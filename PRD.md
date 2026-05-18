@@ -11,7 +11,7 @@
 McGill Plan Your Degree is a web application that transforms the stressful, confusing experience of McGill course planning into something visual, intuitive, and even enjoyable.
 
 ### Feasibility
-This project is technically feasible as a Next.js web app — it's fundamentally a well-designed Claude wrapper with a graph visualization frontend, and both pieces have mature tooling. A focused MVP (one or two faculties) is achievable in a semester. The biggest uncertainty is data quality: McGill's course catalog must be scraped, cleaned, and structured before the AI or UI can work well. Full all-faculty coverage is a stretch goal after MVP validation.
+This project is technically feasible as a Next.js web app. The biggest uncertainty is data quality: McGill's course catalog must be scraped, cleaned, and structured before the AI or UI can work well. Full all-faculty coverage is a stretch goal after MVP validation.
 
 ### Top 3 Challenges
 1. **Course data scraping & structuring** — McGill's site is scrapeable but inconsistent; accurate prereq chains require a robust scraper + validation.
