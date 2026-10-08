@@ -193,15 +193,15 @@ Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Soft
 
 ## 6. Success Metrics
 
-The MVP ships without analytics. Usage metrics start once privacy-friendly analytics is added after launch (open question 4), and no personal data or transcript content is ever sent.
+The MVP ships without analytics. Until privacy-friendly analytics is added after launch (open question 4), only the CI and GitHub metrics are measured. Usage metrics start once it lands, and no personal data or transcript content is ever sent.
 
-### Leading (first registration period after launch)
+### Leading (first registration period after analytics lands)
 
 | Metric | Success | Stretch | Measured by |
 |---|---|---|---|
-| Imports confirmed with zero manual edits | 90% | 97% | Anonymous event on confirm, with edit count |
+| Imports confirmed with zero manual edits | 90% | 97% | Anonymous analytics event on confirm, with edit count |
 | Sample transcript corpus pass rate | 100% | 100% | CI |
-| Students who reach "what's next" after importing | 80% | 90% | Funnel events |
+| Students who reach "what's next" after importing | 80% | 90% | Analytics funnel events |
 | Weekly active users during registration | 100 | 500 | Analytics |
 
 ### Lagging
@@ -213,7 +213,7 @@ The MVP ships without analytics. Usage metrics start once privacy-friendly analy
 | Programs added by contributors within 6 months | 1 | 4 | GitHub |
 | Crawl PRs merged with no manual data fixes | 3 of 4 | 4 of 4 | GitHub |
 
-Review points: 1 week after launch, end of the first registration period, and 6 months after launch.
+Review points: 1 week after analytics lands, end of the first registration period with analytics, and 6 months after launch.
 
 ---
 
@@ -230,7 +230,7 @@ Review points: 1 week after launch, end of the first registration period, and 6 
 | Animation | Motion | Unlock, XP, and level-up animations, with reduced-motion support. |
 | Lint and format | Biome | One fast tool replaces ESLint and Prettier. |
 | Unit tests | Vitest | Prerequisite parser, transcript parser, requirement engine. |
-| E2E tests | Playwright, desktop viewport | Import, browse, and plan flows as a student uses them. |
+| E2E tests | Playwright, 1280 px and 1024 px desktop viewports | Import, browse, and plan flows as a student uses them. |
 | Crawler | TypeScript script in the same repo, run by Node 24 directly | Native type stripping, no extra build step. |
 | Catalogue storage | Versioned JSON in the repo | Every change is a reviewable diff. No database needed to browse. |
 | Profile storage | Zustand store persisted to browser storage, with `version` and `migrate` | Local-first. Built-in schema versioning covers P0-5 migrations. |
