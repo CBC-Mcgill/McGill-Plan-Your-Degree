@@ -1,0 +1,203 @@
+[
+  {
+    "code": "CTPT 200",
+    "subject": "CTPT",
+    "number": "200",
+    "title": "Introduction to Supply Chain Management",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course provides an overall perspective of various functions that exist within supply chains; macro processes and drivers as well as performance indicators along a supply chain are emphasized. Coordination issues are dealt with using a simulation game involving various supply chain stakeholders.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CTPT 201",
+    "subject": "CTPT",
+    "number": "201",
+    "title": "Sourcing",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course is a comprehensive review of sourcing, an important area of supply chain management. It covers four major components of sourcing: the in-house or outsource decisions, the supplier selection and evaluation processes, contract management and procurement processes. Case studies are used to illustrate implementation issues in sourcing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CTPT 202",
+    "subject": "CTPT",
+    "number": "202",
+    "title": "Production and Inventory Planning and Control 1",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course emphasizes contemporary operational issues and techniques in manufacturing and service sectors. Topics include: production and service processes, lean manufacturing methods, total quality management, project management, supply and demand planning. Real-life examples and case studies are an integral part of the course.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CMSC 000",
+      "tree": "CMSC 000",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CTPT 206",
+    "subject": "CTPT",
+    "number": "206",
+    "title": "Transportation Management and Economics",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course focuses on freight transportation, with emphasis on trucking, rail and marine modes including intermodal. Furthermore, it focuses on management of the transportation function from a carrier perspective, including a basic understanding of the structure and regulation of the transportation industry and analysis of specific case examples.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CTPT 208",
+    "subject": "CTPT",
+    "number": "208",
+    "title": "Fundamentals of Logistics",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course addresses the infrastructure required to support logistics activities and the flow of goods and information, including: traffic and transportation, warehousing, materials handling, inventory concepts, Logistics Information Systems, performance indicators, customer service and order processing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CTPT 310",
+    "subject": "CTPT",
+    "number": "310",
+    "title": "Production and Inventory Planning and Control 2",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course focuses on the study of material flow processes by which products are created and delivered to customers. Topics include: aggregate planning, master scheduling, material requirements planning, capacity management, production activity control and inventory control. Computer-aided quantitative tools for decision-making and case analyses are used in the course.",
+    "prerequisites": {
+      "text": "CMSC 000, CTPT 202",
+      "tree": {
+        "and": [
+          "CMSC 000",
+          "CTPT 202"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Passing grade for prerequisite course CMSC 000 is B-."
+    ]
+  },
+  {
+    "code": "CTPT 311",
+    "subject": "CTPT",
+    "number": "311",
+    "title": "Supply Chain Risk Management",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course focuses on the use of available risk management techniques to deal with uncertainty in supply chains, covering issues such as identification of risks, analysis of risks, responding to risks including risk control and risk financing methods, operational and financial hedging and creating resilient supply chains.",
+    "prerequisites": {
+      "text": "CTPT 200",
+      "tree": "CTPT 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CTPT 410",
+    "subject": "CTPT",
+    "number": "410",
+    "title": "International Trade and Logistics",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals required to successfully bring goods to market on a global scale, primarily focusing on logistics trade environment, obstacles and documentation required in international trade, with a focus on parties involved in import/export, legislative and liability, terms of trade, international cargo/cargo security and commercial documentation.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCLW 205",
+      "tree": "CCLW 205",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CTPT 430",
+    "subject": "CTPT",
+    "number": "430",
+    "title": "Fundamentals of Integrated Business Systems",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course examines supply chain information systems in the context of enterprise resource planning (ERP) systems with applications in the manufacturing, retailing and distribution services sectors. Core business processes and transactions pertaining to supply chain management are identified and discussed in terms of relevant ERP modules.",
+    "prerequisites": {
+      "text": "CTPT 200, (CTPT 201 and CTPT 202) or (CTPT 206 and CTPT 208)",
+      "tree": {
+        "and": [
+          "CTPT 200",
+          {
+            "or": [
+              {
+                "and": [
+                  "CTPT 201",
+                  "CTPT 202"
+                ]
+              },
+              {
+                "and": [
+                  "CTPT 206",
+                  "CTPT 208"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

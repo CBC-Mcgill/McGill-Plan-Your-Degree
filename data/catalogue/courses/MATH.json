@@ -1,0 +1,5080 @@
+[
+  {
+    "code": "MATH 111",
+    "subject": "MATH",
+    "number": "111",
+    "title": "Mathematics for Education Students",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Sets and functions. Numeration systems. Whole numbers and integers, algorithms for whole-number computations, elementary number theory. Fractions and proportional reasoning. Real numbers, decimals and percents. A brief introduction to probability and statistics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the B.Ed. program, not open to students who have successfully completed CEGEP course 201-101 or an equivalent. Not available for credit with MATH 112",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "Offered by the Faculty of Science. Note: all Science courses have limited enrolment"
+    ]
+  },
+  {
+    "code": "MATH 122",
+    "subject": "MATH",
+    "number": "122",
+    "title": "Calculus for Management",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of functions, exponents and radicals,exponential and logarithm. Examples of functions in business applications. Limits, continuity and derivatives. Differentiation of elementary functions. Antiderivatives. The definite integral. Techniques of Integration. Applications of differentiation and integration.Trigonometric functions are not discussed in this course.",
+    "prerequisites": {
+      "text": "A course in functions.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 139 or MATH 140 or MATH 150 or CEGEP objective 00UN. MATH 139, MATH 140, MATH 141, MATH 150 , and MATH 151 are not open to students who have taken or are taking MATH 122, except by special permission of the Department of Mathematics and Statistics. Open to Desautels Faculty of Management students only.",
+      "excludes": [
+        "MATH 139",
+        "MATH 140",
+        "MATH 150"
+      ]
+    },
+    "notes": [
+      "Offered by the Faculty of Science. Students intending to pursue the major program or the minor programs offered by the Department of Mathematics and Statistics in the Desautels Faculty of Management should take MATH 140 [or MATH 139] and MATH 141 instead.",
+      "3 hours lecture, 1 hour tutorial"
+    ]
+  },
+  {
+    "code": "MATH 123",
+    "subject": "MATH",
+    "number": "123",
+    "title": "Linear Algebra and Probability",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Geometric vectors in low dimensions. Lines and planes. Dot and cross product. Linear equations and matrices. Matrix operations, properties and rank. Linear dependence and independence. Inverses and determinants. Linear programming and tableaux. Sample space, probability, combination of events. Conditional probability and Bayes Law. Random sampling. Random variables and common distributions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 133 or CEGEP objective 00UQ or equivalent.",
+      "excludes": [
+        "MATH 133"
+      ]
+    },
+    "notes": [
+      "3 hours lecture, 1 hour tutorial.",
+      "Open to Faculty of Management students only.",
+      "Offered by the Faculty of Science. Students intending to pursue the major program or one of the minor programs offered by the Department of Mathematics and Statistics in the Faculty of Management should take MATH 133 instead."
+    ]
+  },
+  {
+    "code": "MATH 125",
+    "subject": "MATH",
+    "number": "125",
+    "title": "Mathematical Techniques for Economics",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Differentation of single and multivarible functions; optimization of single and multivarible functions; constrained optimization of multivariable functions; elements of integration; applications to economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 122 or MATH 141 or CEGEP objective 00UP or an equivalent CEGEP course covering integral calculus.",
+      "excludes": [
+        "MATH 122",
+        "MATH 141"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 133",
+    "subject": "MATH",
+    "number": "133",
+    "title": "Linear Algebra and Geometry",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Systems of linear equations, matrices, inverses, determinants; geometric vectors in three dimensions, dot product, cross product, lines and planes; introduction to vector spaces, linear dependence and independence, bases. Linear transformations. Eigenvalues and diagonalization.",
+    "prerequisites": {
+      "text": "a course in functions",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "1) Not open to students who have taken CEGEP objective 00UQ or equivalent. 2) Not open to students who have taken or are taking MATH 123, except by permission of the Department of Mathematics and Statistics.",
+      "excludes": [
+        "MATH 123"
+      ]
+    },
+    "notes": [
+      "3 hours lecture, 1 hour tutorial"
+    ]
+  },
+  {
+    "code": "MATH 139",
+    "subject": "MATH",
+    "number": "139",
+    "title": "Calculus 1 with Precalculus",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Review of trigonometry and other Precalculus topics. Limits, continuity, derivative. Differentiation of elementary functions. Antidifferentiation. Applications.",
+    "prerequisites": {
+      "text": "a course in functions",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "1) Not open to students who have taken CEGEP objective 00UN or equivalent.2) Not open to students who have taken or are taking MATH 140 or MATH 150. 3) Not open to students who have taken or are taking MATH 122, except by permission of the Department of Mathematics and Statistics.",
+      "excludes": [
+        "MATH 122",
+        "MATH 140",
+        "MATH 150"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "4 hours lecture, 1 hour tutorial",
+      "Students continue in MATH 141",
+      "Each Tutorial section is enrolment limited"
+    ]
+  },
+  {
+    "code": "MATH 140",
+    "subject": "MATH",
+    "number": "140",
+    "title": "Calculus 1",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of functions and graphs. Limits, continuity, derivative. Differentiation of elementary functions. Antidifferentiation. Applications.",
+    "prerequisites": {
+      "text": "High School Calculus",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "1) Not open to students who have taken MATH139 or MATH 150 or CEGEP objective 00UN or equivalent. 2) Not open to students who have taken or are taking MATH 122, except by permission of the Department of Mathematics and Statistics.",
+      "excludes": [
+        "MATH 122",
+        "MATH 139",
+        "MATH 150"
+      ]
+    },
+    "notes": [
+      "3 hours lecture, 1 hour tutorial",
+      "Each Tutorial section is enrolment limited"
+    ]
+  },
+  {
+    "code": "MATH 141",
+    "subject": "MATH",
+    "number": "141",
+    "title": "Calculus 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The definite integral. Techniques of integration. Applications. Introduction to sequences and series.",
+    "prerequisites": {
+      "text": "MATH 139 or MATH 140 or MATH 150.",
+      "tree": {
+        "or": [
+          "MATH 139",
+          "MATH 140",
+          "MATH 150"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEGEP objective 00UP or equivalent.; Not open to students who have taken or are taking MATH 122,except by permission of the Department of Mathematics and Statistics.",
+      "excludes": [
+        "MATH 122"
+      ]
+    },
+    "notes": [
+      "Each Tutorial section is enrolment limited"
+    ]
+  },
+  {
+    "code": "MATH 150",
+    "subject": "MATH",
+    "number": "150",
+    "title": "Calculus A",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Functions, limits and continuity, differentiation, L'Hospital's rule, applications, Taylor polynomials, parametric curves, functions of several variables.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "1) Not open to students who have taken or are taking MATH 139 or MATH 140 or CEGEP objective 00UN or equivalent. 2) Not open to students who have taken or are taking MATH 122,except by permission of the Department of Mathematics and Statistics.",
+      "excludes": [
+        "MATH 122",
+        "MATH 139",
+        "MATH 140"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture, 2 hours tutorial",
+      "Students with no prior exposure to vector geometry are advised to take MATH 133 concurrently. Intended for students with high school calculus who have not received six advanced placement credits",
+      "MATH 150 and MATH 151 cover the material of MATH 139, MATH 140, MATH 141, MATH 222"
+    ]
+  },
+  {
+    "code": "MATH 151",
+    "subject": "MATH",
+    "number": "151",
+    "title": "Calculus B",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Integration, methods and applications, infinite sequences and series, power series, arc length and curvature, multiple integration.",
+    "prerequisites": {
+      "text": "MATH 150",
+      "tree": "MATH 150",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "1) Not open to students who have taken or are taking MATH 141 or CEGEP objective 00UP or equivalent. 2) Not open to students who have taken or are taking MATH 122, except by permission of the Department of Mathematic sand Statistics.",
+      "excludes": [
+        "MATH 122",
+        "MATH 141"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture; 2 hours tutorial",
+      "Each Tutorial section is enrolment limited"
+    ]
+  },
+  {
+    "code": "MATH 180",
+    "subject": "MATH",
+    "number": "180",
+    "title": "The Art of Mathematics",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of what mathematics has to offer. This course will let you discover the beauty of mathematical ideas while only requiring a high school background in mathematics. The topics of the course may include: prime numbers, modular arithmetic, complex numbers, matrices, permutations and combinations, probability, set theory, game theory, logic, chaos. Additional topics may be covered depending on the instructor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 203",
+    "subject": "MATH",
+    "number": "203",
+    "title": "Principles of Statistics 1",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examples of statistical data and the use of graphical means to summarize the data. Basic distributions arising in the natural and behavioural sciences. The logical meaning of a test of significance and a confidence interval. Tests of significance and confidence intervals in the one and two sample setting (means, variances and proportions).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is intended for students in all disciplines. For extensive course restrictions covering statistics courses see Section 3.6.1 of the Arts and of the Science sections of the calendar regarding course overlaps.",
+      "excludes": []
+    },
+    "notes": [
+      "No calculus prerequisites",
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar. Students should consult http://www.mcgill.ca/students/transfercredit for information regarding transfer credits for this course."
+    ]
+  },
+  {
+    "code": "MATH 204",
+    "subject": "MATH",
+    "number": "204",
+    "title": "Principles of Statistics 2",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The concept of degrees of freedom and the analysis of variability. Planning of experiments. Experimental designs. Polynomial and multiple regressions. Statistical computer packages (no previous computing experience is needed). General statistical procedures requiring few assumptions about the probability model.",
+    "prerequisites": {
+      "text": "MATH 203 or equivalent. No calculus prerequisites",
+      "tree": "MATH 203",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is intended for students in all disciplines. For extensive course restrictions covering statistics courses see Section 3.6.1 of the Arts and of the Science sections of the calendar regarding course overlaps.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "MATH 206",
+    "subject": "MATH",
+    "number": "206",
+    "title": "Applied Calculus and Linear Algebra",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Linear algebra in real coordinate space: eigenvalues and diagonalization, applications; orthogonality, Gram-Schmidt process, orthogonal projection; spectral theorem for symmetric matrices; singular value decomposition; positive definite matrices. Multivariable calculus: partial derivatives; linear and quadratic approximation; directional derivatives and gradient; classification of extreme values; constrained optimization. Examples and applications in data science.",
+    "prerequisites": {
+      "text": "MATH 133, and MATH 140 or MATH 139, and MATH 141.",
+      "tree": {
+        "and": [
+          "MATH 133",
+          {
+            "or": [
+              "MATH 140",
+              "MATH 139"
+            ]
+          },
+          "MATH 141"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 222 or MATH 223.",
+      "excludes": [
+        "MATH 222",
+        "MATH 223"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 208",
+    "subject": "MATH",
+    "number": "208",
+    "title": "Introduction to Statistical Computing",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic data management. Data visualization. Exploratory data analysis and descriptive statistics. Writing functions. Simulation and parallel computing. Communication data and documenting code for reproducible research.",
+    "prerequisites": {
+      "text": "MATH 133",
+      "tree": "MATH 133",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 209",
+    "subject": "MATH",
+    "number": "209",
+    "title": "Fundamentals of Statistical Modeling and Inference",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to statistical modelling, likelihood principle and maximum likelihood estimation, Bayesian principle and Bayesian estimation, with emphasis on their application in statistical analysis and data science.",
+    "prerequisites": {
+      "text": "MATH 203, and MATH 206 and MATH 208, or equivalent",
+      "tree": {
+        "and": [
+          "MATH 203",
+          "MATH 206",
+          "MATH 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have received credits for MATH 324.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 222",
+    "subject": "MATH",
+    "number": "222",
+    "title": "Calculus 3",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Taylor series, Taylor's theorem in one and several variables. Review of vector geometry. Partial differentiation, directional derivative. Extreme of functions of 2 or 3 variables. Parametric curves and arc length. Polar and spherical coordinates. Multiple integrals.",
+    "prerequisites": {
+      "text": "MATH 141. Familiarity with vector geometry or Corequisite: MATH 133",
+      "tree": {
+        "and": [
+          "MATH 141",
+          "MATH 133"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 150, MATH 151, MATH206, or MATH 262.",
+      "excludes": [
+        "MATH 150",
+        "MATH 151",
+        "MATH 206",
+        "MATH 262"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 223",
+    "subject": "MATH",
+    "number": "223",
+    "title": "Linear Algebra",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of matrix algebra, determinants and systems of linear equations. Vector spaces, linear operators and their matrix representations, orthogonality. Eigenvalues and eigenvectors, diagonalization of Hermitian matrices. Applications.",
+    "prerequisites": {
+      "text": "MATH 133 or equivalent",
+      "tree": "MATH 133",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students in Mathematics programs nor to students who have taken or are taking MATH 206, MATH 236, MATH 247, or MATH 251.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall and Winter"
+    ]
+  },
+  {
+    "code": "MATH 228",
+    "subject": "MATH",
+    "number": "228",
+    "title": "Classical Geometry",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course is designed to reintroduce classical Euclidean geometry to tomorrow’s teachers. Topics include: Axioms and Euclid’s Elements, the triangle theorem, the Pythagorean Theorem and its extensions, basic constructions and similar triangles, Thales’ theorems and cyclic quadrilaterals, the centers of triangles, the nine-point circle, conic sections and analytic geometry, the prismatoid formula, the Platonic solids, non-Euclidean geometries.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Cannot be taken for credit by students in Mathematics and Statistics programs.; Not open to students who have taken or are taking MATH 348 or MATH 398.",
+      "excludes": [
+        "MATH 348",
+        "MATH 398"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 235",
+    "subject": "MATH",
+    "number": "235",
+    "title": "Algebra 1",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Sets, functions and relations. Methods of proof. Complex numbers. Divisibility theory for integers and modular arithmetic. Divisibility theory for polynomials. Rings, ideals and quotient rings. Fields and construction of fields from polynomial rings. Groups, subgroups and cosets; homomorphisms and quotient groups.",
+    "prerequisites": {
+      "text": "MATH 133 or equivalent",
+      "tree": "MATH 133",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 245.",
+      "excludes": [
+        "MATH 245"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture; 1 hour tutorial"
+    ]
+  },
+  {
+    "code": "MATH 236",
+    "subject": "MATH",
+    "number": "236",
+    "title": "Algebra 2",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Linear equations over a field. Introduction to vector spaces. Linear mappings. Matrix representation of linear mappings. Determinants. Eigenvectors and eigenvalues. Diagonalizable operators. Cayley-Hamilton theorem. Bilinear and quadratic forms. Inner product spaces, orthogonal diagonalization of symmetric matrices. Canonical forms.",
+    "prerequisites": {
+      "text": "MATH 235 or MATH 245",
+      "tree": {
+        "or": [
+          "MATH 235",
+          "MATH 245"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 247 or MATH 251.",
+      "excludes": [
+        "MATH 247",
+        "MATH 251"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 240",
+    "subject": "MATH",
+    "number": "240",
+    "title": "Discrete Structures",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to discrete mathematics and applications. Logical reasoning and methods of proof. Elementary number theory and cryptography: prime numbers, modular equations, RSA encryption. Combinatorics: basic enumeration, combinatorial methods, recurrence equations. Graph theory: trees, cycles, planar graphs.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 133.",
+      "tree": "MATH 133",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "For students in any Computer Science, Computer Engineering, or Software Engineering programs. Others only with the instructor's permission. Not open to students who have taken or are taking MATH 235.",
+      "excludes": [
+        "MATH 235"
+      ]
+    },
+    "notes": [
+      "Fall and Winter"
+    ]
+  },
+  {
+    "code": "MATH 242",
+    "subject": "MATH",
+    "number": "242",
+    "title": "Analysis 1",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A rigorous presentation of sequences and of real numbers and basic properties of continuous and differentiable functions on the real line.",
+    "prerequisites": {
+      "text": "MATH 141",
+      "tree": "MATH 141",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or who have taken MATH 254.",
+      "excludes": [
+        "MATH 254"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 243",
+    "subject": "MATH",
+    "number": "243",
+    "title": "Analysis 2",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Definition and properties of Riemann integral, Fundamental Theorem of Calculus, Taylor's theorem. Infinite series: alternating, telescoping series, rearrangements, conditional and absolute convergence, convergence tests. Power series and Taylor series. Elementary functions. Introduction to metric spaces.",
+    "prerequisites": {
+      "text": "MATH 242 or MATH 254.",
+      "tree": {
+        "or": [
+          "MATH 242",
+          "MATH 254"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 245",
+    "subject": "MATH",
+    "number": "245",
+    "title": "Honours Algebra 1",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Honours level: Sets, functions, and relations. Methods of proof. Complex numbers. Divisibility theory for integers and modular arithmetic. Divisibility theory for polynomials. In-depth study of rings, ideals, and quotient rings; fields and construction of fields from polynomial rings; groups, subgroups, and cosets, homomorphisms, and quotient groups.",
+    "prerequisites": {
+      "text": "Prerequisites: MATH 133 or equivalent",
+      "tree": "MATH 133",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 235.",
+      "excludes": [
+        "MATH 235"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 247",
+    "subject": "MATH",
+    "number": "247",
+    "title": "Honours Applied Linear Algebra",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Matrix algebra, determinants, systems of linear equations. Abstract vector spaces, inner product spaces, Fourier series. Linear transformations and their matrix representations. Eigenvalues and eigenvectors, diagonalizable and defective matrices, positive definite and semidefinite matrices. Quadratic and Hermitian forms, generalized eigenvalue problems, simultaneous reduction of quadratic forms. Applications.",
+    "prerequisites": {
+      "text": "MATH 133 or equivalent.",
+      "tree": "MATH 133",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended for Honours Physics and Engineering students; Not open to students who have taken or are taking MATH 236, MATH 223 or MATH 251",
+      "excludes": [
+        "MATH 223",
+        "MATH 236",
+        "MATH 251"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 248",
+    "subject": "MATH",
+    "number": "248",
+    "title": "Honours Vector Calculus",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Partial derivatives and differentiation of functions in several variables; Jacobians; maxima and minima; implicit functions. Scalar and vector fields; orthogonal curvilinear coordinates. Multiple integrals; arc length, volume and surface area. Line and surface integrals; irrotational and solenoidal fields; Green's theorem; the divergence theorem. Stokes' theorem; and applications.",
+    "prerequisites": {
+      "text": "MATH 133 and MATH 222 or consent of Department.",
+      "tree": {
+        "and": [
+          "MATH 133",
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended for Honours Physics, Computer Science, Physiology and Engineering students.; Not open to students who have taken or are taking MATH 314 or MATH 358.",
+      "excludes": [
+        "MATH 314",
+        "MATH 358"
+      ]
+    },
+    "notes": [
+      "Fall and Winter and Summer"
+    ]
+  },
+  {
+    "code": "MATH 249",
+    "subject": "MATH",
+    "number": "249",
+    "title": "Honours Complex Variables",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Functions of a complex variable; Cauchy-Riemann equations; Cauchy's theorem and consequences. Taylor and Laurent expansions. Residue calculus; evaluation of real integrals; integral representation of special functions; the complex inversion integral. Conformal mapping; Schwarz-Christoffel transformation; Poisson's integral formulas; applications. Additional topics if time permits: homotopy of paths and simple connectivity, Riemann sphere, rudiments of analytic continuation.",
+    "prerequisites": {
+      "text": "MATH 222",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 316.",
+      "excludes": [
+        "MATH 316"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 251",
+    "subject": "MATH",
+    "number": "251",
+    "title": "Honours Algebra 2",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Linear equations over a field. Introduction to vector spaces. Linear maps and their matrix representation. Determinants. Canonical forms. Duality. Bilinear and quadratic forms. Real and complex inner product spaces. Diagonalization of self-adjoint operators.",
+    "prerequisites": {
+      "text": "MATH 235 or MATH 245 or permission of the Department.",
+      "tree": {
+        "or": [
+          "MATH 235",
+          "MATH 245"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken MATH 247 or MATH 236",
+      "excludes": [
+        "MATH 236",
+        "MATH 247"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 254",
+    "subject": "MATH",
+    "number": "254",
+    "title": "Honours Analysis 1",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Properties of R. Cauchy and monotone sequences, Bolzano- Weierstrass theorem. Limits, limsup, liminf of functions. Pointwise, uniform continuity: Intermediate Value theorem. Inverse and monotone functions. Differentiation: Mean Value theorem, L'Hospital's rule, Taylor's Theorem.",
+    "prerequisites": {
+      "text": "MATH 141",
+      "tree": "MATH 141",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or who have taken MATH 242.",
+      "excludes": [
+        "MATH 242"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 255",
+    "subject": "MATH",
+    "number": "255",
+    "title": "Honours Analysis 2",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic point-set topology, metric spaces: open and closed sets, normed and Banach spaces, HÃ¶lder and Minkowski inequalities, sequential compactness, Heine-Borel, Banach Fixed Point theorem. Riemann-(Stieltjes) integral, Fundamental Theorem of Calculus, Taylor's theorem. Uniform convergence. Infinite series, convergence tests, power series. Elementary functions.",
+    "prerequisites": {
+      "text": "MATH 242 or MATH 254 or permission of the Department",
+      "tree": {
+        "or": [
+          "MATH 242",
+          "MATH 254"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 262",
+    "subject": "MATH",
+    "number": "262",
+    "title": "Intermediate Calculus",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Series and power series, including Taylor's theorem. Brief review of vector geometry. Vector functions and curves. Partial differentiation and differential calculus for vector valued functions. Unconstrained and constrained extremal problems. Multiple integrals including surface area and change of variables.",
+    "prerequisites": {
+      "text": "MATH 141, MATH 133 or equivalent.",
+      "tree": {
+        "and": [
+          "MATH 141",
+          "MATH 133"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Faculty of Engineering. Not open to students who are taking or have taken MATH 151, MATH 152, OR MATH 222.",
+      "excludes": [
+        "MATH 151",
+        "MATH 152",
+        "MATH 222"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MATH 263",
+    "subject": "MATH",
+    "number": "263",
+    "title": "Ordinary Differential Equations for Engineers",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "First order ODEs. Second and higher order linear ODEs. Series solutions at ordinary and regular singular points. Laplace transforms. Linear systems of differential equations with a short review of linear algebra.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 262.",
+      "tree": "MATH 262",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in the Faculty of Engineering. Not open to students who are taking or have taken MATH 315 or MATH 325.",
+      "excludes": [
+        "MATH 315",
+        "MATH 325"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MATH 264",
+    "subject": "MATH",
+    "number": "264",
+    "title": "Advanced Calculus for Engineers",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of multiple integrals. Differential and integral calculus of vector fields including the theorems of Gauss, Green, and Stokes. Introduction to partial differential equations, separation of variables, Sturm-Liouville problems, and Fourier series.",
+    "prerequisites": {
+      "text": "MATH 262 or MATH 151 or MATH 152 or equivalent.",
+      "tree": {
+        "or": [
+          "MATH 262",
+          "MATH 151",
+          "MATH 152"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 263",
+      "tree": "MATH 263",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in the Faculty of Engineering. Not open to students who are taking or have taken MATH 319 or MATH 475.",
+      "excludes": [
+        "MATH 319",
+        "MATH 475"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MATH 266",
+    "subject": "MATH",
+    "number": "266",
+    "title": "Theory&Numerics of Ordinary&Partial Differential Equations",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Numerical solution of initial and boundary value problems in science and engineering: ordinary differential equations; partial differential equations (PDE) of elliptic, parabolic, and hyperbolic type. Topics include Runge Kutta and linear multistep methods, finite differences, Rayleigh-Ritz approach, finite elements, finite volumes, spectral methods. Examples of PDE arising in mechanical engineering.",
+    "prerequisites": {
+      "text": "(COMP 208 and MECH 265 and MATH 263 and MATH 264) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "COMP 208",
+              "MECH 265",
+              "MATH 263",
+              "MATH 264"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "MATH 271",
+    "subject": "MATH",
+    "number": "271",
+    "title": "Linear Algebra and Partial Differential Equations",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Applied Linear Algebra. Linear Systems of Ordinary Differential Equations. Power Series Solutions. Partial Differential Equations. Sturm-Liouville Theory and Applications. Fourier Transforms.",
+    "prerequisites": {
+      "text": "MATH 263, MATH 264.",
+      "tree": {
+        "and": [
+          "MATH 263",
+          "MATH 264"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 266.",
+      "excludes": [
+        "MATH 266"
+      ]
+    },
+    "notes": [
+      "Fall and Winter",
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MATH 308",
+    "subject": "MATH",
+    "number": "308",
+    "title": "Fundamentals of Statistical Learning",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theory and application of various techniques for the exploration and analysis of multivariate data: principal component analysis, correspondence analysis, and other visualization and dimensionality reduction techniques; supervised and unsupervised learning; linear discriminant analysis, and clustering techniques. Data applications using appropriate software.",
+    "prerequisites": {
+      "text": "MATH 208, one of MATH 223, MATH 236, MATH 247, MATH 251; MATH 323 or MATH 356.",
+      "tree": {
+        "and": [
+          "MATH 208",
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236",
+              "MATH 247",
+              "MATH 251"
+            ]
+          },
+          {
+            "or": [
+              "MATH 323",
+              "MATH 356"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 314",
+    "subject": "MATH",
+    "number": "314",
+    "title": "Advanced Calculus",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Derivative as a matrix. Chain rule. Implicit functions. Constrained maxima and minima. Jacobians. Multiple integration. Line and surface integrals. Theorems of Green, Stokes and Gauss. Fourier series with applications.",
+    "prerequisites": {
+      "text": "MATH 133, MATH 222",
+      "tree": {
+        "and": [
+          "MATH 133",
+          "MATH 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 248 or MATH 358.",
+      "excludes": [
+        "MATH 248",
+        "MATH 358"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 315",
+    "subject": "MATH",
+    "number": "315",
+    "title": "Ordinary Differential Equations",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "First order ordinary differential equations including elementary numerical methods. Linear differential equations. Laplace transforms. Series solutions.",
+    "prerequisites": {
+      "text": "MATH 222.",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 133.",
+      "tree": "MATH 133",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 325.",
+      "excludes": [
+        "MATH 325"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 316",
+    "subject": "MATH",
+    "number": "316",
+    "title": "Complex Variables",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Algebra of complex numbers, Cauchy-Riemann equations, complex integral, Cauchy's theorems. Taylor and Laurent series, residue theory and applications.",
+    "prerequisites": {
+      "text": "MATH 314 or equivalent and MATH 243.",
+      "tree": {
+        "and": [
+          "MATH 314",
+          "MATH 243"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 249, MATH 366, MATH 381 or MATH 466.",
+      "excludes": [
+        "MATH 249",
+        "MATH 366",
+        "MATH 381",
+        "MATH 466"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 317",
+    "subject": "MATH",
+    "number": "317",
+    "title": "Numerical Analysis",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Error analysis. Numerical solutions of equations by iteration. Interpolation. Numerical differentiation and integration. Introduction to numerical solutions of differential equations.",
+    "prerequisites": {
+      "text": "MATH 315 or MATH 325 or MATH 263, and COMP 202 or permission of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 315",
+              "MATH 325",
+              "MATH 263"
+            ]
+          },
+          "COMP 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 350",
+      "excludes": [
+        "COMP 350"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 318",
+    "subject": "MATH",
+    "number": "318",
+    "title": "Mathematical Logic",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Propositional logic: truth-tables, formal proof systems, completeness and compactness theorems, Boolean algebras; first-order logic: formal proofs, Gödel's completeness theorem; axiomatic theories; set theory; Cantor's theorem, axiom of choice and Zorn's lemma, Peano arithmetic; Gödel's incompleteness theorem.",
+    "prerequisites": {
+      "text": "MATH 235 or MATH 240 or MATH 242.",
+      "tree": {
+        "or": [
+          "MATH 235",
+          "MATH 240",
+          "MATH 242"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 319",
+    "subject": "MATH",
+    "number": "319",
+    "title": "Partial Differential Equations ",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "First order equations, geometric theory; second order equations, classification; Laplace, wave and heat equations, Sturm-Liouville theory, Fourier series, boundary and initial value problems.",
+    "prerequisites": {
+      "text": "MATH 223 or MATH 236, MATH 314 or equivalent, MATH 315",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236"
+            ]
+          },
+          "MATH 314",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 475.",
+      "excludes": [
+        "MATH 475"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 323",
+    "subject": "MATH",
+    "number": "323",
+    "title": "Probability",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Sample space, events, conditional probability, independence of events, Bayes' Theorem. Basic combinatorial probability, random variables, discrete and continuous univariate and multivariate distributions. Independence of random variables. Inequalities, weak law of large numbers, central limit theorem.",
+    "prerequisites": {
+      "text": "MATH 141 or equivalent.",
+      "tree": "MATH 141",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended for students in Science, Engineering and related disciplines, who have had differential and integral calculus; Not open to students who have taken or are taking MATH 356",
+      "excludes": [
+        "MATH 356"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 324",
+    "subject": "MATH",
+    "number": "324",
+    "title": "Statistics",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Sampling distributions, including Normal, Chi-squared, Student’s t, and F distributions. Sampling properties of the sample mean and variance. Point estimation: bias, variance, mean squared error, consistency, sufficiency, UMVUE. Method of moments and maximum likelihood estimation. One- and two-sample inference. Confidence intervals and sample size determination. Hypothesis testing, Type 1 and Type 2 errors, power, and p-values. The Neyman Pearson framework and likelihood ratio tests. Linear models used as illustrative examples, linking them to topics in estimation and hypothesis testing. One-way analysis of variance (ANOVA) and contingency tables.",
+    "prerequisites": {
+      "text": "MATH 323 or equivalent",
+      "tree": "MATH 323",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 357",
+      "excludes": [
+        "MATH 357"
+      ]
+    },
+    "notes": [
+      "Fall and Winter",
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "MATH 325",
+    "subject": "MATH",
+    "number": "325",
+    "title": "Honours Ordinary Differential Equations",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "First and second order equations, linear equations, series solutions, Frobenius method, introduction to numerical methods and to linear systems, Laplace transforms, applications.",
+    "prerequisites": {
+      "text": "MATH 222.",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended for Honours Mathematics, Physics and Engineering programs.; Not open to students who have taken MATH 263 (formerly MATH 261), MATH 315",
+      "excludes": [
+        "MATH 261",
+        "MATH 263",
+        "MATH 315"
+      ]
+    },
+    "notes": [
+      "Fall and Winter",
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MATH 326",
+    "subject": "MATH",
+    "number": "326",
+    "title": "Nonlinear Dynamics and Chaos",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Linear systems of differential equations, linear stability theory. Nonlinear systems: existence and uniqueness, numerical methods, one and two dimensional flows, phase space, limit cycles, Poincare-Bendixson theorem, bifurcations, Hopf bifurcation, the Lorenz equations and chaos.",
+    "prerequisites": {
+      "text": "MATH 222 and (MATH 223 or MATH 236 or MATH 247 or MATH 251).",
+      "tree": {
+        "and": [
+          "MATH 222",
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236",
+              "MATH 247",
+              "MATH 251"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 376",
+      "excludes": [
+        "MATH 376"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 327",
+    "subject": "MATH",
+    "number": "327",
+    "title": "Matrix Numerical Analysis",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An overview of numerical methods for linear algebra applications and their analysis. Problem classes include linear systems, least squares problems and eigenvalue problems.",
+    "prerequisites": {
+      "text": "MATH 223 or MATH 236 or MATH 247 or MATH 251, COMP 202 or consent of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236",
+              "MATH 247",
+              "MATH 251"
+            ]
+          },
+          "COMP 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 329",
+    "subject": "MATH",
+    "number": "329",
+    "title": "Theory of Interest",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Simple and compound interest, annuities certain, amortization schedules, bonds, depreciation.",
+    "prerequisites": {
+      "text": "MATH 141",
+      "tree": "MATH 141",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 335",
+    "subject": "MATH",
+    "number": "335",
+    "title": "Groups, Tilings and Algorithms",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Transformation groups of the plane. Inversions and Moebius transformations. The hyperbolic plane. Tilings in dimension 2 and 3. Group presentations and Cayley graphs. Free groups and Schreier's theorem. Coxeter groups. Dehn's Word and Conjugacy Problems. Undecidability of the Word Problem for semigroups. Regular languages and automatic groups. Automaticity of Coxeter groups.",
+    "prerequisites": {
+      "text": "MATH 235",
+      "tree": "MATH 235",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 365.",
+      "excludes": [
+        "MATH 365"
+      ]
+    },
+    "notes": [
+      "Note: This course is intended primarily for students in the Major Program in Mathematics and the Joint Major Program in Mathematics and Computer Science."
+    ]
+  },
+  {
+    "code": "MATH 338",
+    "subject": "MATH",
+    "number": "338",
+    "title": "History and Philosophy of Mathematics",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Egyptian, Babylonian, Greek, Indian and Arab contributions to mathematics are studied together with some modern developments they give rise to, for example, the problem of trisecting the angle. European mathematics from the Renaissance to the 18th century is discussed, culminating in the discovery of the infinitesimal and integral calculus by Newton and Leibnitz. Demonstration of how mathematics was done in past centuries, and involves the practice of mathematics, including detailed calculations, arguments based on geometric reasoning, and proofs.",
+    "prerequisites": {
+      "text": "MATH 133, MATH 141.",
+      "tree": {
+        "and": [
+          "MATH 133",
+          "MATH 141"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 340",
+    "subject": "MATH",
+    "number": "340",
+    "title": "Discrete Mathematics",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discrete Mathematics and applications. Graph Theory: matchings, planarity, and colouring. Discrete probability. Combinatorics: enumeration, combinatorial techniques and proofs.",
+    "prerequisites": {
+      "text": "MATH 235 or MATH 240 or MATH 242.",
+      "tree": {
+        "or": [
+          "MATH 235",
+          "MATH 240",
+          "MATH 242"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 223 or MATH 236.",
+      "tree": {
+        "or": [
+          "MATH 223",
+          "MATH 236"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restriction: Not open to students who have taken or are taking MATH 350.",
+      "excludes": [
+        "MATH 350"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 346",
+    "subject": "MATH",
+    "number": "346",
+    "title": "Number Theory",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Divisibility. Congruences. Quadratic reciprocity. Diophantine equations. Arithmetical functions.",
+    "prerequisites": {
+      "text": "MATH 235 or consent of instructor",
+      "tree": "MATH 235",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 377.",
+      "excludes": [
+        "MATH 377"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 348",
+    "subject": "MATH",
+    "number": "348",
+    "title": "Euclidean Geometry",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Points and lines in a triangle. Quadrilaterals. Angles in a circle. Circumscribed and inscribed circles. Congruent and similar triangles. Area. Power of a point with respect to a circle. Ceva’s theorem. Isometries. Homothety. Inversion.",
+    "prerequisites": {
+      "text": "MATH 133 or equivalent or permission of instructor.",
+      "tree": "MATH 133",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 398.",
+      "excludes": [
+        "MATH 398"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 350",
+    "subject": "MATH",
+    "number": "350",
+    "title": "Honours Discrete Mathematics ",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Discrete mathematics. Graph Theory: matching theory, connectivity, planarity, and colouring; graph minors and extremal graph theory. Combinatorics: combinatorial methods, enumerative and algebraic combinatorics, discrete probability.",
+    "prerequisites": {
+      "text": "(MATH 235 or MATH 240 or MATH 245) and (MATH 223 or MATH 236 or MATH 247 or MATH 251).",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 235",
+              "MATH 240",
+              "MATH 245"
+            ]
+          },
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236",
+              "MATH 247",
+              "MATH 251"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 340. Intended for students in mathematics or computer science honours programs.",
+      "excludes": [
+        "MATH 340"
+      ]
+    },
+    "notes": [
+      "Intended for students in mathematics or computer science honours programs."
+    ]
+  },
+  {
+    "code": "MATH 352",
+    "subject": "MATH",
+    "number": "352",
+    "title": "Problem Seminar",
+    "credits": 1,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Seminar in Mathematical Problem Solving. The problems considered will be of the type that occur in the Putnam competition and in other similar mathematical competitions.",
+    "prerequisites": {
+      "text": "Enrolment in a math related program or permission of the instructor. Requires departmental approval.; Enrolment in a math related program or permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 356",
+    "subject": "MATH",
+    "number": "356",
+    "title": "Honours Probability",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Sample space, probability axioms, combinatorial probability. Conditional probability, Bayes' Theorem. Distribution theory with special reference to the Binomial, Poisson, and Normal distributions. Expectations, moments, moment generating functions, uni-variate transformations. Random vectors, independence, correlation, multivariate transformations. Conditional distributions, conditional expectation.Modes of stochastic convergence, laws of large numbers, Central Limit Theorem.",
+    "prerequisites": {
+      "text": "MATH 243 or MATH 255, and MATH 222 or permission of the Department.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 243",
+              "MATH 255"
+            ]
+          },
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 323",
+      "excludes": [
+        "MATH 323"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 357",
+    "subject": "MATH",
+    "number": "357",
+    "title": "Honours Statistics",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Sampling distributions. Point estimation. Minimum variance unbiased estimators, sufficiency, and completeness. Confidence intervals. Hypothesis tests, Neyman-Pearson Lemma, uniformly most powerful tests. Likelihood ratio tests for normal samples. Asymptotic sampling distributions and inference.",
+    "prerequisites": {
+      "text": "MATH 356 or equivalent",
+      "tree": "MATH 356",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 324",
+      "excludes": [
+        "MATH 324"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 358",
+    "subject": "MATH",
+    "number": "358",
+    "title": "Honours Advanced Calculus",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Point-set topology in Euclidean space; continuity and differentiability of functions in several variables. Implicit and inverse function theorems. Vector fields, divergent and curl operations. Rigorous treatment of multiple integrals: volume and surface area; and Fubini’s theorem. Line and surface integrals, conservative vector fields. Green's theorem, Stokes’ theorem and the divergence theorem.",
+    "prerequisites": {
+      "text": "MATH 222, MATH 247 or MATH 251, MATH 255 or permission of the Department.",
+      "tree": {
+        "and": [
+          "MATH 222",
+          {
+            "or": [
+              "MATH 247",
+              "MATH 251"
+            ]
+          },
+          "MATH 255"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended for students in Honours Mathematics programs, Not open to students who have taken or are taking MATH 314 or MATH 248",
+      "excludes": [
+        "MATH 248",
+        "MATH 314"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 365",
+    "subject": "MATH",
+    "number": "365",
+    "title": "Honours Groups, Tilings and Algorithms",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Transformation groups of the plane. Inversions and Moebius transformations. The hyperbolic plane. Tilings in dimension 2 and 3. Group presentations and Cayley graphs. Free groups and Schreier's theorem. Coxeter groups. Dehn's Word and Conjugacy Problems. Undecidability of the Word Problem for semigroups. Regular languages and automatic groups. Automaticity of Coxeter groups.",
+    "prerequisites": {
+      "text": "MATH 235",
+      "tree": "MATH 235",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 335.",
+      "excludes": [
+        "MATH 335"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 376",
+    "subject": "MATH",
+    "number": "376",
+    "title": "Honours Nonlinear Dynamics",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course consists of the lectures of MATH 326, but will be assessed at the honours level.",
+    "prerequisites": {
+      "text": "MATH 222 and (MATH 223 or MATH 236 or MATH 247 or MATH 251).",
+      "tree": {
+        "and": [
+          "MATH 222",
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236",
+              "MATH 247",
+              "MATH 251"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended primarily for Honours students. Not open to students who have taken or are taking MATH 326.",
+      "excludes": [
+        "MATH 326"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "Note: Additionally, a special project or projects may be assigned."
+    ]
+  },
+  {
+    "code": "MATH 377",
+    "subject": "MATH",
+    "number": "377",
+    "title": "Honours Number Theory",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course consists of the lectures of MATH 346, but will be assessed at the honours level.",
+    "prerequisites": {
+      "text": "Enrolment in Mathematics Honours program or consent of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 346.",
+      "excludes": [
+        "MATH 346"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "Note: Additionally, a special project or projects may be assigned."
+    ]
+  },
+  {
+    "code": "MATH 378",
+    "subject": "MATH",
+    "number": "378",
+    "title": "Nonlinear Optimization ",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Optimization terminology. Convexity. First- and second-order optimality conditions for unconstrained problems. Numerical methods for unconstrained optimization: Gradient methods, Newton-type methods, conjugate gradient methods, trust-region methods. Least squares problems (linear + nonlinear). Optimality conditions for smooth constrained optimization problems (KKT theory). Lagrangian duality. Augmented Lagrangian methods. Active-set method for quadratic programming. SQP methods.",
+    "prerequisites": {
+      "text": "MATH 223 or MATH 247 or MATH 236 or MATH 251. MATH 248 or MATH 314 or MATH 358. MATH 243 or MATH 255.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 223",
+              "MATH 247",
+              "MATH 236",
+              "MATH 251"
+            ]
+          },
+          {
+            "or": [
+              "MATH 248",
+              "MATH 314",
+              "MATH 358"
+            ]
+          },
+          {
+            "or": [
+              "MATH 243",
+              "MATH 255"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 560.",
+      "excludes": [
+        "MATH 560"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 387",
+    "subject": "MATH",
+    "number": "387",
+    "title": "Honours Numerical Analysis",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Error analysis. Numerical solutions of equations by iteration. Interpolation. Numerical differentiation and integration. Introduction to numerical solutions of differential equations.",
+    "prerequisites": {
+      "text": "MATH 325 or MATH 315, COMP 202 or permission of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 325",
+              "MATH 315"
+            ]
+          },
+          "COMP 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 255 or MATH 243.",
+      "tree": {
+        "or": [
+          "MATH 255",
+          "MATH 243"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Intended primarily for Honours students.",
+      "excludes": []
+    },
+    "notes": [
+      "Taught in alternate years",
+      "Winter (even years)"
+    ]
+  },
+  {
+    "code": "MATH 396",
+    "subject": "MATH",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "MATH 397",
+    "subject": "MATH",
+    "number": "397",
+    "title": "Honours Matrix Numerical Analysis",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The course consists of the lectures of MATH 327 plus additional work involving theoretical assignments and/or a project. The final examination for this course may be different from that of MATH 327.",
+    "prerequisites": {
+      "text": "MATH 251 or MATH 247, COMP 202 or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 251",
+              "MATH 247"
+            ]
+          },
+          "COMP 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 398",
+    "subject": "MATH",
+    "number": "398",
+    "title": "Honours Euclidean Geometry ",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Honours level: points and lines in a triangle. Quadrilaterals. Angles in a circle. Circumscribed and inscribed circles. Congruent and similar triangles. Area. Power of a point with respect to a circle. Ceva’s theorem. Isometries. Homothety. Inversion.",
+    "prerequisites": {
+      "text": "MATH 133 or equivalent or permission of instructor.",
+      "tree": "MATH 133",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students taking or have take MATH 348.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 410",
+    "subject": "MATH",
+    "number": "410",
+    "title": "Majors Project",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "A supervised project.",
+    "prerequisites": {
+      "text": "Students must have 21 completed credits of the required mathematics courses in their program, including all required 200 level mathematics courses.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Requires departmental approval."
+    ]
+  },
+  {
+    "code": "MATH 417",
+    "subject": "MATH",
+    "number": "417",
+    "title": "Linear Optimization",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to linear optimization and its applications: Duality theory, fundamental theorem, sensitivity analysis, convexity, simplex algorithm, interior-point methods, quadratic optimization, applications in game theory.",
+    "prerequisites": {
+      "text": "COMP 202, and MATH 223 or MATH 236, and MATH 314 or equivalent",
+      "tree": {
+        "and": [
+          "COMP 202",
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236"
+            ]
+          },
+          "MATH 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 487 or MATH 517.",
+      "excludes": [
+        "MATH 487",
+        "MATH 517"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 420",
+    "subject": "MATH",
+    "number": "420",
+    "title": "Independent Study",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Reading projects permitting independent study under the guidance of a staff member specializing in a subject where no appropriate course is available. Arrangements must be made with an instructor and the Chair before registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and Winter and Summer",
+      "Requires approval by the chair before registration",
+      "Please see regulations concerning Project Courses under Faculty Degree Requirements"
+    ]
+  },
+  {
+    "code": "MATH 423",
+    "subject": "MATH",
+    "number": "423",
+    "title": "Applied Regression",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Multiple regression estimators and their properties. Hypothesis tests and confidence intervals. Analysis of variance. Prediction and prediction intervals. Model diagnostics. Model selection. Introduction to weighted least squares. Basic contingency table analysis. Introduction to logistic and Poisson regression. Applications to experimental and observational data.",
+    "prerequisites": {
+      "text": "(MATH 209 or MATH 324) and (MATH 206 or MATH 223 or MATH 236)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 209",
+              "MATH 324"
+            ]
+          },
+          {
+            "or": [
+              "MATH 206",
+              "MATH 223",
+              "MATH 236"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 427",
+    "subject": "MATH",
+    "number": "427",
+    "title": "Statistical Quality Control",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to quality management; variability and productivity. Quality measurement: capability analysis, gauge capability studies. Process control: control charts for variables and attributes. Process improvement: factorial designs, fractional replications, response surface methodology, Taguchi methods. Acceptance sampling: operating characteristic curves; single, multiple and sequential acceptance sampling plans for variables and attributes.",
+    "prerequisites": {
+      "text": "MATH 203 or equivalent, and MATH 204 or MATH 324.",
+      "tree": {
+        "and": [
+          "MATH 203",
+          {
+            "or": [
+              "MATH 204",
+              "MATH 324"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 430",
+    "subject": "MATH",
+    "number": "430",
+    "title": "Mathematical Finance",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to concepts of price and hedge derivative securities. The following concepts will be studied in both concrete and continuous time: filtrations, martingales, the change of measure technique, hedging, pricing, absence of arbitrage opportunities and the Fundamental Theorem of Asset Pricing.",
+    "prerequisites": {
+      "text": "MATH 243 or MATH 255, and MATH 323 or MATH 356, and MATH 133 or equivalent.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 243",
+              "MATH 255"
+            ]
+          },
+          {
+            "or": [
+              "MATH 323",
+              "MATH 356"
+            ]
+          },
+          "MATH 133"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 437",
+    "subject": "MATH",
+    "number": "437",
+    "title": "Mathematical Methods in Biology",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The formulation and treatment of realistic mathematical models describing biological phenomena through qualitative and quantitative mathematical techniques (e.g. local and global stability theory, bifurcation analysis and phase plane analysis) and numerical simulation. Concrete and detailed examples will be drawn from molecular and cellular biology and mammalian physiology.",
+    "prerequisites": {
+      "text": "MATH 315 or MATH 325, and MATH 326 or MATH 376, and COMP 202 or COMP 204 or COMP 208 or equivalent.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 315",
+              "MATH 325"
+            ]
+          },
+          {
+            "or": [
+              "MATH 326",
+              "MATH 376"
+            ]
+          },
+          {
+            "or": [
+              "COMP 202",
+              "COMP 204",
+              "COMP 208"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is offered in the winter semester."
+    ]
+  },
+  {
+    "code": "MATH 447",
+    "subject": "MATH",
+    "number": "447",
+    "title": "Introduction to Stochastic Processes",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Conditional probability and conditional expectation, generating functions. Branching processes and random walk. Markov chains, transition matrices, classification of states, ergodic theorem, examples. Birth and death processes, queueing theory.",
+    "prerequisites": {
+      "text": "MATH 323",
+      "tree": "MATH 323",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 547.",
+      "excludes": [
+        "MATH 547"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 451",
+    "subject": "MATH",
+    "number": "451",
+    "title": "Introduction to General Topology",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course is an introduction to point set topology. Topics include basic set theory and logic, topological spaces, separation axioms, continuity, connectedness, compactness, Tychonoff Theorem, metric spaces, and Baire spaces.",
+    "prerequisites": {
+      "text": "MATH 242 or MATH 254",
+      "tree": {
+        "or": [
+          "MATH 242",
+          "MATH 254"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 454",
+    "subject": "MATH",
+    "number": "454",
+    "title": "Honours Analysis 3",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Measure theory: sigma-algebras, Lebesgue measure in R^n and integration, L^1 functions, Fatou's lemma, monotone and dominated convergence theorem, Egorov’s theorem, Lusin's theorem, Fubini-Tonelli theorem, differentiation of the integral, differentiability of functions of bounded variation, absolutely continuous functions, fundamental theorem of calculus.",
+    "prerequisites": {
+      "text": "MATH 255",
+      "tree": "MATH 255",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 354.",
+      "excludes": [
+        "MATH 354"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 455",
+    "subject": "MATH",
+    "number": "455",
+    "title": "Honours Analysis 4",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of point-set topology: topological spaces, dense sets, completeness, compactness, connectedness and path-connectedness, separability, Baire category theorem, Arzela-Ascoli theorem, Stone-Weierstrass theorem..Functional analysis: L^p spaces, linear functionals and dual spaces, Hilbert spaces, Riesz representation theorems. Fourier series and transform, Riemann-Lebesgue Lemma,Fourier inversion formula, Plancherel theorem, Parseval’s identity, Poisson summation formula.",
+    "prerequisites": {
+      "text": "MATH 454 or equivalent.",
+      "tree": "MATH 454",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 355.",
+      "excludes": [
+        "MATH 355"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 456",
+    "subject": "MATH",
+    "number": "456",
+    "title": "Honours Algebra 3",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Groups, quotient groups and the isomorphism theorems. Group actions. Groups of prime order and the class equation. Sylow's theorems. Simplicity of the alternating group. Semidirect products. Principal ideal domains and unique factorization domains. Modules over a ring. Finitely generated modules over a principal ideal domain with applications to canonical forms.",
+    "prerequisites": {
+      "text": "MATH 235 or MATH 245",
+      "tree": {
+        "or": [
+          "MATH 235",
+          "MATH 245"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 370.",
+      "excludes": [
+        "MATH 370"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 457",
+    "subject": "MATH",
+    "number": "457",
+    "title": "Honours Algebra 4",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Representations of finite groups. Maschke's theorem. Schur's lemma. Characters, their orthogonality, and character tables. Field extensions. Finite and cyclotomic fields. Galois extensions and Galois groups. The fundamental theorem of Galois theory. Solvability by radicals.",
+    "prerequisites": {
+      "text": "(MATH 236 or MATH 251) and MATH 456",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 236",
+              "MATH 251"
+            ]
+          },
+          "MATH 456"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 371.",
+      "excludes": [
+        "MATH 371"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 458",
+    "subject": "MATH",
+    "number": "458",
+    "title": "Honours Differential Geometry",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Local theory of plane and space curves: the Frenet formulas. Local theory of surfaces: the first and second fundamental forms, the shape operator, the mean and Gaussian curvatures, the Theorema Egregium, surfaces of revolution with prescribed curvature, ruled and developable surfaces, minimal surfaces. Geodesic curves on surfaces of revolution. The Gauss-Codazzi equations, rigidity. Selected topics in the global theory of plane and space curves, and in the global theory of surfaces: total curvature and the Fary-Milnor theorem on knotted curves, abstract surfaces as 2-d manifolds, the Euler characteristic, and the Gauss-Bonnet theorem for surfaces.",
+    "prerequisites": {
+      "text": "MATH 251 or MATH 247, and MATH 248 or MATH 314 or MATH 358",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 251",
+              "MATH 247"
+            ]
+          },
+          {
+            "or": [
+              "MATH 248",
+              "MATH 314",
+              "MATH 358"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 462",
+    "subject": "MATH",
+    "number": "462",
+    "title": "Machine Learning ",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to supervised learning: decision trees, nearest neighbors, linear models, neural networks. Probabilistic learning: logistic regression, Bayesian methods, naive Bayes. Classification with linear models and convex losses. Unsupervised learning: PCA, k-means, encoders, and decoders. Statistical learning theory: PAC learning and VC dimension. Training models with gradient descent and stochastic gradient descent. Deep neural networks. Selected topics chosen from: generative models, feature representation learning, computer vision.",
+    "prerequisites": {
+      "text": "(MATH 236 or MATH 247 or MATH 251) and (MATH 248 or MATH 314 or MATH 358) and (COMP 202 or equivalent or permission of the instructor).",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 236",
+              "MATH 247",
+              "MATH 251"
+            ]
+          },
+          {
+            "or": [
+              "MATH 248",
+              "MATH 314",
+              "MATH 358"
+            ]
+          },
+          "COMP 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 451 or COMP 551.",
+      "excludes": [
+        "COMP 451",
+        "COMP 551"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 463",
+    "subject": "MATH",
+    "number": "463",
+    "title": "Convex Optimization",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to convex analysis and convex optimization: Convex sets and functions, subdifferential calculus, conjugate functions, Fenchel duality, proximal calculus. Subgradient methods, proximal-based methods. Conditional gradient method, ADMM. Applications including data classification, network-flow problems, image processing, convex feasibility problems, DC optimization, sparse optimization, and compressed sensing.",
+    "prerequisites": {
+      "text": "MATH 223 or MATH 247 or MATH 236 or MATH 251. MATH 248 or MATH 314 or MATH 358. MATH 243 or MATH 255. COMP 202 or COMP 204 or COMP 208 or equivalent.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 223",
+              "MATH 247",
+              "MATH 236",
+              "MATH 251"
+            ]
+          },
+          {
+            "or": [
+              "MATH 248",
+              "MATH 314",
+              "MATH 358"
+            ]
+          },
+          {
+            "or": [
+              "MATH 243",
+              "MATH 255"
+            ]
+          },
+          {
+            "or": [
+              "COMP 202",
+              "COMP 204",
+              "COMP 208"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 563.",
+      "excludes": [
+        "MATH 563"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 466",
+    "subject": "MATH",
+    "number": "466",
+    "title": "Honours Complex Analysis",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Functions of a complex variable, Cauchy-Riemann equations, Cauchy's theorem and its consequences. Uniform convergence on compacta. Taylor and Laurent series, open mapping theorem, Rouché's theorem and the argument principle. Calculus of residues. Fractional linear transformations and conformal mappings.",
+    "prerequisites": {
+      "text": "MATH 255.",
+      "tree": "MATH 255",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 366, MATH 249, MATH 316 and MATH 381.",
+      "excludes": [
+        "MATH 249",
+        "MATH 316",
+        "MATH 366",
+        "MATH 381"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 470",
+    "subject": "MATH",
+    "number": "470",
+    "title": "Honours Research Project",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "The project will contain a significant research component that requires substantial independent work consisting of a written report and oral examination or presentation.",
+    "prerequisites": {
+      "text": "appropriate honours courses with approval of the project supervisor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and Winter and Summer",
+      "Requires Departmental Approval",
+      "Students are advised to start contacting potential project supervisors early during their U2 year."
+    ],
+    "parts": [
+      {
+        "code": "MATH 470D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "MATH 470D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MATH 475",
+    "subject": "MATH",
+    "number": "475",
+    "title": "Honours Partial Differential Equations",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "First order partial differential equations, geometric theory, classification of second order linear equations, Sturm-Liouville problems, orthogonal functions and Fourier series, eigenfunction expansions, separation of variables for heat, wave and Laplace equations, Green's function methods, uniqueness theorems.",
+    "prerequisites": {
+      "text": "MATH 247 or MATH 251 or equivalent, and MATH 248 or MATH 358 or equivalent, MATH 325.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 247",
+              "MATH 251"
+            ]
+          },
+          {
+            "or": [
+              "MATH 248",
+              "MATH 358"
+            ]
+          },
+          "MATH 325"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 319.",
+      "excludes": [
+        "MATH 319"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 478",
+    "subject": "MATH",
+    "number": "478",
+    "title": "Computational Methods in Applied Mathematics ",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Solution to initial value problems: Linear, Nonlinear Finite Difference Methods: accuracy and stability, Lax equivalence theorem, CFL and von Neumann conditions, Fourier analysis: diffusion, dissipation, dispersion, and spectral methods. Solution of large sparse linear systems: iterative methods, preconditioning, incomplete LU, multigrid, Krylov subspaces, conjugate gradient method. Applications to, e.g., weighted least squares, duality, constrained minimization, calculus of variation, inverse problems, regularization, level set methods, Navier-Stokes equations",
+    "prerequisites": {
+      "text": "MATH 315 or MATH 325 or MATH 263; MATH 317 or MATH 387 or COMP 350 or MECH 309; or permission of the instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 315",
+              "MATH 325",
+              "MATH 263"
+            ]
+          },
+          {
+            "or": [
+              "MATH 317",
+              "MATH 387",
+              "COMP 350",
+              "MECH 309"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course will be taught in the winter semester."
+    ]
+  },
+  {
+    "code": "MATH 480",
+    "subject": "MATH",
+    "number": "480",
+    "title": "Honours Independent Study",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Reading projects permitting independent study under the guidance of a staff member specializing in a subject where no appropriate course is available. Arrangements must be made with an instructor and the Chair before registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and Winter and Summer",
+      "Please see regulations concerning Project Courses under Faculty Degree Requirements",
+      "Requires approval by the chair before registration"
+    ]
+  },
+  {
+    "code": "MATH 488",
+    "subject": "MATH",
+    "number": "488",
+    "title": "Honours Set Theory",
+    "credits": 3,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Axioms of set theory, ordinal and cardinal arithmetic, consequences of the axiom of choice, models of set theory, constructible sets and the continuum hypothesis, introduction to independence proofs.",
+    "prerequisites": {
+      "text": "MATH 251 or MATH 255 or permission of instructor",
+      "tree": {
+        "or": [
+          "MATH 251",
+          "MATH 255"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 590.",
+      "excludes": [
+        "MATH 590"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 510",
+    "subject": "MATH",
+    "number": "510",
+    "title": "Quantitative Risk Management",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Basics concepts in quantitative risk management: types of financial risk, loss distribution, risk measures, regulatory framework. Empirical properties of financial data, models for stochastic volatility. Extreme-value theory models for maxima and threshold exceedances. Multivariate models, copulas, and dependence measures. Risk aggregation.",
+    "prerequisites": {
+      "text": "(MATH 323 or MATH 356 or equivalent) and (MATH 324 or MATH 357 or equivalent)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 323",
+              "MATH 356"
+            ]
+          },
+          {
+            "or": [
+              "MATH 324",
+              "MATH 357"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 511",
+    "subject": "MATH",
+    "number": "511",
+    "title": "Analysis of Categorical Data",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Probability distributions for categorical data, Analysis of 2X2 contingency tables, Multiway contingency tables, The Logistic regression, Logistic regression for categorical predictors, Logit models for nominal and ordinal responses, Log-linear models and modelling ordinal associations in contingency tables, Unsupervised learning techniques for categorical data, Non Linear Principal component analysis, Applications of unsupervised learning techniques using R, Item Response Theory, Rasch model. Some topics may be included or excluded as the time permits.",
+    "prerequisites": {
+      "text": "(MATH 208 or equivalent) and (MATH 324 or MATH 357) and (MATH 423 or MATH 533 or equivalent).",
+      "tree": {
+        "and": [
+          "MATH 208",
+          {
+            "or": [
+              "MATH 324",
+              "MATH 357"
+            ]
+          },
+          {
+            "or": [
+              "MATH 423",
+              "MATH 533"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 517",
+    "subject": "MATH",
+    "number": "517",
+    "title": "Honours Linear Optimization",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Honours level introduction to linear optimization and its applications: duality theory, fundamental theorem, sensitivity analysis, convexity, simplex algorithm, interiorpoint methods, quadratic optimization, applications in game theory.",
+    "prerequisites": {
+      "text": "COMP 202, and MATH 223 or MATH 236 and MATH 314 or equivalent.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "COMP 202",
+              "MATH 223"
+            ]
+          },
+          {
+            "and": [
+              "MATH 236",
+              "MATH 314"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 417 or MATH 487.",
+      "excludes": [
+        "MATH 417",
+        "MATH 487"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 518",
+    "subject": "MATH",
+    "number": "518",
+    "title": "Introduction to Algebraic Geometry",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Affine varieties. Radical ideals and Hilbert's Nullstellensatz. The Zariski topology. Irreducible decomposition. Dimension. Tangent spaces, smoothness and singularities. Projective spaces and projective varieties. Regular functions and morphisms. Rational maps and indeterminacy. Blowing up. Divisors and linear systems. Projective curves.",
+    "prerequisites": {
+      "text": "MATH 456 or permission of the instructor.",
+      "tree": "MATH 456",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Some familiarity with rings, ideals, and multivariable calculus is expected."
+    ]
+  },
+  {
+    "code": "MATH 523",
+    "subject": "MATH",
+    "number": "523",
+    "title": "Generalized Linear Models",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exponential families, link functions. Inference and parameter estimation for generalized linear models; model selection using analysis of deviance. Residuals. Contingency table analysis, logistic regression, multinomial regression, Poisson regression, log-linear models. Multinomial models. Overdispersion and Quasilikelihood. Applications to experimental and observational data.",
+    "prerequisites": {
+      "text": "MATH 423 or MATH 533 or EPIB 697.",
+      "tree": {
+        "or": [
+          "MATH 423",
+          "MATH 533",
+          "EPIB 697"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 524",
+    "subject": "MATH",
+    "number": "524",
+    "title": "Nonparametric Statistics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Distribution free procedures for 2-sample problem: Wilcoxon rank sum, Siegel-Tukey, Smirnov tests. Shift model: power and estimation. Single sample procedures: Sign, Wilcoxon signed rank tests. Nonparametric ANOVA: Kruskal-Wallis, Friedman tests. Association: Spearman's rank correlation, Kendall's tau. Goodness of fit: Pearson's chi-square, likelihood ratio, Kolmogorov-Smirnov tests. Statistical software packages used.",
+    "prerequisites": {
+      "text": "MATH 324 or equivalent",
+      "tree": "MATH 324",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 424",
+      "excludes": [
+        "MATH 424"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 525",
+    "subject": "MATH",
+    "number": "525",
+    "title": "Sampling Theory and Applications",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Simple random sampling, domains, ratio and regression estimators, superpopulation models, stratified sampling, optimal stratification, cluster sampling, sampling with unequal probabilities, multistage sampling, complex surveys, nonresponse.",
+    "prerequisites": {
+      "text": "MATH 324 or equivalent",
+      "tree": "MATH 324",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 425",
+      "excludes": [
+        "MATH 425"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 526",
+    "subject": "MATH",
+    "number": "526",
+    "title": "Lifetime Data Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In-depth study of survival analysis, covering foundational concepts and advanced techniques in time-to-event data analysis. Exploration of censoring and truncation, survival and hazard functions, and nonparametric methods like the Kaplan-Meier estimator. Core topics include hypothesis testing for survival distributions, parametric and semiparametric modeling, and covariate inclusion through the Cox proportional hazards model. Emphasis is placed on model diagnostics, validation, and variable selection techniques, including best-subset selection, LASSO, and nonconcave penalized likelihood approaches. Practical applications and hands-on analysis using R for survival data in research and applied settings.",
+    "prerequisites": {
+      "text": "MATH 208 and (MATH 324 or MATH 357).",
+      "tree": {
+        "and": [
+          "MATH 208",
+          {
+            "or": [
+              "MATH 324",
+              "MATH 357"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Some background in multiple linear regression is recommended (e.g., MATH 204, MATH 423, or MATH 533), but not required."
+    ]
+  },
+  {
+    "code": "MATH 527",
+    "subject": "MATH",
+    "number": "527",
+    "title": "Statistical Data Science Practicum",
+    "credits": 6,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The holistic skills required for doing statistical data science in practice. Data science life cycle from a statistics-centric perspective and from the perspective of a statistician working in the larger data science environment. Group-based projects with industry, government, or university partners. Statistical collaboration and consulting conducted in coordination with the Data Science Solutions Hub (DaS^2H) of the Computational and Data Systems Initiative (CDSI).",
+    "prerequisites": {
+      "text": "MATH 324; MATH 223 ; MATH 208",
+      "tree": {
+        "and": [
+          "MATH 324",
+          "MATH 223",
+          "MATH 208"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 423",
+      "tree": "MATH 423",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "No credit will be given for this course unless both MATH 527D1 and MATH527D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MATH 527D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MATH 527D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MATH 533",
+    "subject": "MATH",
+    "number": "533",
+    "title": "Regression and Analysis of Variance",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Multivariate normal and chi-squared distributions; quadratic forms. Multiple linear regression estimators and their properties. General linear hypothesis tests. Prediction and confidence intervals. Asymptotic properties of least squares estimators. Weighted least squares. Variable selection and regularization. Selected advanced topics in regression. Applications to experimental and observational data.",
+    "prerequisites": {
+      "text": "MATH 357, MATH 247 or MATH 251.",
+      "tree": {
+        "and": [
+          "MATH 357",
+          {
+            "or": [
+              "MATH 247",
+              "MATH 251"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 537",
+    "subject": "MATH",
+    "number": "537",
+    "title": "Honours Mathematical Models in Biology",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The formulation and treatment of realistic mathematical models describing biological phenomena through such qualitative and quantitative mathematical techniques as local and global stability theory, bifurcation analysis, phase plane analysis, and numerical simulation. Concrete and detailed examples will be drawn from molecular, cellular and population biology and mammalian physiology.",
+    "prerequisites": {
+      "text": "MATH 325, MATH 376, and COMP 202 or COMP 204 or COMP 208 or equivalent.",
+      "tree": {
+        "and": [
+          "MATH 325",
+          "MATH 376",
+          {
+            "or": [
+              "COMP 202",
+              "COMP 204",
+              "COMP 208"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 437.",
+      "excludes": [
+        "MATH 437"
+      ]
+    },
+    "notes": [
+      "This course is offered in the winter semester."
+    ]
+  },
+  {
+    "code": "MATH 545",
+    "subject": "MATH",
+    "number": "545",
+    "title": "Introduction to Time Series Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Stationary processes; estimation and forecasting of ARMA models; non-stationary and seasonal models; state-space models; financial time series models; multivariate time series models; introduction to spectral analysis; long memory models.",
+    "prerequisites": {
+      "text": "MATH 324 or MATH 357 or equivalent",
+      "tree": {
+        "or": [
+          "MATH 324",
+          "MATH 357"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 547",
+    "subject": "MATH",
+    "number": "547",
+    "title": "Stochastic Processes",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Conditional probability and conditional expectation, generating functions. Branching processes and random walk. Markov chains:transition matrices, classification of states, ergodic theorem, examples. Birth and death processes, queueing theory.",
+    "prerequisites": {
+      "text": "MATH 356 and either MATH 247 or MATH 251.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MATH 356",
+              "MATH 247"
+            ]
+          },
+          "MATH 251"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 447.",
+      "excludes": [
+        "MATH 447"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 550",
+    "subject": "MATH",
+    "number": "550",
+    "title": "Combinatorics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Enumerative combinatorics: inclusion-exclusion, generating functions, partitions, lattices and Moebius inversion. Extremal combinatorics: Ramsey theory, Turan's theorem, Dilworth's theorem and extremal set theory. Graph theory: planarity and colouring. Applications of combinatorics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Intended primarily for honours and graduate students in mathematics."
+    ]
+  },
+  {
+    "code": "MATH 552",
+    "subject": "MATH",
+    "number": "552",
+    "title": "Combinatorial Optimization",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Algorithmic and structural approaches in combinatorial optimization with a focus upon theory and applications. Topics include: polyhedral methods, network optimization, the ellipsoid method, graph algorithms, matroid theory and submodular functions.",
+    "prerequisites": {
+      "text": "MATH 350 or COMP 362 (or equivalent).",
+      "tree": {
+        "or": [
+          "MATH 350",
+          "COMP 362"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 552.",
+      "excludes": [
+        "COMP 552"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 553",
+    "subject": "MATH",
+    "number": "553",
+    "title": "Algorithmic Game Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundations of game theory. Computation aspects of equilibria. Theory of auctions and modern auction design. General equilibrium theory and welfare economics. Algorithmic mechanism design. Dynamic games.",
+    "prerequisites": {
+      "text": "COMP 362 or MATH 350 or MATH 454 or MATH 487, or instructor permission.",
+      "tree": {
+        "or": [
+          "COMP 362",
+          "MATH 350",
+          "MATH 454",
+          "MATH 487"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken COMP 553",
+      "excludes": [
+        "COMP 553"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 555",
+    "subject": "MATH",
+    "number": "555",
+    "title": "Fluid Dynamics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Kinematics. Dynamics of general fluids. Inviscid fluids, Navier-Stokes equations. Exact solutions of Navier-Stokes equations. Low and high Reynolds number flow.",
+    "prerequisites": {
+      "text": "MATH 315 and MATH 319 or equivalent",
+      "tree": {
+        "and": [
+          "MATH 315",
+          "MATH 319"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 556",
+    "subject": "MATH",
+    "number": "556",
+    "title": "Mathematical Statistics 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Distribution theory, stochastic models and multivariate transformations. Families of distributions including location-scale families, exponential families, convolution families, exponential dispersion models and hierarchical models. Concentration inequalities. Characteristic functions. Convergence in probability, almost surely, in Lp and in distribution. Laws of large numbers and Central Limit Theorem. Stochastic simulation.",
+    "prerequisites": {
+      "text": "MATH 323, MATH 356, or equivalent",
+      "tree": {
+        "and": [
+          "MATH 323",
+          "MATH 356"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 557",
+    "subject": "MATH",
+    "number": "557",
+    "title": "Mathematical Statistics 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Sufficiency, minimal and complete sufficiency, ancillarity. Fisher and Kullback-Leibler information. Elements of decision theory. Theory of estimation and hypothesis testing from the Bayesian and frequentist perspective. Elements of asymptotic statistics including large-sample behaviour of maximum likelihood estimators, likelihood-ratio tests, and chi-squared goodness-of-fit tests.",
+    "prerequisites": {
+      "text": "MATH 556 and either MATH 324, MATH 357 or equivalent",
+      "tree": {
+        "and": [
+          "MATH 556",
+          "MATH 324",
+          "MATH 357"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 558",
+    "subject": "MATH",
+    "number": "558",
+    "title": "Design of Experiments",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to concepts in statistically designed experiments. Randomization and replication. Completely randomized designs. Simple linear model and analysis of variance. Introduction to blocking. Orthogonal block designs. Models and analysis for block designs. Factorial designs and their analysis. Row-column designs. Latin squares. Model and analysis for fixed row and column effects. Split-plot designs, model and analysis. Relations and operations on factors. Orthogonal factors. Orthogonal decomposition. Orthogonal plot structures. Hasse diagrams. Applications to real data and ethical issues.",
+    "prerequisites": {
+      "text": "MATH 223, MATH 236, MATH 247, MATH 251, or equivalent. MATH 208 or equivalent. MATH 324, MATH 357, or equivalent.",
+      "tree": {
+        "and": [
+          "MATH 223",
+          "MATH 236",
+          "MATH 247",
+          "MATH 251",
+          "MATH 208",
+          "MATH 324",
+          "MATH 357"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 559",
+    "subject": "MATH",
+    "number": "559",
+    "title": "Bayesian Theory and Methods",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Subjective probability, Bayesian statistical inference and decision making, de Finetti’s representation. Bayesian parametric methods, optimal decisions, conjugate models, methods of prior specification and elicitation, approximation methods. Hierarchical models. Computational approaches to inference, Markov chain Monte Carlo methods, Metropolis—Hastings. Nonparametric Bayesian inference.",
+    "prerequisites": {
+      "text": "MATH 324, MATH 357, MATH 557, or equivalent, and MATH 208 or equivalent.",
+      "tree": {
+        "and": [
+          "MATH 324",
+          "MATH 357",
+          "MATH 557",
+          "MATH 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 562",
+    "subject": "MATH",
+    "number": "562",
+    "title": "Theory of Machine Learning",
+    "credits": null,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Concentration inequalities, PAC model, VC dimension, Rademacher complexity, convex optimization, gradient descent, boosting, kernels, support vector machines, regression and learning bounds. Further topics selected from: Gaussian processes, online learning, regret bounds, basic neural network theory.",
+    "prerequisites": {
+      "text": "MATH 462 or COMP 451 or (COMP 551, MATH 222, MATH 223 and MATH 324) or ECSE 551.",
+      "tree": {
+        "or": [
+          "MATH 462",
+          "COMP 451",
+          {
+            "and": [
+              "COMP 551",
+              "MATH 222",
+              "MATH 223",
+              "MATH 324"
+            ]
+          },
+          "ECSE 551"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 562. Not open to students who have taken COMP 599 when the topic was \"Statistical Learning Theory\" or \"Mathematical Topics for Machine Learning\". Not open to students who have taken COMP 598 when the topic was\"Mathematical Foundations of Machine Learning\".",
+      "excludes": [
+        "COMP 562",
+        "COMP 598",
+        "COMP 599"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 563",
+    "subject": "MATH",
+    "number": "563",
+    "title": "Honours Convex Optimization ",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Honours level introduction to convex analysis and convex optimization: Convex sets and functions, subdifferential calculus, conjugate functions, Fenchel duality, proximal calculus. Subgradient methods, proximal-based methods. Conditional gradient method, ADMM. Applications including data classification, network-flow problems, image processing, convex feasibility problems, DC optimization, sparse optimization, and compressed sensing.",
+    "prerequisites": {
+      "text": "MATH 223 or MATH 247 or MATH 236 or MATH 251. MATH 248 or MATH 314 or MATH 358. MATH 243 or MATH 255. COMP 202 or COMP 204 or COMP 208 or equivalent.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 223",
+              "MATH 247",
+              "MATH 236",
+              "MATH 251"
+            ]
+          },
+          {
+            "or": [
+              "MATH 248",
+              "MATH 314",
+              "MATH 358"
+            ]
+          },
+          {
+            "or": [
+              "MATH 243",
+              "MATH 255"
+            ]
+          },
+          {
+            "or": [
+              "COMP 202",
+              "COMP 204",
+              "COMP 208"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 463.",
+      "excludes": [
+        "MATH 463"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 564",
+    "subject": "MATH",
+    "number": "564",
+    "title": "Real Analysis and Measure Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Abstract theory of measure and integration: Borel-Cantelli lemmas, regularity of measures, product measures, Fubini-Tonelli theorem, signed measures, Hahn and Jordan decompositions, Radon-Nikodym theorem, differentiation in R^n.",
+    "prerequisites": {
+      "text": "MATH 255",
+      "tree": "MATH 255",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 565",
+    "subject": "MATH",
+    "number": "565",
+    "title": "Functional Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of the basic theory of Banach and Hilbert spaces, L^p spaces, open mapping theorem,closed graph theorem, Banach-Steinhaus theorem, Hahn-Banach theorem, weak and weak-* convergence, weak convergence of measures, Riesz representation theorems, spectral theorem for compact self-adjoint operators, Fredholm theory, spectral theorem for bounded self-adjoint operators, Fourier series and integrals, additional topics.",
+    "prerequisites": {
+      "text": "MATH 454 or MATH 564.",
+      "tree": {
+        "or": [
+          "MATH 454",
+          "MATH 564"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 566",
+    "subject": "MATH",
+    "number": "566",
+    "title": "Advanced Complex Analysis and Riemann Surfaces",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Brief review of holomorphicity and contour integration. Analytic continuation and the monodromy theorem, normal families. Riemann surfaces; elliptic functions; Picard theorem. Riemann zeta function and prime number theorem. Relations with harmonic analysis; the uniformization theorem. Time permitting, additional material such as: Hodge decomposition, divisors, the Riemann Roch formula, or rudiments of moduli spaces.",
+    "prerequisites": {
+      "text": "MATH 249 and MATH 455",
+      "tree": {
+        "and": [
+          "MATH 249",
+          "MATH 455"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 568",
+    "subject": "MATH",
+    "number": "568",
+    "title": "Lie Groups",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An introduction to Lie groups, Lie algebras and their representations. Topics include: definitions and basic examples of Lie groups, Lie algebras and the exponential map, compact Lie groups, root systems, representation theory.",
+    "prerequisites": {
+      "text": "MATH 454 and MATH 456.",
+      "tree": {
+        "and": [
+          "MATH 454",
+          "MATH 456"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 569",
+    "subject": "MATH",
+    "number": "569",
+    "title": "Fourier Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The fundamentals of Fourier Analysis, focusing on Fourier series and transforms. Topics include summability in norm, pointwise convergence, Fourier coefficient magnitude, L^2 theory, absolutely convergent series, convergence/divergence at points, and sets of divergence. Interpolation is covered through Riesz-Thorin and Hausdorff-Young theorems and lacunary series. Fourier transforms are studied for L^1, L^2, L^p spaces, tempered distributions, almost-periodic functions, and Paley-Wiener theorems.",
+    "prerequisites": {
+      "text": "MATH 454 or (MATH 255 and some familiarity with Lebesgue Measure) and (MATH 249 or MATH 316).",
+      "tree": {
+        "or": [
+          "MATH 454",
+          {
+            "and": [
+              "MATH 255",
+              {
+                "or": [
+                  "MATH 249",
+                  "MATH 316"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 570",
+    "subject": "MATH",
+    "number": "570",
+    "title": "Higher Algebra 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Free groups and free products of groups. Categories and functors. Universal properties and adjoint functors. Limits. Introduction to commutative algebra. Tensor products. Localization. Noetherian rings and Hilbert’s basis theorem. Hilbert's Nullstellensatz.",
+    "prerequisites": {
+      "text": "MATH 456 or permission of the instructor.",
+      "tree": "MATH 456",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 571",
+    "subject": "MATH",
+    "number": "571",
+    "title": "Higher Algebra 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Flat, projective, and injective modules. Introduction to homological algebra. Ext and Tor. Group cohomology. Semi-simple rings and modules. The Artin-Wedderburn Theorem.",
+    "prerequisites": {
+      "text": "MATH 570 or permission of the instructor.",
+      "tree": "MATH 570",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 574",
+    "subject": "MATH",
+    "number": "574",
+    "title": "Dynamical Systems",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Dynamical systems, phase space, limit sets. Review of linear systems. Stability. Liapunov functions. Stable manifold and Hartman-Grobman theorems. Local bifurcations, Hopf bifurcations, global bifurcations. Poincare Sections. Quadratic maps: chaos, symbolic dynamics, topological conjugacy. Sarkovskii's theorem, periodic doubling route to chaos. Smale Horseshoe.",
+    "prerequisites": {
+      "text": "MATH 325 and MATH 454 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MATH 325",
+          "MATH 454"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 576",
+    "subject": "MATH",
+    "number": "576",
+    "title": "Geometry and Topology 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic point-set topology, including connectedness, compactness, product spaces, separation axioms, metric spaces. The fundamental group and covering spaces. Simplicial complexes. Singular and simplicial homology. Part of the material of MATH 577 may be covered as well.",
+    "prerequisites": {
+      "text": "MATH 454",
+      "tree": "MATH 454",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 577",
+    "subject": "MATH",
+    "number": "577",
+    "title": "Geometry and Topology 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic properties of differentiable manifolds, tangent and cotangent bundles, differential forms, de Rham cohomology, integration of forms, Riemannian metrics, geodesics, Riemann curvature.",
+    "prerequisites": {
+      "text": "MATH 576",
+      "tree": "MATH 576",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 578",
+    "subject": "MATH",
+    "number": "578",
+    "title": "Numerical Analysis 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Development, analysis and effective use of numerical methods to solve problems arising in applications. Topics include direct and iterative methods for the solution of linear equations (including preconditioning), eigenvalue problems, interpolation, approximation, quadrature, solution of nonlinear systems.",
+    "prerequisites": {
+      "text": "MATH 247 or MATH 251; and MATH 387; or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 247",
+              "MATH 251"
+            ]
+          },
+          "MATH 387"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 579",
+    "subject": "MATH",
+    "number": "579",
+    "title": "Numerical Differential Equations",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Numerical solution of initial and boundary value problems in science and engineering: ordinary differential equations; partial differential equations of elliptic, parabolic and hyperbolic type. Topics include Runge Kutta and linear multistep methods, adaptivity, finite elements, finite differences, finite volumes, spectral methods.",
+    "prerequisites": {
+      "text": "MATH 475 and MATH 387 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MATH 475",
+          "MATH 387"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 580",
+    "subject": "MATH",
+    "number": "580",
+    "title": "Advanced Partial Differential Equations 1 ",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Classification and wellposedness of linear and nonlinear partial differential equations; energy methods; Dirichlet principle. Brief introduction to distributions; weak derivatives. Fundamental solutions and Green's functions for Poisson equation, regularity, harmonic functions, maximum principle. Representation formulae for solutions of heat and wave equations, Duhamel's principle. Method of Characteristics, scalar conservation laws, shocks.",
+    "prerequisites": {
+      "text": "MATH 475 or equivalent",
+      "tree": "MATH 475",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 581",
+    "subject": "MATH",
+    "number": "581",
+    "title": "Advanced Partial Differential Equations 2 ",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Systems of conservation laws and Riemann invariants. Cauchy- Kowalevskaya theorem, powers series solutions. Distributions and transforms. Weak solutions; introduction to Sobolev spaces with applications. Elliptic equations, Fredholm theory and spectra of elliptic operators. Second order parabolic and hyperbolic equations. Further advanced topics may be included.",
+    "prerequisites": {
+      "text": "MATH 455 or equivalent, MATH 580.",
+      "tree": {
+        "and": [
+          "MATH 455",
+          "MATH 580"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 582",
+    "subject": "MATH",
+    "number": "582",
+    "title": "Algebraic Topology",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "CW-complexes, cellular approximation theorem. Homotopy groups, long exact sequence for a fiber bundle. Whitehead theorem. Freudenthal suspension theorem. Singular and cellular homology and cohomology. Hurewicz theorem. Mayer-Vietoris sequence. Universal coefficients theorem. Cup product, Kunneth formula, Poincare duality.",
+    "prerequisites": {
+      "text": "MATH 576 or equivalent or permission of instructor.",
+      "tree": "MATH 576",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course to be taught alternate years - Winter Semester"
+    ]
+  },
+  {
+    "code": "MATH 583",
+    "subject": "MATH",
+    "number": "583",
+    "title": "Geometric Group Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Actions on trees. Cayley graphs. The word problem. Hyperbolic groups. Quasi-isometry invariants.",
+    "prerequisites": {
+      "text": "MATH 456 and MATH 576 or equivalent or permission of instructor.",
+      "tree": {
+        "and": [
+          "MATH 456",
+          "MATH 576"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course offered alternate years in Fall."
+    ]
+  },
+  {
+    "code": "MATH 587",
+    "subject": "MATH",
+    "number": "587",
+    "title": "Advanced Probability Theory 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Probability spaces. Random variables and their expectations. Convergence of random variables in Lp. Independence and conditional expectation. Introduction to Martingales. Limit theorems including Kolmogorov's Strong Law of Large Numbers.",
+    "prerequisites": {
+      "text": "MATH 356 and MATH 255 or MATH 243 or equivalent.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MATH 356",
+              "MATH 255"
+            ]
+          },
+          "MATH 243"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "MATH 589",
+    "subject": "MATH",
+    "number": "589",
+    "title": "Advanced Probability Theory 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Characteristic functions: elementary properties, inversion formula, uniqueness, convolution and continuity theorems. Weak convergence. Central limit theorem. Additional topic(s) chosen (at discretion of instructor) from: Martingale Theory; Brownian motion, stochastic calculus.",
+    "prerequisites": {
+      "text": "MATH 587 or equivalent",
+      "tree": "MATH 587",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 590",
+    "subject": "MATH",
+    "number": "590",
+    "title": "Advanced Set Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Students will attend the lectures and fulfill all the requirements of MATH 488. In addition, they will complete a project on an advanced topic agreed on with the instructor. Topics may be chosen from combinatorial set theory, Goedel's constructible sets, forcing, large cardinals and descriptive set theory.",
+    "prerequisites": {
+      "text": "MATH 251 or MATH 255 or permission of instructor.",
+      "tree": {
+        "or": [
+          "MATH 251",
+          "MATH 255"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 488.",
+      "excludes": [
+        "MATH 488"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 591",
+    "subject": "MATH",
+    "number": "591",
+    "title": "Model Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Structures, theories, and definable sets; elementary equivalence and elementary embeddings; compactness and Löwenheim– Skolem theorems; types, the omitting types theorem, and saturation; categoricity and the Ryll-Nardzewski theorem; quantifier elimination and applications to algebra; ultraproducts; homogeneous structures and Fraïssé theory; infinitary logics. Optional topics: indiscernibles and Morley's theorem; stability; o-minimality; elimination of imaginaries.",
+    "prerequisites": {
+      "text": "MATH 318 or MATH 488 or MATH 456 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "MATH 318",
+          "MATH 488",
+          "MATH 456"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 592",
+    "subject": "MATH",
+    "number": "592",
+    "title": "Descriptive Set Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Polish spaces; universality of the Hilbert cube, the Cantor space, and the Baire space; the Cantor–Bendixson theorem; Baire spaces; the Borel hierarchy; change of topology techniques; infinite games; analytic and co-analytic sets; analytic separation; the Luzin–Souslin theorem; the Borel and measure isomorphism theorems; regularity properties of analytic sets; uniformization; the projective hierarchy. Optional topics: Polish groups and their actions; definable equivalence relations and graphs; effective descriptive set theory.",
+    "prerequisites": {
+      "text": "MATH 454 or MATH 451 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "MATH 454",
+          "MATH 451"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MATH 594",
+    "subject": "MATH",
+    "number": "594",
+    "title": "Topics in Mathematics and Statistics ",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers a topic in mathematics and/or statistics.",
+    "prerequisites": {
+      "text": "At least 30 credits in required or complementary courses from the Honours Mathematics, Honours Applied Mathematics, or Honours Probability and Statistics programs. Additional prerequisites may be imposed by the Department of Mathematics and Statistics depending on the nature of the topic.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires permission of the Department of Mathematics and Statistics",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 595",
+    "subject": "MATH",
+    "number": "595",
+    "title": "Topics in Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course covers a topic in analysis.",
+    "prerequisites": {
+      "text": "At least 30 credits in required or complementary courses from the Honours in Mathematics program including MATH 454 or MATH 366 or MATH 466. Additional prerequisites may be imposed by the Department of Mathematics and Statistics depending on the nature of the topic.",
+      "tree": {
+        "or": [
+          "MATH 454",
+          "MATH 366",
+          "MATH 466"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires permission of the Department of Mathematics and Statistics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 596",
+    "subject": "MATH",
+    "number": "596",
+    "title": "Topics in Algebra and Number Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers a topic in algebra and/or number theory.",
+    "prerequisites": {
+      "text": "At least 30 credits in required or complementary courses from the Honours in Mathematics program including MATH 456 or MATH 377. Additional prerequisites may be imposed by the Department of Mathematics and Statistics depending on the nature of the topic.",
+      "tree": {
+        "or": [
+          "MATH 456",
+          "MATH 377"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires permission of the Department of Mathematics and Statistics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 597",
+    "subject": "MATH",
+    "number": "597",
+    "title": "Topics in Applied Mathematics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course covers a topic in applied mathematics.",
+    "prerequisites": {
+      "text": "At least 30 credits in required or complementary courses from the Honours in Applied Mathematics program. Additional prerequisites may be imposed by the Department of Mathematics and Statistics depending on the nature of the topic.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires permission of the Department of Mathematics and Statistics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 598",
+    "subject": "MATH",
+    "number": "598",
+    "title": "Topics in Probability & Statistics",
+    "credits": null,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course covers a topic in probability and/or statistics.",
+    "prerequisites": {
+      "text": "At least 30 credits in required or complementary courses from the Honours in Probability and Statistics program including MATH 356. Additional prerequisites may be imposed by the Department of Mathematics and Statistics depending on the nature of the topic.",
+      "tree": "MATH 356",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires permission of the Department of Mathematics and Statistics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 599",
+    "subject": "MATH",
+    "number": "599",
+    "title": "Topics in Geometry and Topology",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course covers a topic in geometry and/or topology.",
+    "prerequisites": {
+      "text": "At least 30 credits in required or complementary courses from the Honours in Mathematics program including MATH 454 and MATH 458. Additional prerequisites may be imposed by the Department of Mathematics and Statistics depending on the nature of the topic.",
+      "tree": {
+        "and": [
+          "MATH 454",
+          "MATH 458"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires permission of the Department of Mathematics and Statistics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 600",
+    "subject": "MATH",
+    "number": "600",
+    "title": "Master's Thesis Research 1",
+    "credits": 6,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 640",
+      "excludes": [
+        "MATH 640"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 601",
+    "subject": "MATH",
+    "number": "601",
+    "title": "Master's Thesis Research 2",
+    "credits": 6,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 602",
+    "subject": "MATH",
+    "number": "602",
+    "title": "Master's Research Preparation",
+    "credits": 6,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students with appropriate background.",
+      "excludes": []
+    },
+    "notes": [
+      "These credits can only be used to fulfill course credit requirement in the accelerated stream - not in the regular program or in any other graduate programs in mathematics and statistics."
+    ]
+  },
+  {
+    "code": "MATH 604",
+    "subject": "MATH",
+    "number": "604",
+    "title": "Master's Thesis Research 3",
+    "credits": 6,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 605",
+    "subject": "MATH",
+    "number": "605",
+    "title": "Master's Thesis Research 4",
+    "credits": 6,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 640",
+    "subject": "MATH",
+    "number": "640",
+    "title": "Project 1",
+    "credits": 8,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Project research under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 600",
+      "excludes": [
+        "MATH 600"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 641",
+    "subject": "MATH",
+    "number": "641",
+    "title": "Project 2",
+    "credits": 8,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Project research under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 666",
+    "subject": "MATH",
+    "number": "666",
+    "title": "Seminar Mathematics and Statistics 1",
+    "credits": 2,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study on an advanced topic in mathematics or statistics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval required.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 667",
+    "subject": "MATH",
+    "number": "667",
+    "title": "Seminar Mathematics and Statistics 2",
+    "credits": 2,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study on an advanced topic in mathematics or statistics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval required.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 671",
+    "subject": "MATH",
+    "number": "671",
+    "title": "Applied Stochastic Processes",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Discrete parameter Markov chains, including branching processes and random walks. Limit theorems and ergodic properties of Markov chains. Continuous parameter Markov chains, including birth and death process. Topics selected from the following areas: renewal processes, Brownian motion, statistical inference for stochastic processes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 680",
+    "subject": "MATH",
+    "number": "680",
+    "title": "Computation Intensive Statistics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "General introduction to computational methods in statistics; optimization methods; EM algorithm; random number generation and simulations; bootstrap, jackknife, cross-validation, resampling and permutation; Monte Carlo methods: Markov chain Monte Carlo and sequential Monte Carlo; computation in the R language.",
+    "prerequisites": {
+      "text": "MATH 556, MATH 557 or permission of instructor",
+      "tree": {
+        "and": [
+          "MATH 556",
+          "MATH 557"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 682",
+    "subject": "MATH",
+    "number": "682",
+    "title": "Statistical Inference",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Conditional probability and Bayes’ Theorem, discrete and continuous univariate and multivariate distributions, conditional distributions, moments, independence of random variables. Modes of convergence, weak law of large numbers, central limit theorem. Point and interval estimation. Likelihood inference. Bayesian estimation and inference. Hypothesis testing.",
+    "prerequisites": {
+      "text": "MATH 141 or equivalent",
+      "tree": "MATH 141",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 324, MATH 357, MATH 557. Intended for graduate students working on quantitative research questions related to life sciences who have had differential and integral calculus.",
+      "excludes": [
+        "MATH 324",
+        "MATH 357",
+        "MATH 557"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 686",
+    "subject": "MATH",
+    "number": "686",
+    "title": "Survival Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Parametric survival models. Nonparametric analysis: Kaplan-Meier estimator and its properties. Covariates with emphasis on Cox's proportional hazards model. Marginal and partial likelihood. Logrank tests. Residual analysis. Homework assignments a mixture of theory and applications. In-class discussion of data tests.",
+    "prerequisites": {
+      "text": "MATH 556, MATH 557 or permission of instructor",
+      "tree": {
+        "and": [
+          "MATH 556",
+          "MATH 557"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 687",
+    "subject": "MATH",
+    "number": "687",
+    "title": "Reading Course in Mathematical Logic",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 689",
+    "subject": "MATH",
+    "number": "689",
+    "title": "Reading Course in Algebra",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 690",
+    "subject": "MATH",
+    "number": "690",
+    "title": "Reading Course in Number Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 691",
+    "subject": "MATH",
+    "number": "691",
+    "title": "Reading Course in Geometry/Topology",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 693",
+    "subject": "MATH",
+    "number": "693",
+    "title": "Reading Course in Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 695",
+    "subject": "MATH",
+    "number": "695",
+    "title": "Reading Course in Applied Mathematics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 697",
+    "subject": "MATH",
+    "number": "697",
+    "title": "Reading Course in Statistics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 698",
+    "subject": "MATH",
+    "number": "698",
+    "title": "Reading Course in Probability",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval required. May not be enrolled in the following level: Undergraduate. May not be enrolled in one of the following Colleges: School of Continuing Studies, Faculty of Dentistry, Faculty of Medicine.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MATH 699",
+    "subject": "MATH",
+    "number": "699",
+    "title": "Reading Course in Discrete Mathematics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A highly specialized study.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 701",
+    "subject": "MATH",
+    "number": "701",
+    "title": "Ph.D. Qualifying Examination ",
+    "credits": 0,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An oral examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 704",
+    "subject": "MATH",
+    "number": "704",
+    "title": "Advanced Topics in Mathematical Logic",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in mathematical logic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 706",
+    "subject": "MATH",
+    "number": "706",
+    "title": "Advanced Topics in Geometry and Topology 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in geometry and topology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 707",
+    "subject": "MATH",
+    "number": "707",
+    "title": "Advanced Topics in Geometry and Topology 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in geometry and topology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 720",
+    "subject": "MATH",
+    "number": "720",
+    "title": "Advanced Topics in Algebra 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers an advanced topic in some branch of algebra.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 721",
+    "subject": "MATH",
+    "number": "721",
+    "title": "Advanced Topics in Algebra 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of algebra.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 722",
+    "subject": "MATH",
+    "number": "722",
+    "title": "Advanced Topics in Algebraic Geometry",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of algebra.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 723",
+    "subject": "MATH",
+    "number": "723",
+    "title": "Advanced Topics in Group Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of algebra.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 726",
+    "subject": "MATH",
+    "number": "726",
+    "title": "Advanced Topics in Number Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in number theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 727",
+    "subject": "MATH",
+    "number": "727",
+    "title": "Advanced Topics in Arithmetic Geometry",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in number theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 740",
+    "subject": "MATH",
+    "number": "740",
+    "title": "Advanced Topics in Analysis 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 741",
+    "subject": "MATH",
+    "number": "741",
+    "title": "Advanced Topics in Analysis 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 742",
+    "subject": "MATH",
+    "number": "742",
+    "title": "Advanced Topics in Mathematical Physics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 743",
+    "subject": "MATH",
+    "number": "743",
+    "title": "Advanced Topics in Microlocal Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 744",
+    "subject": "MATH",
+    "number": "744",
+    "title": "Advanced Topics in Spectral Theory",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in some branch of analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 756",
+    "subject": "MATH",
+    "number": "756",
+    "title": "Advanced Topics in Optimization",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in Optimization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 758",
+    "subject": "MATH",
+    "number": "758",
+    "title": "Advanced Topics in Discrete Mathematics",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers an advanced topic in Optimization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 761",
+    "subject": "MATH",
+    "number": "761",
+    "title": "Advanced Topics in Applied Mathematics 1",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course covers an advanced topic in applied mathematics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 762",
+    "subject": "MATH",
+    "number": "762",
+    "title": "Advanced Topics in Applied Mathematics 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in applied mathematics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 763",
+    "subject": "MATH",
+    "number": "763",
+    "title": "Advanced Topics in Differential Equations",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in applied mathematics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 764",
+    "subject": "MATH",
+    "number": "764",
+    "title": "Advanced Topics in Partial Differential Equations",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in applied mathematics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 765",
+    "subject": "MATH",
+    "number": "765",
+    "title": "Advanced Topics in Numerical Analysis",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic in applied mathematics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 782",
+    "subject": "MATH",
+    "number": "782",
+    "title": "Advanced Topics in Statistics 1",
+    "credits": null,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course covers an advanced topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 783",
+    "subject": "MATH",
+    "number": "783",
+    "title": "Advanced Topics in Statistics 2",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers an advanced topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MATH 784",
+    "subject": "MATH",
+    "number": "784",
+    "title": "Advanced Topics in Probability",
+    "credits": 4,
+    "offeredBy": "Mathematics and Statistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers an advanced topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "code": "MUCT 235",
+    "subject": "MUCT",
+    "number": "235",
+    "title": "Vocal Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of basic singing skills through group voice lessons, lectures, and Choral Lab performances. Emphasis will be on: text production, breathing, projection, clarity of vowels and consonants, the International Phonetic Alphabet, and definition of voice categories. Simple diagnostic teaching skills will be developed through observation of group voice lessons.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUTH 110 or MUTH 111 AND MUSP 129 or MUSP 131 AND MUHL 184 or MUHL 185; or MUTH 151 AND MUSP 140 or MUSP 141 AND MUHL 186 or MUHL 286",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MUTH 110",
+              {
+                "and": [
+                  "MUTH 111",
+                  "MUSP 129"
+                ]
+              },
+              {
+                "and": [
+                  "MUSP 131",
+                  "MUHL 184"
+                ]
+              },
+              "MUHL 185"
+            ]
+          },
+          {
+            "or": [
+              {
+                "and": [
+                  "MUTH 151",
+                  "MUSP 140"
+                ]
+              },
+              {
+                "and": [
+                  "MUSP 141",
+                  "MUHL 186"
+                ]
+              },
+              "MUHL 286"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  },
+  {
+    "code": "MUCT 315",
+    "subject": "MUCT",
+    "number": "315",
+    "title": "Choral Conducting 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The fundamental skills of choral conducting, including baton technique, score reading, and rehearsal procedures. Conducting materials will be selected from representative choral works.",
+    "prerequisites": {
+      "text": "MUTH 211, MUSP 229, MUCT 235 and MUGT 215; or MUTH 250, MUSP 240, MUCT 235 and MUGT 215; or permission of instructor",
+      "tree": {
+        "and": [
+          "MUTH 211",
+          "MUSP 229",
+          "MUCT 235",
+          "MUGT 215",
+          "MUTH 250",
+          "MUSP 240"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  }
+]

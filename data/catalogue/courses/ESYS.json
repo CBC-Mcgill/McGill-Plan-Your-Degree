@@ -1,0 +1,177 @@
+[
+  {
+    "code": "ESYS 104",
+    "subject": "ESYS",
+    "number": "104",
+    "title": "The Earth System",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Earth system science examines the complex interactions among the atmosphere, biosphere, geosphere and hydrosphere. It focuses on physical, chemical, and biological processes that extend over spatial scales ranging from microns to the size of planetary orbits, and spans time scales from fractions of a second to billions of years.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ESYS 200",
+    "subject": "ESYS",
+    "number": "200",
+    "title": "Earth-System Interactions",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics related to climate change, biogeochemical cycles and natural resources are evaluated from an Earth System perspective. Exploration of the scientific literature in targeted areas of Earth system science with a focus on human-Earth interactions. Emphasis is on complex global issues that cross traditional disciplines, and interpreting and communicating academic knowledge derived from Earth system research.",
+    "prerequisites": {
+      "text": "ENVR 200 or permission of instructor.",
+      "tree": "ENVR 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ESYS 300",
+    "subject": "ESYS",
+    "number": "300",
+    "title": "Earth Data Analysis",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An applied introduction to programming and statistical image processing tools used in Earth system science, typically covering linear regression, statistical significance, Fourier analysis, empirical orthogonal function analysis. Use of global remote-sensing and in-situ observations.",
+    "prerequisites": {
+      "text": "ESYS 200 or equivalent.",
+      "tree": "ESYS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ESYS 301",
+    "subject": "ESYS",
+    "number": "301",
+    "title": "Earth System Modelling",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to principal concepts of systems modelling related to Earth system science and environmental science, including simple numerical models, conservation laws of mass, energy, and momentum, discretization of governing differential equations, the stability of numerical schemes, and exploration of the ideas of equilibria, feedbacks, and complexity.",
+    "prerequisites": {
+      "text": "ESYS 200 or ENVR 200 or equivalent.",
+      "tree": {
+        "or": [
+          "ESYS 200",
+          "ENVR 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ESYS 480",
+    "subject": "ESYS",
+    "number": "480",
+    "title": "Honours Research Project",
+    "credits": 6,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Research project supervised by one or more staff members, with the results to be presented in the form of an undergraduate thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration in the Earth System Science Honours program.",
+      "excludes": []
+    },
+    "notes": [
+      "Permission of instructor is required to take this course. A written proposal outlining the studies to be undertaken must be submitted to the undergraduate ESS Student Adviser by September 30 of the U3 year. The proposal will be reviewed by the Adviser. If approved the investigation will be supervised by one or more staff members, and the results will be presented in the form of an undergraduate thesis. The final written report will be worth at least 50% of the final grade. The grading scheme will be agreed upon between the supervisor(s) and student before approval of the ESS Student Adviser.",
+      "Students must register for both ESYS 480D1 and ESYS 480D2",
+      "No credits will be given for this course unless both ESYS 480D1 and ESYS 480D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "ESYS 480D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "ESYS 480D2",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "ESYS 480N1",
+        "credits": 3,
+        "terms": [
+          "Summer 2026"
+        ]
+      },
+      {
+        "code": "ESYS 480N2",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ESYS 500",
+    "subject": "ESYS",
+    "number": "500",
+    "title": "Collaborative Research Project",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The main steps in developing an Earth System Science research project: identifying knowledge gaps using scientific literature, designing a research strategy (observational, analytical or computational), conducting the research, analyzing and synthesizing results, and communicating results as a formal scientific report.",
+    "prerequisites": {
+      "text": "ESYS 301 or permission of the instructor.",
+      "tree": "ESYS 301",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours seminar",
+      "1 hour of lecture plus 2 hours of project per week."
+    ]
+  }
+]

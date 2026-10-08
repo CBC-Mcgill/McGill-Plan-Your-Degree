@@ -1,0 +1,333 @@
+[
+  {
+    "code": "AEMA 100",
+    "subject": "AEMA",
+    "number": "100",
+    "title": "Calculus for Life Sciences",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental concepts of calculus through a systems-based approach relevant to the life sciences. Limits, derivatives, integrals, and infinite series in biological contexts. Applications to population dynamics, pharmacology, physiological modelling, and quantitative agricultural and environmental systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking AEMA 101 and AEMA 102, or equivalent combination.",
+      "excludes": [
+        "AEMA 101",
+        "AEMA 102"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AEMA 101",
+    "subject": "AEMA",
+    "number": "101",
+    "title": "Calculus 1",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of functions and graphs. Limits, continuity, derivative. Differentiation of elementary functions. Antidifferentiation. Applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AEMA 102",
+    "subject": "AEMA",
+    "number": "102",
+    "title": "Calculus 2",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Integration, the indefinite and definite integral. Trapezoidal and Simpson's Rule approximations for the integral. Applications to areas between curves, distance, volume, length of a curve, work, area of a surface of revolution, average values, moments, etc. Improper integrals and infinite series.",
+    "prerequisites": {
+      "text": "Calculus 1 or equivalent",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AEMA 105",
+    "subject": "AEMA",
+    "number": "105",
+    "title": "Precalculus Lab",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Problem-solving: foundational material in algebra concepts, functions and graphs, polynomials and rational functions, exponential and logarithmic functions, graphs and equations, trigonometry, analytic trigonometry, systems of linear equations, sequences & series.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in FAES whose background is deficient in Precalculus mathematics. Not open to students who have taken CEGEP competency OOUP, AEMA 102, or equivalent. Not open to students who have taken AEMA 100 or MATH 112. Permission of instructor required.",
+      "excludes": [
+        "AEMA 100",
+        "AEMA 102",
+        "MATH 112"
+      ]
+    },
+    "notes": [
+      "(1.0 credit) (2 lab hours per week; normally taken concurrently with AEMA 101 Calculus 1)"
+    ]
+  },
+  {
+    "code": "AEMA 202",
+    "subject": "AEMA",
+    "number": "202",
+    "title": "Intermediate Calculus",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Methods of differential and integral calculus forthe study of multivariable functions. Calculus of parametric and polar curves, vectors and geometry of space, vector functions, partial derivatives, multiple integrals, and their applications.",
+    "prerequisites": {
+      "text": "BREE 103 and AEMA 102 or equivalent CEGEP objectives 00UP and 00UQ or permission of instructor",
+      "tree": {
+        "and": [
+          "BREE 103",
+          "AEMA 102"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 222",
+      "excludes": [
+        "MATH 222"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 lectures and 1 conference"
+    ]
+  },
+  {
+    "code": "AEMA 204",
+    "subject": "AEMA",
+    "number": "204",
+    "title": "Data Analytics for Biosystems",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Techniques and tools used to analyze agricultural and environmental data using some common programs (Microsoft Excel, Python, R, Jupyter Notebook, RStudio).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AEMA 305",
+    "subject": "AEMA",
+    "number": "305",
+    "title": "Differential Equations",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "First and second order differential equations, Laplace transforms, numerical solutions, systems of differential equations, series solutions, applications to biological, chemical and engineering systems, use of computer-based mathematical tools.",
+    "prerequisites": {
+      "text": "AEMA 202 or equivalent",
+      "tree": "AEMA 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MATH 315",
+      "excludes": [
+        "MATH 315"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "AEMA 310",
+    "subject": "AEMA",
+    "number": "310",
+    "title": "Statistical Methods 1",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Measures of central tendency and dispersion; binomial and Poisson distributions; normal, chi-square, Student's t and Fisher-Snedecor F distributions; estimation and hypothesis testing; simple linear regression and correlation; analysis of variance for simple experimental designs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Two 1.5-hour lectures and one 2-hour lab",
+      "Please note that credit will be given for only one introductory statistics course. Consult your academic advisor."
+    ]
+  },
+  {
+    "code": "AEMA 403",
+    "subject": "AEMA",
+    "number": "403",
+    "title": "Environmetrics Stage",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Summer stage of at least four weeks, including a report. Provides students with professional experience in statistical analyses of environmental data. Can be undertaken at federal or provincial research stations and university research laboratories.",
+    "prerequisites": {
+      "text": "Permission of the instructor based on satisfactory completion of the U2 year of the Environmetrics Domain in the McGill School of Environment",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AEMA 411",
+    "subject": "AEMA",
+    "number": "411",
+    "title": "Experimental Designs 01",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "General principles of experimental design, split-plot designs, spatial heterogeneity and experimental design, incomplete block designs and unbalanced designs, analysis of repeated measures, multivariate and modified univariate analyses of variance, central composite designs.",
+    "prerequisites": {
+      "text": "AEMA 310 or equivalent",
+      "tree": "AEMA 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Two 1.5-hour lectures",
+      "Offered in alternate years with AEMA 414",
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "AEMA 414",
+    "subject": "AEMA",
+    "number": "414",
+    "title": "Temporal and Spatial Statistics 01",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Temporal statistics: analysis in the time domain, Box-Jenkins forecasting methodology, analysis in the frequency domain, periodogram analysis. Spatial statistics: mapping, autocorrelogram analysis, geostatistics. Statistical inference with autocorrelated sample data.",
+    "prerequisites": {
+      "text": "AEMA 310 or equivalent",
+      "tree": "AEMA 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Two 1.5-hour lectures",
+      "Offered in alternate years with AEMA 411"
+    ]
+  },
+  {
+    "code": "AEMA 610",
+    "subject": "AEMA",
+    "number": "610",
+    "title": "Statistical Methods 2",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of linear models, multiple regression equations and classification models. Introduction to Analysis of Variance and common statistical designs used in agricultural and environmental sciences. Emphasis on balanced and unbalanced designs and data structures; their analysis and tests of statistical significance.",
+    "prerequisites": {
+      "text": "AEMA 310 or equivalent",
+      "tree": "AEMA 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and one 2-hour lab"
+    ]
+  },
+  {
+    "code": "AEMA 611",
+    "subject": "AEMA",
+    "number": "611",
+    "title": "Experimental Designs 1",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "General principles of experimental design, split-plot designs, spatial heterogeneity and experimental design, incomplete block designs and unbalanced designs, analysis of repeated measures, multivariate and modified univariate analyses of variance, central composite designs.",
+    "prerequisites": {
+      "text": "AEMA 310 or equivalent",
+      "tree": "AEMA 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lectures and 1 conference"
+    ]
+  },
+  {
+    "code": "AEMA 614",
+    "subject": "AEMA",
+    "number": "614",
+    "title": "Temporal and Spatial Statistics 1",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Temporal statistics: analysis in the time domain, Box-Jenkins forecasting methodology, analysis in the frequency domain, periodogram analysis. Spatial statistics: mapping, autocorrelogram analysis, geostatistics. Statistical inference with autocorrelated sample data.",
+    "prerequisites": {
+      "text": "AEMA 310 or equivalent",
+      "tree": "AEMA 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lectures and 1 conference"
+    ]
+  }
+]

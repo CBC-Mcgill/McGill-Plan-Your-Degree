@@ -1,0 +1,863 @@
+[
+  {
+    "code": "PLNT 200",
+    "subject": "PLNT",
+    "number": "200",
+    "title": "Introduction to Crop Science",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of plant science and soil science to production of agronomic and horticultural crops. Use and sustainability of fertilization, weed control, crop rotation, tillage, drainage and irrigation practices.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PLNT 300.",
+      "excludes": [
+        "PLNT 300"
+      ]
+    },
+    "notes": [
+      "3 lectures and one 2-hour lab"
+    ]
+  },
+  {
+    "code": "PLNT 221",
+    "subject": "PLNT",
+    "number": "221",
+    "title": "Introduction to Fungi",
+    "credits": 1,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Field and laboratory survey of local representatives of the major groups of fungi, including edible and poisonous mushrooms. The role of each group in terrestrial and aquatic ecological niches will be studied with respect to saprophytism, parasitism and symbiosis. Economic importance of fungi in medicine and biotechnology will be introduced.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Four 4-hour field labs, given during the second 4 weeks of semester",
+      "Second 4 weeks of term only",
+      "This course carries an additional charge of $31.15 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "PLNT 302",
+    "subject": "PLNT",
+    "number": "302",
+    "title": "Forage Crops and Pastures",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Ecology, management, and physiology of forage crops with emphasis on establishment, growth, maintenance, harvesting, and preservation; value as livestock feed in terms of nutritional composition and role in environmental conservation.",
+    "prerequisites": {
+      "text": "PLNT 200 or PLNT 201 or AEBI 210 or AEBI 211",
+      "tree": {
+        "or": [
+          "PLNT 200",
+          "PLNT 201",
+          "AEBI 210",
+          "AEBI 211"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 304",
+    "subject": "PLNT",
+    "number": "304",
+    "title": "Biology of Fungi",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course describes the various groups of fungi and explores in depth their biology and physiology, their ecological niches and the role in various ecosystems and their benefits and uses in industry and biotechnology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 or above, or permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "PLNT 305",
+    "subject": "PLNT",
+    "number": "305",
+    "title": "Plant Pathology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The theory and concepts of plant pathology, including the disease cycle, infection, symptoms, resistance, epidemiology and control. The biology and taxonomy of pathogens will be studied, including fungi, bacteria, viruses and nematodes. Techniques of inoculation, isolation of pathogens from diseased plants, disease diagnosis and pathogen identification will be demonstrated.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "PLNT 307",
+    "subject": "PLNT",
+    "number": "307",
+    "title": "Agroecology of Vegetables and Fruits",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Application of ecological concepts and principles to the design and management of selected vegetable and fruit agroecosystems. Includes selection of varieties and management from seedling to harvest to storage.",
+    "prerequisites": {
+      "text": "AEBI 210 or PLNT 200 or permission of the instructor",
+      "tree": {
+        "or": [
+          "AEBI 210",
+          "PLNT 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 310",
+    "subject": "PLNT",
+    "number": "310",
+    "title": "Plant Propagation",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Principles and practical aspects of plant propagation are examined. The course consists of two parts. The first third deals with sexual propagation; the production, processing storage certification and analysis of seeds. The remaining two-thirds deals with vegetative propagation; cutting, budding, grafting, layering, and tissue culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "PLNT 312",
+    "subject": "PLNT",
+    "number": "312",
+    "title": "Urban Horticulture",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selection, use and care of plants in urban environments for the benefit of urban populations: landscape design, turf and green space management, urban trees, green roofs and walls, design and management of community gardens, urban agriculture.",
+    "prerequisites": {
+      "text": "PLNT 200 or AEBI 210 or ENVR 202 or BIOL 205 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PLNT 200",
+          "AEBI 210",
+          "ENVR 202",
+          "BIOL 205"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 316",
+    "subject": "PLNT",
+    "number": "316",
+    "title": "Plant Specialized Metabolism",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Plant specialized metabolism in the context of cellbiology, physiology, genetics, and synthetic biology. Thetransformation of simple sugars and amino acids intocomplex natural products. Technologies to deploy suchpathways in engineered organisms to produce high-valuemetabolites sustainably, at scale.",
+    "prerequisites": {
+      "text": "AEBI 210, LSCI 211.",
+      "tree": {
+        "and": [
+          "AEBI 210",
+          "LSCI 211"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 students and higher.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PLNT 322",
+    "subject": "PLNT",
+    "number": "322",
+    "title": "Greenhouse Management",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The production of major flower and vegetable crops in greenhouses. Includes greenhouse design, heating, ventilation, lighting, hydroponics, irrigation, fertilization, scheduling and integrated pest management.",
+    "prerequisites": {
+      "text": "PLNT 200 or AEBI 210 or ENVR 202 or BIOL 205 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PLNT 200",
+          "AEBI 210",
+          "ENVR 202",
+          "BIOL 205"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "PLNT 353",
+    "subject": "PLNT",
+    "number": "353",
+    "title": "Plant Structure and Function",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The general anatomy and physiology of vascular plants with emphasis on how physiological processes influence function.",
+    "prerequisites": {
+      "text": "PLNT 200 or AEBI 210 and LSCI 204 and LSCI 211 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PLNT 200",
+          {
+            "and": [
+              "AEBI 210",
+              "LSCI 204",
+              "LSCI 211"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "PLNT 358",
+    "subject": "PLNT",
+    "number": "358",
+    "title": "Flowering Plant Diversity",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of classification and identification of flowering plants and ferns, with emphasis on 35 major families of flowering plants and the habitats in which they grow.",
+    "prerequisites": {
+      "text": "PLNT 200 or AEBI 210 or ENVR 202 or permission of the instructor",
+      "tree": {
+        "or": [
+          "PLNT 200",
+          "AEBI 210",
+          "ENVR 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "A 4-day field week is held the week preceding the start of classes",
+      "A $100.29 fee is charged to all students registered in this course, which has a fieldwork component prior to the beginning of classes in August. This fee is used to support the cost of excursions, a hand lens, instructional handouts and identification aids. Students who have already received a hand lens may request a reimbursement of a portion of this charge through their department."
+    ]
+  },
+  {
+    "code": "PLNT 426",
+    "subject": "PLNT",
+    "number": "426",
+    "title": "Plant Ecophysiology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course investigates the complex interactions between plants and their environment, focusing on the mechanisms underlying plant physiological processes. Plasticity of plants to their ecological environment; topics include phytoremediation, plant stress responses, plant-symbiosis and plant-insect interactions.",
+    "prerequisites": {
+      "text": "LSCI 204 and PLNT 353 or permission of instructor.",
+      "tree": {
+        "and": [
+          "LSCI 204",
+          "PLNT 353"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 430",
+    "subject": "PLNT",
+    "number": "430",
+    "title": "Pesticides in Agriculture",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Pesticide science concentrating on pesticide discovery, pesticide chemistries, pesticide development, pesticide technologies, mitigation of risks due to pesticides use, national and international pesticide regulations, registrations, and compliances.",
+    "prerequisites": {
+      "text": "AGRI 215, and one of PLNT 300, PLNT 302, PLNT 307, or PLNT 322 or permission from the instructor.",
+      "tree": {
+        "and": [
+          "AGRI 215",
+          {
+            "or": [
+              "PLNT 300",
+              "PLNT 302",
+              "PLNT 307",
+              "PLNT 322"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "There is a fee of $55.07 for the purchase of a dust-moist filtering respirator/mask to be worn when handling pesticides during the laboratory for this course. This equipment is retained by the student."
+    ]
+  },
+  {
+    "code": "PLNT 434",
+    "subject": "PLNT",
+    "number": "434",
+    "title": "Weed Biology and Control",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A study of the biology of undesirable vegetation as related to the principles of prevention and physical, biological, managerial and chemical control. Emphasis on the environmental impact of the different methods of weed control.",
+    "prerequisites": {
+      "text": "PLNT 200 or AEBI 210",
+      "tree": {
+        "or": [
+          "PLNT 200",
+          "AEBI 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 435",
+    "subject": "PLNT",
+    "number": "435",
+    "title": "Plant Breeding",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and practices of plant breeding, including reproduction of crop plants; plant hybridization; sources of genetic variation; selection methods used for self- and cross-pollinated crops and for clonally reproduced crops; breeding for diseases and pest resistance; applications of biotechnology in plant breeding.",
+    "prerequisites": {
+      "text": "LSCI 204 and (PLNT 200 or AEBI 210)",
+      "tree": {
+        "and": [
+          "LSCI 204",
+          {
+            "or": [
+              "PLNT 200",
+              "AEBI 210"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 460",
+    "subject": "PLNT",
+    "number": "460",
+    "title": "Plant Ecology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Theory and practice of plant ecology with an emphasis on the interaction between patterns and ecological processes and the dynamics, conservation and management of plant populations and communities over a range of temporal and spatial scales.",
+    "prerequisites": {
+      "text": "AEMA 310 or permission of instructor.",
+      "tree": "AEMA 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and one 3-hour lab",
+      "This course carries an additional charge of $170.00 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "PLNT 470",
+    "subject": "PLNT",
+    "number": "470",
+    "title": "Cannabis Issues and Concerns",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Local, national and international perspectives on issues and concerns regarding cannabis, with a focus on legal, regulatory, ethical, health and safety aspects relevant to industry, government, academics and consumers.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "FDSC 475, FDSC 476, FDSC 477",
+      "tree": {
+        "and": [
+          "FDSC 475",
+          "FDSC 476",
+          "FDSC 477"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students enrolled in the Diploma in Commercial Cannabis",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PLNT 471",
+    "subject": "PLNT",
+    "number": "471",
+    "title": "Commercial Cannabis Production",
+    "credits": 4,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Botany of the cannabis plant. Climate control for production in controlled environment agriculture: management of temperature, humidity, light, air quality. Production methods and management of irrigation, fertilization, soil and substrates, pests. Propagation, growth, pruning, pinching, harvest, scheduling, processing, storage, quality control, optimal cultivation strategies.",
+    "prerequisites": {
+      "text": "PLNT 470",
+      "tree": "PLNT 470",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PLNT 472 and PLNT 473",
+      "tree": {
+        "and": [
+          "PLNT 472",
+          "PLNT 473"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "All pre-requisites must be passed with a minimum grade of B-"
+    ]
+  },
+  {
+    "code": "PLNT 472",
+    "subject": "PLNT",
+    "number": "472",
+    "title": "Cannabis Genetics and Breeding",
+    "credits": 4,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Cannabis genetic structure and available genomic resources for cannabis research. Introduction to high throughput genomic technologies for the improvement of cannabis cultivars and hybrids and tissue culture protocols. Origin and taxonomic classification of the cannabis genus. Principles and practices of cannabis breeding, including the importance of quantitative trait locus maps and methods of selection of important genetic traits.",
+    "prerequisites": {
+      "text": "PLNT 470",
+      "tree": "PLNT 470",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PLNT 471 and PLNT 473",
+      "tree": {
+        "and": [
+          "PLNT 471",
+          "PLNT 473"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students enrolled in the Diploma in Commercial Cannabis",
+      "excludes": []
+    },
+    "notes": [
+      "All pre-requisites must be passed with a minimum grade of B-"
+    ]
+  },
+  {
+    "code": "PLNT 473",
+    "subject": "PLNT",
+    "number": "473",
+    "title": "Control of Cannabis Diseases",
+    "credits": 4,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Diseases and pest management of cannabis grown under greenhouse and field settings. A systemic approach to descriptions of pests and diseases accompanied by an overview of biological, natural and management solutions to pests and cannabis diseases. Details on products and application methods that are in compliance with Health Canada. Practical laboratory sessions to identify various disease symptoms on cannabis plants and to recommend solutions.",
+    "prerequisites": {
+      "text": "PLNT 470",
+      "tree": "PLNT 470",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PLNT 471 and PLNT 472",
+      "tree": {
+        "and": [
+          "PLNT 471",
+          "PLNT 472"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students enrolled in the Diploma in Commercial Cannabis",
+      "excludes": []
+    },
+    "notes": [
+      "All pre-requisites must be passed with a minimum grade of B-"
+    ]
+  },
+  {
+    "code": "PLNT 474",
+    "subject": "PLNT",
+    "number": "474",
+    "title": "Commercial Cannabis Internship",
+    "credits": 6,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "A 12-week internship with a licensed cannabis producer. Workshops in advance of the placement will review professionalism expected when working in industry and with controlled substances. Students will produce a small project or prepare a research paper as part of their internship.",
+    "prerequisites": {
+      "text": "PLNT 473",
+      "tree": "PLNT 473",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Diploma in Commercial Cannabis.",
+      "excludes": []
+    },
+    "notes": [
+      "All pre-requisites must be passed with a minimum grade of B-. Students must successfully complete a criminal record check."
+    ]
+  },
+  {
+    "code": "PLNT 602",
+    "subject": "PLNT",
+    "number": "602",
+    "title": "Advances in Agronomy",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current topics related to the growth and development and quality of crops. Topics to be covered may include factors affecting crop growth, yield and advances in plant breeding.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 619",
+    "subject": "PLNT",
+    "number": "619",
+    "title": "Advances in Plant Biology and Physiology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current topics related to plant physiology and biology. Topics to be covered may include photosynthesis, nutrient uptake, water relations, cellular regulation, plant secondary metabolism, advanced micropropagation and techniques used to study plant physiology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours conference"
+    ]
+  },
+  {
+    "code": "PLNT 622",
+    "subject": "PLNT",
+    "number": "622",
+    "title": "Advances in Plant Protection",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current topics related to plant protection. Review of current literature on selected topics that may include control of weeds, pathogens and/or insects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 635",
+    "subject": "PLNT",
+    "number": "635",
+    "title": "Advanced Plant Breeding",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Improving crop traits to meet the needs of feeding a growing population under the threat of climate change and other factors. Quantitative genetic variation and inheritance. Fundamental and advanced topics in breeding for quantitative traits. Use of cutting-edge tools to solve plant breeding problems. Study quantitative trait variation at various levels (e.g., genomic to phenomic)",
+    "prerequisites": {
+      "text": "AEMA 310 or equivalent; LSCI 204 or equivalent; and permission of the instructor.",
+      "tree": {
+        "and": [
+          "AEMA 310",
+          "LSCI 204"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 646",
+    "subject": "PLNT",
+    "number": "646",
+    "title": "Advances in Plant-Biotic and -Abiotic Interactions",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current topics related to plant interactions with their biotic and/or abiotic environment. Topics to be covered may include plant-microbe interactions, plant-insect interactions and plant responses to abiotic stresses.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 662",
+    "subject": "PLNT",
+    "number": "662",
+    "title": "Advances in Plant Biotechnology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current techniques used in plant molecular biology. Topics to be covered may include plant biotechnology, recombinant DNA techniques, transgenic plants as well and gene and gene product analysis. Review of current literature on selected topics in plant molecular biology and genetics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lab"
+    ]
+  },
+  {
+    "code": "PLNT 664",
+    "subject": "PLNT",
+    "number": "664",
+    "title": "M.Sc. Thesis 1",
+    "credits": 12,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Written and oral presentation of thesis proposal to the research supervisory committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 665",
+    "subject": "PLNT",
+    "number": "665",
+    "title": "M.Sc. Thesis 2",
+    "credits": 12,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Oral presentation of a proposal to the department and progress report on the thesis research project to the supervisory committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 666",
+    "subject": "PLNT",
+    "number": "666",
+    "title": "M.Sc. Thesis 3",
+    "credits": 15,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation and submission of an acceptable thesis. Oral presentation of the thesis research to the department.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 667",
+    "subject": "PLNT",
+    "number": "667",
+    "title": "MSc Thesis 3A",
+    "credits": 12,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparation and submission of an acceptable thesis.",
+    "prerequisites": {
+      "text": "PLNT 664, PLNT 665",
+      "tree": {
+        "and": [
+          "PLNT 664",
+          "PLNT 665"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PLNT 666.",
+      "excludes": [
+        "PLNT 666"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PLNT 670",
+    "subject": "PLNT",
+    "number": "670",
+    "title": "Special Topics",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is designed to develop seminar presentation skills in graduate students. The course consists of instruction on audio-visual preparation, speaking style, and organization of content, plus practice presentations by students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 hours seminar"
+    ]
+  },
+  {
+    "code": "PLNT 690",
+    "subject": "PLNT",
+    "number": "690",
+    "title": "Research Horizons in Plant Science 1",
+    "credits": 0,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A series of seminars presented by invited speakers, staff and senior graduate students. The topics are selected to integrate the many fields of plant science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 691",
+    "subject": "PLNT",
+    "number": "691",
+    "title": "Research Horizons in Plant Science 2",
+    "credits": 0,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A series of seminars presented by invited speakers, staff and senior graduate students. The topics are selected to integrate the many fields of plant science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PLNT 701",
+    "subject": "PLNT",
+    "number": "701",
+    "title": "Doctoral Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

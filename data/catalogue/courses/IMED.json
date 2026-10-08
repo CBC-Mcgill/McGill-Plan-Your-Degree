@@ -1,0 +1,73 @@
+[
+  {
+    "code": "IMED 301",
+    "subject": "IMED",
+    "number": "301",
+    "title": "TCP Internal Medicine",
+    "credits": 6,
+    "offeredBy": "Medicine",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027",
+      "Summer 2027"
+    ],
+    "description": "Diagnostic reasoning skills (including problemformulation and differential diagnosis) and knowledge of clinical problems common to internal medicine.Performance of history and physical examinations on patients, submission of case reports that include relevant pathophysiology, and presentation of patient cases orally to tutors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.D., C.M. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "IMED 401",
+    "subject": "IMED",
+    "number": "401",
+    "title": "Internal Medicine Clerkship",
+    "credits": 8,
+    "offeredBy": "Medicine",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "The main goals of the internal medicine clerkship are to further develop the student’s ability to function as an increasingly independent, but supervised and safe, clinician in an interprofessional health care team. Students learn, while practicing, both for and from patients. Students, under the supervision of residents and attending physicians, are responsible for performing and documenting histories, physicals, lab and radiology data summaries, and patient problem lists for newly admitted patients, as well as patients being seen in consultation in the outpatient and non-internal medicine ward settings; and the ongoing care, management, follow-up and discharge planning of patients in each of the above settings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.D., C.M. program.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "IMED 401D1",
+        "credits": 4,
+        "terms": []
+      },
+      {
+        "code": "IMED 401D2",
+        "credits": 4,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "IMED 407",
+    "subject": "IMED",
+    "number": "407",
+    "title": "Geriatric Medicine Clerkship",
+    "credits": 4,
+    "offeredBy": "Medicine and Health Sciences",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Summer 2027"
+    ],
+    "description": "The goal of the UGME curriculum in geriatrics is to provide the foundation for competent, compassionate care of older patients, particularly the frail elderly. The Geriatric Medicine clerkship will emphasize the medical basis of Geriatric Medicine and the differences in medical care for frail older patients. It will provide students with an intensive clinical experience in a variety of Geriatric Medicine settings, including clinic, day hospital, emergency department and ward settings as well as an opportunity to work in an interdisciplinary team.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open only to students enrolled in the M.D., C.M. program."
+    ]
+  }
+]

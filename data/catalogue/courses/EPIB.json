@@ -1,0 +1,1347 @@
+[
+  {
+    "code": "EPIB 507",
+    "subject": "EPIB",
+    "number": "507",
+    "title": "Biostats for Health Sciences",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Basic principles of statistical inference applicable to clinical, epidemiologic, and other health research. Topics include: methods of describing data, statistical inference for means, statistical inference for proportions, non-parametric statistics, correlation and introduction to linear regression.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students registered in the Faculty of Medicine, Dentistry, Human Nutrition, Medical Residents, and Clinical Fellows.",
+      "excludes": []
+    },
+    "notes": [
+      "Course not opened to students registered in the Epidemiology and Biostatistics programs.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 521",
+    "subject": "EPIB",
+    "number": "521",
+    "title": "Regression Analysis for Health Sciences",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The aim of this course is to provide students with basic principles of regression analyses applicable to the health sciences so that they can understand and use appropriate statistical regression techniques for continuous and discrete data. The course will cover: Linear regression: Regression for two or more explanatory variables, Polynomial regression, Dummy variables, Inference for regression parameters, Confounding and collinearity, Effect modification, Model-checking, Model selection, Prediction. Logistic and Poisson regression: Logistic regression for one or more variables, Interpreting odds ratios, Inference for logistic and Poisson regression parameters, Confounding and interactions in logistic regression, Model selection, Prediction. A very brief overview of survival analysis.",
+    "prerequisites": {
+      "text": "EPIB 507 or permission of the instructor.",
+      "tree": "EPIB 507",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course not open to students registered in the Epidemiology, Biostatistics or Public Health programs. Not open to students who have taken EPIB 591 when topic was “Regression Analysis for Health Sciences\".",
+      "excludes": [
+        "EPIB 591"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 526",
+    "subject": "EPIB",
+    "number": "526",
+    "title": "Society, Human Biology and Health",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "Social determinants of health (such as educational attainment, childhood socioeconomic circumstances, social integration, discrimination, and job strain) with particular emphasis on the biological mechanisms (e.g. components of the cardiovascular system, endocrine system, immune system, nervous system, and genetics) by which social circumstances influence health.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is open to graduate students and advanced undergraduates from all departments, with the permission of the instructor. Basic knowledge in epidemiology or physiology is useful, though not required."
+    ]
+  },
+  {
+    "code": "EPIB 591",
+    "subject": "EPIB",
+    "number": "591",
+    "title": "Special Topics in Epidemiology",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "Special topics in epidemiology.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: This course is open to graduate students and advanced undergraduates from all departments, with the permission of the instructor.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 600",
+    "subject": "EPIB",
+    "number": "600",
+    "title": "Clinical Epidemiology",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Principles and methods of epidemiology, as applied to clinical practice and clinical research. Key principles of testing and measurement in the clinical context, as well as study design, analysis, and inference in the clinical research setting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to McGill Medical Residents and Clinical Fellows or permission of the instructor for other clinicians.",
+      "excludes": []
+    },
+    "notes": [
+      "Course offered during the Summer Session only.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 601",
+    "subject": "EPIB",
+    "number": "601",
+    "title": "Fundamentals of Epidemiology",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course aims to provide a comprehensive introduction to epidemiologic concepts and corresponding terms. After an introduction to the history, definition, and purposes of epidemiology, \"core\" concepts that are relevant in several areas of investigation (e.g., etiologic research, health care research, and community medicine practice) will be presented.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 603",
+    "subject": "EPIB",
+    "number": "603",
+    "title": "Intermediate Epidemiology",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Concepts and methods for epidemiology at the intermediate level, including causation, measures of disease occurrence and effect, study designs, biases in epidemiologic research, interaction, and data analysis for categorical and survival data using statistical software.",
+    "prerequisites": {
+      "text": "EPIB 601, EPIB 607, and PPHS 602.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607",
+          "PPHS 602"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 605",
+    "subject": "EPIB",
+    "number": "605",
+    "title": "Critical Appraisal in Epidemiology",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course provides the opportunity to develop skills to critically evaluate evidence presented in the biomedical and health sciences literature, based on the concepts acquired in the epidemiology introductory courses.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 607.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 607",
+    "subject": "EPIB",
+    "number": "607",
+    "title": "Inferential Statistics",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the basic principles of statistical inference used in clinical and epidemiologic research. Topics include variability; methods of processing and describing data; sampling and sampling distributions; inferences regarding means and proportions, non-parametric methods, regression and correlation.",
+    "prerequisites": {
+      "text": "A first year course in undergraduate differential and integral calculus.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 613",
+    "subject": "EPIB",
+    "number": "613",
+    "title": "Introduction to Statistical Software",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to statistical software and data management; including basics of entering, manipulating data and elementary statistical analysis, SAS software, with reference to other packages of potential interest to students (R, Stata, SPSS).",
+    "prerequisites": {
+      "text": "Enrolment in Epidemiology stream program or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 619",
+    "subject": "EPIB",
+    "number": "619",
+    "title": "Systematic Reviews and Meta-Analysis",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An overview of principles, methods and practice of systematic reviews and meta-analysis in the field of medicine and public health.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 607, or equivalent, or permission of the instructor",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 621",
+    "subject": "EPIB",
+    "number": "621",
+    "title": "Data Analysis in Health Sciences",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Univariate and multivariate statistical techniques for continuous categorical and survival data. Topics include generalized linear models, multiple linear and logistic regression, introductory survival analysis, model selection. Maximum likelihood and Bayesean approaches will be presented.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 607 of permission of instructor.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 622",
+    "subject": "EPIB",
+    "number": "622",
+    "title": "Advanced Health Decision Modelling",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Developing decision-analytic models to synthesize evidence and simulate the outcomes of strategies in public health and medicine, including health technology assessment and model-based economic evaluation. Methodologies include cohort state transition modelling, microsimulation, discrete event simulation, Bayesian model calibration, probabilistic sensitivity analysis, value of information analysis, and equity-informative modelling frameworks. Applications include disease screening, prevention, and treatment, public health strategy, and prioritization of health research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 676 or EPIB 678 when the topic was “Advanced topics in decision-analytic modelling for health”.",
+      "excludes": [
+        "EPIB 676",
+        "EPIB 678"
+      ]
+    },
+    "notes": [
+      "Students must be familiar with R or a similar programming language, and prior coursework in probability and statistics is required. Students who are unsure whether their background is appropriate for the course should email the instructor."
+    ]
+  },
+  {
+    "code": "EPIB 625",
+    "subject": "EPIB",
+    "number": "625",
+    "title": "Ethics of Human Research",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the ethics of conducting research involving human beings, with focus on clinical trials and surveys of ethical issues in public health research, experimental psychology, and animal experimentation. Areas covered include: scandals involving research with humans; ethical and regulatory guidelines and structures; ethical theory and principles of human research ethics; empirical findings on ethical practice in research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 627",
+    "subject": "EPIB",
+    "number": "627",
+    "title": "Analysis of Correlated Data",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will provide a basic introduction to methods for analysis of correlated, or dependent, data. These data arise when observations are not gathered independently; examples are longitudinal data, household data, cluster samples, etc. Basic descriptive methods and introduction to regression methods for both continuous and discrete outcomes.",
+    "prerequisites": {
+      "text": "EPIB 603, EPIB 621, EPIB 634 or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621",
+          "EPIB 634"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 629",
+    "subject": "EPIB",
+    "number": "629",
+    "title": "Knowledge Synthesis",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will provide a detailed description of the systematic review process, discuss the strengths and limitations of the method, and provide step-by-step guidance on how to perform a systematic review, and how to critically appraise systematic reviews. Specific topics to be covered include: formulation of the review question, searching of literature, quality assessment of studies, data extraction, meta-analytic methods, and report writing. The course will also cover statistical issues of meta-analysis.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 607, or equivalent, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 619. Not open to students who have taken EPIB 675 when topic was 'Knowledge Synthesis'.",
+      "excludes": [
+        "EPIB 619",
+        "EPIB 675"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 631",
+    "subject": "EPIB",
+    "number": "631",
+    "title": "Pharmacoepidemiology 2",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "An advanced course on the methodology to be used when confronted with an alleged adverse or beneficial event related to a drug, a vaccine or a biological product. It includes four parts: i) designs for etiological research; ii) surveillance (modelling, statistical appraisal); iii) hazard functions in pharmacoepidemiology; iv) exposure assessment.",
+    "prerequisites": {
+      "text": "EPIB 633, or instructor's permission, and basic knowledge of epidemiology and biostatistics",
+      "tree": "EPIB 633",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered only in Summer term.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 632",
+    "subject": "EPIB",
+    "number": "632",
+    "title": "Mental Disorders: Population Perspectives and Methods",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Semester-long seminar on key issues and concepts integral to the epidemiological study of mental disorders, through the lens of a population perspective. Review of the origins of the field, classical studies, and recent major studies. Survey of where the field is now. Discussion of national and global burden of mental disorders. Defining and diagnosing mental disorders. Methods to identify psychopathology in community versus clinical settings. Reliability and validity of psychiatric diagnoses and measurement tools. Research designs including approaches to study etiology, health services delivery, prevention, role functioning, and policy.",
+    "prerequisites": {
+      "text": "EPIB 603 or equivalent, or permission of instructor",
+      "tree": "EPIB 603",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PSYT 713.",
+      "excludes": [
+        "PSYT 713"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 633",
+    "subject": "EPIB",
+    "number": "633",
+    "title": "Pharmacoepidemiology 1",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This course is an introduction to epidemiological thinking as it applies to the evaluation of the effects of drugs on the health of populations. It is composed of four parts: i) assessment of adverse event reports; ii) basic designs for pharmacoepidemiologic investigations; iii) data gathering in pharmacoepidemiology; iv) introduction to the use of epidemiologic methods for the assessment of benefits and economic impacts of drug.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered only in Summer Term",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 634",
+    "subject": "EPIB",
+    "number": "634",
+    "title": "Fundamentals of Pharmacoepidemiology",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The objective of this course is for students to develop an understanding of the design and analysis of pharmacoepidiologic studies. It includes didactic lectures, group discussions, and the examination of examples from the medical literature. Topics covered including an overview of commonly used study designs, exposure and outcome assessment, new-user designs, healthy-user effects, non-traditional study designs, and the role of confounding and methods used to minimize it. Biases particularly relevant to pharmacoepidemiology are also discussed.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 607, or permission of instructor",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EPIB 603 and EPIB 621, or permission of instructor",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 635",
+    "subject": "EPIB",
+    "number": "635",
+    "title": "Statistical Design of Clinical Trials",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Statistical design of clinical trials with a focus on modern and complex designs including adaptive and multi-arm trials. Topics include clinical trials definitions and terminology, study protocol, primary and secondary goals and relevant hypotheses, conventional randomized clinical trials, randomization techniques, sample size and power, group sequential designs, Bayesian statistics in clinical trials, interim analysis and stopping rules, effect heterogeneity in clinical trials and information borrowing in clinical trials.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 621.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 637",
+    "subject": "EPIB",
+    "number": "637",
+    "title": "Advanced Modeling: Survival and Other Multivariable Data",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced applied biostatistics course dealing with flexible modeling of non-linear effects of continuous covariates in multivariable analyses, and survival data, including e.g. time-varying covariates and time-dependent or cumulative effects. Focus on the concepts, limitations and advantages of specific methods, and interpretation of their results. Students will get hands-on experience in the implementation of selected methods by applying them to their own multivariable data, in individual survival analysis projects.",
+    "prerequisites": {
+      "text": "EPIB 621, or equivalent, or permission of the instructor.",
+      "tree": "EPIB 621",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 638",
+    "subject": "EPIB",
+    "number": "638",
+    "title": "Mathematical Modeling of Infectious Diseases",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Mathematical models of infectious diseases –computer simulations of epidemics–enable detailed analyses and understanding of factors affecting the distribution of infections/diseases in populations and now play a key role in policy making. Covered topics include: short-term dynamics of infections (R0), compartmental models, stochastic models (including agent-based), contact patterns and heterogeneity, and Bayesian model calibration. The learning objectives are: 1) recognize research questions that can be addressed using modeling; 2) develop, parameterize, calibrate, and analyze simple infectious disease models in R; and 3) critically appraise scientific modeling papers.",
+    "prerequisites": {
+      "text": "EPIB 621 or permission of the instructor",
+      "tree": "EPIB 621",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 676 when topic was \"Mathematical Models of Infectious Diseases\".",
+      "excludes": [
+        "EPIB 676"
+      ]
+    },
+    "notes": [
+      "This is an intermediate-level quantitative course. Previous courses in calculus and biostatistics are recommended (in doubt, contact the instructor prior to registration). A working knowledge of the R statistical software (or equivalent) is mandatory (data structures, function, loop, etc.)."
+    ]
+  },
+  {
+    "code": "EPIB 639",
+    "subject": "EPIB",
+    "number": "639",
+    "title": "Pharmacoepidemiologic Methods",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The objective of this course is to provide students with an in-depth review of the methods and principles of pharmacoepidemiology. Topics covered include themes related to the potential data sources, appropriate exposure definitions, the use of active drug comparators, latency and the application of lag periods, reverse causality, detection bias, methodological considerations in the assessment of acute versus chronic outcomes, new-user designs, healthy-user effects, and non-traditional study designs (e.g., within-user designs). In addition, the role of confounding and methods used to minimize its effects, such as the use of propensity scores, instrumental variables, and marginal structural models will be discussed.",
+    "prerequisites": {
+      "text": "EPIB-603, EPIB-621, or equivalent, or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 641",
+    "subject": "EPIB",
+    "number": "641",
+    "title": "Substantive Epidemiology 1",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Designed to give students an overview of a major disease or health problem. Students will develop their knowledge of a topic regarding 1) key definitions, concepts and indicators useful in study of the problem; 2) epidemiology of problem; 3) major studies of interventions designed to address the problem. Topics currently offered include cancer, injury prevention and heart disease but not all are offered in each semester.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 643",
+    "subject": "EPIB",
+    "number": "643",
+    "title": "Substantive Epidemiology 3",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Designed to give students an overview of a major disease or health problem. Students will develop their knowledge of a topic regarding 1) key definitions, concepts and indicators useful in study of the problem; 2) epidemiology of problem; 3) major studies of interventions designed to address the problem. Topics currently offered include cancer, injury prevention and heart disease but not all are offered in each semester.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day"
+    ]
+  },
+  {
+    "code": "EPIB 645",
+    "subject": "EPIB",
+    "number": "645",
+    "title": "Substantive Epidemiology 5",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Designed to give students an overview of a major disease or health problem. Students will develop their knowledge of a topic regarding 1) key definitions, concepts and indicators useful in study of the problem; 2) epidemiology of problem, 3) major studies of interventions designed to address the problem. Topics currently offered include cancer, injury prevention and heart disease but not all are offered in each semester.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 647",
+    "subject": "EPIB",
+    "number": "647",
+    "title": "Analysis Temporal and Spatial Data",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course focuses on the computational management and analysis of large data sets in epidemiology. We will consider data storage and retrieval, prospective temporal and spatial analysis, and the evaluation of pattern detection.",
+    "prerequisites": {
+      "text": "EPIB 603 and EPIB 621 or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 648",
+    "subject": "EPIB",
+    "number": "648",
+    "title": "Methods in Social Epidemiology",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Methods for conducting studies in social epidemiology and population health will be covered. Topics will include causal inference; measurement and concepts of social exposures; methods for study design and analysis. Techniques for descriptive and etiologic investigations of socioeconomic position, gender, race and ethnicity, geography, and social policies will be discussed.",
+    "prerequisites": {
+      "text": "EPIB 603 and EPIB 621, or permission of the instructors",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 651",
+    "subject": "EPIB",
+    "number": "651",
+    "title": "Selected Topics in Biostatistics 1",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The purpose of this 1-credit courses is to cover specific methodologic topics in more detail than is given in the main courses on statistical methods. The topics to be offered may vary from year to year. Topics currently offered include \"Biometric Methods in Occupational Epidemiology\" and \"Practical Considerations of Statistical Power\".",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 654",
+    "subject": "EPIB",
+    "number": "654",
+    "title": "Pharmacoepidemiology 4",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The utility of epidemiological techniques for the assessment of drug benefits after their marketing is presented. The course is composed of four parts: (i) methodology of Phase IV studies (efficacy and effectiveness studies); (ii) measurement of quality of life; (iii) evaluation of the economic impact of drugs; (iv) assessment of the effects of drugs and vaccines on the public health system.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 607 or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered only in Summer term.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 661",
+    "subject": "EPIB",
+    "number": "661",
+    "title": "Pharmacoepidemiology 3",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "In this course, students are confronted with real examples of pharmaco-epidemiologic problems. Flagship studies in pharmaco-epidemiology are reviewed in terms of protocol, design issues, data collection, statistical analysis and interpretation of results.",
+    "prerequisites": {
+      "text": "EPIB 631, EPIB 633 or permission of instructor",
+      "tree": {
+        "and": [
+          "EPIB 631",
+          "EPIB 633"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered only in Summer term.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 662",
+    "subject": "EPIB",
+    "number": "662",
+    "title": "Pharmacological Basis of Pharmacoepidemiology",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The objective of this course is to provide students with an indepth review of the principles of pharmacology which are essential for the design, analysis and critical appraisal of studies in pharmacoepidemiology.",
+    "prerequisites": {
+      "text": "EPIB 633, or equivalent, or permission of the instructor.",
+      "tree": "EPIB 633",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 663",
+    "subject": "EPIB",
+    "number": "663",
+    "title": "Substantive Epidemiology 6",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Designed to give students an overview of major disease or health problem, disease or substantive area. The students will develop their knowledge of the topic regarding 1) The key definition, concepts and indicators useful in the study of the problem; 2) The epidemiology of the problem; and 3) Major studies of interventions designed to address the problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 668",
+    "subject": "EPIB",
+    "number": "668",
+    "title": "Special Topics 1",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 669",
+    "subject": "EPIB",
+    "number": "669",
+    "title": "Special Topics 2",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Although this course follows a Monday class lecture pattern, there will be a final assignment/exam due on Tuesday, June 30, 2020.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ],
+    "parts": [
+      {
+        "code": "EPIB 669D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "EPIB 669D2",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPIB 670",
+    "subject": "EPIB",
+    "number": "670",
+    "title": "Special Topics 3",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day."
+    ]
+  },
+  {
+    "code": "EPIB 671",
+    "subject": "EPIB",
+    "number": "671",
+    "title": "Cancer Epidemiology and Prevention",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will explore the common epidemiologic approaches to studying etiologic relations in carcinogenesis and for assessing the efficacy of cancer prevention interventions. Emphasis will be given on both molecular and social epidemiology domains with examples of different study designs and data analysis methods and of the impact of measurement error and other biases.",
+    "prerequisites": {
+      "text": "EPIB 601 and EPIB 621, or equivalent, or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 672",
+    "subject": "EPIB",
+    "number": "672",
+    "title": "Special Topics 5",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day.",
+      "**Although this course follows a Monday class lecture pattern, there will be a final assignment/exam due on Tuesday, June 30, 2020."
+    ]
+  },
+  {
+    "code": "EPIB 675",
+    "subject": "EPIB",
+    "number": "675",
+    "title": "Special Topics 6",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 676",
+    "subject": "EPIB",
+    "number": "676",
+    "title": "Special Topics 7",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 677",
+    "subject": "EPIB",
+    "number": "677",
+    "title": "Special Topics 8",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 678",
+    "subject": "EPIB",
+    "number": "678",
+    "title": "Special Topics 9",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 679",
+    "subject": "EPIB",
+    "number": "679",
+    "title": "Special Topics 10",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of epidemiologic importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 681",
+    "subject": "EPIB",
+    "number": "681",
+    "title": "Global Health: Epidemiological Research",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A review of selected epidemiological research focussing on global health and disease topics. Research will be mostly from developing countries and research methods will be highlighted. Case studies will be used to illustrate specific applications and challenges.",
+    "prerequisites": {
+      "text": "With permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 684",
+    "subject": "EPIB",
+    "number": "684",
+    "title": "Principles of Environmental Health Sciences 1",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in environmental health sciences: principles of exposure assessment and of toxicology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students pursuing a career in Environmental Health Sciences or with permission of the course instructors. Not open to students who have taken or are taking EXMD 670 or NRSC 670 or PHAR 670.",
+      "excludes": [
+        "EXMD 670",
+        "NRSC 670",
+        "PHAR 670"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 685",
+    "subject": "EPIB",
+    "number": "685",
+    "title": "Principles of Environmental Health Sciences 2",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in environmental health sciences: principles of environmental epidemiology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students in the Environmental Health Sciences or permission of the course instructors. Not open to students who have taken or are taking EXMD 671 or NRSC 671 or PHAR 671.",
+      "excludes": [
+        "EXMD 671",
+        "NRSC 671",
+        "PHAR 671"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 686",
+    "subject": "EPIB",
+    "number": "686",
+    "title": "Environmental Health Seminar",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The seminar will promote critical thinking among students regarding current topics in environmental and occupational health. The course will comprise critical review of papers and topics from the literature, discussion of key studies in environmental health, student presentations, presentations by outside speakers, presentation of novel methods by students and faculty, and other topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Available to all graduate students in EBOH, and with approval of instructors to students in other departments in which health or epidemiology is taught. Students in EBOH will be given priority."
+    ]
+  },
+  {
+    "code": "EPIB 690",
+    "subject": "EPIB",
+    "number": "690",
+    "title": "M.Sc. Thesis",
+    "credits": 21,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 691",
+    "subject": "EPIB",
+    "number": "691",
+    "title": "Research Project in Epidemiology",
+    "credits": 12,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Students will critically assess research and summarize the findings in a research paper on a health related topic from an epidemiologic perspective. Topic to be approved by faculty member who will direct student and evaluate the paper.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to non-thesis M.Sc. students who have completed requirements.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "EPIB 691D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EPIB 691D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPIB 701",
+    "subject": "EPIB",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The comprehensive examination is a written examination. The objective is to assess the degree to which students have been able to assimilate and apply the principles of epidemiologic research. Examinations held twice yearly.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPIB 702",
+    "subject": "EPIB",
+    "number": "702",
+    "title": "Ph.D. Proposal",
+    "credits": 0,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Essential skills for thesis writing and defence, including essential elements of research protocols, formulation of research objectives, the design, and strategies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Required for Ph.D. students."
+    ],
+    "parts": [
+      {
+        "code": "EPIB 702D1",
+        "credits": 0,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "EPIB 702D2",
+        "credits": 0,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "EPIB 703",
+    "subject": "EPIB",
+    "number": "703",
+    "title": "Principles of Study Design",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to inferential objectives in epidemiologic research (description, prediction, causal inference), study designs for addressing those questions, and study design approaches to synthesizing research findings. The advantages, limitations, and assumptions of various designs. Common epidemiologic study designs, including trials, cohort studies, and various designs with oversampling of cases (collectively called case-control designs). Introduction to designs for other types of inference, including those for descriptive epidemiology and surveillance; impact evaluation; mathematical models; prediction algorithms and machine learning; and measurement studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration in the Ph.D. Epidemiology program, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "No statistical software will be used."
+    ]
+  },
+  {
+    "code": "EPIB 704",
+    "subject": "EPIB",
+    "number": "704",
+    "title": "Doctoral Level Epidemiologic Methods 1",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Estimation of epidemiologic effect measures and their confidence intervals in a variety of different study designs. Emphasis on analysis of sample data sets using regression models, graphical and tabular presentation of results, causal interpretation of effect estimates, writing reports for scientific publications, and sensitivity analyses for violated assumptions.",
+    "prerequisites": {
+      "text": "EPIB 603 and EPIB 621 or equivalent",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Ph.D students in Epidemiology or Biostatistics programs only.; Not open to students who have taken EPIB 604.",
+      "excludes": [
+        "EPIB 604"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 705",
+    "subject": "EPIB",
+    "number": "705",
+    "title": "Doctoral Level Epidemiologic Methods 2",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course has a conceptual and analytical causal inference perspective. The nature of specific study biases resulting in non-causal components in the observed association between exposure and outcome are discussed, including endogenous selection bias, measured and unmeasured confounding, and measurement error. Methods to recover the causal effect with such biases are presented. Causal mediation analysis is discussed. Models for survival analysis are discussed as well as the problem of- and some solutions to missing data. A brief overview of genetic epidemiology principles is covered.",
+    "prerequisites": {
+      "text": "EPIB 704",
+      "tree": "EPIB 704",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Ph.D. students in Epidemiology or Biostatistics programs only.; Not open to students who have taken EPIB 608.",
+      "excludes": [
+        "EPIB 608"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 706",
+    "subject": "EPIB",
+    "number": "706",
+    "title": "Doctoral Seminar in Epidemiology",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course aims to provide an opportunity to students who have completed the Epidemiology course series in the Department of Epidemiology, Biostatistics and Occupational Health, to optimize their training in ways that will be helpful to their thesis research and to the development of their career as epidemiologists. The content of this interactive course and the delivery of the material is primarily determined by students based on the knowledge gaps that they identify. The course will allow students to expand their methodological tool box, explore controversies in epidemiology, and gain experience synthesizing and communicating complex concepts to an informed audience.",
+    "prerequisites": {
+      "text": "EPIB 701",
+      "tree": "EPIB 701",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in PhD Epidemiology or permission of instructor; Not open to students who have taken EPIB 609.",
+      "excludes": [
+        "EPIB 609"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 707",
+    "subject": "EPIB",
+    "number": "707",
+    "title": "Research Design in Health Sciences",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Lectures and discussions and student oral and written presentations with the aim of providing guidance and experience in the development of objectives, background and methods for both the formulation of, and the constructive peer criticism of, research protocols in the health sciences.",
+    "prerequisites": {
+      "text": "EPIB 701",
+      "tree": "EPIB 701",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration in the PhD program in Epidemiology.; Not open to students who have taken EPIB 623.",
+      "excludes": [
+        "EPIB 623"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPIB 710",
+    "subject": "EPIB",
+    "number": "710",
+    "title": "Advanced Methods: Causal Inference",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Causal inference using potential outcomes has become a standard part of the toolkit for epidemiologic researchers. In this course students will review foundational material on potential outcomes, and then understand and implement advanced methods. The class will emphasize both conceptual understanding and implementation, including analyses of complex datasets. Time-fixed and time-varying exposures will be considered. Methods studied will vary but will include marginal structural models, structural nested models, and targeted maximum likelihood.",
+    "prerequisites": {
+      "text": "EPIB 705 or equivalent, or permission of instructor.",
+      "tree": "EPIB 705",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Ph.D. students in the Department of Epidemiology, Biostatistics, and Occupational Health.; Not open to students who have taken EPIB 610.",
+      "excludes": [
+        "EPIB 610"
+      ]
+    },
+    "notes": []
+  }
+]

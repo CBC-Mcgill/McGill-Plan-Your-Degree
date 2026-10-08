@@ -1,0 +1,432 @@
+[
+  {
+    "code": "CACF 210",
+    "subject": "CACF",
+    "number": "210",
+    "title": "Introductory Financial Accounting",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to basic financial statements. Topics include: moving through the accounting cycle and the notion of debit and credit; how to measure and report financial transactions and apply accounting theory; financial statement analysis and how to make better business decisions based on sound analysis.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CMSC 000",
+      "tree": "CMSC 000",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 215",
+    "subject": "CACF",
+    "number": "215",
+    "title": "Introductory Managerial Accounting",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to the accounting needs of managers. Topics include: key concepts and practices of management accounting and how they can be used to improve business performance and decision-making; types of cost-accounting systems; patterns of cost behaviour; problems related to cost determination, allocation, budgeting and control; and identifying, classifying and summarizing costs and expenses.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CMSC 000 and CACF 210",
+      "tree": {
+        "and": [
+          "CMSC 000",
+          "CACF 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 305",
+    "subject": "CACF",
+    "number": "305",
+    "title": "Information System Tools in Accounting",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to the role of computer information systems in organizations as applied to accounting. Topics include: transaction processing fundamentals, major business processing cycles, internal control management systems, accounting information systems security and audit. Includes the use of accounting software.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CACF 210 and CMSC 000",
+      "tree": {
+        "and": [
+          "CACF 210",
+          "CMSC 000"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "CACF 310",
+    "subject": "CACF",
+    "number": "310",
+    "title": "Intermediate Financial Reporting 1",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Course focuses on the reporting and analysis of financial information with statements and using key accounting principles. Topics include: interpretation of financial statements, examination of the notes that accompany the financial statements; recording and use of analytical tools such as financial-ratio analysis.",
+    "prerequisites": {
+      "text": "CMSC 000, CACF 210 and CACF 305",
+      "tree": {
+        "and": [
+          "CMSC 000",
+          "CACF 210",
+          "CACF 305"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 325",
+    "subject": "CACF",
+    "number": "325",
+    "title": "Intermediate Financial Reporting 2",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An in-depth review of the Income Statement components including revenues, expenses, related-party transactions and other measures derived from the income statements. The course provides a deeper examination of the notes that accompany financial statements in annual reports and are integral to the understanding of the financial position of companies.",
+    "prerequisites": {
+      "text": "CACF 310 and CMSC 000",
+      "tree": {
+        "and": [
+          "CACF 310",
+          "CMSC 000"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 340",
+    "subject": "CACF",
+    "number": "340",
+    "title": "Corporate Finance: Value Creation and Decision-Making",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A brief overview of the fundamentals of finance from a corporation’s perspective. It provides the framework, concepts and tools for analyzing investments and financial decision-making by a corporation. Other topics include consideration of alternative methods to optimize the firm’s assets and added-value.",
+    "prerequisites": {
+      "text": "CMSC 000 and CACF 210",
+      "tree": {
+        "and": [
+          "CMSC 000",
+          "CACF 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 341",
+    "subject": "CACF",
+    "number": "341",
+    "title": "Taxation: Concepts and Regulations",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Focus on understanding the conceptual structure of the Income Tax Act and its administration. The course covers the key elements of taxation for individuals and corporations, including income from employment, business and property; capital gains and losses; shareholder benefits; tax planning; international taxation; deductions from income; and calculating taxable income and tax due.",
+    "prerequisites": {
+      "text": "CACF 210 and CMSC 000",
+      "tree": {
+        "and": [
+          "CACF 210",
+          "CMSC 000"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CACF 305 and CMSC 101",
+      "tree": {
+        "and": [
+          "CACF 305",
+          "CMSC 101"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 345",
+    "subject": "CACF",
+    "number": "345",
+    "title": "Intermediate Managerial Accounting",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The course explores the risk controls, costs, economic concepts and other considerations in performance management that needs to be taken into account when making operational decisions. Introduction to the most widely used methodologies in managing organization performance systems.",
+    "prerequisites": {
+      "text": "CACF 215 and CMSC 000",
+      "tree": {
+        "and": [
+          "CACF 215",
+          "CMSC 000"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 350",
+    "subject": "CACF",
+    "number": "350",
+    "title": "Artificial Intelligence: Application in Accounting Practices",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The course covers the topic of installing, using, producing and interpreting accounting reports using SAGE 50 and prepares students for the SAGE 50 certification. Other topics include survey of cloud computing, blockchain technology in business models, availability of big data and systems such as Oracle which allows for fast analysis of business data and its impact on financial records and audit process.",
+    "prerequisites": {
+      "text": "CCCS 280, CACF 210",
+      "tree": {
+        "and": [
+          "CCCS 280",
+          "CACF 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 420",
+    "subject": "CACF",
+    "number": "420",
+    "title": "Ethical Considerations and Practices",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "An introduction to ethics, focusing on the application of ethical theories to controversial, contemporary issues using cases to analyze and simulate problem solving of the dilemmas faced by managers, employees and organizations, including topics on morality versus legality.",
+    "prerequisites": {
+      "text": "CCLW 205",
+      "tree": "CCLW 205",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 440",
+    "subject": "CACF",
+    "number": "440",
+    "title": "Advanced Financial Reporting",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The course focuses on deeper inside complex business entities, partnerships, corporations and foreign currency transactions and how to analyze consolidated financial statements. Topics include the six principal areas of advanced financial accounting: standard-setting in Canada and internationally, financial instruments and income tax allocation, long-term inter-corporate investments, consolidation, foreign currency translation and the translation and consolidation of foreign subsidiaries, and not-for-profit and public-sector accounting.",
+    "prerequisites": {
+      "text": "CACF 325",
+      "tree": "CACF 325",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 445",
+    "subject": "CACF",
+    "number": "445",
+    "title": "Audit and Assurance: Principles, Theories and Current Practices",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Introduction to a variety of audit and assurance services provided by public accounting firms. Services include internal and operational auditing, external auditing, risk management, compliance, and internal control designs. Preparation of audit files and the standards required for documentation of audit work within Canada’s generally accepted auditing standards will be covered.",
+    "prerequisites": {
+      "text": "CACF 325",
+      "tree": "CACF 325",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 450",
+    "subject": "CACF",
+    "number": "450",
+    "title": "Financial and Working Capital Management",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Traditional concepts of liquidity, collections, disbursements, company-bank relationships, cash forecasting, and short-term investing and financing, including the role of working capital management in the operations of a firm.",
+    "prerequisites": {
+      "text": "CACF 340 and CMSC 000",
+      "tree": {
+        "and": [
+          "CACF 340",
+          "CMSC 000"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 460",
+    "subject": "CACF",
+    "number": "460",
+    "title": "Applied Personal and Corporate Taxation",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on the structure of the Canadian tax system, and the income tax filings to be completed by individuals and corporations outlining sources of taxable income and allowable deductions.",
+    "prerequisites": {
+      "text": "CACF 341 and CMSC 000",
+      "tree": {
+        "and": [
+          "CACF 341",
+          "CMSC 000"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 470",
+    "subject": "CACF",
+    "number": "470",
+    "title": "Public Sector Financial Management Practices",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "In-depth review of Generally Accepted Accounting Principles (GAAP) for non-profit and public sector entities. Topics include: application of accounting concepts in the not-for-profit and charities sector; overview of government (public sector) financial reporting standards including the basic process for setting up a not-for-profit and obtaining and maintaining charitable status; major financial reporting issues in not-for-profit organizations, approaches for measuring and valuing outputs, performance measurement in NFPOs and profit-oriented organizations, public and Indigenous communities; the concept of the public sector, and the Handbook applicable to each component of the public sector.",
+    "prerequisites": {
+      "text": "CACF 325",
+      "tree": "CACF 325",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CACF 440",
+      "tree": "CACF 440",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACF 490",
+    "subject": "CACF",
+    "number": "490",
+    "title": "Capstone",
+    "credits": 0,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course requires students to apply the ACAF Method to a single comprehensive business case. Students will work through the case that deals with financial accounting, management accounting, finance, taxation, audit and information system issues.",
+    "prerequisites": {
+      "text": "CACF 345, CACF 350, CACF 420, CACF 440, CACF 445, CACF 460, CACF 470",
+      "tree": {
+        "and": [
+          "CACF 345",
+          "CACF 350",
+          "CACF 420",
+          "CACF 440",
+          "CACF 445",
+          "CACF 460",
+          "CACF 470"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

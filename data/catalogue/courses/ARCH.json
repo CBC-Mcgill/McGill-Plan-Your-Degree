@@ -1,0 +1,2027 @@
+[
+  {
+    "code": "ARCH 201",
+    "subject": "ARCH",
+    "number": "201",
+    "title": "Communication, Behaviour and Architecture",
+    "credits": 6,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to design; development of design judgement and communication skills in a series of exercises addressing light, scale, space, form and colour in the built environment; introduction to techniques of oral and graphic presentation, including model making, photography, sketching and architectural drawing. The course is based in the studio and includes lectures, seminars and field trips.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-9-9)"
+    ]
+  },
+  {
+    "code": "ARCH 202",
+    "subject": "ARCH",
+    "number": "202",
+    "title": "Architectural Graphics and Elements of Design",
+    "credits": 6,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to architectural design; consideration of building form in relation to program, structural system, material selection, site and climate; further development of skills in model making, conventional architectural drawing, axonometric and perspective drawing, sketching and architectural rendering. The course is based in the studio and includes lectures, seminars and field trips.",
+    "prerequisites": {
+      "text": "ARCH 201",
+      "tree": "ARCH 201",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-9-9)"
+    ]
+  },
+  {
+    "code": "ARCH 240",
+    "subject": "ARCH",
+    "number": "240",
+    "title": "Organization of Materials in Buildings",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The characteristics of basic building materials: wood, steel, masonry and concrete. How building materials are shaped into building components, and how these components are integrated into the building envelope. Problems, laboratory projects and field trips to illustrate principles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 241",
+    "subject": "ARCH",
+    "number": "241",
+    "title": "Architectural Structures 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the fundamental concepts and forms of structures in architecture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ARCH 250",
+    "subject": "ARCH",
+    "number": "250",
+    "title": "Architectural History 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The study of architecture and cities from ancient times to 1750.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 251",
+    "subject": "ARCH",
+    "number": "251",
+    "title": "Architectural History 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The study of North American architecture and cities from 1950 to the present.",
+    "prerequisites": {
+      "text": "ARCH 250",
+      "tree": "ARCH 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 303",
+    "subject": "ARCH",
+    "number": "303",
+    "title": "Design and Construction 1",
+    "credits": 6,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "An exploration of the design of buildings. Projects emphasize the major social, technological, environmental, and symbolic aspects of the design process. Introduction to specific modelling, presentation, and documentation techniques. Discussions, readings, field trips and practical exercises.",
+    "prerequisites": {
+      "text": "ARCH 202",
+      "tree": "ARCH 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-9-9)"
+    ]
+  },
+  {
+    "code": "ARCH 304",
+    "subject": "ARCH",
+    "number": "304",
+    "title": "Design and Construction 2",
+    "credits": 6,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of Design and Construction I with projects of increasing complexity. Projects deal with particular aspects of architectural design and/or explore approaches to design methodology. Discussions, readings, field trips and practical exercises.",
+    "prerequisites": {
+      "text": "ARCH 303",
+      "tree": "ARCH 303",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-9-9)"
+    ]
+  },
+  {
+    "code": "ARCH 325",
+    "subject": "ARCH",
+    "number": "325",
+    "title": "Architectural Sketching",
+    "credits": 2,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seven days of supervised field sketching in selected locations outside Montreal. The course develops traditional skills in architectural sketching in pencil, ink and watercolour. Sketching is explored as a process that frames the student's encounter with the environment and as a strategy for acquiring knowledge and understanding of the world.",
+    "prerequisites": {
+      "text": "ARCH 221",
+      "tree": "ARCH 221",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ARCH 324",
+      "excludes": [
+        "ARCH 324"
+      ]
+    },
+    "notes": [
+      "(15-40-6)"
+    ]
+  },
+  {
+    "code": "ARCH 342",
+    "subject": "ARCH",
+    "number": "342",
+    "title": "Digital Representation",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course introduces students to digital representation in architecture. Students explore applications of state-of-the-art two- and three-dimensional computer modeling software in architectural design.",
+    "prerequisites": {
+      "text": "ARCH 201 or instructor's approval",
+      "tree": "ARCH 201",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 354",
+    "subject": "ARCH",
+    "number": "354",
+    "title": "Architectural History 3",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The study of Modern European architecture from 1750 to 1950.",
+    "prerequisites": {
+      "text": "ARCH 250 and ARCH 251",
+      "tree": {
+        "and": [
+          "ARCH 250",
+          "ARCH 251"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 355",
+    "subject": "ARCH",
+    "number": "355",
+    "title": "Architectural History 4",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The study of cities and world architecture from 1900 to the present.",
+    "prerequisites": {
+      "text": "ARCH 250 and ARCH 251",
+      "tree": {
+        "and": [
+          "ARCH 250",
+          "ARCH 251"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 375",
+    "subject": "ARCH",
+    "number": "375",
+    "title": "Landscape",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Land form, plant life, microclimate; land use and land preservation; elements and methods of landscape design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 377",
+    "subject": "ARCH",
+    "number": "377",
+    "title": "Energy, Environment, and Buildings 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of the interrelationship between energy, environment, and building. Climate analysis and design, daylighting, electrical systems, plumbing and water conservation, and conveyance systems.",
+    "prerequisites": {
+      "text": "ARCH 202 and ARCH 378",
+      "tree": {
+        "and": [
+          "ARCH 202",
+          "ARCH 378"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 378",
+    "subject": "ARCH",
+    "number": "378",
+    "title": "Introduction to Building Environments",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to ecology, technology, and building through climate change as a central topic for architects in this century.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 379",
+    "subject": "ARCH",
+    "number": "379",
+    "title": "Summer Course Abroad",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Studies in-situ of key buildings, landscapes and urban settings; techniques of graphic documentations, analysis of physical configuration, constructional details and present use. Excursions to neighbouring sites of architectural interest.",
+    "prerequisites": {
+      "text": "ARCH 202 or permission of instructor",
+      "tree": "ARCH 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental permission required",
+      "excludes": []
+    },
+    "notes": [
+      "(0-0-9)",
+      "The fee for this field course is $1968, of which a small portion is eligible to be reported on a T2202A. The fee covers students' and instructor lodging and instructor transportation costs. The fee also includes the printing of students' final work in the course."
+    ]
+  },
+  {
+    "code": "ARCH 383",
+    "subject": "ARCH",
+    "number": "383",
+    "title": "Geometry and Architecture",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Geometry in the formal structure of design. Grids, lattices, polygons and polyhedra; proportional systems. Evidence of these figures and structures in natural objects and phenomena. Graphical and physical models. Application to architecture and the human environment. Case studies.",
+    "prerequisites": {
+      "text": "ARCH 202 or permission of instructor",
+      "tree": "ARCH 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)",
+      "Given alternate years, alternating with ARCH 525"
+    ]
+  },
+  {
+    "code": "ARCH 405",
+    "subject": "ARCH",
+    "number": "405",
+    "title": "Design and Construction 3",
+    "credits": 6,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A structured investigation of architectural concepts; program interpretation with respect to relevant cultural, social and environmental contexts; applications of appropriate formal languages and building technologies in integrated proposals for a variety of building forms.",
+    "prerequisites": {
+      "text": "ARCH 304",
+      "tree": "ARCH 304",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-9-9)"
+    ]
+  },
+  {
+    "code": "ARCH 406",
+    "subject": "ARCH",
+    "number": "406",
+    "title": "Design and Construction 4",
+    "credits": 6,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A detailed study and comprehensive development of architectural proposals for complex building types and site conditions; the exploration of coherent initial concepts with respect to programmatic requirements, image and form; subsequent elaboration leading to meaningful and technologically viable designs for the built environment.",
+    "prerequisites": {
+      "text": "ARCH 405",
+      "tree": "ARCH 405",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-9-9)"
+    ]
+  },
+  {
+    "code": "ARCH 445",
+    "subject": "ARCH",
+    "number": "445",
+    "title": "Architectural Structures 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Holistic overview of structural systems for architects and application to real-world architectural projects. Fundamentals and principles of the philosophy of structures; structural theory; mechanics of structures; loadings; different structural components such as gravity and lateral force resisting systems; materials and other factors in the design and analysis of structures.",
+    "prerequisites": {
+      "text": "ARCH 240, ARCH 241, ARCH 304",
+      "tree": {
+        "and": [
+          "ARCH 240",
+          "ARCH 241",
+          "ARCH 304"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ARCH 405",
+      "tree": "ARCH 405",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CIVE 492.",
+      "excludes": [
+        "CIVE 492"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ARCH 447",
+    "subject": "ARCH",
+    "number": "447",
+    "title": "Energy, Environment, and Buildings 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced exploration of the interrelationships among energy, environment, and building. Topics include energy efficiency, thermal envelopes, life-cycle design, materials selection, fluid mechanics of natural ventilation, thermal science of passive design, adaptive thermal comfort, the 'air-conditioning trap', the 'embodied carbon blindspot,' and the 'timber-carbon sink'.",
+    "prerequisites": {
+      "text": "ARCH 240, ARCH 378",
+      "tree": {
+        "and": [
+          "ARCH 240",
+          "ARCH 378"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 451",
+    "subject": "ARCH",
+    "number": "451",
+    "title": "Building Regulations and Safety",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The study of building codes with specific emphasis on the National Building and National Fire Codes of Canada. Examples of existing buildings with assignments to illustrate regulations. Development of a systematic approach to the implementation of codes during the preliminary design stage of an architectural project.",
+    "prerequisites": {
+      "text": "ARCH 405",
+      "tree": "ARCH 405",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 461",
+    "subject": "ARCH",
+    "number": "461",
+    "title": "Freehand Drawing and Sketching",
+    "credits": 1,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Drawing and sketching in pencil, charcoal and other media both in the studio and out-of-doors.",
+    "prerequisites": {
+      "text": "ARCH 325",
+      "tree": "ARCH 325",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-3-0)"
+    ]
+  },
+  {
+    "code": "ARCH 490",
+    "subject": "ARCH",
+    "number": "490",
+    "title": "Selected Topics in Design",
+    "credits": 2,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A course to allow the introduction of special topics in related areas of design.",
+    "prerequisites": {
+      "text": "ARCH 202 or permission of instructor",
+      "tree": "ARCH 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-4)"
+    ]
+  },
+  {
+    "code": "ARCH 491",
+    "subject": "ARCH",
+    "number": "491",
+    "title": "Selected Topics in Landscape Studies",
+    "credits": 2,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Current issues of landscape, environment, and climate with impacts on the theory and practice of architecture.",
+    "prerequisites": {
+      "text": "ARCH 202",
+      "tree": "ARCH 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-4)."
+    ]
+  },
+  {
+    "code": "ARCH 492",
+    "subject": "ARCH",
+    "number": "492",
+    "title": "Selected Topics in Professional Practice",
+    "credits": 2,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Critical aspects of the architect's contemporary role in professional practice.",
+    "prerequisites": {
+      "text": "ARCH 202",
+      "tree": "ARCH 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-4)."
+    ]
+  },
+  {
+    "code": "ARCH 500",
+    "subject": "ARCH",
+    "number": "500",
+    "title": "Internship in Architecture",
+    "credits": 0,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A period of architecture internship consistent with the terms of reference of the Canadian Internship in Architecture Program (IAP).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 512",
+    "subject": "ARCH",
+    "number": "512",
+    "title": "Architectural Modelling",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Architectural modelling using advanced applications in digital media. Topics include: 3-D modelling and rendering; image editing; digital animation; hypertext and the World Wide Web; issues of representation and methodology; comparison of publishing applications. Projects complement design studio courses and independent studies that are student or instructor initiated.",
+    "prerequisites": {
+      "text": "ARCH 342 or equivalent.",
+      "tree": "ARCH 342",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 514",
+    "subject": "ARCH",
+    "number": "514",
+    "title": "Community Design Workshop",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Context-focused community-based architectural projects undertaken in collaboration with external partners. Exploration of challenges, needs, and opportunities in architectural and urban-design interventions on real sites through interdisciplinary and cross-sectorial collaboration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking URBP 514.",
+      "excludes": [
+        "URBP 514"
+      ]
+    },
+    "notes": [
+      "(1-4-4)"
+    ]
+  },
+  {
+    "code": "ARCH 515",
+    "subject": "ARCH",
+    "number": "515",
+    "title": "Sustainable Design",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "This course will address sustainable design theory and applications in the built environment with students from a variety of fields (architecture, urban planning, engineering, sociology, environmental studies, economics, international studies). Architecture will provide the focus for environmental, socio-cultural and economic issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 517",
+    "subject": "ARCH",
+    "number": "517",
+    "title": "Sustainable Residential Development",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design strategies of sustainable residential environments at the community and the unit levels. Historic references, siting principles, high density, healthy developments, green homes, urban renewal, circulation and parking, open spaces and implementation approaches.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 519",
+    "subject": "ARCH",
+    "number": "519",
+    "title": "Field Course Abroad",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Advanced and comprehensive studies in-situ of key buildings, landscapes and urban settings; techniques of graphic documentations, analysis of physical configuration, constructional details and present use.",
+    "prerequisites": {
+      "text": "ARCH 304 or permission of instructor",
+      "tree": "ARCH 304",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited enrolment; departmental permission required",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Excursions to neighbouring sites of architectural interest",
+      "The fee for this field course is $1968, of which a small portion is eligible to be reported on a T2202A. The fee covers students' and instructor lodging and instructor transportation costs. The fee also includes the printing of students' final work in the course."
+    ]
+  },
+  {
+    "code": "ARCH 520",
+    "subject": "ARCH",
+    "number": "520",
+    "title": "Montreal: Urban Morphology",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to observation, research, and analysis of building construction and building uses. Use of maps and field visits to understand relationships between individual buildings and neighbourhood development. Study of changes in volume, form, and materials in architecture over time.",
+    "prerequisites": {
+      "text": "ARCH 251",
+      "tree": "ARCH 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 521",
+    "subject": "ARCH",
+    "number": "521",
+    "title": "Structure of Cities",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Nature, pattern and life of modern cities. Urban networks, special areas, problems and prospects.",
+    "prerequisites": {
+      "text": "ARCH 202 or permission of instructor",
+      "tree": "ARCH 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)",
+      "Given alternate years, alternating with ARCH 520"
+    ]
+  },
+  {
+    "code": "ARCH 523",
+    "subject": "ARCH",
+    "number": "523",
+    "title": "Significant Texts and Buildings",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Critical study of significant architectural thought since 1750 as it has been expressed in buildings and texts (treatises, manifestos, criticisms). A specific theme will be addressed every year to allow in-depth interpretations of the material presented and discussed.",
+    "prerequisites": {
+      "text": "ARCH 251",
+      "tree": "ARCH 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental permission required",
+      "excludes": []
+    },
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 525",
+    "subject": "ARCH",
+    "number": "525",
+    "title": "Seminar on Analysis and Theory",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Analysis and evaluation of significant architectural projects with reference to contemporary architectural theories.",
+    "prerequisites": {
+      "text": "ARCH 202 or permission of instructor",
+      "tree": "ARCH 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 528",
+    "subject": "ARCH",
+    "number": "528",
+    "title": "History of Housing",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Indigenous housing both transient and permanent, from the standpoint of individual structure and pattern of settlements. The principal historic examples of houses including housing in the age of industrial revolution and contemporary housing.",
+    "prerequisites": {
+      "text": "ARCH 251 or permission of instructor",
+      "tree": "ARCH 251",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 529",
+    "subject": "ARCH",
+    "number": "529",
+    "title": "Housing Theory",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A review of environmental alternatives in housing; contemporary housing and the physical and sociological determinants that shape it; Canadian housing.",
+    "prerequisites": {
+      "text": "ARCH 528 or permission of instructor",
+      "tree": "ARCH 528",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 531",
+    "subject": "ARCH",
+    "number": "531",
+    "title": "Architectural Intentions Vitruvius - Renaissance",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Architectural intentions embodied in buildings and writings of architects from antiquity to the Renaissance. Special emphasis is placed on the cultural connections of architecture to science and philosophy.",
+    "prerequisites": {
+      "text": "ARCH 251",
+      "tree": "ARCH 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 532",
+    "subject": "ARCH",
+    "number": "532",
+    "title": "Origins of Modern Architecture",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Examination of architectural intentions (theory and practice) in the European context (especially France, Italy and England), during the crucial period that marks the beginning of the modern era.",
+    "prerequisites": {
+      "text": "ARCH 251",
+      "tree": "ARCH 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 533",
+    "subject": "ARCH",
+    "number": "533",
+    "title": "New Approaches to Architectural History",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "An exploration of the aims, tools, and methods of architectural history as a discipline.",
+    "prerequisites": {
+      "text": "ARCH 251 or permission of instructor",
+      "tree": "ARCH 251",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 535",
+    "subject": "ARCH",
+    "number": "535",
+    "title": "History of Architecture in Canada",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "French, British and American influences in the history of Canadian architecture, with particular emphasis on the Eastern Provinces. Site visits and case studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 536",
+    "subject": "ARCH",
+    "number": "536",
+    "title": "Heritage Conservation",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Historic attitudes and terminologies of conservation; historic research techniques. Restoration technology of building materials and principles of interior design in the 19th and 20th century; current preservation planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)",
+      "Site visits and case studies."
+    ]
+  },
+  {
+    "code": "ARCH 540",
+    "subject": "ARCH",
+    "number": "540",
+    "title": "Selected Topics in Architecture 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A course to allow the introduction of new topics in Architecture as needs arise, by regular and visiting staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "ARCH 541",
+    "subject": "ARCH",
+    "number": "541",
+    "title": "Selected Topics in Architecture 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A course to allow the introduction of new topics in Architecture as needs arise, by regular and visiting staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "ARCH 542",
+    "subject": "ARCH",
+    "number": "542",
+    "title": "Selected Topics in Architecture 3",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Special topics related to architecture will be presented by core faculty and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "ARCH 543",
+    "subject": "ARCH",
+    "number": "543",
+    "title": "Selected Topics in Architecture 4",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Special topics related to architecture will be presented by core faculty and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "**Although this course follows a MTWRF class schedule, there will be a class on Saturday, May 9th."
+    ]
+  },
+  {
+    "code": "ARCH 551",
+    "subject": "ARCH",
+    "number": "551",
+    "title": "Urban Design and Planning",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of city-building in Canada relative to municipal, regional, and provincial actions used to guide urban growth and development. Contemporary urban design in major metropolitan centres as shaped by legal, political, and cultural realities. Current preoccupations in citybuilding: reurbanisation and adaptive reuse of infrastructure, collaborative multi-stakeholder projects, strategic initiatives, changing relationships between professional experts and grassroots actors. Introduction to specific aspects of practice: public participation and community engagement; land development and real estate; project feasibility and implementation; policy monitoring and evaluation; emergent city-building regimes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.Arch. students. Not open to students who are taking or who have taken ARCH 550 or URBP 550 or URBP 551.",
+      "excludes": [
+        "ARCH 550",
+        "URBP 550",
+        "URBP 551"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 562",
+    "subject": "ARCH",
+    "number": "562",
+    "title": "Innovative Homes and Communities",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Innovative design concepts for sustainable homes and communities to include adaptability; net-zero energy; micro units; recycling; plug and play; green roofs; aging in place and live-work.",
+    "prerequisites": {
+      "text": "ARCH 201",
+      "tree": "ARCH 201",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ARCH 631.",
+      "excludes": [
+        "ARCH 631"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 564",
+    "subject": "ARCH",
+    "number": "564",
+    "title": "Design for Development",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Designing for sustainable development to meet broad developmental goals. Innovative design approaches, strategies and projects to address these objectives via economic empowerment, food security, gender equity, health, sanitation, climate-change preparedness, and shelter-sector engagements.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 566",
+    "subject": "ARCH",
+    "number": "566",
+    "title": "Cultural Landscapes Seminar",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Overview of cultural landscapes studies, methodologies, and resources. Comparative studies of the connection between people, place, and artifact systems through a critical examination of architecture, regional context, and material culture. Examination of precedents for the interpretation of cultural landscapes by architects, ethnologists, anthropologists, folklorists, historians, writers, filmmakers, photographers, and artists.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 600",
+    "subject": "ARCH",
+    "number": "600",
+    "title": "Advanced Internship in Architecture",
+    "credits": 0,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A period of architecture internship consistent with the terms of reference of the Canadian Internship in Architecture Program (IAP).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 602",
+    "subject": "ARCH",
+    "number": "602",
+    "title": "Advanced Studies in Housing",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar on the thematic study of contemporary housing and its theoretical underpinnings as a response to technological, cultural, environmental, and philosophical challenges.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ARCH 562.",
+      "excludes": [
+        "ARCH 562"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 604",
+    "subject": "ARCH",
+    "number": "604",
+    "title": "Urban Design Seminar",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced concepts and methods used in urban design, focusing on epistemological debates, practical techniques, and philosophical concerns that shape contemporary theory and practice in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 604.",
+      "excludes": [
+        "URBP 604"
+      ]
+    },
+    "notes": [
+      "(1-2-6)"
+    ]
+  },
+  {
+    "code": "ARCH 622",
+    "subject": "ARCH",
+    "number": "622",
+    "title": "Research Methods for Architecture",
+    "credits": 4,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Survey of research methods for students with professional training in architecture. Setting research questions; establishing hypotheses; choosing methodologies; understanding historical, design, and other research traditions; producing literature reviews; engaging architectural evidence; addressing research ethics; presenting findings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-9)"
+    ]
+  },
+  {
+    "code": "ARCH 623",
+    "subject": "ARCH",
+    "number": "623",
+    "title": "Project Preparation",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Guided background preparation for the project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 626",
+    "subject": "ARCH",
+    "number": "626",
+    "title": "Critical Design Strategies",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study of specific contemporary design practices to inform the development of a detailed proposal for the final independent research project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 627",
+    "subject": "ARCH",
+    "number": "627",
+    "title": "Research Methods",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Survey of research methods relevant to architecture. Introduction to research ethics; differentiating between primary and secondary methods; contrasting macro- and micro-social approaches; setting research questions; undertaking literature scans; reviewing empirical findings by others; designing instruments and tools for primary research; conducting field research; presenting findings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.Arch. (Professional), M.Arch. (Post-professional) and Ph.D. in Architecture programs.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 628",
+    "subject": "ARCH",
+    "number": "628",
+    "title": "Fundamentals of Building Regulations and Safety",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study of building codes with specific emphasis on the National Building and National Fire Codes of Canada. Development of a systematic approach to the implementation of codes during the preliminary design stage of an architectural project.",
+    "prerequisites": {
+      "text": "ARCH 405",
+      "tree": "ARCH 405",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ARCH 451.",
+      "excludes": [
+        "ARCH 451"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 632",
+    "subject": "ARCH",
+    "number": "632",
+    "title": "Urban Design and Housing Research Report",
+    "credits": 15,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An individual research report addressing interdisciplinary concerns in Urban Design and Housing.",
+    "prerequisites": {
+      "text": "ARCH 604, ARCH 623",
+      "tree": {
+        "and": [
+          "ARCH 604",
+          "ARCH 623"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 635",
+    "subject": "ARCH",
+    "number": "635",
+    "title": "Selected Topics in Housing 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics related to housing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 641",
+    "subject": "ARCH",
+    "number": "641",
+    "title": "Energy and Environments 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of technical relationships among building materials, architectural proportions, thermoregulation strategies, and human capacity to mitigate and adapt to climate change.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-6)"
+    ]
+  },
+  {
+    "code": "ARCH 642",
+    "subject": "ARCH",
+    "number": "642",
+    "title": "Energy and Environments 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theories and methods for the energetic and environmental basis of architecture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)."
+    ]
+  },
+  {
+    "code": "ARCH 651",
+    "subject": "ARCH",
+    "number": "651",
+    "title": "Architectural History and Theory Seminar 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar on the thematic study of modern architecture and its theoretical underpinnings as a response to technological, cultural,environmental, and philosophical challenges. Historiographic and design approaches to architectural problems encountered from the pre-industrial age to contemporary post-industrial expansion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 652",
+    "subject": "ARCH",
+    "number": "652",
+    "title": "Architectural History and Theory Seminar 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar on the thematic study of modern architecture and its theoretical underpinnings as a response to technological, cultural, environmental, and philosophical challenges. Historiographic and design approaches to architectural problems encountered from the pre-industrial age to contemporary post-industrial expansion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 653",
+    "subject": "ARCH",
+    "number": "653",
+    "title": "Architectural History and Theory Seminar 3",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on the thematic study of modern architecture and its theoretical underpinnings as a response to technological, cultural, environmental, and philosophical challenges. Historiographic and design approaches to architectural problems encountered from the pre-industrial age to contemporary post-industrial expansion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 654",
+    "subject": "ARCH",
+    "number": "654",
+    "title": "Architectural History and Theory Seminar 4",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar on the thematic study of modern architecture and its theoretical underpinnings as a response to technological, cultural, environmental, and philosophical challenges. Historiographic and design approaches to architectural problems encountered from the pre-industrial age to contemporary post-industrial expansion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 670",
+    "subject": "ARCH",
+    "number": "670",
+    "title": "Advanced Landscape Theory",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Landscape as both process and medium linking human history and environmental change. Abiotic and biotic processes. Conceptualizations of nature, ecology, and landscape. Climate change and other anthropogenic impacts. Design as discipline-transcending work at multiple scales.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 672",
+    "subject": "ARCH",
+    "number": "672",
+    "title": "Architectural Design Studio 1",
+    "credits": 9,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Comprehensive design investigation of interrelated architectural-engineering-landscape concepts and systems; development and application of design methods fit for the changing climates and conditions of this century.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ARCH 678.",
+      "tree": "ARCH 678",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students enrolled in M.Arch. (Professional) program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 673",
+    "subject": "ARCH",
+    "number": "673",
+    "title": "Architectural Design Studio 2",
+    "credits": 9,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A project-based graduate studio focused on the integration of skills and research to tackle contemporary global issues in architecture and urban design.",
+    "prerequisites": {
+      "text": "ARCH 672.",
+      "tree": "ARCH 672",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in M.Arch. (Professional) program.",
+      "excludes": []
+    },
+    "notes": [
+      "Continuation of ARCH 672."
+    ]
+  },
+  {
+    "code": "ARCH 674",
+    "subject": "ARCH",
+    "number": "674",
+    "title": "Professional Practice 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The Professional Code, the Architect's Act and the architect's responsibilities to clients, colleagues and society, including professional ethics, responsibility in design, contractual arrangements, business conduct, construction supervision, issuing of certificates, construction and project management, concepts of architectural specification writing, building costs and life cycle costing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ARCH 674, ARCH 675 or ARCH 676 prior to 200509.",
+      "excludes": [
+        "ARCH 675",
+        "ARCH 676"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ARCH 675",
+    "subject": "ARCH",
+    "number": "675",
+    "title": "Architecture in Global Perspective",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Global history of architecture and urbanism, examining contemporary cities with an architectural lens. Case studies are presented to develop capacities for critical analysis of the built environment. Key ideas and ongoing debates on urbanism and architectural design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 676",
+    "subject": "ARCH",
+    "number": "676",
+    "title": "Advanced Architectural Design",
+    "credits": 9,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research and design-based graduate studio focused on investigation of architectural and urban issues.",
+    "prerequisites": {
+      "text": "ARCH 673",
+      "tree": "ARCH 673",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in M.Arch. (Professional); Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 677",
+    "subject": "ARCH",
+    "number": "677",
+    "title": "Architectural Design 3",
+    "credits": 9,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Research and design-based graduate studio focused on individual self-initiated investigation of architectural and urban issues.",
+    "prerequisites": {
+      "text": "ARCH 673",
+      "tree": "ARCH 673",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in M.Arch. (Professional) Non-Thesis; Design Studio.",
+      "excludes": []
+    },
+    "notes": [
+      "(2-10-15)"
+    ]
+  },
+  {
+    "code": "ARCH 678",
+    "subject": "ARCH",
+    "number": "678",
+    "title": "Advanced Construction",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An exploration of construction in relation to architectural design; research in advanced methods of construction and structure related to design problems and built projects; appropriate technologies and alternatives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-7)"
+    ]
+  },
+  {
+    "code": "ARCH 680",
+    "subject": "ARCH",
+    "number": "680",
+    "title": "Field Sketching",
+    "credits": 2,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seven days of supervised field sketching in selected locations outside Montreal. The course reinforces traditional skills in observation, notebook recording and architectural sketching. Students are encouraged to approach the subject critically and thematically, and to treat sketching as a mechanism for documenting experience and expressing their knowledge of the environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(15-40-6)"
+    ]
+  },
+  {
+    "code": "ARCH 681",
+    "subject": "ARCH",
+    "number": "681",
+    "title": "Directed Research Project Preparation",
+    "credits": 1,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An architectural design proposition defined through bibliographic research, site selection, program development, identification of a methodology, and a theoretical approach established.",
+    "prerequisites": {
+      "text": "ARCH 673.",
+      "tree": "ARCH 673",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in M.Arch. (Professional) Non-Thesis; Design Studio - Directed Research.",
+      "excludes": []
+    },
+    "notes": [
+      "(0-0-3)"
+    ]
+  },
+  {
+    "code": "ARCH 683",
+    "subject": "ARCH",
+    "number": "683",
+    "title": "Directed Research Project",
+    "credits": 9,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design-based research project focused on scholarly investigation and the presentation of results in appropriate graphic and written form.",
+    "prerequisites": {
+      "text": "ARCH 676",
+      "tree": "ARCH 676",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 684",
+    "subject": "ARCH",
+    "number": "684",
+    "title": "Contemporary Theory 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar exploring critical readings in architectural design and research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in a Master's program offered by the School.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)",
+      "Note: A variety of topics will be chosen for the seminar each year."
+    ]
+  },
+  {
+    "code": "ARCH 685",
+    "subject": "ARCH",
+    "number": "685",
+    "title": "Contemporary Theory 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar exploring critical readings in architectural design and research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in a Master's program offered by the School.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)",
+      "Note: A variety of topics will be chosen for the seminar each year."
+    ]
+  },
+  {
+    "code": "ARCH 688",
+    "subject": "ARCH",
+    "number": "688",
+    "title": "Directed Research 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Directed research in topics of specialized areas of architecture and design practice.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in M.Arch. (Professional) Non-Thesis; Design Studio - Directed Research.",
+      "excludes": []
+    },
+    "notes": [
+      "(0-0-9)"
+    ]
+  },
+  {
+    "code": "ARCH 689",
+    "subject": "ARCH",
+    "number": "689",
+    "title": "Directed Research 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Directed research in topics of specialized areas of architecture and design practice.",
+    "prerequisites": {
+      "text": "ARCH 688 and permission of instructor",
+      "tree": "ARCH 688",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in M.Arch. (Professional) Non-Thesis; Studio Design - Directed Research.",
+      "excludes": []
+    },
+    "notes": [
+      "(0-0-9)"
+    ]
+  },
+  {
+    "code": "ARCH 694",
+    "subject": "ARCH",
+    "number": "694",
+    "title": "Thesis Preparation",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Definition of thesis proposition, including general preoccupations and methodology; exploration of theoretical antecedents, epistemological foundations, and practical techniques pertinent to contemporary theory and practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.Sc. in Architecture program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 695",
+    "subject": "ARCH",
+    "number": "695",
+    "title": "Detailed Research Proposal",
+    "credits": 6,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Development and presentation of formal proposal for the Master's thesis. Research methods and methodology; research design; major debates in contemporary architectural scholarship.",
+    "prerequisites": {
+      "text": "ARCH 694",
+      "tree": "ARCH 694",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.Sc. in Architecture program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 696",
+    "subject": "ARCH",
+    "number": "696",
+    "title": "Thesis Submission",
+    "credits": 21,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the thesis supervisor.",
+    "prerequisites": {
+      "text": "ARCH 695",
+      "tree": "ARCH 695",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.Sc. in Architecture program.",
+      "excludes": []
+    },
+    "notes": [
+      "1. (0-0-54)."
+    ]
+  },
+  {
+    "code": "ARCH 700",
+    "subject": "ARCH",
+    "number": "700",
+    "title": "Thesis Proposal",
+    "credits": 0,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of a research proposal and a comprehensive framework for the doctoral thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 701",
+    "subject": "ARCH",
+    "number": "701",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Presentation of a comprehensive literature review paper, covering material that is central to the student's doctoral research, with an oral defense before the Doctoral Advisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 702",
+    "subject": "ARCH",
+    "number": "702",
+    "title": "Dissertation Report 1",
+    "credits": 0,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Submission of work in progress on the dissertation with a presentation to the Doctoral Advisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 703",
+    "subject": "ARCH",
+    "number": "703",
+    "title": "Dissertation Report 2",
+    "credits": 0,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Submission and presentation of the final draft version of the dissertation to the Doctoral Advisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 711",
+    "subject": "ARCH",
+    "number": "711",
+    "title": "Doctoral Proseminar 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Major issues and themes in architectural research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ARCH 711D1 and ARCH 711D2",
+      "excludes": [
+        "ARCH 711D1",
+        "ARCH 711D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 712",
+    "subject": "ARCH",
+    "number": "712",
+    "title": "Doctoral Proseminar 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Further exploration of major issues and themes in architectural research.",
+    "prerequisites": {
+      "text": "ARCH 711",
+      "tree": "ARCH 711",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ARCH 712D1 and ARCH 712D2.",
+      "excludes": [
+        "ARCH 712D1",
+        "ARCH 712D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ARCH 721",
+    "subject": "ARCH",
+    "number": "721",
+    "title": "Literature Review 1",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Literature review covering the first of three fields as identified by the student in consultation with the supervisory committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 722",
+    "subject": "ARCH",
+    "number": "722",
+    "title": "Literature Review 2",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Literature review covering the second of three fields as identified by the student in consultation with the supervisory committee.",
+    "prerequisites": {
+      "text": "ARCH 721.",
+      "tree": "ARCH 721",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ARCH 723",
+    "subject": "ARCH",
+    "number": "723",
+    "title": "Literature Review 3",
+    "credits": 3,
+    "offeredBy": "Architecture",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Literature review covering the third of three fields as identified by the student in consultation with the supervisory committee.",
+    "prerequisites": {
+      "text": "ARCH 722.",
+      "tree": "ARCH 722",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,1461 @@
+[
+  {
+    "code": "BIEN 200",
+    "subject": "BIEN",
+    "number": "200",
+    "title": "Introduction to Bioengineering",
+    "credits": 2,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to bioengineering. Introduction to engineering calculations. Physical foundations of bioengineering. Introduction to conservation laws. Fundamentals of conservation principles. Conservation of mass, energy, charge and momentum. Mechanical, chemical, electrical, and thermodynamic driving forces in biological systems. Design principles of biological systems. Computational foundations of bioengineering. Multi-scale modeling of cells and organs. Bioinformatics. Bioengineering applications in life sciences, health sciences, and material sciences. Ethical and regulatory considerations in bioengineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIEN 201",
+    "subject": "BIEN",
+    "number": "201",
+    "title": "Introduction to Bioengineering and Design",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to bioengineering. Introduction to engineering calculations. Physical foundations of bioengineering. Introduction to conservation laws. Fundamentals of conservation principles. Conservation of mass, energy, charge and momentum. Mechanical, chemical, electrical, and thermodynamic driving forces in biological systems. Design principles of biological systems. Computationa foundations of bioengineering. Multi-scale modeling of cells and organs. Bioinformatics. Bioengineering applications in life sciences, health sciences, and material sciences. Ethical and regulatory considerations in bioengineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIEN 203",
+    "subject": "BIEN",
+    "number": "203",
+    "title": "Introduction to Statistics and Data Science",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Probability, adding and multiplying probabilities, conditional and joint probabilities, variables, independence, confidence intervals, p- values and null models, central limit theorem, law of large numbers, statistical power, data normalization, pseudo-counts, T-tests, U test, ANOVA, Chi-squared test, Fisher’s exact test, Kolmogorov– Smirnov test, sampling/simulated null models, Monte Carlo methods, random walks, multiple-testing correction, data visualization, linear regression, clustering, dimensional reduction, data integration and classification. Analysis of large datasets, useand automation of functions from the Statsmodels and Matplotlib Python modules.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "COMP 208",
+      "tree": "COMP 208",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIEN 210",
+    "subject": "BIEN",
+    "number": "210",
+    "title": "Electrical and Optical Properties of Biological Systems",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Mechanisms of optical and electrical detection, transmission, and processing in biology. Vision, luminescence, photosynthesis, nerve conduction, ion channels. Speciation and evolutionary optimization as a design platform. Biomimetic opto-electric engineering. Optics and electronics in instrumentation for biological measurements.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "BIEN 200 or GEPR221",
+      "tree": {
+        "or": [
+          "BIEN 200",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "GEPR courses can only serve as corequisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "BIEN 219",
+    "subject": "BIEN",
+    "number": "219",
+    "title": "Introduction to Physical Molecular and Cell Biology",
+    "credits": 4,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to molecular and cell biology from a physical perspective. Techniques and methodologies, both experimental and computational, are included in the presentation of each thematic module.",
+    "prerequisites": {
+      "text": "(BIOL 112; CHEM 110 and CHEM 120; MATH 140, MATH 141 and MATH 133; PHYS 131 and PHYS 142) or GEPR 121; or the equivalents of these courses",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIOL 112",
+              "CHEM 110",
+              "CHEM 120",
+              "MATH 140",
+              "MATH 141",
+              "MATH 133",
+              "PHYS 131",
+              "PHYS 142"
+            ]
+          },
+          "GEPR 121"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 222 or GEPR 221 or equivalent",
+      "tree": {
+        "or": [
+          "MATH 222",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ANAT212, BIOC212, BIOL200, BIOL 201 and BIOL219. Only open to students in Bioengineering, Computer Science-Biology, Biology-Mathematics, BiologyQuantitative Biology, Chemistry-Biophysical Chemistry, and Physics-Biological Physics options.",
+      "excludes": [
+        "ANAT 212",
+        "BIOC 212",
+        "BIOL 200",
+        "BIOL 201",
+        "BIOL 219"
+      ]
+    },
+    "notes": [
+      "This course is meant to prepare students for related 300-level courses in Biology, Chemistry, Engineering, and Physics.",
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "BIEN 220",
+    "subject": "BIEN",
+    "number": "220",
+    "title": "Introduction to Mechanics for Bioengineers",
+    "credits": 2,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of statics covering basic mechanics topics with focus on bioengineering. Forces during dynamic motion, laws of mechanics, Newton’s laws of motion and mechano-functional biosystems. Applied load and deformation, stress and strain analysis for biological systems and implement computer aided design. Fundamentals of failure mechanics including Euler buckling, local buckling, plastic deformation will be studied. Practical problems in mechanics of biomaterials and biological systems.",
+    "prerequisites": {
+      "text": "BIEN 200, BIEN 210",
+      "tree": {
+        "and": [
+          "BIEN 200",
+          "BIEN 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MECH 210 prior to the winter 2024 term.",
+      "excludes": [
+        "MECH 210"
+      ]
+    },
+    "notes": [
+      "(2-1-3)"
+    ]
+  },
+  {
+    "code": "BIEN 221",
+    "subject": "BIEN",
+    "number": "221",
+    "title": "Mechanics for Bioengineers",
+    "credits": 4,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Stress and strain analysis, viscoelasticity. Linear and non linear mechanical behaviour. Poisson’s ration, auxeticity. Axial and non-axial loading, von Mises model. Composite and heterogeneous materials, prestress, residual stress. Beam theory with biological examples. Buckling and local buckling. Arches and columns, thin-walled vessels. Creep, relaxation, fatigue. Anisotropy. Stretch-dominated and bending-dominated structures. Porous solids and foams. Stress concentrations, sacrificial materials. Basics of crack theory.",
+    "prerequisites": {
+      "text": "BIEN 200 or BIEN 201 and BIEN 210.",
+      "tree": {
+        "or": [
+          "BIEN 200",
+          {
+            "and": [
+              "BIEN 201",
+              "BIEN 210"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MECH 210 or BIEN 220 prior to the winter 2027 term.",
+      "excludes": [
+        "BIEN 220",
+        "MECH 210"
+      ]
+    },
+    "notes": [
+      "(4-2-6)"
+    ]
+  },
+  {
+    "code": "BIEN 267",
+    "subject": "BIEN",
+    "number": "267",
+    "title": "Bioanalytical Methods in Bioengineering",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Survey of qualitative and quantitative methods of analysis in Chemistry, Biochemistry and Molecular Biology and their relevance to bioengineering. Techniques for the determination and experimental analysis of chemical metabolites and biological macromolecules emphasizing the following subjects: analytical process, common analytical tools, chemical equilibrium, basic spectroscopy, chromatography and separation methods, metabolite and protein extraction, protein purification methods and quantitative determination, high performance liquid chromatography, western blotting. An introduction to modern instrumental analysis highlighting gas- and liquid chromatography coupled with mass spectrometry and computational data analysis. Strengths and weaknesses of each method.",
+    "prerequisites": {
+      "text": "BIEN 290 or GEPR 221",
+      "tree": {
+        "or": [
+          "BIEN 290",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "BIEN 280",
+    "subject": "BIEN",
+    "number": "280",
+    "title": "Thermodynamics in Bioengineering",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental concepts of Thermodynamics: Internal Energy, Work, The three Laws of Thermodynamics, Enthalpy, and Entropy. Basic concepts of energy in living organisms: distribution of energy, energy conservation in living organisms, isothermal systems, Gibbs free energy in chemical coupling, reversible processes and redox reactions. Application of Thermodynamics in defining biological processes and components such as hydrolysis, osmosis, ELISA, PCR, DNA, amino acids, proteins.",
+    "prerequisites": {
+      "text": "CHEM 120 and MATH 262",
+      "tree": {
+        "and": [
+          "CHEM 120",
+          "MATH 262"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIEN 300.",
+      "excludes": [
+        "BIEN 300"
+      ]
+    },
+    "notes": [
+      "1. (3-2-4)"
+    ]
+  },
+  {
+    "code": "BIEN 290",
+    "subject": "BIEN",
+    "number": "290",
+    "title": "Bioengineering Measurement Laboratory",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Laboratory safety. Conceptual understanding of measurement principles and instrumentation. Introduction to experimental techniques requiring sterile conditions. Mechanical measurements of solid and thermofluid quantities. Optical sensing techniques. Measurements of biological and chemical properties. Design of experiments and statistical and uncertainty analyses.",
+    "prerequisites": {
+      "text": "(BIEN 200, MATH 203 and PHYS 142) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIEN 200",
+              "MATH 203",
+              "PHYS 142"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-4-4)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "BIEN 310",
+    "subject": "BIEN",
+    "number": "310",
+    "title": "Introduction to Biomolecular Engineering",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Forward and reverse engineering of biomolecular systems. Principles of biomolecular thermodynamics and kinetics. Structure and function of the main classes of biomolecules including proteins, nucleic acids, and lipids. Biomolecular systems as mechanical, chemical, and electrical systems. Rational design and evolutionary methods for engineering functional proteins, nucleic acids, and gene circuits. Rational design topics include molecular modeling, positive and negative design paradigms, simulation and optimization of equilibrium and kinetic properties, design of catalysts, sensors, motors, and circuits. Evolutionary design topics include evolutionary mechanisms, fitness landscapes, directed evolution of proteins, metabolic pathways, and gene circuits. Systems biology and synthetic biology.",
+    "prerequisites": {
+      "text": "BIEN 200 or permission of instructor.",
+      "tree": "BIEN 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 314",
+    "subject": "BIEN",
+    "number": "314",
+    "title": "Transport Phenomena in Biological Systems 1",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic concepts in transport phenomena, including fluid dynamics (momentum transport) and heat transfer (energy transport), with applications to biological systems, both medical and non-medical. Topics in fluid dynamics include: properties of Newtonian and non-Newtonian fluids; dimensional analysis; drag; integral/macroscopic balances (Bernoulli's equation and linear momentum theorem); differential/microscopic balances (continuity and Navier-Stokes equations); boundary layer approximations; turbulence. Topics in heat transfer include elements of conduction and convection.",
+    "prerequisites": {
+      "text": "(BIEN 200 and MATH 263) or GEPR 221 and (BIEN 280 or BIEN 300) or permission of the instructor.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIEN 200",
+              "MATH 263"
+            ]
+          },
+          {
+            "and": [
+              "GEPR 221",
+              {
+                "or": [
+                  "BIEN 280",
+                  "BIEN 300"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only for Bioengineering students. Not open to students who have taken CHEE 314",
+      "excludes": [
+        "CHEE 314"
+      ]
+    },
+    "notes": [
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "BIEN 320",
+    "subject": "BIEN",
+    "number": "320",
+    "title": "Molecular, Cellular and Tissue Biomechanics",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic mechanics of biological building blocks, focusing on the cytoskeleton, with examples from pathology. At the macromolecular level: weak/variable crosslinking and hydrolysis driven athermal processes. At the cellular/tissue level: cell architecture and function. Discussion of modern analytical techniques capable of single-molecule to tissue scale measurements.",
+    "prerequisites": {
+      "text": "BIOL 112 and MECH 210.",
+      "tree": {
+        "and": [
+          "BIOL 112",
+          "MECH 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "BIEN 330",
+    "subject": "BIEN",
+    "number": "330",
+    "title": "Tissue Engineering and Regenerative Medicine",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The history, scope, challenges, ethical considerations, and potential of tissue engineering. In vitro control of tissue development, differentiation, and growth, including relevant elements of immunology compared to in vivo tissue and organ development. Emphasis on the materials, chemical factors, and mechanical cues used in tissue engineering.",
+    "prerequisites": {
+      "text": "BIEN 200, BIOL 112, and CHEM 212, or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIEN 200",
+          "BIOL 112",
+          "CHEM 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 340",
+    "subject": "BIEN",
+    "number": "340",
+    "title": "Transport Phenomena in Biological Systems 2",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental principles of mass transport and its application to a variety of biological systems. Membrane permeability and diffusive transport. Convection. Transport across cell membranes. Ion channels. Blood rheology. Active transport. Intra- and inter-cellular transport.",
+    "prerequisites": {
+      "text": "BIEN 314 and (BIEN 360 or GEPR 221) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "BIEN 314",
+          {
+            "or": [
+              "BIEN 360",
+              "GEPR 221"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "BIEN 350",
+    "subject": "BIEN",
+    "number": "350",
+    "title": "Biosignals, Systems and Control",
+    "credits": 4,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Discrete- and continuous-time signals; basic system properties. Linear time-invariant systems; convolution. Frequency domain analysis; filtering; sampling. Laplace and Fourier transforms; transfer functions; poles and zeros; transient and steady state response. Z-transforms. Dynamic behaviour and PID control of first- and second-order processes. Stability. Applications to biological systems, such as central nervous, cognitive, and motor systems.",
+    "prerequisites": {
+      "text": "MATH 263 or GEPR 221 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "MATH 263",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-6)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "BIEN 360",
+    "subject": "BIEN",
+    "number": "360",
+    "title": "Physical Chemistry in Bioengineering",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Description of chemical systems with the help of theories of physics and application of its techniques: reaction kinetics, physical and chemical equilibria in biological systems. Review of energy transfer and thermodynamics. Chemical and physical equilibria in biology: variation of Gibbs energy with temperature, energy, composition. Theories of reaction kinetics and the reaction mechanism in biological phenomena: polymerization, protein folding, enzymes.",
+    "prerequisites": {
+      "text": "BIEN 300",
+      "tree": "BIEN 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CHEE 310.",
+      "excludes": [
+        "CHEE 310"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIEN 361",
+    "subject": "BIEN",
+    "number": "361",
+    "title": "Materials for Bio-Applications",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Relationships between the structures and properties of materials, with emphasis on bioengineering and biomedical applications. Design of materials with predetermined set of properties. Overview of biomaterials, classes of materials used in medicine and brief introduction to material structures. Introduction to fundamental concepts of materials properties. Mechanical and structural properties of metals, ceramics, polymers, and composites. Electrical, optical, and magnetic properties and materials processing. Selection of materials and design considerations for bioengineering applications.",
+    "prerequisites": {
+      "text": "BIEN 200, BIEN 210",
+      "tree": {
+        "and": [
+          "BIEN 200",
+          "BIEN 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIEN 380",
+    "subject": "BIEN",
+    "number": "380",
+    "title": "Biological Structures, Assemblies and Patterns",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Human anatomy and physiology for bioengineers. Formation, functions and properties of natural structures and assemblies, which are distinct from engineered structures and assemblies. Fundamental phenomena of physics, chemistry and mathematics that define evolutionary optimization strategies found in nature.",
+    "prerequisites": {
+      "text": "BIEN 219 and (BIEN 221 or BIEN 220) and (BIEN 280 or BIEN 300)",
+      "tree": {
+        "and": [
+          "BIEN 219",
+          {
+            "or": [
+              "BIEN 221",
+              "BIEN 220"
+            ]
+          },
+          {
+            "or": [
+              "BIEN 280",
+              "BIEN 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIEN 450.",
+      "excludes": [
+        "BIEN 450"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIEN 390",
+    "subject": "BIEN",
+    "number": "390",
+    "title": "Bioengineering Laboratory",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to the fundamental principles of experimental design, statistical analysis, and scientific communications applied to bioengineering research.Laboratory topics include: DNA engineering and cloning, in vitro motility assays, mammalian cell culture and immunofluorescence, and microfabrication.",
+    "prerequisites": {
+      "text": "BIEN 290",
+      "tree": "BIEN 290",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (1-4-4)"
+    ]
+  },
+  {
+    "code": "BIEN 410",
+    "subject": "BIEN",
+    "number": "410",
+    "title": "Computational Methods in Biomolecular Engineering",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to computational biomolecular engineering. Biomolecular simulation: deterministic simulation, stochastic simulation. Biomolecular modeling: energy minimization, coarse-grained methods. Computational biomolecular design: protein design, protein docking, and drug design. Computational systems and synthetic biology: computer simulation of biomolecular circuits.",
+    "prerequisites": {
+      "text": "BIEN 310 and COMP 208, or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIEN 310",
+          "COMP 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 420",
+    "subject": "BIEN",
+    "number": "420",
+    "title": "Biodevices Design for Diagnostics and Screening",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design of analytical devices for high throughput screening (HTS) for genomics, proteomics and other “omics” applications; and for diagnostics for medical, veterinary, or environmental applications. Assessment of the specific requirements of each 'client' applications, followed by a review of specific regulations and guidelines. Theoretical and practical guidelines regarding the design of a specific micro- or nano-device, and comparison with the established state of the art in the chosen application.",
+    "prerequisites": {
+      "text": "BIEN 390",
+      "tree": "BIEN 390",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "BIEN 440",
+    "subject": "BIEN",
+    "number": "440",
+    "title": "Information Storage and Processing in Biological Systems",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Storage and the processing of information in biological systems, ranging from biomolecules, cells, to aggregates of cells, in DNA/RNA; proteins, immune system, intercellular communication, and neuronal system. Essential bioinfomatics concepts and technologies.",
+    "prerequisites": {
+      "text": "(BIEN 200 or BIEN 201) and BIEN 219 and BIEN 310, or permission of the instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIEN 200",
+              "BIEN 201"
+            ]
+          },
+          "BIEN 219",
+          "BIEN 310"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIEN 540 before 202609.",
+      "excludes": [
+        "BIEN 540"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIEN 462",
+    "subject": "BIEN",
+    "number": "462",
+    "title": "Engineering Principles in Physiological Systems",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic aspects of human physiology. Applications of general balance equations and control theory to systems physiology. The course will cover: circulatory physiology, nervous system physiology, renal physiology and the musculoskeletal system.",
+    "prerequisites": {
+      "text": "BIEN 350 or permission of instructor.",
+      "tree": "BIEN 350",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 562.",
+      "excludes": [
+        "CHEE 562"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "BIEN 470",
+    "subject": "BIEN",
+    "number": "470",
+    "title": "Bioengineering Design Project",
+    "credits": 6,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A capstone group design project on an industrially relevant engineering problem of a biological nature. Student teams work in consultation with faculty and industrial consultants in the design of functional and practical systems, devices, or processes, taking into account safety, sustainability, management and economic considerations.",
+    "prerequisites": {
+      "text": "BIEN 390",
+      "tree": "BIEN 390",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (1-3-5)"
+    ],
+    "parts": [
+      {
+        "code": "BIEN 470D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIEN 470D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "BIEN 470N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "BIEN 470N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "BIEN 471",
+    "subject": "BIEN",
+    "number": "471",
+    "title": "Bioengineering Research Project",
+    "credits": 2,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual guided research projects in bioengineering. Under the guidance of a research adviser, students will propose and implement a research plan that addresses a current gap in knowledge or industry need. Projects will be designed to provide experience in critical evaluation of primary research literature, experimental approaches and methodologies, quantitative analysis, mathematical modelling, and effective written and oral presentation of scientific ideas.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (0-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 472",
+    "subject": "BIEN",
+    "number": "472",
+    "title": "Bioengineering Capstone Project",
+    "credits": 7,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A capstone group design project on an industrially relevant engineering problem of a biological nature. Work is done in consultation with faculty and industrial consultants in the design of functional and practical systems, devices, or processes, taking into account safety, sustainability, management and economic considerations.",
+    "prerequisites": {
+      "text": "BIEN 390 or GEPR 221",
+      "tree": {
+        "or": [
+          "BIEN 390",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program",
+      "Students must register for both BIEN 472D1 and BIEN 472D2.",
+      "No credit will be given for this course unless both BIEN 472D1 and BIEN 472D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "BIEN 472D1",
+        "credits": 3.5,
+        "terms": []
+      },
+      {
+        "code": "BIEN 472D2",
+        "credits": 3.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "BIEN 500",
+    "subject": "BIEN",
+    "number": "500",
+    "title": "Special Topics in Bioengineering 1",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Selected special topics in bioengineering, given by current and visiting staff.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U4 or higher students.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 505",
+    "subject": "BIEN",
+    "number": "505",
+    "title": "Medical Technology Innovation and Development ",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Systematic design methodologies and support concepts: clinical user need identification, brainstorming and conceptualization, system and robust design and development practices, verification and validation testing and failure modes analysis, regulatory affairs, for medical devices and technologies. Concepts and framework of ideation and conceptualization through to device output for sale as realized and defined by the medical device technology industry. Focus on corporate and technological phase structuring for systematic product design and medical business creation aspects. Real-world examples, artifacts from industry, recent articles, and presentations.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 or higher students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIEN 510",
+    "subject": "BIEN",
+    "number": "510",
+    "title": "Engineered Nanomaterials for Biomedical Applications",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the interdisciplinary field of biomedical uses of nanotechnology. Emphasis on emerging nanotechnologies and biomedical applications including nanomaterials, nanoengineering, nanotechnology-based drug delivery systems, nano-based imaging and diagnostic systems, nanotoxicology and immunology, and translating nanomedicine into clinical investigation.",
+    "prerequisites": {
+      "text": "BIEN 200, CHEM 212, and BIOL 112, or permission of instructor",
+      "tree": {
+        "and": [
+          "BIEN 200",
+          "CHEM 212",
+          "BIOL 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 514",
+    "subject": "BIEN",
+    "number": "514",
+    "title": "Fundamentals and Rheology of Biological Fluids",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of non-Newtonian fluid mechanics and rheology as applied to biological fluids. Fundamentals of mass and momentum conservation, dimensional analysis, continuity equations, Generalized Newtonian Fluid models, and the solution of fluid flow problems using empirical constitutive relationships. Selected topics in polymer physics relevant to biological fluids. Fundamentals of rheological characterization, both macrorheology and microrheology. Application of these concepts to the rheology of selected biological fluids in health and disease, selected applications of biofluid rheology: drug delivery, biofluid / pathogeninteractions, and aerosol disease transmission.",
+    "prerequisites": {
+      "text": "MATH 262 and BIEN 314, or permission of the instructor",
+      "tree": {
+        "and": [
+          "MATH 262",
+          "BIEN 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIEN 414.",
+      "excludes": [
+        "BIEN 414"
+      ]
+    },
+    "notes": [
+      "3-1-5"
+    ]
+  },
+  {
+    "code": "BIEN 515",
+    "subject": "BIEN",
+    "number": "515",
+    "title": "Special Topics in Bioengineering 2",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to new selected topics in bioengineering.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to undergraduate (U4 or higher) and graduate students.",
+      "excludes": []
+    },
+    "notes": [
+      "3-2-4",
+      "Instruction given by regular or visiting staff."
+    ]
+  },
+  {
+    "code": "BIEN 520",
+    "subject": "BIEN",
+    "number": "520",
+    "title": "High Throughput Bioanalytical Devices",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to the field of high throughput screening (HTS) analytical techniques and devices used for genomics, proteomics and other \"omics\" approaches, as well as for diagnostics, or for more special cases, e.g., screening for biomaterials. Introduction into the motivation of HTS and its fundamental physico-chemical challenges; techniques used to design, fabricate and operate HTS devices, such as microarrays and new generation DNA screening based on nanotechnology. Specific applications: DNA, protein and diagnostic and cell and tissue arrays.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 524",
+    "subject": "BIEN",
+    "number": "524",
+    "title": "Climate Change and Health",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals of atmospheric science in the context of climate change including overview of thermodynamic variables, climate patterns, and development and use of climate models. Fundamentals of infectious disease modelling including compartmental models for directly transmitted infections, seasonal infections, vector-borne infections, and infections with reservoirs. Fundamentals of epidemiology including causal inference, study design, exposure assessments, and intervention evaluation.",
+    "prerequisites": {
+      "text": "MATH 263 and COMP 208, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MATH 263",
+          "COMP 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EPIB 524.",
+      "excludes": [
+        "EPIB 524"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIEN 525",
+    "subject": "BIEN",
+    "number": "525",
+    "title": "Special Topics in Bioengineering 3",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to new selected topics in bioengineering.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to undergraduate (U4 or higher) and graduate students.",
+      "excludes": []
+    },
+    "notes": [
+      "3-0-6",
+      "Instruction given by regular or visiting staff."
+    ]
+  },
+  {
+    "code": "BIEN 530",
+    "subject": "BIEN",
+    "number": "530",
+    "title": "Imaging and Bioanalytical Instrumentation",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Microscopy techniques with application to biology and medicine. Practical introduction to optics and microscopy from the standpoint of biomedical research. Discussion of recent literature; hands-on experience. Topics include: optics, contrast techniques, advanced microscopy, and image analysis.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "BIEN 535",
+    "subject": "BIEN",
+    "number": "535",
+    "title": "Electron Microscopy and 3D Imaging for Biological Materials",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to electron microscopy and 3D imaging. Dual-beam microscopy (FIB-SEM, or focused ion beam – scanning electron microscope); conventional and cryogenic preparation methods for biological materials. Complementary methods such as X-ray diffraction, X-ray tomography, atom probe tomography. 3D image processing and analysis, and the fundamentals of deep learning in imaging.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to undergraduate (U3 or higher) and graduate students. Priority is given to bioengineering U3 undergraduate students.",
+      "excludes": []
+    },
+    "notes": [
+      "3-3-3"
+    ]
+  },
+  {
+    "code": "BIEN 540",
+    "subject": "BIEN",
+    "number": "540",
+    "title": "Biocomputation and Biosimulation",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Biocomputation; DNA computing, biocomputation with networks, membrane computing. Biosimulation; traffic simulation with motile agents. Information storage in biological systems; DNA and cells, abiotic applications, biologically inspired algorithms.",
+    "prerequisites": {
+      "text": "BIEN 440 or permission of the instructor",
+      "tree": "BIEN 440",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "BIEN 545",
+    "subject": "BIEN",
+    "number": "545",
+    "title": "Diagnostic Devices at the Point-of-Care",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The fundamental of diagnosis devices from design concepts to implementation in real-life application, a brief review of the gold standard diagnostic methods and their limitations, the building blocks of an ideal diagnostic device with a focus on point-of-care applications, biomolecular recognition elements including different one-step and multi-step assays based on nucleic acids and proteins, and the fundamental of sample delivery systems and fluid flow based on microfluidics, the integration of bioassays and microfluidics in lab-on-chip devices for automated sample preparation and detection, real-life application of lab-on-chip devices in medical diagnosis and the commercialized approaches.",
+    "prerequisites": {
+      "text": "BIEN 360, BIEN 314, or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIEN 360",
+          "BIEN 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restrictions: Open to undergraduate (U3 or higher) and graduate students.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 550",
+    "subject": "BIEN",
+    "number": "550",
+    "title": "Biomolecular Devices",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of motor proteins in neuronal transport, force generation e.g. in muscles, cell motility and division. A survey of recent advances in using motor proteins to power nano fabricated devices. Principles of design and operation; hands-on-experience in building a simple device.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "BIEN 560",
+    "subject": "BIEN",
+    "number": "560",
+    "title": "Design of Biosensors",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction into the motivation of analytical biosensors as well as its fundamental physicochemical challenges. Techniques used to design, fabricate and operate biosensors. Specific applications.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (3-2-4)"
+    ]
+  },
+  {
+    "code": "BIEN 570",
+    "subject": "BIEN",
+    "number": "570",
+    "title": "Active Mechanics in Biology",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the role of active forces, e.g. cell and tissue contraction, in the mechanics of biological systems. Review of passive and actively driven viscoelastic systems and momentum transport underlying the material properties of biology. The course involves a literature survey and a team project application.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (3-2-4)"
+    ]
+  },
+  {
+    "code": "BIEN 580",
+    "subject": "BIEN",
+    "number": "580",
+    "title": "Synthetic Biology",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Engineering principles in biology, BioBricks and standardization of biological components, parts registries, advanced molecular biology tools for DNA assembly, genome editing, high-throughput genetic manipulation methods, construction of biological pathways, strategies for transcriptional control, examples of engineered systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor",
+      "excludes": []
+    },
+    "notes": [
+      "1. (3-2-4)"
+    ]
+  },
+  {
+    "code": "BIEN 585",
+    "subject": "BIEN",
+    "number": "585",
+    "title": "Metabolic Engineering",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Metabolic engineering role in transition from fossil resources to a bio-based society. Design-build-test-learn cycle of metabolic engineering. Design, genetic engineering and optimization of microbial biocatalysts. Metabolic network analysis, constraint-based modelling of metabolism, microbial production of valuable chemicals. General biochemical engineering practices. Recombinant DNA technology, enzyme function, kinetics and regulation. Cell chemistry, structure and function. Growth models, fermentation, strain development. Case studies.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3-2-4"
+    ]
+  },
+  {
+    "code": "BIEN 590",
+    "subject": "BIEN",
+    "number": "590",
+    "title": "Cell Culture Engineering",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Basic principles of cell culture engineering, cell line development and cell culture products; genomics, proteomics and post-translational modifications; elements of cell physiology for medium design and bioprocessing; bioreactor design, scale-up for animal cell culture and single use equipment; challenges in downstream processing of cell-culture derived products; process intensification: fed-batch, feeding strategies and continuous manufacturing; scale-down and process modeling; Process Analytical technologies and Quality by Design (QbD) concept.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BIEN 595",
+    "subject": "BIEN",
+    "number": "595",
+    "title": "Advanced Biomolecular Systems Modelling",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced methods for modelling complex biomolecular systems,with a focus on state-of-the-art, data-driven and integrative methods for modelling protein structures and networks. Modelling of protein structures: protein structure prediction, modelling protein dynamics, use of evolutionary information. Modelling of protein networks: reconstruction, analysis, evolution. Combined protein structure and network modelling.",
+    "prerequisites": {
+      "text": "BIEN 410 and COMP 208, or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIEN 410",
+          "COMP 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3-0-6"
+    ]
+  },
+  {
+    "code": "BIEN 601",
+    "subject": "BIEN",
+    "number": "601",
+    "title": "cGMP and Regulation in Biomanufacturing",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to pillars of current good manufacturing practices (cGMP) in biologics, terminologies, and background; importance of cGMP for biologics manufacturing; principles of design and operation of cGMP facilities; knowledge gap between industrial processes and lab practices on GMP.",
+    "prerequisites": {
+      "text": "BIEN 590",
+      "tree": "BIEN 590",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Lectures from experts in the biologics manufacturing industry and translational research units in and around Canada."
+    ]
+  },
+  {
+    "code": "BIEN 602",
+    "subject": "BIEN",
+    "number": "602",
+    "title": "Biomanufacturing for RNA Biologics ",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental and quantitative overview of RNA biologics. Introduction to RNA biologics associated biomanufacturing unit operations in upstream (design tools and large-scale production systems of DNA templates for in vitro RNA transcription; small-scale and large-scale RNA bioprocessing systems), and downstream approaches for RNA purification (like Tangential flow filtration and RNA-specific chromatography systems) for emerging mRNA therapeutics. Introduction to established and emerging applications of RNA biologics for gene and cell therapy.",
+    "prerequisites": {
+      "text": "BIEN 590 or permission of the instructor",
+      "tree": "BIEN 590",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "BIEN 670",
+      "tree": "BIEN 670",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "The course includes guest lectures from academic and industry experts in the field of RNA as therapeutics for synthesis, purification, formulation and scale-up of RNA biologics."
+    ]
+  },
+  {
+    "code": "BIEN 670",
+    "subject": "BIEN",
+    "number": "670",
+    "title": "Downstream Processing ",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to downstream processing (DSP) – principles, characteristics, purpose. Bioprocesses, biomolecules, drug substances, drug products, monoclonal antibodies and Fc fusion proteins, viral vectors, and vaccines. Unit operations - standard practices. Steps and techniques in downstream processing. Harvest and Filtration, Primary capture, Buffer exchange and up-concentration, Purification, Bioconjugation, Formulation. Optimization of downstream processing. Process Analytical Technology (PAT) to support Quality by Design (QbD) in DSP. Regulatory guidelines. Innovative Techniques for Downstream Bioprocessing.",
+    "prerequisites": {
+      "text": "BIEN 590 or permission of the instructor",
+      "tree": "BIEN 590",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIEN 675",
+    "subject": "BIEN",
+    "number": "675",
+    "title": "Process Analytical Technologies and Data Sciences ",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to Process Analytical Technologies (PAT) and Quality by Design (QbD) in the area of manufacturing biologics. Critical Process Parameters (CPP) and Design Space. Analytical Technologies for Biologics and Biologic Medicines and determination of Critical Quality Attributes of products. Case studies. At-line, On-line and Off-line monitoring tools, data acquisition and advanced process control strategies as applied to current industrial biomanufacturing. PAT data processing and modeling to design advanced biomanufacturing processes.",
+    "prerequisites": {
+      "text": "BIEN 590 or permission of the instructor.",
+      "tree": "BIEN 590",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIEN 680",
+    "subject": "BIEN",
+    "number": "680",
+    "title": "Bioprocessing of Vaccines",
+    "credits": 4,
+    "offeredBy": "Bioengineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Building on recent developments and expansion in the mammalian cell culture for production of complex biologics such as viral vaccines and viral vectors, the following topics will be covered: Principles of immunology and industrial virology; Cell physiology for vaccine production; Cell lines for vaccine production; Upstream process development and process intensification strategies; Purification and downstream processing of viral vaccines; Analytical and potency assays; Formulations and delivery of vaccines; Basics of clinical trials and regulatory principles; Immunization policies. Case studies on bioprocessing/manufacturing licensed vaccines.",
+    "prerequisites": {
+      "text": "Permission of Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIEN 685",
+    "subject": "BIEN",
+    "number": "685",
+    "title": "Gene and Cell Therapy Viral Vectors Biomanufacturing",
+    "credits": 3,
+    "offeredBy": "Bioengineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic knowledge in the design and biomanufacturing of viral vectors for gene and cell therapy interventions. Practical examples and case studies highlighting challenges and solutions associated with use of viral vectors such as Adeno-Associated Vectors (AAV), lentivirus vectors and Adenovirus vectors for gene delivery. Fundamental principles of gene and cell therapies through in-vivo and ex-vivo interventions. Design of AAV, Lentivirus and Adenovirus vectors: example of targeted diseases, including CAR-T cell therapy. Technologies and modes of vector manufacturing for clinical use.",
+    "prerequisites": {
+      "text": "BIEN 590 or permission of the instructor",
+      "tree": "BIEN 590",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

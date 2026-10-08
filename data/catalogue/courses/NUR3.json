@@ -1,0 +1,1379 @@
+[
+  {
+    "code": "NUR3 624",
+    "subject": "NUR3",
+    "number": "624",
+    "title": "Nursing Services Administration Internship",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Nursing services administration internship with a host organization that focuses on the nurse manager role in the heath care sector. Nursing management under the preceptorship of selected nurse managers, integrating the strengths-based nursing and healthcare leadership in a management context.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**In order to secure placement in clinical courses and internships, the add/drop is March 28th which is before the start of the course, and withdrawal is May 1st which is the first day of class."
+    ]
+  },
+  {
+    "code": "NUR3 628",
+    "subject": "NUR3",
+    "number": "628",
+    "title": "Advanced Practice Nursing Internship",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced practice internship with a host organization that focuses on the application of the nursing role in clinical environments. This is a consolidation internship where learners identify their learning needs guided by the competencies of the Advanced Practice nurse.",
+    "prerequisites": {
+      "text": "NUR2 605 or NUR2 606 or NUR2 640 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "NUR2 605",
+          "NUR2 606",
+          "NUR2 640"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR3 643",
+    "subject": "NUR3",
+    "number": "643",
+    "title": "Reasoning in Adult Care 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of the legal aspects of advanced nursing practice, evidence-based nursing practice and basic concepts in medical and medication management. The focus will be on common illnesses and diseases of the adult through the development of case studies using a case/inquiry-based approach to learning. Principles of medication actions and interactions, the role of the liver and kidneys will be explored, as well as medication management as applied to case studies.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR3 644",
+      "tree": "NUR3 644",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 677.",
+      "excludes": [
+        "NUR2 677"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 644",
+    "subject": "NUR3",
+    "number": "644",
+    "title": "Reasoning in Adult Care 2",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of illnesses and diseases of the adult through the development of case studies using acase/inquiry-based approach to learning. Generation of a nursing/medical plan of action in response to commonly presenting health/illness issues, based on best available evidence.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR3 643",
+      "tree": "NUR3 643",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 678.",
+      "excludes": [
+        "NUR2 678"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 645",
+    "subject": "NUR3",
+    "number": "645",
+    "title": "Reasoning in Adult Care 3",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of illnesses and diseases of the adult through the development of case studies using a case/inquiry-based approach to learning. Generation of a nursing/medical plan of action in response to commonly presenting health/illness issues, based on best available evidence.",
+    "prerequisites": {
+      "text": "NUR3 643, NUR3 644",
+      "tree": {
+        "and": [
+          "NUR3 643",
+          "NUR3 644"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 687.",
+      "excludes": [
+        "NUR2 687"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 646",
+    "subject": "NUR3",
+    "number": "646",
+    "title": "Advanced Adult Health Assessment",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination and application of advanced physical assessment skills and techniques. Emphasis on history taking and interpreting assessment and diagnostic data, including practice of skills in oral and written communication with patients,families and health care colleagues.",
+    "prerequisites": {
+      "text": "NUR3 643, NUR3 644",
+      "tree": {
+        "and": [
+          "NUR3 643",
+          "NUR3 644"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 648.",
+      "excludes": [
+        "NUR2 648"
+      ]
+    },
+    "notes": [
+      "A nominal fee of $118.53 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR3 647",
+    "subject": "NUR3",
+    "number": "647",
+    "title": "Reasoning in Adult Care 4",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of illnesses and diseases of the adult through the development of case studies using acase/inquiry-based approach to learning. Generation of a nursing/medical plan of action in response to commonly presenting health/illness issues, based on best available evidence.",
+    "prerequisites": {
+      "text": "NUR3 645",
+      "tree": "NUR3 645",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 688.",
+      "excludes": [
+        "NUR2 688"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 648",
+    "subject": "NUR3",
+    "number": "648",
+    "title": "Clinical Seminar in Adult Care 1",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Application of theoretical knowledge to clinical practice by exploring illnesses and diseases of the adult through the presentation of cases and scientific articles. Presentation of a scientific article pertaining to a related subject of interest, a new or controversial therapy or a clinical question.",
+    "prerequisites": {
+      "text": "NUR3 658",
+      "tree": "NUR3 658",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 659",
+      "tree": "NUR3 659",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 689, 689D1/D2.",
+      "excludes": [
+        "NUR2 689",
+        "NUR2 689D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 649",
+    "subject": "NUR3",
+    "number": "649",
+    "title": "Clinical Seminar in Adult Care 2",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of theoretical knowledge. Exploration of illnesses and diseases of the adult through the presentation of cases and scientific articles.",
+    "prerequisites": {
+      "text": "NUR3 648",
+      "tree": "NUR3 648",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 659",
+      "tree": "NUR3 659",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR3 652",
+    "subject": "NUR3",
+    "number": "652",
+    "title": "Internship in Primary Care Practice 1",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Consolidation of the entry-to-practice nurse practitioner role in primary care through the application of theoretical knowledge, practical skills and clinical reasoning within a clinical setting.",
+    "prerequisites": {
+      "text": "NUR3 674, NUR3 675, NUR3 676",
+      "tree": {
+        "and": [
+          "NUR3 674",
+          "NUR3 675",
+          "NUR3 676"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 677",
+      "tree": "NUR3 677",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students enrolled in the Graduate Diploma in Primary Care Nurse Practitioner. Not open to students who have taken NUR2 669.",
+      "excludes": [
+        "NUR2 669"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 653",
+    "subject": "NUR3",
+    "number": "653",
+    "title": "Internship in Primary Care Practice 2",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Continued consolidation of the entry-to-practice nurse practitioner role in primary care through the application of theoretical knowledge, practical skills and clinical reasoning in more complex care within a clinical setting.",
+    "prerequisites": {
+      "text": "NUR3 652, NUR3 677",
+      "tree": {
+        "and": [
+          "NUR3 652",
+          "NUR3 677"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 678",
+      "tree": "NUR3 678",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students enrolled in the Graduate Diploma in Primary Care Nurse Practitioner. Not open to students who have taken NUR2 679.",
+      "excludes": [
+        "NUR2 679"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 654",
+    "subject": "NUR3",
+    "number": "654",
+    "title": "Internship in Pediatric and Children’s Nursing 1",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Consolidation of the entry-to-practice pediatric nurse practitioner role through the application of theoretical knowledge, practical skills and clinical reasoning within a clinical setting.",
+    "prerequisites": {
+      "text": "NUR3 684, NUR3 685",
+      "tree": {
+        "and": [
+          "NUR3 684",
+          "NUR3 685"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 653.",
+      "excludes": [
+        "NUR2 653"
+      ]
+    },
+    "notes": [
+      "A fee of $21.39 for one name pin will be charged based on registration in this course.",
+      "**Due to the length of the clinical course, add/drop is the tenth lecture day and withdrawal is the fifteenth lecture day."
+    ]
+  },
+  {
+    "code": "NUR3 655",
+    "subject": "NUR3",
+    "number": "655",
+    "title": "Internship in Pediatric and Children's Nursing 2",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Consolidation of the entry-to-practice pediatric nurse practitioner role through the application of theoretical knowledge, practical skills and clinical reasoning within a clinical setting.",
+    "prerequisites": {
+      "text": "NUR3 654",
+      "tree": "NUR3 654",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 654.",
+      "excludes": [
+        "NUR2 654"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 656",
+    "subject": "NUR3",
+    "number": "656",
+    "title": "Mental Health Internship 1",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Clinical training in the assessment and management of psychiatric illness, including psychiatric outpatient, inpatient, and emergency care units, to complete required clinical encounters, including assessment, interventions and evaluations. Emphasis is on facilitating the ability to recognize the required psychiatric conditions and pathology associated with these conditions and to develop longitudinal management plans that encompass biopsychosocial understanding of the conditions and address urgent and emergency situations. A strengths-based approach will guide nursing interventions with the patient/family, taking into consideration cultural, societal and environmental aspects.",
+    "prerequisites": {
+      "text": "NUR3 699, NUR3 693 and NUR3 694",
+      "tree": {
+        "and": [
+          "NUR3 699",
+          "NUR3 693",
+          "NUR3 694"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 655.",
+      "excludes": [
+        "NUR2 655"
+      ]
+    },
+    "notes": [
+      "A fee of $21.39 for one name pin will be charged based on registration in this course.",
+      "**Due to the length of the clinical course, add/drop is the eleventh clinical day and withdrawal is the fifteenth clinical day."
+    ]
+  },
+  {
+    "code": "NUR3 657",
+    "subject": "NUR3",
+    "number": "657",
+    "title": "Mental Health Internship 2",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical training in the assessment and management of psychiatric illness, including psychiatric outpatient, inpatient, and emergency care units, to complete required clinical encounters, including assessment, interventions and evaluations. Emphasis is on facilitating an ability to recognize the required psychiatric conditions and the pathology associated with these conditions and to develop longitudinal management plans that encompass biopsychosocial understanding of the conditions and address urgent and emergency situations.",
+    "prerequisites": {
+      "text": "NUR3 699, NUR3 693 and NUR3 694",
+      "tree": {
+        "and": [
+          "NUR3 699",
+          "NUR3 693",
+          "NUR3 694"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 656.",
+      "excludes": [
+        "NUR2 656"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 658",
+    "subject": "NUR3",
+    "number": "658",
+    "title": "Adult Care Internship 1",
+    "credits": 13,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Integration of theoretical knowledge with practical skills in the clinical setting Exposure to a variety of in-patient and specialized clinical settings. Practice of history taking and physical assessment; determine differential diagnoses; request diagnostic exams and techniques, propose therapeutic options, implement interventions and determine desired outcomes in the adult population. The emphasis will be on clinical judgement, critical thinking, collaboration, professional roles and responsibilities, communication, evidence-based practice and leadership.",
+    "prerequisites": {
+      "text": "NUR3 646, NUR3 647",
+      "tree": {
+        "and": [
+          "NUR3 646",
+          "NUR3 647"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 657.",
+      "excludes": [
+        "NUR2 657"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 659",
+    "subject": "NUR3",
+    "number": "659",
+    "title": "Adult Care Internship 2",
+    "credits": 11,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Further integration of theoretical knowledge with practical skills in the in-patient and specialized clinical settings, the focus will be on applying and consolidating a variety of clinical skills and techniques, including obtaining a comprehensive history, performing an advanced physical assessment, determining differential diagnoses, requesting diagnostic exams and techniques, suggesting therapeutic options, implementing interventions and determining desired outcomes in the adult population.The emphasis will be on role development, clinical judgement, critical thinking, collaboration, professional roles and responsibilities, communication evidence based practice, professional autonomy, and leadership.",
+    "prerequisites": {
+      "text": "NUR3 658",
+      "tree": "NUR3 658",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 658.",
+      "excludes": [
+        "NUR2 658"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 660",
+    "subject": "NUR3",
+    "number": "660",
+    "title": "Reasoning in Neonatal Practice 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Common neonatal health problems that don’t require tertiary care, laws governing Nurse Practitioners in the province of Quebec, especially pertaining to the neonatal subspecialty. Topics include review of normal pregnancy, transitional issues of the newborn, care of the late preterm infant and anticipatory guidance in the discharge of a newborn.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 660.",
+      "excludes": [
+        "NUR2 660"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 661",
+    "subject": "NUR3",
+    "number": "661",
+    "title": "Reasoning in Neonatal Practice 2",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced nursing management of illnesses of the newborn. Pathophysiology, decision making, and interventions for advanced nursing practice. Topics include pregnancy, labour and delivery, as well as fluid management, respiratory problemsand surgical emergencies.",
+    "prerequisites": {
+      "text": "NUR3 660 or permission of the instructor.",
+      "tree": "NUR3 660",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 661.",
+      "excludes": [
+        "NUR2 661"
+      ]
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 12th and withdrawal is May 26th."
+    ]
+  },
+  {
+    "code": "NUR3 662",
+    "subject": "NUR3",
+    "number": "662",
+    "title": "Neonatal Health Assessment",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced skills in health assessment, physical examination of healthy newborns and documentation. Different approaches are used to improve proficiency in history taking and physical examinations in a laboratory setting.",
+    "prerequisites": {
+      "text": "NUR3 660 and NUR3 661; or permission of the instructor.",
+      "tree": {
+        "and": [
+          "NUR3 660",
+          "NUR3 661"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 662.",
+      "excludes": [
+        "NUR2 662"
+      ]
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 14th and withdrawal is May 28th."
+    ]
+  },
+  {
+    "code": "NUR3 663",
+    "subject": "NUR3",
+    "number": "663",
+    "title": "Reasoning in Neonatal Practice 3",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced nursing management of illnesses of the newborn. Pathophysiology, decision making, and interventions for advanced nursing practice. Some topics include pregnancy, labour and delivery, as well as fluid management, respiratory problems and surgical emergencies.",
+    "prerequisites": {
+      "text": "NUR3 661 or permission of the instructor.",
+      "tree": "NUR3 661",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 663.",
+      "excludes": [
+        "NUR2 663"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 664",
+    "subject": "NUR3",
+    "number": "664",
+    "title": "Evidence in Neonatal Practice",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "In depth examination and critique of nursing management of illnesses of the newborn.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 664.",
+      "excludes": [
+        "NUR2 664"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 665",
+    "subject": "NUR3",
+    "number": "665",
+    "title": "Common Procedures in Neonatal Practice",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to common diagnostic tests and procedures performed in neonatology. Topics include laboratory result interpretation, x-ray reading, EKG interpretation, and neonatal resuscitation course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.Sc.(Applied) in Nurse Practitioner; Non-Thesis - Neonatal or Graduate Diploma in Neonatal Nurse Practitioner or with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 666",
+    "subject": "NUR3",
+    "number": "666",
+    "title": "Pharmacology for Neonatal Nurse Practitioners",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Health and illness management issues for nurse practitioners in neonatology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 644.",
+      "excludes": [
+        "NUR2 644"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 667",
+    "subject": "NUR3",
+    "number": "667",
+    "title": "Clinical Seminar in Neonatal Practice",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Application of theoretical knowledge to clinical practice by exploring illnesses and diseases of the neonate through the presentation of cases and onsite learning activities.",
+    "prerequisites": {
+      "text": "NUR3 668",
+      "tree": "NUR3 668",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Restrictions Open only to students in the M.Sc.(Applied) in Nurse Practitioner; Non-Thesis - Neonatal or Graduate Diploma in Neonatal Nurse Practitioner or with permission of the instructor."
+    ]
+  },
+  {
+    "code": "NUR3 668",
+    "subject": "NUR3",
+    "number": "668",
+    "title": "Internship in Neonatal Practice 1",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Internship in caring for healthy newborns as well as complex neonatal patients in a hospital setting, and follow-up of at risk infants following hospitalization in the Neonatal Intensive care unit in the Neonatal follow-up clinic. Exposure to normal, healthy babies, or healthy babies with problems not requiring intermediate or intensive care, intermediate care patients initially before progressing to cases that are more complex. Application of theoretical knowledge to the care of the neonate in multiple settings, with focus on practice in Level III neonatal unit. Emphasis will be on the transfer of theoretical knowledge and the individualization of patient care. Family dynamics are assessed and considered integral to the management plan.",
+    "prerequisites": {
+      "text": "NUR2 663, NUR3 665",
+      "tree": {
+        "and": [
+          "NUR2 663",
+          "NUR3 665"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc. (Applied) in Nurse Practitioner; Non-Thesis - Neonatal or Graduate Certificate in Neonatal Nurse Practitioner or with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 669",
+    "subject": "NUR3",
+    "number": "669",
+    "title": "Internship in Neonatal Practice 2 ",
+    "credits": 13,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Consolidation and application of advanced nursing and medical knowledge to neonatal practice.",
+    "prerequisites": {
+      "text": "NUR3 668",
+      "tree": "NUR3 668",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc.(Applied) in Nurse Practitioner; Non-Thesis - Neonatal or Graduate Diploma in Neonatal Nurse Practitioner or with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 670",
+    "subject": "NUR3",
+    "number": "670",
+    "title": "Reasoning in Primary Care Practice 1",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the examination of the advanced role and responsibilities of the primary care nurse practitioner (PCNP) with an emphasis on the approach to preventive health, health promotion, illness prevention and the holistic management of acute and chronic conditions affecting patients and families across the lifespan.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc.(A.) in Nurse Practitioner; Non-Thesis - Primary Care and/or the Graduate Certificate in Primary Care Nurse Practitioner. Not open to students who have taken NUR2 613.",
+      "excludes": [
+        "NUR2 613"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 671",
+    "subject": "NUR3",
+    "number": "671",
+    "title": "Reasoning in Primary Care Practice 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of the primary care nurse practitioner (PCNP) role in the holistic management of acute and chronic conditions affecting patients and families across the lifespan with a focus on pharmacological principles.",
+    "prerequisites": {
+      "text": "NUR3 670",
+      "tree": "NUR3 670",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc.(A,) Nurse Practitioner; Non-Thesis - Primary Care and/or the Graduate Certificate in Primary Care Nurse Practitioner. Not open to students who have taken NUR2 614.",
+      "excludes": [
+        "NUR2 614"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 672",
+    "subject": "NUR3",
+    "number": "672",
+    "title": "Reasoning in Primary Care Practice 3",
+    "credits": 8,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Examination of the primary care nurse practitioner (PCNP) role in the holistic management of various acute and chronic conditions affecting adult patients and their families, including an approach to independent clinical reasoning and decision-making.",
+    "prerequisites": {
+      "text": "NUR3 671",
+      "tree": "NUR3 671",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc.(A.) in Nurse Practitioner; Non-Thesis - Primary Care and/or the Graduate Certificate in Primary Care Nurse Practitioner. Not open to students who have taken NUR2 639.",
+      "excludes": [
+        "NUR2 639"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 673",
+    "subject": "NUR3",
+    "number": "673",
+    "title": "Primary Care Health and Physical Assessment 1",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Examination of the practical application of the primary care nurse practitioner (PCNP) role in the holistic management of various acute and chronic conditions affecting adult patients and their families, integrating theoretical knowledge and practice of advanced physical assessment and procedure skills to clinical cases.",
+    "prerequisites": {
+      "text": "NUR3 671",
+      "tree": "NUR3 671",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 672",
+      "tree": "NUR3 672",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 667.",
+      "excludes": [
+        "NUR2 667"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 674",
+    "subject": "NUR3",
+    "number": "674",
+    "title": "Reasoning in Primary Care Practice 4",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Further examination of the primary care nurse practitioner (PCNP) role in the holistic management of additional various acute and chronic conditions affecting adult patients and their families, including an approach to independent clinical reasoning and decision-making.",
+    "prerequisites": {
+      "text": "NUR3 672, NUR3 673",
+      "tree": {
+        "and": [
+          "NUR3 672",
+          "NUR3 673"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc.(A.) in Nurse Practitioner; Non-Thesis - Primary Care and/or the Graduate Certificate in Primary Care Nurse Practitioner Not open to students who have taken NUR2 641.",
+      "excludes": [
+        "NUR2 641"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 675",
+    "subject": "NUR3",
+    "number": "675",
+    "title": "Applied Reasoning in Primary Care",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of the primary care nurse practitioner (PCNP) role in the holistic management of acute and chronic conditions related to specific approaches to patients and families across the lifespan, including an approach to independent clinical reasoning and decision-making.",
+    "prerequisites": {
+      "text": "NUR3 672, NUR3 673",
+      "tree": {
+        "and": [
+          "NUR3 672",
+          "NUR3 673"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in the Graduate Diploma in Primary Care Nurse Practitioner. Not open to students who have taken NUR2 659.",
+      "excludes": [
+        "NUR2 659"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 676",
+    "subject": "NUR3",
+    "number": "676",
+    "title": "Primary Care Health and Physica lAssessment 2",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Further examination of the practical application of the primary care nurse practitioner (PCNP) role in the holistic management of additional various acute and chronic conditions affecting patients and families across the lifespan, integrating theoretical knowledge and practice of advanced physical assessment and procedure skills to clinical cases.",
+    "prerequisites": {
+      "text": "NUR3 672, NUR3 673",
+      "tree": {
+        "and": [
+          "NUR3 672",
+          "NUR3 673"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 674, NUR3 675",
+      "tree": {
+        "and": [
+          "NUR3 674",
+          "NUR3 675"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 668.",
+      "excludes": [
+        "NUR2 668"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 677",
+    "subject": "NUR3",
+    "number": "677",
+    "title": "Clinical Seminar in Primary Care 1",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Application of theoretical knowledge to clinical practice through examination of complex cases seen in clinical practice and exploration of clinical questions through the presentation of case studies, scientific research evidence and best practices.",
+    "prerequisites": {
+      "text": "NUR3 674, NUR3 675, NUR3 676",
+      "tree": {
+        "and": [
+          "NUR3 674",
+          "NUR3 675",
+          "NUR3 676"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 652",
+      "tree": "NUR3 652",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 697.",
+      "excludes": [
+        "NUR2 697"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 678",
+    "subject": "NUR3",
+    "number": "678",
+    "title": "Clinical Seminar in Primary Care 2",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Further application of theoretical knowledge to clinical practice through examination of complex cases seen in clinical practice and exploration of clinical questions through the presentation of case studies, scientific research evidence and best practices.",
+    "prerequisites": {
+      "text": "NUR3 677",
+      "tree": "NUR3 677",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 653",
+      "tree": "NUR3 653",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students enrolled in the Graduate Diploma in Primary Care Nurse Practitioner. Not open to students who have taken NUR2 698.",
+      "excludes": [
+        "NUR2 698"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 680",
+    "subject": "NUR3",
+    "number": "680",
+    "title": "Reasoning in Pediatric and Children's Nursing 1",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the advanced role and responsibilities of the pediatric nurse practitioner(PNP) with an emphasis on the approach to the well child and preventive pediatrics, growth and development, the holistic management of acute and chronic conditions affecting children, adolescents and their families and advanced clinical reasoning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 680.",
+      "excludes": [
+        "NUR2 680"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 681",
+    "subject": "NUR3",
+    "number": "681",
+    "title": "Reasoning in Pediatric and Children's Nursing 2",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced clinical reasoning and decision-making in the pediatric nurse practitioner (PNP)role. Emphasis on the holistic management ofacute and chronic conditions affecting children,adolescents and their families.",
+    "prerequisites": {
+      "text": "NUR3 680",
+      "tree": "NUR3 680",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 681.",
+      "excludes": [
+        "NUR2 681"
+      ]
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 8th and withdrawal is May 20th."
+    ]
+  },
+  {
+    "code": "NUR3 682",
+    "subject": "NUR3",
+    "number": "682",
+    "title": "Reasoning in Pediatric and Children's Nursing 3",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced clinical reasoning and decision-making in the pediatric nurse practitioner (PNP) role. Emphasis on the holistic management of acute and chronic conditions affecting children, adolescents and their families, with a particular emphasis on mental illness and adolescent health.",
+    "prerequisites": {
+      "text": "NUR3 680",
+      "tree": "NUR3 680",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 682.",
+      "excludes": [
+        "NUR2 682"
+      ]
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is June 26th and withdrawal is July 3rd."
+    ]
+  },
+  {
+    "code": "NUR3 683",
+    "subject": "NUR3",
+    "number": "683",
+    "title": "Children and Youth Health Assessment 1",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced skills in health assessment and physical examination in infants, children and adolescents. Different approaches are used in history taking, physical examination, documentation and writing consultations in a laboratory setting.",
+    "prerequisites": {
+      "text": "NUR3 680",
+      "tree": "NUR3 680",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is June 2nd and withdrawal is June 9th."
+    ]
+  },
+  {
+    "code": "NUR3 684",
+    "subject": "NUR3",
+    "number": "684",
+    "title": "Reasoning in Pediatric and Children's Nursing 4",
+    "credits": 10,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced clinical reasoning and decision-making in the pediatric nurse practitioner (PNP)role. Emphasis on the holistic management ofacute and chronic conditions affecting children,adolescents and their families, and on illnesses affecting the cardiac, respiratory and renal systems, as well as complex care and community care.",
+    "prerequisites": {
+      "text": "NUR3 682",
+      "tree": "NUR3 682",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 683.",
+      "excludes": [
+        "NUR2 683"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 685",
+    "subject": "NUR3",
+    "number": "685",
+    "title": "Children and Youth Health Assessment 2",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced skills in health assessment, physical examination and procedures in infants, children and adolescents. Different approaches are used in history taking, physical examination, documentation and procedures in a laboratory setting.",
+    "prerequisites": {
+      "text": "NUR3 683",
+      "tree": "NUR3 683",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course has an additional course fee of $118.53 that is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR3 686",
+    "subject": "NUR3",
+    "number": "686",
+    "title": "Clinical Seminar in Pediatric and Children’s Nursing 1",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "",
+    "prerequisites": {
+      "text": "NUR3 684, NUR3 685",
+      "tree": {
+        "and": [
+          "NUR3 684",
+          "NUR3 685"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 654",
+      "tree": "NUR3 654",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR3 687",
+    "subject": "NUR3",
+    "number": "687",
+    "title": "Clinical Seminar in Pediatric and Children’s Nursing 2",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Examination of complex cases seen in clinical practice and exploration of clinical questions through the presentation of case studies, scientific articles and best practices.",
+    "prerequisites": {
+      "text": "NUR3 654, NUR3 686",
+      "tree": {
+        "and": [
+          "NUR3 654",
+          "NUR3 686"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR3 655",
+      "tree": "NUR3 655",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR3 689",
+    "subject": "NUR3",
+    "number": "689",
+    "title": "Pharmacology for Pediatric Nurse Practitioners",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced concepts in pharmacology that provides knowledge of basic pharmacologic concepts, including pharmacokinetics, pharmacodynamics and pharmacotherapeutics. Drug therapy considerations in pediatric population taking into account chronic disease states and altered hepatic and renal function.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 645.",
+      "excludes": [
+        "NUR2 645"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 690",
+    "subject": "NUR3",
+    "number": "690",
+    "title": "Reasoning in Mental Health 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to fundamental concepts in psychopathology, as well as psychiatric assessment, diagnosis and intervention. Emphasis placed on advanced practice nursing competencies integrated in mental health care of patients. Objectives also include relevant legal aspects when presented with a patient at risk for violent or dangerous behaviour.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 690.",
+      "excludes": [
+        "NUR2 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 691",
+    "subject": "NUR3",
+    "number": "691",
+    "title": "Reasoning in Mental Health 2",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced nursing knowledge and skills, within the scope of practice of a mental-health nurse practitioner, in the assessment and management of depressive, anxiety, obsessive-compulsive and bipolar disorders. Recognition of the pathology associated with these conditions and development of longitudinal management plans that encompass biopsychosocial understanding of the conditions and address urgent and emergency situations are explored.",
+    "prerequisites": {
+      "text": "NUR3 690",
+      "tree": "NUR3 690",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 691.",
+      "excludes": [
+        "NUR2 691"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 692",
+    "subject": "NUR3",
+    "number": "692",
+    "title": "Reasoning in Mental Health 3",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced nursing knowledge and skills, within the scope of practice of a mental-health nurse practitioner, in the assessment and management of psychotic disorders, trauma- and stressor-related disorders, feeding and eating disorders, obesity and metabolic syndrome, and personality disorders. Recognition of the pathology associated with these conditions and development of longitudinal management plans that encompass biopsychosocial understanding of the conditions and address urgent and emergency situations will be explored.",
+    "prerequisites": {
+      "text": "NUR3 690",
+      "tree": "NUR3 690",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 692.",
+      "excludes": [
+        "NUR2 692"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 693",
+    "subject": "NUR3",
+    "number": "693",
+    "title": "Reasoning in Mental Health 4",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced nursing knowledge and skills, within the scope of practice of a mental-health nurse practitioner, in the assessment and management of: 1) substance disorders, sleep-wake disorders, gender dysphoria and sexual disorders; and 2) child and adolescent psychiatric illness, and psychiatric illness in the geriatric population, where legal aspects to invoke protective measures and decision-making capacity. Recognition of the pathology associated with these conditions or illnesses, and development of longitudinal management plans that encompass biopsychosocial understanding of the conditions and address urgent and emergency situations.",
+    "prerequisites": {
+      "text": "NUR3 691 and NUR3 692",
+      "tree": {
+        "and": [
+          "NUR3 691",
+          "NUR3 692"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 693.",
+      "excludes": [
+        "NUR2 693"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 694",
+    "subject": "NUR3",
+    "number": "694",
+    "title": "Reasoning in Mental Health 5",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Advanced nursing knowledge and skills, within the scope of practice of a mental-health nurse practitioner, in the assessment and management of medical illness and somatic symptoms in psychiatry and to introduce basic psychotherapy concepts. Recognition of the pathology associated with these conditions and development of longitudinal management plans that encompass biopsychosocial understanding of the conditions and address urgent and emergency situations.",
+    "prerequisites": {
+      "text": "NUR3 693",
+      "tree": "NUR3 693",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 694.",
+      "excludes": [
+        "NUR2 694"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR3 699",
+    "subject": "NUR3",
+    "number": "699",
+    "title": "Pharmacology for Mental Health Nurse Practitioners",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced concepts in pharmacology for mental health nurse practitioners, including pharmacokinetics, pharmacodynamics and pharmacotherapeutics. Students will learn decision-making skills and problem-solving in the domain of clinical pharmacology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 647.",
+      "excludes": [
+        "NUR2 647"
+      ]
+    },
+    "notes": []
+  }
+]

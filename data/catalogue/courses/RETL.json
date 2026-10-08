@@ -1,0 +1,625 @@
+[
+  {
+    "code": "RETL 402",
+    "subject": "RETL",
+    "number": "402",
+    "title": "Innovations in Retailing",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of emerging trends, consumer behaviour and technologies and how they can lead to retail innovations that can significantly improve operational efficiency, customer satisfaction and provide a foundation for a sustainable and improved society.",
+    "prerequisites": {
+      "text": "MGCR 352",
+      "tree": "MGCR 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Restricted to U2 & U3 students."
+    ]
+  },
+  {
+    "code": "RETL 407",
+    "subject": "RETL",
+    "number": "407",
+    "title": "Retail Management Project",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A team-based, experiential project that involves defining actual problems and recommending solutions in the realm of an organization, or at the interface of different organizations (e.g. supply chains), including strategic and operational issues in retail management. Each project is multidisciplinary or multi-functional in nature and will have significant impact on one or more operational/competitive capabilities of the organization.",
+    "prerequisites": {
+      "text": "MGCR 271 or equivalent or MGCR 352",
+      "tree": {
+        "or": [
+          "MGCR 271",
+          "MGCR 352"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "1. The instructors will make sure that the workload of the project is commensurate with the course credit and team size.",
+      "2. The instructors will also be involved during the course as advisers, progress reviewers, logistics coordinators, evaluators, and will serve as liaison between the companies and the teams."
+    ]
+  },
+  {
+    "code": "RETL 408",
+    "subject": "RETL",
+    "number": "408",
+    "title": "Omni-Channel Retailing",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Introduction to the fundamentals and different problems in the operations process of omni-channel retailing. The focus will be on multi-channel supply chain management and integration. Combination of theoretical models with study cases and data to review the challenges and solutions in omni-channel retailing.",
+    "prerequisites": {
+      "text": "MGCR 271 or equivalent",
+      "tree": "MGCR 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "RETL 409",
+    "subject": "RETL",
+    "number": "409",
+    "title": "Digitization of Retailing",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Exploration of digital retailing models such as e-commerce marketplace, freemium, and peer-to-peer two-sided marketplace. Examination of how digital technology is driving innovation in these models, and how the models can improve competitiveness, operational efficiency and customer satisfaction.",
+    "prerequisites": {
+      "text": "MGCR 352",
+      "tree": "MGCR 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "RETL 410",
+    "subject": "RETL",
+    "number": "410",
+    "title": "Sustainable Retail and Entrepreneurship",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Stages of developing a business concept in sustainability and retail. The experiential learning component culminates in a competition where student teams will pitch their business ideas to a panel of external business experts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 & U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 434",
+    "subject": "RETL",
+    "number": "434",
+    "title": "Topics in Retail Management 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Topics will be selected from current and emerging issues in retail management.",
+    "prerequisites": {
+      "text": "MGCR 352",
+      "tree": "MGCR 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Restricted to U2 & U3 students."
+    ]
+  },
+  {
+    "code": "RETL 435",
+    "subject": "RETL",
+    "number": "435",
+    "title": "Topics in Retail Management 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Topics will be selected from current and emerging issues in retail management.",
+    "prerequisites": {
+      "text": "MGCR 352",
+      "tree": "MGCR 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 601",
+    "subject": "RETL",
+    "number": "601",
+    "title": "Foundations of Retailing ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Consumer behaviours, emerging trends, technologies and financial approaches to sustainability, and how they can lead to retail innovations that can significantly improve operational efficiencies, competitiveness, customer satisfaction and provide foundation for a better society.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "RETL 603",
+      "tree": "RETL 603",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Restructure: Open only to Master's students within the Desautels Faculty of Management"
+    ]
+  },
+  {
+    "code": "RETL 603",
+    "subject": "RETL",
+    "number": "603",
+    "title": "Retail Science and Data Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic statistical techniques and methodologies including sampling, regression, classification methods, machine learning, and predictions using real cases and data sets across several retail sectors such as real estate, restaurant, entertainment and ecommerce. Conducting predictions using real cases and datasets across several retail sectors.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "RETL 601",
+      "tree": "RETL 601",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to Master's students within Desautels Faculty of Management.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 610",
+    "subject": "RETL",
+    "number": "610",
+    "title": "Environmental Social Governance, Entrepreneurship & Retail",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The importance of environmental, social and governance (ESG) principles that drive social and economic value creation. The basis of a startup and presenting it to ESG-driven entrepreneurs and investors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "RETL 611",
+    "subject": "RETL",
+    "number": "611",
+    "title": "360-Degree Customer Insight ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Key customer concepts and frameworks such as choice models, judgment heuristics, satisfaction models, brand equity models, and theories of persuasion; including cutting edge data analytics relevant to customers such as marketing experiments, observational analysis, physiological/neurological responses, online sentiment, and satisfaction modeling.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to masters' students within the Desautels Faculty of Management.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 613",
+    "subject": "RETL",
+    "number": "613",
+    "title": "Digital Retailing Models",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The role of IT in acquiring retail consumers, digital business models, emergent technologies in e-Business, and various IT-enabled innovations including digital platforms, and online community business models.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 615",
+    "subject": "RETL",
+    "number": "615",
+    "title": "Managing Retail Operations ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of operations management in the retailing industry. Channel management. Forecasting, assortment planning and merchandising. Procurement and supplier management. Inventory management and personalized/dynamic pricing. Logistics and delivery network. Managing store operations and service quality. Customer Relationship Management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 617",
+    "subject": "RETL",
+    "number": "617",
+    "title": "Managing for Sustainability",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to business strategy and stakeholders. Balanced scorecard and corporate social responsibility. Analytical methods to manage the other stakeholders in a firm – owners, employees, and the public. Introduction to stakeholder theory and tools that managers can use to discriminate between the various choices to maximize stakeholder value and balance between competing stakeholder needs. Organizational culture and structure. Conflict management. Financial reporting. Inventory reporting. Budgeting. Taxation. Financial decision making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 621",
+    "subject": "RETL",
+    "number": "621",
+    "title": "Retail Internship",
+    "credits": 6,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "An internship of at least 150 hours with a host retail company. The internship is centered on a mutual agreement between the candidate, the participating company, and the course professor.",
+    "prerequisites": {
+      "text": "RETL 601, RETL 603",
+      "tree": {
+        "and": [
+          "RETL 601",
+          "RETL 603"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 625",
+    "subject": "RETL",
+    "number": "625",
+    "title": "Experiential Retail",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Retail project on analytics in collaboration with a retail company. Retail seminar on emerging retail issues. Retail case challenge to investigate problems and to develop solutions on retail topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 631",
+    "subject": "RETL",
+    "number": "631",
+    "title": "Digital Media Marketing",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals of marketing communications and advertising. Setting budgets and media allocation. Strategic objectives for digital media communications. Storytelling and creative content. Paid, owned, and earned media. Metrics and productivity. Controlled and quasi-experimentation. Launching digital multi-media campaigns and monitoring their performance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 633",
+    "subject": "RETL",
+    "number": "633",
+    "title": "Data-Driven Retail Decisions",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Business decision types, including supply chain management, pricing and promotions, revenue management, inventory policies, and assortment decisions. The applications of machine learning, optimization, and data analytics on retail problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 635",
+    "subject": "RETL",
+    "number": "635",
+    "title": "Creativity and Experiential Economy ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An interdisciplinary perspective on creativity and experiential retail. Focused themes based on the core dimensions of creativity, including the individual, creativity as a social process and the output of this creative process.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 637",
+    "subject": "RETL",
+    "number": "637",
+    "title": "Innovative Retail Technology ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of the value of computer vision (i.e., “visual listening”) and Internet-of-Things (IoT) in retail setting, including basic personalization and targeting retailing strategies, and designing IoT strategies and assessing the impact of technologies on business outcomes as well as the ethical and privacy implications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "RETL 639",
+    "subject": "RETL",
+    "number": "639",
+    "title": "Retail Business Insights",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Key managerial and policy issues involved in successful retailing strategy in the current macro and micro retail environments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken RETL 663 when topic was \"Retail Insights\".",
+      "excludes": [
+        "RETL 663"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 641",
+    "subject": "RETL",
+    "number": "641",
+    "title": "Fashion Retail Management ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The key differences and success factors in fashion, beauty and luxury industries, including personalization, tools of communication, power of social media and key opinion leaders, the importance of brand, the creative process, merchandising and inventory management, distribution and retail operation, financial and investment decisions, talent management, and environmental and social responsibility.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 643",
+    "subject": "RETL",
+    "number": "643",
+    "title": "Fintech and Financial Services ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The capabilities of blockchains for payments, ownership transfers and the delivery of consumer services, public Blockchain architecture, initial coin offerings, the design of online platforms that directly offer funding options to consumers, online mortgage and crowdsourcing, and the automatization of financial advice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 645",
+    "subject": "RETL",
+    "number": "645",
+    "title": "Food Retail",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The “food-production journey,” including the preparation, distribution, safety, marketing, consumption, consumer attitudes, and emerging trends. Food supply chain partners such as farms, grocery stores, restaurants, or community food producers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Master's students within the Desautels Faculty of Management.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 647",
+    "subject": "RETL",
+    "number": "647",
+    "title": "Design Thinking and Innovation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The design thinking process and its application to our professional/personal lives, leading to better, more innovative solutions. Methods from engineering and design, combination of ideas from the arts, tools from social sciences, and insights from the business world. How to build creative confidence. Tools to help define problem statements and design challenges, empathize with the users, develop new ideas, and prototype and test the designs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken RETL 661 when topic was \"Design Thinking\".",
+      "excludes": [
+        "RETL 661"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "RETL 651",
+    "subject": "RETL",
+    "number": "651",
+    "title": "Retail Practicum",
+    "credits": 6,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A complex retail issue that is of interest and importance to a retail sector or organization. The objective is to apply frameworks and learnings to empirically examine a specific retail issue from multiple angles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "RETL 652",
+    "subject": "RETL",
+    "number": "652",
+    "title": "Independent Study in Retail",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Research reading or field projects, permitting independent study under the guidance of a Faculty member. Projects to be arranged individually with instructors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "A detailed student proposal must be submitted to the instructor and approved by the Academic Director during the first week of term."
+    ]
+  },
+  {
+    "code": "RETL 661",
+    "subject": "RETL",
+    "number": "661",
+    "title": "Advanced Topics in Retail Management 1 ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics will be selected from current issues in retailing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "RETL 662",
+    "subject": "RETL",
+    "number": "662",
+    "title": "Advanced Topics in Retail Management 2 ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics will be selected from current issues in retailing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "RETL 663",
+    "subject": "RETL",
+    "number": "663",
+    "title": "Advanced Topics in Retail Management 3 ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics will be selected from current issues in retailing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "RETL 664",
+    "subject": "RETL",
+    "number": "664",
+    "title": "Advanced Topics in Retail Management 4",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics will be selected from current issues in retailing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

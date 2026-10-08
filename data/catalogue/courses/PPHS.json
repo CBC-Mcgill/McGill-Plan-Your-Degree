@@ -1,0 +1,514 @@
+[
+  {
+    "code": "PPHS 501",
+    "subject": "PPHS",
+    "number": "501",
+    "title": "Population Health and Epidemiology",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course presents concepts and methods of epidemiology at the introductory level. The use of epidemiologic methods for population and public health research and practice will be illustrated. A review of selected population health questions such as the HIV/AIDS epidemic, the cardiovascular disease epidemic, cigarette smoking, or screening for disease will be presented.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 501.",
+      "excludes": [
+        "EPIB 501"
+      ]
+    },
+    "notes": [
+      "Course not open to students enrolled in Epidemiology or Public Health programs."
+    ]
+  },
+  {
+    "code": "PPHS 525",
+    "subject": "PPHS",
+    "number": "525",
+    "title": "Health Care Systems in Comparative Perspective",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "Comparative perspective to illustrate processes involved in the development and evolution of health care systems around the world. Countries examined will represent different welfare state regimes, health care system typologies, levels of development and wealth.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 525. Not open to students who are taking or have taken SOCI 525.",
+      "excludes": [
+        "EPIB 525",
+        "SOCI 525"
+      ]
+    },
+    "notes": [
+      "Note: This course is cross-listed in Epidemiology, Biostatistics and Occupational Health and in Sociology"
+    ]
+  },
+  {
+    "code": "PPHS 527",
+    "subject": "PPHS",
+    "number": "527",
+    "title": "Economics for Health Services Research and Policy",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Key health policy topics in developed economies using analytic frameworks and tools from economics. Major topics include health insurance, health care financing, and the roles of individuals and public and private institutions in the health care system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 527.",
+      "excludes": [
+        "EPIB 527"
+      ]
+    },
+    "notes": [
+      "NOTE: This course is open to graduate students and advanced undergraduates from all departments, with the permission of the instructor. A background in introductory economics is useful, though not required."
+    ]
+  },
+  {
+    "code": "PPHS 528",
+    "subject": "PPHS",
+    "number": "528",
+    "title": "Economic Evaluation of Health Programs",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Concepts and methods used to carry out economic evaluations of health programs and interventions, including public health interventions, pharmaceuticals, and other health care interventions. Includes topics such as calculation of unit costs, measurement of quality-adjusted life years (QALYs) and assessment of uncertainty in cost-effectiveness analysis.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 528.",
+      "excludes": [
+        "EPIB 528"
+      ]
+    },
+    "notes": [
+      "No prior background in economics is required.",
+      "Open to graduate students and advanced undergraduates from all departments."
+    ]
+  },
+  {
+    "code": "PPHS 529",
+    "subject": "PPHS",
+    "number": "529",
+    "title": "Global Environmental Health and Burden of Disease",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course presents the grand challenges in global health from environmental and occupational risks along with the multi-disciplinary methods used to identify, control, and prevent them. It will introduce students to knowledge and skills in core disciplines of environmental health and approaches to environmental risk recognition, control and prevention in a global context.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 529.",
+      "excludes": [
+        "EPIB 529"
+      ]
+    },
+    "notes": [
+      "1. Permission of instructor required for undergraduate students.",
+      "2.This course is open to graduate students and advanced undergraduates from all departments.",
+      "3. Previous coursework in statistics and environmental science is useful, though not required."
+    ]
+  },
+  {
+    "code": "PPHS 593",
+    "subject": "PPHS",
+    "number": "593",
+    "title": "Special Topics in Population and Public Health 1",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of population and public health importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 602",
+    "subject": "PPHS",
+    "number": "602",
+    "title": "Foundations of Population Health",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to population health and the conceptual basis of the population health approach to measuring disease occurrence and to prevention. Fundamentals of, and methods for, studying burden of disease in population, and how these differ across time, space, and groups. Topics include population dynamics, denominators, occurrence of events, time, person and place, health indicators, standardization, life tables, age, cohort and period effects, disease surveillance and vital statistics. Introduction to the concepts and principles of measurement including measurement error, validity, reliability, and accuracy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 602 or EPIB 614.",
+      "excludes": [
+        "EPIB 602",
+        "EPIB 614"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PPHS 612",
+    "subject": "PPHS",
+    "number": "612",
+    "title": "Principles of Public Health Practice",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and methods in public health practice. Topics will include investigation in public health, public health intervention, program evaluation, public health and the health care system, society and public health.",
+    "prerequisites": {
+      "text": "EPIB 601, EPIB 602 or PPHS 602, and EPIB 607 or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          {
+            "or": [
+              "EPIB 602",
+              "PPHS 602"
+            ]
+          },
+          "EPIB 607"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 612.",
+      "excludes": [
+        "EPIB 612"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PPHS 613",
+    "subject": "PPHS",
+    "number": "613",
+    "title": "The Practice of Global Health",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to core competencies in the practice of global health, including historical, colonial roots of global health, project planning and implementation, equitable and ethical conduct, building partnerships, working within interdisciplinary teams, effective communication and personal-social skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 614",
+    "subject": "PPHS",
+    "number": "614",
+    "title": "Knowledge Translation and Public Health Leadership ",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of knowledge translation in public health, including synthesis, dissemination, exchange, and ethically-sound application of knowledge to policy and programming. Overview of knowledge translation processes for effective evidence-informed public health leadership.",
+    "prerequisites": {
+      "text": "PPHS 612 or permission of instructor",
+      "tree": "PPHS 612",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 678 when topic was ‘Knowledge Translation, Communications, and Evidence-Informed Public Health Leadership’.",
+      "excludes": [
+        "EPIB 678"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PPHS 615",
+    "subject": "PPHS",
+    "number": "615",
+    "title": "Introduction to Infectious Disease Epidemiology",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the field of infectious disease epidemiology taught from a public health perspective. Topics include analytic methods, study design, outbreak investigations, surveillance, vaccine development and evaluations, screening, modelling, and infectious causes of cancer or chronic diseases.",
+    "prerequisites": {
+      "text": "EPIB 601 or Permission of Instructor.",
+      "tree": "EPIB 601",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 615.",
+      "excludes": [
+        "EPIB 615"
+      ]
+    },
+    "notes": [
+      "Note: An undergraduate level biology course is highly recommended."
+    ]
+  },
+  {
+    "code": "PPHS 616",
+    "subject": "PPHS",
+    "number": "616",
+    "title": "Principles and Practice of Public Health Surveillance",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The objectives of this course are to familiarize students with the theory and methods of surveillance, a core public health function. The seminars will define surveillance and explore surveillance applications and methods through case studies and in-class exercises. Topics will include: measurement, indicators, analytical methods, and the future of surveillance. Computer-based modules will complement seminars. Topics will include: estimating the burden of a disease, detecting disease outbreaks, and identifying cases of chronic disease.",
+    "prerequisites": {
+      "text": "EPIB 603, EPIB 621, PPHS 612, or equivalent, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621",
+          "PPHS 612"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students are encouraged to use R statistical software and to bring a laptop to class."
+    ]
+  },
+  {
+    "code": "PPHS 617",
+    "subject": "PPHS",
+    "number": "617",
+    "title": "Impact Evaluation",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will cover methods for estimating the effects of social interventions on health outcomes. We will provide the intuition for conducting impact evaluation studies in population health and discuss recent developments. We will define causal policy effects within the potential outcomes framework and introduce and formally define policy-relevant research questions based on specific causal contrasts. We will cover the use of randomized and cluster randomized trials for impact evaluation, including cost-effectiveness. We will additionally cover quasi-experimental designs such as interrupted time series, difference-in-differences, instrumental variables, and regression discontinuity.",
+    "prerequisites": {
+      "text": "EPIB 603 and EPIB 621 or permission of the instructors.",
+      "tree": {
+        "and": [
+          "EPIB 603",
+          "EPIB 621"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 618",
+    "subject": "PPHS",
+    "number": "618",
+    "title": "Program Planning and Evaluation in Public Health ",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Major activities in planning and evaluating an evidence-based public health intervention using a structured approach to intervention planning and different evaluation methodologies and techniques. Emphasis on evidence-based program planning, logic model development, participatory approaches, and program evaluation in applied public health settings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 619",
+    "subject": "PPHS",
+    "number": "619",
+    "title": "Public Health and Sexually Transmitted Infections Control",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of core public health competencies in the prevention and control of sexually transmitted infections (STIs) in Canada. Historical perspectives on STIs, their distribution, and social determinants. Overview of Canadian STI surveillance systems, the role of diagnostics, and the use of quantitative data analyses in public health interventions. Examination of data-driven and equity-informed approaches, including policy frameworks and community-based interventions, in STI control.",
+    "prerequisites": {
+      "text": "EPIB 601, EPIB 607, PPHS 612",
+      "tree": {
+        "and": [
+          "EPIB 601",
+          "EPIB 607",
+          "PPHS 612"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 624",
+    "subject": "PPHS",
+    "number": "624",
+    "title": "Public Health Ethics and Policy",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical assessment of ethical dilemmas and policy considerations raised by the practice of public health. Specific topics include: measuring and defining health; surveillance and privacy; preparedness, quarantine, and distribution of resources during a health emergency; and health inequalities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 624.",
+      "excludes": [
+        "EPIB 624"
+      ]
+    },
+    "notes": [
+      "Students from all disciplinary backgrounds are welcome."
+    ]
+  },
+  {
+    "code": "PPHS 630",
+    "subject": "PPHS",
+    "number": "630",
+    "title": "MScPH Practicum/Project",
+    "credits": 12,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The practicum provides the opportunity to integrate classroom learning and practice in a population or public health work environment. The student contributes to an organization's mandate and to addressing a population and/or public health problem while developing skills as a population and/or public health professional and/or researcher.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students registered in the M.Sc. in Public Health; Non-Thesis.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PPHS 681",
+    "subject": "PPHS",
+    "number": "681",
+    "title": "Special Topics in Population and Public Health 2",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of population and public health importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 682",
+    "subject": "PPHS",
+    "number": "682",
+    "title": "Special Topics in Population and Public Health 3",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of population and public health importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 683",
+    "subject": "PPHS",
+    "number": "683",
+    "title": "Special Topics in Population and Public Health 4",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of population and public health importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 684",
+    "subject": "PPHS",
+    "number": "684",
+    "title": "Special Topics in Population and Public Health 5",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study, through lectures, guided reading, practicals, assignments etc., of an elected and approved topic of population and public health importance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PPHS 699",
+    "subject": "PPHS",
+    "number": "699",
+    "title": "MScPH Practicum Requirement",
+    "credits": 9,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The practicum provides the opportunity to integrate classroom learning and practice in a population or public health work environment. The student contributes to an organization’s mandate and to addressing a population or public health problem while developing skills as a population and/or public health professional and/or researcher.",
+    "prerequisites": {
+      "text": "PPHS 602,PPHS 612, PPHS 629",
+      "tree": {
+        "and": [
+          "PPHS 602",
+          "PPHS 612",
+          "PPHS 629"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the MSc. in Public Health; Non-Thesis.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

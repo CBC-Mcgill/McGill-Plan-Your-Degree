@@ -1,0 +1,304 @@
+[
+  {
+    "code": "GEMA 111",
+    "subject": "GEMA",
+    "number": "111",
+    "title": "Analysis 1",
+    "credits": 1.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Ordinary differential equations (ODE), modern mathematical formalism, mathematical theory, finite probabilities, Simulation random variables using Python, regular functions (differentiable, convex, Lipschitz, Taylorexpansion).",
+    "prerequisites": {
+      "text": "High School level math.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA111 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 112",
+    "subject": "GEMA",
+    "number": "112",
+    "title": "Analysis 2",
+    "credits": 1.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Linear transformations, linear systems, quadrics, Markov processes, correlation structures.",
+    "prerequisites": {
+      "text": "GEMA 111, Analysis 1. GEPH 111, Mechanics. GEPH 112, Electric Circuits.",
+      "tree": {
+        "and": [
+          "GEMA 111",
+          "GEPH 111",
+          "GEPH 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA112 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 113",
+    "subject": "GEMA",
+    "number": "113",
+    "title": "Mathematics 1: Real Analysis and Linear Algebra",
+    "credits": 3.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Ordinary differential equations (ODE), modern mathematical formalism, mathematical theory, finite probabilities, Simulation random variables using Python, regular functions (differentiable, convex, Lipschitz, Taylor expansion). Linear transformations, linear systems, quadrics, Markov processes, correlation structures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA113 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 121",
+    "subject": "GEMA",
+    "number": "121",
+    "title": "Analysis 3",
+    "credits": 1.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Norm topology, multi-dimensional integration, differential calculus, Jacobian matrix, chain rule.",
+    "prerequisites": {
+      "text": "GEMA 111, Analysis 1. GEMA 112, Analysis 2.",
+      "tree": {
+        "and": [
+          "GEMA 111",
+          "GEMA 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 122",
+    "subject": "GEMA",
+    "number": "122",
+    "title": "Probability",
+    "credits": 1.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Discrete probability, count elements in a set, model a random experiment, important notions in probability.",
+    "prerequisites": {
+      "text": "GEMA 111, Analysis 1. GEMA 121, Analysis.",
+      "tree": {
+        "and": [
+          "GEMA 111",
+          "GEMA 121"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA112 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 123",
+    "subject": "GEMA",
+    "number": "123",
+    "title": "Mathematics 2 : Multivariable Real Analysis and Probability",
+    "credits": 3.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Norm topology, multi-dimensional integration, differential calculus, Jacobian matrix, chain rule. Discrete probability, count elements in a set, model a random experiment, important notions in probability.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA123 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 211",
+    "subject": "GEMA",
+    "number": "211",
+    "title": "Linear Algebra",
+    "credits": 1.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Linear algebra, complements, numerical linear algebra, determinant – complements, polynomials, matrix reduction.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "Perquisites: GEMA 111, Analysis 1. GEMA 112, Analysis 2. GEMA 121, Analysis 3.",
+      "This course is equivalent to MAA211 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 212",
+    "subject": "GEMA",
+    "number": "212",
+    "title": "Topology and Functional Analysis",
+    "credits": 1.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Notion of approximation, Normed topology, complements, Integral and Lp spaces, Hilbert spaces, Fouriertransform.",
+    "prerequisites": {
+      "text": "GEMA 121, Analysis 3. GEMA 122, Probability. GEMA 211, Linear Algebra.",
+      "tree": {
+        "and": [
+          "GEMA 121",
+          "GEMA 122",
+          "GEMA 211"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA212 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 213",
+    "subject": "GEMA",
+    "number": "213",
+    "title": "Mathematics 3 : Linear Algebra and functional analysis",
+    "credits": 3.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Linear algebra, complements, numerical linear algebra, determinant – complements, polynomials, matrix reduction. Notion of approximation, Normed topology, complements, Integral and Lp spaces, Hilbert spaces, Fourier transform.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA213 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 221",
+    "subject": "GEMA",
+    "number": "221",
+    "title": "Numerical Analysis",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Classes of problems in applied mathematics, solving a linear system, computing the eigenvalues and the eigenvectors, minimizing a function.",
+    "prerequisites": {
+      "text": "GEMA 211, Linear Algebra. GEMA 112, Analysis 2. GEMA 121, Analysis 3.",
+      "tree": {
+        "and": [
+          "GEMA 211",
+          "GEMA 112",
+          "GEMA 121"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA221 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 222",
+    "subject": "GEMA",
+    "number": "222",
+    "title": "Continuous Probability & Intro to Statistical Modelling",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Knowledge in probability, Gaussian distribution, statistical modeling, statistical inference, parametric estimation.",
+    "prerequisites": {
+      "text": "GEMA 122, Probability. GEMA 212, Topology and Functional Analysis.",
+      "tree": {
+        "and": [
+          "GEMA 122",
+          "GEMA 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA222 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMA 223",
+    "subject": "GEMA",
+    "number": "223",
+    "title": "Mathematics 4 : Integration, Probability and Statistics",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Classes of problems in applied mathematics, solving a linear system, computing the eigenvalues and the eigenvectors, minimizing a function. Knowledge in probability, Gaussian distribution, statistical modeling, statistical inference, parametric estimation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MAA223 offered by CentraleSupélec in France."
+    ]
+  }
+]

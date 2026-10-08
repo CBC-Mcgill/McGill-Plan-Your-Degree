@@ -1,0 +1,120 @@
+[
+  {
+    "code": "AECH 110",
+    "subject": "AECH",
+    "number": "110",
+    "title": "General Chemistry 1",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course will be a study of the fundamental principles of atomic structure, valence theory and the periodic table.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Note open to students who have taken FDSC 110.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 lectures, one 3 hour lab, and one tutorial hour"
+    ]
+  },
+  {
+    "code": "AECH 111",
+    "subject": "AECH",
+    "number": "111",
+    "title": "General Chemistry 2",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Thermodynamics, kinetics, equilibrium, aqueous solution chemistry including applications to acids, bases and buffers and selected topics in organic chemistry.",
+    "prerequisites": {
+      "text": "FDSC 110 or AECH 110",
+      "tree": {
+        "or": [
+          "FDSC 110",
+          "AECH 110"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FDSC 111.",
+      "excludes": [
+        "FDSC 111"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 lectures, one 3 hour lab, and one tutorial hour"
+    ]
+  },
+  {
+    "code": "AECH 118",
+    "subject": "AECH",
+    "number": "118",
+    "title": "General Chemistry Laboratory 1",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The laboratory component of AECH 110. Illustrative experiments.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to entering students who have the lecture equivalent of AECH 110. Not open to students who have taken or are taking AECH 110, CHEM 110, or CHEM 112.",
+      "excludes": [
+        "AECH 110",
+        "CHEM 110",
+        "CHEM 112"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "AECH 119",
+    "subject": "AECH",
+    "number": "119",
+    "title": "General Chemistry Laboratory 2",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The laboratory component of AECH 111. Illustrative experiments.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to entering students who have the lecture equivalent of AECH 111. Not open to students who have taken or are taking AECH 111, CHEM 120, or CHEM 122.",
+      "excludes": [
+        "AECH 111",
+        "CHEM 120",
+        "CHEM 122"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  }
+]

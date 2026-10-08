@@ -1,0 +1,4754 @@
+[
+  {
+    "code": "ECSE 200",
+    "subject": "ECSE",
+    "number": "200",
+    "title": "Electric Circuits 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Circuit variables. Analysis of resistive circuits, network theorems (Kirchhoff’s laws, Ohm’s law, Norton and Thevenin equivalent). Ammeters, Voltmeters, and Ohmmeters. Analysis methods (nodal and mesh analysis, linearity, superposition). Dependent sources and Op-Amps. Energy storage elements. First and second order circuits.",
+    "prerequisites": {
+      "text": "PHYS 142 or CEGEP equivalent.",
+      "tree": "PHYS 142",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 263",
+      "tree": "MATH 263",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(4-2-3)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 201",
+    "subject": "ECSE",
+    "number": "201",
+    "title": "Co-operative Work Term 1",
+    "credits": 2,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised and evaluated work experience.",
+    "prerequisites": {
+      "text": "ECSE 250.",
+      "tree": "ECSE 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Administrative fee for undergraduate students in the Software Engineering Co-op Program. Supports program administration and co-op services. Non-refundable.",
+      "Frais administratifs exigés des étudiantes et étudiants de premier cycle du programme coopératif de génie logiciel. Ils servent à soutenir l’administration du programme et les services coopératifs. Non remboursables."
+    ]
+  },
+  {
+    "code": "ECSE 202",
+    "subject": "ECSE",
+    "number": "202",
+    "title": "Introduction to Software Development",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Software development practices in the context of structured and object-oriented programming. Introduces the formalisms inherent in medium-to-large scale object-oriented programming. Introduction to tools and practices employed in commercial software development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 205",
+    "subject": "ECSE",
+    "number": "205",
+    "title": "Probability and Statistics for Engineers",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Probability: basic probability model, conditional probability, Bayes rule, random variables and vectors, distribution and density functions, common distributions in engineering, expectation, moments, independence, laws of large numbers, central limit theorem. Statistics: descriptive measures of engineering data, sampling distributions, estimation of mean and variance, confidence intervals, hypothesis testing, linear regression.",
+    "prerequisites": {
+      "text": "MATH 262",
+      "tree": "MATH 262",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECSE 305.",
+      "excludes": [
+        "ECSE 305"
+      ]
+    },
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 206",
+    "subject": "ECSE",
+    "number": "206",
+    "title": "Introduction to Signals and Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of complex functions. Discrete-and continuous-time signals, basic system properties. Linear time-invariant systems, convolution. Fourier series and Fourier transforms, frequency-domain analysis, filtering, sampling. Laplace transforms and inversion, transfer functions, poles and zeros, solutions of linear constant-coefficient differential equations, transient and steady-state response. Z-transforms.",
+    "prerequisites": {
+      "text": "ECSE 200 or GEPR 221",
+      "tree": {
+        "or": [
+          "ECSE 200",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 209",
+    "subject": "ECSE",
+    "number": "209",
+    "title": "Electrotechnology",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "DC and AC circuit analysis with application to electrical instrumentation, motors, and other common devices. Equations describing exponential and oscillatory behaviour of basic circuits and automatic control loops, with application in diverse engineering contexts (transportation, processing plants, environmental surveying). Overview of common devices including sensors (pH meters, photoresistor, photodiode, thermocouple, strain gauge, gas detection), actuators, and motors (single- and three-phase). In-class demonstrations involving programmed microcontrollers to activate LEDs and stepper-motor based actuators. Introduction to hierarchical control, linking low-level sensor-driven adjustments to higher-level control.",
+    "prerequisites": {
+      "text": "(PHYS 142 or equivalent) or GEPR 221",
+      "tree": {
+        "or": [
+          "PHYS 142",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECSE 200.",
+      "excludes": [
+        "ECSE 200"
+      ]
+    },
+    "notes": [
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 210",
+    "subject": "ECSE",
+    "number": "210",
+    "title": "Electric Circuits 2",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Second-order circuits. Sinusoidal sources and phasors. AC steady-state analysis. AC steady-state power. Laplace transform. Circuit analysis in the s-Domain. Two-port circuits. Elementary continuous signals, impulse functions, basic properties of continuous linear time-invariant (LTI) systems. Frequency analysis of continuous-time LTI systems.",
+    "prerequisites": {
+      "text": "ECSE 200 or GEPR 221",
+      "tree": {
+        "or": [
+          "ECSE 200",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-3)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 211",
+    "subject": "ECSE",
+    "number": "211",
+    "title": "Design Principles and Methods",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Engineering process: design specifications, parameters, optimization, implementation, troubleshooting and refinement; project management: scheduling, risk analysis, project control; case studies; design examples and project.",
+    "prerequisites": {
+      "text": "COMP 202",
+      "tree": "COMP 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-6-1)"
+    ]
+  },
+  {
+    "code": "ECSE 222",
+    "subject": "ECSE",
+    "number": "222",
+    "title": "Digital Logic",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to digital logic, binary numbers and Boolean algebra, combinational circuits, optimized implementation of combinational circuits, arithmetic circuits, combinational circuit building blocks, flip-flops, registers, counters, design of digital circuits with VHDL, and synchronous sequential circuits.",
+    "prerequisites": {
+      "text": "COMP 202 or GEPR 221",
+      "tree": {
+        "or": [
+          "COMP 202",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 223",
+    "subject": "ECSE",
+    "number": "223",
+    "title": "Model-Based Programming",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Integration of modelling with programming; abstraction in software engineering; structural modelling; state-based modelling; modelling of object-oriented systems, code generation; natural language constraints in modelling notations; architectural and design patterns; integrated development environments; programming tools (debugging, continuous build/integration, version control and code repositories, diff, defect and issue tracking, refactoring); code review processes.",
+    "prerequisites": {
+      "text": "ECSE 250 or COMP 250 or GEPR 221",
+      "tree": {
+        "or": [
+          "ECSE 250",
+          "COMP 250",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 250",
+    "subject": "ECSE",
+    "number": "250",
+    "title": "Fundamentals of Software Development",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Software development practices in the context of object-oriented programming. Elementary data structures such as lists, stacks and trees. Recursive and non-recursive algorithms: searching and sorting, tree and graph traversal. Asymptotic notation: Big O. Introduction to tools and practices employed in commercial software development.",
+    "prerequisites": {
+      "text": "COMP 202",
+      "tree": "COMP 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 251",
+    "subject": "ECSE",
+    "number": "251",
+    "title": "Electric and Magnetic Fields",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Divergence, gradient and curl. The divergence theorem and Stokes’ theorem. Maxwell's equations, electrostatics, magnetostatics and induction for power-frequency electrical engineering problems.",
+    "prerequisites": {
+      "text": "ECSE 200 and MATH 262",
+      "tree": {
+        "and": [
+          "ECSE 200",
+          "MATH 262"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 301",
+    "subject": "ECSE",
+    "number": "301",
+    "title": "Co-operative Work Term 2",
+    "credits": 2,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised and evaluated work experience.",
+    "prerequisites": {
+      "text": "ECSE 201 and ECSE 321",
+      "tree": {
+        "and": [
+          "ECSE 201",
+          "ECSE 321"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Administrative fee for undergraduate students in the Software Engineering Co-op Program. Supports program administration and co-op services. Non-refundable.",
+      "Frais administratifs exigés des étudiantes et étudiants de premier cycle du programme coopératif de génie logiciel. Ils servent à soutenir l’administration du programme et les services coopératifs. Non remboursables."
+    ]
+  },
+  {
+    "code": "ECSE 303",
+    "subject": "ECSE",
+    "number": "303",
+    "title": "Signals and Systems 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Elementary continuous and discrete-time signals, impulse functions, basic properties of discrete and continuous linear time-invariant (LTI) systems, Fourier representation of continuous-time periodic and aperiodic signals, the Laplace transform, time and frequency analysis of continuous-time LTI systems, application of transform techniques to electric circuit analysis.",
+    "prerequisites": {
+      "text": "ECSE 210, MATH 247 or MATH 270 or MATH 271.",
+      "tree": {
+        "and": [
+          "ECSE 210",
+          {
+            "or": [
+              "MATH 247",
+              "MATH 270",
+              "MATH 271"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 249 or MATH 381",
+      "tree": {
+        "or": [
+          "MATH 249",
+          "MATH 381"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 305",
+    "subject": "ECSE",
+    "number": "305",
+    "title": "Probability and Random Signals 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "The basic probability model, the heuristics of model-building and the additivity of probability; classical models; conditional probability and Bayes rule; random variables and vectors, distribution and density functions, expectation; statistical independence, laws of large numbers, central limit theorem; introduction to random processes and random signal analysis.",
+    "prerequisites": {
+      "text": "ECSE 303 or ECSE 306.",
+      "tree": {
+        "or": [
+          "ECSE 303",
+          "ECSE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 307",
+    "subject": "ECSE",
+    "number": "307",
+    "title": "Linear Systems and Control",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Modelling and simulation of control systems, review of LTI systems, time response of first and second order systems, state space modeling, controllability, state feedback and pole placement, observability, observer design, and output feedback, block diagrams and their simplification, Routh-Hurwitz stability criterion, system type and steady state errors, Bode plots, Nyquist plots, Nyquist stability criterion, gain and phase margins, lead-lag compensators. Lab work involving step response, frequency response, system identification, state feedback, output feedback, and lead-lag compensators.",
+    "prerequisites": {
+      "text": "ECSE 206 and ECSE 210",
+      "tree": {
+        "and": [
+          "ECSE 206",
+          "ECSE 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 308",
+    "subject": "ECSE",
+    "number": "308",
+    "title": "Introduction to Communication Systems and Networks",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Information and bandwidth, signals, modulation and noise, transmission and switching. Principles of layered design and the OSI model, measures of performance. Information sources and services. Application, Presentation and Session layers. Transport and Network layers. Data link layer and multi-user communication. Physical layer and transmission techniques. Wireline and wireless transmission media. Core (Backbone), and Access Communication Networks. Communication network classification. Laboratory work involving analog and digital transmission techniques.",
+    "prerequisites": {
+      "text": "(ECSE 205 or GEPR 221) and ECSE 206",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 205",
+              "GEPR 221"
+            ]
+          },
+          "ECSE 206"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 310",
+    "subject": "ECSE",
+    "number": "310",
+    "title": "Thermodynamics of Computing",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to thermodynamics from the perspective of computer engineering. The first and second laws of thermodynamics; elementary information theory (bits, entropy); energy storage and dissipation in electrical circuits; effects of noise in switching circuits; the fluctuation-dissipation theorem; Landauer’s principle; reversible and irreversible computation; energy costs of communication; thermal resistance, heat sinking, and cooling technologies for computing circuits.",
+    "prerequisites": {
+      "text": "ECSE 200, ECSE 205, and ECSE 222",
+      "tree": {
+        "and": [
+          "ECSE 200",
+          "ECSE 205",
+          "ECSE 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 316",
+    "subject": "ECSE",
+    "number": "316",
+    "title": "Signals and Networks",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the physical and software architecture of networks and the analysis and representation of signals; client-server and peer-to-peer architectures; layered design principles; network applications and socket programming; multimedia streaming, web transfer, and voice-over-IP; continuous-time and discrete-time signals; Fourier transforms and frequency domain analysis and representation of signals; filtering and sampling; flow and congestion control; solutions of linear constant-coefficient differential equations, transient and steady state response; Laplace transforms; addressing and routing for unicast, multicast, and broadcast transmission; wired and wireless access systems; multiple access protocols. Examples: Ethernet, http, TCP/IP, 802.11, OSPF, BGP.",
+    "prerequisites": {
+      "text": "COMP 251, ECSE 200, and MATH 263",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "ECSE 200",
+          "MATH 263"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 321",
+    "subject": "ECSE",
+    "number": "321",
+    "title": "Introduction to Software Engineering",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Design, development and testing of software systems. Software life cycle: requirements analysis, software architecture and design, implementation, integration, test planning, and maintenance. The course involves a group project.",
+    "prerequisites": {
+      "text": "ECSE 223",
+      "tree": "ECSE 223",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 324",
+    "subject": "ECSE",
+    "number": "324",
+    "title": "Computer Organization",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Basic computer structures; instruction set architecture; assembly language; input/output; memory; software; processor implementation; computer arithmetic. Lab work involving assembly language level programming of single-board computers.",
+    "prerequisites": {
+      "text": "(ECSE 200, ECSE 222, and COMP 206) or (ECSE 222 and GEPR 221)",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECSE 200",
+              "ECSE 222",
+              "COMP 206"
+            ]
+          },
+          {
+            "and": [
+              "ECSE 222",
+              "GEPR 221"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 325",
+    "subject": "ECSE",
+    "number": "325",
+    "title": "Digital Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design of digital systems. Implementation technologies; arithmetic modules; synthesis and advanced modelling techniques; verification; timing analysis; design for testability; asynchronous circuits; hardware/software co-design.",
+    "prerequisites": {
+      "text": "ECSE 324",
+      "tree": "ECSE 324",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 326",
+    "subject": "ECSE",
+    "number": "326",
+    "title": "Software Requirements Engineering",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Techniques for eliciting requirements; languages and models for specification of requirements; analysis and validation techniques, including feature-based, goal-based, and scenario-based analysis; quality requirements; requirements traceability and management; handling evolution of requirements; requirements documentation standards; requirements in the context of system engineering; integration of requirements engineering into software engineering processes.",
+    "prerequisites": {
+      "text": "ECSE 223 or COMP 303",
+      "tree": {
+        "or": [
+          "ECSE 223",
+          "COMP 303"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 330",
+    "subject": "ECSE",
+    "number": "330",
+    "title": "Introduction to Electronics",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to electronic circuits using operational amplifiers, PN junction diodes, bipolar junction transistors (BJTs), and MOS field-effect transistors (MOSFETs), including: terminal characteristics, large- and small-signal models; configuration and frequency response of single-stage amplifiers with discrete biasing. Introduction to SPICE. Simulation experiments.",
+    "prerequisites": {
+      "text": "ECSE 210",
+      "tree": "ECSE 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 331",
+    "subject": "ECSE",
+    "number": "331",
+    "title": "Electronics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to electronic circuits using operational amplifiers, PN junction diodes, bipolar junction transistors (BJTs), and MOS field-effect transistors (MOSFETs), including: terminal characteristics, large- and small-signal models; configuration and frequency response of amplifiers with discrete biasing. Introduction to SPICE. Lab work involving simulation experiments and testing of simple circuits using discrete transistors.",
+    "prerequisites": {
+      "text": "ECSE 210",
+      "tree": "ECSE 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 334",
+    "subject": "ECSE",
+    "number": "334",
+    "title": "Introduction to Microelectronics",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Single-stage integrated-circuit amplifiers; differential and multistage amplifiers, integrated-circuit biasing techniques; non-ideal characteristics, frequency response; feedback amplifiers, output stages; digital CMOS logic circuits.",
+    "prerequisites": {
+      "text": "ECSE 291, ECSE 303 or ECSE 306, ECSE 330.",
+      "tree": {
+        "and": [
+          "ECSE 291",
+          {
+            "or": [
+              "ECSE 303",
+              "ECSE 306"
+            ]
+          },
+          "ECSE 330"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 335",
+    "subject": "ECSE",
+    "number": "335",
+    "title": "Microelectronics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Single-stage integrated-circuit amplifiers; differential and multistage amplifiers, integrated-circuit biasing techniques; non-ideal characteristics, frequency response; feedback amplifiers, output stages; digital CMOS logic circuits. Lab work on designing, building, and debugging electronic hardware using discrete transistors and circuit building blocks",
+    "prerequisites": {
+      "text": "ECSE 331",
+      "tree": "ECSE 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restrion(s): Not open to students who have taken ECSE 334",
+      "excludes": [
+        "ECSE 334"
+      ]
+    },
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 343",
+    "subject": "ECSE",
+    "number": "343",
+    "title": "Numerical Methods in Engineering",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Number representation and numerical error. Symbolic vs. numerical computation. Curve fitting and interpolation. Numerical differentiation and integration. Optimization. Data science pipelines and data-driven approaches. Preliminary machine learning. Solutions of systems of linear equations and nonlinear equations. Solutions of ordinary and partial differential equations. Applications in engineering, physical simulation, CAD, machine learning and digital media.",
+    "prerequisites": {
+      "text": "ECSE 205, MATH 263 and (ECSE 250 or COMP 250) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECSE 205",
+              "MATH 263",
+              {
+                "or": [
+                  "ECSE 250",
+                  "COMP 250"
+                ]
+              }
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "ECSE 353",
+    "subject": "ECSE",
+    "number": "353",
+    "title": "Electromagnetic Fields and Waves",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Divergence, gradient and curl. The divergence theorem and Stokes’ theorem. Maxwell’s equations in integral and differential form. Waves in free space and on transmission lines. Electric and magnetic force and energy. Magnetic materials. Faraday's law. Applications to engineering problems. S-parameters.",
+    "prerequisites": {
+      "text": "(ECSE 210, MATH 262 and MATH 263) or (ECSE 210 and GEPR 221)",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECSE 210",
+              "MATH 262",
+              "MATH 263"
+            ]
+          },
+          {
+            "and": [
+              "ECSE 210",
+              "GEPR 221"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor.",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 354",
+    "subject": "ECSE",
+    "number": "354",
+    "title": "Electromagnetic Wave Propagation",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Transient and steady state wave propagation in transmission lines; telephone and radio frequency lines; Smith's chart and impedance matching; Maxwell's equations, Helmholtz's equations, Poynting's theorem; plane waves, polarization, Snell's law, critical and Brewster's angle; rectangular waveguides, optical fibres, dispersion; radiation and antennas; S-parameters; lab work involving the Smith chart, communication transmission lines, reflection and refraction, and optical waveguides.",
+    "prerequisites": {
+      "text": "ECSE 251",
+      "tree": "ECSE 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 362",
+    "subject": "ECSE",
+    "number": "362",
+    "title": "Fundamentals of Power Engineering",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Characteristics and components of power systems. Generation, transmission and utilization of electric power. 3-phase ac and dc systems. Fundamentals of electromechanical energy conversion. Ampere and Faraday's law. Magnetic circuits. Mutual inductance and transformers. Torque and force. Rotating magnetic fields. Basic rotating machines. Lab work involving techniques of electric power, efficiency, torque, and speed measurements.",
+    "prerequisites": {
+      "text": "(ECSE 210 and ECSE 251) or (ECSE 210 and ECSE 353)",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECSE 210",
+              "ECSE 251"
+            ]
+          },
+          {
+            "and": [
+              "ECSE 210",
+              "ECSE 353"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CIVE 281 or MECH 216 or GEPR 221",
+      "tree": {
+        "or": [
+          "CIVE 281",
+          "MECH 216",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)",
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 396",
+    "subject": "ECSE",
+    "number": "396",
+    "title": "Honours Research Laboratory Rotation 1",
+    "credits": 1,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "First in a series of four research laboratory rotations selected among research groups in the department of Electrical and Computer Engineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-3)"
+    ]
+  },
+  {
+    "code": "ECSE 397",
+    "subject": "ECSE",
+    "number": "397",
+    "title": "Honours Research Laboratory Rotation 2",
+    "credits": 1,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Second in a series of four research laboratory rotations selected among research groups in the department of Electrical and Computer Engineering.",
+    "prerequisites": {
+      "text": "ECSE 396",
+      "tree": "ECSE 396",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-3)"
+    ]
+  },
+  {
+    "code": "ECSE 401",
+    "subject": "ECSE",
+    "number": "401",
+    "title": "Co-operative Work Term 3",
+    "credits": 2,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised and evaluated work experience.",
+    "prerequisites": {
+      "text": "ECSE 301 and ECSE 326",
+      "tree": {
+        "and": [
+          "ECSE 301",
+          "ECSE 326"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Administrative fee for undergraduate students in the Software Engineering Co-op Program. Supports program administration and co-op services. Non-refundable.",
+      "Frais administratifs exigés des étudiantes et étudiants de premier cycle du programme coopératif de génie logiciel. Ils servent à soutenir l’administration du programme et les services coopératifs. Non remboursables."
+    ]
+  },
+  {
+    "code": "ECSE 402",
+    "subject": "ECSE",
+    "number": "402",
+    "title": "Co-operative Work Term 4",
+    "credits": 2,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised and evaluated work experience.",
+    "prerequisites": {
+      "text": "ECSE 401",
+      "tree": "ECSE 401",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Administrative fee for undergraduate students in the Software Engineering Co-op Program. Supports program administration and co-op services. Non-refundable.",
+      "Frais administratifs exigés des étudiantes et étudiants de premier cycle du programme coopératif de génie logiciel. Ils servent à soutenir l’administration du programme et les services coopératifs. Non remboursables."
+    ]
+  },
+  {
+    "code": "ECSE 403",
+    "subject": "ECSE",
+    "number": "403",
+    "title": "Control Systems",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Stability of linear and non-linear systems, controllability, state space models, canonical forms, state space design of controllers, pole placement, LQR, observability, Luenberger observer, separation principle and certainty equivalence, loop transfer recovery, correspondence between system theoretic results for continuous- and discrete-time systems. Lab work involving applications of PID, lead-lag, full state feedback and LQR controllers to robotic devices.",
+    "prerequisites": {
+      "text": "ECSE 307",
+      "tree": "ECSE 307",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 405",
+    "subject": "ECSE",
+    "number": "405",
+    "title": "Antennas",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of antenna theory: sources, radiation pattern and gain. Classification of antennas. Main antenna types and their characteristics. Antenna temperature, remote sensing and radar cross-section. Self and mutual impedances. Special topics include adaptive antennas, very large array (VLA) used in radio astronomy and biomedical applications.",
+    "prerequisites": {
+      "text": "ECSE 303 or ECSE 206 and ECSE 352 or ECSE 354",
+      "tree": {
+        "or": [
+          "ECSE 303",
+          {
+            "and": [
+              "ECSE 206",
+              "ECSE 352"
+            ]
+          },
+          "ECSE 354"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECSE 593.",
+      "excludes": [
+        "ECSE 593"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 408",
+    "subject": "ECSE",
+    "number": "408",
+    "title": "Communication Systems",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Communication system models; AM and FM modulation, performance of AM and FM systems in noise; sampling, FDM and TDM multiplexing systems; baseband and pass-band digital transmission over noisy band-limited channels, digital modulation and detection techniques and their quantitative performance; concepts of entropy and channel capacity, selected data compression and error-control coding techniques. Illustrative examples taken from subscriber loop telephone systems, evolution of internet modems and wireless cellular phone standards. Lab work involving measurement of the performance of AM and FM systems with noise, digital modulation techniques and spectra, experiments with basic error control coding systems.",
+    "prerequisites": {
+      "text": "ECSE 205 and ECSE 308",
+      "tree": {
+        "and": [
+          "ECSE 205",
+          "ECSE 308"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECSE 411.",
+      "excludes": [
+        "ECSE 411"
+      ]
+    },
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 412",
+    "subject": "ECSE",
+    "number": "412",
+    "title": "Discrete Time Signal Processing",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Discrete-time signals and systems; Fourier and Z-transform analysis techniques, the discrete Fourier transform; elements of FIR and IIR filter design, filter structures; FFT techniques for high speed convolution; quantization effects.",
+    "prerequisites": {
+      "text": "ECSE 206 or ECSE 304 or ECSE 306.",
+      "tree": {
+        "or": [
+          "ECSE 206",
+          "ECSE 304",
+          "ECSE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 415",
+    "subject": "ECSE",
+    "number": "415",
+    "title": "Introduction to Computer Vision",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the automated processing, analysis, and understanding of image data. Topics include image formation and acquisition, design of image features, image segmentation, stereo and motion correspondence matching techniques, feature clustering, regression and classification for object recognition, industrial and consumer applications, and computer vision software tools.",
+    "prerequisites": {
+      "text": "(ECSE 206 or ECSE 316) and ECSE 205.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 206",
+              "ECSE 316"
+            ]
+          },
+          "ECSE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ECSE 416",
+    "subject": "ECSE",
+    "number": "416",
+    "title": "Telecommunication Networks",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Architecture and protocols of contemporary networks; wired and wireless access systems; flow and congestion control; network optimization; randomized multiple access protocols; queueing disciplines; low-power wireless networks. Examples: Ethernet, TCP/IP, 802.11, 802.15.4. Lab experiments addressing routing protocols, TCP, queuing disciplines and quality-of-service, and network security.",
+    "prerequisites": {
+      "text": "(ECSE 250 or COMP 250), ECSE 205, and (ECSE 308 or ECSE 316)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 250",
+              "COMP 250"
+            ]
+          },
+          "ECSE 205",
+          {
+            "or": [
+              "ECSE 308",
+              "ECSE 316"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECSE 414 or ECSE 489.",
+      "excludes": [
+        "ECSE 414",
+        "ECSE 489"
+      ]
+    },
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 420",
+    "subject": "ECSE",
+    "number": "420",
+    "title": "Parallel Computing",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Modern parallel computing architectures for shared memory, message passing and data parallel programming models. The design of cache coherent shared memory multiprocessors. Programming techniques for multithreaded, message passing and distributed systems. Use of modern programming languages and parallel programming libraries.",
+    "prerequisites": {
+      "text": "ECSE 427",
+      "tree": "ECSE 427",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 421",
+    "subject": "ECSE",
+    "number": "421",
+    "title": "Embedded Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Definition, structure and properties of embedded systems. Real-time programming: interrupts, latency, context, re-entrancy, thread and process models. Microcontroller and DSP architectures, I/O systems, timing and event management. Real-time kernels and services. Techniques for development, debugging and verification. Techniques for limited resource environments. Networking for distributed systems.",
+    "prerequisites": {
+      "text": "ECSE 324",
+      "tree": "ECSE 324",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ECSE 422",
+    "subject": "ECSE",
+    "number": "422",
+    "title": "Fault Tolerant Computing",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to fault-tolerant systems. Fault-tolerance techniques through hardware, software, information and time redundancy. Failure classification, failure semantics, failure masking. Exception handling: detection, recovery, masking and propagation, termination vs. resumption. Reliable storage, reliable communication. Process groups, synchronous and asynchronous group membership and broadcast services. Automatic redundancy management. Case studies.",
+    "prerequisites": {
+      "text": "ECSE 324 and (ECSE 250 or COMP 250)",
+      "tree": {
+        "and": [
+          "ECSE 324",
+          {
+            "or": [
+              "ECSE 250",
+              "COMP 250"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ECSE 423",
+    "subject": "ECSE",
+    "number": "423",
+    "title": "Fundamentals of Photonics",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the fundamentals of modern optical and photonic engineering. Topics covered include the propagation of light through space, refraction, diffraction, polarization, lens systems, ray-tracing, aberrations, computer-aided design and optimization techniques, Gaussian beam analysis, micro-optics and computer generated diffractive optical elements. Experiments on physical and geometric optics.",
+    "prerequisites": {
+      "text": "ECSE 354",
+      "tree": "ECSE 354",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 424",
+    "subject": "ECSE",
+    "number": "424",
+    "title": "Human-Computer Interaction",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course highlights human-computer interaction strategies from an engineering perspective. Topics include user interfaces, novel paradigms in human-computer interaction, affordances, ecological interface design, ubiquitous computing and computer-supported cooperative work. Attention will be paid to issues of safety, usability, and performance.",
+    "prerequisites": {
+      "text": "(ECSE 324 and ECSE 250) or (ECSE 324 and COMP 250) or (COMP 251 and COMP 273)",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECSE 324",
+              "ECSE 250"
+            ]
+          },
+          {
+            "and": [
+              "ECSE 324",
+              "COMP 250"
+            ]
+          },
+          {
+            "and": [
+              "COMP 251",
+              "COMP 273"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-2)"
+    ]
+  },
+  {
+    "code": "ECSE 425",
+    "subject": "ECSE",
+    "number": "425",
+    "title": "Computer Architecture",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Trends in technology. CISC vs. RISC architectures. Pipelining. Instruction level parallelism. Data and Control Hazards. Static prediction. Exceptions. Dependencies. Loop level paralleism. Dynamic scheduling, branch prediction. Branch target buffers. Superscalar and N-issue machines. VLIW. ILP techniques. Cache analysis and design. Interleaved and virtual memory. TLB translations and caches.",
+    "prerequisites": {
+      "text": "ECSE 324",
+      "tree": "ECSE 324",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 426",
+    "subject": "ECSE",
+    "number": "426",
+    "title": "Microprocessor Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to current microprocessors, their architecture, programming, interfacing and operating systems. The course includes lectures, use of crossassemblers, and simulators as well as laboratory experiments on actual microprocessor hardware.",
+    "prerequisites": {
+      "text": "(CCOM 206 or WCOM 206) and ECSE 323.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CCOM 206",
+              "WCOM 206"
+            ]
+          },
+          "ECSE 323"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-5-3)",
+      "This course may be counted as a technical complementary or a lab complementary.",
+      "Limited Enrolment (50)",
+      "Lab hours assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 427",
+    "subject": "ECSE",
+    "number": "427",
+    "title": "Operating Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Operating system services, file system organization, disk and cpu scheduling, virtual memory management, concurrent processing and distributed systems, protection and security. Aspects of the DOS and UNIX operating systems and the C programming language. Programs that communicate between workstations across a network.",
+    "prerequisites": {
+      "text": "ECSE 324 or COMP 273",
+      "tree": {
+        "or": [
+          "ECSE 324",
+          "COMP 273"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 428",
+    "subject": "ECSE",
+    "number": "428",
+    "title": "Software Engineering Practice",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Software engineering practice in industry, related to the design and commissioning of large software systems. Ethical, social, economic, safety and legal issues. Metrics, project management, costing, marketing, control, standards, CASE tools and bugs. The course involves a large team project.",
+    "prerequisites": {
+      "text": "ECSE 321",
+      "tree": "ECSE 321",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "Students meet with the instructor and/or teaching assistant for one hour each week to discuss their project."
+    ]
+  },
+  {
+    "code": "ECSE 429",
+    "subject": "ECSE",
+    "number": "429",
+    "title": "Software Validation",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Correct and complete implementation of software requirements. Verification and validation lifecycle. Requirements analysis, model based analysis, and design analysis. Unit and system testing, performance, risk management, software reuse. Ubiquitous computing.",
+    "prerequisites": {
+      "text": "ECSE 321 or COMP 303",
+      "tree": {
+        "or": [
+          "ECSE 321",
+          "COMP 303"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 430",
+    "subject": "ECSE",
+    "number": "430",
+    "title": "Photonic Devices and Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to photonic devices and applications. Semiconductor lasers, optical amplifiers, optical modulators, photodetectors and optical receivers, optical fibers and waveguides, fiber and waveguide devices. Photonic systems (communications, sensing, biomedical). Experiments on characterizing photonic devices and systems. Optical test-and-measurement instrumentation.",
+    "prerequisites": {
+      "text": "(ECSE 352 or ECSE 354) and MIME 262.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 352",
+              "ECSE 354"
+            ]
+          },
+          "MIME 262"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 433",
+    "subject": "ECSE",
+    "number": "433",
+    "title": "Physical Basis of Transistor Devices",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Quantitative analysis of diodes and transistors. Semiconductor fundamentals, equilibrium and non-equilibrium carrier transport, and Fermi levels. PN junction diodes, the ideal diode, and diode switching. Bipolar Junction Transistors (BJT), physics of the ideal BJT, the Ebers-Moll model. Field effect transistors, metal-oxide semiconductor structures, static and dynamic behaviour, small-signal models. Laboratory experiments.",
+    "prerequisites": {
+      "text": "ECSE 251, ECSE 331, and MIME 262",
+      "tree": {
+        "and": [
+          "ECSE 251",
+          "ECSE 331",
+          "MIME 262"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 435",
+    "subject": "ECSE",
+    "number": "435",
+    "title": "Mixed-Signal Test Techniques",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Purpose and economics of mixed-signal test, DC measurements. Accuracy and repeatability. DSP-based theory and its applications to parametric testing of analog filters, DACs, and ADC. Timing and PLL measurements. Design for Testability.",
+    "prerequisites": {
+      "text": "ECSE 206 or ECSE 304 and ECSE 334 or ECSE 335",
+      "tree": {
+        "or": [
+          "ECSE 206",
+          {
+            "and": [
+              "ECSE 304",
+              "ECSE 334"
+            ]
+          },
+          "ECSE 335"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Note: This course may be counted as a technical complementary or as a lab complementary."
+    ]
+  },
+  {
+    "code": "ECSE 437",
+    "subject": "ECSE",
+    "number": "437",
+    "title": "Software Delivery",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Design, development, and implementation of code integration processes, release pipelines, and deployment strategies.",
+    "prerequisites": {
+      "text": "ECSE 321 or COMP 303",
+      "tree": {
+        "or": [
+          "ECSE 321",
+          "COMP 303"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 439",
+    "subject": "ECSE",
+    "number": "439",
+    "title": "Software Language Engineering",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Practical and theoretical knowledge for developing software languages and models; foundations for model-based software development; topics include principles of model-driven engineering; concern-driven development; intentional, structural, and behavioral models as well as configuration models; constraints; language engineering; domain-specific languages; metamodeling; model transformations; models of computation; model analyses; and modeling tools.",
+    "prerequisites": {
+      "text": "ECSE 321 or COMP 303.",
+      "tree": {
+        "or": [
+          "ECSE 321",
+          "COMP 303"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Restricted to Software Engineering students."
+    ]
+  },
+  {
+    "code": "ECSE 444",
+    "subject": "ECSE",
+    "number": "444",
+    "title": "Microprocessors",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Design techniques for developing modern microprocessor-based systems, multiple state-of-art instructions set architectures (ISAs) and associated assembly languages, use of tools for compiling, linking, memory overlay; debug techniques for start-stop and real-time debugging, together with debug infrastructure and interfaces: flash patching, variable watching and instruction stream tracing. Use of coprocessors and computer peripherals, such as SPI, I2C, I2S, SAI, USB, wireless standards, timers, DMA units and FLASH accelerators. Interfacing and processing sensor data including multi-sensor integration. Design techniques that promote structured approaches for separation of concerns in computing and communication. Real-time systems and software engineering for tightly integrated hardware.",
+    "prerequisites": {
+      "text": "ECSE 324",
+      "tree": "ECSE 324",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 446",
+    "subject": "ECSE",
+    "number": "446",
+    "title": "Realistic Image Synthesis",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to mathematical models of light transport and the numerical techniques used to generate realistic images in computer graphics. Offline (i.e., raytracing) and interactive (i.e., shader-based) techniques.",
+    "prerequisites": {
+      "text": "(ECSE 205 and ECSE 250) or (ECSE 202, ECSE 205, and COMP 250)",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECSE 205",
+              "ECSE 250"
+            ]
+          },
+          {
+            "and": [
+              "ECSE 202",
+              "ECSE 205",
+              "COMP 250"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECSE 546.",
+      "excludes": [
+        "ECSE 546"
+      ]
+    },
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 451",
+    "subject": "ECSE",
+    "number": "451",
+    "title": "EM Transmission and Radiation",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Microwave transmission through waveguides: impedance matching, microwave devices, filters and resonators; microwave transmission though free space; near and far field behaviour of electromagnetic radiators, simple antennas, antenna arrays, practical antenna parameters; the physics of the radio communication channel: reflection, diffraction and scattering and their macroscopic impact (multipath, fading).",
+    "prerequisites": {
+      "text": "ECSE 352 or ECSE 354",
+      "tree": {
+        "or": [
+          "ECSE 352",
+          "ECSE 354"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 456",
+    "subject": "ECSE",
+    "number": "456",
+    "title": "ECSE Design Project 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A design project undertaken with close mentorship by a staff member and under the supervision of the course instructor. The project consists of defining an engineering problem, reviewing relevant background, acquiring/analyzing data, and seeking solutions using appropriate simulation/analysis tools and experimental investigations. Professional engineering practices will be followed.",
+    "prerequisites": {
+      "text": "ECSE 211, ECSE 322, (ECSE 323, ECSE 330) OR (CCOM 206 or WCOM 206, COMP 302, ECSE 306, ECSE 321)",
+      "tree": {
+        "and": [
+          "ECSE 211",
+          "ECSE 322",
+          {
+            "or": [
+              {
+                "and": [
+                  "ECSE 323",
+                  "ECSE 330"
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "or": [
+                      "CCOM 206",
+                      "WCOM 206"
+                    ]
+                  },
+                  "COMP 302",
+                  "ECSE 306",
+                  "ECSE 321"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 457",
+    "subject": "ECSE",
+    "number": "457",
+    "title": "ECSE Design Project 2",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A design project undertaken with close mentorship by a staff member and under the supervision of the course instructor. The course is a continuation of ECSE 456.",
+    "prerequisites": {
+      "text": "ECSE 456",
+      "tree": "ECSE 456",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 458",
+    "subject": "ECSE",
+    "number": "458",
+    "title": "Capstone Design Project",
+    "credits": 6,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A design project undertaken with close mentorship by a staff member and under the supervision of the course instructor. The project consists of defining an engineering problem, reviewing relevant background, acquiring/analyzing data, and seeking solutions using appropriate simulation/analysis tools and experimental investigations. Professional engineering practices will be followed.",
+    "prerequisites": {
+      "text": "ECSE 211 and ECSE 324 and (CCOM 206 OR WCOM 206) and (ECSE 331 or COMP 302)",
+      "tree": {
+        "and": [
+          "ECSE 211",
+          "ECSE 324",
+          {
+            "or": [
+              "CCOM 206",
+              "WCOM 206"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 331",
+              "COMP 302"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both ECSE 458D1 and ECSE 458D2",
+      "No credit will be given for this course unless both ECSE 458D1 and ECSE 458D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "ECSE 458D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ECSE 458D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "ECSE 458N1",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "ECSE 458N2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ECSE 460",
+    "subject": "ECSE",
+    "number": "460",
+    "title": "Appareillage électrique (Electrical Power Equipment)",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Éléments d'un réseau de transport. Lignes: modélisation et paramètres. Transformateurs: circuits équivalents, pertes, enclenchement, protection. Disjoncteurs: fonctionnement et dimensionnement. Équipements de compensation: condensateurs, branchement série et shunt, inductances. Coordination d'isolement.",
+    "prerequisites": {
+      "text": "ECSE 464.",
+      "tree": "ECSE 464",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "Taught in French.",
+      "This course is offered by the Power Engineering Institute."
+    ]
+  },
+  {
+    "code": "ECSE 461",
+    "subject": "ECSE",
+    "number": "461",
+    "title": "Electric Machinery",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Electric and magnetic circuits. Notions of electromechanical energy conversion applied to electrical machines. Basic electrical machines - transformers, direct-current motors, synchronous motors and generators, three phase and single phase induction machines. Elements of modern electronically controlled electric drive systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students in Electrical Engineering.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-1-5)",
+      "Note: Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 463",
+    "subject": "ECSE",
+    "number": "463",
+    "title": "Electric Power Generation",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Primary energy resources, conventional and renewable. Electric power generation principles. Rotating and static power conversion, frequency and voltage control. Synchronous and induction generators, design and operation, grid integration requirements of central and distributed generation. Static power converter interfaces, principles and operation. Wind generation principles, control and wind farms. Electrochemical and pumped storage.",
+    "prerequisites": {
+      "text": "ECSE 362 or ECSE 461",
+      "tree": {
+        "or": [
+          "ECSE 362",
+          "ECSE 461"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ECSE 464",
+    "subject": "ECSE",
+    "number": "464",
+    "title": "Power Systems Analysis",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic principles of planning and operating modern interconnected power systems with emphasis on Canadian conditions. Mathematical models of network components. Steady-state analysis and power flow formulation and solution algorithms, fault and stability studies. Operating strategies, economic dispatch, voltage reactive power regulation, frequency and tie-line powercontrol.",
+    "prerequisites": {
+      "text": "ECSE 362",
+      "tree": "ECSE 362",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "This course is coordinated by the Electric Power Engineering Institute."
+    ]
+  },
+  {
+    "code": "ECSE 465",
+    "subject": "ECSE",
+    "number": "465",
+    "title": "Power Electronic Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to power electronics: definition, applications and classification of converters. Review of analytical techniques. Overview of power semiconductor switches. Line communicated rectifiers and inverters. Switch mode power converters and modulation techniques. Choppers, inverters and rectifiers. Resonant mode converters. Application to power systems and energy conversion.",
+    "prerequisites": {
+      "text": "ECSE 331 or ECSE 330 and ECSE 361 or ECSE 362",
+      "tree": {
+        "or": [
+          "ECSE 331",
+          {
+            "and": [
+              "ECSE 330",
+              "ECSE 361"
+            ]
+          },
+          "ECSE 362"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "This course is offered by the Power Engineering Institute."
+    ]
+  },
+  {
+    "code": "ECSE 466",
+    "subject": "ECSE",
+    "number": "466",
+    "title": "Réseaux de distribution",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Les réseaux de distribution d'électricité. Concepts de base. Lignes et câbles de distribution, caractéristiques physiques. Réseau de neutre. Techniques de protection des réseaux de distribution. Coordination de la protection, défaillance des équipements. Continuité de service, normes, étendue et durée des pannes. Architectures de réseau. Production distribuée, études d'intégration au réseau protection. Qualité de l'onde, exigences de raccordement, harmoniques, creux de tension papillotement. Logiciels d'analyse des réseaux de distribution, écoulement de puissance déséquilibré, régime perturbé.",
+    "prerequisites": {
+      "text": "ECSE 361 or ECSE 362",
+      "tree": {
+        "or": [
+          "ECSE 361",
+          "ECSE 362"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 467",
+    "subject": "ECSE",
+    "number": "467",
+    "title": "Comportement des réseaux électriques",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction: classification des phénomènes, structure d'un réseau électrique. Modélisation des composants: lignes, transformateurs, machines électriques, charges. Systèmes d'excitation des machines. Régime permanent. Stabilité de transitoire, de tension, des petits signaux. Méthodes de compensation: stabilisateurs, compensation série et shunt. Oscillations sous synchrones. Phénomènes électromagnétiques transitoires. Méthodes et outils de simulation numérique.",
+    "prerequisites": {
+      "text": "ECSE 464.",
+      "tree": "ECSE 464",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Note: Taught in French. This course is offered by the Power Engineering Institute."
+    ]
+  },
+  {
+    "code": "ECSE 468",
+    "subject": "ECSE",
+    "number": "468",
+    "title": "Electricité industrielle (Industrial Power Systems)",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Structure des réseaux électriques industriels. Niveau de tension. Installations électriques, codes et normes. Court-circuits, protection et coordination. Mise à la terre. Qualité de l'onde. Facteur de puissance, tarification et gestion de l'énergie électrique.",
+    "prerequisites": {
+      "text": "ECSE 361 or ECSE 362",
+      "tree": {
+        "or": [
+          "ECSE 361",
+          "ECSE 362"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "This course is offered by the Power Engineering Institute.",
+      "Taught in French."
+    ]
+  },
+  {
+    "code": "ECSE 469",
+    "subject": "ECSE",
+    "number": "469",
+    "title": "Protection des réseaux électriques",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Généralités sur les systèmes de protection. Calculs de défauts symétriques et asymétriques. Transformateurs de mesure. Système de mise à la terre. Types de relais de protection. Protection de transformateur, de barres, de ligne de transport : philosophie et application. Conception des systèmes de protection. Homologation et essais de relais.",
+    "prerequisites": {
+      "text": "ECSE 464.",
+      "tree": "ECSE 464",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Note: Taught in French. This course is offered by the Power Engineering Institute."
+    ]
+  },
+  {
+    "code": "ECSE 470",
+    "subject": "ECSE",
+    "number": "470",
+    "title": "Electromechanical and Static Conversion Systems",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Lumped parameter concepts of electromechanics. Reference frame theory and derivation of current and torque equations. Examples of AC electric machines: synchronous and induction types. Steady-state, transient and stability analysis. Power electronic voltage and frequency converters. Variable speed drives and generation systems. Laboratory work involving electric machine parameters, operation and power electronic control.",
+    "prerequisites": {
+      "text": "ECSE 362",
+      "tree": "ECSE 362",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-4-5)"
+    ]
+  },
+  {
+    "code": "ECSE 472",
+    "subject": "ECSE",
+    "number": "472",
+    "title": "Fundamentals of Circuit Simulation and Modelling",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of circuit simulation. Formulation of network equations. Frequency domain analysis. Nonlinear networks. Transient analysis. Sensitivity analysis. Harmonic balance. Shooting method. Model order reduction. Macromodelling.",
+    "prerequisites": {
+      "text": "ECSE 206 or ECSE 316",
+      "tree": {
+        "or": [
+          "ECSE 206",
+          "ECSE 316"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken ECSE 597.",
+      "excludes": [
+        "ECSE 597"
+      ]
+    },
+    "notes": [
+      "(3-0-6)."
+    ]
+  },
+  {
+    "code": "ECSE 478",
+    "subject": "ECSE",
+    "number": "478",
+    "title": "Electrical Engineering Honours Thesis",
+    "credits": 6,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A research project undertaken with close mentorship by a staff member and under the supervision of the course instructor. The thesis consists of defining an engineering problem, reviewing relevant background, acquiring/analyzing data, and seeking design solutions using appropriate simulation/analysis tools and experimental investigations.",
+    "prerequisites": {
+      "text": "CCOM 206 OR WCOM 206 and at least 42 Departmental credits",
+      "tree": {
+        "or": [
+          "CCOM 206",
+          "WCOM 206"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both ECSE 478D1 and ECSE 478D2",
+      "No credit will be given for this course unless both ECSE 478D1 and ECSE 478D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "ECSE 478D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ECSE 478D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "ECSE 478N1",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "ECSE 478N2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ECSE 496",
+    "subject": "ECSE",
+    "number": "496",
+    "title": "Honours Research Laboratory Rotation 3",
+    "credits": 1,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Third in a series of four research laboratory rotations selected among research groups in the Department of Electrical and Computer Engineering.",
+    "prerequisites": {
+      "text": "ECSE 397",
+      "tree": "ECSE 397",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-3)"
+    ]
+  },
+  {
+    "code": "ECSE 497",
+    "subject": "ECSE",
+    "number": "497",
+    "title": "Honours Research Laboratory Rotation 4",
+    "credits": 1,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Fourth in a series of four research laboratory rotations selected among research groups in the Department of Electrical and Computer Engineering.",
+    "prerequisites": {
+      "text": "ECSE 496",
+      "tree": "ECSE 496",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-3)"
+    ]
+  },
+  {
+    "code": "ECSE 498",
+    "subject": "ECSE",
+    "number": "498",
+    "title": "Honours Thesis 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A research project undertaken with close mentorship by a staff member and under the supervision of the course instructor. The thesis consists of defining an engineering problem, reviewing relevant background, acquiring/analyzing data, and seeking design solutions using appropriate simulation/analysis tools and experimental investigations.",
+    "prerequisites": {
+      "text": "CCOM 206 or WCOM 206 and at least 42 Departmental credits.",
+      "tree": {
+        "or": [
+          "CCOM 206",
+          "WCOM 206"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-3-6)"
+    ]
+  },
+  {
+    "code": "ECSE 499",
+    "subject": "ECSE",
+    "number": "499",
+    "title": "Honours Thesis 2",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A research project undertaken with close supervision by a staff member. A continuation of ECSE 498. The work consists of carrying out the research plan developed in ECSE 498 along with a seminar presentation at end of term.",
+    "prerequisites": {
+      "text": "ECSE 498",
+      "tree": "ECSE 498",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-3-6)"
+    ]
+  },
+  {
+    "code": "ECSE 500",
+    "subject": "ECSE",
+    "number": "500",
+    "title": "Mathematical Foundations of Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic set theories and algebraic structures, linear spaces, linear mappings, topological and metric spaces, separable spaces, continuity, compactness, Lebesque measure on Euclidean spaces, measurability, Banach spaces, Hilbert spaces, linear bounded operators in Banach spaces, dual spaces, adjoint operators, the Orthogonal Projection Theorem, properties of the Fourier series, convergence in probability.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students within the Faculty of Engineering.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 501",
+    "subject": "ECSE",
+    "number": "501",
+    "title": "Linear Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Mathematical models of linear systems, fundamental solution and transition matrices, non-homogeneous linear equations, controllability and observability of linear systems, reachable subspaces, Cayley-Hamilton's Theorem, Kalman's controllability and observability rank conditions, minimal realizations, frequency response, invariant subspaces, finite and infinite horizon linear regulator problems, uniform, exponential, and input-output stability, the Lyapunov equation.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ECSE 500 or permission of instructor",
+      "tree": "ECSE 500",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 506",
+    "subject": "ECSE",
+    "number": "506",
+    "title": "Stochastic Control and Decision Theory",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Modelling of stochastic control systems, controlled Markov processes, dynamic programming, imperfect and delayed observations, linear quadratic and Gaussian (LQG) systems, team theory, information structures, static and dynamic teams, dynamic programming for teams,multi-armed bandits.",
+    "prerequisites": {
+      "text": "ECSE 509",
+      "tree": "ECSE 509",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 507",
+    "subject": "ECSE",
+    "number": "507",
+    "title": "Optimization and Optimal Control",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "General introduction to optimization methods including steepest descent, conjugate gradient, Newton algorithms. Generalized matrix inverses and the least squared error problem. Introduction to constrained optimality; convexity and duality; interior point methods. Introduction to dynamic optimization; existence theory, relaxed controls, the Pontryagin Maximum Principle. Sufficiency of the Maximum Principle.",
+    "prerequisites": {
+      "text": "ECSE 343 or ECSE 543 or ECSE501 or COMP 540 or MATH 247 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "ECSE 343",
+          "ECSE 543",
+          "ECSE 501",
+          "COMP 540",
+          "MATH 247"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 508",
+    "subject": "ECSE",
+    "number": "508",
+    "title": "Multi-Agent Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to game theory, strategic games, extensive form games with perfect and imperfect information, repeated games and folk theorems, cooperative game theory, introduction to mechanism design, markets and market equilibrium, pricing and resource allocation, application in telecommunication networks, applications in communication networks, stochastic games.",
+    "prerequisites": {
+      "text": "ECSE 205 or equivalent.",
+      "tree": "ECSE 205",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 509",
+    "subject": "ECSE",
+    "number": "509",
+    "title": "Probability and Random Signals 2",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Multivariate Gaussian distributions; finite-dimensional mean-square estimation (multivariate case); principal components; introduction to random processes; weak stationarity: correlation functions, spectra, linear processing and estimation; Poisson processes and Markov chains: state processes, invariant distributions; stochastic simulation.",
+    "prerequisites": {
+      "text": "((ECSE 206 or ECSE 316) and ECSE 205) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "ECSE 206",
+                  "ECSE 316"
+                ]
+              },
+              "ECSE 205"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 511",
+    "subject": "ECSE",
+    "number": "511",
+    "title": "Introduction to Digital Communication",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Amplitude and angle modulation including AM, FM, FDM and television systems; introduction to random processes; sampling and quantization, PCM systems, TDM; digital modulation techniques, Maximum-Likelihood receivers, synchronization issues; elements of information theory including information sources, source coding and channel capacity.",
+    "prerequisites": {
+      "text": "ECSE 304 or ECSE 308 or ECSE 316.",
+      "tree": {
+        "or": [
+          "ECSE 304",
+          "ECSE 308",
+          "ECSE 316"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ECSE 509",
+      "tree": "ECSE 509",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "An advanced version of ECSE 411",
+      "Tutorials assigned by instructor."
+    ]
+  },
+  {
+    "code": "ECSE 512",
+    "subject": "ECSE",
+    "number": "512",
+    "title": "Digital Signal Processing 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of discrete-time transforms, sampling and quantization, frequency analysis. Structures for IIR and FIR filters, coefficient quantization, roundoff noise. The DFT, its properties, frequency analysis and filtering using DFT methods, the FFT and its implementation. Multirate processing, subsampling and interpolation, oversampling techniques.",
+    "prerequisites": {
+      "text": "(ECSE 206 or ECSE 316) and ECSE 205.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 206",
+              "ECSE 316"
+            ]
+          },
+          "ECSE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 513",
+    "subject": "ECSE",
+    "number": "513",
+    "title": "Robust Control Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Feedback interconnections of LTI systems; Nominal stability and performance of feedback control systems; Norms of signals and systems; H2-optimal control; H-infinity-optimal control; Uncertainty modelling for robust control; Robust closed-loop stability and performance; Robust H-infinity control; Robustness check using mu-analysis; Robust controller design via mu-synthesis.",
+    "prerequisites": {
+      "text": "ECSE 500 and (ECSE 304 or ECSE 206 or ECSE 316)",
+      "tree": {
+        "and": [
+          "ECSE 500",
+          {
+            "or": [
+              "ECSE 304",
+              "ECSE 206",
+              "ECSE 316"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 515",
+    "subject": "ECSE",
+    "number": "515",
+    "title": "Optical Fibre Communications",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Optical fibre communication technology and principles of optical transport: modulation formats, signal propagation and impairments in optical fibres, sources of noise, amplification and regeneration, optical signal processing technologies, system design.",
+    "prerequisites": {
+      "text": "ECSE 571 and (ECSE 304 or ECSE 308 or ECSE 316) and (ECSE 305 or ECSE 205)",
+      "tree": {
+        "and": [
+          "ECSE 571",
+          {
+            "or": [
+              "ECSE 304",
+              "ECSE 308",
+              "ECSE 316"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 305",
+              "ECSE 205"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ECSE 516",
+    "subject": "ECSE",
+    "number": "516",
+    "title": "Nonlinear and Hybrid Control Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examples of hybrid control systems (HCS). Review of nonlinear system state, controllability, observability, stability. HCS specified via ODEs and automata. Continuous and discrete states and dynamics; controlled and autonomous discrete state switching. HCS stability via Lyapunov theory and LaSalle Invariance Principle. Hybrid Maximum Principle and Hybrid Dynamic Programming; computational algorithms.",
+    "prerequisites": {
+      "text": "ECSE 500 and ECSE 501 or equivalent",
+      "tree": {
+        "and": [
+          "ECSE 500",
+          "ECSE 501"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 517",
+    "subject": "ECSE",
+    "number": "517",
+    "title": "Neural Prosthetic Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Selected topics in bioengineering focusing on the principles of neural prosthetics systems (brain machine interfaces). Paralysis as a communication problem. Motor control theory receptive fields. Electrical properties of the central nervous system, modern measurement technologies, encoding and mutual information, statistical data analysis, decoding and thought prediction.",
+    "prerequisites": {
+      "text": "(ECSE 303 or ECSE 306 or ECSE 206 or ECSE 316) and (ECSE 305 or ECSE 205) or permission of instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 303",
+              "ECSE 306",
+              "ECSE 206",
+              "ECSE 316"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 305",
+              "ECSE 205"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Accessible only to Honours Electrical Engineering students and Graduate students in Engineering",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECSE 518",
+    "subject": "ECSE",
+    "number": "518",
+    "title": "Telecommunication Network Analysis",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Mathematical modeling and analysis techniques for the control and management of modern networks. Introduction to queuing networks; birth/death processes; routing optimization and fairness; multi-commodity network flow; traffic modeling; effective bandwidth and network calculus; performance modeling.",
+    "prerequisites": {
+      "text": "ECSE 509 and (ECSE 414 or ECSE 416 or ECSE 528 or COMP 535)",
+      "tree": {
+        "and": [
+          "ECSE 509",
+          {
+            "or": [
+              "ECSE 414",
+              "ECSE 416",
+              "ECSE 528",
+              "COMP 535"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Accessible only to Honours Electrical Engineering students and Graduate students in Engineering",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECSE 519",
+    "subject": "ECSE",
+    "number": "519",
+    "title": "Semiconductor Nanostructures and Nanophotonic Devices",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physics, design, synthesis, and fundamental properties of semiconductor nanostructures, quantum dots, nanowires, and nanotubes. Nanoscale confinement of radiation, properties of microcavities, whispering gallery modes, photonic crystals, strong vs. weak coupling, and Purcell effect. Quantum dot lasers, nanowire LEDs, and photonic crystal lasers. Nonclassical light sources. Solar cells and thermoelectric devices.",
+    "prerequisites": {
+      "text": "ECSE 354 and (ECSE 433 or ECSE 533)",
+      "tree": {
+        "and": [
+          "ECSE 354",
+          {
+            "or": [
+              "ECSE 433",
+              "ECSE 533"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 520",
+    "subject": "ECSE",
+    "number": "520",
+    "title": "Information Theory and Coding",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Information sources and channel models. Source coding, data compression, and performance limits. Channel coding and performance limits. Multiple-Input Multiple- Output channels. An introduction to multi-user information theory.",
+    "prerequisites": {
+      "text": "ECSE 205 or equivalent.",
+      "tree": "ECSE 205",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECSE 620.",
+      "excludes": [
+        "ECSE 620"
+      ]
+    },
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 521",
+    "subject": "ECSE",
+    "number": "521",
+    "title": "Digital Communications 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Transmission over AWGN channels: optimum receiver design, digital modulation techniques, coherent, noncoherent and differentially coherent detection. Signal design for bandlimited AWGN channels. Channel capacity. Channel coding: block codes, convolutional codes, coded modulation techniques, turbo codes. Transmission over AWGN and ISI channels: MLSE, linear equalization, decision-feedback equalization, precoding, multi-carrier transmission.",
+    "prerequisites": {
+      "text": "ECSE 408",
+      "tree": "ECSE 408",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ECSE 509",
+      "tree": "ECSE 509",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 522",
+    "subject": "ECSE",
+    "number": "522",
+    "title": "Nonlinear Phenomena in Power Systems Dynamics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduces nonlinear dynamics, with applications to generic engineering and power engineering. Topics include one- and two- dimensional systems; bifurcations; phase plane; nonlinear oscillators; Lorenz equations and chaos. Emphasizes power system dynamic modelling and stability. Topics include synchronous machine dynamic modelling; numerical integration methods for dynamic simulations; excitation system and turbine governor; transient stability; small signal stability; voltage stability; nonlinear dynamics and bifurcations in power system dynamic study.",
+    "prerequisites": {
+      "text": "ECSE 361 or ECSE 362, MATH 263, ECSE 307",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 361",
+              "ECSE 362"
+            ]
+          },
+          "MATH 263",
+          "ECSE 307"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 523",
+    "subject": "ECSE",
+    "number": "523",
+    "title": "Speech Communications",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Articulatory and acoustic descriptions of speech production, speech production models, speech perception, digital processing of speech signals, vocodors using formant, linear predictive and cepstral techniques, overview of automatic speech recognition systems, speech synthesis systems and speaker verification systems.",
+    "prerequisites": {
+      "text": "ECSE 412 or ECSE 512",
+      "tree": {
+        "or": [
+          "ECSE 412",
+          "ECSE 512"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 524",
+    "subject": "ECSE",
+    "number": "524",
+    "title": "Interconnects and Signal Integrity",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Interconnect structures, signal integrity issues: reflection, crosstalk, noise, electromagnetic interference, Lossy transmission lines, RLGC matrix representations, wave propagation in multilayered substrates, periodically loaded lines, Floquet's theorem, power distribution network, simultaneous switching noise, packaging structures, chip interconnection technologies, substrate integrated waveguides, methods for experimental characterization of interconnects, signal integrity CAD tools.",
+    "prerequisites": {
+      "text": "(ECSE 334 or ECSE 335) and (ECSE 352 or ECSE 353 or ECSE 354)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 334",
+              "ECSE 335"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 352",
+              "ECSE 353",
+              "ECSE 354"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 525",
+    "subject": "ECSE",
+    "number": "525",
+    "title": "Satellite Navigation Systems ",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of satellite navigation. Overview of existing systems. Augmentation systems. Signal processing techniques, and receiver structures. Kalman Filtering techniques in satellite navigation. Selected applications of satellite navigation.",
+    "prerequisites": {
+      "text": "(ECSE 205 or equivalent) and (ECSE 206 or ECSE 316 or equivalent)",
+      "tree": {
+        "and": [
+          "ECSE 205",
+          {
+            "or": [
+              "ECSE 206",
+              "ECSE 316"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 526",
+    "subject": "ECSE",
+    "number": "526",
+    "title": "Artificial Intelligence",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Design principles of autonomous agents, agent architectures, machine learning, neural networks, genetic algorithms, and multi-agent collaboration. The course includes a term project that consists of designing and implementing software agents that collaborate and compete in a simulated environment.",
+    "prerequisites": {
+      "text": "ECSE 324 or GEPR 221",
+      "tree": {
+        "or": [
+          "ECSE 324",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 424.; Not open to students who have taken or are taking COMP 424.",
+      "excludes": [
+        "COMP 424"
+      ]
+    },
+    "notes": [
+      "(3-0-6)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 527",
+    "subject": "ECSE",
+    "number": "527",
+    "title": "Optical Engineering",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A structured introduction to modern optical engineering. Topics covered include the propagation of light through space, refraction, diffraction, polarization, lens systems, ray-tracing, aberrations, computer-aided design and optimization techniques, Gaussian beam analysis, micro-optics and computer generated diffractive optical elements.",
+    "prerequisites": {
+      "text": "ECSE 354",
+      "tree": "ECSE 354",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 532",
+    "subject": "ECSE",
+    "number": "532",
+    "title": "Computer Graphics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental mathematical, algorithmic and representational issues in computer graphics: overview of graphics pipeline, homogeneous coordinates, projective transformations, line-drawing and rasterization, hidden surface removal, surface modelling (quadrics, bicubics, meshes), rendering (lighting, reflectance models, ray tracing, texture mapping), compositing colour perception, and other selected topics.",
+    "prerequisites": {
+      "text": "ECSE 324",
+      "tree": "ECSE 324",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 533",
+    "subject": "ECSE",
+    "number": "533",
+    "title": "Physical Basis of Semiconductor Devices",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Quantitative analysis of diodes and transistors. Semiconductor fundamentals, equilibrium and non-equilibrium carrier transport, and Fermi levels. PN junction diodes, the ideal diode, and diode switching. Bipolar Junction Transistors (BJT), physics of the ideal BJT, the Ebers-Moll model. Field effect transistors, metal-oxide semiconductor structures, static and dynamic behaviour, small-signal models.",
+    "prerequisites": {
+      "text": "PHYS 271 and (ECSE 330 or ECSE 331) and (ECSE 251 or ECSE 351)",
+      "tree": {
+        "and": [
+          "PHYS 271",
+          {
+            "or": [
+              "ECSE 330",
+              "ECSE 331"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 251",
+              "ECSE 351"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 534",
+    "subject": "ECSE",
+    "number": "534",
+    "title": "Analog Microelectronics",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Design of analog ICs using specialized analog CAD tools such as SPICE. Voltage and current amplifier design which encompasses the study of biasing circuits, current sources and mirrors, input and output stages, and frequency compensation; precision reference sources; analog multipliers; oscillators; waveform generators and shaping circuits, and analog switches.",
+    "prerequisites": {
+      "text": "ECSE 335",
+      "tree": "ECSE 335",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 535",
+    "subject": "ECSE",
+    "number": "535",
+    "title": "Nanoelectronic Devices",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Physical principles and modelling of nanoelectronic devices. Bandstructure and electronic density of states, Quantum wells, wires and dots. Ballistic electron transport, tunnelling and scattering mechanisms. Electrical and optical properties of nanostructures, fundamental performance limits. Research devices and materials.",
+    "prerequisites": {
+      "text": "PHYS 271 and (ECSE 352 or ECSE 354)",
+      "tree": {
+        "and": [
+          "PHYS 271",
+          {
+            "or": [
+              "ECSE 352",
+              "ECSE 354"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 536",
+    "subject": "ECSE",
+    "number": "536",
+    "title": "RF Microelectronics",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to Radio Frequency Integrated Circuits and wireless transceiver architectures. Modelling of passive/active integrated devices. Design of monolithic bipolar and CMOS LNAs, mixers, filters, broadband amplifiers, RF power amplifiers, VCOs, and frequency synthesizers. Analysis of noise and non-linearity in RFICs. Project using modern RFIC simulation/layout CAD tools.",
+    "prerequisites": {
+      "text": "ECSE 335 and permission of the instructor.",
+      "tree": "ECSE 335",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "ECSE 537",
+    "subject": "ECSE",
+    "number": "537",
+    "title": "Advanced Digital Integrated Circuits",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Advanced concepts in the design, layout, and optimization (speed/power/area trade-offs) of digital integrated circuits in state-of-the-art technologies. Emphasis on the main design challenges (low power, process variations) due to device scaling into the nanometer node. Integrated-circuit design flow. Computer-aided design tools.",
+    "prerequisites": {
+      "text": "(ECSE 323 or ECSE 325) and (ECSE 334 or ECSE 335)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 323",
+              "ECSE 325"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 334",
+              "ECSE 335"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Undergraduate: Restricted to Honours Electrical Engineering students",
+      "excludes": []
+    },
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "ECSE 538",
+    "subject": "ECSE",
+    "number": "538",
+    "title": "Safety-Critical Embedded Software",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Software for embedded systems/cyber-physical systems; model-based design; platform-based design; models of computation; synchronous reactive models of computation; timed automata; semantics preserving code generation; real-time operating systems; mixed-criticality scheduling; formal verification; model-based testing; reliability; safety; component-based design.",
+    "prerequisites": {
+      "text": "ECSE 322 and (ECSE 304 or ECSE 306)",
+      "tree": {
+        "and": [
+          "ECSE 322",
+          {
+            "or": [
+              "ECSE 304",
+              "ECSE 306"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 539",
+    "subject": "ECSE",
+    "number": "539",
+    "title": "Advanced Software Language Engineering",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Practical and theoretical knowledge for developing software languages and models; foundations for model-based software development; topics include principles of model-driven engineering; concern-driven development; intentional, structural, and behavioral models as well as configuration models; constraints; language engineering; domain-specific languages; metamodelling; model transformations; models of computation; model analyses; and modeling tools.",
+    "prerequisites": {
+      "text": "COMP 303 or ECSE 321 or permission of instructor.",
+      "tree": {
+        "or": [
+          "COMP 303",
+          "ECSE 321"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-7)"
+    ]
+  },
+  {
+    "code": "ECSE 540",
+    "subject": "ECSE",
+    "number": "540",
+    "title": "Photonic Devices and Applications",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physical basis of passive and active photonic devices, including optical waveguides and fibers, semiconductor lasers, photodetectors, modulators, and amplifiers. Applications to optical signal processing and photonic systems. Introduction to optical test-and-measurement instrumentation.",
+    "prerequisites": {
+      "text": "ECSE 354",
+      "tree": "ECSE 354",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 541",
+    "subject": "ECSE",
+    "number": "541",
+    "title": "Design of Multiprocessor Systems-­on-­Chip",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Modelling, design, evaluation, and optimization of multiprocessor systems-on-chips (MPSoCs). Introduction to system-level modelling of MPSoC architecture; system performance, power, and lifetime modelling; fault and defect tolerance; automatic general and heuristic design space exploration and design optimization; resource allocation, application mapping, and task scheduling.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ECSE 420 or ECSE 421 or ECSE 425 or ECSE 444",
+      "tree": {
+        "or": [
+          "ECSE 420",
+          "ECSE 421",
+          "ECSE 425",
+          "ECSE 444"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 542",
+    "subject": "ECSE",
+    "number": "542",
+    "title": "Human Computer Interaction",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Design, development, and evaluation of human-computer interfaces, with emphasis on usability, interaction paradigms, computer-mediated human activities, and implications to society. These issues are studied from a number of perspectives including that of the engineer and end-user. A team-based project applies knowledge and skills to the full life cycle of an interactive human-computer interface.",
+    "prerequisites": {
+      "text": "ECSE 324 or (COMP 251 and COMP 273) or equivalent.",
+      "tree": {
+        "or": [
+          "ECSE 324",
+          {
+            "and": [
+              "COMP 251",
+              "COMP 273"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)."
+    ]
+  },
+  {
+    "code": "ECSE 543",
+    "subject": "ECSE",
+    "number": "543",
+    "title": "Numerical Methods in Electrical Engineering",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "DC resistor networks and sparse matrix methods. Nonlinear electric and magnetic circuits: curve-fitting; the Newton-Raphson method. Finite elements for electrostatics. Transient analysis of circuits: systems of Ordinary differential equations; stiff equations. Transient analysis of induced currents. Solution of algebraic eigenvalue problems. Scattering of electromagnetic waves: the boundary element method; numerical integration.",
+    "prerequisites": {
+      "text": "ECSE 324, ECSE 331 and ECSE 251",
+      "tree": {
+        "and": [
+          "ECSE 324",
+          "ECSE 331",
+          "ECSE 251"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "ECSE 544",
+    "subject": "ECSE",
+    "number": "544",
+    "title": "Computational Photography",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "An overview of techniques and theory underlying computational photography. Topics include: radiometry and photometry; lenses and image formation; electronic image sensing; colour processing; lightfield cameras; image deblurring; super-resolution methods; image denoising; flash photography; image matting and compositing; high dynamic range imaging and tone mapping; image retargeting; image stitching.",
+    "prerequisites": {
+      "text": "ECSE 205 and (ECSE 206 or ECSE 316)",
+      "tree": {
+        "and": [
+          "ECSE 205",
+          {
+            "or": [
+              "ECSE 206",
+              "ECSE 316"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 546",
+    "subject": "ECSE",
+    "number": "546",
+    "title": "Advanced Image Synthesis",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to mathematical models of light transport and the numerical techniques used to generate realistic images in computer graphics. Offline (i.e., raytracing) and interactive (i.e., shader-based) techniques. Group project addressing important applied research problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For graduate students in Electrical and Computer Engineering and undergraduate Honours Electrical Engineering students.; Not open to students who have taken or are taking ECSE 446.",
+      "excludes": [
+        "ECSE 446"
+      ]
+    },
+    "notes": [
+      "(3-2-7)"
+    ]
+  },
+  {
+    "code": "ECSE 551",
+    "subject": "ECSE",
+    "number": "551",
+    "title": "Machine Learning for Engineers",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to machine learning: challenges and fundamental concepts. Supervised learning: Regression and Classification. Unsupervised learning. Curse of dimensionality: dimension reduction and feature selection. Error estimation and empirical validation. Emphasis on good methods and practices for deployment of real systems.",
+    "prerequisites": {
+      "text": "((ECSE 250 or COMP 250) and (ECSE 205 or MATH 323)) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "ECSE 250",
+                  "COMP 250"
+                ]
+              },
+              {
+                "or": [
+                  "ECSE 205",
+                  "MATH 323"
+                ]
+              }
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ECSE 343 or ECSE 543 or MATH 247",
+      "tree": {
+        "or": [
+          "ECSE 343",
+          "ECSE 543",
+          "MATH 247"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 551.",
+      "excludes": [
+        "COMP 551"
+      ]
+    },
+    "notes": [
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "ECSE 552",
+    "subject": "ECSE",
+    "number": "552",
+    "title": "Deep Learning",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Overview of mathematical background and basics of machine learning, deep feedforward networks, regularization for deep learning, optimization for training deep learning models, convolutional neural networks, recurrent and recursive neural networks, practical considerations,applications of deep learning, recent models and architectures in deep learning.",
+    "prerequisites": {
+      "text": "ECSE 551 or COMP 551",
+      "tree": {
+        "or": [
+          "ECSE 551",
+          "COMP 551"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 554",
+    "subject": "ECSE",
+    "number": "554",
+    "title": "Applied Robotics ",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The approach and the challenges in the key components of manipulators and locomotors: representations, kinematics, dynamics, rigid-body chains, redundant systems, underactuated systems, control, planning, and perception. Practical aspects of robotics: collisions, integrating sensory feedback, and development of real-time software.",
+    "prerequisites": {
+      "text": "ECSE 205, COMP 206, ECSE 250, and (ECSE 343 or MATH 247) or equivalents.",
+      "tree": {
+        "and": [
+          "ECSE 205",
+          "COMP 206",
+          "ECSE 250",
+          {
+            "or": [
+              "ECSE 343",
+              "MATH 247"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)",
+      "Students should be comfortable with C++ and a Unix-like programming environment. Interested students may contact the instructor for more information prior to the start of the course."
+    ]
+  },
+  {
+    "code": "ECSE 555",
+    "subject": "ECSE",
+    "number": "555",
+    "title": "Advanced Topics in Artificial Intelligence",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected topics in areas of artificial intelligence that are of current research interest.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor",
+      "excludes": []
+    },
+    "notes": [
+      "3-0-9"
+    ]
+  },
+  {
+    "code": "ECSE 556",
+    "subject": "ECSE",
+    "number": "556",
+    "title": "Machine Learning in Network Biology",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basics of machine learning; basics of molecular biology; network-guided machine learning in systems biology; network-guided bioinformatics analysis; analysis of biological networks; network module identification; global and local network alignment; construction of biological networks.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of Instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3-0-9"
+    ]
+  },
+  {
+    "code": "ECSE 557",
+    "subject": "ECSE",
+    "number": "557",
+    "title": "Introduction to Ethics of Intelligent Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Ethics and social issues related to AI and robotic systems. Consideration for normative values (e.g., fairness) in the design. Ethics principles, data and privacy issues, ethics challenges in interaction and interface design.",
+    "prerequisites": {
+      "text": "(ECSE 202 or ECSE 250 or COMP250) and (ECSE 205 or MATH 323) or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 202",
+              "ECSE 250",
+              "COMP 250"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 205",
+              "MATH 323"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "COMP 451 or COMP 551 or ECSE 551 or permission of the instructor",
+      "tree": {
+        "or": [
+          "COMP 451",
+          "COMP 551",
+          "ECSE 551"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "ECSE 561",
+    "subject": "ECSE",
+    "number": "561",
+    "title": "Automated Program Analysis and Testing",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to automated software analysis and testing techniques. Foundations of program analysis, software fault models, and test coverage models. Development and design of automated program analysis and test generation techniques.",
+    "prerequisites": {
+      "text": "ECSE 321 or COMP 303 or permission of the instructor",
+      "tree": {
+        "or": [
+          "ECSE 321",
+          "COMP 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 562",
+    "subject": "ECSE",
+    "number": "562",
+    "title": "Low-Carbon Power Generation Engineering",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Primary energy resources, thermodynamics of power generation, conventional and renewable. Electric power generation principles. Rotating and static power conversion, frequency and voltage control. Synchronous and induction generators, design and operation, grid integration requirements. Static power converter interfaces, principles and operation. Wind and solar generation principles, control, wind and solar farms. Energy storage technologies and their role in low-carbon power systems. Operations and planning of low-carbon power generation systems. Renewable integration studies.",
+    "prerequisites": {
+      "text": "ECSE 361 or ECSE 362 or ECSE 461",
+      "tree": {
+        "or": [
+          "ECSE 361",
+          "ECSE 362",
+          "ECSE 461"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECSE 463",
+      "excludes": [
+        "ECSE 463"
+      ]
+    },
+    "notes": [
+      "(3-0-9)",
+      "Winter semester course. Will be given in alternate years alternating with ECSE 563."
+    ]
+  },
+  {
+    "code": "ECSE 563",
+    "subject": "ECSE",
+    "number": "563",
+    "title": "Power Systems Operation and Planning",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Design and operation of large scale power systems: Temporal, spatial and hierarchical decomposition of tasks. Local vs. distributed control. Load-frequency control. Voltage and speed regulation. Interconnected power systems. Power flow. Security states. Optimal operation of power systems. Power system reliability.",
+    "prerequisites": {
+      "text": "ECSE 362",
+      "tree": "ECSE 362",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 564",
+    "subject": "ECSE",
+    "number": "564",
+    "title": "Power Systems Dynamics and Control",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Modern power systems: power plants, conventional generation and distributed inverter-based generation, ac and dc transmission systems, power system dynamics and stability issues. Modeling for operation, control and stability studies: power system components; synchronous machines and control systems; inverter-based generation and controls. Dynamic and stability studies. Control methods for enhancing flexibility and improving stability",
+    "prerequisites": {
+      "text": "ECSE 362 (or equivalent)",
+      "tree": "ECSE 362",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 565",
+    "subject": "ECSE",
+    "number": "565",
+    "title": "Introduction to Power Electronics",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Semiconductor power switches - thyristors, GTO's, bipolar transistors, MOSFET's. Switch mode power amplifiers. Buck and boost principles. Modulation methods -PWM, delta, hysteresis current control. Rectifiers, inverters, choppers.",
+    "prerequisites": {
+      "text": "(ECSE 334 or ECSE 335) and (ECSE 361 or ECSE 362)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 334",
+              "ECSE 335"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 361",
+              "ECSE 362"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 570",
+    "subject": "ECSE",
+    "number": "570",
+    "title": "Automatic Speech Recognition",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Acoustic phonetics and signal representations. Pattern classification, stochastic modelling, language modelling and search algorithms as applied to speech recognition. Techniques for robustness, integration of speech recognition with other user interface modalities, and the role of automatic speech recognition in speech understanding.",
+    "prerequisites": {
+      "text": "(ECSE 305 or ECSE 205) and (ECSE 322 or ECSE 324)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 305",
+              "ECSE 205"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 322",
+              "ECSE 324"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 571",
+    "subject": "ECSE",
+    "number": "571",
+    "title": "Optoelectronic Devices",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Physical basis of optoelectronic devices including Light Emitting Diodes, semiconductor optical amplifiers, semiconductor lasers, quantum well devices, and solid state lasers. Quantitative description of detectors, optical modulation, optical logic devices, optical interconnects, and optomechanical hardware. Throughout the course, photonic systems applications will be addressed.",
+    "prerequisites": {
+      "text": "ECSE 352 or ECSE 354",
+      "tree": {
+        "or": [
+          "ECSE 352",
+          "ECSE 354"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ECSE 533",
+      "tree": "ECSE 533",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 572",
+    "subject": "ECSE",
+    "number": "572",
+    "title": "Nonlinear Optics",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Nonlinear optical processes and their applications: optical fibres, waveguides and crystals. Origin of second- and third-order nonlinear susceptibility, symmetry properties, coupled-wave propagation, phase-matching techniques, sum- and difference frequency generation, parametric amplification, four-wave mixing, self- and cross-phase modulation, soliton propagation, Raman scattering and the electro-optic effect.",
+    "prerequisites": {
+      "text": "ECSE 354",
+      "tree": "ECSE 354",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 574",
+    "subject": "ECSE",
+    "number": "574",
+    "title": "CMOS Sensor Microsystems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "CMOS sensor microsystems, fundamentals of microfabrication, micromachining technology, recognition elements, CMOS signal detection components, and sensor system integration and packaging.",
+    "prerequisites": {
+      "text": "ECSE 331",
+      "tree": "ECSE 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 575",
+    "subject": "ECSE",
+    "number": "575",
+    "title": "Heterogeneous Integration Systems",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Discussion of high performance heterogeneous integration systems. Introduction to key design challenges, including interconnect, power delivery, synchronization, and testing, with respect to heterogeneous systems. Analysis of state-of-the-art integration platforms, such as three-dimensional integrated circuits, wafer-scale integration, and flexible substrates with respect to applications of interest. System-level perspective of the integration hierarchy (i.e., integrated circuit, package, and board).",
+    "prerequisites": {
+      "text": "ECSE 335 or permission of instructor.",
+      "tree": "ECSE 335",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 593",
+    "subject": "ECSE",
+    "number": "593",
+    "title": "Antennas and Propagation",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals of antenna theory: sources, radiation pattern and gain. Classification of antennas. Main antenna types and their characteristics. Antenna temperature, remote sensing and radar cross-section. Self and mutual impedances. Special topics include adaptive antennas, very large array (VLA) used in radio astronomy and biomedical applications.",
+    "prerequisites": {
+      "text": "ECSE 206 and ECSE 354",
+      "tree": {
+        "and": [
+          "ECSE 206",
+          "ECSE 354"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 596",
+    "subject": "ECSE",
+    "number": "596",
+    "title": "Optical Waveguides",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An in-depth analysis to guided-wave propagation. Dielectric waveguides (slab, 2D, nonlinear, spatial solitons), optical fibers (modes, dispersion relations, propagation in dispersive, nonlinear fibers, temporal solitons), beam propagation method, coupled mode theory, waveguide devices (couplers, gratings, etc.). Selection of current research topics of interest (e.g., photonic crystals, optical signal processing, etc.).",
+    "prerequisites": {
+      "text": "ECSE 354",
+      "tree": "ECSE 354",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 597",
+    "subject": "ECSE",
+    "number": "597",
+    "title": "Circuit Simulation and Modelling",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles of circuit simulation. Formulation of network equations. Frequency domain analysis. Nonlinear networks. Transient analysis. Sensitivity analysis. Harmonic Balance. Shooting method. Model order reduction. Macromodelling.",
+    "prerequisites": {
+      "text": "ECSE 206, ECSE 251 and ECSE 331",
+      "tree": {
+        "and": [
+          "ECSE 206",
+          "ECSE 251",
+          "ECSE 331"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 608",
+    "subject": "ECSE",
+    "number": "608",
+    "title": "Machine Learning",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An overview of state-of-the-art algorithms used in machine learning, including theoretical properties and practical applications of these algorithms.",
+    "prerequisites": {
+      "text": "COMP 424, COMP 526 or ECSE 514, COMP 360, MATH 323 or ECSE 305.",
+      "tree": {
+        "and": [
+          "COMP 424",
+          {
+            "or": [
+              "COMP 526",
+              "ECSE 514"
+            ]
+          },
+          "COMP 360",
+          {
+            "or": [
+              "MATH 323",
+              "ECSE 305"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 652.",
+      "excludes": [
+        "COMP 652"
+      ]
+    },
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 609",
+    "subject": "ECSE",
+    "number": "609",
+    "title": "Custom High-Performance Computing Architectures",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Design of custom computer architectures for high-performance computing. Reconfigurable computing elements and systems. Mapping algorithms to hardware. High-level synthesis and CAD algorithms. Applications to computing problems in physics, chemistry, and biology.",
+    "prerequisites": {
+      "text": "ECSE 425 or ECSE 525, and ECSE 487 or ECSE 431.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 425",
+              "ECSE 525"
+            ]
+          },
+          {
+            "or": [
+              "ECSE 487",
+              "ECSE 431"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 610",
+    "subject": "ECSE",
+    "number": "610",
+    "title": "Wireless Communications",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the theory and technology of wireless communications systems networks. Topics include channel modelling, wireless transmission, multiple-access techniques, wireless networks, radio resource management, service technologies, evolution and standardization.",
+    "prerequisites": {
+      "text": "ECSE 521 or permission of the instructor",
+      "tree": "ECSE 521",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 618",
+    "subject": "ECSE",
+    "number": "618",
+    "title": "Haptics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study of touch as relevant to technological systems. Applications. Elements of anatomy, neuroanatomy, physiology, and behaviour. Technology of tactile transducers. Computational synthesis of tactile signals: Elements of contact mechanics, deformation theory and inelasticity, and computational methods to simulate those for realtime synthesis.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 621",
+    "subject": "ECSE",
+    "number": "621",
+    "title": "Statistic Detection and Estimation",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Statistical detection and estimation lies at the intersection of telecommunications, signal processing and mathematical statistics. Subjects include: hypothesis testing (Neyman-Pearson, Bayes, minimax, nuisance parameters, composite hypotheses, generalized likelihood), estimation theory (maximum-likelihood, maximum aposteriory probability, linear estimation, Cramer-Rao bounds).",
+    "prerequisites": {
+      "text": "ECSE 411 or ECSE 511, ECSE 510",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECSE 411",
+              "ECSE 511"
+            ]
+          },
+          "ECSE 510"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 626",
+    "subject": "ECSE",
+    "number": "626",
+    "title": "Statistical Computer Vision",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of statistical and machine learning techniques as applied to computer vision problems, including: stereo vision, motion estimation, object and face recognition, image registration and segmentation. Topics include regularization, probabilistic inference, information theory, Gaussian Mixture Models, Markov-Chain Monte Carlo methods, importance sampling, Markov random fields, principal and independent components analysis, probabilistic deep learning methods including variational models, Bayesian deep learning.",
+    "prerequisites": {
+      "text": "(ECSE 205 or equivalent) and (ECSE 415 or COMP 558 or equivalent).",
+      "tree": {
+        "and": [
+          "ECSE 205",
+          {
+            "or": [
+              "ECSE 415",
+              "COMP 558"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 634",
+    "subject": "ECSE",
+    "number": "634",
+    "title": "Analog Integrated Circuits Signal Processing",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Analog signal processing techniques for monolithic implementation. Filter approximation theory; filter realization methods; integrated filter technologies; active-RC, MOSFET-capacitor, transconductance-capacitor, switched-capacitor, switched-current; filter tuning methods. Phase-locked loops; signal conversion techniques.",
+    "prerequisites": {
+      "text": "ECSE 334, ECSE 303 or equivalent",
+      "tree": {
+        "and": [
+          "ECSE 334",
+          "ECSE 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 635",
+    "subject": "ECSE",
+    "number": "635",
+    "title": "Printed Electronics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Materials and processes for fabricating printed and flexible hybrid electronics, understanding of thin film and organic devices, and emerging printing technologies used for fabricating them.",
+    "prerequisites": {
+      "text": "CHEM 120 or equivalent, ECSE 331 or equivalent.",
+      "tree": {
+        "and": [
+          "CHEM 120",
+          "ECSE 331"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 651",
+    "subject": "ECSE",
+    "number": "651",
+    "title": "M.Eng. Project 1",
+    "credits": 1,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-3)"
+    ]
+  },
+  {
+    "code": "ECSE 652",
+    "subject": "ECSE",
+    "number": "652",
+    "title": "M.Eng. Project 2",
+    "credits": 2,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 653",
+    "subject": "ECSE",
+    "number": "653",
+    "title": "M.Eng. Project 3",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 654",
+    "subject": "ECSE",
+    "number": "654",
+    "title": "M.Eng. Project 4",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-12)"
+    ]
+  },
+  {
+    "code": "ECSE 655",
+    "subject": "ECSE",
+    "number": "655",
+    "title": "M.Eng. Project 5",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-12)"
+    ]
+  },
+  {
+    "code": "ECSE 656",
+    "subject": "ECSE",
+    "number": "656",
+    "title": "M.Eng. Project 6",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-12)"
+    ]
+  },
+  {
+    "code": "ECSE 678",
+    "subject": "ECSE",
+    "number": "678",
+    "title": "Special Topics in Solids 1",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Discussion of topics in semiconductor electronics and electronic properties of materials in areas of current research to the Department.",
+    "prerequisites": {
+      "text": "ECSE 432",
+      "tree": "ECSE 432",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 679",
+    "subject": "ECSE",
+    "number": "679",
+    "title": "Project in Applied Artificial Intelligence",
+    "credits": 6,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A project on a topic related to an application of Artificial Intelligence.",
+    "prerequisites": {
+      "text": "ECSE 551",
+      "tree": "ECSE 551",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.Eng. in Electrical Engineering; Non-Thesis - Applied Artificial Intelligence program",
+      "excludes": []
+    },
+    "notes": [
+      "No credit will be given for this course unless both ECSE 679D1 and ECSE 679D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "ECSE 679D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ECSE 679D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "ECSE 679N1",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "ECSE 679N2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ECSE 680",
+    "subject": "ECSE",
+    "number": "680",
+    "title": "Topics in Photonics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics in photonics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 681",
+    "subject": "ECSE",
+    "number": "681",
+    "title": "Colloquium in Electrical Engineering",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Directed reading, seminar and discussion course in various subjects of current interest in electrical engineering research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 682",
+    "subject": "ECSE",
+    "number": "682",
+    "title": "Topics in Computers and Circuits",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Special topics in computers and circuits.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 683",
+    "subject": "ECSE",
+    "number": "683",
+    "title": "Topics in Vision and Robotics",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics in vision and robotics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 686",
+    "subject": "ECSE",
+    "number": "686",
+    "title": "Topics: Communication Systems",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics in communications systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 688",
+    "subject": "ECSE",
+    "number": "688",
+    "title": "Recent Advances in Electrical Engineering 1",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Course content suited to the area of specialization of the lecture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)",
+      "This course is basically following a MTWR schedule pattern. However, during the second week, there won’t be any class on Thursday, May 15. During the third week, there won’t be any class on Monday, May 19 due to a statutory holiday, but there will be a class on Friday, May 23 to replace the Monday class. During the fourth week, there won’t be any class on Monday, May 26. During the fifth and sixth (last) week, there will be again classes from Monday through Thursday."
+    ]
+  },
+  {
+    "code": "ECSE 689",
+    "subject": "ECSE",
+    "number": "689",
+    "title": "Recent Advances: Electrical Engineering 2",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Course content suited to the area of specialization of the lecturer.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 691",
+    "subject": "ECSE",
+    "number": "691",
+    "title": "Thesis Research 1",
+    "credits": 3,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "ECSE 692",
+    "subject": "ECSE",
+    "number": "692",
+    "title": "Thesis Research 2",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 693",
+    "subject": "ECSE",
+    "number": "693",
+    "title": "Thesis Research 3",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 694",
+    "subject": "ECSE",
+    "number": "694",
+    "title": "Thesis Research 4",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 695",
+    "subject": "ECSE",
+    "number": "695",
+    "title": "Thesis Research 5",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 696",
+    "subject": "ECSE",
+    "number": "696",
+    "title": "Thesis Research 6",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 697",
+    "subject": "ECSE",
+    "number": "697",
+    "title": "Thesis Research 7",
+    "credits": 4,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "ECSE 701",
+    "subject": "ECSE",
+    "number": "701",
+    "title": "Ph.D. Qualifying Examination",
+    "credits": 0,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Oral Examination of Ph.D. student's background in defined areas.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 702",
+    "subject": "ECSE",
+    "number": "702",
+    "title": "Ph.D. Research Plan Proposal",
+    "credits": 0,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Definition of a plan for Ph.D. research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECSE 703",
+    "subject": "ECSE",
+    "number": "703",
+    "title": "Doctoral Research Seminar",
+    "credits": 0,
+    "offeredBy": "Electrical & Computer Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Submission of a research manuscript and presentation of work in an accompanying seminar.",
+    "prerequisites": {
+      "text": "ECSE 702.",
+      "tree": "ECSE 702",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

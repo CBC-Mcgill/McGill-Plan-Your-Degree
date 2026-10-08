@@ -1,0 +1,108 @@
+[
+  {
+    "code": "ENTO 330",
+    "subject": "ENTO",
+    "number": "330",
+    "title": "Insect Biology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to entomology, including the the importance and diversity of insects; insect morphology, anatomy and physiology; insect sensory systems; reproduction; metamorphosis; insect classification and survey of the orders and common families.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ENTO 340",
+    "subject": "ENTO",
+    "number": "340",
+    "title": "Field Entomology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A field course and project about arthropod taxonomy, field methods and experimental design in entomology. Includes natural history observation, and experimental approaches to arthropod population and community ecology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Summer"
+    ]
+  },
+  {
+    "code": "ENTO 352",
+    "subject": "ENTO",
+    "number": "352",
+    "title": "Biocontrol of Pest Insects",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Modern concepts of integrated control techniques and principles of insect pest management, with emphasis on biological control (use of predators, parasites and pathogens against pest insects), population monitoring, and manipulation of environmental, behavioral and physiological factors in the pest's way of life. Physical, cultural, and genetic controls and an introduction to the use of non-toxic biochemical controls (attractants, repellents, pheromones, antimetabolites).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  },
+  {
+    "code": "ENTO 515",
+    "subject": "ENTO",
+    "number": "515",
+    "title": "Parasitoid Behavioural Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "The origin and diversity of parasitoid species will be presented. Aspects of behavioural ecology that pertain to host selection, optimal allocation of progeny and sex and host-parasitoid interactions are examined. The importance of these processes is discussed in a biological control perspective.",
+    "prerequisites": {
+      "text": "ENTO 330 (formerly NRSC 330) or equivalent",
+      "tree": {
+        "and": [
+          "ENTO 330",
+          "NRSC 330"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NRSC 515",
+      "excludes": [
+        "NRSC 515"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "ENTO 610",
+    "subject": "ENTO",
+    "number": "610",
+    "title": "Insect Phylogeny and Diversity",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Discussion of current topics in phylogenetic systematics, evolution, and biodiversity, with special reference to insects and related arthropods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  }
+]

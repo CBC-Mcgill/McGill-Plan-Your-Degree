@@ -1,0 +1,586 @@
+[
+  {
+    "code": "NEUR 301",
+    "subject": "NEUR",
+    "number": "301",
+    "title": "TCP Neurology",
+    "credits": 2,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027",
+      "Summer 2027"
+    ],
+    "description": "During this two-week course, students will develop the knowledge, skills, and attitudes required to diagnose and treat patients with common neurological problems. Students will also gain an understanding of the roles and responsibilities of the various health professionals involved in the treatment of neurological patients, and an appreciation for how these individuals work together as a team to provide effective and efficient care. In addition, students will have opportunities to discuss the various integral roles of a physician, as defined by the Royal College of Physicians and Surgeons of Canada’s CanMEDS framework.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.D., C.M. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NEUR 310",
+    "subject": "NEUR",
+    "number": "310",
+    "title": "Cellular Neurobiology",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A survey of the functional organization of nerve cells, signalling in the nervous system, and principles of neural development. Topics include cell polarity, neurotransmitters, neurotrophins, receptors and second messengers, cell lineage, guidance of axon outgrowth, and nerve regeneration. Emphasis will be placed on analysis of neurons at the molecular level.",
+    "prerequisites": {
+      "text": "or Corequisites: BIOL 201, or PHGY 209, or PHGY 210; and one of ANAT 321, ANAT 322, BIOL 306, PHGY 311.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 201",
+              "PHGY 209",
+              "PHGY 210"
+            ]
+          },
+          {
+            "or": [
+              "ANAT 321",
+              "ANAT 322",
+              "BIOL 306",
+              "PHGY 311"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures each week"
+    ]
+  },
+  {
+    "code": "NEUR 502",
+    "subject": "NEUR",
+    "number": "502",
+    "title": "Basic and Clinical Aspects of Neuroimmunology",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The role of inflammation in physiological function of the nervous system, as well as in a broad range of neurological diseases where inflammation can act as a contributing factor to the development of pathology or promote recovery, including fundamentals of neuroimmunology to molecular/cellular aspects of neuroinflammation underlying the pathology seen in clinical conditions.",
+    "prerequisites": {
+      "text": "(MIMM 214 or MIMM 314 or MIMM 414 or PHGY 313) and (NSCI 200 or NSCI 201 or ANAT 321 or ANAT 323 or PHGY 314) or permission of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MIMM 214",
+              "MIMM 314",
+              "MIMM 414",
+              "PHGY 313"
+            ]
+          },
+          {
+            "or": [
+              "NSCI 200",
+              "NSCI 201",
+              "ANAT 321",
+              "ANAT 323",
+              "PHGY 314"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NEUR 503",
+    "subject": "NEUR",
+    "number": "503",
+    "title": "Computational Neuroscience",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A survey of computational methods commonly used to model brain function, including mathematical modeling to describe the relationship between neuronal activity and perception, action, and cognition. Mathematical basis for vision, motor control and attention. Data relevant to brain processes and models explaining these data, using engineering, statistics and artificial intelligence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NEUR 603.",
+      "excludes": [
+        "NEUR 603"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "Basic neuroanatomy/neurophysiology, some mathematics (linear algebra calculus, probability/statistics) or consent of instructor."
+    ]
+  },
+  {
+    "code": "NEUR 507",
+    "subject": "NEUR",
+    "number": "507",
+    "title": "Topics in Radionuclide Imaging",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course deals with neuroreceptor and oncologic imaging and imaging of cerebral bloodflow and metabolism. The role of radiochemistry and physics will be demonstrated in the context of clinical and research applications. Understanding how radiochemistry and physics intermingle with the medical aspects of radiotracer development will result in a deeper insight into the complex pathways of tracer design and the methods necessary to properly interpret the data obtained.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NEUR 560",
+    "subject": "NEUR",
+    "number": "560",
+    "title": "History of Neuroscience",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A historical survey of neuroscience, from antiquity to the major discoveries of the 20th century. Conceptual and technical advances having led to our current understanding of brain function and dysfunctions will be discussed. Particular attention will be given to sensory systems and cognitive processes.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NEUR 602",
+    "subject": "NEUR",
+    "number": "602",
+    "title": "Current Topics in Neuroscience",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current topics in Neuroscience.",
+    "prerequisites": {
+      "text": "Permission of unit instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NEUR 605",
+    "subject": "NEUR",
+    "number": "605",
+    "title": "Neuroscience Seminar 4",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course focuses on neuronal development and maturation from a molecular aspect. We introduce various model organisms and systems that are used to study molecular aspects of development, explore their particular advantages and explore the cellular and molecular events that contribute to the development of the nervous system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Offered alternate years - odd numbered years"
+    ]
+  },
+  {
+    "code": "NEUR 606",
+    "subject": "NEUR",
+    "number": "606",
+    "title": "Methods in Neuroimaging",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the design and analysis of neuroimaging experiments in humans.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NEUR 608",
+    "subject": "NEUR",
+    "number": "608",
+    "title": "Neuroimaging Data Science",
+    "credits": 3,
+    "offeredBy": "Neuroscience, Integrated Pgm",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Cutting-edge analytics as applied to complex and multimodal neuroimaging datasets. Topics include statistics, associative techniques, graph theoretical analysis, causal models, nonparametric inference, and meta-analytical synthesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in the M.Sc. in Neuroscience or the Ph.D. in Neuroscience. Students from other units may also enrol with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NEUR 610",
+    "subject": "NEUR",
+    "number": "610",
+    "title": "Functional Neuroanatomy",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will examine current topics in the functional anatomy of the human brain. The emphasis will be on how anatomical organization determines function. The course will comprise classroom sessions and dissection of human brains.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Enrolment in IPN or consent of instructor."
+    ]
+  },
+  {
+    "code": "NEUR 630",
+    "subject": "NEUR",
+    "number": "630",
+    "title": "Principles of Neuroscience 1",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of cellular and molecular neuroscience at the graduate level. Topics include: synthesis, processing and intracellular transport of macromolecules; development of the nervous system including neurogenesis, axonal pathfinding, synaptogenesis and myelination; neuronal survival and response to injury; generation and propagation of action potentials; neurotransmitters and synaptic transmission.",
+    "prerequisites": {
+      "text": "BIOL 200 and BIOL 201 or equivalent; permission of instructor",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          "BIOL 201"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NEUR 631",
+    "subject": "NEUR",
+    "number": "631",
+    "title": "Principles of Neuroscience 2",
+    "credits": 3,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An overview of the structure, function and interaction of neuronal systems of vertebrates. Topics include basic neuroanatomy, coding and processing of sensory information (somatic sensory, visual and auditory systems), control of posture and voluntary movement, learning and memory, processing of language and speech, cerebral blood flow, the neuroendocrine system and neuroimmunology.",
+    "prerequisites": {
+      "text": "A knowledge of basic mechanisms of biology, physiology, and anatomy as covered by respective undergraduate classes is expected and necessary to succeed in this course.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Students must be enrolled in a graduate program at McGill University. Students from other universities, as well as undergraduate students from McGill require special permission from the Instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "NEUR 696",
+    "subject": "NEUR",
+    "number": "696",
+    "title": "Master's Thesis Research",
+    "credits": 6,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the direction of the student's supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "NEUR 696D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "NEUR 696D2",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "NEUR 696N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "NEUR 696N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "NEUR 697",
+    "subject": "NEUR",
+    "number": "697",
+    "title": "Master's Thesis Proposal",
+    "credits": 9,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Presentation of a written thesis proposal by the end of the first year in the program. This document stating the hypothesis being tested, relevant literature and methodology will be orally presented to the student's Advisory Committee which will also review the written proposal and communicate its recommendations to the student and the Graduate Studies Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students only",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "NEUR 697D1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "NEUR 697D2",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "NEUR 697N1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "NEUR 697N2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "NEUR 698",
+    "subject": "NEUR",
+    "number": "698",
+    "title": "Master's Seminar Presentation",
+    "credits": 9,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Student's presentation of a thesis research seminar. In this seminar, the student shall explain the direction of his/her research and present his/her findings to date. The presentation shall take approximately 30 to 45 minutes and shall be followed by a question period. This seminar will be attended by the Graduate Studies Committee, the student's Advisory Committee, and interested observers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "NEUR 698D1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "NEUR 698D2",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "NEUR 698N1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "NEUR 698N2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "NEUR 699",
+    "subject": "NEUR",
+    "number": "699",
+    "title": "Master's Thesis Submission",
+    "credits": 12,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Submission of a Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "NEUR 699D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "NEUR 699D2",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "NEUR 699N1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "NEUR 699N2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "NEUR 700",
+    "subject": "NEUR",
+    "number": "700",
+    "title": "Doctoral Candidacy Examination",
+    "credits": 0,
+    "offeredBy": "Neurology and Neurosurgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A qualifying examination consisting of a formal presentation and oral examination of the thesis proposal. The questioning will pertain to the student's knowledge and understanding of his/her field of specialization in neuroscience as well as the research proposal. Its primary purpose is to evaluate the student's ability to carry out original scholarship. (The Candidacy Examination course is also conducted as part of the Transfer seminar for all students currently registered in the M.Sc. program who apply for transfer to the Ph.D.)",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "NEUR 700D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "NEUR 700D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "NEUR 705",
+    "subject": "NEUR",
+    "number": "705",
+    "title": "Responsible Research Conduct",
+    "credits": 0,
+    "offeredBy": "Neuroscience, Integrated Pgm",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to the ethics of scientific research and publication and to the distinctions between appropriate scientific conduct and scientific misconduct.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students in the Integrated Program in Neuroscience",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NEUR 710",
+    "subject": "NEUR",
+    "number": "710",
+    "title": "Connectional Research: Lab-to-World Impact ",
+    "credits": 3,
+    "offeredBy": "Neuroscience, Integrated Pgm",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Conceptual and hands-on training in connectional research, with an emphasis on lab-to-world impact and academic entrepreneurship. Concepts in ideation, idea refinement and definition, stakeholder identification, market analysis and ethnographic studies, and structure of impactful proposals.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Students must have completed 1 year of graduate studies in the Faculties of Medicine, Engineering, or Science.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must have completed 1st year of PhD work. Students must bring laptop for classes."
+    ]
+  },
+  {
+    "code": "NEUR 716",
+    "subject": "NEUR",
+    "number": "716",
+    "title": "PhD 1 Research in Neuroscience 1",
+    "credits": 15,
+    "offeredBy": "Neuroscience, Integrated Pgm",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Neuroscience. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NEUR 717",
+    "subject": "NEUR",
+    "number": "717",
+    "title": "PhD 1 Research in Neuroscience 2",
+    "credits": 15,
+    "offeredBy": "Neuroscience, Integrated Pgm",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Neuroscience. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

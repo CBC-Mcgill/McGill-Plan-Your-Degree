@@ -1,0 +1,1962 @@
+[
+  {
+    "code": "EDKP 100",
+    "subject": "EDKP",
+    "number": "100",
+    "title": "Introduction to Physical and Health Education in Quebec",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will place physical and health education into the Quebec context. Relationships between academic course work and physical activity course offerings will be made to clearly link research and teaching practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to U1 B.Ed. in Physical and Health Education students only.; Not open to students who have taken EDKP 226 and EDKP 394.",
+      "excludes": [
+        "EDKP 226",
+        "EDKP 394"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 204",
+    "subject": "EDKP",
+    "number": "204",
+    "title": "Health Education",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the teacher's role in the total school health program at both elementary and high school levels; current issues in contemporary health education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 206",
+    "subject": "EDKP",
+    "number": "206",
+    "title": "Biomechanics of Human Movement",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of fundamental human movement and the kinematic concepts which underlie each: Stability, agility, walking, running, jumping, throwing, absorbing forces, striking, kicking, spinning, twisting, aquatics and work positions.",
+    "prerequisites": {
+      "text": "PHYS 101 OR PHYS 131",
+      "tree": {
+        "or": [
+          "PHYS 101",
+          "PHYS 131"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 208",
+    "subject": "EDKP",
+    "number": "208",
+    "title": "Biomechanics and Motor Learning",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Nature and mechanical function of human movement in sport, dance, physical recreation and adapted movement activities.",
+    "prerequisites": {
+      "text": "EDKP 293.",
+      "tree": "EDKP 293",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 206.",
+      "excludes": [
+        "EDKP 206"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 213",
+    "subject": "EDKP",
+    "number": "213",
+    "title": "Aquatics",
+    "credits": 1,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Acquisition of skills and techniques in aquatics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 214",
+    "subject": "EDKP",
+    "number": "214",
+    "title": "Basketball",
+    "credits": 2,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Acquisition of skills and techniques in basketball from a curriculum model approach.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 215",
+    "subject": "EDKP",
+    "number": "215",
+    "title": "Standard First Aid/Cardio-Pulmonary Resuscitation Level C",
+    "credits": 0,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Students are expected to take, on their own in their final year of study, Standard Level Safety First Aid/Cardio-Pulmonary Resuscitation Level \"C\" course and submit proof of certification to the Department of Kinesiology and Physical Education. Anyone who fails to submit valid proof of certification will not be granted a degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 217",
+    "subject": "EDKP",
+    "number": "217",
+    "title": "Track and Field",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Using track and field to address a variety of progressions of learning that are included at all levels of, and in relation to, the Quebec Physical Education Curriculum. The Sport Education model will be utilized to stress the transferability of the sport-specific skills needed to engage in track and field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 218",
+    "subject": "EDKP",
+    "number": "218",
+    "title": "Volleyball",
+    "credits": 2,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Acquisition of skills and techniques in volleyball from a curriculum model approach.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 219",
+    "subject": "EDKP",
+    "number": "219",
+    "title": "Healthy Lifestyle Activity",
+    "credits": 1,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "An introduction to activities designed to meet personal needs and self-management skills necessary to adopt healthy lifestyles. Emphasis is on activities that foster mind-body connections, aerobic fitness, muscular tone, balance, and range of motion. Activities may include yoga, tai-chi, pilates, aerobics, walking, in-line skating, and cycling.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 223",
+    "subject": "EDKP",
+    "number": "223",
+    "title": "Games 1: Elementary Physical Education ",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on Teaching Games For Understanding, in relation to the Quebec Physical Education Curriculum, which includes invasion games, target games, net and wall games, and striking and fielding games. Emphasis will be placed on fundamental movement through a variety of games and physical activities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 225",
+    "subject": "EDKP",
+    "number": "225",
+    "title": "Games 2: Secondary Physical Education",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on Teaching Games For Understanding, in relation to the Quebec Physical Education Curriculum, to explore sport-specific skills, tactics, and strategies that are included across traditional sports and settings. The conceptual teaching of physical education will be emphasized.",
+    "prerequisites": {
+      "text": "EDKP 223",
+      "tree": "EDKP 223",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 231",
+    "subject": "EDKP",
+    "number": "231",
+    "title": "Martial Arts",
+    "credits": 1,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Acquisition of skills and techniques in martial arts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 232",
+    "subject": "EDKP",
+    "number": "232",
+    "title": "Health-Related Fitness",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Participation in activities surrounding the components of cardiovascular fitness, strength, and flexibility. Exposure to a variety of fitness assessments as well as how these assessments can be used to connect to the Quebec Physical Education Curriculum’s student plans of action in regards to overall health and well-being.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 235",
+    "subject": "EDKP",
+    "number": "235",
+    "title": "Non-Traditional Physical Activities ",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Martial arts, meditation,stress releasing and other related activities will be introduced to incorporate these activities into future physical education and health programs. The Quebec Physical Education Curriculum will be utilized.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 237",
+    "subject": "EDKP",
+    "number": "237",
+    "title": "Outdoor Education",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Utilization of the outdoors in interdisciplinary lesson planning to engage students in alternative environments, using the Teaching Personal Social Responsibility Through Physical Activity model. Urban outdoor activities will also be included to meet the realities of teaching in large urban centres.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 241",
+    "subject": "EDKP",
+    "number": "241",
+    "title": "Indigenous Physical Activities",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Designed to prepare students to teach physical recreation activities of their Indigenous culture such as Indigenous games, stunts, combatives, gymnastics and dance activities belonging in the cultural context.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Certificate in Education for First Nations and Inuit and Bachelors of Education First Nations and Inuit Education.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "EDKP 245",
+    "subject": "EDKP",
+    "number": "245",
+    "title": "Special Topics 01",
+    "credits": 1,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Special topics in Physical Education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 250",
+    "subject": "EDKP",
+    "number": "250",
+    "title": "Introductory Principles in Applied Kinesiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A combination of lectures and practical demonstrations in applied kinesiology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 252",
+    "subject": "EDKP",
+    "number": "252",
+    "title": "Racquet Sports",
+    "credits": 2,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Basic stroke techniques, rules and strategies, and teaching skills appropriate for various types of racquet sports.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 226 and EDKP 235",
+      "excludes": [
+        "EDKP 226",
+        "EDKP 235"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 253",
+    "subject": "EDKP",
+    "number": "253",
+    "title": "Movement Education",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A Laban theme-based approach will be incorporated through dance, gymnastics, circus and parkour. Basic movement patterns of balance, landings, rotations, and locomotion will be taught. Developmental lesson planning and safety will be incorporated throughout the course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 216 and EDKP 210 or EDKP 253 or EDKP 254.",
+      "excludes": [
+        "EDKP 210",
+        "EDKP 216",
+        "EDKP 254"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 261",
+    "subject": "EDKP",
+    "number": "261",
+    "title": "Motor Development",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Changes apparent in motor behaviour from conception to old age. Two perspectives are emphasized: 1) contemporary and historical theories of human development, 2) development of motor behaviour and influences of physical growth, sensori-perceptual development, information processing and socio-cultural factors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 292",
+    "subject": "EDKP",
+    "number": "292",
+    "title": "Nutrition and Wellness",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will examine the role of carbohydrates, fats, proteins, vitamins, minerals and water in a balanced diet. Students will be introduced to the affects of nutrition on exercise, sport performance and wellness. The validity of claims concerning nutrient supplements will be studied.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 392",
+      "excludes": [
+        "EDKP 392"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 293",
+    "subject": "EDKP",
+    "number": "293",
+    "title": "Anatomy and Physiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic foundations of structural, neuromuscular and visceral anatomy extending to the basic elements of the neuromuscular, circulatory and respiratory systems with emphasis on applications in instructional and coaching settings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 205 and EDKP 331",
+      "excludes": [
+        "EDKP 205",
+        "EDKP 331"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 300",
+    "subject": "EDKP",
+    "number": "300",
+    "title": "Special Topics 02",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Content will vary from year to year and will be announced prior to registration. The course will be given by a single instructor or by a group, as the occasion warrants.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 301",
+    "subject": "EDKP",
+    "number": "301",
+    "title": "Kinesiology Internship 1",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A skills-based practical experience in kinesiology.",
+    "prerequisites": {
+      "text": "EDKP 250, PHGY 209, PHGY 210",
+      "tree": {
+        "and": [
+          "EDKP 250",
+          "PHGY 209",
+          "PHGY 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDKP 350 and EDKP 395",
+      "tree": {
+        "and": [
+          "EDKP 350",
+          "EDKP 395"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 302",
+    "subject": "EDKP",
+    "number": "302",
+    "title": "Kinesiology Clinic Internship 1",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A skills-based practical experience in the on-campus Kinesiology Clinic.",
+    "prerequisites": {
+      "text": "EDKP 250, PHGY 209, PHGY 210",
+      "tree": {
+        "and": [
+          "EDKP 250",
+          "PHGY 209",
+          "PHGY 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDKP 350, EDKP 395",
+      "tree": {
+        "and": [
+          "EDKP 350",
+          "EDKP 395"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 303",
+    "subject": "EDKP",
+    "number": "303",
+    "title": "Seminars in Physical and Health Education",
+    "credits": 1,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of topics that are important for student teachers and their transition into the professional realm.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDFE 380",
+      "tree": "EDFE 380",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 307",
+    "subject": "EDKP",
+    "number": "307",
+    "title": "Evaluation in Physical Education",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Measurement and evaluation techniques designed to assess progress in physical education settings.",
+    "prerequisites": {
+      "text": "EDFE 246",
+      "tree": "EDFE 246",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 330",
+    "subject": "EDKP",
+    "number": "330",
+    "title": "Physical Activity and Public Health",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to literature on the role of physical activity and general health and well-being. Examination of exercise adherence issues, exercise prescription, and the economic impact of physical fitness programs in the workplace. Epidemiologic literature. Concepts of health promotion and public health.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 332",
+    "subject": "EDKP",
+    "number": "332",
+    "title": "Physical Education Curriculum and Instruction",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles, programs and procedures that an elementary teacher may use to promote the designing and teaching of elementary school P.E.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to P.E. Majors",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 342",
+    "subject": "EDKP",
+    "number": "342",
+    "title": "Physical Education Methods",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course is a prerequisite for all field experience and practice.) Designed to prepare students for a teaching/leadership role in physical education. They will examine teaching/leadership effectiveness as it relates to organization and observation techniques, planning, instruction and evaluation of physical activity.",
+    "prerequisites": {
+      "text": "EDKP 223.",
+      "tree": "EDKP 223",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 350",
+    "subject": "EDKP",
+    "number": "350",
+    "title": "Physical Fitness Evaluation Methods",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Provides hands-on skills and training required to work as a kinesiologist. Focus is placed on risk assessment, fitness evaluation methods, collection and interpretation of client data and individualized physical fitness prescription. Lecture and practical lab hours included.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to BSc (Kinesiology) students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 391",
+    "subject": "EDKP",
+    "number": "391",
+    "title": "Physiology in Sport and Exercise",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of the responses of the human body during and following acute and chronic exercise with practical applications for a school setting.",
+    "prerequisites": {
+      "text": "EDKP 293 or equivalent.",
+      "tree": "EDKP 293",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 393",
+    "subject": "EDKP",
+    "number": "393",
+    "title": "Skill Learning and Expertise",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Cognitive perspective on sport skill learning and the development of expertise, and the roles of innate talent, practice and instruction.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 492",
+      "excludes": [
+        "EDKP 492"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 394",
+    "subject": "EDKP",
+    "number": "394",
+    "title": "Historical Perspectives",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A historical survey of the form and function of organized sport and physical activity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 395",
+    "subject": "EDKP",
+    "number": "395",
+    "title": "Exercise Physiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of the physiological responses of the neuromuscular, metabolic, endocrine, and circulatory and respiratory systems to acute and chronic exercise.",
+    "prerequisites": {
+      "text": "PHGY 209 and PHGY 210.",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "PHGY 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 396",
+    "subject": "EDKP",
+    "number": "396",
+    "title": "Adapted Physical Activity",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Assessment, instruction and evaluation in physical activity for special populations. Emphasis on inclusion of people labelled intellectually disabled, learning disabled, physically awkward, autistic, visually or hearing impaired and physically disabled. Weekly lectures plus practical teaching lab.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 496",
+      "excludes": [
+        "EDKP 496"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 400",
+    "subject": "EDKP",
+    "number": "400",
+    "title": "Special Topics 03",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Special topics in Physical Education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 401",
+    "subject": "EDKP",
+    "number": "401",
+    "title": "Kinesiology Internship 2",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A skills-based practical experience in kinesiology.",
+    "prerequisites": {
+      "text": "EDKP 250, PHGY 209, PHGY 210, EDKP 301",
+      "tree": {
+        "and": [
+          "EDKP 250",
+          "PHGY 209",
+          "PHGY 210",
+          "EDKP 301"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDKP 350 and EDKP 395",
+      "tree": {
+        "and": [
+          "EDKP 350",
+          "EDKP 395"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 402",
+    "subject": "EDKP",
+    "number": "402",
+    "title": "Kinesiology Clinic Internship 2",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A skills-based practical experience in the on-campus Kinesiology Clinic.",
+    "prerequisites": {
+      "text": "EDKP 250, EDKP 301 or EDKP 302, PHGY 209, PHGY 210",
+      "tree": {
+        "and": [
+          "EDKP 250",
+          {
+            "or": [
+              "EDKP 301",
+              "EDKP 302"
+            ]
+          },
+          "PHGY 209",
+          "PHGY 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDKP 350, EDKP 395",
+      "tree": {
+        "and": [
+          "EDKP 350",
+          "EDKP 395"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 405",
+    "subject": "EDKP",
+    "number": "405",
+    "title": "Sport in Society",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of the cultural, social, political and economic factors that influence sport in society. Special attention to the effects of gender, financial constraints and political policies on involvement in physical activity and sports programs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 442",
+    "subject": "EDKP",
+    "number": "442",
+    "title": "Physical Education Pedagogy",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This pedagogy course builds on physical education methods and field experiences. It focuses on the developing teacher, the establishment of the learning environment, and the implementation of the varied teaching strategies. Principles of research on teaching in physical education are translated into practical techniques for application in the field.",
+    "prerequisites": {
+      "text": "EDKP 342, EDFE 246 and EDFE 373",
+      "tree": {
+        "and": [
+          "EDKP 342",
+          "EDFE 246",
+          "EDFE 373"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 443",
+    "subject": "EDKP",
+    "number": "443",
+    "title": "Research Methods",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "How to conduct and understand research in physical activity, including a complete overview of the research process, statistical and measurement concepts in research, the various types of research including both quantitative and qualitative aspects, as well as ways of presenting research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 444",
+    "subject": "EDKP",
+    "number": "444",
+    "title": "Ergonomics",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "An examination of ergonomic issues including: injury mechanisms, evaluation and assessment techniques, occupational health and safety legislation, and ergonomic interventions.",
+    "prerequisites": {
+      "text": "ANAT 315, EDKP 206",
+      "tree": {
+        "and": [
+          "ANAT 315",
+          "EDKP 206"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 445",
+    "subject": "EDKP",
+    "number": "445",
+    "title": "Exercise Metabolism",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The biochemical structure and regulation of major biochemical pathways related to exercise. Examine the hormonal regulation of lipid, carbohydrate and protein metabolism during short and prolonged exercise as well as the influence of physical training. Examine gender-related differences and exercise metabolism.",
+    "prerequisites": {
+      "text": "EDKP 395.",
+      "tree": "EDKP 395",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 446",
+    "subject": "EDKP",
+    "number": "446",
+    "title": "Physical Activity and Ageing",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of ageing-related changes in circulatory, respiratory, neuromuscular, hormonal, metabolic and immune systems as they relate to functional limitations and the physiological responses to acute and chronic exercise. Examination of the role of exercise in mitigating ageing response.",
+    "prerequisites": {
+      "text": "EDKP 395.",
+      "tree": "EDKP 395",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 447",
+    "subject": "EDKP",
+    "number": "447",
+    "title": "Motor Control",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic concepts of neuromuscular control of human limb movement. Neural circuitry of sensorimotor networks in the spinal cord and brains. Principles of feedback and feedforward control of body mechanics. Neural mechanisms of motor learning and adaptation.",
+    "prerequisites": {
+      "text": "EDKP 206, PHGY 201 or PHGY 209, PHGY 202 or PHGY 210, EDKP 261",
+      "tree": {
+        "and": [
+          "EDKP 206",
+          {
+            "or": [
+              "PHGY 201",
+              "PHGY 209"
+            ]
+          },
+          {
+            "or": [
+              "PHGY 202",
+              "PHGY 210"
+            ]
+          },
+          "EDKP 261"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 448",
+    "subject": "EDKP",
+    "number": "448",
+    "title": "Exercise and Health Psychology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The psychological aspects of health and participation in exercise and physical activity. The application of psychological knowledge and methodology within exercise and health. Theory and evidence on selected topics in this area of study.",
+    "prerequisites": {
+      "text": "EDKP 261",
+      "tree": "EDKP 261",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 449",
+    "subject": "EDKP",
+    "number": "449",
+    "title": "Neuromuscular and Inflammatory Pathophysiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of the physiological bases of selected disorders of the immune, renal, neurological and muscular-skeletal systems and an examination of the particularities of exercise responses and the effects of exercise conditioning in these populations. A special emphasis on the scientific bases for exercise prescription.",
+    "prerequisites": {
+      "text": "EDKP 395.",
+      "tree": "EDKP 395",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 450",
+    "subject": "EDKP",
+    "number": "450",
+    "title": "Advanced Principles in Applied Kinesiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To introduce the elements of a periodization plan.",
+    "prerequisites": {
+      "text": "EDKP 250 and EDKP 350",
+      "tree": {
+        "and": [
+          "EDKP 250",
+          "EDKP 350"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 451",
+    "subject": "EDKP",
+    "number": "451",
+    "title": "Personal Trainer Practicum",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A practical work-study experience with a focus on instruction and experience in personal training.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 453",
+    "subject": "EDKP",
+    "number": "453",
+    "title": "Research Practicum in Kinesiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research practicum in kinesiology.",
+    "prerequisites": {
+      "text": "EDKP 443",
+      "tree": "EDKP 443",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 453D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "EDKP 453D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 454",
+    "subject": "EDKP",
+    "number": "454",
+    "title": "Honours Research Practicum",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised directed study and research leading to the development of a formal undergraduate thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 485",
+    "subject": "EDKP",
+    "number": "485",
+    "title": "Cardiopulmonary Exercise Pathophysiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The physiological bases of selected cardiovascular, respiratory and metabolic disorders and an examination of the particularities of exercise responses and the effects of exercise conditioning in these populations. A special emphasis on the scientific bases for exercise prescription.",
+    "prerequisites": {
+      "text": "EDKP 395.",
+      "tree": "EDKP 395",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 492",
+    "subject": "EDKP",
+    "number": "492",
+    "title": "Talent Identification in Sports",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Recent scientific approaches in the evaluation of existing talent identification programs in the sports realm and how this knowledge can be used to develop state of the art and evidence-based procedures for identifying and developing talent.",
+    "prerequisites": {
+      "text": "EDKP 261",
+      "tree": "EDKP 261",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 494",
+    "subject": "EDKP",
+    "number": "494",
+    "title": "Physical Education Curriculum Development",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of important philosophies, principles, and personal, educational, and societal issues that influence current physical and health education curricula with particular emphasis on the Québec curriculum for Physical Education and Health.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 495",
+    "subject": "EDKP",
+    "number": "495",
+    "title": "Scientific Principles of Training",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of physiological and kinesiological principles in the selection and evaluation of athletic and physical fitness programs. Specific topics studied will include aerobic and anaerobic training, interval training, circuit training, weight training for muscular strength and endurance, flexibility, motor ability, obesity and energy balance.",
+    "prerequisites": {
+      "text": "EDKP 395.",
+      "tree": "EDKP 395",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 498",
+    "subject": "EDKP",
+    "number": "498",
+    "title": "Sport Psychology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The psychological aspects of participation in sport and physical activity relative to performance enhancement.",
+    "prerequisites": {
+      "text": "EDKP 261",
+      "tree": "EDKP 261",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 499",
+    "subject": "EDKP",
+    "number": "499",
+    "title": "Undergraduate Honours Research Project",
+    "credits": 6,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised preparation of an Honours research project under the direction of a faculty member.",
+    "prerequisites": {
+      "text": "EDKP 454",
+      "tree": "EDKP 454",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the B.Sc.(Kinesiology); Honours in Kinesiology program.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 499D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 499D2",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 499N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 499N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 548",
+    "subject": "EDKP",
+    "number": "548",
+    "title": "Applied Exercise Psychology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "This course examines common theories and interventions used to understand and promote physical activity by (a) reviewing, discussing, and critically evaluating theories of health behaviour change, and (b) learning and applying physical activity counselling strategies.",
+    "prerequisites": {
+      "text": "EDKP 443 and EDKP 448",
+      "tree": {
+        "and": [
+          "EDKP 443",
+          "EDKP 448"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 648.",
+      "excludes": [
+        "EDKP 648"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 552",
+    "subject": "EDKP",
+    "number": "552",
+    "title": "Advanced Cardiopulmonary Exercise Physiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Studied through the lens of cardiorespiratory limitations to human exercise performance, focus is on integrative aspects of cardiovascular and respiratory system adjustments to exercise in ostensibly healthy adults.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 652.",
+      "excludes": [
+        "EDKP 652"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 553",
+    "subject": "EDKP",
+    "number": "553",
+    "title": "Advanced Clinical Cardiopulmonary Exercise Physiology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "How pathophysiological abnormalities in the structure and function of cardiovascular and respiratory systems limit exercise tolerance and how this can be improved in people with chronic health conditions.",
+    "prerequisites": {
+      "text": "EDKP 552",
+      "tree": "EDKP 552",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 566",
+    "subject": "EDKP",
+    "number": "566",
+    "title": "Advanced Biomechanics",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Examination of biomechanical applications in various contexts such as clinical, ergonomic, sport, aging, comparative, robotics.",
+    "prerequisites": {
+      "text": "ANAT 315 and EDKP 206",
+      "tree": {
+        "and": [
+          "ANAT 315",
+          "EDKP 206"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDKP 303 or EKDP 568",
+      "excludes": [
+        "EDKP 303",
+        "EKDP 568"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDKP 603",
+    "subject": "EDKP",
+    "number": "603",
+    "title": "Individual Reading Course 1",
+    "credits": 6,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised readings supervised by a member of staff. Topics will be chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 603D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 603D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 605",
+    "subject": "EDKP",
+    "number": "605",
+    "title": "Research Methods 1",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A critical examination of philosophical issues, current paradigms, and research methodologies related to conducting research in kinesiology and physical education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 616",
+    "subject": "EDKP",
+    "number": "616",
+    "title": "Individual Reading Course 2",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Reading Course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 617",
+    "subject": "EDKP",
+    "number": "617",
+    "title": "Seminar in Kinesiology and Physical Education 1",
+    "credits": 0,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar course given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 618",
+    "subject": "EDKP",
+    "number": "618",
+    "title": "Seminar in Kinesiology and Physical Education 2",
+    "credits": 0,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar course given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 619",
+    "subject": "EDKP",
+    "number": "619",
+    "title": "Seminar in Kinesiology and Physical Education 3",
+    "credits": 0,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar course given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 620",
+    "subject": "EDKP",
+    "number": "620",
+    "title": "Seminar in Kinesiology and Physical Education 4",
+    "credits": 0,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar course given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 621",
+    "subject": "EDKP",
+    "number": "621",
+    "title": "Seminar in Kinesiology and Physical Education 1A ",
+    "credits": 1.5,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminars given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 622",
+    "subject": "EDKP",
+    "number": "622",
+    "title": "Seminar in Kinesiology and Physical Education 2A ",
+    "credits": 1.5,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminars given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": {
+      "text": "EDKP 621",
+      "tree": "EDKP 621",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 623",
+    "subject": "EDKP",
+    "number": "623",
+    "title": "Seminar in Kinesiology and Physical Education 3A ",
+    "credits": 1.5,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminars given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": {
+      "text": "EDKP 622",
+      "tree": "EDKP 622",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 624",
+    "subject": "EDKP",
+    "number": "624",
+    "title": "Seminar in Kinesiology and Physical Education 4A",
+    "credits": 1.5,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminars given by students and invited speakers covering different areas of research related to kinesiology and physical education.",
+    "prerequisites": {
+      "text": "EDKP 623",
+      "tree": "EDKP 623",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 625",
+    "subject": "EDKP",
+    "number": "625",
+    "title": "Sport, Physical Activity and Social Theory ",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to various social theories that have helped to advance the study of sport and physical activity. Theories will be applied to current debates about a range of public issues, including gender, race, and identity issues; the body and body image; exercise and technology; and health promotion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 631",
+    "subject": "EDKP",
+    "number": "631",
+    "title": "Qualitative Methods",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Examination of qualitative research methods and methodologies in sport, physical education and physical activity settings, including issues of epistemology, ontology, research paradigms, methods of data collection, analysis, and forms of representing qualitative research findings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 640",
+    "subject": "EDKP",
+    "number": "640",
+    "title": "Advanced Ergonomics",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Biomechanical aspects of some common motion disorders associated with the workplace. Recent knowledge in this area will be used to gain a better understanding and develop problem-solving skills related to issues such as risk factors, activity status, injury mechanisms, movement compensation, and work adaptation strategies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 654",
+    "subject": "EDKP",
+    "number": "654",
+    "title": "Sport Psychology",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The psychological factors and personality characteristics that influence diverse aspects of sport and physical activity. Seminars focus on discussions/presentations of theory, psychometrics and application of psychological principles to behaviour in sport.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 661",
+    "subject": "EDKP",
+    "number": "661",
+    "title": "Current Topics in Kinesiology Research",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current research across sub-disciplines and areas relevant to kinesiology. Specific areas of doctoral research within the broader multidisciplinary field of kinesiology and other health-related research disciplines.",
+    "prerequisites": {
+      "text": "EDKP 605 and EDPE 676",
+      "tree": {
+        "and": [
+          "EDKP 605",
+          "EDPE 676"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 661D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "EDKP 661D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 662",
+    "subject": "EDKP",
+    "number": "662",
+    "title": "Musculoskeletal Responses to Exercise",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of acute and chronic adaptations of the musculoskeletal system to different types of exercise, and current concepts and understanding of muscle mass regulation, fatigue, motor unit recruitment, and bone strength determinants.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 664",
+    "subject": "EDKP",
+    "number": "664",
+    "title": "Motor Learning and Behaviour",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The analysis of conditions and factors related to human learning and performance or behavioural potential using the information processing model of behaviour. Seminar format is used to discuss experimentation and theory that examine motor skill acquisition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 671",
+    "subject": "EDKP",
+    "number": "671",
+    "title": "Experimental Problems",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study in one area of: ergo-physiology or biomechanics or psychology of motor performance or motor performance for exceptional children. To provide an opportunity to conduct a research project and develop an awareness of the problems involved in the area of concentration under departmental supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 672",
+    "subject": "EDKP",
+    "number": "672",
+    "title": "Advanced Experimental Problems",
+    "credits": 6,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Students conduct a research project and focus on advanced and intensive experiemental problems involved in the area of concentration under departmental supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 691",
+    "subject": "EDKP",
+    "number": "691",
+    "title": "Thesis Research 1",
+    "credits": 6,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comprehensive literature review in the general area of the thesis topic. Independent work under the supervision of the thesis advisor(s).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 691D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 691D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 692",
+    "subject": "EDKP",
+    "number": "692",
+    "title": "Thesis Research 2",
+    "credits": 6,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the supervision of the thesis advisor(s) culminating with a written proposal and oral seminar explaining the direction of the thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 692D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 692D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 693",
+    "subject": "EDKP",
+    "number": "693",
+    "title": "Thesis Research 3",
+    "credits": 6,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to the thesis under the direction of the thesis advisor(s).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 693D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 693D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 694",
+    "subject": "EDKP",
+    "number": "694",
+    "title": "Thesis Research 4",
+    "credits": 6,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the supervision of the thesis advisor(s). Final submission and approval of the thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDKP 694D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDKP 694D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDKP 695",
+    "subject": "EDKP",
+    "number": "695",
+    "title": "Thesis Research 5",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the supervision of the thesis advisor(s) leading to the finalization of procedures for data collection.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 696",
+    "subject": "EDKP",
+    "number": "696",
+    "title": "Thesis Research 6",
+    "credits": 3,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the supervision of the thesis advisor(s) leading to the finalization of procedures for data collection.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDKP 701",
+    "subject": "EDKP",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Kinesiology and Physical Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "The Ph.D. Candidate must demonstrate a general knowledge within their discipline of study, an understanding of the proposed field of research and the ability to present and defend material orally. The examination includes both 1) a written component as specified by the student's advisory committee and in agreement with the thesis supervisor and the student, and 2) an oral examination (3 hours) consisting of questions related to the written component and its relationship with the more general knowledge of the discipline. The oral examination will take place within two weeks following submission of the written component.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

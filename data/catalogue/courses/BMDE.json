@@ -1,0 +1,573 @@
+[
+  {
+    "code": "BMDE 501",
+    "subject": "BMDE",
+    "number": "501",
+    "title": "Selected Topics in Biomedical Engineering",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of engineering and physical science principles to medicine and biological systems. Exploration of emerging and interdisciplinary areas within five research pillars: devices and sensors, modelling and AI, imaging, molecules and materials, and living systems engineering. How engineering principles are applied to solve complex challenges in research, healthcare, and medicine. Introduction to innovations such as biosensors, omics, wearables, signal processing, machine learning, advanced imaging modalities, biomaterials, nanomedicine, tissue engineering, organ-on-chip systems, genetic engineering, artificial organs, and regenerative medicine.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BMDE 502",
+    "subject": "BMDE",
+    "number": "502",
+    "title": "BME Modelling and Identification",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Methodologies in systems or distributed multidimensional processes. System themes include parametric vs. non-parametric system representations; linear/non-linear; noise, transients and time variation; mapping from continuous to discrete models; and relevant identification approaches in continuous and discrete time formulations.",
+    "prerequisites": {
+      "text": "Undergraduate basic statistics and: either BMDE 519, or Signals and Systems (e.g., ECSE 303 & ECSE 304) or equivalent",
+      "tree": {
+        "and": [
+          "BMDE 519",
+          "ECSE 303",
+          "ECSE 304"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BMDE 503",
+    "subject": "BMDE",
+    "number": "503",
+    "title": "Biomedical Instrumentation",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The principles and practice of making biological measurements in the laboratory, including theory of linear systems, data sampling, computer interfaces and electronic circuit design.",
+    "prerequisites": {
+      "text": "Experience with differential equations, in particular Laplace Transforms and complex numbers (e.g. MATH 263 or MATH 381 or equivalent) or permission of instructor.",
+      "tree": {
+        "or": [
+          "MATH 263",
+          "MATH 381"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BMDE 504",
+    "subject": "BMDE",
+    "number": "504",
+    "title": "Biomaterials and Bioperformance",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Biological and synthetic biomaterials, medical devices, and the issues related to their bioperformance. The physicochemical characteristics of biomaterials in relation to their biocompatibility and sterilization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Graduate and final-year undergraduate students from physical, biological and medical science, and engineering",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BMDE 505",
+    "subject": "BMDE",
+    "number": "505",
+    "title": "Cell and Tissue Engineering",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Application of the principles of engineering, physical, and biological sciences to modify and create cells and tissues for therapeutic applications will be discussed, as well as the industrial perspective and related ethical issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "graduate and final year undergraduate students from physical, biological, and medical science, and engineering.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)",
+      "1.5 hours lecture/1.5 hours seminar per week"
+    ]
+  },
+  {
+    "code": "BMDE 506",
+    "subject": "BMDE",
+    "number": "506",
+    "title": "Molecular Biology Techniques",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to major techniques of molecular biology for physical scientists.",
+    "prerequisites": {
+      "text": "MATH 222, BIOL 200 or BIOL 201, CHEM 212 or CHEM 213 or PHYS 253",
+      "tree": {
+        "and": [
+          "MATH 222",
+          {
+            "or": [
+              "BIOL 200",
+              "BIOL 201"
+            ]
+          },
+          {
+            "or": [
+              "CHEM 212",
+              "CHEM 213",
+              "PHYS 253"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to 18 students. Calculus required, physics or physical chemistry (thermodynamics, statistical mechanics) preferred. Primarily for graduate students or advanced undergraduate students in the physical sciences who are interested in learning molecular biology techniques. Preference given to graduate students in Biomedical Engineering and Physics. Students who have completed BIOC 300 or MIMM 366 are not eligible.",
+      "excludes": []
+    },
+    "notes": [
+      "(1-5-3)"
+    ]
+  },
+  {
+    "code": "BMDE 507",
+    "subject": "BMDE",
+    "number": "507",
+    "title": "Formulation and Delivery of Biotherapeutics",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to technologies for formulation and delivery of biotherapeutics. Emphasis is placed on the fundamental principles of formulation, delivery systems, manufacturing, analytical techniques, and biomedical applications. Translational aspects are considered for formulated biotherapeutic products.",
+    "prerequisites": {
+      "text": "CHEE 380 (or equivalent), CHEM 212 (or equivalent), and BIOL 201 (or equivalent), or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CHEE 380",
+          "CHEM 212",
+          "BIOL 201"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 508",
+    "subject": "BMDE",
+    "number": "508",
+    "title": "Introduction to Micro and Nano-Bioengineering",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The micro and nanotechnologies that drive and support the miniaturization and parallelization of techniques for life sciences research, including different inventions, designs and engineering approaches that lead to new tools and methods for the life sciences - while transforming them - and help advance our knowledge of life.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "This course is intended for graduate and advanced undergraduate students having a biological/medical background or an engineering, physical sciences background. Engineering students enrolled in the Minor in Biomedical Engineering, or Honours in Electrical Engineering and Honours in Mechanical Engineering, should be particularly interested."
+    ]
+  },
+  {
+    "code": "BMDE 512",
+    "subject": "BMDE",
+    "number": "512",
+    "title": "Finite-Element Modelling in Biomedical Engineering",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "General principles of quantitative modelling; types of models; principles of the finite-element method, primarily as applied to mechanical systems; introduction to the use of finite-element software; model generation from imaging data; modelling various material types, mainly biological; model validation.",
+    "prerequisites": {
+      "text": "Differential equations (MATH 271 or equivalent) or permission of instructor",
+      "tree": "MATH 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BMDE 517",
+    "subject": "BMDE",
+    "number": "517",
+    "title": "Electromagnetic Technologies for Biomedicine",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction into concepts and characteristics of electromagnetic (EM) fields interacting with the body, from theory through practice. Electromagnetic properties of biological tissues, safety considerations, electrode- and antenna-based measurements, and existing and emerging medical technologies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 or graduate students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BMDE 519",
+    "subject": "BMDE",
+    "number": "519",
+    "title": "Biomedical Signals and Systems",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the theoretical framework, experimental techniques and analysis procedures available for the quantitative analysis of physiological systems and signals. Lectures plus laboratory work using the Biomedical Engineering computer system. Topics include: amplitude and frequency structure of signals, filtering, sampling, correlation functions, time and frequency-domain descriptions of systems.",
+    "prerequisites": {
+      "text": "Satisfactory standing in U3 Honours Physiology; or U3 Major in Physics-Physiology; or U3 Major Physiology-Mathematics; or permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "BMDE 520",
+    "subject": "BMDE",
+    "number": "520",
+    "title": "Machine Learning for Biomedical Data",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theoretical and practical course in machine learning applied to the expanding richness of biomedical data, including multidimensional biomedical measurements centring on high-resolution body imaging and whole-genome common variant genetics.",
+    "prerequisites": {
+      "text": "MATH 203, MATH 223, MATH 323, and one course in computer programming (or equivalent background with permission of instructor).",
+      "tree": {
+        "and": [
+          "MATH 203",
+          "MATH 223",
+          "MATH 323"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Additional background in Calculus and Probability is recommended, e.g. MATH 222 and MATH 204, but not required."
+    ]
+  },
+  {
+    "code": "BMDE 521",
+    "subject": "BMDE",
+    "number": "521",
+    "title": "Computational Methods Single-Cell Analytics",
+    "credits": 3,
+    "offeredBy": "Medicine",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Computational methods (particularly machine learning methods) for various single-cell data analysis, modelling, and visualization tasks that could drive novel biomedical discoveries, focusing on “real-world” biomedical applications.",
+    "prerequisites": {
+      "text": "MATH 203, MATH 223, MATH 323, one course in computer programming and additional background in Calculus and Probability is required (e.g., MATH 222, MATH 204), or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MATH 203",
+          "MATH 223",
+          "MATH 323",
+          "MATH 222",
+          "MATH 204"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EXMD 521.",
+      "excludes": [
+        "EXMD 521"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BMDE 525",
+    "subject": "BMDE",
+    "number": "525",
+    "title": "Design of Assistive Technologies: Principles and Praxis",
+    "credits": 6,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "This is an interdisciplinary, project-based course, centred around a design project in which small teams of students work closely with a person with a disability in the Montreal area to design a device, piece of equipment, app, or other solution that reduces their experience of disability.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "BMDE 525D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "BMDE 525D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "BMDE 558",
+    "subject": "BMDE",
+    "number": "558",
+    "title": "Healthcare Startups and Entrepreneurship",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to healthcare entrepreneurship, including the unique model and challenges of healthcare technology startups. Emphasis is placed on seeking venture capital investment in a healthcare startup business, including medical technologies (MedTech), pharmaceuticals/biotechnology, research tools, healthcare IT, and digital health, particularly as they differ from one another.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 610",
+    "subject": "BMDE",
+    "number": "610",
+    "title": "Functional Neuroimaging Fusion",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Biomedical engineering: Multimodal data fusion of electrophysiology and functional neuroimaging data, including: detailed description of source localization methods for Electro- and MagnetoEncephaloGraphy data, analysis of brain hemodynamic activity through simultaneous recordings with electrophysiology, analysis and reconstruction of Near Infra-Red Spectroscopy data, modeling of the neurovascular coupling,validation methodology.",
+    "prerequisites": {
+      "text": "ECSE 305, MATH 223 or equivalent",
+      "tree": {
+        "and": [
+          "ECSE 305",
+          "MATH 223"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 650",
+    "subject": "BMDE",
+    "number": "650",
+    "title": "Advanced Medical Imaging",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of advanced techniques in medical imaging including: fast magnetic resonance imaging (MRI), functional MRI, MR angiography and quantitative flow measurement, spiral and dynamic x-ray computed tomography, 2D/3D positron emission tomography (PET), basic PET physiology, tracer kinetics, surgical planning and guidance, functional and anatomical brain mapping, 2D and 3D ultrasound imaging, and medical image processing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 652",
+    "subject": "BMDE",
+    "number": "652",
+    "title": "Bioinformatics: Proteomics",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Overview of high-throughput proteomic technologies commonly employed to study the localization and function of all proteins in an organism, and the bioinformatic approaches to analyze raw data and deposit them in proteome databases.",
+    "prerequisites": {
+      "text": "Enrolment in Bioinformatics option program or permission by coordinators.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: The course is inter-disciplinary and is targeted to students with different scientific backgrounds. A substantial portion of marks will be given based on practical assignments."
+    ]
+  },
+  {
+    "code": "BMDE 653",
+    "subject": "BMDE",
+    "number": "653",
+    "title": "Patents in Biomedical Engineering",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This is a practical course on patents with emphasis on biomedical engineering applications. The course offers an overview of intellectual property, patents, and the patenting process. The course also provides insights into the strategies relating to commercialization and exploiting of patents, as well as enforcing patents. This course is designed to help biomedical engineers who will encounter patents in their work and needs to understand the nature and the scope of the patent system, how patents are obtained, and how to commercially exploit a patent.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 654",
+    "subject": "BMDE",
+    "number": "654",
+    "title": "Biomedical Regulatory Affairs - Medical Devices",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Regulatory strategies and quality management systems are critical for medical device development. This course provides an overview of regulatory requirements, and familiarize students with the important ISO and IEC standards pertaining to medical device development. This course will provide biomedical engineers with an understanding of the regulatory and quality requirements to translate a medical device idea into a commercial product, and will draw upon the expertise of invited speakers currently working in the medical devices industry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 655",
+    "subject": "BMDE",
+    "number": "655",
+    "title": "Biomedical Clinical Trials - Medical Devices",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will train biomedical engineers to understand the clinical and business aspects of transferring a medical device idea into a commercial product. This course provides an overview of the pre‐clinical and clinical testing of medical devices, clinical trials, reimbursement systems, market analysis, sales models, and business models, as pertaining to medical devices. This course will also cover the design of randomized trials, including statistical principles, hypothesis postulating, bias minimization, and randomization methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 656",
+    "subject": "BMDE",
+    "number": "656",
+    "title": "Medical Device Development Process",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of medical devices from concept to usage in humans. Overview of technical and regulatory processes to ensure safety and efficacy from the perspective of patients and users. Discussion of an existing medical device, reviewing all steps of the design process and the required documentation for regulatory submission.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BMDE 657",
+    "subject": "BMDE",
+    "number": "657",
+    "title": "Biomedical Engineering Industry Internship",
+    "credits": 18,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This course covers various aspects of translational biomedical engineering at an organization in the biomedical engineering industry (including private, public and non-governmental organizations), which includes applying engineering principles to design, develop, implement, or test biomedical engineering solutions as well as assume active roles in translational projects of biomedical engineering solutions at host organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to graduate students registered in the M.Sc.(A.) in Translational Biomedical Engineering; Non-Thesis.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BMDE 660",
+    "subject": "BMDE",
+    "number": "660",
+    "title": "Advanced MR Imaging and Spectroscopy of the Brain",
+    "credits": 3,
+    "offeredBy": "Biomedical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced magnetic resonance imaging and spectroscopy techniques to investigate the structure, connectivity, chemistry and physiology of the brain, including data acquisition and reconstruction techniques, scanner hardware, and contrast mechanisms. Focus on neuroscience applications.",
+    "prerequisites": {
+      "text": "PHYS 241, ECSE 304 or ECSE 306; PHYS 242 or ECSE 251",
+      "tree": {
+        "and": [
+          "PHYS 241",
+          {
+            "or": [
+              "ECSE 304",
+              "ECSE 306"
+            ]
+          },
+          {
+            "or": [
+              "PHYS 242",
+              "ECSE 251"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "code": "PRAC 200",
+    "subject": "PRAC",
+    "number": "200",
+    "title": "Advocacy",
+    "credits": 1,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical analysis of oral advocacy skills, including a range of settings and appellate advocacy.",
+    "prerequisites": {
+      "text": "Completed PRAC 147D1/D2 Intro Legal Research OR equivalent (transfer & advance standing students only).",
+      "tree": "PRAC 147D1",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have completed PRAC 155D1/D2. Limited to 2nd year Law students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PRAC 510",
+    "subject": "PRAC",
+    "number": "510",
+    "title": "Advanced Mooting 1",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Participation, under Faculty supervision, as a Faculty representative, in an advanced mooting competition approved for this purpose by the Dean. Students may register for Advanced Mooting a maximum of twice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PRAC 188.",
+      "excludes": [
+        "PRAC 188"
+      ]
+    },
+    "notes": [
+      "Note: Advanced Mooting includes mooting competitions such as the Jessup International Moot, Concours Charles-Rousseau, Gale Cup Moot, Tribunal École Pierre-Basile Mignault, etc."
+    ],
+    "parts": [
+      {
+        "code": "PRAC 510D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PRAC 510D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  }
+]

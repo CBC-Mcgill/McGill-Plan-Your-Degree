@@ -1,0 +1,1649 @@
+[
+  {
+    "code": "FINE 342",
+    "subject": "FINE",
+    "number": "342",
+    "title": "Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "In-depth study of corporate finance, risk, diversification, portfolio analysis, and capital market theory.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 420",
+    "subject": "FINE",
+    "number": "420",
+    "title": "Honours Investment Management Research Project 1",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research work on company, industry, risk management, strategy and macro research reports, contemporary issues in finance presented by market practitioners.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 students in B.Com.; Honours in Investment Management program. Not open to students who have taken FINE 440D1/D2.",
+      "excludes": [
+        "FINE 440D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 421",
+    "subject": "FINE",
+    "number": "421",
+    "title": "Honours Investment Management Research Project 2",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research work on company, industry, risk management, strategy and macro research reports, contemporary issues in finance presented by market practitioners.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 or U3 students in B.Com.; Honours in Investment Management program. Not open to students who have taken FINE 440 D1/D2.",
+      "excludes": [
+        "FINE 440"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 430",
+    "subject": "FINE",
+    "number": "430",
+    "title": "Honours Investment Management Research Project 3",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Continuation of research work on company, industry, risk management, strategy and macro research reports, contemporary issues in finance presented by market practitioners.",
+    "prerequisites": {
+      "text": "FINE 421 or (FINE 440 D1/D2 or FINE 440)",
+      "tree": {
+        "or": [
+          "FINE 421",
+          "FINE 440"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students in B.Com.; Honours in Investment Management program. Not open to students who have taken FINE 450 or FINE 450 D1/D2.",
+      "excludes": [
+        "FINE 450"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 431",
+    "subject": "FINE",
+    "number": "431",
+    "title": "Honours Investment Management Research Project 4",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of research work on company, industry, risk management, strategy and macro research reports, contemporary issues in finance presented by market practitioners.",
+    "prerequisites": {
+      "text": "FINE 430",
+      "tree": "FINE 430",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students in B.Com.; Honours in Investment Management program. Not open to students who have taken FINE 450 or FINE 450 D1/D2.",
+      "excludes": [
+        "FINE 450"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 434",
+    "subject": "FINE",
+    "number": "434",
+    "title": "Topics in Finance 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Topics will be selected from current issues in the Finance Area.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 435",
+    "subject": "FINE",
+    "number": "435",
+    "title": "Advanced Topics in Finance 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Advanced topics will be selected from current issues in the Finance Area.",
+    "prerequisites": {
+      "text": "MGCR 341 and FINE 441",
+      "tree": {
+        "and": [
+          "MGCR 341",
+          "FINE 441"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 436",
+    "subject": "FINE",
+    "number": "436",
+    "title": "Topics in Finance 2",
+    "credits": null,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics will be selected from current issues in the Finance Area.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 437",
+    "subject": "FINE",
+    "number": "437",
+    "title": "Topics in Finance 3",
+    "credits": null,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Topics will be selected from current issues in the Finance Area.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 438",
+    "subject": "FINE",
+    "number": "438",
+    "title": "Topics in Finance 4",
+    "credits": null,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Topics will be selected from current issues in the Finance Area.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 441",
+    "subject": "FINE",
+    "number": "441",
+    "title": "Investment Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Application of investment principles and security analysis to the selection and comparison of equity and fixed income securities in the current economic and financial environment. Also covered are: determinants of stock prices, growth models and portfolio diversification.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 442",
+    "subject": "FINE",
+    "number": "442",
+    "title": "Capital Markets and Institutions",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Functions of the capital market through flow of funds analysis and an examination of portfolio activities of financial intermediaries. Also covered are: securities regulations and ethical considerations, the term structure of interest rates and risk and rates of return in debt and equity markets.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 443",
+    "subject": "FINE",
+    "number": "443",
+    "title": "Applied Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Concepts and techniques are applied to problems faced by managers in Corporate Finance, such as working capital management, capital budgeting, capital structure, dividend policy, cost of capital, and mergers and acquisition. Application of theory and techniques through case studies.",
+    "prerequisites": {
+      "text": "FINE 342",
+      "tree": "FINE 342",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 444",
+    "subject": "FINE",
+    "number": "444",
+    "title": "Security Trading and Market Making",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Half theory and half practical exercises using Rotman Interactive Trader software in the trading lab. Theory: principles of trading in different asset classes. Software simulated cases: the actual market environment is simulated where class participants trade in real time. As the market is running, students, given previously prepared strategies, start affecting market prices and see their profit and losses, given the strategies they implement.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "FINE 441",
+      "tree": "FINE 441",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 434 when the topic was \"Managing the Risk of Trading Strategies\".",
+      "excludes": [
+        "FINE 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 445",
+    "subject": "FINE",
+    "number": "445",
+    "title": "Real Estate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals of mortgages from the viewpoint of both consumer and the firm. Emphasis on legal, mathematical and financial structure, provides a micro basis for analysis of the functions and performance of the mortgage market, in conjunction with the housing market.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 446",
+    "subject": "FINE",
+    "number": "446",
+    "title": "Behavioural Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course will focus on how, why and to what extent our \"humanness\" affects decision making pertaining to financial issues. Until Kahneman and Tversky came out with their landmark work, known as prospect theory, economics was based on the notion that individuals, companies, and even countries make decisions based on their financial self-interest. In fact this is one of the tenets of modern portfolio theory. Topics covered in the course include loss aversion, the disposition effect, the framing effect, and the endowment effect.",
+    "prerequisites": {
+      "text": "MGCR 341.",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 434 when topic was \"Behavioural Finance\".",
+      "excludes": [
+        "FINE 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 447",
+    "subject": "FINE",
+    "number": "447",
+    "title": "Venture Capital and Entrepreneurial Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course is designed to provide an introduction to the startup production process with an emphasis on the institutions, processes, and problem solving approaches used in the financing of startup activity. The primary focus of the course is the venture capital industry though classroom discussions will also touch upon alternative funding channels like angel investors, accelerators and incubators, crowdfunding platforms, etc.",
+    "prerequisites": {
+      "text": "MGCR 341.",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 448",
+    "subject": "FINE",
+    "number": "448",
+    "title": "Financial Derivatives",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The course will concentrate on both the analytical and practical aspects of investments in options and futures. The first part of the course concentrates on option and futures valuation, considering both discrete and continuous time models. The second part of the course concentrates on the practical aspects of options and futures trading.",
+    "prerequisites": {
+      "text": "MGSC 372 or equivalent and MGCR 341.",
+      "tree": {
+        "and": [
+          "MGSC 372",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 449",
+    "subject": "FINE",
+    "number": "449",
+    "title": "Risk Management in Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Understanding, quantifying, and managing different types of financial risks. A broad overview of the tools required of someone pursuing a career in risk management, whether it is at a bank, an asset management fund, or a non-financial business. Topics include corporate hedging with derivatives, volatility and correlation modelling, non-normal distributions, Monte Carlo and historical simulations, liquidity risk, and capital requirements.",
+    "prerequisites": {
+      "text": "FINE 441 and MGSC 372 or equivalent.",
+      "tree": {
+        "and": [
+          "FINE 441",
+          "MGSC 372"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 451",
+    "subject": "FINE",
+    "number": "451",
+    "title": "Fixed Income Analysis",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fixed income financial instruments and their uses for both financial engineering and risk management (at the trading desk and aggregate firm level). This will involve coverage of fixed income mathematics, risk management concepts, term structure modeling, derivatives valuation and credit risk analysis.",
+    "prerequisites": {
+      "text": "FINE 441",
+      "tree": "FINE 441",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 452",
+    "subject": "FINE",
+    "number": "452",
+    "title": "Applied Quantitative Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "The course is built around a series of practical applications (backtesting trading strategies, yield curve modelling, derivatives hedging) and consists of lab sessions where lectures are mixed with time and support for solving the tasks in Matlab. No programming experience is required, but a willingness to learn is.",
+    "prerequisites": {
+      "text": "MGCR 341 and MGCR 271 or equivalent",
+      "tree": {
+        "and": [
+          "MGCR 341",
+          "MGCR 271"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 455",
+    "subject": "FINE",
+    "number": "455",
+    "title": "Alternative Investments",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Alternative asset classes and analysis of the expected risk and return on alternative investment strategies including long-short equity, convertible arbitrage, managed futures, and quantitative trading strategies. Alternative investment strategies include commodities, derivatives, hedged strategies, real estate, private equity and venture capital.",
+    "prerequisites": {
+      "text": "FINE 441",
+      "tree": "FINE 441",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "FINE 448 and FINE 451",
+      "tree": {
+        "and": [
+          "FINE 448",
+          "FINE 451"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "This course is restricted to students in the Honours Investment Management program."
+    ]
+  },
+  {
+    "code": "FINE 456",
+    "subject": "FINE",
+    "number": "456",
+    "title": "Hedge Fund Strategies and Trading",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to hedge fund investment strategies that seek to generate alpha and alternative beta by using securities selection, market timing, position sizing, and risk management. Execution of these strategies in a cross-asset context that includes fixed income, commodities, equities, and foreign exchange.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 434 when topic was \"Trading in Financial Securities\".",
+      "excludes": [
+        "FINE 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 460",
+    "subject": "FINE",
+    "number": "460",
+    "title": "Financial Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "An extensive study of the empirical methods casually used in the different subfields of finance. Examination of the most popular statistics models used in finance, both from a theoretical and practical point of view. An important emphasis will be put on the distinction between models of financial mechanisms, and those motivated purely by efficacy.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 464",
+    "subject": "FINE",
+    "number": "464",
+    "title": "Pension Funds and Retirement Systems",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Challenges that pension fund managers currently face. Principles of asset-liability management, the common risks to retirement income, long-term investment strategies, the design of retirement systems around the world, and the current retirement savings shortfall.",
+    "prerequisites": {
+      "text": "FINE 441",
+      "tree": "FINE 441",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 465",
+    "subject": "FINE",
+    "number": "465",
+    "title": "Sustainable Finance ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the financial implications associated with climate change and the transition to a low carbon economy. Topics covered include the integration of environmental, social and governance (ESG) considerations into the decision-making process of investment managers and corporate financial managers, including conducting a sustainability analysis for a company in an investment context.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 434 when topic was \"Sustainable Finance\".",
+      "excludes": [
+        "FINE 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 477",
+    "subject": "FINE",
+    "number": "477",
+    "title": "Fintech for Business and Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Digital technologies and their strategic impact on businesses. FinTech as source of financing, means to learn/engage the market, wider financial inclusion, vehicles for individual investment in innovation. Securities/reward-based crowdfunding, digital payments/transfers, blockchain, crypto-tokens and smart contracts. Theoretical tools from game theory, strategy, corporate finance and economics. Connections to technology firms, platform businesses, traditional banking and venture capital.",
+    "prerequisites": {
+      "text": "MGCR 341, MGCR 293",
+      "tree": {
+        "and": [
+          "MGCR 341",
+          "MGCR 293"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 482",
+    "subject": "FINE",
+    "number": "482",
+    "title": "International Finance 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The international financial environment as it affects the multinational manager. Balance of payments concepts, adjustment process of the external imbalances and the international monetary system. In depth study of the institutional and theoretical aspects of foreign exchange markets; international capital markets, including Eurobonds and eurocredit markets.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 490",
+    "subject": "FINE",
+    "number": "490",
+    "title": "Mergers and Corporate Reorganizations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Mergers, acquisitions, and leveraged buyouts or restructurings in bankruptcy in relation to corporate governance. Conceptual aspects of these transactions (their purposes, executions, and structures), as well as applied aspects such as their valuations and implications on firm value.",
+    "prerequisites": {
+      "text": "FINE 342",
+      "tree": "FINE 342",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 434 and/or FINE 492 when topic was 'Mergers and Corporate Reorganizations'.",
+      "excludes": [
+        "FINE 434",
+        "FINE 492"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 492",
+    "subject": "FINE",
+    "number": "492",
+    "title": "International Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Focus on the financial and operational management of multinational enterprises including (but not limited to) financing and capital budgeting decisions, corporate governance and its implications on valuation and control, and recent developments in international capital markets.",
+    "prerequisites": {
+      "text": "FINE 342",
+      "tree": "FINE 342",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 496",
+    "subject": "FINE",
+    "number": "496",
+    "title": "R for Investment",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Exploration of programming skills (in the widely used software “R”) needed to put finance theory into practice. Implementation and evaluation of quantitative trading strategies based on underlying ‘factor risks.’",
+    "prerequisites": {
+      "text": "MGCR 341 and FINE 441",
+      "tree": {
+        "and": [
+          "MGCR 341",
+          "FINE 441"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 435 when topic was \"R for Finance\".",
+      "excludes": [
+        "FINE 435"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 541",
+    "subject": "FINE",
+    "number": "541",
+    "title": "Applied Investments",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Students are exposed to practical aspects of managing investment portfolios. A principal activity of students is participation in the management of a substantial investment fund.",
+    "prerequisites": {
+      "text": "MGCR 341",
+      "tree": "MGCR 341",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "FINE 441. Limited enrolment.",
+      "tree": "FINE 441",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Open to U2 students. Open to U3 students returning for an additional Fall term, who must register by emailing the BCom Office.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must also register for FINE 541N2",
+      "No credit will be given for this course unless both FINE 541N1 and FINE 541N2 are successfully completed in a twelve month period"
+    ],
+    "parts": [
+      {
+        "code": "FINE 541N1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "FINE 541N2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "FINE 547",
+    "subject": "FINE",
+    "number": "547",
+    "title": "Advanced Finance Seminar",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Selected topics will be discussed by Faculty members, invited guest speakers, and the students. Each student is required to select a topic for study and prepare a written report for presentation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Undergraduate Prerequisites: FINE 441 and FINE 443.",
+      "Graduate Prerequisite: MGCR 651."
+    ]
+  },
+  {
+    "code": "FINE 620",
+    "subject": "FINE",
+    "number": "620",
+    "title": "Corporate Mergers",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course deals with the rationale, structuring, shareholder value creation, financial implications and management of corporate joint ventures, alliances, mergers and acquisitions, including discussion of the external and internal reasons for these alliances and combinations and the steps taken to create structure and value and then to manage their implementation.",
+    "prerequisites": {
+      "text": "FINE-622.",
+      "tree": "FINE 622",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "MBA students only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: This course requires advance preparation based on each new case study presented each week."
+    ]
+  },
+  {
+    "code": "FINE 622",
+    "subject": "FINE",
+    "number": "622",
+    "title": "Modern Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundations of modern corporate finance theory. Key topics: Capital structure in a perfect market as well as imperfections arising from debt and taxes, and bankruptcy costs. Dividend and payout policy. Capital budgeting and valuation with leverage. Corporate governance. Corporate risk management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 632",
+    "subject": "FINE",
+    "number": "632",
+    "title": "Global Environment and Economic Policies",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Survey of the frameworks and tools that managers use to analyze the macro-economic environment in which organizations operate. Emphasizes macro-economic theories to show the links between the domestic economic environment and changes in the global economy. Includes theories of trade, fiscal and monetary policy, interest rates, exchange rates, balance of payments, trading blocs and currency unions, growth, economic development, and financial integration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Desautels Faculty of Management",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 639",
+    "subject": "FINE",
+    "number": "639",
+    "title": "Derivatives and Risk Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course studies the field of investments related to options and futures. The course will concentrate on trading strategies and analytical models for valuing options and futures contacts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 646",
+    "subject": "FINE",
+    "number": "646",
+    "title": "Investments and Portfolio Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The prime objective is to provide the student with a rational framework for investment. The portfolio and capital market theory of FINE 650 is extended and the empirical evidence supporting these and competing hypotheses is investigated for both individual securities and portfolios.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 648",
+    "subject": "FINE",
+    "number": "648",
+    "title": "Applied Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Concepts and techniques developed in earlier courses are extended and/or applied to problems faced by managers in Corporate Finance. Such problems include: working capital management, capital budgeting, capital structure, dividend policy, cost of capital and mergers and acquisitions. Stresses the application of theory and techniques and extensive use is made of case studies.",
+    "prerequisites": {
+      "text": "FINE-622 Modern Corporate Finance.",
+      "tree": "FINE 622",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 664",
+    "subject": "FINE",
+    "number": "664",
+    "title": "Managing Pension and Retirement Funds",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The management of pension and retirement funds, including the essentials of liability-hedging strategies, long-term portfolio strategies across multiple asset classes, and the integration of Environmental, Social, and Governance (ESG) standards in the investment process. The differences in retirement systems around the world and how to design a sustainable retirement system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 670",
+    "subject": "FINE",
+    "number": "670",
+    "title": "Fundamentals of Financial Research",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Research methodology, where a research project will be carried out under the supervision of the Faculty supervisor. Specific tools will be tailored based on a particular research topic and the recommendations of the supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This is a project course; therefore there are no formal meeting times.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "FINE 671",
+    "subject": "FINE",
+    "number": "671",
+    "title": "Applied Finance Project",
+    "credits": 9,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Research project supervised by a Faculty member of the Desautels Faculty of Management.",
+    "prerequisites": {
+      "text": "FINE 670",
+      "tree": "FINE 670",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "FINE 671D1",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "FINE 671D2",
+        "credits": 4.5,
+        "terms": [
+          "Summer 2026"
+        ]
+      },
+      {
+        "code": "FINE 671N1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "FINE 671N2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "FINE 673",
+    "subject": "FINE",
+    "number": "673",
+    "title": "Finance Fundamentals",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Quantitative finance, including mathematics, statistics and financial economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Although this course follows a MTWRF morning class schedule, it also follows a MWF afternoon class schedule on August 19, 21 and 26.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the seventh lecture day."
+    ]
+  },
+  {
+    "code": "FINE 674",
+    "subject": "FINE",
+    "number": "674",
+    "title": "Fintech",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Explores how digital technologies and business model innovation are reshaping finance. Covers alternative financing models such as crowdfunding and token offerings, along with developments in payments, digital currencies, digital ledger technologies (both permissioned and permissionless), smart contracts, the oracle problem, and tokenization. Covers core concepts and draws on research insights. Addresses financial inclusion and other ESG-related challenges in this context, and includes a team project related to these themes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 691 when topic was \"Fintech\".",
+      "excludes": [
+        "FINE 691"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 675",
+    "subject": "FINE",
+    "number": "675",
+    "title": "Financial Valuation Analytics for Startups",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to finance with an emphasis on analytics, focusing on how the merger of analytics and finance plays a first order role for startups and the decision to accelerate growth.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the second lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "FINE 677",
+    "subject": "FINE",
+    "number": "677",
+    "title": "Trading and Markets",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "A focus on how securities are traded, covering theoretical and practical aspects of trading. Topics include market structure, regulation, trader behaviour, liquidity, volatility, and the roles of different market participants. Exploration of algorithmic and high-frequency trading using Rotman Interactive Trader software. Emphasis on execution and measurement of trading strategies, with hands-on work in Python.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FINE 690 when topic was \"Trading and Markets\".",
+      "excludes": [
+        "FINE 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FINE 678",
+    "subject": "FINE",
+    "number": "678",
+    "title": "Financial Economics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Foundational tools for corporate finance and investments, starting with elementary financial mathematics and valuation tools with a focus on the net present value and its application to the capital budgeting decision. Historical evidence on the risk-return relationship and the capital asset pricing model. Fundamental rules for successful investing, including modern portfolio theory and the principles and limitations of ESG investing. Introduction to the capital structure decision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on July 8, 9, 11, 12, 15, 16, 18, 19, 22, 23, 25, 26 & 29 and final exam on August 1st.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "FINE 679",
+    "subject": "FINE",
+    "number": "679",
+    "title": "Corporate Finance Theory",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Framework for analyzing the investment and financial decisions of corporations. Capital structure decision and its effect on the value of a firm. Valuation with an emphasis on the benefits and limitations of the different valuation methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 680",
+    "subject": "FINE",
+    "number": "680",
+    "title": "Investments",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Financial markets, portfolio theory, and portfolio management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "FINE 681",
+    "subject": "FINE",
+    "number": "681",
+    "title": "International Capital Markets",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Development of a few simple, but powerful economic principles to understand the role,structure, and functioning of capital markets and institutions around the world. Analyses functions and structure of the financial system, central bank and monetary policy, financial crises, and major securities markets (e.g., equity, bond, mortgages) and participants. Emphasizes the role of banks, shadow banks, and the regulatory environment, as well as the fund industry, and the role that financial markets and institutions play in the governance of firms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on August 5, 6, 7, 8, 9, 12, 13, 15, 16, 19, 20, 22 & 23 and final exam on August 26th.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "FINE 682",
+    "subject": "FINE",
+    "number": "682",
+    "title": "Derivatives",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to derivatives markets, focusing on the review of institutional features of derivatives contracts, the valuation, the hedging and the use of popular derivatives such as options, futures, and interest rate derivatives. Fundamental valuation, practical applications, and examples on how these contracts are used in the financial industry. The risks and governance concerns associated with the use of financial derivative contracts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 683",
+    "subject": "FINE",
+    "number": "683",
+    "title": "Advanced Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to startups with an emphasis on the institutions and practices employed in the venture capital industry. Alternative funding channels (e.g., angel investors) and, most importantly, alternative viewpoints and interests (e.g., entrepreneurs, employees, advisory).",
+    "prerequisites": {
+      "text": "FINE 679.",
+      "tree": "FINE 679",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 684",
+    "subject": "FINE",
+    "number": "684",
+    "title": "Fixed Income Analysis",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fixed income financial instruments and their uses for financial engineering and risk management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 685",
+    "subject": "FINE",
+    "number": "685",
+    "title": "Market Risk Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Measuring and managing risks facing corporations, focusing on aspects of market risks.",
+    "prerequisites": {
+      "text": "FINE 682.",
+      "tree": "FINE 682",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 686",
+    "subject": "FINE",
+    "number": "686",
+    "title": "Global Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Multinational financial management, including quantitative approach to tackle issues currently faced by multinational corporations and all enterprises interested in accessing global markets.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 687",
+    "subject": "FINE",
+    "number": "687",
+    "title": "Global Investments",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Top-down portfolio management skills, including basic understanding of the global investment approach.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 688",
+    "subject": "FINE",
+    "number": "688",
+    "title": "Mergers and Acquisitions",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Mergers and acquisitions, and corporatere organizations and restructuring, including leveraged buyouts and restructuring in financial distress/bankruptcy. Corporate governance as an organizing framework and how corporate control is exercised, influenced, and changed.",
+    "prerequisites": {
+      "text": "FINE 679.",
+      "tree": "FINE 679",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 689",
+    "subject": "FINE",
+    "number": "689",
+    "title": "Integrative Finance Project",
+    "credits": 12,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project.",
+    "prerequisites": {
+      "text": "33 credits completed in the regular coursework of the Master of Management in Finance Program. The proposal must be submitted by the student at the beginning of the project and accepted by a finance faculty member and by the master's program.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on June 13, 14, 17, 18, 20, 21, 25, 27, 28, July 3, 10, 17, 24, August 5, 6, 8, 9, 12, 13, 15, 16, 19, 20, 22 and 23.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ],
+    "parts": [
+      {
+        "code": "FINE 689N1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "FINE 689N2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "FINE 690",
+    "subject": "FINE",
+    "number": "690",
+    "title": "Advanced Topics in Finance 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of current topics in finance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on July 8, 9, 11, 12, 15, 16, 18, 19, 22, 23, 25, 26 & 29 and final exam on August 1st.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ],
+    "parts": [
+      {
+        "code": "FINE 690N1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "FINE 690N2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "FINE 691",
+    "subject": "FINE",
+    "number": "691",
+    "title": "Advanced Topics in Finance 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current topics in finance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 692",
+    "subject": "FINE",
+    "number": "692",
+    "title": "Advanced Topics in Finance 3",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current selected topics in finance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 693",
+    "subject": "FINE",
+    "number": "693",
+    "title": "Global Capital Markets",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The international financial environment as it affects the multinational manager. In-depth study of the various balance of payments concepts, adjustment of the external balance, and the international monetary system will be followed by a review of theory and institutional aspects of the foreign exchange and the international (Eurodollar) markets.",
+    "prerequisites": {
+      "text": "MGCR-651 Managing Resources.",
+      "tree": "MGCR 651",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 695",
+    "subject": "FINE",
+    "number": "695",
+    "title": "Advanced Topics in Finance Analytics 1",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Advanced topics in finance analytics. Content will vary each term.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Although this course follows a MW class schedule, there will be a class on Friday, May 29th.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "FINE 696",
+    "subject": "FINE",
+    "number": "696",
+    "title": "Advanced Topics in Finance Analytics 2",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in finance analytics. Content will vary each term.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the second lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "FINE 702",
+    "subject": "FINE",
+    "number": "702",
+    "title": "Asset Pricing Theory",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of the foundations of dynamic asset pricing and equilibrium under uncertainty, including various frameworks in continuous time, dynamic optimization, portfolio selection, the Black-Scholes equation, general equilibrium models, asset pricing puzzles, recursive utility, habit formation, heterogeneous agent economies, and Bayesian learning under incomplete information.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 703",
+    "subject": "FINE",
+    "number": "703",
+    "title": "Empirical Asset Pricing ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Studies in empirical asset pricing literature including time-series return predictability, cross-sectional market anomalies, tests of single- and multi-factor risk-return models, consumption-based asset pricing, fund performance evaluation and asset pricing issues in behavioural finance. Methodological aspects of empirical asset pricing research, such as the concept of stochastic discount factor (SDF), GMM-based estimation of parameters of asset pricing models, and modern mean-variance efficiency bounds.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 706",
+    "subject": "FINE",
+    "number": "706",
+    "title": "Introductory Financial Economics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of introductory financial economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 707",
+    "subject": "FINE",
+    "number": "707",
+    "title": "Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Course will review mainly theoretical foundations, in addition to some empirical contributions to corporate finance and financial intermediation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 709",
+    "subject": "FINE",
+    "number": "709",
+    "title": "International Finance Seminar",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Recent advances in international finance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 710",
+    "subject": "FINE",
+    "number": "710",
+    "title": "Fixed Income Securities Theory",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Theoretical framework to deal with the analysis of fixed income securities and derivatives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FINE 711",
+    "subject": "FINE",
+    "number": "711",
+    "title": "Research Topics in Financial Markets Development",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research topics in the development of financial markets.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

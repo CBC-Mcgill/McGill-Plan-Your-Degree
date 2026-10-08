@@ -1,0 +1,997 @@
+[
+  {
+    "code": "ANSC 234",
+    "subject": "ANSC",
+    "number": "234",
+    "title": "Biochemistry 2",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Metabolism in humans and domestic animals. The chemistry of alimentary digestion, absorption, transport, intermediary metabolism and excretion.",
+    "prerequisites": {
+      "text": "LSCI 211",
+      "tree": "LSCI 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 250",
+    "subject": "ANSC",
+    "number": "250",
+    "title": "Introduction to Livestock Management",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the scientific principles underlying animal livestock production as it relates to the consumer food chain. The world- wide demand for animal products, various areas of management (reproduction, nutrition, breeding, health, and welfare) that are used to provide those products by examining both conventional means as well as new and evolving technologies. How these techniques relate to some of the major production systems (dairy, beef, pig, and broiler and egg production) – primarily in a Provincial/Canadian context.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 2-hour lab"
+    ]
+  },
+  {
+    "code": "ANSC 251",
+    "subject": "ANSC",
+    "number": "251",
+    "title": "Comparative Anatomy",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study of the macroscopic anatomy of mammals based on detailed dissection of the dog. Comparison with other domestic species will be emphasized.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab",
+      "A fee of $274.25 will be charged to partially cover the purchase of sufficient quantities of animals and organs for detailed dissection for students in the course",
+      "Une redevance de $266.29 dollars sera appliquée afin de couvrir, en partie, les frais des spécimens qui seront utilisés pour la dissection dans le cours."
+    ]
+  },
+  {
+    "code": "ANSC 301",
+    "subject": "ANSC",
+    "number": "301",
+    "title": "Principles of Animal Breeding",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "The qualitative and quantitative aspects of genetics as they apply to the economic improvement of domestic mammals and birds. Topics include: animal domestication, animal cytology, Mendelian traits of economic importance, principles of population genetics, statistical tools to describe populations, environmental effects, selection and mating systems.",
+    "prerequisites": {
+      "text": "AEMA 310, LSCI 204",
+      "tree": {
+        "and": [
+          "AEMA 310",
+          "LSCI 204"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 2-hour lab"
+    ]
+  },
+  {
+    "code": "ANSC 303",
+    "subject": "ANSC",
+    "number": "303",
+    "title": "Farm Animal Internship",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Internship in farm animal production, including day-to-day activities of production, reproduction and health management, and exposure to major livestock species such as dairy cows, poultry, swine. The internship includes supervised- independent farm management activities and training by experienced livestock technicians.",
+    "prerequisites": {
+      "text": "ANSC 250 and permission of the instructor",
+      "tree": "ANSC 250",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 304",
+    "subject": "ANSC",
+    "number": "304",
+    "title": "Internship Livestock Enterprise",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Experience in the operations of a commercial livestock enterprise. Opportunities include training and the execution of enterprise functions, decision-making processes, and economic constraints; the technical, economic, and social challenges faced by a livestock enterprise.",
+    "prerequisites": {
+      "text": "ANSC 250, ANSC 323 and permission of the instructor",
+      "tree": {
+        "and": [
+          "ANSC 250",
+          "ANSC 323"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and above students who have a minimum CGPA of 3.50.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ANSC 312",
+    "subject": "ANSC",
+    "number": "312",
+    "title": "Animal Health and Disease",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the pathogenesis and control of diseases in farm animals. Immune response and other protective mechanisms. Implications of animal diseases and drug therapy for product safety and public health.",
+    "prerequisites": {
+      "text": "ANSC 250 or ANSC 323 or PHGY 209",
+      "tree": {
+        "or": [
+          "ANSC 250",
+          "ANSC 323",
+          "PHGY 209"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 2-hour conference"
+    ]
+  },
+  {
+    "code": "ANSC 323",
+    "subject": "ANSC",
+    "number": "323",
+    "title": "Mammalian Physiology",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the organization, functions and regulation of various organ systems in mammals. The nervous, endocrine, muscular, cardiovascular, respiratory, urinary, digestive and reproductive systems are discussed.",
+    "prerequisites": {
+      "text": "LSCI 202 or LSCI 204 or ANSC 234",
+      "tree": {
+        "or": [
+          "LSCI 202",
+          "LSCI 204",
+          "ANSC 234"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "ANSC 324",
+    "subject": "ANSC",
+    "number": "324",
+    "title": "Developmental Biology and Reproduction",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Focus on the hormonal, cellular and molecular aspects of reproduction and development (gametogenesis, folliculogenesis, fertilization, embryonic and foetal development, parturition, lactation period, periods before and after puberty). Emphasis on underlying cellular mechanisms and their regulation by hormones and the environment.",
+    "prerequisites": {
+      "text": "LSCI 211 and ANSC 250",
+      "tree": {
+        "and": [
+          "LSCI 211",
+          "ANSC 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 326",
+    "subject": "ANSC",
+    "number": "326",
+    "title": "Fundamentals of Population Genetics",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Population genetics mechanisms in mammals, birds and plant. Factors influencing gene, genotype, and phenotypic frequencies. Effects of different types of selection, Hardy-Weinberg, linkage and recombination, polymorphisms and heterozygosity, population size, random drift and inbreeding on gene and genotype frequencies. Relationship between quantitative genetic parameters and gene frequencies.",
+    "prerequisites": {
+      "text": "AEMA 310 and LSCI 204, or equivalents, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "AEMA 310",
+          "LSCI 204"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 350",
+    "subject": "ANSC",
+    "number": "350",
+    "title": "Food-Borne Pathogens",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the taxonomy, characteristics, epidemiology, mechanisms of pathogenicity, disease, incidence, and factors affecting the survival and growth of pathogenic microorganisms in foods of animal origin; principles of detection, prevention and control of food-borne pathogens (bacteria, fungi, protozoa, helminths, viruses).",
+    "prerequisites": {
+      "text": "LSCI 230, or permission of the instructor",
+      "tree": "LSCI 230",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 400",
+    "subject": "ANSC",
+    "number": "400",
+    "title": "Eukaryotic Cells and Viruses",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The basic principles of molecular biology and the underlying molecular basis for various methodologies in molecular biology are covered. The molecular genetic basis for viral infections and tumorigenesis will be covered as examples of the use of molecular genetic approaches to address biological problems.",
+    "prerequisites": {
+      "text": "LSCI 204",
+      "tree": "LSCI 204",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 420",
+    "subject": "ANSC",
+    "number": "420",
+    "title": "Animal Biotechnology",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Applications of animal biotechnology in agriculture, biomedicine and environmental preservation, including culture, manipulation and transformation of somatic cells, isolation of stem cells, reproductive biotechnologies, animal cloning by nuclear transplantation, production of genetically modified and gene-edited animals, and cell and gene therapies.",
+    "prerequisites": {
+      "text": "LSCI 202 and LSCI 230",
+      "tree": {
+        "and": [
+          "LSCI 202",
+          "LSCI 230"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 424",
+    "subject": "ANSC",
+    "number": "424",
+    "title": "Metabolic Endocrinology",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A detailed study of the endocrine system and its role in the maintenance of homeostasis in higher vertebrates, including the endocrine regulation of energy balance.",
+    "prerequisites": {
+      "text": "ANSC 323",
+      "tree": "ANSC 323",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "ANSC 433",
+    "subject": "ANSC",
+    "number": "433",
+    "title": "Animal Nutrition and Metabolism",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to fundamental aspects of animal nutrition, including gastrointestinal anatomy and physiology; nutrient digestion, absorption, and metabolism; nutrient functions and requirements of livestock species; evaluation of feedstuffs and their use in ration formulation; and feeding strategies. Laboratory classes will include hands-on experience on feed analyses, gastrointestinal tract dissections, nutritional experiments and demonstrations in livestock species as well as computer-based ration balancing exercises.",
+    "prerequisites": {
+      "text": "ANSC 234 or ANSC 250 or permission of the instructor",
+      "tree": {
+        "or": [
+          "ANSC 234",
+          "ANSC 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 1-hour lab"
+    ]
+  },
+  {
+    "code": "ANSC 455",
+    "subject": "ANSC",
+    "number": "455",
+    "title": "Special Topics: Animal Science",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Topics that are not otherwise available in formal courses. Investigation of a particular topic will be carried out under the supervision of a staff member who has expertise in the area of study chosen by the student.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "ANSC 458",
+    "subject": "ANSC",
+    "number": "458",
+    "title": "Advanced Livestock Management",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of the major Canadian livestock industries with particular emphasis on dairy, pork, broilers, and layers. Building on introductory livestock management and advanced nutrition, breeding, and reproductive physiology, current and evolving IofT practices for the production of consumer animal products.",
+    "prerequisites": {
+      "text": "ANSC 250, or permission of the instructor",
+      "tree": "ANSC 250",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ANSC 514",
+    "subject": "ANSC",
+    "number": "514",
+    "title": "Coding for Production Data",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to various methods used for advanced data analysis and their application within the agricultural and environmental sciences, including both classical approaches and machine learning methods; uni- and multivariate analysis; and supervised and unsupervised methods. A special focus on identifying advantages and weaknesses of the various approaches, selecting appropriate methods for specific problems, and avoiding pitfalls. Application of concepts to real-life data.",
+    "prerequisites": {
+      "text": "AEMA 204 or equivalent or permission of instructor",
+      "tree": "AEMA 204",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Basic experience in computer programming (ideally R) is needed."
+    ]
+  },
+  {
+    "code": "ANSC 530",
+    "subject": "ANSC",
+    "number": "530",
+    "title": "Experimental Techniques in Nutrition",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Design and conduction of animal studies, selection of experimental animals, chemical and biological assays, statistical analysis, interpretation of data and preparation of technical reports.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ANSC 630.",
+      "excludes": [
+        "ANSC 630"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "1 lecture, 1 lab"
+    ]
+  },
+  {
+    "code": "ANSC 551",
+    "subject": "ANSC",
+    "number": "551",
+    "title": "Carbohydrate and Lipid Metabolism",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Comparative aspects of nutrition and metabolism of carbohydrate and lipid from the cellular level through the multi-organ of the whole organism. Main topics will include biothermodynamics, calorimetry, cellular metabolism and functions of carbohydrate and lipid, digestion, absorption and utilization of dietary carbohydrate and lipid.",
+    "prerequisites": {
+      "text": "ANSC 234 or permission of instructor",
+      "tree": "ANSC 234",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "ANSC 552",
+    "subject": "ANSC",
+    "number": "552",
+    "title": "Protein Metabolism and Nutrition",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Comparative aspects of nutrition and metabolism of amino acids and proteins from the cellular level on through the multisystem operation of the whole organism. Main topics include cellular metabolism and functions of amino acids and proteins, digestion, absorption and utilization of dietary protein. Comparison between farm animals and humans.",
+    "prerequisites": {
+      "text": "ANSC 234 or permission of instructor",
+      "tree": "ANSC 234",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "ANSC 555",
+    "subject": "ANSC",
+    "number": "555",
+    "title": "The Use and Welfare of Animals",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Understanding the roles in which animals are used by Society, especially in food production, companionship, research, and recreation; application of the scientific approaches that are used in assessing and improving animal welfare; and use of ethical approaches that are invoked in the use of animals, often in controversial contexts. An interdisciplinary course, based on active participation and discussion-method learning.",
+    "prerequisites": {
+      "text": "ANSC 250 or PSYC 301 or WILD 421 or Permission of Instructor",
+      "tree": {
+        "or": [
+          "ANSC 250",
+          "PSYC 301",
+          "WILD 421"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 and graduate students or permission of the instructor",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ANSC 560",
+    "subject": "ANSC",
+    "number": "560",
+    "title": "Biology of Lactation",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An interdisciplinary approach to the study of mammary development, the onset of lactation and its cessation, comparing the differences in mammalian species in mammary development from embryological, pre- and post-pubertal and pre- and post-partum aspects. Lactation at the cellular and biochemical levels.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 600",
+    "subject": "ANSC",
+    "number": "600",
+    "title": "Advanced Eukaryotic Cells and Viruses",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Underlying molecular basis for various methodologies in molecular biology, including the genetic basis for viral infections and tumorigenesis, and the use of molecular genetic approaches to address biological problems.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ANSC 400.",
+      "excludes": [
+        "ANSC 400"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "ANSC 604",
+    "subject": "ANSC",
+    "number": "604",
+    "title": "Advanced Animal Biotechnology",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "New concepts and applications of animal biotechnology in agriculture, biomedicine, environmental preservation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ANSC 420 or ANSC 506",
+      "excludes": [
+        "ANSC 420",
+        "ANSC 506"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "ANSC 608",
+    "subject": "ANSC",
+    "number": "608",
+    "title": "Population Genetics",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theoretical considerations of Mendelian genetics dealing with the genetic properties of animal populations and extension to the simultaneous segregation of genes at many loci, polygenic inheritance and an introduction to quantitative genetics and covariances between relatives, including mechanisms of transmission, segregation, linkages between genes and the effects of natural and artificial selection.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ANSC 504.; Not open to students who have taken ANSC 326",
+      "excludes": [
+        "ANSC 326",
+        "ANSC 504"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "ANSC 611",
+    "subject": "ANSC",
+    "number": "611",
+    "title": "Advanced Reproductive Biology",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to key concepts in reproductive biology and principles of emerging reproductive technologies. Modules covered include oogenesis and folliculogenesis, fertilization, embryo development, reproductive biotechnology and new directions in reproductive biology.",
+    "prerequisites": {
+      "text": "No prerequisites, but students need to have a solid background in reproductive physiology.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Course offered in alternate years."
+    ]
+  },
+  {
+    "code": "ANSC 636",
+    "subject": "ANSC",
+    "number": "636",
+    "title": "Analysis - Animal Breeding Research Data",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An advanced graduate course to give training and experience in statistical techniques applied to quantitative genetics and animal breeding. To consider aspects of data handling of large data sets (100,000 observations), checks for consistency and connectedness in data. Considerations in choosing efficient analytical procedures in fitting these models and development of efficient numerical algorithms to apply these procedures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "ANSC 643",
+    "subject": "ANSC",
+    "number": "643",
+    "title": "Project 1",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of the literature and design of the project. This project relates to the M.Sc. Applied (non-thesis) degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 644",
+    "subject": "ANSC",
+    "number": "644",
+    "title": "Project 2",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of the review of the literature and design of project. This project relates to the M.Sc. Applied (non-thesis) degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 645",
+    "subject": "ANSC",
+    "number": "645",
+    "title": "Project 3",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Execution and write-up of project. This project relates to the M.Sc. Applied (non-thesis) degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 646",
+    "subject": "ANSC",
+    "number": "646",
+    "title": "Project 4",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of write-up and submission of project. This project relates to the M.Sc. Applied (non-thesis) degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 647",
+    "subject": "ANSC",
+    "number": "647",
+    "title": "Project 5",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminar and project presentations. This oral presentation of the project relates to the M.Sc. Applied (non-thesis) degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 680",
+    "subject": "ANSC",
+    "number": "680",
+    "title": "M.Sc. Thesis 1",
+    "credits": 9,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor toward completion of M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 681",
+    "subject": "ANSC",
+    "number": "681",
+    "title": "M.Sc. Thesis 2",
+    "credits": 9,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor toward completion of M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 682",
+    "subject": "ANSC",
+    "number": "682",
+    "title": "M.Sc. Thesis 3",
+    "credits": 9,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor toward completion of M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 683",
+    "subject": "ANSC",
+    "number": "683",
+    "title": "M.Sc. Thesis 4",
+    "credits": 9,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Final submission and approval of M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 691",
+    "subject": "ANSC",
+    "number": "691",
+    "title": "Special Topic: Animal Sciences",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Prescribed reading, conference or practical work on a selected topic in the student's area of specialization, not otherwise available in other courses; under staff supervision. An approved course outline must be on file in the Departmental office prior to registration deadline.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 692",
+    "subject": "ANSC",
+    "number": "692",
+    "title": "Topic in Animal Sciences 1",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Prescribed reading, conference or practical work on a selected topic in the student's area of specialization, not otherwise available in other courses; under staff supervision. An approved course outline must be on file in the Departmental office prior to registration deadline.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 695",
+    "subject": "ANSC",
+    "number": "695",
+    "title": "MSc General Topic Seminar",
+    "credits": 1,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "One of three seminars given by all students in the Animal Science M.Sc. (Thesis) program. Presentation of a scientific topic other than the student's specific area of research. In consultation with the thesis supervisor",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "ANSC 696",
+    "subject": "ANSC",
+    "number": "696",
+    "title": "MSc Research Proposal Seminar",
+    "credits": 1,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "One of three seminars given by all students in the Animal Science M.Sc. (Thesis) program. Consists of a literature review and an experimental approach for the student's proposed area of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "ANSC 697",
+    "subject": "ANSC",
+    "number": "697",
+    "title": "MSc Research Results Seminar",
+    "credits": 1,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "One of three seminars given by all students in the Animal Science M.Sc. (Thesis) program. Consists of the student's summary of research and presentation of results. Should be presented before submission of thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANSC 701",
+    "subject": "ANSC",
+    "number": "701",
+    "title": "Doctoral Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "See Faculty Regulations"
+    ]
+  },
+  {
+    "code": "ANSC 797",
+    "subject": "ANSC",
+    "number": "797",
+    "title": "Animal Science Seminar 3",
+    "credits": 1,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "One of two seminars to be given by all students in a Ph.D. program. Review of literature in relation to the student's proposed research and an experimental design of the research to be conducted.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "ANSC 798",
+    "subject": "ANSC",
+    "number": "798",
+    "title": "Animal Science Seminar 4",
+    "credits": 1,
+    "offeredBy": "Animal Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "One of two seminars to be given by all students in a Ph.D. program. Presentation of a current scientific topic which is not related to the student's research. The topic for the presentation should be cleared by the thesis supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour"
+    ]
+  }
+]

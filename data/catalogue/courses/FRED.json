@@ -1,0 +1,54 @@
+[
+  {
+    "code": "FRED 441",
+    "subject": "FRED",
+    "number": "441",
+    "title": "Communication pour l’immersion française 1",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Compétences linguistiques et sociolinguistiques nécessaires à une communication efficace dans le cadre de la Pédagogie de l’immersion française (PIF). Exploration des réalités éducatives québécoises et canadiennes. Expression orale et écrite dans des contextes académiques pour répondre aux exigences linguistiques et communicatives du programme d’études.",
+    "prerequisites": {
+      "text": "Test de Français Admission - PIF (TFA-PIF) ou satisfaire aux conditions d’exemption",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Ce cours est réservé exclusivement aux étudiant·e·s du programme B.Ed. Kindergarten/Elementary Pédagogie de l'immersion Française (PIF).",
+      "excludes": []
+    },
+    "notes": [
+      "Niveau C1"
+    ]
+  },
+  {
+    "code": "FRED 442",
+    "subject": "FRED",
+    "number": "442",
+    "title": "Communication pour l’immersion française 2",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Sens critique et capacité de réflexion à travers la réalisation de tâches et de projets dans le cadre de la Pédagogie de l’immersion française (PIF). Communication précise et nuancée dans les diverses situations professionnelles propres au domaine de l’enseignement.",
+    "prerequisites": {
+      "text": "FRED 441",
+      "tree": "FRED 441",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Ce cours est réservé exclusivement aux étudiant·e·s du programme B.Ed. Kindergarten/Elementary Pédagogie de l'immersion Française (PIF).",
+      "excludes": []
+    },
+    "notes": [
+      "Niveau C1"
+    ]
+  }
+]

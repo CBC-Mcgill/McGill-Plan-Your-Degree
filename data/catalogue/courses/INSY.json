@@ -1,0 +1,1095 @@
+[
+  {
+    "code": "INSY 331",
+    "subject": "INSY",
+    "number": "331",
+    "title": "Managing and Organizing Digital Technology",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Tools and concepts necessary to manage information systems in an organization: hardware/software/telecom administration, knowledge discovery/management, web-technologies, and computer security. Focuses on both mechanical aspects of IT and conceptual understanding with regard to impact on business organizations.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 333",
+    "subject": "INSY",
+    "number": "333",
+    "title": "Systems Analysis and Modeling",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "First two phases of the software development life cycle. Techniques used to conduct system requirement analysis, practical application of the analyst role in identifying operational problems, defining information system requirements, working with technical and non-technical staff, and making recommendations for system improvement.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 334",
+    "subject": "INSY",
+    "number": "334",
+    "title": "Design Thinking for User Experience",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Design of user interfaces for web and mobile applications, design thinking process, principles of good design to produce technology-enabled solutions. Topics include user research methods, problem definition, ideation, prototyping and testing of user interfaces.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students. Not open to students who have taken INSY 434 when the topic was \"Design Thinking and Innovation\".",
+      "excludes": [
+        "INSY 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 336",
+    "subject": "INSY",
+    "number": "336",
+    "title": "Data Handling and Coding for Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation and analysis of data for business analytics. Topics include: data acquisition, data manipulation and computer programming for statistical analysis.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 339",
+    "subject": "INSY",
+    "number": "339",
+    "title": "Using AI in Digital Consulting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Diverse digital consulting challenges, including how to structure consulting mandates, leverage GenAI, analyze business problems, influence and engage stakeholders, and deliver actionable recommendations. Topics include: data analytics, AI, e-commerce consulting, and careers in digital consulting.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 341",
+    "subject": "INSY",
+    "number": "341",
+    "title": "Developing Business Applications",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental programming techniques, concepts, and data structures. Discusses modularization and maintainability. Emphasis on facilitating communication and understanding between systems analysts and programmers to support decision-making.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 431",
+    "subject": "INSY",
+    "number": "431",
+    "title": "IT Implementation Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exposure to a variety of real-life strategic and operational issues that arise when implementing IT. It may involve the selection process of an information technology, its introduction, implementation, management and/or improvement.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 432",
+    "subject": "INSY",
+    "number": "432",
+    "title": "Digital Business Models",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Discusses the role of the information systems in enabling new digital business models within and across organizations. Focuses on platforms and models of the sharing economy in different industries as well as new forms of business activities enabled by technologies. Discusses economic, strategic and organizational issues of these models.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Restricted to U2 and U3 students."
+    ]
+  },
+  {
+    "code": "INSY 434",
+    "subject": "INSY",
+    "number": "434",
+    "title": "Topics in Information Systems 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Current topics in the area of information systems.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 435",
+    "subject": "INSY",
+    "number": "435",
+    "title": "Topics in Information Systems 2",
+    "credits": null,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current topics in the area of information systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 437",
+    "subject": "INSY",
+    "number": "437",
+    "title": "Managing Data and Databases",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Management of organizational data, implementation of database management systems, and the roles and responsibilities of data management personnel. Explores different models of data representation with an emphasis on the relational model; simple and complex SQL queries.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Management: students are encouraged to take this course as early as possible in their program."
+    ]
+  },
+  {
+    "code": "INSY 440",
+    "subject": "INSY",
+    "number": "440",
+    "title": "E-Business",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Build the knowledge base and skills needed to face today's electronic business challenges, opportunities, and issues. Explore important concepts, models, tools and applications related to e-business.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 442",
+    "subject": "INSY",
+    "number": "442",
+    "title": "Data Analysis and Visualization",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Overview of methods and tools for analyzing business data to improve business decision-making, focusing on data visualization using hands-on learning.",
+    "prerequisites": {
+      "text": "MGCR 331 or permission of the instructor and approval of the BCom ProgramOffice.",
+      "tree": "MGCR 331",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 446",
+    "subject": "INSY",
+    "number": "446",
+    "title": "Data Mining for Business Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical methods and techniques for data mining and predictive analytics to solve business problems. Use of statistical tools for hands-on learning. Topics covered include supervised learning, unsupervised learning, and text mining.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "INSY 336",
+      "tree": "INSY 336",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 448",
+    "subject": "INSY",
+    "number": "448",
+    "title": "Text and Social Media Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The unlimited opportunities that exist today to leverage the power of user generated content analytics, focusing on questions ranging from strategic to operational matters pertaining to a firm’s social media initiatives, metrics to capture relevant outcomes, and predictive analysis to link social media chatter to business performance.",
+    "prerequisites": {
+      "text": "INSY 336, or permission of the instructor and approval of the BCom Program Office.",
+      "tree": "INSY 336",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 450",
+    "subject": "INSY",
+    "number": "450",
+    "title": "Information Systems Project Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Practical principles of project management essential to successful IS development projects or other complex undertakings within an organization; includes methods for defining, planning, and scheduling activities and resources. Discusses managerial and behavioural issues.",
+    "prerequisites": {
+      "text": "MGCR 331 or permission of Instructor and approval of the BCom Office",
+      "tree": "MGCR 331",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 454",
+    "subject": "INSY",
+    "number": "454",
+    "title": "Technological Foundation for E-Commerce",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Technology trends and vocabulary pertaining to current technology developments in E-Commerce. Practical IT skills in web application design, including ASP, XML, etc. Discusses business issues affected by the introduction of e-technologies.",
+    "prerequisites": {
+      "text": "MGCR 331",
+      "tree": "MGCR 331",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "A basic understanding of HTML is necessary.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 455",
+    "subject": "INSY",
+    "number": "455",
+    "title": "Technology and Innovation for Sustainability",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The role of information and other technologies in the size and nature of an organization’s environmental ‘footprint’. Achieving sustainability through strategic innovation, such as digitization, recycling, reuse of materials, sustainable design, LEED certifications, smart grids and energy metrics. Analyzing the environmental benefits and hidden costs of novel technologies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 463",
+    "subject": "INSY",
+    "number": "463",
+    "title": "Deep Learning for Business Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Theory of Neural Networks and its applications for business analytics, including how to build and train Neural Networks to derive insights from unstructured text and image data in business contexts. Introduction to the ecosystem of software packages needed in Python, including: NumPy, Pandas, Sklearn. The theory and implementation of Neural Networks and Deep Learning. How to apply various deep learning models to real-world problems and demonstration of their power in the new data-abundant business world.",
+    "prerequisites": {
+      "text": "INSY 336",
+      "tree": "INSY 336",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "INSY 446",
+      "tree": "INSY 446",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 606",
+    "subject": "INSY",
+    "number": "606",
+    "title": "Technology Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Technological innovation, management of the R&D process, economic assessment and justification, and the state of the art in service, manufacturing, open source, and IT innovation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 608",
+    "subject": "INSY",
+    "number": "608",
+    "title": "Winning with IT",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "How information technology has impacted and changed work, processes, and markets. Successful technology deployment and strategies are identified and analyzed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 609",
+    "subject": "INSY",
+    "number": "609",
+    "title": "Technology Project Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Managing a technology consultation practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 610",
+    "subject": "INSY",
+    "number": "610",
+    "title": "Manufacturing Information Systems ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to the key concepts, frameworks, technologies, and applications of information systems (IS) related to the manufacturing industries. Focus on the strategic value of IS, the enabling role of IS in organizational changes and product/process innovation, the management methods of IS, and recent IT advancements related to manufacturing industries. This includes the fundamental theories underlying the impacts of IS, issues related to the management and use of IS, IS-related key technologies and their recent advancements, and IT-driven industry transformation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGSC 690 when topic was \"Manufacturing Information Systems\".",
+      "excludes": [
+        "MGSC 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 642",
+    "subject": "INSY",
+    "number": "642",
+    "title": "Techniques and Tools for Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The methods and tools needed to analyze business data and to improve business decision making, including data manipulation, analysis, visualization and interpretation of real-world data.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "NOT OPEN TO STUDENTS WHO HAVE TAKEN INSY 690 WHEN TOPIC WAS “INSIGHTS IN BIG DATA AND DATA ANALYTICS”",
+      "excludes": [
+        "INSY 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 652",
+    "subject": "INSY",
+    "number": "652",
+    "title": "Predictive Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Practical methods for predictive analytics using statistical tools for handson learning, building upon regression and classification concepts covered in prior courses. Topics covered will include analytic thinking, supervised segmentation, model performance, and text mining, with the objective of understanding how to increase predictive performance.",
+    "prerequisites": {
+      "text": "INSY 642",
+      "tree": "INSY 642",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 653",
+    "subject": "INSY",
+    "number": "653",
+    "title": "Analytics for Digital Business Models",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Conceptual background coupled with hands-on experience with methods and tools needed to enable digital business models to strategically leverage analytics, with the goal of improving firm performance and decision-making, and attaining a competitive advantage. Topics include understanding online word-of-mouth through analysis of structured and unstructured data, distinguishing between homophily and influence in online social networks, mobile commerce, and more.",
+    "prerequisites": {
+      "text": "INSY 642 Minimum Grade or Test Scores : B-",
+      "tree": "INSY 642",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 660",
+    "subject": "INSY",
+    "number": "660",
+    "title": "Coding Foundations for Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Students will be exposed to a broad set of topics, including fundamentals of computer programming, coding for data acquisition and data manipulation, and specific operational issues related to “big data” analytics. Course material will also cover data privacy, security, and ethical issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the second lecture day.",
+      "**No web drop allowed",
+      "**Web withdrawal not applicable.",
+      "**Web ADD only."
+    ]
+  },
+  {
+    "code": "INSY 661",
+    "subject": "INSY",
+    "number": "661",
+    "title": "Database and Distributed Systems for Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "This course will present the student with many key concepts relating to database technology, how database technology is being used for managing large datasets, and the opportunity to put these concepts to practice. This course will cover database management system (DBMS) concepts, database architecture, database design using entity-relationship (ER) modeling, data storage, file organization, the SQL language, normalization, data integrity, database security, data warehousing, and big data related technologies such as NoSQL, Hadoop, MapReduce, Pic, and Hive.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "INSY 662",
+    "subject": "INSY",
+    "number": "662",
+    "title": "Data Mining and Visualization",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The course will teach practical analytics methods and use R (a tool widely used by data analysts) to provide hands on experience on the data mining techniques covered in the class. The focus of the course is on the application of the tools and techniques rather than learning the theory and math behind the models. This course builds upon concepts of data manipulation and coding seen in INSY 660 and covers these tools and techniques in much more depth. Students will be exposed to real world datasets and examples to get hands-experience with making business decisions using dating mining and predictive analytics, and provide R code to apply the predictive models learned in class. At end of this course students will be comfortable using different data mining techniques to solve business problems on their own using R.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 665",
+    "subject": "INSY",
+    "number": "665",
+    "title": "Making Sense of Data",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Collecting, analyzing and understanding data. How organizations store and analyze data.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken INSY 691 when topic was \"Making Sense of Data\".",
+      "excludes": [
+        "INSY 691"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 669",
+    "subject": "INSY",
+    "number": "669",
+    "title": "Text Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the basics of text mining and text-based predictions, including leading scripts/packages/libraries like SentiStrength (for sentiment analysis), categorization and classification of a variety of documents. The application of text analytics in solving real-world busines problems.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 670",
+    "subject": "INSY",
+    "number": "670",
+    "title": "Social Media Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Methods and tools to leverage the power of social media, with a focus on a variety of questions ranging from strategic to operational matters pertaining to firms’ social media initiatives, metrics to capture relevant outcomes, and predictive analytics to link social media chatter to business performance.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 671",
+    "subject": "INSY",
+    "number": "671",
+    "title": "Analytics and Open Innovation",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course provides a comprehensive introduction to the use of data analytics in the context of open innovation. Students will draw from existing knowledge from prior courses in the Masters program as well as learn new tools and techniques that can be applied to answer realworld questions about open innovation.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 672",
+    "subject": "INSY",
+    "number": "672",
+    "title": "Healthcare Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Students will get hands-on experience with real-world datasets to examine how data analytics can be used to predict and understand disease outbreaks, how analytics can be used to improve the operation of hospitals, and the manner in which analytics can be used as decision support for physicians to diagnose and treat patients. By the end of the course, students should be able to develop an appreciation on the changes that are taking place in the provision of healthcare services due to analytics and the role and opportunities for analytics to reduce cost and improve quality of healthcare in their communities.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 673",
+    "subject": "INSY",
+    "number": "673",
+    "title": "Security Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course provides a comprehensive introduction to data analytics in the context of information security. Students will understand how to leverage data analytics to help in visualizing, detecting, and analyzing information security data. Students will be exposed to real-world datasets and tools and techniques that can be applied to analyze those data.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 674",
+    "subject": "INSY",
+    "number": "674",
+    "title": "Enterprise Data Science: Concepts and Algorithms",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical knowledge of issues involving learning with large datasets. Topic include: data governance and management at scale; principles of feature engineering, parallel and distributed computing for machine learning; techniques for scalable supervised and unsupervised learning; analysis of programs in terms of memory, computation, and (for parallel methods) communication complexity; and methods for low-latency inference.",
+    "prerequisites": {
+      "text": "(INSY 660 or INSY 662) and (MGSC 660 or MGSC 661) or permission of the instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken INSY 695 when the topic was \"Enterprise Data Science & Machine Learning in Production 1\"",
+      "excludes": [
+        "INSY 695"
+      ]
+    },
+    "notes": [
+      "Minimum Grade or Test Scores : B-",
+      "The online version of the course includes synchronous and/or asynchronous course activities"
+    ]
+  },
+  {
+    "code": "INSY 675",
+    "subject": "INSY",
+    "number": "675",
+    "title": "Data Handling for Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Foundational knowledge and using fundamental programming to unearth hidden insights from data to enable more informed decisions. The use of analytics technology to tackle real-world business challenges.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken INSY 691 when the topic was “Making Sense of Data”.",
+      "excludes": [
+        "INSY 691"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INSY 684",
+    "subject": "INSY",
+    "number": "684",
+    "title": "Enterprise Machine Learning in Production",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Fundamental technologies and best practices required to implement sustainable, scalable and enterprise grade artificial intelligence (AI) data science, and machine learning (ML) products. Exploration of how enterprises use an agile approach to data science by leveraging best practices/tools that automate, track and reproduce data science experiments.",
+    "prerequisites": {
+      "text": "(INSY 660 or INSY 662) and (MGSC 660 or MGSC 661) or permission of the instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken INSY 695 when the topic was \"Enterprise Data Science & Machine Learning in Production 2\"",
+      "excludes": [
+        "INSY 695"
+      ]
+    },
+    "notes": [
+      "Minimum Grade or Test Scores : B-",
+      "The online version of the course includes synchronous and/or asynchronous course activities",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "INSY 690",
+    "subject": "INSY",
+    "number": "690",
+    "title": "Advanced Topics in Management Information Systems 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current ropics in management information systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 691",
+    "subject": "INSY",
+    "number": "691",
+    "title": "Adavnced Topics in Management Information Systems 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current topics in management information systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 695",
+    "subject": "INSY",
+    "number": "695",
+    "title": "Advanced Topics in Information Systems 1",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Current emerging topics in information systems. Course content will vary each term.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 696",
+    "subject": "INSY",
+    "number": "696",
+    "title": "Advanced Topics in Information Systems 2",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current emerging topics in information systems. Course content will vary each term.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 697",
+    "subject": "INSY",
+    "number": "697",
+    "title": "Advanced Topics in Information Systems 3",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Current emerging topics in information systems. Course content will vary each term.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "INSY 704",
+    "subject": "INSY",
+    "number": "704",
+    "title": "Organizational Impacts of Information Technology",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of organizational impacts of information technology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 705",
+    "subject": "INSY",
+    "number": "705",
+    "title": "Seminar in Information Systems 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Selected topics in information systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 706",
+    "subject": "INSY",
+    "number": "706",
+    "title": "User Reactions to Technology",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Classical and contemporary theoretical frameworks about individual and organizational reactions to information technology (IT), including artificial intelligence (AI). Topics include user acceptance, resistance, emotions, affordances, post-adoptive behaviours like habits and addiction, and the psychological impacts of IT/AI implementation. Identifying new research avenues and developing original contributions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 709",
+    "subject": "INSY",
+    "number": "709",
+    "title": "Information Technology and Digital Economy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Classical and contemporary empirical studies in economics of information systems (IS) using economic theories and methods. Topics include information technology (IT) productivity, IT outsourcing, fintech, digital platforms, and societal impacts of IT.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INSY 710",
+    "subject": "INSY",
+    "number": "710",
+    "title": "Seminar in IS 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Selected topics in information systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

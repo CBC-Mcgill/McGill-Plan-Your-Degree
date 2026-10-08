@@ -1,0 +1,493 @@
+[
+  {
+    "code": "BIOS 601",
+    "subject": "BIOS",
+    "number": "601",
+    "title": "Epidemiology: Introduction and Statistical Models",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examples of applications of statistics and probability in epidemiologic research. Source of epidemiologic data (surveys, experimental and non-experimental studies). Elementary data analysis for single and comparative epidemiologic parameters.",
+    "prerequisites": {
+      "text": "Permission of instructor. Undergraduate course in mathematical statistics at level of MATH 324.",
+      "tree": "MATH 324",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 602",
+    "subject": "BIOS",
+    "number": "602",
+    "title": "Epidemiology: Regression Models",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Multivariable regression models for proportions, rates and their differences/ratios; Conditional logic regression; Proportional hazards and other parametric/semi-parametric models; unmatched, nested, and self-matched case-control studies; links to Cox's method; Rate ratio estimation when \"time-dependent\" membership in contrasted categories.",
+    "prerequisites": {
+      "text": "Permission of instructor. MATH 556 and BIOS 601, or their equivalents.",
+      "tree": {
+        "and": [
+          "MATH 556",
+          "BIOS 601"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 612",
+    "subject": "BIOS",
+    "number": "612",
+    "title": "Advanced Generalized Linear Models",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Statistical methods for multinomial outcomes, overdispersion, and continuous and categorical correlated data; approaches to inference (estimating equations, likelihood-based methods, semi-parametric methods); analysis of longitudinal data; theoretical content and applications.",
+    "prerequisites": {
+      "text": "BIOS 611 or MATH 533; and MATH 523, or equivalents.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOS 611",
+              "MATH 533"
+            ]
+          },
+          "MATH 523"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 624",
+    "subject": "BIOS",
+    "number": "624",
+    "title": "Data Analysis and Report Writing",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Common data-analytic problems. Practical approaches to complex data. Graphical and tabular presentation of results. Writing reports for scientific journals, research collaborators, consulting clients.",
+    "prerequisites": {
+      "text": "MATH 533 Analysis of Variance and Regression. MATH 523 Generalized Linear Models.",
+      "tree": {
+        "and": [
+          "MATH 533",
+          "MATH 523"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 630",
+    "subject": "BIOS",
+    "number": "630",
+    "title": "Research Project/Practicum in Biostatistics",
+    "credits": 6,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Critical appraisal of the biostatistical literature related to a specific statistical methodology. Topic to be approved by faculty member who will direct student and evaluate the paper.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to non-thesis M.Sc. students who have completed requirements.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "BIOS 630D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIOS 630D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BIOS 631",
+    "subject": "BIOS",
+    "number": "631",
+    "title": "Biostatistics Internship",
+    "credits": 6,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The internship will provide the opportunity to integrate classroom learning and practice in an applied statistics environment. The student contributes to an organization's mandate and to addressing a data analysis or statistics research while developing skills as a biostatistics professional and/or researcher.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "By permission of the department.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is aimed at students registered in the M.Sc. in Biostatistics and the M.Sc. in Mathematics & Statistics who are specializing in statistics."
+    ]
+  },
+  {
+    "code": "BIOS 637",
+    "subject": "BIOS",
+    "number": "637",
+    "title": "Advanced Modeling: Survival and Other Multivariable Data",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced applied biostatistics course dealing with flexible modeling of non-linear effects of continuous covariates in multivariable analyses, and survival data, including e.g. time-varying covariates and time-dependent or cumulative effects. Focus on the concepts, limitations and advantages of specific methods, and interpretation of their results. In addition to 3 hours of weekly lectures, shared with epidemiology students, an additional hour/week focuses on statistical inference and complex simulation methods. Students get hands-on experience in designing and implementing simulations for survival analyses, through individual term projects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Graduate students in Biostatistics or Math/Stat programs, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Students are expected to have a good understanding of multivariable regression and basic knowledge of survival analysis."
+    ]
+  },
+  {
+    "code": "BIOS 640",
+    "subject": "BIOS",
+    "number": "640",
+    "title": "Introduction to Health Data Science Methods",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the basic principles of data analysis and knowledge dissemination. Topics include introduction to R and RStudio; good coding practice and file organization; tidy data; version control; creating reproducible research reports; data visualization; R package creation and online publication.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the scheduling of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is September 3, withdrawal with refund is September 10, web withdrawal with NO refund is September 24."
+    ]
+  },
+  {
+    "code": "BIOS 641",
+    "subject": "BIOS",
+    "number": "641",
+    "title": "Health Data Analysis: Essential Theory",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Foundations for statistical inference applicable to health data. Topics include: sampling distributions and statistical inference for means and proportions.",
+    "prerequisites": {
+      "text": "BIOS 640",
+      "tree": "BIOS 640",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the scheduling of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is November 10, withdrawal with refund is November 17, web withdrawal with NO refund is December 1."
+    ]
+  },
+  {
+    "code": "BIOS 642",
+    "subject": "BIOS",
+    "number": "642",
+    "title": "Health Data: Statistical Learning and Model Visualization",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic principles of regression analyses applicable to the health sciences, covering regression (linear and generalized linear models) and inference for regression parameters; confounding, effect modification, and collinearity; model selection; prediction; and visual representations of model output, covariate-response relationships, and prediction curves.",
+    "prerequisites": {
+      "text": "BIOS 641",
+      "tree": "BIOS 641",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the scheduling of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is January 16, withdrawal with refund is January 23, web withdrawal with NO refund is February 6."
+    ]
+  },
+  {
+    "code": "BIOS 643",
+    "subject": "BIOS",
+    "number": "643",
+    "title": "Theory to Practice: Analysis and Reporting",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Consolidation and reinforcement of data analysis and reporting skills.",
+    "prerequisites": {
+      "text": "BIOS 642",
+      "tree": "BIOS 642",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the scheduling of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is March 16, withdrawal with refund is March 23, web withdrawal with NO refund is April 6."
+    ]
+  },
+  {
+    "code": "BIOS 644",
+    "subject": "BIOS",
+    "number": "644",
+    "title": "Health Data Analytics Capstone Project 1",
+    "credits": 3,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Summer 2027"
+    ],
+    "description": "Analyzing real datasets and communicating the analysis and results.",
+    "prerequisites": {
+      "text": "BIOS 643",
+      "tree": "BIOS 643",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the scheduling of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 14th and withdrawal is May 21st."
+    ]
+  },
+  {
+    "code": "BIOS 690",
+    "subject": "BIOS",
+    "number": "690",
+    "title": "M.Sc. Thesis",
+    "credits": 21,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A review, appraisal of the performance, or application of, selected biostatistical methods, carried out under supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 691",
+    "subject": "BIOS",
+    "number": "691",
+    "title": "Special Topics in Biostatistics 1",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Special topics in biostatistics.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 692",
+    "subject": "BIOS",
+    "number": "692",
+    "title": "Special Topics in Biostatistics 2",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics in biostatistics.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 693",
+    "subject": "BIOS",
+    "number": "693",
+    "title": "Special Topics in Biostatistics 3",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Special topics in biostatistics.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 694",
+    "subject": "BIOS",
+    "number": "694",
+    "title": "Special Topics in Biostatistics 4",
+    "credits": 4,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Special topics in biostatistics.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 695",
+    "subject": "BIOS",
+    "number": "695",
+    "title": "Special Topics in Biostatistics 5",
+    "credits": 1,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics in biostatistics.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOS 697",
+    "subject": "BIOS",
+    "number": "697",
+    "title": "Special Topics in Biostatistics 7",
+    "credits": 2,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics in biostatistics.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "BIOS 701",
+    "subject": "BIOS",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Assessment of student's ability to assimilate and apply statistical theory and methods for biostatistics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in the Ph.D. in Biostatistics",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOS 702",
+    "subject": "BIOS",
+    "number": "702",
+    "title": "Ph.D. Proposal",
+    "credits": 0,
+    "offeredBy": "Epidemiology and Biostatistics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Essential skills for thesis writing and defence, including essential elements of research proposals, methodological development and application, and presentation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Required for Ph.D. students"
+    ],
+    "parts": [
+      {
+        "code": "BIOS 702D1",
+        "credits": 0,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIOS 702D2",
+        "credits": 0,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  }
+]

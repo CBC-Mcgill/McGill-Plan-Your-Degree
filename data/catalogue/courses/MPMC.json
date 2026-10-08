@@ -1,0 +1,143 @@
+[
+  {
+    "code": "MPMC 320",
+    "subject": "MPMC",
+    "number": "320",
+    "title": "CAO et informatique pour les mines",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Présentation de techniques informatisées et de logiciels permettant d'appliquer l'informatique dans le cadre des diverses opérations reliées à l'exploitation des mines. Utilisation de logiciels de support: chiffrier électronique, traitement de texte, éditeur graphique, utilitaires de DOS. Utilisation de graphisme, de traceurs à plumes, de tablettes numérisantes, d'interfaces pour capteurs analogique/numérique et numérique/analogique. Notions de géométrie descriptive appliquées à des problèmes miniers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-3-4)"
+    ]
+  },
+  {
+    "code": "MPMC 321",
+    "subject": "MPMC",
+    "number": "321",
+    "title": "Mécanique des roches et contrôle des terrains",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Pressions de terrains au pourtour des excavations: solutions analytiques et numériques. Stabilité des excavations souterraines et à ciel ouvert: analyse des instabilités structurales par projection stéréographique méridienne, analyse des instabilités causées par les excès de contraintes. Soutènement. Surveillance. Études de cas.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)",
+      "Prérequis : MIME 323"
+    ]
+  },
+  {
+    "code": "MPMC 326",
+    "subject": "MPMC",
+    "number": "326",
+    "title": "Recherche opérationnelle minière",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Logistique minière. Modèles de localisation optimale: Steiner, HAP, construction itérative. Modèles de détermination des contours optimaux des exploitations à ciel ouvert: conventionnels, Lerchs et Grossman, Ford et Fulkerson. Programmation dynamique et modèles d'optimisation du taux de production et de la teneur de coupure. Modèles de planification: cheminement critique et PERT, programmation linéaire et non-linéaire, théorie des graphes. Modèles de capacité: théorie des files d'attente, simulation, silos et stockage. Modèles de mélange.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Prérequis: MATH 262 and MIME 200",
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MPMC 328",
+    "subject": "MPMC",
+    "number": "328",
+    "title": "Environnement et gestion des rejets miniers",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Effets du milieu de travail sur l'homme (hygiène du travail) : législation; contraintes thermiques, problèmes de bruit, de contaminants gazeux et de poussières; techniques de mesures. Effets de l'exploitation d'une mine sur le milieu (environnement et écologie) : législation; études d'impacts; effluents miniers: origine, nature et traitement des effluents; entreposage des résidus; restauration des sites.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)",
+      "Prérequis : MIME 323 and CIVE 205",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "MPMC 329",
+    "subject": "MPMC",
+    "number": "329",
+    "title": "Géologie minière",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Méthodes de cartographie minière, de sondages et d'échantillonnage. Notion de teneur de coupure, calcul des réserves par les méthodes conventionnelles. Évaluation des réserves par les méthodes géostatistiques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-2-2)",
+      "Prérequis : EPSC 221, MIME 200 et MIME 209."
+    ]
+  },
+  {
+    "code": "MPMC 330",
+    "subject": "MPMC",
+    "number": "330",
+    "title": "Géotechnique minière",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Propriétes mécaniques des matériaux meubles. Conception d'empilements et de digues de rétention pour les matériaux miniers. Conception de structures enfouies. Problèmes particuliers avec les résidus miniers: liquéfaction, déposition, etc. Écoulement gravitaire des matériaux meubles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Prérequis: EPSC 221 and MIME 200",
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MPMC 421",
+    "subject": "MPMC",
+    "number": "421",
+    "title": "Exploitation en souterrain",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Étude des caractéristiques des principales méthodes d'abattage utilisées en souterrain. Méthodes d'analyse simplifiée d'un gisement quant à son exploitation en fosse ou en souterrain. Dimensionnement des ouvrages et choix des équipements. Calculs des quantités, des équipements et des coûts reliés aux excavations souterraines. Conception d'un circuit de remblai hydraulique.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)",
+      "Prérequis : MIME 322, MIME 325 et MIME 333.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  }
+]

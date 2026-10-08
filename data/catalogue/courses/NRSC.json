@@ -1,0 +1,498 @@
+[
+  {
+    "code": "NRSC 221",
+    "subject": "NRSC",
+    "number": "221",
+    "title": "Environment and Health",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Key chemical, physical, and social stressors in the environment, and how these affect the health of people and ecosystems. Hazards in air, water, food, and work environments. Historic, current, and future need for environmental health science, from scientific, personal, and practical perspectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken GEOG 221.",
+      "excludes": [
+        "GEOG 221"
+      ]
+    },
+    "notes": [
+      "Note: Students enrolled in main campus programs register as GEOG 221; students enrolled in Macdonald campus programs register as NRSC 221. Course is only offered at Macdonald campus."
+    ]
+  },
+  {
+    "code": "NRSC 333",
+    "subject": "NRSC",
+    "number": "333",
+    "title": "Pollution and Bioremediation",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The environmental contaminants which cause pollution; sources, amounts and transport of pollutants in water, air and soil; waste management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  },
+  {
+    "code": "NRSC 451",
+    "subject": "NRSC",
+    "number": "451",
+    "title": "Research in Ecology and Development in Africa",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of observation and independent inquiry skills through: 1) participation in short-term project modules in collaboration with existing researchers; 2) participation in interdisciplinary team research on topics selected to allow comparative analysis of field sites; 3) active and systematic observation, documentation, and integration of field experience in ecology and development issues.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ANTH or GEOG 451 Society & Development in Africa",
+      "tree": "GEOG 451",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL 451. Open to U2 or later students in the African Field Study Semester (AFSS).",
+      "excludes": [
+        "BIOL 451"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "NRSC 515",
+    "subject": "NRSC",
+    "number": "515",
+    "title": "Water and Health",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Anticipate, recognize, evaluate, and control water-related hazards such as: biological, chemical, and physical. Considerations for public health and environmental management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PARA 515. Open to U3 students and above.",
+      "excludes": [
+        "PARA 515"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 612",
+    "subject": "NRSC",
+    "number": "612",
+    "title": "Environmental Assessment and Sustainable Development",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A detailed consideration of environmental assessment as a tool for sustainable development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to students enrolled in the Non-Thesis Master's in Environmental Assessment Program, or by permission of program coordinator.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 614",
+    "subject": "NRSC",
+    "number": "614",
+    "title": "Special Topics 7",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Students pursue topics not otherwise available in formal courses, under staff supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to students enrolled in a Natural Resource Sciences MSc or PhD program, or by permission of the Graduate Program Director.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 643",
+    "subject": "NRSC",
+    "number": "643",
+    "title": "M.Sc. Proposal Seminar",
+    "credits": 1,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "M.Sc. students in the first year of the programdevelop a research proposal and present aseminar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Department of Natural Resource Sciences M.Sc. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 644",
+    "subject": "NRSC",
+    "number": "644",
+    "title": "M.Sc. Update Seminar",
+    "credits": 1,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "M.Sc. students in their second or third semesterpresent oral and poster presentations onresearch progress.",
+    "prerequisites": {
+      "text": "NRSC 643",
+      "tree": "NRSC 643",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Department of Natural Resource Sciences M.Sc. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 651",
+    "subject": "NRSC",
+    "number": "651",
+    "title": "M.Sc. Final Seminar",
+    "credits": 1,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "M.Sc. students present a final research seminarafter completing all other course and seminarrequirements.",
+    "prerequisites": {
+      "text": "NRSC 644",
+      "tree": "NRSC 644",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Department of Natural Resource Sciences M.Sc. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 670",
+    "subject": "NRSC",
+    "number": "670",
+    "title": "Principles of Environmental Health Sciences 1",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in environmental health sciences: principles of exposure assessment and of toxicology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students pursuing a career in Environmental Health Sciences or with permission of the course instructors. Not open to students who have taken or are taking EPIB 684 or EXMD 670 or PHAR 670.",
+      "excludes": [
+        "EPIB 684",
+        "EXMD 670",
+        "PHAR 670"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 671",
+    "subject": "NRSC",
+    "number": "671",
+    "title": "Principles of Environmental Health Sciences 2",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in environmental health sciences: principles of environmental epidemiology.",
+    "prerequisites": {
+      "text": "NRSC 670",
+      "tree": "NRSC 670",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students in the Environmental Health Sciences or permission of the course instructors. Not open to students who have taken or are taking EPIB 685 or EXMD 671 or PHAR 671.",
+      "excludes": [
+        "EPIB 685",
+        "EXMD 671",
+        "PHAR 671"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 680",
+    "subject": "NRSC",
+    "number": "680",
+    "title": "Special Topics 1",
+    "credits": 1,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students pursue topics not otherwise available in formal courses, under staff supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 684",
+    "subject": "NRSC",
+    "number": "684",
+    "title": "Special Topics 5",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students pursue topics not otherwise available in formal courses, under staff supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 685",
+    "subject": "NRSC",
+    "number": "685",
+    "title": "Special Topics 6",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students pursue topics not otherwise available in formal courses, under staff supervision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 691",
+    "subject": "NRSC",
+    "number": "691",
+    "title": "M.Sc. Thesis Research 1",
+    "credits": 12,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor towards the completion of the M.Sc. degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 692",
+    "subject": "NRSC",
+    "number": "692",
+    "title": "M.Sc. Thesis Research 2",
+    "credits": 12,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor towards the completion of the M.Sc. degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 693",
+    "subject": "NRSC",
+    "number": "693",
+    "title": "M.Sc. Thesis Research 3",
+    "credits": 12,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Completion of the M.Sc. thesis, its approval by reviewers and acceptance by Graduate and Postdoctoral Studies all required for a pass to be granted.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 694",
+    "subject": "NRSC",
+    "number": "694",
+    "title": "M.Sc. Thesis Research 4",
+    "credits": 9,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor towards the completion of the M.Sc. degree.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 701",
+    "subject": "NRSC",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NRSC 751",
+    "subject": "NRSC",
+    "number": "751",
+    "title": "PhD Research Proposal",
+    "credits": 0,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "PhD students in the first year of the programdevelop a research proposal and present aseminar",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Department of Natural Resource Sciences Ph.D. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 752",
+    "subject": "NRSC",
+    "number": "752",
+    "title": "Teaching Experience",
+    "credits": 0,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation of a course outline and presentationof a teaching seminar.",
+    "prerequisites": {
+      "text": "NRSC 751",
+      "tree": "NRSC 751",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Department of Natural Resource Sciences Ph.D. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 753",
+    "subject": "NRSC",
+    "number": "753",
+    "title": "PhD Research Progress Report",
+    "credits": 0,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "In fourth or fifth semester, oral and posterpresentations on research progress.",
+    "prerequisites": {
+      "text": "NRSC 752",
+      "tree": "NRSC 752",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Department of Natural Resource Sciences Ph.D. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NRSC 754",
+    "subject": "NRSC",
+    "number": "754",
+    "title": "PhD Final Research Report",
+    "credits": 0,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of a final research seminar.",
+    "prerequisites": {
+      "text": "NRSC 753",
+      "tree": "NRSC 753",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Department of Natural Resource Sciences Ph.D. program.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

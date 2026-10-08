@@ -1,0 +1,453 @@
+[
+  {
+    "code": "ENVB 210",
+    "subject": "ENVB",
+    "number": "210",
+    "title": "The Biophysical Environment",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "With reference to the ecosystems in the St Lawrence lowlands, the principles and processes governing climate-landform-water-soil-vegetation systems and their interactions will be examined in lecture and laboratory. Emphasis on the natural environment as an integrated system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ENVB 222",
+    "subject": "ENVB",
+    "number": "222",
+    "title": "St. Lawrence Ecosystems",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Integrative field biology course about the biodiversity and ecology of terrestrial and aquatic ecosystems within the St. Lawrence Lowlands. Research projects about the natural history of the regional flora and fauna. Fundamentals of community, ecosystem and landscape ecology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "This course carries an additional charge of $21.58 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "ENVB 301",
+    "subject": "ENVB",
+    "number": "301",
+    "title": "Meteorology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The physical processes underlying weather. Topics include: the atmosphere - its properties (structure and motion), and thermodynamics (stability, heat and moisture); clouds and precipitation; air masses and fronts; mid-latitude weather systems and severe weather.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "none",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ENVB 305",
+    "subject": "ENVB",
+    "number": "305",
+    "title": "Population and Community Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Interactions between organisms and their environment; historical and current perspectives in applied and theoretical population and community ecology. Principles of population dynamics, feedback loops, and population regulation. Development and structure of communities; competition, predation and food web dynamics. Biodiversity science in theory and practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ENVB 313",
+    "subject": "ENVB",
+    "number": "313",
+    "title": "Phylogeny and Biogeography",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in the interface of evolution, phylogenetics, and biogeography, including tree thinking, phylogeny estimation, and the processes that generate and maintain biodiversity. The major scientific discoveries that demonstrated how Earth’s history affects the evolution of organisms, including the unheard voices of evolutionary biology.",
+    "prerequisites": {
+      "text": "AEBI 212",
+      "tree": "AEBI 212",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ENVB 401",
+    "subject": "ENVB",
+    "number": "401",
+    "title": "Honours Research Project 1",
+    "credits": 6,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparation of a literature review, progress report, and delivery of a proposal seminar, as well as initiating the research project.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Environmental Biology program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ENVB 402",
+    "subject": "ENVB",
+    "number": "402",
+    "title": "Honours Research Project 2",
+    "credits": 6,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Completion of the honours research project, including a progress report, a final project report, and a project presentation.",
+    "prerequisites": {
+      "text": "ENVB 401 and permission of the instructor",
+      "tree": "ENVB 401",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Environmental Biology program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ENVB 405",
+    "subject": "ENVB",
+    "number": "405",
+    "title": "Honours Project 1",
+    "credits": 3,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparation of a literature review, progress report and delivery of a proposal seminar, as well as initiating the research project.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Environmental Biology program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ENVB 406",
+    "subject": "ENVB",
+    "number": "406",
+    "title": "Honours Project 2",
+    "credits": 3,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Completion of the honours project, including a progress report, a final project report, and a project presentation.",
+    "prerequisites": {
+      "text": "ENVB 405 and permission of the instructor",
+      "tree": "ENVB 405",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Environmental Biology program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ENVB 410",
+    "subject": "ENVB",
+    "number": "410",
+    "title": "Ecosystem Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Biotic and abiotic processes that control the flows of energy, nutrients and water through ecosystems; emergent system properties; approaches to analyzing complex systems. Labs include collection and multivariate analysis of field data.",
+    "prerequisites": {
+      "text": "ENVB 222, AEMA 310 or permission of instructor",
+      "tree": {
+        "and": [
+          "ENVB 222",
+          "AEMA 310"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course carries an additional charge of $21.58 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period"
+    ]
+  },
+  {
+    "code": "ENVB 415",
+    "subject": "ENVB",
+    "number": "415",
+    "title": "Ecosystem Management",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Through the examination of cases studies presented in a modular format, students will be exposed to a variety of ecosystem processes. Choice of components, interactions and type of management to achieve desired endpoints will be discussed.",
+    "prerequisites": {
+      "text": "BREE 327 or ENVB 305 or permission of instructor",
+      "tree": {
+        "or": [
+          "BREE 327",
+          "ENVB 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "ENVB 437",
+    "subject": "ENVB",
+    "number": "437",
+    "title": "Assessing Environmental Impact",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and practice of Environmental Assessment (EA) in Canada and internationally. Exploration of issues surrounding impact assessment for sustainable development in different sectors, including their limitations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open to U2 students and above."
+    ]
+  },
+  {
+    "code": "ENVB 497",
+    "subject": "ENVB",
+    "number": "497",
+    "title": "Research Project 1",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project in consultation with a faculty supervisor. Selection of a research problem, formulation of hypotheses and objectives, research design, comprehensive literature review, commence data collection.",
+    "prerequisites": {
+      "text": "AEHM 205 and permission of instructor",
+      "tree": "AEHM 205",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and above, and to students with a minimum CGPA of 3.0.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall and Winter",
+      "Note 1: Fall and Winter. Enrolment is limited by availability of research project supervisors and to students in the Environmental Biology Major. Students should make arrangements with a willing supervisor, and the proposed supervisor and project are subject to approval. Students must obtain a minimum grade of B in ENVB 497 to be allowed to take ENVB 498."
+    ]
+  },
+  {
+    "code": "ENVB 498",
+    "subject": "ENVB",
+    "number": "498",
+    "title": "Research Project 2",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of the independent research project begun in ENVB 497. Data collection and analysis, testing of hypotheses, discussion of results.",
+    "prerequisites": {
+      "text": "ENVB 497 and permission of instructor",
+      "tree": "ENVB 497",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students who have earned a minimum of B in the prerequisite course(s). Enrolment is limited by availability of research project supervisors and to students in the Environmental Biology Major. Students should make arrangements with a willing supervisor, and the proposed supervisor and project are subject to approval.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall and Winter"
+    ]
+  },
+  {
+    "code": "ENVB 500",
+    "subject": "ENVB",
+    "number": "500",
+    "title": "Advanced Topics in Ecotoxicology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Exploring the impact of environmental chemicals on biological organisms in an ecological context. Basic topics in ecotoxicology, such as source and fate, routes of exposure, bioavailability, dose-response, biomarkers, and risk assessment will be covered from both theoretical and applied perspectives. The processes by which pollutants are tested, regulated, and monitored will be critically examined.",
+    "prerequisites": {
+      "text": "LSCI 211 and AEBI 211 and one of NRSC 333 or ANSC 323, or permission of the instructor",
+      "tree": {
+        "and": [
+          "LSCI 211",
+          "AEBI 211",
+          {
+            "or": [
+              "NRSC 333",
+              "ANSC 323"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ENVB 506",
+    "subject": "ENVB",
+    "number": "506",
+    "title": "Quantitative Methods: Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to a broad range of innovative data analysis strategies commonly applied to ecological data. How to apply these strategies. Common “best practices” for data management, study design, and graphing techniques.",
+    "prerequisites": {
+      "text": "AEMA 310 and ENVB 305; or graduate student status; or permission of instructor",
+      "tree": {
+        "and": [
+          "AEMA 310",
+          "ENVB 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "ENVB 529",
+    "subject": "ENVB",
+    "number": "529",
+    "title": "GIS for Natural Resource Management",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Applications of Geographic Information Systems (GIS) and spatial analysis techniques to the presentation and analysis of ecological information, including sources and capture of spatial data; characterizing, transforming, displaying spatial data; and spatial analysis to solve resource management problems.",
+    "prerequisites": {
+      "text": "At least one environmental science course and one ecology course or permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 students and above. Not open to students who have taken GEOG 201, GEOG 306 or GEOG 307, ENVB/BREE 430, or BREE 529. Limited to 32 students.",
+      "excludes": [
+        "BREE 430",
+        "BREE 529",
+        "GEOG 201",
+        "GEOG 306",
+        "GEOG 307"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "ENVB 530",
+    "subject": "ENVB",
+    "number": "530",
+    "title": "Advanced GIS for Natural Resource Management",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An advanced spatial analysis course that uses rapidly developing techniques in GIS and remote sensing to solve problems in natural resource management. Focuses on controlling spatial operations through programming.",
+    "prerequisites": {
+      "text": "(ENVB 430 or ENVB 529 or BREE 529) or (GEOG 201 and one of GEOG 306 or GEOG 307) or permission of instructor",
+      "tree": {
+        "or": [
+          "ENVB 430",
+          "ENVB 529",
+          "BREE 529",
+          {
+            "and": [
+              "GEOG 201",
+              {
+                "or": [
+                  "GEOG 306",
+                  "GEOG 307"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

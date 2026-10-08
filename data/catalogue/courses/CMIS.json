@@ -1,0 +1,132 @@
+[
+  {
+    "code": "CMIS 422",
+    "subject": "CMIS",
+    "number": "422",
+    "title": "Information System Security",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Fundamental concepts relating to the design of secure information systems. Identification and assessment of security risks at the application, network, and physical levels. Use of cryptography and other techniques to provide necessary level of security.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCCS 300",
+      "tree": "CCCS 300",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CMIS 530",
+    "subject": "CMIS",
+    "number": "530",
+    "title": "Digital Analytics and Targeting",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Covers fundamental techniques in measuring and analysing the digital marketing experience success and effectiveness as well as using audience data to improve advertising and content using targeting and experiments. How to measure, analyze, and act upon the evolving internet technologies and trends.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMIS 543",
+    "subject": "CMIS",
+    "number": "543",
+    "title": "Digital Customer Experience",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Covers the fundamental techniques for understanding, analyzing and optimizing customer experience on digital platforms. Explores best practices in designing and optimizing conversion actions in an online business. Management of customer data and confidentiality.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMIS 544",
+    "subject": "CMIS",
+    "number": "544",
+    "title": "Digital Marketing Automation, Planning and Technology",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Covers the fundamental concepts needed to develop a digital marketing plan. Enables students to gain an understanding of market behaviour, translation of corporate goals into digital marketing objectives, basic overview of various strategic approaches to align to objectives, as well as implementation and control.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMIS 545",
+    "subject": "CMIS",
+    "number": "545",
+    "title": "Cloud Computing Architecture",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Covers different cloud infrastructures and architectures in the context of deployed cloud computing systems that are appropriate for different businesses. Enables students to use key business metrics to make decisions on the suitability of applications for cloud deployment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMIS 549",
+    "subject": "CMIS",
+    "number": "549",
+    "title": "Digital Media and Search Engine Optimization",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Covers the fundamentals of promoting a brand through digital mediums and how to take advantage of earned digital media. Provides an understanding of how paid search, search engine optimization, various forms of digital media planning and placement, social media promotion work and, how to monitor and optimize performance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMIS 641",
+    "subject": "CMIS",
+    "number": "641",
+    "title": "Information Systems for Managers",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the importance of information systems (IS) and the digital transformation of companies from a managerial perspective. Overview of the strategic importance of information technology (IT) and IS, including implementing IS and IT projects for creating and capturing value and making companies more competitive. Consideration of managerial, informational, and technological issues arising from the use of IS, IT, and their respective processes. Application of a strategic framework for managing companies, especially digitized companies, more effectively.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMIS 541.",
+      "excludes": [
+        "CMIS 541"
+      ]
+    },
+    "notes": []
+  }
+]

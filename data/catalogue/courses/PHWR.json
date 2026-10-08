@@ -1,0 +1,137 @@
+[
+  {
+    "code": "PHWR 300",
+    "subject": "PHWR",
+    "number": "300",
+    "title": "Philosophy and Western Religions 1",
+    "credits": 3,
+    "offeredBy": "Arts - Dean's Office",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to the encounter between philosophy and the Abrahamic religions, Judaism, Christianity, and Islam, from Antiquity to the 12th Century, covering the philosophical sources (Plato to Neoplatonism), the religious sources (Bible to Qu'ran), and their manifold syntheses in the thought of theologians, philosophers and mystics within the three religious traditions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Philosophy & Western Religions, Islamic Studies, Jewish Studies, Philosophy, Religious Studies, and to students of other units with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHWR 301",
+    "subject": "PHWR",
+    "number": "301",
+    "title": "Philosophy and Western Religions 2",
+    "credits": 3,
+    "offeredBy": "Arts - Dean's Office",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to the encounter between philosophy and the three Abrahamic religions, Judaism, Christianity, and Islam, from the 13th Century to the Enlightenment, covering the manifold syntheses of philosophical and religious ideas in thinkers from the Later Middle Ages, the Renaissance, the 17th Century and the Enlightenment.",
+    "prerequisites": {
+      "text": "PHWR 300 or permission of the instructor.",
+      "tree": "PHWR 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Philosophy & Western Religions, Islamic Studies, Jewish Studies, Philosophy, Religious Studies, and to students of other units with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHWR 400",
+    "subject": "PHWR",
+    "number": "400",
+    "title": "Joint Honours/Honours Tutorial",
+    "credits": 3,
+    "offeredBy": "Arts - Dean's Office",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Guided reading and research for Joint Honours and Honours students in their final year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Joint Honours and Honours students in Philosophy & Western Religions in their final year.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHWR 401",
+    "subject": "PHWR",
+    "number": "401",
+    "title": "Honours Thesis Tutorial 1",
+    "credits": 3,
+    "offeredBy": "Arts - Dean's Office",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Initial guided reading and research for Honours students in their final year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Honours students in Philosophy & Western Religions in their final year.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHWR 402",
+    "subject": "PHWR",
+    "number": "402",
+    "title": "Honours Thesis Tutorial 2",
+    "credits": 3,
+    "offeredBy": "Arts - Dean's Office",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Final guided reading and research for Honours students in their final year.",
+    "prerequisites": {
+      "text": "PHWR 401",
+      "tree": "PHWR 401",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Honours students in Philosophy & Western Religions in their final year.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHWR 500",
+    "subject": "PHWR",
+    "number": "500",
+    "title": "Interdisciplinary Seminar",
+    "credits": 3,
+    "offeredBy": "Arts - Dean's Office",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Advanced undergraduate students and faculty members and graduate students conducting research in relevant areas of the academic field will discuss a specific topic (e.g. Platonism, Aristotelianism, Renaissance, Mysticism, God, Prophecy, Exegesis etc.) in an interdisciplinary perspective.",
+    "prerequisites": {
+      "text": "PHWR 300 or permission of an advisor.",
+      "tree": "PHWR 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Major, Joint Honours and Honours students in Philosophy & Western Religions in their final year, as well as students of related units with permission of an advisor.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both PHWR 500D1 and PHWR 500D2.",
+      "No credit will be given for this course unless both PHWR 500D1 and PHWR 500D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PHWR 500D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "PHWR 500D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  }
+]

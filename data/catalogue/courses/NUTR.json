@@ -1,0 +1,2277 @@
+[
+  {
+    "code": "NUTR 207",
+    "subject": "NUTR",
+    "number": "207",
+    "title": "Nutrition and Health",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Provides students who have a basic biology/chemistry background with the fundamental information on how macronutrients, vitamins and minerals are metabolized in the body, followed by application to evaluate current issues of maximizing health and disease prevention at different stages of the lifecycle.",
+    "prerequisites": {
+      "text": "CEGEP equivalent OOXU",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "FDSC 230 [for students that have not taken the CEGEP equivalent OOXV].",
+      "tree": "FDSC 230",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who take NUTR 200 or EDKP 292",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 lectures per week",
+      "Science students in physical science and psychology programs who wish to take this course should see the Arts and Science Student Affairs Office for permission to register."
+    ]
+  },
+  {
+    "code": "NUTR 208",
+    "subject": "NUTR",
+    "number": "208",
+    "title": "Professional Practice Stage 1A",
+    "credits": 2,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the dietetics profession including ethics; provincial regulation; competencies and domains of practice; and dietetic practice in the hospital environment. Introductory activities related to food, food industry, agriculture, public health nutrition and clinical nutrition.",
+    "prerequisites": {
+      "text": "All U0 (freshman) science/math entrance requirements or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "All Required courses in Term 1 of the Dietetics Major, IPEA 500",
+      "tree": "IPEA 500",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Open only to students in the B.Sc. (Nutr.Sc.); Major in Dietetics.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NUTR 209",
+    "subject": "NUTR",
+    "number": "209",
+    "title": "Professional Practice Stage 1B",
+    "credits": 2,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Introductory dietetic internship experience. Introduction to the hospital environment, client- centred care and the patient experience. Communication, dietary assessment, and nutrition education.",
+    "prerequisites": {
+      "text": "All U0 math and science entrance requirements. All U1 required courses of the Dietetics major (ANSC 234, LSCI 211, LSCI 230, NUTR 207, NUTR 208, NUTR 214, NUTR 217, NUTR 322, NUTR 343 and NUTR 341).",
+      "tree": {
+        "and": [
+          "ANSC 234",
+          "LSCI 211",
+          "LSCI 230",
+          "NUTR 207",
+          "NUTR 208",
+          "NUTR 214",
+          "NUTR 217",
+          "NUTR 322",
+          "NUTR 343",
+          "NUTR 341"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course requires the ability to read in French, to understand spoken French and to speak French at a basic functional level for fieldwork experience."
+    ]
+  },
+  {
+    "code": "NUTR 214",
+    "subject": "NUTR",
+    "number": "214",
+    "title": "Food Fundamentals",
+    "credits": 4,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Food composition and structure. Scientific principles underlying physical, chemical, and nutrient content changes during food preparation. The role of ingredients and nutrients, and their interaction in food preparation. Culture of food including historical context and sustainability. Sensory evaluation and food safety.",
+    "prerequisites": {
+      "text": "FDSC 230 or corequisite with instructor's permission.",
+      "tree": "FDSC 230",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "LSCI 211 and NUTR 207",
+      "tree": {
+        "and": [
+          "LSCI 211",
+          "NUTR 207"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Enrolment restricted to Dietetics, Nutrition and Concurrent degrees or permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "One 3-hour lecture and one 4-hour lab",
+      "This course includes a fee of $360.50 for a culinary tool kit, chef coat, hairnet, food ingredients, supplies and laboratory manual. The fee is refundable as long as the kit and supplies have not been opened, used or scratched and the manual is intact. Students who drop this course during the course add/drop period may return the kit (if already received) to their department, who will then advise the Student Accounts Office to reverse the charges for the fee once they have inspected the materials and found them to be in acceptable condition."
+    ]
+  },
+  {
+    "code": "NUTR 217",
+    "subject": "NUTR",
+    "number": "217",
+    "title": "Application: Food Fundamentals",
+    "credits": 4,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Nutrition, chemical and physical properties of food and complex food mixtures. Role of culture, food policy and environmental sustainability on food choices, procurement and preparation. Knowledge of ingredients, preservation, storage, packaging of food. Culturally diverse foods and food habits. Controlling chemical changes during preparation of food to obtain palatable, nutritious and safe food.",
+    "prerequisites": {
+      "text": "NUTR 214 and NUTR 207",
+      "tree": {
+        "and": [
+          "NUTR 214",
+          "NUTR 207"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment restricted to Dietetics major or permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "One 3-hour lecture and one 4-hour lab",
+      "The course NUTR 217 includes a $206.00 fee for the laboratory supplies including food ingredients and required prepared text for the course. The fee is refundable until the end of the add/drop period."
+    ]
+  },
+  {
+    "code": "NUTR 301",
+    "subject": "NUTR",
+    "number": "301",
+    "title": "Psychology",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "A study of the general characteristics of physical, social, emotional and intellectual development, the psychology of learning, and the growth and development of personality.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures and 1 conference"
+    ]
+  },
+  {
+    "code": "NUTR 307",
+    "subject": "NUTR",
+    "number": "307",
+    "title": "Metabolism and Human Nutrition",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course looks at the importance of nutrition from the molecular to the organismal levels in human health and disease. The focus will be on the significance of nutrients in regulating metabolism, and impact of genotype in the metabolism of nutrients.",
+    "prerequisites": {
+      "text": "ANSC 234",
+      "tree": "ANSC 234",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ANSC 323 or NUTR 207",
+      "tree": {
+        "or": [
+          "ANSC 323",
+          "NUTR 207"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lecture hours and 1 tutorial/conference hour."
+    ]
+  },
+  {
+    "code": "NUTR 310",
+    "subject": "NUTR",
+    "number": "310",
+    "title": "Professional Practice Stage 2A",
+    "credits": 2,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The nutrition care process, clinical reasoning and documentation for the medical record. Preparation for the application of knowledge in practice, for clinical nutrition and food service administration rotations, will be addressed.",
+    "prerequisites": {
+      "text": "NUTR 209.; Fall term U2 required Dietetics Major courses",
+      "tree": "NUTR 209",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "One 3-hour lecture/week",
+      "This course has an additional course fee of $136.30 to cover the purchase of clinical nutrition cases from the Nutrition Care Professionals website (www.nutritioncarepro.com) that provides realistic, evidence based training on the International Nutrition Care Process and nutrition assessment tools for dietetics students around the world. These cases will be accessible to students for a period of 18 months after activation, so resources and cases can be consulted as they continue their program."
+    ]
+  },
+  {
+    "code": "NUTR 311",
+    "subject": "NUTR",
+    "number": "311",
+    "title": "Professional Practice Stage 2B",
+    "credits": 5,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Two interrelated modules of directed experience in normal and clinical nutrition and food service management, in health care settings and the private sector.",
+    "prerequisites": {
+      "text": "All U2 required courses: AEMA 310, NUTR 343, ANSC 323, ANSC 424, NUTR 307, NUTR 310, NUTR 337 (NUTR 342 or NUTR 446), NUTR 344, NUTR 345, NUTR 346.",
+      "tree": {
+        "and": [
+          "AEMA 310",
+          "NUTR 343",
+          "ANSC 323",
+          "ANSC 424",
+          "NUTR 307",
+          "NUTR 310",
+          "NUTR 337",
+          {
+            "or": [
+              "NUTR 342",
+              "NUTR 446"
+            ]
+          },
+          "NUTR 344",
+          "NUTR 345",
+          "NUTR 346"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course requires the ability to read in French, to understand spoken French and to speak French at a basic functional level for fieldwork experience.",
+      "The course NUTR 311 includes a $125 fee for the Level II manual. The fee is refundable until the end of the add/drop period as long as the manual is intact."
+    ]
+  },
+  {
+    "code": "NUTR 322",
+    "subject": "NUTR",
+    "number": "322",
+    "title": "Applied Sciences Communication",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The principles and techniques of communicating applied sciences to individuals and groups in both the professional and public milieu. Effective public speaking and group interaction techniques. Communication materials selection, development, use, and evaluation. Writing for the media. Balancing risk and reason in communicating scientific findings.",
+    "prerequisites": {
+      "text": "Completion of 15 credits in a B.Sc. program",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures, 1 lab"
+    ]
+  },
+  {
+    "code": "NUTR 337",
+    "subject": "NUTR",
+    "number": "337",
+    "title": "Nutrition Through Life",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Nutrient utilization, requirements and recommended allowances as related to physiological development throughout the life cycle. Physiological, psychological and environmental determinants of eating behaviour.",
+    "prerequisites": {
+      "text": "ANSC 234 or BIOC 311, and NUTR 307",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ANSC 234",
+              "BIOC 311"
+            ]
+          },
+          "NUTR 307"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures, 1 conference"
+    ]
+  },
+  {
+    "code": "NUTR 341",
+    "subject": "NUTR",
+    "number": "341",
+    "title": "Global Food Security",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Food insecurity is one of the most critical issues humanity has faced in history. The magnitude of this phenomenon, reflected in its worldwide presence and in the number of individuals affected, makes it an imperative component of all nations' and of all internaltional agencies' agendas. Its complexity of determinants and its numerous consequences require the involvement of multipe disciplines and sectors. McGill undergraduate students as future professionals tackling global issues require an integrated and multidisciplinary training on food security.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUTR 207 or permission of Instructor",
+      "tree": "NUTR 207",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 342",
+    "subject": "NUTR",
+    "number": "342",
+    "title": "Applied Human Resources",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course provides a solid foundation of HR essentials and a philosophy from which to navigate in the work place, familiarity with federal and provincial legislation and knowledge of current challenges and issues; a discussion on the employee life cycle from recruitment and selection to termination and everything that happens in between; a paradigm for leadership and creating a culture of engagement and effectiveness.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUTR 446.",
+      "excludes": [
+        "NUTR 446"
+      ]
+    },
+    "notes": [
+      "1. Fall",
+      "2. 3 lectures"
+    ]
+  },
+  {
+    "code": "NUTR 343",
+    "subject": "NUTR",
+    "number": "343",
+    "title": "Financial Management and Accounting",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Priniciples and concepts of financial management, accounting and cost control, analysis, utilization and communication of financial information. Cost value profit analysis, budgets and decision-making with applications in the food and nutrition sector.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "NUTR 344",
+    "subject": "NUTR",
+    "number": "344",
+    "title": "Clinical Nutrition 1",
+    "credits": 4,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Clinical nutrition assessment and dietary modification of pathological conditions including hypertension, lipid disorders and cardiovascular disease, obesity, cancer, COPD, introduction to diabetes, dysphagia.",
+    "prerequisites": {
+      "text": "ANSC 323, NUTR 307, and (ANSC 234 or BIOC 311)",
+      "tree": {
+        "and": [
+          "ANSC 323",
+          "NUTR 307",
+          {
+            "or": [
+              "ANSC 234",
+              "BIOC 311"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUTR 337 and ANSC 424.",
+      "tree": {
+        "and": [
+          "NUTR 337",
+          "ANSC 424"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Two 2.5-hour lectures"
+    ]
+  },
+  {
+    "code": "NUTR 345",
+    "subject": "NUTR",
+    "number": "345",
+    "title": "Food Service Systems Management",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Competency-based professional course for management of food service systems in healthcare organizations, food service industry, and groups. Principles of management theory and development of business plan in nutritionrelated activities. Emphasis on strategic planning; food policies; menu development; recipe standardization, nutrient analysis, costing; food purchasing; quality control; marketing; staffing; management styles; and ethical and professional behaviour. Students receive Canadian Food Safety Certification (Advanced.fst) upon completion of this course.",
+    "prerequisites": {
+      "text": "NUTR 209.",
+      "tree": "NUTR 209",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Bachelor of Science (Nutritional Sciences) (B.Sc.(Nutr.Sc.)) - Major Dietetics",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NUTR 346",
+    "subject": "NUTR",
+    "number": "346",
+    "title": "Applied Food Service Management",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Competency-based professional course focusing on human resources management, marketing, budgeting, HACCP principles, allergen management, recipe standardization, local and federal sanitation laws, and quality assurance in food settings and case studies. Students receive Allergen and WHMIS certification upon completion of this course.",
+    "prerequisites": {
+      "text": "NUTR 345",
+      "tree": "NUTR 345",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "NUTR 346 includes a fee of $409.82 for the Hazard Analysis Critical Control Points (HACCP) online course, the Canadian Food Safety Certification Advanced.fst book and examination and for a laboratory manual and supplies."
+    ]
+  },
+  {
+    "code": "NUTR 401",
+    "subject": "NUTR",
+    "number": "401",
+    "title": "Emerging Issues in Nutrition",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Investigation, discussion and presentations of emerging issues in nutrition.",
+    "prerequisites": {
+      "text": "NUTR 344",
+      "tree": "NUTR 344",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUTR 450",
+      "tree": "NUTR 450",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 408",
+    "subject": "NUTR",
+    "number": "408",
+    "title": "Professional Practice Stage 3A",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Competency-based educational topics linking theory to practice for field placements in the clinical setting. Topics include ethics, leadership and interprofessional teamwork.",
+    "prerequisites": {
+      "text": "NUTR 311",
+      "tree": "NUTR 311",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUTR 409, IPEA 501, IPEA 502, IPEA 503",
+      "tree": {
+        "and": [
+          "NUTR 409",
+          "IPEA 501",
+          "IPEA 502",
+          "IPEA 503"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Two 2 hr lectures/week",
+      "This course requires the ability to read in French, to understand spoken French and to speak French at a basic functional level for fieldwork experience."
+    ]
+  },
+  {
+    "code": "NUTR 409",
+    "subject": "NUTR",
+    "number": "409",
+    "title": "Professional Practice Stage 3B",
+    "credits": 9,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Four interrelated modules of directed experience in clinical nutrition, food service management, normal nutrition education and community nutrition, in health care settings and the private sector.",
+    "prerequisites": {
+      "text": "NUTR 311, NUTR 342 or NUTR 446 , NUTR 450, NUTR 505, NUTR 545 and NUTR 546.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "NUTR 311",
+              "NUTR 342"
+            ]
+          },
+          {
+            "and": [
+              "NUTR 446",
+              "NUTR 450",
+              "NUTR 505",
+              "NUTR 545",
+              "NUTR 546"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter: 11 weeks",
+      "This course requires the ability to read in French, to understand spoken French and to speak French at a basic functional level for fieldwork experience.",
+      "The course NUTR 409 includes a $125.00 fee for the Level III manual. The fee is refundable until the end of the add/drop period as long as the manual is intact."
+    ]
+  },
+  {
+    "code": "NUTR 430",
+    "subject": "NUTR",
+    "number": "430",
+    "title": "Directed Studies: Dietetics and Nutrition 1",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027",
+      "Summer 2027"
+    ],
+    "description": "An individualized course of study in dietetics/human nutrition under the supervision of a staff member with expertise on a topic not otherwise available in a formal course. A written agreement between student and staff member must be made before registration and filed with the Program Coordinator.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and Winter",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "NUTR 431",
+    "subject": "NUTR",
+    "number": "431",
+    "title": "Directed Studies: Dietetics and Nutrition 2",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Summer 2027"
+    ],
+    "description": "An individualized course of study in dietetics/human nutrition under the supervision of a staff member with expertise on a topic not otherwise available in a formal course. A written agreement between student and staff member must be made before registration and filed with the Program Coordinator.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "NUTR 432",
+    "subject": "NUTR",
+    "number": "432",
+    "title": "Directed Studies: Dietetics and Nutrition 3",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An individualized course of study in dietetics/human nutrition under the supervision of a staff member with expertise on a topic not otherwise available in a formal course. A written agreement between student and staff member must be made before registration and filed with the Program Coordinator.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and Winter"
+    ]
+  },
+  {
+    "code": "NUTR 433",
+    "subject": "NUTR",
+    "number": "433",
+    "title": "Directed Studies: Dietetics and Nutrition 4",
+    "credits": 5,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An individualized course of study in dietetics and human nutrition not available through other courses in the School. Emphasis will be placed on application of foods and nutrition knowledge, analytic and synthesis skills, and time management. A written agreement between student and instructor must be made before registration. A \"C\" grade is required to pass the course.",
+    "prerequisites": {
+      "text": "registration in NUTR 409 or equivalent.",
+      "tree": "NUTR 409",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "students in the Dietetics Major or documentation of requirement for professional registration",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter or Summer",
+      "Limited enrolment"
+    ]
+  },
+  {
+    "code": "NUTR 438",
+    "subject": "NUTR",
+    "number": "438",
+    "title": "Interviewing and Counselling",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theories of behaviour change. Techniques and skills as applicable to the dietitian's role as communicator, interviewer, counsellor, educator, motivator and nutrition behaviour change specialist.",
+    "prerequisites": {
+      "text": "NUTR 344 and NUTR 311",
+      "tree": {
+        "and": [
+          "NUTR 344",
+          "NUTR 311"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Three 3-hour conferences"
+    ]
+  },
+  {
+    "code": "NUTR 450",
+    "subject": "NUTR",
+    "number": "450",
+    "title": "Research Methods: Human Nutrition",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to how diverse approaches to nutrition research including international, community, laboratory, clinical, molecular, meta-analyses are necessary to advance the field of nutrition. Emphasis on ethics, scientific method, research process and analysis of results.",
+    "prerequisites": {
+      "text": "AEMA 310 or BIOL 373, and NUTR 307",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "AEMA 310",
+              "BIOL 373"
+            ]
+          },
+          "NUTR 307"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hour lecture, 1 hour other per week"
+    ]
+  },
+  {
+    "code": "NUTR 480",
+    "subject": "NUTR",
+    "number": "480",
+    "title": "Nutrition Industry Internship",
+    "credits": 12,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Internship with an approved host organization in the nutrition product industry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Open to students who have a minimum of 60 credits in the Double Major Food Science/Nutritional Sciences or permission of department."
+    ]
+  },
+  {
+    "code": "NUTR 491",
+    "subject": "NUTR",
+    "number": "491",
+    "title": "Honours Research 1 ",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The first part of a research project under the supervision of a faculty member in the School of Human Nutrition. Development of research proposal, including literature review, objectives, and research plan. Presentation and submission of written proposal.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Nutr.Sc.); Honours in Nutrition program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 492",
+    "subject": "NUTR",
+    "number": "492",
+    "title": "Honours Research 2 ",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The second part of a research project that tests the hypothesis developed in the research proposal. Collection of data, initial interpretation of findings, progress report and plan.",
+    "prerequisites": {
+      "text": "NUTR 491 and permission of the instructor",
+      "tree": "NUTR 491",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Nutr.Sc.); Honours in Nutrition program",
+      "excludes": []
+    },
+    "notes": [
+      "1. The minimum passing grade for the prerequisite course is A-"
+    ]
+  },
+  {
+    "code": "NUTR 493",
+    "subject": "NUTR",
+    "number": "493",
+    "title": "Honours Research 3",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The third part of a research project under the supervision of a faculty member in the School of Human Nutrition with completion of study, data analysis, and written progress report.",
+    "prerequisites": {
+      "text": "NUTR 492 and permission of the instructor",
+      "tree": "NUTR 492",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Nutr.Sc.); Honours in Nutrition program.",
+      "excludes": []
+    },
+    "notes": [
+      "1. The minimum passing grade for the prerequisite course is A-."
+    ]
+  },
+  {
+    "code": "NUTR 494",
+    "subject": "NUTR",
+    "number": "494",
+    "title": "Honours Research 4",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Completion of research project, with final interpretation of data in written manuscript-style report and defended in conference-style presentation.",
+    "prerequisites": {
+      "text": "NUTR 493 and permission of the instructor",
+      "tree": "NUTR 493",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Nutr.Sc.); Honours in Nutrition program.",
+      "excludes": []
+    },
+    "notes": [
+      "1. The minimum passing grade for the prerequisite course is A-."
+    ]
+  },
+  {
+    "code": "NUTR 497",
+    "subject": "NUTR",
+    "number": "497",
+    "title": "Professional Seminar: Nutrition",
+    "credits": 1.5,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A capstone course which requires a student to research a topic relevant to an industrial aspect of Nutritional Science, prepare a report and communicate that information to a peer audience in a succinct and professional manner.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Open to students who have completed a minimum of 75 credits in the dual degree/concurrent program in Food Science/Nutritional Science or permission of Department."
+    ]
+  },
+  {
+    "code": "NUTR 500",
+    "subject": "NUTR",
+    "number": "500",
+    "title": "Independent Study 1",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An individualized course to allow students to undertake projects in library, laboratory, or field study.",
+    "prerequisites": {
+      "text": "Permission of instructor and Director of the School",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An approved course outline must be on file in the School's office prior to registration."
+    ]
+  },
+  {
+    "code": "NUTR 501",
+    "subject": "NUTR",
+    "number": "501",
+    "title": "Nutrition in the Majority World",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current nutrition-related issues in the Majority World, emphasizing young children and other vulnerable groups. The integration of a life science and social science perspective. The multiple causes, consequences, policies, and interventions related to current nutrition.",
+    "prerequisites": {
+      "text": "A course in nutrition across the lifespan at the intermediate undergraduate level such as NUTR 337, or permission of the instructor.",
+      "tree": "NUTR 337",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "One 3-hr lecture"
+    ]
+  },
+  {
+    "code": "NUTR 502",
+    "subject": "NUTR",
+    "number": "502",
+    "title": "Independent Study 2",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An individualized course to allow students to undertake projects in library, laboratory, or field study.",
+    "prerequisites": {
+      "text": "Permission of instructor and Director of the School",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An approved course outline must be on file in the School's office prior to registration."
+    ]
+  },
+  {
+    "code": "NUTR 503",
+    "subject": "NUTR",
+    "number": "503",
+    "title": "Nutrition and Exercise",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Interaction of exercise physiology with nutrient and energy metabolism in healthy adults. Principles of physical training and role of physical activity and exercise in weight management and food intake regulation. Importance of physical activity in childhood, during pregnancy, in healthy adults and in improving functional capacity in the elderly.",
+    "prerequisites": {
+      "text": "Undergraduate Basic Biochemistry (ANSC 234 or BIOC 311), Undergraduate Mammalian Physiology (EDKP 395 or PHGY 210 or ANSC 323), Undergraduate Introductory Nutrition (EDKP 292 or NUTR 207 or NUTR 307).",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ANSC 234",
+              "BIOC 311"
+            ]
+          },
+          {
+            "or": [
+              "EDKP 395",
+              "PHGY 210",
+              "ANSC 323"
+            ]
+          },
+          {
+            "or": [
+              "EDKP 292",
+              "NUTR 207",
+              "NUTR 307"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NUTR 505",
+    "subject": "NUTR",
+    "number": "505",
+    "title": "Public Health Nutrition",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course focuses on the nutrition status of populations, communities and groups of people using a public health lens. It identifies and assesses human nutrition issues and problems, their causes, influencing factors and social conditions using a social determinants of health framework. Offers opportunities to design and conduct needs assessments, design and plan programs and plan for their evaluation. The purpose and role of participatory approaches with diverse populations and Indigenous populations in particular will be analyzed. Health systems, public health and political influence in Canada, as related to nutrition will be addressed.",
+    "prerequisites": {
+      "text": "NUTR 337",
+      "tree": "NUTR 337",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who were registered for NUTR 403 in Fall 2017",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 506",
+    "subject": "NUTR",
+    "number": "506",
+    "title": "Qualitative Methods in Nutrition",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Perspectives in study design, methods, and analysis. The application of qualitative research for developing, implementing, and evaluating community nutrition programs. Critiquing qualitative research articles and proposals for cultural safety and scientific rigour.",
+    "prerequisites": {
+      "text": "NUTR 551",
+      "tree": "NUTR 551",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 507",
+    "subject": "NUTR",
+    "number": "507",
+    "title": "Advanced Nutritional Biochemistry",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Specialized advanced topics in human nutrition, biochemistry and metabolism, including the dietary absorption and metabolism of iron, copper, and selenium and their role in energy metabolism, antioxidant defence, toxin elimination, and redox signaling and food source contamination, nutritional toxicology, and the negative impact these toxins have on metabolic networks and antioxidant defences.",
+    "prerequisites": {
+      "text": "NUTR 307, NUTR 337, ANSC 234",
+      "tree": {
+        "and": [
+          "NUTR 307",
+          "NUTR 337",
+          "ANSC 234"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "A strong understanding of basic cellular metabolism is vital for success."
+    ]
+  },
+  {
+    "code": "NUTR 508",
+    "subject": "NUTR",
+    "number": "508",
+    "title": "Professional Practice Stage 4A",
+    "credits": 7,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Directed professional practice experience in domains of clinical nutrition, management, nutrition education and/or community nutrition. This course includes at least one main clinical nutrition rotation, and may include additional weeks in other domains of practice.",
+    "prerequisites": {
+      "text": "NUTR 409",
+      "tree": "NUTR 409",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUTR 509",
+      "tree": "NUTR 509",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "This course requires the ability to read in French, to understand spoken French and to speak French at a basic functional level for fieldwork experience.",
+      "This course includes a $128.75 fee for the Level IV stage manual. The fee is refundable until the end of the add/drop period as long as the manual is intact."
+    ]
+  },
+  {
+    "code": "NUTR 509",
+    "subject": "NUTR",
+    "number": "509",
+    "title": "Professional Practice Stage 4B",
+    "credits": 7,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Directed professional practice experience in domains of clinical nutrition, management, nutrition education and/or community nutrition. This course includes management and community rotations.",
+    "prerequisites": {
+      "text": "NUTR 409",
+      "tree": "NUTR 409",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUTR 508",
+      "tree": "NUTR 508",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "1. This course requires the ability to read in French, to understand spoken French and to speak French at a basic functional level for fieldwork experience."
+    ]
+  },
+  {
+    "code": "NUTR 511",
+    "subject": "NUTR",
+    "number": "511",
+    "title": "Nutrition and Behaviour",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will integrate biological, social and psychological determinants of eating and food choices in both health and disease. Topics will include behavioural theories relevant to eating and food choice, neurobiology of appetite regulation, mental health, obesity, chronic disease and effectiveness of behaviour-change intervention strategies.",
+    "prerequisites": {
+      "text": "NUTR 337 and NUTR 344",
+      "tree": {
+        "and": [
+          "NUTR 337",
+          "NUTR 344"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 lectures and one seminar"
+    ]
+  },
+  {
+    "code": "NUTR 512",
+    "subject": "NUTR",
+    "number": "512",
+    "title": "Herbs, Foods and Phytochemicals",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of the use of herbal medicines and food phytochemicals and the benefits and risks of their consumption. The physiological basis for activity and the assessment of toxicity will be presented. Current practices relating to the regulation, commercialization and promotion of herbs and phytochemicals will be considered.",
+    "prerequisites": {
+      "text": "FDSC 211 or LSCI 211 or BIOL 201 or BIOC 212",
+      "tree": {
+        "or": [
+          "FDSC 211",
+          "LSCI 211",
+          "BIOL 201",
+          "BIOC 212"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and a project"
+    ]
+  },
+  {
+    "code": "NUTR 515",
+    "subject": "NUTR",
+    "number": "515",
+    "title": "Dietetics French Examination",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of French skills for the practice of dietetics. Testing will include definitions, comprehension of scientific articles, writing, conversation, and reading of and charting in medical records. Students are encouraged to take French courses as needed in the School of Continuing Studies or the French Language Centre at McGill.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in the M.Sc.(Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 537",
+    "subject": "NUTR",
+    "number": "537",
+    "title": "Advanced Human Metabolism",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced topics in regulation and dysregulation of metabolism integrating mechanistic pre-clinical approaches to studying human health and disease. Presentation and critical analysis of metabolic research.",
+    "prerequisites": {
+      "text": "NUTR 307, NUTR 337, ANSC 234, ANSC 424",
+      "tree": {
+        "and": [
+          "NUTR 307",
+          "NUTR 337",
+          "ANSC 234",
+          "ANSC 424"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 545",
+    "subject": "NUTR",
+    "number": "545",
+    "title": "Clinical Nutrition 2",
+    "credits": 4,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Pathophysiology and clinical nutrition intervention for various medical conditions. Topics include gastrointestinal disorders, surgery and nutrition support.",
+    "prerequisites": {
+      "text": "NUTR 337, NUTR 344 and ANSC 424",
+      "tree": {
+        "and": [
+          "NUTR 337",
+          "NUTR 344",
+          "ANSC 424"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "One 3-hour lecture One 1-hour lab"
+    ]
+  },
+  {
+    "code": "NUTR 546",
+    "subject": "NUTR",
+    "number": "546",
+    "title": "Clinical Nutrition 3",
+    "credits": 4,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical nutrition for diabetes, renal disease, eating disorders and other disorders in both adult and pediatric populations.",
+    "prerequisites": {
+      "text": "NUTR 337, NUTR 344 and ANSC 424",
+      "tree": {
+        "and": [
+          "NUTR 337",
+          "NUTR 344",
+          "ANSC 424"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Fall",
+      "Two 2.5-hr lectures"
+    ]
+  },
+  {
+    "code": "NUTR 551",
+    "subject": "NUTR",
+    "number": "551",
+    "title": "Analysis of Nutrition Data",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical application of theoretical concepts in data analysis covering issues of study design, data collection, database organization, and statistical analysis using SPSS statistical software. Applications of statistical tests, reporting and interpretation of results, and data visualization.",
+    "prerequisites": {
+      "text": "NUTR 337, AEMA 310 or another undergraduate-level statistics course.",
+      "tree": {
+        "and": [
+          "NUTR 337",
+          "AEMA 310"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "NUTR 450",
+      "tree": "NUTR 450",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NUTR 603",
+    "subject": "NUTR",
+    "number": "603",
+    "title": "Credentialing in Dietetics",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical and practical integration of knowledge and skills required during graduate professional practice. Includes clinical assessment and nutritional monitoring techniques, analysis of interviewing and counseling situations, and application of management information systems and quality assurance procedures.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUTR 513.",
+      "excludes": [
+        "NUTR 513"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "Open to students in the Master of Science(Applied) [M.Sc.(A.)] Human Nutrition (Non-Thesis): Dietetics Credentialing and the Graduate Diploma (Gr. Dip.) Registered Dietitian Credentialing.",
+      "This course has an additional course fee of $136.30 to cover the purchase of clinical nutrition cases from the Nutrition Care Professionals website (www.nutritioncarepro.com) that provides realistic, evidence based training on the International Nutrition Care Process and nutrition assessment tools for dietetics students around the world. These cases will be accessible to students for a period of 18 months after activation, so resources and cases can be consulted as they continue their program."
+    ]
+  },
+  {
+    "code": "NUTR 606",
+    "subject": "NUTR",
+    "number": "606",
+    "title": "Human Nutrition Research Methods",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Methods in molecular biology and biochemistry and molecular techniques in nutrient metabolism, gene analysis, and metabolomics, experimental models for the human gut and metabolic diseases. Formation and criticism of designs for research, sampling techniques, measurement and analysis issues and human research ethics.",
+    "prerequisites": {
+      "text": "A course in nutrition across the lifespan at the intermediate undergraduate level such as NUTR 337, and a course in statistics at the graduate level, or permission of the instructor.",
+      "tree": "NUTR 337",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "One 3-hour lecture"
+    ]
+  },
+  {
+    "code": "NUTR 607",
+    "subject": "NUTR",
+    "number": "607",
+    "title": "Counselling in Professional Practice ",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Techniques and strategies to enhance interpersonal skills for the health care environment. Topics include ethics, leadership and interprofessional teamwork. Hands-on practice in the dietitian's role as nutrition communicator, interviewer, counsellor, educator, motivator and behavioural change facilitator. Principles and practices essential to participating in entry-level dietetics.",
+    "prerequisites": {
+      "text": "NUTR 545, NUTR 546",
+      "tree": {
+        "and": [
+          "NUTR 545",
+          "NUTR 546"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "IPEA 501, IPEA 502, IPEA 503",
+      "tree": {
+        "and": [
+          "IPEA 501",
+          "IPEA 502",
+          "IPEA 503"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students registered in the M.Sc.(Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 608",
+    "subject": "NUTR",
+    "number": "608",
+    "title": "Special Topics 1",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Prescribed reading, conference, lectures, assignments and/or practical work on selected topics in student's area of specialization. An approved course outline must be on file in the School's office prior to registration.",
+    "prerequisites": {
+      "text": "Permission of instructor and Director of School.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Graduate students in Nutrition.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 609",
+    "subject": "NUTR",
+    "number": "609",
+    "title": "Special Topics 2",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An individualized course to allow students to undertake projects in library, laboratory, or field study. An approved course outline must be on file in the School's office prior to registration.",
+    "prerequisites": {
+      "text": "Permission of instructor and Director of School.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Graduate students in Nutrition.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 610",
+    "subject": "NUTR",
+    "number": "610",
+    "title": "Pediatric and Maternal Nutrition",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The scientific basis for topical and controversial issues during pregnancy, lactation and pediatric nutrition. Physiological, biochemical and molecular aspects of nutrient metabolism affecting maternal and pediatric health. Topics include molecular nutrition and birth defects, toxin-nutrient interactions and maldevelopment; epigenetics and metabolic programming; disrupted macro- and micronutrient metabolism and pregnancy complications; essential fatty acid metabolism and neural development; antioxidants, oxidative distress, inflammation and maternal and pediatric health.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "NUTR 337 or course in nutrition across the lifespan at the intermediate undergraduate level."
+    ]
+  },
+  {
+    "code": "NUTR 611",
+    "subject": "NUTR",
+    "number": "611",
+    "title": "Graduate Professional Practice 1",
+    "credits": 2,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Dietetic practicum that includes the hospital environment, client-centred care and the patient experience. Communication, dietary assessment, nutrition education.",
+    "prerequisites": {
+      "text": "NUTR 344, (NUTR 513 or NUTR 603)",
+      "tree": {
+        "and": [
+          "NUTR 344",
+          {
+            "or": [
+              "NUTR 513",
+              "NUTR 603"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the M.Sc.(Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing program. Not open to students who have taken NUTR 209 as of Fall 2025.",
+      "excludes": [
+        "NUTR 209"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 612",
+    "subject": "NUTR",
+    "number": "612",
+    "title": "Graduate Professional Practice 2 Management",
+    "credits": 8,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Assessment, planning, implementation, communication and evaluation in management of Food and Nutrition Systems. Focus is on application of management theory in dietetic practice.",
+    "prerequisites": {
+      "text": "(NUTR 513 or NUTR 603), NUTR 515, NUTR 611",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "NUTR 513",
+              "NUTR 603"
+            ]
+          },
+          "NUTR 515",
+          "NUTR 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to students registered in the Graduate Diploma in Registered Dietitian Credentialing, and Master of Science, Applied (M.Sc.A.) Human Nutrition (Non-Thesis): Dietetics Credentialing.",
+      "excludes": []
+    },
+    "notes": [
+      "The course NUTR 612 includes a $125.00 fee for the working manual. The fee is essentially for printing costs and for the purchase of copyrighted material used in the preparation of the package. The fee is refundable until the end of the add/drop period as long as the manual is intact."
+    ]
+  },
+  {
+    "code": "NUTR 613",
+    "subject": "NUTR",
+    "number": "613",
+    "title": "Graduate Professional Practice 3 Clinical Nutrition",
+    "credits": 7,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Initial rotation(s) in clinical nutrition. Assessment, planning, implementation, communication and evaluation of clinical nutrition care. Focus is on application of medical nutritional therapy for individuals and groups with a variety of disease states.",
+    "prerequisites": {
+      "text": "(NUTR 513 or NUTR 603), NUTR 515, NUTR 611",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "NUTR 513",
+              "NUTR 603"
+            ]
+          },
+          "NUTR 515",
+          "NUTR 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the M.Sc.(Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing or Graduate Diploma in Registered Dietitian Credentialing.; Not open to students who have taken NUTR 613, NUTR 613D1/D2, or NUTR 613N1/N2 prior to 201909",
+      "excludes": [
+        "NUTR 613D1",
+        "NUTR 613N1"
+      ]
+    },
+    "notes": [
+      "The course NUTR 613 includes a $128.75 fee for the working manual. The fee is essentially for printing costs and for the purchase of copyrighted material used in the preparation of the package. The fee is refundable until the end of the add/drop period as long as the manual is intact."
+    ]
+  },
+  {
+    "code": "NUTR 614",
+    "subject": "NUTR",
+    "number": "614",
+    "title": "Graduate Professional Practice 4 Community Nutrition",
+    "credits": 8,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Assessment, planning, implementation, communication, and evaluation of public health and community nutrition programs for a variety of individuals and population groups. Focus is on intervention strategies and their evaluation.",
+    "prerequisites": {
+      "text": "(NUTR 513 or NUTR 603), NUTR 515, NUTR 611",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "NUTR 513",
+              "NUTR 603"
+            ]
+          },
+          "NUTR 515",
+          "NUTR 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the Graduate Diploma in Registered Dietitian Credentialing, and M.Sc.(Applied) in Human Nutrition; NonThesis - Dietetics Credentialing.",
+      "excludes": []
+    },
+    "notes": [
+      "The course NUTR 614 includes a $128.75 fee for the working manual. The fee is essentially for printing costs and for the purchase of copyrighted material used in the preparation of the package. The fee is refundable until the end of the add/drop period as long as the manual is intact."
+    ]
+  },
+  {
+    "code": "NUTR 615",
+    "subject": "NUTR",
+    "number": "615",
+    "title": "Graduate Professional Practice 5 Clinical Nutrition",
+    "credits": 7,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Final rotation(s) in clinical nutrition. Assessment, planning, implementation, communication and evaluation of clinical nutrition care. Focus is on application of medical nutritional therapy for individuals and groups with a variety of disease states.",
+    "prerequisites": {
+      "text": "(NUTR 513 or NUTR 603), NUTR 515, NUTR 611",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "NUTR 513",
+              "NUTR 603"
+            ]
+          },
+          "NUTR 515",
+          "NUTR 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the M.Sc.(Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing or the Graduate Diploma in Registered Dietitian Credentialing.; Not open to students who have taken NUTR 613, NUTR 613D1/D2, or NUTR 613N1/N2 prior to 201909.",
+      "excludes": [
+        "NUTR 613",
+        "NUTR 613D1",
+        "NUTR 613N1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 618",
+    "subject": "NUTR",
+    "number": "618",
+    "title": "Dietetics Professional Practice",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the dietetics profession including ethics; provincial regulation; competencies and domains of practice; and dietetic practice in the hospital environment. Introductory activities related to food, food industry, agriculture, public health nutrition and clinical nutrition.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "IPEA 500",
+      "tree": "IPEA 500",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in Master of Science, Applied (M.Sc.A.) Human Nutrition (Non-Thesis): Dietetics Credentialing",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 625",
+    "subject": "NUTR",
+    "number": "625",
+    "title": "Emerging Issues for Nutritionists",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Emerging issues in nutrition and dietetics relevant to professional practice. Emphasis on research and writing updates for professional practice documents. Effective oral communication skills with other allied health professionals, as well as the general public. A focus on online communication, evaluating and promoting accurate nutrition science appropriate for diverse target groups. Skills associated with professional leadership roles.",
+    "prerequisites": {
+      "text": "NUTR 695, NUTR 696",
+      "tree": {
+        "and": [
+          "NUTR 695",
+          "NUTR 696"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUTR 626. Only open to students registered in the M.Sc. (Applied)in Human Nutrition; Non-Thesis - Dietetics Credentialing program.",
+      "excludes": [
+        "NUTR 626"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 626",
+    "subject": "NUTR",
+    "number": "626",
+    "title": "Writing for Dietetics Practice",
+    "credits": 2,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Identification and practice of effective writing techniques for the different types of writing likely to be required in dietetics practice, when taking a leadership role, promoting the profession, sharing knowledge and experience, and inspiring others. Writing for different segments of the general population, to writing for a professional audience. Peer critique and revision of text and design, in an effort to reach excellence, are important aspects of the course.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUTR 625 NUTR 695",
+      "tree": {
+        "and": [
+          "NUTR 625",
+          "NUTR 695"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students enrolled in the M.Sc.(Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 629",
+    "subject": "NUTR",
+    "number": "629",
+    "title": "Professional Dietetics Project",
+    "credits": 6,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A team project (3 or 4 students). Interventions and outcomes, or development and evaluation of tools and resources for dietetics practice, in a clinical or community nutrition setting, with individuals or groups as the target population. The project findings will be disseminated through a final report and a presentation to health professionals.",
+    "prerequisites": {
+      "text": "NUTR628",
+      "tree": "NUTR 628",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the M.Sc.(Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 641",
+    "subject": "NUTR",
+    "number": "641",
+    "title": "Advanced Global Food Security",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Food security is a major concern on the international development agenda: hundreds of millions, and perhaps even billions of individuals still face food insecurity and hunger, even years after the Millennium Summit. This course is designed to provide graduate students with multidisciplinary tools in research and education required by practitioners and researchers to better assess, understand, and positively impact global food security. Students will attend the Annual McGill Global Food Security Conference, and will actively review presentations and interact with world experts from various sectors and disciplines presenting on cutting edge research and the state of Global Food Security.",
+    "prerequisites": {
+      "text": "Permission from Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUTR 608 when topic was \"Advanced Global Food Security\" .",
+      "excludes": [
+        "NUTR 608"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 651",
+    "subject": "NUTR",
+    "number": "651",
+    "title": "M.Sc. (Applied) Literature Review",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of literature and definition of problem/objective for the project or practicum.",
+    "prerequisites": {
+      "text": "NUTR 606, NUTR 695 Can also be taken as corequisites.",
+      "tree": {
+        "and": [
+          "NUTR 606",
+          "NUTR 695"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in M.Sc. (Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing, M.Sc.(Applied) in Human Nutrition; Non-Thesis - Practicum, M.Sc.(Applied) in Human Nutrition; Non-Thesis - Project.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 652",
+    "subject": "NUTR",
+    "number": "652",
+    "title": "M.Sc. (Applied) Project 1",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Project design and planning.",
+    "prerequisites": {
+      "text": "NUTR 651",
+      "tree": "NUTR 651",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 653",
+    "subject": "NUTR",
+    "number": "653",
+    "title": "M.Sc. (Applied) Project 2",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Project execution. This project relates to the Human Nutrition M.Sc. (Applied) degree.",
+    "prerequisites": {
+      "text": "NUTR 652",
+      "tree": "NUTR 652",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 654",
+    "subject": "NUTR",
+    "number": "654",
+    "title": "M.Sc. (Applied) Project 3",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of project execution and data collection; preliminary analysis. This project relates to the Human Nutrition M.Sc. (Applied) degree.",
+    "prerequisites": {
+      "text": "NUTR 653",
+      "tree": "NUTR 653",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 655",
+    "subject": "NUTR",
+    "number": "655",
+    "title": "M.Sc. (Applied) Project 4",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Data analysis. Submission of project report. This project relates to the Human Nutrition M.Sc. (Applied) degree.",
+    "prerequisites": {
+      "text": "NUTR 654",
+      "tree": "NUTR 654",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 656",
+    "subject": "NUTR",
+    "number": "656",
+    "title": "M.Sc. (Applied) Practicum 1",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Clinical or community placement (4 weeks). Submission of placement report. This practicum relates to the Human Nutrition M.Sc. (Applied) degree.",
+    "prerequisites": {
+      "text": "NUTR 651",
+      "tree": "NUTR 651",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 657",
+    "subject": "NUTR",
+    "number": "657",
+    "title": "M.Sc. (Applied) Practicum 2",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of placement (4 weeks). Submission of placement report. This practicum relates to the Human Nutrition M.Sc. (Applied) degree.",
+    "prerequisites": {
+      "text": "NUTR 656",
+      "tree": "NUTR 656",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 658",
+    "subject": "NUTR",
+    "number": "658",
+    "title": "M.Sc. (Applied) Practicum 3",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of placement (4 weeks). Submission of placement report. This practicum relates to the Human Nutrition M.Sc. (Applied) degree.",
+    "prerequisites": {
+      "text": "NUTR 657",
+      "tree": "NUTR 657",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 659",
+    "subject": "NUTR",
+    "number": "659",
+    "title": "M.Sc. (Applied) Practicum 4",
+    "credits": 3,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of placement (4 weeks). Submission of placement report. This practicum relates to the Human Nutrition M.Sc. (Applied) degree.",
+    "prerequisites": {
+      "text": "NUTR 658",
+      "tree": "NUTR 658",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 660",
+    "subject": "NUTR",
+    "number": "660",
+    "title": "M.Sc.(Applied) Final Presentation",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Final oral presentation of the project or practicum.",
+    "prerequisites": {
+      "text": "NUTR 629 or NUTR 654 or NUTR 658",
+      "tree": {
+        "or": [
+          "NUTR 629",
+          "NUTR 654",
+          "NUTR 658"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in M.Sc. (Applied) in Human Nutrition; Non-Thesis - Dietetics Credentialing or M.Sc.(Applied) in Human Nutrition; Non-Thesis - Practicum or M.Sc.(Applied) in Human Nutrition; Non-Thesis - Project.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 680",
+    "subject": "NUTR",
+    "number": "680",
+    "title": "Human Nutrition M.Sc. Thesis 1",
+    "credits": 7,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor toward completion of the M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 681",
+    "subject": "NUTR",
+    "number": "681",
+    "title": "Human Nutrition M.Sc. Thesis 2",
+    "credits": 8,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor toward completion of the M.Sc. thesis. Presentation of a thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 682",
+    "subject": "NUTR",
+    "number": "682",
+    "title": "Human Nutrition M.Sc. Thesis 3",
+    "credits": 9,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the direction of a supervisor toward completion of the M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "NUTR 682D2",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "NUTR 683",
+    "subject": "NUTR",
+    "number": "683",
+    "title": "Human Nutrition M.Sc. Thesis 4",
+    "credits": 9,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Final submission and approval of the M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 695",
+    "subject": "NUTR",
+    "number": "695",
+    "title": "Human Nutrition Research Orientation",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Orientation to graduate studies in nutrition including research ethics and safety training, library and literature search skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students in Human Nutrition only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUTR 696",
+    "subject": "NUTR",
+    "number": "696",
+    "title": "Human Nutrition Seminar",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Students will present a recent original research article in which the methods and data presentation will be critically analyzed. The article must be approved by the instructor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 697",
+    "subject": "NUTR",
+    "number": "697",
+    "title": "MSc Final Presentation",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of final masters thesis research in Colloquium.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUTR 701",
+    "subject": "NUTR",
+    "number": "701",
+    "title": "Doctoral Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "See Faculty Regulations"
+    ]
+  },
+  {
+    "code": "NUTR 796",
+    "subject": "NUTR",
+    "number": "796",
+    "title": "PhD Research Presentation",
+    "credits": 1,
+    "offeredBy": "Human Nutrition",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of advanced thesis research in Colloquium towards the end of the program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

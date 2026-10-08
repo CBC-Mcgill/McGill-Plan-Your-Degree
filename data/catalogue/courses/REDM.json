@@ -1,0 +1,167 @@
+[
+  {
+    "code": "REDM 396",
+    "subject": "REDM",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Redpath Museum",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "REDM 399",
+    "subject": "REDM",
+    "number": "399",
+    "title": "Science Writing",
+    "credits": 1,
+    "offeredBy": "Redpath Museum",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Techniques for effective science writing, including elements of reader-based scientific manuscripts and Abstracts. Emphasis on how to edit texts to make them logical, precise, and clear.",
+    "prerequisites": {
+      "text": "Completion of U1 and permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Preference given to students concurrently enrolled in Research Project course. To obtain permission, students should email the instructor, Linda.Cooper@mcgill.ca"
+    ]
+  },
+  {
+    "code": "REDM 400",
+    "subject": "REDM",
+    "number": "400",
+    "title": "Science and Museums",
+    "credits": 3,
+    "offeredBy": "Redpath Museum",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Natural history museums and their collections, how collections are created and maintained and how collections are used in scientific research. Context of natural history museums, collections-based research and curatorial methods.",
+    "prerequisites": {
+      "text": "A 200- or 300-level course that deals with diversity of specimens or objects relevant to Museum-based research and collections. e.g. BIOL 215, BIOL 305, EPSC 210, EPSC 233, ANTH 208, ANTH 310, PLNT 358, WILD 212, WILD 313, or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 215",
+          "BIOL 305",
+          "EPSC 210",
+          "EPSC 233",
+          "ANTH 208",
+          "ANTH 310",
+          "PLNT 358",
+          "WILD 212",
+          "WILD 313"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter: Course consists of lectures, practical labs, field trips and individual term-projects."
+    ]
+  },
+  {
+    "code": "REDM 410",
+    "subject": "REDM",
+    "number": "410",
+    "title": "Writing Research Articles",
+    "credits": 3,
+    "offeredBy": "Redpath Museum",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Students will learn about the scientific article, publishing in the sciences, and the benefits of writing for a wide audience. This course focuses on how to structure the Abstract, as well as the Introduction and Discussion section of the full manuscript, and on editing techniques.",
+    "prerequisites": {
+      "text": "24 credits of 200/300-level Science courses.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This is an advanced course and permission of the instructor is required. To obtain permission, students should email the instructor, linda.cooper@mcgill.ca. Not open to students who are taking or have taken REDM 399.",
+      "excludes": [
+        "REDM 399"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "REDM 511",
+    "subject": "REDM",
+    "number": "511",
+    "title": "Advanced Museum-Based Science",
+    "credits": 3,
+    "offeredBy": "Redpath Museum",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The course will allow senior undergraduates and graduate students to become intimately acquainted with key primary literature in museum-based science and the major issues challenging the field. Course components will include the weekly Redpath seminar series, and also a 2-hour weekly lecture, presentation, and discussion session.",
+    "prerequisites": {
+      "text": "REDM 400 and/or permission of instructor.",
+      "tree": "REDM 400",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "REDM 610",
+    "subject": "REDM",
+    "number": "610",
+    "title": "Writing Science Articles 1",
+    "credits": 3,
+    "offeredBy": "Redpath Museum",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Principles and techniques for clear scientific writing with an emphasis on how to transform complex ideas into direct and precise ones by explaining research to peers and writing for interdisciplinary audiences.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students in the Faculty of Science; graduate students from other faculties considered, space permitting. Enrolment is limited to 12 students. The language of instruction is English and it is not intended as an ESL course. Course is graded pass/fail.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "REDM 710",
+    "subject": "REDM",
+    "number": "710",
+    "title": "Writing Science Articles 2",
+    "credits": 3,
+    "offeredBy": "Redpath Museum",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Skills for writing and publishing scientific articles, including peer-reviewed manuscripts and short, critical reviews of published articles. Topics include techniques for developing logical arguments and writing publishable manuscripts.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Ph.D. students in the Faculty of Science; M.Sc. students from the Faculty of Science and Ph.D. students from other faculties considered, space permitting. Enrolment is limited to 12 students. The language of instruction is English and it is not intended as an ESL course. Course is graded pass/fail.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

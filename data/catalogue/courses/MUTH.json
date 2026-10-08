@@ -1,0 +1,741 @@
+[
+  {
+    "code": "MUTH 100",
+    "subject": "MUTH",
+    "number": "100",
+    "title": "Music Theory Fundamentals",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Basic training in music theory fundamentals. Topics include interval identification (both visual and aural), clef reading, chord recognition, melodic and rhythmic dictation, scales, and key signatures.",
+    "prerequisites": {
+      "text": "Theory placement test for Schulich School of Music undergraduates.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MUTH 150",
+      "tree": "MUTH 150",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "The course is offered as a simultaneous corequisite to MUTH 150 (Theory and Analysis I) for students without the required music theory background. Enrolment in MUTH 100 is based on performance on the placement test for incoming undergraduates."
+    ]
+  },
+  {
+    "code": "MUTH 101",
+    "subject": "MUTH",
+    "number": "101",
+    "title": "Basic Materials: Western Music",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A combination of elementary theory and ear training (sightsinging and aural recognition), and basic piano skills. Topics include: notation of pitch and rhythm, intervals, scales and modes, concept of key, triads and seventh chords, introductory melody and accompaniment writing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all undergraduate students except those in a B.Mus. or L.Mus. program; not open to students who have taken MUAR 201.",
+      "excludes": [
+        "MUAR 201"
+      ]
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 150",
+    "subject": "MUTH",
+    "number": "150",
+    "title": "Theory and Analysis 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Diatonic chords and harmonic progressions, focus on outer-voice framework, cadences, embellishments, building chordal fluency in common-practice tonality, applied chords.",
+    "prerequisites": {
+      "text": "Placement exam",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MUSP 140 and MUSP 170",
+      "tree": {
+        "and": [
+          "MUSP 140",
+          "MUSP 170"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUTH 151",
+    "subject": "MUTH",
+    "number": "151",
+    "title": "Theory and Analysis 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Sequences and modulation, chromatic vocabulary, analysis of simple theme types (sentence, period, hybrids) and fugal techniques.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUSP 141 and MUSP 171",
+      "tree": {
+        "and": [
+          "MUSP 141",
+          "MUSP 171"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Pre- or Co-requisites: MUTH 150, MUSP 140 and MUSP 170"
+    ]
+  },
+  {
+    "code": "MUTH 202",
+    "subject": "MUTH",
+    "number": "202",
+    "title": "Modal Counterpoint 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Polyphonic techniques of the Renaissance period studied through analysis of works by Palestrina and others and through written exercises in two to three voices.",
+    "prerequisites": {
+      "text": "MUSP 140, MUSP 170, MUTH 150",
+      "tree": {
+        "and": [
+          "MUSP 140",
+          "MUSP 170",
+          "MUTH 150"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 204",
+    "subject": "MUTH",
+    "number": "204",
+    "title": "Tonal Counterpoint 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The contrapuntal techniques of Baroque composers studied through detailed technical analysis of their works and through written exercises in strict style.",
+    "prerequisites": {
+      "text": "MUSP 141, MUSP 171, MUTH 151",
+      "tree": {
+        "and": [
+          "MUSP 141",
+          "MUSP 171",
+          "MUTH 151"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 250",
+    "subject": "MUTH",
+    "number": "250",
+    "title": "Theory and Analysis 3",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Compositional resources of late 18th and early 19th century music. Analysis of forms common to the period c. 1770 - 1840, including Classical sonata forms in several media.",
+    "prerequisites": {
+      "text": "MUTH 151",
+      "tree": "MUTH 151",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUSP 240",
+      "tree": "MUSP 240",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 251",
+    "subject": "MUTH",
+    "number": "251",
+    "title": "Theory and Analysis 4",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Expanded harmonic resources of the 19th century (e.g., advanced chromaticism including enharmonic reinterpretation and symmetrical division). Analysis of characteristic small and large forms. Writing and analytical skills with a goal toward perceiving how levels of musical structure interact.",
+    "prerequisites": {
+      "text": "MUTH 250",
+      "tree": "MUTH 250",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUSP 241",
+      "tree": "MUSP 241",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 302",
+    "subject": "MUTH",
+    "number": "302",
+    "title": "Modal Counterpoint 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Continuation of Modal Counterpoint I. Study of more advanced techniques through further analysis and written exercises in three or more voices.",
+    "prerequisites": {
+      "text": "MUTH 202",
+      "tree": "MUTH 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 304",
+    "subject": "MUTH",
+    "number": "304",
+    "title": "Tonal Counterpoint 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Further analysis and written exercises with special emphasis on fugal techniques in free style.",
+    "prerequisites": {
+      "text": "MUTH 204",
+      "tree": "MUTH 204",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 321",
+    "subject": "MUTH",
+    "number": "321",
+    "title": "Topics in Tonal Analysis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in advanced analysis of tonal music.",
+    "prerequisites": {
+      "text": "MUTH 251",
+      "tree": "MUTH 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours",
+      "Topics will change from semester to semester."
+    ]
+  },
+  {
+    "code": "MUTH 322",
+    "subject": "MUTH",
+    "number": "322",
+    "title": "Topics in Post-Tonal Analysis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Topics in advanced analysis of post-tonal music.",
+    "prerequisites": {
+      "text": "MUTH 350",
+      "tree": "MUTH 350",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours",
+      "Topics will change from semester to semester."
+    ]
+  },
+  {
+    "code": "MUTH 350",
+    "subject": "MUTH",
+    "number": "350",
+    "title": "Theory and Analysis 5",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Exploration of 20th and 21st century organizations of pitch, rhythm, timbre etc. Written and analytical skills for the purpose of gaining insight into the compositional techniques and aesthetics of this repertoire.",
+    "prerequisites": {
+      "text": "MUTH 250",
+      "tree": "MUTH 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 426",
+    "subject": "MUTH",
+    "number": "426",
+    "title": "Early Music Analysis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Music from before 1700 is analyzed using recently developed techniques as well as materials gathered from treatises contemporaneous with the music. The implications of analysis for performance are considered.",
+    "prerequisites": {
+      "text": "MUTH 250",
+      "tree": "MUTH 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 475",
+    "subject": "MUTH",
+    "number": "475",
+    "title": "Special Project: Music Theory",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Individual research project exploring music theory.",
+    "prerequisites": {
+      "text": "MUTH 250 and MUSP 171, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MUTH 250",
+          "MUSP 171"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students who have obtained the Departmental Chair's approval.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUTH 526",
+    "subject": "MUTH",
+    "number": "526",
+    "title": "Methods in Tonal Theory and Analysis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Theoretical topics and analytical applications in tonal music. Topics include some of the following: reduction, prolongation, voice-leading/linear models,motive/Grundgestalt, schema, partimento, and phrase rhythm/hypermeter.",
+    "prerequisites": {
+      "text": "MUTH 251",
+      "tree": "MUTH 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Priority will be given to Major Theory and Minor Music Theory students."
+    ]
+  },
+  {
+    "code": "MUTH 528",
+    "subject": "MUTH",
+    "number": "528",
+    "title": "Schenkerian Theory and Analysis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Introduction to the principles and graphing techniques of Schenkerian theory, analysis of tonal works from 1700-1900, and study of prolongational techniques in relation to formal types.",
+    "prerequisites": {
+      "text": "MUTH 251 or permission of instructor.",
+      "tree": "MUTH 251",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 529",
+    "subject": "MUTH",
+    "number": "529",
+    "title": "Proseminar in Music Theory",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "An introduction to the discipline of music theory, including modern music theory and analysis.",
+    "prerequisites": {
+      "text": "MUTH 251 (or equivalent).",
+      "tree": "MUTH 251",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 538",
+    "subject": "MUTH",
+    "number": "538",
+    "title": "Mathematical Models for Musical Analysis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Theoretical topics and analytical applications selected from the following: serial theory, atonal set theory, contour theory, similarity metrics, transformational networks, elementary group theory and generalized interval systems, neo-Riemannian theory, atonal voice-leading and geometry, scale theory, models of tuning and temperament and information theory.",
+    "prerequisites": {
+      "text": "MUTH 350 (or equivalent).",
+      "tree": "MUTH 350",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 539",
+    "subject": "MUTH",
+    "number": "539",
+    "title": "Advanced Writing Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced writing skills, including intensive four-part harmonization, advanced harmonic vocabulary and syntax, post-tonal counterpoint.",
+    "prerequisites": {
+      "text": "MUTH 350",
+      "tree": "MUTH 350",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUTH 541",
+    "subject": "MUTH",
+    "number": "541",
+    "title": "Popular Music Analysis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Different theoretical and analytical approaches to the study of popular music, examining form, phrase structure, pitch structures, rhythm and meter, texture, timbre, recording techniques and other parameters, in order to understand how these elements are organized in popular music and how they combine to create expressivity and meaning.",
+    "prerequisites": {
+      "text": "MUTH 251, MUSP 171 and MUSP 241",
+      "tree": {
+        "and": [
+          "MUTH 251",
+          "MUSP 171",
+          "MUSP 241"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUTH 602",
+    "subject": "MUTH",
+    "number": "602",
+    "title": "Keyboard Modal Counterpoint",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced study of polyphonic techniques of the renaissance period through written exercises, in-depth written case study, and improvised practice at the keyboard.",
+    "prerequisites": {
+      "text": "MUTH 202 or equivalent",
+      "tree": "MUTH 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate keyboardists in early music and organ or permission of the instructor. This course may count only as the additional seminar and not as the approved graduate seminar with the prefix MUCO, MUGS, MUGT, MUHL, MUMT, MUPP, MUTH.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUTH 604",
+    "subject": "MUTH",
+    "number": "604",
+    "title": "Keyboard Tonal Counterpoint",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced study of polyphonic techniques of tonal music through written exercises, in-depth written case study, and improvised practice at the keyboard.",
+    "prerequisites": {
+      "text": "MUTH 204 or equivalent",
+      "tree": "MUTH 204",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate keyboardists only or permission of the instructor. This course may count only as the additional seminar and not as the approved graduate seminar with the prefix MUCO, MUGS, MUGT, MUHL, MUMT, MUPP, MUTH.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUTH 652",
+    "subject": "MUTH",
+    "number": "652",
+    "title": "Seminar in Music Theory 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar in music theory. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 653",
+    "subject": "MUTH",
+    "number": "653",
+    "title": "Seminar in Music Theory 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar in music theory. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 654",
+    "subject": "MUTH",
+    "number": "654",
+    "title": "Seminar in Music Theory 3",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in music theory. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 655",
+    "subject": "MUTH",
+    "number": "655",
+    "title": "Seminar in Music Theory 4",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in music theory. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 656",
+    "subject": "MUTH",
+    "number": "656",
+    "title": "Seminar in Music Theory 5",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar in music theory. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 657",
+    "subject": "MUTH",
+    "number": "657",
+    "title": "Seminar in Music Theory 6",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in music theory. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 658",
+    "subject": "MUTH",
+    "number": "658",
+    "title": "History of Music Theory 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected topics in the history of music theory from Greek antiquity to 1700 through readings of primary and secondary literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 659",
+    "subject": "MUTH",
+    "number": "659",
+    "title": "History of Music Theory 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Selected topics in the history of music theory from 1700 to the present through readings of primary and secondary literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUTH 710",
+    "subject": "MUTH",
+    "number": "710",
+    "title": "Teaching Practicum",
+    "credits": 0,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Compilation of materials for a class on a particular topic, organizing and hierarchizing the information, designing class activities and preparing a lesson plan, presenting information clearly and concisely, and answering students' questions and otherwise interacting with the class.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Ph.D. in Music (Theory) and the Ph.D. in Music; Gender and Women's Studies.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUTH 711",
+    "subject": "MUTH",
+    "number": "711",
+    "title": "General Examinations",
+    "credits": 0,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Series of examinations. Music theory essays, music history (Score ID), oral exam.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Ph.D. in Music (Theory) and the Ph.D. in Music; Gender and Women's Studies.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

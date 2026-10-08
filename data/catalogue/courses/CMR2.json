@@ -1,0 +1,216 @@
+[
+  {
+    "code": "CMR2 566",
+    "subject": "CMR2",
+    "number": "566",
+    "title": "Global Marketing Management",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Marketing management considerations of a company seeking to extend beyond the confines of its domestic market. A review of product, pricing, channels of distribution and communications policies to develop an optimum strategy (between adapting completely to each local environment and standardizing across them) for arriving at an integrated and profitable operation. Particular attention to international marketing and exporting in the Canadian context.",
+    "prerequisites": {
+      "text": "(CMR2 542 or CMR2 642) and CMR2 548 or CMR2 648 or CMS2 521.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CMR2 542",
+                  "CMR2 642"
+                ]
+              },
+              "CMR2 548"
+            ]
+          },
+          "CMR2 648",
+          "CMS2 521"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMR2 573",
+    "subject": "CMR2",
+    "number": "573",
+    "title": "Digital Marketing Communications",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Applies a strategic approach to developing and measuring a digital marketing communication strategy for various platforms and channels aligned to the traditional marketing communications mix. Covers how to leverage best practices to optimise online community building, conversion, and customer experience through digital channels in an integrated marketing communication strategy.",
+    "prerequisites": {
+      "text": "CMIS 543, CMIS 544 and CMIS 549",
+      "tree": {
+        "and": [
+          "CMIS 543",
+          "CMIS 544",
+          "CMIS 549"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMR2 642",
+    "subject": "CMR2",
+    "number": "642",
+    "title": "Marketing Principles and Applications",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of the different aspects of marketing operations: the marketing concept, analysis and research of market opportunities, and the planning, implementation, and control of the marketing program (product, promotion, distribution, and pricing). Focus is on the general market environment and Canadian marketing institutions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMR2 542.",
+      "excludes": [
+        "CMR2 542"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CMR2 643",
+    "subject": "CMR2",
+    "number": "643",
+    "title": "Marketing of Services",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of the concepts, frameworks, and current trends in the marketing of services, including new creative products. Analysis of issues pertaining to the delivery of service excellence, effective communication, the highest quality, and loyalty. Focus is on service marketing in the private and public sectors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMR2 543.",
+      "excludes": [
+        "CMR2 543"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CMR2 648",
+    "subject": "CMR2",
+    "number": "648",
+    "title": "Marketing Research and Reporting",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of statistics, with emphasis on key concepts required to understand and report marketing information. Overview of qualitative and quantitative data collection techniques and interpretation of secondary on-line research. Focus on Facebook and Google analytics and insights.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMR2 548.",
+      "excludes": [
+        "CMR2 548"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CMR2 650",
+    "subject": "CMR2",
+    "number": "650",
+    "title": "Digital Marketing Management",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Overview of digital and web-based marketing principles and areas such as social media, search engine optimization, search engine marketing, content marketing, email marketing, and e-commerce. Design of digital strategies to drive business growth.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMR2 664",
+    "subject": "CMR2",
+    "number": "664",
+    "title": "Integrated Marketing Communications",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design of an integrated marketing plan, including creativity, branding, media selection, customer segmentation, and budgeting. Strategic approach to the integrated marketing mix: digital promotion, advertising, public relations, experiential marketing, and direct marketing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMR2 564.",
+      "excludes": [
+        "CMR2 564"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CMR2 668",
+    "subject": "CMR2",
+    "number": "668",
+    "title": "Buyer Behaviour ",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Comprehensive overview of the behaviour of the consumer in the marketplace and the research approaches to analyzing and understanding that behaviour. Exploration of human behaviour and action in the marketing context with a focus on the basic processes of consumer decision-making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMR2 556.",
+      "excludes": [
+        "CMR2 556"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CMR2 691",
+    "subject": "CMR2",
+    "number": "691",
+    "title": "Marketing Strategy",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of a complete strategic marketing plan including the allocation of resources. Formulation of a marketing strategy for real-world cases.",
+    "prerequisites": {
+      "text": "Departmental approval required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMR2 570.",
+      "excludes": [
+        "CMR2 570"
+      ]
+    },
+    "notes": []
+  }
+]

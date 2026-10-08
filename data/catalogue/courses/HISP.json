@@ -1,0 +1,1503 @@
+[
+  {
+    "code": "HISP 199",
+    "subject": "HISP",
+    "number": "199",
+    "title": "FYS: Hispanic Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to major issues in Hispanic literature and culture through the analysis of primary and secondary sources and intensive writing.",
+    "prerequisites": {
+      "text": "Placement Test offered by the Department of Hispanic Studies or permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to newly admitted students in U0 or U1, who may take only one FYS.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "Course taught in Spanish. Students who register for more than one FYS will be obliged to withdraw from all but one of them. Maximum 20 students."
+    ]
+  },
+  {
+    "code": "HISP 202",
+    "subject": "HISP",
+    "number": "202",
+    "title": "Portuguese Language: Beginners",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A comprehensive first-year course in speaking, reading and writing. Selected readings in Portuguese and Brazilian literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval required; beginners only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HISP 204",
+    "subject": "HISP",
+    "number": "204",
+    "title": "Portuguese Language: Intermediate",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Review of grammar. Practice in speaking and writing. Composition. Selected readings in Portuguese and Brazilian literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 210",
+    "subject": "HISP",
+    "number": "210",
+    "title": "Spanish Language: Beginners",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comprehensive first-level course focusing on all oral and written skills. An introduction to the fundamentals of Spanish grammar and syntax and to Hispanic culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 218 or equivalent",
+      "excludes": [
+        "HISP 218"
+      ]
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "HISP 210D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "HISP 210D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "HISP 218",
+    "subject": "HISP",
+    "number": "218",
+    "title": "Spanish Language Intensive - Elementary",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comprehensive first-level course focusing upon all oral and written skills. An introduction to the fundamentals of Spanish grammar and syntax and to Hispanic culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 210 or 210D1/D2 or equivalent",
+      "excludes": [
+        "HISP 210"
+      ]
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "HISP 219",
+    "subject": "HISP",
+    "number": "219",
+    "title": "Spanish Language Intensive - Intermediate",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A thorough review of Spanish grammar with emphasis upon current usage. Enrichment of all language skills, with a goal of proficiency in written and oral communication, through readings in the literature and civilization of Spain and Spanish America.",
+    "prerequisites": {
+      "text": "HISP 210 or 210D1/D2 or HISP 218 or equivalent",
+      "tree": {
+        "or": [
+          "HISP 210",
+          "HISP 218"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 220D1/D2 or equivalent",
+      "excludes": [
+        "HISP 220"
+      ]
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "HISP 220",
+    "subject": "HISP",
+    "number": "220",
+    "title": "Spanish Language: Intermediate",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A thorough review of Spanish grammar with emphasis upon current usage. Enrichment of all language skills, with a goal of proficiency in written and oral communication, through readings in the literature and cultural aspects of Spain and Spanish America.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 219 or equivalent",
+      "excludes": [
+        "HISP 219"
+      ]
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "HISP 220D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "HISP 220D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "HISP 225",
+    "subject": "HISP",
+    "number": "225",
+    "title": "Hispanic Civilization 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of historical and cultural elements which constitute the background of the Hispanic world up to the 18th century; a survey of the pre-Columbian indigenous civilizations (Aztec, Maya and Inca) and the conquest of America.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Taught in English"
+    ]
+  },
+  {
+    "code": "HISP 226",
+    "subject": "HISP",
+    "number": "226",
+    "title": "Hispanic Civilization 2",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A survey of the constitution of the ideological and political structures of the Spanish Empire in both Europe and America until the Wars of Independence; a survey of the culture and history of the Hispanic people from the early 19th Century to the present.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Taught in English"
+    ]
+  },
+  {
+    "code": "HISP 243",
+    "subject": "HISP",
+    "number": "243",
+    "title": "Survey of Latin American Literature and Culture 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "From the Colonial period to Modernism through a study of representative works.",
+    "prerequisites": {
+      "text": "successful completion of HISP 220D1/HISP 220D2, HISP 219 or equivalent",
+      "tree": {
+        "and": [
+          "HISP 220",
+          "HISP 219"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Taught in Spanish"
+    ]
+  },
+  {
+    "code": "HISP 244",
+    "subject": "HISP",
+    "number": "244",
+    "title": "Survey of Latin American Literature and Culture 2",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "From Modernism to the present through a study of representative works.",
+    "prerequisites": {
+      "text": "HISP 220D1/HISP 220D2, HISP 219 or equivalent",
+      "tree": {
+        "and": [
+          "HISP 220",
+          "HISP 219"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Taught in Spanish"
+    ]
+  },
+  {
+    "code": "HISP 245",
+    "subject": "HISP",
+    "number": "245",
+    "title": "Introduction to Hispanic Literature",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Topics in Spanish and Latin American narrative, essay, poetry, theater and art, including advanced skills in Spanish reading, listening, speaking, and writing.",
+    "prerequisites": {
+      "text": "HISP 219, HISP 220 or equivalent",
+      "tree": {
+        "and": [
+          "HISP 219",
+          "HISP 220"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Taught in Spanish. Native and heritage speakers welcome."
+    ]
+  },
+  {
+    "code": "HISP 246",
+    "subject": "HISP",
+    "number": "246",
+    "title": "Contemporary Issues in the Hispanic World",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in current social, political, and cultural issues in Latin America and Spain, including advanced skills in Spanish reading, listening, speaking, and writing.",
+    "prerequisites": {
+      "text": "HISP 219, HISP 220 or equivalent",
+      "tree": {
+        "and": [
+          "HISP 219",
+          "HISP 220"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Taught in Spanish. Native and heritage speakers welcome."
+    ]
+  },
+  {
+    "code": "HISP 247",
+    "subject": "HISP",
+    "number": "247",
+    "title": "Introduction to Hispanic Popular Cultures",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in Spanish and Latin American popular music, art, film, textual, fashion, food and digital cultures, including advanced skills in Spanish reading, listening, speaking,and writing.",
+    "prerequisites": {
+      "text": "HISP 219, HISP 220 or equivalent",
+      "tree": {
+        "and": [
+          "HISP 219",
+          "HISP 220"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Taught in Spanish. Native and heritage speakers welcome."
+    ]
+  },
+  {
+    "code": "HISP 248",
+    "subject": "HISP",
+    "number": "248",
+    "title": "Introduction to Hispanic Cinema",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in Spanish and Latin American film, including advanced skills in Spanish reading, listening, speaking, and writing.",
+    "prerequisites": {
+      "text": "HISP 219, HISP 220 or equivalent.",
+      "tree": {
+        "and": [
+          "HISP 219",
+          "HISP 220"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Taught in Spanish. Native and heritage speakers welcome."
+    ]
+  },
+  {
+    "code": "HISP 301",
+    "subject": "HISP",
+    "number": "301",
+    "title": "Hispanic Literature and Culture in English 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A topic in the literatures and/or cultures of the Hispanic world will be studied, with all readings and discussion in English.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Taught in English"
+    ]
+  },
+  {
+    "code": "HISP 320",
+    "subject": "HISP",
+    "number": "320",
+    "title": "Contemporary Brazilian Literature and Film",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course introduces students to Brazilian literature and film from the early 20th century to the present day. Students will examine literary works and films from a historical perspective, studying the social, political and regional processes in which they are embedded. From the barren Northeast, to an analysis of gender and race, to urban violence and its manifestations to the contemporary cityscape, this course covers a range of visual and textual material. Students will engage works from major Brazilian authors and filmmakers in conjunction with theoretical texts to better understand some of the main developments in contemporary cultural production.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course taught in English."
+    ]
+  },
+  {
+    "code": "HISP 325",
+    "subject": "HISP",
+    "number": "325",
+    "title": "Spanish Novel of the 19th Century",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The Romantic, Realist and Naturalist novel in Spain, with special emphasis on the development of the Spanish novel in relation to contemporary trends in other European countries.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 325",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HISP 326",
+    "subject": "HISP",
+    "number": "326",
+    "title": "Spanish Romanticism",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The aesthetic and historical development of Romanticism, with special emphasis on lyric poetry and drama.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor. Note: Course taught in Spanish.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "HISP 328",
+    "subject": "HISP",
+    "number": "328",
+    "title": "Literature of Ideas: Latin America",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical reading and discussion of works of outstanding thinkers as a key to understanding the cultural development of a continent.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Note: Course taught in Spanish."
+    ]
+  },
+  {
+    "code": "HISP 332",
+    "subject": "HISP",
+    "number": "332",
+    "title": "Latin American Literature of 19th Century",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An intensive study of representative authors from the period of Independence to the advent of Modernism.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor. Note: Course taught in Spanish.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 333",
+    "subject": "HISP",
+    "number": "333",
+    "title": "Theatre, Performance and Politics in Latin America",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A study of the outstanding works of the theatre from the colonial period to the present, including pre-Columbian works.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Note: Course taught in Spanish."
+    ]
+  },
+  {
+    "code": "HISP 335",
+    "subject": "HISP",
+    "number": "335",
+    "title": "Politics and Poetry in Latin America",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination of Latin American poetry as ithas been used for the expression of racialpolitics, government and economic oppression,identity and gender politics, revolution andactivism.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP243, HISP 244) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 453.",
+      "excludes": [
+        "HISP 453"
+      ]
+    },
+    "notes": [
+      "Course taught in Spanish"
+    ]
+  },
+  {
+    "code": "HISP 340",
+    "subject": "HISP",
+    "number": "340",
+    "title": "Latin American Cinema",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A study of representative films, directors and movements of the region. Topic specified by instructor.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "HISP 341",
+    "subject": "HISP",
+    "number": "341",
+    "title": "Spanish Cinema",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A study of representative films, directors and movements of the region. Topic specified by instructor.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 345",
+    "subject": "HISP",
+    "number": "345",
+    "title": "Contemporary Hispanic Cultural Studies",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines contemporary Hispanic Cultural Studies looking at both cultural artifacts and diverse theoretical and methodological approaches. In doing so, it will introduce students to the frameworks necessary for approaching contemporary culture in the Hispanic World. The course will be mindful of issues including ideology, class, race, ethnicity and sexuality. Students will come into contact with the major cultural theorists in the Hispanic World and those issues pertinent to the study of culture.",
+    "prerequisites": {
+      "text": "Successful completion of one of the Survey of Literature courses (HISP 241, HISP 242, HISP 243, HISP 244), or permission of the instructor",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 352",
+    "subject": "HISP",
+    "number": "352",
+    "title": "Latin American Novel",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical reading and discussion of contemporary Spanish-American fiction writers.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Note: Course taught in Spanish."
+    ]
+  },
+  {
+    "code": "HISP 355",
+    "subject": "HISP",
+    "number": "355",
+    "title": "Contemporary Spanish Literature and Culture ",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An interdisciplinary study of the literary, visual, and digital cultures of contemporary Spain, particularly in its post-authoritarian era (since 1975). Students will also be exposed to critical theory and social and political debates relevant to the course material and its context.",
+    "prerequisites": {
+      "text": "Successful completion of one of the Survey of Literature courses (HISP 241, HISP 242, HISP 243, HISP 244), or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 356",
+    "subject": "HISP",
+    "number": "356",
+    "title": "Latin American Short Story",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Study of style, tendencies and types as reflected in the evolution of this genre, and seen against the background of a developing continent.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor. Note: Course taught in Spanish.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "HISP 357",
+    "subject": "HISP",
+    "number": "357",
+    "title": "Latin American Digital Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course will examine digital cultural production in Latin America from 1990 to the present day. This course introduces students to theoretical frameworks necessary for approaching new media and web-based cultural artifacts, both literary and visual. Students will come into contact with the major writers, artists and web-based cultural producers in Latin America and issues pertinent to the study of the Web in the region.",
+    "prerequisites": {
+      "text": "Successful completion of one of the Survey of Literature courses (HISP 241, HISP 242, HISP 243, HISP 244), or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 358",
+    "subject": "HISP",
+    "number": "358",
+    "title": "Gender and Textualities",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Historical development and literary tendencies regarding gender and sexuality in Hispanic literature, film, and culture.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Note: Course taught in Spanish."
+    ]
+  },
+  {
+    "code": "HISP 432",
+    "subject": "HISP",
+    "number": "432",
+    "title": "Literature - Discovery and Exploration Spain New World",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A study of the primary literary and intellectual developments stemming from Spain's discovery of the Americas. Special attention will be given to the changing perception of the New World's natural resources and indigenous peoples as this is reflected in the literature of the period.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 437",
+    "subject": "HISP",
+    "number": "437",
+    "title": "Colonial / Postcolonial Latin America",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the dialogue between colonial and postcolonial Latin American texts and theories.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor. Note: Course taught in Spanish.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "HISP 438",
+    "subject": "HISP",
+    "number": "438",
+    "title": "Topics: Spanish Literature",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Specific topics of interest in Spanish literature.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Note: Course taught in Spanish."
+    ]
+  },
+  {
+    "code": "HISP 439",
+    "subject": "HISP",
+    "number": "439",
+    "title": "Topics: Latin American Literature",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Specific topics of interest in Spanish-American literature.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Note: Course taught in Spanish."
+    ]
+  },
+  {
+    "code": "HISP 451",
+    "subject": "HISP",
+    "number": "451",
+    "title": "Don Quixote",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Course on the canonical work by Cervantes, Don Quixote. The course will focus on the first modern novel as well as on a number of critical readings.",
+    "prerequisites": {
+      "text": "HISP 220D1/D2 or permission of the Instructor.",
+      "tree": "HISP 220",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 451D1/D2, HISP 451N1/N2 prior to Fall 2018.",
+      "excludes": [
+        "HISP 451D1",
+        "HISP 451N1"
+      ]
+    },
+    "notes": [
+      "One Term"
+    ]
+  },
+  {
+    "code": "HISP 454",
+    "subject": "HISP",
+    "number": "454",
+    "title": "Major Figures: Spanish Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Specific figures of interest in Spanish literature.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor. Note: Course taught in Spanish.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "HISP 455",
+    "subject": "HISP",
+    "number": "455",
+    "title": "Major Figures: Latin American Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Specific figures of interest in Spanish-American literature.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor. Note: Course taught in Spanish.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "HISP 457",
+    "subject": "HISP",
+    "number": "457",
+    "title": "Medieval Literature",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A study of important works of the period: Poema de Mio Cid to La Celestina. Given in alternate years.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 458",
+    "subject": "HISP",
+    "number": "458",
+    "title": "Golden Age Literature: Renaissance",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A comprehensive examination of the poetry, prose and drama of the Renaissance in Spain through representative authors.",
+    "prerequisites": {
+      "text": "Successful completion of any Survey of Literature (HISP 241, HISP 242, HISP 243, HISP 244) or permission of the instructor. Note: Course taught in Spanish.",
+      "tree": {
+        "and": [
+          "HISP 241",
+          "HISP 242",
+          "HISP 243",
+          "HISP 244"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken HISP 421, 458 or 460 prior to September 2004",
+      "excludes": [
+        "HISP 421",
+        "HISP 460"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "HISP 470",
+    "subject": "HISP",
+    "number": "470",
+    "title": "Tutorial 01",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Individualized guided research on an approved topic in Hispanic Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "HISP 490",
+    "subject": "HISP",
+    "number": "490",
+    "title": "Honours Thesis",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Under the direction of a staff member, students prepare the honours thesis on a theme in Hispanic Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Reserved for Honours and Joint Honours students who will present their honours thesis on a theme in Hispanic Studies written under the direction of a member of staff during their final year of study",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ],
+    "parts": [
+      {
+        "code": "HISP 490D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "HISP 490D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "HISP 499",
+    "subject": "HISP",
+    "number": "499",
+    "title": "Internship: Hispanic Studies",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": {
+      "text": "Permission of the departmental Internship Advisor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students after completing 30 credits of a 90 credit degree program or 45 credits of a 69-120 credit program, a minimum CGPA of 2.7, and permission of the departmental Internship Advisor. This course will normally not fulfill program requirements for seminar or 400- level courses. Spanish language proficiency required.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "HISP 505",
+    "subject": "HISP",
+    "number": "505",
+    "title": "Seminar in Hispanic Studies 01",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A team-taught seminar examining major issues in Hispanic letters that transcend national literatures and historical periods. Although the specific topics will vary, each will address broad questions of a diachronic nature, thereby permitting an understanding of literary schools and movements, genres or ideologies present throughout the Hispanic world.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Taught in Spanish"
+    ]
+  },
+  {
+    "code": "HISP 603",
+    "subject": "HISP",
+    "number": "603",
+    "title": "Research Project Methodology",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparatory work towards the production of the two guided research papers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 605",
+    "subject": "HISP",
+    "number": "605",
+    "title": "Culture and Literature",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Investigation of principal themes and critical issues in culture and literature of Spain and/or Latin America.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 606",
+    "subject": "HISP",
+    "number": "606",
+    "title": "Literature of Ideas",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Investigation of principal themes and critical issues in the literature of ideas of Spain and/or Latin America.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 615",
+    "subject": "HISP",
+    "number": "615",
+    "title": "Pre-1800 Literature and Culture",
+    "credits": 9,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A guided research paper on a selected topic in pre-1800 literature and culture of the Iberian Peninsula and/or Latin America under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 616",
+    "subject": "HISP",
+    "number": "616",
+    "title": "Modern and Contemporary Iberian Literature and Culture",
+    "credits": 9,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A guided research paper on a selected topic in Iberian literature or culture from 1800 to present under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 617",
+    "subject": "HISP",
+    "number": "617",
+    "title": "Modern & Contemporary Latin American Literature and Culture",
+    "credits": 9,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A guided research paper on a selected topic in Latin American literature or culture from 1800 to present.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 625",
+    "subject": "HISP",
+    "number": "625",
+    "title": "Spanish Theatre: Golden Age",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Investigation of principal themes and critical issues in the Spanish theatre of the Golden Age.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 680",
+    "subject": "HISP",
+    "number": "680",
+    "title": "Spanish-American Prose",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Investigation of topics in Spanish American prose.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 690",
+    "subject": "HISP",
+    "number": "690",
+    "title": "Special Topics 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics seminar on Hispanic leterature and culture. Topics may vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 691",
+    "subject": "HISP",
+    "number": "691",
+    "title": "Special Topics 2",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics seminar on Hispanic leterature and culture. Topics may vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 692",
+    "subject": "HISP",
+    "number": "692",
+    "title": "Special Topics 3",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics seminar on Hispanic leterature and culture. Topics may vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 693",
+    "subject": "HISP",
+    "number": "693",
+    "title": "Special Topics 4",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Sepcial topics seminar on Hispanic literature and culture. Topics may vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 694",
+    "subject": "HISP",
+    "number": "694",
+    "title": "Special Topics 5",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics seminar on Hispanic leterature and culture. Topics may vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 695",
+    "subject": "HISP",
+    "number": "695",
+    "title": "Thesis Preparation 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparatory work towards the Mater's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "HISP 695D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "HISP 695D2",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "HISP 695N1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "HISP 695N2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "HISP 696",
+    "subject": "HISP",
+    "number": "696",
+    "title": "Thesis Preparation 2",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 697",
+    "subject": "HISP",
+    "number": "697",
+    "title": "M.A. Thesis",
+    "credits": 21,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Written presentation of the thesis to the research supervisor(s).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "HISP 697D1",
+        "credits": 10.5,
+        "terms": []
+      },
+      {
+        "code": "HISP 697D2",
+        "credits": 10.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "HISP 698",
+    "subject": "HISP",
+    "number": "698",
+    "title": "Reading Course 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised reading course. Topics chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HISP 701",
+    "subject": "HISP",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Ph.D. Comprehensive examinations, both oral and written.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Ph.D. students in the Department of Hispanic Studies only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HISP 713",
+    "subject": "HISP",
+    "number": "713",
+    "title": "Research Seminar",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Doctoral-level research seminar exploring a variety of research topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

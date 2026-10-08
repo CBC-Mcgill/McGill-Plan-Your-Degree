@@ -1,0 +1,1598 @@
+[
+  {
+    "code": "EPSC 181",
+    "subject": "EPSC",
+    "number": "181",
+    "title": "Environmental Geology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the relationship of geological processes and materials to the human environment; geologic hazards; hydrogeology; impacts of waste disposal, energy use, land resource development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "EPSC 185",
+    "subject": "EPSC",
+    "number": "185",
+    "title": "Natural Disasters",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course examines the science behind different types of disasters and our ability or inability to control and predict such events. From this course the student will gain an appreciation of natural disasters beyond the newspaper headlines, and will better understand how the effects of disasters can be reduced.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ATOC 185.",
+      "excludes": [
+        "ATOC 185"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures",
+      "This is a double-prefix course and is identical in content with ATOC 185."
+    ]
+  },
+  {
+    "code": "EPSC 186",
+    "subject": "EPSC",
+    "number": "186",
+    "title": "Astrobiology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Astrobiology is the study of life throughout the universe. The course will cover the search for, and characterization of, habitable worlds. We will explore the formation and evolution of stars and planets, the astronomical and geological factors that impact a planet's habitability, the evolution of life on Earth, and the potential for biological evolution beyond an organism's planet of origin..",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EPSC 182, ANAT 182, or PHYS 186.",
+      "excludes": [
+        "ANAT 182",
+        "EPSC 182",
+        "PHYS 186"
+      ]
+    },
+    "notes": [
+      "1.Winter",
+      "2.This is a double-prefix course and is identical in content with PHYS 186."
+    ]
+  },
+  {
+    "code": "EPSC 201",
+    "subject": "EPSC",
+    "number": "201",
+    "title": "Understanding Planet Earth",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Learn about Earth's origin, its place in the solar system, its internal structure, rocks and minerals, the formation of metal and fossil fuel deposits, and the extinction of dinosaurs. Discover the impact of the volcanic eruptions, earthquakes and mountain chains on Earth's past, present and future. Explore 125 million-year-old Mount Royal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EPSC 233.",
+      "excludes": [
+        "EPSC 233"
+      ]
+    },
+    "notes": [
+      "Fall or Winter",
+      "3 hours lectures; afternoon field trips"
+    ]
+  },
+  {
+    "code": "EPSC 210",
+    "subject": "EPSC",
+    "number": "210",
+    "title": "Introductory Mineralogy",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Elementary crystallography, chemistry and identification of the principal rock-forming and ore minerals, in hand specimens and using optical microscopy. Demonstrations of other techniques applied to the identification of minerals and to the analysis of their composition and structure. Optional 2-day field trip.",
+    "prerequisites": {
+      "text": "CHEM 110 or equivalent, or permission of the instructor.",
+      "tree": "CHEM 110",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lectures, 3 hours laboratory",
+      "A nominal fee is charged to cover expenses of materials and supplies for identification kits (pen magnet, streak plate, hand lens and acid bottle) used to identify minerals during laboratory exercises.",
+      "Des frais seront prelevés pour couvrir l'usage des collections d'enseignement et les accessoires (loupe, aimant, bouteille d'acide chlorhydrique dilué, plaque de porcelaine) essentiels à l'identification des minéraux pendant les travaux pratiques."
+    ]
+  },
+  {
+    "code": "EPSC 212",
+    "subject": "EPSC",
+    "number": "212",
+    "title": "Introductory Petrology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A survey of igneous, sedimentary and metamorphic rocks and the processes responsible for their formation. The laboratory will emphasize the recognition of rocks in both hand-specimen and thin section using optical microscopes.",
+    "prerequisites": {
+      "text": "EPSC 210",
+      "tree": "EPSC 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 220",
+    "subject": "EPSC",
+    "number": "220",
+    "title": "Principles of Geochemistry",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic concepts in geochemistry and the quantitative application of principles of chemistry to geological subdisciplines using simple scripts in Matlab. Particular emphasis on the thermodynamics and kinetics of reactions on Earth and other planets, controls on elemental distribution, stable and radiogenic isotopes, and water chemistry. Application of phase diagrams to geology.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120, or their equivalents in CEGEP; (MATH 140 and MATH 141) or (MATH 150 and MATH 151) or their equivalents in CEGEP.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120",
+          {
+            "or": [
+              {
+                "and": [
+                  "MATH 140",
+                  "MATH 141"
+                ]
+              },
+              {
+                "and": [
+                  "MATH 150",
+                  "MATH 151"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lecture, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 221",
+    "subject": "EPSC",
+    "number": "221",
+    "title": "General Geology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introductory course in physical geology designed for majors in civil and mining engineering. Properties of rocks and minerals, major geological processes, together with natural hazards and their effects on engineered structures are emphasized. The laboratory is an integral part of the course which includes rock and mineral identification, basic techniques of airphoto and geological map interpretation, and structural geology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Engineering students only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "2 hours lectures, 3 hours laboratory",
+      "A nominal fee is charged to cover expenses of materials and supplies for identification kits (pen magnet, streak plate, hand lens and acid bottle) used to identify minerals during laboratory exercises.",
+      "Des frais seront prelevés pour couvrir l'usage des collections d'enseignement et les accessoires (loupe, aimant, bouteille d'acide chlorhydrique dilué, plaque de porcelaine) essentiels à l'identification des minéraux pendant les travaux pratiques."
+    ]
+  },
+  {
+    "code": "EPSC 225",
+    "subject": "EPSC",
+    "number": "225",
+    "title": "Properties of Minerals",
+    "credits": 1,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Survey of the physical and chemical properties of the main mineral groups. Discussion of their relationships to the chemical composition and structure of minerals. The practical exercises emphasize the physical and chemical properties that relate to industrial uses and environmental issues, and the identification of hand specimens.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Engineering students only; Not open to students who have taken EPSC 210",
+      "excludes": [
+        "EPSC 210"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "1 hour lecture, 1 hour laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 231",
+    "subject": "EPSC",
+    "number": "231",
+    "title": "Field School 1",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Held locally in Québec. Field projects focused on geological mapping of selected areas, the preparation of maps and reports from field notes, the use of aerial photographs, and the exploration of various field techniques in various tectonic settings.",
+    "prerequisites": {
+      "text": "Prerequisite: EPSC 240 or EPSC 303, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "EPSC 240",
+          "EPSC 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Permission of the instructor is required to register.",
+      "2. This a 2-week field school held in May",
+      "3. The Department of Earth and Planetary Sciences subsidizes a portion of the cost for this activity. This field course has an additional fee to cover the costs of transportation, some meals and accommodation as well as other field expenses.",
+      "4. The location and logistics are announced in the fall semester to students enrolled in EPSC 240 and in January to students enrolled in EPSC 303.",
+      "5. Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "EPSC 233",
+    "subject": "EPSC",
+    "number": "233",
+    "title": "Earth and Life Through Time",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Interpretation of stratified rocks; history of Earth with special emphasis on the regions of North America; outline of the history of life recorded in fossils.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "EPSC 240",
+    "subject": "EPSC",
+    "number": "240",
+    "title": "Geology in the Field",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Lectures and field-based exercises, held locally on campus and in the Montreal area, introduce students to the reading and interpretation of a topographic map, the basic description of a stratigraphic section and the inference of its depositional environment, the nature of intrusive contacts, and the field measurement of some structural features and geophysical properties. Students plot geological information on a map, identify landforms in aerial views and learn the tectonic features diagnostic of plate margins. By the end of the course, the students relate a geological map to the geological history of Quebec.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Priority is given to students in programs for which this course is required.",
+      "excludes": []
+    },
+    "notes": [
+      "Open to U0 students with permission of the instructor."
+    ]
+  },
+  {
+    "code": "EPSC 303",
+    "subject": "EPSC",
+    "number": "303",
+    "title": "Structural Geology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Primary igneous and sedimentary structures, attitudes of planes and lines, stress and strain, fracturing of rocks, faulting, homogeneous strain, description and classification of folds, foliation and lineation, orthographic and stereographic projections.",
+    "prerequisites": {
+      "text": "EPSC 231, or permission of the instructor.",
+      "tree": "EPSC 231",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPSC 203.",
+      "excludes": [
+        "EPSC 203"
+      ]
+    },
+    "notes": [
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 320",
+    "subject": "EPSC",
+    "number": "320",
+    "title": "Elementary Earth Physics",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physical properties of Earth and the processes associated with its existence as inferred from astronomy, geodesy, seismology, geology, terrestrial magnetism and thermal evolution.",
+    "prerequisites": {
+      "text": "MATH 133 and MATH 222 or their equivalent.",
+      "tree": {
+        "and": [
+          "MATH 133",
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Two 1.5 hour lectures"
+    ]
+  },
+  {
+    "code": "EPSC 325",
+    "subject": "EPSC",
+    "number": "325",
+    "title": "Environmental Geochemistry",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The basic concepts and calculations needed to quantitatively understand the geochemical processes occurring between minerals and waters in Earth’s near-surface environment. The important concepts of thermodynamics and kinetics will be exemplified using examples that concentrate on reactions between minerals and water and their impact on the environment.",
+    "prerequisites": {
+      "text": "CHEM 110 or some familiarity with the basic principles of the periodic table (high school/cegep general chemistry is acceptable), or permission of the instructor",
+      "tree": "CHEM 110",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPSC 331",
+    "subject": "EPSC",
+    "number": "331",
+    "title": "Field School 2",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Two week field studies in selected branches of the geosciences.",
+    "prerequisites": {
+      "text": "EPSC 240, enrolment in U2 or U3 EPS program, and permission of the instructor.",
+      "tree": "EPSC 240",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Two-week intensive field school to a range of national and international locations.",
+      "Alternates years with EPSC 341.",
+      "The field school will be based around the Bay of Fundy, and central Nova Scotia and has an additional fee of $611.92 to cover the costs of transportation and accommodation as well as other field expenses. Six days will be spent around the Chignecto peninsula, including visits to Parrsboro, Joggins, and Cape Chignecto park. The remaining time will be spent between Pictou, Wolfville and the Annapolis valley, and the coast south of Halifax."
+    ]
+  },
+  {
+    "code": "EPSC 334",
+    "subject": "EPSC",
+    "number": "334",
+    "title": "Invertebrate Paleontology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Preservation of fossils; the fossil record of invertebrates; use of fossils in stratigraphy and paleoecology; fossils in evolutionary studies. Fossils of invertebrates are studied in the laboratory.",
+    "prerequisites": {
+      "text": "EPSC 201 or EPSC 233 or ENVR 202 or permission of instructor",
+      "tree": {
+        "or": [
+          "EPSC 201",
+          "EPSC 233",
+          "ENVR 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lectures and one laboratory period"
+    ]
+  },
+  {
+    "code": "EPSC 340",
+    "subject": "EPSC",
+    "number": "340",
+    "title": "Earth and Planetary Inference",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to modern techniques for combining geological, geophysical, and geochemical measurements with theoretical knowledge about Earth and other planets. Use of tools from time series analysis and inverse methods to build models and test hypotheses within the Earth and Planetary Sciences.",
+    "prerequisites": {
+      "text": "EPSC 220 or ESYS 200 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "EPSC 220",
+          "ESYS 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 341",
+    "subject": "EPSC",
+    "number": "341",
+    "title": "Field School 3",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Two week field studies in selected branches of the geosciences to examine processes in geology.",
+    "prerequisites": {
+      "text": "EPSC 240, enrolment in U2 or U3 EPS program and permission of the instructor.",
+      "tree": "EPSC 240",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Two week intensive field school to a range of national and international locations.",
+      "Alternates years with EPSC 331.",
+      "This course, given every alternate year, has an additional fee of $611.92 to cover the costs of airfare, meals and accommodation as well as other field expenses. The fee is only refundable prior to the deadline to withdraw with full refund. The department of Earth and Planetary Science subsidizes a portion of the cost for this activity."
+    ]
+  },
+  {
+    "code": "EPSC 350",
+    "subject": "EPSC",
+    "number": "350",
+    "title": "Tectonics",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Rheology of the Earth, mechanics of the crust and mantle and core, convection in the mantle, evolution and kinematics and deformations of the oceanic and continental plates, thermal evolution of the Earth, the unifying theory of plate tectonics.",
+    "prerequisites": {
+      "text": "EPSC 320",
+      "tree": "EPSC 320",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "EPSC 355",
+    "subject": "EPSC",
+    "number": "355",
+    "title": "Sedimentary Geology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The origin, classification, diagenesis and economic importance of sedimentary rocks. The physical properties of sedimentary rocks, the processes by which sediments are transported and deposited, and the environments in which they accumulate. Introduction to techniques for describing and analyzing sedimentary rocks in thin section, hand specimen, and on the outcrop.",
+    "prerequisites": {
+      "text": "EPSC 210 or EPSC 240 or GEOG 272.",
+      "tree": {
+        "or": [
+          "EPSC 210",
+          "EPSC 240",
+          "GEOG 272"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPSC 373",
+    "subject": "EPSC",
+    "number": "373",
+    "title": "Arctic Geology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course introduces students to the principles of the geology of the Canadian Arctic. The primary objectives of the course are to train students in theory and practice of geology in the Canadian Arctic. Practical training includes drill core logging, surveying, mapping, sample collecting, and geological interpretations.",
+    "prerequisites": {
+      "text": "Two courses from the following list: GEOG 203, GEOG 205, GEOG 272, GEOG 372, ENVR 200, ENVR 202, EPSC 203, EPSC 210, EPSC 212, EPSC 220, EPSC 233, ATOC 214, ATOC 215, ATOC 219, SOIL 300.",
+      "tree": {
+        "and": [
+          "GEOG 203",
+          "GEOG 205",
+          "GEOG 272",
+          "GEOG 372",
+          "ENVR 200",
+          "ENVR 202",
+          "EPSC 203",
+          "EPSC 210",
+          "EPSC 212",
+          "EPSC 220",
+          "EPSC 233",
+          "ATOC 214",
+          "ATOC 215",
+          "ATOC 219",
+          "SOIL 300"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "ATOC 373, GEOG 373, [ATOC 473 or EPSC 473 or GEOG 473].",
+      "tree": {
+        "and": [
+          "ATOC 373",
+          "GEOG 373",
+          {
+            "or": [
+              "ATOC 473",
+              "EPSC 473",
+              "GEOG 473"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Note(s): 1. This course is one of a set of four field courses (ATOC 373, EPSC 373, GEOG 373, and ATOC/EPSC/GEOG 473) designed to be taken concurrently. It complements programs in natural science disciplines by providing students with specialized field training and research experience focusing on the unique environmental conditions of cold polar systems. 2. Cost includes transportation, room and board, field expenses. Students are charged $12,000 for the four courses combined: ATOC, 373, EPSC 373, GEOG 373, and ATOC/EPSC/GEOG 473. 3. Arctic localities: Iqaluit, Resolute Bay, and Central Axel Heiberg Island in the Canadian High Arctic."
+    ]
+  },
+  {
+    "code": "EPSC 396",
+    "subject": "EPSC",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "EPSC 423",
+    "subject": "EPSC",
+    "number": "423",
+    "title": "Igneous Petrology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Physical properties, nucleation, crystallization, differentiation and emplacement of magmas. Integrated studies on various rock suites.",
+    "prerequisites": {
+      "text": "EPSC 212, and enrolment in U2 or U3 EPS program.",
+      "tree": "EPSC 212",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 445",
+    "subject": "EPSC",
+    "number": "445",
+    "title": "Metamorphic Petrology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The origin, classification and petrological significance of metamorphic rocks, from the point of view of theory, experiment and field observations.",
+    "prerequisites": {
+      "text": "EPSC 212, enrolment in U2 or U3 EPS program.",
+      "tree": "EPSC 212",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 452",
+    "subject": "EPSC",
+    "number": "452",
+    "title": "Mineral Deposits",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "A systematic review of the nature and origin of the major types of metallic and non-metallic mineral deposits; typical occurrences; geographic distribution; applications to exploration. Emphasis on magmatic ores, massive sulfides, iron formations.",
+    "prerequisites": {
+      "text": "EPSC 220, enrolment in U2 or U3 EPS program",
+      "tree": "EPSC 220",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 460",
+    "subject": "EPSC",
+    "number": "460",
+    "title": "Independent Reading Project",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent reading project with a final written report.",
+    "prerequisites": {
+      "text": "Any three courses among EPSC 203, EPSC210, EPSC 212, EPSC 220 or higher-level EPSC course(s); or permission of instructor",
+      "tree": {
+        "and": [
+          "EPSC 203",
+          "EPSC 210",
+          "EPSC 212",
+          "EPSC 220"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "EPSC 460D1 and EPSC 460D2 together are equivalent to EPSC 460.",
+      "Fall, Winter or Summer",
+      "Before registration, projects must be arranged individually with a faculty member in the Earth and Planetary Science Department, and a written proposal signed by the supervisor and student must be approved by the departmental director of undergraduate studies."
+    ],
+    "parts": [
+      {
+        "code": "EPSC 460D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "EPSC 460D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPSC 470",
+    "subject": "EPSC",
+    "number": "470",
+    "title": "Undergraduate Thesis Research ",
+    "credits": 6,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Research project, designed by a student in consultation with a departmental faculty member, leading to a thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Major students in 3rd year",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both EPSC 470D1 and EPSC 470D2",
+      "No credit will be given unless both EPSC 470D1 and EPSC 470D2 are successfully completed in consecutive terms",
+      "A statement of the proposed project and method of evaluation, signed by the student and supervisor, must be submitted to the departmental Director of Undergraduate Studies for approval by the add/drop deadline of the first semester in which the student registers for this course. The results of the research must be presented in the form of an undergraduate thesis."
+    ],
+    "parts": [
+      {
+        "code": "EPSC 470D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EPSC 470D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPSC 473",
+    "subject": "EPSC",
+    "number": "473",
+    "title": "Arctic Field Research",
+    "credits": 6,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course is the independent research component of the McGill Arctic Field Study Semester. It has four distinct parts, a) problem identification and background preparation, b) research design and field data collection, c) lab and data analysis, and d) report preparation and presentation. The research design and field data collection will be part of an extended period of fieldwork based in the Canadian Arctic. The Lab and data analysis will begin in the field and finish on campus. Each student will prepare a manuscript style report and make a conference presentation based on their research.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "GEOG 373, EPSC 373 and ATOC 373.",
+      "tree": {
+        "and": [
+          "GEOG 373",
+          "EPSC 373",
+          "ATOC 373"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Permission of the instructor. Not open to students who have taken or are taking ATOC 473 or GEOG 473.",
+      "excludes": [
+        "ATOC 473",
+        "GEOG 473"
+      ]
+    },
+    "notes": [
+      "Note(s): 1. This course is one of a set of four field courses (ATOC 373, EPSC 373, GEOG 373, and ATOC/EPSC/GEOG 473) designed to be taken concurrently. It complements programs in natural science disciplines by providing students with specialized field training and research experience focusing on the unique environmental conditions of cold polar systems. 2. Cost includes transportation, room and board, field expenses. Students are charged $12,000 for the four courses combined: ATOC, 373, EPSC 373, GEOG 373, and ATOC/EPSC/GEOG 473. 3. Arctic localities: Iqaluit, Resolute Bay, and Central Axel Heiberg Island in the Canadian High Arctic."
+    ]
+  },
+  {
+    "code": "EPSC 478",
+    "subject": "EPSC",
+    "number": "478",
+    "title": "Short Research Project",
+    "credits": 1,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised research project in earth and planetary sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students. Students are expected to find an appropriate instructor for their project.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "EPSC 480",
+    "subject": "EPSC",
+    "number": "480",
+    "title": "Honours Research Thesis",
+    "credits": 6,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Research project, designed by a student in consultation with a departmental faculty member, leading to a thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Honours students in 3rd year",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both EPSC 480D1 and EPSC 480D2",
+      "No credit will be given for this course unless both EPSC 480D1 and EPSC 480D2 are successfully completed in consecutive terms",
+      "A statement of the proposed project and method of evaluation, signed by the student and supervisor, must be submitted to the departmental Director of Undergraduate Studies for approval by the add/drop deadline of the first semester in which the student registers for this course. The results of the research must be presented in the form of an undergraduate thesis."
+    ],
+    "parts": [
+      {
+        "code": "EPSC 480D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EPSC 480D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPSC 482",
+    "subject": "EPSC",
+    "number": "482",
+    "title": "Research in Earth and Planetary Sciences",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Research project designed by a student in consultation with a departmental faculty member of Earth & Planetary Sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "May not be taken concurrently with EPSC 480",
+      "A statement of the proposed project and method of evaluation, signed by the student and supervisor, must be submitted to the departmental Director of Undergraduate Studies for approval by the add/drop deadline of the semester in which the student registers for this course."
+    ],
+    "parts": [
+      {
+        "code": "EPSC 482D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "EPSC 482D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPSC 501",
+    "subject": "EPSC",
+    "number": "501",
+    "title": "Crystal Chemistry",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Discussion of crystal structures and compositions of important mineral groups, especially oxides, sulphides and silicates. Solid solution. Relation of structure to morphology and to chemical and physical properties of the rock-forming minerals.",
+    "prerequisites": {
+      "text": "EPSC 210 (or equivalent) and at least one 300- or higher-level course in petrology, or permission of the instructor.",
+      "tree": "EPSC 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lectures, 1 hour seminar"
+    ]
+  },
+  {
+    "code": "EPSC 510",
+    "subject": "EPSC",
+    "number": "510",
+    "title": "Climate and Geodynamics",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Topics in geodynamics and its connection to climate and surface processes, including the Earth's gravity field, body and orbital dynamics, tidal interactions, Earth deformation under static and dynamic loads including glacial isostatic adjustment and sea level change, the history and dynamics of the Earth's climate and of surface ice and water.",
+    "prerequisites": {
+      "text": "EPSC 320, EPSC 203, MATH 222, MATH 319 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "EPSC 320",
+          "EPSC 203",
+          "MATH 222",
+          "MATH 319"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "EPSC 519",
+    "subject": "EPSC",
+    "number": "519",
+    "title": "Isotopes in Earth and Environmental Science",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The theory and application of stable and radioactive isotope measurements in the Earth and environmental sciences, including applications in geology, hydrology, climatology, biogeochemistry, and ecology.",
+    "prerequisites": {
+      "text": "CHEM 120 or EPSC 220, and registration as U2 or higher in a B.Sc. program, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "CHEM 120",
+          "EPSC 220"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "EPSC 520",
+    "subject": "EPSC",
+    "number": "520",
+    "title": "Earthquake Physics and Geology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "What are earthquakes and how do we study them? Fundamental mechanics of faulting and earthquake source processes are explored from theoretical and observational perspectives. The lectures cover concepts of earthquake source mechanism, including seismic waves, earthquake energy budget, fracture and friction mechanics, earthquake cycle deformation, earthquake triggering and prediction, and seismic hazards. This is complemented by in-class discussion on recent major discoveries and challenges in the field. Students learn to investigate earthquake source process by using seismic, geodetic and geological data in computer labs and course projects supervised by the instructor(s).",
+    "prerequisites": {
+      "text": "EPSC 320 and MATH 222",
+      "tree": {
+        "and": [
+          "EPSC 320",
+          "MATH 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPSC 522",
+    "subject": "EPSC",
+    "number": "522",
+    "title": "Advanced Environmental Hydrology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Traditional and emerging theories of dominant runoff generation processes. Streamflow generation. Surface and near-surface solute and contaminant transport. Concentration-discharge relationships. Geochemical mixing models. Dyes and biological tracers of water. Isotope ecohydrology. Water source and water age estimation approaches. Development, execution, and evaluation of process-based watershed models. Case studies from forested, agricultural and periurban watersheds.",
+    "prerequisites": {
+      "text": "BREE 217, BREE 509, EPSC 549 or GEOG 322, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "BREE 217",
+          "BREE 509",
+          {
+            "or": [
+              "EPSC 549",
+              "GEOG 322"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking GEOG 522.",
+      "excludes": [
+        "GEOG 522"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPSC 525",
+    "subject": "EPSC",
+    "number": "525",
+    "title": "Microbiology of the Earth System",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of microbes that have influenced the earth’s elemental cycles that sustain life on the planet, their interactions with the goal of understanding the diversity, dynamics and function of microbes in shaping our environment. Topics include global biogeochemical cycling, marine microbiology, microbe-metal interactions, bioremediation, astrobiology and the impact of climate change on microbial processes.",
+    "prerequisites": {
+      "text": "One of BIOL 200, MIMM 211 is recommended, but familiarity with cell biology from BIOL 112, AEBI 122, CEGEP objective 00XU or equivalent is required at a minimum.",
+      "tree": {
+        "or": [
+          "BIOL 200",
+          {
+            "and": [
+              "MIMM 211",
+              "BIOL 112"
+            ]
+          },
+          "AEBI 122"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 or higher in a B.Sc. or B.A .& Sc. program.; Not open to students who have taken EPSC 550 when the topic was \"Geomicrobiology\" or \"Microbiology of the Earth System\".",
+      "excludes": [
+        "EPSC 550"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EPSC 530",
+    "subject": "EPSC",
+    "number": "530",
+    "title": "Volcanology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The physical mechanisms which drive volcanoes and volcanic activity are presented. Descriptive, practical and theoretical approaches to the study of volcanoes are discussed.",
+    "prerequisites": {
+      "text": "EPSC 212 or equivalent, or permission of instructor.; Enrolment in U2 or U3 EPS program",
+      "tree": "EPSC 212",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 533",
+    "subject": "EPSC",
+    "number": "533",
+    "title": "Stratigraphic Analysis",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Advanced techniques for interrogating the sedimentary record. Exploration of both descriptive and quantitative approaches to describing and interpreting the stratigraphic record, including sedimentary facies analysis, seismic stratigraphy, sequence stratigraphy, and chemostratigraphy. Other topics include methods for dating and age-calibrating the stratigraphic record and approaches to analyzing sedimentary cycles.",
+    "prerequisites": {
+      "text": "EPSC 355 or ESYS 300 or GEOG 272, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "EPSC 355",
+          "ESYS 300",
+          "GEOG 272"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPSC 425; or EPSC 551 when topic was \"Advanced Stratigraphic Methods\" in 2024 or \"Advanced Stratigraphy\" in 2022.",
+      "excludes": [
+        "EPSC 425"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "EPSC 547",
+    "subject": "EPSC",
+    "number": "547",
+    "title": "Modelling Geochemical Processes",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Modelling will be applied to construct equilibrium and transport models that quantitatively investigate geochemical processes occurring on Earth and other planets. Topics include, but are not restricted to: box modelling of the transport of elements between geochemical reservoirs, chemical reactions of components during flow through systems, interactions between multiple, competing reactions and/or processes. Model applications will vary from the core and mantle of planets to their surface environments and humans' impact upon them.",
+    "prerequisites": {
+      "text": "EPSC 220, MATH 222, or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPSC 220",
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "EPSC 548",
+    "subject": "EPSC",
+    "number": "548",
+    "title": "Igneous Petrogenetic Mechanisms",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Investigation of the primary mechanisms causing the diversity of igneous rock compositions on the Earth, other planets, asteroids, and meteorite parent bodies.",
+    "prerequisites": {
+      "text": "EPSC 423",
+      "tree": "EPSC 423",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lectures, 1 hour seminar"
+    ]
+  },
+  {
+    "code": "EPSC 549",
+    "subject": "EPSC",
+    "number": "549",
+    "title": "Hydrogeology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to groundwater flow through porous media. Notions of fluid potential and hydraulic head. Darcy flux and Darcy's Law. Physical properties of porous media and their measurement. Equation of groundwater flow. Flow systems. Hydraulics of pumping and recharging wells. Notions of hydrology. Groundwater quality and contamination. Physical processes of contaminant transport.",
+    "prerequisites": {
+      "text": "permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "EPSC 550",
+    "subject": "EPSC",
+    "number": "550",
+    "title": "Selected Topics 1",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research seminar and/or lecture with readings in topics concerning aspects of current interests in Earth & Planetary Sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter",
+      "2 hours seminar, permission of department undergraduate advisor"
+    ]
+  },
+  {
+    "code": "EPSC 551",
+    "subject": "EPSC",
+    "number": "551",
+    "title": "Selected Topics 2",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Research seminar and/or lecture with readings in topics concerning aspects of current interest in Earth & Planetary Sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter",
+      "2 hours seminar, permission of department undergraduate advisor"
+    ]
+  },
+  {
+    "code": "EPSC 552",
+    "subject": "EPSC",
+    "number": "552",
+    "title": "Selected Topics 3",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Research seminar and/or lecture with readings in topics concerning aspects of current interest in Earth & Planetary Sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter",
+      "2 hours seminar, permission of department undergraduate advisor"
+    ]
+  },
+  {
+    "code": "EPSC 561",
+    "subject": "EPSC",
+    "number": "561",
+    "title": "Ore-forming Processes",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Physicochemical controls of hydrothermal mineral deposition. Discussion of fluid inclusion theory and application; stable isotope systematics, wall-rock alteration; ore mineral solubility and speciation; and mechanisms of mineral deposition.",
+    "prerequisites": {
+      "text": "One course in ore petrology (EPSC 451 or EPSC 452) or equivalent, or permission of instructor",
+      "tree": {
+        "or": [
+          "EPSC 451",
+          "EPSC 452"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours seminar"
+    ]
+  },
+  {
+    "code": "EPSC 567",
+    "subject": "EPSC",
+    "number": "567",
+    "title": "Advanced Volcanology",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An in-depth approach to physical and chemical processes associated with volcanic systems. Examination of magma chamber dynamics, magma behaviour in conduits, and eruption mechanisms. Study of eruptive products including pyroclastic deposits, lava flows and lava domes, and volcanic gases. Volcanic-tectonic and magma-hydrothermal interactions.",
+    "prerequisites": {
+      "text": "EPSC 530 or permission of instructor",
+      "tree": "EPSC 530",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPSC 570",
+    "subject": "EPSC",
+    "number": "570",
+    "title": "Cosmochemistry",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examines the implications of phase equilibria and the compositions of meteorites and the solar system for the formation and internal differentiation of the terrestrial planets and the nature of chemical fractionation processes in both planetary interiors and the solar system as a whole.",
+    "prerequisites": {
+      "text": "EPSC 220, EPSC 210, or equivalent, or permission of instructor.",
+      "tree": {
+        "and": [
+          "EPSC 220",
+          "EPSC 210"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "EPSC 590",
+    "subject": "EPSC",
+    "number": "590",
+    "title": "Applied Geochemistry Seminar",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Seminar course devoted to field case studies that illustrate the applications of geochemical principles to solving geologic problems. Each student will prepare and lead a class devoted to a geochemical subject of their own choosing.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours seminar"
+    ]
+  },
+  {
+    "code": "EPSC 644",
+    "subject": "EPSC",
+    "number": "644",
+    "title": "Topics - Advanced Earth Sciences 1",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A survey of a research topic of particular current interest.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lectures or seminars"
+    ]
+  },
+  {
+    "code": "EPSC 645",
+    "subject": "EPSC",
+    "number": "645",
+    "title": "Topics - Advanced Earth Sciences 2",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A survey of a research topic of particular current interest.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lectures or seminars"
+    ]
+  },
+  {
+    "code": "EPSC 695",
+    "subject": "EPSC",
+    "number": "695",
+    "title": "Thesis Project",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent study, theoretical and/or laboratory work in connection with the development of an M.Sc. or Ph.D. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students who have an appropriate background as per departmental special permission",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EPSC 696",
+    "subject": "EPSC",
+    "number": "696",
+    "title": "Thesis Preparation 4",
+    "credits": 9,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent study, theoretical and/or laboratory work in connection with the development of an M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPSC 697",
+    "subject": "EPSC",
+    "number": "697",
+    "title": "Thesis Preparation 1",
+    "credits": 9,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent study, theoretical and/or laboratory work in connection with the development of an M.Sc. thesis. Success in the course is dependent on presentation of an adequate progress report to the supervisory committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EPSC 697D1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "EPSC 697D2",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "EPSC 697N1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "EPSC 697N2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPSC 698",
+    "subject": "EPSC",
+    "number": "698",
+    "title": "Thesis Preparation 2",
+    "credits": 12,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent study, theoretical and/or laboratory work in connection with the development of an M.Sc. thesis. Success in the course is dependent on presentation of an adequate progress report to the supervisory committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EPSC 698D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EPSC 698D2",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EPSC 698N1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EPSC 698N2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPSC 699",
+    "subject": "EPSC",
+    "number": "699",
+    "title": "Thesis Preparation 3",
+    "credits": 12,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent study, theoretical and/or laboratory work in connection with the development of an M.Sc. thesis. Success in the course is dependent on presentation of an adequate progress report to the supervisory committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EPSC 699D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EPSC 699D2",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EPSC 699N1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EPSC 699N2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EPSC 700",
+    "subject": "EPSC",
+    "number": "700",
+    "title": "Preliminary Doctoral Examination",
+    "credits": 0,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EPSC 725",
+    "subject": "EPSC",
+    "number": "725",
+    "title": "Independent Studies 1",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research and/or reading project. Independent study under the guidance of qualified staff in areas of special interest to the student.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not available to students who have taken EPSC 720. Ineligible for credit in M.Sc. Thesis program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EPSC 726",
+    "subject": "EPSC",
+    "number": "726",
+    "title": "Independent Studies 2",
+    "credits": 3,
+    "offeredBy": "Earth & Planetary Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research and/or reading project. Independent study under the guidance of qualified staff in areas of special interest to the student.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  }
+]

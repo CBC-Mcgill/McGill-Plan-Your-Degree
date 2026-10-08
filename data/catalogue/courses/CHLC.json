@@ -1,0 +1,188 @@
+[
+  {
+    "code": "CHLC 351",
+    "subject": "CHLC",
+    "number": "351",
+    "title": "Foundations of Health and Social Services Systems",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course will provide an overview of private and public social services within Quebec and its evolution over the last century. Will examine the structures, functions and relations of social organizations. Students will achieve an understanding of the nature of the social services and the subjective impact of seeking and providing help.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHLC 401",
+    "subject": "CHLC",
+    "number": "401",
+    "title": "Evaluation of Health and Social Services",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Understanding the responsibility of management for the timely appraisal of programs and services delivered by health and social services organizations with a view to ensuring their quality, safety, effectiveness and efficiency.Topics include: program evaluation, continuous quality improvement, organizational performance, utilization management, risk management, accreditation and human resources.",
+    "prerequisites": {
+      "text": "CHLC 351",
+      "tree": "CHLC 351",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHLC 410",
+    "subject": "CHLC",
+    "number": "410",
+    "title": "Fundamentals of Health and Social Services Info Systems",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Fundamental approaches of information systems and data management.Topics covered include: integration of technology in the health care system; use of information technology and management systems to improve access, quality, safety and efficiency.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHLC 351.",
+      "tree": "CHLC 351",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHLC 415",
+    "subject": "CHLC",
+    "number": "415",
+    "title": "Foundations of Legal and Ethical Aspects",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The legal and ethical issues relevant to the health care system in Quebec. Topics include: major legislation relevant to the health care system; the relationship between civil and criminal law; law and medicine; law and ethics; human rights, professional responsibility and liability.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHLC 351.",
+      "tree": "CHLC 351",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHLC 500",
+    "subject": "CHLC",
+    "number": "500",
+    "title": "Health and Social Service Systems",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "An overview of the present Québec and Canadian health and social service system: its components, organization, management and challenges/uncertainties; its recent evolution, present organization and foreseeable direction. Interaction and interface between the health system and other social systems; roles and various levels of government and private sector.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHLC 502",
+    "subject": "CHLC",
+    "number": "502",
+    "title": "Health and Social Services Information Systems",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Information systems and data management fundamentals; understanding of integration of technology in the health care setting; effective use of information technology and management systems to improve the quality, safety, access, and cost-effectiveness of health care.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHLC 500.",
+      "tree": "CHLC 500",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHLC 552",
+    "subject": "CHLC",
+    "number": "552",
+    "title": "Legal and Ethical Aspects: Health and Social Services",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Health care system in Quebec, the federal and provincial law relevant to it. Explores relationships between civil and criminal law, law and medicine, law and ethics. Major legislation, case law and legal writings will be presented. Addresses human rights, professional responsibility, civil, criminal liability and dilemmas raised by new technologies.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHLC 500",
+      "tree": "CHLC 500",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHLC 620",
+    "subject": "CHLC",
+    "number": "620",
+    "title": "Data Governance in Healthcare",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "In-depth analysis of the characteristics and stakeholders in data governance (tools, people and processes) within the healthcare context. Emphasis on data strategies, tooling creation and governance principles in healthcare organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous activities."
+    ]
+  },
+  {
+    "code": "CHLC 630",
+    "subject": "CHLC",
+    "number": "630",
+    "title": "Artificial Intelligence in Healthcare",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "In-depth examination of how artificial intelligence (AI) is changing operations in healthcare through analysis of the AI impact and its application on healthcare systems. Topics include AI operations (Ops) and operational infrastructure, exploration of AI Ops in automation, and AI Ops cloud operations. Extensive exploration of current possibilities using AI in healthcare and how AI works in practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous activities."
+    ]
+  },
+  {
+    "code": "CHLC 690",
+    "subject": "CHLC",
+    "number": "690",
+    "title": "Special Topics in Healthcare",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Analysis of selected topics in the healthcare sector.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHLC 590, 590N1/N2, 590J1/J2/J3.",
+      "excludes": [
+        "CHLC 590",
+        "CHLC 590J1",
+        "CHLC 590N1"
+      ]
+    },
+    "notes": [
+      "1.Content will vary from year to year.",
+      "2.Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  }
+]

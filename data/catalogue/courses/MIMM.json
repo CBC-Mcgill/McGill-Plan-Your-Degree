@@ -1,0 +1,1114 @@
+[
+  {
+    "code": "MIMM 211",
+    "subject": "MIMM",
+    "number": "211",
+    "title": "Introductory Microbiology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A general treatment of microbiology bearing specifically on the biological properties of microorganisms. Emphasis will be on procaryotic cells. Basic principles of microbial genetics are also introduced.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "BIOL 200",
+      "tree": "BIOL 200",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours of lecture"
+    ]
+  },
+  {
+    "code": "MIMM 212",
+    "subject": "MIMM",
+    "number": "212",
+    "title": "Laboratory in Microbiology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This laboratory course is designed to complement MIMM 211. Sessions introduce general techniques peculiar to the handling of microorganisms.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MIMM 211",
+      "tree": "MIMM 211",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours laboratory, 1 hour lecture, 1 hour follow-up"
+    ]
+  },
+  {
+    "code": "MIMM 214",
+    "subject": "MIMM",
+    "number": "214",
+    "title": "Introductory Immunology: Elements of Immunity",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic immunology, organs and cells, elements of innate immunity, phagocytes, complement, elements of adaptive immunity, B-cells, T-cells, antigen presenting cells, MHC genes and molecules, antigen processing and presentation, cytokines and chemokines. Emphasis on anatomy and the molecular and cellular players working together as a physiological system to maintain human health.",
+    "prerequisites": {
+      "text": "BIOL 200",
+      "tree": "BIOL 200",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "BIOL 201 or ANAT 212/BIOC 212",
+      "tree": {
+        "or": [
+          "BIOL 201",
+          "ANAT 212",
+          "BIOC 212"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIMM 301",
+    "subject": "MIMM",
+    "number": "301",
+    "title": "Scientific Writing Skills in MIMM",
+    "credits": 1,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Scientific and communication skills, including searching the literature, reading primary papers, managing citations and using them appropriately, as well as interpreting scientific data, synthesizing findings from the scientific literature, and writing a scientific paper. This course will allow students to practice scientific writing skills through various steps intended to provide feedback.",
+    "prerequisites": {
+      "text": "MIMM323, MIMM324, MIMM384",
+      "tree": {
+        "and": [
+          "MIMM 323",
+          "MIMM 324",
+          "MIMM 384"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MIMM314, MIMM385",
+      "tree": {
+        "and": [
+          "MIMM 314",
+          "MIMM 385"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIMM 314",
+    "subject": "MIMM",
+    "number": "314",
+    "title": "Intermediate Immunology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An intermediate-level immunology course covering the cellular and molecular basis of lymphocyte development and activation in immune responses in health and disease.",
+    "prerequisites": {
+      "text": "MIMM 214",
+      "tree": "MIMM 214",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours of lecture"
+    ]
+  },
+  {
+    "code": "MIMM 323",
+    "subject": "MIMM",
+    "number": "323",
+    "title": "Microbial Physiology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the composition and structure of microbial cells, the biochemical activities associated with cellular metabolism and how these activities are regulated and coordinated. The course will have a molecular and genetic approach to the study of microbial physiology.",
+    "prerequisites": {
+      "text": "MIMM 211",
+      "tree": "MIMM 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours of lecture"
+    ]
+  },
+  {
+    "code": "MIMM 324",
+    "subject": "MIMM",
+    "number": "324",
+    "title": "Fundamental Virology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the fundamental properties of viruses and their interactions with host cells. Bacteriophages, DNA- and RNA-containing animal viruses, and retroviruses are covered. Emphasis will be on phenomena occurring at the molecular level and on the regulated control of gene expression in virus-infected cells.",
+    "prerequisites": {
+      "text": "MIMM 211, BIOL 200, BIOL 201 or BIOC 212",
+      "tree": {
+        "and": [
+          "MIMM 211",
+          "BIOL 200",
+          {
+            "or": [
+              "BIOL 201",
+              "BIOC 212"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours of lecture"
+    ]
+  },
+  {
+    "code": "MIMM 384",
+    "subject": "MIMM",
+    "number": "384",
+    "title": "Molecular Microbiology Laboratory",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A series of laboratory exercises in molecular biology and microbial genetics during the Fall term. As part of a term paper writing project, students will explore contemporary research subjects that represent the wide interests of the Microbiology and Immunology departmentâ•Žs faculty. The general objective is to provide practical and theoretical introduction to the technology and methodology used in contemporary microbiology research.",
+    "prerequisites": {
+      "text": "MIMM 211 and MIMM 212",
+      "tree": {
+        "and": [
+          "MIMM 211",
+          "MIMM 212"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MIMM 323 and MIMM 324",
+      "tree": {
+        "and": [
+          "MIMM 323",
+          "MIMM 324"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken MIMM 386D1/D2.",
+      "excludes": [
+        "MIMM 386D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 385",
+    "subject": "MIMM",
+    "number": "385",
+    "title": "Laboratory in Immunology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This laboratory course allows students to gain expertise in following protocols and performing key techniques in immunology. Students also develop basic experimental design and scientific thinking skills by designing their own experiments based on available reagents to solve a problem. Students learn to keep a lab book and communicate scientific findings in written and oral form.",
+    "prerequisites": {
+      "text": "MIMM 211, MIMM 212, MIMM 214 (MIMM 384 highly recommended).",
+      "tree": {
+        "and": [
+          "MIMM 211",
+          "MIMM 212",
+          "MIMM 214",
+          "MIMM 384"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MIMM 314",
+      "tree": "MIMM 314",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken MIMM 386D1/D2.",
+      "excludes": [
+        "MIMM 386D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 387",
+    "subject": "MIMM",
+    "number": "387",
+    "title": "The Business of Science",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The ability to select and manipulate genetic material has led to unprecedented interest in the industrial applications of procaryotic and eucaryotic cells. Beginning in the 1970s the introduction of and subsequent refinements to recombinant DNA technology and hybridoma technology transformed the horizons of the biopharmaceutical world. This course will highlight the important events that link basic research to clinical/commercial application of new drugs and chemicals.",
+    "prerequisites": {
+      "text": "At least one 200-level course in a biological or biomedical discipline or permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MIMM 390",
+    "subject": "MIMM",
+    "number": "390",
+    "title": "SEA-PHAGES: Phage Discovery",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Microbiology and molecular biology content about bacteriophages, followed by hands-on experience through isolation and characterization of novel bacteriophages from soil samples using various microbiology and virology techniques.",
+    "prerequisites": {
+      "text": "MIMM 211, MIMM 212, BIOL 200",
+      "tree": {
+        "and": [
+          "MIMM 211",
+          "MIMM 212",
+          "BIOL 200"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MIMM 323, MIMM 324, MIMM 384",
+      "tree": {
+        "and": [
+          "MIMM 323",
+          "MIMM 324",
+          "MIMM 384"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to Microbiology and Immunology U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 391",
+    "subject": "MIMM",
+    "number": "391",
+    "title": "SEA-PHAGES: Genome Annotation",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to bioinformatics as a tool to further bacteriophage research by using computer programs and software to annotate genomes of bacteriophages.",
+    "prerequisites": {
+      "text": "MIMM 211, MIMM 212, BIOL 200",
+      "tree": {
+        "and": [
+          "MIMM 211",
+          "MIMM 212",
+          "BIOL 200"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MIMM 323, MIMM 324, MIMM 384",
+      "tree": {
+        "and": [
+          "MIMM 323",
+          "MIMM 324",
+          "MIMM 384"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to Microbiology and Immunology U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 396",
+    "subject": "MIMM",
+    "number": "396",
+    "title": "Undergraduate Research Project in Microbiology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "MIMM 397",
+    "subject": "MIMM",
+    "number": "397",
+    "title": "Undergraduate Research Project in Immunology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": {
+      "text": "Departmental permission required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in programs offered by the Faculty of Science.",
+      "excludes": []
+    },
+    "notes": [
+      "This course cannot be taken under the S/U option.",
+      "Students cannot be supervised by the same instructor for 396 or 397 Science courses.",
+      "Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "MIMM 413",
+    "subject": "MIMM",
+    "number": "413",
+    "title": "Parasitology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A study of the biology, immunological aspects of host-parasite interactions, pathogenicity, epidemiology and molecular biological aspects of selected parasites of medical importance. Laboratory will consist of a lecture on techniques, demonstrations and practical work.",
+    "prerequisites": {
+      "text": "MIMM 314 or equivalent - ANAT 261 is strongly recommended",
+      "tree": {
+        "and": [
+          "MIMM 314",
+          "ANAT 261"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "MIMM 414",
+    "subject": "MIMM",
+    "number": "414",
+    "title": "Advanced Immunology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An advanced course serving as a logical extension of MIMM 314. The course will integrate molecular, cellular and biochemical events involved in the ontogeny of the lymphoid system and its activation in the immune response. The course will provide the student with an up-to-date understanding of a rapidly moving field.",
+    "prerequisites": {
+      "text": "MIMM 314",
+      "tree": "MIMM 314",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hour lecture"
+    ]
+  },
+  {
+    "code": "MIMM 465",
+    "subject": "MIMM",
+    "number": "465",
+    "title": "Bacterial Pathogenesis",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Familiarizes students with key principles and recent advances in our understanding of the strategies that bacteria use to infect and cause disease, as well as the approaches used in the prevention and treatment of bacterial infections.",
+    "prerequisites": {
+      "text": "MIMM 214, MIMM 323, MIMM 384.",
+      "tree": {
+        "and": [
+          "MIMM 214",
+          "MIMM 323",
+          "MIMM 384"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours of lecture"
+    ]
+  },
+  {
+    "code": "MIMM 466",
+    "subject": "MIMM",
+    "number": "466",
+    "title": "Viral Pathogenesis",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A study of the biological and molecular aspects of viral pathogenesis with emphasis on the human pathogenic viruses including the retroviruses HIV and HTLV-1; herpes viruses; papilloma viruses; hepatitis viruses; and new emerging human viral diseases. These viruses will be discussed in terms of virus multiplication, gene expression virus-induced cytopathic effects and host immune response to infection.",
+    "prerequisites": {
+      "text": "MIMM 211, MIMM 324, MIMM 314",
+      "tree": {
+        "and": [
+          "MIMM 211",
+          "MIMM 324",
+          "MIMM 314"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours of lecture"
+    ]
+  },
+  {
+    "code": "MIMM 496",
+    "subject": "MIMM",
+    "number": "496",
+    "title": "Microbiology Advanced Research Project",
+    "credits": 6,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This two-semester course is intended for undergraduate Science students who want a rigorous research experience beyond that of a one semester course (MIMM 396/397) and who are unlikely to take the Honours Research Project course (MIMM 501/502).",
+    "prerequisites": {
+      "text": "MIMM 212, MIMM 384, MIMM 385",
+      "tree": {
+        "and": [
+          "MIMM 212",
+          "MIMM 384",
+          "MIMM 385"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both MIMM 496D1 and MIMM 496D2",
+      "No credit will be given for this course unless both MIMM 496D1 and MIMM 496D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MIMM 496D1",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MIMM 496D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MIMM 497",
+    "subject": "MIMM",
+    "number": "497",
+    "title": "Immunology Advanced Research Project",
+    "credits": 6,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This two-semester course is intended for undergraduate Science students who want a rigorous research experience beyond that of a one semester course (MIMM 396/397) and who are unlikely to take the Honours Research Project course (MIMM 501/502).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "MIMM 497D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MIMM 497D2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026",
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MIMM 498",
+    "subject": "MIMM",
+    "number": "498",
+    "title": "Library Research Project in Immunology",
+    "credits": 1,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised exploration of the current scientific literature on an assigned topic of an advanced nature within the area of Immunology.",
+    "prerequisites": {
+      "text": "MIMM 314, MIMM 323, MIMM 324 and MIMM 386.",
+      "tree": {
+        "and": [
+          "MIMM 314",
+          "MIMM 323",
+          "MIMM 324",
+          "MIMM 386"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is intended for final year Microbiology and Immunology students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 499",
+    "subject": "MIMM",
+    "number": "499",
+    "title": "Library Research Project in Microbiology",
+    "credits": 1,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised exploration of the current scientific literature on an assigned topic of an advanced nature within the general areas of bacteriology, virology, or parasitology.",
+    "prerequisites": {
+      "text": "MIMM 314, MIMM 323, MIMM 324 and MIMM 386.",
+      "tree": {
+        "and": [
+          "MIMM 314",
+          "MIMM 323",
+          "MIMM 324",
+          "MIMM 386"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to final year Microbiology and Immunology students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 501",
+    "subject": "MIMM",
+    "number": "501",
+    "title": "Honours Research Project in Immunology",
+    "credits": 12,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of students' research findings in a seminar and a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MIMM 502D1/D2. Open to U3 Honours students and Majors students.",
+      "excludes": [
+        "MIMM 502"
+      ]
+    },
+    "notes": [
+      "Required CGPA: 3.50 or higher",
+      "An information meeting about the course is held annually in January for students who intend to apply for registration.",
+      "Students must register for both MIMM 501D1 and MIMM 501D2.",
+      "No credit will be given for this course unless both MIMM 501D1 and MIMM 501D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MIMM 501D1",
+        "credits": 6,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MIMM 501D2",
+        "credits": 6,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MIMM 502",
+    "subject": "MIMM",
+    "number": "502",
+    "title": "Honours Research Project in Microbiology",
+    "credits": 12,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of students' research findings in a seminar and a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students and Majors students are eligible. Required CGPA: 3.50 or higher.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "More than 18 hours per week for an independent research project.",
+      "An information meeting about the course is held annually in January for students who intend to apply for registration.",
+      "Students must register for both MIMM 502D1 and MIMM 502D2.",
+      "No credit will be given for this course unless both MIMM 502D1 and MIMM 502D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MIMM 502D1",
+        "credits": 6,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MIMM 502D2",
+        "credits": 6,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MIMM 509",
+    "subject": "MIMM",
+    "number": "509",
+    "title": "Inflammatory Processes",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course concentrates on the non-specific aspects of the immune response, an area which is not adequately covered by the other immunology courses presented at the university. Interactions between guest researchers (from McGill and other universities) and students will be furthered.",
+    "prerequisites": {
+      "text": "MIMM 314",
+      "tree": "MIMM 314",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PHGY 513 or MIMM 414",
+      "tree": {
+        "or": [
+          "PHGY 513",
+          "MIMM 414"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours of seminar",
+      "This course will be given in conjunction with the Division of Experimental Medicine"
+    ]
+  },
+  {
+    "code": "MIMM 510",
+    "subject": "MIMM",
+    "number": "510",
+    "title": "New Advances in Antimicrobial Drugs ",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Overview on bacteria, insights into bacterial pathogenesis, an understanding of antibiotics, and new developments in antibacterial to beat antibiotic resistance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students and above. Class capacity is first come first serve, after the first 15 students, the next 10 students priority will be given to MIMM and PHAR students. Not open to students who have taken or are taking PHAR 510.",
+      "excludes": [
+        "PHAR 510"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 607",
+    "subject": "MIMM",
+    "number": "607",
+    "title": "Biochemical Pathology",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Immunopathogenesis of Human Disease: Lectures and seminars on immune-regulatory mechanisms (cellular/molecular), maintaining the balance between protection and pathology; pathogenesis of major infectious diseases with bacterial, viral and parasitic involvement (e.g. tuberculosis, AIDS, malaria) and classical immune disorders (e.g. asthma).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PATH 607.",
+      "excludes": [
+        "PATH 607"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 611",
+    "subject": "MIMM",
+    "number": "611",
+    "title": "Graduate Seminars 1",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of a research proposal seminar, which is not held publically but presented and evaluated in the context of the first Advisory Committee meeting. Presentation of the relevant background of the research project, the hypothesis to be tested, the objectives of the research project and summary of the experimental approach that will be used.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIMM 612",
+    "subject": "MIMM",
+    "number": "612",
+    "title": "Graduate Seminars 2",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of a scientific seminar, which includes a summary of the relevant background of the research project, the hypothesis being tested, the student’s experimental work to date and the future objectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students - presentation of two seminar topics throughout the course of their degree program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 613",
+    "subject": "MIMM",
+    "number": "613",
+    "title": "Current Topics 1",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Graduate students are required to attend eight scientific seminars each term, for three terms. A minimum of four seminars should be attended from the Infection and Immunity Seminar Series offered by the Department of Microbiology and Immunology. A maximum of four life sciences-related seminars presented by principal investigators can be attended at McGill University or its affiliated centers (MUHC, LDI, IRCM).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIMM 614",
+    "subject": "MIMM",
+    "number": "614",
+    "title": "Current Topics 2",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Graduate students are required to attend eight scientific seminars each term, for three terms. A minimum of four seminars should be attended from the Infection and Immunity Seminar Series offered by the Department of Microbiology and Immunology. A maximum of four life sciences-related seminars presented by principal investigators can be attended at McGill University or its affiliated centers (MUHC, LDI, IRCM).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIMM 615",
+    "subject": "MIMM",
+    "number": "615",
+    "title": "Current Topics 3",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "M.Sc. Students (discussion groups with guest speakers).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIMM 616",
+    "subject": "MIMM",
+    "number": "616",
+    "title": "Reading and Conference 1",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Student presentations, taken from current literature, are concerned with aspects of a central topic. Presentations are designed to be informal and to generate student discussions. Topic will change from term to term.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students - two of these courses required throughout the course of their degree program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 617",
+    "subject": "MIMM",
+    "number": "617",
+    "title": "Reading and Conference 2",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Student presentations, taken from current literature, are concerned with aspects of a central topic. Presentations are designed to be informal and to generate student discussions. Topic will change from term to term.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students - two of these courses required throughout the course of their degree program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 619",
+    "subject": "MIMM",
+    "number": "619",
+    "title": "Reading and Conference 4",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Student presentations, taken from current literature, are concerned with aspects of a central topic. Presentations are designed to be informal and to generate student discussions. Topic will change from term to term.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students - two of these courses required throughout the course of their degree program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 697",
+    "subject": "MIMM",
+    "number": "697",
+    "title": "Master's Research 1",
+    "credits": 11,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the direction of a supervisor on a research problem in the student's designated area of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 698",
+    "subject": "MIMM",
+    "number": "698",
+    "title": "Master's Research 2",
+    "credits": 11,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the direction of a supervisor on a research problem in the student's designated area of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 699",
+    "subject": "MIMM",
+    "number": "699",
+    "title": "Master's Research 3",
+    "credits": 11,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the direction of a supervisor on a research problem in the student's designated area of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc. students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIMM 701",
+    "subject": "MIMM",
+    "number": "701",
+    "title": "Comprehensive Examination-Ph.D. Candidate",
+    "credits": 0,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program. The comprehensive examination includes submission of a written research proposal, an oral presentation of the research accomplishments to date and an oral testing on the understanding of the research area and of relevant areas related to the research project. Students are expected to demonstrate a comprehensive understanding of their research area and a good understanding of relevant areas related to their project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "MIMM 701D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "MIMM 701D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MIMM 713",
+    "subject": "MIMM",
+    "number": "713",
+    "title": "Graduate Seminars 3",
+    "credits": 3,
+    "offeredBy": "Microbiology & Immunology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of a maximum of three seminars topics throughout the course of their degree program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Ph.D. students",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

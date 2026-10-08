@@ -1,0 +1,190 @@
+[
+  {
+    "code": "WILD 302",
+    "subject": "WILD",
+    "number": "302",
+    "title": "Fish Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the biology and ecology of freshwater and marine fishes. Topics include taxonomy, physiology, biogeography, competition, predation, fishing, and conservation. Lab exercises and field trips emphasize familiarity with local fishes and their ecological interactions.",
+    "prerequisites": {
+      "text": "AEBI 211 or permission of instructor",
+      "tree": "AEBI 211",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course carries an additional charge of $43.15 to cover the cost of transportation (bus rental) for local field trips. The fee is only refundable prior to the deadline to withdraw with full refund"
+    ]
+  },
+  {
+    "code": "WILD 307",
+    "subject": "WILD",
+    "number": "307",
+    "title": "Natural History of Vertebrates",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The diversity and natural history of Canadian vertebrates illustrated with trophic, phylogenetic, and macroecological approaches.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course carries an additional charge of $21.58 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "WILD 350",
+    "subject": "WILD",
+    "number": "350",
+    "title": "Mammalogy",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course focuses on the evolution, classification, ecology and behaviour of mammals and relations between humans and mammals. Also structure, systematics and identification of local and world mammals, as well as field methods will be emphasized.",
+    "prerequisites": {
+      "text": "AEBI 211 and WILD 307",
+      "tree": {
+        "and": [
+          "AEBI 211",
+          "WILD 307"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An additional fee of $20.57 is charged to all students registered in WILD 350, Mammalogy, a course that has a required field trip."
+    ]
+  },
+  {
+    "code": "WILD 375",
+    "subject": "WILD",
+    "number": "375",
+    "title": "Issues: Environmental Sciences",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and trends in global ecology as they pertain to agricultural and natural ecosystems and the impact of environmental change on food production.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "WILD 401",
+    "subject": "WILD",
+    "number": "401",
+    "title": "Fisheries and Wildlife Management",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of fisheries and wildlife management are considered and current practices of research and management are discussed.",
+    "prerequisites": {
+      "text": "WILD 307 and ENVB 305 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "WILD 307",
+          "ENVB 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "A fee is charged to all students registered in WILD 401, Fisheries and Wildlife Management, a course that has a required field trip. This fee is used to support the cost of excursions, accommodations, food and fees associated with visiting research facilities where final projects are devised, and data are collected in the field (e.g., at the SUNY-ESF Adirondaks Ecological Center in Newcomb, New York). The Department of Natural Resource Sciences subsidizes a portion of the cost of this compulsory activity.",
+      "A fee of $431.37 is charged to all students registered in WILD 401, Fisheries and Wildlife Management, a course that has a required field trip. This fee is used to support the cost of excursions, accommodations, food and fees associated with visiting research facilities where final projects are devised, and data are collected in the field (e.g., at the SUNY-ESF Adirondaks Ecological Center in Newcomb, New York). The Department of Natural Resource Sciences subsidizes a portion of the cost of this compulsory activity."
+    ]
+  },
+  {
+    "code": "WILD 420",
+    "subject": "WILD",
+    "number": "420",
+    "title": "Ornithology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Taxonomic relationships and evolution of birds. Examination of the physiology, migration, identification and ecological processes of North American birds.",
+    "prerequisites": {
+      "text": "WILD 307 or permission of instructor",
+      "tree": "WILD 307",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course carries an additional charge of $21.58 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "WILD 421",
+    "subject": "WILD",
+    "number": "421",
+    "title": "Wildlife Conservation",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study of current controversial issues focusing on wildlife conservation. Topics include: animal rights, exotic species, ecotourism, urban wildlife, multi-use of national parks, harvesting of wildlife, biological controls, and endangered species.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  },
+  {
+    "code": "WILD 475",
+    "subject": "WILD",
+    "number": "475",
+    "title": "Desert Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "A three week field course exploring relationships between climate, geology, landforms, biodiversity, biotic adaptations and ecosystem conditions in the arid regions of Arizona and southern California. Focus is on the Sonoran and Mojave deserts but includes the transitions to adjacent grassland and forest biomes of the Sky Islands and Colorado Plateau. Exploration of issues arising from human use of land and water, and conservation in arid environments. Experiential learning involving team and individual projects and assignments before and during the field trip.",
+    "prerequisites": {
+      "text": "Permission of the instructors is required to register. To be eligible students are required to have at least one systems-focused course, one ecology course and two organismal courses. Students should consult the instructors for list of appropriate courses.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "Odd-numbered Winter terms; enrollment limited to 20.",
+      "The course begins and ends in Phoenix AZ. Students are responsible for their transportation to/from Phoenix.",
+      "The course requires camping and living under desert conditions.",
+      "A course fee of $1,596.23 covers the cost of transportation, camping, admissions and most meals during the field trip."
+    ]
+  }
+]

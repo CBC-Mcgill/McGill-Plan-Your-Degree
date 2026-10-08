@@ -1,0 +1,1568 @@
+[
+  {
+    "code": "EDSL 203",
+    "subject": "EDSL",
+    "number": "203",
+    "title": "Communication en langue française en éducation",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Communication écrite et orale en langue française en éducation, en contexte d’immersion française. L’accent est mis sur des stratégies permettant d’identifier, d’analyser et d’aborder les difficultés liées à l’expression écrite et orale. Les travaux portent sur la communication académique et professionnelle en éducation, avec une attention particulière à la communication en contexte de classe d’immersion française.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 210",
+    "subject": "EDSL",
+    "number": "210",
+    "title": "First Professional Seminar",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "How to observe in second language classrooms. Students will be introduced to ways of observing instructional practices and procedures and will begin to reflect on various interactional patterns between teachers and students as observed in the First Year Field Experience. Professional portfolios and professional competencies will be addressed.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDFE 209",
+      "tree": "EDFE 209",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDSL 209 (First Year Professional Seminar)",
+      "excludes": [
+        "EDSL 209"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 215",
+    "subject": "EDSL",
+    "number": "215",
+    "title": "Communication in Education for TESL in Quebec",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Designed to develop academic and professional communication in education, both oral and written. Tailored to the needs of future ESL teachers in Quebec. Exposure to different professional and social situations via role playing, problem-solving, and various oral and written interactions in French and/or English as appropriate.",
+    "prerequisites": {
+      "text": "FRSL 211D1/D2 or equivalent, or CEGEP DEC",
+      "tree": "FRSL 211",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Quebec CEGEP graduates are deemed to have met the prerequisite."
+    ]
+  },
+  {
+    "code": "EDSL 247",
+    "subject": "EDSL",
+    "number": "247",
+    "title": "Second Language Education in Indigenous Communities",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Issues and considerations in the learning of English or French in Indigenous communities. Emphasis on teaching a second language to Indigenous children.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Limited to students enrolled in off-campus programs delivered through the Office of First Nations and Inuit Education."
+    ]
+  },
+  {
+    "code": "EDSL 253",
+    "subject": "EDSL",
+    "number": "253",
+    "title": "Deuxième séminaire professionnel (maternelle/primaire)",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Préparation au deuxième stage par le développement de pratiques de base en planification et en enseignement dans des classes de maternelle et de primaire en contexte d’immersion française.",
+    "prerequisites": {
+      "text": "EDEE 223, EDEE 254, EDEE 274, EDEE 284",
+      "tree": {
+        "and": [
+          "EDEE 223",
+          "EDEE 254",
+          "EDEE 274",
+          "EDEE 284"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDFE 256",
+      "tree": "EDFE 256",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 254",
+    "subject": "EDSL",
+    "number": "254",
+    "title": "Second Professional Seminar (TESL)",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The course aims to develop basic practices in planning and teaching in ESL classrooms at the elementary and secondary levels, including reflective analysis. Professional portfolios and professional competencies will be addressed.",
+    "prerequisites": {
+      "text": "EDSL 210, EDFE 209, EDSL 447 and EDSL 311",
+      "tree": {
+        "and": [
+          "EDSL 210",
+          "EDFE 209",
+          "EDSL 447",
+          "EDSL 311"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDFE 255",
+      "tree": "EDFE 255",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 260",
+    "subject": "EDSL",
+    "number": "260",
+    "title": "Méthodes d’enseignement de la lecture FLS",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Méthodes et ressources pour l’enseignement de la lecture à la maternelle et au primaire en immersion française. La littératie en langue seconde, avec un accent sur les processus d’apprentissage de la lecture et sur les approches pédagogiques qui les soutiennent.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 300",
+    "subject": "EDSL",
+    "number": "300",
+    "title": "Foundations of L2 Education",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This introduction to the field of second language education provides an overview of the supporting disciplines (e.g., linguistics, psychology, sociology and education) and includes historical and analytical perspectives on the development of L2 teaching through an examination of approaches to L2 instruction and specific teaching methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 301",
+    "subject": "EDSL",
+    "number": "301",
+    "title": "Étude de la langue",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Notions fondamentales nécessaires à l’enseignement des composantes linguistiques (lexique, morphologie, syntaxe, sémantique) et discursives (de la phrase aux types de textes et de discours) en français langue seconde. Exploration de la grammaire nouvelle et de la composante « langue » des programmes d’études, situées dans des usages authentiques et inclusifs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 304",
+    "subject": "EDSL",
+    "number": "304",
+    "title": "Sociolinguistics and L2 Education",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course introduces students to various social aspects of language, language use, and language learning by examining second language education from three interrelated perspectives: sociolinguistics, discourse, and culture. Issues range from language variation and social attitudes to conversational analysis and cross-cultural communication.",
+    "prerequisites": {
+      "text": "LING 200 or LING 201.",
+      "tree": {
+        "or": [
+          "LING 200",
+          "LING 201"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "May be offered in English or French"
+    ]
+  },
+  {
+    "code": "EDSL 305",
+    "subject": "EDSL",
+    "number": "305",
+    "title": "L2 Learning: Classroom Settings",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course provides an introduction to theory and research in second language acquisition (SLA). It is designed to help students understand the processes, developmental patterns and factors contributing to SLA so that the students will be prepared to evaluate and develop teaching procedures in light of this understanding.",
+    "prerequisites": {
+      "text": "EDSL 300 or LING 200 or LING 201.",
+      "tree": {
+        "or": [
+          "EDSL 300",
+          "LING 200",
+          "LING 201"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 311",
+    "subject": "EDSL",
+    "number": "311",
+    "title": "Pedagogical Grammar",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course focuses on how the English language works as a system, examining it from the levels of phonology, morphology, syntax, semantics, and discourse. These aspects will be considered in relation to second language teaching and learning.",
+    "prerequisites": {
+      "text": "EDSL 350 and EDSL 447",
+      "tree": {
+        "and": [
+          "EDSL 350",
+          "EDSL 447"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not for credit if EDSL 301 or EDEC 302 has been or is being taken",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 315",
+    "subject": "EDSL",
+    "number": "315",
+    "title": "Third Year Professional Seminar",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Classroom processes such as teaching and learning strategies, lesson planning and implementation, classroom organization and management, and developing a reflective teaching and learning practice. Competencies and working professional portfolios will be addressed.",
+    "prerequisites": {
+      "text": "EDSL 255 or EDSL 255D1/D2, and EDFE 255, EDSL 305, EDSL 330, EDSL 334, EDSL 447",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDSL 255",
+              "EDSL 255D1"
+            ]
+          },
+          "EDFE 255",
+          "EDSL 305",
+          "EDSL 330",
+          "EDSL 334",
+          "EDSL 447"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EDFE 359",
+      "tree": "EDFE 359",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to B.Ed. TESL students who have taken EDFE 255. Not open to students who have taken or are taking EDFE 259, EDSL 309 or EDSL 310.",
+      "excludes": [
+        "EDFE 259",
+        "EDSL 309",
+        "EDSL 310"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 330",
+    "subject": "EDSL",
+    "number": "330",
+    "title": "Literacy 1:Teaching Reading in ESL",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examines current literacy theory and practice, focusing on the teaching of reading skills for the comprehension and appreciation of texts in various genres, formats and functions, in ESL for elementary and secondary level students. Top-down and bottom-up reading processes; cultural and general background knowledge; knowledge of language including grammar and vocabulary are addressed.",
+    "prerequisites": {
+      "text": "EDSL 300, EDSL 350",
+      "tree": {
+        "and": [
+          "EDSL 300",
+          "EDSL 350"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 332",
+    "subject": "EDSL",
+    "number": "332",
+    "title": "Literacy 2: Teaching Writing in ESL",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examines current literacy theory and practice, focusing on the teaching of writing skills for the production of texts in various genres, formats and functions, in ESL for elementary and secondary level students. Based on an understanding of writing as a process, key areas include: the adaptation and development of appropriate writing activities; feedback and revision; theme- and literature-based activities; and building upon reading and oral activities.",
+    "prerequisites": {
+      "text": "EDSL 330",
+      "tree": "EDSL 330",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 334",
+    "subject": "EDSL",
+    "number": "334",
+    "title": "Teaching Oral Skills in ESL",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of the English sound system to practical ESL teaching situations, planning and integrating pronunciation (as well as other oral skills, such as fluency) into activities and projects, developing materials, and assessing progress.",
+    "prerequisites": {
+      "text": "LING 200 or LING 201 or LING 210",
+      "tree": {
+        "or": [
+          "LING 200",
+          "LING 201",
+          "LING 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 341",
+    "subject": "EDSL",
+    "number": "341",
+    "title": "Littérature jeunesse en FLS",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Développement de la littératie en langue seconde; les stratégies d'enseignement et d'apprentissage de la lecture et de l'écriture; l'exploration et l'utilisation de la littérature enfantine et de jeunesse propre à la francophonie dans divers contextes scolaires.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 345",
+    "subject": "EDSL",
+    "number": "345",
+    "title": "Enseignement du FLS-immersion",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Enseignement du français langue seconde en contexte d’immersion à travers les contenus disciplinaires. Exploration de diverses approches pédagogiques, tout en développant une analyse critique des pratiques et des recherches en immersion française, notamment en ce qui concerne leurs fondements théoriques, leurs limites et leurs effets sur l’apprentissage et la participation d’élèves issus de milieux linguistiques et culturels diversifiés.",
+    "prerequisites": {
+      "text": "EDSL 301",
+      "tree": "EDSL 301",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students in the B.Ed. K/Elementary Pédagogie de l'Immersion Française (PIF) Option must take EDSL 345 before EDEC253/EDFE256."
+    ]
+  },
+  {
+    "code": "EDSL 350",
+    "subject": "EDSL",
+    "number": "350",
+    "title": "Essentials of English Grammar",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analysis of English phrases, clauses and sentences up to discourse level in connected text. Emphasis on distinguishing between grammatical form, meaning, and function. Identification, analysis and correction of common errors made by ESL learners.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to B.Ed. (TESL) students; This is a required course for B.Ed. TESL students. Students from other programs may be admitted at the discretion of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 353",
+    "subject": "EDSL",
+    "number": "353",
+    "title": "Troisième séminaire professionnel (maternelle/primaire)",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Stratégies pour l’organisation, la gestion et l’enseignement dans des classes de maternelle et de primaire en contexte d’immersion française, en appui au troisième stage. Méthodes d’intégration des différentes disciplines du curriculum au primaire.",
+    "prerequisites": {
+      "text": "EDSL 253",
+      "tree": "EDSL 253",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEE 356, EDFE 306",
+      "tree": {
+        "and": [
+          "EDEE 356",
+          "EDFE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "S'appuie principalement sur le Programme de formation de l'école québécoise."
+    ]
+  },
+  {
+    "code": "EDSL 370",
+    "subject": "EDSL",
+    "number": "370",
+    "title": "Issues and Practices in Teaching Indigenous Languages",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Social, linguistic, and epistemological issues in Indigenous language teaching and learning, drawing on academic and community knowledge bases. Analyzes approaches to the development of Indigenous language proficiency through an examination of specific Indigenous language teaching methods for first language and additional language learners. Emphasis on the relation between instruction and language policy and planning as well as instruction and students own language learning and maintenance. Focuses on how to develop teaching practices and how to evaluate language learning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in First Nations and Inuit programs offered by the Faculty of Education.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDSL 370D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "EDSL 370D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDSL 390",
+    "subject": "EDSL",
+    "number": "390",
+    "title": "Teaching English as a Second Language in the Community",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Introduction to pedagogical, program and policy contexts of teaching ESL outside the formal K - 11 school setting, including teaching children, adolescents and adults, in the private and community sectors in Canada and abroad.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 405",
+    "subject": "EDSL",
+    "number": "405",
+    "title": "Quatrième séminaire professionnel (maternelle/primaire)",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Préparation au stage final et à l’entrée dans la profession enseignante en contexte d’immersion française à la maternelle et au primaire. L’accent est mis sur le développement de la capacité à démontrer un comportement professionnel éthique et responsable dans l’exercice des fonctions liées à l’ensemble des compétences professionnelles.",
+    "prerequisites": {
+      "text": "EDSL 353, EDEE 356",
+      "tree": {
+        "and": [
+          "EDSL 353",
+          "EDEE 356"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDFE 406",
+      "tree": "EDFE 406",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 412",
+    "subject": "EDSL",
+    "number": "412",
+    "title": "Assessment in TESL",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course deals with the role of assessment in TESL. Students will explore the kinds of information needed to make educational decisions in second language courses, different techniques for collecting that information, and ways for interpreting it. Principles and methods for assessment with and without tests are discussed and practiced.",
+    "prerequisites": {
+      "text": "EDSL 447 and EDFE 359",
+      "tree": {
+        "and": [
+          "EDSL 447",
+          "EDFE 359"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 415",
+    "subject": "EDSL",
+    "number": "415",
+    "title": "Fourth Professional Seminar",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Professional competencies and final preparation of professional portfolios will be addressed. Focus is on development as a TESL professional, preparation for the workplace, and analysis, reflection, problem solving and support of actual teaching practice.",
+    "prerequisites": {
+      "text": "EDSL 315",
+      "tree": "EDSL 315",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDFE 459 and EDSL 458",
+      "tree": {
+        "and": [
+          "EDFE 459",
+          "EDSL 458"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDSL 409",
+      "excludes": [
+        "EDSL 409"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 444",
+    "subject": "EDSL",
+    "number": "444",
+    "title": "Laboratoire d'enseignement en français langue seconde",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Soutien au développement des compétences professionnelles en enseignement du français langue seconde au primaire, avec un accent sur l’articulation entre les fondements théoriques, les approches méthodologiques et la pratique en classe. La planification, la mise en oeuvre et l’analyse de situations d’apprentissage en immersion française constituent le coeur du cours, dans le but de favoriser l’adoption d’une pratique réflexive fondée sur la recherche.",
+    "prerequisites": {
+      "text": "EDSL 301 or FREN 231.",
+      "tree": {
+        "or": [
+          "EDSL 301",
+          "FREN 231"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 447",
+    "subject": "EDSL",
+    "number": "447",
+    "title": "Methods in TESL 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Intermediate-level skills in planning and teaching appropriate lessons, activities, and projects for ESL learners in a variety of programs at the elementary and secondary school levels.",
+    "prerequisites": {
+      "text": "EDSL 350",
+      "tree": "EDSL 350",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDSL 305",
+      "tree": "EDSL 305",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 458",
+    "subject": "EDSL",
+    "number": "458",
+    "title": "Methods in TESL 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced-level skills in planning appropriate lessons, activities, units and projects for ESL learners in a variety of programs at the elementary and secondary levels.",
+    "prerequisites": {
+      "text": "EDSL 447, EDSL 311",
+      "tree": {
+        "and": [
+          "EDSL 447",
+          "EDSL 311"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDSL 415 and EDFE 459",
+      "tree": {
+        "and": [
+          "EDSL 415",
+          "EDFE 459"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 500",
+    "subject": "EDSL",
+    "number": "500",
+    "title": "Foundations and Issues in Second Language Teaching and Learning",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to various theories and methodological approaches to second language teaching from the perspective of contributing disciplines (e.g., linguistics, psychology, sociology and education). Overview of theory and research in second language acquisition, including factors affecting how second languages are learned, with applications in classroom contexts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "EDSL 501",
+    "subject": "EDSL",
+    "number": "501",
+    "title": "Attestation de maîtrise langue française",
+    "credits": 0,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Successful completion of a recognized exam attesting to a level of French Language Proficiency deemed sufficient to teach French.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students in the B.Ed. Kindergarten and Elementary Pédagogie de l'Immersion Française and le certificat d’études supérieures en pédagogie de l’immersion française are required to take and pass the exam on their own. Accepted tests are CFRANC, SEL, DELF/DALF or equivalent. This requirement is a condition of graduation."
+    ]
+  },
+  {
+    "code": "EDSL 505",
+    "subject": "EDSL",
+    "number": "505",
+    "title": "Second Language Acquisition Applied to Classroom Contexts",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "An overview of theory and research in second language acquisition, including developmental patterns, factors affecting how second languages are learned, and relevance for teachers in terms of applications to the classroom context.",
+    "prerequisites": {
+      "text": "EDSL 500.",
+      "tree": "EDSL 500",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the Graduate Certificate in Teaching English as a Second Language and the Graduate Certificate in Teaching in Indigenous Schools for Non-Indigenous Teachers.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "EDSL 512",
+    "subject": "EDSL",
+    "number": "512",
+    "title": "Grammar in Teaching English as a Second Language",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Analysis of English grammar at phonological, morphological, syntactic, semantic, and discourse levels. Applications are made to second language teaching and learning, focusing on integrating grammar into communicative language approaches.",
+    "prerequisites": {
+      "text": "EDSL 505",
+      "tree": "EDSL 505",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the Graduate Certificate in TESL",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 515",
+    "subject": "EDSL",
+    "number": "515",
+    "title": "Étude de la langue française pour enseignants",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Notions pour l'enseignement du français langue seconde. Composantes linguistique (lexique, morphologie, syntaxe et semantique) et discursive (de la phrase aux types de textes et de discours); apprentissage de la grammaire nouvelle; composante langue des programmes d'études. Les demandes de deuxième langue d'enseignement et d'apprentissage axées sur l'intégration de la structure du langage dans les approches communicatives langagières.",
+    "prerequisites": {
+      "text": "EDSL 505, EDSL 500",
+      "tree": {
+        "and": [
+          "EDSL 505",
+          "EDSL 500"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 541",
+    "subject": "EDSL",
+    "number": "541",
+    "title": "Littératie et littérature de jeunesse en contexte immersif",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Ce cours vise à conscientiser l'étudiant aux stratégies d'enseignement et d'apprentissage de la lecture et de l'écriture propices au développement de la bilittératie en classes d'immersion. Il explore de façon approfondie, le rôle de la littérature enfantine et de jeunesse dans l'apprentissage du français langue seconde en contexte scolaire.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 544",
+    "subject": "EDSL",
+    "number": "544",
+    "title": "Didactique du français en contexte immersif",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Ce cours vise à amener les étudiants à s'engager dans leur processus de formation en vue de mettre à jour et d’enrichir leur pratique professionnelle ayant trait aux contenus et approches propres au contexte immersif, et ce, tant au primaire qu’au secondaire.",
+    "prerequisites": {
+      "text": "EDSL 515, EDSL 505 OR EDSL 500",
+      "tree": {
+        "and": [
+          "EDSL 515",
+          {
+            "or": [
+              "EDSL 505",
+              "EDSL 500"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 545",
+    "subject": "EDSL",
+    "number": "545",
+    "title": "Fondements pédagogiques de l’immersion",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Ce cours examine en profondeur divers cheminements retrouvés en contexte immersif ainsi que diverses approches pédagogiques propices à l'enseignement du FLS par le biais de matières scolaires. Des recherches effectuées en contexte immersif seront également examinées d’une façon critique, par rapport au développement langagier des élèves en immersion.",
+    "prerequisites": {
+      "text": "EDSL 515, EDSL 505 OR EDSL 500",
+      "tree": {
+        "and": [
+          "EDSL 515",
+          {
+            "or": [
+              "EDSL 505",
+              "EDSL 500"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 570",
+    "subject": "EDSL",
+    "number": "570",
+    "title": "L’acquisition des langues secondes en contexte immersif",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Exploration des défis liés à l’acquisition des langues dans le contexte éducatif particulier de l’immersion française. Présentation des théories actuelles de l’acquisition des langues tout en mettant l’emphase sur l'impact de certains phénomènes sur l'acquisition d'une langue seconde.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 572",
+    "subject": "EDSL",
+    "number": "572",
+    "title": "Planifier l'intégration de la langue et du contenu",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Exploration des défis et les approches pédagogiques liés à la planification de l'enseignement où la langue et le contenu sont enseignés conjointement. Il sera d’abord question d’identifier les difficultés qu’éprouvent les élèves en français et d’en comprendre les causes. L’approche intégrée sera proposée comme piste de solution pour intégrer la langue et le contenu.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EDSL 545.",
+      "excludes": [
+        "EDSL 545"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 574",
+    "subject": "EDSL",
+    "number": "574",
+    "title": "Didactique de la langue française",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Présentations des principales difficultés de la langue française et des composantes linguistiques (lexique, morphologie, syntaxe et sémantique) et discursives (de la phrase aux types de textes et de discours) du français. Ces savoirs seront appliqués aux pratiques de la pédagogique interlinguistique, de l’intégration de la forme au contenu et de l’approche communicative.",
+    "prerequisites": {
+      "text": "EDSL 570; EDSL 572",
+      "tree": {
+        "and": [
+          "EDSL 570",
+          "EDSL 572"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 576",
+    "subject": "EDSL",
+    "number": "576",
+    "title": "Soutenir la production et la compréhension en immersion",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Présentation des bases de l’apprentissage d’une langue seconde et des stratégies pour promouvoir la communication orale en salle de classe, tout en développant la capacité de l’élève à bien communiquer. Éxploration des pratiques d’étayage utilisées pour favoriser la compréhension chez l’élève ainsi que les techniques de rétroaction et d’encouragement lors des échanges à l’oral.",
+    "prerequisites": {
+      "text": "EDSL 570; EDSL 572",
+      "tree": {
+        "and": [
+          "EDSL 570",
+          "EDSL 572"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 578",
+    "subject": "EDSL",
+    "number": "578",
+    "title": "Les débuts de la littératie au primaire",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Éxploration de la littératie précoce ainsi que des textes de littérature jeunesse authentiques et multimodaux comme outils favorisant le développement des compétences en lecture et en écriture. Des exemples de planification de leçons seront également présentées et incluront les pratiques de la pédagogie interlinguistique en lien avec le développement de la littératie.",
+    "prerequisites": {
+      "text": "EDSL 570, EDSL 572",
+      "tree": {
+        "and": [
+          "EDSL 570",
+          "EDSL 572"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 580",
+    "subject": "EDSL",
+    "number": "580",
+    "title": "La littératie chez les plus grands",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Éxploration des stratégies de lecture et d’écriture adressées aux élèves possédant déjà les bases de la littératie. Élaboration de séquences pédagogiques intégrant l'enseignement des textes de littérature jeunesse authentiques et multimodaux. L'accent sera mis sur le développement de la compréhension, de la pensée critique et du goût de lire.",
+    "prerequisites": {
+      "text": "EDSL 570; EDSL 572",
+      "tree": {
+        "and": [
+          "EDSL 570",
+          "EDSL 572"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 582",
+    "subject": "EDSL",
+    "number": "582",
+    "title": "L’évaluation en immersion française",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Les principes, les procédures et les techniques d’évaluation des compétences linguistiques des élèves en immersion.",
+    "prerequisites": {
+      "text": "EDSL 570; EDSL 572",
+      "tree": {
+        "and": [
+          "EDSL 570",
+          "EDSL 572"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 584",
+    "subject": "EDSL",
+    "number": "584",
+    "title": "L’inclusion en classe d’immersion française",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Identification des divers besoins de la clientèle d’immersion française, tant en matière de compétences linguistiques, qu’en matière de besoins académiques et psychosociaux particuliers en immersion française. Les fondements théoriques de l’inclusion en classe d’immersion française présentés en parallèle avec la littérature traitant de la classe inclusive.",
+    "prerequisites": {
+      "text": "EDSL 570; EDSL 572",
+      "tree": {
+        "and": [
+          "EDSL 570",
+          "EDSL 572"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 585",
+    "subject": "EDSL",
+    "number": "585",
+    "title": "Enseigner la culture francophone",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "La culture francophone du Canada, et aussi la francophonie internationale et son intégration dans la classe d’immersion française. Présentation des différents éléments qui composent la culture (savoirs, savoir-faire et savoir-être) et les liens entre langue et culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 586",
+    "subject": "EDSL",
+    "number": "586",
+    "title": "L’identité professionnelle en immersion française ",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "La complexité entourant l’identité bilingue et son rapport à l’enseignement dans le contexte de l’immersion française. La prise de risque linguistique et une réflexion sur sa propre prise de risque en contexte professionnel seront encouragées. L’enjeu de la norme du locuteur natif et sa place dans le contexte de l’immersion seront également à l’étude.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 590",
+    "subject": "EDSL",
+    "number": "590",
+    "title": "Atelier en didactique de l’immersion française 1",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Échanges en présentiel sur les divers enjeux entourant l’immersion française au Canada.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Un nouveau thème est abordé chaque année afin de refléter l’avancement de la recherche en immersion française."
+    ]
+  },
+  {
+    "code": "EDSL 591",
+    "subject": "EDSL",
+    "number": "591",
+    "title": "Atelier en didactique de l’immersion française 2 ",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Échanges en présentiel sur les divers enjeux entourant l’immersion française au Canada.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Un nouveau thème est abordé chaque année afin de refléter l’avancement de la recherche en immersion française."
+    ]
+  },
+  {
+    "code": "EDSL 601",
+    "subject": "EDSL",
+    "number": "601",
+    "title": "Methods and Curriculum in Second Language Teaching 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Applications of current theories and models of second language development and their implications for teaching all language skills (reading, writing, speaking, listening), including lesson planning, materials selection and development, activities and assessment in various formal and community second language education settings. Principles and methods for formative and summative assessment.",
+    "prerequisites": {
+      "text": "EDSL 512",
+      "tree": "EDSL 512",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDSL 602",
+      "tree": "EDSL 602",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to students in the Graduate Certificate in TESL or with permission of the Graduate Program Director",
+      "excludes": []
+    },
+    "notes": [
+      "Attendance in this course is mandatory.",
+      "A practicum component is integrated into this course.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day.",
+      "**This course will be held on July 2, 3, 4, 5, 8, 9, 10, 11, 15, 16, 17 & 18th. **Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day"
+    ]
+  },
+  {
+    "code": "EDSL 602",
+    "subject": "EDSL",
+    "number": "602",
+    "title": "Methods and Curriculum in Second Language Teaching 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Continuation of topics covered in EDSL 601 with further applications. Exploration of the kinds of information needed to make educational decisions in second language courses, different techniques for collecting that information, and ways for interpreting it.",
+    "prerequisites": {
+      "text": "EDSL 512",
+      "tree": "EDSL 512",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDSL 601",
+      "tree": "EDSL 601",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to students in the Graduate Certificate in TESL or with permission of the Graduate Program Director",
+      "excludes": []
+    },
+    "notes": [
+      "Attendance in this course is mandatory.",
+      "A practicum component is integrated into this course.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "EDSL 603",
+    "subject": "EDSL",
+    "number": "603",
+    "title": "Individual Reading Course 1",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent study of an approved topic with the guidance of individual instructor and permission of Graduate Program Director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 616",
+    "subject": "EDSL",
+    "number": "616",
+    "title": "Individual Reading Course 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent study of an approved topic with the guidance of individual instructor and permission of Graduate Program Director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter"
+    ]
+  },
+  {
+    "code": "EDSL 617",
+    "subject": "EDSL",
+    "number": "617",
+    "title": "Special Topics in Second Language Education",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "In-depth study of current topics in Second Language Education. (Content varies from year to year.)",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 620",
+    "subject": "EDSL",
+    "number": "620",
+    "title": "Social Justice Issues in Second Language Education",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of social identity, non-dominant languages, and power relations among speakers, and their impact on the nature of second/additional language teaching, learning and use, from the perspective of critical applied linguistics. Topics range from the micro level of the individual to the macro level of language planning and policy-making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 623",
+    "subject": "EDSL",
+    "number": "623",
+    "title": "Second Language Learning",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar in second language acquisition theory and research and their relevance to teaching a second language.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "EDSL 624",
+    "subject": "EDSL",
+    "number": "624",
+    "title": "Educational Sociolinguistics",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in the social, cultural and political dimensions of English second language learning and teaching.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "EDSL 627",
+    "subject": "EDSL",
+    "number": "627",
+    "title": "Instructed Second Language Acquisition Research",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar in second language classroom-centred research focusing on instructional procedures and practices in relationship to learning outcomes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 628",
+    "subject": "EDSL",
+    "number": "628",
+    "title": "Plurilingualism&Translanguaging in Education and Research ",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Dynamic vision of language and the repertoire of users of two or more languages, including recent theories of translingualism, translanguaging, and plurilingualism. Examination of research and pedagogical implementation of these theories in diverse languages, classrooms and contexts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 631",
+    "subject": "EDSL",
+    "number": "631",
+    "title": "Second Language Curriculum",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Research, theory and practice in curriculum development and teaching in second language education within contemporary frameworks.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDSL 632",
+    "subject": "EDSL",
+    "number": "632",
+    "title": "Second Language Literacy Development",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theory and research related to the teaching and learning of second language literacy. The orientation is on reading and writing as a socio-cognitive activity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "EDSL 640",
+    "subject": "EDSL",
+    "number": "640",
+    "title": "Language Awareness: Theory and Practice",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Explores the concept of language awareness-learners’ and teachers’ explicit knowledge about and conscious perception of language in relation to its learning, teaching, and use. Will further outline possibilities for promoting learners’ language awareness in the L2 classroom.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDSL 617 when topic was \"Language Awareness: Theory and Practice\".",
+      "excludes": [
+        "EDSL 617"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDSL 651",
+    "subject": "EDSL",
+    "number": "651",
+    "title": "Content-Based L2 Learning",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical research underpinnings of learning a second language through content-based approaches and analysis of empirical studies undertaken in a wide range of immersion and other content-based L2 classrooms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "EDSL 666",
+    "subject": "EDSL",
+    "number": "666",
+    "title": "Thesis Research 1",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Submission of a thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter"
+    ]
+  },
+  {
+    "code": "EDSL 667",
+    "subject": "EDSL",
+    "number": "667",
+    "title": "Thesis Research 2",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Presentation of thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter"
+    ]
+  },
+  {
+    "code": "EDSL 668",
+    "subject": "EDSL",
+    "number": "668",
+    "title": "Thesis Research 3",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter"
+    ]
+  },
+  {
+    "code": "EDSL 669",
+    "subject": "EDSL",
+    "number": "669",
+    "title": "Thesis Research 4",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter"
+    ]
+  },
+  {
+    "code": "EDSL 695",
+    "subject": "EDSL",
+    "number": "695",
+    "title": "Project 1",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Theoretical or practical supervised project to explore and analyze an area of interest relevant to second/additional/plurilingual language education and research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the M.A. in Second Language Education; Non-Thesis - Project program.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDSL 695D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDSL 695D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDSL 696",
+    "subject": "EDSL",
+    "number": "696",
+    "title": "Project 2",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical or practical supervised project to explore and analyze an area of interest relevant to second/additional/plurilingual language education. Continuation of Project 1 or new project.",
+    "prerequisites": {
+      "text": "EDSL 695",
+      "tree": "EDSL 695",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the M.A. in Second Language Education; Non-Thesis - Project program.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDSL 696D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDSL 696D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDSL 711",
+    "subject": "EDSL",
+    "number": "711",
+    "title": "Language Acquisition Issues 3",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of language acquisition issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

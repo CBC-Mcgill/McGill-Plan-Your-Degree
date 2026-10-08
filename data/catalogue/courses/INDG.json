@@ -1,0 +1,222 @@
+[
+  {
+    "code": "INDG 200",
+    "subject": "INDG",
+    "number": "200",
+    "title": "Introduction to Indigenous Studies",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The focus is on Indigenous experience in Canada, but encourages comparative approaches. Introduction to the social, political, economic and cultural dimensions of Indigenous life in Canada.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INDG 202",
+    "subject": "INDG",
+    "number": "202",
+    "title": "Topics in Indigenous Studies 1",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Drawing upon and introducing the burgeoning field of Indigenous Studies, this course is designed to be an introduction to selected themes and topics in Indigenous Studies. Possible examples: Indigenous health, Haudenosaunne culture etc. Topics vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Supplementary Calendar Info: INDG 202 and INDG 300 are NOT a sequence of courses."
+    ]
+  },
+  {
+    "code": "INDG 300",
+    "subject": "INDG",
+    "number": "300",
+    "title": "Topics in Indigenous Studies 2",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course is designed to examine specific themes and topics in Indigenous Studies. Possible examples: Haudenosaunee governance etc. Topics vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Supplementary Calendar Info: INDG 202 and INDG 300 are NOT a sequence of courses."
+    ]
+  },
+  {
+    "code": "INDG 301",
+    "subject": "INDG",
+    "number": "301",
+    "title": "Indigenous Contemporary Resistance",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "In-depth and experiential examination of contemporary Indigenous resistance movements based on Indigenous worldviews and land-based knowledge.",
+    "prerequisites": {
+      "text": "INDG 200",
+      "tree": "INDG 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken INDG 202 when topic was \"Contemporary Indigenous Resistance\".",
+      "excludes": [
+        "INDG 202"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INDG 302",
+    "subject": "INDG",
+    "number": "302",
+    "title": "Introduction to Kanien’kéha 1",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Foundations of the Kanien'kéha language and Haudenosaunee worldviews, including reading and speaking basic Kanien'kéha, using key words and phrases to communicate basic needs, and the verb-based morphology and grammatical structure of the language.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken INDG 202 when topic was \"Introduction to Kanien'ké:ha\".",
+      "excludes": [
+        "INDG 202"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INDG 303",
+    "subject": "INDG",
+    "number": "303",
+    "title": "Introduction to Kanien’kéha 2",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Additional study of the foundations of the Kanien'kéha language and Haudenosaunee worldviews, including reading and speaking basic Kanien'kéha, using key words and phrases to communicate basic needs, and the verb-based morphology and grammatical structure of the language.",
+    "prerequisites": {
+      "text": "INDG 302 or permission of the department.",
+      "tree": "INDG 302",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students who already have some proficiency in Kanien'kéha should speak with the instructor."
+    ]
+  },
+  {
+    "code": "INDG 400",
+    "subject": "INDG",
+    "number": "400",
+    "title": "Seminar: Indigenous Studies",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This advanced course is designed to examine specific topics and themes in Indigenous Studies. Possible examples: Indigenous research methodologies. Topics vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INDG 401",
+    "subject": "INDG",
+    "number": "401",
+    "title": "Interdisciplinary Seminar in Indigenous Studies",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The focus is on Indigenous experience in Canada, but encourages comparative approaches.Capstone seminar course offering an in-depth focus on one or more issues in Indigenous Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INDG 420",
+    "subject": "INDG",
+    "number": "420",
+    "title": "Indigenous Food Sovereignty",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Examination of food sovereignty as it relates to First Nation, Inuit, and Métis and their connection to the land as sustenance. The focus is on natural food sources and practices.",
+    "prerequisites": {
+      "text": "INDG 200",
+      "tree": "INDG 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken INDG 400 when the topic was “Indigenous Food Sovereignty”.",
+      "excludes": [
+        "INDG 400"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INDG 450",
+    "subject": "INDG",
+    "number": "450",
+    "title": "Rotinonhsón:ni Land-Based Pedagogy",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The teachings of land, Ohen:ton Karihwátehkwen (Words before all Else) as well as stories that engage in the multiple tenets of Indigenous land-based education. Land-based practices and Indigenous literature. Participation is based on the values of Skén’nen (peace), Kahsatsténhsera (united strength), Ka'nikonhrí:io (good mind).",
+    "prerequisites": {
+      "text": "Required INDG 200, INDG 401 is recommended but not required.",
+      "tree": {
+        "and": [
+          "INDG 200",
+          "INDG 401"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Indigenous Studies Program or with permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "This is an intensive summer field course."
+    ]
+  }
+]

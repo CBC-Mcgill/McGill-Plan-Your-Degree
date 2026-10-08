@@ -1,0 +1,86 @@
+[
+  {
+    "code": "LIBA 202",
+    "subject": "LIBA",
+    "number": "202",
+    "title": "Introduction to Liberal Arts",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the compass and significance of a Liberal Arts education, focusing on contemporary developments and challenges in the humanities. It considers the contribution of a range of disciplines and approaches across a wide range of linguistic traditions, geographical areas and time periods and pays particular attention to the global dimension of contemporary humanistic culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Liberal Arts program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "LIBA 395",
+    "subject": "LIBA",
+    "number": "395",
+    "title": "Individual Reading Course",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Individual reading course in any topic pertinent to Liberal Arts as approved by the Director of the Liberal Arts program.",
+    "prerequisites": {
+      "text": "LIBA 202: Introduction to Liberal Arts Minimum Grade or Test Scores : C",
+      "tree": "LIBA 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration in this course is subject to the approval of the Director of the Liberal Arts Program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "LIBA 402",
+    "subject": "LIBA",
+    "number": "402",
+    "title": "Seminar in Liberal Arts",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Readings and discussions on liberal arts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 and U3 students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "LIBA 490",
+    "subject": "LIBA",
+    "number": "490",
+    "title": "Honours Thesis",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Under the direction of a supervisor, students research and complete an honours thesis on an approved subject in Liberal Arts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in the Liberal Arts Honours program. Instructor's Approval Required.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

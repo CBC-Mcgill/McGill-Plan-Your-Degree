@@ -1,0 +1,97 @@
+[
+  {
+    "code": "IPEA 500",
+    "subject": "IPEA",
+    "number": "500",
+    "title": "Roles in Interprofessional Teams",
+    "credits": 0,
+    "offeredBy": "Medicine and Health Sciences",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A half day workshop, including preparatory work, that introduces interprofessional education, interprofessional practice, and the roles of the different healthcare professionals that make up an interprofessional team.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "IPEA 501",
+    "subject": "IPEA",
+    "number": "501",
+    "title": "Communication in Interprofessional Teams",
+    "credits": 0,
+    "offeredBy": "Medicine and Health Sciences",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A half day workshop, including preparatory work, introducing effective communication and interactions in interprofessional teams.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "IPEA 502",
+    "subject": "IPEA",
+    "number": "502",
+    "title": "Partnership in Interprofessional Teams",
+    "credits": 0,
+    "offeredBy": "Medicine and Health Sciences",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to the principles of interprofessional collaboration through case-based learning experience. Observation and analysis of simulated interprofessional interactions involving a person receiving care and their care partners. Team dynamics, communication strategies, and collaborative decision-making processes to identify best practices and challenges in interprofessional teamwork, emphasizing reflection on professional roles, mutual respect, and person-centered care in complex clinical contexts.",
+    "prerequisites": {
+      "text": "IPEA 500 and IPEA 501 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "IPEA 500",
+          "IPEA 501"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "IPEA 503 or permission of the instructor",
+      "tree": "IPEA 503",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "IPEA 503",
+    "subject": "IPEA",
+    "number": "503",
+    "title": "Navigating Disagreement in Interprofessional Teams",
+    "credits": 0,
+    "offeredBy": "Medicine and Health Sciences",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "Introduction to navigating team differences and disagreements in interprofessional health care settings through case-based learning experiences. Psychological safety, mutual respect, and shared decision-making contributing to effective team functioning. Proactive approaches to address sources of disagreement, prevent escalation, foster cooperative dialogue, and leverage conflict to strengthen team cohesion, support problem-solving, and enhance collaboration.",
+    "prerequisites": {
+      "text": "IPEA 500 and IPEA 501 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "IPEA 500",
+          "IPEA 501"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "IPEA 502 or permission of the instructor.",
+      "tree": "IPEA 502",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Internet connection required"
+    ]
+  }
+]

@@ -55,20 +55,30 @@ export function mergeCourses(pages: CoursePage[]): Course[] {
       courses.push(first);
       continue;
     }
-    if (group.some((page) => page.code === code)) {
-      throw new Error(`${code} exists both whole and in parts`);
-    }
     multiTerm.add(code);
-    const credits = group.map((page) => page.credits);
-    courses.push({
-      ...first,
-      code,
-      number: code.split(" ")[1] ?? first.number,
-      credits: credits.every((value) => value !== null)
-        ? credits.reduce((sum, value) => sum + value, 0)
+    // A whole page and its D1/D2 parts are one course offered either way, so the whole page wins.
+    const whole = group.find((page) => page.code === code);
+    const parts = group.filter((page) => page !== whole);
+    // D1/D2 and N1/N2 are alternative sequences of one course, so credits total one sequence.
+    const totals = [
+      ...Map.groupBy(parts, (page) => PART.exec(page.code)?.[2]?.[0]).values(),
+    ].map((pages) =>
+      pages.every((page) => page.credits !== null)
+        ? pages.reduce((sum, page) => sum + (page.credits ?? 0), 0)
         : null,
+    );
+    const base = whole ?? first;
+    courses.push({
+      ...base,
+      code,
+      number: code.split(" ")[1] ?? base.number,
+      credits: whole
+        ? whole.credits
+        : totals.every((value) => value !== null)
+          ? Math.max(...totals)
+          : null,
       terms: sortTerms(group.flatMap((page) => page.terms)),
-      parts: group.map((page) => ({
+      parts: parts.map((page) => ({
         code: page.code,
         credits: page.credits,
         terms: page.terms,

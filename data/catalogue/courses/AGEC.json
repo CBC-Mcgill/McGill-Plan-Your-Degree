@@ -1,0 +1,446 @@
+[
+  {
+    "code": "AGEC 200",
+    "subject": "AGEC",
+    "number": "200",
+    "title": "Principles of Microeconomics",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The field of economics as it relates to the activities of individual consumers, firms and organizations. Emphasis is on the application of economic principles and concepts to everyday decision making and to the analysis of current economic issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 201",
+    "subject": "AGEC",
+    "number": "201",
+    "title": "Principles of Macroeconomics",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The overall economic system, how it works, and the instruments used to solve social problems. Emphasis will be on decision-making involving the entire economic system and segments of it.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 231",
+    "subject": "AGEC",
+    "number": "231",
+    "title": "Economic Systems of Agriculture",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The structure and organization of Canada's agriculture-food system, the operation, financing, linkages, and functions of its components. Focus to be on management of the various components and the entire system, types of problems confronted now and in the future.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 320",
+    "subject": "AGEC",
+    "number": "320",
+    "title": "Intermediate Microeconomic Theory",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An intermediate theory course in agricultural economics, dealing with economic concepts as applied to agricultural production and cost functions. Includes theory and application of linear programming as related to production decisions.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 330",
+    "subject": "AGEC",
+    "number": "330",
+    "title": "Agriculture and Food Markets",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Nature and organization of agricultural and food markets as economic institutions, including the application of economic theory to problems within the agri-food marketing chain. Spatial and temporal price relationships, and the role of market structure.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 332",
+    "subject": "AGEC",
+    "number": "332",
+    "title": "Farm Management and Finance",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Managing and financing a farm business. Topics include: the decision making process, farm management and economic concepts, the analysis of financial statements, farm planning and budgeting, input management, investment analysis, risk in financial management, the acquisition and cost of capital.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 333",
+    "subject": "AGEC",
+    "number": "333",
+    "title": "Resource Economics",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The role of resources in the environment, use of resources, and management of economic resources within the firm or organization. Problem-solving, case studies involving private and public decision-making in organizations are utilized.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "AGEC 425",
+    "subject": "AGEC",
+    "number": "425",
+    "title": "Applied Econometrics",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The theory and application of econometrics to empirical issues in agriculture and environment. Diagnosis and treatment of standard violations of the assumptions underlying ordinary least squares.",
+    "prerequisites": {
+      "text": "AEMA 310, AGEC 200 and AGEC 201 or equivalents",
+      "tree": {
+        "and": [
+          "AEMA 310",
+          "AGEC 200",
+          "AGEC 201"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 430",
+    "subject": "AGEC",
+    "number": "430",
+    "title": "Agriculture, Food and Resource Policy",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of North American and international agriculture, food and resource policies, policy instruments, programs and their implications. Economic analysis applied to the principles, procedures and objectives of various policy actions affecting agriculture, and the environment.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 442",
+    "subject": "AGEC",
+    "number": "442",
+    "title": "Economics of International Agricultural Development",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course deals with economic aspects of international development with emphasis on the role of food, agriculture and the resource sector in the economy of developing countries. Topics will include world food analysis, development project analysis and policies for sustainable development. Development case studies will be used.",
+    "prerequisites": {
+      "text": "AGEC 200 or AGEC 201 or equivalent",
+      "tree": {
+        "or": [
+          "AGEC 200",
+          "AGEC 201"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 450",
+    "subject": "AGEC",
+    "number": "450",
+    "title": "Agribusiness Management",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Strategic management of agricultural and food businesses. Analysis of internal and external factors and competitive forces affecting agribusinesses. Formulation of business strategy and solutions to strategic problems. Case-based course designed to enhance students' problemsolving and decisionmaking skills. Integration of knowledge and tools from various economics and business disciplines.",
+    "prerequisites": {
+      "text": "AGEC 231, AGEC 330, AGEC 332 and an accounting course, or approval of instructor",
+      "tree": {
+        "and": [
+          "AGEC 231",
+          "AGEC 330",
+          "AGEC 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "AGEC 491",
+    "subject": "AGEC",
+    "number": "491",
+    "title": "Research and Methodology",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Conceptual and philosophical foundations of research methodology, and the procedural aspects of planning, designing and conducting research in applied economics.",
+    "prerequisites": {
+      "text": "AGEC 201 or equivalent and AGEC 320 or permission of the instructor",
+      "tree": {
+        "and": [
+          "AGEC 201",
+          "AGEC 320"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "AGEC 425 or permission of the instructor",
+      "tree": "AGEC 425",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 633",
+    "subject": "AGEC",
+    "number": "633",
+    "title": "Environmental and Natural Resource Economics",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An advanced course in the theory and problems of environmental and resource economics and in the analytical techniques used to assess environmental and resource use issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 685",
+    "subject": "AGEC",
+    "number": "685",
+    "title": "Selected Topics in Agricultural Economics",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course is designed to permit students to explore agricultural economics topics that are not covered in other courses. Students may be asked to prepare a presentation or lead discussion on the selected topic for the benefit of other students and staff. (Pass/Fail grading.)",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 690",
+    "subject": "AGEC",
+    "number": "690",
+    "title": "Seminar in Agricultural Economics",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Current research on economic problems of agriculture, the agri-food system and the environment through presentations by staff, students and special guests. Article discussion on the latest issues and methods in agricultural economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 691",
+    "subject": "AGEC",
+    "number": "691",
+    "title": "M.Sc. Thesis 1",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thesis proposal development - problem statement.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 692",
+    "subject": "AGEC",
+    "number": "692",
+    "title": "M.Sc. Thesis 2",
+    "credits": 3,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Literature review for the thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 693",
+    "subject": "AGEC",
+    "number": "693",
+    "title": "M.Sc. Thesis 3",
+    "credits": 6,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Develop hypotheses for testing and identify the appropriate method.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 694",
+    "subject": "AGEC",
+    "number": "694",
+    "title": "M.Sc. Thesis 4",
+    "credits": 6,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Research to be undertaken on hypotheses testing and interpreting results.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGEC 695",
+    "subject": "AGEC",
+    "number": "695",
+    "title": "M.Sc. Thesis 5",
+    "credits": 6,
+    "offeredBy": "Agricultural Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Writing of the final version of the thesis under the supervision of the Supervisory Committee to be submitted for graduation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "code": "GEPM 121",
+    "subject": "GEPM",
+    "number": "121",
+    "title": "Project Management 1",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Online tools 4 communication, structuring, assignments, management, group creativity & collective intelligence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PM121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPM 122",
+    "subject": "GEPM",
+    "number": "122",
+    "title": "Project Management 2",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Time management & workflow management, collective decision-making, concept of criticality & risk management.",
+    "prerequisites": {
+      "text": "GEPM 121, Project Management 1.",
+      "tree": "GEPM 121",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PM122 offered by CentraleSupélec in France."
+    ]
+  }
+]

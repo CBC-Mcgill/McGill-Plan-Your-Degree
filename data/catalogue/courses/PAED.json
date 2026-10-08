@@ -1,0 +1,56 @@
+[
+  {
+    "code": "PAED 301",
+    "subject": "PAED",
+    "number": "301",
+    "title": "TCP Pediatrics",
+    "credits": 2,
+    "offeredBy": "Pediatrics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027",
+      "Summer 2027"
+    ],
+    "description": "This two-week course provides the student with basic principles of pediatric care including pediatric-specific history-taking and physical exam skills as well as approach to common pediatric problems. Through structured learning activities, clinical encounters and self-directed learning, students will develop knowledge and skills that will prepare them for Clerkship.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.D., C.M. program.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: One half-day per week for a duration of seven weeks"
+    ]
+  },
+  {
+    "code": "PAED 401",
+    "subject": "PAED",
+    "number": "401",
+    "title": "Pediatrics Clerkship",
+    "credits": 6,
+    "offeredBy": "Pediatrics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "The course will cover aspects of growth, perinatology, morbidity-mortality in pediatrics, infections in children, and neurologic, physical and psychological development. The course will include participation in the medical assessment and management of children, supplemented by didactic teaching and self-directed learning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.D., C.M. program.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "PAED 401D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "PAED 401D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  }
+]

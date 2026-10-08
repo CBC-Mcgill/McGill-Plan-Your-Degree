@@ -1,0 +1,79 @@
+[
+  {
+    "code": "GEEC 221",
+    "subject": "GEEC",
+    "number": "221",
+    "title": "Organizational Behavior Week",
+    "credits": 0.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Overview of corporate structures, org of corporate entities, org of intl NGOs & Supranational Structures.",
+    "prerequisites": {
+      "text": "GEHS 121, Topics in International Sustainable Development 1.",
+      "tree": "GEHS 121",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to ECO221 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEEC 222",
+    "subject": "GEEC",
+    "number": "222",
+    "title": "Business Strategy and Corporate Finance",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Economic cycles, instability and growth, sustainability, key macroeconomic indicators & their relationships.",
+    "prerequisites": {
+      "text": "GEHS 221, Structure of Corporations. GEEC 221, Organizational Behaviour Week.",
+      "tree": {
+        "and": [
+          "GEHS 221",
+          "GEEC 221"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to ECO222 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEEC 223",
+    "subject": "GEEC",
+    "number": "223",
+    "title": "Business Games Week",
+    "credits": 0.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Exploration of the different functions of a company through a role-playing game in which each student plays the rôle of a company executive adapting to market conditions.",
+    "prerequisites": {
+      "text": "GEHS 211, Perspectives of Modern Geopolitics 1.",
+      "tree": "GEHS 211",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to ECO223 offered by CentraleSupélec in France."
+    ]
+  }
+]

@@ -1,0 +1,3234 @@
+[
+  {
+    "code": "COMP 189",
+    "subject": "COMP",
+    "number": "189",
+    "title": "Computers and Society",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "How computer technologies shape social notions such as ownership, safety, and privacy. Emphasis is on computer science powering both day-to-day technologies (e.g., online social media) and those in the news (e.g., cyberwar). Discussions will investigate technology and social issues in order to understand both.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 202",
+    "subject": "COMP",
+    "number": "202",
+    "title": "Foundations of Programming",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to computer programming in a high level language: variables, expressions, primitive types, methods, conditionals, loops. Introduction to algorithms, data structures (arrays, strings), modular software design, libraries, file input/output, debugging, exception handling. Selected topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 204, COMP 208, or GEOG 333; not open to students who have taken or are taking COMP 206 or COMP 250.",
+      "excludes": [
+        "COMP 204",
+        "COMP 206",
+        "COMP 208",
+        "COMP 250",
+        "GEOG 333"
+      ]
+    },
+    "notes": [
+      "3 hours",
+      "COMP 202 is intended as a general introductory course, while COMP 204 is intended for students in life sciences, and COMP 208 is intended for students in physical sciences and engineering.",
+      "To take COMP 202, students should have a solid understanding of pre-calculus fundamentals such as polynomial, trigonometric, exponential, and logarithmic functions."
+    ]
+  },
+  {
+    "code": "COMP 204",
+    "subject": "COMP",
+    "number": "204",
+    "title": "Computer Programming for Life Sciences",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Computer Science (Sci): Computer programming in a high level language: variables, expressions, types, functions, conditionals, loops, objects and classes. Introduction to algorithms, modular software design, libraries, file input/output, debugging. Emphasis on applications in the life sciences.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "BIOL 112",
+      "tree": "BIOL 112",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 202, COMP 208, or GEOG 333; not open to students who have taken or are taking COMP 206 or COMP 250.",
+      "excludes": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 208",
+        "COMP 250",
+        "GEOG 333"
+      ]
+    },
+    "notes": [
+      "To take COMP 204, students should have a solid understanding of pre-calculus fundamentals such as polynomial, trigonometric, exponential, and logarithmic functions."
+    ]
+  },
+  {
+    "code": "COMP 206",
+    "subject": "COMP",
+    "number": "206",
+    "title": "Introduction to Software Systems",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Comprehensive overview of programming in C, use of system calls and libraries, debugging and testing of code; use of developmental tools like make, version control systems.",
+    "prerequisites": {
+      "text": "COMP 202 or COMP 204 or COMP 208 or CEGEP objective 0F01 or equivalent",
+      "tree": {
+        "or": [
+          "COMP 202",
+          "COMP 204",
+          "COMP 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 208",
+    "subject": "COMP",
+    "number": "208",
+    "title": "Computer Programming for Physical Sciences and Engineering ",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Programming and problem solving in a high level computer language: variables, expressions, types, functions, conditionals, loops, objects and classes. Introduction to algorithms such as searching and sorting. Modular software design, libraries, file input and output, debugging. Emphasis on applications in Physical Sciences and Engineering, such as root finding, numerical integration, diffusion, Monte Carlo methods.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 133 and MATH 141, or equivalents.",
+      "tree": {
+        "and": [
+          "MATH 133",
+          "MATH 141"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 202, COMP 204, orGEOG 333; not open to students who have taken or are taking COMP 206 or COMP 250.",
+      "excludes": [
+        "COMP 202",
+        "COMP 204",
+        "COMP 206",
+        "COMP 250"
+      ]
+    },
+    "notes": [
+      "3 hours",
+      "COMP 202 is intended as a general introductory course, while COMP 208 is intended for students with sufficient math background and in (non-life) science or engineering fields."
+    ]
+  },
+  {
+    "code": "COMP 230",
+    "subject": "COMP",
+    "number": "230",
+    "title": "Logic and Computability",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Propositional Logic, predicate calculus, proof systems, computability Turing machines, Church-Turing thesis, unsolvable problems, completeness, incompleteness, Tarski semantics, uses and misuses of Gödel's theorem.",
+    "prerequisites": {
+      "text": "CEGEP level mathematics.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 250",
+    "subject": "COMP",
+    "number": "250",
+    "title": "Introduction to Computer Science",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Object oriented programming in Java: classes and objects, interfaces, inheritance. Data structures and abstract data types: arrays, stacks, queues, linked lists, trees, binary trees,binary search trees, heaps, hash tables, graphs. Recursive and non-recursive algorithms and their asymptotic complexity: searching and sorting, tree and graph traversal. Mathematical tools: induction, recurrence relations.",
+    "prerequisites": {
+      "text": "COMP 202 or COMP 204 or COMP 208 or CEGEP objective 0F01 or equivalent",
+      "tree": {
+        "or": [
+          "COMP 202",
+          "COMP 204",
+          "COMP 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECSE 250.",
+      "excludes": [
+        "ECSE 250"
+      ]
+    },
+    "notes": [
+      "3 hours",
+      "Students who plan to study Computer Science beyond COMP 250 are encouraged to take MATH 140 and/or MATH 133 as soon as possible."
+    ]
+  },
+  {
+    "code": "COMP 251",
+    "subject": "COMP",
+    "number": "251",
+    "title": "Algorithms and Data Structures",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Data Structures: priority queues, balanced binary search trees, hash tables, graphs. Algorithms: topological sort, connected components, shortest paths, minimum spanning trees, bipartite matching, network flows. Algorithm design: greedy, divide and conquer, dynamic programming, randomization. Mathematicaltools: proofs of asymptotic complexity and program correctness, Master theorem.",
+    "prerequisites": {
+      "text": "COMP 250; MATH 235 or MATH 240",
+      "tree": {
+        "and": [
+          "COMP 250",
+          {
+            "or": [
+              "MATH 235",
+              "MATH 240"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking: COMP 252 or COMP 260.",
+      "excludes": [
+        "COMP 252",
+        "COMP 260"
+      ]
+    },
+    "notes": [
+      "3 hours",
+      "COMP 251 uses basic counting techniques (permutations and combinations) that are covered in MATH 240 but not in MATH 235. These techniques will be reviewed for the benefit of MATH 235 students."
+    ]
+  },
+  {
+    "code": "COMP 252",
+    "subject": "COMP",
+    "number": "252",
+    "title": "Honours Algorithms and Data Structures",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The design and analysis of data structures and algorithms. The description of various computational problems and the algorithms that can be used to solve them, along with their associated data structures. Proving the correctness of algorithms and determining their computational complexity.",
+    "prerequisites": {
+      "text": "COMP 250 and either MATH 235 or MATH 240",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "COMP 250",
+              "MATH 235"
+            ]
+          },
+          "MATH 240"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "(1) Open only to students in Honours programs. (2) Students cannot receive credit for both COMP 251 and COMP 252.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours",
+      "COMP 252 uses basic combinatorial counting methods that are covered in MATH 240 but not in MATH 235. Students who are unfamiliar with these methods should speak with the instructor for guidance."
+    ]
+  },
+  {
+    "code": "COMP 260",
+    "subject": "COMP",
+    "number": "260",
+    "title": "Applied Algorithms and DataStructures",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Foundational algorithms and data structures with a focus on their implementation and use in data science and applied computer science. Graph, hashing, dynamic programming, parsing, heuristic, and streaming data algorithms. Algorithmic correctness and efficiency. Data storage and memory footprint management. Introduction to relational databases, Unix systems and high-performance computing.",
+    "prerequisites": {
+      "text": "COMP 250",
+      "tree": "COMP 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP251 or COMP 252.",
+      "excludes": [
+        "COMP 251",
+        "COMP 252"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 273",
+    "subject": "COMP",
+    "number": "273",
+    "title": "Introduction to Computer Systems",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Number representations, combinational and sequential digital circuits, MIPS instructions and architecture datapath and control, caches, virtual memory, interrupts and exceptions, pipelining.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "COMP 206.",
+      "tree": "COMP 206",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 280",
+    "subject": "COMP",
+    "number": "280",
+    "title": "History and Philosophy of Computing",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "A history of early mathematical computation. Symbolic logic and computation. Modern computer systems and networks. The rise of the internet.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 302",
+    "subject": "COMP",
+    "number": "302",
+    "title": "Programming Languages and Paradigms",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Programming language design issues and programming paradigms. Binding and scoping, parameter passing, lambda abstraction, data abstraction, type checking. Functional and logic programming.",
+    "prerequisites": {
+      "text": "COMP 250 and (MATH 240 or MATH 235 or MATH 318 or COMP 230 or PHIL 210)",
+      "tree": {
+        "and": [
+          "COMP 250",
+          {
+            "or": [
+              "MATH 240",
+              "MATH 235",
+              "MATH 318",
+              "COMP 230",
+              "PHIL 210"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 303",
+    "subject": "COMP",
+    "number": "303",
+    "title": "Software Design",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Principles, mechanisms, techniques, and tools for object-oriented software design and its implementation, including encapsulation, design patterns, and unit testing.",
+    "prerequisites": {
+      "text": "COMP 206, COMP 250.",
+      "tree": {
+        "and": [
+          "COMP 206",
+          "COMP 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 307",
+    "subject": "COMP",
+    "number": "307",
+    "title": "Principles of Web Development",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course discusses the major principles, algorithms, languages and technologies that underlie web development. Students receive practical hands-on experience through a project.",
+    "prerequisites": {
+      "text": "COMP 206",
+      "tree": "COMP 206",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "COMP 303",
+      "tree": "COMP 303",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 308",
+    "subject": "COMP",
+    "number": "308",
+    "title": "Computer Systems Lab",
+    "credits": 1,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Digital circuitry and programming interface of peripheral circuit boards (cards), e.g., graphics cards; introduction to tools and libraries that interact with the card; performance issues.",
+    "prerequisites": {
+      "text": "COMP 273.",
+      "tree": "COMP 273",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "COMP 310",
+    "subject": "COMP",
+    "number": "310",
+    "title": "Operating Systems",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Control and scheduling of large information processing systems. Operating system software - resource allocation, dispatching, processors, access methods, job control languages, main storage management. Batch processing, multiprogramming, multiprocessing, time sharing.",
+    "prerequisites": {
+      "text": "COMP 273",
+      "tree": "COMP 273",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 321",
+    "subject": "COMP",
+    "number": "321",
+    "title": "Programming Challenges",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Development of programming skills on tricky challenges, games and puzzles by means of programming competitions.",
+    "prerequisites": {
+      "text": "COMP 206",
+      "tree": "COMP 206",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "COMP 251 or COMP 252",
+      "tree": {
+        "or": [
+          "COMP 251",
+          "COMP 252"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "1 hour",
+      "Note: At the end of the class, interested students are encouraged to join the McGill team to participate in the annual ACM International Collegiate Programming Competition."
+    ]
+  },
+  {
+    "code": "COMP 322",
+    "subject": "COMP",
+    "number": "322",
+    "title": "Introduction to C++",
+    "credits": 1,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basics and advanced features of the C++ language. Syntax, memory management, class structure, method and operator overloading, multiple inheritance, access control, stream I/O, templates, exception handling.",
+    "prerequisites": {
+      "text": "COMP 250 and COMP 206",
+      "tree": {
+        "and": [
+          "COMP 250",
+          "COMP 206"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "COMP 330",
+    "subject": "COMP",
+    "number": "330",
+    "title": "Theory of Computation",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Finite automata, regular languages, context-free languages, push-down automata, models of computation, computability theory, undecidability, reduction techniques.",
+    "prerequisites": {
+      "text": "COMP 251.",
+      "tree": "COMP 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 345",
+    "subject": "COMP",
+    "number": "345",
+    "title": "From Natural Language to Data Science",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to language data science, including theoretical approaches and practical skills. Processing, searching, and querying text data; making sense of large corpora; modelling and interpreting psycholinguistic and historical language data; building models of sequences of words; computing similarity between languages; information retrieval and extraction; question answering; and ethics.",
+    "prerequisites": {
+      "text": "COMP 250 and MATH 133; or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMP 250",
+          "MATH 133"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking LING 345.",
+      "excludes": [
+        "LING 345"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 350",
+    "subject": "COMP",
+    "number": "350",
+    "title": "Numerical Computing",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Computer representation of numbers, IEEE Standard for Floating Point Representation, computer arithmetic and rounding errors. Numerical stability. Matrix computations and software systems. Polynomial interpolation. Least-squares approximation. Iterative methods for solving a nonlinear equation. Discretization methods for integration and differential equations.",
+    "prerequisites": {
+      "text": "MATH 222 and MATH 223 and one of: COMP 202, COMP 208, COMP 250; or equivalents.",
+      "tree": {
+        "and": [
+          "MATH 222",
+          "MATH 223",
+          {
+            "or": [
+              "COMP 202",
+              "COMP 208",
+              "COMP 250"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 317 or CHEE 390 or CIVE 320 or ECSE 343 or MECH 309 or MECH 265.",
+      "excludes": [
+        "CHEE 390",
+        "CIVE 320",
+        "ECSE 343",
+        "MATH 317",
+        "MECH 265",
+        "MECH 309"
+      ]
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 360",
+    "subject": "COMP",
+    "number": "360",
+    "title": "Algorithm Design",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced algorithm design and analysis. Linear programming, complexity and NP-completeness, advanced algorithmic techniques.",
+    "prerequisites": {
+      "text": "Either COMP 251 or COMP 252, and either MATH 240 or MATH 235 or MATH 363.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "COMP 251",
+              "COMP 252"
+            ]
+          },
+          {
+            "or": [
+              "MATH 240",
+              "MATH 235",
+              "MATH 363"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 362.",
+      "excludes": [
+        "COMP 362"
+      ]
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 361",
+    "subject": "COMP",
+    "number": "361",
+    "title": "Software Engineering Project",
+    "credits": 6,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Software development process in practice: requirement elicitation and analysis, software design, implementation, integration, test planning, and maintenance. Application of the core concepts and techniques through the realization of a large software system.",
+    "prerequisites": {
+      "text": "COMP 206, COMP 250",
+      "tree": {
+        "and": [
+          "COMP 206",
+          "COMP 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "COMP 303",
+      "tree": "COMP 303",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken the 3 credit version of COMP 361.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both COMP 361D1 and COMP 361D2",
+      "No credit will be given for this course unless both COMP 361D1 and COMP 361D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "COMP 361D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "COMP 361D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "COMP 362",
+    "subject": "COMP",
+    "number": "362",
+    "title": "Honours Algorithm Design",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic algorithmic techniques, their applications and limitations. Problem complexity, how to deal with problems for which no efficient solutions are known.",
+    "prerequisites": {
+      "text": "COMP 252",
+      "tree": "COMP 252",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 360.",
+      "excludes": [
+        "COMP 360"
+      ]
+    },
+    "notes": [
+      "3 hours",
+      "Note: COMP 362 can be used instead of COMP 360 to satisfy prerequisites."
+    ]
+  },
+  {
+    "code": "COMP 370",
+    "subject": "COMP",
+    "number": "370",
+    "title": "Introduction to Data Science",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Comprehensive introduction to the data science process. Orientation to the use and configuration of core data science toolkits, data collection and annotation fundamentals, principles of responsible data science, the use of quantitative tools in data science, and presentation of data science findings.",
+    "prerequisites": {
+      "text": "(COMP 206 or COMP 260) and COMP 250",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "COMP 206",
+              "COMP 260"
+            ]
+          },
+          "COMP 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 570.",
+      "excludes": [
+        "COMP 570"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 396",
+    "subject": "COMP",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in programs offered by the Faculty of Science.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours",
+      "Department approval and project form required to register.",
+      "Students cannot be supervised by the same instructor for two 396 Science courses.",
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "COMP 400",
+    "subject": "COMP",
+    "number": "400",
+    "title": "Project in Computer Science",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A research project in any area of computer science, involving a programming effort and/or a theoretical investigation, and supervised by a faculty member in the School of Computer Science. Final written report required.",
+    "prerequisites": {
+      "text": "15 Computer Science credits. Department approval and project form required to register.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Honours students, or non-Honours students with permission of the department.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 401",
+    "subject": "COMP",
+    "number": "401",
+    "title": "Project in Biology and Computer Science",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A research project applying computational approaches to a biological problem.",
+    "prerequisites": {
+      "text": "COMP 251 and 9 credits of BIOL courses, BIOL 301 recommended. Department approval and project form required to register.",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "BIOL 301"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Major in Biology and Computer Science program.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours",
+      "Note: having taken BIOL 301 before COMP 401 is beneficial for finding a project within a Biology lab.",
+      "The project is (co)-supervised by a professor in Computer Science and/or Biology"
+    ]
+  },
+  {
+    "code": "COMP 402",
+    "subject": "COMP",
+    "number": "402",
+    "title": "Honours Project in Computer Science and Biology",
+    "credits": 6,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "One-semester research project applying computational approaches to a biological problem.",
+    "prerequisites": {
+      "text": "9 credits of COMP courses and 9 credits of BIOL courses. Department approval and project form required to register.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Honours in Computer Science and Biology program.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: The project is (co)-supervised by a professor in Computer Science and/or Biology or related fields."
+    ],
+    "parts": [
+      {
+        "code": "COMP 402D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "COMP 402D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "COMP 409",
+    "subject": "COMP",
+    "number": "409",
+    "title": "Concurrent Programming",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Characteristics and utility of concurrent programs; formal methods for specification, verification and development of concurrent programs; communications, synchronization, resource allocation and management, coherency and integrity.",
+    "prerequisites": {
+      "text": "COMP 251, COMP 302, and COMP 310 or ECSE 427",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "COMP 302",
+          {
+            "or": [
+              "COMP 310",
+              "ECSE 427"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 417",
+    "subject": "COMP",
+    "number": "417",
+    "title": "Introduction Robotics and Intelligent Systems",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course considers issues relevant to the design of robotic and of intelligent systems. How can robots move and interact. Robotic hardware systems. Kinematics and inverse kinematics. Sensors, sensor data interpretation and sensor fusion. Path planning. Configuration spaces. Position estimation. Intelligent systems. Spatial mapping. Multi-agent systems. Applications.",
+    "prerequisites": {
+      "text": "COMP 251, MATH 223 and (ECSE 321 or COMP 206).",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "MATH 223",
+          {
+            "or": [
+              "ECSE 321",
+              "COMP 206"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 421",
+    "subject": "COMP",
+    "number": "421",
+    "title": "Database Systems",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Database Design: conceptual design of databases (e.g., entity-relationship model), relational data model, functional dependencies. Database Manipulation: relational algebra, SQL, database application programming, triggers, access control. Database Implementation: transactions, concurrency control, recovery, query execution and query optimization.",
+    "prerequisites": {
+      "text": "COMP 206, COMP 251, COMP 302",
+      "tree": {
+        "and": [
+          "COMP 206",
+          "COMP 251",
+          "COMP 302"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 424",
+    "subject": "COMP",
+    "number": "424",
+    "title": "Artificial Intelligence",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to search methods. Knowledge representation using logic and probability. Planning and decision making under uncertainty. Introduction to machine learning.",
+    "prerequisites": {
+      "text": "(COMP 206 or ECSE 321), MATH 323 or equivalent and COMP 251.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "COMP 206",
+              "ECSE 321"
+            ]
+          },
+          "MATH 323",
+          "COMP 251"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECSE 526.",
+      "excludes": [
+        "ECSE 526"
+      ]
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 445",
+    "subject": "COMP",
+    "number": "445",
+    "title": "Computational Linguistics",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to foundational ideas in computational linguistics and natural language processing. Topics include formal language theory, probability theory, estimation and inference, and recursively defined models of language structure. Emphasis on both the mathematical foundations of the field as well as how to use these tools to understand human language.",
+    "prerequisites": {
+      "text": "COMP 250 and MATH 133, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMP 250",
+          "MATH 133"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking LING 445.",
+      "excludes": [
+        "LING 445"
+      ]
+    },
+    "notes": [
+      "Students who are taking or have taken both COMP 330 and COMP 424 are advised to take COMP 550 in place of COMP 445/LING 445.",
+      "This is a double-prefix course and is identical in content with LING 445.",
+      "Some background in linguistics at the level of LING 201 is desirable, though not critical."
+    ]
+  },
+  {
+    "code": "COMP 451",
+    "subject": "COMP",
+    "number": "451",
+    "title": "Fundamentals of Machine Learning",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to the computational, statistical and mathematical foundations of machine learning. Algorithms for both supervised learning and unsupervised learning. Maximum likelihood estimation, neural networks, and regularization.",
+    "prerequisites": {
+      "text": "COMP 251, MATH 222, MATH 223, and MATH 323.",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "MATH 222",
+          "MATH 223",
+          "MATH 323"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 551 or MATH 462.",
+      "excludes": [
+        "COMP 551",
+        "MATH 462"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 462",
+    "subject": "COMP",
+    "number": "462",
+    "title": "Computational Biology Methods",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of computer science techniques to problems arising in biology and medicine, techniques for modeling evolution, aligning molecular sequences, predicting structure of a molecule and other problems from computational biology.",
+    "prerequisites": {
+      "text": "COMP 251, and MATH 323 or MATH 203 or BIOL 309",
+      "tree": {
+        "and": [
+          "COMP 251",
+          {
+            "or": [
+              "MATH 323",
+              "MATH 203",
+              "BIOL 309"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 561.",
+      "excludes": [
+        "COMP 561"
+      ]
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 480",
+    "subject": "COMP",
+    "number": "480",
+    "title": "Independent Studies in Computer Science",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Reading course permitting independent study under the supervision of a faculty member who specializes in a subject where no course is available.",
+    "prerequisites": {
+      "text": "Department approval and project form required to register.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 511",
+    "subject": "COMP",
+    "number": "511",
+    "title": "Network Science",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Selected topics in Network Science, Graph Mining and Graph Learning, including patterns in real world networks, ranking and similarity measures for graphs, graph clustering and community mining techniques, and node classification and link prediction methods.",
+    "prerequisites": {
+      "text": "COMP 251 or equivalent, MATH 223",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "MATH 223"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who took COMP 596 in Fall 2019, Fall 2020 or COMP 599 in Fall 2021, Fall 2022.",
+      "excludes": []
+    },
+    "notes": [
+      "1. Students are recommended to have taken MATH 222, COMP 451 or COMP 551."
+    ]
+  },
+  {
+    "code": "COMP 512",
+    "subject": "COMP",
+    "number": "512",
+    "title": "Distributed Systems",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Models and Architectures. Application-oriented communication paradigms (e.g. remote method invocation, group communication). Naming services. Synchronization (e.g. mutual exclusion, concurrency control). Fault-tolerance (e.g. process and replication, agreement protocols). Distributed file systems. Security. Examples of distributed systems (e.g. Web, CORBA). Advanced Topics.",
+    "prerequisites": {
+      "text": "COMP 310, COMP 251 or equivalent.",
+      "tree": {
+        "and": [
+          "COMP 310",
+          "COMP 251"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "4 hours"
+    ]
+  },
+  {
+    "code": "COMP 513",
+    "subject": "COMP",
+    "number": "513",
+    "title": "Advanced Computer Systems",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected topics in computer systems, including modularity and abstraction, layering, advanced operating systems design, performance measurements, fault tolerance, energy efficiency, and data center systems. Methods include class discussions, critique of classic and state-of-the-art papers, oral presentations and a group project. Emphasis on methods and practices for design of real systems.",
+    "prerequisites": {
+      "text": "COMP 310 or ECSE 427",
+      "tree": {
+        "or": [
+          "COMP 310",
+          "ECSE 427"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 596 in Fall 2021.",
+      "excludes": [
+        "COMP 596"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 514",
+    "subject": "COMP",
+    "number": "514",
+    "title": "Applied Robotics",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The approach and the challenges in the key components of manipulators and locomotors: representations, kinematics, dynamics, rigid-body chains, redundant systems, under-actuated systems, control, planning, and perception. Practical aspects of robotics: collisions, integrating sensory feedback, and real-time software development.",
+    "prerequisites": {
+      "text": "(MATH 133 or equivalent) and (MATH 140 or equivalent) and COMP 206 and (COMP 250 or ECSE 250)",
+      "tree": {
+        "and": [
+          "MATH 133",
+          "MATH 140",
+          "COMP 206",
+          {
+            "or": [
+              "COMP 250",
+              "ECSE 250"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECSE 554.",
+      "excludes": [
+        "ECSE 554"
+      ]
+    },
+    "notes": [
+      "Students should be comfortable with C++ (such as from COMP 322) and a Unix-like programming environment."
+    ]
+  },
+  {
+    "code": "COMP 520",
+    "subject": "COMP",
+    "number": "520",
+    "title": "Compiler Design",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The structure of a compiler. Lexical analysis. Parsing techniques. Syntax directed translation. Run-time implementation of various programming language constructs. Introduction to code generation for an idealized machine. Students will implement parts of a compiler.",
+    "prerequisites": {
+      "text": "COMP 273 and COMP 302",
+      "tree": {
+        "and": [
+          "COMP 273",
+          "COMP 302"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours, 1 hour consultation"
+    ]
+  },
+  {
+    "code": "COMP 521",
+    "subject": "COMP",
+    "number": "521",
+    "title": "Modern Computer Games",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Genre and history of games, basic game design, storytelling and narrative analysis, game engines, design of virtual worlds, real-time 2D graphics, game physics and physical simulation, pathfinding and game AI, content generation, 3D game concerns, multiplayer and distributed games, social issues.",
+    "prerequisites": {
+      "text": "COMP 251, MATH 223 and (COMP 303 or COMP 361).",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "MATH 223",
+          {
+            "or": [
+              "COMP 303",
+              "COMP 361"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "4 hours"
+    ]
+  },
+  {
+    "code": "COMP 523",
+    "subject": "COMP",
+    "number": "523",
+    "title": "Language-based Security",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "State-of-the-art language-based techniques for enforcing security policies in distributed computing environments. Static techniques (such as type- and proof-checking technology), verification of security policies and applications such as proof-carrying code, certifying compilers, and proof-carrying authentication.",
+    "prerequisites": {
+      "text": "COMP 302, COMP 330.",
+      "tree": {
+        "and": [
+          "COMP 302",
+          "COMP 330"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 525",
+    "subject": "COMP",
+    "number": "525",
+    "title": "Formal Verification",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Propositional logic - syntax and semantics, temporal logic, other modal logics, model checking, symbolic model checking, binary decision diagrams, other approaches to formal verification.",
+    "prerequisites": {
+      "text": "COMP 251 and COMP 330.",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "COMP 330"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 527",
+    "subject": "COMP",
+    "number": "527",
+    "title": "Logic and Computation",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to modern constructive logic, its mathematical properties, and its numerous applications in computer science.",
+    "prerequisites": {
+      "text": "COMP 302",
+      "tree": "COMP 302",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 426",
+      "excludes": [
+        "COMP 426"
+      ]
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 529",
+    "subject": "COMP",
+    "number": "529",
+    "title": "Software Architecture",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development, analysis, and maintenance of software architectures, with special focus on modular decomposition and reverse engineering.",
+    "prerequisites": {
+      "text": "COMP 303.",
+      "tree": "COMP 303",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "4 hours"
+    ]
+  },
+  {
+    "code": "COMP 531",
+    "subject": "COMP",
+    "number": "531",
+    "title": "Advanced Theory of Computation",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Models for sequential and parallel computations: Turing machines, boolean circuits. The equivalence of various models and the Church-Turing thesis. Unsolvable problems. Model dependent measures of computational complexity. Abstract complexity theory. Exponentially and super-exponentially difficult problems. Complete problems.",
+    "prerequisites": {
+      "text": "COMP 330",
+      "tree": "COMP 330",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 532",
+    "subject": "COMP",
+    "number": "532",
+    "title": "Propositional Proof Complexity",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Propositional proof systems and the complexity of NP. Introduction to various Boolean, Algebraic, and Semi-Algebraic proof systems and the complexity of their proofs. Techniques for upper and lower bounding complexity measures of proofs such as length and depth. Relationships between proof systems and algorithms in SAT solving and optimization. Connections between proof systems and other areas of complexity theory and theoretical computer science.",
+    "prerequisites": {
+      "text": "COMP 330 or COMP 360",
+      "tree": {
+        "or": [
+          "COMP 330",
+          "COMP 360"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 533",
+    "subject": "COMP",
+    "number": "533",
+    "title": "Model-Driven Software Development",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Model-driven software development; requirements engineering based on use cases and scenarios; object-oriented modelling using UML and OCL to establish complete and precise analysis and design documents; mapping to Java. Introduction to meta-modelling and model transformations, use of modelling tools.",
+    "prerequisites": {
+      "text": "ECSE 321 or COMP 303 or COMP 361",
+      "tree": {
+        "or": [
+          "ECSE 321",
+          "COMP 303",
+          "COMP 361"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 535",
+    "subject": "COMP",
+    "number": "535",
+    "title": "Computer Networks 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental design principles, elements, and protocols of computer networks, focusing on the current Internet. Topics include: layered architecture, direct link networks, switching and forwarding, bridge routing, congestion control, end-to-end protocols application of DNS, HTTP, P2P, fair queuing, performance modeling and analysis.",
+    "prerequisites": {
+      "text": "COMP 310 or ECSE 427",
+      "tree": {
+        "or": [
+          "COMP 310",
+          "ECSE 427"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 540",
+    "subject": "COMP",
+    "number": "540",
+    "title": "Matrix Computations",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Designing and programming reliable numerical algorithms. Stability of algorithms and condition of problems. Reliable and efficient algorithms for solution of equations, linear least squares problems, the singular value decomposition, the eigenproblem and related problems. Perturbation analysis of problems. Algorithms for structured matrices.",
+    "prerequisites": {
+      "text": "MATH 327 or COMP 350",
+      "tree": {
+        "or": [
+          "MATH 327",
+          "COMP 350"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 545",
+    "subject": "COMP",
+    "number": "545",
+    "title": "Natural Language Understanding with Deep Learning ",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Neural network-based methods for natural language understanding (NLU) and computational semantics. Continuous representations for words, phrases, sentences, and discourse, and their connection to formal semantics. Practical and ethical considerations in applications such as text classification, question answering, and conversational assistants.",
+    "prerequisites": {
+      "text": "(COMP 345 or LING 345) and (COMP 445 or LING 445) or COMP 550 or COMP 551 (or equivalent).",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "COMP 345",
+                  "LING 345"
+                ]
+              },
+              {
+                "or": [
+                  "COMP 445",
+                  "LING 445"
+                ]
+              }
+            ]
+          },
+          "COMP 550",
+          "COMP 551"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking LING 545.",
+      "excludes": [
+        "LING 545"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 546",
+    "subject": "COMP",
+    "number": "546",
+    "title": "Computational Perception",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Computational models of visual perception and audition. Vision problems include stereopsis, motion, focus, perspective, color. Audition problems include source localization and recognition. Emphasis on physics of image formation, sensory signal processing, neural pathways and computation, psychophysical methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 646.",
+      "excludes": [
+        "COMP 646"
+      ]
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 547",
+    "subject": "COMP",
+    "number": "547",
+    "title": "Cryptography and Data Security",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course presents an in-depth study of modern cryptography and data security. The basic information theoretic and computational properties of classical and modern cryptographic systems are presented, followed by a cryptanalytic examination of several important systems. We will study the applications of cryptography to the security of systems.",
+    "prerequisites": {
+      "text": "COMP 360 or COMP 362, MATH 323.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "COMP 360",
+              "COMP 362"
+            ]
+          },
+          "MATH 323"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 549",
+    "subject": "COMP",
+    "number": "549",
+    "title": "Brain-Inspired Artificial Intelligence",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Overview of the influence of neuroscience and psychology on Artificial Intelligence (AI). Historical topics: perceptrons, the PDP framework, Hopfield nets, Boltzmann and Helmholtz machines, and the behaviourist origins of reinforcement learning. Modern topics: deep learning, attention, memory and consciousness. Emphasis on understanding the interdisciplinary foundations of modern AI.",
+    "prerequisites": {
+      "text": "MATH 222, MATH 223, and MATH 323; or equivalents.",
+      "tree": {
+        "and": [
+          "MATH 222",
+          "MATH 223",
+          "MATH 323"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 596 when the topic was \"Brain-Inspired Artificial Intelligence\".",
+      "excludes": [
+        "COMP 596"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 550",
+    "subject": "COMP",
+    "number": "550",
+    "title": "Natural Language Processing",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the computational modelling of natural language, including algorithms, formalisms, and applications. Computational morphology, language modelling, syntactic parsing, lexical and compositional semantics, and discourse analysis. Selected applications such as automatic summarization, machine translation, and speech processing. Machine learning techniques for natural language processing.",
+    "prerequisites": {
+      "text": "MATH 323 or ECSE 305, COMP 251 or COMP 252",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 323",
+              "ECSE 305"
+            ]
+          },
+          {
+            "or": [
+              "COMP 251",
+              "COMP 252"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 599 in 201509 or 201609.",
+      "excludes": [
+        "COMP 599"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 551",
+    "subject": "COMP",
+    "number": "551",
+    "title": "Applied Machine Learning",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Selected topics in machine learning and data mining, including clustering, neural networks, support vector machines, decision trees. Methods include feature selection and dimensionality reduction, error estimation and empirical validation, algorithm design and parallelization, and handling of large data sets. Emphasis on good methods and practices for deployment of real systems.",
+    "prerequisites": {
+      "text": "MATH 323 or ECSE 205, COMP 202, MATH 133, MATH 222 (or their equivalents).",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 323",
+              "ECSE 205"
+            ]
+          },
+          "COMP 202",
+          "MATH 133",
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 451, ECSE 551, MATH 462, or PSYC 560.",
+      "excludes": [
+        "COMP 451",
+        "ECSE 551",
+        "MATH 462",
+        "PSYC 560"
+      ]
+    },
+    "notes": [
+      "Some background in Artificial Intelligence is recommended, e.g. COMP-424 or ECSE-526, but not required."
+    ]
+  },
+  {
+    "code": "COMP 552",
+    "subject": "COMP",
+    "number": "552",
+    "title": "Combinatorial Optimization",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Algorithmic and structural approaches in combinatorial optimization with a focus upon theory and applications. Topics include: polyhedral methods, network optimization, the ellipsoid method, graph algorithms, matroid theory and submodular functions.",
+    "prerequisites": {
+      "text": "Math 350 or COMP 362 (or equivalent).",
+      "tree": "COMP 362",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is reserved for undergraduate honours students and graduate students. Not open to students who have taken or are taking MATH 552.",
+      "excludes": [
+        "MATH 552"
+      ]
+    },
+    "notes": [
+      "4 hours"
+    ]
+  },
+  {
+    "code": "COMP 553",
+    "subject": "COMP",
+    "number": "553",
+    "title": "Algorithmic Game Theory",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundations of game theory. Computation aspects of equilibria. Theory of auctions and modern auction design. General equilibrium theory and welfare economics. Algorithmic mechanism design. Dynamic games.",
+    "prerequisites": {
+      "text": "COMP 362 or MATH 350 or MATH 454 or MATH 487, or instructor permission",
+      "tree": {
+        "or": [
+          "COMP 362",
+          "MATH 350",
+          "MATH 454",
+          "MATH 487"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken MATH 553",
+      "excludes": [
+        "MATH 553"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 554",
+    "subject": "COMP",
+    "number": "554",
+    "title": "Approximation Algorithms",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The theory and application of approximation algorithms. Topics include: randomized algorithms, network optimization, linear programming and semi definite programming techniques, the game theoretic method, the primal-dual method, and metric embeddings.",
+    "prerequisites": {
+      "text": "COMP 362 or MATH 350 or permission of instructor. Strong background in algorithms and/or mathematics.",
+      "tree": {
+        "or": [
+          "COMP 362",
+          "MATH 350"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 692",
+      "excludes": [
+        "COMP 692"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 555",
+    "subject": "COMP",
+    "number": "555",
+    "title": "Information Privacy",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Conceptual foundations of information privacy: security and cryptography, privacy by design, privacy threats. Technical controls for supporting privacy: authorization, authentication, access control, malware and intrusion detection. Application-specific privacy concerns of databases, web and mobile applications, cloud storage.",
+    "prerequisites": {
+      "text": "COMP 303",
+      "tree": "COMP 303",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 599 when the topic was \"Topics in Mobile Application Development\".",
+      "excludes": [
+        "COMP 599"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 557",
+    "subject": "COMP",
+    "number": "557",
+    "title": "Fundamentals of Computer Graphics",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental mathematical, algorithmic and representational issues in computer graphics: overview of graphics pipeline, homogeneous coordinates, projective transformations, line-drawing and rasterization, hidden surface removal, surface modelling (quadrics, bicubics, meshes), rendering (lighting, reflectance models, ray tracing, texture mapping), compositing colour perception, and other selected topics.",
+    "prerequisites": {
+      "text": "MATH 222, MATH 223, COMP 250, COMP 206",
+      "tree": {
+        "and": [
+          "MATH 222",
+          "MATH 223",
+          "COMP 250",
+          "COMP 206"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 558",
+    "subject": "COMP",
+    "number": "558",
+    "title": "Fundamentals of Computer Vision",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Image filtering, edge detection, image features and histograms, image segmentation, image motion and tracking, projective geometry, camera calibration, homographies, epipolar geometry and stereo, point clouds and 3D registration. Applications in computer graphics and robotics.",
+    "prerequisites": {
+      "text": "COMP 251, MATH 222, MATH 223",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "MATH 222",
+          "MATH 223"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 559",
+    "subject": "COMP",
+    "number": "559",
+    "title": "Fundamentals of Computer Animation",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental mathematical and computational issues in computer animation with a focus on physics based simulation: overview of numerical integration methods, accuracy and absolute stability, stiff systems and constraints, rigid body motion, collision detection and response, friction, deformation, stable fluid simulation, use of motion capture, and other selected topics.",
+    "prerequisites": {
+      "text": "MATH 222, MATH 223, COMP 206, COMP 250",
+      "tree": {
+        "and": [
+          "MATH 222",
+          "MATH 223",
+          "COMP 206",
+          "COMP 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 561",
+    "subject": "COMP",
+    "number": "561",
+    "title": "Computational Biology Methods and Research",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of computer science techniques to problems arising in biology and medicine, techniques for modeling evolution, aligning molecular sequences, predicting structure of a molecule and other problems from computational biology. An in-depth exploration of key research areas.",
+    "prerequisites": {
+      "text": "COMP 251, and MATH 323 or MATH 203 or BIOL 309",
+      "tree": {
+        "and": [
+          "COMP 251",
+          {
+            "or": [
+              "MATH 323",
+              "MATH 203",
+              "BIOL 309"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 462.",
+      "excludes": [
+        "COMP 462"
+      ]
+    },
+    "notes": [
+      "4 hours",
+      "Note: Additional work will consist of assignments and of a substantial final project that will require to put in practice the concepts covered in the course."
+    ]
+  },
+  {
+    "code": "COMP 562",
+    "subject": "COMP",
+    "number": "562",
+    "title": "Theory of Machine Learning",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Concentration inequalities, PAC model, VC dimension, Rademacher complexity, convex optimization, gradient descent, boosting, kernels, support vector machines, regression and learning bounds. Further topics selected from: Gaussian processes, online learning, regret bounds, basic neural network theory.",
+    "prerequisites": {
+      "text": "MATH 462 or COMP 451 or (COMP 551, MATH 222, MATH 223 and MATH 324) or ECSE 551.",
+      "tree": {
+        "or": [
+          "MATH 462",
+          "COMP 451",
+          {
+            "and": [
+              "COMP 551",
+              "MATH 222",
+              "MATH 223",
+              "MATH 324"
+            ]
+          },
+          "ECSE 551"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 562. Not open to students who have taken COMP 599 when the topic was \"Statistical Learning Theory\" or \"Mathematical Topics for Machine Learning\". Not open to students who have taken COMP 598 when the topic was \"Mathematical Foundations of Machine Learning\".",
+      "excludes": [
+        "COMP 598",
+        "COMP 599",
+        "MATH 562"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 564",
+    "subject": "COMP",
+    "number": "564",
+    "title": "Advanced Computational Biology Methods and Research",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Fundamental concepts and techniques in computational structural biology, system biology. Techniques include dynamic programming algorithms for RNA structure analysis, molecular dynamics and machine learning techniques for protein structure prediction, and graphical models for gene regulatory and protein-protein interaction networks analysis. Practical sessions with state-of-the-art software.",
+    "prerequisites": {
+      "text": "COMP 462.",
+      "tree": "COMP 462",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "COMP 462 or COMP 561",
+      "tree": {
+        "or": [
+          "COMP 462",
+          "COMP 561"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 565",
+    "subject": "COMP",
+    "number": "565",
+    "title": "Machine Learning in Genomics and Healthcare",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Linear models in statistical genetics, causal inference, single-cell genomics, multi-omic learning, electronic health record mining. Applications of machine learning techniques: linear regression, latent factor models, variational Bayesian inference, neural networks, model interpretation.",
+    "prerequisites": {
+      "text": "(BIOL 202 or BIOL 302) and MATH 324 and (COMP 451 or COMP 551), or equivalents.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          },
+          "MATH 324",
+          {
+            "or": [
+              "COMP 451",
+              "COMP 551"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 597 or COMP 598 when the topic was \"Machine Learning in Genomics and Healthcare\".",
+      "excludes": [
+        "COMP 597",
+        "COMP 598"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 567",
+    "subject": "COMP",
+    "number": "567",
+    "title": "Discrete Optimization 2",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Formulation, solution and applications of integer programs. Branch and bound, cutting plane, and column generation algorithms. Combinatorial optimization. Polyhedral methods. A large emphasis will be placed on modelling. Students will select and present a case study of an application of integer programming in an area of their choice.",
+    "prerequisites": {
+      "text": "COMP 566 or MATH 417",
+      "tree": {
+        "or": [
+          "COMP 566",
+          "MATH 417"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 570",
+    "subject": "COMP",
+    "number": "570",
+    "title": "Fundamentals of Data Science",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Comprehensive introduction to the data science process. Orientation to the use and configuration of core data science toolkits, data collection and annotation fundamentals, principles of responsible data science, the use of quantitative tools in data science, and presentation of data science findings. Large-scale team-based projects.",
+    "prerequisites": {
+      "text": "COMP 250 and (COMP 206 or COMP 260) and (MATH 203 or MATH 323)",
+      "tree": {
+        "and": [
+          "COMP 250",
+          {
+            "or": [
+              "COMP 206",
+              "COMP 260"
+            ]
+          },
+          {
+            "or": [
+              "MATH 203",
+              "MATH 323"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking COMP 370.",
+      "excludes": [
+        "COMP 370"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 579",
+    "subject": "COMP",
+    "number": "579",
+    "title": "Reinforcement Learning",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Bandit algorithms, finite Markov decision processes, dynamic programming, Monte-Carlo Methods, temporal-difference learning, bootstrapping, planning, approximation methods, on versus off policy learning, policy gradient methods temporal abstraction and inverse reinforcement learning.",
+    "prerequisites": {
+      "text": "A university level course in machine learning such as COMP 451 or COMP 551. Background in calculus, linear algebra, probability at the level of MATH 222, MATH 223, MATH 323, respectively.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "COMP 451",
+              "COMP 551"
+            ]
+          },
+          "MATH 222",
+          "MATH 223",
+          "MATH 323"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 585",
+    "subject": "COMP",
+    "number": "585",
+    "title": "Intelligent Software Systems ",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Practical aspects of building software systems with machine learning components: requirements, design, delivery, quality assessment, and collaboration. Consideration of a user-centered mindset in development; integration of design and development considerations relevant to artificial intelligence, such as security, privacy, and fairness.",
+    "prerequisites": {
+      "text": "COMP 303, COMP 424 or COMP 551",
+      "tree": {
+        "and": [
+          "COMP 303",
+          {
+            "or": [
+              "COMP 424",
+              "COMP 551"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 598 or COMP 599 when the topic was \"Software Engineering for Building Intelligent Systems\".",
+      "excludes": [
+        "COMP 598",
+        "COMP 599"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 588",
+    "subject": "COMP",
+    "number": "588",
+    "title": "Probabilistic Graphical Models",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Representation, inference and learning with graphical models; directed and undirected graphical models; exact inference; approximate inference using deterministic optimization based methods, stochastic sampling based methods; learning with complete and partial observations.",
+    "prerequisites": {
+      "text": "COMP 251, MATH 323, MATH 324; or equivalents.",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "MATH 323",
+          "MATH 324"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 766 or COMP 767 when the topic was \"Probabilistic Graphical Models\".",
+      "excludes": [
+        "COMP 766",
+        "COMP 767"
+      ]
+    },
+    "notes": [
+      "A background in AI (COMP 424) and machine learning (COMP 451 or COMP 551) is highly recommended."
+    ]
+  },
+  {
+    "code": "COMP 594",
+    "subject": "COMP",
+    "number": "594",
+    "title": "Topics in CS: Theory 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Topics in theoretical computer science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 595",
+    "subject": "COMP",
+    "number": "595",
+    "title": "Topics in CS: Theory 2",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Topics in theoretical computer science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 596",
+    "subject": "COMP",
+    "number": "596",
+    "title": "Topics in CS: Systems and Programming 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in computer systems and programming.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 597",
+    "subject": "COMP",
+    "number": "597",
+    "title": "Topics in CS: Systems and Programming 2",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in computer systems and programming.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 598",
+    "subject": "COMP",
+    "number": "598",
+    "title": "Topics in CS: Applications 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Topics in applied computer science.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 599",
+    "subject": "COMP",
+    "number": "599",
+    "title": "Topics in CS: Applications 2",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Topics in applied computer science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 601",
+    "subject": "COMP",
+    "number": "601",
+    "title": "Thesis Literature Review",
+    "credits": 2,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of relevant literature in preparation for the M.Sc. research. This includes regular attendance of the Colloquium organized by the School of Computer Science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 602",
+    "subject": "COMP",
+    "number": "602",
+    "title": "Computer Science Seminar 1",
+    "credits": 1,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exposure to ongoing research directions in computer science through regular attendance of the research colloquium organized by the School of Computer Science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 603",
+    "subject": "COMP",
+    "number": "603",
+    "title": "Computer Science Seminar 2",
+    "credits": 1,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exposure to ongoing research directions in computer science through regular attendance of the research colloquium organized by the School of Computer Science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 604",
+    "subject": "COMP",
+    "number": "604",
+    "title": "Graduate School Fundamentals ",
+    "credits": 1,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to fundamental skills in computer science. Research and communication skills; teamwork in a research group; integrity, diversity and ethics; career paths.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 606",
+    "subject": "COMP",
+    "number": "606",
+    "title": "Teaching Computer Science in Higher Education",
+    "credits": 1,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics include science and psychology of learning, active versus passive learning, student-centered pedagogy, constructivism. Practical skills include lesson planning, assessment design, effective use of varied instructional techniques. Considerations of equity, diversity, and inclusion (EDI), ethics, and generative AI. All topics are contextualized within computer science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking a course on computer science education.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 610",
+    "subject": "COMP",
+    "number": "610",
+    "title": "Information Structures 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study of elementary data structures: lists, stacks, queues, trees, hash tables, binary search trees, red-black trees, heaps. Augmenting data structures. Sorting and selection, Recursive algorithms. Advanced data structures including binomial heaps, Fibonacci heaps, disjoint set structures, and splay trees. Amortizing. String algorithms. Huffman trees and suffix trees. Graph algorithms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 611",
+    "subject": "COMP",
+    "number": "611",
+    "title": "Mathematical Tools for Computer Science",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to mathematical concepts important across computer science, how to think mathematically, and how to write proofs. Proof techniques such as induction, contradiction, and monovariants; topics in combinatorics, graph theory, algebra, analysis, and probability; mathematical analysis of algorithms, data structures, and computational complexity. Emphasis on the mathematical explanations for useful concepts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have majored in Mathematics or an equivalent subject, or have taken a proof-based math or computer science course within the previous two years.; Not open to students who have taken COMP 761 when the topic was \"Mathematical Tools for Computer Science\".",
+      "excludes": [
+        "COMP 761"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 614",
+    "subject": "COMP",
+    "number": "614",
+    "title": "Distributed Data Management",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Architecture and examples of distributed information systems (e.g., federated databases, component systems, web databases). Data consistency (consistency models, advanced transaction models, advanced concurrency control, distributed recovery). Data replication and caching. Distribution queries, Schema Integration. Advanced Topics.",
+    "prerequisites": {
+      "text": "COMP 421 and one of COMP 435 or COMP 535 or COMP 512, or equivalent.",
+      "tree": {
+        "and": [
+          "COMP 421",
+          {
+            "or": [
+              "COMP 435",
+              "COMP 535",
+              "COMP 512"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 616",
+    "subject": "COMP",
+    "number": "616",
+    "title": "Bioinformatics Seminar",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to current trends in Bioinformatics and closely related fields such as genomics and proteomics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This seminar is restricted to graduate students in the Bioinformatics Option. Enrolment is limited to 30 students.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: The seminar will meet for 3 hours every second week over Fall and Winter semesters.",
+      "Students must register for both COMP 616D1 and COMP 616D2.",
+      "No credit will be given for this course unless both COMP 616D1 and COMP 616D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "COMP 616D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "COMP 616D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "COMP 621",
+    "subject": "COMP",
+    "number": "621",
+    "title": "Program Analysis and Transformations",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Program analysis and transformations are used in optimizing compilers and other automatic tools such as bug-finders, verification tools and software engineering applications. Course topics include the design of intermediate representations, control flow analysis, data flow analysis at both the intra- and inter-procedural level and program transformations for performance improvement.",
+    "prerequisites": {
+      "text": "COMP 251 or equivalent, COMP 302 or equivalent, COMP 520 is useful but not strictly necessary",
+      "tree": {
+        "and": [
+          "COMP 251",
+          "COMP 302",
+          "COMP 520"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 642",
+    "subject": "COMP",
+    "number": "642",
+    "title": "Numerical Estimation Methods",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Efficient and reliable numerical algorithms in estimation and their applications. Linear models and least squares estimation. Maximum-likelihood estimation. Kalman filtering. Adaptive estimation, GPS measurements and mathematical models for positioning. Position estimation. Fault detection and exclusion.",
+    "prerequisites": {
+      "text": "MATH 323, MATH 324 and COMP 350",
+      "tree": {
+        "and": [
+          "MATH 323",
+          "MATH 324",
+          "COMP 350"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4 hours)"
+    ]
+  },
+  {
+    "code": "COMP 647",
+    "subject": "COMP",
+    "number": "647",
+    "title": "Advanced Cryptography",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Information theoretic definitions of security, zero-knowledge protocols, secure function evaluation protocols, cryptographic primitives, privacy amplification, error correction, quantum cryptography, quantum cryptanalysis.",
+    "prerequisites": {
+      "text": "COMP 547",
+      "tree": "COMP 547",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 649",
+    "subject": "COMP",
+    "number": "649",
+    "title": "Quantum Cryptography",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of the basic notions of cryptography and quantum information theory. Quantum key distribution and its proof of security. Quantum encryption, error-correcting codes and authentication. Quantum bit commitment, zero-knowledge and oblivious transfer. Multiparty quantum computations.",
+    "prerequisites": {
+      "text": "COMP 547 and permission of the instructor.",
+      "tree": "COMP 547",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "An introduction to notions of Information Theory is required.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 654",
+    "subject": "COMP",
+    "number": "654",
+    "title": "Graph Representation Learning",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Machine learning with graph-structured data. Introductions to spectral graph theory, graph signal processing, graph convolutions, graph neural networks, and the logic of graphs.",
+    "prerequisites": {
+      "text": "MATH 222, MATH 223, COMP 360, COMP 451 or COMP551, or equivalents.",
+      "tree": {
+        "and": [
+          "MATH 222",
+          "MATH 223",
+          "COMP 360",
+          {
+            "or": [
+              "COMP 451",
+              "COMP 551"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMP 766 when the topic was \"Graph Representation Learning\".",
+      "excludes": [
+        "COMP 766"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 680",
+    "subject": "COMP",
+    "number": "680",
+    "title": "Mining Biological Sequences",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced algorithms for the annotation of biological sequences. Algorithms and heuristics for pair-wise and multiple sequence alignment. Gene-finding with hidden Markov models and variants. Motifs discovery techniques: over representation and phylogenetic footprinting approaches. RNA secondary structure prediction. Detection of repetitive elements. Representation and annotation of protein domains.",
+    "prerequisites": {
+      "text": "COMP 462 or with instructor's permission.",
+      "tree": "COMP 462",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 685",
+    "subject": "COMP",
+    "number": "685",
+    "title": "Machine Learning Applied to Climate Change",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Applications of machine learning in fighting climate change, including use cases in electricity systems, buildings, transportation, agriculture and other land use, disaster response, and other areas. Review of recent research literature, with emphasis on when machine learning is relevant and helpful, and how to go about scoping, developing, and deploying a project so that it has the intended impact.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. This course is aimed at graduate students with at least some prior experience in machine learning and ability to read and assimilate research literature across many areas of machine learning. Prior experience with climate change-related topics is not required, but willingness to learn about these topics is."
+    ]
+  },
+  {
+    "code": "COMP 689",
+    "subject": "COMP",
+    "number": "689",
+    "title": "Internship in Computer Science",
+    "credits": 15,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Four month internship in a company or organization, to give experience with industrial practices in computer science, data science or software engineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Student must have taken at least four complementary courses within the program before taking the internship course.",
+      "The student will work with both an industrial and academic supervisor to ensure alignment both with the company or organization needs and with the academic goals, namely suitability for the M.Sc. level."
+    ]
+  },
+  {
+    "code": "COMP 690",
+    "subject": "COMP",
+    "number": "690",
+    "title": "Probabilistic Analysis of Algorithms",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Probabilistic analysis of algorithms and data structures under random input. Expected behaviour of search trees, tries, heaps, bucket structures and multidimensional data structures. Random sampling, divide-and-conquer, grid methods. Applications in computational geometry and in game tree searching. Combinatorial search problems. Algorithms on random graphs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "COMP 691",
+    "subject": "COMP",
+    "number": "691",
+    "title": "Thesis Research 1",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 693",
+    "subject": "COMP",
+    "number": "693",
+    "title": "Research Project 1",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 694",
+    "subject": "COMP",
+    "number": "694",
+    "title": "Research Project 2",
+    "credits": 6,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 695",
+    "subject": "COMP",
+    "number": "695",
+    "title": "Research Project 3",
+    "credits": 6,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 696",
+    "subject": "COMP",
+    "number": "696",
+    "title": "Thesis Research 2",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 697",
+    "subject": "COMP",
+    "number": "697",
+    "title": "Thesis Research 3",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 698",
+    "subject": "COMP",
+    "number": "698",
+    "title": "Thesis Research 4",
+    "credits": 10,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 699",
+    "subject": "COMP",
+    "number": "699",
+    "title": "Thesis Research 5",
+    "credits": 12,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Computer Science students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMP 700",
+    "subject": "COMP",
+    "number": "700",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "COMP 700D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "COMP 700D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "COMP 701",
+    "subject": "COMP",
+    "number": "701",
+    "title": "Thesis Proposal and Area Examination",
+    "credits": 3,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Submission of doctorate thesis proposal and examination that assesses the student's breadth of knowledge in the research area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 760",
+    "subject": "COMP",
+    "number": "760",
+    "title": "Advanced Topics Theory 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in theory related to computer science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 761",
+    "subject": "COMP",
+    "number": "761",
+    "title": "Advanced Topics Theory 2",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in theory related to computer science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 762",
+    "subject": "COMP",
+    "number": "762",
+    "title": "Advanced Topics Programming 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in programming.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 763",
+    "subject": "COMP",
+    "number": "763",
+    "title": "Advanced Topics Programming 2",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in programming.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 764",
+    "subject": "COMP",
+    "number": "764",
+    "title": "Advanced Topics Systems 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in computing systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 765",
+    "subject": "COMP",
+    "number": "765",
+    "title": "Advanced Topics Systems 2",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced topics in computing systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 766",
+    "subject": "COMP",
+    "number": "766",
+    "title": "Advanced Topics Applications 1",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced topics in computing systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMP 767",
+    "subject": "COMP",
+    "number": "767",
+    "title": "Advanced Topics: Applications 2",
+    "credits": 4,
+    "offeredBy": "Computer Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in computing systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

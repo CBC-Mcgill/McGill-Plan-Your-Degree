@@ -1,0 +1,3074 @@
+[
+  {
+    "code": "MECH 201",
+    "subject": "MECH",
+    "number": "201",
+    "title": "Introduction to Mechanical Engineering",
+    "credits": 2,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "The practice of Mechanical Engineering: its scope and context. The role of Design. Introduction to the Design process. The role of engineering analysis and socio-economic factors in Design. Introduction to the individual mechanical engineering subjects and their role in Design. Case studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-3)"
+    ]
+  },
+  {
+    "code": "MECH 210",
+    "subject": "MECH",
+    "number": "210",
+    "title": "Mechanics 1",
+    "credits": 2,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Static equilibrium of particles and rigid bodies. Beams, trusses, frames and machines. Concept of work and energy. Static equilibrium and stability.",
+    "prerequisites": {
+      "text": "PHYS 101 or PHYS 131 or equivalent.",
+      "tree": {
+        "or": [
+          "PHYS 101",
+          "PHYS 131"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-1-3)"
+    ]
+  },
+  {
+    "code": "MECH 215",
+    "subject": "MECH",
+    "number": "215",
+    "title": "Statics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Static equilibrium of particles and rigid bodies. Beams, trusses, frames and machines. Concept of potential energy and virtual work. Static equilibrium and stability. Systems of forces, moments and couples. Static equilibrium and stability of particles and rigid bodies. Free body diagrams: 2D and 3D analysis. Structures: beams, trusses, joints, frames and machines. Concept of work and energy. Centers of mass, centroids, moments of inertia, and parallel-axis theorem. Static friction.",
+    "prerequisites": {
+      "text": "PHYS 101 or PHYS 131 or equivalent",
+      "tree": {
+        "or": [
+          "PHYS 101",
+          "PHYS 131"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 210.",
+      "excludes": [
+        "MECH 210"
+      ]
+    },
+    "notes": [
+      "3-1-5"
+    ]
+  },
+  {
+    "code": "MECH 216",
+    "subject": "MECH",
+    "number": "216",
+    "title": "Analytical Mechanics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Kinematics of particles, relative motion and general moving frames of reference. Dynamics of particles. Central force fields and orbits. Work, conservative forces, potential energy. Impulse and momentum. Dynamics of a system of particles. General motion of rigid bodies, angular momentum and kinetic energy of rigid bodies.Generalized coordinates and forces, Lagrange's equations.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 262 and MATH 263",
+      "tree": {
+        "and": [
+          "MATH 262",
+          "MATH 263"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 220",
+    "subject": "MECH",
+    "number": "220",
+    "title": "Introduction to Dynamics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Dynamics of particles and rigid bodies in planar and three-dimensional motion. Kinematics: coordinate systems, rotating frames of reference, rotational kinematics of rigid bodies, relative and absolute motion analyses. Kinetics: equations of motion, impulse-momentum principles and conservation of momentum, principle of work and energy and conservation of energy.",
+    "prerequisites": {
+      "text": "((MECH 210 or MECH 215) and MATH 262) or GEPR 221. Pre-/Co-requisite: MATH 263 or GEPR 121",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              {
+                "and": [
+                  {
+                    "or": [
+                      "MECH 210",
+                      "MECH 215"
+                    ]
+                  },
+                  "MATH 262"
+                ]
+              },
+              "GEPR 221"
+            ]
+          },
+          {
+            "or": [
+              "MATH 263",
+              "GEPR 121"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-1-7)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "MECH 240",
+    "subject": "MECH",
+    "number": "240",
+    "title": "Thermodynamics 1",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Thermodynamic systems and properties. First law of thermodynamics: energy, work and heat. State principle, p-v-T surfaces, phase equilibrium, ideal gas model. Second law of thermodynamics, entropy, exergy analysis. Energy analysis applied to steady and transient engineering systems including heat engines, refrigerators and heat pumps, air compressors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in U1 or above.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 241",
+    "subject": "MECH",
+    "number": "241",
+    "title": "Fundamentals of Thermodynamics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thermodynamic systems, properties, and state postulate. First law of thermodynamics: energy, work and heat. Properties of pure substances: phase change processes, property diagrams, property tables, and ideal gas model. Energy analysis of closed systems. Mass and energy analysis of control volumes: analysis of steady and transient engineering systems. Second law of thermodynamics: analysis of Carnot heat engines, refrigerators, and heat pumps. Entropy. Gas power cycles. Introduction to compressible flow.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 240.",
+      "excludes": [
+        "MECH 240"
+      ]
+    },
+    "notes": [
+      "4-2-6"
+    ]
+  },
+  {
+    "code": "MECH 261",
+    "subject": "MECH",
+    "number": "261",
+    "title": "Measurement Laboratory",
+    "credits": 2,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Basic experimental laboratory measurements, such as measurement of strain, pressure, force, position, and temperature.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 263",
+      "tree": "MATH 263",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Civil Engineering students at U1 or higher level.",
+      "excludes": []
+    },
+    "notes": [
+      "(2-2-2)"
+    ]
+  },
+  {
+    "code": "MECH 262",
+    "subject": "MECH",
+    "number": "262",
+    "title": "Statistics and Measurement Laboratory",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to probability: conditional probability, binomial and Poisson distributions, random variables, laws of large numbers. Statistical analysis associated with measurements; regression and correlation. Basic experimental laboratory techniques, including the measurement of strain, pressure, force, position, and temperature.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 263 or GEPR 221.",
+      "tree": {
+        "or": [
+          "MATH 263",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to U1 students or higher.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-2-4)",
+      "GEPR courses can only serve as co-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "MECH 265",
+    "subject": "MECH",
+    "number": "265",
+    "title": "Numerical Linear Algebra",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An overview of numerical methods for linear algebra applications and their analysis. Problem classes include linear systems, least squares problems and eigenvalue problems. An overview of advanced techniques for solving large-scale linear algebra problems, as they typically arise in applications.",
+    "prerequisites": {
+      "text": "COMP 208, BIEN 203",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "BIEN 203"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 263",
+      "tree": "MATH 263",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 289",
+    "subject": "MECH",
+    "number": "289",
+    "title": "Design Graphics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The design process, including free-hand sketching; from geometry construction to engineering construction; the technology and standards of engineering graphic communication; designing with CAD software. The role of visualization in the production of engineering designs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Students must be in Year 1 (U1) or higher. Not open to students in Mechanical Engineering.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MECH 290",
+    "subject": "MECH",
+    "number": "290",
+    "title": "Design Graphics for Mechanical Engineering",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to essential modern engineering design graphics skills. Basic knowledge of design graphics projection theory; perspective projections. Introduction to Computer-Aided Design (CAD) software and 3D parametric solid modeling techniques. Design for manufacturing and design for assembly methods. Standard geometric dimensioning and tolerancing techniques and their applications in the engineering drawings and engineering design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to U1 (Year 1) Mechanical Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "(2-3-4)"
+    ]
+  },
+  {
+    "code": "MECH 292",
+    "subject": "MECH",
+    "number": "292",
+    "title": "Design 1: Conceptual Design",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to design. Problem formulation, idea generation, feasibility study, preliminary design, design, analysis, design evaluation, project management, and optimal design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MECH 301",
+    "subject": "MECH",
+    "number": "301",
+    "title": "Mechatronics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Experimental laboratory techniques. Analysis andoperation of measurement/sensing devices for strain, pressure, force, position, and temperature. Analysis and operation of actuators: stepper and servo motors, line aractuators. Communication protocols and sensor processing. Design and application controllers that incorporate sensing and actuation of mechanical devices",
+    "prerequisites": {
+      "text": "ECSE 209 or GEPR 221.",
+      "tree": {
+        "or": [
+          "ECSE 209",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MECH 265 or GEPR 121.",
+      "tree": {
+        "or": [
+          "MECH 265",
+          "GEPR 121"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 383.",
+      "excludes": [
+        "MECH 383"
+      ]
+    },
+    "notes": [
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "MECH 309",
+    "subject": "MECH",
+    "number": "309",
+    "title": "Numerical Methods in Mechanical Engineering",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Numerical techniques for problems commonly encountered in Mechanical Engineering are presented. Chebyshev interpolation, quadrature, roots of equations in one or more variables, matrices, curve fitting, splines and ordinary differential equations. The emphasis is on the analysis and understanding of the problem rather than the details of the actual numerical program.",
+    "prerequisites": {
+      "text": "(MATH 263, MATH 271, COMP 208) or GEPR 221.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MATH 263",
+              "MATH 271",
+              "COMP 208"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "MECH 314",
+    "subject": "MECH",
+    "number": "314",
+    "title": "Dynamics of Mechanisms",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "First principles of analysis; motion; position; displacement; velocity; acceleration; force; inertia and its effects. Kinematic and dynamic analysis of rigid bodies in pure rotation and in pin-connected systems; dynamic balance. Rigid bodies in rolling contact; planetary gear-trains. Bodies in sliding contact; lower and higher sliding pairs.",
+    "prerequisites": {
+      "text": "MECH 220.",
+      "tree": "MECH 220",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 315",
+    "subject": "MECH",
+    "number": "315",
+    "title": "Intermediate Dynamics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Single-degree-of-freedom systems; free vibrations; effect of damping; response to harmonic, periodic and arbitrary excitation. Lagrange's equations of motion. Vibrations of multi-degree-of-freedom systems. Continuous systems.",
+    "prerequisites": {
+      "text": "MECH 220, MATH 271",
+      "tree": {
+        "and": [
+          "MECH 220",
+          "MATH 271"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-1-7)",
+      "Pre-/Co-requisite: CIVE 207."
+    ]
+  },
+  {
+    "code": "MECH 321",
+    "subject": "MECH",
+    "number": "321",
+    "title": "Mechanics of Deformable Solids",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Modern phenomenological theories of the behaviour of engineering materials. Stress and strain concepts and introduction to constitutive theory. Applications of theory of elasticity and thermoelasticity. Introduction to finite element stress analysis method and its application to structural design of a machine element.",
+    "prerequisites": {
+      "text": "CIVE 207",
+      "tree": "CIVE 207",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 331",
+    "subject": "MECH",
+    "number": "331",
+    "title": "Fluid Mechanics 1",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physical properties of fluids. Kinematics and dynamics of fluid flow: stress in a continuum, rates of strain, rotation. Control volume analysis; conservation of mass, linear momentum and energy; Euler and Bernoulli equations; Flow measurement. Dimensional analysis and dynamical similarity. Laminar and turbulent flow in pipes and boundary layers.",
+    "prerequisites": {
+      "text": "MECH 210 or GEPR 221.",
+      "tree": {
+        "or": [
+          "MECH 210",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MECH 220 and (MECH 240 and MATH 271) or GEPR 121.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MECH 220",
+              "MECH 240",
+              "MATH 271"
+            ]
+          },
+          "GEPR 121"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "MECH 332",
+    "subject": "MECH",
+    "number": "332",
+    "title": "Fundamentals of Fluid Mechanics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Physical properties of fluids. Kinematics and dynamics of fluid flow: stress in a continuum, rates of strain, rotation. Control volume analysis; conservation of mass, linear momentum and energy; Euler and Bernoulli equations; Flow measurement. Dimensional analysis and dynamical similarity. Laminar and turbulent flow in pipes and boundary layers. Laminar and turbulent flow passed immersed bodies and external boundary layers. Introduction to turbomachines. Fundamentals of compressible flow.",
+    "prerequisites": {
+      "text": "MECH 241 or GEPR 221.",
+      "tree": {
+        "or": [
+          "MECH 241",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MECH 220 and ((MECH 240 and MATH 266) or GEPR 121).",
+      "tree": {
+        "and": [
+          "MECH 220",
+          {
+            "or": [
+              {
+                "and": [
+                  "MECH 240",
+                  "MATH 266"
+                ]
+              },
+              "GEPR 121"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 331 or MECH 430.",
+      "excludes": [
+        "MECH 331",
+        "MECH 430"
+      ]
+    },
+    "notes": [
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "MECH 341",
+    "subject": "MECH",
+    "number": "341",
+    "title": "Thermodynamics 2",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Generalized thermodynamics relations. Real gas effects, gas tables, dense gas equations of state and generalized compressibility, enthalpy, and entropy charts. Vapour and gas power cycles (coal/nuclear power plants). Refrigerators and heat pumps. Psychrometry and air conditioning processes. Thermodynamics of reactive gas mixtures.",
+    "prerequisites": {
+      "text": "MATH 264 and MECH 240",
+      "tree": {
+        "and": [
+          "MATH 264",
+          "MECH 240"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 346",
+    "subject": "MECH",
+    "number": "346",
+    "title": "Heat Transfer",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Basic concepts and overview. Steady and unsteady heat conduction. Fin Theory. Convective heat transfer: governing equations; dimensionless parameters; analogy between momentum and heat transfer. Design correlations for forced, natural, and mixed convection. Heat exchangers. Radiative heat transfer: black- and gray-body radiation; shape factors; enclosure theory. Thermal engineering design project.",
+    "prerequisites": {
+      "text": "(MECH 240 and MECH 331 and MATH 271) or (BREE 301 and BREE 305 and BREE 319) or (MECH 332 and MATH 271)",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MECH 240",
+              "MECH 331",
+              "MATH 271"
+            ]
+          },
+          {
+            "and": [
+              "BREE 301",
+              "BREE 305",
+              "BREE 319"
+            ]
+          },
+          {
+            "and": [
+              "MECH 332",
+              "MATH 271"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 360",
+    "subject": "MECH",
+    "number": "360",
+    "title": "Principles of Manufacturing",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Theory and practice of modern manufacturing processes: machining, forming, and casting. Producing parts using computer assisted tools from CAD to CNC machining followed by measurement of part quality. Hands-on machining of parts.",
+    "prerequisites": {
+      "text": "MECH 289 or MECH 290 or MECH 292 or MECH 390. Pre-/corequisite: CIVE 207 or MIME 260.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 289",
+              "MECH 290",
+              "MECH 292",
+              "MECH 390"
+            ]
+          },
+          {
+            "or": [
+              "CIVE 207",
+              "MIME 260"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MECH 362",
+    "subject": "MECH",
+    "number": "362",
+    "title": "Mechanical Laboratory 1",
+    "credits": 2,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Experiments will be performed in four areas: MECH 240 Thermodynamics, MECH 315 Vibrations, MECH 331 Fluid Mechanics 1, and MECH 346 Heat Transfer. Students should sign up to do experiments in one or more areas the term following the completion of one or more of the above courses. Students will not formally register for this course until the term in which they will complete all of the experiments.",
+    "prerequisites": {
+      "text": "MECH 261 or MECH 262 or BREE 216",
+      "tree": {
+        "or": [
+          "MECH 261",
+          "MECH 262",
+          "BREE 216"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-3-3)"
+    ]
+  },
+  {
+    "code": "MECH 383",
+    "subject": "MECH",
+    "number": "383",
+    "title": "Applied Electronics and Instrumentation",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Discrete and integrated components, both analogue and digital. Characteristics of passive elements. Semiconductors, amplifiers, filters, oscillators, modulators, power supplies and nonlinear devices. Introduction to digital electronics. Transducer/signal conditioner interfacing considerations.",
+    "prerequisites": {
+      "text": "MECH 261 or MECH 262, MATH 263.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 261",
+              "MECH 262"
+            ]
+          },
+          "MATH 263"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MECH 390",
+    "subject": "MECH",
+    "number": "390",
+    "title": "Computer Aided Design",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction of the essential modern engineering design graphics skills and knowledge. Basic design graphic projection theory and perspective projections. Technical drawing and drafting skills. Computer-Aided Design (CAD) software skills and 3D parametric solid modelling techniques. Introduction of design for manufacturing as well as design for assembly methods and their application to improve the design. Introduction of standard geometric dimensioning and tolerancing techniques to apply in the engineering graphics drawings and engineering design problem.",
+    "prerequisites": {
+      "text": "MECH 292 or GEPR 221.",
+      "tree": {
+        "or": [
+          "MECH 292",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 290.",
+      "excludes": [
+        "MECH 290"
+      ]
+    },
+    "notes": [
+      "3-3-3",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "MECH 393",
+    "subject": "MECH",
+    "number": "393",
+    "title": "Design 2: Machine Element Design",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The design of machine elements for strength requirements in consideration of various methods of manufacture. Synthesis of mechanical systems to fulfill performance requirements, following the engineering design process. Static and fatigue failure prevention. Students form groups to work on a design project.",
+    "prerequisites": {
+      "text": "(MECH 289 or MECH 290) and CIVE 207.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 289",
+              "MECH 290"
+            ]
+          },
+          "CIVE 207"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MIME 260 and ((MECH 360 and MECH 292 and MECH 314) or GEPR 221).",
+      "tree": {
+        "and": [
+          "MIME 260",
+          {
+            "or": [
+              {
+                "and": [
+                  "MECH 360",
+                  "MECH 292",
+                  "MECH 314"
+                ]
+              },
+              "GEPR 221"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "GEPR courses can only serve as Pre-and co-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "MECH 403",
+    "subject": "MECH",
+    "number": "403",
+    "title": "Thesis (Honours)",
+    "credits": 6,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course, together with MECH 404, involves a research project containing both engineering theory and design components, and requiring a theoretical and/or experimental investigation. Students are supervised by the course instructor and mentored by one or more staff members. The work culminates with the submission of a thesis.",
+    "prerequisites": {
+      "text": "A minimum of 60 program credits.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-6-12)",
+      "Students must register for both MECH 403D1 and MECH 403D2.",
+      "No credit will be given for this course unless both MECH 403D1 and MECH 403D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MECH 403D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MECH 403D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "MECH 403N1",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "MECH 403N2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MECH 404",
+    "subject": "MECH",
+    "number": "404",
+    "title": "Honours Thesis 2",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course is part of the same thesis project as course MECH 403.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MECH 403",
+      "tree": "MECH 403",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(0-6-3)"
+    ]
+  },
+  {
+    "code": "MECH 412",
+    "subject": "MECH",
+    "number": "412",
+    "title": "System Dynamics and Control",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Modelling of physical linear time-invariant systems using transfer functions. Transient and steady-state response specifications. State space representation of systems. Frequency-response characterization. Stability. Feedback control systems. PID controller design. Root locus and frequency response design methods. Lead, lag and PID compensators.",
+    "prerequisites": {
+      "text": "MECH 309, MECH 315. Pre-/Co-requisite: MECH 331",
+      "tree": {
+        "and": [
+          "MECH 309",
+          "MECH 315",
+          "MECH 331"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MECH 415",
+    "subject": "MECH",
+    "number": "415",
+    "title": "Applied Solid Mechanics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals and applications of elasticity theory and thermoelasticity. Introduction to plasticity, viscoelasticity, fracture mechanics, fatigue, and creep, as well as concepts of composite materials. Introduction to material testing methods for characterizing mechanical behaviour. Applied stress analysis techniques with emphasis on the finite element method.",
+    "prerequisites": {
+      "text": "CIVE 207",
+      "tree": "CIVE 207",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 321 or MECH 416.",
+      "excludes": [
+        "MECH 321",
+        "MECH 416"
+      ]
+    },
+    "notes": [
+      "4-2-6"
+    ]
+  },
+  {
+    "code": "MECH 416",
+    "subject": "MECH",
+    "number": "416",
+    "title": "Honours Applied Solid Mechanics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Application of elasticity and thermoelasticity theory. Introduction to plasticity, viscoelasticity, fracture, fatigue, and creep. Composite materials and stress analysis using the finite element method. Experimental methods for mechanical property characterization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 415.",
+      "excludes": [
+        "MECH 415"
+      ]
+    },
+    "notes": [
+      "(4-2-6)",
+      "Course consists of additional theoretical assignments and/or an honours-level project."
+    ]
+  },
+  {
+    "code": "MECH 419",
+    "subject": "MECH",
+    "number": "419",
+    "title": "Advanced Mechanics of Systems",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Lagrange's equations of motion. Hamilton's principle. Variational methods. Discrete linear systems: analytical and numerical methods. Distributed parameter systems: exact solutions and discretization techniques. Electrical-mechanical-acoustical analogies. Stability of systems. Nonlinear dynamics: phase-plane, perturbation and other methods of solution.",
+    "prerequisites": {
+      "text": "MECH 220, CIVE 207, MATH 264, MATH 271.",
+      "tree": {
+        "and": [
+          "MECH 220",
+          "CIVE 207",
+          "MATH 264",
+          "MATH 271"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-1-7)"
+    ]
+  },
+  {
+    "code": "MECH 421",
+    "subject": "MECH",
+    "number": "421",
+    "title": "Dynamics and Control",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Modelling of physical linear and nonlinear systems relevant to mechanical engineering. Linearization. State-space and transfer function representations of systems. Transient, steady state, and frequency responses. Stability. Feedback control system analysis and design. Lead, lag, and PID compensators. Loopshaping. Robustness analysis.",
+    "prerequisites": {
+      "text": "MECH 315, MECH 301",
+      "tree": {
+        "and": [
+          "MECH 315",
+          "MECH 301"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 412 or MECH 422.",
+      "excludes": [
+        "MECH 412",
+        "MECH 422"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MECH 422",
+    "subject": "MECH",
+    "number": "422",
+    "title": "Honours Dynamics and Control",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Modelling of linear and nonlinear physical systems in mechanical engineering. Linearization techniques. State-space and transfer function representations. Transient, steady-state, and frequency response analysis. Stability and feedback control system design. Lead, lag, and PID compensators, loop shaping, and robustness analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 421.",
+      "excludes": [
+        "MECH 421"
+      ]
+    },
+    "notes": [
+      "(4-2-6)",
+      "Course consists of additional theoretical assignments and/or an honours-level project."
+    ]
+  },
+  {
+    "code": "MECH 430",
+    "subject": "MECH",
+    "number": "430",
+    "title": "Fluid Mechanics 2",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of thermodynamics of gases, one dimensional isentropic flow and choking. Nozzles and wind tunnels. Normal shock waves. Flow in constant area ducts with friction and heat exchange. Compressible irrotational flow. Oblique shock waves and Prandtl-Meyer expansion. Supersonic aerofoil and wing theory.",
+    "prerequisites": {
+      "text": "MECH 331 and MECH 240.",
+      "tree": {
+        "and": [
+          "MECH 331",
+          "MECH 240"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 441",
+    "subject": "MECH",
+    "number": "441",
+    "title": "Applied Thermofluids",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Mechanical sources of energy: wind and hydro. Thermal sources of energy: nuclear, chemical, and solar. Vapor power cycles. Refrigeration and heat pumps. Energy storage. Energy Economics. Thermofluids engineering design project.",
+    "prerequisites": {
+      "text": "MECH 241, MECH 331, MECH 346",
+      "tree": {
+        "and": [
+          "MECH 241",
+          "MECH 331",
+          "MECH 346"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 341 or MECH 442.",
+      "excludes": [
+        "MECH 341",
+        "MECH 442"
+      ]
+    },
+    "notes": [
+      "4-2-6"
+    ]
+  },
+  {
+    "code": "MECH 442",
+    "subject": "MECH",
+    "number": "442",
+    "title": "Honours Applied Thermofluids",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Applications of fluid mechanics and thermodynamics to mechanical energy systems (wind, hydro) and thermal energy systems (nuclear, chemical, solar). Analysis of power plants, refrigeration, and heat pump systems. Thermofluids engineering design project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 441.",
+      "excludes": [
+        "MECH 441"
+      ]
+    },
+    "notes": [
+      "(4-2-6)",
+      "Course consists of additional theoretical assignments and/or an honours-level project."
+    ]
+  },
+  {
+    "code": "MECH 447",
+    "subject": "MECH",
+    "number": "447",
+    "title": "Combustion",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Equilibrium analysis of reacting systems, Hugoniot analysis, flame propagation mechanisms, introduction to chemical kinetics, models for laminar flame propagation, ignition, quenching, flammability limits, turbulent flames, flame instability mechanisms, detonations, solid and liquid combustion.",
+    "prerequisites": {
+      "text": "MECH 240",
+      "tree": "MECH 240",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 463",
+    "subject": "MECH",
+    "number": "463",
+    "title": "Design 3: Mechanical Engineering Project",
+    "credits": 6,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Team project work typically involving the design, fabrication, verification, and application of a mechanical device/system, or experimental facility. The project work is complemented with lectures in the Fall term on topics related to design and management of design projects. Emphasis is on the completion of a project of professional quality.",
+    "prerequisites": {
+      "text": "(CCOM 206 or WCOM 206) and MECH 393.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CCOM 206",
+              "WCOM 206"
+            ]
+          },
+          "MECH 393"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-3-5)",
+      "Students must register for both MECH 463D1 and MECH 463D2.",
+      "No credit will be given for this course unless both MECH 463D1 and MECH 463D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MECH 463D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MECH 463D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MECH 493",
+    "subject": "MECH",
+    "number": "493",
+    "title": "Machine Element Design",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Design of machine elements for specific requirements in consideration of various methods of manufacture. The selection and sizing of mechanical systems to fulfill performance requirements following the engineering design process. Analysis methods to address static and fatigue failure prevention. Application and integration of the design methodologies in industrial design project.",
+    "prerequisites": {
+      "text": "MIME 260 and ((MECH 415 and MECH 292) or GEPR 221)",
+      "tree": {
+        "and": [
+          "MIME 260",
+          {
+            "or": [
+              {
+                "and": [
+                  "MECH 415",
+                  "MECH 292"
+                ]
+              },
+              "GEPR 221"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MECH 360, MECH 390.",
+      "tree": {
+        "and": [
+          "MECH 360",
+          "MECH 390"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 393.",
+      "excludes": [
+        "MECH 393"
+      ]
+    },
+    "notes": [
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "MECH 494",
+    "subject": "MECH",
+    "number": "494",
+    "title": "Honours Design Project",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An advanced design project course with emphasis on analytical solutions, performance prediction and validation, and planning for production. Students are supervised by the course instructor and mentored by one or more staff members.",
+    "prerequisites": {
+      "text": "MECH 292",
+      "tree": "MECH 292",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Mechanical Engineering Honours students.",
+      "excludes": []
+    },
+    "notes": [
+      "(0-6-3)"
+    ]
+  },
+  {
+    "code": "MECH 496",
+    "subject": "MECH",
+    "number": "496",
+    "title": "Design 4 Capstone Design",
+    "credits": 7,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Final year group design project. Design, fabrication, verification, and application of a mechanical device/system, or experimental facility. Management of design projects and engineering communications. Completion of a project of professional quality.",
+    "prerequisites": {
+      "text": "MECH 360 and MECH 493",
+      "tree": {
+        "and": [
+          "MECH 360",
+          "MECH 493"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MECH 441 and MECH 421",
+      "tree": {
+        "and": [
+          "MECH 441",
+          "MECH 421"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MECH 463D1/D2.",
+      "excludes": [
+        "MECH 463"
+      ]
+    },
+    "notes": [
+      "Students must register for both MECH 496D1 and MECH 496D2.",
+      "No credit will be given for this course unless both MECH 496D1 and MECH 496D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MECH 496D1",
+        "credits": 3.5,
+        "terms": []
+      },
+      {
+        "code": "MECH 496D2",
+        "credits": 3.5,
+        "terms": []
+      },
+      {
+        "code": "MECH 496N1",
+        "credits": 3.5,
+        "terms": []
+      },
+      {
+        "code": "MECH 496N2",
+        "credits": 3.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MECH 497",
+    "subject": "MECH",
+    "number": "497",
+    "title": "Value Engineering",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Value Engineering is an in-depth analysis of an industrial product or process with a view to improving its design and/or performance to increase its worth. This is a workshop type of course. Projects will be supplied by industrial firms and students will work in teams with industrial personnel.",
+    "prerequisites": {
+      "text": "MECH 393 and completion of 45 credits",
+      "tree": "MECH 393",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-8-1)"
+    ]
+  },
+  {
+    "code": "MECH 498",
+    "subject": "MECH",
+    "number": "498",
+    "title": "Interdisciplinary Design Project 1",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Completion of an individual project on an interdisciplinary theme with emphasis on a balanced combination on analysis and synthesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-2-6)"
+    ]
+  },
+  {
+    "code": "MECH 499",
+    "subject": "MECH",
+    "number": "499",
+    "title": "Interdisciplinary Design Project 2",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The individual project initiated in MECH 498 is continued and finalized in this course.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MECH 498.",
+      "tree": "MECH 498",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(1-2-6)"
+    ]
+  },
+  {
+    "code": "MECH 500",
+    "subject": "MECH",
+    "number": "500",
+    "title": "Selected Topics in Mechanical Engineering",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A course to allow the introduction of new topics in Mechanical Engineering as needs arise, by regular and visiting staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 501",
+    "subject": "MECH",
+    "number": "501",
+    "title": "Special Topics: Mechanical Engineering",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A course to allow the introduction of new topics in Mechanical Engineering as needs arise, by regular and visiting staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 502",
+    "subject": "MECH",
+    "number": "502",
+    "title": "Topics in Mechanical Engineering",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A course to allow the introduction of new topics in Mechanical Engineering as needs arise, by regular and visiting staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 510",
+    "subject": "MECH",
+    "number": "510",
+    "title": "Engineering Acoustics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Vibratory and acoustic disturbances propagated in homogeneous media. Modelling of acoustic systems using lumped-parameters. Simple sound wave fields, transverse waves in strings and bars, longitudinal waves in bars, and transverse waves in membranes, beams, and plates. Basic wave propagation phenomena and sound source models.",
+    "prerequisites": {
+      "text": "MATH 271 and MECH 315",
+      "tree": {
+        "and": [
+          "MATH 271",
+          "MECH 315"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Offered only in even years."
+    ]
+  },
+  {
+    "code": "MECH 513",
+    "subject": "MECH",
+    "number": "513",
+    "title": "Control Systems",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "State-space modelling and related linear algebra. Controllability and observability of linear time-invariant systems and corresponding tests, system realizations. Stability: Bounded-Input-Bounded-Output (BIBO), internal, Lyapunov. Linear state feedback control: pole placement and root locus design methods, linear quadratic regulator. State observers: full- and reduced-order designs, separation principle, Linear Quadratic Gaussian (LQG) design. Introduction to optimal control and optimal state estimation.",
+    "prerequisites": {
+      "text": "MECH 412 or MECH 419.",
+      "tree": {
+        "or": [
+          "MECH 412",
+          "MECH 419"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 515",
+    "subject": "MECH",
+    "number": "515",
+    "title": "Unsteady Gasdynamics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of unsteady gasdynamics. Shock and detonation waves in gases and condensed material. Condensed explosives: hydrodynamic theory, equations of state, initiation. Shock interactions. Blast wave theory, similarity methods, blast scaling.",
+    "prerequisites": {
+      "text": "MECH 341, MECH 430.",
+      "tree": {
+        "and": [
+          "MECH 341",
+          "MECH 430"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MECH 615",
+      "excludes": [
+        "MECH 615"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 516",
+    "subject": "MECH",
+    "number": "516",
+    "title": "Computational Gasdynamics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of computational fluid dynamics. Numerical methods for hyperbolic conservation laws: first- and higher-order upwind schemes; monotonicity and Godunov theorem; total-variation-diminishing schemes; Riemann solvers; treatment of source terms; multi-dimensional methods. Introduction to grid generation and adaptation. Methodology for the comparison of numerical and experimental results.",
+    "prerequisites": {
+      "text": "MECH 430 or permission of instructor",
+      "tree": "MECH 430",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 524",
+    "subject": "MECH",
+    "number": "524",
+    "title": "Computer Integrated Manufacturing",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A study of the present impact of computers and automation on manufacturing. Computer-aided systems. Information modelling. Information system structures. Study of several types of production systems. Integration issues: inter-and intra-enterprise. Laboratory experience with manufacturing software systems.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 528",
+    "subject": "MECH",
+    "number": "528",
+    "title": "Product Design",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A study of the design issues present in product life cycle demands. Computer-aided systems. Rapid prototyping. Design for manufacturability. Integration of mechanics, electronics and software in products. Effect on design of product cost, maintainability, recycling, marketability.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "**This course will be held on July 14-26, 31, August 1, 2 and there will be an exam due on August 16, 2020.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day."
+    ]
+  },
+  {
+    "code": "MECH 530",
+    "subject": "MECH",
+    "number": "530",
+    "title": "Mechanics of Composite Materials",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fiber-reinforced composites. Stress, strain, and strength of composite laminates and honeycomb structures. Failure modes and failure criteria. Environmental effects. Manufacturing processes. Design of composite structures. Computer modelling of composites. Computer techniques are utilized throughout the course.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MECH 321 or equivalent/instructor's permission.",
+      "tree": "MECH 321",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 531",
+    "subject": "MECH",
+    "number": "531",
+    "title": "Unmanned Aerial Vehicles",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Kinematics and dynamics of a UAV. Aerodynamic forces and moments on a fixed-wing UAV. Application of linear systems analysis for fixed-wing UAVs. Flight control and autopilots for UAVs. Navigation sensors and state estimation based on Kalman filtering. Guidance strategies and the basics of path planning.",
+    "prerequisites": {
+      "text": "MECH 412 or MECH 419 or Permission of the Instructor",
+      "tree": {
+        "or": [
+          "MECH 412",
+          "MECH 419"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3-0-6"
+    ]
+  },
+  {
+    "code": "MECH 532",
+    "subject": "MECH",
+    "number": "532",
+    "title": "Aircraft Performance, Stability and Control",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Aircraft performance criteria such as range, endurance, rate of climb, maximum ceiling for steady and accelerated flight. Landing and take-off distances. Static and dynamic stability in the longitudinal (stick-fixed and stick-free) and coupled lateral and directional modes. Control response for all three modes.",
+    "prerequisites": {
+      "text": "(MECH 412 or MECH 419), MECH 533; MECH 533",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 412",
+              "MECH 419"
+            ]
+          },
+          "MECH 533"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 533",
+    "subject": "MECH",
+    "number": "533",
+    "title": "Subsonic Aerodynamics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Kinematics: equations of motion; vorticity and circulation, conformal mapping and flow round simple bodies. Two-dimensional flow round aerofoils. Three-dimensional flows; high and low aspect-ratio wings. Wind tunnel interference. Similarity rules for subsonic irrotational flows.",
+    "prerequisites": {
+      "text": "MECH 331 and MECH 309",
+      "tree": {
+        "and": [
+          "MECH 331",
+          "MECH 309"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to graduate students.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 534",
+    "subject": "MECH",
+    "number": "534",
+    "title": "Air Pollution Engineering",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Pollutants from power production and their effects on the environment. Mechanisms of pollutant formation in combustion. Photochemical pollutants and smog, atmospheric dispersion. Pollutant generation from internal combustion engines and stationary power plants. Methods of pollution control (exhaust gas treatment, absorption, filtration, scrubbers, etc.).",
+    "prerequisites": {
+      "text": "MECH 331, MECH 341.",
+      "tree": {
+        "and": [
+          "MECH 331",
+          "MECH 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 535",
+    "subject": "MECH",
+    "number": "535",
+    "title": "Turbomachinery and Propulsion",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to propulsion: turboprops, turbofans and turbojets. Review of thermodynamic cycles. Euler turbine equation. Velocity triangles. Axial-flow compressors and pumps. Centrifugal compressors and pumps. Axial-flow turbines. Loss mechanisms. Dimensional analysis of turbomachines. Performance maps. 3-D effects. Introduction to numerical methods in turbomachines. Prediction of performance of gas turbines.",
+    "prerequisites": {
+      "text": "MECH 331.",
+      "tree": "MECH 331",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MECH 430",
+      "tree": "MECH 430",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 536",
+    "subject": "MECH",
+    "number": "536",
+    "title": "Aerospace Structures",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Aircraft and spacecraft structural components and loads. Bending, shear, torsion and buckling of thin-walled open and closed sections. Structural idealization. Principle of stiffener / web construction. Trusses and isogrid structures. Wing spars and box beams. Fuselage frames and wing ribs. Analysis of riveted, bolted and adhesive joints. Sandwich structures analysis. Thermoelasticity analysis for spacecraft structures.",
+    "prerequisites": {
+      "text": "MECH 321 or equivalent",
+      "tree": "MECH 321",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MECH 432.",
+      "excludes": [
+        "MECH 432"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 539",
+    "subject": "MECH",
+    "number": "539",
+    "title": "Computational Aerodynamics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental equations. Basic flow singularities. Boundary element methods. Source, doublet and vortex panel methods for 2D and 3D incompressible and compressible flows. Method of characteristics. Euler equations for inviscid rotational flows. Finite-difference and finite-volume methods. Explicit and implicit time-integration methods. Quasi 1D solutions. Nozzle and confined aerofoil applications.",
+    "prerequisites": {
+      "text": "MECH 309 or MATH 317, MECH 533.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 309",
+              "MATH 317"
+            ]
+          },
+          "MECH 533"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 542",
+    "subject": "MECH",
+    "number": "542",
+    "title": "Spacecraft Dynamics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of central force motion; Hohmann and other coplanar transfers, rotation of the orbital plane, patched conic method. Orbital perturbations due to the earth's oblateness, solar-lunar attraction, solar radiation pressure and atmospheric drag. Attitude dynamics of a rigid spacecraft; attitude stabilization and control; attitude manoeuvers; large space structures.",
+    "prerequisites": {
+      "text": "MECH 220. Corequisite: MECH 412 or MECH 419",
+      "tree": {
+        "and": [
+          "MECH 220",
+          {
+            "or": [
+              "MECH 412",
+              "MECH 419"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 543",
+    "subject": "MECH",
+    "number": "543",
+    "title": "Design with Composite Materials",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Material systems/selection process. Cost vs. performance. Laminate layup procedures. Theory and application of filament winding of composite cylinders. Regular oven and autoclave oven curing, analysis of resulting material performance. Practical design considerations and tooling. Analysis of environmental considerations. Joining techniques. Analysis of test methods. Theory of repair techniques.",
+    "prerequisites": {
+      "text": "MECH 530",
+      "tree": "MECH 530",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MECH 544",
+    "subject": "MECH",
+    "number": "544",
+    "title": "Processing of Composite Materials",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Composite processing science basic principles. Reinforcement properties; permeability, compaction. Resin properties; curing, viscosity, shrinkage. Heat transfer and cure kinetics; cure cycle optimization. Resin flow; infusion, thickness variations, fiber volume fraction distribution. Residual stresses; tool-part interaction, warpage control, spring-back, tool design. Thermoplastic composites; crystallization control, melting and consolidation.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MECH 530 or permission of the instructor.",
+      "tree": "MECH 530",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "This course requires the use of a finite element software, so experience with finite elements is recommended.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 546",
+    "subject": "MECH",
+    "number": "546",
+    "title": "Finite Element Methods in Solid Mechanics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discrete systems; variational formulation and approximation for continuous systems; direct and variational methods of element formulation in 1- 2- and 3 dimensions; formulation of isoparametric finite elements; plate and shell elements; finite element method for static analysis, vibration analysis and structural dynamics; introduction to nonlinear problems.",
+    "prerequisites": {
+      "text": "MECH 315 or MECH 419, and MECH 321, or instructor's permission.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 315",
+              "MECH 419"
+            ]
+          },
+          "MECH 321"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MECH 645.",
+      "excludes": [
+        "MECH 645"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 547",
+    "subject": "MECH",
+    "number": "547",
+    "title": "Mechanics of Biological Materials",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Mechanics of proteins (collagen, keratin), polysaccharides (cellulose, chitin), cells, skin, bone, teeth, seashells, insect and arthropod cuticles. Emphasis on microstructure-property-function relationships and on multiscale approach. State-of-the-art experimental and modelling techniques. Self-healing and adaptive biological materials.",
+    "prerequisites": {
+      "text": "MECH 210, MIME 260 or MIME 261, or permission of instructor",
+      "tree": {
+        "and": [
+          "MECH 210",
+          {
+            "or": [
+              "MIME 260",
+              "MIME 261"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 548",
+    "subject": "MECH",
+    "number": "548",
+    "title": "Cellular Materials in Natural and Engineering Structures",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Overview of hierarchical solids exhibiting cellular structure. Cell size, shape and topology of bending and stretching dominated materials, including periodic microtruss lattice, plant cellular tissue and trabecular bone. Theories for modelling the mechanics and the physical properties; design and optimization of multifunctional cellular solids for ultralight aerospace and biomedical applications.",
+    "prerequisites": {
+      "text": "MECH 210, MIME 260 or MIME 261, or permission of instructor",
+      "tree": {
+        "and": [
+          "MECH 210",
+          {
+            "or": [
+              "MIME 260",
+              "MIME 261"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 553",
+    "subject": "MECH",
+    "number": "553",
+    "title": "Design and Manufacture of Microdevices",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to microelectromechanical systems (MEMS). Micromachining techniques (thin-film deposition; lithography; etching; bonding). Microscale mechanical behaviour (deformation and fracture; residual stresses; adhesion; experimental techniques). Materials- and process-selection. Process integration. Design of microdevice components to meet specified performance and reliability targets using realistic manufacturing processes.",
+    "prerequisites": {
+      "text": "MECH 309, MECH 321, (MECH 315 or MECH 419)",
+      "tree": {
+        "and": [
+          "MECH 309",
+          "MECH 321",
+          {
+            "or": [
+              "MECH 315",
+              "MECH 419"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 556",
+    "subject": "MECH",
+    "number": "556",
+    "title": "Microfluidics and BioMEMS",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of micro-electro-mechanical systems (MEMS) and microfluidic devices (also called lab-on-a-chip devices), and their applications to biology and medicine. Topics include: microfabrication techniques, MEMS sensing and actuation principles, microfluidics theories, microfluidic device design, packaging and characterization of MEMS and microfluidic devices, bioanalytical techniques in microfluidics. Students will have the opportunity to conduct two term designs in microfluidics and bioMEMS.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: (3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 559",
+    "subject": "MECH",
+    "number": "559",
+    "title": "Engineering Systems Optimization",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to systems-oriented engineering design optimization. Emphasis on i) understanding and representing engineering systems and their structure, ii) obtaining, developing, and managing adequate computational (physics- and data-based) models for their analysis, iii) constructing appropriate design models for their synthesis, and iv) applying suitable algorithms for their numerical optimization while accounting for systems integration issues. Advanced topics such as coordination of distributed problems and non-deterministic design optimization methods.",
+    "prerequisites": {
+      "text": "(MATH 264 or GEPR 221) and MECH 309",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 264",
+              "GEPR 221"
+            ]
+          },
+          "MECH 309"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "MECH 560",
+    "subject": "MECH",
+    "number": "560",
+    "title": "Eco-design and Product Life Cycle Assessment ",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of both product and process engineering with an emphasis on life cycle models and sustainability. Practical and theoretical topics, methodologies, principles, and techniques. Practical methods such as Life Cycle Analysis, eco-design strategies, streamlined Life Cycle Assessment, environmental impact assessment, and Life Cycle Engineering. Introduction to important product development theories and life cycle assessment theories.",
+    "prerequisites": {
+      "text": "MECH 360",
+      "tree": "MECH 360",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 561",
+    "subject": "MECH",
+    "number": "561",
+    "title": "Biomechanics of Musculoskeletal Systems",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The musculoskeletal system; general characteristics and classification of tissues and joints. Biomechanics and clinical problems in orthopaedics. Modelling and force analysis of musculoskeletal systems. Passive and active kinematics. Load-deformation properties of passive connective tissue, passive and stimulated muscle response. Experimental approaches, case studies.",
+    "prerequisites": {
+      "text": "MECH 321 and (MECH 315 or MECH 419)",
+      "tree": {
+        "and": [
+          "MECH 321",
+          {
+            "or": [
+              "MECH 315",
+              "MECH 419"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 562",
+    "subject": "MECH",
+    "number": "562",
+    "title": "Advanced Fluid Mechanics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Conservation laws, control volume analysis, Navier stokes equations, dimensional analysis and limiting forms of N-S equation, laminar viscous flows, boundary layer theory, inviscid potential flows, lift and drag, introduction to turbulence.",
+    "prerequisites": {
+      "text": "MATH 271 or permission of instructor.",
+      "tree": "MATH 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 563",
+    "subject": "MECH",
+    "number": "563",
+    "title": "Biofluids and Cardiovascular Mechanics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic principles of circulation including vascular fluid and solid mechanics, modelling techniques, clinical and experimental methods and the design of cardiovascular devices.",
+    "prerequisites": {
+      "text": "CHEE 314 or MECH 331 or permission of instructor",
+      "tree": {
+        "or": [
+          "CHEE 314",
+          "MECH 331"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 563",
+      "excludes": [
+        "CHEE 563"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 564",
+    "subject": "MECH",
+    "number": "564",
+    "title": "Thermal Radiation and Solar Energy Systems",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of thermal radiation. Black body thermal radiation. Radiative properties of real materials. Surface-to-surface radiation exchange. Radiation with conduction and convection. Radiation in absorbing, emitting and scattering media. Numerical methods to solve radiative transfer equation. Solar thermal energy systems. Solar collectors. Concentrating Solar Power (CSP) technology.",
+    "prerequisites": {
+      "text": "MECH 346, COMP 208",
+      "tree": {
+        "and": [
+          "MECH 346",
+          "COMP 208"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3-0-6"
+    ]
+  },
+  {
+    "code": "MECH 565",
+    "subject": "MECH",
+    "number": "565",
+    "title": "Fluid Flow and Heat Transfer Equipment",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Pipes and piping systems, pumps, and valves. Fans and building air distribution systems. Basic thermal design methods for fins and heat exchangers. Thermal design of shell-and-tube and compact heat exchangers.",
+    "prerequisites": {
+      "text": "MECH 240, MECH 309 or MATH 317, MECH 331, MECH 341, MECH 346 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MECH 240",
+          {
+            "or": [
+              "MECH 309",
+              "MATH 317"
+            ]
+          },
+          "MECH 331",
+          "MECH 341",
+          "MECH 346"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 566",
+    "subject": "MECH",
+    "number": "566",
+    "title": "Fluid-Structure Interactions",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Pipes and cylindrical shells containing flow: fundamentals and applications in ocean mining, Coriolis mass-flow meters, heat exchangers, nuclear reactors and aircraft engines; chaos. Cylinders in axial flow and in cross-flow; vortex-shedding and galloping. Cylinder arrays in cross-flow; fluidelastic instabilities. Ovalling of chimneys.",
+    "prerequisites": {
+      "text": "MECH 315 or MECH 419 or equivalent.",
+      "tree": {
+        "or": [
+          "MECH 315",
+          "MECH 419"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 567",
+    "subject": "MECH",
+    "number": "567",
+    "title": "Structural Dynamics of Turbomachines",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of turbomachines from the standpoint of structural dynamics and vibration analysis, with preference given to aerospace applications involving aircraft and helicopter engines. Topics include: introduction to the finite element method, aircraft/helicopter engines architecture and main components, general equations of motion in rotordynamics, advanced modal analysis, Campbell diagrams and critical rotational velocity, mistuning and cyclic symmetry, fluid-structure coupling, flutter analysis, high-cycle fatigue.",
+    "prerequisites": {
+      "text": "MECH 321 and MECH 412 or MECH 419",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MECH 321",
+              "MECH 412"
+            ]
+          },
+          "MECH 419"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 572",
+    "subject": "MECH",
+    "number": "572",
+    "title": "Mechanics and Control of Robotic Manipulators",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Historical development and applications of robotic manipulators. Homogeneous transformations and geometry. Forward and inverse kinematics, manipulator Jacobian. Newton-Euler and Lagrangian formulations of inverse and forward dynamics. Trajectory planning for pick-and-place operations. Linear independent joint control and nonlinear model-based control schemes.",
+    "prerequisites": {
+      "text": "MATH 271 and MECH 412 / MECH 419 or permission of instructor",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MATH 271",
+              "MECH 412"
+            ]
+          },
+          "MECH 419"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MECH 573",
+      "excludes": [
+        "MECH 573"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 573",
+    "subject": "MECH",
+    "number": "573",
+    "title": "Mechanics of Robotic Systems",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Manipulator performance and design. Pick-and-place and continuous-path operations. Computation of rigid-body angular velocity and acceleration from point-data measurements. Inverse kinematics of serial manipulators with coupled architectures; kinetostatics of multifingered hands and walking machines. Kinematics and dynamics of parallel manipulators and wheeled mobile robots.",
+    "prerequisites": {
+      "text": "MECH 309 or MATH 317, and MECH 572 or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 309",
+              "MATH 317"
+            ]
+          },
+          "MECH 572"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Since the course is open to both undergraduate and graduate students, and B- is the minimum passing mark for graduate students, this minimum mark will be relaxed for undergraduates. The regulations applicable to undergraduates will apply accordingly."
+    ]
+  },
+  {
+    "code": "MECH 578",
+    "subject": "MECH",
+    "number": "578",
+    "title": "Advanced Thermodynamics",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Review of classical mechanics; Boltzmann statistics, thermodynamics of ideal gases; Fermi-Dirac and Bose-Einstein statistics, Gibbsian ensembles; elementary kinetic theory of transport processes, Boltzmann equation, Boltzmann H-theorem and entropy, KBG approximation, discussion on the solution of Boltzmann equation; Maxwell transport equations, derivation of Navier Stokes equations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 579",
+    "subject": "MECH",
+    "number": "579",
+    "title": "Numerical Optimization",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A comprehensive introduction to important algorithms in sensitivity analysis, and unconstrained and constrained numerical optimization of large systems. Topics include unconstrained and constrained optimization, sensitivity analysis, gradient-free optimization, multi-objective optimization, neural networks, and various multidisciplinary algorithms and approaches for design optimization.",
+    "prerequisites": {
+      "text": "MECH 309",
+      "tree": "MECH 309",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MECH 600",
+    "subject": "MECH",
+    "number": "600",
+    "title": "Advanced Topics in Mechanical Engineering 1",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "New developments related to mechanical engineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-8)"
+    ]
+  },
+  {
+    "code": "MECH 602",
+    "subject": "MECH",
+    "number": "602",
+    "title": "Advanced Topics in Mechanical Engineering 2",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "New developments related to Mechanical Engineering will be presented either by staff or by visiting professors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 603",
+    "subject": "MECH",
+    "number": "603",
+    "title": "M. Eng. Project 1",
+    "credits": 9,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 604",
+    "subject": "MECH",
+    "number": "604",
+    "title": "M. Eng. Project 2",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 605",
+    "subject": "MECH",
+    "number": "605",
+    "title": "Applied Mathematics 1",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Tensor Analysis, Gauss and Stokes Theorems, Complex Functions, Laplace and Fourier transforms, Linear Algebra, Initial and Boundary Value Problems for ODE's, Partial Differential Equations including elliptic, parabolic and hyperbolic, Sturm-Liouville theory, Eigenvalue problems, Galerkin Method, Green's Functions and transform methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 609",
+    "subject": "MECH",
+    "number": "609",
+    "title": "Seminar",
+    "credits": 1,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "All candidates for a Master's degree (except those in the Aerospace Program) must present one seminar dealing with their research topic, and attend at least twelve seminars presented by other Masters students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is graded Pass/Fail."
+    ]
+  },
+  {
+    "code": "MECH 610",
+    "subject": "MECH",
+    "number": "610",
+    "title": "Fundamentals of Fluid Dynamics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Conservation laws control volume analysis, Navier Stokes Equations and some exact solutions, dimensional analysis and limiting forms of Navier Stokes Equations. Vorticity, Potential flow and lift, boundary layer theory, drag, turbulence.",
+    "prerequisites": {
+      "text": "MECH 605 or permission of instructor",
+      "tree": "MECH 605",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 632",
+    "subject": "MECH",
+    "number": "632",
+    "title": "Advanced Mechanics of Materials",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of stress, strain, equilibrium and boundary conditions. Constitutive equations for linear and non-linear elasticity; viscoelasticity; rubber elasticity. Implementation of nonlinear constitutive relations for mechanical engineering applications. Material selection charts and overview of the major classes of materials (metals, polymers, ceramics, cellular materials, composites and biomaterials). Microscale mechanisms and their relation to macroscopic performance. Plasticity in metals: deformation maps, micromechanics, failure criteria, post-yield flow, creep and temperature effects. Structure and properties of polymers, models for plasticity and crazing. Fracture and fatigue, Weibull statistics for ceramics and glasses. Selected advanced topics and discussion of modern materials.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 642",
+    "subject": "MECH",
+    "number": "642",
+    "title": "Advanced Dynamics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Variational methods. Hamilton's principle and equations of motion of engineering systems. Lagrangian formulations for discrete systems. Methods of discretizing continuous systems. Rigid body dynamics. Dynamic behaviour of linear and nonlinear systems. Response of engineering systems to deterministic inputs by classical methods. Stability of linear and nonlinear systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Evening course"
+    ]
+  },
+  {
+    "code": "MECH 650",
+    "subject": "MECH",
+    "number": "650",
+    "title": "Fundamentals of Heat Transfer",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Heat conduction: analytical solutions; integral solutions; solid-liquid phase-change. Forced and natural convection: nondimensionalization; boundary layer theory; design correlations for external and internal flows; basic ideas of turbulence modelling. Mixed convection. Boiling and condensation. Radiation heat transfer: basic concepts; black-body enclosure theory; gray-body enclosure theory; participating media.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Evening course"
+    ]
+  },
+  {
+    "code": "MECH 652",
+    "subject": "MECH",
+    "number": "652",
+    "title": "Dynamics of Combustion",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Chemical thermodynamics and chemical kinetics, Hugoniot analysis of reacting flows, conservation equation for reactive mixtures, Reacting couette flows, boundary layers and shear layers. Laminar premixed flames, Detonation theory and ZND structure. Stability of flames and detonations, limits, ignition energies and quenching distance, dynamic parameters of detonations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 654",
+    "subject": "MECH",
+    "number": "654",
+    "title": "Computational Fluid Flow and Heat Transfer",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A study of numerical methods for solving complex problems involving fluid flow and heat transfer. Finite volume methods, and overview of control-volume finite element methods. Methods for solving large systems of coupled nonlinear algebraic discretized equations. Mathematical models for turbulence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Evening course"
+    ]
+  },
+  {
+    "code": "MECH 656",
+    "subject": "MECH",
+    "number": "656",
+    "title": "Fundamentals of Turbulent Flow",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An introduction to turbulence and turbulent flows, including the turbulent transport of momentum and heat, the dynamics of turbulence, free shear flows, wall-bounded flows, the statistical description of turbulence, and an overview of the measurement, simulation and modelling of turbulence.",
+    "prerequisites": {
+      "text": "MECH 452 or MECH 605 or equivalent, and MECH 562 or MECH 610 or equivalent.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MECH 452",
+              "MECH 605"
+            ]
+          },
+          {
+            "or": [
+              "MECH 562",
+              "MECH 610"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MECH 661",
+    "subject": "MECH",
+    "number": "661",
+    "title": "Finite Element Methods in Computational Fluid Dynamics",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The Finite Element Method, assembly rules, solution of linear systems. The direct approach. The variational approach. The weighted residual approach: Rayleigh-Ritz, least-squares, sub-domain and collation, weak-Galerkin formulation. Elements and interpolation functions. Classification of differential equation systems. Formulation and applications for incompressible, compressible and transonic inviscid and viscous flows.",
+    "prerequisites": {
+      "text": "MECH 610.",
+      "tree": "MECH 610",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 669",
+    "subject": "MECH",
+    "number": "669",
+    "title": "Computational Science Engineering Seminar",
+    "credits": 1,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Techniques and applications in computational science and engineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This seminar course is open only to students who were admitted to the CSE Program Option.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MECH 672",
+    "subject": "MECH",
+    "number": "672",
+    "title": "Navigation and Control of Robotic and Aerospace Systems",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Modelling, navigation and control of robotic and aerospace systems that can rotate and translate in three-dimensional space. Kinematic and dynamic models. Nonlinear state-estimation strategies for navigation. Nonlinear control strategies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3-0-9"
+    ]
+  },
+  {
+    "code": "MECH 681",
+    "subject": "MECH",
+    "number": "681",
+    "title": "Aeronautics Project",
+    "credits": 6,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A project on aerospace topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Aeronautical Option only, with permission of the Department.; Not open to students who have taken MECH 682.",
+      "excludes": [
+        "MECH 682"
+      ]
+    },
+    "notes": [
+      "An alternative course for MECH 688 Industrial Stage, that may be permitted by the Department, when no stage is available.",
+      "An evaluation of the candidate's performance during the period of the project becomes part of the student's record."
+    ]
+  },
+  {
+    "code": "MECH 687",
+    "subject": "MECH",
+    "number": "687",
+    "title": "Aerospace Case Studies",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course covers topical case studies drawn from aerospace industrial experience. It is conducted in a modular form by experienced engineers from industry. It is given in collaboration with the other two institutions participating in this joint option/program, and may be conducted at any of the three locations in the language of convenience to the instructors.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "students in the Aerospace Engineering Option/Programs at McGill, Concordia, École Polytechnique or École de Technologie Supérieure.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MECH 688",
+    "subject": "MECH",
+    "number": "688",
+    "title": "Industrial Stage",
+    "credits": 6,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An integral component of the program that is to be completed under the supervision of an experienced engineer in the facilities of a participating company. The topic is to be decided by a mutual agreement between the candidate, the participating company and the Liaison Committee on Aerospace Engineering. An evaluation of the candidate's performance during the work period becomes a part of the student's record.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "students in the Aerospace Engineering Option/Program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MECH 691",
+    "subject": "MECH",
+    "number": "691",
+    "title": "M.Sc. Thesis Literature Review",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comprehensive literature review in the general area of the thesis topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is graded Pass/Fail.",
+      "Must register for and complete in the first semester.",
+      "Failure to submit the Literature Review by the stated date will result in an F grade."
+    ]
+  },
+  {
+    "code": "MECH 692",
+    "subject": "MECH",
+    "number": "692",
+    "title": "M.Sc.Thesis Research Proposal",
+    "credits": 4,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Initiation of research and submission of a proposal for the thesis topic and research objectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is graded Pass/Fail.",
+      "Must be completed in the second semester.",
+      "Failure to submit the Thesis Proposal by the stated date will result in an F grade."
+    ]
+  },
+  {
+    "code": "MECH 693",
+    "subject": "MECH",
+    "number": "693",
+    "title": "M.Sc.Thesis Progress Report 1",
+    "credits": 3,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A first status report on the progress in the thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 694",
+    "subject": "MECH",
+    "number": "694",
+    "title": "M.Sc. Thesis Progress Report 2",
+    "credits": 6,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A second status report on the progress in the thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 695",
+    "subject": "MECH",
+    "number": "695",
+    "title": "M.Sc. Thesis",
+    "credits": 12,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Submission of the M.Sc. thesis for examination.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MECH 696",
+    "subject": "MECH",
+    "number": "696",
+    "title": "M.Sc. Research Thesis",
+    "credits": 25,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Submission of the M.Sc. research thesis for examination.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who were admitted to the M.Sc. Mechanical Engineering (Thesis) program prior to Fall 2026.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MECH 700",
+    "subject": "MECH",
+    "number": "700",
+    "title": "Ph.D. Literature Review",
+    "credits": 0,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation of a written literature review.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course must be completed in the student's second term, within 8 months of initial registration in the program."
+    ]
+  },
+  {
+    "code": "MECH 701",
+    "subject": "MECH",
+    "number": "701",
+    "title": "Ph.D. Thesis Proposal",
+    "credits": 0,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation of the Ph.D. thesis proposal by the student.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course must be completed in the student's third term, within 12 months of initial registration in the program."
+    ]
+  },
+  {
+    "code": "MECH 702",
+    "subject": "MECH",
+    "number": "702",
+    "title": "Ph.D. Comprehensive Preliminary Oral Examination",
+    "credits": 0,
+    "offeredBy": "Mechanical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of the Ph.D. thesis proposal by the student and oral examination of the student's background in related areas.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This exam must be taken in the student's fourth term, within 16 months of initial registration in the program."
+    ]
+  }
+]

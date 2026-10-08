@@ -1,0 +1,191 @@
+[
+  {
+    "code": "CMSC 000",
+    "subject": "CMSC",
+    "number": "000",
+    "title": "Foundations of Mathematics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "First-degree equations and applied word problems, polynomials, factoring, fractions, exponents, roots and radicals, inequalities, quadratic equations and functions, composite and inverse functions, arithmetic and geometric sequences and series.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The passing grade for this course is B-"
+    ]
+  },
+  {
+    "code": "CMSC 003",
+    "subject": "CMSC",
+    "number": "003",
+    "title": "Foundations of Logarithms,Trigonometry & Intro to Calculus",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Introduction to logarithms and trigonometry. Topics include logs and exponents, using linear equations, limits and differentiation, continuity, derivatives, and introduction to integral calculus.",
+    "prerequisites": {
+      "text": "CMSC 000",
+      "tree": "CMSC 000",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMSC 004",
+    "subject": "CMSC",
+    "number": "004",
+    "title": "Foundations:Statistics, Probability&Intro to Linear Algebra",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Statistics and probability, with an introduction to linear algebra, Gaussian elimination for solving linear systems, and an introduction to vectors and matrices in the context of linear systems.",
+    "prerequisites": {
+      "text": "CMSC 003",
+      "tree": "CMSC 003",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMSC 101",
+    "subject": "CMSC",
+    "number": "101",
+    "title": "Mathematical Tools for Management Professionals",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Exponential and logarithmic functions and equations, mathematics of finance, permutations and combinations, introduction to probability, limits and derivatives with applications, matrices and systems of linear equations.",
+    "prerequisites": {
+      "text": "CMSC 000 Foundations of Mathematics or Diagnostic Test",
+      "tree": "CMSC 000",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMSC 105",
+    "subject": "CMSC",
+    "number": "105",
+    "title": "Topics in Foundations of Mathematics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "A selection of introductory topics in the foundations of mathematics.",
+    "prerequisites": {
+      "text": "CMSC 000 or Departmental Approval.",
+      "tree": "CMSC 000",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMSC 110",
+    "subject": "CMSC",
+    "number": "110",
+    "title": "Topics in Applied Mathematics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "A selection of intermediate-level topics in applied mathematics.",
+    "prerequisites": {
+      "text": "CMSC 000 or Departmental Approval.",
+      "tree": "CMSC 000",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMSC 203",
+    "subject": "CMSC",
+    "number": "203",
+    "title": "Survey of Basic Mathematics 1",
+    "credits": null,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Review of analytic geometry, limits, continuity, the derivative, differentiation rules, curve sketching, application to economics, elasticity, problems in optimization, related rates, the differential, log and exponential, continuous compounding, partial differentiation, method of Lagrange multipliers, method of least squares.",
+    "prerequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMSC 310",
+    "subject": "CMSC",
+    "number": "310",
+    "title": "Managerial Economics and Analysis",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An overview of the economic theories as well as the internal and external economic factors that influence business so as to apply and understand managerial decision-making tools. Consideration will be paid to foundational topics such as theories of supply and demand; consumer behaviour; production, cost and pricing strategies; market structures; and optimization techniques.",
+    "prerequisites": {
+      "text": "CMSC 000",
+      "tree": "CMSC 000",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MGCR 293",
+      "excludes": [
+        "MGCR 293"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CMSC 320",
+    "subject": "CMSC",
+    "number": "320",
+    "title": "Business Statistics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "An overview of descriptive statistics, probability, random variables, binomial, Poisson, normal distributions, sampling distribution of the mean, estimation, hypothesis testing, analysis of variance, tests of goodness of fit, linear and multiple regression, non-parametric statistics. Business and management case studies will be used.",
+    "prerequisites": {
+      "text": "CMSC 101",
+      "tree": "CMSC 101",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MGCR 273",
+      "excludes": [
+        "MGCR 273"
+      ]
+    },
+    "notes": []
+  }
+]

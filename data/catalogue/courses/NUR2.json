@@ -1,0 +1,1805 @@
+[
+  {
+    "code": "NUR2 209",
+    "subject": "NUR2",
+    "number": "209",
+    "title": "Human Physiology for Health Care 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "The study of human physiology including healthy functioning of different organ systems such as immunological, hematological, and neurological. Exploration of some updates and advanced topics in the field of human physiology such as epigenetics, differences between stem cells and artificial cells and discrete specific immune responses. Emphasis will be on linking understanding of these concepts to maintain, promote and enhance overall health and well-being.",
+    "prerequisites": {
+      "text": "BIOL 111, BIOL 112 CHEM 110, CHEM 120, CHEM 212 (or equivalents)",
+      "tree": {
+        "and": [
+          "BIOL 111",
+          "BIOL 112",
+          "CHEM 110",
+          "CHEM 120",
+          "CHEM 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in U3 of an undergraduate degree, students who have completed an undergraduate degree or to students who have special permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 210",
+    "subject": "NUR2",
+    "number": "210",
+    "title": "Human Physiology for Health Care 2 ",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "The study of human physiology including healthy functioning of different organ systems such as cardiovascular, renal, and reproductive. Exploration of some updates and advanced topics in the field of human physiology such as chronobiology, sport physiology and the physiological mechanism of aging. Emphasis will be on linking understanding of these concepts to maintain, promote and enhance overall health and well-being.",
+    "prerequisites": {
+      "text": "NUR2 209 (or equivalent)",
+      "tree": "NUR2 209",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in U3 of an undergraduate degree, students who have completed an undergraduate degree or to students who have special permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 500",
+    "subject": "NUR2",
+    "number": "500",
+    "title": "Integrated Health Sciences 1",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This integrated health sciences course will focus on the study of the pathophysiologic alterations in health across the lifespan, looking at selected diseases and pharmacotherapy that are most prevalent in North America. It will explore concepts of disease causation: acquired, immune, infectious, carcinogenic, genetic, and biochemical alterations in health in selected body systems with an emphasis on etiology, cellular and systemic pathophysiologic responses, clinical manifestations, diagnostic, and pharmacological treatment modalities. A focus on drug mechanisms of action, pharmacodynamics, pharmacokinetics, pharmacotherapeutics, patient safety and professional nursing responsibilities in drug administration will also be covered. Hematologic, musculoskeletal, cardiac, neurological integumentary and multiple interacting systems with an emphasis on etiology, cellular and systemic pathophysiologic responses, clinical manifestations, diagnostic, and treatment modalities will be reviewed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 501",
+    "subject": "NUR2",
+    "number": "501",
+    "title": "Integrated Health Sciences 2",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will build on previous knowledge from NUR2 500 and focus on the study of the pathophysiologic alterations in health across the lifespan, looking at selected diseases that are the most prevalent in North America. Namely examining illness and diseases of the reproductive, endocrine, renal, urologic and digestive systems as well as mental health illness. A focus on drug mechanisms of action, pharmacodynamics, pharmacokinetics, pharmacotherapeutics, patient safety and professional nursing responsibilities in drug administration related to these pathophysiologic alterations in health will be reviewed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 510",
+    "subject": "NUR2",
+    "number": "510",
+    "title": "Practice of Nursing 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the nursing profession, including the principles of strength-based nursing care and the study of concepts, values and approaches basic to nursing. Examination of the application to practice and development of health promotion interventions with people in later life and with a particular focus on healthy aging and rehabilitation.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 513 and NUR2 517",
+      "tree": {
+        "and": [
+          "NUR2 513",
+          "NUR2 517"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 511D1.",
+      "excludes": [
+        "NUR2 511D1"
+      ]
+    },
+    "notes": [
+      "A fee of $25.80 for two name pins will be charged based on registration in this course."
+    ]
+  },
+  {
+    "code": "NUR2 511",
+    "subject": "NUR2",
+    "number": "511",
+    "title": "Practice of Nursing 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An exploration of how families cope with the transition of expected and unexpected life events with a focus on the essential qualities of the nursing therapeutic relationship and the impact it has on individual/family outcomes, including strength-based nursing care. Integration of family-centered, health-centered and collaborative care. Nurses’ strengths of mindset, knowledge and knowing, relationships and advocacy. Values, beliefs and attitudes in relation to parenting, breast-feeding, role acquisition and mental health.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 514 and NUR2 518",
+      "tree": {
+        "and": [
+          "NUR2 514",
+          "NUR2 518"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 511D2.",
+      "excludes": [
+        "NUR2 511D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 512",
+    "subject": "NUR2",
+    "number": "512",
+    "title": "Practice and Theory in Nursing",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Learning to nurse patients in acute care settings, who are experiencing a variety of common illness-related problems.",
+    "prerequisites": {
+      "text": "NUR2 514",
+      "tree": "NUR2 514",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the length of the clinical course, add/drop is the eleventh lecture day and withdrawal is the fifteenth lecture day.",
+      "**Although this course officially starts on May 11th, there will be an intro session on May 4th.",
+      "**In order to secure placement in clinical courses and internships, the add/drop is March 28th which is before the start of the course, and withdrawal"
+    ]
+  },
+  {
+    "code": "NUR2 513",
+    "subject": "NUR2",
+    "number": "513",
+    "title": "Introduction to Nursing Care",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical field experiences provide opportunities for students to apply the knowledge, concepts and approaches learned in nursing and allied health courses. Learning to promote health during normative and non-normative life events is a major focus. This includes the practice and development of biophysical, interpersonal and technical nursing skills. In addition, field experiences enable students to demonstrate leadership, self-direction and professionalism in their interactions with clients and families as well as in their work with professional colleagues from nursing and other disciplines.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 510, NUR2 517, IPEA 500.",
+      "tree": {
+        "and": [
+          "NUR2 510",
+          "NUR2 517",
+          "IPEA 500"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 513 prior to 201909.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 514",
+    "subject": "NUR2",
+    "number": "514",
+    "title": "Introduction to Nursing 2",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course aims to include a wide range of concepts related to developmental issues, safety, culture, working with the family as the unit of care and coping with acute illness. Strength-based nursing, nursing process, systematic assessment, illness specific management, ethical issues and developing knowledge specific to the clinical area will guide the student’s learning. The field experiences enable students to continue to develop a strengthbased patient family approach to promote health during a normative life event (maternal-child) and a non-normative life events (mental health/illness crisis).",
+    "prerequisites": {
+      "text": "NUR2 513",
+      "tree": "NUR2 513",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR2 511, NUR2 518 and IPEA 501",
+      "tree": {
+        "and": [
+          "NUR2 511",
+          "NUR2 518",
+          "IPEA 501"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 514 prior to 201909",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 515",
+    "subject": "NUR2",
+    "number": "515",
+    "title": "Applied Statistics for Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of data analysis and statistical inference with an emphasis on the utilization and interpretation of analysis of variance and regression procedures in nursing research. An additional emphasis will be on critiquing data analysis in current nursing research articles.",
+    "prerequisites": {
+      "text": "PSYC 204 or Undergraduate Introductory-Level Statistics Course",
+      "tree": "PSYC 204",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 516",
+    "subject": "NUR2",
+    "number": "516",
+    "title": "Perspectives on Global Health",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An overview of the main issues in global health studies, approaches by which to understand these issues, and the importance of making reasoned links between the key global health studies concepts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students registered in the M.Sc. (Applied) in Nursing (Global Health area of study) and to Direct-Entry Qualifying year students or with permission from the instructor",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 517",
+    "subject": "NUR2",
+    "number": "517",
+    "title": "Nursing Clinical Skills Laboratory 1",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This laboratory course addresses a range of clinical skills that support health and healing capacities in adults.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 510, NUR2 513 and IPEA 500.",
+      "tree": {
+        "and": [
+          "NUR2 510",
+          "NUR2 513",
+          "IPEA 500"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 513 prior to 201909.",
+      "excludes": [
+        "NUR2 513"
+      ]
+    },
+    "notes": [
+      "A nominal fee of $27.88 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR2 518",
+    "subject": "NUR2",
+    "number": "518",
+    "title": "Nursing Clinical Skills Laboratory 2",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This laboratory course addresses a range of clinical skills that support health and healing capacities in adults and newborns.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 511, NUR2 514 and IPEA 501",
+      "tree": {
+        "and": [
+          "NUR2 511",
+          "NUR2 514",
+          "IPEA 501"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 514 prior to 201909.",
+      "excludes": [
+        "NUR2 514"
+      ]
+    },
+    "notes": [
+      "A nominal fee of $33.24 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR2 519",
+    "subject": "NUR2",
+    "number": "519",
+    "title": "Nursing Clinical Skills Laboratory 3",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Illness management clinical technical skills, including risks and patient safety issues associated with the procedure; the infection prevention and control guidelines required to perform the skill; fine and gross psychomotor skills relative to performing the procedure; and sensitivity to the patient experience related to the procedure.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 512",
+      "tree": "NUR2 512",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "A nominal fee of $107.25 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 6th and withdrawal is May 9th."
+    ]
+  },
+  {
+    "code": "NUR2 521",
+    "subject": "NUR2",
+    "number": "521",
+    "title": "Wound Care 1",
+    "credits": 1.5,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The introductory principles of assessment and evidence-informed management of chronic and acute wounds in the clinical and community setting. Pressure ulcers, venous leg ulcers, wound infections, wound care products, compression and other types of chronic wounds will be covered along with appropriate treatment options. Nutrition and healing factors will also be explored. The expanded professional and legal scope practice and the role of the multidisciplinary team in managing complex wound care and patient and family teaching and education strategies to support health and healing will be foundational.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 9th and withdrawal is May 23rd."
+    ]
+  },
+  {
+    "code": "NUR2 533",
+    "subject": "NUR2",
+    "number": "533",
+    "title": "Fundamentals of Digital Health",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Comprehensive introduction to digital health. Critical exploration of current and emerging digital health technologies and their implications for supporting and improving health outcomes. Emphasis on understanding the challenges and opportunities digital health presents, as well as ethical and equity considerations to guide the use of these technologies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course activities are asynchronous."
+    ]
+  },
+  {
+    "code": "NUR2 534",
+    "subject": "NUR2",
+    "number": "534",
+    "title": "Health Assessment/Anatomy 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course develops knowledge and skills required to perform a health history and complete health and physical assessment across the lifespan. Human anatomy will be integrated throughout.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 513, NUR2 510",
+      "tree": {
+        "and": [
+          "NUR2 513",
+          "NUR2 510"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 535",
+    "subject": "NUR2",
+    "number": "535",
+    "title": "Health Assessment/Anatomy 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The skills and techniques of effective and comprehensive health and physical assessment.",
+    "prerequisites": {
+      "text": "NUR2 534",
+      "tree": "NUR2 534",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR2 511, NUR2 514",
+      "tree": {
+        "and": [
+          "NUR2 511",
+          "NUR2 514"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in the Qualifying Year to the M.Sc.(A.) in Nursing program.",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade of B- in prerequisite for registration for qualifying year graduate students."
+    ]
+  },
+  {
+    "code": "NUR2 590",
+    "subject": "NUR2",
+    "number": "590",
+    "title": "Introduction to Nursing Theories and Models",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "In this course, students will explore the philosophical underpinnings and the evolution of nursing knowledge as a science and an art. Using seminar time as an opportunity for reflection and discussion, the student will analyze and define the interrelationships between a variety of nursing theories, models, and concepts; and will explore the root of his/her own perspective on nursing practice. This course provides an overview of various world views that influence knowledge creation and development within nursing practice. Emphasis will be placed on the McGill model of Nursing and its application to guide approach and practice within the nursing process.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the Qualifying MScA in Nursing.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 591",
+    "subject": "NUR2",
+    "number": "591",
+    "title": "Introduction to Graduate Practice",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "This course provides an opportunity for international students with an undergraduate degree in Nursing to be introduced to advanced practice nursing roles within a variety of clinical settings. Students will acquire the knowledge, skills and values necessary for advanced practice nursing through exposure to preceptored clinical experiences. This clinical experience will help students to develop clinical reasoning and judgment in complex clinical situations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the Qualifying MScA in Nursing.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 600",
+    "subject": "NUR2",
+    "number": "600",
+    "title": "Knowledge Translation in Healthcare ",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to conceptual models, strategies, and tools to support the identification, implementation, and evaluation of evidence-based practices in nursing and health care. The theoretical foundations for an actual implementation project and an introduction to basic concepts in project management.",
+    "prerequisites": {
+      "text": "NUR2 612",
+      "tree": "NUR2 612",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 601",
+    "subject": "NUR2",
+    "number": "601",
+    "title": "Applied Knowledge Translation in Healthcare 1",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparation and implementation of a Knowledge Translation (KT) project related to best practice approaches in health care delivery. The project is conducted in a clinical setting using a collaborative approach to meet the needs identified by the Clinical Partners. Projects involve the adoption of new nursing practices, care processes or healthcare innovations (e.g., implementation of nursing best-practice guidelines), as well as the evaluation and enhancement of existing nursing care practices or service delivery (e.g., quality improvement initiatives).",
+    "prerequisites": {
+      "text": "NUR2 600",
+      "tree": "NUR2 600",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 602",
+    "subject": "NUR2",
+    "number": "602",
+    "title": "Applied Knowledge Translation in Healthcare 2 ",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Implementation, dissemination, and sustainability of a knowledge translation (KT) project related to best practice approaches in health care delivery. Dissemination of project findings with a particular focus on sustainability and communication plan with their Clinical Partner(s).",
+    "prerequisites": {
+      "text": "NUR2 601",
+      "tree": "NUR2 601",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. This course is 12 weeks in accordance with the schedules at the clinical sites."
+    ]
+  },
+  {
+    "code": "NUR2 603",
+    "subject": "NUR2",
+    "number": "603",
+    "title": "Teaching and Learning in Nursing ",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of the role of the nurse educator in healthcare settings and academia. Focus on application of theoretical and evidence-based approaches to education and exploration of how individuals learn and develop within the nursing profession. Development of educational approaches that promote student learning in face-to-face, hybrid, simulated and online learning environments. Emphasis on course design and development process, teaching and facilitation, student assessments, the evaluation of education activities and critical reflection and dialogue to support development of educational leadership.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 605",
+    "subject": "NUR2",
+    "number": "605",
+    "title": "Advanced Clinical Reasoning",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Using clinical reasoning skills to generate comprehensive, collaborative, culturally safe and customized advanced nursing care plans in response to commonly presenting illnesses based on the best available evidence and with a strengths-based nursing and healthcare approach. Promoting health team effectiveness by identifying and articulating barriers to sound clinical reasoning, managing conflicts, as well as providing effective feedback and debriefing in challenging clinical situations.",
+    "prerequisites": {
+      "text": "NUR2 612",
+      "tree": "NUR2 612",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 606",
+    "subject": "NUR2",
+    "number": "606",
+    "title": "Clinical Reasoning in a Global Context ",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Generating comprehensive, collaborative, culturally safe and customized advanced nursing care plans in response to commonly presenting health/illness issues in underserved populations including those with limited resources. Identification of barriers to sound clinical reasoning and effectively present nursing care plans to other healthcare professionals in diverse settings.",
+    "prerequisites": {
+      "text": "NUR2 612",
+      "tree": "NUR2 612",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 607",
+    "subject": "NUR2",
+    "number": "607",
+    "title": "Children's Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course aims to understand the biological, psychological, and sociocultural perspectives of children 0-18 years and their families using a strength-based nursing framework. This course will go beyond the traditional developmental approach to nursing children and will explore new ways of thinking about their care.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 609",
+      "tree": "NUR2 609",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 608",
+    "subject": "NUR2",
+    "number": "608",
+    "title": "Seminar in Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Students gain advanced knowledge of the processes, mechanisms, and principles that promote health and support healing during normative change, illness, and other unexpected events or crises. Through the study of theory, examination of empirical evidence, and discussion of clinical experiences, students develop a philosophical orientation and a value driven approach to nursing to guide their nursing practice with individuals and families. The orientation to practice is Strengths-Based Nursing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 611D1/D2.",
+      "excludes": [
+        "NUR2 611D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 609",
+    "subject": "NUR2",
+    "number": "609",
+    "title": "Nursing Care of Children and their Families",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical experience working with selected children/adolescents and their families in an acute hospital setting. The focus will be on learning to nurse children/adolescents experiencing illness during an admission to an acute health care facility.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 611D1",
+      "tree": "NUR2 611D1",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 613D1.",
+      "excludes": [
+        "NUR2 613D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 610",
+    "subject": "NUR2",
+    "number": "610",
+    "title": "Ambulatory/Community Care",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Clinical experience in the community/ambulatory settings integrating concepts related to acute and chronic health concerns within a family-centered framework.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 608 and IPEA 502",
+      "tree": {
+        "and": [
+          "NUR2 608",
+          "IPEA 502"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 613D2.",
+      "excludes": [
+        "NUR2 613D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 611",
+    "subject": "NUR2",
+    "number": "611",
+    "title": "Policy Leadership in Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Students continue to gain advanced knowledge of the processes, mechanisms, and principles that promote health and support healing during normative change, illness, and other unexpected events or crises. Through the study of theory, examination of empirical evidence, and discussion of clinical experiences, students develop a philosophical orientation and a value driven approach to nursing to guide their nursing practice with individuals and families.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 611D1 and NUR2 611D2",
+      "excludes": [
+        "NUR2 611D1",
+        "NUR2 611D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 612",
+    "subject": "NUR2",
+    "number": "612",
+    "title": "Research Methods in Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic knowledge and skills needed to conduct research. The philosophy and principles of scientific inquiry, research design, sampling, techniques of data collection, ethics, and incorporating research into practice are discussed with emphasis for nursing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 616",
+    "subject": "NUR2",
+    "number": "616",
+    "title": "Advanced Clinical Skills",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Supervised clinical experiences in health care agencies are aimed at developing competence in technical and family nursing skills at an advanced level. Experience is determined on an individual basis according to learning needs and the student's area of interest.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the length of the clinical course, add/drop is the eleventh lecture day and withdrawal is the fifteenth lecture day.",
+      "**In order to secure placement in clinical courses and internships, the add/drop is March 28th which is before the start of the course, and withdrawal is May 9th which is the first day of class."
+    ]
+  },
+  {
+    "code": "NUR2 617",
+    "subject": "NUR2",
+    "number": "617",
+    "title": "Clinical in Family Systems Nursing 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course develops the knowledge and skills required to enhance the health of families. Family health has to do with ways of learning, developing, relating,behaving, and thinking which promote physical and psychological well-being. It involves coping with adversity by developing or drawing on family and individual strengths, as well as external resources. From the foundational perspective of Strengths-Based Nursing, students will learn approaches to family engagement and assessment using theoretically and empirically grounded strategies for working with families.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 608",
+      "tree": "NUR2 608",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 614D1/D2.",
+      "excludes": [
+        "NUR2 614D1"
+      ]
+    },
+    "notes": [
+      "A fee of $25.56 for two name pins will be charged based on registration in this course."
+    ]
+  },
+  {
+    "code": "NUR2 618",
+    "subject": "NUR2",
+    "number": "618",
+    "title": "Clinical in Family Systems Nursing 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course continues to develop the knowledge and skills required to enhance the health of families. Family health has to do with ways of learning, developing, relating, behaving, and thinking which promote physical and psychological well-being. It involves coping with adversity by developing or drawing on family and individual strengths, as well as external resources. From the foundational perspective of Strengths-Based Nursing, students will continue to develop approaches to family assessment and intervention using theoretically and empirically grounded strategies for working with families.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 611",
+      "tree": "NUR2 611",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 614D1/D2.",
+      "excludes": [
+        "NUR2 614D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 619",
+    "subject": "NUR2",
+    "number": "619",
+    "title": "Nursing Clinical Skills Laboratory 4",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This laboratory course addresses illness management clinical technical skills and is the companion course to NUR2 616. Students develop a range of clinical technical skills related to the GI, urinary, integumentary systems as well as resuscitation and emergency skills.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR2 616, NUR2 621",
+      "tree": {
+        "and": [
+          "NUR2 616",
+          "NUR2 621"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "A nominal fee of $121.19 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 2nd and withdrawal is May 5th."
+    ]
+  },
+  {
+    "code": "NUR2 621",
+    "subject": "NUR2",
+    "number": "621",
+    "title": "Wound Care 2",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This course will focus on teaching the principles of assessment and evidence-informed management of chronic and acute wounds in the clinical and community setting. Wound infections, debridement, wound care products, compression, trauma and other types of chronic and complex wounds will be covered along with appropriate treatment options for general and special populations such as neonatal, pediatric, palliative and obese.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 16th and withdrawal is May 21st."
+    ]
+  },
+  {
+    "code": "NUR2 622",
+    "subject": "NUR2",
+    "number": "622",
+    "title": "Nursing Education Internship",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Nursing education internship with a host organization that focuses on applying and integrating education theory and andragogical issues to teaching practice with a focus on a Strengthen-based Nursing and health care approach to active learning.",
+    "prerequisites": {
+      "text": "NUR2 603",
+      "tree": "NUR2 603",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 623",
+    "subject": "NUR2",
+    "number": "623",
+    "title": "Clinical Assessment and Therapeutics 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Medical, surgical, and nursing management of the major illnesses in adults and children. Topics will include diagnostic tests, drug therapies, dietary management, exercise, relaxation techniques, pain management approaches, patient education, and strategies for maintaining physical and emotional well-being.",
+    "prerequisites": {
+      "text": "PATH 300",
+      "tree": "PATH 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 626",
+    "subject": "NUR2",
+    "number": "626",
+    "title": "Professional Issues in Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of theories of learning and organizational behaviour as related to the preparation of nurses for the delivery of health care services. Implications of these theories for the assessment, development, and evaluation of nursing programs will be investigated.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 629",
+    "subject": "NUR2",
+    "number": "629",
+    "title": "Nursing Administration Stage",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The nurse manager's role in the health care sector. Acquisition of skills and experience in nursing management under the preceptorship of selected nurse managers in order to integrate the McGill Model of nursing in a management context.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Adjunct stream of the MSc(A) in Nursing program.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 8th and withdrawal is May 20th."
+    ]
+  },
+  {
+    "code": "NUR2 630",
+    "subject": "NUR2",
+    "number": "630",
+    "title": "Research Project 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of a proposal for a nursing related clinical project under the supervision of a Faculty member of the Ingram School of Nursing. Introduction to research proposal writing, including the framing of research questions, the selection of methodological approaches, the consideration of ethical principles in the conduct of research, as well as the development of realistic and feasible expectations for developing a project within limited time frames.",
+    "prerequisites": {
+      "text": "NUR2 612",
+      "tree": "NUR2 612",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 631",
+    "subject": "NUR2",
+    "number": "631",
+    "title": "Research Project 2",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Implementation of a project with the expected outcomes of collecting data, transcribing it; entering it into a database; writing and interpreting the data and writing it into a report describing the results.",
+    "prerequisites": {
+      "text": "NUR2 630.",
+      "tree": "NUR2 630",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 632",
+    "subject": "NUR2",
+    "number": "632",
+    "title": "Research Project 3",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Disseminating and reporting, orally and in writing, research findings on a clinical project. The written research report must be in the form of a journal manuscript.",
+    "prerequisites": {
+      "text": "NUR2 631",
+      "tree": "NUR2 631",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 634",
+    "subject": "NUR2",
+    "number": "634",
+    "title": "Clinical Assessment and Therapeutics 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Medical, surgical, and nursing management of the major illnesses in adults and children. Topics will include diagnostic tests, drug therapies, dietary management, symptom management, patient education, and strategies for maintaining physical and emotional well-being.",
+    "prerequisites": {
+      "text": "NUR2 623",
+      "tree": "NUR2 623",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR1 324.",
+      "excludes": [
+        "NUR1 324"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 635",
+    "subject": "NUR2",
+    "number": "635",
+    "title": "Pain Measurement in Children",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Research issues surrounding the measurement of pain throughout childhood. Topics include measurement theory, theoretical and conceptual definitions of pain in children, scale construction, format and scaling issues, reliability, validity, clinical unity, developmental considerations, self-report formats, observational formats, physiological indicators of pain.",
+    "prerequisites": {
+      "text": "Graduate-level course in inferential statistics and graduate or undergraduate course in child development, or permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Health Sciences or Psychology graduate students or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 636",
+    "subject": "NUR2",
+    "number": "636",
+    "title": "Global Health Nursing Internship",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course offers students in the Global Health concentrations an opportunity to integrate knowledge and clinical competencies acquired thus far in the program in collaboration with an on-site mentor. Students may choose to focus the clinical experience in either community nursing or an acute care setting to further develop and strengthen advanced clinical judgment as well as the ability to respond more purposefully to complex health concerns of individuals, families, and/or communities.",
+    "prerequisites": {
+      "text": "NUR2 609 and NUR2 610 OR NUR2 617 and NUR2 618 Minimum Grade or Test Scores : B-",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "NUR2 609",
+              "NUR2 610"
+            ]
+          },
+          {
+            "and": [
+              "NUR2 617",
+              "NUR2 618"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the MSc(A) Nursing - Global Health Direct Entry concentration and MSc(A) Nursing - Global Health concentration. Not open to students who have taken NUR2 625.",
+      "excludes": [
+        "NUR2 625"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 637",
+    "subject": "NUR2",
+    "number": "637",
+    "title": "Clinical Nursing Specialization",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course provides students with the opportunity to focus on a specialty clinical area of their choice. This specialty could include any age group in acute care, specialty care setting or community/public health setting. This will allow an opportunity to care for a specific population of patients with unique health challenges related to their illness and the resulting impact on their family and support networks and resources, complex, unpredictable, and/or intense health needs; expansion or acquisition of new knowledge and skills and role autonomy extending beyond traditional scopes of nursing practice.",
+    "prerequisites": {
+      "text": "NUR2 609, NUR2 610, NUR2 616",
+      "tree": {
+        "and": [
+          "NUR2 609",
+          "NUR2 610",
+          "NUR2 616"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the MSc(A) Nursing - Direct Entry Nursing concentration. Not open to students who have taken NUR2 625.",
+      "excludes": [
+        "NUR2 625"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 638",
+    "subject": "NUR2",
+    "number": "638",
+    "title": "Nursing in Critical Care",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course will provide students with the opportunity to consolidate acquired clinical skills, nursing theory and previous clinical courses in an acute care setting.",
+    "prerequisites": {
+      "text": "NUR2 616 (DE students) or NUR2 636 (GHDE students)",
+      "tree": {
+        "or": [
+          "NUR2 616",
+          "NUR2 636"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 640",
+    "subject": "NUR2",
+    "number": "640",
+    "title": "Clinical Reasoning",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced pathophysiology of diseases across the lifespan, decision-making, and interventions for advanced practice related to illness management in a multiple-problem context, including independent clinical reasoning in the management of health and illness concerns.",
+    "prerequisites": {
+      "text": "PHGY 209, PHGY 210; PATH 300; PHAR 300; or permission of instructor.",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "PHGY 210",
+          "PATH 300",
+          "PHAR 300"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 642",
+    "subject": "NUR2",
+    "number": "642",
+    "title": "Ethics in Advanced Practice",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of common as well as complex ethical issues in advanced nursing practice. General ethical standards for professional practice are reviewed as well as selected controversies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 643",
+    "subject": "NUR2",
+    "number": "643",
+    "title": "Role Development",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Development of advanced practice roles, including professional and legal accountability, interdisciplinary practice, planning change, conflict resolution, referral, and consultation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 646",
+    "subject": "NUR2",
+    "number": "646",
+    "title": "Pharmacology for Primary Care Nurse Practitioners",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Through case presentations, discussions and readings students achieve familiarity with basic concepts of pharmacology including special considerations for various patient populations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.Sc.(A.) in Nursing; Non-Thesis - Primary Care Nurse Practitioner or the Graduate Certificate in Theory in Primary Care.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 649",
+    "subject": "NUR2",
+    "number": "649",
+    "title": "Neonatology Internship 1",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This internship is designed to provide the student with the experience needed to practice as a neonatal nurse practitioner caring for the complex neonatal patient. It will allow the neonatal nurse practitioner student the opportunity to apply theoretical knowledge to the care of the neonate in multiple settings, with focus on practice in Level III neonatal unit. Emphasis will be on the transfer of theoretical knowledge and the individualization of patient care. Family dynamics will be assessed and are considered integral to the management plan. The student will be expected to demonstrate leadership behaviors in the clinical setting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 650D1.",
+      "excludes": [
+        "NUR2 650D1"
+      ]
+    },
+    "notes": [
+      "Open only to students in the Graduate Diploma in Neonatal Nurse Practitioner.",
+      "A fee of $21.39 for one name pin will be charged based on registration in this course."
+    ]
+  },
+  {
+    "code": "NUR2 650",
+    "subject": "NUR2",
+    "number": "650",
+    "title": "Neonatology Internship 2",
+    "credits": 12,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Consolidation and application of advanced nursing and medical knowledge to neonatal practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 650D1.",
+      "excludes": [
+        "NUR2 650D1"
+      ]
+    },
+    "notes": [
+      "Open only to students in the Graduate Diploma in Neonatal Nurse Practitioner."
+    ]
+  },
+  {
+    "code": "NUR2 651",
+    "subject": "NUR2",
+    "number": "651",
+    "title": "Primary Care Internship 1",
+    "credits": 8,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to nurse practitioner clinical practice. The student will begin to implement theoretical advanced nursing and medical knowledge to practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 651D1/D2. Open only to students in the Graduate Diploma Primary Care Nurse Practitioner.",
+      "excludes": [
+        "NUR2 651D1"
+      ]
+    },
+    "notes": [
+      "This course is followed by NUR2 652.",
+      "A fee of $21.39 for one name pin will be charged based on registration in this course.",
+      "**Due to the length of the clinical course, add/drop is the tenth lecture day and withdrawal is the fifteenth lecture day."
+    ]
+  },
+  {
+    "code": "NUR2 652",
+    "subject": "NUR2",
+    "number": "652",
+    "title": "Primary Care Internship 2",
+    "credits": 14,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Consolidation and application of nurse practitioner knowledge to practice. The student will continue to implement theoretical advanced nursing and medical knowledge to practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR2 651D2. Only open to students in the Graduate Diploma Primary Care Nurse Practitioner.",
+      "excludes": [
+        "NUR2 651D2"
+      ]
+    },
+    "notes": [
+      "Continuation of NUR2 651.",
+      "Prerequisite(s: NUR2 651."
+    ]
+  },
+  {
+    "code": "NUR2 666",
+    "subject": "NUR2",
+    "number": "666",
+    "title": "Neonatal Follow-Up Internship",
+    "credits": 6,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This internship is designed to focus on the advanced assessment skills required to provide primary care to high-risk infants and their families within the context of our current health care system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Diploma in Neonatal Nurse Practitioner program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 667",
+    "subject": "NUR2",
+    "number": "667",
+    "title": "Health and Physical Assessment in Primary Care 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Examination of the practical application of the primary care nurse practitioner (PCNP) role in the holistic management of various acute and chronic conditions affecting adult patients and their families, integrating theoretical knowledge and practice of advanced physical assessment and procedure skills to clinical cases.",
+    "prerequisites": {
+      "text": "NUR2 614",
+      "tree": "NUR2 614",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc.(A.) in Nurse Practitioner; Non-Thesis - Primary Care and/or the Graduate Certificate in Primary Care Nurse Practitioner.",
+      "excludes": []
+    },
+    "notes": [
+      "A nominal fee of $129.82 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 9th and withdrawal is May 21st."
+    ]
+  },
+  {
+    "code": "NUR2 668",
+    "subject": "NUR2",
+    "number": "668",
+    "title": "Health and Physical Assessment in Primary Care 2 ",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Further examination of the practical application of the primary care nurse practitioner (PCNP) role in the holistic management of additional various acute and chronic conditions affecting patients and families across the lifespan, integrating theoretical knowledge and practice of advanced physical assessment and procedure skills to clinical cases.",
+    "prerequisites": {
+      "text": "NUR2 639, NUR2 667",
+      "tree": {
+        "and": [
+          "NUR2 639",
+          "NUR2 667"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc.(A.) in Nurse Practitioner; Non-Thesis - Primary Care and/or the Graduate Certificate in Primary Care Nurse Practitioner.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 670",
+    "subject": "NUR2",
+    "number": "670",
+    "title": "Reasoning in Primary Care 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "In this course students will learn decision making/problem solving in the acute presentation of illness as well as the follow up of chronic stable disease of the male and female reproductive system, their role in prenatal care and family planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.Sc.(A.) in Nursing (primary care nurse practitioner specialization) or the Graduate Certificate in Theory in Primary Care",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 671",
+    "subject": "NUR2",
+    "number": "671",
+    "title": "Reasoning in Primary Care 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Decision making/problem solving in the acute presentation of illness as well as the follow-up of chronic stable disease in paediatric populations.",
+    "prerequisites": {
+      "text": "NUR2 670",
+      "tree": "NUR2 670",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.Sc.(A.) in Nursing (primary care nurse practitioner specialization) or the Graduate Certificate Theory in Primary Care.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 672",
+    "subject": "NUR2",
+    "number": "672",
+    "title": "Reasoning in Primary Care 3",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Decision making/problem solving in the follow-up of both chronic stable medical conditions in the following body systems: neurological, muscular, rheumatologic, and peripheral vascular. Familiarity is achieived and competence in recognizing conditions in these same bodily systems that present acutely in undifferentiated patients.",
+    "prerequisites": {
+      "text": "NUR2 670 and NUR2 671",
+      "tree": {
+        "and": [
+          "NUR2 670",
+          "NUR2 671"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.Sc.(A.) in Nursing (primary care nurse practitioner specialization) or the Graduate Certificate in Theory in Primary Care.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 673",
+    "subject": "NUR2",
+    "number": "673",
+    "title": "Reasoning in Primary Care 4",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Decision making/problem solving in the follow up of both chronic stable medical conditions in the following body systems: cardiac, respiratory, and gastrointestinal. Familiarity and competence is achieved in recognizing conditions in these same bodily systems that present acutely in undifferentiated patients and knowing their appropriate disposition.",
+    "prerequisites": {
+      "text": "NUR2 672",
+      "tree": "NUR2 672",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.Sc.(A.) in Nursing (primary care nurse practitioner specialization) or the Graduate Certificate Theory in Primary Care",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 674",
+    "subject": "NUR2",
+    "number": "674",
+    "title": "Reasoning in Primary Care 5",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Decision making/problem solving in the acute presentation of illness as well as the follow up of chronic stable disease in the renal and endocrine systems. Students also will learn about mental illness and the promotion of health behaviours.",
+    "prerequisites": {
+      "text": "NUR2 673",
+      "tree": "NUR2 673",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the M.Sc.(A.) in Nursing (primary care nurse practitioner specialization) or the Graduate Certificate Theory in Primary Care.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 675",
+    "subject": "NUR2",
+    "number": "675",
+    "title": "Reasoning in Primary Care 6",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Decision making/problem solving in the acute presentation of illness as well as the follow up of chronic stable disease in the musculoskeletal and dermatological systems. Students also learn about illness affecting the eyes, ears, nose, and throat and geriatric issues to complement previous teaching on the subject.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma Primary Care Nurse Practitioner program.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "NUR2 676",
+    "subject": "NUR2",
+    "number": "676",
+    "title": "Primary Care Assessment",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Decision making/problem solving skills acquired in previous courses. This course is designed as a health and physical assessment course relevant to the Primary Care Nurse Practitioner. Hands on practice in a laboratory setting before students begin their final integration practicum in various clinical areas with patients.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma Primary Care Nurse Practitioner program.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "NUR2 684",
+    "subject": "NUR2",
+    "number": "684",
+    "title": "Reasoning in Pediatrics 5",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced nursing concepts in pediatric mental health & psychiatry, nephrology & urology, hemato-oncology and gastroenterology. Students will learn the pathophysiology, investigation and management of pediatric mental health & psychiatric, nephrologic & urologic, hemato-oncologic and gastroenterologic disorders.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 685",
+    "subject": "NUR2",
+    "number": "685",
+    "title": "Reasoning in Pediatrics 6",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced nursing concepts in pediatric rheumatology, orthopedics, musculoskeletal and emergency & critical care medicine. Students will learn the pathophysiology, investigation and management of pediatric rheumatologic, orthopedic, musculoskeletal disorders and emergency & critical care medicine.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "NUR2 686",
+    "subject": "NUR2",
+    "number": "686",
+    "title": "Pediatric Assessment",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced nursing assessment of the pediatric patient. Students will learn advanced pediatric skills in the evaluation of children 0 to 18 years of age. Students will learn how to inquire about children and family history, and examine newborns and children in a systematic approach.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day.",
+      "A nominal fee of $78.01 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR2 701",
+    "subject": "NUR2",
+    "number": "701",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral students in order to achieve candidacy status and continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 22nd and withdrawal is May 29th."
+    ]
+  },
+  {
+    "code": "NUR2 702",
+    "subject": "NUR2",
+    "number": "702",
+    "title": "Quantitative Research",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of various experimental, quasi-experimental, correlational, and survey designs with particular focus on the use of these designs in nursing research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 703",
+    "subject": "NUR2",
+    "number": "703",
+    "title": "Issues of Measurement",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination of the underlying theories of measurement and techniques for assessing the validity and reliability of data collection instruments. Issues related to the development and/or utilization of instruments to measure target variables in nursing and health research are addressed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 22nd and withdrawal is May 29th."
+    ]
+  },
+  {
+    "code": "NUR2 706",
+    "subject": "NUR2",
+    "number": "706",
+    "title": "Qualitative Nursing Research",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced examination of the utilization of qualitative research in nursing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolled in Ph.D. in Nursing or permission of instructor",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 711",
+    "subject": "NUR2",
+    "number": "711",
+    "title": "PhD Seminar 1",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Presentation of specialty topics and evolving proposals for peer review.",
+    "prerequisites": {
+      "text": "NUR2 730",
+      "tree": "NUR2 730",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Ph.D. in Nursing students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 712",
+    "subject": "NUR2",
+    "number": "712",
+    "title": "PhD Seminar 2",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Presentation of specialty topics and evolving proposals for peer review.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Ph.D. in Nursing students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 713",
+    "subject": "NUR2",
+    "number": "713",
+    "title": "PhD Seminar 3",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Presentation of specialty topics and evolving proposals for peer review.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Ph.D. in Nursing students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR2 730",
+    "subject": "NUR2",
+    "number": "730",
+    "title": "Theory Development in Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of the epistemological foundations of nursing knowledge, with a critical review of the dominant tradition in nursing knowledge (i.e, scientific theory) as well as alternate paradigms for the development of nursing knowledge.",
+    "prerequisites": {
+      "text": "NUR2 620 or equivalent",
+      "tree": "NUR2 620",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR2 783",
+    "subject": "NUR2",
+    "number": "783",
+    "title": "Psychosocial Oncology Research",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This seminar focuses on evidence-based research developments in psychosocial oncology. Students will explore state-of-the-art theory, research methods, findings, and intervention programs from a variety of disciplines including nursing, psychology, medicine, health services management and social work that have contributed to the emergent field of psychosocial oncology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

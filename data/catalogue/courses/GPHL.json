@@ -1,0 +1,225 @@
+[
+  {
+    "code": "GPHL 200",
+    "subject": "GPHL",
+    "number": "200",
+    "title": "Foundations in Population and Global Health",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of global policies, politics, industry and institutions and their neo-colonial underpinnings, and their influence on current global health theory, research and practice, with a special focus on the health of Indigenous peoples in Canada and other racialized groups. The environmental and social determinants of health and health inequities, with attention to women and children’s health, communicable and non-communicable disease, and the complexities of disasters and humanitarian crises. Global health governance,systems, and innovations and social entrepreneurship in health.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GPHL 201",
+    "subject": "GPHL",
+    "number": "201",
+    "title": "Population and Global Health Ethics",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the concepts of ethics and equity, in a broad range of applications, including power, privilege and positionality. Exploration of foundations of ethics as they apply to population and global health practice. Concepts of human rights, anti-racism, ethics and equity, informed by an understanding of the legacy of colonization, as they pertain to a wide array of global health issues.",
+    "prerequisites": {
+      "text": "GPHL 200",
+      "tree": "GPHL 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GPHL 300",
+    "subject": "GPHL",
+    "number": "300",
+    "title": "Data Literacy",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to foundational concepts in statistical thinking, data science and epidemiology including how to connect data to underlying phenomena and dealing with illustrating and interpreting data.",
+    "prerequisites": {
+      "text": "GPHL 200",
+      "tree": "GPHL 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in a Population and Global Health undergraduate program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "GPHL 301",
+    "subject": "GPHL",
+    "number": "301",
+    "title": "Introduction to Research Methods",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to quantitative, qualitative and participatory research approaches to population and global health problem solving, with a focus on critical skills in assessing research quality and relevance. Concepts include: the art of formulating a research question, and its implications for research design and implementation.",
+    "prerequisites": {
+      "text": "GPHL 201, GPHL 300",
+      "tree": {
+        "and": [
+          "GPHL 201",
+          "GPHL 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in a Population and Global Health undergraduate program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "GPHL 302",
+    "subject": "GPHL",
+    "number": "302",
+    "title": "Knowledge Translation",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Key knowledge translation concepts, principles and practice as they apply to the formulation of policies and programs serving disadvantaged populations in resource-constrained settings. Interdisciplinary sharing and critical appraisal and application of existing knowledge to the development of global and public health policies, program content and its delivery.",
+    "prerequisites": {
+      "text": "GPHL 201, GPHL 300",
+      "tree": {
+        "and": [
+          "GPHL 201",
+          "GPHL 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in a Population and Global Health undergraduate program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "GPHL 303",
+    "subject": "GPHL",
+    "number": "303",
+    "title": "Community Engaged Learning",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to community engaged learning with a focus on the broader determinants of health. Exploration of the social, environmental and structural determinants of health and health inequities in the local community context. Exposure to the complexities of meaningful, ethical and productive community partnership, teamwork skills and workplace professionalism.",
+    "prerequisites": {
+      "text": "GPHL 201, GPHL 300",
+      "tree": {
+        "and": [
+          "GPHL 201",
+          "GPHL 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in a Population and Global Health undergraduate program.",
+      "excludes": []
+    },
+    "notes": [
+      "Language of instruction is English. Some community placements may require a functional use of French. There are 2.25 hours a week dedicated to learning in the community context."
+    ]
+  },
+  {
+    "code": "GPHL 401",
+    "subject": "GPHL",
+    "number": "401",
+    "title": "Experiential Learning",
+    "credits": 12,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A full-semester capstone practicum undertaken in the context of a community organization, mentored research activity or an internship with an international or local public health agency, focusing on a relevant global health-related issue, and skills in professional conduct, team work, effective communication and knowledge translation.",
+    "prerequisites": {
+      "text": "GPHL 301, GPHL 303",
+      "tree": {
+        "and": [
+          "GPHL 301",
+          "GPHL 303"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in a Population and Global Health undergraduate program.",
+      "excludes": []
+    },
+    "notes": [
+      "The host organization requires the instructor’s approval. Students are responsible for paying for their travel costs which include food and lodging. However travel grants will be sought to help offset the costs."
+    ]
+  },
+  {
+    "code": "GPHL 500",
+    "subject": "GPHL",
+    "number": "500",
+    "title": "Critical Perspectives in Global Health",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Global health issues, including global burden of diseases, determinants of health, transition in health and drivers of such transition, challenges in healthcare delivery in resource-limited settings, and the variety of agencies and actors engaged in addressing global health challenges.",
+    "prerequisites": {
+      "text": "GPHL 301, GPHL 303 OR with permission of the instructor",
+      "tree": {
+        "and": [
+          "GPHL 301",
+          "GPHL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GPHL 591",
+    "subject": "GPHL",
+    "number": "591",
+    "title": "Special Topics in Global and Population Health 1",
+    "credits": 3,
+    "offeredBy": "Global & Public Health",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Selected topics in global and population health.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

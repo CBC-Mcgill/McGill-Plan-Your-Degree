@@ -1,0 +1,1356 @@
+[
+  {
+    "code": "PHGY 200",
+    "subject": "PHGY",
+    "number": "200",
+    "title": "Cutting-Edge Research in Physiology",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An overview of physiology through an examination of current research topics and experimental approaches. Emphasis is placed on applications of physiology to modern medicine and careers in physiology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students registered in Core Liberal Physiology, Major Physiology and Honours Physiology programs.",
+      "excludes": []
+    },
+    "notes": [
+      "1. Fall",
+      "2. 1 hour lecture per week"
+    ]
+  },
+  {
+    "code": "PHGY 209",
+    "subject": "PHGY",
+    "number": "209",
+    "title": "Mammalian Physiology 1",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physiology of body fluids, blood, body defense mechanisms, muscle, peripheral, central, and autonomic nervous systems.",
+    "prerequisites": {
+      "text": "BIOL 112, CHEM 110, CHEM 120, PHYS 101 or PHYS 131, and PHYS 102 or PHYS 142. Pre-/co-requisites: BIOL 200, CHEM 212 or equivalent.",
+      "tree": {
+        "and": [
+          "BIOL 112",
+          "CHEM 110",
+          "CHEM 120",
+          {
+            "or": [
+              "PHYS 101",
+              "PHYS 131"
+            ]
+          },
+          {
+            "or": [
+              "PHYS 102",
+              "PHYS 142"
+            ]
+          },
+          "BIOL 200",
+          "CHEM 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHGY 211 or students who are taking and who have taken NSCI 200.; For students in the Faculty of Science, and other students by permission of the instructor",
+      "excludes": [
+        "NSCI 200",
+        "PHGY 211"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures weekly"
+    ]
+  },
+  {
+    "code": "PHGY 210",
+    "subject": "PHGY",
+    "number": "210",
+    "title": "Mammalian Physiology 2",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Physiology of cardiovascular, respiratory, digestive, endocrine and renal systems.",
+    "prerequisites": {
+      "text": "BIOL 112, CHEM 110, CHEM 120, PHYS 101 or PHYS 131, and PHYS 102 or PHYS 142. Pre-/co-requisite: BIOL 200, BIOL 201, BIOC 212, CHEM 212 or equivalent.",
+      "tree": {
+        "and": [
+          "BIOL 112",
+          "CHEM 110",
+          "CHEM 120",
+          {
+            "or": [
+              "PHYS 101",
+              "PHYS 131"
+            ]
+          },
+          {
+            "or": [
+              "PHYS 102",
+              "PHYS 142"
+            ]
+          },
+          "BIOL 200",
+          "BIOL 201",
+          "BIOC 212",
+          "CHEM 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For students in the Faculty of Science, and other students by permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures weekly",
+      "Although PHGY 210 may be taken without the prior passing of PHGY 209, students should note that they may have some initial difficulties because of lack of familiarity with some basic concepts introduced in PHGY 209"
+    ]
+  },
+  {
+    "code": "PHGY 212",
+    "subject": "PHGY",
+    "number": "212",
+    "title": "Introductory Physiology Laboratory 1",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exercises illustrating fundamental principles in physiology: Biological Signals Acquisitions, Blood, Immunology, Neurophysiology, Neuromuscular Physiology.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PHGY 209.",
+      "tree": "PHGY 209",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Required for Physiology students enrolled in PHGY 209. Open to BA &Sc. students and to others by permission of the instructor. Not open to students who have taken PHGY 212D1/D2.",
+      "excludes": [
+        "PHGY 212D1"
+      ]
+    },
+    "notes": [
+      "(One 3-hour lab and one 1-hour lecture every second week.)",
+      "Note: For students in a Physiology program, PHGY 212 should be taken concurrently with PHGY 209."
+    ]
+  },
+  {
+    "code": "PHGY 213",
+    "subject": "PHGY",
+    "number": "213",
+    "title": "Introductory Physiology Laboratory 2",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exercises illustrating fundamental principles in physiology: Central Nervous System, Cardiovascular, Respiration, Exercise Physiology, Molecular Endocrinology.",
+    "prerequisites": {
+      "text": "PHGY 212",
+      "tree": "PHGY 212",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PHGY 210.",
+      "tree": "PHGY 210",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Required for Physiology students enrolled in PHGY 210. Open to BA &Sc. students and to others by permission of the instructor. Not open to students who have taken PHGY 212D1/D2.",
+      "excludes": [
+        "PHGY 212D1"
+      ]
+    },
+    "notes": [
+      "(One 3-hour lab and one 1-hour lecture every second week.)",
+      "Note: For students in a Physiology program, PHGY 213 should be taken concurrently with PHGY 210."
+    ]
+  },
+  {
+    "code": "PHGY 311",
+    "subject": "PHGY",
+    "number": "311",
+    "title": "Channels, Synapses and Hormones",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "In-depth presentation of experimental results and hypotheses on cellular communication in the nervous system and the endocrine system.",
+    "prerequisites": {
+      "text": "PHGY 209 or permission of the instructor.",
+      "tree": "PHGY 209",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours of lectures per week; 1-3 hours optional lab/demonstration/tutorial arranged for a maximum of 3 afternoons per term"
+    ]
+  },
+  {
+    "code": "PHGY 312",
+    "subject": "PHGY",
+    "number": "312",
+    "title": "Respiratory, Renal, and Cardiovascular Physiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In-depth presentation of experimental results and hypotheses underlying our current understanding of topics in renal, respiratory and cardiovascular functions explored beyond the introductory level.",
+    "prerequisites": {
+      "text": "PHGY 209 and PHGY 210 or equivalent, PHGY 311 or permission of the instructor",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "PHGY 210",
+          "PHGY 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours of lectures per week; 1-3 hours optional lab/demonstration/tutorial arranged for a maximum of 3 Wednesday afternoons per term"
+    ]
+  },
+  {
+    "code": "PHGY 313",
+    "subject": "PHGY",
+    "number": "313",
+    "title": "Blood, Gastrointestinal, and Immune Systems Physiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In-depth presentation of experimental results and hypotheses underlying our current understanding of topics in immunology, blood and fluids, and gastrointestinal physiology.",
+    "prerequisites": {
+      "text": "PHGY 209 and PHGY 210 or equivalent, PHGY 311 or permission of the instructor",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "PHGY 210",
+          "PHGY 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours of lectures per week; 1-3 hours optional lab/demonstration/tutorial arranged for a maximum of 3 Wednesday afternoons per term"
+    ]
+  },
+  {
+    "code": "PHGY 314",
+    "subject": "PHGY",
+    "number": "314",
+    "title": "Integrative Neuroscience",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "In depth presentation of experimental results and hypotheses underlying our current understanding of how single neurons and ensembles of neurons encode sensory information, generate movement, and control cognitive functions such as emotion, learning, and memory, during voluntary behaviours.",
+    "prerequisites": {
+      "text": "PHGY 209",
+      "tree": "PHGY 209",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours of lectures per week"
+    ]
+  },
+  {
+    "code": "PHGY 351",
+    "subject": "PHGY",
+    "number": "351",
+    "title": "Research Techniques: Physiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Provides an overview of common research methods in Physiology, including critical analysis and practical experience with some of the methods. Topics include research ethics of animal experimentation, data analysis, membrane biophysics, radioimmunoassay, ion sensitive dyes, immunocytochemistry, localization techniques, protein transport, cell sorting and molecular biology.",
+    "prerequisites": {
+      "text": "PHGY 209, PHGY 210 and PHGY 311.",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "PHGY 210",
+          "PHGY 311"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PHGY 312 and PHGY 313",
+      "tree": {
+        "and": [
+          "PHGY 312",
+          "PHGY 313"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Honours Physiology students",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "2 hour lecture and 3 hour lab weekly"
+    ]
+  },
+  {
+    "code": "PHGY 359",
+    "subject": "PHGY",
+    "number": "359",
+    "title": "Tutorial in Physiology",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The course consists of regularly scheduled meetings between each individual student and a chosen staff member, to consider current problems in biomedical research and to develop background for a research project to be carried out in U3. Brief written summaries of each meeting are required.",
+    "prerequisites": {
+      "text": "PHGY 209 and PHGY 210 or equivalent.",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "PHGY 210"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "PHGY 311, PHGY 312 and PHGY 313.",
+      "tree": {
+        "and": [
+          "PHGY 311",
+          "PHGY 312",
+          "PHGY 313"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Enrolment restricted to Honours Physiology students",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "Students must register for both PHGY 359D1 and PHGY 359D2.",
+      "No credit will be given for this course unless both PHGY 359D1 and PHGY 359D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PHGY 359D1",
+        "credits": 0.5,
+        "terms": []
+      },
+      {
+        "code": "PHGY 359D2",
+        "credits": 0.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PHGY 396",
+    "subject": "PHGY",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "PHGY 419",
+    "subject": "PHGY",
+    "number": "419",
+    "title": "Immunology Research Project",
+    "credits": 9,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual research projects in immunology under the guidance of staff members in the three participating departments: Physiology, Biochemistry, and Microbiology and Immunology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment restricted to U3 Interdepartmental Honours Immunology students or permission of instructors",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "15 hours lab/week",
+      "Students must register for both PHGY 419D1 and PHGY 419D2.",
+      "No credit will be given for this course unless both PHGY 419D1 and PHGY 419D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PHGY 419D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHGY 419D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHGY 425",
+    "subject": "PHGY",
+    "number": "425",
+    "title": "Analyzing Physiological Systems",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to quantitative analysis of physiological data, both to the mode of thinking and to a set of tools that allows accurate predictions of biological systems. Examples will range from oscillating genetic networks to understanding higher brain function. Modelling and data analysis through examples and exercises will be emphasized.",
+    "prerequisites": {
+      "text": "PHGY 311, PHGY 314, BIOL 200 or permission from instructor.",
+      "tree": {
+        "and": [
+          "PHGY 311",
+          "PHGY 314",
+          "BIOL 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Enrolment limited to 20 students."
+    ]
+  },
+  {
+    "code": "PHGY 451",
+    "subject": "PHGY",
+    "number": "451",
+    "title": "Advanced Neurophysiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics of current interest in neurophysiology including the development of neurons and synapses, physiology of ionic channels, presynaptic and postsynaptic events in synaptic transmission and neuronal interactions in CNS function.",
+    "prerequisites": {
+      "text": "PHGY 311 or equivalent",
+      "tree": "PHGY 311",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval required",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "PHGY 459",
+    "subject": "PHGY",
+    "number": "459",
+    "title": "Physiology Seminar",
+    "credits": 6,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Discussion of topics in mammalian, cellular and molecular physiology. Students will be required to write one essay and make at least one oral presentation per term. A final course essay is required.",
+    "prerequisites": {
+      "text": "permission of instructors",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours seminar",
+      "Required course for U3 Honours students.",
+      "Students must register for both PHGY 459D1 and PHGY 459D2.",
+      "No credit will be given for this course unless both PHGY 459D1 and PHGY 459D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PHGY 459D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHGY 459D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHGY 461",
+    "subject": "PHGY",
+    "number": "461",
+    "title": "Experimental Physiology",
+    "credits": 9,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Individual project work under the supervision of Departmental Staff members.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval required. This course is a requirement for U3 students in the Honours Physiology program, the Major Program in Physiology and Mathematics, and the Major program in Physiology and Physics, and is open to a limited number of other U3 Physiology students.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "Students must register for both PHGY 461D1 and PHGY 461D2.",
+      "No credit will be given for this course unless both PHGY 461D1 and PHGY 461D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PHGY 461D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHGY 461D2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PHGY 488",
+    "subject": "PHGY",
+    "number": "488",
+    "title": "Stem Cell Biology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The main concepts in stem cell biology: embryonic stem cells, induced pluripotent stem cells, cancer stem cells, stem cells populations of many adult tissues, applications of stem cell biology and ethical issues surrounding stem cell use in research and medicine. The major experimental methods and laboratory techniques in stem cell biology.",
+    "prerequisites": {
+      "text": "PHGY 313 or by permission of instructor.",
+      "tree": "PHGY 313",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration is on a first-come, first-served basis.; Not open to students who are taking or have taken ANAT 416.",
+      "excludes": [
+        "ANAT 416"
+      ]
+    },
+    "notes": [
+      "Critical reading of peer-reviewed journal papers, practice in oral presentations of scientific material and participation in group discussions."
+    ]
+  },
+  {
+    "code": "PHGY 499",
+    "subject": "PHGY",
+    "number": "499",
+    "title": "Independent Study in Physiology",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised research project in physiology.",
+    "prerequisites": {
+      "text": "PHGY 311, PHGY 312, PHGY 313, PHGY 314. Note: A form from the Student Affairs Officer, Room 1022, McIntyre Medical Bldg., must be completed prior to registration.",
+      "tree": {
+        "and": [
+          "PHGY 311",
+          "PHGY 312",
+          "PHGY 313",
+          "PHGY 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to final year Physiology students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHGY 502",
+    "subject": "PHGY",
+    "number": "502",
+    "title": "Exercise Physiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Behaviour of physiological processes in response to physical effort, in areas such as structural basis of muscle contraction, thermoregulation during exercise, mechanics and energetics of muscle contraction, fuel utilization, fatigue, physiological adjustments during exercise and influence of training.",
+    "prerequisites": {
+      "text": "PHGY 311, PHGY 312, and PHGY 313",
+      "tree": {
+        "and": [
+          "PHGY 311",
+          "PHGY 312",
+          "PHGY 313"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHGY 508",
+    "subject": "PHGY",
+    "number": "508",
+    "title": "Advanced Renal Physiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced concepts in selected areas of kidney physiology, including the glomerulus, renal cell biology, kidney development, membrane and epithelial transport, hormones and autacoids, kidney transplantation, bioengineering and regenerative medicine.",
+    "prerequisites": {
+      "text": "PHGY 312 or the equivalent",
+      "tree": "PHGY 312",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to advanced undergraduate and graduate students",
+      "excludes": []
+    },
+    "notes": [
+      "Fall. Offered in conjunction with the Department of Medicine."
+    ]
+  },
+  {
+    "code": "PHGY 513",
+    "subject": "PHGY",
+    "number": "513",
+    "title": "Translational Immunology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced key concepts in immunology as they relate to health and disease, including infectious diseases, non-infectious diseases and autoimmunity, and cancer immunology.",
+    "prerequisites": {
+      "text": "MIMM 314 or PHGY 313 or permission of the instructor",
+      "tree": {
+        "or": [
+          "MIMM 314",
+          "PHGY 313"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHGY 515",
+    "subject": "PHGY",
+    "number": "515",
+    "title": "Blood-Brain Barrier in Health and Disease",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Molecular and cellular mechanisms underlying the organization and regulation of the blood-brain barrier, highlighting neurological diseases associated with the blood-brain barrier breakdown and give an overview of experimental approaches to study blood-brain barrier.",
+    "prerequisites": {
+      "text": "PHGY 313 or PHGY 314 and permission of the instructor",
+      "tree": {
+        "or": [
+          "PHGY 313",
+          "PHGY 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "1.5 hours Lecture and 1.5 hours Seminar weekly"
+    ]
+  },
+  {
+    "code": "PHGY 516",
+    "subject": "PHGY",
+    "number": "516",
+    "title": "Physiology of Blood ",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Bone marrow hematopoiesis, with emphasis on regulation of stem cell proliferation and differentiation along hematopoietic pathways. Formation and differentiation of red and white blood cells and some of the diseases associated with hematopoiesis will be covered. Emphasis will be given to the molecular mechanisms involved in the normal and pathological conditions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lecture plus 1 hour seminar weekly"
+    ]
+  },
+  {
+    "code": "PHGY 518",
+    "subject": "PHGY",
+    "number": "518",
+    "title": "Artificial Cells",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physiology, biotechnology, chemistry and biomedical application of artificial cells, blood substitutes, immobilized enzymes, microorganisms and cells, hemoperfusion, artificial kidneys, and drug delivery systems. PHGY 517 and PHGY 518 when taken together, will give a complete picture of this field. However, the student can select one of these.",
+    "prerequisites": {
+      "text": "permission of instructors.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHGY 520",
+    "subject": "PHGY",
+    "number": "520",
+    "title": "Ion Channels",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A discussion of the principal theories and interesting new developments in the study of ion channels. Based on a textbook, computer exercises and critical reading and presentation of research papers. Topics include: Properties of voltage-and ligand-gated channels, single channel analysis, structure and function of ion channels.",
+    "prerequisites": {
+      "text": "PHGY 311",
+      "tree": "PHGY 311",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Offered in even numbered years",
+      "1 1/2 hour lecture, 1 1/2 hour seminar",
+      "Priority to Graduate and Honours students; others by permission of instructors."
+    ]
+  },
+  {
+    "code": "PHGY 524",
+    "subject": "PHGY",
+    "number": "524",
+    "title": "Chronobiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An introduction to the field of chronobiology. The aim is to provide basic instruction on different types of biological rhythms, with particular focus on circadian rhythms.",
+    "prerequisites": {
+      "text": "PHGY 209 and PHGY 210 (or NSCI 200 and NSCI 201), and a relevant 300-level course (PHGY 311, or PHGY 314, or PSYC 318, or BIOC 311, or other, with permission of course coordinator).",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "PHGY 210",
+          "NSCI 200",
+          "NSCI 201",
+          {
+            "or": [
+              "PHGY 311",
+              "PHGY 314",
+              "PSYC 318",
+              "BIOC 311"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course for senior undergraduate (U3) and graduate students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHGY 525",
+    "subject": "PHGY",
+    "number": "525",
+    "title": "Cortical Plasticity",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An examination of cortical plasticity following peripheral and central nervous damage from a systems/cognitive neuroscience perspective. Focus is on sensory systems and animal models, including the following topics: ocular dominance columns, retinal lesions, blindness, deafness, cochlear implants, barrel fields, amputation, stroke, and hemispherectomy. Experimental approaches to be considered include: electrophysiological recording, psychophysics, behaviour, and functional imaging.",
+    "prerequisites": {
+      "text": "NSCI 200 or PHGY 314 or permission of the instructor",
+      "tree": {
+        "or": [
+          "NSCI 200",
+          "PHGY 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 531",
+    "subject": "PHGY",
+    "number": "531",
+    "title": "Topics in Applied Immunology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar format course in which experts in immunologic mechanisms of resistance against a variety of infectious diseases, including AIDS, malaria, and tuberculosis oversee student moderators in their presentation of recent scientific literature in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of the instructor. U3 InterDept. Honours Immunology students and graduate students with strong immunology background i.e. PHGY 513 and BIOC 503",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHGY 550",
+    "subject": "PHGY",
+    "number": "550",
+    "title": "Molecular Physiology of Bone",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Students will develop a working knowledge of cartilage and bone. Discussion topics will include: molecular and cellular environment of bone; heritable and acquired skeletal defects; research models used to study metabolic bone disease.",
+    "prerequisites": {
+      "text": "PHGY 311, and BIOL 202 or equivalent",
+      "tree": {
+        "and": [
+          "PHGY 311",
+          "BIOL 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Physiology students, and graduate students in biomedical departments; others by permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "1 hour of lecture, 2 hours of seminar per week"
+    ]
+  },
+  {
+    "code": "PHGY 552",
+    "subject": "PHGY",
+    "number": "552",
+    "title": "Cellular and Molecular Physiology",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discussions of recent significant advances in our understanding of the gene products involved in diverse cellular signalling pathways. Topics will include cell-surface hormone receptors, nuclear steroid hormone receptors, and ion channels and transporters. Students will present and critically evaluate experimental approaches, results and interpretations of selected research publications.",
+    "prerequisites": {
+      "text": "PHGY 311",
+      "tree": "PHGY 311",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "1 hour lecture, 2 hours seminar weekly",
+      "Preference will be given to Physiology Honours and Graduate students"
+    ]
+  },
+  {
+    "code": "PHGY 556",
+    "subject": "PHGY",
+    "number": "556",
+    "title": "Topics in Systems Neuroscience",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics of current interest in systems neurophysiology and behavioural neuroscience including: the neural representation of sensory information and motor behaviours, models of sensory motor integration, and the computational analysis of problems in motor control and perception. Students will be expected to present and critically discuss journal articles in class.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of the instructor required.; Not open to students who have taken PHGY 456",
+      "excludes": [
+        "PHGY 456"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHGY 560",
+    "subject": "PHGY",
+    "number": "560",
+    "title": "Light Microscopy-Life Science",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to optics, light microscopy imaging and data analysis for life scientists.",
+    "prerequisites": {
+      "text": "BIOL 301 or permission of instructors.",
+      "tree": "BIOL 301",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHGY 601",
+    "subject": "PHGY",
+    "number": "601",
+    "title": "M.Sc. Proposal Seminar",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminar presentation to Supervisory Committee and students on the Master's thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 602",
+    "subject": "PHGY",
+    "number": "602",
+    "title": "Literature Search and Research Proposal",
+    "credits": 2,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent work under the supervision of the thesis advisor including literature search and research leading to thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 603",
+    "subject": "PHGY",
+    "number": "603",
+    "title": "Systems Biology and Biophysics",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to classical and current topics in biophysics and systems biology in order to model the control of gene expression and intracellular signal transduction, as well as gene spread in populations.",
+    "prerequisites": {
+      "text": "Knowledge of differential equations at the MATH 315 level or equivalent.",
+      "tree": "MATH 315",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Notes: Enrolment is limited to 20 students per semester. The course is 1.5 hours of lecture and 1.5 hours of seminar per week. Readings will focus on classic and current journal articles."
+    ]
+  },
+  {
+    "code": "PHGY 604",
+    "subject": "PHGY",
+    "number": "604",
+    "title": "Responsible Conduct in Research",
+    "credits": 0,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course provides students with information on the following areas: 1) an ethics overview; 2) scientific conduct and misconduct; 3) research authorship and peer review; and 4) research on human and animal subjects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students having taken this course during the M.Sc. in Physiology will not be obliged to re-take the course if transferring to the Ph.D."
+    ]
+  },
+  {
+    "code": "PHGY 607",
+    "subject": "PHGY",
+    "number": "607",
+    "title": "Laboratory Research 1",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Laboratory research leading to the thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 608",
+    "subject": "PHGY",
+    "number": "608",
+    "title": "Laboratory Research 2",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Laboratory research leading to the thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 620",
+    "subject": "PHGY",
+    "number": "620",
+    "title": "Progress in Research",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Progress in research in preparation of thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 621",
+    "subject": "PHGY",
+    "number": "621",
+    "title": "Thesis 1",
+    "credits": 12,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Written and oral presentation of thesis proposal to the research Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 622",
+    "subject": "PHGY",
+    "number": "622",
+    "title": "Thesis 2",
+    "credits": 12,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Written and oral preparation of the thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 623",
+    "subject": "PHGY",
+    "number": "623",
+    "title": "M.Sc. Final Seminar",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Final seminar presentation to students supervisory committee prior to thesis submission.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 690",
+    "subject": "PHGY",
+    "number": "690",
+    "title": "Thesis Research",
+    "credits": 9,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Thesis preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 701",
+    "subject": "PHGY",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The Ph.D. comprehensive exam will be completed between 12-18 months of commencing the program and is designed to ensure that the student's research encompasses the i) acquisition of a comprehensive knowledge of scientific literature; ii) the development of experimental skills and technical expertise with a deep understanding of the experimental design thus iii) ensuring a high degree of scholarship in the thesis submission.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 703",
+    "subject": "PHGY",
+    "number": "703",
+    "title": "Ph.D. Progress Seminar 1",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The Progress Seminar is a \"work in progress\" seminar on what the student has accomplished to date. Following completion of the comprehensive exam, the seminar should be presented to the student's supervisory committee as a formal presentation of approximately 30 minutes followed by a question and discussion period.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 704",
+    "subject": "PHGY",
+    "number": "704",
+    "title": "Ph.D. Progress Seminar 2",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A \"work in progress\" seminar, intended as a report on student progress following the Thesis Proposal Seminar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 720",
+    "subject": "PHGY",
+    "number": "720",
+    "title": "Ph.D. Seminar Course 1",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Required for Ph.D. students. Coordinated in conjunction with the weekly Departmental seminar series, students will meet for one hour before each seminar to critically discuss papers on the subject of the weekly seminar. Students will take turns introducing the papers and leading discussions on an overview of the research topic, some of the methodologies, results and conclusions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 721",
+    "subject": "PHGY",
+    "number": "721",
+    "title": "Ph.D. Seminar Course 2",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Required for Ph.D. students. Coordinated in conjunction with the weekly Departmental seminar series, students will meet for one hour before each seminar to critically discuss papers on the subject of the weekly seminar. Students will take turns introducing the papers and leading discussions on an overview of the research topic, some of the methodologies, results and conclusions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 722",
+    "subject": "PHGY",
+    "number": "722",
+    "title": "Ph.D. Seminar Course 3",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Required for Ph.D. students. Coordinated in conjunction with the weekly Departmental seminar series, students will meet for one hour before each seminar to critically discuss papers on the subject of the weekly seminar. Students will take turns introducing the papers and leading discussions on an overview of the research topic, some of the methodologies, results and conclusions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 723",
+    "subject": "PHGY",
+    "number": "723",
+    "title": "Ph.D. Seminar Course 4",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Required for Ph.D. students. Coordinated in conjunction with the weekly Departmental seminar series, students will meet for one hour before each seminar to critically discuss papers on the subject of the weekly seminar. Students will take turns introducing the papers and leading discussions on an overview of the research topic, some of the methodologies, results and conclusions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 724",
+    "subject": "PHGY",
+    "number": "724",
+    "title": "Ph.D. Seminar Course 5",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Required for Ph.D. students. Coordinated in conjunction with the weekly Departmental seminar series, students will meet for one hour before each seminar to critically discuss papers on the subject of the weekly seminar. Students will take turns introducing the papers and leading discussions on an overview of the research topic, some of the methodologies, results and conclusions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHGY 725",
+    "subject": "PHGY",
+    "number": "725",
+    "title": "Ph.D. Seminar Course 6",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Required for Ph.D. students. Coordinated in conjunction with the weekly Departmental seminar series, students will meet for one hour before each seminar to critically discuss papers on the subject of the weekly seminar. Students will take turns introducing the papers and leading discussions on an overview of the research topic, some of the methodologies, results and conclusions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

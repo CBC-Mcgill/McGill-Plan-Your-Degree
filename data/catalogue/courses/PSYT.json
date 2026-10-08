@@ -1,0 +1,585 @@
+[
+  {
+    "code": "PSYT 199",
+    "subject": "PSYT",
+    "number": "199",
+    "title": "FYS: Mental Illness and the Brain",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will introduce the student to the fundamentals of neuroscience, and then use these principles to illustrate recent advances made on the biological causes of, and treatments for, mental disorders with a strong biological component: schizophrenia, depression, mania, anxiety disorders, obsessive-compulsive disorder, Alzheimer's and Parkinson's diseases and alcohol and drug abuse.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to newly admitted students in U0 or U1, who may take only one FYS. Students who register for more than one will be obliged to withdraw from all but one of them.",
+      "excludes": []
+    },
+    "notes": [
+      "1 hour lecture and 2 hours seminar weekly",
+      "Maximum 25. No prerequisites"
+    ]
+  },
+  {
+    "code": "PSYT 301",
+    "subject": "PSYT",
+    "number": "301",
+    "title": "Issues in Drug Dependence",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The phenomenology and epidemiology of the use and abuse of alcohol, nicotine, opiates, stimulants, sedatives and psychotomimetic agents are discussed in relation to current theoretical and experimental issues. The perspective is multidisciplinary and the intention is to develop an understanding of the nature of the issues surrounding drug dependence.",
+    "prerequisites": {
+      "text": "PSYC 211 or NSCI 201 or NSCI 200 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PSYC 211",
+          "NSCI 201",
+          "NSCI 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PSYT 400",
+    "subject": "PSYT",
+    "number": "400",
+    "title": "Research Project in Psychiatry",
+    "credits": 6,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Individually supervised research projects in either fundamental or clinical psychiatry, with a final written report.",
+    "prerequisites": {
+      "text": "A course in biostatistics (eg. PSYC 305 or equivalent), approval of course instructor(s) and agreement of a research supervisor with appointment in Psychiatry.",
+      "tree": "PSYC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 undergraduates. Departmental permission required. This course cannot be taken concurrently by students enrolling for undergraduate honours thesis projects, or for the following research courses: PSYC 395, PSYC 450D1/D2, PSYC 494D1/D2, PSYC 494N1/N2, PSYC 495, except with special permission. Students must have a GPA of 3.0 to enroll.",
+      "excludes": []
+    },
+    "notes": [
+      "Work done in this course cannot be used for any other course. Note: Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project/supervisor is available. Individual projects will be suggested by researchers within the psychiatry department and available through the course coordinator or alternatively students may approach professors to devise their own potential projects for approval.",
+      "Students must register for both PSYT 400D1 and PSYT 400D2.",
+      "No credit will be given for this course unless both PSYT 400D1 and PSYT 400D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYT 400D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "PSYT 400D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYT 401",
+    "subject": "PSYT",
+    "number": "401",
+    "title": "Psychiatry Clerkship",
+    "credits": 8,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The psychiatry clerkship is designed to provide students with the core knowledge and skills required to understand and assist patients and families with either psychiatric illness, or overwhelming emotional distress. It also provides students with an understanding of the complex interplay between psychiatric and non-psychiatric illness, and the need to be aware of medical illness in patients presenting with psychiatric symptoms, and vice versa. Students at all training sites will receive the equivalent of 8-weeks of training in psychiatry, where they will be exposed to the principles and practice of child and adult psychiatry through their work in a variety of clinical settings, in addition to participating in core learning sessions and independent learning activities. The complementary roles of the family physician and the psychiatrist in the care of patients with mental illness will be highlighted.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Restrictions Open only to students enrolled in the M.D., C.M. program."
+    ],
+    "parts": [
+      {
+        "code": "PSYT 401D1",
+        "credits": 4,
+        "terms": []
+      },
+      {
+        "code": "PSYT 401D2",
+        "credits": 4,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYT 500",
+    "subject": "PSYT",
+    "number": "500",
+    "title": "Advances: Neurobiology of Mental Disorders",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current theories on the neurobiological basis of most well known mental disorders (e.g. schizophrenia, depression, anxiety, dementia). Methods and strategies in research on genetic, physiological and biochemical factors in mental illness will be discussed. Discussion will also focus on the rationale for present treatment approaches and on promising new approaches.",
+    "prerequisites": {
+      "text": "BIOC 212 and BIOC 311, or BIOC 312, or BIOL 200 and BIOL 201, or PHGY 311, or PSYC 308 and an upper-level biological science course with permission of the instructors, or equivalent. Basic knowledge of cellular and molecular biology is required.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIOC 212",
+              "BIOC 311"
+            ]
+          },
+          "BIOC 312",
+          {
+            "and": [
+              "BIOL 200",
+              "BIOL 201"
+            ]
+          },
+          "PHGY 311",
+          "PSYC 308"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 and graduate students only.; Graduate Studies: strongly recommended for M.Sc. students in Psychiatry.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PSYT 515",
+    "subject": "PSYT",
+    "number": "515",
+    "title": "Advanced Studies in Addiction",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Critical assessment of research tools, reported data, and theoretical perspectives on drug addiction, with an emphasis on multi-factorial and inter-disciplinary approaches.",
+    "prerequisites": {
+      "text": "PSYT 301 or permission from one of the instructors.",
+      "tree": "PSYT 301",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Priority will be given to graduate students registered in Psychiatry, Psychology or Neuroscience graduate programs. Open to undergraduates who have completed PSYT 301 or an equivalent course. Undergraduates must obtain permission of the instructors before registration. Not open to students who have taken PSYT 615.",
+      "excludes": [
+        "PSYT 615"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYT 522",
+    "subject": "PSYT",
+    "number": "522",
+    "title": "Early Adversity, Development and Health ",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The concept of adversity during critical developmental periods from gestation to adolescence. Examination of neurodevelopmental mechanisms, neural pathways and plasticity leading to vulnerability and resilience. How single cell expression patterns, neuronal networks and gene association studies can inform about the biological underpinnings of adversity, the individual differences in susceptibility and how these biological mechanisms link psychopathologies to other comorbidities.",
+    "prerequisites": {
+      "text": "BIOL 201, BIOC 212, ANAT 212, BIOL 202, BIOL 306, BIOL 370, ANAT 322 or equivalent; permission of the instructor if prerequisites are not met.",
+      "tree": {
+        "and": [
+          "BIOL 201",
+          "BIOC 212",
+          "ANAT 212",
+          "BIOL 202",
+          "BIOL 306",
+          "BIOL 370",
+          "ANAT 322"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Supplementary Calendar Info: Open to U3 undergraduate students and graduate students (MSc and PhD level). Limit of 25 students. A knowledge of basic mechanisms of biology, physiology and anatomy as covered by respective undergraduate courses is expected and required to succeed in this course. Permission from the responsible instructor is required to register if course pre-requisites are not met. Priority will be given to students having the course pre-requisites and grades higher than C in these courses (B). Course is not recorded."
+    ]
+  },
+  {
+    "code": "PSYT 550",
+    "subject": "PSYT",
+    "number": "550",
+    "title": "Suicide and Self-Harm",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to suicide and self-harm behaviours epidemiology across the world. Main theoretical models to understand suicide and self-harm from a developmental, psychological, sociological, and neurobiological perspectives. Risk and protective factors for suicide and self-harm behaviour, and specificities of suicide and self-harm behaviours across age groups (childhood, adolescence, older adulthood), sexes and genders, and specific groups (e.g., Indigenous peoples). Elements of assessment of suicide risks, prediction of suicidal behaviours, and approaches to suicide prevention.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 600",
+    "subject": "PSYT",
+    "number": "600",
+    "title": "Digital Mental Health Care",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current and emerging trends of eHealth, highlighting both local and international applications, interventions, and research in the mental health context. Critical issues related to the integration of eHealth applications and interventions in health care, community care and public health. Topics include the definition and taxonomy of eHealth; the interdisciplinary foundation of the eHealth and eMental health fields; data capturing and repository systems (e.g., electronic health records [EHR] systems); widely diffused and emerging technologies (e.g., mobile apps, virtual communities, virtual reality (VR), video games, artificial intelligence (AI), and machine learning); patient engagement in designing eHealth applications; patient safety standards; applications evaluation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Priority given to psychiatry department students.",
+      "excludes": []
+    },
+    "notes": [
+      "Some lectures will be held online via Zoom."
+    ]
+  },
+  {
+    "code": "PSYT 605",
+    "subject": "PSYT",
+    "number": "605",
+    "title": "History and Philosophy of Psychiatry ",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Philosophical and historical perspectives on the construction of scientific knowledge in psychiatry, including mental illness and disorders and corresponding evolution of various forms of treatments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 606",
+    "subject": "PSYT",
+    "number": "606",
+    "title": "Mental Illness: Symptoms Diagnostics and Determinants",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A broad perspective on mental illness, from diagnostic approaches to mental health policies. Examination of symptoms and diagnostic criteria of mood disorders, psychoses, and addictions and impulsivity disorders. Medication- and therapy-based treatments and recent developments in mind-body approaches. Epidemiology and social determinants of mental illness, and mental health prevention, services and policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 620",
+    "subject": "PSYT",
+    "number": "620",
+    "title": "Trends in Clinical Psychiatry",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A review of the major psychopathologies, the theories that underlie them and their treatment.",
+    "prerequisites": {
+      "text": "A course in research methods. Or special permission by the course instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 630 or equivalent.",
+      "excludes": [
+        "PSYC 630"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYT 625",
+    "subject": "PSYT",
+    "number": "625",
+    "title": "Qualitative Research in Health Care",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Discussion and practice of qualitative methodologies for conducting rigorous and reflective qualitative research projects in health care sector including ethnographic fieldwork and community interviews.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking FMED 625 or HSED 625.",
+      "excludes": [
+        "FMED 625",
+        "HSED 625"
+      ]
+    },
+    "notes": [
+      "Course will be given in English. Course work may be submitted in English or French."
+    ]
+  },
+  {
+    "code": "PSYT 630",
+    "subject": "PSYT",
+    "number": "630",
+    "title": "Statistics for Neurosciences",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Statistics needed for analysing the types of data generated in a laboratory setting, with emphasis on the neurosciences, will be covered. Hypothesis testing, parametric and non-parametric statistics will be studied with a practical approach, using data generated by the students. Computer analysis will be introduced.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 633",
+    "subject": "PSYT",
+    "number": "633",
+    "title": "Social and Cultural Research Methods",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Introduction to the various research methods commonly used in social and cultural psychiatry, including qualitative, quantitative and mixed-methods approaches, with special attention to the unique challenges of working with people with mental illness. Emphasis is placed on the following: study design, cross-cultural measurement, sampling, recruitment, execution, bias, analysis and dissemination. Classic studies in social and cultural psychiatry will be used as examples to illuminate points made. This course will be held every May as part of the Summer Program in Social and Cultural Psychiatry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course will be useful for graduate students in psychiatry, social work, nursing, occupational therapy and related disciplines with an interest in mental health research from a social and cultural perspective.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "PSYT 640",
+    "subject": "PSYT",
+    "number": "640",
+    "title": "Non-Pharmacological Clinical Trials",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will provide an introduction to the design, conduct, analysis, and reporting of randomized clinical trials with a focus on issues particularly important to non-pharmacological interventions (e.g., psychotherapy, care management interventions, physical therapy interventions) including blinding, intervention complexity, and intervention fidelity. Topics will include trial design and specification of a primary question; ethical considerations; randomization and stratification; sample size determination; analysis and reporting; quality and sources of bias; interpretation of results; and design alternatives, including considerations of particular relevance to trials of non-pharmacological interventions",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Enrollment is limited to 20 students."
+    ]
+  },
+  {
+    "code": "PSYT 667",
+    "subject": "PSYT",
+    "number": "667",
+    "title": "Aging, Cognition and Mental Health",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of the intersection of aging, cognition, and mental health across the life course, including the overlap between cognition and mental health, especially for older adults (e.g. neurocognitive disorders). The biopsychosocial impact of mental health conditions on older adults and their caregivers. An overview of non-pharmacological and pharmacological interventions, including those with technology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EXMD 667.",
+      "excludes": [
+        "EXMD 667"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYT 682",
+    "subject": "PSYT",
+    "number": "682",
+    "title": "Psychosocial Issues of Disease",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The course objective is to provide students with population-level perspectives on psychosocial aspects of chronic health conditions, highlighting the interactions between mental health, social environment, and physical health. Emphasis will be placed on integrating the following topics: affective symptoms and disorders, community factors, lifestyle behaviours, disability and quality of life, and the onset and course of chronic diseases.",
+    "prerequisites": {
+      "text": "Must be registered in an MSc or PhD program.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructors.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYT 691",
+    "subject": "PSYT",
+    "number": "691",
+    "title": "Thesis Research 1",
+    "credits": 12,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 692",
+    "subject": "PSYT",
+    "number": "692",
+    "title": "Thesis Research 2",
+    "credits": 12,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 693",
+    "subject": "PSYT",
+    "number": "693",
+    "title": "Thesis Research 3",
+    "credits": 12,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 696",
+    "subject": "PSYT",
+    "number": "696",
+    "title": "Special Topics in Psychiatry",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Supervised reading and discussion of selected issues and topics in contemporary psychiatry. Students will be responsible for assigned readings and for preparation of a graded paper.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 701",
+    "subject": "PSYT",
+    "number": "701",
+    "title": "Comprehensive Exam Mental Health",
+    "credits": 0,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Mandatory comprehensive exam for all students enrolled in the Mental Health Ph.D. program, and must be completed by the end of the second year. The results of the examination determine whether or not students will be permitted to continue in the program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYT 711",
+    "subject": "PSYT",
+    "number": "711",
+    "title": "Cultural Psychiatry",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Topics covered: cross-national epidemiological and ethnographic research of major and minor psychiatric disorders; culture-bound syndromes and idioms of distress; culture, emotion and social interaction; psychological and symbolic healing; mental health of immigrants and refugees; psychiatric theory and practice as cultural constructions; methods of cross-cultural research.",
+    "prerequisites": {
+      "text": "Knowledge of psychiatry and anthropology",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "PSYT 713",
+    "subject": "PSYT",
+    "number": "713",
+    "title": "Psychiatric Epidemiology",
+    "credits": 3,
+    "offeredBy": "Psychiatry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An overview of the applications of epidemiology in psychiatry, including instruments and methods used in community studies; major recent population surveys of psychiatric disorders; study of treatment-seeking, pathways to care and use of services; interaction between psychological distress and physical health; methods used in specific populations; evaluation of treatment.",
+    "prerequisites": {
+      "text": "EPIB 601 or equivalent, or permission of instructor.",
+      "tree": "EPIB 601",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  }
+]

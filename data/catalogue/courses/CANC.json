@@ -1,0 +1,231 @@
+[
+  {
+    "code": "CANC 601",
+    "subject": "CANC",
+    "number": "601",
+    "title": "Patient Engagement in Cancer Research",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination of the historical and current aspects of patient involvement in research and the evolution from passive subjects to engaged patients and collaborators in research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANC 602",
+    "subject": "CANC",
+    "number": "602",
+    "title": "Epidemiology in Cancer ",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to epidemiological methods to study cancer burden, causes and evaluation of preventive strategies including topics of confounding, interaction, mediation, and measures of association.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EPIB 671.",
+      "excludes": [
+        "EPIB 671"
+      ]
+    },
+    "notes": [
+      "1. Students should have a working knowledge of R; contact the course instructor in advance of course registration for details"
+    ]
+  },
+  {
+    "code": "CANC 603",
+    "subject": "CANC",
+    "number": "603",
+    "title": "Mouse Models in Cancer ",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to the use of mouse models to study cancer biology and the design of genetically engineered mouse models.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Enrolment is limited to a maximum of 8 students. Students MUST have taken McGill University Animal Compliance Office Module 1 Workshop AND complete online Animal Ethics Course prior to taking this course. Students should note that the mouse-handling workshop is sometimes oversubscribed so students must plan well in advance to sign up for the workshop. This course is not a replacement for the ACO workshop but rather is in conjunction with the ACO workshop to enhance basic skills."
+    ]
+  },
+  {
+    "code": "CANC 604",
+    "subject": "CANC",
+    "number": "604",
+    "title": "Cancer Genomics Data Analyses ",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An introduction to the basic principles underlying genome-wide analysis of high-dimensional genomic data such as gene expression, epigenetic, or proteomic or data through the lens of RNA-seq expression data to illustrate concepts such as assessing data quality, the need for normalization, the impact of filtering, and testing for differential expression.",
+    "prerequisites": {
+      "text": "BIOL 200, BIOC 212, ANAT 212 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          "BIOC 212",
+          "ANAT 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. An understanding of transcription, translation, and how RNA-seq data measure transcription is required."
+    ]
+  },
+  {
+    "code": "CANC 605",
+    "subject": "CANC",
+    "number": "605",
+    "title": "Cancer Caregiving: Psychosocial Issues",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination in the psychosocial effects of cancer on patients and caregivers, with focus on the responsibilities of caregivers and the consequences of this role.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANC 606",
+    "subject": "CANC",
+    "number": "606",
+    "title": "Tumour Microenvironment",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Approaches to investigating and dissecting the tumour microenvironment, including exploration and analysis of this environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANC 607",
+    "subject": "CANC",
+    "number": "607",
+    "title": "Cancer Immunotherapies",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination of the different immunotherapies in use and being developed for cancer treatment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANC 608",
+    "subject": "CANC",
+    "number": "608",
+    "title": "Oncometabolism ",
+    "credits": 1,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination of the role metabolism plays in cancer progression, metastasis, and resistance to treatment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANC 621",
+    "subject": "CANC",
+    "number": "621",
+    "title": "Seminars in Cancer Sciences",
+    "credits": 4,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Exposure to broad range of cancer research disciplines, including: cancer biology, cancer therapeutics and care, cancer epidemiology and global cancer control, and psychosocial oncology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Language of instruction is English",
+      "No credit will be given for this course unless both CANC 621D1 and CANC 621D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "CANC 621D1",
+        "credits": 2,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "CANC 621D2",
+        "credits": 2,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CANC 701",
+    "subject": "CANC",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral students to continue in the doctoral program in cancer sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the Ph.D. in Cancer Sciences interdisciplinary program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CANC 716",
+    "subject": "CANC",
+    "number": "716",
+    "title": "PhD 1 Research in Cancer Sciences 1",
+    "credits": 15,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Cancer Sciences. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANC 717",
+    "subject": "CANC",
+    "number": "717",
+    "title": "PhD 1 Research in Cancer Sciences 2",
+    "credits": 15,
+    "offeredBy": "Interdepartmental Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Cancer Sciences. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

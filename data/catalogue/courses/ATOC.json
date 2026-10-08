@@ -1,0 +1,1392 @@
+[
+  {
+    "code": "ATOC 100",
+    "subject": "ATOC",
+    "number": "100",
+    "title": "Extreme-Weather and Climate-Change Physics",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course will provide an overview of extreme weather and climate phenomena, using calculus-based mathematical and physical principles. It will examine the physics and dynamics associated with extreme weather and climate phenomena, including blizzards, heat waves, cold waves, ice storms, tornadoes, and hurricanes. The atmospheric and oceanic observing system will be used to quantify the structure and mechanisms of extreme weather and climate events. The physics of climate change will be interpreted through the natural and anthropogenic changes to Earth's radiation and energy balances. An introduction to climate models (both simple and complex) will illustrate the concepts of forcing, feedbacks, and climate sensitivity, and provide the foundation for understanding future changes in extreme weather.",
+    "prerequisites": {
+      "text": "PHYS 101",
+      "tree": "PHYS 101",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 141",
+      "tree": "MATH 141",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 181",
+    "subject": "ATOC",
+    "number": "181",
+    "title": "Introduction to Atmospheric Science",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of the Earth's atmosphere, weather and climate system. Topics include the fundamental processes that determine interactions between the atmosphere, ocean and biosphere; anthropogenic effects such as global warming, the ozone hole and acid rain; a perspective on future climate change.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 210, ATOC 214, ENVB 301 or NRSC 201.",
+      "excludes": [
+        "ATOC 210",
+        "ATOC 214",
+        "ENVB 301",
+        "NRSC 201"
+      ]
+    },
+    "notes": [
+      "Fall and Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 182",
+    "subject": "ATOC",
+    "number": "182",
+    "title": "Introduction to Oceanic Sciences",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to ocean sciences with particular emphasis on physical oceanography. Topics typically include seawater properties, sea ice, air-sea interaction, seafloor topography, large-scale ocean circulation, waves, tides, physical control of biological processes, the role of oceans in climate, and impact of human activities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and/or Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 183",
+    "subject": "ATOC",
+    "number": "183",
+    "title": "Climate and Climate Change",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The atmosphere, ocean and sea-ice distribution characteristic of the current climate, as seen through observational data and computer model results. Physics of naturally occurring variability on time scales of months to years, such as El Niño. Global circulation models of the atmosphere, ocean and coupled atmosphere-ocean system, and global warming simulations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 230.",
+      "excludes": [
+        "ATOC 230"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 184",
+    "subject": "ATOC",
+    "number": "184",
+    "title": "Science of Storms",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Physical processes associated with severe and hazardous weather affecting the Earth. Topics are taught at a fundamental level, without equations, to provide a complete and up-to-date understanding of such extreme events as blizzards, ice storms, tornadoes, hurricanes, floods and droughts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 240, or the combination of ATOC 214 and ATOC 215.",
+      "excludes": [
+        "ATOC 214",
+        "ATOC 215",
+        "ATOC 240"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "ATOC 185",
+    "subject": "ATOC",
+    "number": "185",
+    "title": "Natural Disasters",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course examines the science behind different types of disasters and our ability or inability to control and predict such events. From this course the student will gain an appreciation of natural disasters beyond the newspaper headlines and will better understand how the effects of disasters can be reduced.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EPSC 185.",
+      "excludes": [
+        "EPSC 185"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture",
+      "This is a double-prefix course and is identical in content with EPSC 185."
+    ]
+  },
+  {
+    "code": "ATOC 214",
+    "subject": "ATOC",
+    "number": "214",
+    "title": "Introduction: Physics of the Atmosphere",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to key physical processes operating in the atmosphere, designed for students in science and engineering. Topics typically include: composition of the atmosphere; vertical structure; heat transfer; solar and terrestrial radiation and Earth's energy balance; seasonal and daily temperature changes; humidity and the formation of clouds and precipitation; stability of tropospheric air layers; applications of adiabatic charts.",
+    "prerequisites": {
+      "text": "CEGEP Physics, or the combination of PHYS 131 and PHYS 142, or permission of instructor.",
+      "tree": {
+        "and": [
+          "PHYS 131",
+          "PHYS 142"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 215",
+    "subject": "ATOC",
+    "number": "215",
+    "title": "Oceans, Weather and Climate",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to key physical and dynamical processes in the oceans and atmosphere. Topics typically include air-sea-ice interactions, laws of motion, the geostrophic and thermal wind relations, general circulation of the atmosphere and oceans, weather, radiative balance, climate sensitivity and variability, role of the atmosphere and oceans in climate.",
+    "prerequisites": {
+      "text": "MATH 141",
+      "tree": "MATH 141",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 219",
+    "subject": "ATOC",
+    "number": "219",
+    "title": "Introduction to Atmospheric Chemistry",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the basic topics in atmospheric chemistry. The fundamentals of the chemical composition of the atmosphere and its chemical reactions. Selected topics such as smog chamber, acid rain, and ozone hole will be examined.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120, and one of MATH 139 or MATH 140 or MATH 150, or a CEGEP DEC in Science, or permission of instructor.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120",
+          {
+            "or": [
+              "MATH 139",
+              "MATH 140",
+              "MATH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 219, CHEM 419 or ATOC 419",
+      "excludes": [
+        "ATOC 419",
+        "CHEM 219",
+        "CHEM 419"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture",
+      "Offered in odd years. Students should register in CHEM 219 in even years"
+    ]
+  },
+  {
+    "code": "ATOC 309",
+    "subject": "ATOC",
+    "number": "309",
+    "title": "Weather Radars and Satellites",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic notions of radiative transfer and applications of satellite and radar data to mesoscale and synoptic-scale systems are discussed. Emphasis will be put on the contribution of remote sensing to atmospheric and oceanic sciences.",
+    "prerequisites": {
+      "text": "ATOC 215",
+      "tree": "ATOC 215",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 312",
+    "subject": "ATOC",
+    "number": "312",
+    "title": "Rotating Fluid Dynamics",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals of fluid motion on a rotating sphere: Rotating coordinate systems, the Lagrangian time derivative, and equations of motion. The geostrophic approximation and thermal wind balance; departures from geostrophy, such as frictional Ekman layers, inertial oscillations, and the gradient wind balance. The shallow water equations, including potential vorticity conservation, quasigeostrophy, and simple wave solutions.",
+    "prerequisites": {
+      "text": "MATH 314",
+      "tree": "MATH 314",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 512.",
+      "excludes": [
+        "ATOC 512"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "ATOC 315",
+    "subject": "ATOC",
+    "number": "315",
+    "title": "Thermodynamics and Convection",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Buoyancy, stability, and vertical oscillations. Dry and moist adiabatic processes. Resulting dry and precipitating convective circulations from the small scale to the global scale. Mesoscale precipitation systems from the cell to convective complexes. Severe convection, downbursts, mesocyclones.",
+    "prerequisites": {
+      "text": "ATOC 214 and MATH 222",
+      "tree": {
+        "and": [
+          "ATOC 214",
+          "MATH 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 333",
+    "subject": "ATOC",
+    "number": "333",
+    "title": "Tropical Weather and Climate Field Course",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Observing weather, climate and environmental chemistry in tropical Barbados. Emphasis on experiential learning. Field observations typically cover measurements of sea surface temperature, meteorological variables, and environmental chemical characteristics.",
+    "prerequisites": {
+      "text": "Permission of the instructor required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 555.",
+      "excludes": [
+        "ATOC 555"
+      ]
+    },
+    "notes": [
+      "This field course will be held at the Bellairs Institute in Barbados. Students pay for their own tuition and airfare. The course fee $2776.72 will cover 2 weeks of accommodation (double occupancy),food, transportation in Barbados, and lab supplies. The trip's duration is 15 days and 14 nights in May. For information about the course fee, students should contact the department administration(admin.aos@mcgill.ca)."
+    ]
+  },
+  {
+    "code": "ATOC 341",
+    "subject": "ATOC",
+    "number": "341",
+    "title": "Caribbean Climate and Weather",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The climate system and ongoing global change, ocean and atmosphere circulation and future trends in the tropics; local climate variability and dynamics, extreme weather events in the Caribbean",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "BIOL 343, GEOG 340, FSCI 444 or permission of the Program Director",
+      "tree": {
+        "and": [
+          "BIOL 343",
+          "GEOG 340",
+          "FSCI 444"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Open to U2 and U3 students from all faculties that are registered in the Barbados Field Study Semester, with minimum CGPA of 3.0.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 357",
+    "subject": "ATOC",
+    "number": "357",
+    "title": "Atmospheric and Oceanic Science Laboratory",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Students will gain hands-on experience in several fundamental atmospheric and oceanic science topics through practical experimentation. A diverse set of experiments will be conducted, ranging from in situ observations in Montreal, to remote sensing of clouds and radiation, to laboratory chemistry and water-tank experiments. As a background for these experiments, students will receive training on sensor principles and measurement error analysis, as well as the fundamental physical processes of interest in each experiment. They will learn to operate, and physically interpret data from, various sensors for in situ and remote observation of meteorological variables. Their training will also extend to operational weather observations, analysis, and forecasting.",
+    "prerequisites": {
+      "text": "ATOC 214 or permission of instructor.",
+      "tree": "ATOC 214",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 373",
+    "subject": "ATOC",
+    "number": "373",
+    "title": "Arctic Climate and Climate Change",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to the principles of Arctic climate and climate change with a special focus on the Canadian Arctic. The primary objectives of the course are to 1)develop an understanding of the presentday high latitude climate, including the atmosphere, the ocean and the sea ice, 2) develop an understanding of the role of the polar regions in the global climate and climate change, and 3) introduce students to field methods of polar research including ice coring, sea-ice buoys installation and data analysis, atmospheric measurements (radiative and turbulent heat fluxes), and ocean hydrographic measurements (e.g. CTD, nets).",
+    "prerequisites": {
+      "text": "Two courses from the following list: GEOG 203, GEOG 205,GEOG 272, GEOG 372, ENVR 200, ENVR 202, EPSC 203, EPSC 210, EPSC 212, EPSC 220, EPSC 233, ATOC 214, ATOC 215, ATOC 219, SOIL 300.",
+      "tree": {
+        "and": [
+          "GEOG 203",
+          "GEOG 205",
+          "GEOG 272",
+          "GEOG 372",
+          "ENVR 200",
+          "ENVR 202",
+          "EPSC 203",
+          "EPSC 210",
+          "EPSC 212",
+          "EPSC 220",
+          "EPSC 233",
+          "ATOC 214",
+          "ATOC 215",
+          "ATOC 219",
+          "SOIL 300"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EPSC 373, GEOG 373, [ATOC 473 or EPSC 473 or GEOG 473]",
+      "tree": {
+        "and": [
+          "EPSC 373",
+          "GEOG 373",
+          {
+            "or": [
+              "ATOC 473",
+              "EPSC 473",
+              "GEOG 473"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Note(s): 1. This course is one of a set of four field courses (ATOC 373, EPSC 373, GEOG 373, ATOC/EPSC/GEOG 473) designed to be taken concurrently. It complements programs in natural science disciplines by providing students with specialized field training and research experience focusing on the unique environmental conditions of cold polar systems. 2. Cost includes transportation, room and board, field expenses. Students are charged $12,000 for the four courses combined: ATOC, 373, EPSC 373, GEOG 373, and ATOC/EPSC/GEOG 473. 3. Arctic localities: Iqaluit, Resolute Bay, and Central Axel Heiberg Island in the Canadian High Arctic."
+    ]
+  },
+  {
+    "code": "ATOC 396",
+    "subject": "ATOC",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": {
+      "text": "Departmental permission required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to B.Sc., B.A.& Sc., B.A. and B.Eng. students.",
+      "excludes": []
+    },
+    "notes": [
+      "1. This course cannot be taken under the S/U option. Students cannot be supervised by the same instructor for two 396 Science courses."
+    ]
+  },
+  {
+    "code": "ATOC 404",
+    "subject": "ATOC",
+    "number": "404",
+    "title": "Climate Physics",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers the essentials of climate physics through the lens of one-dimensional, vertical atmospheric models. This includes shortwave and longwave radiative transfer, convection, phase changes, clouds, greenhouse gases, and atmospheric escape. This is an adequate level of detail for understanding Earth's climate, paleoclimate, anthropogenic climate change, or pursuing studies of Solar System planets and extrasolar planets.",
+    "prerequisites": {
+      "text": "PHYS 230 or PHYS 251, PHYS 232 or PHYS 253, MATH 315 or MATH 325, and MATH 222",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PHYS 230",
+              "PHYS 251"
+            ]
+          },
+          {
+            "or": [
+              "PHYS 232",
+              "PHYS 253"
+            ]
+          },
+          {
+            "or": [
+              "MATH 315",
+              "MATH 325"
+            ]
+          },
+          "MATH 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 404.",
+      "excludes": [
+        "PHYS 404"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 473",
+    "subject": "ATOC",
+    "number": "473",
+    "title": "Artic Field Research",
+    "credits": 6,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course is the independent research component of the McGill Arctic Field Study Semester. It has four distinct parts, a) problem identification and background preparation, b) research design and field data collection, c) lab and data analysis, and d) report preparation and presentation. The research design and field data collection will be part of an extended period of fieldwork based in the Canadian Arctic. The Lab and data analysis will begin in the field and finish on campus. Each student will prepare a manuscript style report and make a conference presentation based on their research.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "GEOG 373, EPSC 373 and ATOC 373",
+      "tree": {
+        "and": [
+          "GEOG 373",
+          "EPSC 373",
+          "ATOC 373"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Permission of the instructor. Not open to students who have taken or are taking EPSC 473 or GEOG 473.",
+      "excludes": [
+        "EPSC 473",
+        "GEOG 473"
+      ]
+    },
+    "notes": [
+      "Note(s): 1. This course is one of a set of four field courses (ATOC 373, EPSC 373, GEOG 373, and ATOC/EPSC/GEOG 473) designed to be taken concurrently. It complements programs in natural science disciplines by providing students with specialized field training and research experience focusing on the unique environmental conditions of cold polar systems. 2. Cost includes transportation, room and board, field expenses. Students are charged $12,000 for the four courses combined: ATOC, 373, EPSC 373, GEOG 373, and ATOC/EPSC/GEOG 473. 3. Arctic localities: Iqaluit, Resolute Bay, and Central Axel Heiberg Island in the Canadian High Arctic."
+    ]
+  },
+  {
+    "code": "ATOC 480",
+    "subject": "ATOC",
+    "number": "480",
+    "title": "Honours Research Project",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The student will carry out a research project under the supervision of a member of the staff. The student will be expected to write a report and present a seminar on the work.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 Honours and Major students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 512",
+    "subject": "ATOC",
+    "number": "512",
+    "title": "Atmospheric and Oceanic Dynamics",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Equations of motion used to study waves, turbulence, and the general circulation of the atmosphere and oceans. Standard approximations to these equations, including the Boussinesq, primitive, quasigeostrohic, and rotating shallow water equations. Emphasis is on effects for which rotation and/or buoyancy play essential roles. Simple classes of flow, e.g., geostrophic, thermal wind, Ekman, and inertial oscillations.",
+    "prerequisites": {
+      "text": "MATH 314, MATH 315, or permission of instructor",
+      "tree": {
+        "and": [
+          "MATH 314",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 513",
+    "subject": "ATOC",
+    "number": "513",
+    "title": "Waves and Stability",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Description of the principal wave types and instability mechanisms of geophysical fluid dynamics. Geostrophic adjustment, wave dispersion, the WKBJ approximation. Wave types considered include (internal) inertia-gravity waves, planetary Rossby waves, and the equatorial and coastal wave guides. Instabilities considered include inertial, symmetric, barotropic, baroclinic, and Kelvin-Helmholtz instability.",
+    "prerequisites": {
+      "text": "MATH 314, MATH 315, or permission of instructor",
+      "tree": {
+        "and": [
+          "MATH 314",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 515",
+    "subject": "ATOC",
+    "number": "515",
+    "title": "Turbulence in Atmosphere and Oceans",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Application of statistical and semi-empirical methods to the study of geophysical turbulence. Reynolds' equations, dimensional analysis, and similarity. The surface and planetary boundary layers. Oceanic mixed layer. Theories of isotropic two- and three- dimensional turbulence: energy and enstrophy inertial ranges. Beta turbulence.",
+    "prerequisites": {
+      "text": "MATH 314, MATH 315, a previous course in fluid dynamics (such as ATOC 512), or permission of instructor",
+      "tree": {
+        "and": [
+          "MATH 314",
+          "MATH 315",
+          "ATOC 512"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 517",
+    "subject": "ATOC",
+    "number": "517",
+    "title": "Boundary Layer Meteorology ",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Turbulence and turbulent fluxes, atmospheric stability, Monin-Obukhov similarity theory, surface roughness and surface fluxes, power law and logarithmic wind profiles including their application in wind energy and engineering sectors, convective and stably stratified boundary layers, internal boundary layer development, large-eddy simulations, fundamentals of boundary-layer parameterization in numerical models, and introduction to urban boundary layers.",
+    "prerequisites": {
+      "text": "MATH 314, MATH 315, and one of ATOC 312 or ATOC 315 or ATOC 512, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MATH 314",
+          "MATH 315",
+          {
+            "or": [
+              "ATOC 312",
+              "ATOC 315",
+              "ATOC 512"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 519",
+    "subject": "ATOC",
+    "number": "519",
+    "title": "Advances in Chemistry of Atmosphere",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the field of atmospheric chemistry that is identified as the significant driver of climate change and the cause of millions of premature death every year. Discussion of cutting-edge novel technologies for observing and quantifying pollutants (from ground to satellite) using artificial intelligence, the fate of emerging contaminants (e.g., nano/microplastics, trace metals, persistent organic), and modelling of atmospheric and interfacial processes. Examination of topics like atmospheric gaseous and multiphase components like bioaerosols. Study of photochemical, photophysical, and aerosol nucleation processes that affect air quality, climate change, and ecosystem health.",
+    "prerequisites": {
+      "text": "CHEM 213, CHEM 273, MATH 222, MATH 315 or equivalents, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CHEM 213",
+          "CHEM 273",
+          "MATH 222",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CHEM 519.",
+      "excludes": [
+        "CHEM 519"
+      ]
+    },
+    "notes": [
+      "3 hours lecture",
+      "Cross linked course: CHEM 519"
+    ]
+  },
+  {
+    "code": "ATOC 521",
+    "subject": "ATOC",
+    "number": "521",
+    "title": "Cloud Physics",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A detailed overview of the environmental factors and microphysical processes involved in the formation of clouds and precipitation. Topics typically include: cloud observations, atmospheric thermodynamics, environmental stability regimes, convection, the microphysics of the formation of cloud droplets and ice crystals, initiation of precipitation, aerosol–cloud interactions.",
+    "prerequisites": {
+      "text": "ATOC 315, MATH 314, and MATH 315, or permission of instructor.",
+      "tree": {
+        "and": [
+          "ATOC 315",
+          "MATH 314",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "ATOC 525",
+    "subject": "ATOC",
+    "number": "525",
+    "title": "Atmospheric Radiation",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Solar and terrestrial radiation. Interactions of molecules, aerosols, clouds, and precipitation with radiation of various wavelengths. Radiative transfer through the clear and cloudy atmosphere. Radiation budgets. Satellite and ground-based measurements. Climate implications.",
+    "prerequisites": {
+      "text": "ATOC 315, MATH 314, and MATH 315, or permission of instructor.",
+      "tree": {
+        "and": [
+          "ATOC 315",
+          "MATH 314",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 620.",
+      "excludes": [
+        "ATOC 620"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 531",
+    "subject": "ATOC",
+    "number": "531",
+    "title": "Dynamics of Current Climates",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A detailed overview of the climate and the global energy balance. Topics typically include: energy balance at top of the atmosphere and at the surface, poleward energy flux, the role of clouds, climate and atmospheric/oceanic general circulations, natural variability of the climate system, evolution of climate and climate change.",
+    "prerequisites": {
+      "text": "MATH 315 or permission of instructor",
+      "tree": "MATH 315",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "ATOC 312 or ATOC 512 or permission of instructor",
+      "tree": {
+        "or": [
+          "ATOC 312",
+          "ATOC 512"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 540",
+    "subject": "ATOC",
+    "number": "540",
+    "title": "Synoptic Meteorology 1",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analysis of current meteorological data. Description of a geostrophic, hydrostatic atmosphere. Ageostrophic circulations and hydrostatic instabilities. Kinematic and thermodynamic methods of computing vertical motions. Tropical and extratropical condensation rates. Barotropic and equivalent barotropic atmospheres.",
+    "prerequisites": {
+      "text": "MATH 314, MATH 315, or permission of instructor",
+      "tree": {
+        "and": [
+          "MATH 314",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lecture; 2 hours laboratory"
+    ]
+  },
+  {
+    "code": "ATOC 541",
+    "subject": "ATOC",
+    "number": "541",
+    "title": "Synoptic Meteorology 2",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Analysis of current meteorological data. Quasi-geostrophic theory, including the omega equation, as it relates to extratropical cyclone and anticyclone development. Frontogenesis and frontal circulations in the lower and upper troposphere. Cumulus convection and its relationship to tropical and extratropical circulations. Diagnostic case study work.",
+    "prerequisites": {
+      "text": "ATOC 312 and ATOC 540 or permission of instructor.",
+      "tree": {
+        "and": [
+          "ATOC 312",
+          "ATOC 540"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lecture; 2 hours laboratory"
+    ]
+  },
+  {
+    "code": "ATOC 546",
+    "subject": "ATOC",
+    "number": "546",
+    "title": "Current Weather Discussion",
+    "credits": 1,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Half-hour briefing on atmospheric general circulation and current weather around the world using satellite data, radar observations, conventional weather maps, and analyses and forecasts produced by computer techniques.",
+    "prerequisites": {
+      "text": "ATOC 540 or permission of instructor",
+      "tree": "ATOC 540",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Graduate students and final-year Honours Atmospheric Science students. Others by special permission.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "2 hours"
+    ]
+  },
+  {
+    "code": "ATOC 548",
+    "subject": "ATOC",
+    "number": "548",
+    "title": "Mesoscale Meteorology",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theory of meteorologically important mesoscale phenomena including mesoscale instabilities, cumulus convection and its organization (including thunderstorms, squall lines, and other forms of severe weather), internal gravity waves, and topographically forced flows. Application of theory to the physical interpretation of observations and numerical simulations.",
+    "prerequisites": {
+      "text": "ATOC 512 or ATOC 312",
+      "tree": {
+        "or": [
+          "ATOC 512",
+          "ATOC 312"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 646.",
+      "excludes": [
+        "ATOC 646"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 551",
+    "subject": "ATOC",
+    "number": "551",
+    "title": "Selected Topics 1",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Topics in atmospheric and oceanic sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course restricted to students in U3 undergraduate or graduate programs in ATOC or in closely related disciplines, and permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 552",
+    "subject": "ATOC",
+    "number": "552",
+    "title": "Selected Topics 2",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Topics in atmospheric and oceanic sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course restricted to students in U3 undergraduate or graduate programs in ATOC or in closely related disciplines, and permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 556",
+    "subject": "ATOC",
+    "number": "556",
+    "title": "Field Course 2",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Field studies in selected topics of the atmospheric and oceanic sciences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course restricted to students in U3 undergraduate or graduate programs in ATOC or in closely related disciplines, and permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ATOC 557",
+    "subject": "ATOC",
+    "number": "557",
+    "title": "Research Methods: Atmospheric and Oceanic Science",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The analysis of observational and modeling data, and the advantages and limitations of different data. Different analysis methods including regression, linear stochastic processes autocovariance and spectral analysis, principle component analysis, inverse problems and data assimilation, commonly used in the atmospheric and oceanic sciences.",
+    "prerequisites": {
+      "text": "COMP 208, MATH 315, MATH 323, and MATH 324 or equivalents.",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "MATH 315",
+          "MATH 323",
+          "MATH 324"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 558",
+    "subject": "ATOC",
+    "number": "558",
+    "title": "Numerical Methods and Laboratory",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Numerical simulation of atmospheric and oceanic processes. Finite difference, finite element, and spectral modelling techniques. Term project including computer modelling of convection or large-scale flows in the atmosphere or ocean.",
+    "prerequisites": {
+      "text": "ATOC 312 or ATOC 512, or permission of instructor",
+      "tree": {
+        "or": [
+          "ATOC 312",
+          "ATOC 512"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Graduate students and final-year Honours Atmospheric Science students. Others by special permission.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "1 hour lecture; 4 hours laboratory"
+    ]
+  },
+  {
+    "code": "ATOC 568",
+    "subject": "ATOC",
+    "number": "568",
+    "title": "Ocean Physics",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Major topics in physics and dynamics of the ocean including seawater properties, density and equation of state, sea ice, air-sea-ice exchanges, mixing and stability in the ocean, wind-driven and thermohaline circulations. Observational techniques and numerical models of the ocean, which include some data analysis and literature review.",
+    "prerequisites": {
+      "text": "ATOC 512 or permission of instructor",
+      "tree": "ATOC 512",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ATOC 616",
+    "subject": "ATOC",
+    "number": "616",
+    "title": "Topics - Geophysical Fluid Dynamics",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topics in the dynamics of oceanic and atmospheric flows.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "ATOC 626",
+    "subject": "ATOC",
+    "number": "626",
+    "title": "Atmospheric/Oceanic Remote Sensing",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Principles of radiative transfer applied to observing the atmosphere and oceans by satellite, radar, and other methods of remote sensing. Applications to cloud physics and climate research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "ATOC 666",
+    "subject": "ATOC",
+    "number": "666",
+    "title": "Topics In Ocean Circulation",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Recent observations of mesoscale and large-scale ocean circulation. Inverse methods and their application to tracer distributions and deep ocean circulation. Review of modern theoretical developments such as geostrophic turbulence, homogenization of potential vorticity, ventilated thermoclines, wind and buoyancy driven ocean circulation models, and coupled ice-ocean circulation models.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "ATOC 670",
+    "subject": "ATOC",
+    "number": "670",
+    "title": "Reading Course: Meteorology 1",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Assigned reading of a specialized topic in meteorology with formal evaluation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 671",
+    "subject": "ATOC",
+    "number": "671",
+    "title": "Reading Course: Meteorology 2",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Assigned reading of a specialized topic in meteorology with formal evaluation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 672",
+    "subject": "ATOC",
+    "number": "672",
+    "title": "Reading Course: Oceanography 1",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Assigned reading of a specialized topic in oceanography with formal evaluation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 691",
+    "subject": "ATOC",
+    "number": "691",
+    "title": "Master's Thesis Literature Review",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of relevant literature in preparation for the M.Sc. research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 692",
+    "subject": "ATOC",
+    "number": "692",
+    "title": "Master's Thesis Research 1",
+    "credits": 6,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the supervision of the student's M.Sc. supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 693",
+    "subject": "ATOC",
+    "number": "693",
+    "title": "Master's Thesis Research 2",
+    "credits": 6,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the supervision of the student's M.Sc. supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 694",
+    "subject": "ATOC",
+    "number": "694",
+    "title": "Master's Thesis Progress Report and Seminar",
+    "credits": 3,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Written report on the M.Sc. research progress and oral presentation of the report in seminar form to staff and students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 695",
+    "subject": "ATOC",
+    "number": "695",
+    "title": "Master's Thesis Research 3",
+    "credits": 6,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the supervision of the student's M.Sc. supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 697",
+    "subject": "ATOC",
+    "number": "697",
+    "title": "Master's Thesis Research 4",
+    "credits": 3,
+    "offeredBy": "Science",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research under the supervision of the student's M.Sc. supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 699",
+    "subject": "ATOC",
+    "number": "699",
+    "title": "Master's Thesis",
+    "credits": 12,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research under the supervision of the student's M.Sc. supervisor leading to the M.Sc. thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 700",
+    "subject": "ATOC",
+    "number": "700",
+    "title": "Ph.D. Proposal Seminar",
+    "credits": 1,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminar where students present their research and a comprehensive framework for the thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 701",
+    "subject": "ATOC",
+    "number": "701",
+    "title": "Doctoral Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 751",
+    "subject": "ATOC",
+    "number": "751",
+    "title": "Seminar: Atmosphere and Ocean",
+    "credits": 1,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Presentation of research to departmental staff and students. General presentations on library services, scientific communication, tips for scholarship applications, mental health issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ATOC 752",
+    "subject": "ATOC",
+    "number": "752",
+    "title": "Atmospheric, Oceanic and Climate Dynamics",
+    "credits": 1,
+    "offeredBy": "Atmospheric & Oceanic Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminars on topics in atmospheric, oceanic and climate dynamics. Students are required to present one or more seminars during the year on their thesis research and to participate actively in the seminars given by others.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

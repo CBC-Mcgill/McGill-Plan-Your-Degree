@@ -1,0 +1,169 @@
+[
+  {
+    "code": "CSCI 010",
+    "subject": "CSCI",
+    "number": "010",
+    "title": "Foundations in General Biology 1",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Mechanisms of cell biology: important biomolecules, cell metabolism and cellular structure. How cells divide and reproduce. Molecular basis of inheritance. Cell communication in multicellular organisms. Applying the concept of homeostasis to the study of systems in animals and plants.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CSCI 103.",
+      "excludes": [
+        "CSCI 103"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CSCI 011",
+    "subject": "CSCI",
+    "number": "011",
+    "title": "Foundations of General Biology 2 ",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Physiology, evolution and organization of living things and their biological structures and function; reproduction and basic genetic principles; mechanisms of evolution and the origins of diversity; ecosystems and the flow of chemicals through the environment.",
+    "prerequisites": {
+      "text": "CSCI 010",
+      "tree": "CSCI 010",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CSCI 020",
+    "subject": "CSCI",
+    "number": "020",
+    "title": "Foundations in General Chemistry 1",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The study of matter and energy and how they interact. A strong emphasis is placed on moles (and using them) and unit analysis (with unit conversion); how to read a periodic table; charge; the difference between ionic and covalent in bonding; chemical reactions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CSCI 101.",
+      "excludes": [
+        "CSCI 101"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CSCI 021",
+    "subject": "CSCI",
+    "number": "021",
+    "title": "Foundations in General Chemistry 2 ",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Principles of physics underlying all chemical interactions (ex. gas laws, enthalpy/entropy); chemical equilibrium, especially the aqueous solutions; thermochemistry; strong emphasis on laboratory techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CSCI 022",
+    "subject": "CSCI",
+    "number": "022",
+    "title": "Fundamentals of Organic Chemistry",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Nature of organic compounds, functional groups, nomenclature, tereochemistry, bonding, reactivity and reaction mechanisms of alkanes, alkyl halides, alkenes, alkynes and benzene",
+    "prerequisites": {
+      "text": "CSCI 021",
+      "tree": "CSCI 021",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CSCI 030",
+    "subject": "CSCI",
+    "number": "030",
+    "title": "Fundamentals of Physics - Mechanics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Basic principles of mechanics – kinematics, dynamics. Vectors, rectilinear motion. Newton's laws, gravitation, motion in a plane, work and energy theorem. Principles of conservation of energy and linear momentum.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CSCI 102.",
+      "excludes": [
+        "CSCI 102"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CSCI 031",
+    "subject": "CSCI",
+    "number": "031",
+    "title": "Fundamentals of Physics - Waves and Optics ",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Oscillations, mechanical waves, optics; simple harmonic motion; waves in material media, including sound waves; beats and the Doppler effect; ray and wave optics.",
+    "prerequisites": {
+      "text": "CSCI 030",
+      "tree": "CSCI 030",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CSCI 040",
+    "subject": "CSCI",
+    "number": "040",
+    "title": "Basic Concepts in Mathematics & Science",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Basic content-based vocabulary for mathematics, biology, chemistry and physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must meet the School of Continuing Studies’ English Language Proficiency Requirement: https://www.mcgill.ca/continuingstudies/language-policy",
+      "1. This course must be taken before CSCI 041."
+    ]
+  },
+  {
+    "code": "CSCI 041",
+    "subject": "CSCI",
+    "number": "041",
+    "title": "Essential Communication Skills for STEM",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Essential content-based written and oral communication skills for mathematics, biology, chemistry and physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "CSCI 040 and students must meet the School of Continuing Studies' English Language Proficiency Requirement: https://www.mcgill.ca/continuingstudies/language-policy"
+    ]
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "code": "GEBI 111",
+    "subject": "GEBI",
+    "number": "111",
+    "title": "Cell Biology",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Molecular characteristics and physicochemical principles, small organic molecules, Metabolic transformations.",
+    "prerequisites": {
+      "text": "Basic secondary level knowledge of biology.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to BIO111 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEBI 121",
+    "subject": "GEBI",
+    "number": "121",
+    "title": "Genetics",
+    "credits": 1.25,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Structures of genes and genomes, DNA structure, gene structure, Structures of prokaryotic & eukaryotic genomes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "Perquisites: GEBI 111, Cell Biology.",
+      "This course is equivalent to BIO121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEBI 122",
+    "subject": "GEBI",
+    "number": "122",
+    "title": "Cell Biology and Genetics",
+    "credits": 2.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Molecular characteristics and physicochemical principles, small organic molecules, Metabolic transformations. Structures of genes and genomes, DNA structure, gene structure, Structures of prokaryotic eukaryotic genomes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to BIO122 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEBI 211",
+    "subject": "GEBI",
+    "number": "211",
+    "title": "Introduction to Bioengineering",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction & basic concepts, design in bioengineering & biomaterials, cell mechanics, properties of biological matter.",
+    "prerequisites": {
+      "text": "GEBI 121",
+      "tree": "GEBI 121",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to BIO211 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEBI 221",
+    "subject": "GEBI",
+    "number": "221",
+    "title": "Ecosystems and Biodiversity",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Key concepts revolving around biodiversity, 4 types of major ecosystems, evolution of ecological thinking.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to BIO221 offered by CentraleSupélec in France."
+    ]
+  }
+]

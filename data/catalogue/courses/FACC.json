@@ -1,0 +1,571 @@
+[
+  {
+    "code": "FACC 100",
+    "subject": "FACC",
+    "number": "100",
+    "title": "Introduction to the Engineering Profession",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to engineering practice; professional conduct and responsibility emphasizing ethics, sustainability, and the engineer’s role in society; engineering for sustainability; foundational concepts in engineering design, project management, risk evaluation and management, occupational health and safety.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1.5-0-1.5)"
+    ]
+  },
+  {
+    "code": "FACC 150",
+    "subject": "FACC",
+    "number": "150",
+    "title": "Foundations of Engineering Practice and Communication",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to engineering practice and communication. Professional conduct and ethics, engineer's duty to society and the environment, sustainable development, occupational health and safety. Strategies for researching, generating, developing, organizing, and presenting ideas in a technical setting; communicating to different audiences; editing and revising communication materials; and public speaking.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FACC 100 or WCOM 206.",
+      "excludes": [
+        "FACC 100",
+        "WCOM 206"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "FACC 200",
+    "subject": "FACC",
+    "number": "200",
+    "title": "Industrial Practicum 1",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "12 to 16 weeks of full-time remunerated engineering-related work in private or public practice.",
+    "prerequisites": {
+      "text": "Permission of Faculty.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Coordinated by the Engineering Career Centre."
+    ]
+  },
+  {
+    "code": "FACC 201",
+    "subject": "FACC",
+    "number": "201",
+    "title": "Industrial Practicum 2",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "12 to 16 weeks of full-time remunerated engineering-related work in private or public practice.",
+    "prerequisites": {
+      "text": "FACC 200 and permission of Faculty.",
+      "tree": "FACC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Coordinated by the Engineering Career Centre."
+    ]
+  },
+  {
+    "code": "FACC 202",
+    "subject": "FACC",
+    "number": "202",
+    "title": "Industrial Practicum 3",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "12 to 16 weeks of full-time remunerated engineering-related work in private or public practice.",
+    "prerequisites": {
+      "text": "FACC 201 and permission of Faculty.",
+      "tree": "FACC 201",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Coordinated by the Engineering Career Centre."
+    ]
+  },
+  {
+    "code": "FACC 203",
+    "subject": "FACC",
+    "number": "203",
+    "title": "Industrial Practicum 4",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "12 to 16 weeks of full-time remunerated engineering-related work in private or public practice.",
+    "prerequisites": {
+      "text": "FACC 202 and permission of Faculty.",
+      "tree": "FACC 202",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Coordinated by the Engineering Career Centre."
+    ]
+  },
+  {
+    "code": "FACC 204",
+    "subject": "FACC",
+    "number": "204",
+    "title": "Industrial Practicum 5",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "12 to 16 weeks of full-time remunerated engineering-related work in private or public practice.",
+    "prerequisites": {
+      "text": "FACC 203 and permission of Faculty.",
+      "tree": "FACC 203",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Coordinated by the Engineering Career Centre."
+    ]
+  },
+  {
+    "code": "FACC 205",
+    "subject": "FACC",
+    "number": "205",
+    "title": "Industrial Practicum 6",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "12 to 16 weeks of full-time remunerated engineering-related work in private or public practice.",
+    "prerequisites": {
+      "text": "FACC 204 and permission of Faculty.",
+      "tree": "FACC 204",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Coordinated by the Engineering Career Centre."
+    ]
+  },
+  {
+    "code": "FACC 210",
+    "subject": "FACC",
+    "number": "210",
+    "title": "MIAE Industrial Practicum 1",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Research and design project in the aerospace industry, coordinated by the McGill Institute for Aerospace Engineering (MIAE) and supervised by both an industrial and an academic researcher.",
+    "prerequisites": {
+      "text": "Permission of Faculty.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 211",
+    "subject": "FACC",
+    "number": "211",
+    "title": "MIAE Industrial Practicum 2",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Research and design project in the aerospace industry, coordinated by the McGill Institute for Aerospace Engineering (MIAE) and supervised by both an industrial and an academic researcher.",
+    "prerequisites": {
+      "text": "FACC 210 and permission of Faculty.",
+      "tree": "FACC 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 212",
+    "subject": "FACC",
+    "number": "212",
+    "title": "MIAE Industrial Practicum 3",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Research and design project in the aerospace industry, coordinated by the McGill Institute for Aerospace Engineering (MIAE) and supervised by both an industrial and an academic researcher",
+    "prerequisites": {
+      "text": "FACC 211 and permission of Faculty",
+      "tree": "FACC 211",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 213",
+    "subject": "FACC",
+    "number": "213",
+    "title": "MIAE Industrial Practicum 4",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Research and design project in the aerospace industry, coordinated by the McGill Institute for Aerospace Engineering (MIAE) and supervised by both an industrial and an academic researcher",
+    "prerequisites": {
+      "text": "FACC 212 and permission of Faculty",
+      "tree": "FACC 212",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 220",
+    "subject": "FACC",
+    "number": "220",
+    "title": "Law for Architects and Engineers",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Aspects of the law which affect architects and engineers. Definition and branches of law; Federal and Provincial jurisdiction, civil and criminal law and civil and common law; relevance of statutes; partnerships and companies; agreements; types of property, rights of ownership; successions and wills; expropriation; responsibility for negligence; servitudes/easements, privileges/liens, hypothecs/ mortgages; statutes of limitations; strict liability of architect, engineer and builder; patents, trade marks, industrial design and copyright; bankruptcy; labour law; general and expert evidence; court procedure and arbitration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "FACC 250",
+    "subject": "FACC",
+    "number": "250",
+    "title": "Responsibilities of the Professional Engineer",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A course designed to provide all Engineering students with further training regarding their responsibilities as future Professional Engineers. Particular focus will be placed on three professional characteristics that future engineers must demonstrate: i) professionalism, ii) ethical and equitable behaviour, and iii) consideration of the impact of engineering on society and the environment.",
+    "prerequisites": {
+      "text": "FACC 100 or BREE 205",
+      "tree": {
+        "or": [
+          "FACC 100",
+          "BREE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to undergraduate students registered in the Bioengineering, Bioresource Engineering, Chemical Engineering, Civil Engineering, Computer Engineering, Electrical Engineering, Materials Engineering, Mechanical Engineering, Mining Engineering, and Software Engineering (Faculty of Engineering) programs. Not open to U0 (Year 0)students.",
+      "excludes": []
+    },
+    "notes": [
+      "(0-0-0.5)"
+    ]
+  },
+  {
+    "code": "FACC 300",
+    "subject": "FACC",
+    "number": "300",
+    "title": "Engineering Economy",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to the basic concepts required for the economic assessment of engineering projects. Topics include: accounting methods, marginal analysis, cash flow and time value of money, taxation and depreciation, discounted cash flow analysis techniques, cost of capital, inflation, sensitivity and risk analysis, analysis of R and D, ongoing as well as new investment opportunities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 310.",
+      "excludes": [
+        "MIME 310"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "FACC 351",
+    "subject": "FACC",
+    "number": "351",
+    "title": "Summer Undergraduate Research Experience 1",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Participation in the SURE (Summer Undergraduate Research in the Faculty of Engineering) experience, in which a student undertakes a 16-week traineeship within a research facility or laboratory in the Faculty, including the School of Architecture. Students work closely with academic researchers and graduate students on a specified project, and present the results of their research as part of the SURE poster session at the end of the summer.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 352",
+    "subject": "FACC",
+    "number": "352",
+    "title": "Summer Undergraduate Research Experience 2",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Participation in the SURE (Summer Undergraduate Research in the Faculty of Engineering) experience, in which a student undertakes a 16-week traineeship within a research facility or laboratory in the Faculty, including the School of Architecture. Students work closely with academic researchers and graduate students on a specified project, and present the results of their research as part of the SURE poster session at the end of the summer.",
+    "prerequisites": {
+      "text": "FACC 351",
+      "tree": "FACC 351",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 353",
+    "subject": "FACC",
+    "number": "353",
+    "title": "Summer Undergraduate Research Experience 3",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Participation in the SURE (Summer Undergraduate Research in the Faculty of Engineering) experience, in which a student undertakes a 16-week traineeship within a research facility or laboratory in the Faculty, including the School of Architecture. Students work closely with academic researchers and graduate students on a specified project, and present the results of their research as part of the SURE poster session at the end of the summer.",
+    "prerequisites": {
+      "text": "FACC 352",
+      "tree": "FACC 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 354",
+    "subject": "FACC",
+    "number": "354",
+    "title": "Summer Undergraduate Research Experience 4",
+    "credits": 0,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Participation in the SURE (Summer Undergraduate Research in the Faculty of Engineering) experience, in which a student undertakes a 16-week traineeship within a research facility or laboratory in the Faculty, including the School of Architecture. Students work closely with academic researchers and graduate students on a specified project, and present the results of their research as part of the SURE poster session at the end of the summer.",
+    "prerequisites": {
+      "text": "FACC 353",
+      "tree": "FACC 353",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FACC 400",
+    "subject": "FACC",
+    "number": "400",
+    "title": "Engineering Professional Practice",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Laws, regulations and codes governing engineering professional practice. Responsibility and liability. Environmental legislation. Project and organization management. Relations between engineer and client. Technical practice - analysis, design, execution and operation.",
+    "prerequisites": {
+      "text": "FACC 250 and [at least 60 program credits for B.Eng./B.S.E. students in the Faculty of Engineering or 45 program credits for B.Eng.(Bioresource) students].",
+      "tree": "FACC 250",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 221.",
+      "excludes": [
+        "MIME 221"
+      ]
+    },
+    "notes": [
+      "(1.5-1-0.5)"
+    ]
+  },
+  {
+    "code": "FACC 463",
+    "subject": "FACC",
+    "number": "463",
+    "title": "Engineering Design Project",
+    "credits": 6,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Teams work in consultation with faculty members and/or industrial consultants, and under the supervision of the course instructor, in the design of functional and practical systems, devices, or processes, taking into account safety, sustainability, management and economic considerations. Emphasis is on the completion of a project of professional quality in which professional engineering practices are followed.",
+    "prerequisites": {
+      "text": "WCOM 206",
+      "tree": "WCOM 206",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to U3 students",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "FACC 463D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "FACC 463D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "FACC 500",
+    "subject": "FACC",
+    "number": "500",
+    "title": "Technology Business Plan Design",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course combines several management functional areas such as marketing, financial, operations and strategy with the skills of creativity, engineering innovation, leadership and communications. Students learn how to design an effective and winning business plan around a technology or engineering project in small, medium or large enterprises.",
+    "prerequisites": {
+      "text": "FACC 300 or permission of instructor.",
+      "tree": "FACC 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Recommended to be taken in combination with FACC 501."
+    ]
+  },
+  {
+    "code": "FACC 501",
+    "subject": "FACC",
+    "number": "501",
+    "title": "Technology Business Plan Project",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Students work in teams to develop a comprehensive business plan project based on a technological or engineering innovation while utilizing site visits.",
+    "prerequisites": {
+      "text": "FACC 300 or permission of instructor",
+      "tree": "FACC 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FACC 480.",
+      "excludes": [
+        "FACC 480"
+      ]
+    },
+    "notes": [
+      "(1-0-8)",
+      "Recommended to be taken in combination with FACC 500."
+    ]
+  },
+  {
+    "code": "FACC 510",
+    "subject": "FACC",
+    "number": "510",
+    "title": "Selected Topics in the Faculty of Engineering 1",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Special topics related to interdisciplinary areas in engineering, architecture, and/or urban planning.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students and undergraduate students in their final year.",
+      "excludes": []
+    },
+    "notes": [
+      "Contact hours variable."
+    ]
+  },
+  {
+    "code": "FACC 511",
+    "subject": "FACC",
+    "number": "511",
+    "title": "Selected Topics in the Faculty of Engineering 2",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Special topics related to inter-disciplinary areas in engineering, architecture, and/or urban planning.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students",
+      "excludes": []
+    },
+    "notes": [
+      "Contact hours variable."
+    ]
+  }
+]

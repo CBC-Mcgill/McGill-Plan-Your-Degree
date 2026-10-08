@@ -1,0 +1,165 @@
+[
+  {
+    "code": "EDPS 600",
+    "subject": "EDPS",
+    "number": "600",
+    "title": "Foundational Professional Seminar",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Foundational seminar designed to foster critical thinking about the complex educational endeavour of becoming a teacher, including what shapes the development of teachers’ roles, identities and professionalism. Topics include: community, families, relationships, conflict management, and trauma-informed practices. Review of the Québec Education Program and professional repository documentation of developing individual teacher identity and professional competencies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. See Minerva for dates."
+    ]
+  },
+  {
+    "code": "EDPS 605",
+    "subject": "EDPS",
+    "number": "605",
+    "title": "Culminating Professional Seminar",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminars on the experience through aspects of self-examination and reflection. Topics include identifying and understanding progress and areas of weakness, attending to physical and emotional self-care, and charting ongoing professional development. Culminating professional projects are showcased.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDIN 602",
+      "tree": "EDIN 602",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day."
+    ]
+  },
+  {
+    "code": "EDPS 610",
+    "subject": "EDPS",
+    "number": "610",
+    "title": "Professional Seminar 1A",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Reflexive, cohesive, and practice-oriented topics on equity, diversity and inclusion in education; classroom situations with a view to improving practice; integration of digital technologies; and teacher collaboration and community-building through a case study approach. Ongoing support for and debrief of concurrent internship. Professional repository documentation of professional competencies for teachers and selection of artifacts.",
+    "prerequisites": {
+      "text": "EDTL 515, EDPS 600",
+      "tree": {
+        "and": [
+          "EDTL 515",
+          "EDPS 600"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDIN 610 or EDIN 510",
+      "tree": {
+        "or": [
+          "EDIN 610",
+          "EDIN 510"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDIN 601.",
+      "excludes": [
+        "EDIN 601"
+      ]
+    },
+    "notes": [
+      "Normally students must pass both EDIN 610 and EDPS 610, failure in a course may necessitate repeating both courses."
+    ]
+  },
+  {
+    "code": "EDPS 620",
+    "subject": "EDPS",
+    "number": "620",
+    "title": "Professional Seminar 2",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Professional and ethical practices as novice teachers. Case study approach of topics include: identity, contributions to education, connections to competencies, professional organizations and professional development. Ongoing support for and debrief of concurrent internship. E-portfolios are completed and prepared for future professional development in the field.",
+    "prerequisites": {
+      "text": "EDIN 610, EDPS 610, EDTL 640",
+      "tree": {
+        "and": [
+          "EDIN 610",
+          "EDPS 610",
+          "EDTL 640"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDIN 620",
+      "tree": "EDIN 620",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDIN 602.",
+      "excludes": [
+        "EDIN 602"
+      ]
+    },
+    "notes": [
+      "Students must pass both 'mentored student teaching' and 'professional seminar' components to pass the course. Normally students must pass both EDIN 620 and EDPS 620, failure in a course may necessitate repeating both courses"
+    ]
+  },
+  {
+    "code": "EDPS 622",
+    "subject": "EDPS",
+    "number": "622",
+    "title": "Professional Seminar 2A",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Professional and ethical practices as novice teachers. Case study approach of topics include: identity, professional competencies, contributions to education, professional organizations, digital technology integration, and professional development.",
+    "prerequisites": {
+      "text": "EDPS 610, (EDIN 610 or EDIN 510)",
+      "tree": {
+        "and": [
+          "EDPS 610",
+          {
+            "or": [
+              "EDIN 610",
+              "EDIN 510"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDIN 520",
+      "tree": "EDIN 520",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDPS 620.",
+      "excludes": [
+        "EDPS 620"
+      ]
+    },
+    "notes": [
+      "Professional repositories are completed and prepared for future professional development in the field."
+    ]
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "code": "CACC 220",
+    "subject": "CACC",
+    "number": "220",
+    "title": "Accounting Concepts for Managers",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course covers concepts in managerial and financial accounting, develops an understanding of cost behaviour, budgeting and financial statements, and provides practice in financial decision-making skills.",
+    "prerequisites": {
+      "text": "CMSC 000",
+      "tree": "CMSC 000",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGCR 211.",
+      "excludes": [
+        "MGCR 211"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CACC 520",
+    "subject": "CACC",
+    "number": "520",
+    "title": "Accounting for Management",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course covers financial and managerial accounting. The course provides an understanding of the various financial statements as well as cost behaviour, cost/volume/profit relationships, budgets, responsibility accounting and relevant costing.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CMS2 500",
+      "tree": "CMS2 500",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CACC 523",
+    "subject": "CACC",
+    "number": "523",
+    "title": "Financial Aspects of Health Care",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Methods of budgeting in the health care system and evaluating health care investment proposals. Problems of benefit measurement and optimal public investment in relation to fiscal and political constraints. This includes the role of governmental expenditures, the public debt, private contributions in the health care system.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHLC 500",
+      "tree": "CHLC 500",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "CACC 523N1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CACC 523N2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "CACC 621",
+    "subject": "CACC",
+    "number": "621",
+    "title": "Concepts of Financial Accounting",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of accounting in a finance context, specifically, how to prepare, interpret, and make decisions based on accounting information, including the process of recording and reporting accounting transactions, the elements of financial statements, and the preparation of various financial statements.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CACC 521.",
+      "excludes": [
+        "CACC 521"
+      ]
+    },
+    "notes": []
+  }
+]

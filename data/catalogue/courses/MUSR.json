@@ -1,0 +1,606 @@
+[
+  {
+    "code": "MUSR 200",
+    "subject": "MUSR",
+    "number": "200",
+    "title": "Audio Recording Essentials",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "A basic overview of audio recording. Topics include fundamentals of audio; a historical overview of recorded sound; analog and digital signal flow; listening environment design; listening and analysis; simple recording; connecting audio to a video camera; and audio on the web.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "No experience in audio recording required."
+    ]
+  },
+  {
+    "code": "MUSR 201",
+    "subject": "MUSR",
+    "number": "201",
+    "title": "Audio Production Essentials",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "An introduction to common practices in digital audio production. A survey of music production styles and audio production techniques: basic editing, arranging and mixing music on a computer using a combination of natural and sampled sounds; sound design for television, film and video games. The course design is centered on classroom presentations and discussion, including in-class demonstrations without the need for a studio or lab component.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSR 232",
+    "subject": "MUSR",
+    "number": "232",
+    "title": "Introduction to Electronics",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basics of electricity including: Ohm's law, electronic components, DC circuits, block diagram, amplifiers, filters, power supplies, electrical measurements (frequency levels, distortion). Emphasis will be placed on electronics applied to audio.",
+    "prerequisites": {
+      "text": "or corequisite: MATH 112. Available as Arts/Science elective in B.Mus. programs.",
+      "tree": "MATH 112",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUMT 232.",
+      "excludes": [
+        "MUMT 232"
+      ]
+    },
+    "notes": [
+      "2 hours lecture plus 2 hours laboratory."
+    ]
+  },
+  {
+    "code": "MUSR 300",
+    "subject": "MUSR",
+    "number": "300",
+    "title": "Introduction to Music Recording",
+    "credits": 6,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The theory and practice of music recording including a study of recording environments, equipment and studio techniques. The analysis of music scores and recordings with respect to the requirements and possibilities of the recording studio. Studio work will include recording sessions, recording of live concerts, editing, mixing and music p.a.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUMT 300D1/D2.",
+      "excludes": [
+        "MUMT 300D1"
+      ]
+    },
+    "notes": [
+      "3 hours lecture plus 4 hours studio time.",
+      "It is recommended that all students taking this course register concurrently for PHYS 224 Physics of Music if they do not already have a background in this subject.",
+      "Students must register for both MUSR 300D1 and MUSR 300D2.",
+      "No credit will be given for this course unless both MUSR 300D1 and MUSR 300D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSR 300D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 300D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 339",
+    "subject": "MUSR",
+    "number": "339",
+    "title": "Introduction to Electroacoustics",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Basic principles of operation and design of electroacoustical devices and systems; transducers and signal processing devices; magnetic tape sound recording - reproducing systems; disc recording, motion picture sound recording and reproducing systems; practical demonstration of some of these devices and associated measuring, testing and analyzing equipment and techniques.",
+    "prerequisites": {
+      "text": "MUSR 232 (previously MUMT 232). Available as Arts/Science elective in B.Mus. programs.",
+      "tree": {
+        "and": [
+          "MUSR 232",
+          "MUMT 232"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUMT 339.",
+      "excludes": [
+        "MUMT 339"
+      ]
+    },
+    "notes": [
+      "2 hours lecture plus 2 hours laboratory."
+    ]
+  },
+  {
+    "code": "MUSR 629",
+    "subject": "MUSR",
+    "number": "629",
+    "title": "Technical Ear Training",
+    "credits": 4,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course will, through a sequence of specific auditory exercises, develop and improve students' aural sensitivity to small changes in sound quality. Students train to identify spectral variables in sound, develop stable reference of sound quality and learn about spectral characteristics of musical instruments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUMT 629D1/D2.",
+      "excludes": [
+        "MUMT 629D1"
+      ]
+    },
+    "notes": [
+      "1 hour tutorial, 2 hours laboratory.",
+      "Students must register for both MUSR 629D1 and MUSR 629D2.",
+      "No credit will be given for this course unless both MUSR 629D1 and MUSR 629D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSR 629D1",
+        "credits": 2,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 629D2",
+        "credits": 2,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 631",
+    "subject": "MUSR",
+    "number": "631",
+    "title": "Advanced Technical Ear Training",
+    "credits": 4,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Identification and quantification of spatial parameters of sound image, nonlinear and transient distortion audibility, identification of coherent and incoherent noise, sound source identification in complex textures, sound enhancement and reconstruction. Instruction focused on acoustic and electroacoustic measurements is included throughout the year, as an exploration of the bridge between objective measure and subjective impressions of various acoustic spaces and electronic equipment.",
+    "prerequisites": {
+      "text": "MUMT 629.",
+      "tree": "MUMT 629",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUMT 631D1/D2.",
+      "excludes": [
+        "MUMT 631D1"
+      ]
+    },
+    "notes": [
+      "1 hour tutorial, 2 hours laboratory",
+      "Students must register for both MUSR 631D1 and MUSR 631D2.",
+      "No credit will be given for this course unless both MUSR 631D1 and MUSR 631D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSR 631D1",
+        "credits": 2,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 631D2",
+        "credits": 2,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 667",
+    "subject": "MUSR",
+    "number": "667",
+    "title": "Digital Studio Technology",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Technical and operational characteristics of different digital recording systems currently employed by the recording industry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "MUSR 668",
+    "subject": "MUSR",
+    "number": "668",
+    "title": "Digital/Analog Audio Editing",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Using analog and digital record/playback equipment, students learn, through practice, the art of replacing, patching, rebalancing, reconstructing, or generally speaking, improving recorded music through editing. Teaching will include cut and splice editing, disk-based editing, and editing by transfer and mixing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour tutorial, 3 hours studio time."
+    ]
+  },
+  {
+    "code": "MUSR 669",
+    "subject": "MUSR",
+    "number": "669",
+    "title": "Topics: Classical Music Recording",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Issues involving classical music recording. Topics may include: analysis of performance styles, acoustics of concert halls, production of music videos, seminars with recording producers, tonmeisters, classical music in multimedia, and others.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lecture"
+    ],
+    "parts": [
+      {
+        "code": "MUSR 669D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 669D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 670",
+    "subject": "MUSR",
+    "number": "670",
+    "title": "Recording Theory and Practice 1",
+    "credits": 10,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Theoretical and practice study of recording equipment, procedures and techniques. Recording sessions and live stereo recording, using the recording studio, concert hall and portable equipment for on-location recording. Also included will be an introduction to the areas of radio drama, broadcast recording and radio commercials.",
+    "prerequisites": {
+      "text": "MUMT 300.",
+      "tree": "MUMT 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours seminar, 6 hours studio time.",
+      "Students must register for both MUSR 670D1 and MUSR 670D2.",
+      "No credit will be given for this course unless both MUSR 670D1 and MUSR 670D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSR 670D1",
+        "credits": 5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 670D2",
+        "credits": 5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 671",
+    "subject": "MUSR",
+    "number": "671",
+    "title": "Recording Theory and Practice 2",
+    "credits": 10,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Emphasis on multi-track recording theory and practice. The course will also concentrate on expanded multi-track procedures: signal processing, overdubbing, mixing, editing, and producing.",
+    "prerequisites": {
+      "text": "MUSR 670D1/D2 (formerly MUMT 670D1/D2).",
+      "tree": {
+        "and": [
+          "MUSR 670",
+          "MUMT 670D1"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours seminar, 6 hours studio time.",
+      "Students must register for both MUSR 671D1 and MUSR 671D2.",
+      "No credit will be given for this course unless both MUSR 671D1 and MUSR 671D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSR 671D1",
+        "credits": 5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 671D2",
+        "credits": 5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 672",
+    "subject": "MUSR",
+    "number": "672",
+    "title": "Analysis of Recordings",
+    "credits": 6,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The analysis of recording engineering, production, performance, aesthetics and technical quality of selected recordings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours.",
+      "Students must register for both MUSR 672D1 and MUSR 672D2.",
+      "No credit will be given for this course unless both MUSR 672D1 and MUSR 672D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSR 672D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 672D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 677",
+    "subject": "MUSR",
+    "number": "677",
+    "title": "Audio for Video Post-Production",
+    "credits": 6,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Theoretical study includes historical analysis of sound for image, audio post-production process for film and video, aesthetic and technical considerations in sound design, time code and synchronization, and final mix formats. Practical skills include field recording, sound library management, sound design, dialog, effects and music editing, and final mix process.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours seminar, 4 hours studio time.",
+      "Students must register for both MUSR 677D1 and MUSR 677D2.",
+      "No credit will be given for this course unless both MUSR 677D1 and MUSR 677D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSR 677D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUSR 677D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUSR 678",
+    "subject": "MUSR",
+    "number": "678",
+    "title": "Advanced Digital Editing and Post-Production",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course covers advanced concepts and techniques of audio post-production using digital workstations. Students practise the assembly of raw material into a complete final product through editing, signal processing, mixing, sound restoration and pre-mastering.",
+    "prerequisites": {
+      "text": "MUSR 668 (formerly MUMT 668).",
+      "tree": {
+        "and": [
+          "MUSR 668",
+          "MUMT 668"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours."
+    ]
+  },
+  {
+    "code": "MUSR 690",
+    "subject": "MUSR",
+    "number": "690",
+    "title": "Special Field Research",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar focused on research preparation and methods, with course materials comprised of special field topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Ph.D. in Music (Sound Recording).",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUSR 691",
+    "subject": "MUSR",
+    "number": "691",
+    "title": "Mastering and Restoration",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced practices in mastering and remastering of recorded music. Emphasis on digitizing and restoration (“clean-up\") of ageing analog sources, print-through correction, and the assembling/mastering/finalizing of new recordings utilizing various techniques. Specific topics include archiving/preservation/metadata, analog tape transfer including alignment/azimuth and record bias, 78rpm disc transfers including stylus choice/speed correction and playback curve selection. Instruction is included in equalization and dynamic range control processes as they relate specifically to the mastering process.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours."
+    ]
+  },
+  {
+    "code": "MUSR 692",
+    "subject": "MUSR",
+    "number": "692",
+    "title": "Music Production Workshop",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The Seminar aims at giving Music Performance and Sound Recording students the tools to becoming better recording artists, performers and recording engineers in today’s music scene. It will help them acquire skills and abilities as well as develop an informed judgement about recorded music performances and the recorded sound.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This seminar is open to second year masters and doctoral Sound Recording students, master's and doctoral Performance and Graduate Artist Diploma students only.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours."
+    ]
+  },
+  {
+    "code": "MUSR 693",
+    "subject": "MUSR",
+    "number": "693",
+    "title": "Media Theory and Practice Seminar 4",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics vary from year to year and are normally chosen according to the individual instructor's area of expertise. Topics to be covered may include the following: Media Technology, Digital Restoration of Archival Recordings, Communications Systems and Standards, Audio Aesthetics of Video Musicals, Classical Music and the Television Medium, etc.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUSR 695",
+    "subject": "MUSR",
+    "number": "695",
+    "title": "Techniques of Immersive Sound",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theory and practice of immersive sound. Exploration of advanced tools and techniques applied in three-dimensional recording and reproduction of music. Topics are chosen each year to reflect key areas of emerging knowledge and applications in 3D audio. Learning is based on application of interdisciplinary components from music, acoustics, signal processing, auditory perception, virtual reality, and multimedia.",
+    "prerequisites": {
+      "text": "For Master's students: MUSR 670D1, MUSR 670D2 and MUSR 672D1, MUSR 672D2",
+      "tree": {
+        "and": [
+          "MUSR 670",
+          "MUSR 672"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  }
+]

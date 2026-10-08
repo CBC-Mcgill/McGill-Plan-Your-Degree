@@ -1,0 +1,74 @@
+[
+  {
+    "code": "CEN2 500",
+    "subject": "CEN2",
+    "number": "500",
+    "title": "New Venture Formation",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Essential business acumen required to plan and launch a new venture. The various facets of entrepreneurship dealing with idea generation, valuation techniques, funding, data sources, intellectual property, legalities and business plan development will be explored.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CEN2 506",
+    "subject": "CEN2",
+    "number": "506",
+    "title": "Financing Startups and Ventures",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Selecting and securing venture financing by evaluating the different sources of equity and debt financing (including Government financial assistance programs). Capital planning, valuation and financing deal structure will also be covered.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CEN2 507",
+    "subject": "CEN2",
+    "number": "507",
+    "title": "Venture Growth Strategies",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Practical strategies for building businesses through all the various stages will be explored. Focus will be placed on identifying potentials for growth, realizing the challenges and opportunities for growth within entrepreneurial settings, and managing growth. The course will also include a team project in which a development plan for a real or hypothetical business will be created.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CEN2 510",
+    "subject": "CEN2",
+    "number": "510",
+    "title": "Practical Entrepreneurship Management",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This application-based course provides students with hands-on experience in planning a new venture in its entirety. Students will work in teams to develop a new start-up idea project during the term.",
+    "prerequisites": {
+      "text": "CEN2 500, CEN2 506 and CMG2 520",
+      "tree": {
+        "and": [
+          "CEN2 500",
+          "CEN2 506",
+          "CMG2 520"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: The course includes live case studies by the 'Dobson Fellows' (Presidents, CEOs and industry leaders)."
+    ]
+  }
+]

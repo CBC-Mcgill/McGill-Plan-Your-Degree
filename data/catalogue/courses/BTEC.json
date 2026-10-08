@@ -1,0 +1,328 @@
+[
+  {
+    "code": "BTEC 306",
+    "subject": "BTEC",
+    "number": "306",
+    "title": "Experiments in Biotechnology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Practical laboratory-based research experience. Techniques in cellular and molecular biology, designing experiments and developing skills in interpretation and communication of experimental results.",
+    "prerequisites": {
+      "text": "BIOL 202 or LSCI 204 or permission of instructor.",
+      "tree": {
+        "or": [
+          "BIOL 202",
+          "LSCI 204"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BTEC 501",
+    "subject": "BTEC",
+    "number": "501",
+    "title": "Bioinformatics",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course introduces the application of computer software for analysis of biological sequence information. An emphasis is placed on the biological theory behind analytical techniques, the algorithms used and methods of developing a statistical framework for various types of analysis.",
+    "prerequisites": {
+      "text": "LSCI 202 or LSCI 204 and ANSC 326. Permission of instructor.",
+      "tree": {
+        "or": [
+          "LSCI 202",
+          {
+            "and": [
+              "LSCI 204",
+              "ANSC 326"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BINF 301.",
+      "excludes": [
+        "BINF 301"
+      ]
+    },
+    "notes": [
+      "3 lectures per week"
+    ]
+  },
+  {
+    "code": "BTEC 502",
+    "subject": "BTEC",
+    "number": "502",
+    "title": "Biotechnology Ethics and Society",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of particular social and ethical challenges posed by modern biotechnology such as benefit sharing, informed consent in the research setting, access to medical care worldwide, environmental safety and biodiversity and the ethical challenges posed by patenting life.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 and over.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BTEC 535",
+    "subject": "BTEC",
+    "number": "535",
+    "title": "Functional Genomics in Model Organisms",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An overview of strategies used to understand the function of genes, especially those identified through genome sequencing and bioinformatics. Use of model organisms that have proved particularly valuable for this purpose.",
+    "prerequisites": {
+      "text": "300-level course in genetics, molecular biology, biochemistry or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to 30 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BTEC 555",
+    "subject": "BTEC",
+    "number": "555",
+    "title": "Structural Bioinformatics",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of protein structure and the application of tools for structure determination, how protein structure allows us to understand the complex biological functions, and how knowledge of protein structure can contribute to drug discovery.",
+    "prerequisites": {
+      "text": "Molecular biology or biochemistry, and basic bioinformatics, or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "1-hr lecture, followed by 2 hrs of computer lab."
+    ]
+  },
+  {
+    "code": "BTEC 619",
+    "subject": "BTEC",
+    "number": "619",
+    "title": "Biotechnology Laboratory 2",
+    "credits": 4,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A laboratory-based course in a variety of topics including: proteomics, protein expression and purification, conventional and HPLC chromatography, protein-protein interactions, ELISA, and Western blot analysis and hybridoma techniques.",
+    "prerequisites": {
+      "text": "BTEC 620 or permission of the instructor.",
+      "tree": "BTEC 620",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The fee of $616.34 is used to support the cost of chemical reagents, kits, disposables and minor equipment necessary to run this hands-on laboratory course."
+    ]
+  },
+  {
+    "code": "BTEC 620",
+    "subject": "BTEC",
+    "number": "620",
+    "title": "Biotechnology Laboratory 1",
+    "credits": 4,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical training in contemporary methods of molecular and cellular biology. Intended for students with background in molecular biology, biochemistry, or a related area, who are already familiar with theoretical principles of recombinant DNA technologies. Topics include: polymerase chain reaction (PCR), methods for gene cloning and mutagenesis, eukaryotic and prokaryotic gene expression systems, protein purification and methods of eukaryotic cell culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "one 8-hour lab per week",
+      "The fee of $1232.68 is used to support the cost of chemical reagents, kits, disposables and minor equipment necessary to run this hands-on laboratory course."
+    ]
+  },
+  {
+    "code": "BTEC 621",
+    "subject": "BTEC",
+    "number": "621",
+    "title": "Biotechnology Management",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics relevant to the management of research in industry are presented by experts working in industry. This course highlights the differences existing between research done in an academic environment and research done within industry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "one 3-hour lecture per week"
+    ]
+  },
+  {
+    "code": "BTEC 622",
+    "subject": "BTEC",
+    "number": "622",
+    "title": "Biotechnology Research Project 1",
+    "credits": 2,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research project proposal and literature review.",
+    "prerequisites": {
+      "text": "BTEC 620.",
+      "tree": "BTEC 620",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "M.Sc.(Applied) in Biotechnology students and is a prerequisite to BTEC 623, BTEC 624 and BTEC 625.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BTEC 623",
+    "subject": "BTEC",
+    "number": "623",
+    "title": "Biotechnology Research Project 2",
+    "credits": 6,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Intensive research project, lasting a minimum of 16 weeks in conjunction with course Biotechnology Research Project 3, conducted in a university hospital or industry laboratory involved in biotechnology research or development.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "BTEC 622",
+      "tree": "BTEC 622",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "M.Sc.(Applied) Biotechnology students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BTEC 624",
+    "subject": "BTEC",
+    "number": "624",
+    "title": "Biotechnology Research Project 3",
+    "credits": 6,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Intensive research project, lasting a minimum of 16 weeks in conjunction with Biotechnology Research Project 2, conducted in a university hospital or industry laboratory involved in biotechnology research or development.",
+    "prerequisites": {
+      "text": "BTEC 622.",
+      "tree": "BTEC 622",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "BTEC 623.",
+      "tree": "BTEC 623",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "M.Sc.(Applied) Biotechnology students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BTEC 625",
+    "subject": "BTEC",
+    "number": "625",
+    "title": "Biotechnology Research Project 4",
+    "credits": 2,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Student will prepare a report on the research experience and give a presentation.",
+    "prerequisites": {
+      "text": "BTEC 622.",
+      "tree": "BTEC 622",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "BTEC 623, BTEC 624.",
+      "tree": {
+        "and": [
+          "BTEC 623",
+          "BTEC 624"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "M.Sc.(Applied) Biotechnology students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BTEC 650",
+    "subject": "BTEC",
+    "number": "650",
+    "title": "Therapeutic Antibody Design",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles and methodologies of structure-based molecular design, optimization, and development of therapeutic monoclonal antibodies. Role in therapy and diagnosis; structural features of various types of antibodies; dissection of antibody-antigen interactions; in silico affinity maturation; manipulation of antigen specificity by point mutagenesis; using antibody Fc domain to modulate pharmacokinetics and effector functions; design of antibody conjugates carrying toxic payloads; engineering T-cells with chimeric antigen receptors; evaluation and improving antibody immunogenicity and aggregation; antibody humanization.",
+    "prerequisites": {
+      "text": "400-level or higher level course in biochemistry and bioinformatics, or permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,533 @@
+[
+  {
+    "code": "MUSP 123",
+    "subject": "MUSP",
+    "number": "123",
+    "title": "Jazz Ear Training 1",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Rhythmic, melodic and harmonic materials from the jazz idiom. Sight-singing, dictation and transcription with some classical materials.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUJZ 160, MUJZ 170",
+      "tree": {
+        "and": [
+          "MUJZ 160",
+          "MUJZ 170"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students in Jazz Performance and Music Studies Majors. Not open to students who have taken or are taking MUSP 140.",
+      "excludes": [
+        "MUSP 140"
+      ]
+    },
+    "notes": [
+      "2 hours"
+    ]
+  },
+  {
+    "code": "MUSP 124",
+    "subject": "MUSP",
+    "number": "124",
+    "title": "Jazz Ear Training 2",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced jazz idioms.",
+    "prerequisites": {
+      "text": "MUSP 123",
+      "tree": "MUSP 123",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUJZ 161, MUJZ 171",
+      "tree": {
+        "and": [
+          "MUJZ 161",
+          "MUJZ 171"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students in Jazz Performance and Music Studies Majors. Not open to students who have taken or are taking MUSP 141.",
+      "excludes": [
+        "MUSP 141"
+      ]
+    },
+    "notes": [
+      "2 hours"
+    ]
+  },
+  {
+    "code": "MUSP 140",
+    "subject": "MUSP",
+    "number": "140",
+    "title": "Musicianship Training 1",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Rhythm and metre basic subdivisions and conducting patterns; intervals, chords, and scale patterns; non-modulating tonal melodies with treble and bass clefs; harmonic progressions emphasizing two-part outer voice structures.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUTH 150, MUSP 170",
+      "tree": {
+        "and": [
+          "MUTH 150",
+          "MUSP 170"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MUSP 123.",
+      "excludes": [
+        "MUSP 123"
+      ]
+    },
+    "notes": [
+      "2 hours"
+    ]
+  },
+  {
+    "code": "MUSP 141",
+    "subject": "MUSP",
+    "number": "141",
+    "title": "Musicianship Training 2",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Rhythm and metre mixed divisions and syncopations; triadic and seventh chord voicings and disjunct pitch collections; chromatically embellished melodies adding alto clef; simple modulating harmonic progressions emphasizing two-part outer voice structures.",
+    "prerequisites": {
+      "text": "MUSP 140 and MUSP 170",
+      "tree": {
+        "and": [
+          "MUSP 140",
+          "MUSP 170"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUTH 151, MUSP 171",
+      "tree": {
+        "and": [
+          "MUTH 151",
+          "MUSP 171"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MUSP 124.",
+      "excludes": [
+        "MUSP 124"
+      ]
+    },
+    "notes": [
+      "2 hours"
+    ]
+  },
+  {
+    "code": "MUSP 170",
+    "subject": "MUSP",
+    "number": "170",
+    "title": "Musicianship (Keyboard) 1",
+    "credits": 1,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Harmonic, melodic and rhythmic analysis at the keyboard through the study of rudiments, repertoire, chorale/score reading, transposition and harmonization.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUTH 150 and MUSP 140.",
+      "tree": {
+        "and": [
+          "MUTH 150",
+          "MUSP 140"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MUJZ 170.",
+      "excludes": [
+        "MUJZ 170"
+      ]
+    },
+    "notes": [
+      "1 hour",
+      "Course contents parallel with those of MUTH 150 and MUSP 140."
+    ]
+  },
+  {
+    "code": "MUSP 171",
+    "subject": "MUSP",
+    "number": "171",
+    "title": "Musicianship (Keyboard) 2",
+    "credits": 1,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Building chordal fluency. Harmonic vocabulary including sequences, chromaticism and modulation. Chorale and score reading with transposing instruments and alto/tenor clefs.",
+    "prerequisites": {
+      "text": "MUSP 170",
+      "tree": "MUSP 170",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUTH 151 and MUSP 141",
+      "tree": {
+        "and": [
+          "MUTH 151",
+          "MUSP 141"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MUJZ 171.",
+      "excludes": [
+        "MUJZ 171"
+      ]
+    },
+    "notes": [
+      "1 hour",
+      "Course contents parallel with those of MUTH 151 and MUSP 141."
+    ]
+  },
+  {
+    "code": "MUSP 240",
+    "subject": "MUSP",
+    "number": "240",
+    "title": "Musicianship Training 3",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Rhythm and metre mixed divisions and two-part work; additional chordal voicings and pitch collections; melodies modulating to closely-related keys adding tenor clef; harmonic progression including applied chords; two-part keyboard-style passages.",
+    "prerequisites": {
+      "text": "Matriculation Music or McGill Conservatory Theory Secondary V or its equivalent. MUSP 141",
+      "tree": "MUSP 141",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MUTH 250",
+      "tree": "MUTH 250",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSP 241",
+    "subject": "MUSP",
+    "number": "241",
+    "title": "Musicianship Training 4",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Changing metres; chord voicings and atonal pitch collections; modulating tonal melodies and score reading of transposing instruments; harmonic progression including chromatic chords; two-part passages.",
+    "prerequisites": {
+      "text": "MUSP 240",
+      "tree": "MUSP 240",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUTH 251",
+      "tree": "MUTH 251",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSP 324",
+    "subject": "MUSP",
+    "number": "324",
+    "title": "Musicianship for Strings",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Fundamental musicianship issues in the context of performance with an emphasis on intonation accuracy, rhythm, articulation, voice-leading and sound texture for strings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Pre- or Co-requisite: MUSP 241"
+    ]
+  },
+  {
+    "code": "MUSP 346",
+    "subject": "MUSP",
+    "number": "346",
+    "title": "Post-Tonal Musicianship",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Extended tonal and post-tonal harmonic and contrapuntal structures, rhythmic practices of the 20th and 21st century, score reading.",
+    "prerequisites": {
+      "text": "MUSP 241",
+      "tree": "MUSP 241",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSP 353",
+    "subject": "MUSP",
+    "number": "353",
+    "title": "Musicianship for Voice",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Fundamental musicianship issues in the context of performance with an emphasis on intonation accuracy, rhythm, voice-leading and sound texture.",
+    "prerequisites": {
+      "text": "MUSP 141",
+      "tree": "MUSP 141",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSP 354",
+    "subject": "MUSP",
+    "number": "354",
+    "title": "Introduction to Improvisation and Ornamentation",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of improvisation and ornamentation for music before 1800, including harmonic progressions and voice-leading and contrapuntal patterns for instrumentalists and singers, along with examples of ornamented vocal and instrumental works from 17th and 18th century sources.",
+    "prerequisites": {
+      "text": "MUSP 241",
+      "tree": "MUSP 241",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSP 355",
+    "subject": "MUSP",
+    "number": "355",
+    "title": "Advanced Rhythm in Musicianship",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental musicianship issues in the context of performance with an emphasis on polyrhythm.",
+    "prerequisites": {
+      "text": "MUSP 241",
+      "tree": "MUSP 241",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSP 361",
+    "subject": "MUSP",
+    "number": "361",
+    "title": "Topics in Musicianship",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Advanced ear training challenges in rhythm, pitch, harmony, form, or timbre.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics will change from semester to semester."
+    ]
+  },
+  {
+    "code": "MUSP 363",
+    "subject": "MUSP",
+    "number": "363",
+    "title": "Topics in Global Musicianship",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Musicianship skills from one or more global musical practice(s), with specific challenges and approaches corresponding to the selected topic.",
+    "prerequisites": {
+      "text": "MUSP 171, MUSP 241",
+      "tree": {
+        "and": [
+          "MUSP 171",
+          "MUSP 241"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics vary from semester to semester."
+    ]
+  },
+  {
+    "code": "MUSP 381",
+    "subject": "MUSP",
+    "number": "381",
+    "title": "Singing Renaissance Notation",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Choral sightsinging of mensural notation, with a focus on white notation c. 1420-1600. Development of basic fluency in the notation, interpretation of values in triple meter, addition of accidentals given the contrapuntal context as perceived aurally, Renaissance solmisation.",
+    "prerequisites": {
+      "text": "MUSP 241",
+      "tree": "MUSP 241",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUSP 446",
+    "subject": "MUSP",
+    "number": "446",
+    "title": "Advanced Musicianship 1",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Advanced musicianship skills.",
+    "prerequisites": {
+      "text": "One of MUSP 324, 330, 335, 346, 350, 353, 354, 355, 381",
+      "tree": {
+        "or": [
+          "MUSP 324",
+          "MUSP 330",
+          "MUSP 335",
+          "MUSP 346",
+          "MUSP 350",
+          "MUSP 353",
+          "MUSP 354",
+          "MUSP 355",
+          "MUSP 381"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topic will vary semester to semester."
+    ]
+  },
+  {
+    "code": "MUSP 447",
+    "subject": "MUSP",
+    "number": "447",
+    "title": "Advanced Musicianship 2",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Additional advanced musicianship skills.",
+    "prerequisites": {
+      "text": "One of MUSP 324, 330, 335, 346, 350, 353, 354, 355, 381",
+      "tree": {
+        "or": [
+          "MUSP 324",
+          "MUSP 330",
+          "MUSP 335",
+          "MUSP 346",
+          "MUSP 350",
+          "MUSP 353",
+          "MUSP 354",
+          "MUSP 355",
+          "MUSP 381"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics will vary semester to semester."
+    ]
+  },
+  {
+    "code": "MUSP 500",
+    "subject": "MUSP",
+    "number": "500",
+    "title": "Keyboard for Professional Practice",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Training in keyboard skills required for research, score study, professional presentations, and teaching: figured bass realization, melody harmonization, transposition, score reading, improvisation, and performance for dictation, taught through group meetings and weekly practical assignments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "By permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Enrolment preference will be given to students enrolled in graduate programs in music theory and conducting.",
+      "Students must register for both MUSP 500D1 and MUSP 500D2.",
+      "No credit will be given for this course unless both MUSP 500D1 and MUSP 500D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUSP 500D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "MUSP 500D2",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  }
+]

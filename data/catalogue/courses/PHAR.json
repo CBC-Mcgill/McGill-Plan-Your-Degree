@@ -1,0 +1,1041 @@
+[
+  {
+    "code": "PHAR 200",
+    "subject": "PHAR",
+    "number": "200",
+    "title": "Introduction to Pharmacology 1",
+    "credits": 1,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The objective of this course is to give U1 Pharmacology Major program students an appreciation of research in Pharmacology. The focus will be on contributions of this research to our understanding of how drugs work, strategies towards the discovery of new drugs, and/or on how use of current drugs may be improved based on this understanding.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the BSc. Major in Pharmacology.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 201",
+    "subject": "PHAR",
+    "number": "201",
+    "title": "Introduction to Pharmacology 2",
+    "credits": 1,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will be a continuation of PHAR 200, taught in the fall semester. The focus will be on contributions of this research to our understanding of how drugs work, strategies towards the discovery of new drugs, and/or on how use of current drugs may be improved based on this understanding.",
+    "prerequisites": {
+      "text": "PHAR 200",
+      "tree": "PHAR 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the BSc. Major in Pharmacology.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 300",
+    "subject": "PHAR",
+    "number": "300",
+    "title": "Drug Action",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of pharmacology and toxicology. Frequently encountered drugs will be used as a focus to illustrate sites and mechanisms of action, distribution, metabolism, elimination and adverse side effects.",
+    "prerequisites": {
+      "text": "BIOL 200, PHGY 209, PHGY 210 and one of BIOL 201 or ANAT/BIOC 212 or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          "PHGY 209",
+          "PHGY 210",
+          {
+            "or": [
+              "BIOL 201",
+              "BIOC 212"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHAR 301",
+    "subject": "PHAR",
+    "number": "301",
+    "title": "Drugs and Disease",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course further explores the basic principles of pharmacology as illustrated by drugs used in the treatment of disease. Emphasis is placed on drugs used for diseases prevalent in North America.",
+    "prerequisites": {
+      "text": "PHAR 300",
+      "tree": "PHAR 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHAR 303",
+    "subject": "PHAR",
+    "number": "303",
+    "title": "Principles of Toxicology",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental mechanisms by which toxic compounds damage a biological system (organelle, cell, organ, organism, ecosystem). Detection and quantification of toxicity and risk/benefit analysis are considered. Selected agents of current risk to human health or the environment are evaluated in depth.",
+    "prerequisites": {
+      "text": "BIOL 200, BIOL 201 or BIOC 212, PHGY 209 and PHGY 210",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIOL 200",
+              "BIOL 201"
+            ]
+          },
+          {
+            "and": [
+              "BIOC 212",
+              "PHGY 209",
+              "PHGY 210"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHAR 390",
+    "subject": "PHAR",
+    "number": "390",
+    "title": "Laboratory in Pharmacology",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This course is a two-week all day practical laboratory course where students will have the opportunity to design their own experiments, write out the experimental lab reports and learn to trouble shoot on their own.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Pharmacology Honours students, or permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 396",
+    "subject": "PHAR",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report and an oral presentation.",
+    "prerequisites": {
+      "text": "Completion of at least one undergraduate term with CGPA of 3.0.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option.; Departmental permission required.; Students cannot be supervised by the same instructor for two 396 Science courses.; Open to students in programs offered by the Faculty of Science.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrollment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "PHAR 397",
+    "subject": "PHAR",
+    "number": "397",
+    "title": "Pharmacology Research Project 2",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research project to be carried out under supervision of a faculty member in the Department of Pharmacology and Therapeutics. Projects should address a testable hypothesis to be tested using the experimental tools available in the supervisor’s lab and probably other facilities at McGill. Hands-on experience with contemporary research in pharmacology and related disciplines.",
+    "prerequisites": {
+      "text": "Successful completion of PHAR 396, a CGPA of at least 3.0, and permission of the instructor.",
+      "tree": "PHAR 396",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in programs offered by the Faculty of Science with permission of the Course Coordinator. This course cannot be taken under the S/U option.",
+      "excludes": []
+    },
+    "notes": [
+      "Departmental permission required.",
+      "1. Note: Enrollment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See \"https://www.mcgill.ca/science/research/undergraduateresearch/ science-research-courses\" for more information regarding the application form and procedures. Expected time commitment: An equivalent of one day (8-10 hours) per week in the research supervisor’s lab. Evaluation: 1) Research performance as assessed by the research supervisor (50%) 2) Written report summarizing the research conducted, to be evaluated by the course coordinator (50%)",
+      "For students who have completed PHAR 396 and wish to pursue a research project for a second term."
+    ]
+  },
+  {
+    "code": "PHAR 503",
+    "subject": "PHAR",
+    "number": "503",
+    "title": "Drug Discovery and Development 1",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Chemistry, mechanisms of action, and steps in drug discovery and development.",
+    "prerequisites": {
+      "text": "PHAR 301 or PHAR 303; or permission of instructor",
+      "tree": {
+        "or": [
+          "PHAR 301",
+          "PHAR 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHAR 504",
+    "subject": "PHAR",
+    "number": "504",
+    "title": "Drug Discovery and Development 2",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Nobel Prize-winning discoveries as a basis for drug development.",
+    "prerequisites": {
+      "text": "PHAR 301 or PHAR 303; or permission of instructor",
+      "tree": {
+        "or": [
+          "PHAR 301",
+          "PHAR 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 and graduate students. Students can register only with permission of coordinators.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHAR 505",
+    "subject": "PHAR",
+    "number": "505",
+    "title": "Structural Pharmacology",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course will cover approaches widely used in the pharmaceuticals industry, such as drug target selection, structure determination and medicinal chemistry. The basics of structural biology will be taught in a very visual and interactive manner, with an emphasis on drug:target interactions and chemical principles relevant to drug design. By the end of the course, the students will become familiar with the structure-based drug discovery process and principles of molecular pharmacology.",
+    "prerequisites": {
+      "text": "PHAR 301, BIOC 311 or with permission of instructor",
+      "tree": {
+        "and": [
+          "PHAR 301",
+          "BIOC 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHAR 503.",
+      "excludes": [
+        "PHAR 503"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 508",
+    "subject": "PHAR",
+    "number": "508",
+    "title": "Drug Discovery and Development 3",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The design of biologically-relevant drug screens for molecular targets in a cell, tissue, and in vivo setting. Explore the use of stem cells and tissue-based disease models for the understanding of disease and for drug discovery. Situate modern pharmacology into broader medical and societal issues such as personalized medicine and the ethics associated with research.",
+    "prerequisites": {
+      "text": "PHAR 301 (PHAR 503 or PHAR 505 are also highly recommended)",
+      "tree": {
+        "and": [
+          "PHAR 301",
+          {
+            "or": [
+              "PHAR 503",
+              "PHAR 505"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students in the minor, major or honours program in Pharmacology.; Not open to students who have taken PHAR 558.",
+      "excludes": [
+        "PHAR 558"
+      ]
+    },
+    "notes": [
+      "Assessment modalities- in class presentations and discussion, take-home exams and writing exercises."
+    ]
+  },
+  {
+    "code": "PHAR 510",
+    "subject": "PHAR",
+    "number": "510",
+    "title": "New Advances in Antimicrobial",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Overview on bacteria, insights into bacterial pathogenesis, an understanding of antibiotics, and new developments in antibacterial to beat antibiotic resistance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students and above. Class capacity is first come first serve, after the first 15 students, the next 10 students priority will be given to MIMM and PHAR students. Not open to students who have taken or are taking MIMM 510.",
+      "excludes": [
+        "MIMM 510"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 522",
+    "subject": "PHAR",
+    "number": "522",
+    "title": "Fundamentals of Disease Therapy",
+    "credits": 6,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Basic physiology and pathology, including a macro-level overview of normal physiology and pathophysiology of selected organs.",
+    "prerequisites": {
+      "text": "FMED 525 or permission of the instructor",
+      "tree": "FMED 525",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PHAR 522D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHAR 522D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHAR 524",
+    "subject": "PHAR",
+    "number": "524",
+    "title": "Clinical Mentorship",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Interaction with clinicians and clinician scientists in the field of medicine and health sciences, focusing on understanding disease from their perspective.",
+    "prerequisites": {
+      "text": "FMED 525 or permission of the instructor",
+      "tree": "FMED 525",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 540",
+    "subject": "PHAR",
+    "number": "540",
+    "title": "Advances in Industrial Biotechnology ",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to emerging technologies and research advances in biotechnologies. Topics include semisynthetic production of drugs and drug candidates through large-scale fermentation, next generation synthesis of DNA and whole genes, green toxicology, single-molecule diagnostics, orphan-drug re-purposing, and next- generation genomic analyses in drug development. Translational research, issues of entrepreneurship, sustainability, and ethics are also covered.",
+    "prerequisites": {
+      "text": "CHEM 222 (or equivalent) and BIOL 200 or CHEM 332",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEM 222",
+              "BIOL 200"
+            ]
+          },
+          "CHEM 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Students or higher. Not open to students who have taken or are taking CHEM 540.",
+      "excludes": [
+        "CHEM 540"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 562",
+    "subject": "PHAR",
+    "number": "562",
+    "title": "Neuropharmacology",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in pharmacology with an emphasis on molecular mechanisms of drug-action and cellular targets in the nervous system.",
+    "prerequisites": {
+      "text": "PHAR 301 or with permission of instructor.",
+      "tree": "PHAR 301",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students in the minor, major or honours program in Pharmacology, or with permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHAR 563",
+    "subject": "PHAR",
+    "number": "563",
+    "title": "Endocrine Pharmacology",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This advanced course covers selected topics in pharmacology of reproductive, endocrine, and metabolic disorders.",
+    "prerequisites": {
+      "text": "PHAR 301 or permission of the instructor(s)",
+      "tree": "PHAR 301",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students in the minor, major or honours program in Pharmacology, or with permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Course material will be presented in the form of lectures and student-led presentations."
+    ]
+  },
+  {
+    "code": "PHAR 565",
+    "subject": "PHAR",
+    "number": "565",
+    "title": "Epigenetic Drugs and Targets",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course covers therapeutics targeting epigenetic mechanisms. Although only a handful of epigenetic drugs are in widespread use, further development of such agents is a very active area of research as it has the potential to directly target aberrant gene expression. This course will examine both the current use and potential of epigenetic drugs in treatment of cancer, neurological diseases, immune disorders, and cardiovascular disease. The concept of epigenetics as mediating gene-environment interaction will also be discussed.",
+    "prerequisites": {
+      "text": "PHAR 301.",
+      "tree": "PHAR 301",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking HGEN 673.",
+      "excludes": [
+        "HGEN 673"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 590",
+    "subject": "PHAR",
+    "number": "590",
+    "title": "Advanced Research Methods in Pharmacology ",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Investigation into the signaling, regulation and modulation of a large family of receptors of fundamental importance in pharmacology.",
+    "prerequisites": {
+      "text": "PHAR 390, or permission of the instructor.",
+      "tree": "PHAR 390",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "PHAR 599 or PHAR 598, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PHAR 599",
+          "PHAR 598"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 598",
+    "subject": "PHAR",
+    "number": "598",
+    "title": "Honours Pharmacology Research Project",
+    "credits": 6,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised Honours Research Project in Pharmacology. Students are expected to obtain hands-on research experience in their supervisor's laboratory. They are also required to submit a written report in the form of a scientific manuscript and present a ten minute seminar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PHAR 598D1",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHAR 598D2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026",
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHAR 599",
+    "subject": "PHAR",
+    "number": "599",
+    "title": "Pharmacology Research Project",
+    "credits": 6,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Mechanisms involved in different pathologies and drug actions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 students with permission of instructors; students should consult instructors 3 - 4 weeks before registration.",
+      "excludes": []
+    },
+    "notes": [
+      "Minimum of 18 hours/week to be spent in the lab and/or library.",
+      "Pre-/Co-requisite: PHAR 562 and PHAR 563."
+    ],
+    "parts": [
+      {
+        "code": "PHAR 599D1",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHAR 599D2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026",
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHAR 601",
+    "subject": "PHAR",
+    "number": "601",
+    "title": "Research Seminar",
+    "credits": 6,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A research seminar must be presented by all M.Sc. students in the Department after completion of two semesters in the Department",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both PHAR 601D1 and PHAR 601D2",
+      "No credit will be given for the spanned version of this course unless both PHAR 601D1/D2 are successfully completed in consecutive terms.This is a Pass/Fail course",
+      "PHAR 601D1 and PHAR 601D2 together are equivalent to PHAR 601"
+    ],
+    "parts": [
+      {
+        "code": "PHAR 601D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHAR 601D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "PHAR 601N1",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "PHAR 601N2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHAR 602",
+    "subject": "PHAR",
+    "number": "602",
+    "title": "Principles of Pharmacology",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of core principles in pharmacology, with an emphasis on advanced concepts and state-of-the-art current research. Molecular mechanisms for interactions of drugs with their receptors, pharmacokinetics, drug design, and toxicology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to graduate students in Pharmacology and Therapeutics. Others require permission of the course coordinator.",
+      "excludes": []
+    },
+    "notes": [
+      "No equivalent course(s).",
+      "39 contact hours.",
+      "Language of instruction is English."
+    ]
+  },
+  {
+    "code": "PHAR 609",
+    "subject": "PHAR",
+    "number": "609",
+    "title": "Research Professionalism for Pharmacologists",
+    "credits": 1,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Discussion of good research practices in Pharmacology, including scientific conduct and misconduct, mentorship, authorship, peer review, research on animal and human subjects, and intellectual property.",
+    "prerequisites": {
+      "text": "Any Pharmacology 500 level excluding PHAR 598 and 599.",
+      "tree": {
+        "and": [
+          "PHAR 598",
+          "PHAR 599"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "First year graduate students in Pharmacology or with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 610",
+    "subject": "PHAR",
+    "number": "610",
+    "title": "Scientific Communication for Pharmacologists",
+    "credits": 2,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This is a hands-on course with a strong emphasis on developing scientific writing and oral communication skills in Pharmacology.",
+    "prerequisites": {
+      "text": "Any Pharmacology 500 level excluding PHAR 598 and 599.",
+      "tree": {
+        "and": [
+          "PHAR 598",
+          "PHAR 599"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "First year graduate students in Pharmacology or with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 670",
+    "subject": "PHAR",
+    "number": "670",
+    "title": "Principles of Environmental Health Sciences 1",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in environmental health sciences: principles of exposure assessment and of toxicology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students pursuing a career in Environmental Health Sciences or with permission of the course instructor. Not open to students who have taken or are taking EPIB 684 or EXMD 670 or NRSC 670.",
+      "excludes": [
+        "EPIB 684",
+        "EXMD 670",
+        "NRSC 670"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 671",
+    "subject": "PHAR",
+    "number": "671",
+    "title": "Principles of Environmental Health Sciences 2",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in environmental health sciences: principles of environmental epidemiology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students in the Environmental Health Sciences or permission of the course instructor. Not open to students who have taken or are taking EPIB 685 or EXMD 671 or NRSC 671.",
+      "excludes": [
+        "EPIB 685",
+        "EXMD 671",
+        "NRSC 671"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHAR 696",
+    "subject": "PHAR",
+    "number": "696",
+    "title": "Thesis Preparation",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 697",
+    "subject": "PHAR",
+    "number": "697",
+    "title": "Thesis Preparation 1",
+    "credits": 6,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 698",
+    "subject": "PHAR",
+    "number": "698",
+    "title": "Thesis Preparation 2",
+    "credits": 9,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 699",
+    "subject": "PHAR",
+    "number": "699",
+    "title": "Thesis Preparation 3",
+    "credits": 12,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 701",
+    "subject": "PHAR",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Exam",
+    "credits": 0,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program. This is an oral presentation followed by an oral examination by the student's advisory committee and members of the department faculty.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 702",
+    "subject": "PHAR",
+    "number": "702",
+    "title": "Topics in Pharmacology 1",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in pharmacology.",
+    "prerequisites": {
+      "text": "Permission of the Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 703",
+    "subject": "PHAR",
+    "number": "703",
+    "title": "Topics in Pharmacology 2",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics in pharmacology.",
+    "prerequisites": {
+      "text": "Permission of the Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 704",
+    "subject": "PHAR",
+    "number": "704",
+    "title": "Topics in Pharmacology 3",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics in pharmacology.",
+    "prerequisites": {
+      "text": "Permission of the Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 705",
+    "subject": "PHAR",
+    "number": "705",
+    "title": "Topics in Pharmacology 4",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics in pharmacology.",
+    "prerequisites": {
+      "text": "Permission of the Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 706",
+    "subject": "PHAR",
+    "number": "706",
+    "title": "Topics in Pharmacology 5",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics in pharmacology.",
+    "prerequisites": {
+      "text": "Permission of the Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 707",
+    "subject": "PHAR",
+    "number": "707",
+    "title": "Topics in Pharmacology 6",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics in pharmacology.",
+    "prerequisites": {
+      "text": "Permission of the Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHAR 712",
+    "subject": "PHAR",
+    "number": "712",
+    "title": "Statistics for Pharmacologists",
+    "credits": 3,
+    "offeredBy": "Pharmacology and Therapeutics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic theoretical and practical aspects of statistics for pharmacologists.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to graduate students in Pharmacology and Therapeutics. Others require permission of the course coordinator.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

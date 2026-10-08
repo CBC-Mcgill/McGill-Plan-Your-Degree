@@ -1,0 +1,216 @@
+[
+  {
+    "code": "GECS 111",
+    "subject": "GECS",
+    "number": "111",
+    "title": "Introduction to Programming",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of databases: database design & SQL, programming in Python, variables, collections, loops, functions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE111 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 112",
+    "subject": "GECS",
+    "number": "112",
+    "title": "Coding Weeks",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Intensive software development, digital management tools & programing environments, web-oriented programing.",
+    "prerequisites": {
+      "text": "GECS 111",
+      "tree": "GECS 111",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE112 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 113",
+    "subject": "GECS",
+    "number": "113",
+    "title": "Computer Science 1: Algorithms and Intro to Programming",
+    "credits": 2.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of databases: database design & SQL, programming in Python, variables, collections, loops, functions. Abstract algorithmics, Discrete mathematical tools, sorting methods, data structures, stacks, queues, heaps. Computer architecture, Processes memory management, Networks: OSI model, introduction to information security.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE113 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 121",
+    "subject": "GECS",
+    "number": "121",
+    "title": "Algorithms",
+    "credits": 0.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Abstract algorithmics, Discrete mathematical tools, sorting methods, data structures, stacks, queues, heaps.",
+    "prerequisites": {
+      "text": "GEMA 121, Analysis 3. GECS 111, Introduction to Programming",
+      "tree": {
+        "and": [
+          "GEMA 121",
+          "GECS 111"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 122",
+    "subject": "GECS",
+    "number": "122",
+    "title": "Fundamentals of programming: Information Systems",
+    "credits": 0.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Computer architecture, Processes & memory management, Networks: OSI model, introduction to information security.",
+    "prerequisites": {
+      "text": "GECS 111, Introduction to Programming. GECS 112, Coding Week.",
+      "tree": {
+        "and": [
+          "GECS 111",
+          "GECS 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE122 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 123",
+    "subject": "GECS",
+    "number": "123",
+    "title": "Comp Sci 2: Advanced Programming and Machine Learning",
+    "credits": 2,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Computer architecture, Processes memory management, Networks: OSI model, introduction to information security. Introduce methods algorithms used in machine learning present some fundamentals of artificial intelligence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE123 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 211",
+    "subject": "GECS",
+    "number": "211",
+    "title": "Advanced Programming",
+    "credits": 0.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Object-oriented programming paradigm (OOP) by means of the JAVA programming language, “procedural” elements.",
+    "prerequisites": {
+      "text": "None (though previous experience with computer programming might help).",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE211 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 221",
+    "subject": "GECS",
+    "number": "221",
+    "title": "Advanced Programming",
+    "credits": 2,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Object-oriented programming paradigm (OOP) by means of the JAVA programming language, “procedural” elements.",
+    "prerequisites": {
+      "text": "None (though previous experience with computer programming might help).",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE211 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECS 222",
+    "subject": "GECS",
+    "number": "222",
+    "title": "Machine Learning",
+    "credits": 0.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduce methods & algorithms used in machine learning & present some fundamentals of artificial intelligence.",
+    "prerequisites": {
+      "text": "GECS 221, Advanced Programming.",
+      "tree": "GECS 221",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CSE222 offered by CentraleSupélec in France."
+    ]
+  }
+]

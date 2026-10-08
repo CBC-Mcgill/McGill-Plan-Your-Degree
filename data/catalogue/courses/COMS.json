@@ -1,0 +1,1458 @@
+[
+  {
+    "code": "COMS 200",
+    "subject": "COMS",
+    "number": "200",
+    "title": "History of Communication",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The social and cultural implications of major developments in communications from prehistory to the electronic era. Thematic and conceptual introduction to the underlying media technologies and to some key issues and practices of historical thinking about their role in society.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have ENGC 200.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMS 210",
+    "subject": "COMS",
+    "number": "210",
+    "title": "Introduction to Communication Studies",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "The social and cultural implications of media. Surveys theory and case studies relevant key issues such as the ownership, structure and governance of media industries; the significance of emergent media technologies; and the roles of media as cultural forms and practices.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ENGL 278 or ENGC 210",
+      "excludes": [
+        "ENGC 210",
+        "ENGL 278"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMS 230",
+    "subject": "COMS",
+    "number": "230",
+    "title": "Communication and Democracy",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to investigation of the relationship between communication, media practices and democracy. Examines the role of media and communication in existing and emerging democratic contexts, and the challenges of constructing and maintaining a democratic media and communication environment on the domestic and international levels.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 300",
+    "subject": "COMS",
+    "number": "300",
+    "title": "Media and Modernity in the 20th Century",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An overview of the growth and impact of 20th century media such as radio, television, cinema and the mass-circulation press; their role in shaping the technological, socio-political and aesthetic dimensions of urban modernity.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, or COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 301",
+    "subject": "COMS",
+    "number": "301",
+    "title": "Core Concepts in Critical Theory",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will survey foundational texts and thinkers in critical social theory, as they relate to the fields of media and communication studies. This will include core texts in Marxism, the Frankfurt School, public sphere theory, feminism, post-structuralism, post-colonialism and queer theory. The course will prepare students with key theoretical and conceptual vocabularies for advanced study in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Prequisite(s): COMS 210 or COMS 230"
+    ],
+    "parts": [
+      {
+        "code": "COMS 301J1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "COMS 301J2",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "COMS 301J3",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "COMS 310",
+    "subject": "COMS",
+    "number": "310",
+    "title": "Media and Feminist Studies",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to feminist studies of the media. Impact of feminist and queer theory on media studies; current issues about gender in the media. Emphasis will be placed on critical analysis of media representations of gender in relation to other social differences, such as race, class and sexuality.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, COMS 230, SDST 250, GSFS 200, PHIL 242 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230",
+          "SDST 250",
+          "GSFS 200",
+          "PHIL 242"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 320",
+    "subject": "COMS",
+    "number": "320",
+    "title": "Media and Empire",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The relationship between mass media and empire-building, as well as the role of mass and alternative media in anti-imperialism movements. Topics may include: Print technologies and the British Empire; shipping technologies, industrialization and the slave trade; new media and the anti-war and anti-globalization movements.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, or COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 330",
+    "subject": "COMS",
+    "number": "330",
+    "title": "Media in Cultural Life",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to a range of theories and qualitative methods in communication studies for the critical analysis of media practices in cultural life.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, or COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 340",
+    "subject": "COMS",
+    "number": "340",
+    "title": "New Media",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Critical analysis of new media from cultural, philosophical, technological and institutional perspectives.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, or COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 350",
+    "subject": "COMS",
+    "number": "350",
+    "title": "Sound Culture",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of sound culture, including sonic and audiovisual media, sound art and architecture, sound in everyday life, sonic institutions and theoretical accounts of the role of sound in communication.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 354",
+    "subject": "COMS",
+    "number": "354",
+    "title": "Media Studies of Crime",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Critical analysis of the social construction of crime from the perspectives of its visual culture and representation in popular, historical and new media forms.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, or COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ARTH 353 when topic is \"Visual Culture of Crime\".",
+      "excludes": [
+        "ARTH 353"
+      ]
+    },
+    "notes": [
+      "This course is sometimes cross-listed with ARTH 353 when taught as \"Visual Culture of Crime\" by Prof. Will Straw."
+    ]
+  },
+  {
+    "code": "COMS 355",
+    "subject": "COMS",
+    "number": "355",
+    "title": "Media Governance",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Electronic communications systems such as broadcasting, cable, telephony, and the Internet are vital public resources for social, economic, political, and cultural interaction in modern life. This course introduces students to the political and economic forces that govern policies about the flow of information, knowledge, and ideas using such media systems.",
+    "prerequisites": {
+      "text": "Successful completion of COMS 210, COMS 200, or COMS 230.",
+      "tree": {
+        "or": [
+          "COMS 210",
+          "COMS 200",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMS 365.",
+      "excludes": [
+        "COMS 365"
+      ]
+    },
+    "notes": [
+      "Note: Combined lecture and seminar format. Language of instruction is English. Maximum enrolment is 90."
+    ]
+  },
+  {
+    "code": "COMS 360",
+    "subject": "COMS",
+    "number": "360",
+    "title": "Environmental Communication",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of contemporary approaches to communication, media and environment in the field of communication studies. Focus on critical attention on media, communication and knowledge practices concerning environmental information, issues and controversies, as well as the environmental impacts of media technologies, infrastructures and practices. Topics include public communication of science and environmental information (journalism, governments; social movements), climate change communication, media materialities and toxicities (energy, pollution, waste), environmental racism and environmental justice, environment and disability,",
+    "prerequisites": {
+      "text": "COMS 210 or permission of the instructor",
+      "tree": "COMS 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 361",
+    "subject": "COMS",
+    "number": "361",
+    "title": "Selected Topics Communication Studies 1",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Study of a special field in media theory.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, or COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topic will change depending upon term and instructor"
+    ]
+  },
+  {
+    "code": "COMS 362",
+    "subject": "COMS",
+    "number": "362",
+    "title": "Selected Topics Communication Studies 2",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study of a special field of critical inquiry into media and/or technological practices.",
+    "prerequisites": {
+      "text": "One of the following: COMS 200, COMS 210, or COMS 230 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topic will change depending upon term and instructor"
+    ]
+  },
+  {
+    "code": "COMS 400",
+    "subject": "COMS",
+    "number": "400",
+    "title": "Critical Theory Seminar",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course builds on the foundations of critical social thought to engage students in intensive study of emerging and contemporary themes in social and cultural theory related to media and communication studies. Focus will be on current texts and debates of significance in the field, and will include prominent work in areas including political economy, feminism, gender and sexuality studies, postcolonial and critical race theory, radical democracy, environmentalism, and media and cultural studies.",
+    "prerequisites": {
+      "text": "COMS 301",
+      "tree": "COMS 301",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 410",
+    "subject": "COMS",
+    "number": "410",
+    "title": "Cultures in Visualization",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Analysis of imaging technologies in their cultural contexts. Focus on different traditions of visual representation through the investigation of artistic and scientific visualization practices.",
+    "prerequisites": {
+      "text": "One of the following 200-level courses: COMS 200, COMS 210, COMS 230 AND one of the following 300-level courses: COMS 300, COMS 310, COMS 320, COMS 330, COMS 340, COMS 350, COMS 354, COMS 361, COMS 362, COMS 365 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230",
+          "COMS 300",
+          "COMS 310",
+          "COMS 320",
+          "COMS 330",
+          "COMS 340",
+          "COMS 350",
+          "COMS 354",
+          "COMS 361",
+          "COMS 362",
+          "COMS 365"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 411",
+    "subject": "COMS",
+    "number": "411",
+    "title": "Disability, Technology and Communication",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Explores communication, technology and culture from the perspective of disability. Topics may included identity, stigma, representation and art; design, access and accessibility; normalization and classification; contrasting models of disability; interfaces between bodies and technologies; the disabling dimensions of environments and technologies; disability policy and activism.",
+    "prerequisites": {
+      "text": "Any 200-level course in Communication Studies (COMS 2xx for 3 credits) AND any 300-level course in Communication Studies (COMS 3xx for 3 credits), or by the permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMS 492 in 201109 or 201209.",
+      "excludes": [
+        "COMS 492"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMS 425",
+    "subject": "COMS",
+    "number": "425",
+    "title": "Urban Culture and Everyday Life",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Explores how popular and artistic cultural texts interrogate the dimensions of urban culture that shape everyday life, such as transnationalization/ globalization; gentrification, migration and other displacements; the proliferation of mobile media and communication technologies; and the political mobilization of fear and anxiety about violence and terrorism.",
+    "prerequisites": {
+      "text": "One of the following 200-level courses: COMS 200, COMS 210, COMS 230 AND one of the following 300-level courses: COMS 300, COMS 310, COMS 320, COMS 330, COMS 340, COMS 350, COMS 354, COMS 361, COMS 362, COMS 365 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230",
+          "COMS 300",
+          "COMS 310",
+          "COMS 320",
+          "COMS 330",
+          "COMS 340",
+          "COMS 350",
+          "COMS 354",
+          "COMS 361",
+          "COMS 362",
+          "COMS 365"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 435",
+    "subject": "COMS",
+    "number": "435",
+    "title": "Advanced Issues in Media Governance",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This seminar examines current/emergent scholarship about policy debates and issues related to electronic media worldwide. Topics vary; they include but are not limited to Internet Governance, Electronic Privacy/Surveillance, Access to Information/Knowledge, Media Diversity, Community and Social Justice Media, Communication Rights and Freedom of Expression, and Civil Society Policy Advocacy.",
+    "prerequisites": {
+      "text": "Successful completion of COMS 200, COMS 210 or COMS 230.",
+      "tree": {
+        "and": [
+          "COMS 200",
+          {
+            "or": [
+              "COMS 210",
+              "COMS 230"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken COMS 493.",
+      "excludes": [
+        "COMS 493"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMS 490",
+    "subject": "COMS",
+    "number": "490",
+    "title": "Special Topics in History and Theory of Media",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Emergent themes in media history and media theory, and their application to current issues in communications studies.",
+    "prerequisites": {
+      "text": "One of the following 200-level courses: COMS 200, COMS 210, COMS 230 AND one of the following 300-level courses: COMS 300, COMS 310, COMS 320, COMS 330, COMS 340, COMS 350, COMS 354, COMS 361, COMS 362 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230",
+          "COMS 300",
+          "COMS 310",
+          "COMS 320",
+          "COMS 330",
+          "COMS 340",
+          "COMS 350",
+          "COMS 354",
+          "COMS 361",
+          "COMS 362"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 491",
+    "subject": "COMS",
+    "number": "491",
+    "title": "Special Topics in Communications Studies",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Emergent themes and issues in cultural approaches to media and communication studies.",
+    "prerequisites": {
+      "text": "One of the following 200-level courses: COMS 200, COMS 210, COMS 230 AND one of the following 300-level courses: COMS 300, COMS 310, COMS 320, COMS 330, COMS 340, COMS 350, COMS 354, COMS 361, COMS 362 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230",
+          "COMS 300",
+          "COMS 310",
+          "COMS 320",
+          "COMS 330",
+          "COMS 340",
+          "COMS 350",
+          "COMS 354",
+          "COMS 361",
+          "COMS 362"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 492",
+    "subject": "COMS",
+    "number": "492",
+    "title": "Power, Difference and Justice",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Media systems and their role in social relations of power and difference that are maintained and challenged through communication practices.",
+    "prerequisites": {
+      "text": "One of the following 200-level courses: COMS 200, COMS 210, COMS 230 AND one of the following 300-level courses: COMS 300, COMS 310, COMS 320, COMS 330, COMS 340, COMS 350, COMS 354, COMS 361, COMS 362 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMS 200",
+          "COMS 210",
+          "COMS 230",
+          "COMS 300",
+          "COMS 310",
+          "COMS 320",
+          "COMS 330",
+          "COMS 340",
+          "COMS 350",
+          "COMS 354",
+          "COMS 361",
+          "COMS 362"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 495",
+    "subject": "COMS",
+    "number": "495",
+    "title": "Directed Reading",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Directed reading in a specialized area of communication studies to be undertaken with the guidance of an instructor with relevant expertise in the area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 credits at the 200-level and 3 credits at the 300-level in COMS courses and permission of the instructor"
+    ]
+  },
+  {
+    "code": "COMS 497",
+    "subject": "COMS",
+    "number": "497",
+    "title": "Independent Study",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent study of a particular topic in communication studies taken under the supervision of an instructor with relevant expertise in the area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 credits at the 200-level and 3 credits at the 300-level in COMS courses and permission of the instructor"
+    ]
+  },
+  {
+    "code": "COMS 500",
+    "subject": "COMS",
+    "number": "500",
+    "title": "Special Topics in Communications Studies 1",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A seminar for advanced undergraduate students and Masters students dealing with selected topics in Communications Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to U3 undergraduates or MA students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMS 501",
+    "subject": "COMS",
+    "number": "501",
+    "title": "Special Topics in Communications Studies 2 ",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A seminar for advanced undergraduate students and Masters students in selected topics in Communications Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to U3 undergraduates or M.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "COMS 510",
+    "subject": "COMS",
+    "number": "510",
+    "title": "Canadian Broadcasting Policy",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Key issues in the history and evolution of radio, television and new media in Canada. The legislative and regulatory framework of Canadian broadcasting, the relationship between public and privately-owned media, the emergence of new media, and the efforts of interest groups to influence the direction of the Canadian media system.",
+    "prerequisites": {
+      "text": "3 credits of COMS coursework at the 200-level, 3 credits of COMS coursework at the 300 or 400-level, or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course intended for senior undergraduates and graduate students with a specialized interest in Canadian broadcasting policy."
+    ]
+  },
+  {
+    "code": "COMS 521",
+    "subject": "COMS",
+    "number": "521",
+    "title": "Communications in History",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "North American communication studies have undergone five discernible changes in the definition and focus of the field. The major \"schools\" of thought to be covered are the Chicago and Lazarsfeld heritages, the institutionalization of communication science in the academy, and the post-modern period.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 541",
+    "subject": "COMS",
+    "number": "541",
+    "title": "Cultural Industries",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The convergence of computerized technologies and cultural industries and how these have produced entire new forms of cultural expression in film, TV, and the Internet.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 560",
+    "subject": "COMS",
+    "number": "560",
+    "title": "Communications and Development",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Examines the history and politics of communication and media practice in developing countries and regions. Emphasis on critical approaches to cultural and media imperialism, communication for development, indigenous media practices, technology transfer and emerging media.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 601",
+    "subject": "COMS",
+    "number": "601",
+    "title": "The Problem of Communication",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The idea, nature, and problem of 'communication' in western social and political thought, including the emergence of 'communication' in social analysis, and its relationship to language, media, subjectivity, culture and politics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 608",
+    "subject": "COMS",
+    "number": "608",
+    "title": "Sound Studies",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Key theoretical, primary and critical readings in sound studies including areas such as technology, subjectivity, voice, listening, soundscape, sound art, sound design, sound history and the philosophy of sound.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 611",
+    "subject": "COMS",
+    "number": "611",
+    "title": "History/Theory/Technology",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A critical appraisal of current issues in the field of communications notably through an examination of how new theorists have dealt with the effects and consequences of developments in the technologies of communication. The contributions of Canadian media theorists figure significantly in the seminar's concerns.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 612",
+    "subject": "COMS",
+    "number": "612",
+    "title": "Philosophy of Technology",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Central currents in the philosophy of technology, including the problem of technology as a core dimension of modernity and in post-industrial societies, especially as it related to issues in communication studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 613",
+    "subject": "COMS",
+    "number": "613",
+    "title": "Gender and Technology",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Contemporary culture and media in Canada and Quebec since 1945, with special emphasis on the '70s.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 614",
+    "subject": "COMS",
+    "number": "614",
+    "title": "Discourse Theory and Analysis",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course examines the history, theory, and practice of discourse analysis, with particular emphasis placed on scholarship in the fields of media, technology, and communication studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 616",
+    "subject": "COMS",
+    "number": "616",
+    "title": "Staff-Student Colloquium 1",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Pro-Seminar in Communications. A required course for all new M.A. and Ph.D. students. The Pro-Seminar is designed to explore theoretical and methodological issues in Communications through a series of presentations by the faculty and other McGill associates.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 617",
+    "subject": "COMS",
+    "number": "617",
+    "title": "Staff-Student Colloquium 2",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A required course for all new M.A. and Ph.D. students. The Pro-Seminar is designed to explore theoretical and methodological issues in Communications through a series of presentations by the faculty and other McGill associates.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 619",
+    "subject": "COMS",
+    "number": "619",
+    "title": "Material Culture and Communications",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Approaches to the analysis of material artefacts of \"things\" and their place within communications. Anthropological, economic and aesthetic analysis of objects, with particular emphasis on the capacity of artefacts to carry and store meaning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 623",
+    "subject": "COMS",
+    "number": "623",
+    "title": "Information Design",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Examination of the basic concepts and methodologies in the design of information.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 625",
+    "subject": "COMS",
+    "number": "625",
+    "title": "Media Policy",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The political, economic, social and cultural processes that shape national media systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 627",
+    "subject": "COMS",
+    "number": "627",
+    "title": "Global Media Governance",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Governance issues, policies and institutions that are shaping the new global media environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 629",
+    "subject": "COMS",
+    "number": "629",
+    "title": "Canadian Cultural Communications Policy",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An advanced seminar in history and theory of Canadian cultural and communications policy in the context of rapidly changing technological environments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 630",
+    "subject": "COMS",
+    "number": "630",
+    "title": "Readings in Communications Research 1",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Reading programs supervised by a member of staff; topics will be chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 631",
+    "subject": "COMS",
+    "number": "631",
+    "title": "Textual Analysis of Media",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination of tools and methods for the analysis of media texts, including methodological traditions of semiology, structuralism, classical film theory and discourse analysis, as well as with critiques directed at these traditions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 633",
+    "subject": "COMS",
+    "number": "633",
+    "title": "Feminist Media Studies",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Examination of cross-disciplinary approaches to critical media study undertaken by feminist, gender and queer studies scholars.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 635",
+    "subject": "COMS",
+    "number": "635",
+    "title": "Communication and Postcolonial Thought",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Postcolonial and/or anti-colonial thinkers, including their intersection with important questions in communication and cultural studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 637",
+    "subject": "COMS",
+    "number": "637",
+    "title": "Historiography of Communications",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Surveys recent writings in the history of media and communication; explores theoretical and methodological problems of writing media history.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 639",
+    "subject": "COMS",
+    "number": "639",
+    "title": "Interpretive Methods in Media",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A study of the various modes of interpreting and understanding the products of the mass media and of other human communication events.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 643",
+    "subject": "COMS",
+    "number": "643",
+    "title": "Cultural Studies of News",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Examines how cultural studies scholars approach news, including news as a popular textual system, news as the ritual construction of national identity and its role in nation-building projects, the urban circulation of news, journalism as an interpretive culture, alternative press cultures, and the commoditization of news spectacles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 644",
+    "subject": "COMS",
+    "number": "644",
+    "title": "Diasporic Popular Culture",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Communicative and cultural innovations emerging from the experience of diasporic displacement, including theories of transnational communication, cultural exchange and diasporic cultural production.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ENGG 560 in the 2003-2005 academic year.",
+      "excludes": [
+        "ENGG 560"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "COMS 646",
+    "subject": "COMS",
+    "number": "646",
+    "title": "Popular Media",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An assessment of popular culture and the research strategies employed; an examination of semiotics, critical theory, literary criticism, psychoanalysis, and cultural studies. Case studies from several of the following areas will be critiqued: fashion, music, advertising sub-cultural codes and behaviour, soap operas, visual art and cult films.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 647",
+    "subject": "COMS",
+    "number": "647",
+    "title": "Emerging Media",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Critical analysis of emergent media technologies, practices and institutions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 648",
+    "subject": "COMS",
+    "number": "648",
+    "title": "Bodies and Machines",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Analysis of the cultural history of body-machine relations, including instruments, experiments, spaces of representation and intervention, and new media and embodiment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 649",
+    "subject": "COMS",
+    "number": "649",
+    "title": "Audience Analysis",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced theoretical and empirical work on audience analysis from the perspective of recent research in mass communications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 651",
+    "subject": "COMS",
+    "number": "651",
+    "title": "Crime, Media, Culture",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Concepts of fear, criminality, victim, punishment, discipline, and risk and their construction in modern media culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 655",
+    "subject": "COMS",
+    "number": "655",
+    "title": "Media and the Senses",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Media as interfaces between human senses and the surrounding world, including the relationship of media and sensory experience from cultural, technological, political and philosophical perspectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 670",
+    "subject": "COMS",
+    "number": "670",
+    "title": "Film Studies Seminar",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in film studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both COMS 670D1 and COMS 670D2",
+      "No credit will be given for this course unless both COMS 670D1 and COMS 670D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "COMS 670D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "COMS 670D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "COMS 675",
+    "subject": "COMS",
+    "number": "675",
+    "title": "Media and Urban Life",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The role of media in giving shape to urban life, including ways in which various media, from the newspaper through digital information networks, have shaped urban space, life and culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 681",
+    "subject": "COMS",
+    "number": "681",
+    "title": "Special Topics: Media and Culture",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Emergent themes in media and culture, and their application to current issues in communication studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 682",
+    "subject": "COMS",
+    "number": "682",
+    "title": "Special Topics in Media Theory",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Emergent themes in media theory, and their application to current issues in communication studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 683",
+    "subject": "COMS",
+    "number": "683",
+    "title": "Special Topics in Media and Politics",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Emergent themes in media and politics, and their application to current issues in communication studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 692",
+    "subject": "COMS",
+    "number": "692",
+    "title": "M.A. Thesis Preparation 1",
+    "credits": 6,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 693",
+    "subject": "COMS",
+    "number": "693",
+    "title": "M.A. Thesis Preparation 2",
+    "credits": 6,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 694",
+    "subject": "COMS",
+    "number": "694",
+    "title": "M.A. Thesis Preparation 3",
+    "credits": 6,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 695",
+    "subject": "COMS",
+    "number": "695",
+    "title": "M.A. Thesis Preparation 4",
+    "credits": 6,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Preparatory work towards the Master's thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 696",
+    "subject": "COMS",
+    "number": "696",
+    "title": "Research Project 1",
+    "credits": 6,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 697",
+    "subject": "COMS",
+    "number": "697",
+    "title": "Research Project 2",
+    "credits": 6,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 702",
+    "subject": "COMS",
+    "number": "702",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Comprehensive examination as per departmental procedure.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 703",
+    "subject": "COMS",
+    "number": "703",
+    "title": "Dissertation Proposal",
+    "credits": 0,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Compulsory examination for all doctoral candidates.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "COMS 730",
+    "subject": "COMS",
+    "number": "730",
+    "title": "Readings in Communications Research 2",
+    "credits": 3,
+    "offeredBy": "Art History & Communications",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Reading programs supervised by a member of staff; topics will be chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

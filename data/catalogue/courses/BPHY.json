@@ -1,0 +1,152 @@
+[
+  {
+    "code": "BPHY 601",
+    "subject": "BPHY",
+    "number": "601",
+    "title": "Fundamentals in Biophysics",
+    "credits": 6,
+    "offeredBy": "Biophysics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Theory and practical topics in biophysics, including biophysical methods, light and electron optical theory and methods, structural biology, mass spectrometry, bioinformatics, physics of cells and statistical mechanics.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "BPHY 602D1/D2",
+      "tree": "BPHY 602",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Students must register for both BPHY 601D1 and BPHY 601D2.",
+      "No credit will be given for this course unless both BPHY 601D1 and BPHY 601D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "BPHY 601D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BPHY 601D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BPHY 602",
+    "subject": "BPHY",
+    "number": "602",
+    "title": "Current Topics in Biophysics",
+    "credits": 2,
+    "offeredBy": "Biophysics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Current topics and methods in biophysics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both BPHY 602D1 and BPHY 602D2.",
+      "No credit will be given for this course unless both BPHY 602D1 and BPHY 602D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "BPHY 602D1",
+        "credits": 1,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BPHY 602D2",
+        "credits": 1,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BPHY 603",
+    "subject": "BPHY",
+    "number": "603",
+    "title": "Effective Science Communication",
+    "credits": 1,
+    "offeredBy": "Biophysics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of different forms of scientific communication with a focus on how to write exceptional proposals and scholarships and give effective presentations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BPHY 701",
+    "subject": "BPHY",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Biophysics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination on the ability to conduct independent and original research (prospective comprehensive) that must be passed by all doctoral students to continue in the doctoral biophysics program.",
+    "prerequisites": {
+      "text": "BPHY 601D1/D2, BPHY 602D1/D2, BPHY 603",
+      "tree": {
+        "and": [
+          "BPHY 601",
+          "BPHY 602",
+          "BPHY 603"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BPHY 716",
+    "subject": "BPHY",
+    "number": "716",
+    "title": "PhD 1 Research in Biophysics 1",
+    "credits": 15,
+    "offeredBy": "Biophysics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Biophysics. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BPHY 717",
+    "subject": "BPHY",
+    "number": "717",
+    "title": "PhD 1 Research in Biophysics 2",
+    "credits": 15,
+    "offeredBy": "Biophysics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Biophysics. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

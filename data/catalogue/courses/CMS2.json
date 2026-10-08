@@ -1,0 +1,185 @@
+[
+  {
+    "code": "CMS2 500",
+    "subject": "CMS2",
+    "number": "500",
+    "title": "Mathematics for Management",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Basic mathematics needed for business applications, including graphs of functions, series summation, mathematics of finance, annuity, discounted cash flow, internal rate of return, permutations, combinations, maxima and minima of functions with business applications in optimization, introductory statistics and probability",
+    "prerequisites": {
+      "text": "CMSC 000",
+      "tree": "CMSC 000",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: \"Mathematics for Management\" must be completed in the first semester of the Diploma in Management program."
+    ]
+  },
+  {
+    "code": "CMS2 524",
+    "subject": "CMS2",
+    "number": "524",
+    "title": "Management of Service Operations",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The course takes an operations point of view to look at companies and industries in the services sector. It builds on conceptual frameworks and cases from a wide range of service operations, selected from health care, hospitality, internet services, transportation, retailing, financial services, humanitarian services, government services, and others.",
+    "prerequisites": {
+      "text": "CMS2 515",
+      "tree": "CMS2 515",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMS2 525",
+    "subject": "CMS2",
+    "number": "525",
+    "title": "Supply Chain Management",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This is an applications-oriented course in supply chain strategy and macro-processes of supply chain management such as supplier relations management, customer relations management, logistics and distribution. Use of operations research models and computer software will be an integral part of this course.",
+    "prerequisites": {
+      "text": "CMS2 505 and CMS2 515",
+      "tree": {
+        "and": [
+          "CMS2 505",
+          "CMS2 515"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMS2 531",
+    "subject": "CMS2",
+    "number": "531",
+    "title": "Re-Engineering and Integration of Business Systems",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Information systems used in supply chains are presented in the context of enterprise resource planning (ERP) systems with applications in manufacturing, retailing and distribution services sectors. Core business processes and transactions pertaining to supply chain management are identified and discussed in terms of relevant ERP modules.",
+    "prerequisites": {
+      "text": "CMS2 525",
+      "tree": "CMS2 525",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMS2 533",
+    "subject": "CMS2",
+    "number": "533",
+    "title": "Lean Operations and Performance Management in Health Services",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Role of operations management and how to create public value by delivering services effectively and efficiently, and measure the performance of the organization, including how the lean approach in healthcare can provide “outside of the box” solutions to resolve process issues and improve quality, cost and delivery of healthcare services.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHLC 500.",
+      "tree": "CHLC 500",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "CMS2 533D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CMS2 533D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "CMS2 590",
+    "subject": "CMS2",
+    "number": "590",
+    "title": "Special Topics in Mathematics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Intended for students studying at the graduate level in programs requiring specific mathematics skills. Covers intermediate and advanced concepts and selected topics in mathematics.",
+    "prerequisites": {
+      "text": "CMSC 000 or departmental approval",
+      "tree": "CMSC 000",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMS2 621",
+    "subject": "CMS2",
+    "number": "621",
+    "title": "Applied Management Statistics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Statistical methods used in a variety of business situations, emphasizing application and providing a working knowledge of the most widely-used techniques. Topics include descriptive statistics; probability distributions; sampling procedures and distributions; inferential statistics including estimation; hypothesis testing and Anova; simple linear, multiple regression and correlation; time series and forecasting.",
+    "prerequisites": {
+      "text": "CMS2 500 or the Exemption by Examination Test",
+      "tree": "CMS2 500",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMS2 521.",
+      "excludes": [
+        "CMS2 521"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CMS2 627",
+    "subject": "CMS2",
+    "number": "627",
+    "title": "Business Intelligence and Analytics",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course provides a managerial and technical focus on computational and business techniques which can help to identify new business opportunities and transform an organization’s future by optimizing operational and strategic decision making.",
+    "prerequisites": {
+      "text": "CMS2 500",
+      "tree": "CMS2 500",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMS2 527.",
+      "excludes": [
+        "CMS2 527"
+      ]
+    },
+    "notes": [
+      "Course may be offered in-person or online."
+    ]
+  }
+]

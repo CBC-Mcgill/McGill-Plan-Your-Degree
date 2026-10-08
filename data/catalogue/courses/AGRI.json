@@ -1,0 +1,535 @@
+[
+  {
+    "code": "AGRI 120",
+    "subject": "AGRI",
+    "number": "120",
+    "title": "Exobiospheres",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Introduction to basic astronomical, biological, chemical and (geo)physical principles of systems capable of giving rise to and sustaining living structures, in both natural and artificial biospheres, within our solar system and beyond.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Freshman Program of FAES on Macdonald Campus.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Not equivalent to EPSC 205/ANAT 205."
+    ]
+  },
+  {
+    "code": "AGRI 195",
+    "subject": "AGRI",
+    "number": "195",
+    "title": "Freshman Seminar 1",
+    "credits": 0.5,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Members of the Faculty and/or Student Services will present seminars on resources available to help students develop the requisite skills to facilitate their transition into university life.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Freshman (U0) students. Not open to students who have taken or are taking BREE 187.",
+      "excludes": [
+        "BREE 187"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 196",
+    "subject": "AGRI",
+    "number": "196",
+    "title": "Freshman Seminar 2",
+    "credits": 0.5,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Members of the Faculty will present seminars on topical issues about their areas of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Freshman (U0) Students. Not open to students who have taken or are taking BREE 188.",
+      "excludes": [
+        "BREE 188"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 215",
+    "subject": "AGRI",
+    "number": "215",
+    "title": "Agro-Ecosystems Field Course",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Through case studies and field trips, students will examine the problems and constraints within the Canadian agro-ecosystem, including the interrelationships among food production, the environment, agricultural policy and social issues. Research in this field of study will also be introduced.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course carries an additional charge of $67.25 to cover the cost of transportation (bus rental) for local field trips to agricultural enterprises. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "AGRI 310",
+    "subject": "AGRI",
+    "number": "310",
+    "title": "Internship in Agriculture/Environment",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Internship on working farms or in other appropriate businesses of the agri-food/environment industries.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken AGRI 201D1/D2.",
+      "excludes": [
+        "AGRI 201D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 325",
+    "subject": "AGRI",
+    "number": "325",
+    "title": "Sustainable Agriculture Field Course",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Exposure to a foreign rural and agricultural context, to observe a variety of types of farm operations, cropping systems and techniques. The sustainability of these is discussed within their local social, environmental and economic landscapes.",
+    "prerequisites": {
+      "text": "AGEC 200 or equivalent; permission of the instructor.",
+      "tree": "AGEC 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Lectures and visits will be jointly delivered by local experts and McGill Staff. Lectures (25%) and field visits (75%).",
+      "This course has a fee of $1,969.06, a small portion of which is tax receiptable on the T2202A; it includes internal travel (by coach), accommodation, most of the meals for the duration of the course, as well as instructor costs.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "AGRI 330",
+    "subject": "AGRI",
+    "number": "330",
+    "title": "Agricultural Legislation",
+    "credits": 1,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A study of Quebec legislation of importance to the agricultural sector, with emphasis on the reasons why these laws were implemented and on their net effects on this sector. Some Canadian laws will be covered but only inasmuch as they affect Quebec agriculture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Some written materials in this course are only available in French."
+    ]
+  },
+  {
+    "code": "AGRI 340",
+    "subject": "AGRI",
+    "number": "340",
+    "title": "Principles of Ecological Agriculture",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Focus on low-input, sustainable, and organic agriculture: the farm as an ecosystem; complex system theory; practical examples of soil management, pest control, integrated crop and livestock production, and marketing systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  },
+  {
+    "code": "AGRI 401",
+    "subject": "AGRI",
+    "number": "401",
+    "title": "Honours Research Project 1",
+    "credits": 6,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparation of a literature review, progress report, and delivery of a proposal seminar, as well as initiating the research project.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Agro-Environmental Sciences program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 402",
+    "subject": "AGRI",
+    "number": "402",
+    "title": "Honours Research Project 2",
+    "credits": 6,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Completion of the honours research project, including a progress report, a final project report, and a project presentation.",
+    "prerequisites": {
+      "text": "AGRI 401 and permission of the instructor",
+      "tree": "AGRI 401",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Agro-Environmental Sciences program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 405",
+    "subject": "AGRI",
+    "number": "405",
+    "title": "Honours Project 1",
+    "credits": 3,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparation of a literature review, progress report and delivery of a proposal seminar, as well as initiating the research project.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Agro-Environmental Sciences program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 406",
+    "subject": "AGRI",
+    "number": "406",
+    "title": "Honours Project 2",
+    "credits": 3,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Completion of the honours project, including a progress peport, a final project report, and a project presentation.",
+    "prerequisites": {
+      "text": "AGRI 405 and permission of the instructor",
+      "tree": "AGRI 405",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Agro-Environmental Sciences program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 410",
+    "subject": "AGRI",
+    "number": "410",
+    "title": "Agrology Internship",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Professional internship (stage) under the supervision of a practicing agrologist.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "AGRI 410D1",
+        "credits": 1.5,
+        "terms": [
+          "Summer 2026"
+        ]
+      },
+      {
+        "code": "AGRI 410D2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AGRI 411",
+    "subject": "AGRI",
+    "number": "411",
+    "title": "Global Issues on Development, Food and Agriculture",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "International development and world food security and challenges in developing countries. Soil and water management, climate change, demographic issues, plant and animal resources conservation, bio-products and biofuels, economic and environmental issues specially in tropical and sub-tropical regions. Globalization, sustainable development, technology transfer and human resources needs for rural development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Two 2-hour conferences"
+    ]
+  },
+  {
+    "code": "AGRI 430",
+    "subject": "AGRI",
+    "number": "430",
+    "title": "Professional Practice in Agrology",
+    "credits": 2,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course introduces students to the professional aspects of the practice of agrology. Topics include understanding the responsibilities of agrologists, the broad context and functioning of the Québec agricultural industry, how to deal with clients, colleagues, and understanding legal and regulatory aspects of the profession in Québec.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 or permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "This course requires the ability to read in French and understand spoken French."
+    ]
+  },
+  {
+    "code": "AGRI 435",
+    "subject": "AGRI",
+    "number": "435",
+    "title": "Soil and Water Quality Management",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Management of soil and water systems for sustainability. Cause of soil degradation, surface and groundwater contamination by agricultural chemicals and toxic pollutants. Human health and safety concerns. Water-table management. Soil and water conservation techniques will be examined with an emphasis on methods of prediction and best management practices.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 3-hour lab",
+      "This course carries an additional charge of $37.68 to cover the cost of transportation with respect to a field trip. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "AGRI 452",
+    "subject": "AGRI",
+    "number": "452",
+    "title": "Water Resources in Barbados",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Physical environment challenges, centered on water, being faced by an island nation. Guest speakers, field study tours and laboratory tests. Private, government and NGO institutional context of conservation strategies, and water quantity and quality analyses for water management specific to Barbados.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in full \"Barbados Field Study Semester\". Not open to students who have taken CIVE 452.",
+      "excludes": [
+        "CIVE 452"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 490",
+    "subject": "AGRI",
+    "number": "490",
+    "title": "Agri-Food Industry Project",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Interdisciplinary team project in the agri-food industry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGRI 493",
+    "subject": "AGRI",
+    "number": "493",
+    "title": "International Project Management",
+    "credits": 3,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and practice related to management of agriculture, nutrition and environmental projects within an international context. Case-studies and workshops drawing on expertise of development professionals from government and the private sector address techniques and resources for successful planning, implementation and evaluation within a multi-sectoral framework.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AGRI 498",
+    "subject": "AGRI",
+    "number": "498",
+    "title": "Agricultural Development Research",
+    "credits": 3,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Supervised reading and research project related to agriculture, food systems, nutrition and health in developing countries.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 or U3 students in the IAFS major.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 499",
+    "subject": "AGRI",
+    "number": "499",
+    "title": "Agricultural Development Internship",
+    "credits": 3,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised internship to provide practical experience working on agricultural issues related to international development. The internship can take many forms, including work in a developing country, for an agency that focuses on international development, or on a research project that aims at solving problems faced by developing populations.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students should take this course after having completed four semesters in their undergraduate program. It is the student's responsibility to find an appropriate internship, which must be approved by the instructor before registration is authorized."
+    ]
+  },
+  {
+    "code": "AGRI 510",
+    "subject": "AGRI",
+    "number": "510",
+    "title": "Professional Practice",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The ethical issues that face a professional in the workplace; professional ethics and deontology, professional responsibilities as related to the laws of labour, health, safety and risks to the environment, risk management and communication.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course restricted to senior undergraduate and graduate students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 519",
+    "subject": "AGRI",
+    "number": "519",
+    "title": "Sustainable Development Plans",
+    "credits": 6,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Geared for solving real-world environmental problems related to water at the local, regional and international scale in Barbados. Projects to be designed by instructors in consultation with university, government and NGO partners and to be conducted by teams of 2 to 4 students in collaboration with them.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in full \"Barbados Field Study Semester\". Not open to students who have taken CIVE 519 or URBP 519.",
+      "excludes": [
+        "CIVE 519",
+        "URBP 519"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AGRI 550",
+    "subject": "AGRI",
+    "number": "550",
+    "title": "Sustained Tropical Agriculture",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Contrast theory and practice in defining agricultural environmental \"challenges\" in the Neotropics. Indigenous and appropriate technological means of mitigation. Soil management and erosion, water scarcity, water over-abundance, and water quality. Explore agro-ecosystem protection via field trips and project designs. Institutional context of conservation strategies, NGO links, and public participation.",
+    "prerequisites": {
+      "text": "HISP 218 or equivalent; MATH 203 or AEMA 310 or equivalent",
+      "tree": {
+        "and": [
+          "HISP 218",
+          {
+            "or": [
+              "MATH 203",
+              "AEMA 310"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted Enrolment. Location in Panama. Student must be registered for a full semester of studies in Panama",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "code": "PRV5 483",
+    "subject": "PRV5",
+    "number": "483",
+    "title": "Consumer Law",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A comparative study of civil and common law and consumer protection law in Quebec and in Canada.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PRV5 582",
+    "subject": "PRV5",
+    "number": "582",
+    "title": "Advanced Torts",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This seminar examines in depth one or more selected problems in the law of torts such as protection of privacy, interference with economic and other relations, defamation, products liability, professional malpractice, strict liability, the future of tort law, and statutory compensation schemes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PRV5 182",
+      "excludes": [
+        "PRV5 182"
+      ]
+    },
+    "notes": []
+  }
+]

@@ -1,0 +1,390 @@
+[
+  {
+    "code": "MUMT 202",
+    "subject": "MUMT",
+    "number": "202",
+    "title": "Fundamentals of New Media",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "A theoretical and practical introduction to selected areas of music technology. Topics include digital audio and sampling theory, MIDI and sequencing, audio editing and mixing, elementary sound recording, score editing software and current areas of research interest.",
+    "prerequisites": {
+      "text": "none",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all students though priority will be given to students in the Music Technology MAT Minor, followed by Schulich School of Music students.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 203",
+    "subject": "MUMT",
+    "number": "203",
+    "title": "Introduction to Digital Audio",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to digital audio and the technologies involved in its practical realization and use in computer music. Topics will include audio signals and systems, sampling & quantization, signal encoding, compression, transmission and storage, filters, analog-to-digital and digital-to-analog converters, digital audio effects, sound sampling and synthesis techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Music Technology MST Minor or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 250",
+    "subject": "MUMT",
+    "number": "250",
+    "title": "Music Perception and Cognition",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic processes by which the brain transforms sound waves into musical events, dimensions, systems and structures and the processes by which musicians imagine new musical sounds and structures and plan movements that produce music on instruments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUMT 301",
+    "subject": "MUMT",
+    "number": "301",
+    "title": "Music and the Internet",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "A brief history of Internet technologies (protocols, web servers, web browsers) and their relationship to music and musicians (physical vs. virtual music distribution, digital music formats, streaming services). Locating, retrieving, and working with online music information through Web APIs and coding exercises. Basic static website creation for musicians (HTML/CSS/JavaScript). Technology-enhanced music creation.",
+    "prerequisites": {
+      "text": "MUMT 202",
+      "tree": "MUMT 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 302",
+    "subject": "MUMT",
+    "number": "302",
+    "title": "New Media Production 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Techniques for producing and manipulating music and sound for new media applications. Synthesis techniques including FM, granular and physical modeling. Audio effects including delay, reverberation, dynamics processing, and filtering. Audio compression, HCI and MIR concepts.",
+    "prerequisites": {
+      "text": "MUMT 202",
+      "tree": "MUMT 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Music Technology MAT Minor or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 306",
+    "subject": "MUMT",
+    "number": "306",
+    "title": "Music and Audio Computing 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Concepts, algorithms, data structures, and programming techniques for the development of music and audio software, ranging from musical instrument design to interactive music performance systems.",
+    "prerequisites": {
+      "text": "Previous digital audio and object-oriented programming experience.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Music Technology MST Minor or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 307",
+    "subject": "MUMT",
+    "number": "307",
+    "title": "Music and Audio Computing 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theory and implementation of signal processing techniques for sound synthesis and audio effects processing using Matlab, C++, and Max/MSP.",
+    "prerequisites": {
+      "text": "MUMT 306",
+      "tree": "MUMT 306",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Music Technology MST Minor or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 501",
+    "subject": "MUMT",
+    "number": "501",
+    "title": "Digital Audio Signal Processing",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discrete-time signal processing concepts and techniques. Discrete-time fourier transform and series, linear time-invariant systems, digital filtering, spectral analysis of discrete-time signals, and the z-transform.",
+    "prerequisites": {
+      "text": "MUMT 307 and MATH 133 or equivalent",
+      "tree": {
+        "and": [
+          "MUMT 307",
+          "MATH 133"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Music students and students enrolled in the MST Minor will be given priority for this course"
+    ]
+  },
+  {
+    "code": "MUMT 502",
+    "subject": "MUMT",
+    "number": "502",
+    "title": "Senior Project: Music Technology",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent senior project in Music Technology. Students will design and implement a medium-scale project in consultation with their advisor. Evaluation will be based on concept, background research, implementation, reliability, and documentation.",
+    "prerequisites": {
+      "text": "Departmental approval required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 605",
+    "subject": "MUMT",
+    "number": "605",
+    "title": "Digital Sound Synthesis and Audio Process",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Sound analysis, synthesis, and processing techniques are presented as based on specific spectral models of sound signals. Techniques explored in this context include the phase-vocoder, additive synthesis, source-filter synthesis, and audio effects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUMT 609",
+    "subject": "MUMT",
+    "number": "609",
+    "title": "Music, Media and Technology Project",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent music technology project. Students will prepare a statement of objectives, a comprehensive project design and a schedule of work, and will undertake the project on appropriate music technology platforms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 research/project hours"
+    ]
+  },
+  {
+    "code": "MUMT 616",
+    "subject": "MUMT",
+    "number": "616",
+    "title": "Timbre Form-Bearing Dimension in Music",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Music theoretic, performance-related, psychophysical, and cognitive perspectives on musical timbre and its role as a bearer of musical form from small-scale patterns to large-scale structures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUMT 617",
+    "subject": "MUMT",
+    "number": "617",
+    "title": "Cognitive Dynamics of Music Listening",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Music theoretic, performance-related, psychophysical and cognitive approaches to the temporal dynamics of musical listening to, and experience of, contemporary musical materials and form.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUMT 618",
+    "subject": "MUMT",
+    "number": "618",
+    "title": "Computational Modeling of Musical Acoustics",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Methods for discrete-time modeling of musical acoustic systems, with an emphasis on digital waveguide techniques. Delay-based audio effects, artificial reverberation, musical instrument models and \"physically-informed\" approaches to sound synthesis.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Prior experience with differential equations, digital filters, Matlab, and C/C++ is required."
+    ]
+  },
+  {
+    "code": "MUMT 619",
+    "subject": "MUMT",
+    "number": "619",
+    "title": "Input Devices for Musical Expression",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Basic technologies used in the design of input devices for musical expression, including the most common types of electronic sensors, actuators and associated conditioning circuits with examples of their application to gestural controllers.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Prior knowledge of analog electronics required"
+    ]
+  },
+  {
+    "code": "MUMT 620",
+    "subject": "MUMT",
+    "number": "620",
+    "title": "Gestural Control of Sound Synthesis",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Use of computers as part of novel digital musical instruments, including physical gestures and actions, the design and evaluation of new interfaces for musical expression, and mapping strategies between gestures and sounds.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Basic knowledge of sound synthesis methods is required"
+    ]
+  },
+  {
+    "code": "MUMT 621",
+    "subject": "MUMT",
+    "number": "621",
+    "title": "Music Information, Retrieval, Acquisition, Preservation",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Interdisciplinary applications for storing, preserving and retrieving musical information in musicology, music education, music theory, psychology, engineering, and library and information science based on musical similarity, genre classification, timbre recognition, automatic transcription, music representation, and formal analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUMT 622",
+    "subject": "MUMT",
+    "number": "622",
+    "title": "Time-Frequency and Parametric Representations of Sounds",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research trends in time-frequency representations and parametric modeling in the context of music and audio applications. Specific focus on the analysis of sounds using parametric methods.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Knowledge of sound analysis and resynthesis techniques and of digital signal processing required."
+    ]
+  }
+]

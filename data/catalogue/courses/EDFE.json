@@ -1,0 +1,857 @@
+[
+  {
+    "code": "EDFE 200",
+    "subject": "EDFE",
+    "number": "200",
+    "title": "First Field Experience (K/Elem and Secondary)",
+    "credits": 2,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Students are assigned to a school for a \"participant observer\" field experience. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships & Student Affairs website at http://www.mcgill.ca/isa.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEC 201",
+      "tree": "EDEC 201",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to B.Ed. Secondary and B.Ed. K/Elem. students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDFE 205",
+    "subject": "EDFE",
+    "number": "205",
+    "title": "First Field Experience (Music)",
+    "credits": 2,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Students are assigned to a school for a \"participant observer\" field experience. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at http://www.mcgill.ca/isa.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEA 206",
+      "tree": "EDEA 206",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDFE 208",
+    "subject": "EDFE",
+    "number": "208",
+    "title": "Second Field Experience (Music)",
+    "credits": 3,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Supervised student teaching in a school. Students are expected to apprise themselves of Field Experience, dates, duration and responsibilities as outlined on the Internships and Student Affairs website at http://www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDFE 205 or EDFE 200 or EDFE 209 or EDFE 246",
+      "tree": {
+        "or": [
+          "EDFE 205",
+          "EDFE 200",
+          "EDFE 209",
+          "EDFE 246"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEA 208 or EDEC 253",
+      "tree": {
+        "or": [
+          "EDEA 208",
+          "EDEC 253"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Students in B.Ed. in Music and concurrent B.Ed./B.Mus.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience can be found at www.mcgill.ca/isa."
+    ],
+    "parts": [
+      {
+        "code": "EDFE 208D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "EDFE 208D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDFE 209",
+    "subject": "EDFE",
+    "number": "209",
+    "title": "First Field Experience (TESL)",
+    "credits": 2,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Students are assigned to a school for a \"participant observer\" field experience. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at http://www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDSL 300.",
+      "tree": "EDSL 300",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDSL 210",
+      "tree": "EDSL 210",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to B.Ed. Teaching English as a Second Language (TESL) students.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 210",
+    "subject": "EDFE",
+    "number": "210",
+    "title": "Middle School Practicum",
+    "credits": 3,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Supervised practice to provide classroom teaching experience in the middle school context designed to prepare individuals to teach effectively at this level; seminars where participants discuss how best to respond to the social and emotional issues their students face.",
+    "prerequisites": {
+      "text": "At least 24 credits in the program must have been completed",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDFE 246",
+    "subject": "EDFE",
+    "number": "246",
+    "title": "First Field Experience (Physical Education)",
+    "credits": 3,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Supervised student teaching in Physical Education in an elementary school. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at http://www.mcgill.ca/isa",
+    "prerequisites": {
+      "text": "EDKP 342",
+      "tree": "EDKP 342",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to B.Ed. Physical and Health Education students",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 254",
+    "subject": "EDFE",
+    "number": "254",
+    "title": "Second Field Experience (Secondary)",
+    "credits": 3,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Supervised student teaching. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDFE 200 or EDFE 209 or EDFE 246 or EDFE 205",
+      "tree": {
+        "or": [
+          "EDFE 200",
+          "EDFE 209",
+          "EDFE 246",
+          "EDFE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEC 254 or EDEC 254D1",
+      "tree": {
+        "or": [
+          "EDEC 254",
+          "EDEC 254D1"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restriction: Open to B.Ed. in Secondary English, B.Ed. in Secondary Social Sciences, B.Ed. in Secondary Mathematics, and B.Ed. in Secondary Science and Technology students.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 255",
+    "subject": "EDFE",
+    "number": "255",
+    "title": "Second Field Experience (TESL)",
+    "credits": 3,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Supervised student teaching. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "(EDSL 210 and EDFE 209) or EDFE 200 or EDFE 246 or EDFE 205",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "EDSL 210",
+              "EDFE 209"
+            ]
+          },
+          "EDFE 200",
+          "EDFE 246",
+          "EDFE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDSL 254",
+      "tree": "EDSL 254",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to B.Ed. TESL students.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 256",
+    "subject": "EDFE",
+    "number": "256",
+    "title": "Second Field Experience (Kindergarten/Elementary)",
+    "credits": 3,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Supervised student teaching. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDFE 200 or EDFE 209 or EDFE 246 or EDFE 205",
+      "tree": {
+        "or": [
+          "EDFE 200",
+          "EDFE 209",
+          "EDFE 246",
+          "EDFE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEC 253 or EDSL 253",
+      "tree": {
+        "or": [
+          "EDEC 253",
+          "EDSL 253"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "B.Ed. (K/Elementary) students. Not open to students who have taken EDFE 253.",
+      "excludes": [
+        "EDFE 253"
+      ]
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 300",
+    "subject": "EDFE",
+    "number": "300",
+    "title": "Indigenous Education Field Experience",
+    "credits": 5,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Supervised student teaching of designated subject areas for a minimum of 35 days in an Indigenous elementary school, assuming more responsibility for student learning, classroom management, and formative and summative evaluations.",
+    "prerequisites": {
+      "text": "EDFE 200, EDFE 256, EDEC 201, and EDEC 253",
+      "tree": {
+        "and": [
+          "EDFE 200",
+          "EDFE 256",
+          "EDEC 201",
+          "EDEC 253"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Certificate in Education for First Nations and Inuit",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDFE 306",
+    "subject": "EDFE",
+    "number": "306",
+    "title": "Third Field Experience (Kindergarten/Elementary)",
+    "credits": 8,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised student teaching in a school. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDEE 275 or EDEE 273, EDEE 223, EDEE 250 or EDEE 253 or EDEE 254, EDEE 282 or EDEE 283 or EDEE 284, EDEC 215, (EDFE 256 or EDFE 256D1/D2), (EDEC 253 or EDEC 253D1/D2 or EDSL 253).",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDEE 275",
+              "EDEE 273"
+            ]
+          },
+          "EDEE 223",
+          {
+            "or": [
+              "EDEE 250",
+              "EDEE 253",
+              "EDEE 254"
+            ]
+          },
+          {
+            "or": [
+              "EDEE 282",
+              "EDEE 283",
+              "EDEE 284"
+            ]
+          },
+          "EDEC 215",
+          {
+            "or": [
+              "EDFE 256",
+              "EDFE 256D1"
+            ]
+          },
+          {
+            "or": [
+              "EDEC 253",
+              "EDEC 253D1",
+              "EDSL 253"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EDEE 353 or EDSL 353, EDEE 355 or EDEE 356.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDEE 353",
+              "EDSL 353"
+            ]
+          },
+          {
+            "or": [
+              "EDEE 355",
+              "EDEE 356"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "B.Ed. (K/Elementary) students. Not open to students who have taken EDFE 303.",
+      "excludes": [
+        "EDFE 303"
+      ]
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ],
+    "parts": [
+      {
+        "code": "EDFE 306D1",
+        "credits": 4,
+        "terms": []
+      },
+      {
+        "code": "EDFE 306D2",
+        "credits": 4,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDFE 308",
+    "subject": "EDFE",
+    "number": "308",
+    "title": "Third Field Experience (Music)",
+    "credits": 8,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised student teaching in a school. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDFE 208, EDEA 208.",
+      "tree": {
+        "and": [
+          "EDFE 208",
+          "EDEA 208"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEA 442, EDES 350.",
+      "tree": {
+        "and": [
+          "EDEA 442",
+          "EDES 350"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Students in B.Ed. in Music and concurrent B.Ed./B.Mus. Not open to students who have taken EDFE 305.",
+      "excludes": [
+        "EDFE 305"
+      ]
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 351",
+    "subject": "EDFE",
+    "number": "351",
+    "title": "Third Field Experience (Secondary)",
+    "credits": 8,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised student teaching in a school. Students are expected to apprise themselves of Field Experience, dates, duration and responsibilities as outlined on the Internships & Student Affairs Office website http://www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "(EDFE 254 or EDFE 254D1/D2), (EDEC 254 or EDEC 254D1/D2), (EDES 334 or EDES 335 or EDES 353 or EDES 361).",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDFE 254",
+              "EDFE 254D1"
+            ]
+          },
+          {
+            "or": [
+              "EDEC 254",
+              "EDEC 254D1"
+            ]
+          },
+          {
+            "or": [
+              "EDES 334",
+              "EDES 335",
+              "EDES 353",
+              "EDES 361"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EDEC 351, EDES 350.",
+      "tree": {
+        "and": [
+          "EDEC 351",
+          "EDES 350"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Students must have completed a minimum of 24 credits in their teachable subject area with grades of C or higher, as well as the corresponding first level methods course (i.e. EDES 334, 335, 353 or 361) with a grade of C or higher.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 359",
+    "subject": "EDFE",
+    "number": "359",
+    "title": "Third Field Experience (TESL)",
+    "credits": 8,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised student teaching in a school. Students are expected to apprise themselves of Field Experience, dates, duration and responsibilities as outlined on the Internships & Student Affairs Office website http://www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "(EDSL 254 or EDSL 255D1/D2 or EDSL 259D1/D2), (EDFE 255 or EDFE 259 or EDFE 259D1/D2).",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDSL 254",
+              "EDSL 255D1",
+              "EDSL 259D1"
+            ]
+          },
+          {
+            "or": [
+              "EDFE 255",
+              "EDFE 259",
+              "EDFE 259D1"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EDSL 315",
+      "tree": "EDSL 315",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 373",
+    "subject": "EDFE",
+    "number": "373",
+    "title": "Second Field Experience (Physical Education)",
+    "credits": 3,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Supervised student teaching in physical education in a secondary school. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDFE 246",
+      "tree": "EDFE 246",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to B.Ed. Phys. Ed. students.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa.",
+      "Add/Drop date: Wednesday, May 20. Withdrawal without refund: May 25."
+    ]
+  },
+  {
+    "code": "EDFE 380",
+    "subject": "EDFE",
+    "number": "380",
+    "title": "Third Field Experience (Physical Education)",
+    "credits": 7,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised student teaching physical education in a school.",
+    "prerequisites": {
+      "text": "EDFE 373",
+      "tree": "EDFE 373",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDKP 217, EDKP 303",
+      "tree": {
+        "and": [
+          "EDKP 217",
+          "EDKP 303"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to B.Ed. Physical and Health Education students.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 406",
+    "subject": "EDFE",
+    "number": "406",
+    "title": "Fourth Field Experience (Kindergarten/Elementary)",
+    "credits": 7,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised student teaching in a school. Students will be expected to assume a much increased responsibility for student learning, classroom management, and evaluation. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDEC 215, EDEE 223, EDEE 332, EDEE 275 or EDEE 273, EDEE 282 or EDEE 283 or EDEE 284, EDEE 250 or EDEE 253 or EDEE 254, EDFE 303 or EDFE 306.",
+      "tree": {
+        "and": [
+          "EDEC 215",
+          "EDEE 223",
+          "EDEE 332",
+          {
+            "or": [
+              "EDEE 275",
+              "EDEE 273"
+            ]
+          },
+          {
+            "or": [
+              "EDEE 282",
+              "EDEE 283",
+              "EDEE 284"
+            ]
+          },
+          {
+            "or": [
+              "EDEE 250",
+              "EDEE 253",
+              "EDEE 254"
+            ]
+          },
+          {
+            "or": [
+              "EDFE 303",
+              "EDFE 306"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEC 405 or EDSL 405",
+      "tree": {
+        "or": [
+          "EDEC 405",
+          "EDSL 405"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to B.Ed. (K/Elem) students.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 407",
+    "subject": "EDFE",
+    "number": "407",
+    "title": "Fourth Field Experience (Music)",
+    "credits": 7,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Supervised student teaching in a school. Students will be expected to assume a much increased responsibility for student learning, classroom management, and evaluation. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa",
+    "prerequisites": {
+      "text": "EDEC 215, (EDFE 308 or EDFE 305).",
+      "tree": {
+        "and": [
+          "EDEC 215",
+          {
+            "or": [
+              "EDFE 308",
+              "EDFE 305"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEA 407.",
+      "tree": "EDEA 407",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Students in B.Ed. in Music and the Concurrent B.Ed./B.Mus.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 451",
+    "subject": "EDFE",
+    "number": "451",
+    "title": "Fourth Field Experience (Secondary)",
+    "credits": 7,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised student teaching in a school. Students will be expected to assume a much increased responsibility for student learning, classroom management, and evaluation. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDFE 351 and EDEC 215.",
+      "tree": {
+        "and": [
+          "EDFE 351",
+          "EDEC 215"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEC 404.",
+      "tree": "EDEC 404",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to B.Ed. Secondary students only",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 459",
+    "subject": "EDFE",
+    "number": "459",
+    "title": "Fourth Field Experience (TESL)",
+    "credits": 7,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Supervised student teaching in a school. Students will be expected to assume a much increased responsibility for student learning, classroom management, and evaluation. Students are expected to apprise themselves of Field Experience dates, duration and responsibilities as outlined on the Internships and Student Affairs website at www.mcgill.ca/isa.",
+    "prerequisites": {
+      "text": "EDEC 215, EDSL 315 and EDFE 359",
+      "tree": {
+        "and": [
+          "EDEC 215",
+          "EDSL 315",
+          "EDFE 359"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDSL 415 and EDSL 458",
+      "tree": {
+        "and": [
+          "EDSL 415",
+          "EDSL 458"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  },
+  {
+    "code": "EDFE 480",
+    "subject": "EDFE",
+    "number": "480",
+    "title": "Fourth Field Experience (Physical Education)",
+    "credits": 7,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A minimum of 35 days of supervised teaching Physical Education in a school.",
+    "prerequisites": {
+      "text": "EDFE 380, EDEC 215",
+      "tree": {
+        "and": [
+          "EDFE 380",
+          "EDEC 215"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDKP 442.",
+      "tree": "EDKP 442",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to B.Ed. Physical Education students",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Expectations for this field experience, according to your program, can be found at www.mcgill.ca/isa."
+    ]
+  }
+]

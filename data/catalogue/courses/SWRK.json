@@ -1,0 +1,1777 @@
+[
+  {
+    "code": "SWRK 219",
+    "subject": "SWRK",
+    "number": "219",
+    "title": "Anti-Oppression Social Work Practice",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Social work policy and practice, including an examination of discrimination and oppressions, identity and social location, reflexivity, intersectionality, contemporary anti-oppression movements, access and equity in human services and their implications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to BSW U1 students. Not open to students who have taken SWRK 325.",
+      "excludes": [
+        "SWRK 325"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 220",
+    "subject": "SWRK",
+    "number": "220",
+    "title": "History and Philosophy of Social Work",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Historical, theoretical and philosophical base of social work which includes the role of social work in the social welfare, modalities of practice, professional codes of ethics, and human rights legislation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U1 students.",
+      "excludes": []
+    },
+    "notes": [
+      "**Web add/drop deadline is August 31, 2026.",
+      "**Web withdrawal is not applicable.",
+      "**Students should carefully review the class schedule notes, as registration instructions, deadlines, and other conditions may vary by program. The OFNIE section is reserved for First Nations and Inuit students enrolled in community-based programs."
+    ]
+  },
+  {
+    "code": "SWRK 221",
+    "subject": "SWRK",
+    "number": "221",
+    "title": "Public Social Services in Canada",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Federal and provincial social welfare programs - the intended objectives, program design, issues of eligibility and funding, and comparison with programs in other parts of Europe and North America. Particular emphasis on concepts of social justice and poverty. Programs such as income security, labour market, health, immigration, and social services.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U1 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 222",
+    "subject": "SWRK",
+    "number": "222",
+    "title": "Introduction to Practicum",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Basic social work skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U1 students.",
+      "excludes": []
+    },
+    "notes": [
+      "**Summer term offerings: Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply in the Summer term. Add/drop is the first lecture day and withdrawal is the third lecture day.",
+      "**Web add/drop deadline is August 31, 2026.",
+      "**Web withdrawal is not applicable.",
+      "**Students should carefully review the class schedule notes, as registration instructions, deadlines, and other conditions may vary by program. The OFNIE section is reserved for First Nations and Inuit students enrolled in community-based programs."
+    ]
+  },
+  {
+    "code": "SWRK 224",
+    "subject": "SWRK",
+    "number": "224",
+    "title": "Human Development Across the Lifespan",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Physical, cognitive, emotional, behavioural and social development in different stages of the life course with a focus on childhood and adolescence. Human development in different social contexts. Theory and research as it relates to social work practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to BSW U1 students",
+      "excludes": []
+    },
+    "notes": [
+      "**Web add/drop deadline is August 31, 2026.",
+      "**Web withdrawal is not applicable.",
+      "**Students should carefully review the class schedule notes, as registration instructions, deadlines, and other conditions may vary by program. The OFNIE section is reserved for First Nations and Inuit students enrolled in community-based programs."
+    ]
+  },
+  {
+    "code": "SWRK 319",
+    "subject": "SWRK",
+    "number": "319",
+    "title": "Critical Thought and Ethics in Social Work",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Use of theory and reflexivity to challenge the various ways knowing and practicing within social work. Critically engage and assess the theoretical basis of social work theories and knowledge acquired over the course of the program. Application of this knowledge to ethical dilemmas that arise in practice.",
+    "prerequisites": {
+      "text": "SWRK 219 or SWRK 325",
+      "tree": {
+        "or": [
+          "SWRK 219",
+          "SWRK 325"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to BSW U2 students. Not open to students who have taken SWRK 525.",
+      "excludes": [
+        "SWRK 525"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 320",
+    "subject": "SWRK",
+    "number": "320",
+    "title": "Practice with Individuals and Families 1",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to theories and techniques informing clinical social work practice with individual and family systems in a social context. Sexual orientation, race, class, gender, culture, ability and diverse family forms are integrated. Knowledge and skills required for assessment and treatment across a range of practice settings.",
+    "prerequisites": {
+      "text": "SWRK 224.",
+      "tree": "SWRK 224",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U2 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 321",
+    "subject": "SWRK",
+    "number": "321",
+    "title": "Introduction to Practice with Groups",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Introduction to theories and techniques informing social work practice with groups. Emphasis on understanding group formation, assessment, and models of group intervention across a range of practice settings and with different populations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U2 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 322",
+    "subject": "SWRK",
+    "number": "322",
+    "title": "Field Practice 1",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised educational experiences in social work practice designed to integrate practice and theory.",
+    "prerequisites": {
+      "text": "SWRK 219, SWRK 220, SWRK 221, SWRK 222, SWRK 224",
+      "tree": {
+        "and": [
+          "SWRK 219",
+          "SWRK 220",
+          "SWRK 221",
+          "SWRK 222",
+          "SWRK 224"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. students.",
+      "excludes": []
+    },
+    "notes": [
+      "To register for this course, students must have completed 15 credits of U1 B.S.W. required courses plus 9 credits derived from any combination of B.S.W. SWRK complementary, non-SWRK complementary, and/or non-SWRK elective courses totalling 24 credits."
+    ],
+    "parts": [
+      {
+        "code": "SWRK 322D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "SWRK 322D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "SWRK 323",
+    "subject": "SWRK",
+    "number": "323",
+    "title": "Field Practice 2",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised educational experiences in social work practice designed to integrate practice with theoretical knowledge.",
+    "prerequisites": {
+      "text": "SWRK 322",
+      "tree": "SWRK 322",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. students.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "SWRK 323D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "SWRK 323D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "SWRK 326",
+    "subject": "SWRK",
+    "number": "326",
+    "title": "Practice with Individuals and Families 2",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced integration of theories and techniques informing clinical social work practice with individual and family systems in a social context. Sexual orientation, race, class, gender, culture, ability and diverse family forms are integrated. Knowledge and skills required for assessment and treatment across a range of practice settings.",
+    "prerequisites": {
+      "text": "SWRK 320",
+      "tree": "SWRK 320",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U2 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 327",
+    "subject": "SWRK",
+    "number": "327",
+    "title": "Approaches to Community Practice",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comparison of approaches to community practice, with a focus on social change. An analysis of community practice assumptions and methods, including views, theories, and ideologies on social justice. Methods to bring change will also be discussed including strategies, tactics, and actions.",
+    "prerequisites": {
+      "text": "SWRK 219",
+      "tree": "SWRK 219",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U2 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 342",
+    "subject": "SWRK",
+    "number": "342",
+    "title": "Social Work, Gender and Sexual Diversity",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of issues facing Two-Spirit, gay, lesbian, bisexual, trans and intersex people. How social workers can support the development of health and social services informed by principles of social justice and equity. Topics include self-esteem, youth at risk, families, intersectionality, and aging.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to BSW students and U3 non-Social Work students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 344",
+    "subject": "SWRK",
+    "number": "344",
+    "title": "Integrative Seminar 1",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Building on SWRK 222 Introduction to Practicum, the purpose of this integrative seminar is to facilitate links between theories, concepts and empirical findings introduced in coursework to observations and knowledge students garner from the field. This process will help students integrate their knowledge from the classroom and their experiences from the field into a useful and meaningful whole. In order to support the integration of theory, research and practice this seminar will also introduce students to principles and practices in field education that support student learning. In this way, students learn how they can maximize their field learning experiences.",
+    "prerequisites": {
+      "text": "SWRK 322",
+      "tree": "SWRK 322",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "SWRK 323, or with permission of the instructor.",
+      "tree": "SWRK 323",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 353",
+    "subject": "SWRK",
+    "number": "353",
+    "title": "Introduction to Mental Health Practice",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduces specialized knowledge and assessment skills in mental health first aid and crisis intervention through the lens of social, cultural, and historical developments. Particular emphasis is placed on the dynamics of institutional responses to mental illness and current conditions and programs, the differential effects of mental illness with regard to age, race, culture, gender identity, and socioeconomic status, the changing conceptions of cause, diagnosis, and treatment across time and socio-cultural boundaries, recovery interventions and comprehensive assessments",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to BSW U2 students. Not open to BSW students who have taken SWRK 424.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 354",
+    "subject": "SWRK",
+    "number": "354",
+    "title": "Social Work in the Health Field",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to health and health institutions in the context of service delivery. Major themes will include: multidisciplinary teamwork in the hospital; crisis intervention; legal ethical issues; and emerging issues for social workers in health.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to BSW students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 400",
+    "subject": "SWRK",
+    "number": "400",
+    "title": "Policy and Practice for Refugees",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Refugee-generating conflicts, international and national responses are considered. Canadian policy, history and response to refugees are analyzed. Theory-grounded practice with refugees is examined, including community organizing and direct service delivery to individuals and families.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 420",
+    "subject": "SWRK",
+    "number": "420",
+    "title": "Advanced Field Practice 1",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised educational experience in social work practice at an advanced level.",
+    "prerequisites": {
+      "text": "SWRK 219; SWRK 220; SWRK 221; SWRK 222; SWRK 224; SWRK 319; SWRK 320; SWRK 321; SWRK 322; SWRK 323; SWRK 326; SWRK 327; SWRK 344).",
+      "tree": {
+        "and": [
+          "SWRK 219",
+          "SWRK 220",
+          "SWRK 221",
+          "SWRK 222",
+          "SWRK 224",
+          "SWRK 319",
+          "SWRK 320",
+          "SWRK 321",
+          "SWRK 322",
+          "SWRK 323",
+          "SWRK 326",
+          "SWRK 327",
+          "SWRK 344"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must have completed 39 credits of U1 and U2 B.S.W. required courses plus 15 credits derived from any combination of B.S.W. SWRK complementary, non-SWRK complementary, and/or non-SWRK elective courses totalling 54 credits."
+    ]
+  },
+  {
+    "code": "SWRK 421",
+    "subject": "SWRK",
+    "number": "421",
+    "title": "Advanced Field Practice 2",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised educational experience in social work practice at an advanced level.",
+    "prerequisites": {
+      "text": "SWRK 420",
+      "tree": "SWRK 420",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "SWRK 422",
+      "tree": "SWRK 422",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 422",
+    "subject": "SWRK",
+    "number": "422",
+    "title": "Integrative Seminar 2",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analyzing field experiences operationalizing the link between scholarship and practice. Dimensions of equity will be integrated.",
+    "prerequisites": {
+      "text": "SWRK 420",
+      "tree": "SWRK 420",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "SWRK 421",
+      "tree": "SWRK 421",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 423",
+    "subject": "SWRK",
+    "number": "423",
+    "title": "Social Work Research",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Appraising and analyzing social work practice research, including the perspectives of the authors, the literature reviewed, the practice questions, the research methodology and analysis and the implications of the findings for practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 424",
+    "subject": "SWRK",
+    "number": "424",
+    "title": "Mental Health and Illness",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Symptoms of mental illness and approaches to the delivery of services and programs within various sites of care. Impact of stigma and the place of psychosocial rehabilitation. Biopsychosocial framework and effective practice models examined with an emphasis on policy and its implications for the delivery of services and programs.",
+    "prerequisites": {
+      "text": "SWRK 320",
+      "tree": "SWRK 320",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to BSW U3 students. Not open to BSW students who have taken SWRK 353.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 428",
+    "subject": "SWRK",
+    "number": "428",
+    "title": "Social Policy and Administration",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An analysis of the administrative structures and dynamics of social service organizations, with special attention to Québec policies and to the role of social workers. Examples are drawn from current field experiences of students.",
+    "prerequisites": {
+      "text": "SWRK 221",
+      "tree": "SWRK 221",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 434",
+    "subject": "SWRK",
+    "number": "434",
+    "title": "Practice with Involuntary Clients",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Issues and practice problems encountered with involuntary clients in settings such as courts, youth protection agencies and total institutions. Topics include: reaction of the client and worker to the \"involuntary\" situation, the ethics and efficacy of \"coerced treatment\" and practice interventions with involuntary clients. Students draw on their own experience with these issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to BSW students.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "SWRK 445",
+    "subject": "SWRK",
+    "number": "445",
+    "title": "First Peoples and Social Work",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An analysis of Canadian policies and legislation, their impact on First Peoples and on social work practice. Historical and contextual overviews of European-Canadian and First Nations, Métis and Inuit relations.",
+    "prerequisites": {
+      "text": "SWRK 220",
+      "tree": "SWRK 220",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course carries an additional charge of $8.73 to cover the cost of transportation to attend a lecture at the Kahnawake Longhouse. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "SWRK 463",
+    "subject": "SWRK",
+    "number": "463",
+    "title": "Social Work Practice with Older Adults",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to gerontological social work practice and the roles of social workers in a variety of settings.Themes include: the strengths of older people, families in later life, retirement, caregiving, death of a spouse or partner, institutionalization, end of life care, economics and aging, community care and services and resources for older adults.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 471",
+    "subject": "SWRK",
+    "number": "471",
+    "title": "Tutorial in Social Work Research",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "With approval and under the supervision of an interested faculty member, students propose and pursue a small-scale research project of their own or contribute to the faculty member's research project, either individually or in a small group. The faculty member oversees the tutorial which includes one or more aspects of research: literature review, collection or analysis of data, report writing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 485",
+    "subject": "SWRK",
+    "number": "485",
+    "title": "Tutorial in Social Work Practice",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "With approval and under the supervision of an interested faculty member, students propose and pursue a topic of their own related to social work practice or contribute to a faculty member's topic of interest related to social work practice. Students work independently on the topic of interest related to social work practice, individually or in a small group. The faculty member oversees the tutorial on the topic of social work practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 486",
+    "subject": "SWRK",
+    "number": "486",
+    "title": "Tutorial in Social Policy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "With approval and under the supervision of an interested faculty member, students propose and pursue a topic of their own related to social policy or contribute to a topic of interest of a faculty related to social policy. Students work independently on the topic of interest related to social policy, individually or in a small group. The faculty member oversees the tutorial on the topic of social policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.S.W. U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 492",
+    "subject": "SWRK",
+    "number": "492",
+    "title": "Violence against Women and Children",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Through a feminist theoretical lens, this course examines a range of male-perpetrated sexual and physical abuses of women and children. Such an examination includes critical appraisals of \"common knowledge\", research findings, dominant modes of intervention, and social welfare policies and legislation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to BSW U3, 2-year BSW, and Women's Studies Major/Minor Concentration students",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "SWRK 493",
+    "subject": "SWRK",
+    "number": "493",
+    "title": "Seminar on Child Protection",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The field of child protection and the problems of physical and sexual abuse and neglect of children. The general characteristics of this vulnerable population group and their families as well as some models of intervention.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to B.S.W. U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 498",
+    "subject": "SWRK",
+    "number": "498",
+    "title": "Clinical Practice Seminar 2",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Practice competence with various population groups. Topics may change from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to BSW U2, BSW U3, and 2-year BSW students.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "SWRK 510",
+    "subject": "SWRK",
+    "number": "510",
+    "title": "Critical Disability Studies",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The application of critical disability theory and approaches to social work practice with individuals, families and communities; consideration of intersecting identities/social locations and interlocking oppression; attention to the evaluation and critique of dominant discourses and practices within health and social care, both historically and contemporaneously; exploration of alternative frameworks including social model of disability, and disability justice frameworks and their relevance to social work; attention to social work intervention, advocacy and self-advocacy movements: examination of the role of people with disabilities in policy and program level decision-making with attention to agency, resilience and resistance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken SWRK 669.",
+      "excludes": [
+        "SWRK 669"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 527",
+    "subject": "SWRK",
+    "number": "527",
+    "title": "Advanced Social Work Practice in Quebec",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The Reserved Acts (designated by L’Ordre des Travailleurs Sociaux et des Thérapeutes Conjugaux et Familiaux du Québec - OTSTCFQ). Exploration of micro, mezzo, macro levels of social work practice.",
+    "prerequisites": {
+      "text": "for BSW students only: SWRK 320and SWRK 326",
+      "tree": "SWRK 326",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to B.S.W. U3 students and M.S.W.; Non-Thesis students. Not open to students who have taken SWRK 425.",
+      "excludes": [
+        "SWRK 425"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 532",
+    "subject": "SWRK",
+    "number": "532",
+    "title": "International Social Work",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discussion based upon intensive study and reports on problems in selected countries. Emphasis on identifying major social problems, understanding the social forces bearing on those problems and considering appropriate professional approaches to aid in their solution.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 and M.S.W. students, or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 533",
+    "subject": "SWRK",
+    "number": "533",
+    "title": "Afrocentric Perspectives in Health and Social Care",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the integration of Afrocentric perspectives in health and social care, focusing on disparities and social determinants affecting African and diaspora communities. Examination of Afrocentric values and principles in relation to Western approaches, emphasizing cultural competency and the practical application of Afrocentric theories in health and social services. The role of spirituality and community in enhancing well-being and the evaluation of interventions aligned with African customs and practices.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to B.S.W. and M.S.W. students, or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 535",
+    "subject": "SWRK",
+    "number": "535",
+    "title": "Addictions",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction into the broad field of addictions with a focus on drug dependence. Students will have an opportunity to critically reflect and analyse the multiple approaches and models to treating addictions. Students will be provided with concepts and practical applications to screen, assess, evaluate, and intervene with multiple populations over the life span. Students will be exposed to different service providers in the area of addictions. Focus on a practical approach will highlight throughout the course with the intention of providing students with the necessary insight to respond within multiple settings. Perspectives on specific populations will be elaborated and key concepts and approaches to understanding the complexity of each. Students will have the opportunity to further their understanding of the factors and consequences of addiction over a life span as well as the impact on society.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 B.S.W. and M.S.W. students, or by permission of the instructor. Not open to students who have taken SWRK 498 or SWRK 649 when topic was \"Addictions\".",
+      "excludes": [
+        "SWRK 498",
+        "SWRK 649"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 602",
+    "subject": "SWRK",
+    "number": "602",
+    "title": "Youth Justice in Canada",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Youth delinquency and youth justice intervention from theoretical and practical perspectives, including socio-legal responses to youth crime and strategies of intervention. Exploration of the ways in which gender, 'race', socio-economic status and other factors shape young people's contact and experiences with the criminal justice system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Open to all graduate-level students (including students outside of Social Work)."
+    ]
+  },
+  {
+    "code": "SWRK 603",
+    "subject": "SWRK",
+    "number": "603",
+    "title": "Evidence Informed Advocacy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This applied learning course explores how social workers can identify and address systemic social injustices in change resistant environments. The roles of philosophy/worldview, evidence, social work values/ethics, moral courage, communication are stressed in the formulation of peaceful and respectful advocacy strategies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day, and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "SWRK 605",
+    "subject": "SWRK",
+    "number": "605",
+    "title": "Anti-Racist Social Work Practice",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical exploration of ways anti-Black and anti-Indigenous racism have shaped our institutions, health, culture, beliefs and the social work profession in Canada. The ways power and privilege are maintained and perpetuated within these institutions and communities. Examination of how Indigenous communities globally resist assaults on their lands and cultures, both historically and currently.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 606",
+    "subject": "SWRK",
+    "number": "606",
+    "title": "Reclaiming Child Welfare",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Reflection on current practices in child welfare. An overview of contemporary theoretical frameworks and students' experiences in the field will form the basis of class discussion. Topics include: the construction of abuse and neglect; the risk ethos, families'/mothers' experiences of child welfare services; the reflective practitioner and resistance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Seminar."
+    ]
+  },
+  {
+    "code": "SWRK 610",
+    "subject": "SWRK",
+    "number": "610",
+    "title": "Family Treatment",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An advanced seminar on techniques and practice of current therapies.",
+    "prerequisites": {
+      "text": "SWRK 622",
+      "tree": "SWRK 622",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 618",
+    "subject": "SWRK",
+    "number": "618",
+    "title": "Le Savoir-être in Direct Practice",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An experiential, clinical seminar focused on social workers' and couple and family therapists' relationship to self (self-awareness, self-regulation, self-reflexivity) and relationship to others (empathy, mentalization, cultural humility). Topics include nervous system regulation, emotion regulation, mentalization, and current approaches to direct practice. Links drawn between these skill areas and practice with individuals, families and communities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 620",
+    "subject": "SWRK",
+    "number": "620",
+    "title": "Migration and Social Work",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Informing practice through examination of how migration's social, economic, political, legal, cultural aspects shape lives of those migrating voluntarily or involuntarily to Canada. Historical context of immigration policies, acculturation frameworks, different models of service provision in resettlement. Intersecting oppressions of status, ethnicity, gender, class, age, sexual orientation and differential ability.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 621",
+    "subject": "SWRK",
+    "number": "621",
+    "title": "Seminar on Trauma and Resilience",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of the concepts of trauma and resilience within a comparative and international context. Exploration of theory, research, and practice interventions concerning trauma and resilience, both nationally and globally. Analysis of the ways in which culture, ethnicity, gender, class, and age shape experiences of trauma and recovery.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 622",
+    "subject": "SWRK",
+    "number": "622",
+    "title": "Understanding and Assessing Families",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The changing family system and overview of recent advancements in family assessment. Family developmental and systemic applications, with attention to the heterogeneity and diversity of the post-modern family, integrating contextual, gender, cultural and relational perspectives through the evaluation process.",
+    "prerequisites": {
+      "text": "SWRK 320 D1/D2",
+      "tree": "SWRK 320",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 623",
+    "subject": "SWRK",
+    "number": "623",
+    "title": "Couple Therapy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The goal of this course is to introduce students to the major models of couple therapy. The course will be divided into four core theoretical approaches to couple therapy: integrated systemic therapy for couples, emotionally focused therapy for couples, mentalizing based couple therapy, and cognitive behavioural marital therapy. Common factors will be explored such as communication skills, therapeutic alliance and client/therapist characteristics, in couple treatment. Models will be presented integrating the lens of gender, race, poverty, social class, and multiculturalism into couple treatment.",
+    "prerequisites": {
+      "text": "SWRK 622",
+      "tree": "SWRK 622",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 624",
+    "subject": "SWRK",
+    "number": "624",
+    "title": "Community Organization: Advocacy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The aim of this course is to develop an understanding of organizing advocacy at community and systemic levels. This session will focus specifically on an advocacy approach called \"Mosquito Advocacy\" where students will create social action campaigns to design and implement evidence informed social change movements.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 626",
+    "subject": "SWRK",
+    "number": "626",
+    "title": "International and Community Development",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced analysis of international and community development as a field of practice, policy and research. Critical concepts include colonization, development and underdevelopment, international socio-economic inequalities, social justice and social change, planning for development, governance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 628",
+    "subject": "SWRK",
+    "number": "628",
+    "title": "Intimate Partner Violence",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Assessment, intervention practices, and common knowledge through feminism, trauma- informed, and intersectionality in relation to intimate partner violence (IPV). Examination of intervention practices that give preference to more complex, contradictory, and in-depth understandings, focusing on the voices of those who experience IPV.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 630",
+    "subject": "SWRK",
+    "number": "630",
+    "title": "Adult Mental Health",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The objective of this course will be to familiarize students with theories of psychopathology including diagnostic systems, the history of the study of psychopathology and treatment of mental illness. Emphasis will be placed on understanding abnormal behaviour in adults (e.g. anxiety and posttraumatic stress disorders, substance abuse, psychotic disorders and affective disorders and somatization disorders).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 631",
+    "subject": "SWRK",
+    "number": "631",
+    "title": "Leadership and Organization",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Prepares students for participation in non-profit organizations, as founders, leaders, managers, workers, volunteers or members. Contemporary theories of management and organization to understand organizational dynamics, structures, processes. Practical knowledge/skills to articulate vision and values, develop strategy, improve performance, and manage yourself, people, finances, information and work through partnerships, contracts, networks, coalitions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 633",
+    "subject": "SWRK",
+    "number": "633",
+    "title": "Program Evaluation",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The theoretical and practical problems involved in evaluating the impact of social work services and social welfare programs. Topics include goal definition, comparison of experimental and non-experimental designs, data sources, qualitative and quantitative approaches, and outcome measures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 635",
+    "subject": "SWRK",
+    "number": "635",
+    "title": "Advanced Clinical Seminar: Use of Self",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An experiential learning approach to service providers’ use of self in interactions with service users (individuals, families, and communities), social service institutions, and the socio-political structures that shape institutions and service provision. Theoretical frameworks include critical social work, anti-oppressive and culturally responsive practice, and transformative healing. Topics include attachment theory, internal family systems, embodied practice, and transference.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 636",
+    "subject": "SWRK",
+    "number": "636",
+    "title": "Tutorial in Social Work",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An individual or small group tutorial in which students will work independently in conjunction with the instructor. The student will undertake a major project related to the area of specialization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 641",
+    "subject": "SWRK",
+    "number": "641",
+    "title": "Social Policy Analysis",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A seminar that reviews available theoretical approaches to the analysis of social policy, examines their ideological and methodological characteristics, and applies them to selected substantive welfare policies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 642",
+    "subject": "SWRK",
+    "number": "642",
+    "title": "Tutorial Social Welfare",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This tutorial permits students to pursue studies in special areas not covered in other courses offered, or to study in greater depth subjects covered in earlier work. Emphasis is on the content, operation and analysis of social welfare programs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 643",
+    "subject": "SWRK",
+    "number": "643",
+    "title": "Research Methods 2",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Covers a range of qualitative and quantitative methods used in social work related research. Focuses on research skills and knowledge mobilization tools for conducting applied research in partnership with social service agencies and communities.",
+    "prerequisites": {
+      "text": "SWRK 653.",
+      "tree": "SWRK 653",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Limited to M.S.W. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 649",
+    "subject": "SWRK",
+    "number": "649",
+    "title": "Special Topics in Social Welfare",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course will be offered from time to time to deal with topics of current interest in social welfare, that are not covered in other courses. Specific content will differ from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 650",
+    "subject": "SWRK",
+    "number": "650",
+    "title": "Field Work Practicum 1",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised educational experience in social work practice integrating practice with theoretical knowledge characteristic of the specialized field. Individual and group instruction. Involves approximately 115 hours of work in a field setting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 651",
+    "subject": "SWRK",
+    "number": "651",
+    "title": "Field Work Practicum 2",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised educational experience in social work practice integrating practice with theoretical knowledge characteristic of the specialized field. Individual and group instruction. Involves approximately 115 hours of work in a field setting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 653",
+    "subject": "SWRK",
+    "number": "653",
+    "title": "Research for Social Justice",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Integration of relevant research in social work practice to inform program design, development, and evaluation. Activist-researcher and practitioner-researcher roles in social work, research literacy and knowledge mobilization skills. Tools to design and propose research projects that contribute to justice practices with communities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 655",
+    "subject": "SWRK",
+    "number": "655",
+    "title": "Seminar on Aging",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced graduate seminar which focuses on a critical examination of historical and contemporary theories and practice models in gerontological social work.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Specific content will vary from year to year to allow for in-depth exploration of current topics in aging."
+    ]
+  },
+  {
+    "code": "SWRK 657",
+    "subject": "SWRK",
+    "number": "657",
+    "title": "Child and Adolescent Mental Health ",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Canadian mental health policies and practices related to children and adolescents, including historical trends in the conceptualization of mental illness/wellness, and foundations of child/adolescent DSM diagnoses and best practice approaches.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 660",
+    "subject": "SWRK",
+    "number": "660",
+    "title": "Field Work Practicum 3",
+    "credits": 6,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised educational experience in social work practice integrating practice with theoretical knowledge characteristic of the specialized field. Individual and group instruction. Involves approximately 115 hours of work in a field setting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Involves approximately 220 hours of work in a field setting"
+    ]
+  },
+  {
+    "code": "SWRK 664",
+    "subject": "SWRK",
+    "number": "664",
+    "title": "Intensive Advanced Field Placement",
+    "credits": 12,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Supervised educational experience in an advanced social work practice setting. Integrating practice with theoretical knowledge characteristic of the specialized field.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "SWRK 665",
+      "tree": "SWRK 665",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students in the M.S.W.; Non-Thesis program and in the M.S.W.; Non-Thesis - Gender and Women's Studies program.",
+      "excludes": []
+    },
+    "notes": [
+      "1. Course is Pass/Fail. Individual and group instruction. Involves approximately 450 hours in afield setting."
+    ]
+  },
+  {
+    "code": "SWRK 665",
+    "subject": "SWRK",
+    "number": "665",
+    "title": "Advanced Field Seminar",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Analysis of advanced field experiences, operationalizing the link between scholarship and practice, including dimensions of equity.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "SWRK 664",
+      "tree": "SWRK 664",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 668",
+    "subject": "SWRK",
+    "number": "668",
+    "title": "Living with Illness, Loss and Bereavement",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This seminar addresses the psycho-social concerns of patients and family members living with illness and/or non-bereavement loss. An interdisciplinary theoretical perspective is combined with clinical practice interventions. Special attention will be given to the role of the social worker.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 670",
+    "subject": "SWRK",
+    "number": "670",
+    "title": "Seminar on Caregiving",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The psychosocial concerns and needs of caregivers to people living with illness, disability and/or facing end of life, using an interdisciplinary framework. The role of social workers in delivering strength-based clinical interventions that best address the challenges of giving and receiving care while at the same time attending to experiences of loss and bereavement.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SWRK 690",
+    "subject": "SWRK",
+    "number": "690",
+    "title": "Independent Study Project",
+    "credits": 9,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "An independent study project on a topic of interest in a comprehensive and creative fashion. The project is completed by the student following initial guidance from her/his advisor. It systematically examines a theoretical, substantive or empirical matter, using appropriate methodology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "SWRK 690D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "SWRK 690D2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "SWRK 691",
+    "subject": "SWRK",
+    "number": "691",
+    "title": "Social Work / Law Independent Study Project",
+    "credits": 12,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Students will produce an essay consisting of: 1) identifying a substantive area which integrates core legal and social work knowledge; 2) analyzing the legal and behavioural science information in each substantive area; 3) developing and applying relevant theoretical frameworks; 4) developing research questions to be examined by qualitative or quantitative methods; 5) integrating research findings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "SWRK 691D1",
+        "credits": 6,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "SWRK 691D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "SWRK 698",
+    "subject": "SWRK",
+    "number": "698",
+    "title": "Thesis Research 1",
+    "credits": 12,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Independent research work under the direction of a supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "SWRK 698D1",
+        "credits": 6,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "SWRK 698D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "SWRK 699",
+    "subject": "SWRK",
+    "number": "699",
+    "title": "Thesis Research 2",
+    "credits": 15,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Independent research work under the direction of a supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "SWRK 699D1",
+        "credits": 7.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "SWRK 699D2",
+        "credits": 7.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "SWRK 701",
+    "subject": "SWRK",
+    "number": "701",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 720",
+    "subject": "SWRK",
+    "number": "720",
+    "title": "Thought and Theory Development in Social Work",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The purpose of this seminar is to explore the origins and historical development of social work theory. Included in the analysis of this development will be the impact of material, cultural and ideological shifts within society in general and social welfare in particular. Attention will also be given to the effect of changes within relevant social science disciplines on the process of social work theory development and its relation to intervention.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 721",
+    "subject": "SWRK",
+    "number": "721",
+    "title": "Advanced Integrative Seminar",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This seminar guides students to explore the theoretical, empirical and methodological traditions in scholarship that give rise to their research question. It also provides opportunities for students to engage in collaborative discussions and presentations of their emerging research proposals to support their advancement through the program.",
+    "prerequisites": {
+      "text": "Completion of comprehensive exam (SWRK 701)",
+      "tree": "SWRK 701",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": [
+      "This course is graded as Pass/Fail."
+    ]
+  },
+  {
+    "code": "SWRK 722",
+    "subject": "SWRK",
+    "number": "722",
+    "title": "Advanced Seminar: Social Work Intervention",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Comparative study of certain models of social work intervention from the point of view of their internal logical structure and their practical effectiveness. The models to be presented will be analyzed in terms of their origins, their underlying values, their objectives, their modes of intervention, and their effectiveness.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 723",
+    "subject": "SWRK",
+    "number": "723",
+    "title": "Advanced Seminar on Social Policy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of social policies and their impact on social work practice and on the clienteles that they affect. Study of the interaction between social policies and styles of management of social work organizations responsible for their application.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 724",
+    "subject": "SWRK",
+    "number": "724",
+    "title": "Advanced Research Methods and Analysis: Quantitative Data",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Problems encountered in the use of quantitative methods in social work research. Types of quantitative research useful in social welfare policy analysis and discussion of yield from alternative analytic methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 725",
+    "subject": "SWRK",
+    "number": "725",
+    "title": "Advanced Qualitative Research Methods and Data Analysis",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of the principal methods comprised under the area of qualitative research and problems related to the utilization of those methods. Particular attention to analysis arising from these methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SWRK 726",
+    "subject": "SWRK",
+    "number": "726",
+    "title": "Independent Study",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent study of a selelcted field or topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the joint Social Work Ph.D. program",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

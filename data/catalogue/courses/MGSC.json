@@ -1,0 +1,1259 @@
+[
+  {
+    "code": "MGSC 372",
+    "subject": "MGSC",
+    "number": "372",
+    "title": "Advanced Business Statistics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A practical managerial approach to advanced simple and multiple regression analysis, with application in finance, economics and business, including a review of probability theory, an introduction to methods of least squares and maximum likelihood estimation, autoregressive forecasting models and analysis of variance.",
+    "prerequisites": {
+      "text": "MGCR 271 or equivalent.",
+      "tree": "MGCR 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECON 257D1/D2, MATH 324, MATH 423, MATH 357 or equivalent.",
+      "excludes": [
+        "ECON 257",
+        "MATH 324",
+        "MATH 357",
+        "MATH 423"
+      ]
+    },
+    "notes": [
+      "You may not be able to receive credit for this course and other statistics courses. Be sure to check the Course Overlap section of the Desautels Faculty of Management in the eCalendar."
+    ]
+  },
+  {
+    "code": "MGSC 373",
+    "subject": "MGSC",
+    "number": "373",
+    "title": "Operations Research 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A realistic experience of analytical models which have been successfully applied in several areas of managerial decision-making like marketing, finance and IS. Emphasis on the formulation of problems, their solution approaches, limitations, underlying assumptions and practical use. Topics include: decision analysis, project management, simulation, linear and integer programming, sensitivity analysis.",
+    "prerequisites": {
+      "text": "MGCR 271",
+      "tree": "MGCR 271",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 401",
+    "subject": "MGSC",
+    "number": "401",
+    "title": "Statistical Foundations of Data Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course will provide statistical foundations for data analytics. In this course, we will learn an introduction to advanced statistical techniques and methodologies including sampling, regression, time-series and multi-variate statistics. We will support our approach by looking at applied examples and real cases and datasets across several business areas, including marketing, human resources, finance, and operations. Students will apply their skills to interpret a real-world data set and make appropriate business recommendations.",
+    "prerequisites": {
+      "text": "MGCR 271 or equivalent.",
+      "tree": "MGCR 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 403",
+    "subject": "MGSC",
+    "number": "403",
+    "title": "Introduction to Logistics Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Managing logistics systems, including transportation management, facility location, procurement, distribution management, and supply chain management.",
+    "prerequisites": {
+      "text": "MGCR 472 or MGCR 372",
+      "tree": {
+        "or": [
+          "MGCR 472",
+          "MGCR 372"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 404",
+    "subject": "MGSC",
+    "number": "404",
+    "title": "Foundations of Decision Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course teaches quantitative methods used in business decision making. Topics include: optimization models, decision trees, simulation, and computer simulation. Business applications of these techniques are emphasized. Students in this course will acquire expertise in computer based methods for decision making, through computer analysis of real-life problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 415",
+    "subject": "MGSC",
+    "number": "415",
+    "title": "Supplier Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Strategic role of purchasing, supplier selection, supplier relationship management, international sourcing, E-procurement, price determination, purchasing services, and auctions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 and U1 students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 416",
+    "subject": "MGSC",
+    "number": "416",
+    "title": "Data-Driven Models for Operations Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of how data-driven models have been used to transform businesses and industries, using examples and case studies in e-commerce, retail, social and online networks, sports analytics, and online advertising. Demonstration of the use of data-driven analytics methods such as time series forecasting, network models, mixed-integer optimization, matching markets and exploration/exploitation.",
+    "prerequisites": {
+      "text": "MGCR 271, INSY 336 or permission of instructor and approval of the BCom Program Office",
+      "tree": {
+        "and": [
+          "MGCR 271",
+          "INSY 336"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGSC 434 when the topic was \"Data-Driven Models for Operations Analytics\"",
+      "excludes": [
+        "MGSC 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 417",
+    "subject": "MGSC",
+    "number": "417",
+    "title": "Project Operations and Risk Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Project leadership, stakeholder management, project analytics, challenges, and risk management.",
+    "prerequisites": {
+      "text": "MGCR 271 or equivalent",
+      "tree": "MGCR 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students. Not open to students who have taken MGSC 434 when the topic was \"Project Operations and Risk Management\".",
+      "excludes": [
+        "MGSC 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 431",
+    "subject": "MGSC",
+    "number": "431",
+    "title": "Operations and Supply Chain Analysis",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course introduces students to operations concepts and techniques with application to supply chain management. A supply chain consists of all activities involved in fulfilling customer demand and the management decisions have a direct impact on a firm's performance, such as operating cost, market penetration and customer service. The course covers both classical tactics and evolving new strategies to reduce cost, increase responsiveness and maintain sustainable growth in a firm's supply chain.",
+    "prerequisites": {
+      "text": "MGCR 472 or MGCR 372",
+      "tree": {
+        "or": [
+          "MGCR 472",
+          "MGCR 372"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 434",
+    "subject": "MGSC",
+    "number": "434",
+    "title": "Topics in Operations Management 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Selected topics in operations management.",
+    "prerequisites": {
+      "text": "MGCR 271",
+      "tree": "MGCR 271",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 435",
+    "subject": "MGSC",
+    "number": "435",
+    "title": "Topics in Operations Management 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Selected topics in operations management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 483",
+    "subject": "MGSC",
+    "number": "483",
+    "title": "Analytics-Based Community Project",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Aiding a host community organization in the application of analytics, with the aim of helping to improve the community's operations for the good of society.",
+    "prerequisites": {
+      "text": "Permission of Instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "This interdisciplinary experiential-learning course will partner students with an NGO to draw on that organization’s knowledge in sustainability or analytics. During these projects, students will implement AI and analytical tools to, for example, study the health of bee colonies, track microplastics in the ocean, help micro-farming initiatives, or develop compost optimization. Students will earn credits from McGill University by developing experiential, all while living on a natural reserve in Costa Rica located steps away from Playa Conchal.",
+      "There is an additional fee of $3050 that covers accommodation for 10 nights in Costa Rica, all ground transportation, entrance to national parks and natural reserves, most meals, and all course infrastructure and materials.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "MGSC 488",
+    "subject": "MGSC",
+    "number": "488",
+    "title": "Sustainability and Operations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Social and environmental impacts of an organization’s operations. Regulatory environments, eco-efficiency concepts and measurement systems. Lifecycle analysis and exploring impacts linked to: product design, sourcing, production, distribution, sales, and end-of-life recovery & treatment. Frameworks and best practices for reducing negative consequences and increasing positive ones.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 575",
+    "subject": "MGSC",
+    "number": "575",
+    "title": "Applied Time Series Analysis Managerial Forecasting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Management applications of time series analysis. Starting with ratio-to-moving average methods, the course deals successively with Census 2, exponential smoothing methods, the methodology introduced by Box and Jenkins, spectral analysis and time-series regression techniques. Computational aspects and applications of the methodology are emphasized.",
+    "prerequisites": {
+      "text": "MGCR 271.",
+      "tree": "MGCR 271",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 578",
+    "subject": "MGSC",
+    "number": "578",
+    "title": "Simulation of Management Systems",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Building simulation models of management systems. Design of simulation experiments and the analysis and implementation of results. Students are expected to design a complete simulation of a real problem using a standard simulation language.",
+    "prerequisites": {
+      "text": "(Undergraduate) MGCR 271.",
+      "tree": "MGCR 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 602",
+    "subject": "MGSC",
+    "number": "602",
+    "title": "Strategic Management of Operations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Tools, conceptual frameworks, and technological understanding necessary to manage operations in today's increasingly competitive marketplace.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day.",
+      "**This course will be held on May 24, 25, 26, 31, June 1 & 2, and there will be a take-home exam due on June 15, 2019."
+    ]
+  },
+  {
+    "code": "MGSC 603",
+    "subject": "MGSC",
+    "number": "603",
+    "title": "Logistics Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The management of the logistics functions in a manufacturing firm. Internal logistics includes the design and operation of a production-distribution system, with emphasis on the management of supply chains in global manufacturing companies. External logistics includes an analysis of the prevailing sourcing strategies and alternative means of customer satisfaction. Important tools such as forecasting techniques and information technology are also covered.",
+    "prerequisites": {
+      "text": "MGSC 472",
+      "tree": "MGSC 472",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course will be held on May 2, 3, 8, 9 & 10, and will have the final exam on June 21, 2015.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 604",
+    "subject": "MGSC",
+    "number": "604",
+    "title": "Managerial Communication in Supply Chain Management",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Analysis of communication situations, including identification of the different viewpoints of the parties involved, cogent arguments based on the available data, communications with an effective structure, style, and tone.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": [
+      "**This course will be held on June 11, 12, 18, 19 and there will be a final evaluation due on June 26, 2021.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 605",
+    "subject": "MGSC",
+    "number": "605",
+    "title": "Total Quality Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The topics include: Top Management Commitment, Leadership Style, Bench Marking, Employee involvement, Human Resource Utilization, Employee Motivation, Quality Function Deployment, Statistical Techniques for Quality Improvement including the seven tools of quality and statistical process control. New topics of ISO9000, Just-in-Time, \"Kaizen\" and Return-of Quality are also discussed. Students are encouraged to do industry projects on TQM.",
+    "prerequisites": {
+      "text": "MGCR 272 or MGCR 274",
+      "tree": {
+        "or": [
+          "MGCR 272",
+          "MGCR 274"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 607",
+    "subject": "MGSC",
+    "number": "607",
+    "title": "Corporate Social Responsibility in Supply Chain Management",
+    "credits": 1,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to the basic theories and development on business ethics and corporate social responsibility (CSR).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day.",
+      "**This course will be held on June 4, 5, 25, 26 and there will be a paper due on July 17, 2021."
+    ]
+  },
+  {
+    "code": "MGSC 608",
+    "subject": "MGSC",
+    "number": "608",
+    "title": "Data Decisions and Models",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The goal is to evaluate quantitative information and to make sound decisions in complex situations. The course provides a foundation for various models of uncertainty, techniques for interpreting data and many decision making approaches in both deterministic and stochastic environments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course will be held on April 17, 18, 19, 24, 25 & 26, and will have the final exam on May 30, 2015.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 609",
+    "subject": "MGSC",
+    "number": "609",
+    "title": "Operations Industrial Seminar",
+    "credits": 1,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Presentations by operations industry experts and manufacturing managers, covering the information on recent trends, issues and challenges.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 610",
+    "subject": "MGSC",
+    "number": "610",
+    "title": "Operations Case Studies",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Case studies on a variety of manufacturing topics given by industry experts, that can be a historical example of a solved problem or a present problem. The case study is to be researched thoroughly and a solution is to be proposed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 611",
+    "subject": "MGSC",
+    "number": "611",
+    "title": "Operations Industrial Stage",
+    "credits": 9,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "The stage is to be completed under the supervision of an experienced engineer in the facilities of a participating/host company. The stage consists of a project that requires the approval of the host company and the course instructor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 614",
+    "subject": "MGSC",
+    "number": "614",
+    "title": "Computer Integrated Manufacturing",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A study of the present impact of information technology and automation on manufacturing. The characteristics of information systems and how they influence work flow. Computer-aided systems and their effect on productivity. The integration of information paradigm and its effect on manufacturing. Time based manufacturing principles. Implementation of CIM strategies and technologies. The course includes a manufacturing analysis project using computer simulation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 615",
+    "subject": "MGSC",
+    "number": "615",
+    "title": "Procurement and Distribution",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Key strategic, operational and technological issues associated with the role of procurement and distribution, including selection and management of suppliers, international sourcing, price determination, e-purchasing, and auctions. It will explore traditional as well as emerging business models and emphasize the use of operations-related technologies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on May 30, 31, June 6, 7, 13, 14 and there will be a take-home exam due on July 5, 2020",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 616",
+    "subject": "MGSC",
+    "number": "616",
+    "title": "Technology in Action",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Strategic and operational issues that arise when managing technological innovation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "To students in the Technology and Innovation Management Concentration",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 617",
+    "subject": "MGSC",
+    "number": "617",
+    "title": "Product Design",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A study of the fundamental design principles and techniques for user-centered designs in both product and service environments. Topics covered: the role of design in business, characteristics of good design, various effects of design (e.g., on cost, manufacturability, maintainability, environmental compatibility, marketability), design process frameworks, organizing for design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 618",
+    "subject": "MGSC",
+    "number": "618",
+    "title": "Data Analytics Foundations in Supply Chain Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Data processing and analysis skills; basics of Python; data processing, visualization and simple programming. Study of regression and simulation techniques to address management problems that arise in real-world business settings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 619",
+    "subject": "MGSC",
+    "number": "619",
+    "title": "Independant Study",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Research reading or field projects, permitting independent study under the guidance of a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 621",
+    "subject": "MGSC",
+    "number": "621",
+    "title": "Sustainable Supply Chains",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "How companies integrate financial, environmental, social sustainability concerns while managing their logistics and operations. Topics include: global regulatory environments (such as carbon taxes, cap-and-trade, energy-efficiency mandates), certification regimes (ISO 14000, fair-trade labels, other eco-labels), how firms respond to them. Practical analytical sustainability frameworks such as the triple bottom line, life cycle assessment, and sustainability disclosure reporting. Opportunities for companies to implement sustainable business strategies at each stage in a supply chain: green business models and new product development, sustainable resource extraction, responsible supplier sourcing, end-of-life product recovery and recycling.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGSC 691 when topic was \"Sustainable Supply Chains\".",
+      "excludes": [
+        "MGSC 691"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 631",
+    "subject": "MGSC",
+    "number": "631",
+    "title": "Analysis: Production Operations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course presents a framework for design and control of modern production and inventory systems, and bridges the gap between theory and practice of production and inventory management. The course develops analytical concepts in the area and highlights their applications in manufacturing industry. The course is divided into three segments. The first segment looks at the production planning process and discusses in detail the resource allocation issues. The second segment deals with analysis and operation of inventory systems. The third segment integrates production planning and inventory control and looks at various integrated models for determining replenishment quantities and production lots.",
+    "prerequisites": {
+      "text": "MGCR 472 or MGCR 372",
+      "tree": {
+        "or": [
+          "MGCR 472",
+          "MGCR 372"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 640",
+    "subject": "MGSC",
+    "number": "640",
+    "title": "Fundamentals of Decision Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Business applications of quantitative methods used in data analysis and decision making. Topics include: optimization models, probability, decision trees, statistical inference and sampling, simulation, and computer simulation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 641",
+    "subject": "MGSC",
+    "number": "641",
+    "title": "Operations Management in Health Services",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "See MGSC 641D1 for course description.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "MGSC 641D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "MGSC 641D2",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MGSC 642",
+    "subject": "MGSC",
+    "number": "642",
+    "title": "Quality Management in Healthcare",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Quality management concepts and tools with a focus on healthcare. Techniques and tools in collect and processing data on safety and quality. Quality improvement models and frameworks. Lean process improvement tools and scientific methodologies for understanding, analyzing and improving work processes. Sigma methodologies to eliminate quality defects. The most recent lean and six sigma applications that aim to provide better care at lower cost.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "MGSC 642D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "MGSC 642D2",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MGSC 650",
+    "subject": "MGSC",
+    "number": "650",
+    "title": "Operations and Risk Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Business applications of decision making tools and frameworks under uncertainty in the context of internal and external operations. Topics include: operational metrics, demand forecasting, sales and operations planning, purchasing and supplier management, logistics and distribution management, capacity, and inventory management, and global operations.",
+    "prerequisites": {
+      "text": "MGSC 640",
+      "tree": "MGSC 640",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 652",
+    "subject": "MGSC",
+    "number": "652",
+    "title": "Statistical Foundations of Data Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Statistical foundations for data analytics. Introduction to advanced statistical techniques and methodologies including sampling, regression, classification methods, and machine learning. Methods including retail settings, real cases and datasets across several business areas, and from the internet - including Yelp, Spotify, and Google trends.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGSC 692 when topic was \"Statistical Foundations of Data Analytics\".",
+      "excludes": [
+        "MGSC 692"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 656",
+    "subject": "MGSC",
+    "number": "656",
+    "title": "Analytics Consulting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Hands-on experience with analytics consulting projects in a variety of industries. The course will be a mixture of lecture, project milestone presentations, and project-specific guest speakers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 660",
+    "subject": "MGSC",
+    "number": "660",
+    "title": "Mathematical and Statistical Foundations for Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This course consists of two parts: (i) The first half of the course focuses on probabilistic and statistical foundations of data analytics. At the end of this part, students will have the mathematical knowledge in following topics: probabilities, random variables, the Central Limit Theorem; prior and posterior distributions, and Bayes’ rule; correlation, and Sampling. (ii) The second half of the course focuses on mathematical foundations of decision analytics. At the end of this part, students will have the mathematical knowledge in following topics: linear algebra; calculus of several variables; convexity; separating hyperplanes; unconstrained and constrained optimization; lagrange multipliers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable.",
+      "**Web ADD only"
+    ]
+  },
+  {
+    "code": "MGSC 661",
+    "subject": "MGSC",
+    "number": "661",
+    "title": "Multivariate Statistical Analysis",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "The course will begin with the standard linear regressions, and extend to multivariable regression models, factor analysis, principal components, selection models, and dynamic and nonlinear multivariate data methods. Students will be exposed to a broad range of techniques and applications in business analytics through conducting their own statistical analyses.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 662",
+    "subject": "MGSC",
+    "number": "662",
+    "title": "Decision Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course teaches quantitative methods used in business decision making. Topics include: optimization models, optimization under uncertainty, and simulation. Business applications of these techniques are emphasized. Students in this course will acquire expertise in quantitative methods for decision making, through computer analysis of real-life problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 670",
+    "subject": "MGSC",
+    "number": "670",
+    "title": "Revenue Management",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course will introduce students to revenue management (RM) practices in air transportation, hospitality (hotels, cruises, theme parks, casinos), car rental, media, broadcasting, natural-gas storage and transmission, electricity generation and transmission, and show business (concerts, theaters, sport events). Most applications are recent and made possible by the advances in technology, data and decision analytics. However, there are issues of legality and customer backlash for charging different prices for virtually the same product. The course will touch upon these issues as well. Topics covered include capacity allocation, network management, overbooking, markdown pricing, and customized pricing.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 672",
+    "subject": "MGSC",
+    "number": "672",
+    "title": "Operations and Supply Chain Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The course covers analytical models that explore the key issues associated with the design and management of supply chains. A considerable portion of the course is devoted to data-driven decision models that treat uncertainty explicitly. Topics include supply network design, inventory centralization, value of information, and contracts.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 673",
+    "subject": "MGSC",
+    "number": "673",
+    "title": "Introduction to Artificial Intelligence and Deep Learning",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to deep learning, through its use of neura networks, to learn from data and tasks such as classification, forecasting, data generation. The basis of deep learning up to the applications of the most recent research. Use of deep learning in a production environment, and leveraging techniques such as: Keras, hyperparameter tuning, image classification methods, back propagation, LSTMs, and Autoencoders.",
+    "prerequisites": {
+      "text": "(INSY 660 AND INSY 662) OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          "INSY 660",
+          "INSY 662",
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 674",
+    "subject": "MGSC",
+    "number": "674",
+    "title": "Optimization for Data Science",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to foundational concepts in optimization with a strong emphasis on applications to problems in data science and machine learning, including fundamental optimization models such as linear, integer, and convex programming, a variety of gradient descent methods, and algorithms ( the expectation-maximization and back-propagation algorithm), as well as the applications to various current and diverse data science and machine-learning contexts",
+    "prerequisites": {
+      "text": "(INSY 660 or INSY 662) and (MGSC 660 or MGSC 661) or permission of the instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGSC 695 when the topic was \"Optimization for Data Science\"",
+      "excludes": [
+        "MGSC 695"
+      ]
+    },
+    "notes": [
+      "1. The online version of the course includes synchronous and/or asynchronous course activities"
+    ]
+  },
+  {
+    "code": "MGSC 684",
+    "subject": "MGSC",
+    "number": "684",
+    "title": "Data Driven Decisions and Modelling for Operations",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction of the concepts, techniques, and tools needed to analyze and improve data-driven modelling to optimize business decisions under uncertainty. Predictive and prescriptive analytic methods are presented to cover the strategies used in practice to address decision-making when information is not well-defined. Exploration of how data-driven and analytical techniques can be used to create value in strategic decisions involving design, management and improvement of operational systems, including the similarities and particularities of different sectors and their link with operations analytic and decision-making.",
+    "prerequisites": {
+      "text": "(INSY 660 or INSY 662) and (MGSC 660 or MGSC 661) or permission of the instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGSC 695 when the topic was \"Data Driven Decisions and Modelling for Operations\"",
+      "excludes": [
+        "MGSC 695"
+      ]
+    },
+    "notes": [
+      "The online version of the course includes synchronous and/or asynchronous course activities"
+    ]
+  },
+  {
+    "code": "MGSC 690",
+    "subject": "MGSC",
+    "number": "690",
+    "title": "Selected Topics in Management Science 1 ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current selected topics in management of science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 691",
+    "subject": "MGSC",
+    "number": "691",
+    "title": "Selected Topics in Management Science 2 ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A study of current selected issues in the management science area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Master of Management in Manufacturing Management, Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGSC 692",
+    "subject": "MGSC",
+    "number": "692",
+    "title": "Selected Topics in Mgmt Sci 3",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A study of current selected issues in the management science area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 695",
+    "subject": "MGSC",
+    "number": "695",
+    "title": "Advanced Topics in Management Science 1",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Current emerging topics in operations management. Course content will vary each term.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "MGSC 696",
+    "subject": "MGSC",
+    "number": "696",
+    "title": "Advanced Topics in Management Science 2",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current emerging topics in operations management. Course content will vary each term.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 697",
+    "subject": "MGSC",
+    "number": "697",
+    "title": "Advanced Topics in Management Science 3",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Current emerging topics in operations management. Course content will vary each term.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "MGSC 702",
+    "subject": "MGSC",
+    "number": "702",
+    "title": "Operations Management Seminar",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced research training in operations management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 706",
+    "subject": "MGSC",
+    "number": "706",
+    "title": "Management Research Statistics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental concepts, theory and methods of statistics essential to undertaking and evaluating research in the field of management.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGSC 709",
+    "subject": "MGSC",
+    "number": "709",
+    "title": "Manufacturing Systems",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Manufacturing and attributes operations and the models used to design, evaluate and optimize these operations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

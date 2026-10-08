@@ -1,0 +1,706 @@
+[
+  {
+    "code": "FRPC 102",
+    "subject": "FRPC",
+    "number": "102",
+    "title": "Basic French",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "For students with little or no knowledge of French, classes will provide instruction in listening, speaking, reading and writing. Course content, including grammatical structures, phonetics and thematic vocabulary, is aimed at helping students develop the basic linguistic and communicative skills required to operate in simple day-to-day situations.",
+    "prerequisites": {
+      "text": "Entrance Placement Test or Permission of the Director.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 102.",
+      "excludes": [
+        "CEFN 102"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FRPC 104",
+    "subject": "FRPC",
+    "number": "104",
+    "title": "Elementary French",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "For students with basic knowledge of French, classes will provide instruction in listening, speaking, reading and writing. Course content, including grammar, phonetics, thematic vocabulary and functional expressions, is aimed at helping the students develop the basic linguistic and communicative skills required to operate in simple social contexts.",
+    "prerequisites": {
+      "text": "(CEFN 102 or FRPC 102) or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          "CEFN 102",
+          "FRPC 102"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 104.",
+      "excludes": [
+        "CEFN 104"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FRPC 106",
+    "subject": "FRPC",
+    "number": "106",
+    "title": "Fundamentals of French Grammar and Writing",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "For students at an Elementary level wishing to acquire competency in reading and writing at this level. Vocabulary and grammar through written/oral exercises and communicative activities are aimed at helping students develop the linguistic skills required to operate in various simple social and cultural contexts.",
+    "prerequisites": {
+      "text": "(CEFN 104 or FRPC 104) or (CEFN 107 or FRPC 107) or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          "CEFN 104",
+          "FRPC 104",
+          "CEFN 107",
+          "FRPC 107"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 106.",
+      "excludes": [
+        "CEFN 106"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FRPC 107",
+    "subject": "FRPC",
+    "number": "107",
+    "title": "Fundamentals of French Oral Communication",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "For students at an Elementary level wishing to acquire oral and written communicative competence at this level. Vocabulary, grammar and strategies are aimed at helping students develop listening and communicative skills required to operate in various simple social and cultural contexts.",
+    "prerequisites": {
+      "text": "(CEFN 104 or FRPC 104) or (CEFN 106 or FRPC 106) or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          "CEFN 104",
+          "FRPC 104",
+          "CEFN 106",
+          "FRPC 106"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 107.",
+      "excludes": [
+        "CEFN 107"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FRPC 211",
+    "subject": "FRPC",
+    "number": "211",
+    "title": "Functional French Grammar/Writing 1",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at a Low Intermediate level wishing to acquire competency in reading and writing at this level. Vocabulary and grammar through written/oral exercises and communicative activities embedded in social/work related situations, including linguistic accuracy needed in socio-cultural settings and in professional life. / Ce cours s'adresse aux étudiants de niveau intermédiaire bas qui veulent développer, en compréhension et expression écrites, une compétence propre à ce niveau. L'étude du vocabulaire et de la grammaire se fait par le biais d'exercices écrits et oraux, ainsi que par des activités communicatives menées dans un contexte socioculturel et professionnel. L'accent est mis sur la précision linguistique requise pour être efficace en société et au travail.",
+    "prerequisites": {
+      "text": "(CEFN 106 or FRPC 106) and (CEFN 107 or FRPC 107) or CEFN 212 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 106",
+                  "FRPC 106"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 107",
+                  "FRPC 107"
+                ]
+              }
+            ]
+          },
+          "CEFN 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 211.",
+      "excludes": [
+        "CEFN 211"
+      ]
+    },
+    "notes": [
+      "39 Hours"
+    ]
+  },
+  {
+    "code": "FRPC 212",
+    "subject": "FRPC",
+    "number": "212",
+    "title": "French Communication Practice 1",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at a Low Intermediate level wishing to acquire oral and written communicative competence at this level. Vocabulary, grammar and strategies needed in professional life and in socio-cultural situations, including listening and communicative skills. / Ce cours s'adresse aux étudiants de niveau intermédiaire bas qui veulent développer, en communication orale et écrite, une compétence propre à ce niveau. Il vise à développer le vocabulaire, la grammaire et les stratégies nécessaires pour interagir dans la vie professionnelle et dans diverses situations socioculturelles. L'accent est mis sur l'écoute et l'aptitude à communiquer.",
+    "prerequisites": {
+      "text": "(CEFN 106 or FRPC 106) and (CEFN 107 or FRPC 107) or (CEFN 211 or FRPC 211) or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 106",
+                  "FRPC 106"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 107",
+                  "FRPC 107"
+                ]
+              }
+            ]
+          },
+          "CEFN 211",
+          "FRPC 211"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 212.",
+      "excludes": [
+        "CEFN 212"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 221",
+    "subject": "FRPC",
+    "number": "221",
+    "title": "Functional French Grammar/Writing 2",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at a Mid Intermediate level wishing to acquire competency in reading and writing at this level. Vocabulary and grammar through written/oral exercises and communicative activities embedded in social/work related situations, including linguistic accuracy needed in socio-cultural settings and in professional life. / Ce cours s'adresse aux étudiants de niveau intermédiaire moyen qui veulent développer, en compréhension et expression écrites, une compétence propre à ce niveau. L'étude du vocabulaire et de la grammaire se fait par le biais d'exercices écrits et oraux, ainsi que par des activités communicatives menées dans un contexte socioculturel et professionnel. L'accent est mis sur la précision linguistique requise pour être efficace en société et au travail.",
+    "prerequisites": {
+      "text": "(CEFN 211 or FRPC 211) and (CEFN 212 or FRPC 212) or FRPC 222 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 211",
+                  "FRPC 211"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 212",
+                  "FRPC 212"
+                ]
+              }
+            ]
+          },
+          "FRPC 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 221.",
+      "excludes": [
+        "CEFN 221"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 222",
+    "subject": "FRPC",
+    "number": "222",
+    "title": "French Communication Practice 2",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at a Mid Intermediate level wishing to acquire oral and written communicative competence at this level. Vocabulary, grammar and strategies needed in professional life and in socio-cultural situations, including listening and communicative skills. / Ce cours s'adresse aux étudiants de niveau intermédiaire moyen qui veulent développer, en communication orale et écrite, une compétence propre à ce niveau. Il vise à développer le vocabulaire, la grammaire et les stratégies nécessaires pour interagir dans la vie professionnelle et dans diverses situations socioculturelles. L'accent est mis sur l'écoute et l'aptitude à communiquer.",
+    "prerequisites": {
+      "text": "(CEFN 211 or FRPC 211) and (CEFN 212 or FRPC 212) or FRPC 221 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 211",
+                  "FRPC 211"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 212",
+                  "FRPC 212"
+                ]
+              }
+            ]
+          },
+          "FRPC 221"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 222.",
+      "excludes": [
+        "CEFN 222"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 331",
+    "subject": "FRPC",
+    "number": "331",
+    "title": "Functional French Grammar/Writing 3",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at a High Intermediate level wishing to acquire competency in reading and writing at this level. Vocabulary and grammar through written/oral exercises and communicative activities embedded in social/work related situations, including linguistic accuracy needed in socio-cultural settings and in professional life. / Ce cours s'adresse aux étudiants de niveau intermédiaire élevé qui veulent développer, en compréhension et expression écrites, une compétence propre à ce niveau. L'étude du vocabulaire et de la grammaire se fait par le biais d'exercices écrits et oraux, ainsi que par des activités communicatives menées dans un contexte socioculturel et professionnel. L'accent est mis sur la précision linguistique requise pour être efficace en société et au travail.",
+    "prerequisites": {
+      "text": "(CEFN 221 or FRPC 221) and (CEFN 222 or FRPC 222) or FRPC 332 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 221",
+                  "FRPC 221"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 222",
+                  "FRPC 222"
+                ]
+              }
+            ]
+          },
+          "FRPC 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 331.",
+      "excludes": [
+        "CEFN 331"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 332",
+    "subject": "FRPC",
+    "number": "332",
+    "title": "French Communication Practice 3",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at a High Intermediate level wishing to acquire oral and written communicative competence at this level. Vocabulary, grammar and strategies needed in professional life and in socio-cultural situations, including listening and communicative skills. / Ce cours s'adresse aux étudiants de niveau intermédiaire élevé qui veulent développer, en communication orale et écrite, une compétence propre à ce niveau. Il vise à développer le vocabulaire, la grammaire et les stratégies nécessaires pour interagir dans la vie professionnelle et dans diverses situations socioculturelles. L'accent est mis sur l'écoute et l'aptitude à communiquer.",
+    "prerequisites": {
+      "text": "(CEFN 221 or FRPC 221) and (CEFN 222 or FRPC 222) or FRPC 331 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 221",
+                  "FRPC 221"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 222",
+                  "FRPC 222"
+                ]
+              }
+            ]
+          },
+          "FRPC 331"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 332.",
+      "excludes": [
+        "CEFN 332"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 401",
+    "subject": "FRPC",
+    "number": "401",
+    "title": "French Vocabulary in Context",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Focuses on French communication through the study of vocabulary and its function in discourse. Broadens the field and mode of oral/written communication by developing \"lexical competence\". Identifies the nature and role of words, phrases and idioms through the study of semantics and intense practice of vocabulary in context. / Ce cours se concentre sur la communication par le truchement de l'étude du vocabulaire et de ses fonctions dans le discours. Il cherche à développer une véritable « compétence lexicale » tant à l'oral qu'à l'écrit. L'enrichissement du vocabulaire se fera par l'identification de la nature et du rôle des mots, des locutions ou des expressions figées, par l'étude des champs sémantiques et par une pratique intensive favorisant le réemploi en contexte.",
+    "prerequisites": {
+      "text": "(CEFN 331 or FRPC 331) and (CEFN 332 or FRPC 332) or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CEFN 331",
+              "FRPC 331"
+            ]
+          },
+          {
+            "or": [
+              "CEFN 332",
+              "FRPC 332"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 401.",
+      "excludes": [
+        "CEFN 401"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 402",
+    "subject": "FRPC",
+    "number": "402",
+    "title": "Persuasive French in Communication",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of oral and written skills necessary for efficient communication in persuasive and argumentative situations, including argumentation mechanisms, and a study of linguistic and discursive elements for the convincing transmission of complex ideas. / Ce cours vise à développer, tant à l'oral qu'à l'écrit, les compétences nécessaires pour communiquer efficacement dans des échanges argumentés. Il traite des mécanismes de l'argumentation et propose une étude des éléments linguistiques et discursifs permettant une transmission convaincante d'idées complexes.",
+    "prerequisites": {
+      "text": "(CEFN 331 or FRPC 331) and (CEFN 332 or FRPC 332) or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CEFN 331",
+              "FRPC 331"
+            ]
+          },
+          {
+            "or": [
+              "CEFN 332",
+              "FRPC 332"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 402.",
+      "excludes": [
+        "CEFN 402"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 411",
+    "subject": "FRPC",
+    "number": "411",
+    "title": "French Grammar/Writing Techniques",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at an advanced level. Reviews grammatical structures. Explores specialized vocabulary and writing techniques for coherence, conciseness, clarity, accuracy, style, tone and audience. Strategies for revising, editing and effectively communicating the written message. / Ce cours propose aux étudiants de niveau avancé une révision des règles grammaticales, un examen du vocabulaire spécialisé et l'étude de stratégies permettant de rédiger avec plus de cohérence, de clarté, de concision, de précision et d'efficacité. Le cours présente aussi quelques techniques d'autocorrection.",
+    "prerequisites": {
+      "text": "(CEFN 331 or FRPC 331) and (CEFN 332 or FRPC 332) or FRPC 412 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 331",
+                  "FRPC 331"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 332",
+                  "FRPC 332"
+                ]
+              }
+            ]
+          },
+          "FRPC 412"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 411.",
+      "excludes": [
+        "CEFN 411"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 412",
+    "subject": "FRPC",
+    "number": "412",
+    "title": "French Oral Communication Techniques",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at an advanced level. Provides principles and practice of effective oral communication. Focuses on accuracy, interaction, meaning, and fluency in a variety of work-related situations, including techniques for informative, persuasive, argumentative, and impromptu speaking. / Ce cours permet aux étudiants de niveau avancé de développer et de mettre en pratique les techniques nécessaires à une communication orale efficace. L'accent est mis sur la précision linguistique, la compétence pragmatique et l'aisance requises dans une variété de situations professionnelles. Des techniques propres à différents types de discours (informatif, persuasif, argumentatif, impromptu) sont aussi examinées.",
+    "prerequisites": {
+      "text": "(CEFN 331 or FRPC 331) and (CEFN 332 or FRPC 332) or FRPC 411 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 331",
+                  "FRPC 331"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 332",
+                  "FRPC 332"
+                ]
+              }
+            ]
+          },
+          "FRPC 411"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 412.",
+      "excludes": [
+        "CEFN 412"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 421",
+    "subject": "FRPC",
+    "number": "421",
+    "title": "French Written Communication Contexts",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Designed for students at an advanced level. Emphasizes formal and informal advanced written communication for social/professional purposes in inter-personal, group and organizational settings. Focuses on a variety of North American and international contexts. / Ce cours permet aux étudiants de niveau avancé de s'exercer à la rédaction d'une grande variété de communications écrites répondant à des objectifs sociaux ou professionnels spécifiques: lettres ou documents formels ou informels, adressés à des individus, à des groupes de personnes ou à des organismes. Ces communications sont étudiées dans des contextes nord-américains et internationaux.",
+    "prerequisites": {
+      "text": "(CEFN 411 or FRPC 411) and (CEFN 412 or FRPC 412) or FRPC 422 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 411",
+                  "FRPC 411"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 412",
+                  "FRPC 412"
+                ]
+              }
+            ]
+          },
+          "FRPC 422"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 421.",
+      "excludes": [
+        "CEFN 421"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  },
+  {
+    "code": "FRPC 422",
+    "subject": "FRPC",
+    "number": "422",
+    "title": "French Oral Communication Contexts",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students at an advanced level. Focuses on advanced formal and informal oral communication for social/professional purposes in inter-personal, group and organizational contexts. Explores the discourse of professional milieus in North American and international settings. / Ce cours permet aux étudiants de niveau avancé de s'exercer à une grande variété de communications orales répondant à des objectifs sociaux ou professionnels spécifiques : discours formels ou informels, adressés à des individus, à des groupes de personnes ou à des organismes. Ces communications orales sont étudiées dans des contextes nord-américains et internationaux.",
+    "prerequisites": {
+      "text": "(CEFN 411 or FRPC 411) and (CEFN 412 or FRPC 412) or FRPC 421 or Entrance Placement Test or Permission of the Director.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              {
+                "or": [
+                  "CEFN 411",
+                  "FRPC 411"
+                ]
+              },
+              {
+                "or": [
+                  "CEFN 412",
+                  "FRPC 412"
+                ]
+              }
+            ]
+          },
+          "FRPC 421"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEFN 422.",
+      "excludes": [
+        "CEFN 422"
+      ]
+    },
+    "notes": [
+      "39 hours"
+    ]
+  }
+]

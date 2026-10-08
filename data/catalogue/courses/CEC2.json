@@ -1,0 +1,40 @@
+[
+  {
+    "code": "CEC2 532",
+    "subject": "CEC2",
+    "number": "532",
+    "title": "Business Economics",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Introductory micro and macro economic theory and practice in profit and non-profit organizations from a managerial perspective. Topics include: demand and supply analysis, production costs, firms' pricing and output determination, aggregate demand and supply, national income, output and employment determination, inflation, interest rate, exchange rate determination, fiscal and monetary policies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CEC2 632",
+    "subject": "CEC2",
+    "number": "632",
+    "title": "Business Economics",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Overview of microeconomic tools and analytic approaches for business decision-making. Topics include analysis of demand, supply and markets, production, costing and pricing decisions, market structure, competition, and strategy. Macroeconomic indicators, forecasting, and policy and their effect on the business environment overall.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEC2 532.",
+      "excludes": [
+        "CEC2 532"
+      ]
+    },
+    "notes": []
+  }
+]

@@ -1,0 +1,954 @@
+[
+  {
+    "code": "MUJZ 160",
+    "subject": "MUJZ",
+    "number": "160",
+    "title": "Jazz Materials 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental aural and theoretical skills associated with the jazz idiom. Nomenclature, chord construction, chord/scale relationships, harmonic progression, circle of 5ths, simple turnarounds, simple substitution, symmetrical scales and chord relationships, voice leading.",
+    "prerequisites": {
+      "text": "none. Open to non-jazz majors, space permitting, but not for elective credit in B.Mus. or Artist Diploma programs",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "4 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 161",
+    "subject": "MUJZ",
+    "number": "161",
+    "title": "Jazz Materials 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Simple and advanced substitution, borrowed chords, reharmonisation, modes of harmonic minor and melodic minor diatonic systems, unresolved tensions, odd and infrequent modulations, mixed two-five-ones, introduction to polychords, slashchords and non-functional harmony.",
+    "prerequisites": {
+      "text": "MUJZ 160. Open to non-jazz majors, space permitting, but not for elective credit in B.Mus. or Artist Diploma programs",
+      "tree": "MUJZ 160",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "4 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 170",
+    "subject": "MUJZ",
+    "number": "170",
+    "title": "Jazz Keyboard Proficiency 1",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic piano skills, basic comping techniques, standard 3 note rootless voicings in 7, 3 and 3, 7 position with one extension, two-five-ones in major and minor - limited keys. Simple substitution and reharmonisation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Jazz Performance and Music Studies Majors. Not open to students who have taken or are taking MUSP 170.",
+      "excludes": [
+        "MUSP 170"
+      ]
+    },
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "MUJZ 171",
+    "subject": "MUJZ",
+    "number": "171",
+    "title": "Jazz Keyboard Proficiency 2",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of previous semester. Two-five-ones and mixed two-five-ones using 4 note close position voicings and 4 and 5 note spreads, in all keys, diminished passing chords, half step shifts, voice leading extensions, quartal and modal voicing, sight reading of standard jazz repertoire.",
+    "prerequisites": {
+      "text": "MUJZ 170.",
+      "tree": "MUJZ 170",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Jazz Performance and Music Studies Majors. Not open to students who have taken or are taking MUSP 171.",
+      "excludes": [
+        "MUSP 171"
+      ]
+    },
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "MUJZ 172",
+    "subject": "MUJZ",
+    "number": "172",
+    "title": "Drum Set Proficiency",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic drums skills and techniques, initiation to main rhythms and grooves (swing, straight 8s, Latin, Afro-Cuban etc). Practice of claves, independence & simple polyrhythms. Usual meters (3/4, 4/4, 6/8) and most common odd meters (5/4, 7/4). Tempo, time and placement.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open to students in the BMus Jazz Performance program and others by permission of the instructor",
+      "Not open to jazz drums majors"
+    ]
+  },
+  {
+    "code": "MUJZ 187",
+    "subject": "MUJZ",
+    "number": "187",
+    "title": "Jazz History Survey",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introductory study of the principal recordings, artists and musical trends in jazz from its origins to the present day.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 213",
+    "subject": "MUJZ",
+    "number": "213",
+    "title": "Fundamentals of Jazz Improvisation 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Introduction to basic improvisation concepts of phrasing, articulation, melodic development, harmonic control, musical vocabulary and style. Pedagogical techniques will be discussed.",
+    "prerequisites": {
+      "text": "MUSP 124 or MUSP 141, and MUJZ 161",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MUSP 124",
+              "MUSP 141"
+            ]
+          },
+          "MUJZ 161"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Open to students in Faculty Program Jazz and to students minoring in Jazz Performance, or with permission of instructor; not open to students majoring in Jazz Performance."
+    ]
+  },
+  {
+    "code": "MUJZ 214",
+    "subject": "MUJZ",
+    "number": "214",
+    "title": "Fundamentals of Jazz Improvisation 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "A continuation of development of basic improvisation concepts of phrasing, articulation, melodic development, harmonic control, musical vocabulary and style. Pedagogical techniques will be discussed.",
+    "prerequisites": {
+      "text": "MUJZ 213",
+      "tree": "MUJZ 213",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Open to students in Faculty Program Jazz and to students minoring in Jazz Performance, or with permission of instructor; not open to students majoring in Jazz Performance."
+    ]
+  },
+  {
+    "code": "MUJZ 223",
+    "subject": "MUJZ",
+    "number": "223",
+    "title": "Jazz Improvisation/Musicianship 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic improvisational concepts with emphasis on time feel, phrasing, articulation, melodic development, voice leading, harmonic control and stylistic nuance. Memorization and aural recognition of standard jazz repertoire also stressed. The aural tradition of the music is emphasized through rhythmic/melodic dictation.",
+    "prerequisites": {
+      "text": "MUJZ 161",
+      "tree": "MUJZ 161",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 224",
+    "subject": "MUJZ",
+    "number": "224",
+    "title": "Jazz Improvisation/Musicianship 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of Jazz Improvisation/Musicianship MUJZ 223.",
+    "prerequisites": {
+      "text": "MUJZ 223.",
+      "tree": "MUJZ 223",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 225",
+    "subject": "MUJZ",
+    "number": "225",
+    "title": "Jazz Vocal Improvisation 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental concepts of the blues, blues expression, blues function and its application to vocal improvisation in jazz. The history of the blues and the cultural influence of Black American music on popular American music and jazz will be analyzed. Emphasis on ear training, performance, memorization and transcription of required jazz solos.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUJZ 161",
+      "tree": "MUJZ 161",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in a Major in Performance Jazz program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 226",
+    "subject": "MUJZ",
+    "number": "226",
+    "title": "Jazz Vocal Improvisation 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental concepts of the blues, blues expression, storytelling, blues function and its application to jazz vocal improvisation and standard jazz repertoire. Advanced blues harmonic structures and forms will be analyzed. Emphasis on ear training, performance, applied musicianship, memorization and transcription of required jazz solos.",
+    "prerequisites": {
+      "text": "MUJZ 225",
+      "tree": "MUJZ 225",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Major in Performance Jazz program.",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade for prerequisite(s) is B-."
+    ]
+  },
+  {
+    "code": "MUJZ 250",
+    "subject": "MUJZ",
+    "number": "250",
+    "title": "Jazz Vocal Accompaniment: Blues 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical study of jazz accompaniment for instrumentalists working with vocalists. Focus on fundamental blues forms, expression, and function within the context of vocal improvisation. Interactive skills and ensemble performance through real-time practice and faculty coaching.",
+    "prerequisites": {
+      "text": "Permission of the instructor required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance students (instrumentalists). Not open to students in Jazz Voice",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 251",
+    "subject": "MUJZ",
+    "number": "251",
+    "title": "Jazz Vocal Accompaniment: Blues 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced practical study of jazz accompaniment for instrumentalists working with vocalists. Focus on advanced blues forms, harmonic structures, and improvisational storytelling. Interactive skills and ensemble performance within the jazz vocal idiom through real-time practice and faculty coaching.",
+    "prerequisites": {
+      "text": "Permission of the instructor required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance (instrumentalists). Not open to students in Jazz Voice Performance.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 252",
+    "subject": "MUJZ",
+    "number": "252",
+    "title": "Jazz Vocal Accompaniment: Repertoire 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical study of jazz accompaniment techniques for instrumentalists working with vocalists. Focus on the American Songbook and standard jazz repertoire. Interactive skills, harmonic support, and ensemble performance within the jazz vocal idiom through real-time practice and faculty coaching.",
+    "prerequisites": {
+      "text": "Permission of the instructor required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance (instrumentalists). Not open to students in Jazz Voice Performance.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 253",
+    "subject": "MUJZ",
+    "number": "253",
+    "title": "Jazz Vocal Accompaniment: Repertoire 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced practical study of jazz accompaniment for instrumentalists working with vocalists. Focus on the American Songbook, ear training, and harmonic analysis. Interactive skills and ensemble performance within the jazz vocal idiom through real-time practice and faculty coaching.",
+    "prerequisites": {
+      "text": "Permission of the instructor required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance students (instrumentalists). Not open to students in Jazz Voice Performance.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 254",
+    "subject": "MUJZ",
+    "number": "254",
+    "title": "Jazz Vocal Accompaniment: Arranging 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical study of arranging techniques for instrumentalists working with vocalists. Exploration of rhythm section arrangements, research on landmark jazz vocal recordings, and application of specific accompaniment styles. Arranging skills within the jazz vocal idiom through real-time practice and faculty coaching",
+    "prerequisites": {
+      "text": "Permission of the instructor required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance students (instrumentalists). Not open to students in Jazz Voice Performance.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 255",
+    "subject": "MUJZ",
+    "number": "255",
+    "title": "Jazz Vocal Accompaniment: Arranging 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced practical study of arranging and performance techniques for instrumentalists working with vocalists. Focus on repertoire development, portfolio creation, and concert performance. Professional accompaniment skills within the jazz vocal idiom through real-time practice and faculty coaching",
+    "prerequisites": {
+      "text": "Permission of the instructor required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance students (instrumentalists). Not open to students in Jazz Voice Performance.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 260",
+    "subject": "MUJZ",
+    "number": "260",
+    "title": "Jazz Arranging 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to concepts and techniques commonly used in jazz arranging. Notation, calligraphy and score preparation are discussed; including study of classical and contemporary scores by prominent jazz arrangers.",
+    "prerequisites": {
+      "text": "MUJZ 161",
+      "tree": "MUJZ 161",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors OR with permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 261",
+    "subject": "MUJZ",
+    "number": "261",
+    "title": "Jazz Arranging 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Consolidation of knowledge of basic concepts and techniques used in jazz arranging.",
+    "prerequisites": {
+      "text": "MUJZ 260.",
+      "tree": "MUJZ 260",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors OR by permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 262",
+    "subject": "MUJZ",
+    "number": "262",
+    "title": "Applied Jazz Theory",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An examination of harmonic practices and compositional styles in post-1960 jazz. Various theoretical approaches to jazz harmonic analysis will be addressed. Students analyze and compose jazz tunes and longer forms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Prerequesite (s): MUJZ 161."
+    ]
+  },
+  {
+    "code": "MUJZ 323",
+    "subject": "MUJZ",
+    "number": "323",
+    "title": "Advanced Jazz Ear Training",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Dictation workshop. Content includes tonal functions commonly found in Blues, Standard Tunes and post-1960s tunes; all harmonic structures commonly used in jazz; modulations to all keys; harmonic sequences and turnaround patterns; all commonly used jazz scales; melodic dictation of tonic, II-V and turnaround patterns.",
+    "prerequisites": {
+      "text": "MUJZ 214 or MUSP 241.",
+      "tree": {
+        "or": [
+          "MUJZ 214",
+          "MUSP 241"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUJZ 325",
+    "subject": "MUJZ",
+    "number": "325",
+    "title": "Jazz Vocal Improvisation 3",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental concepts of jazz vocal improvisation and its use and application in standard jazz repertoire, with an emphasis on ear training, performance, harmonic analysis, language development and applied musicianship. American songbook repertoire will be the focus.",
+    "prerequisites": {
+      "text": "MUJZ 226",
+      "tree": "MUJZ 226",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Major in Performance Jazz program.",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade for prerequisite(s) is B-."
+    ]
+  },
+  {
+    "code": "MUJZ 326",
+    "subject": "MUJZ",
+    "number": "326",
+    "title": "Jazz Vocal Improvisation 4",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental concepts of jazz vocal improvisation and its use and application in standard jazz repertoire, with an emphasis on ear training, performance, harmonic analysis, language development and applied musicianship. Classic and contemporary jazz standard repertoire will be the focus.",
+    "prerequisites": {
+      "text": "MUJZ 325",
+      "tree": "MUJZ 325",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Major in Performance Jazz program.",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade of prerequisite(s) is B-."
+    ]
+  },
+  {
+    "code": "MUJZ 340",
+    "subject": "MUJZ",
+    "number": "340",
+    "title": "Jazz Composition 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Jazz composition based on the stylistic concepts of leading jazz composers. Development of a personal and creative compositional style and of control of factors such as: rhythmic, harmonic, and melodic continuity, vertical modal, and linear modal harmony, polychordal techniques, and non-functional harmonic concepts.",
+    "prerequisites": {
+      "text": "MUJZ 261",
+      "tree": "MUJZ 261",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors OR by permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 341",
+    "subject": "MUJZ",
+    "number": "341",
+    "title": "Jazz Composition 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A continuation of development of a personal and creative jazz compositional style.",
+    "prerequisites": {
+      "text": "MUJZ 340.",
+      "tree": "MUJZ 340",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors OR by permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 423",
+    "subject": "MUJZ",
+    "number": "423",
+    "title": "Jazz Improvisation/Musicianship 3",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Refinement of improvisational concepts in conjunction with ear training, leading towards the establishment of a personal style of playing. Complex forms and harmonies, and contemporary techniques. Memorization of large and varied repertoire is stressed. The ability to identify, transcribe and perform various melodies, rhythms, and complex harmonies by ear will be stressed.",
+    "prerequisites": {
+      "text": "MUJZ 224.",
+      "tree": "MUJZ 224",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 424",
+    "subject": "MUJZ",
+    "number": "424",
+    "title": "Jazz Improvisation/Musicianship 4",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of Jazz Improvisation/Musicianship MUJZ 423.",
+    "prerequisites": {
+      "text": "MUJZ 423.",
+      "tree": "MUJZ 423",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 425",
+    "subject": "MUJZ",
+    "number": "425",
+    "title": "Jazz Vocal Repertoire 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental concepts of applied performance technique, arranging for vocalists, accompaniment skills and repertoire development with an emphasis on improvisation and performance. Analysis of selected recordings and concert performance videos.",
+    "prerequisites": {
+      "text": "MUJZ 326",
+      "tree": "MUJZ 326",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Major in Performance Jazz program.",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade for prerequisite(s) is B-."
+    ]
+  },
+  {
+    "code": "MUJZ 426",
+    "subject": "MUJZ",
+    "number": "426",
+    "title": "Jazz Vocal Repertoire 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental concepts of applied performance technique, arranging for vocalists, accompaniment skills and repertoire development with an emphasis on improvisation and performance. Analysis of selected recordings and concert performance videos.",
+    "prerequisites": {
+      "text": "MUJZ 425",
+      "tree": "MUJZ 425",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a Major in Performance Jazz program.",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade of prerequisite(s) is B-."
+    ]
+  },
+  {
+    "code": "MUJZ 440",
+    "subject": "MUJZ",
+    "number": "440",
+    "title": "Advanced Jazz Composition 1 ",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A continuation of MUJZ 341. This course will reaffirm the importance of the basic elements of composition with an emphasis on the compositional process and micro-listening.",
+    "prerequisites": {
+      "text": "MUJZ 341",
+      "tree": "MUJZ 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUJZ 440D1/D2. Open only to Jazz Performance Majors OR by permission of the instructor.",
+      "excludes": [
+        "MUJZ 440D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUJZ 441",
+    "subject": "MUJZ",
+    "number": "441",
+    "title": "Advanced Jazz Composition 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A continuation of MUJZ 440. This course will further emphasize and facilitate the development of a personal and creative compositional style. Jazz aesthetics will be emphasized and explored in greater depth.",
+    "prerequisites": {
+      "text": "MUJZ 440",
+      "tree": "MUJZ 440",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "2. Not open to students who have taken MUJZ 440D1 - MUJZ 440 D2.",
+      "excludes": [
+        "MUJZ 440",
+        "MUJZ 440D1"
+      ]
+    },
+    "notes": [
+      "Restricion: 1. Open only to Jazz Performance Majors OR by permission of the instructor."
+    ]
+  },
+  {
+    "code": "MUJZ 461",
+    "subject": "MUJZ",
+    "number": "461",
+    "title": "Advanced Jazz Arranging",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course introduces advanced concepts in jazz writing by examining scores by historically-important jazz composers/arrangers, as well as contemporary masters. Student writing, including expanded combo, big band, and small group string projects, is geared toward public performance by McGill jazz ensembles and combos.",
+    "prerequisites": {
+      "text": "MUJZ 341",
+      "tree": "MUJZ 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors OR permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "2 hours",
+      "Students must register for both MUJZ 461D1 and MUJZ 461D2.",
+      "No credit will be given for this course unless both MUJZ 461D1 and MUJZ 461D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "MUJZ 461D1",
+        "credits": 2,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUJZ 461D2",
+        "credits": 2,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUJZ 493",
+    "subject": "MUJZ",
+    "number": "493",
+    "title": "Jazz Performance Practice",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An in-depth exploration of the performance practice of leading jazz figures, primarily through the study of solo transcriptions. Comparative study of conceptual differences in time feel, ornamentation, tone quality, articulation and harmonic and melodic approach. Detailed study of major rhythm sections and their interaction with soloists.",
+    "prerequisites": {
+      "text": "MUJZ 187, MUJZ 224.",
+      "tree": {
+        "and": [
+          "MUJZ 187",
+          "MUJZ 224"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Jazz Performance Majors",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 601",
+    "subject": "MUJZ",
+    "number": "601",
+    "title": "Jazz Pedagogy",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A course designed to prepare students to teach jazz-related subjects at the university and professional level, with emphasis on ensemble direction and the instruction of improvisation, as well as course and curriculum development. Various pedagogical methods, philosophies, rehearsal techniques, and materials will be investigated.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 640",
+    "subject": "MUJZ",
+    "number": "640",
+    "title": "Jazz Composition and Arranging 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analysis and application of a variety of jazz and 20th Century compositional and arranging techniques, including writing for small and medium size jazz ensembles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 hours"
+    ]
+  },
+  {
+    "code": "MUJZ 641",
+    "subject": "MUJZ",
+    "number": "641",
+    "title": "Jazz Composition and Arranging 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Students compose and arrange for a variety of instrumental combinations including large jazz ensembles of ten or more instruments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUJZ 644",
+    "subject": "MUJZ",
+    "number": "644",
+    "title": "Jazz Repertoire Project 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Students investigate an approved area of jazz orchestral repertoire, under the supervision of a full-time faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUJZ 645",
+    "subject": "MUJZ",
+    "number": "645",
+    "title": "Jazz Repertoire Project 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Jazz repertoire for any ensemble format may be explored.",
+    "prerequisites": {
+      "text": "MUJZ 644.",
+      "tree": "MUJZ 644",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

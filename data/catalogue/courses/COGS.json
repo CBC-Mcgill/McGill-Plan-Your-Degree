@@ -1,0 +1,136 @@
+[
+  {
+    "code": "COGS 396",
+    "subject": "COGS",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Arts & Science Admin (Shared)",
+    "faculty": "Interfaculty, B.A. & Sc.",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "COGS 401",
+    "subject": "COGS",
+    "number": "401",
+    "title": "Research Cognitive Science 1",
+    "credits": 6,
+    "offeredBy": "Arts & Science Admin (Shared)",
+    "faculty": "Interfaculty, B.A. & Sc.",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Research project supervised by a McGill Faculty member.",
+    "prerequisites": {
+      "text": "30 credits of Cognitive Science program. Approval of Program Director. CGPA >3.00",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: To receive approval to register for this course, a student must present a research proposal to the Director of the Cognitive Science Program. See https://www.mcgill.ca/cogsci/research/ for instructions."
+    ],
+    "parts": [
+      {
+        "code": "COGS 401D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "COGS 401D2",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "COGS 401N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "COGS 401N2",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "COGS 444",
+    "subject": "COGS",
+    "number": "444",
+    "title": "Honours Research",
+    "credits": 6,
+    "offeredBy": "Arts & Science Admin (Shared)",
+    "faculty": "Interfaculty, B.A. & Sc.",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Honours research project.",
+    "prerequisites": {
+      "text": "Permission of Director of Cognitive Science Programs.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: To receive approval to register for this course, a student must present a research proposal to the Director of the Cognitive Science Program. See https://www.mcgill.ca/cogsci/research/ for instructions."
+    ],
+    "parts": [
+      {
+        "code": "COGS 444D1",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "COGS 444D2",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Fall 2026",
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "COGS 444N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "COGS 444N2",
+        "credits": 3,
+        "terms": [
+          "Summer 2026"
+        ]
+      }
+    ]
+  }
+]

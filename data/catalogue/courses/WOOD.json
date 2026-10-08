@@ -1,0 +1,32 @@
+[
+  {
+    "code": "WOOD 441",
+    "subject": "WOOD",
+    "number": "441",
+    "title": "Integrated Forest Management",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The study of silviculture and silvics and their application to forest management to sustain the production of wood and other ecological goods and services such as wildlife, water and landscape in natural forests and rural environments (agroforestry). Acquisition of practical skills in forest surveying and computer simulation of forest growth.",
+    "prerequisites": {
+      "text": "ENVB 210 or ENVB 222 or ENVR 202, or permission of instructor.",
+      "tree": {
+        "or": [
+          "ENVB 210",
+          "ENVB 222",
+          "ENVR 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "code": "GECH 111",
+    "subject": "GECH",
+    "number": "111",
+    "title": "General Chemistry: Atomistics and Bonding",
+    "credits": 0.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Origins of elementary particles, global concept between matter and energy, covalent bonding.",
+    "prerequisites": {
+      "text": "Proficiency at a high school level in chemistry, physics, and mathematics is required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CHEM111 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECH 112",
+    "subject": "GECH",
+    "number": "112",
+    "title": "Chemistry of Solutions",
+    "credits": 0.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Chemical kinetics, Laws of chemical equilibrium, Chemical reactions in the solution, acid-base titration.",
+    "prerequisites": {
+      "text": "GECH 111, General Chemistry.",
+      "tree": "GECH 111",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CHEM112 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECH 113",
+    "subject": "GECH",
+    "number": "113",
+    "title": "Chemistry 1: General Chemistry and Thermochemistry",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Origins of elementary particles, global concept between matter and energy, covalent bonding. Transformation models, description parameters in a chemical physics system, standard quantities standard reaction quantities, thermal effects of a reaction.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CHEM113 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECH 121",
+    "subject": "GECH",
+    "number": "121",
+    "title": "Oxidation, Reduction and Electrochemistry",
+    "credits": 0.75,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Reduction-oxidation equilibrium, redox couple, reduction- oxidation reaction, reversible battery electrode.",
+    "prerequisites": {
+      "text": "GECH 111, General Chemistry. GECH 112, Chemistry of Solutions.",
+      "tree": {
+        "and": [
+          "GECH 111",
+          "GECH 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CHEM121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECH 122",
+    "subject": "GECH",
+    "number": "122",
+    "title": "Chem 2: Solutions, Oxidation, Reduction & Electrochem",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Chemical kinetics, Laws of chemical equilibrium, Chemical reactions in the solution, acid-base titration. Reduction-oxidation equilibrium, redox couple, reduction-oxidation reaction, reversible battery electrode.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CHEM122 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GECH 211",
+    "subject": "GECH",
+    "number": "211",
+    "title": "Thermochemistry",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Transformation models, description parameters in a chemical physics system, standard quantities & standard reaction quantities, thermal effects of a reaction.",
+    "prerequisites": {
+      "text": "GECH 111, General Chemistry. GECH 112, Chemistry of Solutions. GEPH 121, Thermodynamics.",
+      "tree": {
+        "and": [
+          "GECH 111",
+          "GECH 112",
+          "GEPH 121"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to CHEM211 offered by CentraleSupélec in France."
+    ]
+  }
+]

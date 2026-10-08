@@ -1,0 +1,912 @@
+[
+  {
+    "code": "MGCR 211",
+    "subject": "MGCR",
+    "number": "211",
+    "title": "Introduction to Financial Accounting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The role of financial accounting in the reporting of the financial performance of a business. The principles, components and uses of financial accounting and reporting from a user's perspective, including the recording of accounting transactions and events, the examination of the elements of financial statements, the preparation of financial statements and the analysis of financial results.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 222",
+    "subject": "MGCR",
+    "number": "222",
+    "title": "Introduction to Organizational Behaviour",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual motivation and communication style; group dynamics as related to problem solving and decision making, leadership style, work structuring and the larger environment. Interdependence of individual, group and organization task and structure.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 233",
+    "subject": "MGCR",
+    "number": "233",
+    "title": "Data Programming for Business",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to data programming for management students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U0 and U1 B.Com. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 250",
+    "subject": "MGCR",
+    "number": "250",
+    "title": "Expressive Analysis for Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Focusing on skills with respect to analysis, writing and presentation in management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U0 and U1 B.Com. students. Not open to students who have taken BUSA 250.",
+      "excludes": [
+        "BUSA 250"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 271",
+    "subject": "MGCR",
+    "number": "271",
+    "title": "Business Statistics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Statistical concepts and methodology, their application to managerial decision-making, real-life data, problem-solving and spreadsheet modeling. Topics include: descriptive statistics; normal distributions, sampling distributions and estimation, hypothesis testing for one and two populations, goodness of fit, analysis of variance, simple and multiple regression.",
+    "prerequisites": {
+      "text": "(MATH 122 or MATH 140) and (MATH 123 or MATH133)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MATH 122",
+              "MATH 140"
+            ]
+          },
+          {
+            "or": [
+              "MATH 123",
+              "MATH 133"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students. Not open to students who have taken or are taking ECON 227D1/D2, ECON 257D1/D2, MATH 203 at McGill, MATH 204, MATH 324, PSYC 204; students with an exemption from High School or CEGEP for MATH 203 will NOT be exempt from MCGR 271.",
+      "excludes": [
+        "ECON 227",
+        "ECON 257",
+        "MATH 203",
+        "MATH 204",
+        "MATH 324",
+        "PSYC 204"
+      ]
+    },
+    "notes": [
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "MGCR 273",
+    "subject": "MGCR",
+    "number": "273",
+    "title": "Introductory Management Statistics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Descriptive statistics, probability, random variables, binomial, poisson, normal distributions, sampling distribution of the mean, estimation, hypothesis testing, analysis of variance, tests of goodness of fit, simple linear regression, non-parametric statistics. Use of computer statistics package (no computer background needed). Application to problems in business and management.",
+    "prerequisites": {
+      "text": "CMSC 101 Mathematical Tools for Management Professionals or Diagnostic Test.",
+      "tree": "CMSC 101",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Requirement for the Institute of Internal Auditors, CMA and CGA"
+    ]
+  },
+  {
+    "code": "MGCR 293",
+    "subject": "MGCR",
+    "number": "293",
+    "title": "Managerial Economics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The course focuses on the application of economic theory to management problems and the economic foundations of marketing, finance, and production. Attention is given to the following topics: price and cost analysis; demand and supply analysis, conditions of competition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students. Not open to students who have taken or are taking ECON 208, ECON 230D1/D2, or ECON 250D1/D2.",
+      "excludes": [
+        "ECON 208",
+        "ECON 230",
+        "ECON 250"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 294",
+    "subject": "MGCR",
+    "number": "294",
+    "title": "The Firm in the Macroeconomy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Topics and tools of macroeconomics such as national accounting, the IS-LM model, the drivers of output and business cycles, and the basics of monetary policy and inflation. Emphasis on financial markets, the role of expectations, and the reasons for possible deviations from full information market efficiency.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MGCR 293",
+      "tree": "MGCR 293",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to U0 students. Open only to B.Com. students. Not open to students who have taken or are taking ECON 295, ECON 209, ECON 332, ECON 333, ECON 330D1/D2 or ECON 352D1/D2.",
+      "excludes": [
+        "ECON 209",
+        "ECON 295",
+        "ECON 330D1",
+        "ECON 332",
+        "ECON 333",
+        "ECON 352D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 331",
+    "subject": "MGCR",
+    "number": "331",
+    "title": "Information Technology Management ",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to principles and concepts of information systems in organizations. Topics include information technology, transaction processing systems, decision support systems, database and systems development. Students are required to have background preparation on basic micro computer skills including spreadsheet and word-processing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 341",
+    "subject": "MGCR",
+    "number": "341",
+    "title": "Introduction to Finance",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to the principles, issues, and institutions of Finance. Topics include valuation, risk, capital investment, financial structure, cost of capital, working capital management, financial markets, and securities.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MGCR 271 or equivalent",
+      "tree": "MGCR 271",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 352",
+    "subject": "MGCR",
+    "number": "352",
+    "title": "Principles of Marketing",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to marketing principles, focusing on problem solving and decision making. Topics include: the marketing concept; marketing strategies; buyer behaviour; Canadian demographics; internal and external constraints; product; promotion; distribution; price. Lectures, text material and case studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 372",
+    "subject": "MGCR",
+    "number": "372",
+    "title": "Operations Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Design, planning, establishment, control, and improvement of the activities/processes that create a firm's final products and/or services. The interaction of operations with other business areas will also be discussed. Topics include forecasting, product and process design, waiting lines, capacity planning, inventory management and total quality management.",
+    "prerequisites": {
+      "text": "MGCR 271 or equivalent",
+      "tree": "MGCR 271",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U1, U2, U3 students. Not open to students who have taken MGCR 472.",
+      "excludes": [
+        "MGCR 472"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 382",
+    "subject": "MGCR",
+    "number": "382",
+    "title": "International Business",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to the world of international business. Economic foundations of international trade and investment. The international trade, finance, and regulatory frameworks. Relations between international companies and nation-states, including costs and benefits of foreign investment and alternative controls and responses. Effects of local environmental characteristics on the operations of multi-national enterprises.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 423",
+    "subject": "MGCR",
+    "number": "423",
+    "title": "Strategic Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An integrative and interdisciplinary introduction to strategy formation and execution. Concepts, tools, and practical application to understand how firms leverage resources and capabilities to gain competitive advantage in dynamic, contemporary industries. Strategic positioning, organizational design, and managerial action for the long-term success of businesses and positive social and ecological outcomes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 460",
+    "subject": "MGCR",
+    "number": "460",
+    "title": "Social Context of Business",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of how business interacts with the larger society. Exploration of the development of modern capitalist society, and the dilemmas that organizations face in acting in a socially responsible manner. Examination of these issues with reference to sustainable development, business ethics, globalization and developing countries, and political activity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students. Not open to students who have taken MGCR 360.",
+      "excludes": [
+        "MGCR 360"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 610",
+    "subject": "MGCR",
+    "number": "610",
+    "title": "Research Paper",
+    "credits": 6,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The process and problems of independent research. Choice of topic may be a normative or descriptive study based on primary or secondary data. Opportunity to work on a one-to-one basis with a faculty member. Members of the Montreal business community may act as resource consultants.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 611",
+    "subject": "MGCR",
+    "number": "611",
+    "title": "Financial Accounting",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The understanding and use of published financial statements as a primary source of accounting information. The concepts, conventions and techniques involved in the preparation of financial statements leading to the analysis and interpretation of this information.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 612",
+    "subject": "MGCR",
+    "number": "612",
+    "title": "Organizational Behaviour",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Overview of the many issues that influence the management of complex organizations. Understanding of individual and group attitudes, cognitions, and behaviours, providing the essential core knowledge for day-to-day managerial activity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be taught abroad. The lectures will be held on May 14, 15, June 4 & 5, and will have the final exam on July 3, 2016",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the first lecture day and withdrawal is the second lecture day."
+    ]
+  },
+  {
+    "code": "MGCR 613",
+    "subject": "MGCR",
+    "number": "613",
+    "title": "Managerial Economics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "How economic systems and markets work, a command of how concepts and models developed by economists can be used in managerial decisions, a familiarity with the more practical aspects of competitive behaviour and the structure of competition, and a good appreciation of issues arising in the development of corporate goals (including ESG) and strategies. The use of economic analysis in strategy formulation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 614",
+    "subject": "MGCR",
+    "number": "614",
+    "title": "Management Statistics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Use of up-to-date statistical analysis to extract information from a set of data, including the application and interpretation of results rather than on formal statistical theory; the challenge will be in the selection of the appropriate statistical methodology to address the problem and the limitations. The social aspects of statistical analysis, the ethical implications of data collection, privacy concerns, and the potential impact of statistical results on different societal groups.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 616",
+    "subject": "MGCR",
+    "number": "616",
+    "title": "Marketing",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The course concentrates on what may be the most scarce resource for most corporations today - the customer. The course examines how organizations research what the customer wants and needs. The course also looks at the social and psychological backgrounds of consumer choice and looks at the methods for grouping consumers into segments according to the heterogeneity of their desires. The firm's response to consumers is then considered. First, the need satisfying item is considered - the product. Following this, the elements of the marketing mix, distribution, pricing and promotion, are considered.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 617",
+    "subject": "MGCR",
+    "number": "617",
+    "title": "Operations Management",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Introduction to the fundamental decisions and trade-offs associated with the management of a firm's production and service activities. A study of how production and service systems can be effectively designed, utilized and managed in order for them to compete successfully on the basis of different parameters. Analyzing and optimizing production and service processes to minimize waste, reduce carbon emissions to achieve net-zero impact, and enhance resource efficiency. Exploring emerging trends and innovative approaches in sustainable operations, including the use of digital technologies, data analytics to ensure competitiveness while contributing to a more socially responsible business environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 618",
+    "subject": "MGCR",
+    "number": "618",
+    "title": "Leadership and Professional Skills",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "An introduction to the leadership and professional skills needed for success in the 21st century in a rapidly changing global environment. Topics covered include self-awareness, personal branding, models of sustainable leadership, ethics and corporate governance, influencing others, critical thinking, professionalism, making effective presentations, and job search skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "MGCR 618D1",
+        "credits": 0.75,
+        "terms": []
+      },
+      {
+        "code": "MGCR 618D2",
+        "credits": 0.75,
+        "terms": []
+      },
+      {
+        "code": "MGCR 618J1",
+        "credits": 0.5,
+        "terms": []
+      },
+      {
+        "code": "MGCR 618J2",
+        "credits": 0.5,
+        "terms": []
+      },
+      {
+        "code": "MGCR 618J3",
+        "credits": 0.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MGCR 620",
+    "subject": "MGCR",
+    "number": "620",
+    "title": "Information Systems",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Overview of the information systems issues that influence the management of organizations with a special focus given to digital platforms. The impact of information technology on firm operations and the benefits as well as limitations of information technology, as it relates to the essential core knowledge needed for day-to-day managerial activity. Includes green IT as well as sustainability and IT.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 621",
+    "subject": "MGCR",
+    "number": "621",
+    "title": "International Environment",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Overview of the international issues that influence the management of organizations. Understanding of the international environment as it relates to the essential core knowledge needed for day-to-day managerial activity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 622",
+    "subject": "MGCR",
+    "number": "622",
+    "title": "Organizational Strategy",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analysis and improvement of the competitive position of organizations, including various tools for studying both the internal characteristics (e.g., resources, capabilities, and core competencies) and external environments (e.g., economic, sociocultural, political-legal, and sustainable-physical segments, and industry structure), “value” implications of different strategic initiatives (e.g., strategic positioning, diversification, mergers and acquisitions, and alliances). Disentanglement between the creation, addition, and appropriation of “value” and extension of the concept of “value” beyond merely “economic value” to also include social and environmental value, i.e., triple-bottom-line.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 628",
+    "subject": "MGCR",
+    "number": "628",
+    "title": "Integrative Course",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course provides an integrative perspective to the topics in the first year core, building on progressive stages of integrative understanding from basic management skills looking inward to basic and specialized management skills looking both inward and outward. The emphasis is on pedagogic tools which focus on a holistic view of the organization, forcing an understanding of the management of the enterprise from multiple perspectives and the resolution of conflicting viewpoints.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "MGCR 628D1",
+        "credits": 0.75,
+        "terms": []
+      },
+      {
+        "code": "MGCR 628D2",
+        "credits": 0.75,
+        "terms": []
+      },
+      {
+        "code": "MGCR 628J1",
+        "credits": 0.5,
+        "terms": []
+      },
+      {
+        "code": "MGCR 628J2",
+        "credits": 0.5,
+        "terms": []
+      },
+      {
+        "code": "MGCR 628J3",
+        "credits": 0.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MGCR 629",
+    "subject": "MGCR",
+    "number": "629",
+    "title": "Healthcare Leadership",
+    "credits": 1,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "An introduction to the leadership challenges of the 21st century in a rapidly changing global environment at the intersection of business and society.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 638",
+    "subject": "MGCR",
+    "number": "638",
+    "title": "Marketing Management",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A comprehensive overview of the fundamental principles of marketing. The primary focus is on understanding customers and creating value by offering solutions to their problems that can be branded, communicated and distributed using an omnichannel approach. Appreciate the importance of marketing for business, marketing and ESG adoption and for designing winning marketing plans for organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "MGCR 639",
+    "subject": "MGCR",
+    "number": "639",
+    "title": "Managing Organizational Behaviour",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of social processes that affect human behaviour and decision making, and tactics for building and managing organizations. Different organizational designs for optimizing different types of innovation. The intersection of organizational behaviour and sustainability, covering environmental but also social aspects of the latter. The ethics of management, including the governance of AI. The role of culture in organizations and the management of organizational culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 640",
+    "subject": "MGCR",
+    "number": "640",
+    "title": "Accounting and Financial Reporting",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The use of financial reporting including concepts and techniques in developing and interpreting accounting information. Identification of information that is relevant and useful for stakeholder decision making and analysis. Governance and ethical issues relating to the framework, accuracy and integrity of how this information is prepared and presented.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 641",
+    "subject": "MGCR",
+    "number": "641",
+    "title": "Elements of Modern Finance 1",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics: appropriate evaluation criteria for projects, risk and return; how to construct efficient portfolios; rigorous techniques for valuing financial assets. Corporate financing strategies, efficient market theories and investment banking; principles of debt financing and Modigliani-Miller propositions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGCR 642",
+    "subject": "MGCR",
+    "number": "642",
+    "title": "Financial Reporting",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basics of investments, including stocks, bonds and portfolio analysis, and the management of a company’s financial resources. How discounting and capital budgeting techniques help managers decide which projects should receive funding. The focus will be on Net Present Value analysis and its limitations. How financial indicators are not always sufficient and do not incorporate considerations such as sustainability and the need to act ethically.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to M.B.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGCR 650",
+    "subject": "MGCR",
+    "number": "650",
+    "title": "Business Tools",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An introduction to the practical usage of standard business tools and frameworks.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Intensive course: 13 hours per week for 2 weeks, for a total of 26 contact hours."
+    ]
+  },
+  {
+    "code": "MGCR 651",
+    "subject": "MGCR",
+    "number": "651",
+    "title": "Managing Resources",
+    "credits": 4,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An introduction to the challenges of acquiring and developing various resources in the firm, including financial capital, human talent, and information technology.",
+    "prerequisites": {
+      "text": "MGCR 650",
+      "tree": "MGCR 650",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Intensive course: 7.5 hours per week, over 7 weeks for a total of 52 contact hours"
+    ],
+    "parts": [
+      {
+        "code": "MGCR 651D1",
+        "credits": 2,
+        "terms": []
+      },
+      {
+        "code": "MGCR 651D2",
+        "credits": 2,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MGCR 652",
+    "subject": "MGCR",
+    "number": "652",
+    "title": "Value Creation",
+    "credits": 4,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Offers a comprehensive overview of the value creation process in business sectors by exploring the inter-relationships among the partners in the value chain.",
+    "prerequisites": {
+      "text": "MGCR 650.",
+      "tree": "MGCR 650",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Intensive course: 7.5 hours per week, over 7 weeks for a total of 52 contact hours."
+    ],
+    "parts": [
+      {
+        "code": "MGCR 652D1",
+        "credits": 2,
+        "terms": []
+      },
+      {
+        "code": "MGCR 652D2",
+        "credits": 2,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MGCR 653",
+    "subject": "MGCR",
+    "number": "653",
+    "title": "Markets and Globalization",
+    "credits": 4,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A review of macro-environment in which firms compete, and the linkages which exist between the domestic and global economies. Topics such as trade, fiscal and monetary policy, interest rates, exchange rates, and balance of payments will be covered.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Intensive course: 13 hours per week over 4 weeks for a total of 52 contact hours."
+    ]
+  },
+  {
+    "code": "MGCR 660",
+    "subject": "MGCR",
+    "number": "660",
+    "title": "International Study Trip",
+    "credits": 4.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course aims to provide students a comprehensive understanding of the process of internationalization as well as managing an enterprise/organization in an international setting. Students will participate in an organized study trip outside of Canada, to a city with significant international business.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open only to M.B.A. students.",
+      "Note: A fee of $3,000.00 is charged. You will have the opportunity to visit multiple companies, meet with senior executives, and truly experience business in an international country. Learning through on-site company visits, meetings with senior executives, classroom settings, workshops and seminars. Experiential learning takes place in classes located in foreign destinations and includes presentations, group projects and field surveys. This a requirement for graduation."
+    ],
+    "parts": [
+      {
+        "code": "MGCR 660D1",
+        "credits": 2.25,
+        "terms": []
+      },
+      {
+        "code": "MGCR 660D2",
+        "credits": 2.25,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MGCR 661",
+    "subject": "MGCR",
+    "number": "661",
+    "title": "International Study Experience",
+    "credits": 6,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The process of internationalization as well as managing an enterprise/organization in an international setting. Students will participate in an organized study trip outside of Canada, to a city with significant international business.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

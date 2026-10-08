@@ -1,0 +1,530 @@
+[
+  {
+    "code": "EXSU 500",
+    "subject": "EXSU",
+    "number": "500",
+    "title": "Fundamentals of AI in Medicine",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to artificial intelligence (AI) applied to issues in medical diagnosis, therapy selection and learning from health data. Various AI methods, electronic medical records, and ethical/security concerns. Machine learning approaches including deep learning and reinforcement learning without delving too deeply into the technical details.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 501",
+    "subject": "EXSU",
+    "number": "501",
+    "title": "Medical Technology Internship 1",
+    "credits": 6,
+    "offeredBy": "Surgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "This is a 6-weeks/37.5 hour per week internship course where students undertake a significant experiential learning opportunity through direct observation, reflection and evaluation with a variety of medical, medical education, medical research and healthcare sectors. The course starts with an orientation session and concludes with a debrief session and generation of a professional skills development plan. This course complements and is followed by a second 6-week internship - EXSU 502 which allows students to change hosts and receive targeted training in communication and management.",
+    "prerequisites": {
+      "text": "Written approval from student Supervisor submitted to the course coordinator",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all students in the basic and biomedical sciences. This includes the following programs: Experimental Surgery; Experimental Medicine; Biomedical Engineering; graduate programs in the Faculty of Engineering; graduate programs in the Faculty of Science. Graduate students must have written approval from their Supervisor submitted to the course coordinator. International students are eligible to be enrolled in the course. It is the students’ responsibility to ensure their visa enables them to engage in the internship.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EXSU 502",
+    "subject": "EXSU",
+    "number": "502",
+    "title": "Medical Technology Internship 2",
+    "credits": 6,
+    "offeredBy": "Surgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "This is a 6-weeks/37.5 hour per week internship course where students undertake a significant experiential learning opportunity through direct observation, reflection and evaluation with a variety of medical, medical education, medical research and healthcare sectors. The course starts with an orientation session followed by an intense advanced workshop (15 hours) in communication and management and concludes with a debrief session and generation of a professional skills development plan. This course complements the EXSU 501 and allows students to change hosts and receive targeted training in communication and management.",
+    "prerequisites": {
+      "text": "EXSU 501 and written approval from student Supervisor submitted to the course coordinator",
+      "tree": "EXSU 501",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all students in the basic and biomedical sciences. This includes the following programs: Experimental Surgery; Experimental Medicine; Biomedical Engineering; graduate programs in the Faculty of Engineering; graduate programs in the Faculty of Science. Graduate students must have written approval from their Supervisor submitted to the course coordinator. International students are eligible to be enrolled in the course. It is the students’ responsibility to ensure their visa enables them to engage in the internship.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EXSU 505",
+    "subject": "EXSU",
+    "number": "505",
+    "title": "Trends in Precision Oncology",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the emerging paradigms in cancer detection, management and treatment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all students in the Faculty of Medicine but priority will be given to students in the Department of Surgery and the Department of Oncology if the number of registered students exceeds the projected enrolment.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EXSU 510",
+    "subject": "EXSU",
+    "number": "510",
+    "title": "Advanced Topics of AI in Medicine",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced and applied topics in artificial intelligence in medicine. Exploration of big data preprocessing, cloud and edge computing, machine learning pipelines, deep learning, and AI-driven analysis of spatial, temporal, and unstructured data. Introduction of emerging paradigms such as foundational models, large biomedical models (LBMs), and multiomics integration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 601",
+    "subject": "EXSU",
+    "number": "601",
+    "title": "Knowledge Management 1",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical elements required for the preparation and evaluation of abstracts and full-length manuscripts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EXSU 601, 601D1/D2, 601N1/N2 prior to Fall 2019.",
+      "excludes": [
+        "EXSU 601D1",
+        "EXSU 601N1"
+      ]
+    },
+    "notes": [
+      "3 hours/week.",
+      "Compulsory for students in the Department of Surgery and available to others by permission of the coordinators."
+    ]
+  },
+  {
+    "code": "EXSU 602",
+    "subject": "EXSU",
+    "number": "602",
+    "title": "Knowledge Management 2",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Critical elements required for the creation and delivery of digital slide presentations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EXSU 601, 601D1/D2, 601N1/N2 prior to Fall 2019.",
+      "excludes": [
+        "EXSU 601",
+        "EXSU 601D1",
+        "EXSU 601N1"
+      ]
+    },
+    "notes": [
+      "3 hours/week",
+      "Compulsory for students in the Department of Surgery and available to others by permission of the coordinators"
+    ]
+  },
+  {
+    "code": "EXSU 603",
+    "subject": "EXSU",
+    "number": "603",
+    "title": "Surgical Education Foundations",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Critical overview of key educational and educational psychology theories and assessment principles to guide surgical education. Different surgical education environments analyzed and evaluated using theory, empirical evidence, and assessment practices.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Since course is interactive, enrollment is capped at 12."
+    ]
+  },
+  {
+    "code": "EXSU 605",
+    "subject": "EXSU",
+    "number": "605",
+    "title": "Biomedical Research Innovation",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to the novel and/or emerging technologies in the field of biomedical research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 hours/week",
+      "Compulsory for students in the Department of Surgery and available to others by permission of the coordinators"
+    ]
+  },
+  {
+    "code": "EXSU 606",
+    "subject": "EXSU",
+    "number": "606",
+    "title": "Statistics for Surgical Research",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of statistics for surgical research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 hours/week",
+      "Compulsory for students in the Department of Surgery and available to others by permission of the coordinators"
+    ]
+  },
+  {
+    "code": "EXSU 610",
+    "subject": "EXSU",
+    "number": "610",
+    "title": "Surgical Outcomes Research Foundations",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Comprehensive overview of strategies to measure and improve outcomes after surgery. Traditional and modern approaches to measure surgical outcomes, including clinician-reported, patient-reported and performance-based outcome measures. Contemporary strategies to improve postoperative recovery; topics include minimally invasive surgery (laparoscopic, robotic), enhanced recovery pathways and prehabilitation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc. in ExperimentalSurgery; Surgical Outcomes Research program. Other students require permission of the instructors.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours/week.",
+      "Students will be required to attend mandatory visits to surgical outcomes research labs at McGill.",
+      "Language of instruction: English"
+    ]
+  },
+  {
+    "code": "EXSU 619",
+    "subject": "EXSU",
+    "number": "619",
+    "title": "The Hospital Environment",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The process of surgical innovation and hands-on skills necessary to work within a multi-disciplinary team in the creation of a novel, need driven, and marketable prototype used in the care of the surgical patient. This is second of a 3 part course introducing concepts and performing needs analyses focusing on the hospital environment and the close contact with its structure and patients.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EXSU 620",
+      "tree": "EXSU 620",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Course requires entry to surgical theatre; this is subject to hospital approval.",
+      "excludes": []
+    },
+    "notes": [
+      "1) Students may be subject to interview.",
+      "2) Language of instruction: English, French available.",
+      "3) Minimum number 6, maximum 30",
+      "4) Subject to completion of medical/immunization record.",
+      "5) Professional conduct and dress required at all times in hospital visits when in potential contact with patients."
+    ]
+  },
+  {
+    "code": "EXSU 620",
+    "subject": "EXSU",
+    "number": "620",
+    "title": "Surgical Innovation 1",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The process of surgical innovation and acquisition of hands-on skills necessary to work within a multi-disciplinary team in the creation of a novel, need driven, and marketable prototype used in the care of the surgical patient. This is the first of a 3 part course introducing concepts and performing needs analyses.",
+    "prerequisites": {
+      "text": "Permission of instructors.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "EXSU 619",
+      "tree": "EXSU 619",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Course requires entry to surgical theatre; this is subject to hospital approval.",
+      "excludes": []
+    },
+    "notes": [
+      "1) Students may be subject to interview.",
+      "2) Contact hours 46.5 , 31.5 hours lectures, 15 hours workshops and hospital visits.",
+      "3) Language of instruction: English, French available.",
+      "4) Minimum number 6, maximum 30",
+      "5) Subject to completion of medical requirements/immunization record.",
+      "6) Professional conduct and dress required at all times in hospital visits when in potential contact with patients."
+    ]
+  },
+  {
+    "code": "EXSU 621",
+    "subject": "EXSU",
+    "number": "621",
+    "title": "Surgical Innovation 2",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course builds on key concepts and needs screening delivered and generated in EXSU 620 to develop hands-on skills necessary to work within a multi-disciplinary team in the creation of a novel, need driven, and marketable prototype used in the care of the surgical patient.",
+    "prerequisites": {
+      "text": "EXSU 620",
+      "tree": "EXSU 620",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course requires entry to surgical theatre, this is subject to hospital approval.",
+      "excludes": []
+    },
+    "notes": [
+      "Students may be subject to interview.",
+      "Contact hours 47 consisting of 23 hours lectures, 24 hours hospital visits and presentation.",
+      "Language of instruction: English, French available.",
+      "Minimum number 6, maximum 20.",
+      "Subject to completion of medical requirements/immunization record.",
+      "Professional conduct and dress required at all times in hospital visits when in potential contact with patients."
+    ]
+  },
+  {
+    "code": "EXSU 622",
+    "subject": "EXSU",
+    "number": "622",
+    "title": "Surgery Research Project 1",
+    "credits": 12,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Immersion into a specific research area and completion of a project. Students will learn to develop a project and to demonstrate skills essential for analysis, evaluation and project management.",
+    "prerequisites": {
+      "text": "Permission of instructors.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must also register for EXSU 622D2",
+      "No credit will be given for this course unless both EXSU 622D1 and EXSU 622D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "EXSU 622D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EXSU 622D2",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EXSU 622N1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EXSU 622N2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EXSU 623",
+    "subject": "EXSU",
+    "number": "623",
+    "title": "Surgery Research Project 2",
+    "credits": 6,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Immersion into a specific research area and completion of a short project. Students will learn to develop a project and to demonstrate skills essential for analysis, evaluation and project management.",
+    "prerequisites": {
+      "text": "Permission of instructors.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 630",
+    "subject": "EXSU",
+    "number": "630",
+    "title": "Medical and Simulation Technologies",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A critical overview of the defining characteristics and objectives of several types of medical and simulation technologies relevant for enhancing medical and surgical education, including foundational principles that guide the design, implementation, and evaluation of these tools.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 684",
+    "subject": "EXSU",
+    "number": "684",
+    "title": "Cellular signaling and mechanisms of disease",
+    "credits": 3,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced examination of the molecula rmechanisms of cellular signal transduction. Topics include receptor-mediated signaling, kinase cascades, transcriptional regulation, and pathway integration, with emphasis on interpreting experimental data and understanding signaling dysregulation in disease.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students with prerequisites and U3 undergraduates with special permission",
+      "excludes": []
+    },
+    "notes": [
+      "2 hours/week"
+    ]
+  },
+  {
+    "code": "EXSU 690",
+    "subject": "EXSU",
+    "number": "690",
+    "title": "M.Sc. Research 1",
+    "credits": 4,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 691",
+    "subject": "EXSU",
+    "number": "691",
+    "title": "M.Sc. Research 2",
+    "credits": 4,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 692",
+    "subject": "EXSU",
+    "number": "692",
+    "title": "M.Sc. Research 3",
+    "credits": 4,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 693",
+    "subject": "EXSU",
+    "number": "693",
+    "title": "M.Sc. Thesis",
+    "credits": 18,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Written and oral presentation of thesis proposal to the research Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 694",
+    "subject": "EXSU",
+    "number": "694",
+    "title": "M.Sc. Research 4",
+    "credits": 2,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EXSU 700",
+    "subject": "EXSU",
+    "number": "700",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Surgery",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

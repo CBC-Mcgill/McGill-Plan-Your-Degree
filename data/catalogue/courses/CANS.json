@@ -1,0 +1,489 @@
+[
+  {
+    "code": "CANS 200",
+    "subject": "CANS",
+    "number": "200",
+    "title": "Understanding Canada",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Key cultural, economic, social and political institutions and their evolution over time.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 203",
+    "subject": "CANS",
+    "number": "203",
+    "title": "Making Canada",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An investigation of specific material objects and cultural phenomena, to explore past and present Canadian cultures and to place them in their broader social and historical contexts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 300",
+    "subject": "CANS",
+    "number": "300",
+    "title": "Topics in Canadian Studies 1",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An historical explanation of the Canadian experience of nationalism from the Patriotes to the First Nations, with reference to politics, economics, iconography, ideology and multicultural experience.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 301",
+    "subject": "CANS",
+    "number": "301",
+    "title": "Topics in Canadian Studies 2",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An interdisciplinary course on a Canadian Studies topic.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 306",
+    "subject": "CANS",
+    "number": "306",
+    "title": "Topics in Indigenous Public Affairs ",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Past and present achievements and concerns within Indigenous societies across Canada.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken Issues in Native Studies as a CANS topics course.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 307",
+    "subject": "CANS",
+    "number": "307",
+    "title": "Canada in the World",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Canada's interaction with other countries and regions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 308",
+    "subject": "CANS",
+    "number": "308",
+    "title": "Sex and Gender in Canada",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Sex and gender in Canada in the past and the present.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 310",
+    "subject": "CANS",
+    "number": "310",
+    "title": "Canadian Cultures: Context and Issues",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course traces the history of Canadian cultures from the middle of the 19th century to the present. It focuses on the diversity of Canadian cultural identities through literature, drama, art and the mass media.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CANS 202",
+      "excludes": [
+        "CANS 202"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 311",
+    "subject": "CANS",
+    "number": "311",
+    "title": "Topics in Canadian Public Affairs 1",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An interdisciplinary selected topic dealing with Canadian public affairs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 312",
+    "subject": "CANS",
+    "number": "312",
+    "title": "Topics in Canadian Public Affairs 2",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An interdisciplinary selected topic dealing with Canadian public affairs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 315",
+    "subject": "CANS",
+    "number": "315",
+    "title": "Indigenous Art and Culture",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An examination of the work of selected First Nations, MÃ©tis and Inuit artists in Canada.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ARTH 315 or have taken \"Aboriginal Art and Culture\" as a CANS or ARTH topics course.",
+      "excludes": [
+        "ARTH 315"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 401",
+    "subject": "CANS",
+    "number": "401",
+    "title": "Canadian Studies Seminar 1",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An interdisciplinary seminar on a Canadian Studies topic.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topic will vary from year to year depending on staff interests."
+    ]
+  },
+  {
+    "code": "CANS 402",
+    "subject": "CANS",
+    "number": "402",
+    "title": "Canadian Studies Seminar 2",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An interdisciplinary seminar on a Canadian Studies topic.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 404",
+    "subject": "CANS",
+    "number": "404",
+    "title": "Canadian Studies Seminar 4",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An interdisciplinary seminar on a Canadian Studies topic.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 405",
+    "subject": "CANS",
+    "number": "405",
+    "title": "Canadian Studies Seminar 5",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An interdisciplinary seminar on a Canadian Studies topic.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 406",
+    "subject": "CANS",
+    "number": "406",
+    "title": "Canadian Studies Seminar 6",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An interdisciplinary seminar on a Canadian Studies topic.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor.",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CANS 408",
+    "subject": "CANS",
+    "number": "408",
+    "title": "Individual Reading Course",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised reading on an explicitly multidisciplinary topic under the direction of a professor working in the field of Canadian Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Reserved for final-year students enrolled in the Canadian Studies major or minor concentration. Permission must be obtained from the Canadian Studies advisor and from the supervising professor before registration.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 413",
+    "subject": "CANS",
+    "number": "413",
+    "title": "Canada and Quebec Seminar",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Comparison of Canada and Quebec.",
+    "prerequisites": {
+      "text": "Cans 200 or permission of the Instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: A reading knowledge of French is required"
+    ]
+  },
+  {
+    "code": "CANS 415",
+    "subject": "CANS",
+    "number": "415",
+    "title": "Black Canada",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The significant presence of people of African descent in Canada that dates back to the 17th century. Migration and immigration will be situated as part of the renewal of Canadian identity while examining the intellectual, historical and political presence of people of African descent.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CANS 401 when topic was \"Caribbean Canadians\" or \"Black Diaspora\".",
+      "excludes": [
+        "CANS 401"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 420",
+    "subject": "CANS",
+    "number": "420",
+    "title": "Shaping Public Affairs in Canada",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of key aspects of public affairs and leadership in Canada.",
+    "prerequisites": {
+      "text": "CANS 200 or permission of instructor.",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to final year students. Not open to students who have taken CANS 501.",
+      "excludes": [
+        "CANS 501"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 480",
+    "subject": "CANS",
+    "number": "480",
+    "title": "Honours Thesis 1",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised research for and preparation of the Honours Thesis Proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Students in the Honours Program in Canadian Studies.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 481",
+    "subject": "CANS",
+    "number": "481",
+    "title": "Honours Thesis 2",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised writing of Honours thesis.",
+    "prerequisites": {
+      "text": "CANS 480.",
+      "tree": "CANS 480",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Students in the Honours Program in Canadian Studies.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 492",
+    "subject": "CANS",
+    "number": "492",
+    "title": "Joint Honours Thesis",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Honours thesis research to be carried out under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Joint Honours Program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CANS 499",
+    "subject": "CANS",
+    "number": "499",
+    "title": "Internship - Canadian Studies",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": {
+      "text": "CANS 200 and permission of program Director",
+      "tree": "CANS 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open to U2 and U3 students after completing CANS 200, 30 credits of a 90 degree or 45 credits of a 96-120 credit degree, and a minimum CGPA of 3.0. Students may register in the Fall or Winter semester for Summer internships."
+    ]
+  }
+]

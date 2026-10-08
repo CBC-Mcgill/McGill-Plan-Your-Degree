@@ -1,0 +1,53 @@
+[
+  {
+    "code": "SURG 301",
+    "subject": "SURG",
+    "number": "301",
+    "title": "TCP Surgery",
+    "credits": 4,
+    "offeredBy": "Surgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027",
+      "Summer 2027"
+    ],
+    "description": "During this four-week course, students will build on history-taking and physical examination skills, develop diagnostic and clinical reasoning skills, and expand their knowledge of surgery-related problems. The student will also learn the pathophysiology of surgical conditions and practice procedural skills relevant to the practice of surgery.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.D., C.M. program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SURG 402",
+    "subject": "SURG",
+    "number": "402",
+    "title": "Surgery Clerkship",
+    "credits": 8,
+    "offeredBy": "Surgery",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [],
+    "description": "During this course, students will participate in the care of surgical patients under the supervision of residents and attending staff. Students are expected to perform and document patient interviews and physical examinations, prioritize differential diagnosis for common and urgent problems seen in surgery, and practice developing management plans for common surgical problems. Students will participate in activities of the surgical outpatient and inpatient services.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Registration(s): Open only to students enrolled in the M.D., C.M. program."
+    ],
+    "parts": [
+      {
+        "code": "SURG 402D1",
+        "credits": 4,
+        "terms": []
+      },
+      {
+        "code": "SURG 402D2",
+        "credits": 4,
+        "terms": []
+      }
+    ]
+  }
+]

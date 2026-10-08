@@ -1,0 +1,3248 @@
+[
+  {
+    "code": "MIME 200",
+    "subject": "MIME",
+    "number": "200",
+    "title": "Introduction to the Minerals Industry",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Economic importance of the minerals industry. Mining: legislation, regulations, criteria for exploiting an ore: mining methods, equipment. Extractive metallurgy: mineral processing, hydrometallurgy, pyrometallurgy. Environmental protection.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 203",
+    "subject": "MIME",
+    "number": "203",
+    "title": "Mine Surveying",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Introduction to surveying. Definitions and mathematics. Measurement of levels, angles and distances. Fundamentals of control surveying. Underground mine surveying. GPS and laser applications.",
+    "prerequisites": {
+      "text": "MECH 289",
+      "tree": "MECH 289",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-0)",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "MIME 209",
+    "subject": "MIME",
+    "number": "209",
+    "title": "Mathematical Applications",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to stochastic modelling of mining and metallurgical engineering processes. Description and analysis of data distributions observed in mineral engineering applications. Modelling with linear regression analysis. Taylor series application to error and uncertainty propagation. Metallurgical mass balance adjustments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MIME 212",
+    "subject": "MIME",
+    "number": "212",
+    "title": "Engineering Thermodynamics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Macro versus microscopic approach: patterns of Nature. First and second laws and their uses. Property relationships: free energies, chemical potentials, activities, heat capacity. Chemical equilibrium. Reaction kinetics. Phase equilibrium for a pure substance. Experimental methods. Engineering applications: high-temperature metallurgical reactors, turbines, mixtures and solutions, phase diagrams, superconductivity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1.5-4.5)"
+    ]
+  },
+  {
+    "code": "MIME 250",
+    "subject": "MIME",
+    "number": "250",
+    "title": "Introduction to Extractive Metallurgy",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to physical, hydrochemical, electrochemical and thermochemical processing in the production of metals and materials; description of the industries, basic processing concepts, unit operations and an introduction to environmental exchanges. Size reduction and classification, particle separation, stoichiometric and mass balance calculations, chemical equilibria, aqueous processing, smelting and refining.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MIME 251",
+    "subject": "MIME",
+    "number": "251",
+    "title": "Introduction to Process and Materials Engineering Design",
+    "credits": 1,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the principles of engineering design related to materials production processes and materials engineering. A simplified description of metals, ceramics, polymers, and their production processes will include a basic introduction to mass and energy balances around material transformations. Introduction to high-level block flow diagram creation to describe processes. Impacts of the design of these material production processes on the environment and their sustainability.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 256",
+    "subject": "MIME",
+    "number": "256",
+    "title": "Design Graphics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to engineering design practice in mining and materials engineering through the fundamentals of technical drawing as a communication platform. Coverage of graphic projection theory, perspective projections, Computer Aided Design (CAD), and 3D parametric solid modeling techniques. Application of standard geometric dimensioning and tolerancing (GD&T) within engineering graphics and design contexts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 260",
+    "subject": "MIME",
+    "number": "260",
+    "title": "Materials Science and Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Structure properties and fabrication of metals, polymers, ceramics, composites; engineering properties: tensile, fracture, creep, oxidation, corrosion, friction, wear; fabrication and joining methods; principles of materials selection.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-2-5)"
+    ]
+  },
+  {
+    "code": "MIME 261",
+    "subject": "MIME",
+    "number": "261",
+    "title": "Structure of Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Classification of materials, electrons in atoms, molecules and solids, bonding in solids, elements of crystallography, common crystal structures, atoms positions, directions and planes in crystal structures, defects in crystalline solids, point defects, dislocations, structure of polycrystalline materials, grains, grain boundaries, non-crystalline solids.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MIME 262",
+    "subject": "MIME",
+    "number": "262",
+    "title": "Properties of Materials in Electrical Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Properties of a material continuum and crystalline state; properties of atoms in materials; conduction electrons in materials; electronic properties of semiconductors and metals; magnetic and thermal properties of materials; applications of electronic materials in semiconductor technology, recording media and transducers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECSE 212.",
+      "excludes": [
+        "ECSE 212"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MIME 280",
+    "subject": "MIME",
+    "number": "280",
+    "title": "Industrial Training 1",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Four-month training period in a materials engineering industrial or research environment. Work term report due upon completion.",
+    "prerequisites": {
+      "text": "WCOM 206. Department permission required. Must have completed a minimum of 40 credits of the core Materials Engineering program.",
+      "tree": "WCOM 206",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to McGill students.",
+      "excludes": []
+    },
+    "notes": [
+      "This administrative fee is charged to all undergraduate students enrolled in the Materials Engineering Co op Program. It supports the direct costs of operating the co-op program, including employer outreach, individualized career advising, coordination of work term opportunities, and the administration of required industrial training courses. The fee is not a job placement fee and is non refundable. The Materials Engineering Co op Program fee was originally implemented in 1997 and was revised in 2026.",
+      "Ces frais administratifs sont exigés de tous les étudiants de premier cycle inscrits au programme coopératif en Génie des matériaux. Ils couvrent les coûts directs liés au fonctionnement du programme coopératif, notamment le développement de partenariats industriels, les conseils de carrière individualisés, la coordination des possibilités de stages coopératifs et la gestion des cours de formation industrielle obligatoires. Les frais ne constituent pas des frais de placement d’emploi et ne sont pas remboursables. Les frais du programme coopératif en Génie des matériaux ont été établis en 1997 et révisés en 2026."
+    ]
+  },
+  {
+    "code": "MIME 290",
+    "subject": "MIME",
+    "number": "290",
+    "title": "Industrial Work Period 1",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A four-month work period in the mineral industry, to expose the student to an industrial environment. Candidates will receive basic industrial training. A complete report must be submitted at the end of the term.",
+    "prerequisites": {
+      "text": "MIME 200 and MIME 203",
+      "tree": {
+        "and": [
+          "MIME 200",
+          "MIME 203"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "All students registering in this course are subject to an additional course fee of $650.03 to defray the costs of administering"
+    ]
+  },
+  {
+    "code": "MIME 291",
+    "subject": "MIME",
+    "number": "291",
+    "title": "Industrial Work Period 2",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A four-month industrial work period in a mining company, research laboratory or government agency. The student will receive formal industrial training in a technical position. A complete report must be submitted at the end of the term.",
+    "prerequisites": {
+      "text": "MIME 290",
+      "tree": "MIME 290",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course in the Faculty of Engineering is open only to McGill students.",
+      "All students registering in this course are subject to an additional course fee of $650.03 to defray the costs of administering the stage."
+    ]
+  },
+  {
+    "code": "MIME 308",
+    "subject": "MIME",
+    "number": "308",
+    "title": "Social Impact of Technology",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Critical examination of the socio-economic costs and benefits of technology, case studies of old engineering works and new technologies. The integration of applied ethics and engineering practice, analysis of basic concepts of technology assessment, the inter-connected processes of risk assessment, management, and communication.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Enrolment encouraged by students outside the Faculty of Engineering"
+    ]
+  },
+  {
+    "code": "MIME 311",
+    "subject": "MIME",
+    "number": "311",
+    "title": "Modelling and Automatic Control",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Mass and energy conservation laws. Dynamic versus steady state models, dynamic behaviour of first and higher order metallurgical systems, linear and nonlinear models, interacting and noninteracting systems. Laplace domain dynamics and transfer functions. Feedback control, control valves and controllers, transducers. Feedback-feedforward control, introduction to cascade, adaptive and statistical control strategies. Digital computer control, instruments and interfaces.",
+    "prerequisites": {
+      "text": "MIME 356",
+      "tree": "MIME 356",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MIME 317",
+    "subject": "MIME",
+    "number": "317",
+    "title": "Analytical and Characterization Techniques",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Bulk, surface and microanalytical techniques for materials characterization. Bulk analysis: spectrophotometry using UV, visible, flame and atomic absorption, x-ray diffraction and x-ray fluorescence. Surface and microanalysis: infrared spectroscopy, scanning and transmission electron microscopy, Auger electron and x-ray photoelectron spectroscopy.",
+    "prerequisites": {
+      "text": "MIME 261",
+      "tree": "MIME 261",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MIME 320",
+    "subject": "MIME",
+    "number": "320",
+    "title": "Extraction of Energy Resources",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The extraction of energy resources, i.e. coal, gas, oil and tar sands. After a brief geological review, different extraction techniques for these substances will be discussed. Emphasis on problems such as northern mining and offshore oil extraction with reference to Canadian operations. Transportation and marketing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 322",
+    "subject": "MIME",
+    "number": "322",
+    "title": "Fragmentation and Comminution",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles of drilling, penetration rates, and factors affecting the choice of drilling method. Characteristics of explosives, firing systems and blast patterns. Blasting techniques in surface and underground workings. Special blasting techniques at excavation perimeters. Vibration and noise control. Mechanical and continuous approaches to fragmentation, including longwall shearing and fullface boring. Economics of drill/blast practice, interface with transport and crushing systems, drivers for mine-to-mill integration including energy considerations. Modelling of fragment and particle size distributions; comminution as a transfer function. Comminution technology: crushing, grinding, size classification. Integrated analysis of fragmentation and comminution operations.",
+    "prerequisites": {
+      "text": "MIME 209 or MECH 262 or CIVE 302 or CHEE 231 or ECSE 205",
+      "tree": {
+        "or": [
+          "MIME 209",
+          "MECH 262",
+          "CIVE 302",
+          "CHEE 231",
+          "ECSE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MIME 341",
+      "tree": "MIME 341",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)."
+    ]
+  },
+  {
+    "code": "MIME 323",
+    "subject": "MIME",
+    "number": "323",
+    "title": "Rock and Soil Mass Characterization",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Characteristics of soil and rock masses and the stability of mine workings. Mechanical properties of rocks and soils related to physical/chemical properties. Characterization of rock mass discontinuities. Laboratory and in-situ techniques to define mechanical properties of soils, rocks and discontinuities. Permeability and groundwater flow principles. In-situ stresses and their measurement. Rock mass quality and classification systems.",
+    "prerequisites": {
+      "text": "EPSC 221 and MIME 200",
+      "tree": {
+        "and": [
+          "EPSC 221",
+          "MIME 200"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 325",
+    "subject": "MIME",
+    "number": "325",
+    "title": "Mineral Industry Economics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Geographical distribution of mineral resources. Production, consumption and prices of minerals. Market structure of selected minerals. Economic evaluation aspects: grade-tonnage considerations; capital and operating cost estimation; assessment of market conditions; estimation of revenue; taxation; sensitivity and risk analyses; economic optimization of mine development and extraction.",
+    "prerequisites": {
+      "text": "FACC 300.",
+      "tree": "FACC 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MIME 329",
+    "subject": "MIME",
+    "number": "329",
+    "title": "Mining Geology",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Methods of field mapping (e.g., geology, structure), drilling and sampling; concept of cut-off grade; resource estimation by conventional and geostatistical methods.",
+    "prerequisites": {
+      "text": "EPSC 221, MIME 200, MIME 209",
+      "tree": {
+        "and": [
+          "EPSC 221",
+          "MIME 200",
+          "MIME 209"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students from CEGEP entry or who have taken MPMC 329.",
+      "excludes": []
+    },
+    "notes": [
+      "(2-1-3)"
+    ]
+  },
+  {
+    "code": "MIME 330",
+    "subject": "MIME",
+    "number": "330",
+    "title": "Mining Geotechnics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Properties of soils; permeability and seepage; effective stress concept; compressibility and settlement; lateral earth pressure; soil compaction; stability and design of embankments and mine tailings dams; problems related to mine tailings: liquefaction and disposal; gravitational flow of soils; buried structures.",
+    "prerequisites": {
+      "text": "EPSC 221 and MIME 200",
+      "tree": {
+        "and": [
+          "EPSC 221",
+          "MIME 200"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MPMC 330.",
+      "excludes": [
+        "MPMC 330"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 333",
+    "subject": "MIME",
+    "number": "333",
+    "title": "Materials Handling",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Physical and mechanical characteristics of materials related to loading, transport and storage. Dynamics of particles, systems and rigid bodies, mass-acceleration, work-energy, impulse-momentum. Types and selection of excavation and haulage equipment. Layout of haul roads. Rail transport. Conveyor belts and chain conveyors. Mine hoists. Layout of mine shafts.",
+    "prerequisites": {
+      "text": "MIME 200",
+      "tree": "MIME 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 340",
+    "subject": "MIME",
+    "number": "340",
+    "title": "Applied Fluid Dynamics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Flow analysis and manometry. Conservation of mass and momentum. Flow in pipes and ducts, analysis of pipe networks. First and second law of thermodynamics and their applications. Open channel flows. Dimensional analysis and similitude. Flow measurements. Settling and separation of particles. Non-Newtonian flow and slurry transport. Fluidized beds. Filtration of liquid/solid mixtures. Conduction heat transfer. Convection heat transfer. Principle of heat exchanger.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 341",
+    "subject": "MIME",
+    "number": "341",
+    "title": "Introduction to Mineral Processing",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theory and practice of unit operations including: size reduction-crushing and grinding; size separation-screening and classification; mineral separation-flotation, magnetic and gravity separation. Equipment and circuit design and selection. Mass balancing. Laboratory procedures: grindability, liberation, magnetic and gravity separation, flotation and solid-liquid separation.",
+    "prerequisites": {
+      "text": "MIME 200 or MIME 250",
+      "tree": {
+        "or": [
+          "MIME 200",
+          "MIME 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0.5-5.5)"
+    ]
+  },
+  {
+    "code": "MIME 345",
+    "subject": "MIME",
+    "number": "345",
+    "title": "Applications of Polymers",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Applications of synthetic and natural polymers and composites as engineering materials, e.g. in biomedical, automotive and aerospace applications. Thermoplastics, thermosets and elastomers. Animal and plant origin, degradable and non-degradable polymers. Particulate and fibre reinforced polymer matrix composites. Manufacturing routes, and characterization tools for their physical, thermal, mechanical and chemical properties.",
+    "prerequisites": {
+      "text": "MIME 261 or permission of instructor.",
+      "tree": "MIME 261",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MIME 350",
+    "subject": "MIME",
+    "number": "350",
+    "title": "Extractive Metallurgical Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Principle non-ferrous base-metal pyrometallurgical extraction processes, relevant thermodynamics, heat and mass balances, transport phenomena (copper, nickel, lead, zinc, aluminum, magnesium). Ores, gangue, fuels, slag, fluxes, recovery, refining, minor elements, byproducts and the environment. Roasting, drying, smelting, converting, reverberatory furnaces, flash furnaces, continuous and batch operations, injection practices and oxygen enrichment. Simulation, modelling, control and optimization.",
+    "prerequisites": {
+      "text": "MIME 200 or MIME 250, MIME 212",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MIME 200",
+              "MIME 250"
+            ]
+          },
+          "MIME 212"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "**Due to the St. Jean and Canada Day holidays, there will be make up classes on Thursday, June 15th and Monday, July 3rd."
+    ]
+  },
+  {
+    "code": "MIME 352",
+    "subject": "MIME",
+    "number": "352",
+    "title": "Hydrochemical Processing",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analysis and description of dissolution (leaching), solute separation (solvent extraction, ion exchange, carbon adsorption) and deposition operations (precipitation, crystallization, electrolysis) in aqueous reaction media as these apply to: (i) the hydrometallurgical extraction of metals from primary/secondary sources; (ii) the treatment of effluents and (iii) the production of inorganic materials.",
+    "prerequisites": {
+      "text": "(CHEM 233 or GEPR 121) and MIME 212 and MIME 200 and MIME 250, and (MIME 356 or MIME 340 or GEPR 221)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CHEM 233",
+              "GEPR 121"
+            ]
+          },
+          "MIME 212",
+          "MIME 200",
+          "MIME 250",
+          {
+            "or": [
+              "MIME 356",
+              "MIME 340",
+              "GEPR 221"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1.5-4.5)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "MIME 356",
+    "subject": "MIME",
+    "number": "356",
+    "title": "Heat, Mass and Fluid Flow",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fluid statics and dynamics. Newton's laws of viscosity and motion, control volume analyses. Navier Stokes, Euler. Bemoulli and Steady Flow Energy Equations. turbulence and Reynolds stress equations. Molecular conduction/diffusion processes in heat and mass transfer). Convective flows. Transport coefficients in slags, metals and gases. Radiative heat transfer. Transient/steady state flow.",
+    "prerequisites": {
+      "text": "MIME 212",
+      "tree": "MIME 212",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-6)"
+    ]
+  },
+  {
+    "code": "MIME 360",
+    "subject": "MIME",
+    "number": "360",
+    "title": "Phase Transformations: Solids",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Free energy (equilibrium) and kinetic (non-equilibrium) considerations, phase diagrams and TTT diagrams, solid state diffusion, diffusional (nucleation and growth) and shear (martensitic) transformations.",
+    "prerequisites": {
+      "text": "MIME 260 or MIME 261.",
+      "tree": {
+        "or": [
+          "MIME 260",
+          "MIME 261"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "Pre/Corequisite: MIME 212."
+    ]
+  },
+  {
+    "code": "MIME 362",
+    "subject": "MIME",
+    "number": "362",
+    "title": "Mechanical Properties",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Stress-strain behaviour. Elasticity and plasticity of metals, ceramics and polymers. Dislocations theory. Single crystal and polycrystalline slip. Mechanical twinning. Strengthening mechanisms. Process-property and microstructure-property relationships. Notch toughness and fracture mechanics. Failure, fracture and damage accumulation. Fatigue. Creep and creep rupture. Fractography. Design considerations in materials selection.",
+    "prerequisites": {
+      "text": "MIME 360",
+      "tree": "MIME 360",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-3-4)"
+    ]
+  },
+  {
+    "code": "MIME 380",
+    "subject": "MIME",
+    "number": "380",
+    "title": "Industrial Training 2",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "One four-month work period in industry. Work term report due upon completion.",
+    "prerequisites": {
+      "text": "MIME 280",
+      "tree": "MIME 280",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to McGill students.",
+      "excludes": []
+    },
+    "notes": [
+      "This administrative fee is charged to all undergraduate students enrolled in the Materials Engineering Co op Program. It supports the direct costs of operating the co-op program, including employer outreach, individualized career advising, coordination of work term opportunities, and the administration of required industrial training courses. The fee is not a job placement fee and is non refundable. The Materials Engineering Co op Program fee was originally implemented in 1997 and was revised in 2026.",
+      "Ces frais administratifs sont exigés de tous les étudiants de premier cycle inscrits au programme coopératif en Génie des matériaux. Ils couvrent les coûts directs liés au fonctionnement du programme coopératif, notamment le développement de partenariats industriels, les conseils de carrière individualisés, la coordination des possibilités de stages coopératifs et la gestion des cours de formation industrielle obligatoires. Les frais ne constituent pas des frais de placement d’emploi et ne sont pas remboursables. Les frais du programme coopératif en Génie des matériaux ont été établis en 1997 et révisés en 2026."
+    ]
+  },
+  {
+    "code": "MIME 392",
+    "subject": "MIME",
+    "number": "392",
+    "title": "Industrial Work Period 3",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A four-month industrial work period in a mining company, research laboratory or government agency. Based on the experience gained during the first two work periods, the student may be asked to undertake more challenging technical tasks. A complete report must be submitted at the end of the term.",
+    "prerequisites": {
+      "text": "75 credits including MIME 291",
+      "tree": "MIME 291",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "All students registering in this course are subject to an additional course fee of $ 650.03 to defray the costs of administering the stage"
+    ]
+  },
+  {
+    "code": "MIME 410",
+    "subject": "MIME",
+    "number": "410",
+    "title": "Materials Research Project",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A research project will be carried out, usually in groups, under the guidance of a staff member. A technical report will be prepared at the end and a formal presentation will be made on the research topic.",
+    "prerequisites": {
+      "text": "Recommendation of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-6-3)"
+    ]
+  },
+  {
+    "code": "MIME 413",
+    "subject": "MIME",
+    "number": "413",
+    "title": "Strategic Mine Planning With Uncertainty",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Strategic decision-making for mine planning given uncertain metal supply from orebodies and commodity demand. Stochastic optimization techniques in mine design and production scheduling. Uncertainty quantification and orebody representation. Stochastic mine optimization in applications from open pit and underground metal mines. Introduction to sustainable development and utilization of mineral resources.",
+    "prerequisites": {
+      "text": "(CIVE 208 or MPMC 326) and (MIME 329 or MPMC 329) and MIME 419",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CIVE 208",
+              "MPMC 326"
+            ]
+          },
+          {
+            "or": [
+              "MIME 329",
+              "MPMC 329"
+            ]
+          },
+          "MIME 419"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MIME 425",
+      "tree": "MIME 425",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 513.",
+      "excludes": [
+        "MIME 513"
+      ]
+    },
+    "notes": [
+      "3-3-3"
+    ]
+  },
+  {
+    "code": "MIME 419",
+    "subject": "MIME",
+    "number": "419",
+    "title": "Surface Mining",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Choice of a surface mining method. Analysis of soil and rock mass properties related to surface mining. Calculation and monitoring of stripping ratios, ultimate pit depth, slope stability, rock reinforcement, bench and berm dimensioning and ramp design. Loading and hauling systems. Surface layout and development. Water drainage systems. Production and cost analysis. Computerized design techniques.",
+    "prerequisites": {
+      "text": "MIME 322, MIME 333 and MIME 325",
+      "tree": {
+        "and": [
+          "MIME 322",
+          "MIME 333",
+          "MIME 325"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)",
+      "**Regular schedule May 10, 2021, to June 21, 2021",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day.",
+      "*Although this course follows a Monday/Wednesday class schedule pattern, there will be a lecture on Friday, May 26th.",
+      "**This course will be held on July 15, 17, 19, 22, 24, 26, 29, 31, August 5, 7, 12, 14, 19 and 21st."
+    ]
+  },
+  {
+    "code": "MIME 421",
+    "subject": "MIME",
+    "number": "421",
+    "title": "Rock Mechanics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Stresses around excavations: analytical and numerical solutions. Stability of underground and surface excavations: structural instability analysis with stereonet, instability due to high stress. Rock supports. Monitoring. Case studies.",
+    "prerequisites": {
+      "text": "MIME 323 and instructor permission",
+      "tree": "MIME 323",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students from CEGEP entry or who have taken MPMC 321.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 422",
+    "subject": "MIME",
+    "number": "422",
+    "title": "Mine Ventilation",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Statutory regulations and engineering design criteria. Occupational health hazards of mine gases, dusts, etc. Ventilation system design. Natural and mechanical ventilation. Measuring and modelling air flow in ventilation networks. Calculation of head losses. Selection of mine ventilation fans. Air heating and cooling. Aspects of economics.",
+    "prerequisites": {
+      "text": "MIME 340",
+      "tree": "MIME 340",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MPMC 422.",
+      "excludes": [
+        "MPMC 422"
+      ]
+    },
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 424",
+    "subject": "MIME",
+    "number": "424",
+    "title": "Underground Mining Methods",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Fundamentals of underground mining methods; orebody characteristics and host rock; drilling and blasting procedures; general and specialized equipment; mining method selection criteria; cost estimation; calculation of cut-off grade, ore recovery and dilution; mine developments and underground infrastructure: raises, chutes, loading pockets, dump points, raises, and ore bins; mine safety practice.",
+    "prerequisites": {
+      "text": "MIME 322, MIME 325, and MIME 333",
+      "tree": {
+        "and": [
+          "MIME 322",
+          "MIME 325",
+          "MIME 333"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students from CEGEP entry or who have taken MPMC 421.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-3-3)",
+      "**Monday May 18 is a statutory holiday; therefore the instructor will make up for the class on Friday May 22nd.",
+      "**Wednesday June 24th is a statutory holiday; therefore the instructor will make up for the class on Friday June 26th.",
+      "**Wednesday July 1st is a statutory holiday therefore the instructor would like to make up for the class on Friday July 3rd.",
+      "**Regular schedule of MW is May 20th, May 25th, May 27th, June 1st, June 3rd, June 8th, June 10th, June 15th, June 17th, June 22 & June 29, 2020.",
+      "**This course will be held on May 22, 24, 27, 29, June 3, 5, 10, 12, 17, 19, 21, 26, 28 & July 3rd.",
+      "**Although this course follows a MW class schedule, there will be a class on Friday, May 22nd & Friday, June 26th and a final exam on Friday, July 3rd."
+    ]
+  },
+  {
+    "code": "MIME 425",
+    "subject": "MIME",
+    "number": "425",
+    "title": "Applied Stochastic Orebody Modelling",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Representing uncertainty in orebody models and shortcomings of conventional methods including reserve reporting and mine planning. Stochastic spatial sequential simulation methods. Joint simulation of multiple correlated elements. Simulation material types. Introduction to geometallurgical modelling. Additional drilling, reserve classification, grade control and mine planning optimization. Risk quantification in life-of-mine production schedules.",
+    "prerequisites": {
+      "text": "(MPMC 326 or CIVE 208) and (MPMC 329 or MIME 329)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MPMC 326",
+              "CIVE 208"
+            ]
+          },
+          {
+            "or": [
+              "MPMC 329",
+              "MIME 329"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 525.",
+      "excludes": [
+        "MIME 525"
+      ]
+    },
+    "notes": [
+      "3-3-3"
+    ]
+  },
+  {
+    "code": "MIME 426",
+    "subject": "MIME",
+    "number": "426",
+    "title": "Mine Design and Prefeasibility Study",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A case study design exercise. Design and selection of the facilities required to start production. Use of design criteria dictated by mining plans, geography, geology and government regulations. Professional appraisal of the technical and economic prefeasibility of developing a mineral deposit. Students prepare a professional-level report and seminar presentation.",
+    "prerequisites": {
+      "text": "MIME 422 and (MIME 421 or MPMC 321) and (MIME 424 or MPMC 421)",
+      "tree": {
+        "and": [
+          "MIME 422",
+          {
+            "or": [
+              "MIME 421",
+              "MPMC 321"
+            ]
+          },
+          {
+            "or": [
+              "MIME 424",
+              "MPMC 421"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-12)"
+    ]
+  },
+  {
+    "code": "MIME 428",
+    "subject": "MIME",
+    "number": "428",
+    "title": "Environmental Mining Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Effect of mining on the environment: ecology, legislation, effluents and wastes, environmental impact. Acid mine drainage: prediction, treatment, prevention, control. Mineral processing agents. Solid wastes. Mine site closure, reclamation and monitoring. Economic aspects. Environmental practices.",
+    "prerequisites": {
+      "text": "MIME 323 and CIVE 205",
+      "tree": {
+        "and": [
+          "MIME 323",
+          "CIVE 205"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "MIME 442",
+    "subject": "MIME",
+    "number": "442",
+    "title": "Analysis, Modelling and Optimization in Mineral Processing",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Tools and methods of process analysis, modelling and optimization using flotation and comminution examples: sampling theory and statistics, data reconciliation, statistical experimental design. Kinetic models of flotation and comminution; simulation software. Residence time distributions: tanks-in-series and axial dispersion models. Combined flotation/comminution models. Introduction to geostatistics and data mining.",
+    "prerequisites": {
+      "text": "MIME 341",
+      "tree": "MIME 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1.5-4.5)"
+    ]
+  },
+  {
+    "code": "MIME 452",
+    "subject": "MIME",
+    "number": "452",
+    "title": "Process and Materials Design",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Capstone design of metals production or other process plants, materials, or products. Formulation of an engineering problem, and solution selection from multiple solutions. Creation of preliminary engineering estimates that consider materials and energy balances, process selection, emission controls, engineering economics, safety, stakeholder, and environmental assessments in technical report format.",
+    "prerequisites": {
+      "text": "MIME 311, MIME341, MIME 352, MIME 362, FACC 300, WCOM 206",
+      "tree": {
+        "and": [
+          "MIME 311",
+          "MIME 341",
+          "MIME 352",
+          "MIME 362",
+          "FACC 300",
+          "WCOM 206"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-2-9)"
+    ]
+  },
+  {
+    "code": "MIME 455",
+    "subject": "MIME",
+    "number": "455",
+    "title": "Advanced Process Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Transport phenomena in non-idealized systems. Solutions for transient heat and mass transfer processes involving thermal and molecular diffusion in materials processing systems. Natural and forced convection in heat and mass transfer. Dimensionless correlations. Fick's Laws and Fourier's Laws. Exact solutions. Numerical approximations for transient systems. Equivalences between heat and mass transfer. Finite difference modelling of conduction, convection and radiation heat transfer and diffusion and convection mass transfer.",
+    "prerequisites": {
+      "text": "MIME 356",
+      "tree": "MIME 356",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1.5-4.5)"
+    ]
+  },
+  {
+    "code": "MIME 456",
+    "subject": "MIME",
+    "number": "456",
+    "title": "Steelmaking and Steel Processing",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The production and refining of liquid iron in the iron blast furnace, the production and refining of liquid steel, secondary refining operations, continuous casting and thermomechanical processing (hot rolling). Specialty steels and newly emerging technologies (e.g. thin slab casting, direct ironmaking) are also discussed in terms of process/environment and productivity. \"Downstream\" topics will include cold rolling, batch and continuous annealing, and coating operations.",
+    "prerequisites": {
+      "text": "(MIME 260 or MIME 261 or CHEE 380) and (MIME356 or MECH 346 or CHEE 315) or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MIME 260",
+              "MIME 261",
+              "CHEE 380"
+            ]
+          },
+          {
+            "or": [
+              "MIME 356",
+              "MECH 346",
+              "CHEE 315"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MIME 465",
+    "subject": "MIME",
+    "number": "465",
+    "title": "Metallic and Ceramic Powders Processing",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Powder metallurgy and ceramic processing. Fabrication, characterization and properties of powders. Powder consolidation techniques. Sintering and densification mechanisms. Properties of porous compacts. Design of fabrication process. Particularities and classification of ceramic systems.",
+    "prerequisites": {
+      "text": "MIME 360",
+      "tree": "MIME 360",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MIME 467",
+    "subject": "MIME",
+    "number": "467",
+    "title": "Electronic Properties of Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Electrons as particles and waves, Schrodinger's Equation, electrical and thermal conductivity, semiconductors, semiconductor devices, fundamentals of magnetism, superconductivity and superconductive materials, dielectric materials, optical properties of materials, LASERs and waveguides. Advanced materials and their technological applications. An introduction to quantum mechanics will be included which will be the foundation upon which energy band diagrams will be built and understood.",
+    "prerequisites": {
+      "text": "MATH 263 and MIME 261",
+      "tree": {
+        "and": [
+          "MATH 263",
+          "MIME 261"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 367",
+      "excludes": [
+        "MIME 367"
+      ]
+    },
+    "notes": [
+      "(6-1.5-3.5)"
+    ]
+  },
+  {
+    "code": "MIME 470",
+    "subject": "MIME",
+    "number": "470",
+    "title": "Engineering Biomaterials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Key definitions, clinical need, desired materials properties, current and future materials, materials assessments and performance. Materials of the body. Characterisation techniques for bulk and mechanical properties of biomaterials. Engineering processing and design of biomaterials.",
+    "prerequisites": {
+      "text": "MIME 261 or equivalent. Permission of instructor.",
+      "tree": "MIME 261",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Attendance is mandatory for a one-time 3-hour lab, scheduled during the semester."
+    ]
+  },
+  {
+    "code": "MIME 473",
+    "subject": "MIME",
+    "number": "473",
+    "title": "Introduction to Computational Materials Design",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to modelling and simulation techniques in materials engineering: quantum mechanics and atomistic simulation (i.e. Monte-Carlo and Molecular Dynamics). These modelling and simulations methods provide new and efficient tools to examine and predict various physical and mechanical properties of materials, enabling bottom-up design of materials and structures starting from quantum and atomistic level. These computational tools play an increasingly important role in modern materials engineering. Fundamental theories behind materials modelling and hands-on training on various modelling software.",
+    "prerequisites": {
+      "text": "COMP 208 and MIME 209 and MIME 362.",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "MIME 209",
+          "MIME 362"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1.5-4.5)"
+    ]
+  },
+  {
+    "code": "MIME 480",
+    "subject": "MIME",
+    "number": "480",
+    "title": "Industrial Training 3",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Four-month work period in industry. Work term report with co-op seminar due upon completion.",
+    "prerequisites": {
+      "text": "MIME 380",
+      "tree": "MIME 380",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to McGill students.",
+      "excludes": []
+    },
+    "notes": [
+      "This administrative fee is charged to all undergraduate students enrolled in the Materials Engineering Co op Program. It supports the direct costs of operating the co-op program, including employer outreach, individualized career advising, coordination of work term opportunities, and the administration of required industrial training courses. The fee is not a job placement fee and is non refundable. The Materials Engineering Co op Program fee was originally implemented in 1997 and was revised in 2026.",
+      "Ces frais administratifs sont exigés de tous les étudiants de premier cycle inscrits au programme coopératif en Génie des matériaux. Ils couvrent les coûts directs liés au fonctionnement du programme coopératif, notamment le développement de partenariats industriels, les conseils de carrière individualisés, la coordination des possibilités de stages coopératifs et la gestion des cours de formation industrielle obligatoires. Les frais ne constituent pas des frais de placement d’emploi et ne sont pas remboursables. Les frais du programme coopératif en Génie des matériaux ont été établis en 1997 et révisés en 2026."
+    ]
+  },
+  {
+    "code": "MIME 481",
+    "subject": "MIME",
+    "number": "481",
+    "title": "Industrial Training 4",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Four-month work period in industry. Work term report due upon completion.",
+    "prerequisites": {
+      "text": "MIME 480. Department permission required.",
+      "tree": "MIME 480",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to McGill students.",
+      "excludes": []
+    },
+    "notes": [
+      "This administrative fee is charged to all undergraduate students enrolled in the Materials Engineering Co op Program. It supports the direct costs of operating the co-op program, including employer outreach, individualized career advising, coordination of work term opportunities, and the administration of required industrial training courses. The fee is not a job placement fee and is non refundable. The Materials Engineering Co op Program fee was originally implemented in 1997 and was revised in 2026.",
+      "Ces frais administratifs sont exigés de tous les étudiants de premier cycle inscrits au programme coopératif en Génie des matériaux. Ils couvrent les coûts directs liés au fonctionnement du programme coopératif, notamment le développement de partenariats industriels, les conseils de carrière individualisés, la coordination des possibilités de stages coopératifs et la gestion des cours de formation industrielle obligatoires. Les frais ne constituent pas des frais de placement d’emploi et ne sont pas remboursables. Les frais du programme coopératif en Génie des matériaux ont été établis en 1997 et révisés en 2026."
+    ]
+  },
+  {
+    "code": "MIME 484",
+    "subject": "MIME",
+    "number": "484",
+    "title": "Mining Project",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A mining research project to be completed during one semester. The project must be approved by an academic advisor. A comprehensive report and a seminar presentation are required for the project.",
+    "prerequisites": {
+      "text": "85 credits completed (non-CEGEP students) or 60 credits completed (students from a CEGEP background).",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-9)"
+    ]
+  },
+  {
+    "code": "MIME 494",
+    "subject": "MIME",
+    "number": "494",
+    "title": "Industrial Work Period 4",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A four-month industrial work period after which the student must submit a report.",
+    "prerequisites": {
+      "text": "MIME 419, MPMC 328 and MPMC 421",
+      "tree": {
+        "and": [
+          "MIME 419",
+          "MPMC 328",
+          "MPMC 421"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "All students registering in this course are subject to an additional course fee of $650.03 to defray the costs of administering the stage."
+    ]
+  },
+  {
+    "code": "MIME 495",
+    "subject": "MIME",
+    "number": "495",
+    "title": "Industrial Work Period 5",
+    "credits": 2,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A four-month industrial work period after which the student must submit a report.",
+    "prerequisites": {
+      "text": "MIME 494",
+      "tree": "MIME 494",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "All students registering in this course are subject to an additional course fee of $513.50 to defray the costs of administering the stage."
+    ]
+  },
+  {
+    "code": "MIME 511",
+    "subject": "MIME",
+    "number": "511",
+    "title": "Advanced Subsurface Ventilation and Air Conditioning",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of air flow in underground mines. Thermodynamics of mine ventilation. Gases, dust, fire and Radon control. Thermal comfort. Mine heat transfer. Refrigeration systems, Ventilation-on-Demand. Optimization of mine ventilation design.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)."
+    ]
+  },
+  {
+    "code": "MIME 512",
+    "subject": "MIME",
+    "number": "512",
+    "title": "Corrosion and Degradation of Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Electrochemical theory of metal corrosion, Evans Diagrams, corrosion rate controlling mechanisms, mixed corrodents, alloying effects, passivation. Discussion and analysis of the various forms of corrosion. Corrosion prevention methods. Oxidation of alloys-mechanisms and kinetics. Degradation of ceramics and polymers. Case studies.",
+    "prerequisites": {
+      "text": "MIME 261 and MIME 352 or permission of instructor.",
+      "tree": {
+        "and": [
+          "MIME 261",
+          "MIME 352"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 412.",
+      "excludes": [
+        "MIME 412"
+      ]
+    },
+    "notes": [
+      "(3-1.5-4.5)"
+    ]
+  },
+  {
+    "code": "MIME 513",
+    "subject": "MIME",
+    "number": "513",
+    "title": "Mine Planning Optimization Under Uncertainty",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Strategic mine planning and optimization under uncertain demand and supply. Modern optimization techniques in mine design and production scheduling. Metal supply and orebody modelling. Market forecasting and planning with flexibility. Valuing information. Stochastic mine optimization and applications in open pit and underground metal mines.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 413.",
+      "excludes": [
+        "MIME 413"
+      ]
+    },
+    "notes": [
+      "3-3-3"
+    ]
+  },
+  {
+    "code": "MIME 514",
+    "subject": "MIME",
+    "number": "514",
+    "title": "Sustainability Analysis of Mining Systems",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Concepts of sustainability analysis applied to mining projects. Case studies topics selected from: Stakeholder Engagement and Participation; Biodiversity and Conservation Management; Mine Water Management; Tailings and Waste Rock Management. Relationship between risk management and life-cycle assessment. Mass balancing and logistical modeling applied within the mining value chain, with an emphasis on sustainability. Quantification of systemic balances between environmental, economic and social indicators, using geostatistical simulations, discrete event simulation, and multi-objective optimization techniques.",
+    "prerequisites": {
+      "text": "FACC 300 and MIME 341, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "FACC 300",
+          "MIME 341"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "MIME 515",
+    "subject": "MIME",
+    "number": "515",
+    "title": "(Bio)material Surface Analysis and Modification",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Material surface properties and how they affect their real-world applications, with emphasis on biologically relevant applications. Material surface modification techniques. Material surface characterization techniques.",
+    "prerequisites": {
+      "text": "(CHEM 233 and MIME 261 and MIME 317) or (CHEE 310 and CHEE 380) or permission of instructor",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEM 233",
+              "MIME 261",
+              "MIME 317"
+            ]
+          },
+          {
+            "and": [
+              "CHEE 310",
+              "CHEE 380"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 520",
+    "subject": "MIME",
+    "number": "520",
+    "title": "Stability of Rock Slopes",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Properties of structural discontinuities. Influence of geological structures on slope stability. Kinematic analysis. Limit equilibrium methods. Empirical methods. Numerical modelling. Slope stabilization and monitoring. Case studies.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 521",
+    "subject": "MIME",
+    "number": "521",
+    "title": "Stability of Underground Openings",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The properties of rock masses and stability classification systems. The influence and properties of geological structural features. Stability related to the design of underground openings and mining systems. Site investigations. Methods of stabilization.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)",
+      "This course in the Faculty of Engineering is open only to McGill students."
+    ]
+  },
+  {
+    "code": "MIME 522",
+    "subject": "MIME",
+    "number": "522",
+    "title": "Mineral Reserve Assessment Techniques",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Techniques in mineral reserve assessment.",
+    "prerequisites": {
+      "text": "COMP 208 or equivalent, MIME 209 or equivalent",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "MIME 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 524",
+    "subject": "MIME",
+    "number": "524",
+    "title": "Mineral Resources Economics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analysis of significant factors affecting mineral supply, including oil and gas. Role of governments, concept of economic rent and determinants of a mineral policy. Objectives, strategies and concerns of mining and oil and gas companies. International resource environment, commodity associations, mineral investment and trade patterns.",
+    "prerequisites": {
+      "text": "FACC 300 or equivalent, or permission of instructor.",
+      "tree": "FACC 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 525",
+    "subject": "MIME",
+    "number": "525",
+    "title": "Stochastic Orebody Modelling",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Uncertainty in modelling orebodies. Conventional modelling methods. Ore reserve estimation and risk. Geostatistical basics. Sequential simulation methods. Fast and efficient simulation of large orebodies. Simulation of multi-element deposits. Simulation of geology. Geometallurgical modelling. Integration and effects on mine planning and financial evaluation. Drilling optimization; reserve classification; grade control. Practical applications.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 425.",
+      "excludes": [
+        "MIME 425"
+      ]
+    },
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 526",
+    "subject": "MIME",
+    "number": "526",
+    "title": "Mineral Economics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Mineral project evaluation techniques and applications. Topics covered include grade-tonnage relationships, capital and operating cost estimation techniques, assessment of mineral market conditions, taxation, discounted cash flow analysis, risk analysis, and optimization of project specifications with respect to capacity and cutoff grade.",
+    "prerequisites": {
+      "text": "Permission of instructor. (Background in economics required.)",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 325.",
+      "excludes": [
+        "MIME 325"
+      ]
+    },
+    "notes": [
+      "(3-2-5)"
+    ]
+  },
+  {
+    "code": "MIME 527",
+    "subject": "MIME",
+    "number": "527",
+    "title": "Selected Topics in Mineral Resource Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A comprehensive study of selected topics in the mineral resource sector.",
+    "prerequisites": {
+      "text": "65 credits (if admitted as U1) or 85 credits (if admitted as U0)",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-0-8)"
+    ]
+  },
+  {
+    "code": "MIME 529",
+    "subject": "MIME",
+    "number": "529",
+    "title": "Automation of Mining Systems",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundational approach to mining automation, including aspects of artificial intelligence, robotic motion and digital communications technology, with connections to mining case studies. Mining system modelling applied to rock cutting, materials transport, and bunkerage, pitch, yaw and roll steering of mining machines. Control and robotics: digitization, discrete systems, sensors, actuators and real time algorithms. Data communication in mines. Simulation exercises.",
+    "prerequisites": {
+      "text": "COMP 208, ECSE 209, MIME 322 and MIME 333, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "ECSE 209",
+          "MIME 322",
+          "MIME 333"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 542",
+    "subject": "MIME",
+    "number": "542",
+    "title": "Transmission Electron Microscopy",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Comprehensive study of transmission electron microscopy (TEM). Theory, principles and practical application of imaging, analysis and advanced sample preparation relevant to biological and non-biological materials.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-2-4)"
+    ]
+  },
+  {
+    "code": "MIME 544",
+    "subject": "MIME",
+    "number": "544",
+    "title": "Analysis: Mineral Processing Systems 1",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "The course covers three main topics: principles of separation, including data presentation, properties of recovery/ yield plots, technical and economic efficiency and identification of limits to separation; column flotation, hydrodynamics of collection and froth zones, mixing, scale-up and design, measurements and control; surface and electrochemistry, including absorption, surface charge, coagulation, electron transfer reactions, electrochemistry in plant practice.",
+    "prerequisites": {
+      "text": "MIME 341",
+      "tree": "MIME 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-3-4)"
+    ]
+  },
+  {
+    "code": "MIME 545",
+    "subject": "MIME",
+    "number": "545",
+    "title": "Analysis: Mineral Processing Systems 2",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Gold recovery (as a Professional Development Seminar): methods of recovery (gravity, flotation, cyanidation), refractory gold (roasting, pressure oxidation, bacterial leaching), dissolved gold recovery (Merrill-Crowe) and activated carbon methods. Sampling: definition of errors, sample extraction, size, and processing. Mass balancing: basic considerations, definition of networks, software. Blending: auto-correlation functions, transfer functions, blending systems. Effect of feed variability.",
+    "prerequisites": {
+      "text": "MIME 341",
+      "tree": "MIME 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-3)"
+    ]
+  },
+  {
+    "code": "MIME 553",
+    "subject": "MIME",
+    "number": "553",
+    "title": "Impact of Materials Production",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Impact on the environment of the production of major materials. Pollution control practices, emerging technologies, cost, resources and conservation. Review of flowsheets for various production methods. Analysis of the use of materials, prices, consumption, fabrication, and recycling of waste materials.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 556",
+    "subject": "MIME",
+    "number": "556",
+    "title": "Sustainable Materials Processing",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Sustainability, population and environment impact, environmental impact indicators, materials flows, enthalpy flows, the carbon cycle, materials intensity, energy intensity, global warming potential, acidification potential, FACTOR-Two, -Four and -Ten, life-cycle-inventory/assessment, end-of-pipe strategies, supply-chain and flow-sheet redesign, recycling, waste treatment and materials case studies.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "MIME 559",
+    "subject": "MIME",
+    "number": "559",
+    "title": "Aluminum Physical Metallurgy",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Crystal structure, deformation characteristics, strengthening and softening mechanisms, hot and cold working. Microstructure property relationships in aluminum alloys. Physical metallurgy of aluminum casting alloys and their uses. Properties, and physical metallurgy of aluminum wrought alloys and their industrial applications.",
+    "prerequisites": {
+      "text": "MIME 360 and MIME 362, or permission of instructor",
+      "tree": {
+        "and": [
+          "MIME 360",
+          "MIME 362"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "MIME 560",
+    "subject": "MIME",
+    "number": "560",
+    "title": "Joining Processes",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Physics of joining; interfacial requirements; energy sources, chemical, mechanical and electrical; homogeneous hot-joining, arc-, Mig-, Tig-, gas-, thermite- and Plasma-welding; Autogeneous hot-joining, forge-, pressure-, friction-, explosive-, electron beam- and laser-welding; Heterogeneous hot-joining, brazing, soldering, diffusion bonding; Heterogeneous cold joining, adhesives, mechanical fastening; Filler materials; Joint metallurgy; Heat affected zone, non-metallic systems; joint design and economics; defects and testing methods.",
+    "prerequisites": {
+      "text": "MIME 250 and MIME 360",
+      "tree": {
+        "and": [
+          "MIME 250",
+          "MIME 360"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 561",
+    "subject": "MIME",
+    "number": "561",
+    "title": "Advanced Materials Design",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Advanced topics in materials design problems. Discussion and laboratory work, supplemented by detailed technical reports. Special attention is given to selection, design and failure problems in various materials systems.",
+    "prerequisites": {
+      "text": "MIME 362 or equivalent",
+      "tree": "MIME 362",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-4-5)"
+    ]
+  },
+  {
+    "code": "MIME 563",
+    "subject": "MIME",
+    "number": "563",
+    "title": "Hot Deformation of Metals",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "High temperature deformation processing of metallic materials. Topics include static and dynamic recrystallization, recovery, precipitation; effect of deformation on phase transformations and microstructural evolution during industrial processing. Mathematical modelling of microstructural evolution.",
+    "prerequisites": {
+      "text": "MIME 360 and MIME 362; MIME 362 or equivalent",
+      "tree": {
+        "and": [
+          "MIME 360",
+          "MIME 362"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 565",
+    "subject": "MIME",
+    "number": "565",
+    "title": "Aerospace Metallic-Materials and Manufacturing Processes",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Integrated approach to aerospace materials, manufacturing and repair; materials and selection criteria for airframe, engines and coatings; repair concepts and technologies; application of new and emerging manufacturing technologies for the forming, joining and repair of aerospace products.",
+    "prerequisites": {
+      "text": "MIME 260 or MIME 261 or permission of instructor",
+      "tree": {
+        "or": [
+          "MIME 260",
+          "MIME 261"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor required",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 567",
+    "subject": "MIME",
+    "number": "567",
+    "title": "Advanced Electronic Properties of Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Electrons as particles and waves, Schrodinger's Equation, electrical and thermal conductivity, semiconductors, semiconductor devices, fundamentals of magnetism, superconductivity and superconductive materials, dielectric materials, optical properties of materials, LASERs and waveguides. Advanced materials and their technological applications. An introduction to quantum mechanics; energy band diagrams.",
+    "prerequisites": {
+      "text": "MATH 263, MATH 264 and MIME 261",
+      "tree": {
+        "and": [
+          "MATH 263",
+          "MATH 264",
+          "MIME 261"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 367 or MIME 467",
+      "excludes": [
+        "MIME 367",
+        "MIME 467"
+      ]
+    },
+    "notes": [
+      "(3-1.5-4.5)"
+    ]
+  },
+  {
+    "code": "MIME 568",
+    "subject": "MIME",
+    "number": "568",
+    "title": "Topics in Advanced Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "New and emerging materials. Composites. Coatings. Electronic materials. Current and future technologies. Specialized property requirements. Novel processing and fabrication techniques. Future developments.",
+    "prerequisites": {
+      "text": "MIME 362 or equivalent",
+      "tree": "MIME 362",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 569",
+    "subject": "MIME",
+    "number": "569",
+    "title": "Electron Beam Analysis of Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Emphasis on operation of scanning and transmission electron microscopes. Topics covered are electron/specimen interactions, hardware description; image contrast description; qualitative and quantitative (ZAF) x-ray analysis; electron diffraction pattern analysis.",
+    "prerequisites": {
+      "text": "MIME 317",
+      "tree": "MIME 317",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-3-4)"
+    ]
+  },
+  {
+    "code": "MIME 570",
+    "subject": "MIME",
+    "number": "570",
+    "title": "Micro- and Nano-Fabrication Fundamentals",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of micro- and nano-fabrication technologies. Lithographic, etching, deposition, and implantation and various control parameters of these processes and their resulting effects on structure, materials quality, and conformality.",
+    "prerequisites": {
+      "text": "MIME 467 or ECSE 330 or equivalent, or permission of instructor",
+      "tree": {
+        "or": [
+          "MIME 467",
+          "ECSE 330"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 571",
+    "subject": "MIME",
+    "number": "571",
+    "title": "Surface Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Surface science. Surface characterization. Surface modification. Coatings and thin films. Tribology. Surface engineering and control of surface properties.",
+    "prerequisites": {
+      "text": "MIME 362",
+      "tree": "MIME 362",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 572",
+    "subject": "MIME",
+    "number": "572",
+    "title": "Computational Thermodynamics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Computational thermodynamics; materials design; process optimization; chemical reactions; phase diagrams; phase transformation; numerical simulation techniques.",
+    "prerequisites": {
+      "text": "MIME 212 or equivalent",
+      "tree": "MIME 212",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 574",
+    "subject": "MIME",
+    "number": "574",
+    "title": "Battery Materials Engineering",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "An engineering-focused exploration of the fundamentals and design principles of advanced battery materials. Introductory electrochemistry, the classification of electrochemical systems, engineering design considerations for rechargeable batteries, roles and optimization of battery components, and methods for testing, synthesis, and modeling of materials. Development of sustainable and efficient battery systems, characterization techniques, battery recycling processes, and engineering approaches to advancing battery technologies.",
+    "prerequisites": {
+      "text": "MIME 212 and MIME 317, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MIME 212",
+          "MIME 317"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "MIME 576",
+    "subject": "MIME",
+    "number": "576",
+    "title": "Advanced Steelmaking and Processing",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The role of thermodynamics and mass transport phenomena in the production of liquid iron and steel in blast furnaces and basic oxygen/electric arc furnaces, followed by refining, and continuous casting of steel sheet, blooms and billets. The physical metallurgy of steels. Thermo-mechanical processing, rolling, and strengthening mechanisms. Phases, microstructures, and associated mechanical properties.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students taking or have taken MIME 456",
+      "excludes": []
+    },
+    "notes": [
+      "(3-1-8)",
+      "This course is given with MIME 456"
+    ]
+  },
+  {
+    "code": "MIME 580",
+    "subject": "MIME",
+    "number": "580",
+    "title": "Additive Manufacturing Using Metallic and Ceramic Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to additive manufacturing, seven AM families, starting material characterization, powder bed and direct energy deposition processes, direct writing, fundamental of sintering and solidification, post-processing and issues, mechanical assessment and reliability, standards, design and topology optimization, industrial applications of AM.",
+    "prerequisites": {
+      "text": "MIME 465 or instructor permission.",
+      "tree": "MIME 465",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)."
+    ]
+  },
+  {
+    "code": "MIME 588",
+    "subject": "MIME",
+    "number": "588",
+    "title": "Reliability Analysis of Mining Systems",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Statistics and probability theory used in reliability. Reliability analysis, measure and networks. Reliability prediction, modelling and testing. Concepts of preventive and corrective maintenance. Reliability based maintenance. Control and management of reliability systems. Quality and safety associated with maintenance analysis. Inventory control. Reliability based optimization.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "MIME 601",
+    "subject": "MIME",
+    "number": "601",
+    "title": "Engineering Laboratory Practice",
+    "credits": 0,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The basics of laboratory safety in mining and materials engineering laboratories. Mandatory safety orientation (administration, contacts, fire, waste, emergency procedures) and official WHMIS training.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to mining and materials engineering graduate students.",
+      "excludes": []
+    },
+    "notes": [
+      "1. For Masters’ students the course must be completed by the end of the first year of the student's enrollment in a Masters' degree program. Likewise, for Doctoral students the course must be completed by the end of the first year of the student's enrollment in a Doctoral degree program."
+    ]
+  },
+  {
+    "code": "MIME 606",
+    "subject": "MIME",
+    "number": "606",
+    "title": "Mineral/Metal Production and Marketing 1",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction of new topics in Mining and Materials Engineering.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 608",
+    "subject": "MIME",
+    "number": "608",
+    "title": "Mineral/Metal Production and Marketing 2",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction of new topics in Mining and Materials Engineering.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 610",
+    "subject": "MIME",
+    "number": "610",
+    "title": "Master's Foundation Course",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Broad exposure to theories, concepts and processes in the field of Materials Engineering. These modules will permit the student to acquire knowledge on different topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both MIME 610D1 and MIME 610D2",
+      "No credit will be given for this course unless both MIME 610D1 and MIME 610D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MIME 610D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MIME 610D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "MIME 610N1",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "MIME 610N2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MIME 620",
+    "subject": "MIME",
+    "number": "620",
+    "title": "Rock Mechanics 1",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "A study of the effects of rock properties and ground stresses on problems in mine design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 621",
+    "subject": "MIME",
+    "number": "621",
+    "title": "Rock Mechanics 2",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The application of the principles of strength of materials to the analysis of problems in ground control.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 623",
+    "subject": "MIME",
+    "number": "623",
+    "title": "Ground Fragmentation",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A comprehensive review of principles and theory of explosives; rock information systems, cratering concepts and applications to mining.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course given once per academic year"
+    ]
+  },
+  {
+    "code": "MIME 624",
+    "subject": "MIME",
+    "number": "624",
+    "title": "Materials Handling in Mines",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comprehensive review of materials handling systems used in open pit and underground mines. Review of system selection criteria, and analysis of the impact of particular systems on mine design.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both MIME 624D1 and MIME 624D2",
+      "No credit will be given for this course unless both MIME 624D1 and MIME 624D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MIME 624D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MIME 624D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "MIME 624N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "MIME 624N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MIME 625",
+    "subject": "MIME",
+    "number": "625",
+    "title": "Applied Mineral Economics 1",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of analytical techniques employed for project evaluation and decision-making in the mineral industry.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 626",
+    "subject": "MIME",
+    "number": "626",
+    "title": "Applied Geostatistics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of applied geostatistics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 627",
+    "subject": "MIME",
+    "number": "627",
+    "title": "Applied Mineral Economics 2",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the techniques employed in the analysis of government policy and the financing of projects in the mineral industry.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 628",
+    "subject": "MIME",
+    "number": "628",
+    "title": "Mineral Engineering Project 1",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A project of the student's choice, undertaken under the direct supervision of at least one staff member. The final mark is assessed on the basis of a final report that is examined internally, by the supervisor and at least one other staff member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 629",
+    "subject": "MIME",
+    "number": "629",
+    "title": "Mineral Engineering Project 2",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Continuation of Mining Engineering Project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 631",
+    "subject": "MIME",
+    "number": "631",
+    "title": "Advanced Stochastic Optimization in Mine Planning",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Uncertainty and risk in mine design and production scheduling. Conventional mine optimization methods and flaws. Mine planning and sustainable mining under uncertainty. Combinatorial optimization and algorithmic methods in mine production scheduling. Real options and decision making in mine planning. Mine waste deferment methods. Global and local optimization of mining processes.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-6)"
+    ]
+  },
+  {
+    "code": "MIME 634",
+    "subject": "MIME",
+    "number": "634",
+    "title": "Mineral Engineering Project 3",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Continuation of Mining Engineering Project 1.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 635",
+    "subject": "MIME",
+    "number": "635",
+    "title": "Finite Element Method - Rock Mechanics",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Overview of numerical methods; elasticity relations; element assembly process; formulative procedures; planar elements; convergence and accuracy; isoparametric formulation; rock joint and rock support elements; dynamic analysis; material and geometric nonlinearities. XFEM. Applications in mining and geotechnical engineering.",
+    "prerequisites": {
+      "text": "MIME 521 and/or permission of instructor",
+      "tree": "MIME 521",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 638",
+    "subject": "MIME",
+    "number": "638",
+    "title": "Mine Waste Management",
+    "credits": 4,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Nature and generation of mine waste. Characteristics of mine waste material. Surface and underground disposal methods. Surface impoundment. Tailing embankment design and stability analysis. Seepage and containment transport. Seepage control methods. Site reclamation. Computer applications in design and monitoring. Case histories.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 640",
+    "subject": "MIME",
+    "number": "640",
+    "title": "Advanced Mineral Processing",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Modern advances in mineral processing techniques. The student will prepare a series of reports covering developments in mineral processing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 652",
+    "subject": "MIME",
+    "number": "652",
+    "title": "Aqueous Processing",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced treatment of the chemical and engineering principles governing aqueous dissolution, purification and deposition operations. Topics include: ionic activities of dilute and concentrated solutions; solution and solid-liquid equilibria; analysis of complexation and redox reactions; high temperature solution thermodynamic kinetics; solvent extraction, equilibria and mass transfer kinetics; nucleation, growth and agglomeration phenomena in aqueous precipitation systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 653",
+    "subject": "MIME",
+    "number": "653",
+    "title": "Transport Phenomena - Process Metallurgy",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Process metallurgical applications of heat, mass and momentum transport theories. Methods of numerical solution in the analysis of: continuous casting, ingot solidification, soaking pits, hot mill operations, alloy addition methods in steel-making, etc. Students are assigned individual computer projects and present a report plus a seminar on their findings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 656",
+    "subject": "MIME",
+    "number": "656",
+    "title": "Deformation Mechanisms in Crystalline Solids",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Deformation and failure mechanisms in crystalline solids; dislocation mechanics and dynamics, including Peierls-Nabarro model, Peach-Koehler equation, dislocation pile-ups and dislocation forest; Griffith fracture mechanics, crack-tip plasticity, J-integral and crack-dislocation interactions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 658",
+    "subject": "MIME",
+    "number": "658",
+    "title": "Quantum Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Quantum mechanical methods for the design of material properties, including: electronic, magnetic, optical and chemical properties. Introduction to practical quantum mechanical materials design methods based on density functional theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 661",
+    "subject": "MIME",
+    "number": "661",
+    "title": "Literature Review on Selected Research Topics",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Literature review concerning specific research topics.",
+    "prerequisites": {
+      "text": "Permission of supervisor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students in thesis programs in Mining or Materials Engineering.",
+      "excludes": []
+    },
+    "notes": [
+      "(9-0-0)"
+    ]
+  },
+  {
+    "code": "MIME 665",
+    "subject": "MIME",
+    "number": "665",
+    "title": "Advanced Processing of Powder Materials",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Metallic and ceramic powder processing. Fabrication, characterization, properties and tailoring of powders. Pressure and pressureless consolidation techniques. Sintering and densification mechanisms. Properties of sintered compacts. Design of fabrication process. Research project on a powder materials topic.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MIME 465.",
+      "excludes": [
+        "MIME 465"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 670",
+    "subject": "MIME",
+    "number": "670",
+    "title": "Research Seminar 1",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminar presentation to staff and students on the Master's research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For students registered for a Master's degree in Mining and or Materials Engineering.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 673",
+    "subject": "MIME",
+    "number": "673",
+    "title": "Mining Engineering Seminar",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "For students registered in the Graduate Diploma or Master's programs in Mining.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 680",
+    "subject": "MIME",
+    "number": "680",
+    "title": "Materials Engineering Project 1",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A project of the student's choice, undertaken under the direct supervision of at least one staff member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 681",
+    "subject": "MIME",
+    "number": "681",
+    "title": "Materials Engineering Project 2",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A project of the student's choice, undertaken under the direct supervision of at least one staff member. Can be a continuation of MIME 680 Materials Engineering Project 1.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 682",
+    "subject": "MIME",
+    "number": "682",
+    "title": "Materials Engineering Project 3",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A project of the student's choice, undertaken under the direct supervision of at least one staff member. Can be a continuation of MIME 681 Materials Engineering Project 2.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 686",
+    "subject": "MIME",
+    "number": "686",
+    "title": "Mining Internship",
+    "credits": 0,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A four-month industrial work period in industry, a research centre or a government agency.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to full-time non-thesis Master’s students in mining engineering with the approval of the student's academic supervisor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 690",
+    "subject": "MIME",
+    "number": "690",
+    "title": "Thesis Research 1",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee, if any.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Master's students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 691",
+    "subject": "MIME",
+    "number": "691",
+    "title": "Thesis Research 2",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee, if any.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Master's students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 692",
+    "subject": "MIME",
+    "number": "692",
+    "title": "Thesis Research 3",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee, if any.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Master's students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 693",
+    "subject": "MIME",
+    "number": "693",
+    "title": "Thesis Research 4",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee, if any.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Master's students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 694",
+    "subject": "MIME",
+    "number": "694",
+    "title": "Thesis Research 5",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee, if any.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Master's students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 695",
+    "subject": "MIME",
+    "number": "695",
+    "title": "Thesis Research 6",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee, if any.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Master's students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 701",
+    "subject": "MIME",
+    "number": "701",
+    "title": "Ph.D. Thesis Research Proposal",
+    "credits": 0,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "For students registered in a Ph.D. program in Mining or Materials Engineering. Student submits a document and takes an oral examination to demonstrate familiarity with relevant literature, define a methodology and describe a work plan.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 702",
+    "subject": "MIME",
+    "number": "702",
+    "title": "Ph.D. Preliminary Examination ",
+    "credits": 0,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of the Ph.D. thesis proposal by the doctoral student and oral examination to evaluate the student's breadth of knowledge regarding the proposed research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 703",
+    "subject": "MIME",
+    "number": "703",
+    "title": "Ph.D. Comprehensive Exam",
+    "credits": 0,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Invited-level seminar presentation to examination committee. The student will highlight the scientific background involved in the field, explain the challenges and will provide explanations of possible solutions generated from the research work.",
+    "prerequisites": {
+      "text": "MIME 701",
+      "tree": "MIME 701",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 704",
+    "subject": "MIME",
+    "number": "704",
+    "title": "Ph.D. Comprehensive Examination in Mining Engineering ",
+    "credits": 0,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Invited-level seminar presentation to examination committee. The student will highlight the scientific background involved in the field, explain the challenges and will provide explanations of possible solutions generated from the research work.",
+    "prerequisites": {
+      "text": "MIME 776",
+      "tree": "MIME 776",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MIME 710",
+    "subject": "MIME",
+    "number": "710",
+    "title": "Ph.D. Foundation Course",
+    "credits": 3,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Broad exposure to theories, concepts and processes in the field of Materials Engineering. These modules will permit the student to acquire knowledge on different topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both MIME 710D1 and MIME 710D2",
+      "No credit will be given for this course unless both MIME 710D1 and MIME 710D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MIME 710D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MIME 710D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "MIME 710N1",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "MIME 710N2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MIME 771",
+    "subject": "MIME",
+    "number": "771",
+    "title": "Research Seminar 2",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminar presentation to staff and students on the Doctorate research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For students registered in a Ph.D. program in Materials Engineering.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MIME 776",
+    "subject": "MIME",
+    "number": "776",
+    "title": "Ph.D. Research Seminar",
+    "credits": 6,
+    "offeredBy": "Mining & Materials Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Submission of a seminar paper and presentation of the research topic in the seminar paper.",
+    "prerequisites": {
+      "text": "MIME 702",
+      "tree": "MIME 702",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

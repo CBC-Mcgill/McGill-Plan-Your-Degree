@@ -1,0 +1,2029 @@
+[
+  {
+    "code": "MUIN 110",
+    "subject": "MUIN",
+    "number": "110",
+    "title": "Elective Practical Instruction 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elective practical instruction in an instrument or voice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 111",
+    "subject": "MUIN",
+    "number": "111",
+    "title": "Elective Practical Instruction 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elective practical instruction in an instrument or voice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 180",
+    "subject": "MUIN",
+    "number": "180",
+    "title": "BMus Practical Lessons 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical instruction on an instrument or voice.",
+    "prerequisites": {
+      "text": "Admission to the B.Mus. program by audition.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUIN 181",
+    "subject": "MUIN",
+    "number": "181",
+    "title": "BMus Practical Lessons 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical examination in clarinet techniques.",
+    "prerequisites": {
+      "text": "MUIN 180",
+      "tree": "MUIN 180",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students entering directly from High Schools outside Quebec.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 210",
+    "subject": "MUIN",
+    "number": "210",
+    "title": "Elective Practical Instruction 3",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elective practical instruction in an instrument or voice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 211",
+    "subject": "MUIN",
+    "number": "211",
+    "title": "Elective Practical Instruction 4",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elective practical instruction in an instrument or voice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 222",
+    "subject": "MUIN",
+    "number": "222",
+    "title": "Concentration 1 Examination",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 232",
+    "subject": "MUIN",
+    "number": "232",
+    "title": "Performance 1 Examination",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 250",
+    "subject": "MUIN",
+    "number": "250",
+    "title": "L.Mus. Practical Instruction 1",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "Admission to the L.Mus. program by audition",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 251",
+    "subject": "MUIN",
+    "number": "251",
+    "title": "L.Mus. Practical Instruction 2",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 250",
+      "tree": "MUIN 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 252",
+    "subject": "MUIN",
+    "number": "252",
+    "title": "L.Mus. Performance 1 Examination",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 269",
+    "subject": "MUIN",
+    "number": "269",
+    "title": "Classical Concerto Exam",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Performance by memory before jury of a concerto from the Classical period.",
+    "prerequisites": {
+      "text": "MUIN 232",
+      "tree": "MUIN 232",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 hour"
+    ]
+  },
+  {
+    "code": "MUIN 270",
+    "subject": "MUIN",
+    "number": "270",
+    "title": "Practical Lessons Performance Minor 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical instruction as part of a performance minor program.",
+    "prerequisites": {
+      "text": "Admission to the relevant performance minor program by audition",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 271",
+    "subject": "MUIN",
+    "number": "271",
+    "title": "Practical Lessons Performance Minor 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Practical instruction as part of a performance minor program.",
+    "prerequisites": {
+      "text": "MUIN 270",
+      "tree": "MUIN 270",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 272",
+    "subject": "MUIN",
+    "number": "272",
+    "title": "Performance Minor Examination 1",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student's progress in the practical area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 273",
+    "subject": "MUIN",
+    "number": "273",
+    "title": "Practical Lessons Performance Minor 3",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction as part of a performance minor program.",
+    "prerequisites": {
+      "text": "Admission to the relevant performance minor program by audition or MUIN 270.",
+      "tree": "MUIN 270",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 274",
+    "subject": "MUIN",
+    "number": "274",
+    "title": "Practical Lessons Performance Minor 4",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction as part of a performance minor program.",
+    "prerequisites": {
+      "text": "MUIN 273",
+      "tree": "MUIN 273",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 275",
+    "subject": "MUIN",
+    "number": "275",
+    "title": "Practical Lessons Performance Minor 5",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Practical instruction as part of a performance minor program.",
+    "prerequisites": {
+      "text": "MUIN 274",
+      "tree": "MUIN 274",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 276",
+    "subject": "MUIN",
+    "number": "276",
+    "title": "Practical Lessons Performance Minor 6",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Practical instruction as part of a performance minor program.",
+    "prerequisites": {
+      "text": "MUIN 275",
+      "tree": "MUIN 275",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 280",
+    "subject": "MUIN",
+    "number": "280",
+    "title": "BMus Practical Lessons 3",
+    "credits": 2.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction on an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 181.",
+      "tree": "MUIN 181",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 281",
+    "subject": "MUIN",
+    "number": "281",
+    "title": "BMus Practical Lessons 4",
+    "credits": 2.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction on an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 280",
+      "tree": "MUIN 280",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 282",
+    "subject": "MUIN",
+    "number": "282",
+    "title": "BMus Performance Examination 1",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student's progress in the practical area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Exam details are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 283",
+    "subject": "MUIN",
+    "number": "283",
+    "title": "BMus Concentration Final Examination",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student's progress in the practical area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Exam details are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 300",
+    "subject": "MUIN",
+    "number": "300",
+    "title": "Voice Coaching 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual coaching on repertoire.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 301",
+    "subject": "MUIN",
+    "number": "301",
+    "title": "Voice Coaching 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual coaching on repertoire.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 302",
+    "subject": "MUIN",
+    "number": "302",
+    "title": "Early Music Minor Repertoire Coaching 1",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Coaching sessions on early music repertoire.",
+    "prerequisites": {
+      "text": "Admission to the Early Music Minor by audition",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 303",
+    "subject": "MUIN",
+    "number": "303",
+    "title": "Early Music Minor Repertoire Coaching 2",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Coaching sessions on early music repertoire.",
+    "prerequisites": {
+      "text": "MUIN 302",
+      "tree": "MUIN 302",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 304",
+    "subject": "MUIN",
+    "number": "304",
+    "title": "Early Music Minor Repertoire Coaching 3",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Coaching sessions on early music repertoire.",
+    "prerequisites": {
+      "text": "MUIN 303",
+      "tree": "MUIN 303",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 305",
+    "subject": "MUIN",
+    "number": "305",
+    "title": "Early Music Minor Repertoire Coaching 4",
+    "credits": 1.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Coaching sessions on early music repertoire.",
+    "prerequisites": {
+      "text": "MUIN 304",
+      "tree": "MUIN 304",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 322",
+    "subject": "MUIN",
+    "number": "322",
+    "title": "Concentration 2 Examination",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 332",
+    "subject": "MUIN",
+    "number": "332",
+    "title": "Performance 2 Examination",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 333",
+    "subject": "MUIN",
+    "number": "333",
+    "title": "Piano Techniques 2",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical examination in piano techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "pass/fail",
+      "Mandatory test for pianists to be taken prior to the Performance 2 Exam."
+    ]
+  },
+  {
+    "code": "MUIN 342",
+    "subject": "MUIN",
+    "number": "342",
+    "title": "Honours Performance 2 Examination",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 350",
+    "subject": "MUIN",
+    "number": "350",
+    "title": "L.Mus. Practical Instruction 3",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 251",
+      "tree": "MUIN 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 351",
+    "subject": "MUIN",
+    "number": "351",
+    "title": "L.Mus. Practical Instruction 4",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 350",
+      "tree": "MUIN 350",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 352",
+    "subject": "MUIN",
+    "number": "352",
+    "title": "L.Mus. Performance 2 Examination",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": {
+      "text": "MUIN 252",
+      "tree": "MUIN 252",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 369",
+    "subject": "MUIN",
+    "number": "369",
+    "title": "Concerto",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Practical examination on concerto repertoire.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "pass/fail",
+      "Mandatory test for pianists"
+    ]
+  },
+  {
+    "code": "MUIN 380",
+    "subject": "MUIN",
+    "number": "380",
+    "title": "BMus Practical Lessons 5",
+    "credits": 2.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction on an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 281",
+      "tree": "MUIN 281",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 381",
+    "subject": "MUIN",
+    "number": "381",
+    "title": "BMus Practical Lessons 6",
+    "credits": 2.5,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction on an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 380",
+      "tree": "MUIN 380",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 382",
+    "subject": "MUIN",
+    "number": "382",
+    "title": "BMus Performance Examination 2",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student's progress in the practical area.",
+    "prerequisites": {
+      "text": "MUIN 282",
+      "tree": "MUIN 282",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Exam details are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 384",
+    "subject": "MUIN",
+    "number": "384",
+    "title": "Conducting Minor Project",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Conducting project including selection, preparation, rehearsal and performance of 10-15 minutes of choral or orchestral music.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Minor in Conducting.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 400",
+    "subject": "MUIN",
+    "number": "400",
+    "title": "Voice Coaching 3",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A course in which the student will have individual coaching sessions on repertoire, with emphasis in musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Artist Diploma in Voice program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 401",
+    "subject": "MUIN",
+    "number": "401",
+    "title": "Voice Coaching 4",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continued individual coaching sessions on repertoire, with emphasis in musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Artist Diploma in Voice program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 432",
+    "subject": "MUIN",
+    "number": "432",
+    "title": "Performance 3 Examination",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 433",
+    "subject": "MUIN",
+    "number": "433",
+    "title": "Piano Techniques 3",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Practical examination in piano techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "pass/fail",
+      "Mandatory test for pianists to be taken prior to the Performance 3 Exam."
+    ]
+  },
+  {
+    "code": "MUIN 442",
+    "subject": "MUIN",
+    "number": "442",
+    "title": "Honours Performance 3 Examination",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 450",
+    "subject": "MUIN",
+    "number": "450",
+    "title": "L.Mus. Practical Instruction 5",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 351",
+      "tree": "MUIN 351",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 451",
+    "subject": "MUIN",
+    "number": "451",
+    "title": "L.Mus. Practical Instruction 6",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 450",
+      "tree": "MUIN 450",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 452",
+    "subject": "MUIN",
+    "number": "452",
+    "title": "L.Mus. Performance 3 Examination",
+    "credits": 8,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student progress.",
+    "prerequisites": {
+      "text": "MUIN 352",
+      "tree": "MUIN 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ],
+    "parts": [
+      {
+        "code": "MUIN 452D1",
+        "credits": 4,
+        "terms": []
+      },
+      {
+        "code": "MUIN 452D2",
+        "credits": 4,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MUIN 462",
+    "subject": "MUIN",
+    "number": "462",
+    "title": "Artist Diploma Recital 1",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Performance in a recital - instrument or voice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 469",
+    "subject": "MUIN",
+    "number": "469",
+    "title": "Artist Diploma Concerto 1",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Practical examination on concerto repertoire.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 480",
+    "subject": "MUIN",
+    "number": "480",
+    "title": "BMus Practical Lessons 7",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction on an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 381",
+      "tree": "MUIN 381",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 481",
+    "subject": "MUIN",
+    "number": "481",
+    "title": "BMus Practical Lessons 8",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction on an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 480",
+      "tree": "MUIN 480",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 482",
+    "subject": "MUIN",
+    "number": "482",
+    "title": "BMus Performance Examination 3",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Assessment of student's progress in the practical area.",
+    "prerequisites": {
+      "text": "MUIN 382",
+      "tree": "MUIN 382",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Exam details are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 500",
+    "subject": "MUIN",
+    "number": "500",
+    "title": "Practical Instruction 1",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Individual coaching sessions for musicians in advanced ensembles to focus on their individual instrumental technique.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to musicians in Chamber Music Stream in the Graduate Diploma in Performance and the Graduate Artist Diploma. May be taken by D.Mus. students with special permission.",
+      "excludes": []
+    },
+    "notes": [
+      "30 minutes"
+    ]
+  },
+  {
+    "code": "MUIN 560",
+    "subject": "MUIN",
+    "number": "560",
+    "title": "Artist Diploma Practical Instruction 3",
+    "credits": 8,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 461",
+      "tree": "MUIN 461",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1.5 hours"
+    ]
+  },
+  {
+    "code": "MUIN 561",
+    "subject": "MUIN",
+    "number": "561",
+    "title": "Artist Diploma Practical Instruction 4",
+    "credits": 8,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practical instruction in an instrument or voice.",
+    "prerequisites": {
+      "text": "MUIN 560",
+      "tree": "MUIN 560",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1.5 hours"
+    ]
+  },
+  {
+    "code": "MUIN 562",
+    "subject": "MUIN",
+    "number": "562",
+    "title": "Artist Diploma Recital 2",
+    "credits": 0,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Performance in a recital - instrument or voice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Complete descriptions are to be found under Examinations and Goals in Practical Subjects in the Music Chapter of the University Calendar."
+    ]
+  },
+  {
+    "code": "MUIN 569",
+    "subject": "MUIN",
+    "number": "569",
+    "title": "Artist Diploma Concerto 2",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Practical examination on concerto repertoire.",
+    "prerequisites": {
+      "text": "MUIN 469",
+      "tree": "MUIN 469",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 601",
+    "subject": "MUIN",
+    "number": "601",
+    "title": "Graduate Diploma Vocal Coaching 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Coaching sessions on vocal repertoire.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Graduate Diploma in Performance",
+      "excludes": []
+    },
+    "notes": [
+      "(1 hour)"
+    ]
+  },
+  {
+    "code": "MUIN 610",
+    "subject": "MUIN",
+    "number": "610",
+    "title": "Vocal Coaching 1",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual coaching sessions on advanced vocal repertoire with emphasis on musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUIN 600",
+      "excludes": [
+        "MUIN 600"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 611",
+    "subject": "MUIN",
+    "number": "611",
+    "title": "Vocal Coaching 2",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of Vocal Coaching I with emphasis on musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUIN 601",
+      "excludes": [
+        "MUIN 601"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 612",
+    "subject": "MUIN",
+    "number": "612",
+    "title": "Vocal Coaching 3",
+    "credits": 1,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Coaching sessions on advanced vocal repertoire with emphasis on musical nuance and the expression of an individual artistic voice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 620",
+    "subject": "MUIN",
+    "number": "620",
+    "title": "Performance Tutorial 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental, vocal, conducting, collaborative piano or operatic tutorial. Technical and interpretive development, preparation of thesis performance projects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 621",
+    "subject": "MUIN",
+    "number": "621",
+    "title": "Performance Tutorial 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Additional individual instrumental, vocal, conducting, collaborative piano or operatic tutorial according to area of performing specialization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 622",
+    "subject": "MUIN",
+    "number": "622",
+    "title": "Performance Tutorial 3",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual tutorial according to area of performing specialization. Interpretative preparation of thesis performance projects and development of individual artistic vision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "MUIN 622D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUIN 622D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUIN 623",
+    "subject": "MUIN",
+    "number": "623",
+    "title": "Performance Tutorial 4",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Extra term of Individual instrumental, vocal, conducting, collaborative piano or operatic tutorial.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 624",
+    "subject": "MUIN",
+    "number": "624",
+    "title": "Performance Tutorial 5",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Extra term of individual tutorial according to area of performing specialization. Interpretative preparation of thesis performance projects and development of individual artistic vision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 626",
+    "subject": "MUIN",
+    "number": "626",
+    "title": "Jazz Performance/Composition Tutorial 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instruction in instrumental performance, jazz composition and arranging and jazz improvisation according to performing specialization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 626",
+      "excludes": [
+        "MUPG 626"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 627",
+    "subject": "MUIN",
+    "number": "627",
+    "title": "Jazz Performance/Composition Tutorial 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instruction in instrumental performance, jazz composition and arranging and jazz improvisation according to performing specialization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 627",
+      "excludes": [
+        "MUPG 627"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 628",
+    "subject": "MUIN",
+    "number": "628",
+    "title": "Jazz Performance/Composition Tutorial 3",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instruction in instrumental performance, jazz composition and arranging and jazz improvisation according to performing specialization, including work on various aspects of jazz artistry in preparation for recital requirements.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 628",
+      "excludes": [
+        "MUPG 628"
+      ]
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "MUIN 628D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUIN 628D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUIN 630",
+    "subject": "MUIN",
+    "number": "630",
+    "title": "Conducting Tutorial 1",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Group conducting tutorial. Technical and interpretive development, preparation of thesis performance projects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Master of Music (M. Mus.) in Performance; Conducting option.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 631",
+    "subject": "MUIN",
+    "number": "631",
+    "title": "Conducting Tutorial 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Group conducting tutorial. Continuing technical and interpretive development, preparation of thesis performance projects.",
+    "prerequisites": {
+      "text": "MUIN 630",
+      "tree": "MUIN 630",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Master of Music (M.Mus) in Performance; Conducting option.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 632",
+    "subject": "MUIN",
+    "number": "632",
+    "title": "Conducting Tutorial 3",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Additional group conducting tutorial. Interpretative preparation of thesis performance projects and development of individual artistic vision.",
+    "prerequisites": {
+      "text": "MUIN 631",
+      "tree": "MUIN 631",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Master of Music (M. Mus.) in Performance; Conducting option.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 633",
+    "subject": "MUIN",
+    "number": "633",
+    "title": "Conducting Tutorial 4",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Extra term of group conducting tutorial. Interpretive preparation of thesis performance projects and development of individual artistic vision.",
+    "prerequisites": {
+      "text": "MUIN 632",
+      "tree": "MUIN 632",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Tuition per credit and Copyright Fee per credit fee apply."
+    ]
+  },
+  {
+    "code": "MUIN 634",
+    "subject": "MUIN",
+    "number": "634",
+    "title": "Graduate Diploma Tutorial 1",
+    "credits": 8,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical Instruction; Individual artists: specific performance projects detailed at audition. Jazz Musicians: includes arranging and composition. Chamber ensembles: individual artistry, development of group identity with respect to sound, communication skills, performance practice, and artistic/interpretative vision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Graduate Diploma in Performance.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 635",
+    "subject": "MUIN",
+    "number": "635",
+    "title": "Graduate Diploma Tutorial 2",
+    "credits": 8,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continued Practical Instruction; Individual artists: specific performance projects detailed at audition. Jazz Musicians: includes arranging and composition. Chamber ensembles: individual artistry, development of group identity with respect to sound, communication skills, performance practice, and artistic/interpretative vision.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Graduate Diploma in Perfomance.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 637",
+    "subject": "MUIN",
+    "number": "637",
+    "title": "Graduate Certificate Conducting Tutorial 1 ",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Group conducting tutorial. Technical and interpretive development and preparation of graduate certificate performance project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Graduate Certificate in Performance - Choral Conducting.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 638",
+    "subject": "MUIN",
+    "number": "638",
+    "title": "Graduate Certificate Conducting Tutorial 2",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Group conducting tutorial. Continued technical and interpretive development and preparation of graduate certificate performance project.",
+    "prerequisites": {
+      "text": "MUIN 637",
+      "tree": "MUIN 637",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Graduate Certificate in Performance - Choral Conducting.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 700",
+    "subject": "MUIN",
+    "number": "700",
+    "title": "Doctoral Repertoire Coaching 1",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual tutorial coaching sessions in repertoire, with emphasis on musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 701",
+    "subject": "MUIN",
+    "number": "701",
+    "title": "Doctoral Repertoire Coaching 2",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual tutorial coaching sessions in repertoire, with emphasis on musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 702",
+    "subject": "MUIN",
+    "number": "702",
+    "title": "Doctoral Repertoire Coaching 3",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual tutorial coaching sessions in repertoire, with emphasis on musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 703",
+    "subject": "MUIN",
+    "number": "703",
+    "title": "Doctoral Repertoire Coaching 4",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual tutorial coaching sessions in repertoire, with emphasis on musical and linguistic nuance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUIN 715",
+    "subject": "MUIN",
+    "number": "715",
+    "title": "Post-Graduate Artist Diploma Tutorial 1",
+    "credits": 8,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Practical instruction. Coaching and mentorship in support of the development of artistic goals defined by the student in consultation with the instructor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Post-Graduate Artist Diploma in Performance program. Not open to students who have taken MUIN 710.",
+      "excludes": [
+        "MUIN 710"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 716",
+    "subject": "MUIN",
+    "number": "716",
+    "title": "Post-Graduate Artist Diploma Tutorial 2",
+    "credits": 8,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Practical instruction. Continued coaching and mentorship in support of the development of artistic goals defined by the student in consultation with the instructor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Post-Graduate Artist Diploma in Performance program. Not open to students who have taken MUIN 711.",
+      "excludes": [
+        "MUIN 711"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 720",
+    "subject": "MUIN",
+    "number": "720",
+    "title": "D.Mus. Performance Tutorial 1",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 720",
+      "excludes": [
+        "MUPG 720"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 721",
+    "subject": "MUIN",
+    "number": "721",
+    "title": "D.Mus. Performance Tutorial 2",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 721",
+      "excludes": [
+        "MUPG 721"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 722",
+    "subject": "MUIN",
+    "number": "722",
+    "title": "D.Mus. Performance Tutorial 3",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 722",
+      "excludes": [
+        "MUPG 722"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 723",
+    "subject": "MUIN",
+    "number": "723",
+    "title": "D.Mus. Performance Tutorial 4",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 723",
+      "excludes": [
+        "MUPG 723"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 724",
+    "subject": "MUIN",
+    "number": "724",
+    "title": "D.Mus. Performance Tutorial 5",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 724",
+      "excludes": [
+        "MUPG 724"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 725",
+    "subject": "MUIN",
+    "number": "725",
+    "title": "D.Mus. Performance Tutorial 6",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 725",
+      "excludes": [
+        "MUPG 725"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 726",
+    "subject": "MUIN",
+    "number": "726",
+    "title": "D.Mus. Performance Tutorial 7",
+    "credits": 4,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 726",
+      "excludes": [
+        "MUPG 726"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 730",
+    "subject": "MUIN",
+    "number": "730",
+    "title": "D.Mus. Performance Tutorial 8",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 730",
+      "excludes": [
+        "MUPG 730"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 731",
+    "subject": "MUIN",
+    "number": "731",
+    "title": "D.Mus. Performance Tutorial 9",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical or interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 731",
+      "excludes": [
+        "MUPG 731"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 732",
+    "subject": "MUIN",
+    "number": "732",
+    "title": "D.Mus. Performance Tutorial 10",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 732",
+      "excludes": [
+        "MUPG 732"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 733",
+    "subject": "MUIN",
+    "number": "733",
+    "title": "D.Mus. Performance Tutorial 11",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 733",
+      "excludes": [
+        "MUPG 733"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUIN 734",
+    "subject": "MUIN",
+    "number": "734",
+    "title": "D.Mus. Performance Tutorial 12",
+    "credits": 6,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual instrumental or vocal tutorial. Advanced technical and interpretive training as well as recital preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPG 734",
+      "excludes": [
+        "MUPG 734"
+      ]
+    },
+    "notes": []
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "code": "BUS2 365",
+    "subject": "BUS2",
+    "number": "365",
+    "title": "Business Associations",
+    "credits": 4,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to agency or mandate, partnership and co-operatives. The nature of corporate personality; the two systems of incorporation; constitutional problems; the raising and maintenance of a company's capital; the organs of the company; and protection of investors and minority shareholders.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on May 1, 2, 7, 8, 9, 14, 15, 16, 21, 22, 23, & 24.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "BUS2 501",
+    "subject": "BUS2",
+    "number": "501",
+    "title": "Patent Theory and Policy",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [],
+    "description": "Examination and critical assessment of the justifications of patent law; the tension between the public domain and private monopoly control; examination of international patent protection; international conventions touching on patent law, international trade instruments; examination of patents in relation to new technology: biotechnology, the Internet and business methods.",
+    "prerequisites": {
+      "text": "BUS2 463",
+      "tree": "BUS2 463",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to first year students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BUS2 502",
+    "subject": "BUS2",
+    "number": "502",
+    "title": "Intellectual and Industrial Property",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of private relationships involving inventive and creative activity through an analysis of various conceptions of intellectual property regimes, in the context of public governance of public space, as well as the interrelationship between international and national law.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to first year students. Not open to students who have taken BUS2 463.",
+      "excludes": [
+        "BUS2 463"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BUS2 503",
+    "subject": "BUS2",
+    "number": "503",
+    "title": "Business Organizations",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [],
+    "description": "A treatment of specialized topics in the law of business organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BUS2 367.",
+      "excludes": [
+        "BUS2 367"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BUS2 504",
+    "subject": "BUS2",
+    "number": "504",
+    "title": "Securities Regulation",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the structure of Canada's capital markets and a review of major features of securities regulation using the Quebec or Ontario scheme as background. An examination of the general regulatory framework for licensing of securities professionals, disclosure to investors and enforcement powers of regulators.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BUS2 372.",
+      "excludes": [
+        "BUS2 372"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BUS2 505",
+    "subject": "BUS2",
+    "number": "505",
+    "title": "Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced issues in business and corporate law. Principles underlying decisions about a corporation's capital structure. Distinctive aspects and rights of corporate securities, including common shares, preferred shares.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BUS2 464.",
+      "excludes": [
+        "BUS2 464"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BUS2 506",
+    "subject": "BUS2",
+    "number": "506",
+    "title": "Corporate Governance",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [],
+    "description": "The law of corporate governance. Examination of central questions of governance, including several key debates: shareholder and stakeholder theory, shareholder democracy, and especially diversity in corporate governance. Voluntary and mandated diversity measures in Canada, the United States, Europe, and elsewhere. How social science has influenced regulation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken LAWG 539 when topic was \"Corporate Governance\".",
+      "excludes": [
+        "LAWG 539"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BUS2 531",
+    "subject": "BUS2",
+    "number": "531",
+    "title": "Banking Law",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Legal relationships between banks and the people who deal with banks in connection with the settlement of transactions by way of paper instruments and electronic means, including wire transfers, debit and credit cards, cheques, trade bills and letters of credit.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BUS2 561",
+    "subject": "BUS2",
+    "number": "561",
+    "title": "Insurance",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The general principles of the insurance contract under the law of Quebec, with reference to the Ontario Insurance Act and the insurance acts of other common law provinces. This course provides an opportunity for immersion in the culture, epistemology and practices of the Civil Law Tradition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BUS2 461",
+      "excludes": [
+        "BUS2 461"
+      ]
+    },
+    "notes": []
+  }
+]

@@ -1,0 +1,3375 @@
+[
+  {
+    "code": "BIOL 101",
+    "subject": "BIOL",
+    "number": "101",
+    "title": "Organismal Biology Laboratory",
+    "credits": 1,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Laboratory component of BIOL 111. May be taken only by transfer students who have completed elsewhere the lecture component but not the laboratory of BIOL 111 and only with permission of the Associate Dean (Student Affairs) of Science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken, or are taking BIOL 111.",
+      "excludes": [
+        "BIOL 111"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "2 hours laboratory",
+      "Labs are held weekly, starting from the second week of term. Attendance at the first lab is mandatory to confirm registration in the course."
+    ]
+  },
+  {
+    "code": "BIOL 102",
+    "subject": "BIOL",
+    "number": "102",
+    "title": "Cell and Molecular Biology Methods",
+    "credits": 1,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The laboratory component of BIOL 112. May be taken only by transfer students who have completed elsewhere the lecture component but not the laboratory of BIOL 112 and only with permission of the Associate Dean (Student Affairs) of Science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking, or have taken BIOL 112.",
+      "excludes": [
+        "BIOL 112"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "2 hours laboratory",
+      "Labs are held weekly, starting from the second week of term. Attendance at the first lab is mandatory to confirm registration in the course."
+    ]
+  },
+  {
+    "code": "BIOL 111",
+    "subject": "BIOL",
+    "number": "111",
+    "title": "Principles: Organismal Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the phylogeny, structure, function and adaptation of unicellular organisms, plants and animals in the biosphere.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEGEP objective 00UK or equivalent; or BIOL 115.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "2 hours lecture and 2 hours laboratory",
+      "This course serves as an alternative to CEGEP objective code 00UK",
+      "Labs are held weekly, starting from the second week of term. Attendance at the first lab is mandatory to confirm registration in the course."
+    ]
+  },
+  {
+    "code": "BIOL 112",
+    "subject": "BIOL",
+    "number": "112",
+    "title": "Cell and Molecular Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The cell: ultrastructure, division, chemical constituents and reactions. Bioenergetics: photosynthesis and respiration. Principles of genetics, the molecular basis of inheritance and biotechnology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CEGEP objective 00XU or equivalent;or BIOL 115; or AEBI 122",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "2 hours lecture and 2 hours laboratory",
+      "Labs are held weekly, starting from the second week of term. Attendance at the first lab is mandatory to confirm registration in the course.",
+      "This course serves as an alternative to CEGEP objective code 00XU"
+    ]
+  },
+  {
+    "code": "BIOL 115",
+    "subject": "BIOL",
+    "number": "115",
+    "title": "Essential Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to biological science that emphasizes the manner in which scientific understanding is achieved and evolves and the influence of biological science on society. Topics will include cell structure and function, genetics, evolution, organ physiology, ecology and certain special topics that change from year to year.",
+    "prerequisites": {
+      "text": "none.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to non-Science students; not open to students who have had BIOL 111, BIOL 112, or equivalents.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 200",
+    "subject": "BIOL",
+    "number": "200",
+    "title": "Molecular Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The physical and chemical properties of the cell and its components in relation to their structure and function. Topics include: protein structure, enzymes and enzyme kinetics; nucleic acid replication, transcription and translation; the genetic code, mutation, recombination, and regulation of gene expression.",
+    "prerequisites": {
+      "text": "BIOL 112 or equivalent",
+      "tree": "BIOL 112",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CHEM 212 or equivalent, or CHEM 204",
+      "tree": {
+        "or": [
+          "CHEM 212",
+          "CHEM 204"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture, 1 hour optional tutorial"
+    ]
+  },
+  {
+    "code": "BIOL 201",
+    "subject": "BIOL",
+    "number": "201",
+    "title": "Cell Biology and Metabolism",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course introduces the student to our modern understanding of cells and how they work. Major topics to be covered include: photosynthesis, energy metabolism and metabolic integration; plasma membrane including secretion, endocytosis and contact mediated interactions between cells; cytoskeleton including cell and organelle movement; the nervous system; hormone signaling; the cell cycle.",
+    "prerequisites": {
+      "text": "BIOL 200.",
+      "tree": "BIOL 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ANAT 212 or BIOC 212",
+      "excludes": [
+        "ANAT 212",
+        "BIOC 212"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture, 1 hour optional tutorial"
+    ]
+  },
+  {
+    "code": "BIOL 202",
+    "subject": "BIOL",
+    "number": "202",
+    "title": "Basic Genetics",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to basic principles, and to modern advances, problems and applications in the genetics of higher and lower organisms with examples representative of the biological sciences.",
+    "prerequisites": {
+      "text": "BIOL 200 or BIOL 219",
+      "tree": {
+        "or": [
+          "BIOL 200",
+          "BIOL 219"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking LSCI 204 or BIOL 302.",
+      "excludes": [
+        "BIOL 302",
+        "LSCI 204"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture, 1 hour optional tutorial per week"
+    ]
+  },
+  {
+    "code": "BIOL 205",
+    "subject": "BIOL",
+    "number": "205",
+    "title": "Functional Biology of Plants and Animals",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Unified view of form and function in animals and plants. Focus on how the laws of chemistry and physics illuminate biological processes relating to the acquisition of energy and materials and their use in movement, growth, development, reproduction and responses to environmental stress.",
+    "prerequisites": {
+      "text": "BIOL 200 or BIOL 219 or permission of the instructor",
+      "tree": {
+        "or": [
+          "BIOL 200",
+          "BIOL 219"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "ANAT 212/BIOC 212 or BIOL 201",
+      "tree": {
+        "or": [
+          "ANAT 212",
+          "BIOC 212",
+          "BIOL 201"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture, optional conference hour"
+    ]
+  },
+  {
+    "code": "BIOL 206",
+    "subject": "BIOL",
+    "number": "206",
+    "title": "Methods in Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to modern methods used in organismal biology, including ecological sampling, experimental methods and statistics. Particular emphasis is on ways of thinking about the design of sampling programs and the analyses of data to test hypotheses using observational or experimental data.",
+    "prerequisites": {
+      "text": "BIOL 111 or equivalent",
+      "tree": "BIOL 111",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "1. 2 hours lecture, 2. 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "BIOL 210",
+    "subject": "BIOL",
+    "number": "210",
+    "title": "How Science Works",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the thinking, language, and practices of scientists. Exploration of science as a way of understanding the world, its methodological and philosophical foundations, its limitations, and how science functions in the context of society and politics. Emphasis is placed on the scientific claims and science- related issues that we encounter as citizens. Topics include scientific methods and reasoning, research ethics, probability and risk, science funding, science communication and publishing, and misinformation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture, 1 hour tutorial"
+    ]
+  },
+  {
+    "code": "BIOL 215",
+    "subject": "BIOL",
+    "number": "215",
+    "title": "Introduction to Ecology and Evolution",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the fundamental processes of ecology and evolution that bear on the nature and diversity of organisms and the processes that govern their assembly into ecological communities and their roles in ecosystem function.",
+    "prerequisites": {
+      "text": "BIOL 111",
+      "tree": "BIOL 111",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ENVR 202",
+      "excludes": [
+        "ENVR 202"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 216",
+    "subject": "BIOL",
+    "number": "216",
+    "title": "Biology of Behaviour",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the study of animal behaviour at the population, organismal, cellular, and molecular levels. Historical and contemporary methods and experiments will be presented and discussed to provide an overall appreciation of the biology of behaviour, with a focus on the application of multiple levels of analysis to biological phenomena and the formulation of hypotheses about evolution, development, function, and mechanisms of behavioural traits. Topics will range from how animals communicate with one another to the cellular mechanisms that allow information to be processed by nervous systems.",
+    "prerequisites": {
+      "text": "BIOL 111 and BIOL 112 or equivalents",
+      "tree": {
+        "and": [
+          "BIOL 111",
+          "BIOL 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 219",
+    "subject": "BIOL",
+    "number": "219",
+    "title": "Introduction to Physical Molecular and Cell Biology",
+    "credits": 4,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to molecular and cell biology from a physical perspective. Techniques and methodologies, both experimental and computational, are included in the presentation of each thematic module.",
+    "prerequisites": {
+      "text": "BIOL 112; CHEM 110 and CHEM 120; MATH 140, MATH 141 and MATH 133; PHYS 131 and PHYS 142; or the equivalents of these courses.",
+      "tree": {
+        "and": [
+          "BIOL 112",
+          "CHEM 110",
+          "CHEM 120",
+          "MATH 140",
+          "MATH 141",
+          "MATH 133",
+          "PHYS 131",
+          "PHYS 142"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 222 or equivalent",
+      "tree": "MATH 222",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ANAT 212, BIOC 212, BIOL 200, and BIOL 201, or BIEN 219. Only open to students in Bioengineering, Computer Science-Biology, Biology-Mathematics, Biology-Quantitative Biology, Chemistry-Biophysical Chemistry, and Physics-Biological Physics Options.",
+      "excludes": [
+        "ANAT 212",
+        "BIEN 219",
+        "BIOC 212",
+        "BIOL 200",
+        "BIOL 201"
+      ]
+    },
+    "notes": [
+      "This course is meant to prepare students for related 300-level courses in Biology, Chemistry, Engineering and Physics."
+    ]
+  },
+  {
+    "code": "BIOL 240",
+    "subject": "BIOL",
+    "number": "240",
+    "title": "Monteregian Flora",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Field studies of ferns, fern allies, conifers and flowering plants; the use of keys for plant identification.",
+    "prerequisites": {
+      "text": "BIOL 111 or permission",
+      "tree": "BIOL 111",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PLNT 358",
+      "excludes": [
+        "PLNT 358"
+      ]
+    },
+    "notes": [
+      "Note: Taught at the Gault Nature Reserve. Contact instructor for specific dates, logistics: (virginie.millien@mcgill.ca).",
+      "This course is offered in the summer.",
+      "This course, given at the University’s Gault Nature Reserve in Mont St. Hilaire, has an additional fee of $485.56 which includes a hand lens, a textbook, handouts, lodging and supper each day."
+    ]
+  },
+  {
+    "code": "BIOL 300",
+    "subject": "BIOL",
+    "number": "300",
+    "title": "Molecular Biology of the Gene",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of current knowledge and approaches in the area of regulation of gene expression, post-transcriptional control of gene expression, and signal transduction.",
+    "prerequisites": {
+      "text": "BIOL 219 or BIOL 200 plus either BIOL 201 or ANAT 212/BIOC 212",
+      "tree": {
+        "or": [
+          "BIOL 219",
+          {
+            "and": [
+              "BIOL 200",
+              "BIOL 201"
+            ]
+          },
+          "ANAT 212",
+          "BIOC 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 301",
+    "subject": "BIOL",
+    "number": "301",
+    "title": "Cell and Molecular Laboratory",
+    "credits": 4,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to biology research and communication with a focus on cell and molecular biology. Through conducting a series of project-based experiments and writing a final report, molecular and synthetic biology techniques such as gene cloning, manipulation, protein isolation and characterization and how research is conducted, analyzed and communicated will be addressed. In addition, an introduction to bioinformatics methods and their role in analysis will be provided.",
+    "prerequisites": {
+      "text": "BIOL 200, BIOL 201 (or ANAT 212/BIOC 212); or BIOL 219",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          "BIOL 201",
+          {
+            "or": [
+              "ANAT 212",
+              "BIOC 212"
+            ]
+          },
+          "BIOL 219"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOC 300, or BIOC 220 and BIOC 320. Requires departmental approval.",
+      "excludes": [
+        "BIOC 220",
+        "BIOC 300",
+        "BIOC 320"
+      ]
+    },
+    "notes": [
+      "Fall or Winter",
+      "1 hour lecture and one 6-hour laboratory",
+      "For approval email maxime.leroux@mcgill.ca. Specify your ID number as well as the term and two lab day preferences."
+    ]
+  },
+  {
+    "code": "BIOL 302",
+    "subject": "BIOL",
+    "number": "302",
+    "title": "Fundamentals of Genetics and Genomics",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Trait variation within and across populations and species,and how this reflects variation within genomes. Case studies and problem-solving approaches will be used to illustrate the tools of genomics, molecular genetics and classical genetics, and how they are employed to understand the mechanisms of phenotypic variation.Topics will include evolutionary, developmental and human genetics. Application of multiple levels of genetic analysis, formulation, and testing of hypotheses on critical topics ranging from evolution to developmental biology to human genetics.",
+    "prerequisites": {
+      "text": "BIOL 200 or BIOL 219; BIOL 215, or permission of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 200",
+              "BIOL 219"
+            ]
+          },
+          "BIOL 215"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL202.",
+      "excludes": [
+        "BIOL 202"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOL 303",
+    "subject": "BIOL",
+    "number": "303",
+    "title": "Developmental Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A consideration of the fundamental processes and principles operating during embryogenesis. Experimental analyses at the molecular, cellular, and organismal levels will be presented and discussed to provide an overall appreciation of developmental phenomena.",
+    "prerequisites": {
+      "text": "BIOL 202 or BIOL 302; BIOL 219 or BIOL 200 plus either BIOL 201 or ANAT212/BIOC212",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          },
+          {
+            "or": [
+              "BIOL 219",
+              {
+                "and": [
+                  "BIOL 200",
+                  "BIOL 201"
+                ]
+              },
+              "ANAT 212",
+              "BIOC 212"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "BIOL 202.",
+      "tree": "BIOL 202",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken ANAT 381.",
+      "excludes": [
+        "ANAT 381"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture and 1 hour optional tutorial"
+    ]
+  },
+  {
+    "code": "BIOL 304",
+    "subject": "BIOL",
+    "number": "304",
+    "title": "Evolution",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A comprehensive introduction to evolutionary biology. It covers both short-term and long-term evolutionary processes. Topics include the history of life, the origin of species, adaptation, natural selection and sexual selection.",
+    "prerequisites": {
+      "text": "BIOL 205 and BIOL 215 or ENVR 202",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIOL 205",
+              "BIOL 215"
+            ]
+          },
+          "ENVR 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture."
+    ]
+  },
+  {
+    "code": "BIOL 305",
+    "subject": "BIOL",
+    "number": "305",
+    "title": "Animal Diversity",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The characteristics of the major groups of animals, their ancestry, history and relationship to one another. The processes of speciation, adaptive radiation and extinction responsible for diversity. Methods for constructing of phylogenies, for comparing phenotypes, and for estimating and analyzing diversity.",
+    "prerequisites": {
+      "text": "BIOL 215 or both ENVR 200 and ENVR 202",
+      "tree": {
+        "or": [
+          "BIOL 215",
+          {
+            "and": [
+              "ENVR 200",
+              "ENVR 202"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lecture and 1 three-hour laboratory"
+    ]
+  },
+  {
+    "code": "BIOL 306",
+    "subject": "BIOL",
+    "number": "306",
+    "title": "Neural Basis of Behaviour",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Neural mechanisms of animal behaviour; neuroethology; cellular neurophysiology, integrative networks within nervous systems; neural control of movement; processing of sensory information.",
+    "prerequisites": {
+      "text": "PHYS 102 or PHYS 142 or CEGEP Physics, and one of the following: BIOL 216, NSCI 200, or PHGY 209, or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PHYS 102",
+              "PHYS 142"
+            ]
+          },
+          {
+            "or": [
+              "BIOL 216",
+              "NSCI 200",
+              "PHGY 209"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 308.",
+      "excludes": [
+        "PSYC 308"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 307",
+    "subject": "BIOL",
+    "number": "307",
+    "title": "Behavioural Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "How an organism’s behaviour relates to its physical, biological, and social environment, using evolutionary and ecological perspectives. Emphasis is on general principles, covering topics such feeding, predator avoidance, aggression, reproduction, social behaviour, communication and cognition.",
+    "prerequisites": {
+      "text": "BIOL 215 and BIOL 216 (or equivalents), or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIOL 215",
+          "BIOL 216"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "In some weeks, lecture will be replaced by interactive discussion periods, practical exercises, or student presentations"
+    ]
+  },
+  {
+    "code": "BIOL 308",
+    "subject": "BIOL",
+    "number": "308",
+    "title": "Ecological Dynamics",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of population, community, and ecosystem dynamics: population growth and regulation, species interactions, dynamics of competitive interactions and of predator/prey systems; evolutionary dynamics.",
+    "prerequisites": {
+      "text": "BIOL 215 or both ENVR 200 and ENVR 202",
+      "tree": {
+        "or": [
+          "BIOL 215",
+          {
+            "and": [
+              "ENVR 200",
+              "ENVR 202"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours per week lecture, four sessions of 1.5 hour tutorial during the semester."
+    ]
+  },
+  {
+    "code": "BIOL 309",
+    "subject": "BIOL",
+    "number": "309",
+    "title": "Mathematical Models in Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of finite difference and differential equations to problems in cell and developmental biology, ecology and physiology. Qualitative, quantitative and graphical techniques are used to analyze mathematical models and to compare theoretical predictions with experimental data.",
+    "prerequisites": {
+      "text": "BIOL 200, BIOL 201 (or ANAT 212/BIOC 212); or BIOL 219",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          "BIOL 201",
+          {
+            "or": [
+              "ANAT 212",
+              "BIOC 212"
+            ]
+          },
+          "BIOL 219"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 310",
+    "subject": "BIOL",
+    "number": "310",
+    "title": "Biodiversity and Ecosystems",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Ecological bases of the natural causes and consequences of current global environmental changes, including how biodiversity and ecosystem processes are defined and measured, how they vary in space and time, how they are affected by physical and biological factors, and how they affect each other and human societies.",
+    "prerequisites": {
+      "text": "BIOL 215; or ENVR 200 and ENVR 202; MATH 112 or equivalent; or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIOL 215",
+          "ENVR 200",
+          "ENVR 202",
+          "MATH 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture",
+      "one-day field trip to Mont St-Hilaire"
+    ]
+  },
+  {
+    "code": "BIOL 311",
+    "subject": "BIOL",
+    "number": "311",
+    "title": "Advanced Methods in Organismal Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of methods and techniques used by organismal biologists, paired with the design of sampling programs to test hypotheses using observational or experimental data, and the analysis of data. Topics include DNA barcoding/metabarcoding and experimental evolution.",
+    "prerequisites": {
+      "text": "BIOL 200 or BIOL 219; BIOL 206, COMP 204, and BIOL 202 or BIOL 302.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 200",
+              "BIOL 219"
+            ]
+          },
+          "BIOL 206",
+          "COMP 204",
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIOL 206 prior to Fall 2020",
+      "excludes": [
+        "BIOL 206"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOL 313",
+    "subject": "BIOL",
+    "number": "313",
+    "title": "Eukaryotic Cell Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "In-depth examination of the structure and function of eukaryotic cells, with an emphasis on experimental design and interpretation. Examination of the molecular mechanisms of various cellular processes, including protein homeostasis, intracellular transport, cytoskeletal dynamics, multicellular organization and cell proliferation.",
+    "prerequisites": {
+      "text": "BIOL 202 or BIOL 302; BIOL 219 or BIOL 200 plus either BIOL 201 or ANAT 212/BIOC 212",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          },
+          {
+            "or": [
+              "BIOL 219",
+              {
+                "and": [
+                  "BIOL 200",
+                  "BIOL 201"
+                ]
+              },
+              "ANAT 212",
+              "BIOC 212"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture and 1 hour optional tutorial"
+    ]
+  },
+  {
+    "code": "BIOL 314",
+    "subject": "BIOL",
+    "number": "314",
+    "title": "Molecular Biology of Cancer",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The molecular basis of human cancers, including analyzing the events that promote the formation of oncogenes and inhibit tumour suppressor genes, the biochemical properties of the proteins encoded by these genes, and their functions. Current molecular targets for cancer therapy and the concepts and consequences of inheriting mutations in genes that predispose to cancer.",
+    "prerequisites": {
+      "text": "BIOL 200, and BIOL 201 or ANAT 212 /BIOC 212; or BIOL 219.",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          {
+            "or": [
+              "BIOL 201",
+              "ANAT 212",
+              "BIOC 212"
+            ]
+          },
+          "BIOL 219"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 316",
+    "subject": "BIOL",
+    "number": "316",
+    "title": "Biomembranes and Organelles",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The course focuses on biomembranes and subcellular organelles and their implications for disease. The topics include: protein and lipid biochemistry, membrane structure and transport; intracellular compartmentalization, protein sorting and modification, intracellular membrane trafficking; energy transfer, organization and dynamics of chloroplasts and mitochondria; extracellular matrix and cell walls.",
+    "prerequisites": {
+      "text": "BIOL 201 or ANAT 212/BIOC 212",
+      "tree": {
+        "or": [
+          "BIOL 201",
+          "ANAT 212",
+          "BIOC 212"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOL 319",
+    "subject": "BIOL",
+    "number": "319",
+    "title": "Introduction to Biophysics",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Emerging physical approaches and quantitative measurement techniques are providing new insights into longstanding biological questions. This course will present underlying physical theory, quantitative measurement techniques, and significant findings in molecular and cellular biophysics. Principles covered include Brownian motion, low Reynolds-number environments, forces relevant to cells and molecules, chemical potentials, and free energies. These principles are applied to enzymes as molecular machines, membranes, DNA, and RNA.",
+    "prerequisites": {
+      "text": "BIOL 200 or BIOL 219; MATH 222; PHYS 230 and (PHYS 232 or PHYS 253), or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 200",
+              "BIOL 219"
+            ]
+          },
+          "MATH 222",
+          "PHYS 230",
+          {
+            "or": [
+              "PHYS 232",
+              "PHYS 253"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 319",
+      "excludes": [
+        "PHYS 319"
+      ]
+    },
+    "notes": [
+      "Winter. Students with training in physics and biology will be well-suited to the course. ."
+    ]
+  },
+  {
+    "code": "BIOL 320",
+    "subject": "BIOL",
+    "number": "320",
+    "title": "Evolution of Brain and Behaviour",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Functional and comparative approach to neuroanatomy, examining how species changes in brain organization contribute to evolutionary changes in behaviour.",
+    "prerequisites": {
+      "text": "NSCI 201 or BIOL 306",
+      "tree": {
+        "or": [
+          "NSCI 201",
+          "BIOL 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours of lecture and 1 hour of conference (mandatory)"
+    ]
+  },
+  {
+    "code": "BIOL 324",
+    "subject": "BIOL",
+    "number": "324",
+    "title": "Ecological Genetics",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Presents evolutionary genetics within an ecological context. Covers theoretical and applied topics together with relevant data from natural populations of plant and animals.",
+    "prerequisites": {
+      "text": "BIOL 202 or BIOL 302",
+      "tree": {
+        "or": [
+          "BIOL 202",
+          "BIOL 302"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Two lectures per week; one required computer lab or conference per week"
+    ]
+  },
+  {
+    "code": "BIOL 331",
+    "subject": "BIOL",
+    "number": "331",
+    "title": "Ecology/Behaviour Field Course",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Methods of sampling natural populations. Testing hypotheses in nature.",
+    "prerequisites": {
+      "text": "BIOL 206 and BIOL 215, or equivalents, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "BIOL 206",
+          "BIOL 215"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: This course has an additional fee. The Department of Biology subsidizes a portion of the cost for this activity.",
+      "The field portion of this course is given at the University’s Gault Nature Reserve in Mont St. Hilare over a two-week period in the summer term. In the summer, students prepare a report based on projects carried out during this field portion. There is an additional fee of $885.00 that covers room and board and handouts. This fee could be refundable if the department approves it.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "BIOL 334",
+    "subject": "BIOL",
+    "number": "334",
+    "title": "Applied Tropical Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Relevant to agriculture, forestry, fisheries and conservation of natural resources. Field component taught at the University's Bellairs Research Institute in Barbados, for two weeks in early May. The course is organized in a series of small-group field projects of 2-3 days each. Interested students should check the course website, attend the full information session and fill out an application form.",
+    "prerequisites": {
+      "text": "BIOL 206; and BIOL 215 or both ENVR 200 and ENVR 202; and permission of the instructor.",
+      "tree": {
+        "and": [
+          "BIOL 206",
+          {
+            "or": [
+              "BIOL 215",
+              {
+                "and": [
+                  "ENVR 200",
+                  "ENVR 202"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter, Summer",
+      "Students must register for both BIOL 334D1 and BIOL 334D2.",
+      "No credit will be given for this course unless both BIOL 334D1 and BIOL 334D2 are successfully completed in consecutive terms",
+      "BIOL 334D1 and BIOL 334D2 together are equivalent to BIOL 334"
+    ],
+    "parts": [
+      {
+        "code": "BIOL 334D1",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "BIOL 334D2",
+        "credits": 1.5,
+        "terms": [
+          "Summer 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BIOL 335",
+    "subject": "BIOL",
+    "number": "335",
+    "title": "Marine Mammals",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Biology of marine mammals with special emphasis on seals and whales of the Bay of Fundy. Taught at the Huntsman Marine Science Centre, St. Andrews, N.B., for two weeks in August. The course combines lectures, laboratory exercises, field trips, and individual projects.",
+    "prerequisites": {
+      "text": "BIOL 205",
+      "tree": "BIOL 205",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is offered in the summer.",
+      "Apply first to Huntsman, then contact susan.gabe@mcgill.ca.",
+      "The fee for this field course is $1913.86 to cover fees related to the use of facilities for teaching and lab spaces in the Huntsman Marine Center (lodging, meals, facility rental spaces, transportation and tour fees)."
+    ]
+  },
+  {
+    "code": "BIOL 342",
+    "subject": "BIOL",
+    "number": "342",
+    "title": "Global Change Biology of Aquatic Ecosystems",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to freshwater and marine biology. Topics include the structure and functioning of the major aquatic ecosystems and how these aspects are affected by global change drivers.",
+    "prerequisites": {
+      "text": "BIOL 205, and BIOL 215 or both ENVR 200 and ENVR 202",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIOL 205",
+              "BIOL 215"
+            ]
+          },
+          {
+            "and": [
+              "ENVR 200",
+              "ENVR 202"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOL 343",
+    "subject": "BIOL",
+    "number": "343",
+    "title": "Biodiversity in the Caribean",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Biodiversity loss and the measure of ecological integrity of ecosystems, patterns of diversification and evolution of terrestrial and oceanic biotas in the Caribbean.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "GEOG 340, ATOC 341, FSCI 444 or permission of the Program Director.",
+      "tree": {
+        "and": [
+          "GEOG 340",
+          "ATOC 341",
+          "FSCI 444"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Open to U2 and U3 students from all faculties who are registered in the Barbados Field Study Semester, with minimum CGPA of 3.0.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOL 350",
+    "subject": "BIOL",
+    "number": "350",
+    "title": "Insect Biology and Control",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to insect structure, physiology, biochemistry, development, systematics, evolution, ecology and control. Stress on interrelationships and integrated pest control.",
+    "prerequisites": {
+      "text": "BIOL 205 or permission of instructor.",
+      "tree": "BIOL 205",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ENTO 330 or ENTO 350.",
+      "excludes": [
+        "ENTO 330",
+        "ENTO 350"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 352",
+    "subject": "BIOL",
+    "number": "352",
+    "title": "Dinosaur Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Using dinosaurs as exemplars, this course teaches aspects of comparative, functional, and developmental morphology, macroevolution, macroecology, and phylogenetic systematics. Lab dissections will explore vertebrate anatomy.",
+    "prerequisites": {
+      "text": "BIOL 215 or ENVR 202 or EPSC 233 or permission of instructor.",
+      "tree": {
+        "or": [
+          "BIOL 215",
+          "ENVR 202",
+          "EPSC 233"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lecture, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "BIOL 373",
+    "subject": "BIOL",
+    "number": "373",
+    "title": "Biometry",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Elementary statistical methods in biology. Introduction to the analysis of biological data with emphasis on the assumptions behind statistical tests and models. Use of statistical techniques typically available on computer packages.",
+    "prerequisites": {
+      "text": "MATH 112 or equivalent",
+      "tree": "MATH 112",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lecture and 2 hours laboratory",
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "BIOL 377",
+    "subject": "BIOL",
+    "number": "377",
+    "title": "Independent Reading Project",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Independent reading project.",
+    "prerequisites": {
+      "text": "BIOL 200 and one of BIOL 201, ANAT/BIOC 212; or BIOL 215; or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          {
+            "or": [
+              "BIOL 201",
+              "BIOC 212"
+            ]
+          },
+          "BIOL 215"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 or U3 Biology students only",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter or Summer",
+      "Note: Before registration, projects must be arranged individually with a PI in the Biology Department. Prior to registration, students fill out the application form at http://biology.mcgill.ca/undergrad/res_opps.html and email or bring it to nancy.nelson@mcgill.ca, or Nancy Nelson, Room N7/9B, Stewart Biology Building."
+    ]
+  },
+  {
+    "code": "BIOL 389",
+    "subject": "BIOL",
+    "number": "389",
+    "title": "Laboratory in Neurobiology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Methods of neurobiological research, including extracellular and intracellular recordings, electrical stimulation, and the study of neuro-behavioural problems.",
+    "prerequisites": {
+      "text": "BIOL 306 or NSCI 200 or PHGY 311 or NEUR 310 or permission",
+      "tree": {
+        "or": [
+          "BIOL 306",
+          "NSCI 200",
+          "PHGY 311",
+          "NEUR 310"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "1 hour lecture; 5 hours laboratory"
+    ]
+  },
+  {
+    "code": "BIOL 395",
+    "subject": "BIOL",
+    "number": "395",
+    "title": "Quantitative Biology Seminar",
+    "credits": 1,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Overview of concepts and current research in quantitative biology; theoretical ecology and evolution, computational biology, and physical biology.",
+    "prerequisites": {
+      "text": "BIOL 219; or BIOL 200 plus BIOL 201 or ANAT 212 or BIOC 212; CHEM 212; COMP 202 or COMP 204 or COMP 250; MATH 222; or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 219",
+          {
+            "or": [
+              {
+                "and": [
+                  "BIOL 200",
+                  "BIOL 201"
+                ]
+              },
+              "ANAT 212",
+              "BIOC 212"
+            ]
+          },
+          "CHEM 212",
+          {
+            "or": [
+              "COMP 202",
+              "COMP 204",
+              "COMP 250"
+            ]
+          },
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students in the following programs: B.Sc. Major and Honours Biology-- Quantitative Biology option; B.Sc. Major and Honours Computer Science and Biology; BSc Major Biology and Mathematics; BSc Major Physiology and Mathematics; BSc Major Physiology and Physics; BSc Major and Honours Chemistry-- Biophysical Chemistry; and B.Sc. Major and Honours Physics--Biological Physics.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOL 396",
+    "subject": "BIOL",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter or Summer",
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures. A completed application form should be brought to Nancy Nelson in Room N7/9B, Stewart Biology Building."
+    ]
+  },
+  {
+    "code": "BIOL 405",
+    "subject": "BIOL",
+    "number": "405",
+    "title": "Natural History of East Africa",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Integrated study of African landforms, geologic history, climate, environments, biota, water resources and human influences, fostering a thorough understanding of the East African landscape and its inhabitants.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ANTH 461 or GEOG 451; and NRSC 451 or BIOL 451.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ANTH 461",
+              "GEOG 451"
+            ]
+          },
+          {
+            "or": [
+              "NRSC 451",
+              "BIOL 451"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NRSC 405 or REDM 405. Open only to Africa Field Study Semester students during the year of participation in the field.",
+      "excludes": [
+        "NRSC 405",
+        "REDM 405"
+      ]
+    },
+    "notes": [
+      "1. Winter",
+      "2. Course consists of field exercises, lectures, seminars and discussions."
+    ]
+  },
+  {
+    "code": "BIOL 413",
+    "subject": "BIOL",
+    "number": "413",
+    "title": "Directed Reading",
+    "credits": 1,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Directed reading.",
+    "prerequisites": {
+      "text": "BIOL 200, BIOL 201, BIOL 202, BIOL 205, BIOL 215.",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          "BIOL 201",
+          "BIOL 202",
+          "BIOL 205",
+          "BIOL 215"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter or Summer",
+      "Note: Before registration, projects must be arranged individually with a PI in the Biology Department. Prior to registration, students fill out the application form at http://biology.mcgill.ca/undergrad/res_opps.html and email or bring it to nancy.nelson@mcgill.ca, or Nancy Nelson, Room N7/9B, Stewart Biology Building."
+    ]
+  },
+  {
+    "code": "BIOL 414",
+    "subject": "BIOL",
+    "number": "414",
+    "title": "Invertebrate Brain Circuits and Behaviours ",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of the neural and molecular mechanisms that drive animal behaviour, with a focus on invertebrates, including the principles of neural circuits and behaviour.",
+    "prerequisites": {
+      "text": "BIOL 306 or permission of instructor, COMP 202 or equivalent (any coding experience or permission of the instructor).",
+      "tree": {
+        "and": [
+          "BIOL 306",
+          "COMP 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 416",
+    "subject": "BIOL",
+    "number": "416",
+    "title": "Genetics of Mammalian Development",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course aims to examine problems, theories, and experimental evidence on several concepts of mammalian developmental processes at molecular to organogenesis levels. Most topics are in the mouse model system, where various techniques for genetic manipulation are available.",
+    "prerequisites": {
+      "text": "BIOL 202 or BIOL 302; BIOL 300; BIOL 303; or permission of instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          },
+          "BIOL 300",
+          "BIOL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 418",
+    "subject": "BIOL",
+    "number": "418",
+    "title": "Freshwater Invertebrate Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The life history and ecology of freshwater invertebrates in lakes, rivers and wetlands; habitat requirements, functional ecology and food web interactions; the role of invertebrates in the functioning of aquatic ecosystems; threats to freshwater diversity.",
+    "prerequisites": {
+      "text": "BIOL 215 (or ENVR 200 and ENVR 202) and BIOL 205 or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIOL 215",
+          "ENVR 200",
+          "ENVR 202",
+          "BIOL 205"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lecture and 3 hours lab",
+      "enrolment limited to 25 students"
+    ]
+  },
+  {
+    "code": "BIOL 427",
+    "subject": "BIOL",
+    "number": "427",
+    "title": "Herpetology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Principles of biology as exemplified by amphibians and reptiles. Topics include: adaptation, social behaviour, reproductive strategies, physiology, biomechanics, ecology, biogeography and evolution. Laboratories will emphasize structure, systematics and identification of local and world herpetofauna as well as field methods.",
+    "prerequisites": {
+      "text": "BIOL 205 and BIOL 305 or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 205",
+          "BIOL 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIOL 327.",
+      "excludes": [
+        "BIOL 327"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "2 hours lecture; 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "BIOL 428",
+    "subject": "BIOL",
+    "number": "428",
+    "title": "Biological Diversity in Africa",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Biological diversity as exemplified by a particular taxonomic group chosen by the instructor, using field setting in East Africa to impart training in species identification, field research, and principles embodied in the phylogeny, systematics, biogeography, ecology, physiology and/or behaviour of the organisms concerned.",
+    "prerequisites": {
+      "text": "BIOL 305 or equivalent or permission of instructor.",
+      "tree": "BIOL 305",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "NRSC/BIOL 451 and ANTH/GEOG 451",
+      "tree": {
+        "or": [
+          "BIOL 451",
+          "GEOG 451"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Student must be enrolled in the Africa Field Study Seminar"
+    ]
+  },
+  {
+    "code": "BIOL 429",
+    "subject": "BIOL",
+    "number": "429",
+    "title": "East African Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Field settings (Uganda, Kenya, and/or Tanzania) are used to impart training in ecological principles critical to tropical conservation with an emphasis on research design and field research exercises.",
+    "prerequisites": {
+      "text": "BIOL 215 or equivalent.",
+      "tree": "BIOL 215",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "NRSC/BIOL 451 and ANTH/GEOG 451",
+      "tree": {
+        "or": [
+          "BIOL 451",
+          "GEOG 451"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken BIOL 329.",
+      "excludes": [
+        "BIOL 329"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "The course is to be taught in Africa as a component of the Africa Field Study Semester. Students must register for the Africa Field Study Semester."
+    ]
+  },
+  {
+    "code": "BIOL 432",
+    "subject": "BIOL",
+    "number": "432",
+    "title": "Limnology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the physical, chemical and biological properties of lakes and other inland waters, with emphasis on their functioning as systems.",
+    "prerequisites": {
+      "text": "BIOL 206 and BIOL 215 or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 206",
+          "BIOL 215"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ENVB 315.",
+      "excludes": [
+        "ENVB 315"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture",
+      "This course, involving two field weekends, has an additional fee of $360.39, which includes room and board and transportation. The fee is refundable during the period where a student can drop the course with full refund. The Department of Biology subsidizes a portion of the cost for this activity."
+    ]
+  },
+  {
+    "code": "BIOL 435",
+    "subject": "BIOL",
+    "number": "435",
+    "title": "Natural Selection",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Explains how the selection of undirected variation accounts for some of the leading features of the natural world. Its main focus is evolutionary change and adaptation, but it will also include material from ecological, economic, biochemical and computer systems. It emphasizes experimental studies of evolution.",
+    "prerequisites": {
+      "text": "BIOL 304 or permission of instructor.",
+      "tree": "BIOL 304",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours of lecture"
+    ]
+  },
+  {
+    "code": "BIOL 436",
+    "subject": "BIOL",
+    "number": "436",
+    "title": "Evolution and Society",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Explores the impact that biological evolution and evolutionary thinking have on society. Topics include intelligence, language, race, gender, medicine, genetically modified organisms, politics, and creationism.",
+    "prerequisites": {
+      "text": "BIOL 304 or permission of the instructor",
+      "tree": "BIOL 304",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Course instructors will introduce each topic and lead discussion, while an invited lecturer will focus on a particular aspect of that topic.",
+      "Enrolment limited to 25 students."
+    ]
+  },
+  {
+    "code": "BIOL 438",
+    "subject": "BIOL",
+    "number": "438",
+    "title": "Sand in the Anthropocene",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A critical examination of the increasing global consumption of sandresources and the human-caused changes and impact on sediment dynamics, landscape evolution, ecological processes in freshwater ecosystem and conservation biology.",
+    "prerequisites": {
+      "text": "GEOG 272 or BIOL 206 or EPSC 355 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "GEOG 272",
+          "BIOL 206",
+          "EPSC 355"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking GEOG 438. Not open to students who have taken GEOG 407 in winter 2025 under the topic: Sand in the Anthropocene.",
+      "excludes": [
+        "GEOG 407",
+        "GEOG 438"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOL 441",
+    "subject": "BIOL",
+    "number": "441",
+    "title": "Biological Oceanography",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to how the ocean functions biologically: biology and ecology of marine plankton; regulation, extent and fate of production in the sea.",
+    "prerequisites": {
+      "text": "BIOL 206; and BIOL 215 or both ENVR 200 and ENVR 202.",
+      "tree": {
+        "and": [
+          "BIOL 206",
+          {
+            "or": [
+              "BIOL 215",
+              {
+                "and": [
+                  "ENVR 200",
+                  "ENVR 202"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lecture, 3 hours laboratory/conference"
+    ]
+  },
+  {
+    "code": "BIOL 451",
+    "subject": "BIOL",
+    "number": "451",
+    "title": "Research in Ecology and Development in Africa",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Development of observation and independent inquiry skills through: 1) participation in short-term project modules in collaboration with existing researchers; 2) participation in interdisciplinary team research on topics selected to allow comparative analysis of field sites; 3) active and systematic observation, documentation, and integration of field experience in ecology and development issues.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ANTH 451 or GEOG 451",
+      "tree": {
+        "or": [
+          "ANTH 451",
+          "GEOG 451"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking NRSC 451.",
+      "excludes": [
+        "NRSC 451"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "Open only to U2 or later students in the AFSS."
+    ]
+  },
+  {
+    "code": "BIOL 465",
+    "subject": "BIOL",
+    "number": "465",
+    "title": "Conservation Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Discussion of relevant theoretical and applied issues in conservation biology. Topics: biodiversity, population viability analysis, community dynamics, biology of rarity, extinction, habitat fragmentation, social issues.",
+    "prerequisites": {
+      "text": "BIOL 215 OR both ENVR 200 and ENVR 202",
+      "tree": {
+        "or": [
+          "BIOL 215",
+          {
+            "and": [
+              "ENVR 200",
+              "ENVR 202"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 466",
+    "subject": "BIOL",
+    "number": "466",
+    "title": "Independent Research Project 1",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project.",
+    "prerequisites": {
+      "text": "BIOL 206 or BIOL 301 or other suitable laboratory course.",
+      "tree": {
+        "or": [
+          "BIOL 206",
+          "BIOL 301"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Biology students. Not open to students who have taken BIOL 477.",
+      "excludes": [
+        "BIOL 477"
+      ]
+    },
+    "notes": [
+      "Fall, Winter or Summer",
+      "Note: Before registration, projects must be arranged individually with a PI in the Biology Department. Prior to registration, students fill out the application form at http://biology.mcgill.ca/undergrad/res_opps.html and email or bring it to nancy.nelson@mcgill.ca, or Nancy Nelson, Room N7/9B, Stewart Biology Building."
+    ]
+  },
+  {
+    "code": "BIOL 467",
+    "subject": "BIOL",
+    "number": "467",
+    "title": "Independent Research Project 2",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project.",
+    "prerequisites": {
+      "text": "BIOL 206 or BIOL 301 or other suitable laboratory course.",
+      "tree": {
+        "or": [
+          "BIOL 206",
+          "BIOL 301"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Biology students. Not open to students who have taken BIOL 478.",
+      "excludes": [
+        "BIOL 478"
+      ]
+    },
+    "notes": [
+      "Fall, Winter or Summer",
+      "Note: Before registration, projects must be arranged individually with a PI in the Biology Department. Prior to registration, students fill out the application form at http://biology.mcgill.ca/undergrad/res_opps.html and email or bring it to nancy.nelson@mcgill.ca, or Nancy Nelson, Room N7/9B, Stewart Biology Building."
+    ]
+  },
+  {
+    "code": "BIOL 468",
+    "subject": "BIOL",
+    "number": "468",
+    "title": "Independent Research Project 3",
+    "credits": 6,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project.",
+    "prerequisites": {
+      "text": "BIOL 206 or BIOL 301 or other suitable laboratory course",
+      "tree": {
+        "or": [
+          "BIOL 206",
+          "BIOL 301"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Biology students. Not open to students who have taken BIOL 471 or BIOL 471D1/D2.",
+      "excludes": [
+        "BIOL 471",
+        "BIOL 471D1"
+      ]
+    },
+    "notes": [
+      "Fall, Winter or Summer",
+      "Note: Before registration, projects must be arranged individually with a PI in the Biology Department. Prior to registration, students fill out the application form at http://biology.mcgill.ca/undergrad/res_opps.html and email or bring it to nancy.nelson@mcgill.ca, or Nancy Nelson, Room N7/9B, Stewart Biology Building."
+    ],
+    "parts": [
+      {
+        "code": "BIOL 468D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIOL 468D2",
+        "credits": 3,
+        "terms": [
+          "Summer 2026",
+          "Fall 2026",
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BIOL 469",
+    "subject": "BIOL",
+    "number": "469",
+    "title": "Independent Research Project 4",
+    "credits": 9,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project.",
+    "prerequisites": {
+      "text": "BIOL 206 or BIOL 301 or other suitable 300-level biology course.",
+      "tree": {
+        "or": [
+          "BIOL 206",
+          "BIOL 301"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Before registration, projects must be arranged individually with a PI in the Biology Department. Prior to registration, students fill out the application form at http://biology.mcgill.ca/undergrad/res_opps.html and email or bring it to nancy.nelson@mcgill.ca, or Nancy Nelson, Room N7/9B, Stewart Biology Building."
+    ],
+    "parts": [
+      {
+        "code": "BIOL 469D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIOL 469D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BIOL 479",
+    "subject": "BIOL",
+    "number": "479",
+    "title": "Honours Research Project 1",
+    "credits": 9,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduces students to original research, and to its design, execution and reporting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Biology Honours students. Projects must be arranged individually with, and accepted by a staff member of the Biology Department",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter",
+      "8-12 hours per week research project and related seminars",
+      "Students must register for both BIOL 479D1 and BIOL 479D2.",
+      "No credit will be given for this course unless both BIOL 479D1 and BIOL 479D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "BIOL 479D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIOL 479D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BIOL 480",
+    "subject": "BIOL",
+    "number": "480",
+    "title": "Honours Research Project 2",
+    "credits": 12,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduces students to original research, and to its design, execution and reporting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and Winter",
+      "10-15 hours per week research project and related seminars",
+      "Restriction and course description: as for BIOL 479",
+      "Students must register for both BIOL 480D1 and BIOL 480D2.",
+      "No credit will be given for this course unless both BIOL 480D1 and BIOL 480D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "BIOL 480D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "BIOL 480D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "BIOL 499",
+    "subject": "BIOL",
+    "number": "499",
+    "title": "Honours Seminar in Biology",
+    "credits": 4,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The practical aspects of science and scholarship in biology, including scientific writing, research presentations, bibliographies, methods, and peer review, as relating to Biology Honours research projects and theses. Attendance at research seminars in areas of related research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Biology Honours program. Students in the Quantitative Biology or Computer Science and Biology Honours programs may enroll with instructor permission.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter",
+      "Students must register for both BIOL 499D1 and BIOL 499D2.",
+      "No credit will be given for this course unless both BIOL 499D1 and BIOL 499D2 are successfully completed in consecutive terms",
+      "In some weeks, conference attendance will be replaced by research seminar attendance.",
+      "In some weeks, conference attendance will be replaced by research seminar attendance."
+    ],
+    "parts": [
+      {
+        "code": "BIOL 499D1",
+        "credits": 2,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIOL 499D2",
+        "credits": 2,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BIOL 506",
+    "subject": "BIOL",
+    "number": "506",
+    "title": "Neurobiology of Learning",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Exploration of the neurobiological basis of learning, from molecules to circuits, focusing on the synaptic, cellular and circuit-level processes that support learning, in the context of different brain regions and forms of learning.",
+    "prerequisites": {
+      "text": "BIOL 306 or NEUR 310 or NSCI 200 and NSCI 201 or PHGY 311 or PHGY 314 or permission of instructor",
+      "tree": {
+        "or": [
+          "BIOL 306",
+          "NEUR 310",
+          {
+            "and": [
+              "NSCI 200",
+              "NSCI 201"
+            ]
+          },
+          "PHGY 311",
+          "PHGY 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 507",
+    "subject": "BIOL",
+    "number": "507",
+    "title": "Animal Communication",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to communication between animals, including humans. Physical and phylogenetic constraints on the evolution of communication systems will be discussed. The approach to communication will draw from behavioural ecology, psychology, physiology and physics.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "BIOL 307 or equivalent and one of BIOL 306 or NEUR 310 or NSCI 200 or NSCI 201 or PHGY 311; or permission of instructor. Since all corequisites may not be offered in the same term, students are advised that they may have to plan their schedules so that they may register in these courses in the term prior to BIOL 507.",
+      "tree": {
+        "and": [
+          "BIOL 307",
+          {
+            "or": [
+              "BIOL 306",
+              "NEUR 310",
+              "NSCI 200",
+              "NSCI 201",
+              "PHGY 311"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 510",
+    "subject": "BIOL",
+    "number": "510",
+    "title": "Advances in Community Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The origin, maintenance and roles of biological diversity within ecological communities.",
+    "prerequisites": {
+      "text": "BIOL 308 or GEOG 350 or permission of instructor.",
+      "tree": {
+        "or": [
+          "BIOL 308",
+          "GEOG 350"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture/seminar"
+    ]
+  },
+  {
+    "code": "BIOL 515",
+    "subject": "BIOL",
+    "number": "515",
+    "title": "Advances in Aquatic Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Aquatic ecology and the major issues challenging the field.",
+    "prerequisites": {
+      "text": "BIOL 432 or BIOL 441 or permission of the instructor",
+      "tree": {
+        "or": [
+          "BIOL 432",
+          "BIOL 441"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours seminar"
+    ]
+  },
+  {
+    "code": "BIOL 517",
+    "subject": "BIOL",
+    "number": "517",
+    "title": "Cognitive Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Cognition refers to the processes of acquiring, retaining, and using information. In the wild, an organism relies on a wide variety of information to interact with its environment and these interactions affect its survival and reproduction. Focus on the ecology and evolution of cognition and its underlying neural mechanisms. Examines links between cognition, behaviour in the wild, and the brain. Builds upon the principles of behavioural ecology and behavioural neuroscience.",
+    "prerequisites": {
+      "text": "BIOL 307 or equivalent or permission of the instructor",
+      "tree": "BIOL 307",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 518",
+    "subject": "BIOL",
+    "number": "518",
+    "title": "Advanced Topics in Cell Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Concepts and mechanisms in advanced cell biology, based on genetic, cell biological, biophysical, and computational studies. Emphasis is placed on processes that are evolutionarily conserved, with examples from model organisms and cell-free (in vitro) approaches.",
+    "prerequisites": {
+      "text": "BIOL 300 or BIOL 303 or BIOL 313 or BIOC 311 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "BIOL 300",
+          "BIOL 303",
+          "BIOL 313",
+          "BIOC 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours seminar"
+    ]
+  },
+  {
+    "code": "BIOL 520",
+    "subject": "BIOL",
+    "number": "520",
+    "title": "Gene Activity in Development",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An analysis of the role and regulation of gene expression in several models of eukaryotic development. The emphasis will be on critical evaluation of recent literature concerned with molecular or genetic approaches to the problems of cellular differentiation and determination. Recent research reports will be discussed in conferences and analyzed in written critiques.",
+    "prerequisites": {
+      "text": "BIOL 300 and BIOL 303 or permission",
+      "tree": {
+        "and": [
+          "BIOL 300",
+          "BIOL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture and discussion"
+    ]
+  },
+  {
+    "code": "BIOL 524",
+    "subject": "BIOL",
+    "number": "524",
+    "title": "Topics in Molecular Biology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Molecular genetics and molecular, cellular and developmental biology, including signal transduction, cell differentiation and function, genetic diseases in eukaryotes.",
+    "prerequisites": {
+      "text": "BIOL 300 and BIOL 303 or permission.",
+      "tree": {
+        "and": [
+          "BIOL 300",
+          "BIOL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOL 530",
+    "subject": "BIOL",
+    "number": "530",
+    "title": "Advances in Neuroethology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Neural mechanisms underlying behaviour in vertebrate and invertebrate organisms.",
+    "prerequisites": {
+      "text": "BIOL 306 or NSCI 200 or NSCI 201 or PHGY 311 or permission of instructor.",
+      "tree": {
+        "or": [
+          "BIOL 306",
+          "NSCI 200",
+          "NSCI 201",
+          "PHGY 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours seminar"
+    ]
+  },
+  {
+    "code": "BIOL 532",
+    "subject": "BIOL",
+    "number": "532",
+    "title": "Developmental Neurobiology Seminar",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discussions of all aspects of nervous system development including pattern formation, cell lineage, pathfinding and targeting by growing axons, and neural regeneration. The basis for these discussions will be recent research papers and other assigned readings.",
+    "prerequisites": {
+      "text": "BIOL 303 or BIOL 306 or permission of instructor",
+      "tree": {
+        "or": [
+          "BIOL 303",
+          "BIOL 306"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "1 hour lecture, 2 hours seminar"
+    ]
+  },
+  {
+    "code": "BIOL 540",
+    "subject": "BIOL",
+    "number": "540",
+    "title": "Ecology of Species Invasions",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Causes and consequences of biological invasion, as well as risk assessment methods and management strategies for dealing with invasive species.",
+    "prerequisites": {
+      "text": "BIOL 215 (or ENVR 200 plus ENVR 202), and at least one 300- or 400-level course in ecology, evolution, or conservation biology.",
+      "tree": {
+        "and": [
+          "BIOL 215",
+          "ENVR 200",
+          "ENVR 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U1 or U2 students; Not open to students who are taking or have taken ENVR 540.",
+      "excludes": [
+        "ENVR 540"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 544",
+    "subject": "BIOL",
+    "number": "544",
+    "title": "Genetic Basis of Life Span",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The course will consider how gene action is determining the duration of life in various organisms focusing on the strengths and limitations of the genetic approach. The course will focus particularly on model organisms such as yeast, Caenorhabditis, Drosophila and mouse, as well as on the characterization of long-lived people.",
+    "prerequisites": {
+      "text": "BIOL 202 or BIOL 302; BIOL 300; or permission of instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          },
+          "BIOL 300"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Three hours seminar"
+    ]
+  },
+  {
+    "code": "BIOL 546",
+    "subject": "BIOL",
+    "number": "546",
+    "title": "Genetics of Model Systems",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in the genetics and molecular genetics of unicellular, plant, invertebrate and vertebrate models systems.",
+    "prerequisites": {
+      "text": "BIOL 202 or BIOL 302; BIOL 300; BIOL 303 recommended",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          },
+          "BIOL 300",
+          "BIOL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall course given every second year, alternating with BIOL 544; enrollment limited to 15 students"
+    ]
+  },
+  {
+    "code": "BIOL 551",
+    "subject": "BIOL",
+    "number": "551",
+    "title": "Principles of Cellular Control",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental principles of cellular control, with cell cycle control as a major theme. Biological and physical concepts are brought to bear on control in healthy cells..",
+    "prerequisites": {
+      "text": "CHEM 115 or 120, MATH 133 and 141, PHYS 142; or equivalents. BIOL 201 or ANAT/BIOC 212. Recommended: COMP 202, PHYS 230 and BIOL/PHYS 319.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CHEM 115",
+              {
+                "and": [
+                  "CHEM 120",
+                  "MATH 133",
+                  "MATH 141",
+                  "PHYS 142"
+                ]
+              }
+            ]
+          },
+          {
+            "or": [
+              "BIOL 201",
+              "BIOC 212"
+            ]
+          },
+          "COMP 202",
+          {
+            "or": [
+              "PHYS 230",
+              "PHYS 319"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 553",
+    "subject": "BIOL",
+    "number": "553",
+    "title": "Neotropical Environments",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Ecology revisited in view of tropical conditions. Exploring species richness. Sampling and measuring biodiversity. Conservation status of ecosystems, communities and species. Indigenous knowledge.",
+    "prerequisites": {
+      "text": "HISP 218, MATH 203, and BIOL 215",
+      "tree": {
+        "and": [
+          "HISP 218",
+          "MATH 203",
+          "BIOL 215"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ENVR 451; GEOG 404 and HIST 510 alternating with GEOG 498 and AGRI 550",
+      "tree": {
+        "and": [
+          "ENVR 451",
+          "GEOG 404",
+          "HIST 510",
+          "GEOG 498",
+          "AGRI 550"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "location in Panama. Students must register for a full semester of studies in Panama",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "24 hours lecture and 36 hours field work over a 4-week period"
+    ]
+  },
+  {
+    "code": "BIOL 565",
+    "subject": "BIOL",
+    "number": "565",
+    "title": "Cell and Tissue Mechanobiology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The emerging field of mechanobiology and mechanotransduction, and their relevance in the context of multicellular physiology in health and disease. The molecular and cellular foundations of mechanobiology are covered. Current literature on the topic will be discussed and presented by students. Identification of gaps in current knowledge and proposing research to address them.",
+    "prerequisites": {
+      "text": "One 300-level cell biology course or equivalent, and/or instructor's permission",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to senior undergraduate in the BSc degree and graduate students who fullfill the prerequisites or to students approved by the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOL 568",
+    "subject": "BIOL",
+    "number": "568",
+    "title": "Topics on the Human Genome",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Cellular and molecular approaches to characterization of the human genome.",
+    "prerequisites": {
+      "text": "(BIOL 200 or BIOL 219); BIOL 300; BIOL 302; or permission of the course coordinator.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 200",
+              "BIOL 219"
+            ]
+          },
+          "BIOL 300",
+          "BIOL 302"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 569",
+    "subject": "BIOL",
+    "number": "569",
+    "title": "Developmental Evolution",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The influence of developmental mechanisms on evolution. This course draws on recent examples from plants and invertebrate and vertebrate animals. Topics include homology, modularity, dissociation, co-option, evolutionary novelty, evolution of cis-regulation and gene regulatory networks, developmental constraint and evolvability, heterochrony, phenotypic plasticity, and canalization.",
+    "prerequisites": {
+      "text": "BIOL 303 and BIOL 304; or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 303",
+          "BIOL 304"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 573",
+    "subject": "BIOL",
+    "number": "573",
+    "title": "Vertebrate Palaeontology Field Course",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Terrestrial vertebrate fossils (i.e. dinosaurs, crocodiles and other reptiles) and palaeocommunity analysis, including practical training with fossil identification, mapping, collecting, and stratigraphic interpretation.",
+    "prerequisites": {
+      "text": "BIOL 304 and BIOL 352 or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 304",
+          "BIOL 352"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Summer",
+      "Notes: Spring field course with completed project and presentation by the end of the Summer. Given in a selected Late Cretaceous Alberta and/or Saskatchewan site. Enrolment limited to 15 students.",
+      "This course, given at selected localities in Alberta and/or Saskatchewan in May, has an additional fee of $1,500.00 which includes room and board, museum entrance fees, and transportation during the course, but not tuition or transportation to western Canada.",
+      "This course is offered in the summer."
+    ]
+  },
+  {
+    "code": "BIOL 580",
+    "subject": "BIOL",
+    "number": "580",
+    "title": "Genetic Approaches to Neural Systems",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course will focus on recent research employing genetic-based methods to examine the functional and structural properties of the nervous system. The focus will be on approaches for studying neural circuits and behavior in a range of model organisms. Topics will include recent technological advances, such as optogenetics for modifying and controlling neuronal activity, and animal models of neurological diseases. Students will critically analyze the application of these methods to current research through in-class discussion of primary literature, student presentations, and written assignments.",
+    "prerequisites": {
+      "text": "BIOL 306 or permission of the instructors.",
+      "tree": "BIOL 306",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 585",
+    "subject": "BIOL",
+    "number": "585",
+    "title": "Game Theory and Evolutionary Dynamics",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Mathematical models of game theory and evolutionary dynamics; classical models and current research.",
+    "prerequisites": {
+      "text": "BIOL 308 and BIOL 434 or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 308",
+          "BIOL 434"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lecture; 1 hour laboratory",
+      "Note: Course given in alternating years."
+    ]
+  },
+  {
+    "code": "BIOL 588",
+    "subject": "BIOL",
+    "number": "588",
+    "title": "Advances in Molecular/Cellular Neurobiology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Discussion of fundamental molecular mechanisms underlying the general features of cellular neurobiology. An advanced course based on lectures and on a critical review of primary research papers.",
+    "prerequisites": {
+      "text": "BIOL 300 and BIOL 306 or permission",
+      "tree": {
+        "and": [
+          "BIOL 300",
+          "BIOL 306"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "1.5 hours lecture, 1.5 hours seminar"
+    ]
+  },
+  {
+    "code": "BIOL 592",
+    "subject": "BIOL",
+    "number": "592",
+    "title": "Integrated Bioinformatics",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "'Post-genomic' bioinformatics. Concepts behind large-scale computational analysis and comparison of genomes/proteomes (and beyond), and the implications for our understanding of the basic processes of molecular and cell biology and the evolution of those processes.",
+    "prerequisites": {
+      "text": "BIOL 301 or permission of instructor.",
+      "tree": "BIOL 301",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BINF 511.",
+      "excludes": [
+        "BINF 511"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "BIOL 594",
+    "subject": "BIOL",
+    "number": "594",
+    "title": "Advanced Evolutionary Ecology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Evolutionary ecology is the study of evolutionary change in natural populations. General predictive approaches in evolutionary ecology, including population genetics, quantitative genetics, optimality, and game theory will be examined. Emphasis will be placed on the mathematical underpinnings of each approach, particularly as they relate to classic and contemporary problems.",
+    "prerequisites": {
+      "text": "BIOL 304 and BIOL 308",
+      "tree": {
+        "and": [
+          "BIOL 304",
+          "BIOL 308"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 or permission.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOL 596",
+    "subject": "BIOL",
+    "number": "596",
+    "title": "Advanced Experimental Design",
+    "credits": 1,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course focuses on experimental design as it relates to statistical analyses to prepare individuals for data collection. Instructors will provide information on basic statistical principles and require students to prepare presentations about their experiments, write summaries of their research, and discuss and critique journal articles.",
+    "prerequisites": {
+      "text": "BIOL 373 or equivalent and permission of instructor",
+      "tree": "BIOL 373",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 601",
+    "subject": "BIOL",
+    "number": "601",
+    "title": "Introduction to Graduate Studies in Biology",
+    "credits": 1.5,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Foundational, cross-disciplinary skills in research and communication, including graduate student orientation, research integrity and ethics, equity, diversity and inclusion, science communication for a general audience, seminar critiques, elevator pitches, science writing for a general audience, finding/reading the literature, and peer review.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 602",
+    "subject": "BIOL",
+    "number": "602",
+    "title": "Molecular Biology Research and Professional Skills",
+    "credits": 1.5,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Core skills in reading, writing, critical thinking and experimental design/interpretation, pertaining to the molecular biology research stream. Research presentations, research proposals, and peer review, related to thesis research projects. Career opportunities and skills relating to career development.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL 603.",
+      "excludes": [
+        "BIOL 603"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOL 603",
+    "subject": "BIOL",
+    "number": "603",
+    "title": "Organismal Biology Research and Professional Skills",
+    "credits": 1.5,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Core skills in proposal writing, peer review, oral presentation, and practical workflows for reproducibility in science, pertaining to the Organismal Biology research stream, and including stream-specific topics such as field safety and career options. Topics include: paper/pre-print discussion and written review, research presentations,research proposals, rubric-guided peer review, and experimental design in field research disciplines.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL 602.",
+      "excludes": [
+        "BIOL 602"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOL 610",
+    "subject": "BIOL",
+    "number": "610",
+    "title": "Scientific Manuscript Writing",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Guide to the process of writing a scientific manuscript, including how to effectively communicate research findings to maximize their impact. Provides an atmosphere and structure to facilitate writing. Expectation that students bring analyzed data to the course with the goal of completing a manuscript. All aspects of manuscript writing are covered, including: narrative, writing style, effective figures, editing, and peer-review.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "While this course is open to undergraduates, students must enter with a complete and analyzed data set (i.e., should have rough Figures), and a letter from their supervisor confirming that this data set exists and is appropriate for a first-author paper by the student. Students must email this information to the instructor, and enrol on Minerva once they receive confirmation of their admission. Enrolment is limited, priority given to Biology graduate students. Language of instruction is English. Course evaluation includes regular assignments and peer-to-peer feedback."
+    ]
+  },
+  {
+    "code": "BIOL 632",
+    "subject": "BIOL",
+    "number": "632",
+    "title": "Advanced Limnology",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the physical, chemical and biological properties of inland waters, with emphasis on their functioning as systems.",
+    "prerequisites": {
+      "text": "BIOL 206 and/or permission",
+      "tree": "BIOL 206",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture",
+      "This course, involving two field weekends, has an additional fee of $360.39, which includes room and board and transportation. The fee is refundable during the period where a student can drop the course with full refund. The Department of Biology subsidizes a portion of the cost for this activity."
+    ]
+  },
+  {
+    "code": "BIOL 640",
+    "subject": "BIOL",
+    "number": "640",
+    "title": "Tropical Biology and Conservation",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Long-term research at the Smithsonian Tropical Research Institute will be organized and synthesized to examine historical assembly and ecological maintenance of tropical communities. This synthesis will draw on phylogenetic concepts for historical insight and will examine the probable resilience of these communities to global change, pollution and biodiversity loss.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "students enrolled in Neotropical Environment Option (NEO) or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fees: Graduate students requesting registration in the Neotropical Environment Option pay a fee of $966.09. This fee is used to support the costs associated with transportation and housing while in Panama."
+    ]
+  },
+  {
+    "code": "BIOL 650",
+    "subject": "BIOL",
+    "number": "650",
+    "title": "Recent Advances in Biology 1",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Directed reading, seminar and discussion courses in subjects of current interest in biological research. Intended for students working individually or in classes on selected areas under the supervision of one or more staff members. Content and form are flexible to allow the Department to meet specific student demands or needs. Such courses are arranged by consultation with individual staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 651",
+    "subject": "BIOL",
+    "number": "651",
+    "title": "Recent Advances in Biology 2",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Directed reading, seminar and discussion courses in subjects of current interest in biological research. Intended for students working individually or in classes on selected areas under the supervision of one or more staff members. Content and form are flexible to allow the Department to meet specific student demands or needs. Such courses are arranged by consultation with individual staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 652",
+    "subject": "BIOL",
+    "number": "652",
+    "title": "Recent Advances in Biology 3",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Directed reading, seminar and discussion courses in subjects of current interest in biological research. Intended for students working individually or in classes on selected areas under the supervision of one or more staff members. Content and form are flexible to allow the Department to meet specific student demands or needs. Such courses are arranged by consultation with individual staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 655",
+    "subject": "BIOL",
+    "number": "655",
+    "title": "Laboratory Projects and Techniques 1",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Directed training in selected methods used in areas of current interest in biological research. Intended for individuals or classes working in selected areas under the supervision of one or more staff members. Form and content are flexible to allow the Department to meet specific student demands and needs. Each course is arranged by consultation with individual staff.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 690",
+    "subject": "BIOL",
+    "number": "690",
+    "title": "Master's Thesis Research 4",
+    "credits": 10,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 697",
+    "subject": "BIOL",
+    "number": "697",
+    "title": "Master's Thesis Research 1",
+    "credits": 13,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 698",
+    "subject": "BIOL",
+    "number": "698",
+    "title": "Master's Thesis Research 2",
+    "credits": 13,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 699",
+    "subject": "BIOL",
+    "number": "699",
+    "title": "Master's Thesis Research 3",
+    "credits": 13,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 700",
+    "subject": "BIOL",
+    "number": "700",
+    "title": "Doctoral Qualifying Examination",
+    "credits": 0,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The oral Qualifying Examination is a formal evaluation of the candidate's ability to proceed to the attainment of the Ph.D. Candidates must submit a thesis proposal in advance of the exam.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 702",
+    "subject": "BIOL",
+    "number": "702",
+    "title": "Ph.D. Seminar",
+    "credits": 6,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Doctoral candidates are required to give a public oral presentation of their major results before submitting a thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 716",
+    "subject": "BIOL",
+    "number": "716",
+    "title": "PhD 1 Research in Biology 1",
+    "credits": 15,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Biology. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOL 717",
+    "subject": "BIOL",
+    "number": "717",
+    "title": "PhD 1 Research in Biology 2",
+    "credits": 15,
+    "offeredBy": "Biology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Biology. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

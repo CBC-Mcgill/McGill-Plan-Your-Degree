@@ -1,0 +1,1643 @@
+[
+  {
+    "code": "EDPE 208",
+    "subject": "EDPE",
+    "number": "208",
+    "title": "Personality and Social Development",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Personality, social behavior, and moral development from nursery school up to, but not including, adolescence. Emphasis on aspects of personality and social development that are related to the process of schooling.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not available for Psychology Major students or any student who has taken or is required to take PSYC 304 in the Psychology Department",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 300",
+    "subject": "EDPE",
+    "number": "300",
+    "title": "Educational Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Selected theories, models, and concepts relevant to planning and reflecting upon educational practice and improvement. Overview of development, learning, thinking, motivation, individual difference, etc. In relation to applications in classroom teaching and learning, the complementary role of counsellors and psychologists, educational computing and technology. The Youth Protection Act.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 304",
+    "subject": "EDPE",
+    "number": "304",
+    "title": "Measurement and Evaluation",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The purposes of examinations. Causes of complaints about examinations. Equalizing means and dispersions in distribution of marks. Standardized scores. The percentile system. Essay and objective-type examinations. Taxonomies of educational objectives. Validity and reliability: item analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 335",
+    "subject": "EDPE",
+    "number": "335",
+    "title": "Instructional Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Psychological processes in instruction and learning, assessment, and curriculum design, based on theories of cognition, motivation, and the social context of instruction.",
+    "prerequisites": {
+      "text": "An introductory course in psychology or EDPE 300",
+      "tree": "EDPE 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 355",
+    "subject": "EDPE",
+    "number": "355",
+    "title": "Cognition and Education",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Cognition and learning in educational domains and contexts. Contributions of cognitive science to issues in education including domain-specific and general knowledge and expertise, situated cognition and learning, cognitive apprenticeship, and uses of computers and networks as cognitive tools in educational settings.",
+    "prerequisites": {
+      "text": "PSYC 213 or permission of the instructor",
+      "tree": "PSYC 213",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 375",
+    "subject": "EDPE",
+    "number": "375",
+    "title": "Introductory Statistics",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This online course provides an introduction to the fundamentals of descriptive and inferential statistics. Topics in descriptive statistics include introduction to statistics, measures of central tendency, variability and correlation. Topics in inferential statistics concentrate on basic procedures in between-group hypothesis testing using dependent and independent t-tests and within-group hypothesis testing using correlation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 377",
+    "subject": "EDPE",
+    "number": "377",
+    "title": "Adolescence and Education",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development of personality and social behaviour in adolescence. Problems relating to self-concept, academic achievement, relationships with others, and development of values in a changing culture. Some attention to current criticisms of the school as an agency involved in adolescent development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered through Continuing Education or Summer Studies"
+    ]
+  },
+  {
+    "code": "EDPE 496",
+    "subject": "EDPE",
+    "number": "496",
+    "title": "Individual Reading Course",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Supervised individual reading course on an approved subject.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "By arrangement with individual instructor. Permission must be obtained from the Department before registration"
+    ]
+  },
+  {
+    "code": "EDPE 502",
+    "subject": "EDPE",
+    "number": "502",
+    "title": "Theories of Human Development",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Life course developmental theories to form a foundation for policy and for empirical and applied work with diverse groups, including disability and other equity-seeking groups.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 510",
+    "subject": "EDPE",
+    "number": "510",
+    "title": "Machine Learning in Society",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of key topics and broader issues in machine learning. An exploration of machine learning algorithms to make predictions and provide explanations from the decision structures inferred from the data. An introduction to programming languages to exemplify fundamental machine learning algorithms and techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered through Continuing Education or Summer Studies"
+    ]
+  },
+  {
+    "code": "EDPE 515",
+    "subject": "EDPE",
+    "number": "515",
+    "title": "Gender Identity Development",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theoretical models and empirical findings relevant to the development of gender identity. Special attention is given to the influence of peers in school settings. Psychological, physiological, parental, peer and cultural influences on gender identity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered through Continuing Education."
+    ]
+  },
+  {
+    "code": "EDPE 535",
+    "subject": "EDPE",
+    "number": "535",
+    "title": "Instructional Design",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course draws on the fields of learning theory, developmental psychology, and measurement to focus on the tasks of constructing instructional materials. Areas to be considered include behaviour analysis, concept formation, and test construction.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 550",
+    "subject": "EDPE",
+    "number": "550",
+    "title": "Consciousness and Virtual Reality",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "An exploration of the nature and role of consciousness from the virtual reality research perspective, and the implications of virtual reality and cyberspace in education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDPE 650.",
+      "excludes": [
+        "EDPE 650"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 555",
+    "subject": "EDPE",
+    "number": "555",
+    "title": "Introduction to Learning Sciences",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to foundational theories of the learning sciences. Implications of theory on methodologies for the learning sciences in general, and for educational and instructional contexts in particular.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 561",
+    "subject": "EDPE",
+    "number": "561",
+    "title": "Machine Learning: Theory & Applications",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of the principles underlying the current practice of machine learning,emphasizing the conceptual underpinnings of the fundamental machine learning algorithms applied to education and other domains. The critical use of data to develop rigorous data models. The mapping of algorithms to learning tasks. The visualization, evaluation, and interpretation of performance measures and results. The identification of model strengths and limitations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 575",
+    "subject": "EDPE",
+    "number": "575",
+    "title": "Statistics for Practitioners",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Understanding and interpreting basic statistical procedures used in basic and applied research, including graphs, measures of central tendency and variability, hypothesis testing, and correlations, t-tests, and basic ANOVA designs.",
+    "prerequisites": {
+      "text": "EDPE 602",
+      "tree": "EDPE 602",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 595",
+    "subject": "EDPE",
+    "number": "595",
+    "title": "Seminar in Special Topics 1 ",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "The content of the seminar will vary from year to year and will be announced prior to registration. The seminar may be given by a single instructor or by a group, as the occasion warrants.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 596",
+    "subject": "EDPE",
+    "number": "596",
+    "title": "Seminar in Special Topics 2",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Seminar in selected topics in Educational and Counselling Psychology. The topic will vary from year and will be announced prior to registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 602",
+    "subject": "EDPE",
+    "number": "602",
+    "title": "Uses of Research Findings in Education",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic concepts of educational research for the student who is likely to be a regular consumer of research but only an occasional generator of research and will be able to use common tools of information retrieval.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 604",
+    "subject": "EDPE",
+    "number": "604",
+    "title": "Thesis 1",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Literature survey and thesis planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 605",
+    "subject": "EDPE",
+    "number": "605",
+    "title": "Research Methods",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research methods and designs, planning and evaluating research, relations between research and statistical designs, interdisciplinary and nonquantitative approaches, meta-analysis, and the use of computers beyond computation. Ethics, scholarly writing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 607",
+    "subject": "EDPE",
+    "number": "607",
+    "title": "Thesis 2",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Preparation of a thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 609",
+    "subject": "EDPE",
+    "number": "609",
+    "title": "Selected Topics in Educational Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A detailed examination of recent developments in specific topics of educational psychology. The content of the seminar will vary from year to year and will be announced prior to registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 616",
+    "subject": "EDPE",
+    "number": "616",
+    "title": "Cognitive Development",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Assessment of theories of cognitive development including Piagetian, neo-Piagetian, and information-processing approaches. Theoretical models and empirical findings, and their application to educational and other settings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 619",
+    "subject": "EDPE",
+    "number": "619",
+    "title": "Child and Adolescent Therapy",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Therapeutic models for individual and group interventions for children and adolescents; case histories; gender and cultural minority issues; emphasis on classical and innovative strategies and methods for school and counselling psychologists.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For School/Applied Child Psychology students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 620",
+    "subject": "EDPE",
+    "number": "620",
+    "title": "Developmental Psychopathology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theory, research, and practice in developmental processes in the study of psychopathology, including aberrant behaviour in childhood, at-risk and resilient children, and mental illness.",
+    "prerequisites": {
+      "text": "None",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 622",
+    "subject": "EDPE",
+    "number": "622",
+    "title": "Multiculturalism and Gender",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Models and practices related to human rights, social justice, and Indigenous Peoples that apply to counselling and school psychology. Implications and their impact in assessment, research, training, intervention, and advocacy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to School/ Applied Child and Counselling Psychology students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 623",
+    "subject": "EDPE",
+    "number": "623",
+    "title": "Social-Emotional Development",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Social-emotional development including temperament, attachment, gender identity, and peer relations. Biological and environmental influences, continuity and change, and qualitative versus quantitative variables.",
+    "prerequisites": {
+      "text": "EDPE 616 or EDPE 620",
+      "tree": {
+        "or": [
+          "EDPE 616",
+          "EDPE 620"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 625",
+    "subject": "EDPE",
+    "number": "625",
+    "title": "Practicum 1: School Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Clinic experiences (normally 8-10 hours/week) (a) conducting assessment batteries, (b) interpreting assessment findings and developing intervention plans, (c) providing remedial services for specific learning domains and practical recommendations, (d) acquiring skills in group intervention techniques. Weekly case review and student progress meetings.",
+    "prerequisites": {
+      "text": "EDPC 609, EDPC 610, EDPC 618, EDPI 654, EDPE 611, EDPE 616.",
+      "tree": {
+        "and": [
+          "EDPC 609",
+          "EDPC 610",
+          "EDPC 618",
+          "EDPI 654",
+          "EDPE 611",
+          "EDPE 616"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDPC 682D1/D2, EDPE 620.",
+      "tree": {
+        "and": [
+          "EDPC 682",
+          "EDPE 620"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Students taking courses which access the ECP Assessment Materials Resource Centre are required to pay an access fee as well as the cost of all consumables required per course. The fee is dependent on the number of consumables/protocols used in each class and is refundable during the withdrawal with full refund period. The fee is $60."
+    ]
+  },
+  {
+    "code": "EDPE 626",
+    "subject": "EDPE",
+    "number": "626",
+    "title": "Practicum 2: School Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Clinic experiences (normally 8-10 hours/week) building upon EDPE 625: (a) conducting assessment batteries, (b) interpreting assessment findings and developing intervention plans, (c) providing remedial services for specific learning domains and practical recommendations, (d) acquiring skills in group intervention techniques. Weekly case review and student progress meetings. May continue to the end of the public school year.",
+    "prerequisites": {
+      "text": "EDPE 620, EDPE 625.",
+      "tree": {
+        "and": [
+          "EDPE 620",
+          "EDPE 625"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDPC 682D1/D2",
+      "tree": "EDPC 682",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Students taking courses which access the ECP Assessment Materials Resource Centre are required to pay an access fee as well as the cost of all consumables required per course. The fee is dependent on the number of consumables/protocols used in each class and is refundable during the withdrawal with full refund period. The fee in Winter 2018 is $60."
+    ]
+  },
+  {
+    "code": "EDPE 627",
+    "subject": "EDPE",
+    "number": "627",
+    "title": "Ethical and Professional Practice of Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Ethics and the professional and governmental structures regulating the practice of psychology in Quebec, Canada, and North America and their relation to the work of psychologists. Required for licensing as a psychologist.",
+    "prerequisites": {
+      "text": "EDPE 575 or equivalent",
+      "tree": "EDPE 575",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in M.A. (Thesis) Educational Psychology - School/Applied Child Psychology Stream Program, M.A. (Non-Thesis) Counselling Psychology - Project Program, and M.A. (Thesis) Counselling Psychology Program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 632",
+    "subject": "EDPE",
+    "number": "632",
+    "title": "Research Seminar",
+    "credits": 0,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A bi-weekly seminar course given by staff, invited speakers and senior graduate students in different areas of research related to Human Development. Students are expected to participate by reading pertinent literature prior to seminars and asking questions at each seminar. Attendance is compulsory, and the course is graded pass/fail based on participation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both EDPE 632D1 and EDPE 632D2.",
+      "No credit will be given for this course unless both EDPE 632D1 and EDPE 632D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "EDPE 632D1",
+        "credits": 0,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "EDPE 632D2",
+        "credits": 0,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "EDPE 633",
+    "subject": "EDPE",
+    "number": "633",
+    "title": "Research Internship 1",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course provides students with applied research experience under the supervision of a researcher other than their academic supervisor over the duration of 150 hours. Nature of the research internship will be contracted with the research internship supervisor, documented, and approved by the supervisor and program director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 634",
+    "subject": "EDPE",
+    "number": "634",
+    "title": "Research Internship 2",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course provides students with applied research experience under the supervision of a researcher other than their academic supervisor over the duration of 150 hours. Nature of the research internship will be contracted with the research internship supervisor, documented, and approved by the supervisor and program director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 635",
+    "subject": "EDPE",
+    "number": "635",
+    "title": "Theories of Learning and Instruction",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An analysis of the relationship between theory and research about learning and teaching from a historical perspective.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 636",
+    "subject": "EDPE",
+    "number": "636",
+    "title": "Motivation and Instruction",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Instructional effects on motivation and emotions and their implications for educational practice, with particular emphasis on socio-cultural and constructivist practices, classroom interaction, and teacher impact.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 637",
+    "subject": "EDPE",
+    "number": "637",
+    "title": "Issues in Health Professions Education",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An overview of health professions education issues, including: learning and assessment in the clinical setting, medical core competencies, design, delivery and evaluation of health professions education programs, organization & management of health professions education programs and systems, organizational change and leadership, clinical reasoning and decision making, interdisciplinary education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 640",
+    "subject": "EDPE",
+    "number": "640",
+    "title": "Emerging Technologies for Educational Change",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Interdisciplinary learning theories; working with and evaluating emerging digital technologies and interfaces that impact teaching and learning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 656",
+    "subject": "EDPE",
+    "number": "656",
+    "title": "Applied Theory/Methods in the Learning Sciences",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundational and current theories and methodologies applied to understanding human cognition and learning. An overview of experimental, observational, and physiological research designs, methods, and analyses.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 657",
+    "subject": "EDPE",
+    "number": "657",
+    "title": "Learning, Cognition, and Motivation in Health Sciences Educ",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to foundational psychological and educational theories relevant to health sciences education that can account for learning and change and can inform the pedagogical design of courses, programs, and educational environments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. The blended format requires a total of 130 hours of learning time. This will be achieved by 20 hours of face-to-face instruction, 60 hours of on-line synchronous and asynchronous instruction, and 50 hours of individual work including readings, assignments and projects."
+    ]
+  },
+  {
+    "code": "EDPE 658",
+    "subject": "EDPE",
+    "number": "658",
+    "title": "Introduction to HSE Curriculum and Program Development",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Instructional design principles and their application to course and program development, highlighting a learner-centered approach to teaching, curriculum design, and program development (e.g., competency-based curriculum) and specific approaches to delivery in diverse health sciences education contexts in which teaching and learning occur (e.g., simulation, classroom, clinical settings).",
+    "prerequisites": {
+      "text": "EDPE 657",
+      "tree": "EDPE 657",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. The blended format requires a total of 130 hours of learning time. This will be achieved by 20 hours of face-to-face instruction, 60 hours of online synchronous and asynchronous instruction, and 50 hours of individual work including readings, assignments and projects."
+    ]
+  },
+  {
+    "code": "EDPE 659",
+    "subject": "EDPE",
+    "number": "659",
+    "title": "Introduction to Assessment and Evaluation in HSE ",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introductory principles and issues related to assessment, and also specific to the workplace-based contexts specific to health sciences education (HSE). Concepts include: creating and using assessments for decision-making; generating feedback for learners; and examining the quality of assessments, and critical assessment literacy on the uses and interpretations of assessment in HSE. Basic principles of program evaluation, introduction to several frameworks used to guide its design, and key steps in formulating an evaluation plan.",
+    "prerequisites": {
+      "text": "EDPE 658",
+      "tree": "EDPE 658",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. The blended format requires a total of 130 hours of learning time. This will be achieved by 20 hours of face-to-face instruction, 60 hours of on-line synchronous and asynchronous instruction, and 50 hours of individual work including readings, assignments and projects"
+    ]
+  },
+  {
+    "code": "EDPE 663",
+    "subject": "EDPE",
+    "number": "663",
+    "title": "Learning Environments",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research on digital environments and tools (e.g., online, mobile) that support learning and developing expertise. Evaluation and application of theory and research on technology-rich educational environments focusing on underlying cognitive and social processes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 664",
+    "subject": "EDPE",
+    "number": "664",
+    "title": "Critical Thinking",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Foundational and current research on the development of critical thinking in formal and informal educational settings, exploring cognitive, interpersonal, and socio-cultural dimensions. Introduction to methodologies for analyzing data related to cognitive processes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 666",
+    "subject": "EDPE",
+    "number": "666",
+    "title": "Advanced Topics in Learning Sciences",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced topics on theory and research on the interdisciplinary study of the learning sciences. Focuses on cognitive-psychological and social- psychological foundations of human learning, as well as on the design of learning environments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 668",
+    "subject": "EDPE",
+    "number": "668",
+    "title": "Advanced Seminar in Learning Sciences",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Critical analysis and synthesis of contemporary theoretical and empirical research in educational psychology and cognate areas. Topics addressed for each offering may change as a function of current debates and issues in the educational literature. Examples of topics would be motivation, assessment, epistemology, self-regulated learning, and metacognition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 670",
+    "subject": "EDPE",
+    "number": "670",
+    "title": "Educational Assessment and Evaluation",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theories and models of evaluation as applied to educational programs and instructional systems. Current theories of aligning assessment with curriculum and instruction goals based on the cognitive competencies required in specific practices.",
+    "prerequisites": {
+      "text": "EDPE 635",
+      "tree": "EDPE 635",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 672",
+    "subject": "EDPE",
+    "number": "672",
+    "title": "Human Development Seminar 1",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theories and developments in the science of human development within the context of research and practice and the evolution of the field at large.",
+    "prerequisites": {
+      "text": "EDPE 502 or permission of the instructor (Minimum Grade/Test score(s) needed is B-).",
+      "tree": "EDPE 502",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 673",
+    "subject": "EDPE",
+    "number": "673",
+    "title": "Human Development Seminar 2",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of theories and developments in the science of human development within the context of research and practice and evolution of the field at large.",
+    "prerequisites": {
+      "text": "EDPE 672 (Minimum Grade/Test score(s) needed is B-).",
+      "tree": "EDPE 672",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 676",
+    "subject": "EDPE",
+    "number": "676",
+    "title": "Intermediate Statistics",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Concepts and procedures of conducting basic descriptive and inferential statistics, including analysis of variance, correlation, and regression models. Provides experience with data-analysis tools.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 682",
+    "subject": "EDPE",
+    "number": "682",
+    "title": "Univariate/Multivariate Analysis",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "General linear model as a unified data analytic system for estimation and hypothesis testing that subsumes regression, analysis of variance, and analysis of covariance for single dependent variables. Introduction to generalizations involving multiple dependent (criterion) variables. Applications oriented toward education, educational psychology and counselling psychology. Experience with data-analysis tools.",
+    "prerequisites": {
+      "text": "EDPE 676",
+      "tree": "EDPE 676",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 683",
+    "subject": "EDPE",
+    "number": "683",
+    "title": "Human Development Seminar 3",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Recent developments of specific topics in human development.",
+    "prerequisites": {
+      "text": "EDPE 673 (Minimum Grade/Test score(s) needed is B-).",
+      "tree": "EDPE 673",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 684",
+    "subject": "EDPE",
+    "number": "684",
+    "title": "Applied Multivariate Statistics",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principal methods, models, and hypothesis-testing procedures for the prediction and analysis of patterns, structure, and relationships in multivariate data (e.g., factor and path analysis, structural equation modeling, multi-level modeling). Applications oriented toward education and educational and counselling psychology. Provides experience with data analysis tools.",
+    "prerequisites": {
+      "text": "EDPE 682 or equivalent.",
+      "tree": "EDPE 682",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 686",
+    "subject": "EDPE",
+    "number": "686",
+    "title": "Human Development Seminar 4",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of recent developments of specific topics in human development.",
+    "prerequisites": {
+      "text": "EDPE 683 (Minimum Grade/Test score(s) needed is B-).",
+      "tree": "EDPE 683",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 687",
+    "subject": "EDPE",
+    "number": "687",
+    "title": "Qualitative Methods in Educational Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The logics of design and selection of phenomenology, grounded theory, ethnography, case study and mixed design methods with emphasis on data analysis in light of issues of research purpose, epistemology, reliability and validity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 691",
+    "subject": "EDPE",
+    "number": "691",
+    "title": "Reading Course",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Supervised readings supervised by a member of staff. Topics will be chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 692",
+    "subject": "EDPE",
+    "number": "692",
+    "title": "Reading Course",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Supervised readings supervised by a member of staff. Topics will be chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 692D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 692D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 693",
+    "subject": "EDPE",
+    "number": "693",
+    "title": "Thesis 3",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision of a research director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 694",
+    "subject": "EDPE",
+    "number": "694",
+    "title": "Thesis 4",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision of a research director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 695",
+    "subject": "EDPE",
+    "number": "695",
+    "title": "Thesis 5",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision of a research director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 695D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 695D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 696",
+    "subject": "EDPE",
+    "number": "696",
+    "title": "Thesis 6",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Thesis research under supervision of a research director.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 696D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 696D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 697",
+    "subject": "EDPE",
+    "number": "697",
+    "title": "Special Activity 1",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A project relevant to improving educational practice. It may be an internship, a research project, or an innovation in teaching, supervised by the student's advisor and with the approval of the department. It is completed by the submission of a project report, monograph, or production. For M.Ed. students only.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 697D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 697D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 698",
+    "subject": "EDPE",
+    "number": "698",
+    "title": "Special Activity 2",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A project relevant to improving educational practice. It may be an internship, a research project, or an innovation in teaching, supervised by the student's advisor and with the approval of the department. It is completed by the submission of a project report, monograph, or production. For M.Ed. students only.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 698D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 698D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 699",
+    "subject": "EDPE",
+    "number": "699",
+    "title": "Special Activity",
+    "credits": 12,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A project relevant to improving educational practice. It may be an internship, a research project, or an innovation in teaching supervised by the student's advisor and with the approval of the department. It is completed by the submission of a project report, monograph, or production.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to M.Ed. students. Not open to students who have taken EDPE 697 and EDPE 698.",
+      "excludes": [
+        "EDPE 697",
+        "EDPE 698"
+      ]
+    },
+    "notes": [
+      "Students must register for EDPE 699D1 and EDPE 699D2.",
+      "No credit will be given for this course unless both EDPE 699D1 and EDPE 699D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "EDPE 699D1",
+        "credits": 6,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "EDPE 699D2",
+        "credits": 6,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "EDPE 704",
+    "subject": "EDPE",
+    "number": "704",
+    "title": "Professional Development Seminar 1",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Professional development topics including literature search strategies, academic writing techniques, employment preparation (academic and non-academic), and current research topics (e.g., publishing, open science). Consideration of conceptual and methodological issues relevant to students’ proposed dissertations. Preparation for the comprehensive examination and initial doctoral research proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 705",
+    "subject": "EDPE",
+    "number": "705",
+    "title": "Professional Development Seminar 2",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Professional development topics including literature search strategies, academic writing techniques, employment preparation (academic and non-academic), and current research topics (e.g., publishing, open science). Consideration of conceptual and methodological issues relevant to students’ proposed dissertations. Preparation for the comprehensive examination and initial doctoral research proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to doctoral students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 706",
+    "subject": "EDPE",
+    "number": "706",
+    "title": "Professional Development Seminar 3",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Professional development topics including literature search strategies, academic writing techniques, employment preparation (academic and non-academic), and current research topics (e.g., publishing, open science). Consideration of conceptual and methodological issues relevant to students’ proposed dissertations. Preparation for the comprehensive examination and initial doctoral research proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to doctoral students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 707",
+    "subject": "EDPE",
+    "number": "707",
+    "title": "Professional Development Seminar 4",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Professional development topics including literature search strategies, academic writing techniques, employment preparation (academic and non-academic), and current research topics (e.g., publishing, open science). Consideration of conceptual and methodological issues relevant to students’ proposed dissertations. Preparation for the comprehensive examination and initial doctoral research proposal.",
+    "prerequisites": {
+      "text": "EDPE 704 - Advanced Research Seminar 1, EDPE 705 - Advanced Research Seminar 2, EDPE 706 - Advanced Research Seminar 3",
+      "tree": {
+        "and": [
+          "EDPE 704",
+          "EDPE 705",
+          "EDPE 706"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to doctoral students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDPE 708",
+    "subject": "EDPE",
+    "number": "708",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A four-part evaluation which is normally taken at the end of the Ph.D. 2 year. A detailed description of the examination is provided to all students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 708D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "EDPE 708D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 710",
+    "subject": "EDPE",
+    "number": "710",
+    "title": "Consultation in School Psychology",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Open only to students in School/Applied Child Psychology and with permission, Counselling Psychology and Special Populations Major. A clinical course on the use of consultation in educational and school-related settings. Topics include: consultation theory, the process of evaluations of the consultation process and outcomes, critical study of relevant research and practice. Includes problem identification, problem analysis, treatment implementation, and treatment evaluation of one case.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDPE 625, EDPE 626 or equivalent.",
+      "tree": {
+        "and": [
+          "EDPE 625",
+          "EDPE 626"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 712",
+    "subject": "EDPE",
+    "number": "712",
+    "title": "Neurological Bases of Behaviour Across Lifespan",
+    "credits": 3,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Neurobiological changes specific to developmental, learning, psychiatric and neurodegenerative conditions with clinical onset across the lifespan examined within environmental and psychosocial contexts. Uses of current neuromodulatory and pharmacological remediation discussed in addition to clinical/educational intervention.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 713",
+    "subject": "EDPE",
+    "number": "713",
+    "title": "Language Acquisition Issues 5",
+    "credits": 2,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on language science controversies and their associating literature, and practical implications in education and learning in general.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDPE 721",
+    "subject": "EDPE",
+    "number": "721",
+    "title": "School Psychology: Elementary",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Open only to Ph.D. students in School/Applied Child Psychology. Field experience. Two days or 16 hours per week supervised by faculty members and a field supervisor in a school providing elementary education. Weekly class meetings. Students must also register for either EDPE 722 or EDPE 723 in the same academic year.",
+    "prerequisites": {
+      "text": "EDPE 626",
+      "tree": "EDPE 626",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 721D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 721D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 722",
+    "subject": "EDPE",
+    "number": "722",
+    "title": "School Psychology: Secondary",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Open only to Ph.D. students in School/Applied Child Psychology. Field experience. Two days or 16 hours per week supervised by faculty members and a field supervisor in a school providing secondary education. Weekly class meetings. Students must also register for either EDPE 721 or EDPE 723 in the same academic year.",
+    "prerequisites": {
+      "text": "EDPE 626",
+      "tree": "EDPE 626",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 722D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 722D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 723",
+    "subject": "EDPE",
+    "number": "723",
+    "title": "School Psychology: Community",
+    "credits": 6,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Open only to Ph.D. students in School/Applied Child Psychology. Field experience. Two days or 16 hours per week supervised by faculty members and a field supervisor in an educationally relevant community or institutional setting. Weekly class meetings. Students must also register for either EDPE 721 or EDPE 722 in the same academic year.",
+    "prerequisites": {
+      "text": "EDPE 626",
+      "tree": "EDPE 626",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 723D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "EDPE 723D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 725",
+    "subject": "EDPE",
+    "number": "725",
+    "title": "Internship 1 - School Psychology",
+    "credits": 12,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Open only to Ph.D. students in School/Applied Child Psychology. A 2 1/2 day, 10- to 12-month supervised internship (minimum 600 hours) including assessment and diagnosis normally in a school-based setting. This also includes group supervision to discuss cases that arise in internship settings. May be combined with EDPE 726 in a single full-time year long internship; this full-time pattern is typical in accredited sites.",
+    "prerequisites": {
+      "text": "EDPE 708 and two of EDPE 721, EDPE 722 or EDPE 723",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "EDPE 708",
+              "EDPE 721",
+              "EDPE 722"
+            ]
+          },
+          "EDPE 723"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 725D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EDPE 725D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "EDPE 726",
+    "subject": "EDPE",
+    "number": "726",
+    "title": "Internship 2 - School Psychology",
+    "credits": 12,
+    "offeredBy": "Educational&Counselling Psych",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Open only to Ph.D. students in School/Applied Child Psychology. A 2 1/2 day, 10- to 12-month supervised internship (minimum 600 hours) including assessment and diagnosis normally in an educationally relevant community-based centre (e.g., hospital, clinic), group supervision, case discussions. May be combined with EDPE 725 in a single full-time year long internship; this full-time pattern is typical in accredited sites.",
+    "prerequisites": {
+      "text": "EDPE 708 and two of EDPE 721, EDPE 722 or EDPE 723",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "EDPE 708",
+              "EDPE 721",
+              "EDPE 722"
+            ]
+          },
+          "EDPE 723"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "EDPE 726D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "EDPE 726D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  }
+]

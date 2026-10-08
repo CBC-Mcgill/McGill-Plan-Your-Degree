@@ -1,0 +1,4059 @@
+[
+  {
+    "code": "PSYC 100",
+    "subject": "PSYC",
+    "number": "100",
+    "title": "Introduction to Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the scientific study of mind and behavior, including basic concepts and methods in psychology while also highlighting the relevance of psychology to everyday life; attachment, aggression, depression, parenting and personality change.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have passed an Introductory Psychology course in CEGEP: 350-101 or 350-102 or equivalent",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "2 lectures; 1 conference"
+    ]
+  },
+  {
+    "code": "PSYC 204",
+    "subject": "PSYC",
+    "number": "204",
+    "title": "Introduction to Psychological Statistics",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The statistical analysis of research data; frequency distributions; graphic representation; measures of central tendency and variability; elementary sampling theory and tests of significance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MATH 203.",
+      "excludes": [
+        "MATH 203"
+      ]
+    },
+    "notes": [
+      "Fall and Winter",
+      "This course is a prerequisite for PSYC 305, PSYC 406, PSYC 310, PSYC 336",
+      "Completion of PSYC 204 may restrict a student from getting credit for other statistics courses at McGill (please see the Course Overlap section of the McGill Course Catalogue for details)."
+    ]
+  },
+  {
+    "code": "PSYC 211",
+    "subject": "PSYC",
+    "number": "211",
+    "title": "Introductory Behavioural Neuroscience",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to contemporary research on the relationship between brain and behaviour. Topics include learning, memory and cognition, brain damage and neuroplasticity, emotion and motivation, and drug addiction and brain reward circuits. Much of the evidence will be drawn from the experimental literature on research with animals.",
+    "prerequisites": {
+      "text": "BIOL 111, 112 or 115, PSYC 100 or equivalent",
+      "tree": {
+        "and": [
+          "BIOL 111",
+          {
+            "or": [
+              "BIOL 112",
+              "BIOL 115"
+            ]
+          },
+          "PSYC 100"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 212",
+    "subject": "PSYC",
+    "number": "212",
+    "title": "Perception",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Perception is the organization of sensory input into a representation of the environment. Topics include: survey of sensory coding mechanisms (visual, auditory, tactile, olfactory, gustatory), object recognition, spatial localization, perceptual constancies and higher level influences.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall 2 Lectures, 1 conference"
+    ]
+  },
+  {
+    "code": "PSYC 213",
+    "subject": "PSYC",
+    "number": "213",
+    "title": "Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Where do thoughts come from? What is the nature of thought, and how does it arise in the mind and the brain? Cognition is the study of human information processing, and we will explore topics such as memory, attention, categorization, decision making, intelligence, philosophy of mind, and the mind-as computer metaphor.",
+    "prerequisites": {
+      "text": "One previous course in Psychology.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures, 1 conference"
+    ]
+  },
+  {
+    "code": "PSYC 215",
+    "subject": "PSYC",
+    "number": "215",
+    "title": "Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The course offers students an overview of the major topics in social psychology. Three levels of analysis are explored beginning with individual processes (e.g., attitudes, attribution), then interpersonal processes (e.g., attraction, communication, love) and finally social influence processes (e.g., conformity, norms, roles, reference groups).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 330, MGCR 221 or SOCI 216",
+      "excludes": [
+        "MGCR 221",
+        "PSYC 330",
+        "SOCI 216"
+      ]
+    },
+    "notes": [
+      "Fall and Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 301",
+    "subject": "PSYC",
+    "number": "301",
+    "title": "Animal Learning and Theory",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Contemporary and historical research and theory on animal learning approached from a behavioural, cognitive and biological perspective. Classical and instrumental conditioning, cognitive learning, and biological constraints. The status and history of North American behaviourism will be discussed and compared with cognitive and other approaches.",
+    "prerequisites": {
+      "text": "PSYC 211 or PSYC 213 or permission of instructor.",
+      "tree": {
+        "or": [
+          "PSYC 211",
+          "PSYC 213"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 211 prior to the 2000-01 academic year",
+      "excludes": [
+        "PSYC 211"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 302",
+    "subject": "PSYC",
+    "number": "302",
+    "title": "Pain",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to pain research and theory, with emphasis on the interactions of psychological, cultural and physiological factors in pain perception. The role of these factors in clinical pain and its management by pharmacological and non-pharmacological means will be discussed.",
+    "prerequisites": {
+      "text": "NSCI 201 or PSYC 211, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "NSCI 201",
+          "PSYC 211"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken PSYC 505.",
+      "excludes": [
+        "PSYC 505"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 303",
+    "subject": "PSYC",
+    "number": "303",
+    "title": "Introduction to Human Memory",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to human memory. Topics include: methods in memory research; major models and taxonomies of memory, such as the modal model, working memory, semantic, episodic, and procedural memory, declarative and non-declarative memory; fundamental memory processes, such as formation, maintenance, retrieval, and forgetting; memory development; autobiographical memory; metamemory; disorders of memory.",
+    "prerequisites": {
+      "text": "PSYC 211 and PSYC 213",
+      "tree": {
+        "and": [
+          "PSYC 211",
+          "PSYC 213"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 304",
+    "subject": "PSYC",
+    "number": "304",
+    "title": "Child Development",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Psychology of children, covering critical issues, theories, biological underpinnings, experimental methods, and findings in perceptual, cognitive, language, emotional, and social development.",
+    "prerequisites": {
+      "text": "Two courses from PSYC 211, PSYC 213, and PSYC 215 or permission of the instructor",
+      "tree": {
+        "and": [
+          "PSYC 211",
+          "PSYC 213",
+          "PSYC 215"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 lectures, 1 conference",
+      "This course is a prerequisite for PSYC 412, PSYC 413, PSYC 414, PSYC 416"
+    ]
+  },
+  {
+    "code": "PSYC 305",
+    "subject": "PSYC",
+    "number": "305",
+    "title": "Statistics for Experimental Design",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to the design and analysis of experiments, including analysis of variance, planned and post hoc tests and a comparison of anova to correlational analysis.",
+    "prerequisites": {
+      "text": "PSYC 204; or MATH 203 (or those who are exempt from MATH 203 via advanced standing credits).",
+      "tree": {
+        "and": [
+          "PSYC 204",
+          "MATH 203"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall and Winter",
+      "This course is required of all students who propose to enter an Honours or Major program in Psychology",
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "PSYC 306",
+    "subject": "PSYC",
+    "number": "306",
+    "title": "Research Methods in Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The philosophy of science, the methods psychologists use, and how to interpret and evaluate psychological research. The ethical issues in psychological research and how to communicate psychological research in written and visual forms. How to become consumers of psychological science, and to provide building blocks to become expert producers of psychological science.",
+    "prerequisites": {
+      "text": "PSYC 100; PSYC 204 or MATH 203; PSYC 305",
+      "tree": {
+        "and": [
+          "PSYC 100",
+          {
+            "or": [
+              "PSYC 204",
+              "MATH 203"
+            ]
+          },
+          "PSYC 305"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PSYC 305",
+      "tree": "PSYC 305",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to U2 students and above.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 309",
+    "subject": "PSYC",
+    "number": "309",
+    "title": "Positive Psychology: Science of Well-Being",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to positive psychology that is designed toexplore the research behind the concepts, techniques,and exercises that enhance well-being.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 310",
+    "subject": "PSYC",
+    "number": "310",
+    "title": "Intelligence",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to the evolution and assessment of intelligence. Emphasizes measurement and correlates of the human intellect and the role of environment and heredity in social and race differences in intellectual and adaptive functioning. Evolution of intelligence in vertebrates and other intelligences including practical and emotional intelligence will be covered.",
+    "prerequisites": {
+      "text": "PSYC 204 or MATH 203; and PSYC 211 or PSYC 213 or PSYC 215 or BIOL 111 or BIOL 112 or BIOL 115; or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PSYC 204",
+              "MATH 203"
+            ]
+          },
+          {
+            "or": [
+              "PSYC 211",
+              "PSYC 213",
+              "PSYC 215",
+              "BIOL 111",
+              "BIOL 112",
+              "BIOL 115"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 311",
+    "subject": "PSYC",
+    "number": "311",
+    "title": "Human Cognition and the Brain",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course is an introduction to the field studying how human cognitive processes, such as perception, attention, language, learning and memory, planning and organization, are related to brain processes. The material covered is primarily based on studies of the effects of different brain lesions on cognition and studies of brain activity in relation to cognitive processes with modern functional neuroimaging methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 lectures; 1 conference"
+    ]
+  },
+  {
+    "code": "PSYC 312",
+    "subject": "PSYC",
+    "number": "312",
+    "title": "Introduction to Perception",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to perception. Topics include sensory coding mechanisms across different modalities (vision, hearing, touch, smell, and taste), object recognition, spatial localization, perceptual constancies, and the influence of higher-level cognitive processes.",
+    "prerequisites": {
+      "text": "PSYC 211",
+      "tree": "PSYC 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 212.",
+      "excludes": [
+        "PSYC 212"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 315",
+    "subject": "PSYC",
+    "number": "315",
+    "title": "Computational Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Application of computational methods to the simulation of psychological phenomena. Comparison of natural and artificial intelligence. Symbolic and neural network techniques. Methods for evaluating simulations.",
+    "prerequisites": {
+      "text": "15 credits in any of Psychology, Cognitive Science, Biology, Mathematics and Statistics, Computer Science, or Neuroscience.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 or U1 students.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 317",
+    "subject": "PSYC",
+    "number": "317",
+    "title": "Genes and Behaviour",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Focuses on current techniques employed to study which genes influence behaviour, and how they do so.",
+    "prerequisites": {
+      "text": "PSYC 211 or NSCI 201 or BIOL 306 or PHGY 314 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PSYC 211",
+          "NSCI 201",
+          "BIOL 306",
+          "PHGY 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 318",
+    "subject": "PSYC",
+    "number": "318",
+    "title": "Behavioural Neuroscience 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The physiological bases of motivational states, with respect to feeding, drinking, sexual behaviour, drug use, and aggression. Physiological bases of learning and memory.",
+    "prerequisites": {
+      "text": "NSCI 201 or PSYC 311 or BIOL 306 or PHGY 314.",
+      "tree": {
+        "or": [
+          "NSCI 201",
+          "PSYC 311",
+          "BIOL 306",
+          "PHGY 314"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Two lectures and one conference per week."
+    ]
+  },
+  {
+    "code": "PSYC 319",
+    "subject": "PSYC",
+    "number": "319",
+    "title": "Computational Models - Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to the purpose, design, and role of computational modeling in the cognitive sciences. Domains examined will include memory, categorization, and language. Focus will be on computational models to attain a better theoretical understanding of human behaviour. New trends, including the use of big data and machine learning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 or above. Restricted to students in Psychology, Linguistics and Cognitive Science.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 328",
+    "subject": "PSYC",
+    "number": "328",
+    "title": "Health Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "A survey of major issues in health psychology: historical perspective; health effects of stress and stress management; pain mechanisms and management; prevention and management of chronic diseases, hypertension, coronary heart disease, cancer, and immunological disorders. Behaviour change strategies for smoking, weight regulation, physical inactivity, and sexual risk behaviour.",
+    "prerequisites": {
+      "text": "PSYC 213 and PSYC 215.",
+      "tree": {
+        "and": [
+          "PSYC 213",
+          "PSYC 215"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 429.",
+      "excludes": [
+        "PSYC 429"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "2 lectures",
+      "Available only to U2 and above."
+    ]
+  },
+  {
+    "code": "PSYC 329",
+    "subject": "PSYC",
+    "number": "329",
+    "title": "Introduction to Auditory Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Listener's response to sound. Higher-level mental principles including perception, attention, memory, motor control, and emotion. Sensation and perceptual organization of sound. Perception/production of speech, music, and other auditory events.",
+    "prerequisites": {
+      "text": "PSYC 212 or PSYC 213 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PSYC 212",
+          "PSYC 213"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lecture hours per week."
+    ]
+  },
+  {
+    "code": "PSYC 331",
+    "subject": "PSYC",
+    "number": "331",
+    "title": "Inter-Group Relations",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course focuses on the social psychology of societal groups such as racial minorities, aboriginal groups and women. The ideological biases of current theories is first established. This is followed by a review of current theories and finally current controversies are explored including new forms of racism and affirmative action.",
+    "prerequisites": {
+      "text": "PSYC 215",
+      "tree": "PSYC 215",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 332",
+    "subject": "PSYC",
+    "number": "332",
+    "title": "Introduction to Personality",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course examines some of the major theories of personality, e.g., those of Freud, Rogers, and Bandura. Empirical research inspired by these theories will also be examined. Topics include the nature of human motivation, the role of the self-concept, and the consistency and stability of personality.",
+    "prerequisites": {
+      "text": "PSYC 100",
+      "tree": "PSYC 100",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 333",
+    "subject": "PSYC",
+    "number": "333",
+    "title": "Personality and Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The course builds on and is an extension of Social Psychology (PSYC 215). Traditional approaches to person-situation interactions and a more dynamic approach based on recent research on goals and social cognition.",
+    "prerequisites": {
+      "text": "PSYC 215",
+      "tree": "PSYC 215",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 337",
+    "subject": "PSYC",
+    "number": "337",
+    "title": "Introduction to Psychopathology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to major concepts and issues in the study of psychopathology in humans, including major models of etiology, diagnosis, prognosis, assessment, and treatment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 338.",
+      "excludes": [
+        "PSYC 338"
+      ]
+    },
+    "notes": [
+      "Two lectures"
+    ]
+  },
+  {
+    "code": "PSYC 339",
+    "subject": "PSYC",
+    "number": "339",
+    "title": "Introduction to Applied Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Exploration of the conceptual frameworks that underlie different applied psychological disciplines (e.g., educational/school psychology, clinical child and adult psychology, health psychology, forensic psychology, vocational psychology), the nature of the problems addressed by different psychological disciplines, and the tools used for assessment and intervention.",
+    "prerequisites": {
+      "text": "PSYC 100",
+      "tree": "PSYC 100",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 340",
+    "subject": "PSYC",
+    "number": "340",
+    "title": "Psychology of Language",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "A survey of issues in psycholinguistics, focusing on the nature and processing of language (e.g., how we understand speech sounds, words, sentences, and discourse). Also surveyed: language and thought, the biological foundations of language, and first language acquisition.",
+    "prerequisites": {
+      "text": "PSYC 213",
+      "tree": "PSYC 213",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYC 341",
+    "subject": "PSYC",
+    "number": "341",
+    "title": "The Psychology of Bilingualism",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will examine issues in bilingualism, including second language acquisition in children and adults, critical period hypothesis, cognitive consequences and correlates of bilingualism, social psychological aspects of bilingualism, and bilingual education.",
+    "prerequisites": {
+      "text": "Introductory Psychology, and PSYC 340 or introduction to linguistics; or permission of instructor",
+      "tree": "PSYC 340",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 342",
+    "subject": "PSYC",
+    "number": "342",
+    "title": "Hormones and Behaviour",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The role of hormones in organization of CNS function, as effectors of behaviour, in expression of behaviours and in mental illness.",
+    "prerequisites": {
+      "text": "BIOL 111, BIOL 112, BIOL 115 or equivalent",
+      "tree": {
+        "and": [
+          "BIOL 111",
+          "BIOL 112",
+          "BIOL 115"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 349",
+    "subject": "PSYC",
+    "number": "349",
+    "title": "Psychology Research Experience",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Conducting research in the laboratory of a faculty member in psychology or a related discipline (e.g., psychiatry, education), including: literature searches; experimental design; experiment programming; data collection (running participants or animals through experiments); data entry; data coding; data analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Departmental permission required.",
+      "Students must register for both PSYC 349D1 and PSYC 349D2.",
+      "No credit will be given for this course unless both PSYC 349D1 and PSYC 349D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "PSYC 349D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 349D2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026",
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "PSYC 349N1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 349N2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 351",
+    "subject": "PSYC",
+    "number": "351",
+    "title": "Research Methods and Laboratory in Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to the issues, strategies, and applications of various research methodologies in social psychology; methods using both correlational and experimental procedures. Classic and contemporary approaches will be examined.",
+    "prerequisites": {
+      "text": "PSYC 215 and PSYC 305",
+      "tree": {
+        "and": [
+          "PSYC 215",
+          "PSYC 305"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 students and above.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 352",
+    "subject": "PSYC",
+    "number": "352",
+    "title": "Research Methods and Laboratory in Cognitive Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to research methods and experimental techniques in cognitive psychology for exploring topics such as attention, memory, categorization, reasoning, and language processing.",
+    "prerequisites": {
+      "text": "PSYC 213 and PYSC 305.",
+      "tree": {
+        "and": [
+          "PSYC 213",
+          "PYSC 305"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 students or above",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "1 hour lecture, weekly lab"
+    ]
+  },
+  {
+    "code": "PSYC 353",
+    "subject": "PSYC",
+    "number": "353",
+    "title": "Research Methods and Laboratory in Human Perception",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to standard psychophysical procedures and data analysis techniques. Modelling behavioural data using various psychophysical methods.",
+    "prerequisites": {
+      "text": "PSYC 212 and PSYC 305",
+      "tree": {
+        "and": [
+          "PSYC 212",
+          "PSYC 305"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 students and above.",
+      "excludes": []
+    },
+    "notes": [
+      "1. Winter"
+    ]
+  },
+  {
+    "code": "PSYC 354",
+    "subject": "PSYC",
+    "number": "354",
+    "title": "Research Methods and Laboratory in Psycholinguistics",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to experimental methods used in the psychology of language (i.e., psycholinguistics). The planning of projects and research related to experimental design and analysis relevant to psycholinguistics, as well as research ethics, critical analysis, and communication of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 students and above.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 355",
+    "subject": "PSYC",
+    "number": "355",
+    "title": "Research Methods and Laboratory in Electroencephalography",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the use of electroencephalography (EEG) for measuring brain function in behavioural neuroscience experiments. Recording and analyzing EEG data, as well asin designing experiments and interpreting findings using this method. Topics include the neural basis of EEG, recording principles and techniques, EEG data analysis (frequency bands, averaging, sources of noise, filtering, signal to noise), event-related potential analysis (ERP), spectral analysis and time-frequency analysis, data visualization, topographical maps.",
+    "prerequisites": {
+      "text": "PSYC 211 (or NCSI 201), PSYC 212, and PSYC 213",
+      "tree": {
+        "and": [
+          "PSYC 211",
+          "NCSI 201",
+          "PSYC 212",
+          "PSYC 213"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 415.",
+      "excludes": [
+        "PSYC 415"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 380",
+    "subject": "PSYC",
+    "number": "380",
+    "title": "Honours Research Project Seminar",
+    "credits": 9,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "First laboratory research project.",
+    "prerequisites": {
+      "text": "Departmental permission required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students admitted to the psychology honours program (for details, see:https://www.mcgill.ca/psychology/undergraduate/current-students/research-opportunities/research-courses);admission is selective.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both PSYC 380D1 and PSYC 380D2.",
+      "No credit will be given for this course unless both PSYC 380D1 and PSYC 380D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 380D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 380D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 385",
+    "subject": "PSYC",
+    "number": "385",
+    "title": "Independent Research Project 1",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project with a final written report.",
+    "prerequisites": {
+      "text": "PSYC 305 or equivalent; requires departmental approval.",
+      "tree": "PSYC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is open to students that have completed the 24 credits and that have a minimum CGPA of 3.00.",
+      "excludes": []
+    },
+    "notes": [
+      "Offered in the fall, winter or summer term.",
+      "For more information, see the Department of Psychology website.",
+      "Requires a supervisor, application approval"
+    ]
+  },
+  {
+    "code": "PSYC 395",
+    "subject": "PSYC",
+    "number": "395",
+    "title": "Psychology Research Project 1",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Supervised research project.",
+    "prerequisites": {
+      "text": "24 credits of the psychology program, PSYC 305 or equivalent and CGPA above 3.00.",
+      "tree": "PSYC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires departmental approval.; Registration is by special arrangement with Psychology staff, and project proposals must be approved by the Department before registration.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter",
+      "For more information see the Psychology Department website."
+    ]
+  },
+  {
+    "code": "PSYC 396",
+    "subject": "PSYC",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter",
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "PSYC 403",
+    "subject": "PSYC",
+    "number": "403",
+    "title": "Modern Psychology in Historical Perspective",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of the scientific and ideological influences on psychology from its philosophical beginnings through the period of the schools to its modern situation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 406",
+    "subject": "PSYC",
+    "number": "406",
+    "title": "Psychological Tests",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the theory and practice of psychological measurement in health, educational, clinical and industrial/organizational settings. Attention to procedures for developing and validating tests and questionnaires. Techniques include: intelligence tests, projective tests, questionnaires, structured interviews, rating scales, and behavioural/performance tests.",
+    "prerequisites": {
+      "text": "PSYC 204 or MATH 203",
+      "tree": {
+        "or": [
+          "PSYC 204",
+          "MATH 203"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Two lectures per week"
+    ]
+  },
+  {
+    "code": "PSYC 408",
+    "subject": "PSYC",
+    "number": "408",
+    "title": "Principles and Applications of Psychotherapy",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the theories, research, and practice of psychotherapy, with a particular focus on cognitive behavioural and related therapies. Discussion of broad topics such as historical perspectives on psychotherapy, the empirical study of psychotherapy, and ethical issues related to psychotherapy. Traditional and contemporary cognitive-behavioural therapies and their application to mood, anxiety, eating, and personality disorders will be reviewed. Current interest topics in psychotherapy (e.g., neurocognitive correlates of change, technology in treatment) will be highlighted.",
+    "prerequisites": {
+      "text": "PSYC 337",
+      "tree": "PSYC 337",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 and above",
+      "excludes": []
+    },
+    "notes": [
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 409",
+    "subject": "PSYC",
+    "number": "409",
+    "title": "Positive Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Didactic instruction and experiential learning in its coverage of three issues central to this field: positive emotions, positive individual traits, and positive institutions. Topics covered include sensory savoring, expressing gratitude, optimism, identifying and building strengths, kindness, and meaning.",
+    "prerequisites": {
+      "text": "PSYC 215 Social Psychology",
+      "tree": "PSYC 215",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Permission from instructor is required."
+    ]
+  },
+  {
+    "code": "PSYC 410",
+    "subject": "PSYC",
+    "number": "410",
+    "title": "Special Topics in Neuropsychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Developments in cognitive neuroscience and cognitive neuropsychiatry via readings from primary sources. Topics include the neural bases of memory, emotion, social cognition and neuropsychiatric diseases. Integrating knowledge from studies in clinical populations and functional neuroimaging studies.",
+    "prerequisites": {
+      "text": "PSYC 213 and PSYC 311 (or NSCI 201). Knowledge of basic neuropsychology at the level covered in PSYC 311 is assumed.",
+      "tree": {
+        "and": [
+          "PSYC 213",
+          "PSYC 311",
+          "NSCI 201"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Two lectures per week."
+    ]
+  },
+  {
+    "code": "PSYC 411",
+    "subject": "PSYC",
+    "number": "411",
+    "title": "Discrimination & Wellbeing in Marginalized Communities",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of research on the associations between discrimination and health, with emphases on how (1) various types of discrimination (e.g., interpersonal, microaggression, online, institutional) impact health and wellbeing and (2) various factors – rooted in individual’s cultural values and beliefs – help provide resilience against the effects of discrimination.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PSYC 337",
+      "tree": "PSYC 337",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to U2 students or above",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 412",
+    "subject": "PSYC",
+    "number": "412",
+    "title": "Child Development: Psychopathology ",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Introduction to the field of behavior disorders of childhood and adolescence, including core issues, theoretical and methodological underpinnings, descriptions and discussions of many disorders, clinical and research data, and treatment approaches. Three major assumptions will be woven through the course.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PSYC 304 or PSYC 337 or permission of instructor",
+      "tree": {
+        "or": [
+          "PSYC 304",
+          "PSYC 337"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Two lectures and one conference weekly."
+    ]
+  },
+  {
+    "code": "PSYC 413",
+    "subject": "PSYC",
+    "number": "413",
+    "title": "Cognitive Development",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "In-depth exploration of cognitive development in infants and children including knowledge representation and processing, conceptual development, language development, and theories and principles of cognitive development.",
+    "prerequisites": {
+      "text": "PSYC 304 or PSYC 213 or equivalent",
+      "tree": {
+        "or": [
+          "PSYC 304",
+          "PSYC 213"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PSYC 414",
+    "subject": "PSYC",
+    "number": "414",
+    "title": "Social Development",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced study of the development of social behaviour and social cognition in children. Topics include: socialization, attachment, aggression, exploration, role taking, communication, family and peer relations, self and person perception. The development of these social processes within the framework of three general theories of development: behaviour genetics, learning, and cognitive-developmental.",
+    "prerequisites": {
+      "text": "PSYC 304 and PSYC 305",
+      "tree": {
+        "and": [
+          "PSYC 304",
+          "PSYC 305"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 427",
+    "subject": "PSYC",
+    "number": "427",
+    "title": "Sensorimotor Neuroscience",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A systematic examination of the sensorimotor system, drawing on models and data from both behavioural and physiological studies. Topics include: cortical motor areas, cerebellum, basal ganglia, spinal mechanisms, motor unit properties and force production, prioception, muscle properties.",
+    "prerequisites": {
+      "text": "NSCI 201 or PSYC 211 and PSYC 212 or permission of instructor",
+      "tree": {
+        "or": [
+          "NSCI 201",
+          {
+            "and": [
+              "PSYC 211",
+              "PSYC 212"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 433",
+    "subject": "PSYC",
+    "number": "433",
+    "title": "Cognitive Science",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The multi-disciplinary study of cognitive science, exploring the computer metaphor of the mind as an information-processing system. Focus on levels of analysis, symbolic modeling, Turing machines, neural networks, as applied to topics such as reasoning, vision, decision-making, and consciousness.",
+    "prerequisites": {
+      "text": "PSYC 213",
+      "tree": "PSYC 213",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 532.",
+      "excludes": [
+        "PSYC 532"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYC 436",
+    "subject": "PSYC",
+    "number": "436",
+    "title": "Human Sexuality and Its Problems",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course will deal with typical sexual behavior and its variations. Topics will include the history of sex research, the sexual response cycle, sexual dysfunction, gender identity, sexual orientation, etc. Current research and theory will be emphasized.",
+    "prerequisites": {
+      "text": "either PSYC 337 or permission of the instructor",
+      "tree": "PSYC 337",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 439",
+    "subject": "PSYC",
+    "number": "439",
+    "title": "Correlational Techniques",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The statistical analysis of relations among a number of variables in situations common in psychology. Methods include regression analysis, principal components analysis, and other techniques for modelling the structure of correlation matrices.",
+    "prerequisites": {
+      "text": "PSYC 305 or its equivalent.",
+      "tree": "PSYC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 536.",
+      "excludes": [
+        "PSYC 536"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYC 443",
+    "subject": "PSYC",
+    "number": "443",
+    "title": "Affective Neuroscience",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Focus on the neurobiology of emotion, the links between emotion and cognition, and the role of experience and individual differences in emotional states associated with psychopathology.",
+    "prerequisites": {
+      "text": "PSYC211 or NSCI201 or BIOL306 or PSYC318 or permission of instructor",
+      "tree": {
+        "or": [
+          "PSYC 211",
+          "NSCI 201",
+          "BIOL 306",
+          "PSYC 318"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 444",
+    "subject": "PSYC",
+    "number": "444",
+    "title": "Sleep Mechanisms and Behaviour",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "This course covers basic biological mechanisms, possible functions and behavioural aspects of sleep. Additional topics include: disorders of sleep, their effects on behaviour and cognition, and treatment approaches; as well as medical, neurological and psychiatric disorders, and drugs, that affect sleep.",
+    "prerequisites": {
+      "text": "One of PSYC 211, NSCI 201, PHGY 209 AND one of PSYC 311, PSYC 317, PSYC 318, PSYC 342 or permission of instructor.",
+      "tree": {
+        "or": [
+          "PSYC 211",
+          "NSCI 201",
+          {
+            "and": [
+              "PHGY 209",
+              {
+                "or": [
+                  "PSYC 311",
+                  "PSYC 317",
+                  "PSYC 318",
+                  "PSYC 342"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 450",
+    "subject": "PSYC",
+    "number": "450",
+    "title": "Research Project and Seminar",
+    "credits": 9,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Under supervision of an adviser approved by the Department, students design and carry out a research project. Students report their research in seminars throughout the year, in a final written report that takes the form of a data-based APA style manuscript, and in a poster presentation at the departmental poster session.",
+    "prerequisites": {
+      "text": "PSYC 305. Departmental permission required.",
+      "tree": "PSYC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Major or special students in U3 who intend to proceed to graduate school.",
+      "excludes": []
+    },
+    "notes": [
+      "Requires application (for details, see:https://www.mcgill.ca/psychology/undergraduate/current-students/research-opportunities/research-courses);admission is selective.",
+      "Students must register for both PSYC 450D1 and PSYC 450D2.",
+      "No credit will be given for this course unless both PSYC450D1 and PSYC 450D2 are successfully completed inconsecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "PSYC 450D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 450D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 470",
+    "subject": "PSYC",
+    "number": "470",
+    "title": "Memory and Brain",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Memory systems are studied with an emphasis on the neural computations that occur at various stages of the processing stream, focusing on the hippocampus, amygdala, basal ganglia, cerebellum and cortex. The data reviewed is obtained from human, non-human primates and rodents, with single unit recording, neuroimaging and brain damaged subjects.",
+    "prerequisites": {
+      "text": "NSCI 201 and (PSYC 318 or PHGY 311 or BIOL 306)",
+      "tree": {
+        "and": [
+          "NSCI 201",
+          {
+            "or": [
+              "PSYC 318",
+              "PHGY 311",
+              "BIOL 306"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hour lecture per week"
+    ]
+  },
+  {
+    "code": "PSYC 471",
+    "subject": "PSYC",
+    "number": "471",
+    "title": "Human Motivation",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course is designed to explore questions such as \"Why do people often fail to reach their personal goals?\" Current goal-based and need-based theories of human motivation will be reviewed. The instructor will highlight the relevance of motivation research to the domains of education, sports and management.",
+    "prerequisites": {
+      "text": "PSYC 215",
+      "tree": "PSYC 215",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PSYC 473",
+    "subject": "PSYC",
+    "number": "473",
+    "title": "Social Cognition and the Self",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course examines the social psychological literature emphasizing a) social cognition - how people think about and make sense of their social experiences; and b) self theory - how people create and maintain a sense of identity. These frameworks will be applied to social psychological topics including close relationships, attitudes and self-esteem.",
+    "prerequisites": {
+      "text": "PSYC 215 and PSYC 333 or PSYC 331 or PSYC 474",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "PSYC 215",
+              "PSYC 333"
+            ]
+          },
+          "PSYC 331",
+          "PSYC 474"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 411",
+      "excludes": [
+        "PSYC 411"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 474",
+    "subject": "PSYC",
+    "number": "474",
+    "title": "Interpersonal Relationships",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Psychological science approach to interpersonal relationships. Organized in terms of the development of relationships, focusing first on impression formation as a platform for the development of relationships. Then we focus on close relationships, examining interpersonal constructs (intimacy, trust, commitment) and reconsidering social cognitive constructs (attributions, schemas) in an interpersonal context.",
+    "prerequisites": {
+      "text": "PSYC 215; PSYC 204 or MATH 203; and PSYC 333 or permission of the instructor",
+      "tree": {
+        "and": [
+          "PSYC 215",
+          {
+            "or": [
+              "PSYC 204",
+              "MATH 203"
+            ]
+          },
+          "PSYC 333"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYC 475",
+    "subject": "PSYC",
+    "number": "475",
+    "title": "Neuroscience of Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The biological underpinnings of human social cognition and behavior, including neural, hormonal, and genetic mechanisms. By integrating multiple levels of analysis (biological, psychological), as well as different perspectives (basic, clinical, applied), the aim is to gain a deeper understanding of classic social psychological processes. Topics will include social cognition/theory of mind, empathy and understanding others, cooperation and prosocial behavior, interpersonal relationships, the self/agency, morality and anti-social behavior as well as basic methodological approaches to the study of social neuroscience and emerging issues in the field.",
+    "prerequisites": {
+      "text": "PSYC 215 and (NSCI 201 or PSYC 211) and one of (PSYC 311 or PSYC 318 or PSYC 331 or PSYC 332 or PSYC 333), or permission of instructor.",
+      "tree": {
+        "and": [
+          "PSYC 215",
+          {
+            "or": [
+              "NSCI 201",
+              "PSYC 211"
+            ]
+          },
+          {
+            "or": [
+              "PSYC 311",
+              "PSYC 318",
+              "PSYC 331",
+              "PSYC 332",
+              "PSYC 333"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 482",
+    "subject": "PSYC",
+    "number": "482",
+    "title": "Advanced Honours Seminar",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Ethical issues in scientific and clinical psychology, scientific psychology and social policy; and other issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken 204-480D. For Honours students only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "2 lectures, plus student presentations, debates, and discussions."
+    ]
+  },
+  {
+    "code": "PSYC 483",
+    "subject": "PSYC",
+    "number": "483",
+    "title": "Seminar in Experimental Psychopathology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Design of experiments in psychopathology, interviewing techniques and clinical diagnosis.",
+    "prerequisites": {
+      "text": "PSYC 305 and PSYC 337, or permission of instructor.",
+      "tree": {
+        "and": [
+          "PSYC 305",
+          "PSYC 337"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For U3 students only.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 484",
+    "subject": "PSYC",
+    "number": "484",
+    "title": "Independent Research Project 2",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project.",
+    "prerequisites": {
+      "text": "PSYC 305 or equivalent. Departmental approval is required.",
+      "tree": "PSYC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is open to students that have completed 30 credits in psychology and that have a minimum CGPA of 3.0.",
+      "excludes": []
+    },
+    "notes": [
+      "Offered in fall-winter, winter-summer, summer-fall.",
+      "For more information, see the Department of Psychology website.",
+      "Requires a supervisor, and application.",
+      "No credit will be given for this course unless both PSYC 484D1 and PSYC 484 D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 484D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026",
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "PSYC 484D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "PSYC 484N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "PSYC 484N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 485",
+    "subject": "PSYC",
+    "number": "485",
+    "title": "Independent Research Project 3",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project with a final written report.",
+    "prerequisites": {
+      "text": "PSYC 385. Departmental approval is required.",
+      "tree": "PSYC 385",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is open to students that have a minimum CGPA of 3.0.",
+      "excludes": []
+    },
+    "notes": [
+      "Offered in the fall, winter or summer term.",
+      "For more information, see the Department of Psychology website.",
+      "Requires a supervisor, and application."
+    ]
+  },
+  {
+    "code": "PSYC 486",
+    "subject": "PSYC",
+    "number": "486",
+    "title": "Independent Honours Research 1 ",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Second Honours research project.",
+    "prerequisites": {
+      "text": "PSYC 380D1/D2. Departmental approval is required.",
+      "tree": "PSYC 380",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered in fall, winter or summer.",
+      "For more information, see the Department of Psychology website.",
+      "Requires a supervisor, and application."
+    ]
+  },
+  {
+    "code": "PSYC 487",
+    "subject": "PSYC",
+    "number": "487",
+    "title": "Independent Honours Research 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Third Honours research project.",
+    "prerequisites": {
+      "text": "PSYC 486. Departmental approval is required.",
+      "tree": "PSYC 486",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered in the fall, winter or summer term.",
+      "For more information, see the Department of Psychology website.",
+      "Requires a supervisor, and application."
+    ]
+  },
+  {
+    "code": "PSYC 488",
+    "subject": "PSYC",
+    "number": "488",
+    "title": "Independent Honours Research 3",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project with a final written report.",
+    "prerequisites": {
+      "text": "PSYC 380D1/PSYC 380D2. Departmental approval is required.",
+      "tree": "PSYC 380",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to Honours Psychology students.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both PSYC 488D1 and PSYC 488D2.",
+      "No credit will be given for this course unless both PSYC 488D1 and PSYC 488D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "PSYC 488D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 488D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 491",
+    "subject": "PSYC",
+    "number": "491",
+    "title": "Advanced Study: Behavioural Disorders",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A critical examination of topics in abnormal and clinical psychology. Emphasis will be on analysis of theoretical positions and empirical findings as they relate to both etiology and treatment.",
+    "prerequisites": {
+      "text": "PSYC 337",
+      "tree": "PSYC 337",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours of seminar per week plus a placement at a clinical or specialized educational site.",
+      "Students must register for both PSYC 491D1 and PSYC 491D2.",
+      "No credit will be given for this course unless both PSYC 491D1 and PSYC 491D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 491D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 491D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 492",
+    "subject": "PSYC",
+    "number": "492",
+    "title": "Special Topics Seminar 1",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "These seminars are offered by special arrangement between interested Psychology staff and students. Note: A written proposal detailing the plans for the seminar must be approved by the Department Curriculum Committee before the student is permitted to register for this course. This proposal must be received by the Departmental Curriculum Committee well before the beginning of the term for which the seminar is proposed. Consult the Departmental Handbook for additional information.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 students. Requires departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "PSYC 493",
+    "subject": "PSYC",
+    "number": "493",
+    "title": "Special Topics Seminar 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "These seminars are offered by special arrangement between interested Psychology staff and students. Note: A written proposal detailing the plans for the seminar must be approved by the Department Curriculum Committee before the student is permitted to register for this course. This proposal must be received by the Departmental Curriculum Committee well before the beginning of the term for which the seminar is proposed. Consult the Departmental Handbook for additional information.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 students. Requires departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "PSYC 494",
+    "subject": "PSYC",
+    "number": "494",
+    "title": "Psychology Research Project",
+    "credits": 9,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Supervised research project.",
+    "prerequisites": {
+      "text": "30 credits of the psychology program, PSYC 305 or equivalent and CGPA above 3.00.",
+      "tree": "PSYC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Requires departmental approval. Registration is by special arrangement with Psychology staff, and project proposals must be approved by the Department before registration.",
+      "excludes": []
+    },
+    "notes": [
+      "For more information see the Psychology Department website.",
+      "Students must register for both PSYC 494D1 and PSYC 494D2.",
+      "No credit will be given for this course unless both PSYC 494D1 and PSYC 494D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "PSYC 494D1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 494D2",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 494N1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 494N2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 495",
+    "subject": "PSYC",
+    "number": "495",
+    "title": "Psychology Research Project 2",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Supervised research project.",
+    "prerequisites": {
+      "text": "PSYC 395 or equivalent.",
+      "tree": "PSYC 395",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration is by special arrangement with Psychology staff, and project proposals must be approved by the Department before registration.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter",
+      "For more information see the Psychology Department website."
+    ]
+  },
+  {
+    "code": "PSYC 496",
+    "subject": "PSYC",
+    "number": "496",
+    "title": "Senior Honours Research 1",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Second laboratory research project.",
+    "prerequisites": {
+      "text": "PSYC 380D1/PSYC 380D2",
+      "tree": "PSYC 380",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 497",
+    "subject": "PSYC",
+    "number": "497",
+    "title": "Senior Honours Research 2",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Third laboratory research project.",
+    "prerequisites": {
+      "text": "PSYC 380D1/PSYC 380D2.",
+      "tree": "PSYC 380",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PSYC 496",
+      "tree": "PSYC 496",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 498",
+    "subject": "PSYC",
+    "number": "498",
+    "title": "Senior Honours Research",
+    "credits": 9,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Second two-term laboratory research project culminating in an APA style manuscript based on data, and a scientific poster presentation at the departmental poster session.",
+    "prerequisites": {
+      "text": "PSYC 380D1/PSYC 380D2",
+      "tree": "PSYC 380",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both PSYC 498D1 and PSYC 498D2.",
+      "No credit will be given for this course unless both PSYC 498D1 and PSYC 498D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 498D1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 498D2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 499",
+    "subject": "PSYC",
+    "number": "499",
+    "title": "Reading Project",
+    "credits": 1,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Under the guidance of an instructor with the relevant expertise, the student explores the literature on a special topic.",
+    "prerequisites": {
+      "text": "PSYC 211, PSYC 213, PSYC 215, and PSYC 305. Requires departmental approval.",
+      "tree": {
+        "and": [
+          "PSYC 211",
+          "PSYC 213",
+          "PSYC 215",
+          "PSYC 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "PSYC 502",
+    "subject": "PSYC",
+    "number": "502",
+    "title": "Psychoneuroendocrinology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This advanced seminar course offers an in-depth introduction to current topics in psychoneuroendocrinology. Students will read and discuss original scientific literature from human and animal research interrogating the mechanisms by which hormones act in the brain to influence behaviour in health and disease. Students will gain a refined understanding of key concepts in psychoneuroendocrinology, such as negative feedback control and the key neuroendocrine axes and their role in behavioural control. They will apply this knowledge to critically evaluate original scientific literature and generate hypothesis-driven research questions from the scientific literature.",
+    "prerequisites": {
+      "text": "One of PSYC 311, PSYC 318, PSYC 342, NSCI 201, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PSYC 311",
+          "PSYC 318",
+          "PSYC 342",
+          "NSCI 201"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall Please note that a B- in the prerequisite course(s) is recommended."
+    ]
+  },
+  {
+    "code": "PSYC 506",
+    "subject": "PSYC",
+    "number": "506",
+    "title": "Cognitive Neuroscience of Attention",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An introduction to cognitive properties and neural mechanisms of human attention. The material will include an overview of the history of attention research, contemporary theories of attention, the varieties of attention, behavioral and neuroimaging experimental methods, the nature of attentional dysfunctions, and the links between attention and other cognitive functions including memory and consciousness.",
+    "prerequisites": {
+      "text": "PSYC 213 and PSYC 311, and one of PSYC 305 OR BIOL 373, or permission of instructor.",
+      "tree": {
+        "and": [
+          "PSYC 213",
+          "PSYC 311",
+          {
+            "or": [
+              "PSYC 305",
+              "BIOL 373"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Psychology, Cognitive Science and Neuroscience students. Not open to students who have taken PSYC 365.",
+      "excludes": [
+        "PSYC 365"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 507",
+    "subject": "PSYC",
+    "number": "507",
+    "title": "Emotions, Stress, and Illness",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Emotional effects on peripheral physiology and the development, course, and outcome of physical disorders such as high blood pressure, coronary artery disease, ulcers, asthma, and cancer.",
+    "prerequisites": {
+      "text": "PSYC 337, PSYC 328 and permission of the instructor.",
+      "tree": {
+        "and": [
+          "PSYC 337",
+          "PSYC 328"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 509",
+    "subject": "PSYC",
+    "number": "509",
+    "title": "Diverse Clinical Populations",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Poverty is a significant risk factor for psychological disorder. In this class, we will examine critically research focused on this association, with an emphasis on (a) mechanisms underlying the link between poverty and psychopathology, and (b) development and dissemination of evidence-based treatments for individuals living in poverty. Particular attention will be paid to the research methodologies used to address these questions.",
+    "prerequisites": {
+      "text": "PSYC 204 or MATH 203; and PSYC 337",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PSYC 204",
+              "MATH 203"
+            ]
+          },
+          "PSYC 337"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students in Psychology and to U3 students enrolled in one of the following programs: BSc; Major in Psychology, BSc; Honours in Psychology, BA; Major Concentration in Psychology, BA; Honours in Psychology, BA; Joint Honours - Psychology Component, or by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 512",
+    "subject": "PSYC",
+    "number": "512",
+    "title": "Advanced Personality Seminar",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Advanced topics in personality. Focus on power, status, and dominance and how these are manifested in social behavior. Dominance in nonhuman species, biological substrates of dominance, relations of status and dominance to social cognition, affect, and health; gender, role and cultural influences on dominance.",
+    "prerequisites": {
+      "text": "PSYC 332 or permission of instructor.",
+      "tree": "PSYC 332",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to psychology students. Enrolment limited. Students must be in U3 or above. Departmental permission required.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 513",
+    "subject": "PSYC",
+    "number": "513",
+    "title": "Human Decision-Making",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Interdisciplinary study of decision-making, covering contemporary approaches to understanding how humans compute values and make choices. Measurement of and techniques for assessing variables such as risk and uncertainty, utilities and preferences, reinforcement learning, heuristics and biases, and self-control. Emphasis on quantitative models of decision-making.",
+    "prerequisites": {
+      "text": "PSYC 213 or permission of the instructor",
+      "tree": "PSYC 213",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 514",
+    "subject": "PSYC",
+    "number": "514",
+    "title": "Neurobiology of Memory",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Advances in the understanding of the neurobiological bases of fundamental memory processes, such as memory consolidation maintenance, retrieval, and forgetting. The contribution of their dysregulation to neurodevelopmental and neurodegenerative diseases. Consideration of findings from a variety of species, spanning insects to humans.",
+    "prerequisites": {
+      "text": "BIOL 306 or PHGY 311 or NSCI 201 or NEUR 310 or permission of the instructor",
+      "tree": {
+        "or": [
+          "BIOL 306",
+          "PHGY 311",
+          "NSCI 201",
+          "NEUR 310"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIOL 514.",
+      "excludes": [
+        "BIOL 514"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYC 522",
+    "subject": "PSYC",
+    "number": "522",
+    "title": "Neurochemistry and Behaviour",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Anatomical, biochemical and physiological aspects of neurotransmitter systems in the brain, current theories of the function of these systems in normal and abnormal behaviour, and the actions of psychotropic drugs.",
+    "prerequisites": {
+      "text": "any two of the following NSCI 201, PSYC 311, PSYC 318, ANAT 321, PHGY 314, BIOL 306",
+      "tree": {
+        "and": [
+          "NSCI 201",
+          "PSYC 311",
+          "PSYC 318",
+          "ANAT 321",
+          "PHGY 314",
+          "BIOL 306"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHAR 562",
+      "excludes": [
+        "PHAR 562"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 526",
+    "subject": "PSYC",
+    "number": "526",
+    "title": "Advances in Visual Perception",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "We examine in detail the structure of the visual system, and its function as reflected in the perceptual abilities and behaviour of the organism. Parallels are also drawn with other sensory systems to demonstrate general principles of sensory coding.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 lectures"
+    ]
+  },
+  {
+    "code": "PSYC 528",
+    "subject": "PSYC",
+    "number": "528",
+    "title": "Vulnerability to Depression and Anxiety",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This course will examine in depth cognitive, behavioral, biological, and developmental psychopathology models of the etiology of depression and anxiety. Within each theoretical perspective, core issues, theoretical and methodological underpinnings, and research data will be examined.",
+    "prerequisites": {
+      "text": "PSYC 337 or PSYC 412 or permission of instructor. Requires departmental approval.",
+      "tree": {
+        "or": [
+          "PSYC 337",
+          "PSYC 412"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 529",
+    "subject": "PSYC",
+    "number": "529",
+    "title": "Music Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Interdisciplinary study of music cognition, with an emphasis on psychological, computational, and neuroscientific approaches. Focuses on listeners' response to sound, including perception, attention, memory, motor control, skilled performance, and emotional response.",
+    "prerequisites": {
+      "text": "PSYC 204 or MATH 203, and PSYC 213",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PSYC 204",
+              "MATH 203"
+            ]
+          },
+          "PSYC 213"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 530",
+    "subject": "PSYC",
+    "number": "530",
+    "title": "Applied Topics in Deafness",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Covers fundamental topics in deafness (sensory, perceptual, cognitive, social, linguistic, education and health issues) from an applied psychological perspective. Lectures and seminar presentations plus field work involving ASL/LSQ.",
+    "prerequisites": {
+      "text": "PSYC 340 or PSYC 316 or equivalent. Permission of instructor",
+      "tree": {
+        "or": [
+          "PSYC 340",
+          "PSYC 316"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 531",
+    "subject": "PSYC",
+    "number": "531",
+    "title": "Structural Equation Models",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course introduces basic concepts underlying structural equation models (SEM). SEM, which combine regression analysis and factor analysis, are quite useful and are currently very popular in analyzing data that arise in social, developmental and clinical psychology. The students are expected to get first-hand experiences in fitting SEM, and learn how to interpret and report the results from SEM.",
+    "prerequisites": {
+      "text": "PSYC 305and (PSYC 439 or PSYC 536) or permission of the instructor",
+      "tree": {
+        "or": [
+          "PSYC 439",
+          "PSYC 536"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "one 2-hour lecture plus one lab"
+    ]
+  },
+  {
+    "code": "PSYC 535",
+    "subject": "PSYC",
+    "number": "535",
+    "title": "Advanced Topics in Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Classic and contemporary readings in a specific content area within social psychology will be assigned in order to examine the sub-area in depth. The focus will vary depending upon the specialty area of the instructor. These areas include interpersonal relationships, intergroup relations, the self, and social cognition.",
+    "prerequisites": {
+      "text": "PSYC 215; and PSYC 333 or PSYC 351 or PSYC 380.",
+      "tree": {
+        "and": [
+          "PSYC 215",
+          {
+            "or": [
+              "PSYC 333",
+              "PSYC 351",
+              "PSYC 380"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental permission required.; Graduate Students, enrolment limited",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYC 537",
+    "subject": "PSYC",
+    "number": "537",
+    "title": "Advanced Seminar in Psychology of Language",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Topics may include: the neural basis of language, evolutionary approaches to language, pragmatics and figurative language processing, disordered language processing, models of spoken word recognition.",
+    "prerequisites": {
+      "text": "PSYC 213 and one of: PSYC 340, LING 200, or LING 201.",
+      "tree": {
+        "and": [
+          "PSYC 213",
+          {
+            "or": [
+              "PSYC 340",
+              "LING 200",
+              "LING 201"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Note: Prior background in the psychology of language, cognitive psychology, or linguistics is essential."
+    ]
+  },
+  {
+    "code": "PSYC 538",
+    "subject": "PSYC",
+    "number": "538",
+    "title": "Categorization, Communication and Consciousness",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The main challenges that cognitive science faces today, focusing on the capacity to learn sensorimotor categories, to name and describe them verbally, and to transmit them to others, concluding with cognition distributed on the Web.",
+    "prerequisites": {
+      "text": "Student must have completed a 300 level course in one of the following: Linguistics, Philosophy, Psychology, Computer Science, or Neuroscience.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to U2 students or above.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 539",
+    "subject": "PSYC",
+    "number": "539",
+    "title": "Advanced Topics in Social Psychology 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Classic and contemporary readings in a specific content area within social psychology. The focus will vary depending upon the specialty area of the instructor, including interpersonal relationships, intergroup relations, the self, and social cognition.",
+    "prerequisites": {
+      "text": "PSYC 215; and PSYC 333 or PSYC 351 or PSYC 380.",
+      "tree": {
+        "and": [
+          "PSYC 215",
+          {
+            "or": [
+              "PSYC 333",
+              "PSYC 351",
+              "PSYC 380"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental permission required.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 541",
+    "subject": "PSYC",
+    "number": "541",
+    "title": "Multilevel Modelling",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Basic concepts of multilevel linear and nonlinear models and applying these methods to empirical data.",
+    "prerequisites": {
+      "text": "PSYC 305 and (PSYC 439 or PSYC 536)",
+      "tree": {
+        "and": [
+          "PSYC 305",
+          {
+            "or": [
+              "PSYC 439",
+              "PSYC 536"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Limited enrolment."
+    ]
+  },
+  {
+    "code": "PSYC 545",
+    "subject": "PSYC",
+    "number": "545",
+    "title": "Topics in Language Acquisition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Psychological mechanisms and theories of first language acquisition in infancy and early childhood. Topics such as: infant speech perception, acquisition of grammar, word learning, pidgin and Creole languages, critical and sensitive periods, genetic and evolutionary bases of language.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PSYC 560",
+    "subject": "PSYC",
+    "number": "560",
+    "title": "Machine Learning Tools in Psychology ",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An overview of various methods for understanding and predicting complex and often large datasets, which have been developed in machine learning and statistics. It focuses on the conceptual underpinnings of popular supervised and unsupervised learning methods and the applications of the methods to various datasets from psychology and closely related disciplines (e.g. neuroscience, consumer behaviour, psychiatry) using existing software packages for the methods.",
+    "prerequisites": {
+      "text": "PSYC 305",
+      "tree": "PSYC 305",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 students or above. Not open to students who have taken or are taking COMP 551.",
+      "excludes": [
+        "COMP 551"
+      ]
+    },
+    "notes": [
+      "1. Students who have taken COMP 202 or COMP 204 and who have taken freshman linear algebra and calculus might instead consider taking COMP 551.",
+      "2. Students in both psychology and computer science are strongly encouraged to take COMP 551 over PSYC 560."
+    ]
+  },
+  {
+    "code": "PSYC 562",
+    "subject": "PSYC",
+    "number": "562",
+    "title": "Measurement of Psychological Processes",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Intermediate level theory and methods for the measurement of latent variables in psychology and related fields. In-depth coverage of theories of validity and psychometrics as applied in psychology. Introduction to quantitative methods for scale development, use, and evaluation. Discussion of current topics and challenges in psychological measurement and psychometrics.",
+    "prerequisites": {
+      "text": "PSYC 305 (or equivalent) and PSYC 406.",
+      "tree": {
+        "and": [
+          "PSYC 305",
+          "PSYC 406"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PSYC 601",
+    "subject": "PSYC",
+    "number": "601",
+    "title": "First Year Research Paper",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Reference number for research paper written by all first-year graduate students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 601D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "PSYC 601D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 615",
+    "subject": "PSYC",
+    "number": "615",
+    "title": "Diagnostic Methods (Children)",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A review of diagnostic methods used with children.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both PSYC 615D1 and PSYC 615D2",
+      "No credit will be given for this course unless both PSYC 615D1 and PSYC 615D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 615D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 615D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 617",
+    "subject": "PSYC",
+    "number": "617",
+    "title": "Diagnostic Methods (Adults)",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A review of diagnostic methods used with adults.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 618D1/D2.",
+      "excludes": [
+        "PSYC 618D1"
+      ]
+    },
+    "notes": [
+      "Students must register for both PSYC 617D1 and PSYC 617D2",
+      "No credit will be given for this course unless both PSYC 617D1 and PSYC 617D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 617D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 617D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 620",
+    "subject": "PSYC",
+    "number": "620",
+    "title": "Practicum in Psychotherapy",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A professional training course including dealing with patients under supervision, and a \"case conference\" seminar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both PSYC 620D1 and PSYC 620D2",
+      "No credit will be given for this course unless both PSYC 620D1 and PSYC 620D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 620D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 620D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 622",
+    "subject": "PSYC",
+    "number": "622",
+    "title": "Practicum in Clinical Supervision and Consultation",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Investigating the important issues in the theory, research, and practice of clinical supervision via regular, on-going supervision. Focus on practical aspects of supervision practice: methods and models of supervision, the supervisory alliance, how trainees develop over time, ethics, and the supervision research.",
+    "prerequisites": {
+      "text": "PSYC 620D1 and PSYC 620D2, PSYC 706",
+      "tree": {
+        "and": [
+          "PSYC 620",
+          "PSYC 706"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both PSYC 622D1 and PSYC 622D2.",
+      "No credit will be given for this course unless both PSYC 622D1 and PSYC 622D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "PSYC 622D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "PSYC 622D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 625",
+    "subject": "PSYC",
+    "number": "625",
+    "title": "Research: Clinical Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Research in clinical psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Summer"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 625D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 625D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 630",
+    "subject": "PSYC",
+    "number": "630",
+    "title": "Psychopathology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of major types of psychopathology with emphasis on research findings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 641",
+    "subject": "PSYC",
+    "number": "641",
+    "title": "Individual Psychotherapy with Adults",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theory and research evidence pertaining to process and outcome in individual psychotherapy, including humanistic, psychodynamic, and cognitive-behavioural approaches.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 642",
+    "subject": "PSYC",
+    "number": "642",
+    "title": "Systems Interventions",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theory and research evidence pertaining to process and outcome in couple, family, and group psychotherapy",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 650",
+    "subject": "PSYC",
+    "number": "650",
+    "title": "Advanced Statistics 1",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A course in advanced statistics with specialization in experimental design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 651",
+    "subject": "PSYC",
+    "number": "651",
+    "title": "Advanced Statistics 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A course in advanced statistics with specialization in multivariate techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 660",
+    "subject": "PSYC",
+    "number": "660",
+    "title": "Psychology Theory",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Professors representing the various research areas within the Department discuss critical issues and developments within their fields of expertise.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 660D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 660D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 690",
+    "subject": "PSYC",
+    "number": "690",
+    "title": "Masters Research 1",
+    "credits": 15,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Development of research topic, study and review of previous literature, preliminary experimental and/or theoretical thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 690D1",
+        "credits": 7.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 690D2",
+        "credits": 7.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 690N1",
+        "credits": 7.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 699",
+    "subject": "PSYC",
+    "number": "699",
+    "title": "Masters Research 2",
+    "credits": 12,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Continuation of PSYC 690. Further experimental and/or theoretical research. Data analysis (as needed). Writing of thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 701",
+    "subject": "PSYC",
+    "number": "701",
+    "title": "Doctoral Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 701D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "PSYC 701D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 706",
+    "subject": "PSYC",
+    "number": "706",
+    "title": "Clinical Practicum",
+    "credits": 15,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical experience in the hospital setting and/or the community integrating concepts related to psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 706D1",
+        "credits": 7.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 706D2",
+        "credits": 7.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 706J1",
+        "credits": 5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 706J2",
+        "credits": 5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 706J3",
+        "credits": 5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 707",
+    "subject": "PSYC",
+    "number": "707",
+    "title": "Clinical Internship 1",
+    "credits": 15,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical internship in a host institution/hospital.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 707D1",
+        "credits": 7.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 707D2",
+        "credits": 7.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 707J1",
+        "credits": 5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 707J2",
+        "credits": 5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 707J3",
+        "credits": 5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 708",
+    "subject": "PSYC",
+    "number": "708",
+    "title": "Clinical Internship 2",
+    "credits": 15,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical internship in a host institution/hospital.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 708D1",
+        "credits": 7.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 708D2",
+        "credits": 7.5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 708J1",
+        "credits": 5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 708J2",
+        "credits": 5,
+        "terms": []
+      },
+      {
+        "code": "PSYC 708J3",
+        "credits": 5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 709",
+    "subject": "PSYC",
+    "number": "709",
+    "title": "Language Acquisition Issues 1",
+    "credits": 2,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in language acquisition issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 712",
+    "subject": "PSYC",
+    "number": "712",
+    "title": "Comparative and Physiological Psychology 3",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in comparative and physiological psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 715",
+    "subject": "PSYC",
+    "number": "715",
+    "title": "Comparative and Physiological Psychology 6",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced area seminar on a topic in comparative and physiological psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 716",
+    "subject": "PSYC",
+    "number": "716",
+    "title": "PhD 1 Research in Psychology 1",
+    "credits": 15,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Psychology. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 717",
+    "subject": "PSYC",
+    "number": "717",
+    "title": "PhD 1 Research in Psychology 2",
+    "credits": 15,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Psychology. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 722",
+    "subject": "PSYC",
+    "number": "722",
+    "title": "Personality and Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced area seminar on a topic in personality and social psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 723",
+    "subject": "PSYC",
+    "number": "723",
+    "title": "Personality and Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in comparative and physiological psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 724",
+    "subject": "PSYC",
+    "number": "724",
+    "title": "Personality and Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced area seminar on a topic in comparative and physiological psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 725",
+    "subject": "PSYC",
+    "number": "725",
+    "title": "Personality and Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced area seminar on a topic in comparative and physiological psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 727",
+    "subject": "PSYC",
+    "number": "727",
+    "title": "Personality and Social Psychology",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in comparative and physiological psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 728",
+    "subject": "PSYC",
+    "number": "728",
+    "title": "Ethics and Professional Issues",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Clinical psychology as a profession, with particular emphasis on ethical issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 729",
+    "subject": "PSYC",
+    "number": "729",
+    "title": "Theory of Assessment",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Issues related to psychological measurement and assessment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 730",
+    "subject": "PSYC",
+    "number": "730",
+    "title": "Clinical Neuroscience Methods",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Techniques used in the study of biological aspects of clinical disorders, including methods in epidemiology, course and outcome, behavioural and molecular genetics, neuroimaging, psychophysiology and psychopharmacology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 732",
+    "subject": "PSYC",
+    "number": "732",
+    "title": "Clinical Psychology 1",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of clinical psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 732D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 732D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 733",
+    "subject": "PSYC",
+    "number": "733",
+    "title": "Clinical Psychology 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of clinical psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "PSYC 733D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 733D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 734",
+    "subject": "PSYC",
+    "number": "734",
+    "title": "Developmental Psychology and Language",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in developmental psychology and language",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 735",
+    "subject": "PSYC",
+    "number": "735",
+    "title": "Developmental Psychology and Language",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in developmental psychology and language.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 736",
+    "subject": "PSYC",
+    "number": "736",
+    "title": "Developmental Psychology and Language",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in developmental psychology and language",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 740",
+    "subject": "PSYC",
+    "number": "740",
+    "title": "Perception and Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced area seminar on a topic in perception and cognition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 741",
+    "subject": "PSYC",
+    "number": "741",
+    "title": "Perception and Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced area seminar on a topic in perception and cognition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 742",
+    "subject": "PSYC",
+    "number": "742",
+    "title": "Perception and Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in perception and cognition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 744",
+    "subject": "PSYC",
+    "number": "744",
+    "title": "Perception and Cognition",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced area seminar on a topic in perception and cognition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 746",
+    "subject": "PSYC",
+    "number": "746",
+    "title": "Quantitative and Individual Differences",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in quantitative and individual difference.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 747",
+    "subject": "PSYC",
+    "number": "747",
+    "title": "Quantitative and Individual Differences",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced area seminar on a topic in quantitative and individual difference.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 748",
+    "subject": "PSYC",
+    "number": "748",
+    "title": "Quantitative and Individual Differences",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced area seminar on a topic in quantitative and individual difference.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 749",
+    "subject": "PSYC",
+    "number": "749",
+    "title": "Quantitative and Individual Differences",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced area seminar on a topic in quantitative and individual difference.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 750",
+    "subject": "PSYC",
+    "number": "750",
+    "title": "Applied Bayesian Statistics",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Bayesian statistics, emphasizing applications to commonly encountered models in the social sciences (regression analysis, mediation and moderation, and latent variable models). Focus will be on differences between classical and Bayesian statistics, Bayesian analyses for several commonly used models in psychology, reporting results of a Bayesian analysis, and critical evaluation of methods and results sections of papers in psychology journals that used Bayesian analysis.",
+    "prerequisites": {
+      "text": "PSYC 651",
+      "tree": "PSYC 651",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students in Psychology. Not open to students who have taken PSYC 747 when the topic was \"Applied Bayesian Statistics\".",
+      "excludes": [
+        "PSYC 747"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 752",
+    "subject": "PSYC",
+    "number": "752",
+    "title": "Psychotherapy and Behaviour Change",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A practice-oriented course. Staff and students discuss current cases being treated with a variety of psychotherapeutic and behavioural change techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both PSYC 752D1 and PSYC 752D2",
+      "No credit will be given for this course unless both PSYC 752D1 and PSYC 752D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PSYC 752D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "PSYC 752D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "PSYC 753",
+    "subject": "PSYC",
+    "number": "753",
+    "title": "Health Psychology Seminar 1",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced area seminar on a topic in health psychology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 754",
+    "subject": "PSYC",
+    "number": "754",
+    "title": "Clinical Science and Interventions with Diverse Populations",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A broad view of the state-of-the-art research and treatment methods in clinical psychological science, as well as key areas of professional development.",
+    "prerequisites": {
+      "text": "PSYC 630",
+      "tree": "PSYC 630",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both PSYC 754D1 and PSYC 754D2.",
+      "No credit will be given for this course unless both PSYC 754D1 and PSYC 754D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "PSYC 754D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PSYC 754D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PSYC 780",
+    "subject": "PSYC",
+    "number": "780",
+    "title": "Special Topics in Clinical Psychology",
+    "credits": 6,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An additional elective course available to students when and where appropriate. This may be in areas such as neurophysiology, quantitative methods, learning problems, etc.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 781",
+    "subject": "PSYC",
+    "number": "781",
+    "title": "Behavioural Neuroscience Special Topics",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Behavioural neuroscience (BNS) emphasizes recent advances in both theory and methodology aimed at describing neurobiological processes underpinning behaviour and cognition in non-human and human animals. This team-taught lecture course will survey multiple topics within the field of BNS and is intended to provide students with a broad theoretical, methodological, and empirical foundation within the discipline.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all McGill graduate students with permission of the instructor. Psychology graduate students will have enrollment priority.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 782",
+    "subject": "PSYC",
+    "number": "782",
+    "title": "Behavioural Neuroscience Advanced Seminar",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Behavioural neuroscience (BNS) emphasizes recent advances in both theory and methodology aimed at describing neurobiological processes underpinning behaviour and cognition in non-human and human animals. This seminar course will focus on a specific topic within the field of BNS, and is thus intended to provide students with an in-depth understanding at the theoretical, methodological, and empirical levels.",
+    "prerequisites": {
+      "text": "PSYC 781",
+      "tree": "PSYC 781",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all McGill graduate students with permission of the instructor. Psychology graduate students will have enrollment priority.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PSYC 797",
+    "subject": "PSYC",
+    "number": "797",
+    "title": "Teaching Methods: Psychology 1",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Development of teaching skills for graduate students in psychology under the supervision of academic staff. Relevant skills: stating objectives and sequencing content; preparation and delivery of lectures; running discussion and laboratory sessions; techniques for preparing, marking and assessing evaluation instruments; obtaining feedback on teaching skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PSYC 798",
+    "subject": "PSYC",
+    "number": "798",
+    "title": "Teaching Methods: Psychology 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Continuation of PSYC 797.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

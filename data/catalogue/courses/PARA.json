@@ -1,0 +1,364 @@
+[
+  {
+    "code": "PARA 410",
+    "subject": "PARA",
+    "number": "410",
+    "title": "Environment and Infection",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Infectious pathogens of humans and animals and their impact on the global environment are considered. The central tenet is that infectious pathogens are environmental risk factors. The course considers their impact on the human condition and juxtaposes the impact of control and treatment measures and environmental change.",
+    "prerequisites": {
+      "text": "one of LSCI 230, AEBI 211, ENVR 202, ENVB 305",
+      "tree": {
+        "or": [
+          "LSCI 230",
+          "AEBI 211",
+          "ENVR 202",
+          "ENVB 305"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 lectures per week"
+    ]
+  },
+  {
+    "code": "PARA 424",
+    "subject": "PARA",
+    "number": "424",
+    "title": "Fundamental Parasitology",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Systematics, morphology, biology and ecology of parasitic protozoa, flatworms, roundworms and arthropods with emphasis on economically and medically important species.",
+    "prerequisites": {
+      "text": "AEBI 211 or LSCI 230 or permission of instructor",
+      "tree": {
+        "or": [
+          "AEBI 211",
+          "LSCI 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WILD 424.",
+      "excludes": [
+        "WILD 424"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PARA 438",
+    "subject": "PARA",
+    "number": "438",
+    "title": "Immunology",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An in-depth analysis of the principles of cellular and molecular immunology. The emphasis of the course is on host defence against infection and on diseases caused by abnormal immune responses.",
+    "prerequisites": {
+      "text": "AEBI 202 or LSCI 202 or permission of instructor",
+      "tree": {
+        "or": [
+          "AEBI 202",
+          "LSCI 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures per week"
+    ]
+  },
+  {
+    "code": "PARA 606",
+    "subject": "PARA",
+    "number": "606",
+    "title": "Parasitology Seminar",
+    "credits": 2,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A seminar series in which students present seminars covering topics in parasitology, in areas relevant to their research interests. Students register for the course in their second term of residency. Attendance and participation are compulsory for M.Sc. students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 607",
+    "subject": "PARA",
+    "number": "607",
+    "title": "Parasitology Research Seminar",
+    "credits": 2,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This is a required course for M.Sc. students. A seminar course in which students registered at the Institute of Parasitology present seminars on the results of their thesis research. Students register for the course in the final term prior to thesis submission.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 635",
+    "subject": "PARA",
+    "number": "635",
+    "title": "Cell Biology and Infection",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research articles will be the primary source of information. This course will cover new principles in cell biology. In particular, the mechanisms by which gene expression is regulated through signal transduction pathways initiated at the cell surface will be presented.",
+    "prerequisites": {
+      "text": "students with some background in molecular biology",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 645",
+    "subject": "PARA",
+    "number": "645",
+    "title": "Applied Parasitology",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Molecular aspects of applied parasitology. Diagnostics, surveillance, and epidemiology of parasites and the areas of anti-parasitic drug and vaccine development.",
+    "prerequisites": {
+      "text": "300-level undergraduate course in molecular biology, biochemistry or equivalent, or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 655",
+    "subject": "PARA",
+    "number": "655",
+    "title": "Pathogen Control Strategies",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of one health including how infectious diseases caused by parasitic, viral, and bacterial pathogens are controlled in human and animal populations. With strong emphasis on drug discovery, development, production, approval, and deployment, examination of classical and emerging strategies for developing therapeutics, vaccines, biologics, and RNA-based agents. Exploration of how these interventions are identified, optimized, evaluated in preclinical and clinical settings, and implemented in real-world contexts shaped by epidemiology, resistance, and global health needs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 665",
+    "subject": "PARA",
+    "number": "665",
+    "title": "Special Topics in Parasitology",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course designation will be used for special courses that staff, or visiting professors, may wish to provide when student interest warrants. Examples might include a laboratory techniques course, a mathematical modelling course or a special pharmacology seminar series.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 678",
+    "subject": "PARA",
+    "number": "678",
+    "title": "Microcirculation and Inflammation",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Study of the structure of the microcirculation of several organs and basic mechanisms involved in the leukocyte-endothelium interaction in inflammation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 687",
+    "subject": "PARA",
+    "number": "687",
+    "title": "Thesis Research 1",
+    "credits": 11,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 688",
+    "subject": "PARA",
+    "number": "688",
+    "title": "Thesis Research 2",
+    "credits": 11,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 689",
+    "subject": "PARA",
+    "number": "689",
+    "title": "Thesis Research 3",
+    "credits": 13,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 690",
+    "subject": "PARA",
+    "number": "690",
+    "title": "Thesis Research 4",
+    "credits": 2,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 691",
+    "subject": "PARA",
+    "number": "691",
+    "title": "Thesis Research 5",
+    "credits": 6,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students registered in the M.Sc. in Parasitology, Environment option.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PARA 701",
+    "subject": "PARA",
+    "number": "701",
+    "title": "PhD Comprehensive Exam",
+    "credits": 0,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Consists of a written proposal outlining the research planned and an oral examination.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 710",
+    "subject": "PARA",
+    "number": "710",
+    "title": "Parasitology Ph.D. Seminar 1",
+    "credits": 2,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This first seminar is a review of the scientific literature in the topic area of the thesis research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PARA 711",
+    "subject": "PARA",
+    "number": "711",
+    "title": "Parasitology Ph.D. Seminar 2",
+    "credits": 2,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A seminar series in which students present seminars covering topics in parasitology in areas relevant to their research interests. Attendance and participation are compulsory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]
