@@ -30,6 +30,27 @@ export function meets(
   return tree.or.some((child) => meets(child, codes));
 }
 
+/** What a tree still needs, in plain words: "COMP 250 or COMP 251", "MATH 222 and (COMP 250 or COMP 251)". */
+export function missingText(
+  tree: RequirementTree,
+  codes: ReadonlySet<string>,
+): string {
+  if (typeof tree === "string") return tree;
+  const [op, children] =
+    "and" in tree ? (["and", tree.and] as const) : (["or", tree.or] as const);
+  const parts = (
+    op === "and" ? children.filter((c) => !meets(c, codes)) : children
+  ).map((child) => ({
+    text: missingText(child, codes),
+    nested: typeof child !== "string" && !(op in child),
+  }));
+  return parts
+    .map(({ text, nested }) =>
+      nested && parts.length > 1 ? `(${text})` : text,
+    )
+    .join(` ${op} `);
+}
+
 export function blockedBy(
   course: CourseSummary,
   taken: ReadonlySet<string>,

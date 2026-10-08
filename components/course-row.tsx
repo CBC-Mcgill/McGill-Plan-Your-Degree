@@ -1,5 +1,6 @@
 import { cn } from "cn";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { chipStatus, StatusChip } from "@/components/status-chip";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
@@ -41,28 +42,46 @@ export function CourseRowHeader({ withStatus }: { withStatus: boolean }) {
   );
 }
 
-/** One list item that links to the course page. Pass `state` to show the student's status, and leave it out when there is no profile. */
+/**
+ * One list item that links to the course page. Pass `state` to show the student's status, and leave it out when there is no profile.
+ * `note` adds a line under the title. `action` sits beside the link, since a button cannot live inside it: pass null to keep the column empty so rows line up.
+ */
 export function CourseRow({
   course,
   state,
+  note,
+  action,
 }: {
   course: CourseSummary;
   state?: CourseState;
+  note?: ReactNode;
+  action?: ReactNode;
 }) {
   return (
-    <li>
+    <li
+      className={cn(
+        "transition-[background-color] hover:bg-muted/60",
+        action !== undefined && "flex items-center",
+      )}
+    >
       <Link
         href={`/courses/${courseSlug(course.code)}`}
         prefetch={false}
         className={cn(
           grid(Boolean(state)),
-          "-outline-offset-3 min-h-14 py-2.5 transition-[background-color] hover:bg-muted/60",
+          "-outline-offset-3 min-h-14 py-2.5",
+          action !== undefined && "min-w-0 flex-1",
         )}
       >
         <span className="font-extrabold">{course.code}</span>
-        <span className="line-clamp-2">{course.title}</span>
+        <span>
+          <span className="line-clamp-2">{course.title}</span>
+          {note}
+        </span>
         <span className="text-muted-foreground text-sm">
-          {course.credits === null ? "-" : `${course.credits} credits`}
+          {course.credits === null
+            ? "-"
+            : `${course.credits} ${course.credits === 1 ? "credit" : "credits"}`}
         </span>
         <span className="text-muted-foreground text-sm">
           {seasonsOffered(course)}
@@ -74,6 +93,9 @@ export function CourseRow({
           />
         )}
       </Link>
+      {action !== undefined && (
+        <div className="flex w-48 shrink-0 justify-end pr-4">{action}</div>
+      )}
     </li>
   );
 }
