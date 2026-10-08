@@ -270,3 +270,22 @@ export function validateProgram(value: unknown): ValidationResult {
     ? { ok: true, program: value as Program }
     : { ok: false, errors };
 }
+
+/** Every course code a program file names, sorted, so CI can confirm each exists in the catalogue. */
+export function programCourseCodes(program: Program): string[] {
+  const codes = new Set<string>();
+  for (const g of program.groups) {
+    if (g.kind === "required") {
+      for (const entry of g.courses) {
+        for (const c of typeof entry === "string" ? [entry] : entry.oneOf)
+          codes.add(c);
+      }
+      continue;
+    }
+    for (const r of g.rules) {
+      for (const c of r.courses ?? []) codes.add(c);
+      for (const c of r.match?.exclude ?? []) codes.add(c);
+    }
+  }
+  return [...codes].sort();
+}

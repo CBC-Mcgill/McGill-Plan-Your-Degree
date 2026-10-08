@@ -47,6 +47,12 @@ When the data changed, it pushes a `data/catalogue-*` branch and opens a PR with
 The CBC-Mcgill organization blocks Actions from opening PRs, so the run summary shows a one-click link to open it instead.
 Catalogue data reaches production only by merging that PR.
 
+## Adding a program
+
+Copy a file in `data/programs/`, rename it to the new program id, and fill it in from the program page in the course catalogue, following `lib/programs/types.ts`.
+Register it in `lib/programs/index.ts` and, if a transcript names it, in `guessProgram`.
+Run `pnpm test` to check the file against the schema and the catalogue.
+
 ## License
 
 MIT
