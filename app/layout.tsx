@@ -1,40 +1,22 @@
 import type { Metadata } from "next";
-import { Playfair_Display, JetBrains_Mono, Inter } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  variable: "--font-playfair",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Plan Your Degree | McGill",
+  title: "McGill Plan Your Degree",
   description:
-    "Visualize your McGill degree as an interactive skill tree, plan semesters, and get AI-powered course recommendations.",
+    "Browse McGill courses, import your transcript, and plan your degree.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
-      <body
-        className={`${playfair.variable} ${jetbrains.variable} ${inter.variable} bg-background text-text-primary font-sans antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }

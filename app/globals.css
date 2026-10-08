@@ -1,37 +1,17 @@
 @import "tailwindcss";
 
-@theme {
-  /* Backgrounds */
-  --color-background: #FFFFFF;
-  --color-surface:    #F8FAFC;
-  --color-elevated:   #F1F5F9;
-  --color-border:     #E2E8F0;
-
-  /* Brand */
-  --color-red:        #ED1B2F;
-  --color-red-light:  #FFF1F2;
-  --color-red-dim:    #FEE2E2;
-
-  /* Text */
-  --color-text-primary: #0F172A;
-  --color-text-muted:   #64748B;
-
-  /* Font stacks */
-  --font-sans:  var(--font-inter),      system-ui, sans-serif;
-  --font-mono:  var(--font-jetbrains),  monospace;
-  --font-serif: var(--font-playfair),   Georgia, serif;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-html {
-  scroll-behavior: smooth;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
 }
 
-::-webkit-scrollbar       { width: 5px; }
-::-webkit-scrollbar-track { background: var(--color-elevated); }
-::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
-
-@keyframes flowDash {
-  from { stroke-dashoffset: 20; }
-  to   { stroke-dashoffset: 0; }
+body {
+  background: var(--background);
+  color: var(--foreground);
 }
