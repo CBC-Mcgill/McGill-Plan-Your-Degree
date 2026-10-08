@@ -7,7 +7,7 @@ import { useRef } from "react";
 import { CourseLink } from "@/components/course-link";
 import { seasonsOffered } from "@/components/course-row";
 import { AddCourse } from "@/components/plan/add-course";
-import { addWithUndo } from "@/components/plan/add-with-undo";
+import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { TermWarnings } from "@/components/plan/term-warnings";
 import {
   STATUS,
@@ -15,7 +15,6 @@ import {
   StatusIcon,
   StatusLabel,
 } from "@/components/status";
-import { toast } from "@/components/toast";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -183,8 +182,6 @@ export function TermPanel({
   /** Every term a planned course can move to. */
   moveOptions: MoveOption[];
 }) {
-  const addToPlan = useProfileStore((state) => state.addToPlan);
-  const removeFromPlan = useProfileStore((state) => state.removeFromPlan);
   const entry = useProfileStore((state) => state.entry);
   const heading = useRef<HTMLHeadingElement>(null);
   const moved = useRef(false);
@@ -241,15 +238,8 @@ export function TermPanel({
   }
 
   function remove(value: string) {
-    removeFromPlan(stage.term, value);
+    removeWithUndo(stage.term, value);
     heading.current?.focus();
-    toast(`Removed ${value}`, {
-      label: "Undo",
-      run: () => {
-        addToPlan(stage.term, value);
-        toast("Added back");
-      },
-    });
   }
 
   return (
