@@ -218,7 +218,7 @@ export function TermPanel({
                         <Title code={code} catalogue={catalogue} />
                         <p className="text-muted-foreground text-sm">
                           {course
-                            ? `${course.credits ?? "-"} credits - ${seasonsOffered(course)}`
+                            ? `${course.credits ?? "-"} credits · ${seasonsOffered(course)}`
                             : "Not in the catalogue"}
                         </p>
                       </div>

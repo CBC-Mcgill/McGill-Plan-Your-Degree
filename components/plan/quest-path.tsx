@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "cn";
-import { Check, GraduationCap } from "lucide-react";
+import { CalendarDays, Check, Clock, GraduationCap, Minus } from "lucide-react";
 import { motion } from "motion/react";
 import { useRef } from "react";
 import type { Stage, StageState } from "@/lib/engine/stages";
@@ -25,17 +25,18 @@ const POP = { type: "spring", stiffness: 500, damping: 18 } as const;
 
 function detail(stage: Stage, nowKey: number): string {
   const credits = `${stage.credits} credits`;
+  const courses = `${stage.count} ${stage.count === 1 ? "course" : "courses"}`;
   switch (stage.state) {
     case "completed":
-      return `Completed - ${credits}`;
+      return `Completed · ${credits}`;
     case "current":
-      return `Current term - ${credits}`;
+      return `Current term · ${credits}`;
     case "planned":
-      return `Planned - ${credits}`;
+      return `Planned · ${courses} · ${credits}`;
     case "past": {
       const unfinished = stage.records.filter((r) => !isDone(r.status)).length;
       return unfinished > 0
-        ? `${credits} - ${unfinished} not completed`
+        ? `${credits} · ${unfinished} not completed`
         : credits;
     }
     case "empty":
@@ -59,11 +60,13 @@ function Node({ stage }: { stage: Stage }) {
       >
         {state === "completed" ? (
           <Check aria-hidden className="size-5" strokeWidth={3.5} />
-        ) : state === "empty" ? null : count > 0 ? (
-          count
-        ) : (
-          <span className="size-2.5 rounded-full bg-white" />
-        )}
+        ) : state === "current" ? (
+          <Clock aria-hidden className="size-5" strokeWidth={2.75} />
+        ) : state === "planned" ? (
+          <CalendarDays aria-hidden className="size-5" strokeWidth={2.5} />
+        ) : state === "past" ? (
+          <Minus aria-hidden className="size-5" strokeWidth={3} />
+        ) : null}
       </motion.span>
       {warnings.length > 0 && (
         <span className="absolute -top-1 -right-1 grid size-5 place-items-center rounded-full border-2 border-card bg-primary font-extrabold text-primary-foreground text-xs leading-none">

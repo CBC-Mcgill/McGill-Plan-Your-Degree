@@ -30,7 +30,7 @@ function CourseLine({
           <span title={course.title}>{course.title}</span>
         </p>
         <p className="text-muted-foreground text-sm">
-          {course.credits === null ? "-" : `${course.credits} credits`} -{" "}
+          {course.credits === null ? "-" : `${course.credits} credits`} ·{" "}
           {seasonsOffered(course)}
         </p>
       </div>
