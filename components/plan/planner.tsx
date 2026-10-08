@@ -29,11 +29,17 @@ const NOTHING = buildSnapshot([]);
 /** The planner. Without a profile it offers to import a transcript or to plan from scratch. */
 export function Planner() {
   const snapshot = useSnapshot();
-  const catalogue = useCatalogue();
   const startTerm = useProfileStore((state) => state.startTerm);
 
   if (snapshot === undefined) return <PlannerSkeleton />;
   if (snapshot === null && startTerm === null) return <EmptyState />;
+  return <PlannerWithCatalogue snapshot={snapshot ?? NOTHING} />;
+}
+
+// Split out so a first-time visitor on the empty state does not download the catalogue.
+function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
+  const catalogue = useCatalogue();
+
   if (catalogue.status === "error") {
     return (
       <p role="alert" className="mt-8">
@@ -42,12 +48,7 @@ export function Planner() {
     );
   }
   if (catalogue.status !== "ready") return <PlannerSkeleton />;
-  return (
-    <PlannerReady
-      snapshot={snapshot ?? NOTHING}
-      catalogue={catalogue.catalogue}
-    />
-  );
+  return <PlannerReady snapshot={snapshot} catalogue={catalogue.catalogue} />;
 }
 
 function PlannerReady({

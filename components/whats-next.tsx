@@ -19,6 +19,7 @@ import {
   type OpenGroup,
 } from "@/lib/engine/next-view";
 import type { ProgramProgress } from "@/lib/engine/progress";
+import type { Snapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
@@ -40,6 +41,42 @@ interface Context {
 
 export function WhatsNext() {
   const snapshot = useSnapshot();
+  if (snapshot === null) {
+    return (
+      <>
+        <Header />
+        <EmptyState />
+      </>
+    );
+  }
+  if (snapshot === undefined) {
+    return (
+      <>
+        <Header />
+        <PageSkeleton />
+      </>
+    );
+  }
+  return <WhatsNextReady snapshot={snapshot} />;
+}
+
+function Header({ children }: { children?: ReactNode }) {
+  return (
+    <div className="flex items-end justify-between gap-6">
+      <div>
+        <h1 className="text-4xl">What's next</h1>
+        <p className="mt-2 text-lg text-muted-foreground">
+          The courses you can take next term, and what you still need to
+          graduate.
+        </p>
+      </div>
+      {children}
+    </div>
+  );
+}
+
+// Split out so a visitor without a profile does not download the catalogue.
+function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const programId = useProfileStore((state) => state.programId);
   const catalogue = useCatalogue();
   const options = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
@@ -49,14 +86,14 @@ export function WhatsNext() {
 
   // Planned courses stay in the lists, so adding one shows "Planned" and the row does not vanish.
   const unplanned = useMemo(
-    () => snapshot && { ...snapshot, planned: NO_COURSES },
+    () => ({ ...snapshot, planned: NO_COURSES }),
     [snapshot],
   );
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
   const program = programId ? (getProgram(programId) ?? null) : null;
   const view = useMemo(
     () =>
-      unplanned && courses && selected
+      courses && selected
         ? nextView(courses, unplanned, selected, program)
         : null,
     [unplanned, courses, selected, program],
@@ -64,14 +101,7 @@ export function WhatsNext() {
 
   return (
     <>
-      <div className="flex items-end justify-between gap-6">
-        <div>
-          <h1 className="text-4xl">What's next</h1>
-          <p className="mt-2 text-lg text-muted-foreground">
-            The courses you can take next term, and what you still need to
-            graduate.
-          </p>
-        </div>
+      <Header>
         {view && selected && (
           <label className="flex shrink-0 flex-col gap-1.5 font-semibold text-sm">
             Term
@@ -88,15 +118,13 @@ export function WhatsNext() {
             </select>
           </label>
         )}
-      </div>
+      </Header>
 
-      {snapshot === null ? (
-        <EmptyState />
-      ) : catalogue.status === "error" ? (
+      {catalogue.status === "error" ? (
         <p role="alert" className="mt-8">
           Could not load the course list. Reload the page to try again.
         </p>
-      ) : snapshot && view && selected ? (
+      ) : view && selected ? (
         <Content
           view={view}
           program={program}

@@ -1,9 +1,23 @@
 # McGill Plan Your Degree
 
 Open-source degree planner for McGill students.
-Browse every McGill course, import your unofficial transcript, see what you can and must take next, and plan your path to graduation.
+Import your unofficial transcript, see which courses you can take next, and plan every term up to graduation.
+Plan Your Degree is not affiliated with McGill University.
 
-Status: early development. The product spec is in [PRD.md](PRD.md).
+## Features
+
+- Browse every McGill course, with search, filters, and a shareable page for each course.
+- Import your unofficial transcript privately, and review it before anything is saved.
+- See what's next: the courses you can take next term and the required ones you still need.
+- Plan each term on a quest path, with warnings for missing prerequisites, terms a course is not offered, and credit overloads.
+- Earn XP and badges from real progress, with a new level for every 15 credits.
+
+## Privacy
+
+Everything stays in your browser.
+The transcript is read on your device and is never uploaded, and the PDF is never stored.
+The app has no accounts and no backend.
+Export your data as a file or delete all of it from the profile page at any time.
 
 ## Setup
 
@@ -47,11 +61,11 @@ When the data changed, it pushes a `data/catalogue-*` branch and opens a PR with
 The CBC-Mcgill organization blocks Actions from opening PRs, so the run summary shows a one-click link to open it instead.
 Catalogue data reaches production only by merging that PR.
 
-## Adding a program
+## Contributing
 
-Copy a file in `data/programs/`, rename it to the new program id, and fill it in from the program page in the course catalogue, following `lib/programs/types.ts`.
-Register it in `lib/programs/index.ts` and, if a transcript names it, in `guessProgram`.
-Run `pnpm test` to check the file against the schema and the catalogue.
+Fixes and new programs are welcome.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the code rules, how to fix crawler bugs, and how to add a program.
+The product spec is in [PRD.md](PRD.md).
 
 ## License
 

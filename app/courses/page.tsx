@@ -12,7 +12,7 @@ export default function CoursesPage() {
       <Suspense
         fallback={
           <div className="mt-8">
-            <CourseRowSkeleton />
+            <CourseRowSkeleton rows={14} />
           </div>
         }
       >

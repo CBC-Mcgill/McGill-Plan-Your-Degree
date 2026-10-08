@@ -235,7 +235,7 @@ export function CourseBrowser() {
             )}
           </div>
         )}
-        {catalogue.status === "loading" && <CourseRowSkeleton />}
+        {catalogue.status === "loading" && <CourseRowSkeleton rows={14} />}
         {catalogue.status === "error" && (
           <p role="alert">
             Could not load the course list. Reload the page to try again.

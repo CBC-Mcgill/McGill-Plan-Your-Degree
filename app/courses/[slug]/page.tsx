@@ -57,12 +57,11 @@ export default async function CoursePage({
             <Fact label="Credits" value={creditsText(course.credits)} />
             <Fact label="Offered by" value={course.offeredBy} />
             <Fact label="Faculty" value={course.faculty} />
-            <div className="col-span-3">
-              <Fact
-                label="Terms offered"
-                value={course.terms.join(", ") || "Not offered this year"}
-              />
-            </div>
+            <Fact
+              className="col-span-3"
+              label="Terms offered"
+              value={course.terms.join(", ") || "Not offered this year"}
+            />
           </dl>
 
           <p className="mt-8 max-w-prose text-lg leading-relaxed">
@@ -123,9 +122,17 @@ function creditsText(credits: number | null) {
   return credits === null ? null : String(credits);
 }
 
-function Fact({ label, value }: { label: string; value: string | null }) {
+function Fact({
+  label,
+  value,
+  className,
+}: {
+  label: string;
+  value: string | null;
+  className?: string;
+}) {
   return (
-    <div>
+    <div className={className}>
       <dt className="font-semibold text-muted-foreground text-sm">{label}</dt>
       <dd className="mt-0.5 font-semibold">{value ?? "Not listed"}</dd>
     </div>
