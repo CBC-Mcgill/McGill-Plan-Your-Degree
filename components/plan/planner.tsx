@@ -47,7 +47,7 @@ function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
 
   if (catalogue.status === "error") {
     return (
-      <p role="alert" className="mt-6">
+      <p role="alert">
         Could not load the course list. Reload the page to try again.
       </p>
     );
@@ -113,22 +113,28 @@ function PlannerReady({
     ]) {
       terms.set(termKey(term), term);
     }
-    return [...terms.values()].sort(compareTerms);
+    return [...terms.values()].sort(compareTerms).map((term) => ({
+      term,
+      credits:
+        stages.find((stage) => stage.key === termKey(term))?.credits ?? 0,
+    }));
   }, [stages, now, nowKey, end]);
 
+  // Open on the next term to plan, not the one already in progress.
   const selected =
     stages.find((stage) => stage.key === picked) ??
-    stages.find((stage) => stage.key >= nowKey) ??
+    stages.find((stage) => stage.key > nowKey) ??
     stages.at(-1);
   const firstWarned = stages.find((stage) => stage.warnings.length > 0);
 
   return (
-    <div className="mt-6 flex flex-col gap-6">
+    <>
       <PlanSummary
         program={program}
         progress={progress}
         warningCount={warnings.length}
         onShowWarnings={() => firstWarned && setPicked(firstWarned.key)}
+        graduation={termLabel(end)}
         graduationSet={graduationTerm !== null}
         graduationPassed={
           graduationTerm && compareTerms(graduationTerm, now) < 0
@@ -164,7 +170,7 @@ function PlannerReady({
           profile.
         </p>
       )}
-    </div>
+    </>
   );
 }
 
@@ -174,7 +180,7 @@ function EmptyState() {
   const steps = ["completed", "in-progress", "planned", "available"] as const;
 
   return (
-    <Card className="mx-auto mt-8 flex max-w-2xl flex-col items-center gap-5 px-10 py-12 text-center">
+    <Card className="mx-auto mt-3 flex max-w-2xl flex-col items-center gap-5 px-10 py-12 text-center">
       <div aria-hidden className="flex items-center">
         {steps.map((status) => (
           <div key={status} className="flex items-center">
@@ -188,7 +194,7 @@ function EmptyState() {
       </div>
       <div>
         <h2 className="text-lg">Start your path to graduation</h2>
-        <p className="mt-1 text-muted-foreground">
+        <p className="mt-1 text-balance text-muted-foreground">
           Import your unofficial transcript and every course you have taken
           lands on your path. It never leaves your browser.
         </p>
@@ -217,9 +223,9 @@ function EmptyState() {
 
 function PlannerSkeleton() {
   return (
-    <div role="status" className="mt-6 flex flex-col gap-6">
+    <div role="status" className="flex flex-col gap-5">
       <span className="sr-only">Loading your plan</span>
-      <Card aria-hidden className="h-36" />
+      <Card aria-hidden className="h-24" />
       <div
         aria-hidden
         className="grid grid-cols-[18.75rem_minmax(0,1fr)] gap-6"

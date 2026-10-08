@@ -1,181 +1,169 @@
 "use client";
 
-import { Plus, Search } from "lucide-react";
-import { useId, useState } from "react";
-import { CourseLink } from "@/components/course-link";
-import { seasonsOffered } from "@/components/course-row";
+import { cn } from "cn";
+import { Search } from "lucide-react";
+import { useId, useRef, useState } from "react";
 import { addWithUndo } from "@/components/plan/add-with-undo";
-import { StatusLabel } from "@/components/status";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { STATUS, StatusIcon } from "@/components/status";
 import { controlStyles } from "@/components/ui/field";
 import { type IndexedCourse, searchCourses } from "@/lib/catalogue/search";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import type { Snapshot } from "@/lib/engine/snapshot";
-import { useProfileStore } from "@/lib/profile/store";
+import { courseStatus } from "@/lib/engine/status";
 import { termLabel } from "@/lib/profile/term-options";
-import { type Term, termKey } from "@/lib/profile/types";
+import { type Plan, type Term, termKey } from "@/lib/profile/types";
 
 const MAX_RESULTS = 6;
 
-function CourseLine({
-  course,
-  children,
-}: {
-  course: CourseSummary;
-  children: React.ReactNode;
-}) {
-  return (
-    <li className="flex items-center gap-4 px-4 py-2">
-      <div className="min-w-0 flex-1">
-        <p className="truncate">
-          <CourseLink code={course.code} className="font-semibold" />{" "}
-          <span title={course.title}>{course.title}</span>
-        </p>
-        <p className="text-[13px] text-muted-foreground">
-          {course.credits === null ? "-" : `${course.credits} credits`} ·{" "}
-          {seasonsOffered(course)}
-        </p>
-      </div>
-      {children}
-    </li>
-  );
-}
-
-/** Search the catalogue and put a course in the selected term, plus the required courses that fit it. */
+/** Search combobox that puts a course in the term. Arrow keys move, Enter adds, Escape clears or closes. A course planned elsewhere moves here. */
 export function AddCourse({
   term,
   index,
   snapshot,
-  suggestions,
-  hasProgram,
+  plan,
 }: {
   term: Term;
   index: readonly IndexedCourse[];
   snapshot: Snapshot;
-  /** Remaining required courses that fit this term, or null when there is no program. */
-  suggestions: CourseSummary[] | null;
-  hasProgram: boolean;
+  plan: Plan;
 }) {
-  const inputId = useId();
-  const plan = useProfileStore((state) => state.plan);
+  const listId = useId();
+  const wrap = useRef<HTMLDivElement>(null);
   const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const text = query.trim();
+  const results = text ? searchCourses(index, text).slice(0, MAX_RESULTS) : [];
   const label = termLabel(term);
 
-  const plannedHere = new Set(
-    plan.find((entry) => termKey(entry.term) === termKey(term))?.courses,
-  );
-  const results = query.trim()
-    ? searchCourses(index, query).slice(0, MAX_RESULTS)
-    : [];
-
-  function add(course: CourseSummary) {
-    addWithUndo(term, course.code);
-    setQuery("");
-  }
-
-  const addButton = (course: CourseSummary) => {
-    const moving = snapshot.planned.has(course.code);
-    return (
-      <Button
-        variant="secondary"
-        size="sm"
-        aria-label={`${moving ? "Move" : "Add"} ${course.code} to ${label}`}
-        onClick={() => add(course)}
-      >
-        <Plus aria-hidden />
-        {moving ? "Move here" : "Add"}
-      </Button>
-    );
+  const stateOf = (course: CourseSummary) => {
+    const { status } = courseStatus(course, snapshot);
+    const at = plan.find((entry) => entry.courses.includes(course.code))?.term;
+    const done =
+      status === "completed" ||
+      status === "covered" ||
+      status === "in-progress";
+    const here = at !== undefined && termKey(at) === termKey(term);
+    return {
+      status,
+      disabled: done || here,
+      note: done
+        ? STATUS[status].label
+        : here
+          ? "Planned here"
+          : at
+            ? `In ${termLabel(at)}`
+            : "",
+    };
   };
 
-  return (
-    <div className="flex flex-col gap-6">
-      <div>
-        <label htmlFor={inputId} className="font-semibold">
-          Add a course
-        </label>
-        <div className="relative mt-2">
-          <Search
-            aria-hidden
-            className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
-          />
-          <input
-            id={inputId}
-            type="search"
-            autoComplete="off"
-            placeholder="Search by code or title, like COMP 251 or algorithms"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            className={`${controlStyles} w-full pl-9`}
-          />
-        </div>
-        {query.trim() &&
-          (results.length === 0 ? (
-            <p className="mt-2 text-muted-foreground">
-              No courses match "{query.trim()}".
-            </p>
-          ) : (
-            <Card
-              asChild
-              className="mt-2 divide-y divide-border overflow-hidden"
-            >
-              <ul aria-label="Search results">
-                {results.map((course) => {
-                  const state = snapshot.covered.has(course.code)
-                    ? "covered"
-                    : snapshot.done.has(course.code)
-                      ? "completed"
-                      : snapshot.inProgress.has(course.code)
-                        ? "in-progress"
-                        : null;
-                  return (
-                    <CourseLine key={course.code} course={course}>
-                      {state ? (
-                        <StatusLabel status={state} />
-                      ) : plannedHere.has(course.code) ? (
-                        <StatusLabel status="planned" />
-                      ) : (
-                        addButton(course)
-                      )}
-                    </CourseLine>
-                  );
-                })}
-              </ul>
-            </Card>
-          ))}
-      </div>
+  function commit(course: CourseSummary | undefined) {
+    if (!course || stateOf(course).disabled) return;
+    addWithUndo(term, course.code);
+    setQuery("");
+    setActive(0);
+    setOpen(false);
+  }
 
-      {hasProgram && !query.trim() && (
-        <section aria-labelledby={`${inputId}-suggested`}>
-          <h3 id={`${inputId}-suggested`} className="text-sm">
-            Suggested for this term
-          </h3>
-          {suggestions && suggestions.length > 0 ? (
-            <>
-              <p className="text-[13px] text-muted-foreground">
-                Courses your program still needs, offered in {term.season}, with
-                prerequisites met by earlier terms.
-              </p>
-              <Card
-                asChild
-                className="mt-3 divide-y divide-border overflow-hidden"
-              >
-                <ul>
-                  {suggestions.slice(0, 5).map((course) => (
-                    <CourseLine key={course.code} course={course}>
-                      {addButton(course)}
-                    </CourseLine>
-                  ))}
-                </ul>
-              </Card>
-            </>
-          ) : (
-            <p className="mt-1 text-muted-foreground">
-              No remaining required course fits this term.
+  const showList = open && text.length > 0;
+
+  return (
+    <div ref={wrap} className="relative">
+      <div className="relative">
+        <Search
+          aria-hidden
+          className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground"
+          strokeWidth={1.75}
+        />
+        <input
+          type="text"
+          role="combobox"
+          aria-label={`Add a course to ${label}`}
+          aria-expanded={showList}
+          aria-controls={showList ? listId : undefined}
+          aria-activedescendant={
+            showList && results.length > 0 ? `${listId}-${active}` : undefined
+          }
+          aria-autocomplete="list"
+          autoComplete="off"
+          spellCheck={false}
+          placeholder="Search by code or title, like COMP 251"
+          value={query}
+          onFocus={() => setOpen(true)}
+          onBlur={(event) => {
+            if (!wrap.current?.contains(event.relatedTarget)) setOpen(false);
+          }}
+          onChange={(event) => {
+            setQuery(event.target.value);
+            setActive(0);
+            setOpen(true);
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+              event.preventDefault();
+              setOpen(true);
+              const step = event.key === "ArrowDown" ? 1 : -1;
+              setActive((value) =>
+                results.length
+                  ? (value + step + results.length) % results.length
+                  : 0,
+              );
+            } else if (event.key === "Enter") {
+              event.preventDefault();
+              commit(results[active]);
+            } else if (event.key === "Escape") {
+              setQuery("");
+              setOpen(false);
+            }
+          }}
+          className={cn(controlStyles, "w-full pr-3 pl-8")}
+        />
+      </div>
+      {showList && (
+        <div
+          id={listId}
+          role="listbox"
+          aria-label="Search results"
+          onMouseDown={(event) => event.preventDefault()}
+          className="absolute inset-x-0 top-full z-20 mt-1 rounded-lg bg-card p-1 shadow-float"
+        >
+          {results.length === 0 && (
+            <p className="px-2 py-2.5 text-[13px] text-muted-foreground">
+              No courses match "{text}"
             </p>
           )}
-        </section>
+          {results.map((course, i) => {
+            const state = stateOf(course);
+            return (
+              <button
+                key={course.code}
+                type="button"
+                role="option"
+                id={`${listId}-${i}`}
+                aria-selected={i === active}
+                aria-disabled={state.disabled}
+                onMouseMove={() => setActive(i)}
+                onClick={() => commit(course)}
+                className={cn(
+                  "flex h-10 w-full items-center gap-2.5 rounded-md px-2 text-left",
+                  i === active && "bg-subtle",
+                  state.disabled && "cursor-default text-muted-foreground",
+                )}
+              >
+                <StatusIcon status={state.status} />
+                <span className="w-[76px] shrink-0 whitespace-nowrap font-semibold tabular-nums">
+                  {course.code}
+                </span>
+                <span className="min-w-0 flex-1 truncate" title={course.title}>
+                  {course.title}
+                </span>
+                <span className="shrink-0 text-muted-foreground text-xs tabular-nums">
+                  {state.note || `${course.credits ?? "?"} cr`}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       )}
     </div>
   );

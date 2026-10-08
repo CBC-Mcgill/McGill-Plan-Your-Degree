@@ -134,7 +134,7 @@ export function QuestPath({
                   "bg-subtle shadow-[inset_0_0_0_1px_var(--border)]",
               )}
             >
-              <span className="relative flex h-full w-4 shrink-0 items-center justify-center">
+              <span className="relative flex h-full w-5 shrink-0 items-center justify-center">
                 {i > 0 && (
                   <Line className="top-0 h-4" done={stage.key <= nowKey} />
                 )}
@@ -165,12 +165,12 @@ export function QuestPath({
           );
         })}
         <div className="relative flex h-12 items-center gap-3 px-2">
-          <span className="relative flex h-full w-4 shrink-0 items-center justify-center">
-            <Line className="top-0 h-4" done={false} />
+          <span className="relative flex h-full w-5 shrink-0 items-center justify-center">
+            <Line className="top-0 h-3.5" done={false} />
             <span
               aria-hidden
               className={cn(
-                "relative grid size-4 place-items-center rounded-full",
+                "relative grid size-5 place-items-center rounded-full",
                 graduation.satisfied
                   ? "bg-completed text-white"
                   : "bg-card text-muted-foreground shadow-[inset_0_0_0_1.5px_var(--border-strong)]",
