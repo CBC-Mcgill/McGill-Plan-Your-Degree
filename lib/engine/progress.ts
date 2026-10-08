@@ -89,6 +89,25 @@ export function groupAllows(group: ComplementaryGroup, code: string): boolean {
   return rules.some((rule) => ruleMatches(rule, code));
 }
 
+/** True when one more course stays within the caps of every rule it matches, given what each rule already holds, in rule order. */
+export function fitsCaps(
+  group: ComplementaryGroup,
+  held: readonly Pick<RuleProgress, "creditsDone" | "coursesDone">[],
+  code: string,
+  credits: number,
+): boolean {
+  return group.rules.every((rule, i) => {
+    const creditsDone = held[i]?.creditsDone ?? 0;
+    const coursesDone = held[i]?.coursesDone ?? 0;
+    return (
+      !ruleMatches(rule, code) ||
+      ((rule.maxCredits === undefined ||
+        creditsDone + credits <= rule.maxCredits) &&
+        (rule.maxCourses === undefined || coursesDone < rule.maxCourses))
+    );
+  });
+}
+
 function requiredProgress(
   group: RequiredGroup,
   have: ReadonlySet<string>,
@@ -132,25 +151,23 @@ function complementaryProgress(
   for (const [code, credits] of counted) {
     if (!used.has(code) && groupAllows(group, code)) pool.set(code, credits);
   }
-  const state = group.rules.map((rule) => ({ rule, credits: 0, courses: 0 }));
+  const state = group.rules.map((rule) => ({
+    rule,
+    creditsDone: 0,
+    coursesDone: 0,
+  }));
   const chosen = new Map<string, number>();
   let total = 0;
 
   const fits = (code: string, credits: number) =>
-    state.every(
-      (s) =>
-        !ruleMatches(s.rule, code) ||
-        ((s.rule.maxCredits === undefined ||
-          s.credits + credits <= s.rule.maxCredits) &&
-          (s.rule.maxCourses === undefined || s.courses < s.rule.maxCourses)),
-    );
+    fitsCaps(group, state, code, credits);
   const take = (code: string, credits: number) => {
     chosen.set(code, credits);
     total += credits;
     for (const s of state) {
       if (ruleMatches(s.rule, code)) {
-        s.credits += credits;
-        s.courses++;
+        s.creditsDone += credits;
+        s.coursesDone++;
       }
     }
   };
@@ -159,8 +176,8 @@ function complementaryProgress(
   for (const s of state) {
     for (const [code, credits] of pool) {
       if (
-        s.credits >= (s.rule.minCredits ?? 0) &&
-        s.courses >= (s.rule.minCourses ?? 0)
+        s.creditsDone >= (s.rule.minCredits ?? 0) &&
+        s.coursesDone >= (s.rule.minCourses ?? 0)
       ) {
         break;
       }
@@ -179,14 +196,15 @@ function complementaryProgress(
   }
 
   for (const code of chosen.keys()) used.add(code);
-  const rules = state.map(({ rule, credits, courses }) => ({
+  const rules = state.map(({ rule, creditsDone, coursesDone }) => ({
     title: rule.title,
-    creditsDone: credits,
-    coursesDone: courses,
+    creditsDone,
+    coursesDone,
     minCredits: rule.minCredits,
     minCourses: rule.minCourses,
     satisfied:
-      credits >= (rule.minCredits ?? 0) && courses >= (rule.minCourses ?? 0),
+      creditsDone >= (rule.minCredits ?? 0) &&
+      coursesDone >= (rule.minCourses ?? 0),
   }));
   return {
     title: group.title,

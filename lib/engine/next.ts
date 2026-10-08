@@ -1,7 +1,13 @@
 import type { Course } from "../catalogue/types.ts";
 import type { Term } from "../profile/types.ts";
 import type { ComplementaryGroup, Program } from "../programs/types.ts";
-import { groupAllows, namesCourses, programProgress } from "./progress.ts";
+import {
+  fitsCaps,
+  type GroupProgress,
+  groupAllows,
+  namesCourses,
+  programProgress,
+} from "./progress.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 import { blockedBy, isOffered, isUncertain, meets } from "./status.ts";
 
@@ -29,7 +35,8 @@ export function whatsNext(
   program?: Program | null,
 ): WhatsNext {
   const required = new Set<string>();
-  const openGroups: ComplementaryGroup[] = [];
+  const openGroups: { group: ComplementaryGroup; progress: GroupProgress }[] =
+    [];
   if (program) {
     const progress = programProgress(program, snapshot, catalogue, {
       inProgress: true,
@@ -41,12 +48,14 @@ export function whatsNext(
       }
     }
     for (const [i, group] of program.groups.entries()) {
+      const groupProgress = progress.groups[i];
       if (
         group.kind === "complementary" &&
         namesCourses(group) &&
-        !progress.groups[i]?.satisfied
+        groupProgress &&
+        !groupProgress.satisfied
       ) {
-        openGroups.push(group);
+        openGroups.push({ group, progress: groupProgress });
       }
     }
   }
@@ -69,7 +78,13 @@ export function whatsNext(
     }
     const suggestion = { course, uncertain: isUncertain(course) };
     if (required.has(code)) result.mustTake.push(suggestion);
-    else if (openGroups.some((group) => groupAllows(group, code))) {
+    else if (
+      openGroups.some(
+        ({ group, progress }) =>
+          groupAllows(group, code) &&
+          fitsCaps(group, progress.rules, code, course.credits ?? 0),
+      )
+    ) {
       result.canTake.complementary.push(suggestion);
     } else result.canTake.other.push(suggestion);
   }
