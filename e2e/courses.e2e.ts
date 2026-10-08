@@ -35,6 +35,15 @@ test("search finds COMP 251 and its page links the prerequisites", async ({
   await expect(
     page.getByRole("link", { name: "Import your transcript" }),
   ).toHaveAttribute("href", "/profile");
+
+  await page.goto("/courses/comp-250");
+  await expect(
+    page
+      .locator("section", {
+        has: page.getByRole("heading", { name: "Unlocks" }),
+      })
+      .getByRole("link", { name: "COMP 251" }),
+  ).toHaveAttribute("href", "/courses/comp-251");
 });
 
 test("an unknown course is a 404", async ({ page }) => {
