@@ -60,13 +60,13 @@ function GainToast() {
   const [title, ...rest] = gains ? describe(gains) : [];
 
   return (
-    <div className="pointer-events-none fixed top-20 right-8 z-40 w-80">
+    <div className="pointer-events-none fixed right-8 bottom-8 z-40 w-80">
       <AnimatePresence>
         {gains && (
           <motion.div
             role="status"
             className="pointer-events-auto flex items-start gap-3 rounded-lg border-2 border-border-strong bg-card p-4 shadow-edge"
-            initial={{ opacity: 0, y: -16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ type: "spring", bounce: 0.25, duration: 0.45 }}
