@@ -38,7 +38,7 @@ export default async function CoursePage({
   const catalogueSlug = courseSlug(course.parts?.[0]?.code ?? course.code);
   const unlocks = await getUnlocks(course.code);
   const unlockedCourses = (
-    await Promise.all(unlocks.slice(0, 12).map((code) => getCourse(code)))
+    await Promise.all(unlocks.map((code) => getCourse(code)))
   ).filter((unlocked): unlocked is Course => unlocked !== undefined);
 
   return (
@@ -99,23 +99,14 @@ export default async function CoursePage({
               <p className="mt-3 text-muted-foreground">
                 Courses that list {course.code} as a prerequisite.
               </p>
-              <ul className="mt-3 flex max-w-prose flex-col gap-1.5">
-                {unlockedCourses.map((unlocked) => (
-                  <li key={unlocked.code}>
-                    <Link
-                      href={`/courses/${courseSlug(unlocked.code)}`}
-                      className="font-semibold text-in-progress underline underline-offset-2 hover:text-foreground"
-                    >
-                      {unlocked.code}
-                    </Link>{" "}
-                    {unlocked.title}
-                  </li>
-                ))}
-              </ul>
-              {unlocks.length > 12 && (
-                <p className="mt-3 text-muted-foreground">
-                  and {unlocks.length - 12} more
-                </p>
+              <UnlockList courses={unlockedCourses.slice(0, 12)} />
+              {unlockedCourses.length > 12 && (
+                <details className="group mt-1.5">
+                  <summary className="inline-flex h-10 cursor-pointer items-center rounded-md font-semibold text-muted-foreground hover:text-foreground group-open:hidden">
+                    Show {unlockedCourses.length - 12} more
+                  </summary>
+                  <UnlockList courses={unlockedCourses.slice(12)} />
+                </details>
               )}
             </section>
           )}
@@ -168,5 +159,23 @@ function Fact({
       <dt className="font-semibold text-muted-foreground text-sm">{label}</dt>
       <dd className="mt-0.5 font-semibold">{value ?? "Not listed"}</dd>
     </div>
+  );
+}
+
+function UnlockList({ courses }: { courses: Course[] }) {
+  return (
+    <ul className="mt-3 flex max-w-prose flex-col gap-1.5">
+      {courses.map((unlocked) => (
+        <li key={unlocked.code}>
+          <Link
+            href={`/courses/${courseSlug(unlocked.code)}`}
+            className="font-semibold text-in-progress underline underline-offset-2 hover:text-foreground"
+          >
+            {unlocked.code}
+          </Link>{" "}
+          {unlocked.title}
+        </li>
+      ))}
+    </ul>
   );
 }
