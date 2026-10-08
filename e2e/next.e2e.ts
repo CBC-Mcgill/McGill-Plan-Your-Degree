@@ -57,13 +57,18 @@ test("with a profile, a required course can be added to the next term", async ({
   );
 
   const row = page
-    .getByRole("region", { name: "Must take" })
+    .getByRole("region", { name: "Required courses" })
     .getByRole("listitem")
     .filter({ hasText: "COMP 273" });
-  await row.getByRole("button", { name: "Add to Winter 2027" }).click();
-  await expect(row.getByRole("link", { name: /Planned/ })).toHaveAttribute(
-    "href",
-    "/plan",
-  );
-  await expect(row.getByRole("link", { name: /Planned/ })).toBeFocused();
+  await row
+    .getByRole("button", { name: "Add COMP 273 to Winter 2027" })
+    .click();
+  const remove = row.getByRole("button", {
+    name: "Remove COMP 273 from Winter 2027",
+  });
+  await expect(remove).toBeFocused();
+  await remove.click();
+  await expect(
+    row.getByRole("button", { name: "Add COMP 273 to Winter 2027" }),
+  ).toBeVisible();
 });
