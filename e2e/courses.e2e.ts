@@ -22,14 +22,14 @@ test("search finds COMP 251 and its page links the prerequisites", async ({
   await expect(search).toBeFocused();
   for (const query of ["comp251", "COMP 251", "comp 251"]) {
     await search.fill(query);
-    await expect(page.locator("main li a").first()).toHaveAttribute(
+    await expect(page.locator("tbody a").first()).toHaveAttribute(
       "href",
       "/courses/comp-251",
     );
   }
   await expect(page).toHaveURL(/q=comp\+251/);
 
-  await page.locator("main li a").first().click();
+  await page.locator("tbody a").first().click();
   await expect(page).toHaveTitle(/COMP 251 Algorithms and Data Structures/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Algorithms and Data Structures",
@@ -76,7 +76,7 @@ test("an unknown course is a 404", async ({ page }) => {
   expect(response?.status()).toBe(404);
 });
 
-test("with a profile, Can take narrows the list and a course can be planned", async ({
+test("with a profile, Can take now is the default tab and a course can be planned", async ({
   page,
 }) => {
   await page.addInitScript(
@@ -100,12 +100,18 @@ test("with a profile, Can take narrows the list and a course can be planned", as
   );
   await page.goto("/courses?q=comp+25");
   await expect(page.getByRole("searchbox")).toHaveValue("comp 25");
-  const rows = page.locator("main li a");
-  await expect(rows.filter({ hasText: "COMP 250" })).toBeVisible();
-
-  await page.getByLabel("Status").selectOption("available");
+  const rows = page.locator("tbody tr");
   await expect(rows.filter({ hasText: "COMP 251" })).toBeVisible();
   await expect(rows.filter({ hasText: "COMP 250" })).toHaveCount(0);
+
+  await page.getByRole("tab", { name: /^All/ }).click();
+  await expect(rows.filter({ hasText: "COMP 250" })).toBeVisible();
+  await page.getByRole("tab", { name: /^Can take now/ }).click();
+
+  await page.getByRole("button", { name: "Level" }).click();
+  await page.getByRole("checkbox", { name: "200" }).click();
+  await expect(page).toHaveURL(/level=200/);
+  await page.keyboard.press("Escape");
 
   await rows.filter({ hasText: "COMP 251" }).click();
   await expect(page.getByLabel("Term")).toBeVisible();

@@ -22,26 +22,6 @@ const grid = (withStatus: boolean) =>
       : "grid-cols-[6rem_minmax(0,1fr)_5rem_9rem]",
   );
 
-/** Column labels for a list of CourseRow. Pass the same `withStatus` as the rows. */
-export function CourseRowHeader({ withStatus }: { withStatus: boolean }) {
-  return (
-    <div aria-hidden className="pb-2">
-      <div
-        className={cn(
-          grid(withStatus),
-          "font-medium text-muted-foreground text-xs",
-        )}
-      >
-        <span>Course</span>
-        <span>Title</span>
-        <span>Credits</span>
-        <span>Offered</span>
-        {withStatus && <span>Your status</span>}
-      </div>
-    </div>
-  );
-}
-
 /**
  * One list item that links to the course page. Pass `state` to show the student's status, and leave it out when there is no profile.
  * `note` adds a line under the title. `action` sits beside the link, since a button cannot live inside it: pass null to keep the column empty so rows line up.

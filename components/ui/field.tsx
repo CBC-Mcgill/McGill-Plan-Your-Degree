@@ -59,4 +59,4 @@ function TextField({
   );
 }
 
-export { controlStyles, SelectField, TextField };
+export { compactControlStyles, controlStyles, SelectField, TextField };
