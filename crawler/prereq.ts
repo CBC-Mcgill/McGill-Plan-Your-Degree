@@ -156,7 +156,11 @@ class Parser {
   private parseOperand(): RequirementTree | null {
     const token = this.tokens[this.index++];
     if (token?.type === "code") return token.value;
-    if (token?.type === "oneOf") return this.parseList(true);
+    if (token?.type === "oneOf") {
+      const list = this.parseList(true);
+      if (list === null) this.ambiguous = true;
+      return list;
+    }
     if (token?.type !== "open") return null;
     const inner = this.parseClauses();
     if (this.peek() === "close") this.index++;
@@ -299,8 +303,11 @@ export const EXCLUSION =
 export function parseRestriction(text: string): Restriction {
   const excludes = new Set<string>();
   for (const clause of text.split(/;|\.\s|\d\)\s/)) {
-    if (!EXCLUSION.test(clause)) continue;
-    const courses = clause.replace(/,?\s*except\b.*$/i, "");
+    const exclusion = EXCLUSION.exec(clause);
+    if (!exclusion) continue;
+    const courses = clause
+      .slice(exclusion.index + exclusion[0].length)
+      .replace(/,?\s*except\b.*$/i, "");
     for (const token of tokenize(courses)) {
       if (token.type === "code") excludes.add(token.value);
     }

@@ -5,11 +5,16 @@ import { EXCLUSION, parseRequirement, parseRestriction } from "./prereq.ts";
 /** A course as one catalogue page shows it, before multi-term parts are merged. */
 export type CoursePage = Omit<Course, "parts">;
 
-// Labels vary: "Prerequisite(s) X", "Prerquisite(s):", "Revised Prerequisite:", "Prerequisites/corequisites:".
-const PREREQ_LABEL =
-  /^(?:revised\s+)?pre-?re?quisites?(?:\s*\(s\))?(?:\s*\/\s*co-?requisites?)?\s*(?:\([^)]*\))?(?:\s*[:.,]|(?=\s|$))/i;
-const COREQ_LABEL =
-  /^co-?re?quisites?(?:\s*\(s\))?\s*(?:\([^)]*\))?(?:\s*[:.,]|(?=\s|$))/i;
+// Labels vary: "Prerequisite(s) X", "Prerquisite(s):", "Revised Prerequisite:", "Prerequisite (Undergraduate):".
+const LABEL_END = String.raw`(?:\s*\(s\))?(?:(?:\s*\((?![^)]*(?:\d{3}|one of))[^)]*\))?\s*[:.,]|(?=\s|$))`;
+const PREREQ_LABEL = new RegExp(
+  String.raw`^(?:revised\s+)?pre-?re?quisites?${LABEL_END}`,
+  "i",
+);
+const COREQ_LABEL = new RegExp(`^co-?re?quisites?${LABEL_END}`, "i");
+// "Prerequisites/Corequisites:" keeps its label so the text and the unparsed flag show it allows concurrent courses.
+const COMBINED_LABEL =
+  /^(?:revised\s+)?pre-?re?quisites?(?:\s*\(s\))?\s*\/\s*co-?re?quisites?/i;
 const RESTRICTION_LABEL = /^restrictions?(?:\s*\(s\))?\s*[:.]/i;
 
 const clean = (text: string) => text.replace(/\s+/g, " ").trim();
@@ -37,12 +42,12 @@ export function parseCoursePage(html: string): CoursePage {
     .get()
     .filter(Boolean);
 
-  const prereqItems = items.filter((item) => PREREQ_LABEL.test(item));
+  const prereqItems = items.filter(
+    (item) => PREREQ_LABEL.test(item) || COMBINED_LABEL.test(item),
+  );
   const coreqItems = items.filter((item) => COREQ_LABEL.test(item));
   const restrictionItems = items.filter(
-    (item) =>
-      RESTRICTION_LABEL.test(item) ||
-      (!prereqItems.includes(item) && EXCLUSION.test(item)),
+    (item) => RESTRICTION_LABEL.test(item) || EXCLUSION.test(item),
   );
   const notes = items.filter(
     (item) =>
