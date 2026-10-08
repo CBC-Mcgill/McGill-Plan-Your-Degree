@@ -7,17 +7,13 @@ export const metadata: Metadata = { title: "Browse courses" };
 
 export default function CoursesPage() {
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-10">
+    <div className="mx-auto w-full max-w-page px-8 pt-8 pb-24">
       <h1>Browse courses</h1>
-      <Suspense
-        fallback={
-          <div className="mt-8">
-            <CourseRowSkeleton rows={14} />
-          </div>
-        }
-      >
-        <CourseBrowser />
-      </Suspense>
+      <div className="mt-5">
+        <Suspense fallback={<CourseRowSkeleton rows={12} />}>
+          <CourseBrowser />
+        </Suspense>
+      </div>
     </div>
   );
 }
