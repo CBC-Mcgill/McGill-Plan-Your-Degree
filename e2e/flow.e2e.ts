@@ -12,11 +12,15 @@ test("a student imports a transcript, adds a course, and sees it in the plan", a
   await expect(page).toHaveURL("/next");
 
   const row = page
-    .getByRole("region", { name: "Must take" })
+    .getByRole("region", { name: "Required courses" })
     .getByRole("listitem")
     .filter({ hasText: "COMP 251" });
-  await row.getByRole("button", { name: "Add to Winter 2027" }).click();
-  await expect(row.getByRole("link", { name: /Planned/ })).toBeVisible();
+  await row
+    .getByRole("button", { name: "Add COMP 251 to Winter 2027" })
+    .click();
+  await expect(
+    row.getByRole("button", { name: "Remove COMP 251 from Winter 2027" }),
+  ).toBeVisible();
 
   await page.getByRole("link", { name: "Planner" }).click();
   await expect(page).toHaveURL("/plan");

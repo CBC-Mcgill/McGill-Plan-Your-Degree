@@ -1,10 +1,12 @@
 "use client";
 
-import { ChevronDown, Compass, FileUp, Info } from "lucide-react";
+import { cn } from "cn";
+import { ChevronDown, Compass, FileUp, Info, Plus, X } from "lucide-react";
+import { motion } from "motion/react";
 import Link from "next/link";
-import { type ReactNode, useMemo, useState } from "react";
-import { AddToPlan, PlannedLink } from "@/components/add-to-plan";
-import { CourseRow, CourseRowSkeleton } from "@/components/course-row";
+import { type ReactNode, useId, useMemo, useState } from "react";
+import { seasonsOffered } from "@/components/course-row";
+import { addWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon, UncertainFlag } from "@/components/status";
 import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
@@ -12,6 +14,7 @@ import { Card } from "@/components/ui/card";
 import { SelectField } from "@/components/ui/field";
 import { ProgressBar, ProgressRing } from "@/components/ui/progress";
 import { useCatalogue } from "@/lib/catalogue/client";
+import { courseSlug } from "@/lib/catalogue/slug";
 import {
   degreeCredits,
   type Exemption,
@@ -19,14 +22,12 @@ import {
   exemptionsToReplace,
 } from "@/lib/engine/credits";
 import {
-  type Bucket,
   type Entry,
   type Item,
   type NextView,
   nextView,
   type OpenGroup,
 } from "@/lib/engine/next-view";
-import type { ProgramProgress } from "@/lib/engine/progress";
 import type { Snapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
@@ -36,21 +37,30 @@ import { getProgram } from "@/lib/programs";
 import type { Program } from "@/lib/programs/types";
 
 const TERMS_SHOWN = 4;
-const BUCKET_LIMIT = 10;
-const OTHER_LIMIT = 20;
-/** Required later starts closed when it has more courses than this. */
-const LATER_OPEN_LIMIT = 6;
+const BUCKET_LIMIT = 5;
+const OTHER_STEP = 20;
+const OTHER = "other";
 const NO_COURSES: ReadonlySet<string> = new Set();
 
 interface Context {
   term: Term;
-  planned: ReadonlySet<string>;
+  /** Course code to the term it is planned in. */
+  planned: ReadonlyMap<string, Term>;
 }
 
 /** Credits toward the whole degree, and exemptions that left credits to make up. */
 interface Background {
   degree: { done: number; required: number; advancedStanding: number } | null;
   exemptions: Exemption[];
+}
+
+/** A required group with the courses still missing, split into open now and not open yet. */
+interface RequiredBlock {
+  title: string;
+  creditsDone: number;
+  credits: number;
+  ready: Item[];
+  later: Item[];
 }
 
 export function WhatsNext() {
@@ -74,14 +84,15 @@ export function WhatsNext() {
   return <WhatsNextReady snapshot={snapshot} />;
 }
 
-function Header({ children }: { children?: ReactNode }) {
+function Header({ term, children }: { term?: Term; children?: ReactNode }) {
   return (
     <div className="flex items-end justify-between gap-6">
       <div>
         <h1>What's next</h1>
         <p className="mt-1 text-muted-foreground">
-          The courses you can take next term, and what you still need to
-          graduate.
+          The courses you can take{" "}
+          {term ? `in ${termLabel(term)}` : "next term"}, and what you still
+          need to graduate.
         </p>
       </div>
       {children}
@@ -96,6 +107,7 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const advancedStanding = useProfileStore((state) => state.advancedStanding);
   const creditsRequired = useProfileStore((state) => state.creditsRequired);
   const records = useProfileStore((state) => state.records);
+  const plan = useProfileStore((state) => state.plan);
   const catalogue = useCatalogue();
   const options = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
   const [picked, setPicked] = useState<number | null>(null);
@@ -106,6 +118,15 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const unplanned = useMemo(
     () => ({ ...snapshot, planned: NO_COURSES }),
     [snapshot],
+  );
+  const planned = useMemo(
+    () =>
+      new Map(
+        plan.flatMap(({ term, courses }) =>
+          courses.map((code) => [code, term] as const),
+        ),
+      ),
+    [plan],
   );
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
   const program = programId ? (getProgram(programId) ?? null) : null;
@@ -141,13 +162,13 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
 
   return (
     <>
-      <Header>
+      <Header term={view ? selected : undefined}>
         {view && selected && (
           <SelectField
             label="Term"
             value={termKey(selected)}
             onChange={(event) => setPicked(Number(event.target.value))}
-            className="w-44 shrink-0"
+            className="shrink-0 grid-cols-[auto_10rem] items-center gap-2.5"
           >
             {options.map((option) => (
               <option key={termKey(option)} value={termKey(option)}>
@@ -167,7 +188,7 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
           view={view}
           program={program}
           background={background}
-          context={{ term: selected, planned: snapshot.planned }}
+          context={{ term: selected, planned }}
           inProgress={snapshot.inProgress.size > 0}
         />
       ) : (
@@ -190,14 +211,27 @@ function Content({
   context: Context;
   inProgress: boolean;
 }) {
-  const { term } = context;
-  const { mustTake, later, complementary, other } = view;
+  const label = termLabel(context.term);
+  const blocks = useMemo(() => requiredBlocks(view), [view]);
+  const [collapsed, setCollapsed] = useState<ReadonlySet<string>>(
+    () => new Set([OTHER]),
+  );
+  const toggle = (key: string) =>
+    setCollapsed((current) => {
+      const next = new Set(current);
+      if (!next.delete(key)) next.add(key);
+      return next;
+    });
+
   return (
-    <div className="mt-6 flex flex-col gap-8">
+    <div className="mt-6 flex flex-col gap-6">
       {program && view.progress ? (
-        <ProgramCard
+        <ProgramSummary
           program={program}
-          progress={view.progress}
+          creditsDone={view.progress.creditsDone}
+          credits={view.progress.credits}
+          mustTake={view.mustTake.length}
+          label={label}
           background={background}
           inProgress={inProgress}
         />
@@ -213,149 +247,117 @@ function Content({
         </Card>
       )}
 
-      {program && (
-        <Section
-          id="must-take"
-          title="Must take"
-          count={mustTake.length}
-          hint={`Required courses you can take in ${termLabel(term)}.`}
-        >
-          {mustTake.length > 0 ? (
-            <Items items={mustTake} context={context} />
-          ) : (
-            <Card className="px-5 py-5 text-muted-foreground">
-              {later.length > 0
-                ? `No required course is open in ${termLabel(term)}. See what comes later below.`
-                : "You have taken every required course. Nice work!"}
-            </Card>
-          )}
-        </Section>
-      )}
-
-      {later.length > 0 && (
-        <section aria-labelledby="later">
-          <details open={later.length <= LATER_OPEN_LIMIT} className="group">
-            <summary className="flex cursor-pointer list-none items-baseline gap-3 rounded-md [&::-webkit-details-marker]:hidden">
-              <h2 id="later" className="text-lg">
-                Required later
-              </h2>
-              <span className="font-medium text-muted-foreground">
-                {later.length}
-              </span>
-              <span className="ml-auto flex items-center gap-1.5 font-medium text-[13px] text-muted-foreground">
-                <span className="group-open:hidden">Show</span>
-                <span className="hidden group-open:inline">Hide</span>
-                <ChevronDown
-                  aria-hidden
-                  className="size-4 transition-transform group-open:rotate-180"
-                />
-              </span>
-            </summary>
-            <p className="mt-0.5 mb-3 text-muted-foreground">
-              Required courses you cannot take in {termLabel(term)} yet, and
-              why.
-            </p>
-            <Items items={later} context={context} />
-          </details>
-        </section>
-      )}
-
-      {complementary.length > 0 && (
-        <Section
-          id="complementary"
-          title="Complementary options"
-          hint={`Courses open in ${termLabel(term)} that count toward your complementary credits.`}
-        >
-          <div className="flex flex-col gap-4">
-            {complementary.map((group) => (
-              <GroupCard key={group.title} group={group} context={context} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      <Section
-        id="other"
-        title="Other courses you can take"
-        count={other.length}
-        hint={`Open to you in ${termLabel(term)}, such as electives.`}
-      >
-        {other.length > 0 ? (
-          <Items items={other.slice(0, OTHER_LIMIT)} context={context} />
-        ) : (
-          <Card className="px-5 py-5 text-muted-foreground">
-            Nothing else is open to you in {termLabel(term)}.
-          </Card>
+      <Card className="overflow-hidden">
+        {blocks.map((block) => (
+          <Group
+            key={block.title}
+            title={block.title}
+            fraction={{ done: block.creditsDone, of: block.credits }}
+            collapsed={collapsed.has(block.title)}
+            onToggle={() => toggle(block.title)}
+            context={context}
+            candidates={flatten(block.ready)}
+          >
+            <ItemRows items={block.ready} context={context} />
+            {block.later.length > 0 && (
+              <>
+                <SubLabel left={`Not open in ${label}`} />
+                <ItemRows items={block.later} context={context} />
+              </>
+            )}
+          </Group>
+        ))}
+        {program && blocks.length === 0 && (
+          <p className="px-4 py-3 text-muted-foreground">
+            You have taken every required course. Nice work!
+          </p>
         )}
-        <div className="mt-5 flex flex-col items-center gap-2">
-          <Button asChild variant="secondary">
-            <Link href={`/courses?status=available&term=${term.season}`}>
-              See all courses you can take
-            </Link>
-          </Button>
-          {other.length > OTHER_LIMIT && (
-            <p className="text-[13px] text-muted-foreground">
-              Showing {OTHER_LIMIT} of {other.length.toLocaleString()}
-            </p>
-          )}
-        </div>
-      </Section>
+        {view.complementary.map((group) => (
+          <ComplementaryGroup
+            key={group.title}
+            group={group}
+            collapsed={collapsed.has(group.title)}
+            onToggle={() => toggle(group.title)}
+            context={context}
+          />
+        ))}
+        <OtherGroup
+          entries={view.other}
+          collapsed={collapsed.has(OTHER)}
+          onToggle={() => toggle(OTHER)}
+          context={context}
+        />
+      </Card>
     </div>
   );
 }
 
-function Section({
-  id,
-  title,
-  count,
-  hint,
-  children,
-}: {
-  id: string;
-  title: string;
-  count?: number;
-  hint: string;
-  children: ReactNode;
-}) {
-  return (
-    <section aria-labelledby={id}>
-      <div className="flex items-baseline gap-3">
-        <h2 id={id} className="text-lg">
-          {title}
-        </h2>
-        {count !== undefined && (
-          <span className="font-medium text-muted-foreground">
-            {count.toLocaleString()}
-          </span>
-        )}
-      </div>
-      <p className="mt-0.5 mb-3 text-muted-foreground">{hint}</p>
-      {children}
-    </section>
+const flatten = (items: Item[]) =>
+  items.flatMap((item) => ("oneOf" in item ? item.oneOf : [item]));
+
+/** The program's required groups that still have courses to take. */
+function requiredBlocks(view: NextView): RequiredBlock[] {
+  return (view.progress?.groups ?? []).flatMap((group) => {
+    if (group.kind !== "required" || group.credited) return [];
+    const mine = new Set(
+      group.remaining.flatMap((item) =>
+        typeof item === "string" ? [item] : item.oneOf,
+      ),
+    );
+    const owns = (item: Item) =>
+      flatten([item]).some(({ course }) => mine.has(course.code));
+    const ready = view.mustTake.filter(owns);
+    const later = view.later.filter(owns);
+    return ready.length + later.length > 0
+      ? [
+          {
+            title: group.title,
+            creditsDone: Math.min(group.creditsDone, group.credits),
+            credits: group.credits,
+            ready,
+            later,
+          },
+        ]
+      : [];
+  });
+}
+
+/** "Required Courses" becomes "Required courses", and acronyms such as COMP stay. */
+function sentence(title: string): string {
+  return title.replace(
+    /\b([A-Z])([a-z]+)/g,
+    (word, first: string, rest: string, at: number) =>
+      at === 0 ? word : first.toLowerCase() + rest,
   );
 }
 
-function ProgramCard({
+/** One strip for the program, then the degree credits and any exemption notes under it. */
+function ProgramSummary({
   program,
-  progress,
+  creditsDone,
+  credits,
+  mustTake,
+  label,
   background: { degree, exemptions },
   inProgress,
 }: {
   program: Program;
-  progress: ProgramProgress;
+  creditsDone: number;
+  credits: number;
+  mustTake: number;
+  label: string;
   background: Background;
   inProgress: boolean;
 }) {
-  const { creditsDone, credits } = progress;
   return (
-    <Card asChild className="p-5">
-      <section aria-labelledby="program">
-        <div className="flex items-baseline justify-between gap-6">
-          <h2 id="program" className="text-base">
+    <section aria-labelledby="program" className="flex flex-col gap-3">
+      <Card className="flex h-[72px] items-center gap-6 px-5">
+        <div className="shrink-0">
+          <h2 id="program" className="text-sm leading-5">
             {program.name}
           </h2>
-          <p className="font-semibold tabular-nums">
-            {creditsDone} of {credits} credits
+          <p className="text-muted-foreground text-xs leading-4">
+            Program progress
           </p>
         </div>
         <ProgressBar
@@ -363,212 +365,396 @@ function ProgramCard({
           max={credits}
           label={`${program.name} progress`}
           valueText={`${creditsDone} of ${credits} credits`}
-          className="mt-3 h-2"
+          className="flex-1"
         />
-        {inProgress && (
-          <p className="mt-2 text-[13px] text-muted-foreground">
-            Includes the courses you are taking now.
-          </p>
-        )}
-        {degree && (
-          <p className="mt-2 text-[13px]">
-            <span className="font-medium">Earned so far:</span>{" "}
-            <span className="tabular-nums">
-              {degree.done}
-              {degree.required !== credits && ` of ${degree.required}`} credits
-            </span>
-            {degree.advancedStanding > 0 && (
-              <span className="text-muted-foreground">
-                , including {degree.advancedStanding} advanced standing credits
+        <Stat
+          value={`${creditsDone} of ${credits}`}
+          caption="program credits"
+        />
+        <span aria-hidden className="h-8 w-px bg-border" />
+        <Stat value={String(mustTake)} caption={`must take in ${label}`} />
+      </Card>
+      {(degree || inProgress) && (
+        <div className="flex flex-col gap-1 text-[13px]">
+          {inProgress && (
+            <p className="text-muted-foreground">
+              Program credits include the courses you are taking now.
+            </p>
+          )}
+          {degree && (
+            <p>
+              <span className="font-medium">Earned so far:</span>{" "}
+              <span className="tabular-nums">
+                {degree.done}
+                {degree.required !== credits && ` of ${degree.required}`}{" "}
+                credits
               </span>
-            )}
-          </p>
-        )}
-        <ul className="mt-4 columns-2 gap-x-10">
-          {progress.groups.map((group) => (
-            <li
-              key={group.title}
-              className="flex break-inside-avoid items-center gap-2.5 pb-2 text-sm"
-            >
-              {group.satisfied ? (
-                <StatusIcon status="completed" size={16} />
-              ) : (
-                <ProgressRing
-                  value={group.creditsDone}
-                  max={group.credits}
-                  size={16}
-                />
+              {degree.advancedStanding > 0 && (
+                <span className="text-muted-foreground">
+                  , including {degree.advancedStanding} advanced standing
+                  credits
+                </span>
               )}
-              <span className="min-w-0 flex-1 truncate font-medium">
-                {group.title}
-              </span>
-              <span className="shrink-0 text-[13px] text-muted-foreground tabular-nums">
-                {group.credited
-                  ? "Credited from CEGEP"
-                  : `${Math.min(group.creditsDone, group.credits)} of ${group.credits} credits`}
-                {group.satisfied && <span className="sr-only">, done</span>}
-              </span>
-            </li>
-          ))}
-        </ul>
-        {exemptions.length > 0 && (
-          <ul className="mt-2 flex flex-col gap-2">
-            {exemptions.map(({ code, credits }) => (
-              <li key={code}>
-                <Banner>
-                  <Info aria-hidden />
-                  <span>
-                    {code} was exempted without credit. Replace{" "}
-                    {credits === null
-                      ? "its credits"
-                      : `its ${credits} ${credits === 1 ? "credit" : "credits"}`}{" "}
-                    with another course.
-                  </span>
-                </Banner>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
-    </Card>
-  );
-}
-
-function GroupCard({ group, context }: { group: OpenGroup; context: Context }) {
-  return (
-    <Card className="overflow-hidden">
-      <div className="border-border border-b bg-subtle px-4 py-3">
-        <div className="flex items-baseline justify-between gap-4">
-          <h3 className="text-base">{group.title}</h3>
-          <p className="font-medium text-[13px] tabular-nums">
-            {group.creditsDone} of {group.credits} credits
-          </p>
-        </div>
-        <ProgressBar
-          value={group.creditsDone}
-          max={group.credits}
-          label={`${group.title} progress`}
-          valueText={`${group.creditsDone} of ${group.credits} credits`}
-          className="mt-2"
-        />
-      </div>
-      {group.buckets.map((bucket) => (
-        <BucketList
-          key={bucket.title}
-          bucket={bucket}
-          showTitle={group.titled}
-          context={context}
-        />
-      ))}
-    </Card>
-  );
-}
-
-function BucketList({
-  bucket,
-  showTitle,
-  context,
-}: {
-  bucket: Bucket;
-  showTitle: boolean;
-  context: Context;
-}) {
-  const [all, setAll] = useState(false);
-  const shown = all ? bucket.entries : bucket.entries.slice(0, BUCKET_LIMIT);
-  const hidden = bucket.entries.length - shown.length;
-  return (
-    <div className="border-border border-b last:border-b-0">
-      {showTitle && (
-        <div className="flex items-baseline justify-between gap-4 px-4 pt-3 pb-1">
-          <h4 className="font-semibold">{bucket.title}</h4>
-          {bucket.progress && (
-            <p className="shrink-0 text-[13px] text-muted-foreground tabular-nums">
-              {bucket.progress}
             </p>
           )}
         </div>
       )}
-      <ul className="divide-y divide-border">
-        {shown.map((entry) => (
-          <EntryRow key={entry.course.code} entry={entry} context={context} />
-        ))}
-      </ul>
-      {hidden > 0 && (
-        <div className="px-4 py-3">
-          <Button variant="secondary" size="sm" onClick={() => setAll(true)}>
-            Show {hidden} more
-          </Button>
-        </div>
+      {exemptions.length > 0 && (
+        <ul className="flex flex-col gap-2">
+          {exemptions.map(({ code, credits }) => (
+            <li key={code}>
+              <Banner>
+                <Info aria-hidden />
+                <span>
+                  {code} was exempted without credit. Replace{" "}
+                  {credits === null
+                    ? "its credits"
+                    : `its ${credits} ${credits === 1 ? "credit" : "credits"}`}{" "}
+                  with another course.
+                </span>
+              </Banner>
+            </li>
+          ))}
+        </ul>
       )}
+    </section>
+  );
+}
+
+function Stat({ value, caption }: { value: string; caption: string }) {
+  return (
+    <div className="shrink-0 text-right">
+      <p className="font-semibold text-[15px] leading-5 tabular-nums">
+        {value}
+      </p>
+      <p className="text-muted-foreground text-xs leading-4">{caption}</p>
     </div>
   );
 }
 
-function Items({ items, context }: { items: Item[]; context: Context }) {
+/** Group header band: chevron, name, fraction, ring, and a plus that adds the first open course not yet planned. */
+function Group({
+  title,
+  fraction,
+  trailing,
+  collapsed,
+  onToggle,
+  context: { term, planned },
+  candidates = [],
+  children,
+}: {
+  title: string;
+  fraction?: { done: number; of: number };
+  trailing?: string;
+  collapsed: boolean;
+  onToggle: () => void;
+  context: Context;
+  candidates?: Entry[];
+  children: ReactNode;
+}) {
+  const id = useId();
+  const next = candidates.find(
+    ({ course, reason }) => !reason && !planned.has(course.code),
+  )?.course;
+  const addLabel = next && `Add ${next.code} to ${termLabel(term)}`;
   return (
-    <Card asChild className="divide-y divide-border overflow-hidden">
-      <ul>
-        {items.map((item) =>
-          "oneOf" in item ? (
-            <li
-              key={item.oneOf.map((entry) => entry.course.code).join()}
-              className="border-l-2 border-l-border-strong bg-subtle"
-            >
-              <p className="px-4 pt-3 pb-1 font-semibold text-[13px] text-muted-foreground">
-                One of
-              </p>
-              <ul className="divide-y divide-border">
-                {item.oneOf.map((entry) => (
-                  <EntryRow
-                    key={entry.course.code}
-                    entry={entry}
-                    context={context}
-                  />
-                ))}
-              </ul>
-            </li>
-          ) : (
-            <EntryRow key={item.course.code} entry={item} context={context} />
-          ),
+    <section
+      aria-labelledby={`${id}-title`}
+      className="border-border border-t first:border-t-0"
+    >
+      <div className="flex h-9 items-center gap-2 bg-subtle pr-2 pl-4">
+        <h2
+          id={`${id}-title`}
+          className="min-w-0 flex-1 text-[13px] leading-[18px]"
+        >
+          <button
+            type="button"
+            onClick={onToggle}
+            aria-expanded={!collapsed}
+            aria-controls={collapsed ? undefined : `${id}-list`}
+            className="flex h-9 w-full items-center gap-3 rounded-sm text-left -outline-offset-2"
+          >
+            <ChevronDown
+              aria-hidden
+              strokeWidth={2}
+              className={cn(
+                "size-3.5 shrink-0 text-muted-foreground transition-transform motion-reduce:transition-none",
+                collapsed && "-rotate-90",
+              )}
+            />
+            <span className="truncate" title={sentence(title)}>
+              {sentence(title)}
+            </span>
+          </button>
+        </h2>
+        {fraction && (
+          <>
+            <span className="text-[13px] text-muted-foreground tabular-nums">
+              {fraction.done} of {fraction.of} credits
+            </span>
+            <ProgressRing
+              value={fraction.done}
+              max={fraction.of}
+              label={`${fraction.done} of ${fraction.of} credits`}
+            />
+          </>
         )}
-      </ul>
-    </Card>
+        {trailing && (
+          <span className="text-[13px] text-muted-foreground tabular-nums">
+            {trailing}
+          </span>
+        )}
+        {next ? (
+          <Button
+            variant="ghost"
+            size="icon"
+            title={addLabel}
+            aria-label={addLabel}
+            onClick={() => addWithUndo(term, next.code)}
+          >
+            <Plus aria-hidden />
+          </Button>
+        ) : (
+          <span aria-hidden className="size-7" />
+        )}
+      </div>
+      {!collapsed && <ul id={`${id}-list`}>{children}</ul>}
+    </section>
   );
 }
 
-/** A course with a reason cannot be taken in the term, so it gets no add button. */
-function EntryRow({
+function SubLabel({ left, right }: { left: string; right?: string | null }) {
+  return (
+    <li className="flex h-8 items-center justify-between gap-4 border-border border-t pr-[108px] pl-[42px] font-medium text-muted-foreground text-xs leading-4">
+      <span className="truncate">{left}</span>
+      {right && <span className="tabular-nums">{right}</span>}
+    </li>
+  );
+}
+
+function ItemRows({ items, context }: { items: Item[]; context: Context }) {
+  return items.map((item) =>
+    "oneOf" in item ? (
+      <li
+        key={item.oneOf.map(({ course }) => course.code).join()}
+        className="border-border border-t"
+      >
+        <p className="flex h-7 items-center bg-subtle pl-[42px] font-medium text-in-progress text-xs leading-4">
+          Take one of these
+        </p>
+        <ul>
+          {item.oneOf.map((entry) => (
+            <Row key={entry.course.code} entry={entry} context={context} />
+          ))}
+        </ul>
+      </li>
+    ) : (
+      <Row key={item.course.code} entry={item} context={context} />
+    ),
+  );
+}
+
+/** Course row, 44px. The action stays hidden until hover or focus, so the list is quiet at rest. */
+function Row({
   entry: { course, uncertain, reason },
   context: { term, planned },
 }: {
   entry: Entry;
   context: Context;
 }) {
+  const plannedIn = planned.get(course.code);
+  const here = plannedIn && termKey(plannedIn) === termKey(term);
+  const [pops, setPops] = useState(0);
+  const status = plannedIn ? "planned" : reason ? "locked" : "available";
+  const plannedText = plannedIn && `Planned for ${termLabel(plannedIn)}`;
+  const caption =
+    plannedIn && !here ? plannedText : (reason ?? seasonsOffered(course));
+  const showAction = here || (!plannedIn && !reason);
+
   return (
-    <CourseRow
-      course={course}
-      note={
-        (reason || uncertain) && (
-          <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-            {reason && (
-              <span className="text-[13px] text-muted-foreground">
-                {reason}
-              </span>
-            )}
-            {uncertain && <UncertainFlag withLabel />}
+    <li
+      className={cn(
+        "group/row flex h-11 items-center gap-3 border-border border-t pr-3 pl-4 focus-within:bg-subtle hover:bg-subtle",
+        status === "locked" && "text-muted-foreground",
+      )}
+    >
+      <motion.span
+        key={pops}
+        initial={pops > 0 ? { scale: 0.5 } : false}
+        animate={{ scale: 1 }}
+        transition={{ type: "spring", duration: 0.15, bounce: 0.5 }}
+        className="flex shrink-0"
+      >
+        <StatusIcon status={status} label={plannedText} />
+      </motion.span>
+      <Link
+        href={`/courses/${courseSlug(course.code)}`}
+        prefetch={false}
+        className="-mx-2 flex h-full min-w-0 flex-1 items-center gap-3 rounded-sm px-2 -outline-offset-2"
+      >
+        <span className="w-[76px] shrink-0 font-semibold tabular-nums">
+          {course.code}
+        </span>
+        <span className="flex min-w-0 flex-1 items-center gap-1.5">
+          <span className="truncate" title={course.title}>
+            {course.title}
           </span>
-        )
-      }
-      action={
-        reason ? (
-          planned.has(course.code) ? (
-            <PlannedLink code={course.code} />
-          ) : null
-        ) : (
-          <AddToPlan course={course} term={term} />
-        )
-      }
-    />
+          {uncertain && <UncertainFlag />}
+        </span>
+        <span
+          className="w-64 shrink-0 truncate text-[13px] text-muted-foreground"
+          title={caption}
+        >
+          {caption}
+        </span>
+        <span className="w-14 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
+          {course.credits === null ? "-" : `${course.credits} cr`}
+        </span>
+      </Link>
+      <span className="flex w-[84px] shrink-0 justify-end">
+        {showAction && (
+          <Button
+            variant="ghost"
+            size="sm"
+            className="opacity-0 focus-visible:opacity-100 group-focus-within/row:opacity-100 group-hover/row:opacity-100"
+            onClick={() => {
+              if (here) {
+                useProfileStore.getState().removeFromPlan(term, course.code);
+              } else {
+                setPops((n) => n + 1);
+                addWithUndo(term, course.code);
+              }
+            }}
+          >
+            {here ? <X aria-hidden /> : <Plus aria-hidden />}
+            {here ? "Remove" : "Add"}
+            <span className="sr-only">
+              {" "}
+              {course.code} {here ? "from" : "to"} {termLabel(term)}
+            </span>
+          </Button>
+        )}
+      </span>
+    </li>
+  );
+}
+
+function ShowMore({
+  hidden,
+  step,
+  onClick,
+}: {
+  hidden: number;
+  step: number;
+  onClick: () => void;
+}) {
+  return (
+    <li className="flex h-10 items-center border-border border-t pl-8">
+      <Button variant="ghost" size="sm" onClick={onClick}>
+        {hidden > step ? "Show more" : `Show ${hidden} more`}
+      </Button>
+    </li>
+  );
+}
+
+function ComplementaryGroup({
+  group,
+  collapsed,
+  onToggle,
+  context,
+}: {
+  group: OpenGroup;
+  collapsed: boolean;
+  onToggle: () => void;
+  context: Context;
+}) {
+  return (
+    <Group
+      title={group.title}
+      fraction={{ done: group.creditsDone, of: group.credits }}
+      collapsed={collapsed}
+      onToggle={onToggle}
+      context={context}
+      candidates={group.buckets.flatMap((bucket) => bucket.entries)}
+    >
+      {group.buckets.map((bucket) => (
+        <Bucket
+          key={bucket.title}
+          title={group.titled ? bucket.title : null}
+          progress={bucket.progress}
+          entries={bucket.entries}
+          context={context}
+        />
+      ))}
+    </Group>
+  );
+}
+
+function Bucket({
+  title,
+  progress,
+  entries,
+  context,
+}: {
+  title: string | null;
+  progress: string | null;
+  entries: Entry[];
+  context: Context;
+}) {
+  const [all, setAll] = useState(false);
+  const shown = all ? entries : entries.slice(0, BUCKET_LIMIT);
+  const hidden = entries.length - shown.length;
+  return (
+    <>
+      {title && <SubLabel left={title} right={progress} />}
+      {shown.map((entry) => (
+        <Row key={entry.course.code} entry={entry} context={context} />
+      ))}
+      {hidden > 0 && (
+        <ShowMore hidden={hidden} step={hidden} onClick={() => setAll(true)} />
+      )}
+    </>
+  );
+}
+
+function OtherGroup({
+  entries,
+  collapsed,
+  onToggle,
+  context,
+}: {
+  entries: Entry[];
+  collapsed: boolean;
+  onToggle: () => void;
+  context: Context;
+}) {
+  const [limit, setLimit] = useState(OTHER_STEP);
+  const shown = entries.slice(0, limit);
+  const hidden = entries.length - shown.length;
+  return (
+    <Group
+      title="Other courses you can take"
+      trailing={`${entries.length.toLocaleString()} courses`}
+      collapsed={collapsed}
+      onToggle={onToggle}
+      context={context}
+    >
+      {shown.map((entry) => (
+        <Row key={entry.course.code} entry={entry} context={context} />
+      ))}
+      {hidden > 0 && (
+        <ShowMore
+          hidden={hidden}
+          step={OTHER_STEP}
+          onClick={() => setLimit((n) => n + OTHER_STEP)}
+        />
+      )}
+      {entries.length === 0 && (
+        <li className="border-border border-t px-4 py-3 text-muted-foreground">
+          Nothing else is open to you in {termLabel(context.term)}.
+        </li>
+      )}
+    </Group>
   );
 }
 
@@ -603,18 +789,26 @@ function EmptyState() {
 
 function PageSkeleton() {
   return (
-    <div className="mt-6 flex flex-col gap-8">
+    <div className="mt-6 flex flex-col gap-6">
       <p role="status" className="sr-only">
         Loading your courses
       </p>
-      <Card aria-hidden className="h-36 p-5">
+      <Card aria-hidden className="flex h-[72px] items-center px-5">
         <div className="h-5 w-60 rounded-sm bg-muted motion-safe:animate-pulse" />
-        <div className="mt-5 h-2 rounded-full bg-muted motion-safe:animate-pulse" />
       </Card>
-      <div aria-hidden>
-        <div className="mb-4 h-6 w-44 rounded-sm bg-muted motion-safe:animate-pulse" />
-        <CourseRowSkeleton rows={5} />
-      </div>
+      <Card aria-hidden className="overflow-hidden">
+        <div className="h-9 bg-subtle" />
+        {Array.from({ length: 6 }, (_, row) => (
+          <div
+            // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+            key={row}
+            className="flex h-11 items-center gap-4 border-border border-t px-4"
+          >
+            <div className="h-4 w-20 rounded-sm bg-muted motion-safe:animate-pulse" />
+            <div className="h-4 flex-1 rounded-sm bg-muted motion-safe:animate-pulse" />
+          </div>
+        ))}
+      </Card>
     </div>
   );
 }
