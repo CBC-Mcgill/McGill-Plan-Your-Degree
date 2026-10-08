@@ -5,7 +5,7 @@ import { NavLinks } from "@/components/nav-links";
 export function SiteHeader() {
   return (
     <header className="border-border border-b bg-card">
-      <div className="mx-auto flex h-16 max-w-6xl items-center gap-6 px-8">
+      <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-8 xl:gap-6">
         <Link
           href="/"
           className="flex shrink-0 items-center gap-2.5 rounded-md font-extrabold text-lg tracking-tight font-stretch-semi-expanded"
