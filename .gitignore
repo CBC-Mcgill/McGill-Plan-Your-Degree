@@ -49,3 +49,6 @@ next-env.d.ts
 
 # claude code agent worktrees
 /.claude/worktrees/
+
+# browser tool logs
+/.playwright-mcp/

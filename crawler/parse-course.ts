@@ -1,13 +1,16 @@
 import * as cheerio from "cheerio";
 import type { Course } from "../lib/catalogue/types.ts";
-import { parseRequirement, parseRestriction } from "./prereq.ts";
+import { EXCLUSION, parseRequirement, parseRestriction } from "./prereq.ts";
 
 /** A course as one catalogue page shows it, before multi-term parts are merged. */
 export type CoursePage = Omit<Course, "parts">;
 
-const PREREQ_LABEL = /^pre-?requisites?(?:\s*\(s\))?\s*(?:\([^)]*\))?\s*:/i;
-const COREQ_LABEL = /^co-?requisites?(?:\s*\(s\))?\s*(?:\([^)]*\))?\s*:/i;
-const RESTRICTION_LABEL = /^restrictions?(?:\s*\(s\))?\s*:/i;
+// Labels vary: "Prerequisite(s) X", "Prerquisite(s):", "Revised Prerequisite:", "Prerequisites/corequisites:".
+const PREREQ_LABEL =
+  /^(?:revised\s+)?pre-?re?quisites?(?:\s*\(s\))?(?:\s*\/\s*co-?requisites?)?\s*(?:\([^)]*\))?(?:\s*[:.,]|(?=\s|$))/i;
+const COREQ_LABEL =
+  /^co-?re?quisites?(?:\s*\(s\))?\s*(?:\([^)]*\))?(?:\s*[:.,]|(?=\s|$))/i;
+const RESTRICTION_LABEL = /^restrictions?(?:\s*\(s\))?\s*[:.]/i;
 
 const clean = (text: string) => text.replace(/\s+/g, " ").trim();
 
@@ -36,7 +39,11 @@ export function parseCoursePage(html: string): CoursePage {
 
   const prereqItems = items.filter((item) => PREREQ_LABEL.test(item));
   const coreqItems = items.filter((item) => COREQ_LABEL.test(item));
-  const restrictionItems = items.filter((item) => RESTRICTION_LABEL.test(item));
+  const restrictionItems = items.filter(
+    (item) =>
+      RESTRICTION_LABEL.test(item) ||
+      (!prereqItems.includes(item) && EXCLUSION.test(item)),
+  );
   const notes = items.filter(
     (item) =>
       !prereqItems.includes(item) &&

@@ -293,7 +293,7 @@ export function parseRequirement(text: string): Requirement {
   };
 }
 
-const EXCLUSION =
+export const EXCLUSION =
   /not open to students who (?:have taken|are taking|have passed)/i;
 
 export function parseRestriction(text: string): Restriction {
