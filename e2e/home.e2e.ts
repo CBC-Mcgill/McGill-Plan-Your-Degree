@@ -6,7 +6,9 @@ test("home renders without horizontal scroll", async ({ page }) => {
     page.getByRole("heading", { name: "McGill Plan Your Degree" }),
   ).toBeVisible();
   const overflow = await page.evaluate(
-    () => document.documentElement.scrollWidth - window.innerWidth,
+    () =>
+      document.documentElement.scrollWidth -
+      document.documentElement.clientWidth,
   );
   expect(overflow).toBeLessThanOrEqual(0);
 });

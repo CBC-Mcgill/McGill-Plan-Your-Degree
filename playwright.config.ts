@@ -10,7 +10,10 @@ export default defineConfig({
   reporter: isCI ? "github" : "list",
   use: { baseURL: "http://localhost:3000", trace: "retain-on-failure" },
   projects: [
-    { name: "mobile", use: { ...devices["Pixel 7"] } },
+    {
+      name: "mobile",
+      use: { ...devices["Pixel 7"], viewport: { width: 320, height: 640 } },
+    },
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },
   ],
   webServer: {
