@@ -25,11 +25,13 @@ export function useGameProgress(): GameProgress | undefined {
   const programId = useProfileStore((state) => state.programId);
   const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const creditLimit = useProfileStore((state) => state.creditLimit);
+  const entry = useProfileStore((state) => state.entry);
+  const advancedStanding = useProfileStore((state) => state.advancedStanding);
 
   return useMemo(() => {
     if (!hydrated || catalogue.status === "loading") return undefined;
     return gameProgress(
-      { records, plan, graduationTerm, creditLimit },
+      { records, plan, graduationTerm, creditLimit, entry, advancedStanding },
       // Without the catalogue, only the credits a record states count.
       catalogue.status === "ready" ? catalogue.catalogue : NO_COURSES,
       (programId && getProgram(programId)) || null,
@@ -42,5 +44,7 @@ export function useGameProgress(): GameProgress | undefined {
     programId,
     graduationTerm,
     creditLimit,
+    entry,
+    advancedStanding,
   ]);
 }

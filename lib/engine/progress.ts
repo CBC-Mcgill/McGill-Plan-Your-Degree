@@ -1,3 +1,4 @@
+import type { EntryRoute } from "../profile/types.ts";
 import type {
   ComplementaryGroup,
   Group,
@@ -14,6 +15,8 @@ export interface CountOptions {
   inProgress?: boolean;
   /** Count planned courses as if done. */
   planned?: boolean;
+  /** How the student started. A Quebec CEGEP student is credited for the foundation groups. */
+  entry?: EntryRoute | null;
 }
 
 export interface RuleProgress {
@@ -34,6 +37,8 @@ export interface GroupProgress {
   minCourses?: number;
   coursesDone: number;
   satisfied: boolean;
+  /** A foundation group the student is credited for from CEGEP, so it needs no courses. */
+  credited: boolean;
   /** The counted courses this group claimed. */
   courses: string[];
   /** Required groups: the items still missing. */
@@ -108,6 +113,22 @@ export function fitsCaps(
   });
 }
 
+/** Full credits with nothing remaining. The group claims no courses, so a course the student did take can count elsewhere. */
+function creditedProgress(group: Group): GroupProgress {
+  return {
+    title: group.title,
+    kind: group.kind,
+    credits: group.credits,
+    creditsDone: group.credits,
+    coursesDone: 0,
+    satisfied: true,
+    credited: true,
+    courses: [],
+    remaining: [],
+    rules: [],
+  };
+}
+
 function requiredProgress(
   group: RequiredGroup,
   have: ReadonlySet<string>,
@@ -136,6 +157,7 @@ function requiredProgress(
     creditsDone,
     coursesDone: courses.length,
     satisfied: remaining.length === 0,
+    credited: false,
     courses,
     remaining,
     rules: [],
@@ -217,6 +239,7 @@ function complementaryProgress(
       total >= group.credits &&
       chosen.size >= (group.minCourses ?? 0) &&
       rules.every((rule) => rule.satisfied),
+    credited: false,
     courses: [...chosen.keys()],
     remaining: [],
     rules,
@@ -249,13 +272,17 @@ export function programProgress(
 
   const used = new Set<string>();
   const results = new Map<Group, GroupProgress>();
+  const credited = (group: Group) =>
+    count.entry === "cegep" && group.foundation;
   for (const group of program.groups) {
-    if (group.kind === "required") {
+    if (credited(group)) {
+      results.set(group, creditedProgress(group));
+    } else if (group.kind === "required") {
       results.set(group, requiredProgress(group, have, counted, used));
     }
   }
   for (const group of program.groups) {
-    if (group.kind === "complementary") {
+    if (!credited(group) && group.kind === "complementary") {
       results.set(group, complementaryProgress(group, counted, used));
     }
   }

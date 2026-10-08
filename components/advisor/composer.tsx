@@ -16,9 +16,12 @@ import Link from "next/link";
 import { DropdownMenu } from "radix-ui";
 import { type RefObject, useLayoutEffect, useState } from "react";
 import { useCatalogue } from "@/lib/catalogue/client";
-import type { Snapshot } from "@/lib/engine/snapshot";
+import { earnedCredits } from "@/lib/engine/credits";
+import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
 import { getProgram } from "@/lib/programs";
+
+const NO_COURSES: Catalogue = new Map();
 
 export type ContextKind = "profile" | "transcript" | "plan" | "course";
 
@@ -42,26 +45,26 @@ const menuItem =
 const toolButton =
   "flex h-9 items-center gap-1.5 rounded-md px-2.5 font-semibold text-muted-foreground text-sm transition-[background-color,color] hover:bg-muted hover:text-foreground data-[state=open]:bg-muted data-[state=open]:text-foreground";
 
-/** Credits earned, using the catalogue for records that do not state them. */
+/** Credits earned, advanced standing included, using the catalogue for records that do not state them. */
 function ProfileDetail({
   snapshot,
 }: {
   snapshot: Snapshot | null | undefined;
 }) {
   const programId = useProfileStore((state) => state.programId);
+  const advancedStanding = useProfileStore((state) => state.advancedStanding);
   const catalogue = useCatalogue();
 
   const parts: string[] = [];
   const program = programId ? getProgram(programId) : undefined;
   if (program) parts.push(program.name);
-  let credits = 0;
-  for (const [code, stated] of snapshot?.earned ?? []) {
-    credits +=
-      stated ??
-      (catalogue.status === "ready"
-        ? (catalogue.catalogue.get(code)?.credits ?? 0)
-        : 0);
-  }
+  const credits =
+    (snapshot
+      ? earnedCredits(
+          snapshot,
+          catalogue.status === "ready" ? catalogue.catalogue : NO_COURSES,
+        )
+      : 0) + advancedStanding;
   if (credits > 0) parts.push(`${credits} credits`);
 
   return parts.length > 0 ? (

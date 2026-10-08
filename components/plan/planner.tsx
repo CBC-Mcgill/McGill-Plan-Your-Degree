@@ -68,6 +68,7 @@ function PlannerReady({
   const startTerm = useProfileStore((state) => state.startTerm);
   const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const creditLimit = useProfileStore((state) => state.creditLimit);
+  const entry = useProfileStore((state) => state.entry);
   const [picked, setPicked] = useState<number | null>(null);
 
   const now = useMemo(() => currentTerm(), []);
@@ -97,9 +98,10 @@ function PlannerReady({
         ? programProgress(program, snapshot, catalogue, {
             inProgress: true,
             planned: true,
+            entry,
           })
         : null,
-    [program, snapshot, catalogue],
+    [program, snapshot, catalogue, entry],
   );
   const moveOptions = useMemo(() => {
     const first = stages[0]?.term ?? now;

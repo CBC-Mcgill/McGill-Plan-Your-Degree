@@ -8,7 +8,7 @@ import {
   termKey,
 } from "./types.ts";
 
-export const PROFILE_VERSION = 1;
+export const PROFILE_VERSION = 2;
 
 const FORMAT = "plan-your-degree-profile";
 const MAX_FILE_CHARS = 1_000_000;
@@ -131,6 +131,9 @@ function profile(value: unknown): Profile {
   const o = object(value, "profile", [
     "records",
     "programId",
+    "entry",
+    "advancedStanding",
+    "creditsRequired",
     "startTerm",
     "graduationTerm",
     "plan",
@@ -148,6 +151,21 @@ function profile(value: unknown): Profile {
       }
       return id;
     }),
+    entry: nullable(o.entry, (v) => {
+      if (v !== "cegep" && v !== "foundation") {
+        bad("profile.entry", 'must be "cegep" or "foundation"');
+      }
+      return v;
+    }),
+    advancedStanding: number(
+      o.advancedStanding,
+      "profile.advancedStanding",
+      0,
+      60,
+    ),
+    creditsRequired: nullable(o.creditsRequired, (v) =>
+      number(v, "profile.creditsRequired", 1, 200),
+    ),
     startTerm: nullable(o.startTerm, (v) => term(v, "profile.startTerm")),
     graduationTerm: nullable(o.graduationTerm, (v) =>
       term(v, "profile.graduationTerm"),
@@ -167,7 +185,10 @@ function profile(value: unknown): Profile {
 }
 
 /** Brings saved data from an older version up to the current shape. Add one step per version bump. */
-export function migrateProfile(data: unknown, _version: number): unknown {
+export function migrateProfile(data: unknown, version: number): unknown {
+  if (version < 2 && typeof data === "object" && data !== null) {
+    return { entry: null, advancedStanding: 0, creditsRequired: null, ...data };
+  }
   return data;
 }
 
@@ -175,6 +196,9 @@ export function exportProfile(state: Profile): string {
   const data: Profile = {
     records: state.records,
     programId: state.programId,
+    entry: state.entry,
+    advancedStanding: state.advancedStanding,
+    creditsRequired: state.creditsRequired,
     startTerm: state.startTerm,
     graduationTerm: state.graduationTerm,
     plan: state.plan,

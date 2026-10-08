@@ -56,6 +56,12 @@ export function validateProgram(value: unknown): ValidationResult {
     if (o[key] !== undefined) text(o, key, path);
   }
 
+  function optionalTrue(o: Obj, key: string, path: string) {
+    if (o[key] !== undefined && o[key] !== true) {
+      fail(`${path}.${key}`, "expected true, or leave it out");
+    }
+  }
+
   function num(
     o: Obj,
     key: string,
@@ -201,11 +207,13 @@ export function validateProgram(value: unknown): ValidationResult {
         "credits",
         "courses",
         "note",
+        "foundation",
       ]);
       if (!g) return;
       text(g, "title", path);
       num(g, "credits", path, "positive");
       optionalText(g, "note", path);
+      optionalTrue(g, "foundation", path);
       list(g.courses, `${path}.courses`, 1, item);
     } else if (v.kind === "complementary") {
       const g = object(v, path, [
@@ -215,12 +223,14 @@ export function validateProgram(value: unknown): ValidationResult {
         "minCourses",
         "rules",
         "note",
+        "foundation",
       ]);
       if (!g) return;
       text(g, "title", path);
       num(g, "credits", path, "positive");
       optionalNum(g, "minCourses", path, "count");
       optionalText(g, "note", path);
+      optionalTrue(g, "foundation", path);
       list(g.rules, `${path}.rules`, 1, rule);
     } else {
       fail(`${path}.kind`, 'expected "required" or "complementary"');

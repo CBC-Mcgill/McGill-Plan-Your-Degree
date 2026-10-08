@@ -1,5 +1,5 @@
 import type { CourseSummary } from "../catalogue/types.ts";
-import type { Term } from "../profile/types.ts";
+import type { EntryRoute, Term } from "../profile/types.ts";
 import type { Program, Rule } from "../programs/types.ts";
 import { type Suggestion, whatsNext } from "./next.ts";
 import {
@@ -123,10 +123,11 @@ export function nextView(
   snapshot: Snapshot,
   term: Term,
   program: Program | null,
+  entry: EntryRoute | null = null,
 ): NextView {
-  const next = whatsNext(catalogue, snapshot, term, program);
+  const next = whatsNext(catalogue, snapshot, term, program, entry);
   const progress = program
-    ? programProgress(program, snapshot, catalogue, { inProgress: true })
+    ? programProgress(program, snapshot, catalogue, { inProgress: true, entry })
     : null;
 
   const takeable = new Map(next.mustTake.map((s) => [s.course.code, s]));

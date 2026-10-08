@@ -1,5 +1,5 @@
 import type { CourseSummary } from "../catalogue/types.ts";
-import type { Term } from "../profile/types.ts";
+import type { EntryRoute, Term } from "../profile/types.ts";
 import type { ComplementaryGroup, Program } from "../programs/types.ts";
 import {
   fitsCaps,
@@ -33,6 +33,7 @@ export function whatsNext(
   snapshot: Snapshot,
   term: Term,
   program?: Program | null,
+  entry: EntryRoute | null = null,
 ): WhatsNext {
   const required = new Set<string>();
   const openGroups: { group: ComplementaryGroup; progress: GroupProgress }[] =
@@ -41,6 +42,7 @@ export function whatsNext(
     const progress = programProgress(program, snapshot, catalogue, {
       inProgress: true,
       planned: true,
+      entry,
     });
     for (const item of progress.remaining) {
       for (const code of typeof item === "string" ? [item] : item.oneOf) {

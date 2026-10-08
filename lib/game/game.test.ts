@@ -58,6 +58,8 @@ const play = (records: CourseRecord[], plan: Term[] = []) =>
       plan: plan.map((term) => ({ term, courses: ["COMP 251"] })),
       graduationTerm: null,
       creditLimit: 17,
+      entry: null,
+      advancedStanding: 0,
     },
     catalogue,
     program,

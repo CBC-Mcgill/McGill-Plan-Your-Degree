@@ -1,0 +1,261 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Engineering",
+      "programs": [
+        "Computer Engineering"
+      ],
+      "minors": [],
+      "creditsRequired": 133,
+      "previousEducation": "Quebec CEGEP/IB",
+      "advancedStanding": 25,
+      "courses": [
+        {
+          "code": "COMP 202",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": null,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "exemption"
+        },
+        {
+          "code": "ECSE 200",
+          "title": "Electric Circuits 1",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 250",
+          "title": "Fundamentals of Software Dev",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 262",
+          "title": "Intermediate Calculus",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 206",
+          "title": "Intro to Software Systems",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 100",
+          "title": "Intro to the Eng. Profession",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 1,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 1,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 205",
+          "title": "Prob and Stats for Engineers",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 222",
+          "title": "Digital Logic",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 223",
+          "title": "Model-Based Programming",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 263",
+          "title": "ODE for Engineers",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 251",
+          "title": "Algorithms and Data Structures",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 250",
+          "title": "Resp. of the Prof. Engineer",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 0,
+          "grade": "P",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 206",
+          "title": "Intro to Signals and Systems",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "ECSE 210",
+          "title": "Electric Circuits 2",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "ECSE 211",
+          "title": "Design Principles and Methods",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "MATH 240",
+          "title": "Discrete Structures",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "WCOM 206",
+          "title": "Communication in Engineering",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Gagnon, Louis",
+    "260900011",
+    "GAGL11121399"
+  ]
+}

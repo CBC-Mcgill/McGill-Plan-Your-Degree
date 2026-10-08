@@ -176,6 +176,31 @@ test("program progress counts exemptions as satisfied but not as credit", () => 
   ).toBe(true);
 });
 
+test("a CEGEP entry credits foundation groups and drops their courses from what's next", () => {
+  const foundation: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Year 0",
+        kind: "required",
+        foundation: true,
+        credits: 3,
+        courses: ["COMP 251"],
+      },
+    ],
+  };
+  const winter = { season: "Winter", year: 2027 } as const;
+  const codes = (entry: "cegep" | null) =>
+    whatsNext(catalogue, snapshot, winter, foundation, entry).mustTake.map(
+      (s) => s.course.code,
+    );
+  expect(codes(null)).toEqual(["COMP 251"]);
+  expect(codes("cegep")).toEqual([]);
+  expect(
+    programProgress(foundation, snapshot, catalogue, { entry: "cegep" }),
+  ).toMatchObject({ satisfied: true, groups: [{ credited: true }] });
+});
+
 test("plan warnings cover prerequisites, offering, restrictions, and credits", () => {
   const winter = { season: "Winter", year: 2027 } as const;
   const fall = { season: "Fall", year: 2027 } as const;

@@ -1,3 +1,4 @@
+import { earnedCredits } from "../engine/credits.ts";
 import { planWarnings } from "../engine/plan.ts";
 import { programProgress } from "../engine/progress.ts";
 import { buildSnapshot, type Catalogue } from "../engine/snapshot.ts";
@@ -12,7 +13,12 @@ export const XP_PER_LEVEL = XP_PER_CREDIT * CREDITS_PER_LEVEL;
 
 export type GameProfile = Pick<
   Profile,
-  "records" | "plan" | "graduationTerm" | "creditLimit"
+  | "records"
+  | "plan"
+  | "graduationTerm"
+  | "creditLimit"
+  | "entry"
+  | "advancedStanding"
 >;
 
 export interface Level {
@@ -39,20 +45,17 @@ export function levelOf(xp: number): Level {
   };
 }
 
-/** XP comes from earned credits only: completed and transfer. Exemptions, in-progress and planned courses add none. */
+/** XP comes from earned credits only: completed, transfer and advanced standing. Exemptions, in-progress and planned courses add none. */
 export function gameProgress(
   profile: GameProfile,
   catalogue: Catalogue,
   program: Program | null,
 ): GameProgress {
-  const { records, plan } = profile;
+  const { records, plan, entry } = profile;
   const snapshot = buildSnapshot(records, plan);
   const creditsOf = (code: string) => catalogue.get(code)?.credits ?? 0;
 
-  let credits = 0;
-  for (const [code, stated] of snapshot.earned) {
-    credits += stated ?? creditsOf(code);
-  }
+  const credits = earnedCredits(snapshot, catalogue) + profile.advancedStanding;
   const xp = Math.round(credits * XP_PER_CREDIT);
 
   let plannedCredits = 0;
@@ -76,11 +79,14 @@ export function gameProgress(
     snapshot,
     catalogue,
     program,
-    progress: program ? programProgress(program, snapshot, catalogue) : null,
+    progress: program
+      ? programProgress(program, snapshot, catalogue, { entry })
+      : null,
     projected: program
       ? programProgress(program, snapshot, catalogue, {
           inProgress: true,
           planned: true,
+          entry,
         })
       : null,
     warnings: planWarnings(plan, snapshot, catalogue, profile.creditLimit),

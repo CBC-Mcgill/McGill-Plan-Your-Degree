@@ -37,6 +37,8 @@ const transcript = (courses: TranscriptCourse[]): Transcript => ({
   programs: [],
   minors: [],
   creditsRequired: null,
+  previousEducation: null,
+  advancedStanding: 0,
   courses,
   unrecognized: [],
 });
@@ -90,4 +92,24 @@ test("parseProfileFile rejects a malformed file and round-trips an export", () =
     error: expect.stringContaining("profile.records[0].status"),
   });
   expect(parseProfileFile("not json").ok).toBe(false);
+});
+
+test("parseProfileFile migrates a version 1 file to version 2", () => {
+  const file = {
+    format: "plan-your-degree-profile",
+    version: 1,
+    profile: {
+      records: [],
+      programId: null,
+      startTerm: null,
+      graduationTerm: null,
+      plan: [],
+      creditLimit: 17,
+      importedAt: null,
+    },
+  };
+  expect(parseProfileFile(JSON.stringify(file))).toMatchObject({
+    ok: true,
+    profile: { entry: null, advancedStanding: 0, creditsRequired: null },
+  });
 });
