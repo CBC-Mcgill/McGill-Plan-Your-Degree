@@ -65,7 +65,7 @@ function GainToast() {
         {gains && (
           <motion.div
             role="status"
-            className="pointer-events-auto flex items-start gap-3 rounded-lg border-2 border-border-strong bg-card p-4 shadow-edge"
+            className="pointer-events-auto flex items-start gap-3 rounded-lg bg-card p-4 shadow-float"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
@@ -75,15 +75,17 @@ function GainToast() {
             onFocus={() => setPaused(true)}
             onBlur={() => setPaused(false)}
           >
-            <span className="grid size-10 shrink-0 place-items-center rounded-full bg-completed-surface text-xp">
-              <Sparkles aria-hidden className="size-5" />
+            <span className="grid size-10 shrink-0 place-items-center rounded-full bg-xp-surface text-xp-foreground">
+              <Sparkles aria-hidden className="size-5" strokeWidth={1.75} />
             </span>
             <div className="min-w-0 flex-1 pt-0.5">
-              <p className="font-extrabold text-lg leading-tight">{title}</p>
+              <p className="font-display font-extrabold text-lg leading-tight font-stretch-semi-expanded">
+                {title}
+              </p>
               {rest.map((line) => (
                 <p
                   key={line}
-                  className="mt-1 font-semibold text-muted-foreground text-sm"
+                  className="mt-1 font-medium text-[13px] text-muted-foreground"
                 >
                   {line}
                 </p>
@@ -93,7 +95,7 @@ function GainToast() {
               type="button"
               aria-label="Dismiss"
               onClick={() => setGains(null)}
-              className="-mt-1 -mr-1 grid size-8 shrink-0 place-items-center rounded-md text-muted-foreground transition-[background-color] hover:bg-muted hover:text-foreground"
+              className="-mt-1 -mr-1 grid size-7 shrink-0 place-items-center rounded-md text-muted-foreground transition-[background-color] hover:bg-subtle hover:text-foreground"
             >
               <X aria-hidden className="size-4" />
             </button>

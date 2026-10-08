@@ -2,93 +2,133 @@
 
 /* Light theme. Dark mode (P1) redefines these variables only. */
 :root {
-  --background: #f1f4f9;
+  --background: #f3f4f6;
   --foreground: #172036;
   --card: #ffffff;
-  --muted: #e3e8ef;
-  --muted-foreground: #4d5870;
-  --border: #d7dde7;
-  --border-strong: #b8c1cf;
-  --ring: #1f5bd8;
+  --subtle: #f7f8fa;
+  --muted: #e9ecf0;
+  --muted-foreground: #5b6478;
+  --faint: #8a93a6;
+  --border: #e4e7ec;
+  --border-strong: #cdd3dc;
+  --ring: #2f5fc4;
 
-  --primary: #da1a2e;
-  --primary-hover: #c2162a;
-  --primary-edge: #8f0f1f;
+  --primary: #c8102e;
+  --primary-hover: #a90d26;
   --primary-foreground: #ffffff;
+  --brand: #c8102e;
+  --danger: #b42318;
+  --warn: #a8650a;
+  --warn-surface: color-mix(in oklab, var(--warn) 12%, white);
 
-  --xp: #178347;
+  /* Status colors stay in the navy-blue family, so red keeps meaning "act here". */
+  --completed: #233158;
+  --completed-surface: color-mix(in oklab, var(--completed) 12%, white);
+  --covered: #233158;
+  --covered-surface: color-mix(in oklab, var(--covered) 12%, white);
+  --in-progress: #2f5fc4;
+  --in-progress-surface: color-mix(in oklab, var(--in-progress) 12%, white);
+  --planned: #5157a8;
+  --planned-surface: color-mix(in oklab, var(--planned) 12%, white);
+  --available: #8a93a6;
+  --available-surface: color-mix(in oklab, var(--available) 12%, white);
+  --locked: #a3abbb;
+  --locked-surface: color-mix(in oklab, var(--locked) 12%, white);
+  --failed: var(--danger);
+  --failed-surface: color-mix(in oklab, var(--failed) 12%, white);
 
-  --completed: #146c3a;
-  --completed-surface: #ddf3e5;
-  --in-progress: #1d4fbf;
-  --in-progress-surface: #e1ebfd;
-  --available: #8f5d00;
-  --available-surface: #fdf0cf;
-  --locked: #4a5468;
-  --locked-surface: #eceff4;
-  --planned: #5b2fc2;
-  --planned-surface: #eee8fd;
-  --failed: #a8132a;
-  --failed-surface: #fde4e7;
+  /* Gold is only for XP and levels. */
+  --xp: #d99a1e;
+  --xp-surface: color-mix(in oklab, var(--xp) 18%, white);
+  --xp-foreground: #7a5300;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
+  --color-subtle: var(--subtle);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-ring: var(--ring);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
-  --color-primary-edge: var(--primary-edge);
   --color-primary-foreground: var(--primary-foreground);
-  --color-xp: var(--xp);
+  --color-brand: var(--brand);
+  --color-danger: var(--danger);
+  --color-warn: var(--warn);
+  --color-warn-surface: var(--warn-surface);
   --color-completed: var(--completed);
   --color-completed-surface: var(--completed-surface);
+  --color-covered: var(--covered);
+  --color-covered-surface: var(--covered-surface);
   --color-in-progress: var(--in-progress);
   --color-in-progress-surface: var(--in-progress-surface);
+  --color-planned: var(--planned);
+  --color-planned-surface: var(--planned-surface);
   --color-available: var(--available);
   --color-available-surface: var(--available-surface);
   --color-locked: var(--locked);
   --color-locked-surface: var(--locked-surface);
-  --color-planned: var(--planned);
-  --color-planned-surface: var(--planned-surface);
   --color-failed: var(--failed);
   --color-failed-surface: var(--failed-surface);
+  --color-xp: var(--xp);
+  --color-xp-surface: var(--xp-surface);
+  --color-xp-foreground: var(--xp-foreground);
 
-  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
 
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
 
-  /* Solid bottom edges that make surfaces look pressable */
-  --shadow-edge: 0 4px 0 0 var(--border-strong);
-  --shadow-edge-primary: 0 4px 0 0 var(--primary-edge);
-  --shadow-edge-available: 0 4px 0 0
-    color-mix(in oklab, var(--available) 40%, transparent);
+  /* Page content is 1200px wide inside 32px side padding. */
+  --container-page: 79rem;
+
+  --shadow-card: 0 1px 0 rgb(23 32 54 / 0.05), inset 0 0 0 1px var(--border);
+  --shadow-button:
+    inset 0 -1px 0 var(--border-strong), inset 0 0 0 1px var(--border),
+    0 1px 0 rgb(23 32 54 / 0.04);
+  --shadow-primary:
+    inset 0 -2px 0 rgb(0 0 0 / 0.22), inset 0 1px 0 rgb(255 255 255 / 0.22);
+  --shadow-pressed: inset 0 1px 2px rgb(23 32 54 / 0.18);
+  --shadow-float: 0 8px 24px -6px rgb(23 32 54 / 0.22), 0 0 0 1px var(--border);
 }
 
 @layer base {
   body {
     @apply bg-background text-foreground;
+    font-size: 14px;
+    line-height: 20px;
+    font-feature-settings: "cv11", "ss01";
   }
 
-  h1,
-  h2,
-  h3 {
+  h1 {
+    font-family: var(--font-display);
     font-weight: 800;
     font-stretch: 112.5%;
+    font-size: 28px;
+    line-height: 34px;
     letter-spacing: -0.015em;
     text-wrap: balance;
   }
 
+  h2,
+  h3 {
+    font-weight: 600;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-wrap: balance;
+  }
+
   :focus-visible {
-    outline: 3px solid var(--ring);
+    outline: 2px solid var(--ring);
     outline-offset: 2px;
   }
 }

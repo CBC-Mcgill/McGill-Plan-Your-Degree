@@ -1,7 +1,7 @@
 import { cn } from "cn";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { chipStatus, StatusChip } from "@/components/status-chip";
+import { StatusLabel } from "@/components/status";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { type CourseState, isOffered } from "@/lib/engine/status";
@@ -18,18 +18,18 @@ const grid = (withStatus: boolean) =>
   cn(
     "grid items-center gap-4 px-4",
     withStatus
-      ? "grid-cols-[6.5rem_minmax(0,1fr)_5.5rem_9.5rem_10.5rem]"
-      : "grid-cols-[6.5rem_minmax(0,1fr)_5.5rem_9.5rem]",
+      ? "grid-cols-[6rem_minmax(0,1fr)_5rem_9rem_10rem]"
+      : "grid-cols-[6rem_minmax(0,1fr)_5rem_9rem]",
   );
 
 /** Column labels for a list of CourseRow. Pass the same `withStatus` as the rows. */
 export function CourseRowHeader({ withStatus }: { withStatus: boolean }) {
   return (
-    <div aria-hidden className="px-0.5 pb-2">
+    <div aria-hidden className="pb-2">
       <div
         className={cn(
           grid(withStatus),
-          "font-semibold text-muted-foreground text-xs",
+          "font-medium text-muted-foreground text-xs",
         )}
       >
         <span>Course</span>
@@ -60,7 +60,7 @@ export function CourseRow({
   return (
     <li
       className={cn(
-        "transition-[background-color] hover:bg-muted/60",
+        "transition-[background-color] hover:bg-subtle",
         action !== undefined && "flex items-center",
       )}
     >
@@ -69,26 +69,27 @@ export function CourseRow({
         prefetch={false}
         className={cn(
           grid(Boolean(state)),
-          "-outline-offset-3 min-h-14 py-2.5",
+          "min-h-11 py-2 -outline-offset-3",
           action !== undefined && "min-w-0 flex-1",
         )}
       >
-        <span className="font-extrabold">{course.code}</span>
+        <span className="font-semibold tabular-nums">{course.code}</span>
         <span>
           <span className="line-clamp-2">{course.title}</span>
           {note}
         </span>
-        <span className="text-muted-foreground text-sm">
+        <span className="text-[13px] text-muted-foreground">
           {course.credits === null
             ? "-"
             : `${course.credits} ${course.credits === 1 ? "credit" : "credits"}`}
         </span>
-        <span className="text-muted-foreground text-sm">
+        <span className="text-[13px] text-muted-foreground">
           {seasonsOffered(course)}
         </span>
         {state && (
-          <StatusChip
-            status={chipStatus(state)}
+          <StatusLabel
+            status={state.status}
+            uncertain={state.uncertain}
             className="justify-self-start"
           />
         )}
@@ -104,11 +105,11 @@ export function CourseRowSkeleton({ rows = 8 }: { rows?: number }) {
   return (
     <div
       aria-hidden
-      className="divide-y divide-border rounded-lg border-2 border-border bg-card"
+      className="divide-y divide-border rounded-lg bg-card shadow-card"
     >
       {Array.from({ length: rows }, (_, row) => (
         // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-        <div key={row} className="flex min-h-14 items-center gap-4 px-4">
+        <div key={row} className="flex h-11 items-center gap-4 px-4">
           <div className="h-4 w-20 rounded-sm bg-muted motion-safe:animate-pulse" />
           <div className="h-4 flex-1 rounded-sm bg-muted motion-safe:animate-pulse" />
         </div>

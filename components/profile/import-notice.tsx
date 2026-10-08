@@ -1,5 +1,6 @@
 import { CircleAlert, CircleCheck, LoaderCircle } from "lucide-react";
 import type { Notice } from "@/components/profile/use-import-flow";
+import { Banner } from "@/components/ui/banner";
 
 export function ImportNotice({
   reading = false,
@@ -10,32 +11,30 @@ export function ImportNotice({
 }) {
   if (reading) {
     return (
-      <p
+      <Banner
+        tone="progress"
         role="status"
-        className="flex items-center gap-2.5 rounded-md border-2 border-in-progress/30 bg-in-progress-surface px-4 py-3 font-semibold text-in-progress"
+        className="items-center px-4 py-3 font-medium"
       >
         <LoaderCircle
           aria-hidden
-          className="size-5 shrink-0 animate-spin motion-reduce:animate-none"
+          className="mt-0! animate-spin motion-reduce:animate-none"
         />
         Reading your transcript...
-      </p>
+      </Banner>
     );
   }
   if (!notice) return null;
   const error = notice.kind === "error";
   const Icon = error ? CircleAlert : CircleCheck;
   return (
-    <p
+    <Banner
+      tone={error ? "danger" : "success"}
       role={error ? "alert" : "status"}
-      className={`flex items-start gap-2.5 rounded-md border-2 px-4 py-3 font-semibold ${
-        error
-          ? "border-failed/30 bg-failed-surface text-failed"
-          : "border-completed/30 bg-completed-surface text-completed"
-      }`}
+      className="px-4 py-3 font-medium"
     >
-      <Icon aria-hidden className="mt-0.5 size-5 shrink-0" />
+      <Icon aria-hidden />
       {notice.text}
-    </p>
+    </Banner>
   );
 }

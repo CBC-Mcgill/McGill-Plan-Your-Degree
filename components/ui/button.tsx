@@ -3,26 +3,39 @@ import { cn } from "cn";
 import { Slot } from "radix-ui";
 import type * as React from "react";
 
+/** One primary per screen, secondary for everything else, ghost for row actions. Never a pill. */
 const buttonVariants = cva(
-  "inline-flex h-12 shrink-0 select-none items-center justify-center gap-2 whitespace-nowrap rounded-md px-6 font-semibold text-base transition-[translate,box-shadow,background-color] duration-100 motion-reduce:transition-none active:translate-y-1 active:shadow-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0",
+  "inline-flex shrink-0 select-none items-center justify-center gap-1.5 whitespace-nowrap rounded-md font-medium transition-[background-color,box-shadow,translate] duration-100 motion-reduce:transition-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground shadow-edge-primary hover:bg-primary-hover",
+        primary:
+          "bg-primary text-primary-foreground shadow-primary hover:bg-primary-hover active:translate-y-px active:shadow-pressed",
         secondary:
-          "border-2 border-border-strong bg-card text-foreground shadow-edge hover:bg-muted",
+          "bg-card text-foreground shadow-button hover:bg-subtle active:translate-y-px active:shadow-pressed",
+        ghost:
+          "text-muted-foreground hover:bg-subtle hover:text-foreground active:bg-border",
+        destructive:
+          "bg-card text-danger shadow-button hover:bg-failed-surface active:translate-y-px active:shadow-pressed",
+      },
+      size: {
+        sm: "h-7 px-2.5 text-[13px] [&_svg]:size-3.5",
+        md: "h-8 px-3 text-sm [&_svg]:size-4",
+        lg: "h-10 px-4 font-semibold text-sm [&_svg]:size-4",
+        icon: "size-7 [&_svg]:size-4",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "primary",
+      size: "md",
     },
   },
 );
 
 function Button({
   className,
-  variant = "default",
+  variant,
+  size,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -34,8 +47,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      data-variant={variant}
-      className={cn(buttonVariants({ variant, className }))}
+      className={cn(buttonVariants({ variant, size }), className)}
       {...props}
     />
   );

@@ -1,13 +1,14 @@
 "use client";
 
-import { cn } from "cn";
-import { Check, GraduationCap } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { PlanSummary } from "@/components/plan/plan-summary";
 import { QuestPath } from "@/components/plan/quest-path";
 import { TermPanel } from "@/components/plan/term-panel";
+import { StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses } from "@/lib/catalogue/search";
 import { planWarnings, termRange } from "@/lib/engine/plan";
@@ -46,7 +47,7 @@ function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
 
   if (catalogue.status === "error") {
     return (
-      <p role="alert" className="mt-8">
+      <p role="alert" className="mt-6">
         Could not load the course list. Reload the page to try again.
       </p>
     );
@@ -122,7 +123,7 @@ function PlannerReady({
   const firstWarned = stages.find((stage) => stage.warnings.length > 0);
 
   return (
-    <div className="mt-8 flex flex-col gap-6">
+    <div className="mt-6 flex flex-col gap-6">
       <PlanSummary
         program={program}
         progress={progress}
@@ -136,7 +137,7 @@ function PlannerReady({
         }
       />
       {selected ? (
-        <div className="grid grid-cols-[20rem_minmax(0,1fr)] items-start gap-6">
+        <div className="grid grid-cols-[18.75rem_minmax(0,1fr)] items-start gap-6">
           <QuestPath
             stages={stages}
             selected={selected.key}
@@ -169,53 +170,36 @@ function PlannerReady({
 
 function EmptyState() {
   const setTerms = useProfileStore((state) => state.setTerms);
-  const dashed =
-    "border-border-strong border-dashed bg-card text-muted-foreground";
-  // Matches the stage looks on the path: completed, current, planned, and graduation.
-  const dots = [
-    { id: "done", tone: "border-completed bg-completed text-white" },
-    {
-      id: "current",
-      tone: "border-in-progress bg-in-progress text-white ring-4 ring-in-progress/20",
-    },
-    { id: "planned", tone: "border-planned bg-planned text-white" },
-    { id: "later", tone: dashed },
-    { id: "graduation", tone: dashed },
-  ];
+  // Matches the stages on the path: completed, current, planned, empty, and graduation.
+  const steps = ["completed", "in-progress", "planned", "available"] as const;
 
   return (
-    <div className="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-6 rounded-lg border-2 border-border bg-card px-10 py-12 text-center">
+    <Card className="mx-auto mt-8 flex max-w-2xl flex-col items-center gap-5 px-10 py-12 text-center">
       <div aria-hidden className="flex items-center">
-        {dots.map(({ id, tone }, i) => (
-          <div key={id} className="flex items-center">
-            {i > 0 && (
-              <span className="h-1 w-8 rounded-full bg-border-strong" />
-            )}
-            <span
-              className={cn(
-                "grid size-10 place-items-center rounded-full border-2",
-                tone,
-              )}
-            >
-              {i === 0 && <Check className="size-5" strokeWidth={3.5} />}
-              {i === dots.length - 1 && <GraduationCap className="size-5" />}
-            </span>
+        {steps.map((status) => (
+          <div key={status} className="flex items-center">
+            <StatusIcon status={status} size={20} />
+            <span className="h-0.5 w-8 bg-border-strong" />
           </div>
         ))}
+        <span className="grid size-5 place-items-center rounded-full bg-card text-muted-foreground shadow-[inset_0_0_0_1.5px_var(--border-strong)]">
+          <GraduationCap className="size-3" strokeWidth={2} />
+        </span>
       </div>
       <div>
-        <h2 className="text-2xl">Start your path to graduation</h2>
-        <p className="mt-2 text-muted-foreground">
+        <h2 className="text-lg">Start your path to graduation</h2>
+        <p className="mt-1 text-muted-foreground">
           Import your unofficial transcript and every course you have taken
           lands on your path. It never leaves your browser.
         </p>
       </div>
       <div className="flex flex-col items-center gap-3">
-        <Button asChild>
+        <Button asChild size="lg">
           <Link href="/profile">Import your transcript</Link>
         </Button>
         <Button
           variant="secondary"
+          size="lg"
           onClick={() => {
             const start = currentTerm();
             setTerms({
@@ -227,31 +211,31 @@ function EmptyState() {
           Start planning without one
         </Button>
       </div>
-    </div>
+    </Card>
   );
 }
 
 function PlannerSkeleton() {
   return (
-    <div role="status" className="mt-8 flex flex-col gap-6">
+    <div role="status" className="mt-6 flex flex-col gap-6">
       <span className="sr-only">Loading your plan</span>
+      <Card aria-hidden className="h-36" />
       <div
         aria-hidden
-        className="h-40 rounded-lg border-2 border-border bg-card"
-      />
-      <div aria-hidden className="grid grid-cols-[20rem_minmax(0,1fr)] gap-6">
-        <div className="flex flex-col gap-3 rounded-lg border-2 border-border bg-card p-5">
+        className="grid grid-cols-[18.75rem_minmax(0,1fr)] gap-6"
+      >
+        <Card className="flex flex-col gap-3 p-4">
           {Array.from({ length: 6 }, (_, row) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
             <div key={row} className="flex items-center gap-3">
-              <div className="size-10 rounded-full bg-muted motion-safe:animate-pulse" />
+              <div className="size-4 rounded-full bg-muted motion-safe:animate-pulse" />
               <div className="h-4 flex-1 rounded-sm bg-muted motion-safe:animate-pulse" />
             </div>
           ))}
-        </div>
-        <div className="h-96 rounded-lg border-2 border-border bg-card p-6">
-          <div className="h-8 w-48 rounded-sm bg-muted motion-safe:animate-pulse" />
-        </div>
+        </Card>
+        <Card className="h-96 p-5">
+          <div className="h-7 w-48 rounded-sm bg-muted motion-safe:animate-pulse" />
+        </Card>
       </div>
     </div>
   );

@@ -101,7 +101,7 @@ export function AdvisorChat() {
 
   return (
     <Tooltip.Provider delayDuration={150}>
-      <div className="flex h-[calc(100dvh-4rem-1px)] min-h-[36rem]">
+      <div className="flex h-[calc(100dvh-3.5rem)] min-h-[36rem]">
         <Sidebar onNewChat={newChat} />
         <section
           aria-label="Advisor chat"
@@ -121,7 +121,7 @@ export function AdvisorChat() {
                 <Spark className="size-9 text-primary" />
                 {greeting ?? "Hello"}
               </h1>
-              <p className="mt-3 text-center text-lg text-muted-foreground">
+              <p className="mt-3 text-center text-base text-muted-foreground">
                 Ask about your courses, requirements, or what to take next.
               </p>
             </div>
@@ -179,15 +179,16 @@ export function AdvisorChat() {
                   <button
                     type="button"
                     onClick={() => suggest(title)}
-                    className="flex h-full w-full items-start gap-3.5 rounded-lg border border-border bg-card p-4 text-left transition-[border-color,box-shadow] hover:border-border-strong hover:shadow-[0_4px_16px_rgb(23_32_54/0.06)]"
+                    className="flex h-full w-full items-start gap-3 rounded-lg bg-card p-4 text-left shadow-card transition-colors hover:bg-subtle"
                   >
                     <Icon
                       aria-hidden
-                      className="mt-0.5 size-5 shrink-0 text-primary"
+                      className="mt-0.5 size-5 shrink-0 text-muted-foreground"
+                      strokeWidth={1.75}
                     />
                     <span className="grid gap-0.5">
                       <span className="font-semibold">{title}</span>
-                      <span className="text-muted-foreground text-sm leading-5">
+                      <span className="text-[13px] text-muted-foreground leading-[18px]">
                         {line}
                       </span>
                     </span>

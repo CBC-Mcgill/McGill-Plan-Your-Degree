@@ -4,8 +4,11 @@ import { Plus, Search } from "lucide-react";
 import { useId, useState } from "react";
 import { CourseLink } from "@/components/course-link";
 import { seasonsOffered } from "@/components/course-row";
-import { StatusChip } from "@/components/status-chip";
+import { addWithUndo } from "@/components/plan/add-with-undo";
+import { StatusLabel } from "@/components/status";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { controlStyles } from "@/components/ui/field";
 import { type IndexedCourse, searchCourses } from "@/lib/catalogue/search";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import type { Snapshot } from "@/lib/engine/snapshot";
@@ -23,13 +26,13 @@ function CourseLine({
   children: React.ReactNode;
 }) {
   return (
-    <li className="flex items-center gap-4 px-4 py-2.5">
+    <li className="flex items-center gap-4 px-4 py-2">
       <div className="min-w-0 flex-1">
         <p className="truncate">
-          <CourseLink code={course.code} className="font-extrabold" />{" "}
+          <CourseLink code={course.code} className="font-semibold" />{" "}
           <span title={course.title}>{course.title}</span>
         </p>
-        <p className="text-muted-foreground text-sm">
+        <p className="text-[13px] text-muted-foreground">
           {course.credits === null ? "-" : `${course.credits} credits`} ·{" "}
           {seasonsOffered(course)}
         </p>
@@ -55,10 +58,8 @@ export function AddCourse({
   hasProgram: boolean;
 }) {
   const inputId = useId();
-  const addToPlan = useProfileStore((state) => state.addToPlan);
   const plan = useProfileStore((state) => state.plan);
   const [query, setQuery] = useState("");
-  const [notice, setNotice] = useState("");
   const label = termLabel(term);
 
   const plannedHere = new Set(
@@ -69,9 +70,7 @@ export function AddCourse({
     : [];
 
   function add(course: CourseSummary) {
-    const moved = snapshot.planned.has(course.code);
-    addToPlan(term, course.code);
-    setNotice(`${moved ? "Moved" : "Added"} ${course.code} to ${label}.`);
+    addWithUndo(term, course.code);
     setQuery("");
   }
 
@@ -80,11 +79,11 @@ export function AddCourse({
     return (
       <Button
         variant="secondary"
-        className="h-10 px-3 text-sm"
+        size="sm"
         aria-label={`${moving ? "Move" : "Add"} ${course.code} to ${label}`}
         onClick={() => add(course)}
       >
-        <Plus aria-hidden className="size-4!" />
+        <Plus aria-hidden />
         {moving ? "Move here" : "Add"}
       </Button>
     );
@@ -93,13 +92,13 @@ export function AddCourse({
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <label htmlFor={inputId} className="font-extrabold">
+        <label htmlFor={inputId} className="font-semibold">
           Add a course
         </label>
         <div className="relative mt-2">
           <Search
             aria-hidden
-            className="absolute top-1/2 left-3.5 size-5 -translate-y-1/2 text-muted-foreground"
+            className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
           />
           <input
             id={inputId}
@@ -107,68 +106,69 @@ export function AddCourse({
             autoComplete="off"
             placeholder="Search by code or title, like COMP 251 or algorithms"
             value={query}
-            onChange={(event) => {
-              setQuery(event.target.value);
-              setNotice("");
-            }}
-            className="h-12 w-full rounded-md border-2 border-border-strong bg-card pr-3 pl-11 text-base"
+            onChange={(event) => setQuery(event.target.value)}
+            className={`${controlStyles} w-full pl-9`}
           />
         </div>
-        <p role="status" className="mt-2 text-sm empty:mt-0">
-          {notice}
-        </p>
         {query.trim() &&
           (results.length === 0 ? (
-            <p className="mt-1 text-muted-foreground">
+            <p className="mt-2 text-muted-foreground">
               No courses match "{query.trim()}".
             </p>
           ) : (
-            <ul
-              aria-label="Search results"
-              className="mt-1 divide-y divide-border rounded-lg border-2 border-border bg-card"
+            <Card
+              asChild
+              className="mt-2 divide-y divide-border overflow-hidden"
             >
-              {results.map((course) => {
-                const state = snapshot.covered.has(course.code)
-                  ? "covered"
-                  : snapshot.done.has(course.code)
-                    ? "completed"
-                    : snapshot.inProgress.has(course.code)
-                      ? "in-progress"
-                      : null;
-                return (
-                  <CourseLine key={course.code} course={course}>
-                    {state ? (
-                      <StatusChip status={state} />
-                    ) : plannedHere.has(course.code) ? (
-                      <StatusChip status="planned" />
-                    ) : (
-                      addButton(course)
-                    )}
-                  </CourseLine>
-                );
-              })}
-            </ul>
+              <ul aria-label="Search results">
+                {results.map((course) => {
+                  const state = snapshot.covered.has(course.code)
+                    ? "covered"
+                    : snapshot.done.has(course.code)
+                      ? "completed"
+                      : snapshot.inProgress.has(course.code)
+                        ? "in-progress"
+                        : null;
+                  return (
+                    <CourseLine key={course.code} course={course}>
+                      {state ? (
+                        <StatusLabel status={state} />
+                      ) : plannedHere.has(course.code) ? (
+                        <StatusLabel status="planned" />
+                      ) : (
+                        addButton(course)
+                      )}
+                    </CourseLine>
+                  );
+                })}
+              </ul>
+            </Card>
           ))}
       </div>
 
       {hasProgram && !query.trim() && (
         <section aria-labelledby={`${inputId}-suggested`}>
-          <h3 id={`${inputId}-suggested`} className="text-base">
+          <h3 id={`${inputId}-suggested`} className="text-sm">
             Suggested for this term
           </h3>
           {suggestions && suggestions.length > 0 ? (
             <>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-[13px] text-muted-foreground">
                 Courses your program still needs, offered in {term.season}, with
                 prerequisites met by earlier terms.
               </p>
-              <ul className="mt-3 divide-y divide-border rounded-lg border-2 border-border bg-card">
-                {suggestions.slice(0, 5).map((course) => (
-                  <CourseLine key={course.code} course={course}>
-                    {addButton(course)}
-                  </CourseLine>
-                ))}
-              </ul>
+              <Card
+                asChild
+                className="mt-3 divide-y divide-border overflow-hidden"
+              >
+                <ul>
+                  {suggestions.slice(0, 5).map((course) => (
+                    <CourseLine key={course.code} course={course}>
+                      {addButton(course)}
+                    </CourseLine>
+                  ))}
+                </ul>
+              </Card>
             </>
           ) : (
             <p className="mt-1 text-muted-foreground">

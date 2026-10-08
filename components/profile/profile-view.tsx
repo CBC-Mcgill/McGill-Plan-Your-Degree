@@ -37,15 +37,15 @@ export function ProfileView() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-8 py-12">
+    <div className="mx-auto w-full max-w-page px-8 py-8">
       <div className="flex items-end justify-between gap-6">
         <div>
-          <h1 className="text-4xl">Your profile</h1>
-          <p className="mt-3 text-lg text-muted-foreground">
+          <h1>Your profile</h1>
+          <p className="mt-1 text-muted-foreground">
             Your program and courses, kept in this browser.
           </p>
         </div>
-        <Button asChild>
+        <Button asChild size="lg">
           <Link href="/next">
             See what's next
             <ArrowRight aria-hidden />
@@ -53,11 +53,11 @@ export function ProfileView() {
         </Button>
       </div>
 
-      <div className="mt-6 empty:hidden">
+      <div className="mt-5 empty:hidden">
         <ImportNotice reading={flow.reading} notice={flow.notice} />
       </div>
 
-      <div className="mt-8 grid gap-6">
+      <div className="mt-6 grid gap-5">
         <ProgramCard />
         <BadgesCard />
         <CoursesCard />

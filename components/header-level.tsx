@@ -18,13 +18,18 @@ function LevelLink() {
   return (
     <Link
       href="/profile#badges"
-      className="-mr-3 ml-auto flex shrink-0 items-center gap-3 rounded-md px-3 py-2 transition-[background-color] hover:bg-muted"
+      title={`${game.xpToNextLevel} XP to level ${game.level + 1}`}
+      className="flex h-8 shrink-0 items-center gap-2.5 rounded-md px-2 transition-colors hover:bg-subtle"
     >
-      <span className="font-extrabold">Level {game.level}</span>
+      <span className="font-display font-extrabold text-[13px] font-stretch-semi-expanded">
+        Lv {game.level}
+      </span>
       <XpBar
         xp={game.xpIntoLevel}
         max={XP_PER_LEVEL}
         label={`${game.xp.toLocaleString("en-US")} XP`}
+        barClassName="max-[1200px]:w-16"
+        captionClassName="max-[1200px]:sr-only"
       />
     </Link>
   );

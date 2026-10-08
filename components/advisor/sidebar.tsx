@@ -3,6 +3,7 @@
 import { Plus, Search } from "lucide-react";
 import { useState } from "react";
 import { Spark } from "@/components/advisor/spark";
+import { controlStyles } from "@/components/ui/field";
 
 export function Sidebar({ onNewChat }: { onNewChat: () => void }) {
   const [query, setQuery] = useState("");
@@ -16,10 +17,10 @@ export function Sidebar({ onNewChat }: { onNewChat: () => void }) {
         <button
           type="button"
           onClick={onNewChat}
-          className="flex h-10 items-center gap-2.5 rounded-md px-2 font-semibold text-[0.9375rem] transition-[background-color] hover:bg-muted"
+          className="flex h-8 items-center gap-2.5 rounded-md px-2 font-medium transition-[background-color] hover:bg-subtle"
         >
-          <span className="grid size-6 place-items-center rounded-md bg-primary/10 text-primary">
-            <Plus aria-hidden className="size-4" strokeWidth={2.5} />
+          <span className="grid size-5 place-items-center rounded-sm bg-muted text-foreground">
+            <Plus aria-hidden className="size-3.5" strokeWidth={2.25} />
           </span>
           New chat
         </button>
@@ -34,7 +35,7 @@ export function Sidebar({ onNewChat }: { onNewChat: () => void }) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search chats"
-            className="h-9 w-full rounded-md border border-border bg-background pr-3 pl-9 text-sm placeholder:text-muted-foreground"
+            className={`${controlStyles} w-full pl-9`}
           />
         </label>
       </div>
@@ -42,23 +43,23 @@ export function Sidebar({ onNewChat }: { onNewChat: () => void }) {
       <section aria-labelledby="recents" className="grid gap-2">
         <h2
           id="recents"
-          className="px-2 font-semibold font-stretch-normal text-muted-foreground text-xs tracking-normal"
+          className="px-2 font-medium text-muted-foreground text-xs"
         >
           Recents
         </h2>
-        <p className="px-2 text-muted-foreground text-sm">
+        <p className="px-2 text-[13px] text-muted-foreground">
           {query.trim()
             ? "No chats match your search"
             : "Your chats will show up here"}
         </p>
       </section>
 
-      <div className="mt-auto rounded-lg bg-background p-3.5">
-        <p className="flex items-center gap-2 font-semibold text-sm">
+      <div className="mt-auto rounded-lg bg-subtle p-3 shadow-[inset_0_0_0_1px_var(--border)]">
+        <p className="flex items-center gap-2 font-medium">
           <Spark className="size-4 text-primary" />
           Preview
         </p>
-        <p className="mt-1.5 text-muted-foreground text-sm leading-5">
+        <p className="mt-1.5 text-[13px] text-muted-foreground leading-[18px]">
           The advisor is coming soon. For now this chat only shows how it will
           work. Nothing you type is saved or sent anywhere.
         </p>

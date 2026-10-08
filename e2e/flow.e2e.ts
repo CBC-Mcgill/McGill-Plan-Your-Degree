@@ -26,6 +26,6 @@ test("a student imports a transcript, adds a course, and sees it in the plan", a
   ).toBeVisible();
 
   await expect(
-    page.getByRole("banner").getByRole("link", { name: /^Level \d/ }),
+    page.getByRole("banner").getByRole("link", { name: /^Lv \d/ }),
   ).toBeVisible();
 });

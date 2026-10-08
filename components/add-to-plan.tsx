@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { type Ref, useEffect, useMemo, useRef, useState } from "react";
-import { StatusChip } from "@/components/status-chip";
+import { addWithUndo } from "@/components/plan/add-with-undo";
+import { StatusLabel } from "@/components/status";
 import { Button } from "@/components/ui/button";
+import { SelectField } from "@/components/ui/field";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { isOffered } from "@/lib/engine/status";
 import { useProfileStore } from "@/lib/profile/store";
@@ -39,9 +41,9 @@ export function PlannedLink({
       ref={ref}
       href="/plan"
       aria-label={`Planned: ${code}. View your plan`}
-      className="rounded-sm transition-opacity hover:opacity-70"
+      className="inline-flex h-7 items-center rounded-md px-2 transition-colors hover:bg-subtle"
     >
-      <StatusChip status="planned" className="h-9 px-3 text-sm" />
+      <StatusLabel status="planned" />
     </Link>
   );
 }
@@ -50,7 +52,6 @@ function AddToTerm({ course, term }: { course: CourseSummary; term: Term }) {
   const planned = useProfileStore((state) =>
     state.plan.some((entry) => entry.courses.includes(course.code)),
   );
-  const addToPlan = useProfileStore((state) => state.addToPlan);
   const link = useRef<HTMLAnchorElement>(null);
   const justAdded = useRef(false);
 
@@ -66,11 +67,11 @@ function AddToTerm({ course, term }: { course: CourseSummary; term: Term }) {
   return (
     <Button
       variant="secondary"
-      className="h-9 px-3 text-sm"
+      size="sm"
       aria-label={`Add to ${termLabel(term)}, ${course.code}`}
       onClick={() => {
         justAdded.current = true;
-        addToPlan(term, course.code);
+        addWithUndo(term, course.code);
       }}
     >
       Add to {termLabel(term)}
@@ -81,7 +82,6 @@ function AddToTerm({ course, term }: { course: CourseSummary; term: Term }) {
 function PickTerm({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
   const plan = useProfileStore((state) => state.plan);
-  const addToPlan = useProfileStore((state) => state.addToPlan);
   const options = useMemo(() => planTermOptions(plan), [plan]);
   const [picked, setPicked] = useState<number | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
@@ -105,41 +105,38 @@ function PickTerm({ course }: { course: CourseSummary }) {
 
   return (
     <div className="flex flex-col gap-3">
-      <label className="flex flex-col gap-1.5 font-semibold text-sm">
-        Term
-        <select
-          value={selected ?? ""}
-          onChange={(event) => {
-            setPicked(Number(event.target.value));
-            setNotice(null);
-          }}
-          className="h-12 rounded-md border-2 border-border-strong bg-card px-3 font-normal text-base"
-        >
-          {options.map((option) => (
-            <option key={termKey(option)} value={termKey(option)}>
-              {termLabel(option)}
-            </option>
-          ))}
-        </select>
-      </label>
+      <SelectField
+        label="Term"
+        value={selected ?? ""}
+        onChange={(event) => {
+          setPicked(Number(event.target.value));
+          setNotice(null);
+        }}
+      >
+        {options.map((option) => (
+          <option key={termKey(option)} value={termKey(option)}>
+            {termLabel(option)}
+          </option>
+        ))}
+      </SelectField>
       <div>
         <Button
           className="w-full"
           onClick={() => {
             if (!term) return;
-            addToPlan(term, course.code);
+            addWithUndo(term, course.code);
             setNotice(`${planned ? "Moved" : "Added"} to ${termLabel(term)}.`);
           }}
         >
           {planned ? "Move to this term" : "Add to plan"}
         </Button>
-        <p role="status" className="mt-3 min-h-5 text-sm">
+        <p role="status" className="mt-3 min-h-5">
           {notice && (
             <>
               {notice}{" "}
               <Link
                 href="/plan"
-                className="font-semibold underline underline-offset-2 hover:text-primary"
+                className="font-medium underline underline-offset-2 hover:text-primary"
               >
                 View your plan
               </Link>

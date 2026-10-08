@@ -1,41 +1,114 @@
-"use client";
-
 import { cn } from "cn";
-import { motion } from "motion/react";
-import { Progress as ProgressPrimitive } from "radix-ui";
-import type * as React from "react";
 
-// Fill color follows the root's text color, so callers set it with a text-* class.
-function Progress({
-  className,
+const fills = {
+  completed: "bg-completed",
+  "in-progress": "bg-in-progress",
+  planned: "bg-planned",
+  xp: "bg-xp",
+  primary: "bg-primary",
+  warn: "bg-warn",
+} as const;
+
+export type ProgressFill = keyof typeof fills;
+
+/** A 6px bar. Pass `valueText` when "12 of 40" reads better than the raw number. */
+function ProgressBar({
   value,
-  max = 100,
-  ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Root>) {
-  const percent = Math.min(100, Math.max(0, ((value ?? 0) / max) * 100));
-
+  max,
+  fill = "completed",
+  label,
+  valueText,
+  className,
+}: {
+  value: number;
+  max: number;
+  fill?: ProgressFill;
+  label: string;
+  valueText?: string;
+  className?: string;
+}) {
+  const pct = max > 0 ? Math.min(100, (value / max) * 100) : 0;
   return (
-    <ProgressPrimitive.Root
-      data-slot="progress"
-      value={value}
-      max={max}
+    <div
+      role="progressbar"
+      aria-label={label}
+      aria-valuemin={0}
+      aria-valuemax={max}
+      aria-valuenow={value}
+      aria-valuetext={valueText}
       className={cn(
-        "relative h-3 w-full overflow-hidden rounded-full bg-muted text-primary",
+        "h-1.5 w-full overflow-hidden rounded-full bg-muted",
         className,
       )}
-      {...props}
     >
-      <ProgressPrimitive.Indicator asChild>
-        <motion.div
-          data-slot="progress-indicator"
-          className="size-full rounded-full bg-current"
-          initial={{ x: "-100%" }}
-          animate={{ x: `${percent - 100}%` }}
-          transition={{ type: "spring", bounce: 0.2, duration: 0.8 }}
-        />
-      </ProgressPrimitive.Indicator>
-    </ProgressPrimitive.Root>
+      <div
+        className={cn(
+          "h-full rounded-full transition-[width] duration-500 motion-reduce:transition-none",
+          fills[fill],
+        )}
+        style={{ width: `${pct}%` }}
+      />
+    </div>
   );
 }
 
-export { Progress };
+const ringStroke = {
+  completed: "stroke-completed",
+  "in-progress": "stroke-in-progress",
+  planned: "stroke-planned",
+  xp: "stroke-xp",
+  primary: "stroke-primary",
+  warn: "stroke-warn",
+} as const;
+
+const RADIUS = 5;
+const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+/** A ring for fractions in dense headers, drawn on the same 14px grid as the status icons. */
+function ProgressRing({
+  value,
+  max,
+  size = 14,
+  fill = "completed",
+  label,
+}: {
+  value: number;
+  max: number;
+  size?: number;
+  fill?: ProgressFill;
+  label?: string;
+}) {
+  const pct = max > 0 ? Math.min(1, value / max) : 0;
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      width={size}
+      height={size}
+      role={label ? "img" : undefined}
+      aria-label={label}
+      aria-hidden={label ? undefined : true}
+      className="-rotate-90 shrink-0"
+    >
+      <circle
+        cx="7"
+        cy="7"
+        r={RADIUS}
+        fill="none"
+        strokeWidth="2"
+        className="stroke-muted"
+      />
+      <circle
+        cx="7"
+        cy="7"
+        r={RADIUS}
+        fill="none"
+        strokeWidth="2"
+        strokeDasharray={`${CIRCUMFERENCE * pct} ${CIRCUMFERENCE}`}
+        strokeLinecap={pct > 0 && pct < 1 ? "round" : "butt"}
+        className={ringStroke[fill]}
+      />
+    </svg>
+  );
+}
+
+export { ProgressBar, ProgressRing };

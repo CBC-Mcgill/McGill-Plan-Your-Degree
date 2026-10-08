@@ -41,7 +41,7 @@ test("progress shows as a level, badges, and a one-time celebration", async ({
     { key: "plan-your-degree:profile", value: JSON.stringify(profile) },
   );
   const toast = page.getByRole("status").filter({ hasText: "XP" });
-  const level = page.getByRole("banner").getByRole("link", { name: /Level 3/ });
+  const level = page.getByRole("banner").getByRole("link", { name: /Lv 3/ });
 
   await page.goto("/profile");
   await expect(toast).toContainText("+3,200 XP");

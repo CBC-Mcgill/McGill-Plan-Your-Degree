@@ -1,6 +1,8 @@
+import { cn } from "cn";
 import { TriangleAlert } from "lucide-react";
 import { Fragment } from "react";
 import { CourseLink } from "@/components/course-link";
+import { bannerVariants } from "@/components/ui/banner";
 import type { RequirementTree } from "@/lib/catalogue/types";
 import type { PlanWarning } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
@@ -97,12 +99,12 @@ export function TermWarnings({
   return (
     <section
       aria-labelledby="warnings-heading"
-      className="rounded-md border-2 border-primary/30 bg-primary/5 p-4"
+      className={cn(bannerVariants({ tone: "warn" }), "block p-4")}
     >
-      <h3 id="warnings-heading" className="text-base text-primary-edge">
+      <h3 id="warnings-heading" className="text-sm">
         {warnings.length === 1 ? "1 warning" : `${warnings.length} warnings`}
       </h3>
-      <p className="text-muted-foreground text-sm">
+      <p className="text-[13px] text-muted-foreground">
         These do not block your plan, but check them before you register.
       </p>
       <ul aria-label="Warnings" className="mt-3 flex flex-col gap-2">
@@ -113,7 +115,7 @@ export function TermWarnings({
           >
             <TriangleAlert
               aria-hidden
-              className="mt-0.5 size-4 shrink-0 text-primary-edge"
+              className="mt-0.5 size-4 shrink-0 text-warn"
             />
             <p>
               <Sentence

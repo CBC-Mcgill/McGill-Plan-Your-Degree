@@ -9,7 +9,9 @@ import {
   ProgramSelect,
   TermSelect,
 } from "@/components/profile/selects";
+import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { TextField } from "@/components/ui/field";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { useProfileStore } from "@/lib/profile/store";
@@ -107,90 +109,92 @@ export function ReviewScreen({
 
   return (
     <div className="flex flex-1 flex-col">
-      <div className="mx-auto w-full max-w-6xl flex-1 px-8 pt-12 pb-10">
+      <div className="mx-auto w-full max-w-page flex-1 px-8 pt-8 pb-8">
         <h1
           ref={(element) => element?.focus()}
           tabIndex={-1}
-          className="text-4xl focus:outline-none"
+          className="focus:outline-none"
         >
           Check your transcript
         </h1>
-        <p className="mt-3 max-w-prose text-lg text-muted-foreground">
+        <p className="mt-1 max-w-prose text-muted-foreground">
           Nothing is saved until you choose Save to my profile.
         </p>
 
-        <section className="mt-8 rounded-lg border-2 border-border bg-card p-6">
-          <div className="flex items-baseline justify-between gap-6">
-            <h2 className="text-2xl">
-              {kept.length} {kept.length === 1 ? "course" : "courses"} across{" "}
-              {termCount} {termCount === 1 ? "term" : "terms"}
-            </h2>
-            <p className="text-muted-foreground text-sm">
-              {detected.length > 0
-                ? `Found: ${detected.join(", ")}`
-                : "We could not find a program on this transcript."}
-            </p>
-          </div>
-          <div className="mt-5 grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)] gap-4">
-            <ProgramSelect value={programId} onChange={setProgramId} />
-            <TermSelect
-              label="Start term"
-              value={startTerm}
-              onChange={setStartTerm}
-            />
-            <TermSelect
-              label="Expected graduation"
-              value={graduationTerm}
-              onChange={setGraduationTerm}
-            />
-          </div>
-          <div className="mt-4 grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)] items-end gap-4">
-            <EntrySelect value={entry} onChange={setEntry} />
-            <TextField
-              label="Advanced standing credits"
-              type="number"
-              min={0}
-              max={60}
-              placeholder="0"
-              value={advancedStanding || ""}
-              onChange={(event) =>
-                setAdvancedStanding(
-                  Math.max(0, Math.min(60, Number(event.target.value))),
-                )
-              }
-            />
-            <TextField
-              label="Credits required for your degree"
-              type="number"
-              min={1}
-              max={200}
-              placeholder="Optional"
-              value={creditsRequired ?? ""}
-              onChange={(event) => {
-                const credits = Number(event.target.value);
-                setCreditsRequired(
-                  credits >= 1 ? Math.min(200, credits) : null,
-                );
-              }}
-            />
-          </div>
-          {background && (
-            <p className="mt-3 text-muted-foreground text-sm">
-              Found on your transcript: {background}
-            </p>
-          )}
-          {programId === null && (
-            <p className="mt-3 text-muted-foreground text-sm">
-              Your courses are still saved. Requirements can't be tracked for
-              this program yet.
-            </p>
-          )}
-        </section>
+        <Card asChild className="mt-6 p-5">
+          <section>
+            <div className="flex items-baseline justify-between gap-6">
+              <h2 className="text-lg">
+                {kept.length} {kept.length === 1 ? "course" : "courses"} across{" "}
+                {termCount} {termCount === 1 ? "term" : "terms"}
+              </h2>
+              <p className="text-[13px] text-muted-foreground">
+                {detected.length > 0
+                  ? `Found: ${detected.join(", ")}`
+                  : "We could not find a program on this transcript."}
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)] gap-4">
+              <ProgramSelect value={programId} onChange={setProgramId} />
+              <TermSelect
+                label="Start term"
+                value={startTerm}
+                onChange={setStartTerm}
+              />
+              <TermSelect
+                label="Expected graduation"
+                value={graduationTerm}
+                onChange={setGraduationTerm}
+              />
+            </div>
+            <div className="mt-4 grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)] items-end gap-4">
+              <EntrySelect value={entry} onChange={setEntry} />
+              <TextField
+                label="Advanced standing credits"
+                type="number"
+                min={0}
+                max={60}
+                placeholder="0"
+                value={advancedStanding || ""}
+                onChange={(event) =>
+                  setAdvancedStanding(
+                    Math.max(0, Math.min(60, Number(event.target.value))),
+                  )
+                }
+              />
+              <TextField
+                label="Credits required for your degree"
+                type="number"
+                min={1}
+                max={200}
+                placeholder="Optional"
+                value={creditsRequired ?? ""}
+                onChange={(event) => {
+                  const credits = Number(event.target.value);
+                  setCreditsRequired(
+                    credits >= 1 ? Math.min(200, credits) : null,
+                  );
+                }}
+              />
+            </div>
+            {background && (
+              <p className="mt-3 text-[13px] text-muted-foreground">
+                Found on your transcript: {background}
+              </p>
+            )}
+            {programId === null && (
+              <p className="mt-3 text-[13px] text-muted-foreground">
+                Your courses are still saved. Requirements can't be tracked for
+                this program yet.
+              </p>
+            )}
+          </section>
+        </Card>
 
-        <div className="mt-8 grid gap-7">
+        <div className="mt-6 grid gap-6">
           {missingCount > 0 && (
-            <p className="flex items-start gap-2.5 rounded-md border-2 border-available/30 bg-available-surface px-4 py-3 text-available">
-              <TriangleAlert aria-hidden className="mt-0.5 size-5 shrink-0" />
+            <Banner tone="warn" className="px-4 py-3">
+              <TriangleAlert aria-hidden className="text-warn" />
               <span>
                 <strong>
                   {missingCount}{" "}
@@ -199,7 +203,7 @@ export function ReviewScreen({
                 </strong>{" "}
                 They are still saved, but may not count toward requirements.
               </span>
-            </p>
+            </Banner>
           )}
           {groups.map(({ term, items }) => (
             <TermGroup
@@ -227,40 +231,44 @@ export function ReviewScreen({
             </TermGroup>
           ))}
           {kept.length === 0 && (
-            <p className="rounded-md border-2 border-border border-dashed p-6 text-center text-muted-foreground">
+            <p className="rounded-lg border border-border-strong border-dashed p-6 text-center text-muted-foreground">
               No courses left. You can add them by hand on your profile.
             </p>
           )}
           {transcript.unrecognized.length > 0 && (
             <section>
-              <h2 className="text-lg">Lines we could not read</h2>
-              <p className="mt-1 text-muted-foreground text-sm">
+              <h2 className="text-base">Lines we could not read</h2>
+              <p className="mt-0.5 text-[13px] text-muted-foreground">
                 Add these courses by hand on your profile if they are missing.
               </p>
-              <ul className="mt-3 divide-y divide-border rounded-md border-2 border-border bg-card">
-                {transcript.unrecognized.map((line, i) => (
-                  // biome-ignore lint/suspicious/noArrayIndexKey: the lines are fixed and may repeat
-                  <li key={i} className="px-4 py-2.5 text-sm">
-                    {line}
-                  </li>
-                ))}
-              </ul>
+              <Card asChild className="mt-3 divide-y divide-border">
+                <ul>
+                  {transcript.unrecognized.map((line, i) => (
+                    // biome-ignore lint/suspicious/noArrayIndexKey: the lines are fixed and may repeat
+                    <li key={i} className="px-4 py-2 text-[13px]">
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
             </section>
           )}
         </div>
       </div>
 
-      <div className="sticky bottom-0 border-border border-t-2 bg-card">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-8 py-4">
+      <div className="sticky bottom-0 border-border border-t bg-card">
+        <div className="mx-auto flex max-w-page items-center justify-between gap-6 px-8 py-3">
           <p className="text-muted-foreground">
             {kept.length} {kept.length === 1 ? "course" : "courses"} ready to
             save
           </p>
           <div className="flex items-center gap-3">
-            <Button variant="secondary" onClick={onCancel}>
+            <Button variant="secondary" size="lg" onClick={onCancel}>
               Cancel
             </Button>
-            <Button onClick={save}>Save to my profile</Button>
+            <Button size="lg" onClick={save}>
+              Save to my profile
+            </Button>
           </div>
         </div>
       </div>
