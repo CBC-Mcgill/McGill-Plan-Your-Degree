@@ -1,4 +1,9 @@
-import type { CourseSummary, RequirementTree } from "../catalogue/types.ts";
+import type {
+  CourseSummary,
+  Requirement,
+  RequirementTree,
+  Restriction,
+} from "../catalogue/types.ts";
 import type { Season } from "../profile/types.ts";
 import type { Snapshot } from "./snapshot.ts";
 
@@ -19,6 +24,31 @@ export interface CourseState {
 }
 
 const NONE: readonly string[] = [];
+
+/** The fields a status reads, so a page can send the browser these and not the whole summary. */
+export interface StatusInput {
+  code: string;
+  prerequisites: Pick<Requirement, "tree" | "unparsed"> | null;
+  corequisites: Pick<Requirement, "unparsed"> | null;
+  restrictions: Pick<Restriction, "excludes"> | null;
+}
+
+export function toStatusInput({
+  code,
+  prerequisites,
+  corequisites,
+  restrictions,
+}: StatusInput): StatusInput {
+  return {
+    code,
+    prerequisites: prerequisites && {
+      tree: prerequisites.tree,
+      unparsed: prerequisites.unparsed,
+    },
+    corequisites: corequisites && { unparsed: corequisites.unparsed },
+    restrictions: restrictions && { excludes: restrictions.excludes },
+  };
+}
 
 /** True when the tree is met by the codes. No tree means nothing is required. */
 export function meets(
@@ -53,7 +83,7 @@ export function missingText(
 }
 
 export function blockedBy(
-  course: CourseSummary,
+  course: StatusInput,
   taken: ReadonlySet<string>,
 ): readonly string[] {
   const excludes = course.restrictions?.excludes;
@@ -61,7 +91,7 @@ export function blockedBy(
   return excludes.filter((code) => taken.has(code));
 }
 
-export function isUncertain(course: CourseSummary): boolean {
+export function isUncertain(course: StatusInput): boolean {
   return Boolean(
     course.prerequisites?.unparsed || course.corequisites?.unparsed,
   );
@@ -79,7 +109,7 @@ export function isOffered(course: CourseSummary, season: Season): boolean {
 
 /** The student's status for one course now, for the browse and course pages. */
 export function courseStatus(
-  course: CourseSummary,
+  course: StatusInput,
   snapshot: Snapshot,
 ): CourseState {
   const uncertain = isUncertain(course);

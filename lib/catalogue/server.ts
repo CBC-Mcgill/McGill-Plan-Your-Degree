@@ -41,7 +41,7 @@ export async function getCourse(code: string): Promise<Course | undefined> {
   return (await loadCatalogue()).get(code);
 }
 
-function leaves(tree: RequirementTree): string[] {
+export function leaves(tree: RequirementTree): string[] {
   if (typeof tree === "string") return [tree];
   return ("and" in tree ? tree.and : tree.or).flatMap(leaves);
 }

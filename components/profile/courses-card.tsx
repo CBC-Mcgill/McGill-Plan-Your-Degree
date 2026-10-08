@@ -3,8 +3,8 @@
 import { useId, useState } from "react";
 import { CourseRow, TermGroup } from "@/components/profile/course-row";
 import { TermSelect } from "@/components/profile/selects";
+import { SectionCard } from "@/components/section-card";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { SelectField, TextField } from "@/components/ui/field";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { useProfileStore } from "@/lib/profile/store";
@@ -87,83 +87,82 @@ export function CoursesCard() {
   const groups = groupByTerm(records).reverse();
 
   return (
-    <Card asChild className="p-5">
-      <section>
-        <h2 className="text-base">Your courses</h2>
-
-        <form
-          onSubmit={add}
-          className="mt-3 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 rounded-lg bg-subtle p-4 shadow-[inset_0_0_0_1px_var(--border)]"
+    <SectionCard
+      id="courses"
+      title="Your courses"
+      trailing={`${records.length} ${records.length === 1 ? "course" : "courses"}`}
+      bodyClassName=""
+    >
+      <form
+        onSubmit={add}
+        className="grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 border-border border-y bg-subtle px-5 py-4"
+      >
+        <TextField
+          label="Add a course by code"
+          value={text}
+          list={listId}
+          placeholder="COMP 250"
+          autoComplete="off"
+          spellCheck={false}
+          onChange={(event) => {
+            setText(event.target.value);
+            setError(null);
+          }}
+        />
+        <datalist id={listId}>
+          {suggestions.map((course) => (
+            <option key={course.code} value={course.code}>
+              {course.title}
+            </option>
+          ))}
+        </datalist>
+        <TermSelect label="Term" value={chosenTerm} onChange={setTerm} />
+        <SelectField
+          label="Status"
+          value={chosenStatus}
+          onChange={(event) =>
+            setStatus(event.target.value as "completed" | "in-progress")
+          }
         >
-          <TextField
-            label="Add a course by code"
-            value={text}
-            list={listId}
-            placeholder="COMP 250"
-            autoComplete="off"
-            spellCheck={false}
-            onChange={(event) => {
-              setText(event.target.value);
-              setError(null);
-            }}
-          />
-          <datalist id={listId}>
-            {suggestions.map((course) => (
-              <option key={course.code} value={course.code}>
-                {course.title}
-              </option>
-            ))}
-          </datalist>
-          <TermSelect label="Term" value={chosenTerm} onChange={setTerm} />
-          <SelectField
-            label="Status"
-            value={chosenStatus}
-            onChange={(event) =>
-              setStatus(event.target.value as "completed" | "in-progress")
-            }
-          >
-            <option value="completed">Completed</option>
-            <option value="in-progress">In progress</option>
-          </SelectField>
-          <Button type="submit" variant="secondary" className="mb-0.5">
-            Add course
-          </Button>
-          {error && (
-            <p role="alert" className="col-span-4 font-medium text-danger">
-              {error}
-            </p>
-          )}
-        </form>
-
-        {groups.length === 0 ? (
-          <p className="mt-5 rounded-lg border border-border-strong border-dashed p-6 text-center text-muted-foreground">
-            No courses yet. Add one above, or import your transcript.
+          <option value="completed">Completed</option>
+          <option value="in-progress">In progress</option>
+        </SelectField>
+        <Button type="submit" variant="secondary" className="h-9">
+          Add course
+        </Button>
+        {error && (
+          <p role="alert" className="col-span-4 font-medium text-danger">
+            {error}
           </p>
-        ) : (
-          <div className="mt-5 grid gap-5">
-            {groups.map(({ term: groupTerm, items }) => (
-              <TermGroup
-                key={groupTerm ? termKey(groupTerm) : "before"}
-                term={groupTerm}
-                count={items.length}
-              >
-                {items.map((record) => (
-                  <CourseRow
-                    key={`${record.code}-${record.term ? termKey(record.term) : "none"}`}
-                    code={record.code}
-                    title={ready?.get(record.code)?.title ?? null}
-                    credits={record.credits}
-                    grade={record.grade}
-                    status={record.status}
-                    missing={ready !== null && !ready.has(record.code)}
-                    onRemove={() => removeCourse(record.code)}
-                  />
-                ))}
-              </TermGroup>
-            ))}
-          </div>
         )}
-      </section>
-    </Card>
+      </form>
+
+      {groups.length === 0 ? (
+        <p className="px-5 py-8 text-center text-muted-foreground">
+          No courses yet. Add one above, or import your transcript.
+        </p>
+      ) : (
+        groups.map(({ term: groupTerm, items }) => (
+          <TermGroup
+            key={groupTerm ? termKey(groupTerm) : "before"}
+            term={groupTerm}
+            count={items.length}
+          >
+            {items.map((record) => (
+              <CourseRow
+                key={`${record.code}-${record.term ? termKey(record.term) : "none"}`}
+                code={record.code}
+                title={ready?.get(record.code)?.title ?? null}
+                credits={record.credits}
+                grade={record.grade}
+                status={record.status}
+                missing={ready !== null && !ready.has(record.code)}
+                onRemove={() => removeCourse(record.code)}
+              />
+            ))}
+          </TermGroup>
+        ))
+      )}
+    </SectionCard>
   );
 }

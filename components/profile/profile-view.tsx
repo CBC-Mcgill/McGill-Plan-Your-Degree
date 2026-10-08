@@ -37,7 +37,7 @@ export function ProfileView() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-8">
+    <div className="mx-auto w-full max-w-page px-8 py-10">
       <div className="flex items-end justify-between gap-6">
         <div>
           <h1>Your profile</h1>
@@ -57,7 +57,7 @@ export function ProfileView() {
         <ImportNotice reading={flow.reading} notice={flow.notice} />
       </div>
 
-      <div className="mt-6 grid gap-5">
+      <div className="mt-6 flex flex-col gap-8">
         <ProgramCard />
         <BadgesCard />
         <CoursesCard />

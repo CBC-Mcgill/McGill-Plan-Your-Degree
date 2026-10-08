@@ -2,9 +2,10 @@
 
 import { ArchiveRestore, Download, FileUp, Trash2 } from "lucide-react";
 import { AlertDialog } from "radix-ui";
+import type { ReactNode } from "react";
+import { SettingsSection } from "@/components/profile/settings-section";
 import type { ImportFlow } from "@/components/profile/use-import-flow";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { FileButton } from "@/components/ui/file-button";
 import { exportProfile } from "@/lib/profile/file";
 import { useProfileStore } from "@/lib/profile/store";
@@ -22,6 +23,28 @@ function downloadBackup() {
   URL.revokeObjectURL(url);
 }
 
+function Row({
+  title,
+  description,
+  children,
+}: {
+  title: string;
+  description: string;
+  children: ReactNode;
+}) {
+  return (
+    <li className="flex items-center justify-between gap-6 px-5 py-4">
+      <div>
+        <p className="font-medium">{title}</p>
+        <p className="text-[13px] text-muted-foreground leading-[18px]">
+          {description}
+        </p>
+      </div>
+      {children}
+    </li>
+  );
+}
+
 export function DataCard({
   flow,
   onReset,
@@ -32,17 +55,26 @@ export function DataCard({
   const reset = useProfileStore((s) => s.reset);
 
   return (
-    <Card asChild className="p-5">
-      <section>
-        <h2 className="text-base">Your data</h2>
-        <p className="mt-0.5 text-[13px] text-muted-foreground">
-          It all lives in this browser. Nothing is sent anywhere.
-        </p>
-        <div className="mt-3 flex flex-wrap gap-3">
+    <SettingsSection
+      id="data"
+      title="Your data"
+      description="It all lives in this browser, and nothing is sent anywhere."
+      cardClassName=""
+    >
+      <ul className="divide-y divide-border">
+        <Row
+          title="Backup"
+          description="Save your profile to a file you can keep."
+        >
           <Button variant="secondary" onClick={downloadBackup}>
             <Download aria-hidden />
             Export a backup
           </Button>
+        </Row>
+        <Row
+          title="Restore"
+          description="Load a backup file. It replaces what is here now."
+        >
           <FileButton
             variant="secondary"
             accept="application/json,.json"
@@ -51,6 +83,11 @@ export function DataCard({
             <ArchiveRestore aria-hidden />
             Restore from a backup
           </FileButton>
+        </Row>
+        <Row
+          title="Transcript"
+          description="Read a newer transcript PDF. You check it before anything is saved."
+        >
           <FileButton
             variant="secondary"
             accept="application/pdf,.pdf"
@@ -60,7 +97,11 @@ export function DataCard({
             <FileUp aria-hidden />
             Re-import a transcript
           </FileButton>
-
+        </Row>
+        <Row
+          title="Delete"
+          description="Remove your courses, program and plan from this browser."
+        >
           <AlertDialog.Root>
             <AlertDialog.Trigger asChild>
               <Button variant="destructive">
@@ -97,8 +138,8 @@ export function DataCard({
               </AlertDialog.Content>
             </AlertDialog.Portal>
           </AlertDialog.Root>
-        </div>
-      </section>
-    </Card>
+        </Row>
+      </ul>
+    </SettingsSection>
   );
 }
