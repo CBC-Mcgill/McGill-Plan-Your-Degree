@@ -1,8 +1,7 @@
-import { cn } from "cn";
 import { TriangleAlert } from "lucide-react";
 import { Fragment } from "react";
 import { CourseLink } from "@/components/course-link";
-import { bannerVariants } from "@/components/ui/banner";
+import { Banner } from "@/components/ui/banner";
 import type { RequirementTree } from "@/lib/catalogue/types";
 import type { PlanWarning } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
@@ -97,37 +96,37 @@ export function TermWarnings({
 }) {
   if (warnings.length === 0) return null;
   return (
-    <section
+    <Banner
+      tone="warn"
+      role="group"
       aria-labelledby="warnings-heading"
-      className={cn(bannerVariants({ tone: "warn" }), "block p-4")}
+      className="block text-[color-mix(in_oklab,var(--warn)_85%,black)]"
     >
-      <h3 id="warnings-heading" className="text-sm">
+      <h3
+        id="warnings-heading"
+        className="flex items-center gap-1.5 text-[13px] leading-[18px]"
+      >
+        <TriangleAlert aria-hidden className="mt-0" strokeWidth={2} />
         {warnings.length === 1 ? "1 warning" : `${warnings.length} warnings`}
       </h3>
-      <p className="text-[13px] text-muted-foreground">
-        These do not block your plan, but check them before you register.
-      </p>
-      <ul aria-label="Warnings" className="mt-3 flex flex-col gap-2">
+      <ul aria-label="Warnings" className="mt-1.5 flex flex-col gap-1">
         {warnings.map((warning) => (
           <li
             key={`${warning.kind}-${"course" in warning ? warning.course : "term"}`}
-            className="flex gap-2.5"
+            className="text-[13px] leading-[18px]"
           >
-            <TriangleAlert
-              aria-hidden
-              className="mt-0.5 size-4 shrink-0 text-warn"
+            <Sentence
+              warning={warning}
+              snapshot={snapshot}
+              catalogue={catalogue}
+              plan={plan}
             />
-            <p>
-              <Sentence
-                warning={warning}
-                snapshot={snapshot}
-                catalogue={catalogue}
-                plan={plan}
-              />
-            </p>
           </li>
         ))}
       </ul>
-    </section>
+      <p className="mt-1.5 text-xs leading-4 opacity-80">
+        These do not block your plan, but check them before you register.
+      </p>
+    </Banner>
   );
 }

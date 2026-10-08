@@ -11,7 +11,10 @@ const done = (code: string) => ({
   source: "manual",
 });
 
-test("starting without a transcript shows the quest path", async ({ page }) => {
+test("starting without a transcript opens the path on the next term to plan", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
   await page.goto("/plan");
   await expect(
     page.getByRole("heading", { level: 1, name: "Planner" }),
@@ -24,13 +27,20 @@ test("starting without a transcript shows the quest path", async ({ page }) => {
     .getByRole("button", { name: "Start planning without one" })
     .click();
   const terms = page.getByRole("tablist", { name: "Terms" }).getByRole("tab");
-  await expect(terms.first()).toHaveAttribute("aria-selected", "true");
-  await expect(page.getByText("Graduation", { exact: true })).toBeVisible();
-
-  await terms.first().focus();
-  await page.keyboard.press("ArrowDown");
+  await expect(terms.first()).toHaveAccessibleName(/^Fall 2026/);
+  await expect(terms.first()).toHaveAttribute("aria-selected", "false");
+  await expect(terms.nth(1)).toHaveAccessibleName(/^Winter 2027/);
   await expect(terms.nth(1)).toHaveAttribute("aria-selected", "true");
-  await expect(terms.nth(1)).toBeFocused();
+  await expect(
+    page
+      .getByRole("tablist", { name: "Terms" })
+      .getByText("Graduation", { exact: true }),
+  ).toBeVisible();
+
+  await terms.nth(1).focus();
+  await page.keyboard.press("ArrowDown");
+  await expect(terms.nth(2)).toHaveAttribute("aria-selected", "true");
+  await expect(terms.nth(2)).toBeFocused();
 
   const overflow = await page.evaluate(
     () =>
@@ -71,9 +81,11 @@ test("a course placed before its prerequisite warns until it is moved later", as
 
   const fall = `Fall ${year + 1}`;
   await page.getByRole("tab", { name: new RegExp(`^${fall}`) }).click();
-  const search = page.getByLabel("Add a course");
+  const search = page.getByRole("combobox", {
+    name: `Add a course to ${fall}`,
+  });
   await search.fill("COMP 251");
-  await page.getByRole("button", { name: `Add COMP 251 to ${fall}` }).click();
+  await page.getByRole("option", { name: /^COMP 251/ }).click();
   const warnings = page.getByRole("list", { name: "Warnings" });
   await expect(warnings).toContainText(
     "COMP 251 needs COMP 250 in an earlier term",
@@ -81,11 +93,14 @@ test("a course placed before its prerequisite warns until it is moved later", as
 
   // The same term is not earlier.
   await search.fill("COMP 250");
-  await page.getByRole("button", { name: `Add COMP 250 to ${fall}` }).click();
+  await page.getByRole("option", { name: /^COMP 250/ }).click();
   await expect(warnings).toContainText("COMP 251 needs COMP 250");
 
   await page
-    .getByLabel("Move COMP 250 to another term")
-    .selectOption({ label: `Winter ${year + 1}` });
+    .getByRole("button", { name: "Move COMP 250 to another term" })
+    .click();
+  await page
+    .getByRole("menuitem", { name: new RegExp(`^Winter ${year + 1}`) })
+    .click();
   await expect(warnings).toHaveCount(0);
 });
