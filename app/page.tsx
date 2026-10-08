@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </div>
 
-      <figure className="rounded-lg border-2 border-border-strong bg-card p-6 shadow-edge">
+      <figure className="rounded-lg border-2 border-border bg-card p-6">
         <figcaption className="font-semibold text-muted-foreground text-sm">
           Example path for a Computer Science student
         </figcaption>

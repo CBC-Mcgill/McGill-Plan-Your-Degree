@@ -1,9 +1,5 @@
 import Link from "next/link";
 import { NavLinks } from "@/components/nav-links";
-import { XpBar } from "@/components/xp-bar";
-
-// Static placeholder until the gamification PR derives level and XP from the profile
-const placeholderProgress = { level: "U1", xp: 120, nextLevelXp: 300 };
 
 export function SiteHeader() {
   return (
@@ -19,15 +15,6 @@ export function SiteHeader() {
         <nav aria-label="Main">
           <NavLinks />
         </nav>
-        <div className="ml-auto flex shrink-0 items-center gap-3">
-          <span className="whitespace-nowrap font-bold text-sm">
-            Level {placeholderProgress.level}
-          </span>
-          <XpBar
-            xp={placeholderProgress.xp}
-            max={placeholderProgress.nextLevelXp}
-          />
-        </div>
       </div>
     </header>
   );
