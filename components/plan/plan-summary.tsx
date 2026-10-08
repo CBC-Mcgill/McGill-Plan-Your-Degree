@@ -71,12 +71,15 @@ export function PlanSummary({
   warningCount,
   onShowWarnings,
   graduationSet,
+  graduationPassed,
 }: {
   program: Program | null;
   progress: ProgramProgress | null;
   warningCount: number;
   onShowWarnings: () => void;
   graduationSet: boolean;
+  /** The graduation term's label when it is already in the past. */
+  graduationPassed: string | null;
 }) {
   const missing = progress?.groups.filter((group) => !group.satisfied) ?? [];
   return (
@@ -159,6 +162,20 @@ export function PlanSummary({
             </>
           )}
         </div>
+      )}
+
+      {graduationPassed && (
+        <p className="col-span-2 flex items-start gap-2.5 rounded-md border border-border bg-muted p-3 text-sm">
+          <Info aria-hidden className="mt-0.5 size-4 shrink-0" />
+          <span>
+            Your expected graduation, {graduationPassed}, has already passed, so
+            there are no terms left to plan.{" "}
+            <Link href="/profile" className={linkClass}>
+              Update it on your profile
+            </Link>
+            .
+          </span>
+        </p>
       )}
 
       {!graduationSet && (

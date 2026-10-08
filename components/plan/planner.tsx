@@ -19,7 +19,11 @@ import {
 } from "@/lib/engine/snapshot";
 import { buildStages } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
-import { currentTerm, defaultGraduation } from "@/lib/profile/term-options";
+import {
+  currentTerm,
+  defaultGraduation,
+  termLabel,
+} from "@/lib/profile/term-options";
 import { compareTerms, type Term, termKey } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { getProgram } from "@/lib/programs";
@@ -123,6 +127,11 @@ function PlannerReady({
         warningCount={warnings.length}
         onShowWarnings={() => firstWarned && setPicked(firstWarned.key)}
         graduationSet={graduationTerm !== null}
+        graduationPassed={
+          graduationTerm && compareTerms(graduationTerm, now) < 0
+            ? termLabel(graduationTerm)
+            : null
+        }
       />
       {selected ? (
         <div className="grid grid-cols-[20rem_minmax(0,1fr)] items-start gap-6">

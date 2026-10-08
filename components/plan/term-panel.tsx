@@ -122,7 +122,7 @@ export function TermPanel({
           <p className="font-semibold">
             {stage.credits} credits{" "}
             <span className="font-normal text-muted-foreground">
-              - this term has passed, so your record is read-only
+              · this term has passed, so your record is read-only
             </span>
           </p>
         ) : (

@@ -2,6 +2,7 @@ import { compareTerms, type Term, termFromKey, termKey } from "./types.ts";
 
 export const formatTerm = (term: Term) => `${term.season} ${term.year}`;
 
+/** Winter is January to April, Summer May to August, Fall September to December. */
 export function currentTerm(now = new Date()): Term {
   const month = now.getMonth();
   const season = month < 4 ? "Winter" : month < 8 ? "Summer" : "Fall";
@@ -32,19 +33,24 @@ export function termRange(
 const CREDITS_PER_TERM = 15;
 const DEGREE_TERMS = 8;
 
-/** A starting guess for graduation: a four-year degree, or the credits left at 15 per Fall or Winter term. */
+/** A starting guess for graduation: a four-year degree, or the credits left at 15 per Fall or Winter term. Never before next term. */
 export function guessGraduation(
   start: Term | null,
   last: Term | null,
   creditsLeft: number | null,
+  now = new Date(),
 ): Term | null {
-  if (last && creditsLeft !== null) {
-    return advanceTerms(
-      last,
-      Math.ceil(Math.max(0, creditsLeft) / CREDITS_PER_TERM),
-    );
-  }
-  return start ? advanceTerms(start, DEGREE_TERMS - 1) : null;
+  const guess =
+    last && creditsLeft !== null
+      ? advanceTerms(
+          last,
+          Math.ceil(Math.max(0, creditsLeft) / CREDITS_PER_TERM),
+        )
+      : start
+        ? advanceTerms(start, DEGREE_TERMS - 1)
+        : null;
+  const next = advanceTerms(currentTerm(now), 1);
+  return guess && compareTerms(guess, next) < 0 ? next : guess;
 }
 
 /** Groups by term from oldest to newest, with the entries that have no term first. */
