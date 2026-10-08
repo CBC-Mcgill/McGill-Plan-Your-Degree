@@ -1,0 +1,233 @@
+[
+  {
+    "code": "CATH 200",
+    "subject": "CATH",
+    "number": "200",
+    "title": "Introduction to Catholicism",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course offers an exploration of the Roman Catholic tradition in its intellectual, religious, moral, and cultural dimensions. It provides an interdisciplinary study of the ways in which Catholicism has shaped Western civilization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 220",
+    "subject": "CATH",
+    "number": "220",
+    "title": "Selected Topics in Catholic Studies",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A review of selected topics in Catholic studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics vary by year."
+    ]
+  },
+  {
+    "code": "CATH 310",
+    "subject": "CATH",
+    "number": "310",
+    "title": "Catholic Intellectual Traditions",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines Catholic intellectual perspectives, schools of thought, and major thinkers, with focus on topics such as God, faith and reason, the human person, history, culture and community. Will also examine the interaction between Catholicism and other perspectives and traditions.",
+    "prerequisites": {
+      "text": "CATH 200, RELG 320, or permission of instructor",
+      "tree": {
+        "and": [
+          "CATH 200",
+          "RELG 320"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 320",
+    "subject": "CATH",
+    "number": "320",
+    "title": "Catholicism and Modernity",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An exploration of major historical developments in modern Catholicism. The course will examine broad historical trends as well as regional contexts.",
+    "prerequisites": {
+      "text": "CATH 200, or permission of instructor",
+      "tree": "CATH 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 325",
+    "subject": "CATH",
+    "number": "325",
+    "title": "Mystery and the Imagination",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An exploration of Catholic perspectives on faith, reason, meaning and mystery through literature, art, music, and film.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to those who have taken 190-370A in 2001-02 or CATH 370 in 2002-03.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CATH 330",
+    "subject": "CATH",
+    "number": "330",
+    "title": "Catholicism in a Global Context",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An exploration of Catholicism as a global phenomenon through case studies of its multiple expressions in Europe, Asia, Africa, and the Americas. Topics include transnational Catholic movements and interreligious engagement.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 335",
+    "subject": "CATH",
+    "number": "335",
+    "title": "Confessions of Saint Augustine",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A close reading of Augustine's monumental Confessions- the odyssey of a restless soul seeking rest in God alone (conf. 1.1.)",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 340",
+    "subject": "CATH",
+    "number": "340",
+    "title": "Catholicism and Public Policy",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of Catholic social thought, including intellectual and institutional engagement with a wide range of key public policy issues in spheres such as politics, law, economics, diplomacy, and international development.",
+    "prerequisites": {
+      "text": "CATH 200, or permission of instructor",
+      "tree": "CATH 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 370",
+    "subject": "CATH",
+    "number": "370",
+    "title": "Topics in Catholic Studies",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A review of selected topics in Catholica studies. Topics vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 370AA",
+    "subject": "CATH",
+    "number": "370AA",
+    "title": "Indigenous Religiosity and Spirituality",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A review of selected topics in Catholica studies. Topics vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 375",
+    "subject": "CATH",
+    "number": "375",
+    "title": "Topics in Catholic Theology",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A review of selected topics in Catholic Theology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics vary by year."
+    ]
+  },
+  {
+    "code": "CATH 375AA",
+    "subject": "CATH",
+    "number": "375AA",
+    "title": "Topics in Catholic Theology",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A review of selected topics in Catholic Theology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CATH 460",
+    "subject": "CATH",
+    "number": "460",
+    "title": "Catholic Studies Seminar",
+    "credits": 3,
+    "offeredBy": "Religious Studies",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A research seminar on a major theme and/or thinker. The seminar will evolve around primary source materials.",
+    "prerequisites": {
+      "text": "CATH 200, or permission of instructor",
+      "tree": "CATH 200",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

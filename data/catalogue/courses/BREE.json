@@ -1,0 +1,1975 @@
+[
+  {
+    "code": "BREE 103",
+    "subject": "BREE",
+    "number": "103",
+    "title": "Linear Algebra",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Systems of linear equations, matrices, inverses, determinants, geometric vectors in three dimensions, dot and cross product, lines and planes; introduction to vector spaces, linear (in)dependence, bases. lntroduction to computer-based mathematical tools.",
+    "prerequisites": {
+      "text": "AEMA 100 or equivalent course in functions/precalculus",
+      "tree": "AEMA 100",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken Math 133 or CEGEP objective 00UQ or equivalent",
+      "excludes": []
+    },
+    "notes": [
+      "3 lectures and 1 conference"
+    ]
+  },
+  {
+    "code": "BREE 187",
+    "subject": "BREE",
+    "number": "187",
+    "title": "Freshman Seminar 1",
+    "credits": 0.5,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Members of the Faculty and/or Student Services will present seminars on resources available to help students develop the requisite skills to facilitate their transition into university life.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Freshman intending to enrol in B.Eng. Bioresources Engineering Major.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 188",
+    "subject": "BREE",
+    "number": "188",
+    "title": "Freshman Seminar 2",
+    "credits": 0.5,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Members of the Faculty present seminars on topical issues about their area of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Freshman intending to enroll in B.Eng. Bioresource Engineering Major. Not open to students who have taken AGRI 196.",
+      "excludes": [
+        "AGRI 196"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 204",
+    "subject": "BREE",
+    "number": "204",
+    "title": "Data Analytics for Biosystems",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Techniques and tools used to analyze agricultural and environmental data using some common programs (Microsoft Excel, Python, R, Jupyter Notebook, RStudio).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking AEMA 204.",
+      "excludes": [
+        "AEMA 204"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 205",
+    "subject": "BREE",
+    "number": "205",
+    "title": "Engineering Design 1",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Role of the bioresource engineer in society; introduction to engineering analysis and design; kinds of engineering; role and duties of the engineer in the design, construction, and operation of bio-based facilities, industries and the environment. Regulation of the engineering profession; law and liability; engineering ethics; occupational health and safety.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in a Bioresource Engineering program or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 210",
+    "subject": "BREE",
+    "number": "210",
+    "title": "Mechanical Analysis and Design",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Non-concurrent force systems; analysis of simple trusses and multiforce frames; friction, shearing forces and bending moments in beams and frames; centres of gravity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and 2 hours lab or problems per week."
+    ]
+  },
+  {
+    "code": "BREE 214",
+    "subject": "BREE",
+    "number": "214",
+    "title": "Geomatics",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The communicative skills of surveying. The fundamentals of surveying through the application of reasoning, tools, techniques, and instruments. Practices in use of basic surveying equipment including steel tape, level, and theodolite. The use and operation of Total Stations. The procedures and methods for the measurement of distances, elevations, angles and positions. Basic surveying calculations, including traverse adjustments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Two lectures and one 3-hour lab per week."
+    ]
+  },
+  {
+    "code": "BREE 216",
+    "subject": "BREE",
+    "number": "216",
+    "title": "Bioresource Engineering Materials",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the composition and mechanical constitution of materials used in bioresource engineering, including metals, plastics, concrete, wood, composite, plant and food materials. Crystal structure, alloys, phase diagrams, stresses and strains, elasticity, plasticity, yield, fracture, ductility, heat treatments, cold work, corrosion, composite materials, concrete chemistry, polymers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in a Bioresource Engineering program or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "2 lectures and one 2-hour lab"
+    ]
+  },
+  {
+    "code": "BREE 217",
+    "subject": "BREE",
+    "number": "217",
+    "title": "Hydrology and Water Resources",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to water resources and hydrologic cycle. Precipitation and hydrologic frequency analysis. Soil water processes, infiltration theory and modeling. Evapotranspiration estimation methods and crop water requirements. Surface runoff estimation as a function of land use modifications. Estimation of peak runoff rates. Unit hydrograph. Design of open channels and vegetated waterways.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures, one 2-hour lab per week.",
+      "This course carries an additional course charge for field trips.",
+      "This course carries an additional course charge of $21.02 to cover transportation costs for two field trips, which may include a visit to a national weather station and a trip to gain hands-on experience on monitoring water flow in streams."
+    ]
+  },
+  {
+    "code": "BREE 252",
+    "subject": "BREE",
+    "number": "252",
+    "title": "Computing for Engineers",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A disciplined general approach to the solution of engineering problems, and the implementation of these solutions using structured programming methods in a current computational environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and one 2-hour lab per week",
+      "Note that a B+ must be obtained in this course in order to be permitted to register in BREE 504"
+    ]
+  },
+  {
+    "code": "BREE 300",
+    "subject": "BREE",
+    "number": "300",
+    "title": "Bioresource Engineering Internship",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Full-time internship with a host organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking FAES 300. Open only to students in the Department of Bioresource Engineering.",
+      "excludes": [
+        "FAES 300"
+      ]
+    },
+    "notes": [
+      "At least one of the internship supervisors must be a professional engineer.",
+      "The internship report will be graded by a Bioresource Engineering professor with expertise relevant to the student's area of study.",
+      "Finding a work placement is the student's responsibility and is facilitated by the Faculty's Internship Office."
+    ]
+  },
+  {
+    "code": "BREE 301",
+    "subject": "BREE",
+    "number": "301",
+    "title": "Biothermodynamics",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Classical thermodynamic analysis of pure and simple compressible systems. The course covers the first and second laws of thermodynamics. It deals with basic concepts of thermodynamics and thermochemistry in biological systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Bioresource Engineering and Bionegineering programs and permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3 lectures and one 2-hour lab"
+    ]
+  },
+  {
+    "code": "BREE 305",
+    "subject": "BREE",
+    "number": "305",
+    "title": "Fluid Mechanics",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Properties of fluids; fluid statics; principles of flow of incompressible and compressible fluids; dimensional analysis boundary layers; conduit and open channel systems; simple applications to turbo machinery.",
+    "prerequisites": {
+      "text": "BREE 210, AEMA 202",
+      "tree": {
+        "and": [
+          "BREE 210",
+          "AEMA 202"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures and one 2-hour lab or problems per week.",
+      "This course carries an additional course charge for field trips.",
+      "This course carries an additional charge of $35.05 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "BREE 312",
+    "subject": "BREE",
+    "number": "312",
+    "title": "Electric Circuits and Machines",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "General circuit laws and DC circuits; electromagnetic circuits; inductance and capacitance, natural and forced response of circuits; analysis of single phase and three phase networks; transformers, AC and DC motors/generators.",
+    "prerequisites": {
+      "text": "AEMA 305.",
+      "tree": "AEMA 305",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures and one 2-hour lab or problems per week."
+    ]
+  },
+  {
+    "code": "BREE 314",
+    "subject": "BREE",
+    "number": "314",
+    "title": "Agri-Food Buildings",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis and design of structures to house animals and plants and to process and store animal and plant products. Introduction to environmental control systems and animal waste management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures and 2-hour lab per week.",
+      "This course carries an additional course charge for field trips.",
+      "Analysis and design of structures to house animals and plants and to process and store animal and plant products. Introduction to environmental control systems and animal waste management.",
+      "This course carries an additional course charge of $140.68 to cover transportation costs for field trips which may include an agri-centre, sugar shack and winery."
+    ]
+  },
+  {
+    "code": "BREE 319",
+    "subject": "BREE",
+    "number": "319",
+    "title": "Engineering Mathematics",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced topics in engineering mathematics, including systems of ordinary differential equations, stability analysis, special functions, orthogonal functions and Fourier series, boundary value problems in various coordinate systems, and integral transforms. The use of computer-based mathematical tools is an integral part of the course.",
+    "prerequisites": {
+      "text": "AEMA 305 and BREE 252, or equivalents.",
+      "tree": {
+        "and": [
+          "AEMA 305",
+          "BREE 252"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 319.",
+      "excludes": [
+        "ABEN 319"
+      ]
+    },
+    "notes": [
+      "3 hours of lecture and 1 hour of conference per week"
+    ]
+  },
+  {
+    "code": "BREE 322",
+    "subject": "BREE",
+    "number": "322",
+    "title": "Management of Organic Residue",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Engineering aspects of handling, storage, and treatment of organic residues in agricultural and municipal contexts. Technologies, design approaches, and management strategies for resource recovery and increasing the circularity of material and energy flows.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 lectures and one 2-hour lab",
+      "A fee of $52.53 is charged to support a field trip to local waste management facilities for guided tour and information-gathering for a course assignment as well as some laboratory supplies for hands-on composting and/or anaerobic digestion lab."
+    ]
+  },
+  {
+    "code": "BREE 324",
+    "subject": "BREE",
+    "number": "324",
+    "title": "Elements of Food Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A course in basic food engineering for non-engineering students, covering heat transfer, mass and energy balances, food process unit operations, material transport/ steam/refrigeration systems.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "FDSC 330",
+      "tree": "FDSC 330",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students in any of the B.Eng.(Bioresource) programs.; Not open to students who have taken BREE 325.",
+      "excludes": [
+        "BREE 325"
+      ]
+    },
+    "notes": [
+      "Two 1.5-hour lectures and one 3-hour lab per week"
+    ]
+  },
+  {
+    "code": "BREE 325",
+    "subject": "BREE",
+    "number": "325",
+    "title": "Food Process Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Heat and mass transfer, enthalpy and mass balances, sterilizing, freezing, fluid flow, pipes, steam, refrigeration, pumps and valves.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BREE 324",
+      "excludes": [
+        "BREE 324"
+      ]
+    },
+    "notes": [
+      "Three lectures and one 3-hour lab per week."
+    ]
+  },
+  {
+    "code": "BREE 327",
+    "subject": "BREE",
+    "number": "327",
+    "title": "Bio-Environmental Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to how humans affect the earth's ecosystem and projections for the needs of food, water, air and energy to support the human population. Ecologically-reasonable coping strategies including biofuels, bioprocessing, waste management, and remediation methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open to U2 students and above.",
+      "This course carries an additional course charge for field trips.",
+      "This course carries an additional course charge of $12.95 to cover transportation costs for field trips which may include a solar installation site and if registrations permit, a bio-ethanol plant. The fee is refundable only during the withdrawal with full refund period"
+    ]
+  },
+  {
+    "code": "BREE 329",
+    "subject": "BREE",
+    "number": "329",
+    "title": "Precision Agriculture",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course provides an overview of the principle concepts of precision agriculture. It focuses on equipment, software and the information management systems for mastering the essential steps when adopting and developing economically viable and environmentally sound solutions for modern farms and other agribusiness enterprises.",
+    "prerequisites": {
+      "text": "AEBI 210 or PLNT 200, or equivalent approved by the instructor.",
+      "tree": {
+        "or": [
+          "AEBI 210",
+          "PLNT 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FMT4 027",
+      "excludes": [
+        "FMT4 027"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 341",
+    "subject": "BREE",
+    "number": "341",
+    "title": "Mechanics of Materials",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Stress, strain, resilience, elastic and plastic properties of materials; bending moment and shear force diagrams; bending and shear stress; deflections; simple, fixed and continuous beams, torsion and helical springs, reinforced concrete beams; columns, bending and direct stress; general case of plane stress; Mohr's circle.",
+    "prerequisites": {
+      "text": "BREE 210",
+      "tree": "BREE 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures and one 3-hour lab per week."
+    ]
+  },
+  {
+    "code": "BREE 403",
+    "subject": "BREE",
+    "number": "403",
+    "title": "Biological Material Properties",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Relationships between composition, structure and properties of biological materials. Measurement methods and use of mechanical, thermal, electromagnetic, chemical and functional properties in the design of new applications and product development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BREE 423.",
+      "excludes": [
+        "BREE 423"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 412",
+    "subject": "BREE",
+    "number": "412",
+    "title": "Machinery Systems Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Study and analysis of machines for tillage, harvesting, crop processing and handling. Field tests, load studies, design requirements; design of machines and components for agricultural applications.",
+    "prerequisites": {
+      "text": "BREE 341",
+      "tree": "BREE 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures and one 3-hour lab per week"
+    ]
+  },
+  {
+    "code": "BREE 415",
+    "subject": "BREE",
+    "number": "415",
+    "title": "Design of Machines and Structural Elements ",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Design of shafts, bearings, gears, fasteners, and frames. Material selection and introduction to advanced materials for machine and structural design applications. Stress, strain, and deflection analysis for standard machine and structural elements. Predicting mechanical failure caused by static and variable (fatigue) loads using proper design criteria. Applying fundamental concepts for the analysis and design of machine elements (shafts, gears, and bearings). Integrating the design of individual machine elements into larger systems and applying numerical modeling (finite element method), engineering drawing, and 3D printing for validation and rapid prototyping of designed machine and structural elements.",
+    "prerequisites": {
+      "text": "BREE 210, BREE 216, and BREE 341",
+      "tree": {
+        "and": [
+          "BREE 210",
+          "BREE 216",
+          "BREE 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BREE 315.",
+      "excludes": [
+        "BREE 315"
+      ]
+    },
+    "notes": [
+      "3 hours of lecture and 2 hours of problems per week",
+      "A course fee of $20.0 is to pay for supplies used in fused-deposition modeling (FDM) and Stereoithography (SLA) for 3D printing of structural and machine elements. The fee is associated with the printing materials and accessories used in lab sessions."
+    ]
+  },
+  {
+    "code": "BREE 419",
+    "subject": "BREE",
+    "number": "419",
+    "title": "Structural Design",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Structural Design in steel and timber; application of complete design procedures to working stress design; plastic design for ultimate loading.",
+    "prerequisites": {
+      "text": "BREE 341",
+      "tree": "BREE 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures and one 3-hour lab or design problems per week."
+    ]
+  },
+  {
+    "code": "BREE 420",
+    "subject": "BREE",
+    "number": "420",
+    "title": "Engineering for Sustainability",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and practices of engineering for sustainability. Emphasis on environmental, economic, social, management and policy factors that should be incorporated into sustainable approaches to engineering and design. Topics will include: sustainability metrics, systems thinking, stakeholder engagement, and leading change for sustainability within companies.",
+    "prerequisites": {
+      "text": "FACC 300 or permission of instructor",
+      "tree": "FACC 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 451",
+    "subject": "BREE",
+    "number": "451",
+    "title": "Undergraduate Seminar 1 - Oral Presentation",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Attendance and participation in departmental undergraduate seminars, where each student must give an oral presentation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 452",
+    "subject": "BREE",
+    "number": "452",
+    "title": "Undergraduate Seminar 2 Poster Presentation",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Attendance and participation in departmental undergraduate seminars. All students will be required to prepare and present a poster.",
+    "prerequisites": {
+      "text": "BREE 451",
+      "tree": "BREE 451",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 453",
+    "subject": "BREE",
+    "number": "453",
+    "title": "Undergraduate Seminar 3 - Scientific Writing",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Attendance and participation in undergraduate departmental seminars and science writing workshops.",
+    "prerequisites": {
+      "text": "BREE 452",
+      "tree": "BREE 452",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 485",
+    "subject": "BREE",
+    "number": "485",
+    "title": "Senior Undergraduate Seminar",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Attendance and participation in departmental seminars, and a small written project report.",
+    "prerequisites": {
+      "text": "BREE 453",
+      "tree": "BREE 453",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 490",
+    "subject": "BREE",
+    "number": "490",
+    "title": "Engineering Design 2",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Working in design teams, an engineering design proposal is developed. The proposal integrates technical requirements with real-world constraints, including sustainability, environment, universal design, human and workplace safety, and social and economic factors.",
+    "prerequisites": {
+      "text": "CHEE 315 or MECH 346, BREE 415.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CHEE 315",
+              "MECH 346"
+            ]
+          },
+          "BREE 415"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "One lecture per week."
+    ]
+  },
+  {
+    "code": "BREE 495",
+    "subject": "BREE",
+    "number": "495",
+    "title": "Engineering Design 3",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Implementation of a proposed engineering design project. Documentation and communication of project outcomes through formal written reports and oral presentations along with reflection on individual and teamwork.",
+    "prerequisites": {
+      "text": "BREE 490",
+      "tree": "BREE 490",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "One lecture per week."
+    ]
+  },
+  {
+    "code": "BREE 497",
+    "subject": "BREE",
+    "number": "497",
+    "title": "Bioresource Engineering Project",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent study for design and experimental work on a bioresource engineering topic chosen in consultation between the student and departmental staff.",
+    "prerequisites": {
+      "text": "BREE 205 and BREE 327",
+      "tree": {
+        "and": [
+          "BREE 205",
+          "BREE 327"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 501",
+    "subject": "BREE",
+    "number": "501",
+    "title": "Simulation and Modelling",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Philosophical and mathematical principles of computational modelling and simulation: Concepts of verification, parameterization, validation, and sensitivity analysis. Introduction to basic concepts of finite element modelling: Direct stiffness and weighted residual methods. Introduction to software packages for general systems and multiphysics, finite-element-based modeling. Emphasis on biosystems engineering applications, e.g., ecosystem dynamics, material properties, solid and structural mechanics, heat transfer, fluid dynamics, electrical and machinery systems.",
+    "prerequisites": {
+      "text": "BREE 252; AEMA 305; or permission of instructor.",
+      "tree": {
+        "and": [
+          "BREE 252",
+          "AEMA 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 students and above",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 502",
+    "subject": "BREE",
+    "number": "502",
+    "title": "Soil and Water Resource Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Water use in agriculture; soil loss by water and erosion; reservoirs and embankments; water and sediment control structures; water supply; Introduction to drainage; design and construction of drainage systems; irrigation principles; design and layout of sprinkler and drip irrigation systems; subirrigation and water table management; pipe hydraulics, pumps and pumping stations.",
+    "prerequisites": {
+      "text": "BREE 217",
+      "tree": "BREE 217",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BREE 416.",
+      "excludes": [
+        "BREE 416"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 503",
+    "subject": "BREE",
+    "number": "503",
+    "title": "Water: Society, Law and Policy",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Water and society and the ramifications at the local, national and international scales with respect to legal and public policy issues related to, for example, drinking water quality, transboundary water management, public involvement, First Nations, agriculture, governance, and institutions relevant to the management of water resources.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the M.Sc. Bioresource Engineering (Non-Thesis): Integrated Water Resources Management program or other graduate students by permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BREE 504",
+    "subject": "BREE",
+    "number": "504",
+    "title": "Instrumentation and Control",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of instrumentation and control systems used in bioresource engineering. Hands-on development of data acquisition systems and learning strategies to process and interpret the signal obtained constitute the majority of the course.",
+    "prerequisites": {
+      "text": "BREE 252 and BREE 312 or equivalents.",
+      "tree": {
+        "and": [
+          "BREE 252",
+          "BREE 312"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lecture hours and one 2-hour lab per week during Fall term every year"
+    ]
+  },
+  {
+    "code": "BREE 505",
+    "subject": "BREE",
+    "number": "505",
+    "title": "Life Cycle Assessment for Sustainable Agrifood Systems",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of the methods for food system sustainability assessment and their trade-offs, focusing on conducting environmental life cycle assessment, life cycle costing, and an introduction to social life cycle assessment for agrifood systems (crops and livestock). Additionally, methods for trade-off analysis among the three sustainability dimensions – environment, economics, social – will be evaluated and applied to agrifood system optimization and sustainability decision-making.",
+    "prerequisites": {
+      "text": "BREE 420 or equivalent or permission of the instructor",
+      "tree": "BREE 420",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students and above",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 506",
+    "subject": "BREE",
+    "number": "506",
+    "title": "Advances in Drainage Management",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Land drainage in relation to soils and crops. Design of regional drainage systems, stability of ditches, ice problems. Design of subsurface drainage systems. Theories of flow into drain tubes. Hydraulics of wells. Drainage of irrigated lands. Water table control.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 506.",
+      "excludes": [
+        "ABEN 506"
+      ]
+    },
+    "notes": [
+      "3 weeks intensive course"
+    ]
+  },
+  {
+    "code": "BREE 507",
+    "subject": "BREE",
+    "number": "507",
+    "title": "Renewable Energy",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The analysis and design of renewable energy systems, with a focus on solar, bioenergy, wind, and hydro. Analysis of energy resources, energy conversion technologies, system modelling and controls.",
+    "prerequisites": {
+      "text": "BREE 301, BREE 305, and (CHEE 315 or MECH 346), or equivalents",
+      "tree": {
+        "and": [
+          "BREE 301",
+          "BREE 305",
+          {
+            "or": [
+              "CHEE 315",
+              "MECH 346"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CHEE 400.",
+      "excludes": [
+        "CHEE 400"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 509",
+    "subject": "BREE",
+    "number": "509",
+    "title": "Hydrologic Systems and Modelling",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Hydrologic cycle in the nature and how to quantitatively describe those processes using models. The fundamentals of hydrology including basic concepts, precipitation, snow and snowmelt, evapotranspiration, subsurface flow, infiltration and soil water movement, and runoff and streamflow. Equivalent attention to theories and hands-on practices on model application. How to set up and execute weather data driven physical based models, both at a point-scale and a watershed scale, to predict snowmelt, evapotranspiration, infiltration, soil water redistribution, subsurface drainage, runoff, and stream flow in hydrologic systems.",
+    "prerequisites": {
+      "text": "BREE 217 or equivalent.",
+      "tree": "BREE 217",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hour lectures"
+    ]
+  },
+  {
+    "code": "BREE 510",
+    "subject": "BREE",
+    "number": "510",
+    "title": "Watershed Systems Management",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A holistic examination of methods in watershed management with a focus on integrated water resources management (IWRM). Topics include: integration, participatory management, water resources assessment, modeling, planning, adaptive management, transboundary management, and transition management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 students or above.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-2-4)",
+      "Note: Case studies and a project."
+    ]
+  },
+  {
+    "code": "BREE 512",
+    "subject": "BREE",
+    "number": "512",
+    "title": "Soil Cutting and Tillage",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Soil mechanics applied to cutting, tillage and drain installation tools. Soil cutting forces for two and three dimensional implements. Soil loosening, inversion, sorting and manipulation. Selection of traction machines to match soil cutting and tillage requirements. Depth and grade control systems. Analysis of drainage machines, wheel trenchers, chain trenchers and trenchless plows.",
+    "prerequisites": {
+      "text": "BREE 341 (formerly ABEN 341)",
+      "tree": {
+        "and": [
+          "BREE 341",
+          "ABEN 341"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 512.",
+      "excludes": [
+        "ABEN 512"
+      ]
+    },
+    "notes": [
+      "2 lectures and one 2-hour lab"
+    ]
+  },
+  {
+    "code": "BREE 518",
+    "subject": "BREE",
+    "number": "518",
+    "title": "Ecological Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Concepts and practice of ecological engineering: the planned creation or management of a community of organisms, their nonliving surroundings, and technological components to provide services. Survey of applications such as constructed wetlands, aquatic production systems, green infrastructure for urban storm water management, environmental restoration. Taught cooperatively with a parallel course at University of Nebraska-Lincoln. Online collaboration with an interdisciplinary, international team is an important component of the course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "One 3-hour lecture per week."
+    ]
+  },
+  {
+    "code": "BREE 519",
+    "subject": "BREE",
+    "number": "519",
+    "title": "Advanced Food Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced topics in food engineering. Concepts of mathematical modelling and research methodologies in food engineering. Topics include heat and mass transfer in food systems, packaging and distribution of food products, thermal and non-thermal processing, rheology and kinetics of food transformations.",
+    "prerequisites": {
+      "text": "BREE 325, or permission of instructor.",
+      "tree": "BREE 325",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Three lectures and one 2-hour lab per week."
+    ]
+  },
+  {
+    "code": "BREE 520",
+    "subject": "BREE",
+    "number": "520",
+    "title": "Food, Fibre and Fuel Elements",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Analysis and design incorporating the four elements required by organisms and biomass for food, fibre and fuel production (air, earth, energy, and water). Special emphasis will be placed on the demands and requirements of engineering systems to control these elements and allow optimal growth in semi-controlled and completely controlled environments.",
+    "prerequisites": {
+      "text": "BREE 327",
+      "tree": "BREE 327",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 522",
+    "subject": "BREE",
+    "number": "522",
+    "title": "Bio-Based Polymers",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The structure and properties of selected biomass (e.g. vegetable oils and starches) will be reviewed. The synthesis of bio-based polymers through chemical modification, casting, compression and extrusion among other methods will be studied. The physical properties of the resulting matrices will then be reviewed. Commercial applications will be examined.",
+    "prerequisites": {
+      "text": "BREE 216 and BREE 341 or permission of instructor",
+      "tree": {
+        "and": [
+          "BREE 216",
+          "BREE 341"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 529",
+    "subject": "BREE",
+    "number": "529",
+    "title": "GIS for Natural Resource Management",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Applications of Geographic Information Systems (GIS) and spatial analysis techniques to the presentation and analysis of ecological information, including sources and capture of spatial data; characterizing, transforming, displaying spatial data; and spatial analysis to solve resource management problems.",
+    "prerequisites": {
+      "text": "At least one environmental science course and one ecology course or permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 students and above. Not open to students who have taken GEOG 201, GEOG 306, GEOG 307, ENVB/BREE 430, or ENVB 529. Limited to 32 students.",
+      "excludes": [
+        "BREE 430",
+        "ENVB 529",
+        "GEOG 201",
+        "GEOG 306",
+        "GEOG 307"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BREE 530",
+    "subject": "BREE",
+    "number": "530",
+    "title": "Fermentation Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced topics in food and fermentation engineering are covered, including brewing, bioreactor design and control and microbial kinetics.",
+    "prerequisites": {
+      "text": "BREE 305 or equivalent",
+      "tree": "BREE 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 lectures and one 3-hour lab",
+      "Graduate courses available to senior undergraduates with permission of the instructor",
+      "A fee of $131.95 covers the cost of the fermentation laboratory consumables and transportation costs for field trips which may include a brewery, winery and other fermentation operations"
+    ]
+  },
+  {
+    "code": "BREE 531",
+    "subject": "BREE",
+    "number": "531",
+    "title": "Post-Harvest Drying",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Heat and moisture transfer with respect to drying of agricultural commodities; techniques of enhancement of heat and mass transfer; drying efficiency and scale-up problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students or above.",
+      "excludes": []
+    },
+    "notes": [
+      "This course carries an additional course charge for field trips.",
+      "This course carries an additional course charge of $49.74 to cover transportation costs for two field trips which may include at least two visits to distinctly different drying facilities in the field."
+    ]
+  },
+  {
+    "code": "BREE 532",
+    "subject": "BREE",
+    "number": "532",
+    "title": "Post-Harvest Storage",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Active, semi-passive and passive storage systems; environmental control systems; post-harvest physiology and pathogenicity; quality assessment and control methodology; economic aspects of long-term storage.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students or above.",
+      "excludes": []
+    },
+    "notes": [
+      "This course carries an additional course charge for field trips.",
+      "This course carries an additional charge of $52.40 to cover the cost of transportation (bus rental) for local field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "BREE 533",
+    "subject": "BREE",
+    "number": "533",
+    "title": "Water Quality Management",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The water phases of terrestrial ecological systems and the processes that link them. Physical, chemical, and biological properties of water, and water quality standards. The fate and transport of pollutants in rivers and streams, lakes, and wetlands. Methods to quantify soil carbon and nitrogen cycle to predict nutrient leaching. Impacts of human activities (e.g., agricultural drainage) on water quality and measures to improve drainage water quality. Assess the effectiveness of proposed engineering measures or management practices in improving or maintaining water quality of a real site/water body using numerical methods or a computer modelling approach.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BREE 625 (formerly ABEN 625).",
+      "excludes": [
+        "ABEN 625",
+        "BREE 625"
+      ]
+    },
+    "notes": [
+      "Management of water quality for sustainability. Cause of soil degradation, surface and groundwater contamination by agricultural chemicals and toxic pollutants. Screening and mechanistic models. Human health and safety concerns. Water table management. Soil and water conservation techniques will be examined with an emphasis on methods of prediction and best management practices.",
+      "This course carries an additional charge of $61.80 to cover the cost of transportation with respect to a field trip. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "BREE 535",
+    "subject": "BREE",
+    "number": "535",
+    "title": "Food Safety Engineering",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "The application of engineering principles to address microbial and chemical safety challenges in food processing, including intervention technologies (traditional and novel non-thermal intervention technologies, chemical interventions, and hurdle approach); control, monitoring and identification techniques (biosensors); packaging applications in food safety (active packaging, intelligent or smart packaging); and tracking and traceability systems.",
+    "prerequisites": {
+      "text": "BREE 324 or BREE 325 or FDSC 330 or permission of the instructor",
+      "tree": {
+        "or": [
+          "BREE 324",
+          "BREE 325",
+          "FDSC 330"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 600",
+    "subject": "BREE",
+    "number": "600",
+    "title": "Project/Internship Proposal",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation of research proposals for BREE 671 and BREE 672 research projects and/or preparation of the internship programs with government, non-governmental organizations or private sector, for BREE 601 and BREE 602.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to graduate students registered in the M.Sc.(A.) in Bioresource Engineering; Non-Thesis - Integrated Food and Bioprocessing.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 601",
+    "subject": "BREE",
+    "number": "601",
+    "title": "Integrated Food and Bioprocessing Internship 1",
+    "credits": 6,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Placement in a government, non-governmental organization or private sector agency for 6 weeks of full- time work on a bioprocess and food security project (35 hr per week). Students will be responsible for defining a mandate, then performing and reporting on the work/research performed during the internship.",
+    "prerequisites": {
+      "text": "BREE 600.",
+      "tree": "BREE 600",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to graduate students registered in the M.Sc.(A.) in Bioresource Engineering; Non-Thesis - Integrated Food and Bioprocessing.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 602",
+    "subject": "BREE",
+    "number": "602",
+    "title": "Integrated Food and Bioprocessing Internship 2",
+    "credits": 6,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Placement in a government, non-governmental organization or private sector agency for 6 weeks of full- time work on a bioprocess and food security project (35 hr per week). Students will be responsible for defining a mandate, then performing and reporting on the work/research performed during the internship.",
+    "prerequisites": {
+      "text": "BREE 600.",
+      "tree": "BREE 600",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to graduate students registered in the M.Sc.(A.) in Bioresource Engineering; Non-Thesis - Integrated Food and Bioprocessing.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 603",
+    "subject": "BREE",
+    "number": "603",
+    "title": "Advanced Properties: Food and Plant Materials",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced topics related the physico-chemical characteristics/properties of biological products: including mechanical, thermal, electromagnetic and functional properties. Emphasis will be on food constituents (nutraceuticals), plants of pharmaco-interest (phytochemicals), new sources of natural fibers and biofuel biomass.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 608",
+    "subject": "BREE",
+    "number": "608",
+    "title": "Special Problems in Bioresource Engineering 1",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Laboratory, field and library studies and reports on special problems related to agricultural and biosystems engineering that are not covered in regular course work.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 608.",
+      "excludes": [
+        "ABEN 608"
+      ]
+    },
+    "notes": [
+      "2 conferences, either term"
+    ]
+  },
+  {
+    "code": "BREE 623",
+    "subject": "BREE",
+    "number": "623",
+    "title": "Proposal Preparation",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Critiques of proposals prepared by others. Preparation and defense of a research proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Non-thesis graduate students in the department of Bioresource Engineering.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours conferences"
+    ]
+  },
+  {
+    "code": "BREE 630",
+    "subject": "BREE",
+    "number": "630",
+    "title": "Integrated Water Resources Management Internship",
+    "credits": 13,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Placement in a government, or private sector agency for 13 weeks of full-time work on an integrated water resource management project (35 hours per week). Student shall be responsible for defining a mandate, then performing and reporting on the work/research performed. This course is now to be offered both in the Winter semester (new) and the Summer semester (current).",
+    "prerequisites": {
+      "text": "BREE 510 and BREE 655",
+      "tree": {
+        "and": [
+          "BREE 510",
+          "BREE 655"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "BREE 631",
+      "tree": "BREE 631",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students enrolled in the Non-Thesis IWRM program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 631",
+    "subject": "BREE",
+    "number": "631",
+    "title": "Integrated Water Resources Management Project",
+    "credits": 6,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To broaden the scope of the IWRM internship experience (BREE 630) in the form of a research paper or 'plan of action' that expands on the water resources management problem(s) or issue(s) examined in the internship. This course is now to be offered both in the Winter semester (new) and the Summer semester (current).",
+    "prerequisites": {
+      "text": "BREE 510 and BREE 655",
+      "tree": {
+        "and": [
+          "BREE 510",
+          "BREE 655"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "BREE 630",
+      "tree": "BREE 630",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students enrolled in the Non-Thesis IWRM program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 651",
+    "subject": "BREE",
+    "number": "651",
+    "title": "Departmental Seminar M.Sc. 1",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To give seminars and participate in discussions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 651.",
+      "excludes": [
+        "ABEN 651"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 652",
+    "subject": "BREE",
+    "number": "652",
+    "title": "Departmental Seminar M.Sc. 2",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To give seminars and participate in discussions.",
+    "prerequisites": {
+      "text": "BREE 651",
+      "tree": "BREE 651",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 655",
+    "subject": "BREE",
+    "number": "655",
+    "title": "Integrated Water Resources Management Research Visits",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Class visits to various firms and agencies working in the realm of integrated water resources management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Non-thesis IWRM program.",
+      "excludes": []
+    },
+    "notes": [
+      "Visits occur in alternate weeks; each visit is followed by research and submission of a written report.",
+      "This course carries an additional course charge of $78.51 to cover transportation costs for field trips related to the course."
+    ]
+  },
+  {
+    "code": "BREE 671",
+    "subject": "BREE",
+    "number": "671",
+    "title": "Project 1",
+    "credits": 6,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 671 or ABEN 671D1/D2.",
+      "excludes": [
+        "ABEN 671",
+        "ABEN 671D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 672",
+    "subject": "BREE",
+    "number": "672",
+    "title": "Project 2",
+    "credits": 6,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 672 or ABEN 672D1/D2.",
+      "excludes": [
+        "ABEN 672",
+        "ABEN 672D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 691",
+    "subject": "BREE",
+    "number": "691",
+    "title": "M.Sc. Thesis 1",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Problem definition and literature Review.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 691.",
+      "excludes": [
+        "ABEN 691"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 692",
+    "subject": "BREE",
+    "number": "692",
+    "title": "M.Sc. Thesis 2",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Written and oral presentation of thesis proposal to the research Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 693",
+    "subject": "BREE",
+    "number": "693",
+    "title": "M.Sc. Thesis 3",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Methodology development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 694",
+    "subject": "BREE",
+    "number": "694",
+    "title": "M.Sc. Thesis 4",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Experimentation 1.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 695",
+    "subject": "BREE",
+    "number": "695",
+    "title": "M.Sc. Thesis 5",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Experimentation 2.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 696",
+    "subject": "BREE",
+    "number": "696",
+    "title": "M.Sc. Thesis 6",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Data analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 697",
+    "subject": "BREE",
+    "number": "697",
+    "title": "M.Sc. Thesis 7",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Draft thesis preparation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 698",
+    "subject": "BREE",
+    "number": "698",
+    "title": "M.Sc. Thesis 8",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Thesis completion and acceptance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 699",
+    "subject": "BREE",
+    "number": "699",
+    "title": "Scientific Publication",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review and critique papers that are published in field of the candidate. Prepare draft paper(s) following the format of leading journals in field of study undertaken.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Periodic conferences"
+    ]
+  },
+  {
+    "code": "BREE 701",
+    "subject": "BREE",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BREE 702",
+    "subject": "BREE",
+    "number": "702",
+    "title": "Special Problems in Bioresource Engineering 2",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced level laboratory, field and library studies and reports on special problems related to agricultural and biosystems engineering which are not covered in regular course work. Designed for doctoral level students with experience in postgraduate studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 702.",
+      "excludes": [
+        "ABEN 702"
+      ]
+    },
+    "notes": [
+      "2 conferences, either term"
+    ]
+  },
+  {
+    "code": "BREE 708",
+    "subject": "BREE",
+    "number": "708",
+    "title": "Special Problems in Bioresource Engineering 2",
+    "credits": 3,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced level laboratory, field and library studies and reports on special problems related to agricultural and biosystems engineering which are not covered in regular course work. Designed for doctoral level students with experience in postgraduate studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BREE 702.",
+      "excludes": [
+        "BREE 702"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 751",
+    "subject": "BREE",
+    "number": "751",
+    "title": "Departmental Seminar Ph.D. 1",
+    "credits": 0,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To give seminars and participate in discussions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 751.",
+      "excludes": [
+        "ABEN 751"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 752",
+    "subject": "BREE",
+    "number": "752",
+    "title": "Departmental Seminar Ph.D. 2",
+    "credits": 0,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To give seminars and participate in discussions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 752.",
+      "excludes": [
+        "ABEN 752"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 753",
+    "subject": "BREE",
+    "number": "753",
+    "title": "Departmental Seminar Ph.D. 3",
+    "credits": 0,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To give seminars and participate in discussion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 753.",
+      "excludes": [
+        "ABEN 753"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BREE 754",
+    "subject": "BREE",
+    "number": "754",
+    "title": "Departmental Seminar Ph.D. 4",
+    "credits": 0,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "To give seminars and participate in discussions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ABEN 754",
+      "excludes": [
+        "ABEN 754"
+      ]
+    },
+    "notes": []
+  }
+]

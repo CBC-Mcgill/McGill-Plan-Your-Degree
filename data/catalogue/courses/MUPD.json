@@ -1,0 +1,340 @@
+[
+  {
+    "code": "MUPD 135",
+    "subject": "MUPD",
+    "number": "135",
+    "title": "Music as a Profession 1",
+    "credits": 1,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Music Professional Development: An introduction to information, resources, and skills related to physical, mental, and professional well-being for the musician and scholar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open to B.Mus. students or by permission of the instructor."
+    ]
+  },
+  {
+    "code": "MUPD 145",
+    "subject": "MUPD",
+    "number": "145",
+    "title": "Exploring Interdisciplinary Music Studies 1",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction of interdisciplinary perspectives on the musician’s role in society and the ways in which musicianship may be partnered with social responsibility in the development of professional music careers. Exploration of the many ways in which musical skills and artistry are used to serve the needs of a diverse range of communities, and the interdisciplinary skillsets that may be relevant to different musical pathways.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUPD 200",
+    "subject": "MUPD",
+    "number": "200",
+    "title": "Introduction to Music Marketing",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Business models for monetizing music effectively in the digital era; music marketing fundamentals; music value chain; traditional and new marketing tools; publicity, advertising and promotion; the e-press kit; touring and merchandising; online distribution; social network marketing strategies; rebirth of video content; viral marketing; marketing for subscriptions, wireless; global perspectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUPD 201",
+    "subject": "MUPD",
+    "number": "201",
+    "title": "Business Fundamentals for Musicians",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Topics pertaining to the music industry and developing a career in music, including: business models, budgeting and financial planning, accounting and taxation, agents, representatives and consultants, contracts and agreements, licensing, rights and rights management, managing human resources, building and working with teams.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUPD 204",
+    "subject": "MUPD",
+    "number": "204",
+    "title": "Production for Digital Media 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental video production techniques for music and general applications. Professional video camera operation, lighting and shooting techniques. The lab component of the course includes camera setup and operation during Schulich School of Music productions for live internet streaming. Capture and editing of video, audio, text and graphics for use in creating digital media. Basic techniques of recording audio for video.",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment will be limited to 16.",
+      "excludes": []
+    },
+    "notes": [
+      "A Macintosh laptop will be an asset."
+    ]
+  },
+  {
+    "code": "MUPD 205",
+    "subject": "MUPD",
+    "number": "205",
+    "title": "Production for Digital Media 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Editing, mixing, and exporting, audio, video, text and graphics. Compression and synchronization. Post-production: ProTools for sound editing and multi-channel mixing. Final Cut Pro for video editing and mixing. Practical application of these tools. Critical listening and viewing skills.",
+    "prerequisites": {
+      "text": "MUPD 204 and permission of the instructor",
+      "tree": "MUPD 204",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUPD 235",
+    "subject": "MUPD",
+    "number": "235",
+    "title": "Music as a Profession 2",
+    "credits": 1,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An overview of the responsibilities and skills required of professions in music and of the varied career paths leading from a music degree.",
+    "prerequisites": {
+      "text": "MUPD 135",
+      "tree": "MUPD 135",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MUPD 136.",
+      "excludes": [
+        "MUPD 136"
+      ]
+    },
+    "notes": [
+      "Open to BMus students in U2 and U3, or by permission of the instructor."
+    ]
+  },
+  {
+    "code": "MUPD 245",
+    "subject": "MUPD",
+    "number": "245",
+    "title": "Exploring Interdisciplinary Music Studies 2",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Investigation of the concept of artistic citizenship.Inquiry into the ways in which musical skills and artistry serve the needs of diverse communities and career pathways.",
+    "prerequisites": {
+      "text": "MUPD 145",
+      "tree": "MUPD 145",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUPD 350",
+    "subject": "MUPD",
+    "number": "350",
+    "title": "Applied Projects for Musicians",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Skills needed in the evolving music business. An interdisciplinary music project that focuses on synthesizing, and putting into practice creative, business, and entrepreneurial skills.",
+    "prerequisites": {
+      "text": "MGPO 362 or MUPD 245, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "MGPO 362",
+          "MUPD 245"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUPD 473",
+    "subject": "MUPD",
+    "number": "473",
+    "title": "Special Project: Professional Development 1",
+    "credits": 1,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Special project in professional development.",
+    "prerequisites": {
+      "text": "Permission of Department Chair and Associate Dean (Student and Academic Affairs).",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Music students after completing 30 credits of a 90-credit program or 45 credits of a 120-credit program; minimum CGPA 3.00.",
+      "excludes": []
+    },
+    "notes": [
+      "Music students must complete a Special Project Proposal Form available from the Music Student Affairs Office and submit it to the Chair of the student's department for approval. This course will be counted towards Music and/or Free Electives in B.Mus. programs."
+    ]
+  },
+  {
+    "code": "MUPD 474",
+    "subject": "MUPD",
+    "number": "474",
+    "title": "Special Project: Professional Development 2",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Special project in professional development.",
+    "prerequisites": {
+      "text": "Permission of Department Chair and Associate Dean (Student and Academic Affairs).",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Music students after completing 30 credits of a 90-credit program or 45 credits of a 120-credit program; minimum CGPA 3.00.",
+      "excludes": []
+    },
+    "notes": [
+      "Music students must complete a Special Project Proposal Form available from the Music Student Affairs Office and submit it to the Chair of the student's department for approval. This course will be counted towards Music and/or Free Electives in B.Mus. programs."
+    ]
+  },
+  {
+    "code": "MUPD 475",
+    "subject": "MUPD",
+    "number": "475",
+    "title": "Special Project: Professional Development 3",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Special project in professional development.",
+    "prerequisites": {
+      "text": "Permission of Department Chair and Associate Dean (Student and Academic Affairs).",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Music students after completing 30 credits of a 90-credit program or 45 credits of a 120-credit program; minimum CGPA 3.00.",
+      "excludes": []
+    },
+    "notes": [
+      "Music students must complete a Special Project Proposal Form available from the Music Student Affairs Office and submit it to the Chair of the student's department for approval. This course will be counted towards Music and/or Free Electives in B.Mus. programs."
+    ]
+  },
+  {
+    "code": "MUPD 499",
+    "subject": "MUPD",
+    "number": "499",
+    "title": "Internship: Music Professional Development",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Music internship in professional development with an approved host institution or organization.",
+    "prerequisites": {
+      "text": "Permission of Department Chair and the Associate Dean (Student and Academic Affairs).",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Music students after completing 30 credits of a 90-credit program or 45 credits of an 120-credit program; minimum CGPA 2.70.",
+      "excludes": []
+    },
+    "notes": [
+      "Music students must complete an Internship Proposal Form available from the Music Student Affairs Office and submit it to the Chair of the student's department for approval. This course will be counted towards Music and/or Free Electives in B.Mus. programs."
+    ]
+  },
+  {
+    "code": "MUPD 560",
+    "subject": "MUPD",
+    "number": "560",
+    "title": "Music Information and Research Skills",
+    "credits": 1,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to music information and research skills, including navigation of music information systems and tools, finding and evaluating online and physical resources, and documenting research through appropriate citations; introduction to writing performance-related content (e.g., program/liner notes, grant proposals).",
+    "prerequisites": {
+      "text": "MUHL 286 and one 300-level MUHL or MUPP course",
+      "tree": "MUHL 286",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUPD 580",
+    "subject": "MUPD",
+    "number": "580",
+    "title": "Piano Pedagogy Practicum",
+    "credits": 2,
+    "offeredBy": "Performance",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Observation of studio and master class teaching, videotaped private instruction, and adjudication of student performances.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to pianists in the graduate piano and Artist Diploma programs. Limited enrolment.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUPD 650",
+    "subject": "MUPD",
+    "number": "650",
+    "title": "Research Methods in Music ",
+    "credits": 3,
+    "offeredBy": "Performance",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This interdisciplinary lecture offers an overview of the fundamental principles of research in music. Emphasis is placed on acquainting students with the methods and techniques most commonly used to study music and musical processes. Topics include approaches and theories, artistic research, research project design, procedures for carrying out research, as well as both qualitatively- and quantitatively-oriented methods of data collection, processing and analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

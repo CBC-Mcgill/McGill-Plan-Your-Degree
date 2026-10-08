@@ -1,0 +1,204 @@
+[
+  {
+    "code": "CMRK 200",
+    "subject": "CMRK",
+    "number": "200",
+    "title": "Fundamentals of Marketing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Fundamental theories and principles of strategic marketing. Role of the marketing professional in the corporate environment. Applications of marketing practices to new businesses. Development of a marketing plan.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMRK 225",
+    "subject": "CMRK",
+    "number": "225",
+    "title": "Marketing Statistics and Research",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic statistics for marketing research. Qualitative and quantitative data collection techniques, traditional and digital. Use of secondary on-line data: determining reliability, interpretation, analysis.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CMRK 200",
+      "tree": "CMRK 200",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMRK 235",
+    "subject": "CMRK",
+    "number": "235",
+    "title": "Digital Media Marketing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Electronic marketplaces and their evolving role in Internet business. New channels of marketing, including social media, advertising and communication. Planning, executing, and managing e-commerce. Web analytics, customer analysis, search engine optimization, search engine marketing and issues of permission and privacy.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CMRK 200",
+      "tree": "CMRK 200",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMRK 320",
+    "subject": "CMRK",
+    "number": "320",
+    "title": "Principles of Consumer Behaviour",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundational and emerging concepts of consumer behaviour. Perception, learning, attitude formation and change, decision-making, social influences, motivations, values, lifestyle, geo-demographics and the dynamics of reference groups in social media. Ethical and responsible use of digital marketing tools.",
+    "prerequisites": {
+      "text": "CMRK 200 and CMRK 225.",
+      "tree": {
+        "and": [
+          "CMRK 200",
+          "CMRK 225"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMRK 321",
+    "subject": "CMRK",
+    "number": "321",
+    "title": "Integrated Marketing Communications",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Marketing communications mix: advertising (in both traditional and digital media), publicity, promotion, creative tactics, direct marketing, marketing-oriented public relations, buzz creation, and sponsorships. Communication theory and ethical practice. Use and effects of social media",
+    "prerequisites": {
+      "text": "CMRK 200 and CMRK 225.",
+      "tree": {
+        "and": [
+          "CMRK 200",
+          "CMRK 225"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMRK 322",
+    "subject": "CMRK",
+    "number": "322",
+    "title": "Basics of Service Marketing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Differences between marketing of products and of services. Marketing mix for service business. Balance of supply and demand. Permissible nature of a service in relation to time. Value and quality of services. Managing service operations. Customer satisfaction.",
+    "prerequisites": {
+      "text": "CMRK 200 and CMRK 225.",
+      "tree": {
+        "and": [
+          "CMRK 200",
+          "CMRK 225"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMRK 325",
+    "subject": "CMRK",
+    "number": "325",
+    "title": "Global Marketing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Issues faced by businesses when entering and operating in foreign markets: changes in product, pricing, channels, and communications policies. Export marketing in the Canadian context.",
+    "prerequisites": {
+      "text": "CMRK 200 and CMRK 225.",
+      "tree": {
+        "and": [
+          "CMRK 200",
+          "CMRK 225"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CMRK 430",
+    "subject": "CMRK",
+    "number": "430",
+    "title": "Marketing Applications",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Integrative, capstone course: cultivating skills and techniques required for effective marketing planning. Application of theories and skills learned in previous courses. Situational analysis and problem-solving skills. Cases and marketing simulation.",
+    "prerequisites": {
+      "text": "CMRK 200, CMRK 225, CMRK 235, CMRK 320, CMRK 321, CMRK 322, CMRK 325, CPRL 221 and (CMRK 230 or CGMG 318)",
+      "tree": {
+        "and": [
+          "CMRK 200",
+          "CMRK 225",
+          "CMRK 235",
+          "CMRK 320",
+          "CMRK 321",
+          "CMRK 322",
+          "CMRK 325",
+          "CPRL 221",
+          {
+            "or": [
+              "CMRK 230",
+              "CGMG 318"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

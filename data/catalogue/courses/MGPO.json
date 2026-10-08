@@ -1,0 +1,725 @@
+[
+  {
+    "code": "MGPO 362",
+    "subject": "MGPO",
+    "number": "362",
+    "title": "Fundamentals of Entrepreneurship",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study of the key aspects involved in starting and managing a new venture: identifying opportunities and analyzing new venture ideas, identifying common causes of failure and strategies for success, understanding intellectual property systems, comparison of multiple modes of funding. Applies to for-profit and not-for-profit start-ups.",
+    "prerequisites": {
+      "text": "INTG 201 or INTG 202 or INTG 215 or MGCR 211 or MGCR 352.",
+      "tree": {
+        "or": [
+          "INTG 201",
+          "INTG 202",
+          "INTG 215",
+          "MGCR 211",
+          "MGCR 352"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to U2, U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "Limited enrolment; priority registration to Management students and non-Management students in Minors in Entrepreneurship."
+    ]
+  },
+  {
+    "code": "MGPO 364",
+    "subject": "MGPO",
+    "number": "364",
+    "title": "Entrepreneurship in Practice",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Provides hands-on experience with the development of an entrepreneurial venture or a contribution to an existing entrepreneurial venture. Involves the creation of a venture development or business plan. Applicable to many kinds of new ventures, both private companies and social enterprises.",
+    "prerequisites": {
+      "text": "MGPO 362",
+      "tree": "MGPO 362",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 365",
+    "subject": "MGPO",
+    "number": "365",
+    "title": "Business-Government Relations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The political environment in which business organizations operate: how governments control, regulate, promote, and compete with the private sector and how corporate policy responds to, and seeks to influence, these activities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 & U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 383",
+    "subject": "MGPO",
+    "number": "383",
+    "title": "International Business Policy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Development and application of conceptual approaches to general management policy and strategy formulation in multinational business involvement (exporting, licensing, contractual arrangements, turnkey projects, joint ventures, consortia); technology transfer, location and ownership strategies: competitive multinational relationships. Emphasis on pragmatic analysis, using case studies.",
+    "prerequisites": {
+      "text": "MGCR 382",
+      "tree": "MGCR 382",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 402",
+    "subject": "MGPO",
+    "number": "402",
+    "title": "Dynamic Cities",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "A course which focuses on three key theories of National Competitiveness and includes a visit to a country(ies). The country(ies) visit(s) has a more integrated approach, drawing on material taught in marketing, finance, strategy, OB, etc.., as we apply ideas from all our classes in a foreign context in the organized visits.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Instructor's Permission Required. Not open to students who have taken BUSA 434 when topic course was “Growing National Competitiveness\"",
+      "excludes": [
+        "BUSA 434"
+      ]
+    },
+    "notes": [
+      "Students must take part in the country(ies) visits. There will be a substantial fee associated with this travel. The fee depends on the country(ies) visited, hotels, meals, which will vary from trip to trip."
+    ]
+  },
+  {
+    "code": "MGPO 430",
+    "subject": "MGPO",
+    "number": "430",
+    "title": "Practicum in Not for Profit Consulting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "This course is designed around a pro bono consulting experience. It is meant to connect students to both the NGO community as well as the consulting world. The students go through the entire process of researching potential NGOs, writing and getting a Letter of Proposal Signed off, undertaking the first hand research and analysis, presenting the project results to the Board of the NGO, and finally presenting it to both the professor and the office of the partnering consulting firm. Students are put into teams whose structure is meant to mimic that of a real consulting team.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MGPO 434 when topic course was “Not for Profit Consulting” . Permission of instructor.",
+      "excludes": [
+        "MGPO 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 432",
+    "subject": "MGPO",
+    "number": "432",
+    "title": "Topics in Entrepreneurship",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Specialized advanced topic in entrepreneurship.",
+    "prerequisites": {
+      "text": "MGPO 362",
+      "tree": "MGPO 362",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 433",
+    "subject": "MGPO",
+    "number": "433",
+    "title": "Topics in Social Business and Enterprise",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Specialized advanced topic in social business and enterprise.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 434",
+    "subject": "MGPO",
+    "number": "434",
+    "title": "Topics in Policy 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "This is a specialized course covering an advanced topic in strategy and organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 435",
+    "subject": "MGPO",
+    "number": "435",
+    "title": "The Origins of Capitalism",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course covers the evolution of modern business institutions from their roots in the early middle ages to the modern era. Covering economic issues in the context of arts and culture, it offers a \"distant mirror on globalization.\"",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to U2 and U3 students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 438",
+    "subject": "MGPO",
+    "number": "438",
+    "title": "Social Entrepreneurship and Innovation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Explores key concepts associated with social entrepreneurship and social innovation – the application of principles of entrepreneurship and innovation to solve social problems through social ventures, enterprises and not-for-profit organizations. Focuses on the social economy, including how the market system can be leveraged to create social value.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 440",
+    "subject": "MGPO",
+    "number": "440",
+    "title": "Strategies for Sustainability",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course explores the relationship between economic activity, management, and the natural environment. Using readings, discussions and cases, the course will explore the challenges that the goal of sustainable development poses for our existing notions of economic goals, production and consumption practices and the management of organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 445",
+    "subject": "MGPO",
+    "number": "445",
+    "title": "Industry Analysis and Competitive Strategy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Analysis of industry structure, macro-environment, and evolution. Evaluation of strategic position, behaviour, and intent of organizations within industry context. Development of strategic recommendations for these firms.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MGCR 423",
+      "tree": "MGCR 423",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to U2 and U3 student",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 450",
+    "subject": "MGPO",
+    "number": "450",
+    "title": "Ethics in Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of the economic, legal and ethical responsibilities of managers in both private and public organizations. Through readings, case studies, discussions and projects the class evaluates alternative ethical systems and norms of behaviour and draws conclusions as to the right, proper and just decisions and actions in the face of moral dilemmas. The focus of this course is on the decision process, values and consistency of values of the individual and on the impact of systems control and incentives on managerial morality.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 and U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 460",
+    "subject": "MGPO",
+    "number": "460",
+    "title": "Managing Innovation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Firms face difficulties in developing new products. This course examines the new product development process to understand why problems occur and what managers can do. Topics include the creative synthesis of market and technology; the coordination of functions; and the strategic connection between the project and the strategy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 469",
+    "subject": "MGPO",
+    "number": "469",
+    "title": "Managing Globalization",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course explores economic and social consequences of globalization, focusing on the most pertinent issues at the time. Topics include the existing global imbalances; the opportunities and risks presented by large cross border capital flows; and the role of institutions, and organizational and policy responses in crisis hit countries.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": [
+      "Recommended: MGCR 423"
+    ]
+  },
+  {
+    "code": "MGPO 470",
+    "subject": "MGPO",
+    "number": "470",
+    "title": "Strategy and Organization",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course explores how strategic change affects the organization and how the organization can be designed to realize its strategy more effectively. It will examine how strategic choices affect organizational structures, processes, culture, human resource policies, leadership styles, etc. and how the organization can be aligned with the organizational mission.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 475",
+    "subject": "MGPO",
+    "number": "475",
+    "title": "Strategies for Developing Countries",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Strategic management challenges in developing and emerging economies. Focus on strategies that foster both firm competitiveness and economic development, including: technological capabilities, new forms of organization, small and large firms, global production, social impact, global standards and governance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 485",
+    "subject": "MGPO",
+    "number": "485",
+    "title": "Emerging Technologies: Organizing and Societal Stakes",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An examination of emerging technologies and their impacton decision-making, coordination, control, and innovationin management. Broader societal implications of these technologies and how to develop strategic responses. Focus on an experiential consulting project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students. Not open to students who have taken MGPO 434 when the topic was \"Emerging Technologies: Organizing and Societal Stakes\".",
+      "excludes": [
+        "MGPO 434"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 615",
+    "subject": "MGPO",
+    "number": "615",
+    "title": "Consulting for Change",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Consultation in the area of assisting firms to introduce strategic change including approaches that are used to assess, understand and advise firms whose status quo is no longer considered satisfactory.",
+    "prerequisites": {
+      "text": "M.B.A. One.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 630",
+    "subject": "MGPO",
+    "number": "630",
+    "title": "Managing Strategy and Innovation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Activities from company start-ups and turnarounds to implementing mergers and acquisitions. Examination of how strategic change works in practice and how the strategic transitions faced by organizations of all types can be addressed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 637",
+    "subject": "MGPO",
+    "number": "637",
+    "title": "Cases in Competitive Strategy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The course applies the techniques for analyzing industries to a number of industries (electronics, photocopy, bicycles, chain saws, securities, fibre optics) through the use of specific company cases. The objective is to develop skills and techniques in a competitive environment and define competitive strategies through practical application.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 640",
+    "subject": "MGPO",
+    "number": "640",
+    "title": "Strategies for Sustainable Development",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course aims to produce new knowledge about the multidimensional nature of sustainable development; develop skills required to formulate and implement policies that integrate economic progress with quality of life and the preservation of the biosphere.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 645",
+    "subject": "MGPO",
+    "number": "645",
+    "title": "Strategy in Context",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Exploration of how different environments enable some competitive modes and maneuvers while constraining others. Analysis of industry structure and competitive dynamics and how they evolve; the strategic positioning of firms; how opportunities get constructed and how firm capabilities get linked to them; how competitive advantage is developed and sustained. Introduction to the theories and frameworks will also be critiqued in light of empirical evidence and practitioner experience.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BUSA 690 (when topic was Strategy in Context)",
+      "excludes": [
+        "BUSA 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGPO 651",
+    "subject": "MGPO",
+    "number": "651",
+    "title": "Strategic Management: Developing Countries",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The course examines strategic management challenges in developing countries using lectures and discussion of readings and cases. Topics include economic policy management (national development strategies, structural adjustment, privatization), economic cost/benefit analysis, technology choice and transfer, negotiations between multinational firms and host governments, and strategic management for public enterprise, family-owned firms, economic groups, and developmental organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 669",
+    "subject": "MGPO",
+    "number": "669",
+    "title": "Managing Globalization",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "M.B.A.s need to understand international competitive issues, such as: forces for industry globalization, a firm's international expansion process, and international competitive strategies. Many types of firms will be analyzed, from small U.S. and Canadian firms beginning to explore internationally to large multinationals that are managing investments around the world.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 683",
+    "subject": "MGPO",
+    "number": "683",
+    "title": "International Business Policy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Development and application of conceptual approaches to general management policy and strategy formulation in multinational enterprises. Alternative forms of international business involvement (licenses, contractual arrangements, turnkey projects, joint ventures, full direct investment); formulation and implementation of international, multinational and transnational competitive strategies; technology transfer; ownership strategy; international collaborative arrangements. A combination of conceptual readings and applied case analyses.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 690",
+    "subject": "MGPO",
+    "number": "690",
+    "title": "Advanced Topics in Strategic Management 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Survey of advanced topics in strategic management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 691",
+    "subject": "MGPO",
+    "number": "691",
+    "title": "Advanced Topics in Strategic Management 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Survey of advanced topics in strategic management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 695",
+    "subject": "MGPO",
+    "number": "695",
+    "title": "Advanced Topics in Strategy Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current topics in strategy analytics. Course content will vary each term.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 701",
+    "subject": "MGPO",
+    "number": "701",
+    "title": "Seminar in Qualitative Methods",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on the foundations of qualitative methods, with emphasis on underlying principles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 702",
+    "subject": "MGPO",
+    "number": "702",
+    "title": "New Paradigms: Strategic Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Survey of new paradigms in strategic management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 704",
+    "subject": "MGPO",
+    "number": "704",
+    "title": "Organizational Theory Seminar",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on organizational theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 705",
+    "subject": "MGPO",
+    "number": "705",
+    "title": "Seminar in Policy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 706",
+    "subject": "MGPO",
+    "number": "706",
+    "title": "Perspectives on Innovation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Survey of perspectives on innovatiion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 708",
+    "subject": "MGPO",
+    "number": "708",
+    "title": "Seminar in Strategic Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Course explores questions of business dynamics, including how firms scan the environment, gather information, and deal with information asymmetries; how firms perceive, interpret, and respond to environmental threats; how firms transact under conditions of market failure; as well as process of organizational reconfiguration and integration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGPO 709",
+    "subject": "MGPO",
+    "number": "709",
+    "title": "Social Networks: Concepts, Theory and Applications",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Course will focus on three broad questions - how and why networks form, change and influence behaviour - and will consider networks constituted by entities at multiple levels of analysis, including individuals, groups and organizations. Students will gain an understanding of and appreciation for the concepts and theories associated with social network analysis and their empirical applications and contributions to business research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

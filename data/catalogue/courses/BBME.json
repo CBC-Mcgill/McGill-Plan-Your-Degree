@@ -1,0 +1,273 @@
+[
+  {
+    "code": "BBME 600",
+    "subject": "BBME",
+    "number": "600",
+    "title": "Seminars in Biological and Biomedical Engineering",
+    "credits": 3,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Mandatory attendance at the seminar series at which students present a seminar related to their research",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the second term or later of the M.Eng. in Biological and Biomedical Engineering (Thesis). Not open to students who have taken BMDE 600D1/2.",
+      "excludes": [
+        "BMDE 600D1"
+      ]
+    },
+    "notes": [
+      "1. Students must register for both BBME 600D1 and BBME 600D2",
+      "2. Students must register for BBME 600D1 before registering for BBME 600D2",
+      "3. No credit will be given for this course unless both BBME 600D1 and BBME 600D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "BBME 600D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BBME 600D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "BBME 600N1",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "BBME 600N2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BBME 681",
+    "subject": "BBME",
+    "number": "681",
+    "title": "Internship 1",
+    "credits": 9,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "An internship/research project (minimum 360 hours) related to the practice of Biological and Biomedical Engineering supervised by a practitioner in the biological and biomedical engineering field within an industrial or institutional research centre environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the M.Eng. in Biological and Biomedical Engineering; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": [
+      "Students will be supervised by a BBME faculty member and co-supervised by a qualified supervisor from the host organization."
+    ]
+  },
+  {
+    "code": "BBME 682",
+    "subject": "BBME",
+    "number": "682",
+    "title": "Internship 2 ",
+    "credits": 9,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An internship/research project (minimum 360 hours) related to the practice of Biological and Biomedical Engineering supervised by a practitioner in the biological and biomedical engineering field within an industrial or institutional research centre environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the M.Eng. in Biological and Biomedical Engineering; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": [
+      "This course may be completed in the same organization and under the same supervisor as BBME 681 to consolidate professional knowledge and experience, or in another institution to broaden professional experience and knowledge.",
+      "Students will be supervised by a BBME faculty member and co-supervised by a qualified supervisor from the host organization."
+    ]
+  },
+  {
+    "code": "BBME 693",
+    "subject": "BBME",
+    "number": "693",
+    "title": "Thesis Research 1",
+    "credits": 6,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in M.Eng in Biological and Biomedical Engineering Master's Program (Thesis)",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BBME 694",
+    "subject": "BBME",
+    "number": "694",
+    "title": "Thesis Research 2",
+    "credits": 6,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in M.Eng in Biological and Biomedical Engineering Master's Program (Thesis)",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BBME 695",
+    "subject": "BBME",
+    "number": "695",
+    "title": "Thesis Submission",
+    "credits": 12,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in M.Eng in Biological and Biomedical Engineering Master's Program (Thesis)",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BBME 696",
+    "subject": "BBME",
+    "number": "696",
+    "title": "Thesis Research 3",
+    "credits": 3,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in M.Eng. in Biological and Biomedical Engineering (Thesis) program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BBME 697",
+    "subject": "BBME",
+    "number": "697",
+    "title": "Thesis Research 4",
+    "credits": 3,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only opened to students in M.Eng in Biological and Biomedical Engineering (Thesis) program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BBME 701",
+    "subject": "BBME",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral students in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the Ph.D. in Biological and Biomedical Engineering Doctoral Program (Thesis)",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BBME 716",
+    "subject": "BBME",
+    "number": "716",
+    "title": "PhD 1 Research in Biological and Biomedical Engineering 1",
+    "credits": 15,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Biological and Biomedical Engineering. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BBME 717",
+    "subject": "BBME",
+    "number": "717",
+    "title": "PhD 1 Research in Biological and Biomedical Engineering 2",
+    "credits": 15,
+    "offeredBy": "Biological & Biomedical Engr",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Biological and Biomedical Engineering. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

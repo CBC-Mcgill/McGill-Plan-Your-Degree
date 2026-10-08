@@ -1,0 +1,46 @@
+[
+  {
+    "code": "CPDV 400",
+    "subject": "CPDV",
+    "number": "400",
+    "title": "Risks and Capital for Banks 1",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course covers classification of financial risks in banking, the concepts of risk-based regulatory and economic capital, and the evolution of the Basel II regulatory process. The basic relevant statistical tools including the Value at Risk measure, the measurement of market and interest rate risks will be presented.",
+    "prerequisites": {
+      "text": "CFIN 300 and CMSC 221 and MGCR 341",
+      "tree": {
+        "and": [
+          "CFIN 300",
+          "CMSC 221",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CPDV 402",
+    "subject": "CPDV",
+    "number": "402",
+    "title": "Risks and Capital for Banks 2",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course deals with the measurement of credit and operational risks and the Top of the House regulatory and economic capital. Case studies of the 2008-2009 financial crisis, stress testing and back testing of bank capital, and model validation will be discussed.",
+    "prerequisites": {
+      "text": "CPDV 400",
+      "tree": "CPDV 400",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

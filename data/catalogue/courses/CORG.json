@@ -1,0 +1,489 @@
+[
+  {
+    "code": "CORG 225",
+    "subject": "CORG",
+    "number": "225",
+    "title": "Foundation of Organizational Behaviour and Administration",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course covers diverse theories and applications such as perception, motivation, decision-making, team dynamics, negotiation, conflict management, leadership, and organizational culture. Levels of analysis are on the individual, team and organizational level.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CORG 295",
+    "subject": "CORG",
+    "number": "295",
+    "title": "Employee Labour Relations and Law",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of the history and theories of industrial relations and how they are related to today's labour-management relationships and laws. Consideration will be paid to topics such as the organization, purpose and governance of unions; legislation of labour; collective bargaining processes and the dynamic of public interest and industrial relations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking INDR 294.",
+      "excludes": [
+        "INDR 294"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 415",
+    "subject": "CORG",
+    "number": "415",
+    "title": "Leading Teams in Organizations",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "An overview of leadership theories and models related to the management of teams in organizational settings. Topics such as team dynamics, underlying factors to successful and ineffective teamwork, strategies for supporting managers in improving team performance and team building will be addressed. In addition, practical strategies and leadership skills for leading teams will be applied and developed.",
+    "prerequisites": {
+      "text": "MGCR 222 or CORG 225",
+      "tree": {
+        "or": [
+          "MGCR 222",
+          "CORG 225"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ORGB 420.",
+      "excludes": [
+        "ORGB 420"
+      ]
+    },
+    "notes": [
+      "This course will be held on May 2nd, 3rd, 4th, 5th, 6th, 7th, 9th, 10th, and 11th.",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the third lecture day."
+    ]
+  },
+  {
+    "code": "CORG 416",
+    "subject": "CORG",
+    "number": "416",
+    "title": "HR Innovation: Technology and the Future of Work",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examines key theories and models of organizational change in response to emerging technologies and evolving work environments. Topics include change processes, leadership strategies, resistance management, and approaches to building buy-in. Techno-structural methods and change frameworks are applied to contemporary Canadian case studies, with emphasis on digital transformation, hybrid work models, AI integration, and innovation.",
+    "prerequisites": {
+      "text": "MGCR 222 or CORG 225",
+      "tree": {
+        "or": [
+          "MGCR 222",
+          "CORG 225"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ORGB 421",
+      "excludes": [
+        "ORGB 421"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 420",
+    "subject": "CORG",
+    "number": "420",
+    "title": "Human Resource Management: Theory and Practice",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course provides a comprehensive overview of human resources management (HRM) and an understanding of the strategic role HRM plays in the work environment. It introduces students to current HRM concepts, skills and practices, focusing on both theory and its practical application. Topics include: human resources planning, job analysis and design, recruitment selection and retention, training, performance management, organizational development and change, compensation and benefits, labour relations, legal issues, and strategic issues and challenges in HRM.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CORG 225",
+      "tree": "CORG 225",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CORG 440",
+    "subject": "CORG",
+    "number": "440",
+    "title": "Organizational Learning and Development ",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of major models of learning and development from a systemic point of view. Assessing and understanding the difference between training and development. Topics include: learning organizations, training issues, training programs, skills development, transfer of learning, planning, conceptualization, design, implementation and evaluation of training and career development programs.",
+    "prerequisites": {
+      "text": "CORG 420 or ORGB 423",
+      "tree": {
+        "or": [
+          "CORG 420",
+          "ORGB 423"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CORG 445",
+    "subject": "CORG",
+    "number": "445",
+    "title": "Workforce Planning and Talent Acquisition",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "New trends and best practices in workforce planning and talent acquisition. Recruitment and selection will be covered from legal, theoretical, and practical perspectives. Topics covered include job analysis, competency-based profile, and employer branding. Staffing processes, metric indicators, and strategic sourcing will also be discussed.",
+    "prerequisites": {
+      "text": "CORG 420 or ORGB 423",
+      "tree": {
+        "or": [
+          "CORG 420",
+          "ORGB 423"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CORG 450",
+    "subject": "CORG",
+    "number": "450",
+    "title": "Health, Safety and Wellness in Organizations",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focuses on core elements of workplace health and safety, including current legislation, the role of safety committees, accident prevention, hazardous materials, loss control, and claims management. Integrates the concept of wellness culture through topics such as employee assistance programs, work-life balance, preventative health, and ergonomics, highlighting the connection between wellness- oriented environments, safety, and organizational sustainability.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CORG 470",
+    "subject": "CORG",
+    "number": "470",
+    "title": "Total Rewards: Compensation and Benefits",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Analyzes key organizational behaviour theories in relation to compensation management, emphasizing the strategic role of total rewards in employee motivation. Topics include job evaluation, salary structures, performance-based pay, and pay equity, with consideration for special employee groups, ethics and social equity. Explores the impact of modern digital tools, including AI and advanced HRIS, on total rewards management.",
+    "prerequisites": {
+      "text": "(MGCR 222 or CORG 225) and (CORG 420 or ORGB 423)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "MGCR 222",
+              "CORG 225"
+            ]
+          },
+          {
+            "or": [
+              "CORG 420",
+              "ORGB 423"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ORGB 525.",
+      "excludes": [
+        "ORGB 525"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 556",
+    "subject": "CORG",
+    "number": "556",
+    "title": "Managing and Engaging Teamwork",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Skills and knowledge to work better in teams, to leverage team strengths and avoid or resolve obstacles to build effective teamwork. Topics include: team development, building trust, decision-making in teams, resolving team conflicts and enhancing creativity in groups.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "CORG 556D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CORG 556D2",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CORG 556N1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CORG 556N2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "CORG 651",
+    "subject": "CORG",
+    "number": "651",
+    "title": "Behaviour in Organizations",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Analysis of individual and group performance and behaviour within an organization. The implications for management and the essential concepts of social psychology, such as motivation, perception, working in teams, well-being, decision-making, communication, conflict management, power and politics, leadership, and organizational culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 551 or CORG 551N1/N2, or CORG 551J1/J2/J3.",
+      "excludes": [
+        "CORG 551",
+        "CORG 551J1",
+        "CORG 551N1"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous components."
+    ]
+  },
+  {
+    "code": "CORG 653",
+    "subject": "CORG",
+    "number": "653",
+    "title": "Employee and Labour Relations",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Industrial relations framework; its legal, political, social, economic, ecological and ethical, subsystems. Processes governing union-management relations, collective bargaining, and dispute resolution; and the roles of executives, supervisors, employees, employee representatives, and Human Resources - Industrial Relations professionals in effective employee relations in unionized and non-unionized environments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 553.",
+      "excludes": [
+        "CORG 553"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 654",
+    "subject": "CORG",
+    "number": "654",
+    "title": "Managing Occupational Health and Safety",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "How to develop, implement, and manage effective health and safety programs; competencies and roles of employees, supervisors, executives, and Human Resources; strategic, legal, and ethical implications of legislation; risk behaviour; socio-psychological aspects of mental and physical health and safety issues; communications and training strategies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 554.",
+      "excludes": [
+        "CORG 554"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 655",
+    "subject": "CORG",
+    "number": "655",
+    "title": "Strategic Human Resources Management",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Study of the relationship between human resources management and business strategy; role of human resources in the organization and alignment with strategic management. Overview of human resources functional areas and the competencies required to become a successful human resources professional; impact of human resources policies, processes, and practices on employees, teams, and organizations, including legal and ethical implications. Green human resources management, hybrid work, equity, diversity, and inclusion policies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 555.",
+      "excludes": [
+        "CORG 555"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 660",
+    "subject": "CORG",
+    "number": "660",
+    "title": "Staffing Organizations",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Study of current issues and methodologies used to competitively staff organizations. Focus on using strategic, legal, ethical, and data-driven practices to enhance the staffing process. Topics include human resources planning and succession planning; job analysis and competency profiling; recruitment, selection, and sourcing; organizational effectiveness.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 560.",
+      "excludes": [
+        "CORG 560"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 661",
+    "subject": "CORG",
+    "number": "661",
+    "title": "Developing Human Resources",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Human performance technology and organizational learning models addressing individual, team, and organizational performance problems: diagnosing workplace situations, identifying causes, selecting appropriate interventions, implementing change, and evaluating results; increasing client capability; delivering results while considering internal and external factors affecting performance (competing pressures and resource constraints); strategic, legal, and ethical implications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 561.",
+      "excludes": [
+        "CORG 561"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 662",
+    "subject": "CORG",
+    "number": "662",
+    "title": "Total Compensation and Rewards",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Strategic compensation management within a behavioural framework to understand rewards and motivation, work, satisfaction, and performance. Use of financial and non-financial rewards to attract, retain, and motivate. Legal, economic, ethical, and culture-fit issues in the design and implementation of direct and indirect compensation policies and systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 562.",
+      "excludes": [
+        "CORG 562"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 665",
+    "subject": "CORG",
+    "number": "665",
+    "title": "Technology and Innovation in Human Resources ",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of new human resources information systems (HRIS) that facilitate innovative processes within an organization and its ecosystem. Focus on using technology to support an organization’s optimization needs. Overview of current human resources trends, recruitment software, change management, human resources metrics, data analytics, artificial intelligence, and increasingly sophisticated payroll systems, including those using blockchain technologies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 565.",
+      "excludes": [
+        "CORG 565"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CORG 667",
+    "subject": "CORG",
+    "number": "667",
+    "title": "Talent and Performance Management",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Succession planning and performance management systems, processes, and tools. Topics include: performance management strategies, measurement, indicators, and reviews. Selecting effective and practical processes, methods, and tools to assess and increase current and future organizational performance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CORG 557.",
+      "excludes": [
+        "CORG 557"
+      ]
+    },
+    "notes": []
+  }
+]

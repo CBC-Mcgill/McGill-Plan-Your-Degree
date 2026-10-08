@@ -1,0 +1,367 @@
+[
+  {
+    "code": "CAFT 600",
+    "subject": "CAFT",
+    "number": "600",
+    "title": "Couple and Family Therapy Pre-Practicum",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The development of practical skills in the area of couple and family therapy. Introduction to the concept of common factors in the psychotherapy process, assessment, foundational therapeutic competencies and the application of orientation specific empirically supported treatment competencies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the M.Sc.(Applied) Couple and Family Therapy program or with departmental permission.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CAFT 601",
+    "subject": "CAFT",
+    "number": "601",
+    "title": "Anti-Oppressive Practice in Couple and Family Therapy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The influence of race, culture, class, ethnicity, immigration, sexual orientation and gender in the assessment and treatment processes of couple and family therapy.",
+    "prerequisites": {
+      "text": "SWRK 622 and SWRK 610 and SWRK 623 or equivalent with permission of instructor.; CAFT 600.",
+      "tree": {
+        "and": [
+          "SWRK 622",
+          "SWRK 610",
+          "SWRK 623",
+          "CAFT 600"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 602",
+    "subject": "CAFT",
+    "number": "602",
+    "title": "Advanced Assessment in Couple and Family Therapy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Integration of models of psychopathology and assessment into couple and family therapy. Focus will be on formulation of clinical impressions, differential systemic models of assessment, models and measures of systemic assessment and the intersection between classification of mental disorders, and relational/systemic formulations of mental health and mental illness.",
+    "prerequisites": {
+      "text": "CAFT 600 and SWRK 622 and SWRK 610 or equivalent with permission of instructor.",
+      "tree": {
+        "and": [
+          "CAFT 600",
+          "SWRK 622",
+          "SWRK 610"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the M.Sc.(Applied) Couple and Family Therapy program or with departmental permission.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CAFT 603",
+    "subject": "CAFT",
+    "number": "603",
+    "title": "Research Methods for Couple and Family Therapists",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Essential research skills for couple and family therapists, including evaluation of clinical research literature and the basics in designing and analyzing qualitative and quantitative research with a particular emphasis on understanding the relevance of research for clinical practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the M.Sc.(Applied) Couple and Family Therapy program or with departmental permission.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CAFT 604",
+    "subject": "CAFT",
+    "number": "604",
+    "title": "Sex, Sexuality, and Contemporary Issues ",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Couples and families dealing with challenges living in contemporary society. Intersections between diversity and mental health, gender roles and identities, separation/divorce including custody and access, single parent, reconstituted and same sex families, inter-cultural families, legal and family issues in adoption and foster families.",
+    "prerequisites": {
+      "text": "CAFT 600, SWRK 622, SWRK 610, SWRK 623 or equivalent with permission of the instructor.",
+      "tree": {
+        "and": [
+          "CAFT 600",
+          "SWRK 622",
+          "SWRK 610",
+          "SWRK 623"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 605",
+    "subject": "CAFT",
+    "number": "605",
+    "title": "Advanced Family Treatment Across the Lifespan",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Advanced practice in four core models of family therapy in relation to problems pertaining to children, adolescents, and adults from middle adulthood to later life; four clinical models. Clinical models include: EFT-humanistic, cognitive behavioural family therapy, psychodynamic and systemic family therapy.",
+    "prerequisites": {
+      "text": "SWRK 622 and SWRK 610 and SWRK 623 or equivalent with permission of instructo; CAFT 600",
+      "tree": {
+        "and": [
+          "SWRK 622",
+          "SWRK 610",
+          "SWRK 623",
+          "CAFT 600"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 606",
+    "subject": "CAFT",
+    "number": "606",
+    "title": "Internship 1 in Couple and Family Therapy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "The first portion of the internship consists of direct contact with clients, clinical supervision, a didactic seminar series, psychotherapy rounds and complementary clinical activities. Students will participate in a series of seminars on advanced systemic and communication models. Students will participate in an integrative seminar designed to facilitate the integration of their advancing knowledge and clinical skills.",
+    "prerequisites": {
+      "text": "SWRK 660 or equivalent with permission of instructor. SWRK 622 or equivalent with permission of instructor. SWRK 610 or equivalent with permission of instructor.",
+      "tree": {
+        "and": [
+          "SWRK 660",
+          "SWRK 622",
+          "SWRK 610"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The combination of three portions (CAFT 606, CAFT 611, CAFT 612) of the internship totals 500 hours of direct client contact, 100 hours individual supervision and 200 hours of clinical activities related to the practice of psychotherapy.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "CAFT 607",
+    "subject": "CAFT",
+    "number": "607",
+    "title": "Legal, Ethical and Professional Issues in C & FT",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Practicing in a legally-sound and ethically-informed manner as a couple and family therapist. Focus on ethical decision making processes, codes of ethical conduct, legislative and regulatory frameworks for practice, specific laws, regulations and standards.",
+    "prerequisites": {
+      "text": "SWRK 610 and SWRK 622 and SWRK 623 or equivalent with permission of instructor.; CAFT 600",
+      "tree": {
+        "and": [
+          "SWRK 610",
+          "SWRK 622",
+          "SWRK 623",
+          "CAFT 600"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 608",
+    "subject": "CAFT",
+    "number": "608",
+    "title": "Human Development Across Lifespan: Couple & Family Therapy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced human development specific to the needs of a couple and family therapist. Focus on child, adolescence and early adult development, human sexuality, developmental impact of divorce, remarriage, birth, adoption and death on members of a family.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the M.Sc.(Applied) Couple and Family Therapy program or with departmental permission.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CAFT 609",
+    "subject": "CAFT",
+    "number": "609",
+    "title": "Advanced Couple Therapy",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The four core modalities of couple therapy practice, EFT-humanistic, cognitive behavioural, psychodynamic and systemic, and communications, including common factors and models integrating the lens of gender, race, poverty and social class, and multiculturalism into couple treatment.",
+    "prerequisites": {
+      "text": "SWRK 623 or equivalent with permission of instructor.",
+      "tree": "SWRK 623",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 610",
+    "subject": "CAFT",
+    "number": "610",
+    "title": "Biological Foundations of Behaviour for C&FTs",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The biology and neuropsychology of couple and family therapy. Neural physiology and pathophysiology, development, anatomy and physiology of the human sensory, motor, emotional, perceptual and cognitive systems, formulation of clinical impressions, and applications and limitations of biological and psychological treatments will be explored.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 611",
+    "subject": "CAFT",
+    "number": "611",
+    "title": "Internship 2 in Couple and Family Therapy",
+    "credits": 6,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The second portion of the internship consists of direct contact with clients, clinical supervision, a didactic seminar series, psychotherapy rounds and complementary clinical activities. Students will participate in a series of seminars geared to providing further didactic training in the legal and organizational aspects and ethics and deontology as applied to specific case examples being experienced by students in their internship experiences. Also, participation in an integrative seminar designed to facilitate the integration of advancing knowledge and clinical skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 612",
+    "subject": "CAFT",
+    "number": "612",
+    "title": "Internship 3 in Couple and Family Therapy",
+    "credits": 6,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The third portion of the internship consists of direct contact with clients, clinical supervision, a didactic seminar series, psychotherapy rounds and complementary clinical activities. In this course, students will participate in a series of seminars provided by faculty experts on the four models of treatment: (Humanistic, Systemic) cognitive behavioural couple and family therapy (CBMT), attachment focused and mentalizing based therapy for couples and families (Psychodynamic) and systemic family therapy (Systemic). Students will participate in an integrative seminar designed to facilitate the integration of their advancing knowledge and clinical skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  },
+  {
+    "code": "CAFT 613",
+    "subject": "CAFT",
+    "number": "613",
+    "title": "Couple and Family Therapy Internal Practicum",
+    "credits": 3,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will provide opportunity for the development of practice skills in the area of Couple and Family Therapy within an internal clinic setting to prepare students for integration into external clinical internship sites. Students will participate, as observers and clinicians, in clinical research, and clinical practice with members of the community, within the McGill Couple and Family Therapy Clinic. The professor, within the internal clinic, will provide opportunities for in-depth clinical training and supervision.",
+    "prerequisites": {
+      "text": "CAFT600",
+      "tree": "CAFT 600",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CAFT 614",
+    "subject": "CAFT",
+    "number": "614",
+    "title": "Supervision in Couple and Family Therapy",
+    "credits": 6,
+    "offeredBy": "Social Work",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Couple and family therapy supervision skills, integrating methods from the fields of supervision teaching and learning.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to the following students: graduates of the M.Sc. (Applied) in Couple and Family Therapy; Non-Thesis program who are also licensed with the OTSTCFT and OPQ. Graduates of other Masters programs in Psychotherapy/Couple and Family Therapy currently licensed by OTSTCFT and/or OPQ with 5 years of clinical experience.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "CAFT 614D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "CAFT 614D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  }
+]

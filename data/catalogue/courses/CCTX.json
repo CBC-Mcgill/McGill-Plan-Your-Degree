@@ -1,0 +1,70 @@
+[
+  {
+    "code": "CCTX 611",
+    "subject": "CCTX",
+    "number": "611",
+    "title": "Taxation 1",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Basic principles of tax law; residence, meaning and computation of taxable income; computation of personal tax; foreign tax credits; capital gains; partnerships; trusts; administration and enforcement; case decisions; Revenue Department bulletins, circulars and rulings; appeals.",
+    "prerequisites": {
+      "text": "Prerequisite: (CACC 521 or CACC 621) or (CACC 520 or CACC 620)",
+      "tree": {
+        "or": [
+          "CACC 521",
+          "CACC 621",
+          "CACC 520",
+          "CACC 620"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCTX 511.",
+      "excludes": [
+        "CCTX 511"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCTX 632",
+    "subject": "CCTX",
+    "number": "632",
+    "title": "Taxation 2",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Theoretical analysis of federal corporate taxation. Current issues in taxation will also be discussed and analyzed.",
+    "prerequisites": {
+      "text": "CCTX 511 or CCTX 611",
+      "tree": {
+        "or": [
+          "CCTX 511",
+          "CCTX 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCTX 532.",
+      "excludes": [
+        "CCTX 532"
+      ]
+    },
+    "notes": [
+      "CGA Requirement"
+    ]
+  }
+]

@@ -1,0 +1,426 @@
+[
+  {
+    "code": "MDPH 396",
+    "subject": "MDPH",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This course cannot be taken under the S/U option. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science. Since this course takes place within a clinical department and may require access to confidential data, the proposed research project needs departmental approval and may need research ethics board approval.",
+    "prerequisites": {
+      "text": "Completion of at least one undergraduate term with CGPA of 3.0",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science. Since this course takes place within a clinical department and may require access to confidential data, the proposed research project needs departmental approval and may need research ethics board approval.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MDPH 601",
+    "subject": "MDPH",
+    "number": "601",
+    "title": "Radiation Physics",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The production and properties of directly and indirectly ionizing radiations and their interactions with matter; basic theoretical and experimental aspects of radiation dosimetry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 602",
+    "subject": "MDPH",
+    "number": "602",
+    "title": "Radiotherapy Physics",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The physics of radiation therapy including that of radioactive sources, accelerators and x-ray machines. The theoretical and practical dosimetry of ionizing radiation including codes of practice and guidelines, dose calculations, dose measurements and dose optimization. The radiation therapy workflow and practical aspects related to quality assurance of radiation therapy as well as record and verify systems used in radiation therapy.",
+    "prerequisites": {
+      "text": "MDPH 601",
+      "tree": "MDPH 601",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 603",
+    "subject": "MDPH",
+    "number": "603",
+    "title": "Laboratory Radiotherapy Physics",
+    "credits": 2,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This laboratory course gives some experience in practical/clinical aspects as applied to radiation therapy and to the techniques for the measurement of different physical parameters which characterize radiation beams. The student is exposed to the operation of various therapy units, dose measuring devices, 3D treatment planning, virtual simulator units, brachytherapy, quality assurance, calibration and different types of relative dosimetry systems.",
+    "prerequisites": {
+      "text": "MDPH 601.",
+      "tree": "MDPH 601",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MDPH 602",
+      "tree": "MDPH 602",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 607",
+    "subject": "MDPH",
+    "number": "607",
+    "title": "Medical Imaging",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course is concerned with the principles of medical imaging as applied to conventional diagnostic radiography, X-ray computed tomography (CT), positron emission tomography (PET), and magnetic resonance imaging (MRI). The course emphasizes a linear system approach to the formation, processing, and display of medical images.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in Medical Physics or Biological & Biomedical Engineering programs; permission of instructor for other students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MDPH 608",
+    "subject": "MDPH",
+    "number": "608",
+    "title": "Laboratory - Diagnostic Radiology and Nuclear Medicine",
+    "credits": 2,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This laboratory course takes place in hospital departments of medical diagnostic imaging and is designed to give the student a working knowledge of the performance parameters of the diagnostic imaging equipment. Laboratory classes will offer the student the practical experience of image quality control, on selected imaging equipment currently used in diagnostic medicine together with practical applications of the concepts studied in MDPH 614 and MDPH 615.",
+    "prerequisites": {
+      "text": "MDPH 614, MDPH 615.",
+      "tree": {
+        "and": [
+          "MDPH 614",
+          "MDPH 615"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 609",
+    "subject": "MDPH",
+    "number": "609",
+    "title": "Radiation Biology",
+    "credits": 2,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Deals with the effects and mode of action of ionizing radiation on biological material from molecular interactions, through sub-cellular and cellular levels of organization, to the response of tissues, organs and the whole body. Includes the application of radiation biology to oncology and the biological aspects of environmental radiation exposure.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 610",
+    "subject": "MDPH",
+    "number": "610",
+    "title": "Instrumentation and Computation in Medical Physics 2",
+    "credits": 2,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A course on electronics, computer programming, and instrumentation as applied to medical physics. A basic knowledge of electronics and computers is assumed, but the detailed course contents may vary from year to year, depending on the background of the students.",
+    "prerequisites": {
+      "text": "MDPH 601 or MDPH 614",
+      "tree": {
+        "or": [
+          "MDPH 601",
+          "MDPH 614"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MDPH 612.",
+      "excludes": [
+        "MDPH 612"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MDPH 613",
+    "subject": "MDPH",
+    "number": "613",
+    "title": "Health Physics",
+    "credits": 2,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The hazards of ionizing radiations and the safe handling of radiation sources. Topics covered include basic principles; safety codes, laws and regulations; organization of radiation safety; and practical safety measures and procedures.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MDPH 601",
+      "tree": "MDPH 601",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 614",
+    "subject": "MDPH",
+    "number": "614",
+    "title": "Physics of Diagnostic Radiology",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A rigorous treatment of the physical principles and the instrumentation of radiology, computed tomography and ultrasound medical imaging systems. Special attention is paid to the analysis of the relations between imaging system design, image quality, and safety. Measurement techniques for the evaluation of medical imaging systems are reviewed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 615",
+    "subject": "MDPH",
+    "number": "615",
+    "title": "Physics of Nuclear Medicine",
+    "credits": 2,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The physics of radioactivity and the applications of radioisotopes and radiopharmaceuticals in medical diagnosis. Topics covered include radiation spectrometry, the scintillation camera, image analysis and data processing in nuclear medicine, single photon emission tomography, and positron emission tomography.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MDPH 601",
+      "tree": "MDPH 601",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 617",
+    "subject": "MDPH",
+    "number": "617",
+    "title": "Advanced MRI Image Acquisition and Analysis",
+    "credits": 2,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced MRI image acquisition and quantitative image analysis. Topics include: MRI RF coils, phased arrays, MRI image optimization and artifact reduction, quantitative image analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Require the use of a computer, particularly Linux; soldering skills.",
+      "Location for course: MGH (mandatory due to equipment use).",
+      "Language of instruction: English.",
+      "Contact hours: 30."
+    ]
+  },
+  {
+    "code": "MDPH 618",
+    "subject": "MDPH",
+    "number": "618",
+    "title": "Anatomy and Physiology for Medical Physics",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic anatomy, physiology and oncology. The review of statistics will focus on study design and hypotheses testing in health studies. Focus on anatomic structures, their relationships, their cross-sectional and planar projections. Imaging and radiation treatment planning methods will be reviewed by anatomic region, as they apply to: central nervous system, head and neck, thorax, abdomen, pelvis and extremities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in the MSc in Medical Radiation Physics program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MDPH 690",
+    "subject": "MDPH",
+    "number": "690",
+    "title": "M.Sc. Thesis Research",
+    "credits": 24,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "MDPH 690D1",
+        "credits": 12,
+        "terms": []
+      },
+      {
+        "code": "MDPH 690D2",
+        "credits": 12,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MDPH 691",
+    "subject": "MDPH",
+    "number": "691",
+    "title": "MSc Thesis Research 2",
+    "credits": 18,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MDPH 690, 690 D1/D2, 690 N1/N2.",
+      "excludes": [
+        "MDPH 690"
+      ]
+    },
+    "notes": [
+      "Students must register for both MDPH 691D1 and MDPH 691D2",
+      "No credit will be given for this course unless both MDPH 691D1 and MDPH 691D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MDPH 691D1",
+        "credits": 9,
+        "terms": []
+      },
+      {
+        "code": "MDPH 691D2",
+        "credits": 9,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "MDPH 702",
+    "subject": "MDPH",
+    "number": "702",
+    "title": "Advanced Topics in Radiation Oncology Physics Research",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced research topics in radiation oncology physics comprising radiation physics and dosimetry, Monte Carlo calculations, anatomical, molecular and functional imaging, integration of the latter in radiation delivery, biological models, radiation biology and clinical research.",
+    "prerequisites": {
+      "text": "Permission of the instructors.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MDPH 704",
+    "subject": "MDPH",
+    "number": "704",
+    "title": "Computational Methods in Radiotherapy and Imaging",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An overview of advanced computational tools and methods in medical physics, both in radiation therapy and imaging. Learning objectives of the course are familiarity with data structures and algorithms, numerical analysis techniques, deterministic approaches, stochastic approaches, optimization methods, statistical testing, familiarity with software tools, concepts and languages used in scientific computing, libraries used in scientific computing, Monte Carlo software used in medical physics, software development environments, productivity tools, advanced techniques in computational medical physics and relational databases and statistical analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students with an M.Sc. in Medical Physics and students that are currently registered in the Ph.D. in Physics program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MDPH 707",
+    "subject": "MDPH",
+    "number": "707",
+    "title": "Advanced Clinical Medical Physics",
+    "credits": 3,
+    "offeredBy": "Medical Physics Unit",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Clinical medical physicists’ roles and responsibilities in a hospital environment including: professional ethics, dose measurements, treatment planning, advanced treatment techniques, and clinical observerships.",
+    "prerequisites": {
+      "text": "MDPH 603, MDPH 607, MDPH 609, MDPH 610, MDPH 613, MDPH 618",
+      "tree": {
+        "and": [
+          "MDPH 603",
+          "MDPH 607",
+          "MDPH 609",
+          "MDPH 610",
+          "MDPH 613",
+          "MDPH 618"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MDPH 608",
+      "tree": "MDPH 608",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Medical Radiation Physics and to PhD students with permission from the director of the Medical Physics Unit.",
+      "excludes": []
+    },
+    "notes": [
+      "Enrolment limited to 5 students per class, course given in English at the MUHC Cedars Cancer Center. Daily presence will be required."
+    ]
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "code": "LSCI 202",
+    "subject": "LSCI",
+    "number": "202",
+    "title": "Molecular Cell Biology",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Organization and function of intracellular organelles in eukaryotic cells. Mechanisms of membrane transport. Protein sorting and vesicular transport. Cytoskeleton. DNA and chromosome structure. DNA replication. Mechanisms of RNA and protein synthesis. Control of gene expression. Cell cycle and the control of cell division. Mechanisms of cell communication and signal transduction. Apoptosis. Neuronal signaling.",
+    "prerequisites": {
+      "text": "LSCI 211 and FDSC 230 or equivalent, or permission of instructor.",
+      "tree": {
+        "and": [
+          "LSCI 211",
+          "FDSC 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "LSCI 204",
+    "subject": "LSCI",
+    "number": "204",
+    "title": "Genetics",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course integrates classical, molecular and population genetics of animals, plants, bacteria and viruses. The aim is to understand the flow of genetic information within a cell, within families and in populations. Emphasis will be placed on problem solving based learning. The laboratory exercises will emphasize the interpretation of genetic experimental data.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIOL 202.",
+      "excludes": [
+        "BIOL 202"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "LSCI 207",
+    "subject": "LSCI",
+    "number": "207",
+    "title": "One Health Fundamentals",
+    "credits": 3,
+    "offeredBy": "Animal Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Foundational and guiding principles of One Health to better understand current and reflect on future challenges that are affecting various socio-economic and cultural groups. Fundamental concepts in One Health will be emphasized through core themes such as emerging and zoonotic pathogens, climate change, antimicrobial resistance, and global food system resilience.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "LSCI 211",
+    "subject": "LSCI",
+    "number": "211",
+    "title": "Biochemistry 1",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Biochemistry of carbohydrates, lipids, proteins, nucleic acids; enzymes and coenzymes. Introduction to intermediary metabolism.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "FDSC 230",
+      "tree": "FDSC 230",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken FDSC 211",
+      "excludes": [
+        "FDSC 211"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "LSCI 230",
+    "subject": "LSCI",
+    "number": "230",
+    "title": "Introductory Microbiology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The occurrence and importance of microorganisms in the biosphere. Principles governing growth, death and metabolic activities of microorganisms. An introduction to the microbiology of soil, water, plants, food, humans and animals.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "LSCI 401",
+    "subject": "LSCI",
+    "number": "401",
+    "title": "Honours Research Project 1",
+    "credits": 6,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparation of an honours research proposal, progress report, and delivery of a proposal seminar, as well as initiating the research project.",
+    "prerequisites": {
+      "text": "AEHM 205 and permission of the instructor",
+      "tree": "AEHM 205",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Life Sciences (Biological and Agricultural) program.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is only offered in Fall."
+    ]
+  },
+  {
+    "code": "LSCI 402",
+    "subject": "LSCI",
+    "number": "402",
+    "title": "Honours Research Project 2",
+    "credits": 6,
+    "offeredBy": "Agricultural & Env.Sc.-Dean",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Completion of the honours research project, including a progress report, a final project report, and a project presentation.",
+    "prerequisites": {
+      "text": "LSCI 401 and permission of the instructor",
+      "tree": "LSCI 401",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the B.Sc.(Ag.Env.Sc.); Honours in Life Sciences (Biological and Agricultural) program.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is only offered in Winter."
+    ]
+  },
+  {
+    "code": "LSCI 451",
+    "subject": "LSCI",
+    "number": "451",
+    "title": "Research Project 1",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A research project on a topic relevant to the life sciences. This course is intended for senior (U3) undergraduates.",
+    "prerequisites": {
+      "text": "PARA 438 as a prerequisite or corequisite, and permission of instructor.",
+      "tree": "PARA 438",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students with a minimum CGPA of 3.0.; Not open to students who have taken AEBI 451.",
+      "excludes": [
+        "AEBI 451"
+      ]
+    },
+    "notes": [
+      "Fall and Winter",
+      "Enrolment is limited by availability of research project supervisors and to students in the Life Sciences (Biological and Agricultural) Major. Students should make arrangements with a willing supervisor, and the proposed supervisor and project are subject to approval. Recommended for students in their final year (U3)."
+    ]
+  },
+  {
+    "code": "LSCI 452",
+    "subject": "LSCI",
+    "number": "452",
+    "title": "Research Project 2",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Continuation of the project begun in LSCI 451 on a topic relevant to the life sciences.",
+    "prerequisites": {
+      "text": "LSCI 451",
+      "tree": "LSCI 451",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment is limited by availability of research project supervisors and to students in the Life Sciences (Biological and Agricultural) Major. Students should make arrangements with a supervisor; the proposed supervisor and project are subject to approval. Not open to students who have taken AEBI 452.",
+      "excludes": [
+        "AEBI 452"
+      ]
+    },
+    "notes": [
+      "Fall and Winter"
+    ]
+  }
+]

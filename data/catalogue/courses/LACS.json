@@ -1,0 +1,89 @@
+[
+  {
+    "code": "LACS 480",
+    "subject": "LACS",
+    "number": "480",
+    "title": "Latin American and Caribbean Studies Reading Course",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised reading in advance special topics in Latin American and Caribbean Studies under the direction of member of faculty.",
+    "prerequisites": {
+      "text": "Having completed at least two of the required courses of the Program.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "LACS 497",
+    "subject": "LACS",
+    "number": "497",
+    "title": "Research Seminar: Latin America and the Caribbean",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An interdisciplinary research seminar on topics of common interest to staff and students of the Latin-American and Caribbean Studies Program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Program students and to others with permission of the Program Adviser.",
+      "excludes": []
+    },
+    "notes": [
+      "Ordinarily offered in alternate years"
+    ]
+  },
+  {
+    "code": "LACS 498",
+    "subject": "LACS",
+    "number": "498",
+    "title": "Honours Thesis",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course is designed to allow students to pursue interdisciplinary research projects under close supervision.",
+    "prerequisites": {
+      "text": "LACS 497 and permission of the Program Adviser",
+      "tree": "LACS 497",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is only available to Latin American and Caribbean Studies Honours program students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "LACS 499",
+    "subject": "LACS",
+    "number": "499",
+    "title": "Internship: Latin America and Caribbean Studies",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": {
+      "text": "Permission of the program Internship Advisor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students after completing 30 credits of a 90 credit degree program or 45 credits of a 69-120 credit program, a minimum CGPA of 2.7 and permission of the program Internship Advisor. This course will normally not fulfill program requirements for seminar or 400 level courses.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

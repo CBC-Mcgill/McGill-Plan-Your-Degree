@@ -1,0 +1,1272 @@
+[
+  {
+    "code": "FDSC 200",
+    "subject": "FDSC",
+    "number": "200",
+    "title": "Introduction to Food Science",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course enables one to gain an appreciation of the scope of food science as a discipline. Topics include introductions to chemistry, processing, packaging, analysis, microbiology, product development, sensory evaluation and quality control as they relate to food science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "FDSC 213",
+    "subject": "FDSC",
+    "number": "213",
+    "title": "Analytical Chemistry 1",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theoretical aspects of wet chemical techniques including gravimetric and volumetric analyses, redoximetry, and separation techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 230",
+    "subject": "FDSC",
+    "number": "230",
+    "title": "Organic Chemistry",
+    "credits": 4,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Atomic and molecular structure, modern concepts of bonding, overview of functional groups, conformational analysis, stereochemistry, mechanisms and reactions of aliphatic compounds.",
+    "prerequisites": {
+      "text": "AECH 110 or CHEM 110 or equivalent of CHEM NYA in CEGEP.",
+      "tree": {
+        "or": [
+          "AECH 110",
+          "CHEM 110"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 231",
+    "subject": "FDSC",
+    "number": "231",
+    "title": "Organic Chemistry Lecture",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Atomic and molecular structure, modern concepts of bonding, overview of functional groups, conformational analysis, stereochemistry, mechanisms and reactions of aliphatic and aromatic compounds.",
+    "prerequisites": {
+      "text": "AECH 110 or CHEM 110 or equivalent of CHE NYA in CEGEP",
+      "tree": {
+        "or": [
+          "AECH 110",
+          "CHEM 110"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking FDSC 230 or equivalent",
+      "excludes": [
+        "FDSC 230"
+      ]
+    },
+    "notes": [
+      "In order to complete the Organic Chemistry 4 credit requirement, the lab component (FDSC 232) must also be completed."
+    ]
+  },
+  {
+    "code": "FDSC 232",
+    "subject": "FDSC",
+    "number": "232",
+    "title": "Organic Chemistry Laboratory",
+    "credits": 1,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Techniques and experiments in organic chemistry.",
+    "prerequisites": {
+      "text": "AECH 110 or CHEM 110 or equivalent of CHE NYA in CEGEP FDSC 231 or equivalent",
+      "tree": {
+        "or": [
+          "AECH 110",
+          {
+            "and": [
+              "CHEM 110",
+              "FDSC 231"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking FDSC 230 or equivalent",
+      "excludes": [
+        "FDSC 230"
+      ]
+    },
+    "notes": [
+      "Laboratory section associated with FDSC 231."
+    ]
+  },
+  {
+    "code": "FDSC 233",
+    "subject": "FDSC",
+    "number": "233",
+    "title": "Physical Chemistry",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to kinetic theory, thermodynamics, properties of liquids and solids, chemical equilibrium and the law of mass action, phase rule, properties of solutions, chemical kinetics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "FDSC 251",
+    "subject": "FDSC",
+    "number": "251",
+    "title": "Food Chemistry 1",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A study of the chemistry and functionality of the major components comprising food systems, such as water, proteins, carbohydrates and lipids. The relationship of these components to food stability will be studied in terms of degradative reactions and processing.",
+    "prerequisites": {
+      "text": "FDSC 211 or LSCI 211",
+      "tree": {
+        "or": [
+          "FDSC 211",
+          "LSCI 211"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 300",
+    "subject": "FDSC",
+    "number": "300",
+    "title": "Principles of Food Analysis 1",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The fundamentals of food analysis are presented with the emphasis on the major components of foods. Topics include: food components, sampling, method selection, official methods, proximate analysis, moisture, protein, fat, ash, fiber, carbohydrates, vitamins and nutraceutical compounds.",
+    "prerequisites": {
+      "text": "FDSC 251 or permission of instructor.",
+      "tree": "FDSC 251",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "FDSC 251 or permission of instructor.",
+      "tree": "FDSC 251",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 305",
+    "subject": "FDSC",
+    "number": "305",
+    "title": "Food Chemistry 2",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the chemistry and functionality of the minor components comprising food systems, such as enzymes, anthocyanins, carotenoids, additives, vitamins and essential oils. The relationship of these components to food stability in terms of degradative reactions and processing.",
+    "prerequisites": {
+      "text": "FDSC 251",
+      "tree": "FDSC 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 310",
+    "subject": "FDSC",
+    "number": "310",
+    "title": "Post Harvest Fruit and Vegetable Technology",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The post harvest chemistry and physiology of horticultural crops as they affect quality and marketability, handling methods pre and post harvest, principles and practices in cooling, storage, transportation and packaging.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 3-hour lab",
+      "This course carries an additional charge of $131.33 to cover the cost of transportation with respect to field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "FDSC 315",
+    "subject": "FDSC",
+    "number": "315",
+    "title": "Separation Techniques in Food Analysis 1",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A detailed treatment on the principal chromotographic and electrophoretic techniques that are associated with the analysis of carbohydrate, lipid, protein constituents of food.",
+    "prerequisites": {
+      "text": "FDSC 300 or permission of instructor.",
+      "tree": "FDSC 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 319",
+    "subject": "FDSC",
+    "number": "319",
+    "title": "Food Commodities",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The relationship between the chemistry of food constituents present in common commodities, such as milk, meat, eggs, cereals, oilseeds etc. and the common processing technologies associated with their transformation into stable food products.",
+    "prerequisites": {
+      "text": "FDSC 251 or permission of instructor",
+      "tree": "FDSC 251",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 330",
+    "subject": "FDSC",
+    "number": "330",
+    "title": "Food Processing",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The principles and practices of food processing with an emphasis on canning, freezing, and dehydration. A survey of the newer methods of food preservation such as irradiation, reverse osmosis etc.",
+    "prerequisites": {
+      "text": "FDSC 251",
+      "tree": "FDSC 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 334",
+    "subject": "FDSC",
+    "number": "334",
+    "title": "Analysis of Food Toxins and Toxicants",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Toxins and toxicant residues in food including heavy metals, persistant organic pollutants (POPS) and microbial toxins are explored from an analytical perspective; new methods and strategies of analysis are emphasized.",
+    "prerequisites": {
+      "text": "FDSC 213 or permission of instructor.",
+      "tree": "FDSC 213",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 400",
+    "subject": "FDSC",
+    "number": "400",
+    "title": "Food Packaging",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An integrated approach to the materials used for the packaging of food products, considering the physical, chemical and functional characteristics of such materials and their utility, relative to the chemistry of the food system they are designed to enclose and preserve.",
+    "prerequisites": {
+      "text": "FDSC 305",
+      "tree": "FDSC 305",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab",
+      "This course carries an additional charge of $55.35 to cover the cost of transportation with respect to field trips. The fee is refundable only during the withdrawal with full refund period."
+    ]
+  },
+  {
+    "code": "FDSC 405",
+    "subject": "FDSC",
+    "number": "405",
+    "title": "Food Product Development",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental principles of food product development from an innovative concept to the marketplace. Emphasis will be on the application of basic knowledge of food chemistry, food technology and related disciplines in developing new products or improving the existing ones.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 4-hour lab.",
+      "Pre-/Co-requisite: FDSC 305 or permission of instructor"
+    ]
+  },
+  {
+    "code": "FDSC 442",
+    "subject": "FDSC",
+    "number": "442",
+    "title": "Food Microbiology",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics in Food Microbiology including an overview of the natural flora and microbiological spoilage of food products, methods of control and shelf-life extension, methods of detection and control food-borne pathogens and the use of suitable microorganisms in the production of a variety of food products.",
+    "prerequisites": {
+      "text": "MICR 230 or LSCI 230 or permission of instructor.",
+      "tree": {
+        "or": [
+          "MICR 230",
+          "LSCI 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have completed MICR 442.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "FDSC 475",
+    "subject": "FDSC",
+    "number": "475",
+    "title": "Introduction to Cannabis and Cannabinoids",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "The chemistry, metabolic pathways of formation, biological activity, and health benefits of phytochemicals in cannabis plants. Extraction, classification, and analysis of bioactive components in cannabis plants.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PLNT 470, FDSC 476, and FDSC 477",
+      "tree": {
+        "and": [
+          "PLNT 470",
+          "FDSC 476",
+          "FDSC 477"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students enrolled in the Diploma in Commercial Cannabis",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FDSC 476",
+    "subject": "FDSC",
+    "number": "476",
+    "title": "Contaminants in Cannabis",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Basic concepts of various contaminants in cannabis. Sources, basic biology/chemistry, classification and testing, method validation and quality assurance procedures to avoid microbial/chemical contamination.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PLNT 470, FDSC 475, FDSC 477",
+      "tree": {
+        "and": [
+          "PLNT 470",
+          "FDSC 475",
+          "FDSC 477"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students enrolled in the Diploma in Commercial Cannabis",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FDSC 477",
+    "subject": "FDSC",
+    "number": "477",
+    "title": "Introduction to Cannabis Product Design",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Fundamental principles needed to develop new food products from conceptualization through design, formulation and production, as applied to cannabis products. The technical challenges associated with the formulation of cannabis-based products, as well as the considerations for an optimal formulation.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PLNT 470, FDSC 475, FDSC 476",
+      "tree": {
+        "and": [
+          "PLNT 470",
+          "FDSC 475",
+          "FDSC 476"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students enrolled in the Diploma in Commercial Cannabis",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FDSC 480",
+    "subject": "FDSC",
+    "number": "480",
+    "title": "Food Industry Internship",
+    "credits": 12,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Intership with an approved host organization in the food industry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Open to students who have a minimum of 60 credits in the Double Major Food Science/Nutritional Sciences or permission of department."
+    ]
+  },
+  {
+    "code": "FDSC 490",
+    "subject": "FDSC",
+    "number": "490",
+    "title": "Research Project 1",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A course designed to give final year undergraduate students research experience.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "FDSC 491",
+    "subject": "FDSC",
+    "number": "491",
+    "title": "Research Project 2",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A laboratory research project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration by Department permission only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter",
+      "Pre-/Co-requisite: FDSC 490"
+    ]
+  },
+  {
+    "code": "FDSC 495",
+    "subject": "FDSC",
+    "number": "495",
+    "title": "Food Science Seminar",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Two 20-minute presentations (1 per term) on an assigned or selected topic. The purpose is to research a subject and present to a peer audience the essence of the subject investigated. Development of presentation and communication skills at a professional level is stressed and rapport with the industry will be established through guest speakers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "FDSC 495D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "FDSC 495D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "FDSC 497",
+    "subject": "FDSC",
+    "number": "497",
+    "title": "Professional Seminar: Food",
+    "credits": 1.5,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A capstone course which requires a student to research a topic relevant to an industrial aspect of Food Science, prepare a report and communicate that information to a peer audience in a succinct and professional manner.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter",
+      "Note: Open to students who have completed a minimum of 75 credits in the dual degree/concurrent program in Food Science/Nutritional Science or permission of Department."
+    ]
+  },
+  {
+    "code": "FDSC 515",
+    "subject": "FDSC",
+    "number": "515",
+    "title": "Enzymology",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected advanced topics on the biophysical and kinetic aspects of enzymatic reactions, particularly the fundamentals and applications of laws of biothermodynamics, biochemical equilibrium, electrochemistry and biochemical kinetics as related to the enzymatic reactions.",
+    "prerequisites": {
+      "text": "FDSC 211 or LSCI 211 and FDSC 233 or permission of instructor",
+      "tree": {
+        "or": [
+          "FDSC 211",
+          {
+            "and": [
+              "LSCI 211",
+              "FDSC 233"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures",
+      "Course offered in even years. Check with Graduate Program Supervisor."
+    ]
+  },
+  {
+    "code": "FDSC 516",
+    "subject": "FDSC",
+    "number": "516",
+    "title": "Flavour Chemistry",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The chemistry of the flavour constituents of foods, thermal and enzymatic generation, mechanistic pathways of formation, analysis synthesis and applications in food.",
+    "prerequisites": {
+      "text": "FDSC 305 or permission of instructor",
+      "tree": "FDSC 305",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FDSC 410",
+      "excludes": [
+        "FDSC 410"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "FDSC 519",
+    "subject": "FDSC",
+    "number": "519",
+    "title": "Advanced Food Processing",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Advanced technologies associated with food processing studied in more detail. Topics include food irradiation, reverse osmosis, super critical fluid extraction and extrusion.",
+    "prerequisites": {
+      "text": "FDSC 330",
+      "tree": "FDSC 330",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures",
+      "Course offered in even years. Check with Graduate Program Supervisor."
+    ]
+  },
+  {
+    "code": "FDSC 520",
+    "subject": "FDSC",
+    "number": "520",
+    "title": "Biophysical Chemistry of Food",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will cover recent advances in the application of spectroscopic techniques, including infrared, Raman, near-infrared, circular dichroism, and fluorescence spectroscopy, to the study of biomolecules of relevance to food. Particular emphasis will be placed on the molecular basis of structure-function and structure-functionality relationships.",
+    "prerequisites": {
+      "text": "FDSC 233",
+      "tree": "FDSC 233",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures",
+      "Course offered in odd years. Check with Graduate Program Supervisor."
+    ]
+  },
+  {
+    "code": "FDSC 525",
+    "subject": "FDSC",
+    "number": "525",
+    "title": "Food Quality Assurance",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The principles and practices required for the development, maintenance and monitoring of systems for food quality and food safety. The concepts and practices of Hazard Analysis Critical Control Point; ISO 9000; Total Quality Management; Statistical Sampling Plans, Statistical Process Control; Tools of Quality; Government Regulations.",
+    "prerequisites": {
+      "text": "AEMA 310 or permission of instructor",
+      "tree": "AEMA 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FDSC 425",
+      "excludes": [
+        "FDSC 425"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 lectures"
+    ]
+  },
+  {
+    "code": "FDSC 536",
+    "subject": "FDSC",
+    "number": "536",
+    "title": "Food Traceability",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Concepts and processes associated with the identification, tracking and tracing food forward and backward through the food continuum.",
+    "prerequisites": {
+      "text": "FDSC 425 or permission of instructor.",
+      "tree": "FDSC 425",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures",
+      "Course offered in odd years."
+    ]
+  },
+  {
+    "code": "FDSC 537",
+    "subject": "FDSC",
+    "number": "537",
+    "title": "Nutraceutical Chemistry",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The origin, classification, mechanism of action and chemical properties of potential and established nutraceutical compounds and their applications in functional foods.",
+    "prerequisites": {
+      "text": "FDSC 211 or LSCI 211, FDSC 230 and FDSC 233 or permission of instructor.",
+      "tree": {
+        "or": [
+          "FDSC 211",
+          {
+            "and": [
+              "LSCI 211",
+              "FDSC 230",
+              "FDSC 233"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures",
+      "Course offered in even years."
+    ]
+  },
+  {
+    "code": "FDSC 538",
+    "subject": "FDSC",
+    "number": "538",
+    "title": "Food Science in Perspective",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Food industry, food properties, nutritive aspects, quality factors, and key preservation processes, with self-study linking these elements directly to specific commodities and product groups, their characteristics, chemistry and distinct manufacturing processes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students with an undergraduate degree in Food Science or currently majoring in Food Science. Open to U3 students and above.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "FDSC 540",
+    "subject": "FDSC",
+    "number": "540",
+    "title": "Sensory Evaluation of Foods",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles and procedures for sensory evaluation of food products, applications of sensory tests, their strengths and weaknesses, factors affecting their responses, data analysis and interpretation of results. Analysis of sensory data in relation to the instrumental analyses will also be emphasized.",
+    "prerequisites": {
+      "text": "FDSC 305 or NUTR 346, or permission of the instructor",
+      "tree": {
+        "or": [
+          "FDSC 305",
+          "NUTR 346"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures",
+      "Offered in alternate years"
+    ]
+  },
+  {
+    "code": "FDSC 545",
+    "subject": "FDSC",
+    "number": "545",
+    "title": "Advances in Food Microbiology",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An advanced level food microbiology course providing a perspective on advanced topics in food microbiology (microbial biofilms, antimicrobial resistance, bacterial endospores) and describing the fundamental principles of advanced techniques in food microbiology (microbiological, biochemical, immunological, genetics methods).",
+    "prerequisites": {
+      "text": "MICR 230 or LSCI 230, or permission of instructor",
+      "tree": {
+        "or": [
+          "MICR 230",
+          "LSCI 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures",
+      "Offered in alternate years only"
+    ]
+  },
+  {
+    "code": "FDSC 555",
+    "subject": "FDSC",
+    "number": "555",
+    "title": "Comparative Food Law",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to food law. The transformations that food law is undergoing as a consequence of social, economic and technological changes, the regulation of food risks and consumers' rights to be informed (labeling, health claims, nutritional information).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 624",
+    "subject": "FDSC",
+    "number": "624",
+    "title": "Current Food Safety Issues",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examining current and emerging food safety issues and concerns as they occur, including food recalls, in the context of food safety hazards and health risk, food laws and regulations, food industry standards and practices.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 626",
+    "subject": "FDSC",
+    "number": "626",
+    "title": "Food Safety Risk Assessment",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Food safety risk assessment as a key component of the risk analysis framework. Various aspects of the risk assessment process including planning, conducting and reviewing a risk assessment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 634",
+    "subject": "FDSC",
+    "number": "634",
+    "title": "Food Toxins and Toxicants",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Toxins and toxicant residues in food are explored from an analytical perspective. New techniques of analysis and strategies are emphasized.",
+    "prerequisites": {
+      "text": "FDSC 213 or permission of instructor.",
+      "tree": "FDSC 213",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "FDSC 651",
+    "subject": "FDSC",
+    "number": "651",
+    "title": "Principles of Food Analysis 2",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The fundamentals of food analysis are presented with the emphasis on the major food components. Topics include: sampling, method selection, official methods, proximate analysis, moisture, protein, fat, ash, fiber, carbohydrates, vitamins, nutraceutical compounds and infra-red analyses.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures; one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 652",
+    "subject": "FDSC",
+    "number": "652",
+    "title": "Separation Techniques in Food Analysis 2",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced detailed treatment of the principal chromatographic and electrophoretic techniques associated with the analysis of carbohydrate, lipid and protein constituents of food.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures; one 3-hour lab"
+    ]
+  },
+  {
+    "code": "FDSC 690",
+    "subject": "FDSC",
+    "number": "690",
+    "title": "M.Sc. Literature Review",
+    "credits": 8,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Master of Science literature review.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 691",
+    "subject": "FDSC",
+    "number": "691",
+    "title": "M.Sc. Research Protocol",
+    "credits": 7,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Master of Science research protocol.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 692",
+    "subject": "FDSC",
+    "number": "692",
+    "title": "M.Sc. Thesis",
+    "credits": 15,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Master of Science research portion of the M.Sc. thesis based on results obtained from the research phase of the M.Sc. thesis. Satisfactory completion of the M.Sc. Thesis, approval by reviewers and acceptance by Graduate and Postdoctoral Studies is required to pass the course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 695",
+    "subject": "FDSC",
+    "number": "695",
+    "title": "M.Sc. Graduate Seminar 1",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation on a selected topic, research proposal or research results based on progress in degree work (M.Sc.1).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 696",
+    "subject": "FDSC",
+    "number": "696",
+    "title": "M.Sc. Graduate Seminar 2",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation on a selected topic, research proposal or research results based on progress in degree work (M.Sc.2).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 697",
+    "subject": "FDSC",
+    "number": "697",
+    "title": "M.Sc. Project Part 1",
+    "credits": 6,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A critical review of the current state of knowledge of some aspect of Food Science or Technology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Must be registered in the M.Sc. in Food Science and Agricultural Chemistry; Non-Thesis Food Science.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FDSC 698",
+    "subject": "FDSC",
+    "number": "698",
+    "title": "M.Sc. Project Part 2",
+    "credits": 6,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A critical review of the current state of knowledge of some aspects of Food Science or Technology.",
+    "prerequisites": {
+      "text": "FDSC 697.",
+      "tree": "FDSC 697",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Must be registered in the M.Sc. in Food Science and Agricultural Chemistry; Non-Thesis-Food Science.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "FDSC 700",
+    "subject": "FDSC",
+    "number": "700",
+    "title": "Comprehensive Preliminary Examination",
+    "credits": 0,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "See Faculty Regulations"
+    ]
+  },
+  {
+    "code": "FDSC 725",
+    "subject": "FDSC",
+    "number": "725",
+    "title": "Advanced Topics in Food Science",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Selected subjects related to advancements taking place in the discipline of Food Science will be studied to gain an in-depth understanding of their principles, application and potential impact.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Ph.D. students in Food Science. Not open to students who have taken FDSC 625.",
+      "excludes": [
+        "FDSC 625"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FDSC 797",
+    "subject": "FDSC",
+    "number": "797",
+    "title": "Ph.D. Graduate Seminar 1",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation on a selected topic, research proposal or research results based on progress in degree work (Ph.D.).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "FDSC 798",
+    "subject": "FDSC",
+    "number": "798",
+    "title": "Ph.D. Graduate Seminar 2",
+    "credits": 3,
+    "offeredBy": "Food Science&Agr.Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation on a selected topic, research proposal or research results based on progress in degree work (Ph.D.).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

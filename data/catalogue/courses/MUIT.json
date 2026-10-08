@@ -1,0 +1,261 @@
+[
+  {
+    "code": "MUIT 201",
+    "subject": "MUIT",
+    "number": "201",
+    "title": "String Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "The fundamental techniques in performance of four common stringed instruments, i.e., violin, viola, cello, and bass. Principles of sound production on stringed instruments, historical development of the strings, purchase of new and used instruments, maintenance and repairs, teaching procedures and reference materials.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUSP 140 or MUSP 141 AND MUTH 150.",
+      "tree": {
+        "or": [
+          "MUSP 140",
+          {
+            "and": [
+              "MUSP 141",
+              "MUTH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  },
+  {
+    "code": "MUIT 202",
+    "subject": "MUIT",
+    "number": "202",
+    "title": "Woodwind Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The fundamental techniques in performance of five common woodwind instruments, i.e., clarinet, flute, oboe, bassoon, and saxophone. Principles of sound production, historical development of the woodwinds, purchase of new and used instruments, maintenance and repairs, teaching procedures and reference materials.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUSP 140 or MUSP 141 AND MUTH 150.",
+      "tree": {
+        "or": [
+          "MUSP 140",
+          {
+            "and": [
+              "MUSP 141",
+              "MUTH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  },
+  {
+    "code": "MUIT 203",
+    "subject": "MUIT",
+    "number": "203",
+    "title": "Brass Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The fundamental techniques in performance of five common brass instruments, i.e., trumpet, horn, trombone, baritone, and tuba. Principles of sound production, historical development of the brass, purchase of new and used instruments, maintenance and repairs, teaching procedures and reference materials.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUSP 140 or MUSP 141 AND MUTH 150.",
+      "tree": {
+        "or": [
+          "MUSP 140",
+          {
+            "and": [
+              "MUSP 141",
+              "MUTH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  },
+  {
+    "code": "MUIT 204",
+    "subject": "MUIT",
+    "number": "204",
+    "title": "Percussion Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The fundamental techniques in performance of percussion instruments commonly in use in symphonic bands and orchestras. Principles of sound production, historical development of the percussion, purchase of new and used instruments, maintenance and repairs, teaching procedures and reference materials.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUSP 140 or MUSP 141 AND MUTH 150.",
+      "tree": {
+        "or": [
+          "MUSP 140",
+          {
+            "and": [
+              "MUSP 141",
+              "MUTH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  },
+  {
+    "code": "MUIT 250",
+    "subject": "MUIT",
+    "number": "250",
+    "title": "Guitar Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The fundamental techniques in guitar performance. Basic principles of beginning and intermediate pedagogy, sound production, historical development of the instrument, purchase of new and used instruments, maintenance and repair, and teaching materials and repertoire for solo and ensemble performance.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUSP 140 or MUSP 141 AND MUTH 150.",
+      "tree": {
+        "or": [
+          "MUSP 140",
+          {
+            "and": [
+              "MUSP 141",
+              "MUTH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUIT 302",
+    "subject": "MUIT",
+    "number": "302",
+    "title": "Advanced Wind Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Continued exploration of brass and woodwind pedagogy. Methods for developing technique and musical sensitivity in beginning and intermediate performers will be explored through in-depth study of heterogeneous and homogeneous instrumental methods. Skill on secondary instruments and diagnostic and prescriptive teaching abilities will be extended through Lab performances and individual coaching projects.",
+    "prerequisites": {
+      "text": "MUIT 202, MUIT 203.",
+      "tree": {
+        "and": [
+          "MUIT 202",
+          "MUIT 203"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  },
+  {
+    "code": "MUIT 315",
+    "subject": "MUIT",
+    "number": "315",
+    "title": "Instrumental Conducting",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The fundamental skills of instrumental conducting, including baton technique, score analysis, and rehearsal procedures; conducting materials are selected from representative orchestral works.",
+    "prerequisites": {
+      "text": "MUGT 215, MUIT 201, 202, MUIT 203, MUIT 204, or MUIT 250, or permission of instructor.",
+      "tree": {
+        "or": [
+          "MUGT 215",
+          "MUIT 201",
+          "MUIT 202",
+          "MUIT 203",
+          "MUIT 204",
+          "MUIT 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to non-music education students with permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours and 2 hours lab"
+    ]
+  },
+  {
+    "code": "MUIT 356",
+    "subject": "MUIT",
+    "number": "356",
+    "title": "Jazz Instruction: Philosophy and Techniques",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Introduction to techniques for the development of school and community-based jazz programs. Topics will include: philosophy of jazz instruction, rhythm section, musical materials, techniques to develop improvisation and aural skills, jazz styles, score preparation, rehearsal techniques, and administration of jazz programs. Will include observation of rehearsals and coaching opportunities.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MUGT 215, MUIT 202, MUIT 203, MUIT 204 and MUIT 201 or MUIT 250, or permission of the instructor",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MUGT 215",
+              "MUIT 202",
+              "MUIT 203",
+              "MUIT 204",
+              "MUIT 201"
+            ]
+          },
+          "MUIT 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  }
+]

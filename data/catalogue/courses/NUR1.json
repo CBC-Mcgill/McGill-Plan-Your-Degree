@@ -1,0 +1,1290 @@
+[
+  {
+    "code": "NUR1 209",
+    "subject": "NUR1",
+    "number": "209",
+    "title": "Pathophysiology for Nursing 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will focus on the study of the physiological control mechanisms and pathophysiologic alterations in health across the lifespan, looking at selected diseases that are the most prevalent in North America. It will explore concepts of disease causation: acquired, immune, infectious, carcinogenic, genetic, and biochemical alterations in health in selected body systems. There will be an emphasis on etiology, cellular and systemic pathophysiologic responses, clinical manifestations, diagnostic, and treatment modalities.",
+    "prerequisites": {
+      "text": "BIOL 112, CHEM 110, CHEM 120, CHEM 212, PHYS 101, & PHYS 102 or equivalent.",
+      "tree": {
+        "and": [
+          "BIOL 112",
+          "CHEM 110",
+          "CHEM 120",
+          "CHEM 212",
+          "PHYS 101",
+          "PHYS 102"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 210",
+    "subject": "NUR1",
+    "number": "210",
+    "title": "Pathophysiology for Nursing 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will build on previous knowledge from NUR1 209, and focus on the study of the physiology of organ systems and the pathophysiologic alterations in health across the lifespan, looking at selected diseases of the reproductive, cardiovascular, renal, digestive, and neurological. endocrine and hematological systems that are the most prevalent in North America. It will explore concepts of disease causation in the: acquired, immune, infectious, carcinogenic, genetic, and biochemical alterations in health in selected body systems. There will be an emphasis on etiology, cellular and systemic pathophysiologic responses, clinical manifestations, diagnostic, and treatment modalities.",
+    "prerequisites": {
+      "text": "NUR1 209; for BNI students only: NUR1 222.",
+      "tree": {
+        "and": [
+          "NUR1 209",
+          "NUR1 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 221",
+    "subject": "NUR1",
+    "number": "221",
+    "title": "Intro to Professional Practice and Strengths-Based Nursing and Healthcare",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the nursing profession and to a nurse’s scope of practice. Exploration of the nursing history of healthcare in Canada, the history of nursing and of the strengths-based nursing and healthcare (SBNH) approach. Exploration of nursing concepts with a focus on how the approach can be applied to professional practice.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "IPEA 500",
+      "tree": "IPEA 500",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": [
+      "A fee of $25.56 for two name pins will be charged based on registration in this course."
+    ]
+  },
+  {
+    "code": "NUR1 222",
+    "subject": "NUR1",
+    "number": "222",
+    "title": "Strengths-Based Nursing & Healthcare & Professional Practice",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Overview of the history of nursing, the philosophical and theoretical tenets of Strengths-Based Nursing and Healthcare (SBNH) and the pivotal contributions of nursing in the health cares ystem. Study of selected topics and concepts related to nursing practice, health promotion,research, and ethics.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "IPEA 500",
+      "tree": "IPEA 500",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students in U0.",
+      "excludes": []
+    },
+    "notes": [
+      "A fee of $25.80 for two name pins will be charged based on registration in this course."
+    ]
+  },
+  {
+    "code": "NUR1 224",
+    "subject": "NUR1",
+    "number": "224",
+    "title": "Individual and Family Development Across Lifespans 1",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "In this course students will explore the development of adults and their families to identify biological, psychological, and sociocultural perspectives of aging using a strength-based nursing framework. In this foundational inquiry based learning course students will work in groups and independently, evaluating and applying research to build upon existing knowledge and explore health and illness situations.",
+    "prerequisites": {
+      "text": "or corequisites: NUR1 209 & NUR1 222",
+      "tree": {
+        "and": [
+          "NUR1 209",
+          "NUR1 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "NUR1 230, NUR1 234, and NUR1 235",
+      "tree": {
+        "and": [
+          "NUR1 230",
+          "NUR1 234",
+          "NUR1 235"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 225",
+    "subject": "NUR1",
+    "number": "225",
+    "title": "Individual and Family Development Across Lifespans 2",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In this course students will explore the development of young families to understand biological, psychological, and sociocultural perspectives using a strengthbased nursing framework. The focus of this course will be on individuals 0-18 years old and their families. This inquiry based learning course will build upon NUR1 224.",
+    "prerequisites": {
+      "text": "NUR1 224",
+      "tree": "NUR1 224",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 231, NUR1 233, & NUR1 236",
+      "tree": {
+        "and": [
+          "NUR1 231",
+          "NUR1 233",
+          "NUR1 236"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 230",
+    "subject": "NUR1",
+    "number": "230",
+    "title": "Supporting Health and Healing Capacities 1",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This laboratory course addresses a range of clinical skills that support health and healing capacities in adults.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR1 224, NUR1 234, NUR1 235",
+      "tree": {
+        "and": [
+          "NUR1 224",
+          "NUR1 234",
+          "NUR1 235"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Pre/co-requisites: NUR1 209, NUR1 222",
+      "A nominal fee of $26.05 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR1 231",
+    "subject": "NUR1",
+    "number": "231",
+    "title": "Supporting Health and Healing Capacities 2",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This laboratory course builds on NUR1 230 and addresses a range of clinical skills that support health and healing capacities in young families.",
+    "prerequisites": {
+      "text": "NUR1 230; Prerequisite/ co-requisites: NUR1 210, NUR1 311",
+      "tree": {
+        "and": [
+          "NUR1 230",
+          "NUR1 210",
+          "NUR1 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "NUR1 225, NUR1 233, NUR1 236",
+      "tree": {
+        "and": [
+          "NUR1 225",
+          "NUR1 233",
+          "NUR1 236"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "A nominal fee of $34.99 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR1 233",
+    "subject": "NUR1",
+    "number": "233",
+    "title": "Promoting Young Family Development",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This clinical course focuses on identifying indicators of healthy development in individuals and families during two phases of development, the birth of a baby and the young preschooler. Students will develop skill in the assessment of these individuals and families and explore nursing approaches that promote their health.",
+    "prerequisites": {
+      "text": "NUR1 230, NUR1 234, NUR1 235",
+      "tree": {
+        "and": [
+          "NUR1 230",
+          "NUR1 234",
+          "NUR1 235"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "IPEA 501, NUR1 225, NUR1 231 and NUR1 236",
+      "tree": {
+        "and": [
+          "IPEA 501",
+          "NUR1 225",
+          "NUR1 231",
+          "NUR1 236"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 234",
+    "subject": "NUR1",
+    "number": "234",
+    "title": "Nursing Older Adults",
+    "credits": 2,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A clinical course providing basic knowledge and skills in promoting and maintaining biological, psychological, and social processes of health in the aged. Students will acquire skill in gerontological nursing assessment and intervention with the elderly living in the community.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR1 224, NUR1 230, NUR1 235",
+      "tree": {
+        "and": [
+          "NUR1 224",
+          "NUR1 230",
+          "NUR1 235"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Pre/co-requisites: NUR1 209 and NUR1 222"
+    ]
+  },
+  {
+    "code": "NUR1 235",
+    "subject": "NUR1",
+    "number": "235",
+    "title": "Health and Physical Assessment/Anatomy 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course develops knowledge and skills required to perform a health history and complete health and physical assessment across the lifespan. Human anatomy will be integrated throughout.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR1 224, NUR1 230, NUR1 234",
+      "tree": {
+        "and": [
+          "NUR1 224",
+          "NUR1 230",
+          "NUR1 234"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Pre/co-requisites: NUR1 209, NUR1 222"
+    ]
+  },
+  {
+    "code": "NUR1 236",
+    "subject": "NUR1",
+    "number": "236",
+    "title": "Health and Physical Assessment/Anatomy 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course builds upon NUR1 235 and further develops knowledge and skills required to perform a health history and complete health and physical assessment across the lifespan. Human anatomy will be integrated throughout.",
+    "prerequisites": {
+      "text": "NUR1 235",
+      "tree": "NUR1 235",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 225, NUR1 231, NUR1 233",
+      "tree": {
+        "and": [
+          "NUR1 225",
+          "NUR1 231",
+          "NUR1 233"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Pre-corequisite/co-requisites: NUR1 210, NUR1 311"
+    ]
+  },
+  {
+    "code": "NUR1 300",
+    "subject": "NUR1",
+    "number": "300",
+    "title": "Pharmacology for Nursing 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This introductory course will focus on drug mechanisms of action, pharmacodynamics, pharmacokinetics, pharmacotherapeutics, patient safety and professional nursing responsibilities in drug administration. Pharmacotherapeutic challenges across the life span will be addressed. Health promotion as it relates to pharmacologic agents, drug safety, and evidence-based nursing implications for teaching, medication administration and monitoring will be explored.",
+    "prerequisites": {
+      "text": "NUR1 209 and NUR1 210",
+      "tree": {
+        "and": [
+          "NUR1 209",
+          "NUR1 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 301",
+    "subject": "NUR1",
+    "number": "301",
+    "title": "Pharmacology for Nursing 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will build on knowledge from NUR1 300. It will apply and expand upon knowledge on drug mechanisms of action, pharmacodynamics, pharmacokinetics, patient safety and professional nursing responsibilities in drug administration. Pharmacotherapeutic challenges related to cardiovascular, reproductive, digestive, renal, neurological, hematological, musculoskeletal systems, as well as, toxicology, addiction will be addressed. Health promotion as it relates to pharmacologic agents, drug safety, and evidence-based nursing implications for teaching, medication administration and monitoring will be explored.",
+    "prerequisites": {
+      "text": "NUR1 300",
+      "tree": "NUR1 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 311",
+    "subject": "NUR1",
+    "number": "311",
+    "title": "Infection Prevention and Control",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles of microbiology and their application to clinical practice in acute and community care settings. Laboratory diagnostics, infectious diseases, and infection prevention and control principles and activities are covered.",
+    "prerequisites": {
+      "text": "NUR1 209",
+      "tree": "NUR1 209",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Pre/ co-requisite: NUR1 210"
+    ]
+  },
+  {
+    "code": "NUR1 312",
+    "subject": "NUR1",
+    "number": "312",
+    "title": "Research in Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Quantitative and qualitative approaches to nursing research and guidance to effectively critique research and apply the results to clinical practice, including: formulating a research question, research design issues, strategies for data collection and analysis, appraisal and utilization of nursing research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 318",
+    "subject": "NUR1",
+    "number": "318",
+    "title": "Chronic Illness and Palliative Health Challenges",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An analysis of how biological, psychological and sociocultural factors influence living with chronic and palliative health challenges using a strengths-based nursing approach. Evidence-informed approaches to nursing persons and their families in selected health situations will be prioritized.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR1 338",
+      "tree": "NUR1 338",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to BNI students.",
+      "excludes": []
+    },
+    "notes": [
+      "Pre/corequisites: NUR1 209, NUR1 222, NUR1 312"
+    ]
+  },
+  {
+    "code": "NUR1 320",
+    "subject": "NUR1",
+    "number": "320",
+    "title": "Critical Care Nursing Theory",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The focus of this course is the management of critical illness situations, the impact of psychological, behavioural and biological responses of stress and illness and the impact this complex interplay has on the personal and contextual resources of patients and their families. It will explore evidence informed management approaches to a range of symptoms and patient conditions as well as nurse sensitive indicators of care, taking into account research evidence, clinical expertise, and patient preferences.",
+    "prerequisites": {
+      "text": "NUR1 209",
+      "tree": "NUR1 209",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "IPEA 501, NUR1 327, NUR1 339",
+      "tree": {
+        "and": [
+          "IPEA 501",
+          "NUR1 327",
+          "NUR1 339"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR1 319 or NUR1 324.; Only open to students in the Bachelor of Nursing (Integrated Nursing) program.",
+      "excludes": [
+        "NUR1 319",
+        "NUR1 324"
+      ]
+    },
+    "notes": [
+      "Pre/corequisites: NUR1 210, NUR1 312"
+    ]
+  },
+  {
+    "code": "NUR1 322",
+    "subject": "NUR1",
+    "number": "322",
+    "title": "Chronic Illness and Palliative Care",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "The biological, psychological and social factors which influence living with chronic illness are examined. Empirical findings linking different chronic stressors to coping responses and to health outcomes are reviewed. Issues in palliative care, the care of the dying, and the nature of bereavement are reviewed.",
+    "prerequisites": {
+      "text": "NUR1 331 or NUR1 319",
+      "tree": {
+        "or": [
+          "NUR1 331",
+          "NUR1 319"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "IPEA 502",
+      "tree": "IPEA 502",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 323",
+    "subject": "NUR1",
+    "number": "323",
+    "title": "Illness Management 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The focus of this course is the medical, surgical and nursing management of the major illnesses in adults and children. Topics will include diagnostic tests, drug therapies, dietary management, exercise, relaxation techniques, pain management approaches, patient education, and strategies for maintaining physical and emotional well-being.",
+    "prerequisites": {
+      "text": "NUR1 209, NUR1 210",
+      "tree": {
+        "and": [
+          "NUR1 209",
+          "NUR1 210"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 300",
+      "tree": "NUR1 300",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 324",
+    "subject": "NUR1",
+    "number": "324",
+    "title": "Illness Management 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Medical, surgical, and nursing management of the major illnesses in adults and children. Topics will include diagnostic tests, drug therapies, dietary management, symptom management, patient education, and strategies for maintaining physical and emotional well-being.",
+    "prerequisites": {
+      "text": "NUR1 323",
+      "tree": "NUR1 323",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "IPEA 502 and NUR1 301",
+      "tree": {
+        "and": [
+          "IPEA 502",
+          "NUR1 301"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 325",
+    "subject": "NUR1",
+    "number": "325",
+    "title": "Acute, Chronic, and Palliative Health Challenges 1",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "In this course students will explore how biological, psychological and sociocultural factors influence living with acute, chronic and palliative health conditions using a strength- based nursing framework. Students will apply evidence informed approaches to nursing persons and their families in selected health situations. This inquiry based learning course will build upon NUR1 225.",
+    "prerequisites": {
+      "text": "NUR1 225",
+      "tree": "NUR1 225",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 323, NUR1 332, NUR1 336",
+      "tree": {
+        "and": [
+          "NUR1 323",
+          "NUR1 332",
+          "NUR1 336"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 326",
+    "subject": "NUR1",
+    "number": "326",
+    "title": "Acute, Chronic, and Palliative Health Challenges 2",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In this course students will analyze how biological, psychological and sociocultural factors influence living with acute, chronic and palliative health conditions using a strength-based nursing framework. Students will prioritize evidence informed approaches to nursing persons and their families in selected health situations. This course will build upon NUR1 325.",
+    "prerequisites": {
+      "text": "NUR1 325",
+      "tree": "NUR1 325",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 324, NUR1 333 or NUR1 431",
+      "tree": {
+        "and": [
+          "NUR1 324",
+          {
+            "or": [
+              "NUR1 333",
+              "NUR1 431"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 327",
+    "subject": "NUR1",
+    "number": "327",
+    "title": "Critical Health Challenges",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An analysis of how biological, psychological and sociocultural factors influence critical illness experiences using a strengths-based nursing approach. Evidence-informed approaches to nursing persons and their families in selected critical health challenges will be prioritized.",
+    "prerequisites": {
+      "text": "NUR1 318",
+      "tree": "NUR1 318",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 320 and NUR1 339",
+      "tree": {
+        "and": [
+          "NUR1 320",
+          "NUR1 339"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to BNI students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR1 329",
+    "subject": "NUR1",
+    "number": "329",
+    "title": "Skin Integrity and Wound Care",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will focus on teaching the principles of assessment and evidence-informed management of chronic and acute wounds in the clinical and community setting. Pressure ulcers, venous leg ulcers, wound infections, debridement, wound care products, compression and other types of chronic wounds will be covered along with appropriate treatment options, the expanded professional and legal scope practice and the role of the multidisciplinary team in managing complex wound care and patient and family teaching and education strategies to support health and healing.",
+    "prerequisites": {
+      "text": "NUR1 209, NUR1 210, and (NUR1 331 or NUR1 434 or NUR1 435)",
+      "tree": {
+        "and": [
+          "NUR1 209",
+          "NUR1 210",
+          {
+            "or": [
+              "NUR1 331",
+              "NUR1 434",
+              "NUR1 435"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 331",
+    "subject": "NUR1",
+    "number": "331",
+    "title": "Nursing in Illness 1",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Knowledge, clinical reasoning skills, and approaches to strengths-based nursing care of individuals and families experiencing acute and/or chronic illness events requiring hospitalization.",
+    "prerequisites": {
+      "text": "NUR1 233",
+      "tree": "NUR1 233",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 335",
+      "tree": "NUR1 335",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Web withdrawal deadline is the fourth lecture day.",
+      "**In order to secure placement in clinical courses and internships, the add/drop is March 28th which is before the start of the course, and withdrawal is May 9th which is the first day of class."
+    ]
+  },
+  {
+    "code": "NUR1 332",
+    "subject": "NUR1",
+    "number": "332",
+    "title": "Nursing in Illness 2",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Knowledge, clinical reasoning skills, and approaches to strengths-based nursing care, including establishing inter-patient priorities, of individuals and families experiencing acute and/or chronic illness events requiring hospitalization.",
+    "prerequisites": {
+      "text": "NUR1 331",
+      "tree": "NUR1 331",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 325, NUR1 336, NUR1 323",
+      "tree": {
+        "and": [
+          "NUR1 325",
+          "NUR1 336",
+          "NUR1 323"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 333",
+    "subject": "NUR1",
+    "number": "333",
+    "title": "Nursing in Illness 3",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Knowledge, clinical reasoning skills, and approaches to strengths-based nursing care, including establishing priorities among groups of patients/families experiencing acute and/or chronic illness events requiring hospitalization.",
+    "prerequisites": {
+      "text": "NUR1 332",
+      "tree": "NUR1 332",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Register by October 1st to ensure placement.",
+      "**In order to secure placement in clinical courses and internships, the add/drop is March 28th which is before the start of the course, and withdrawal is May 5th which is the first day of class."
+    ]
+  },
+  {
+    "code": "NUR1 335",
+    "subject": "NUR1",
+    "number": "335",
+    "title": "Illness Management Clinical Skills Laboratory 1",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This laboratory course addresses illness management clinical technical skills and is the companion course to Nursing in Illness 1. Students develop the following areas with respect to a range of clinical technical skills: a) knowledge of the technical skill itself; b) an understanding of the risks and patient safety issues associated with the procedure; c) knowledge of the infection prevention and control guidelines required to perform the skill; d) fine and gross psychomotor skills relative to performing the procedure; e) sensitivity to the patient experience related to the procedure.",
+    "prerequisites": {
+      "text": "NUR1 231",
+      "tree": "NUR1 231",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 331",
+      "tree": "NUR1 331",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is May 6th and withdrawal is May 9th.",
+      "A nominal fee of $107.25 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR1 336",
+    "subject": "NUR1",
+    "number": "336",
+    "title": "Illness Management Clinical Skills Laboratory 2",
+    "credits": 1,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This laboratory course addresses illness management clinical technical skills and is the companion course to Nursing in Illness 2. Students develop the following areas with respect to a range of clinical technical skills: a) knowledge of the technical skill itself; b) an understanding of the risks and patient safety issues associated with the procedure; c) knowledge of the infection prevention and control guidelines required to perform the skill; d) fine and gross psychomotor skills relative to performing the procedure; e) sensitivity to the patient experience related to the procedure.",
+    "prerequisites": {
+      "text": "NUR1 335",
+      "tree": "NUR1 335",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 323, NUR1 332",
+      "tree": {
+        "and": [
+          "NUR1 323",
+          "NUR1 332"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Nominal fee of $118.50 is charged to all nursing students who register in courses where clinical skills are taught to students in the Nursing Learning Laboratory. The fee is for clinical skills kits that students will use during their training in the Nursing Learning Laboratory. The kits also contain additional materials for students to take with them after the training to allow them to practice the skills they learn on their own."
+    ]
+  },
+  {
+    "code": "NUR1 338",
+    "subject": "NUR1",
+    "number": "338",
+    "title": "Applied Health and Physical Assessment/Anatomy 1",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course builds on and develops advanced knowledge and skills required to perform a health history and complete health and physical assessment across the lifespan. Human anatomy will be integrated throughout.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR1 318",
+      "tree": "NUR1 318",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Pre/corequisite: NUR1 209"
+    ]
+  },
+  {
+    "code": "NUR1 339",
+    "subject": "NUR1",
+    "number": "339",
+    "title": "Applied Health and Physical Assessment/Anatomy 2",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course builds upon NUR1 338 and further develops knowledge and skills required to perform a health history and complete health and physical assessment across the lifespan, and apply to specific patient populations. Human anatomy will be integrated throughout.",
+    "prerequisites": {
+      "text": "NUR1 338",
+      "tree": "NUR1 338",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 320, NUR1 327",
+      "tree": {
+        "and": [
+          "NUR1 320",
+          "NUR1 327"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken NUR1 239",
+      "excludes": [
+        "NUR1 239"
+      ]
+    },
+    "notes": [
+      "Pre/corequisite: NUR1 210"
+    ]
+  },
+  {
+    "code": "NUR1 421",
+    "subject": "NUR1",
+    "number": "421",
+    "title": "Resources: Special Populations",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "The concept of social support is explored and links between social networks and health are examined. Groups at health risk including the homeless, poor, and new immigrants are identified. Types and functions of community groups available as social resources for these groups will be discussed.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "NUR1 431 or NUR1 432",
+      "tree": {
+        "or": [
+          "NUR1 431",
+          "NUR1 432"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Prequisite(s): NUR1 420"
+    ]
+  },
+  {
+    "code": "NUR1 423",
+    "subject": "NUR1",
+    "number": "423",
+    "title": "Leading Change: Policy and Practice",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In this course students will critique today's healthcare environment and professional practice issues. The focus will be on the development of leadership skills to influence policy and practice.",
+    "prerequisites": {
+      "text": "NUR1 424",
+      "tree": "NUR1 424",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 424",
+    "subject": "NUR1",
+    "number": "424",
+    "title": "Legal, Ethical, and Professional Practice Issues",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "In this course students will integrate principles of ethical and legal nursing practice standards to complex health situations for persons and their families. There will be a focus on professional accountability, liability, and advocacy.",
+    "prerequisites": {
+      "text": "for B.Sc.(N.) students: NUR1 326; for B.N. (Integrated) students: NUR1 327",
+      "tree": {
+        "and": [
+          "NUR1 326",
+          "NUR1 327"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 428",
+    "subject": "NUR1",
+    "number": "428",
+    "title": "Learning and Health Education",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "This course examines how cognitive, behaviorist, and social learning theories may be used to enhance individual and family health behaviors, coping and development. Topics include: learning theories; principles of teaching and learning, support groups, issues around clients' use of information technology for health information.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR1 328.",
+      "excludes": [
+        "NUR1 328"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR1 431",
+    "subject": "NUR1",
+    "number": "431",
+    "title": "Community Health Nursing Practicum",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "In this clinical course, students will apply the guiding principles and values of primary health care through the application of the community health nursing process using capacity building and strength based approach in partnership with individuals, families and groups within the health care system leading to enhanced competencies in prevention, health protection, maintenance, restoration and palliation.",
+    "prerequisites": {
+      "text": "for B.Sc.(Nursing) students: NUR1 326 and NUR1 332.; for B.N. (Integrated) students: NUR1 327.",
+      "tree": {
+        "and": [
+          "NUR1 326",
+          "NUR1 332",
+          "NUR1 327"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**In order to secure placement in clinical courses and internships, the add/drop is March 28th which is before the start of the course, and withdrawal is May 2nd which is the first day of class."
+    ]
+  },
+  {
+    "code": "NUR1 432",
+    "subject": "NUR1",
+    "number": "432",
+    "title": "Community Health Nursing Project",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "In this clinical course, students will apply the guiding principles and values of primary health care through the application of the community health nursing process using capacity building and strength based approach in partnership with populations and communities outside the health care system leading to a health promotion project.",
+    "prerequisites": {
+      "text": "for B.Sc.(N.) students: NUR1 332, NUR1 336; for B.N. (Integrated) students: NUR1 327, NUR1 434 or NUR1 435",
+      "tree": {
+        "and": [
+          "NUR1 332",
+          "NUR1 336",
+          "NUR1 327",
+          {
+            "or": [
+              "NUR1 434",
+              "NUR1 435"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "NUR1 434",
+    "subject": "NUR1",
+    "number": "434",
+    "title": "Critical Care Nursing Practicum",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Advancing nursing practice through clinical and research activities. Hospital-based studies involve planning and providing direct patient care; one-to-one discussions with their clinical teacher/preceptor; peer discussions; and clinical rounds, with the goal of enhancing the breadth and depth of critical thinking and clinical decision-making.",
+    "prerequisites": {
+      "text": "NUR1 320, NUR1 327 and NUR1 339",
+      "tree": {
+        "and": [
+          "NUR1 320",
+          "NUR1 327",
+          "NUR1 339"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken NUR1 334.",
+      "excludes": [
+        "NUR1 334"
+      ]
+    },
+    "notes": [
+      "Only open to B.N. (Integrated) students",
+      "**Due to the length of the clinical course, add/drop is the eleventh lecture day and withdrawal is the fifteenth lecture day.",
+      "**In order to secure placement in clinical courses and internships, the add/drop is March 28th which is before the start of the course, and withdrawal is May 1st which is the first day of class."
+    ]
+  },
+  {
+    "code": "NUR1 435",
+    "subject": "NUR1",
+    "number": "435",
+    "title": "Ambassador Critical Care Practicum",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "This clinical nursing experience offers students an opportunity to consolidate their critical care knowledge and assessment skills in clinical settings outside the McGill University Teaching Hospital Network.",
+    "prerequisites": {
+      "text": "NUR1 320, NUR1 327 and NUR1 339",
+      "tree": {
+        "and": [
+          "NUR1 320",
+          "NUR1 327",
+          "NUR1 339"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "**Web add/drop deadline is March 30, 2020, which is before the start of classes.",
+      "**Web withdrawal deadline is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "NUR1 529",
+    "subject": "NUR1",
+    "number": "529",
+    "title": "Critical Care Nursing",
+    "credits": 4,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "This intensive clinical nursing experience focuses on the assessment and care of individuals and their families dealing with a critical and potentially life threatening health event.",
+    "prerequisites": {
+      "text": "NUR1 424, NUR1 431, NUR1 432",
+      "tree": {
+        "and": [
+          "NUR1 424",
+          "NUR1 431",
+          "NUR1 432"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.Sc.(N.) students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR1 530",
+    "subject": "NUR1",
+    "number": "530",
+    "title": "Nursing Practice Consolidation",
+    "credits": 5,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This clinical nursing experience offers students an opportunity to consolidate their knowledge and assessment skills in either community nursing or critical care.",
+    "prerequisites": {
+      "text": "NUR1 431 and NUR1 432",
+      "tree": {
+        "and": [
+          "NUR1 431",
+          "NUR1 432"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only B.Sc.(N) Program",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "NUR1 531",
+    "subject": "NUR1",
+    "number": "531",
+    "title": "Ambassador Nursing Practice Consolidation",
+    "credits": 5,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "This clinical nursing experience offers students an opportunity to consolidate their knowledge and assessment skills in either community nursing or critical care in clinical settings outside the McGill University.",
+    "prerequisites": {
+      "text": "NUR1 432",
+      "tree": "NUR1 432",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NUR1 423",
+      "tree": "NUR1 423",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Restricion(s): Only open to B.Sc.(N.) students and permission of the instructor."
+    ]
+  },
+  {
+    "code": "NUR1 548",
+    "subject": "NUR1",
+    "number": "548",
+    "title": "Introduction to Telehealth Nursing",
+    "credits": 3,
+    "offeredBy": "Ingram School of Nursing",
+    "faculty": "Ingram School of Nursing",
+    "terms": [],
+    "description": "Introduction to the clinical, technological, administrative and ethical legal aspects of telehealth nursing.",
+    "prerequisites": {
+      "text": "NUR1 331 OR NUR2 511D1/D2",
+      "tree": {
+        "or": [
+          "NUR1 331",
+          "NUR2 511D1"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Limited Enrollment.",
+      "Only open to students registered in a Nursing program at McGill."
+    ]
+  }
+]

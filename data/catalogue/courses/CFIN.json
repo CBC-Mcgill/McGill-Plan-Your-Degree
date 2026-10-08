@@ -1,0 +1,294 @@
+[
+  {
+    "code": "CFIN 305",
+    "subject": "CFIN",
+    "number": "305",
+    "title": "Investor Behaviour",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The emotional and psychological factors that impact investors' behaviour and decision making. Various market anomalies will be examined in the context of mean-variance efficiency theory, as well as typical forecasting errors, expert justifications and continued investor reliance on forecasting models in the context of psychological biases.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 350",
+    "subject": "CFIN",
+    "number": "350",
+    "title": "Alternative Investments",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course defines alternative asset classes, examines the structure of the different markets and investment vehicles with a focus on investments in sustainable ventures. The performance of each asset class in relation to the traditional asset classes of equity and fixed income is analyzed.",
+    "prerequisites": {
+      "text": "CFIN 300",
+      "tree": "CFIN 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 400",
+    "subject": "CFIN",
+    "number": "400",
+    "title": "Real Estate Finance",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "A thorough introduction to the cash flows, returns and risks of investing in and financing of real estates is provided. The basics of mortgage finance, mortgage refinancing, default risk and underwriting of individual residential properties, and analyses of leases, valuation, investment and risk of individual income producing properties are covered.",
+    "prerequisites": {
+      "text": "CFIN 300 and CMSC 221 and MGCR 341",
+      "tree": {
+        "and": [
+          "CFIN 300",
+          "CMSC 221",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 420",
+    "subject": "CFIN",
+    "number": "420",
+    "title": "Mutual Funds",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course examines the process of investing in mutual funds, sales of funds, and management of funds, including valuation and accounting. Additional topics include the special characteristics of hedge funds, ethical considerations and key regulations for mutual funds.",
+    "prerequisites": {
+      "text": "CFIN 300 and MGCR 211 and MGCR 341",
+      "tree": {
+        "and": [
+          "CFIN 300",
+          "MGCR 211",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 512",
+    "subject": "CFIN",
+    "number": "512",
+    "title": "Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Fundamental finance theory as applied to the firm's short and long-term financing and investment decisions and the sources of funds available to it (stocks, bonds, derivatives). Exposure to critical concepts of \"firm value maximization\" emphasizing capital budgeting, cost of capital, capital structure, derivatives, dividend policy, risk and return.",
+    "prerequisites": {
+      "text": "CACC 520 or CACC 521",
+      "tree": {
+        "or": [
+          "CACC 520",
+          "CACC 521"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CMS2 621",
+      "tree": "CMS2 621",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "CFIN 515",
+    "subject": "CFIN",
+    "number": "515",
+    "title": "Behavioural Finance",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The course will introduce various documented psychological biases that impact human behaviour and decision making. These documented market anomalies will be examined and assessed in the context of mean-variance efficiency theory. Typical forecasting errors, expert justifications and continued investor reliance on forecasting models will be examined.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 522",
+    "subject": "CFIN",
+    "number": "522",
+    "title": "Applied Topics: Corporate Finance",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Concepts and techniques developed in earlier courses are extended and/or applied to problems faced by managers in Corporate Finance. Such problems include: working capital management, capital budgeting, capital structure, dividend policy, cost of capital and mergers and acquisitions. Stresses the application of theory and techniques; and makes extensive use of case studies.",
+    "prerequisites": {
+      "text": "CFIN 512",
+      "tree": "CFIN 512",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "CGA Requirement",
+      "CMA Requirement",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "CFIN 540",
+    "subject": "CFIN",
+    "number": "540",
+    "title": "Introduction to International Finance",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The international financial environment as it affects the multinational manager. In-depth study of the various balance of payments concepts, adjustment of the external balance, and the international monetary systems, will be followed by a review of theory and institutional aspects of the foreign exchange and the international markets.",
+    "prerequisites": {
+      "text": "CFIN 512",
+      "tree": "CFIN 512",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 550",
+    "subject": "CFIN",
+    "number": "550",
+    "title": "Analysis of Fixed-Income Securities",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course addresses investments and trading strategies concerning popular fixed income securities, and risk management of fixed income portfolios. Additional topics include the structure, pricing and risks of securitized products and credit derivatives. Students will also be expected to read and present current research papers in this area.",
+    "prerequisites": {
+      "text": "CACC 521 and CFIN 500 and CFIN 512",
+      "tree": {
+        "and": [
+          "CACC 521",
+          "CFIN 500",
+          "CFIN 512"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 560",
+    "subject": "CFIN",
+    "number": "560",
+    "title": "Mutual Funds Finance",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course examines the entire process of investing in mutual funds, sales of funds, and management of funds including valuation and accounting. Additional topics include the special characteristics of hedge funds, ethical considerations and key regulations for mutual funds.",
+    "prerequisites": {
+      "text": "CACC 521 and CFIN 500 and CFIN 512",
+      "tree": {
+        "and": [
+          "CACC 521",
+          "CFIN 500",
+          "CFIN 512"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 561",
+    "subject": "CFIN",
+    "number": "561",
+    "title": "Sustainable Investments",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The course addresses the nuances of sustainable investments, how they affect the performance of the respective investment, and how sustainable investments measure up from a risk-return analytical framework. It will take the perspective of investors for optimally allocating capital across various asset classes including classes of sustainable investments.",
+    "prerequisites": {
+      "text": "CFIN 500",
+      "tree": "CFIN 500",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CFIN 590",
+    "subject": "CFIN",
+    "number": "590",
+    "title": "Topics in Finance",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Specialized course covering an advanced topic in the finance area selected from current issues or themes in literature.",
+    "prerequisites": {
+      "text": "CFIN 522 or CFIN 525 or CFIN 530 or CFIN 540",
+      "tree": {
+        "or": [
+          "CFIN 522",
+          "CFIN 525",
+          "CFIN 530",
+          "CFIN 540"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Content will vary from year to year."
+    ]
+  },
+  {
+    "code": "CFIN 595",
+    "subject": "CFIN",
+    "number": "595",
+    "title": "Derivatives and Risk Management Tools",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course develops and illustrates the no-arbitrage approach to the valuation of popular derivatives like forwards, futures and options for risk management purposes. Additional topics include an introduction to exotic options, emerging instruments, and the Nobel winning Black-Scholes option pricing model.",
+    "prerequisites": {
+      "text": "CFIN 500 and CFIN 512",
+      "tree": {
+        "and": [
+          "CFIN 500",
+          "CFIN 512"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,679 @@
+[
+  {
+    "code": "CCTR 401",
+    "subject": "CCTR",
+    "number": "401",
+    "title": "Independent Studies: Translation",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Research, reading and special projects, permitting independent study under the guidance of a staff member specializing in the field of interest. Projects will have to be arranged individually with the instructors. A detailed study proposal must be submitted to the Director during the first week of class. / Recherche, lecture et projets spéciaux, permettant des études indépendantes sous la direction d'un membre du personnel spécialisé dans le domaine choisi par l'étudiant. Les projets doivent être conçus individuellement avec les chargés de cours. Projet d'étude détaillé à présenter au directeur pendant la première semaine de cours.",
+    "prerequisites": {
+      "text": "Permission of the Program Director",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Condition préalable: autorisation du directeur du programme"
+    ]
+  },
+  {
+    "code": "CCTR 500",
+    "subject": "CCTR",
+    "number": "500",
+    "title": "Translation Practicum 1",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Translation project supervised by faculty and/or external partner.",
+    "prerequisites": {
+      "text": "Departmental approval required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCTR 530",
+    "subject": "CCTR",
+    "number": "530",
+    "title": "Applied Jurilinguistics",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Introduction to the field of jurilinguistics. Examination of jurilinguistic practices, including: drafting, legal translation, legal terminology development, revision, interpretation of law, and other aspects of legal language, such as readability and plain language.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bilingual course",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 531",
+    "subject": "CCTR",
+    "number": "531",
+    "title": "Introduction to Law for Non-Jurists",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of the common law and the civil law traditions for non-jurists. History and key concepts of the common law and civil law. Canadian bijuralism, judicial institutions and civil procedure, constitutional law, and criminal law.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation or with departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bilingual course.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 532",
+    "subject": "CCTR",
+    "number": "532",
+    "title": "Introduction to Translation",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the principles and practice of professional translation, research techniques and sources of documentation. Translation of a variety of general and semi-specialized texts from English to French, or from French to English.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation or with departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bi-directional translation course. Students will submit assignments in their target language, either English or French.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 534",
+    "subject": "CCTR",
+    "number": "534",
+    "title": "Professional Writing for Law",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Preparation of French or English texts of a professional and specialized nature with an emphasis on accuracy, concision, and respecting the characteristics of the prescribed form or genre.",
+    "prerequisites": {
+      "text": "CCTR 532",
+      "tree": "CCTR 532",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation or with departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bi-directional translation course. Students will submit assignments in their target language, either English or French.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 532.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 535",
+    "subject": "CCTR",
+    "number": "535",
+    "title": "Introduction to Language Technologies",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Identification and classification of different types of language technologies and their components. Introduction to computer-assisted translation (CAT) tools, translation management systems, machine translation and post-editing. Hands-on experience with CAT tools usage including the creation of translation memories, file alignment, creation of terminology databases and records, as well as the translation of documents in a translation editing environment. Principles of real life meta-learning (i.e., learning how to learn).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation or with departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bilingual course.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 536",
+    "subject": "CCTR",
+    "number": "536",
+    "title": "Advanced Revision for Law",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Principles of editing and revising texts written in French or English, or translated from French to English or from English to French, including the difference between editing and revising. Introduction to parameters and procedures applied in copy editing and editing practices, including structural, content, and substantive editing;examination of best practices used in bilingual revision; post-editing (i.e., revising machine-translation output); computer aids for editors and revisors.",
+    "prerequisites": {
+      "text": "CCTR 534",
+      "tree": "CCTR 534",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation or with departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bi-directional translation course. Students will submit assignments in their target language, either English or French.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 534.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 541",
+    "subject": "CCTR",
+    "number": "541",
+    "title": "Legal Translation: General",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Translation of legal texts. Overview of legal theory. Examination of legal translation methodology, legal terminology, phraseology, and legal citation guidelines through hands-on translation exercises of different subtypes of legal texts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation or with departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bi-directional translation course (English to French and French to English). The languages of instruction are English and French.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 536.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 544",
+    "subject": "CCTR",
+    "number": "544",
+    "title": "(Co)Writing Techniques for Legal Drafters ",
+    "credits": 1.5,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Drafting of legal documents in a clear and concise manner in unilingual, bilingual and multilingual contexts. The processes and procedures for (co)writing plain yet precise language will be the focus of practical exercises in (co)writing. Familiarity with the stylistic resources of both source and target languages will be studied with a view to making (co)writing outcomes reliable, idiomatic and readable.",
+    "prerequisites": {
+      "text": "CCTR 530",
+      "tree": "CCTR 530",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in the Graduate Diploma in Legal Translation or by Departmental Approval.",
+      "excludes": []
+    },
+    "notes": [
+      "This is a bilingual course.",
+      "Early opening registration date for CS courses only.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "CCTR 553",
+    "subject": "CCTR",
+    "number": "553",
+    "title": "Legal Translation: Judgments (English to French)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Translation of judgments from English to French. Review of judicial systems and subject-matter jurisdiction. Examination of legal translation principles and techniques applied to judgments. Study of macro-level translation strategies specific to judgments, including structure, genre, function (of the judgment and its translation) and context, and micro-level textual specificities of judgments and their translation. Strategies used to solve specific terminological and phraseological translation problems. Research techniques and use of appropriate references and tools when translating judgments.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 554",
+    "subject": "CCTR",
+    "number": "554",
+    "title": "Legal Translation: Judgments (French to English)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Translation of judgments from French to English. Review of judicial systems and subject-matter jurisdiction. Examination of legal translation principles and techniques applied to judgments. Study of macro-level translation strategies specific to judgments, including structure, genre, function (of the judgment and its translation) and context, and micro-level textual specificities of judgments and their translation. Strategies used to solve specific terminological and phraseological translation problems. Research techniques and use of appropriate references and tools when translating judgments.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 555",
+    "subject": "CCTR",
+    "number": "555",
+    "title": "Legal Translation: Contracts (English to French)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Translation of contracts from English to French. Overview of the legal framework for contracts translated in Canada, including differences between the civil law principles applied in Quebec and the common law principles applied in the rest of Canada, and other translation problems typical of international contracts. Examination of the structure of contracts. Application of context-specific translation strategies. Translation of standard and general clauses, as well as specific types of contracts. Examination of English and French terminology and phraseology in the subfield of contracts.",
+    "prerequisites": {
+      "text": "CCTR 541.",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation or the Graduate Certificate in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 541.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 556",
+    "subject": "CCTR",
+    "number": "556",
+    "title": "Legal Translation: Contracts (French to English)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Translation of contracts from French to English. Overview of the legal framework for contracts translated in Canada, including differences between the civil law principles applied in Quebec and the common law principles applied in the rest of Canada, and other translation problems typical of international contracts. Examination of the structure of contracts. Application of context-specific translation strategies. Translation of standard and general clauses, as well as specific types of contracts. Examination of English and French terminology and phraseology in the subfield of contracts.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 541.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 557",
+    "subject": "CCTR",
+    "number": "557",
+    "title": "Legal Translation: Statutes&Regulations (English to French)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Translation of legislation from English to French. Review of legislative systems in Canada. Analysis of methods of legislative translation in Canada. Legal translation principles and techniques applied to the translation of legislation. Study of macro-level translation strategies specific to statutes and regulations, including jurisdiction, sources of law, law structure, genre, function (of statutes and regulations and their translation) and context, and micro-level textual specificities of statutes and regulations and their translation. Strategies used to solve specific terminological and phraseological translation problems. Research techniques and use of appropriate references and tools when translating legislation.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 541.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 558",
+    "subject": "CCTR",
+    "number": "558",
+    "title": "Legal Translation: Statutes&Regulations (French to English)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Translation of legislation from French to English. Review of legislative systems in Canada, with a focus on Quebec. Analysis of methods of legislative translation in Canada. Legal translation principles and techniques applied to the translation of legislation. Study of macro-level translation strategies specific to statutes and regulations, including jurisdiction, sources of law, law structure, genre, function (of statutes and regulations and their translation) and context, and micro-level textual specificities of statutes and regulations and their translation. Strategies used to solve specific terminological and phraseological translation problems. Research techniques and use o appropriate references and tools when translating legislation.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 541.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 599",
+    "subject": "CCTR",
+    "number": "599",
+    "title": "Special Topics in Translation Studies",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Selected topics in translation and translation studies.",
+    "prerequisites": {
+      "text": "Departmental approval required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation or with departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "Topics will vary by academic year.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- is required to pass this course."
+    ]
+  },
+  {
+    "code": "CCTR 600",
+    "subject": "CCTR",
+    "number": "600",
+    "title": "Translation Practicum 2",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Translation project supervised by faculty and/or external partner.",
+    "prerequisites": {
+      "text": "CCTR 500",
+      "tree": "CCTR 500",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCTR 601",
+    "subject": "CCTR",
+    "number": "601",
+    "title": "Independent Studies",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent study under the guidance of a course supervisor specializing in the field of interest.",
+    "prerequisites": {
+      "text": "Departmental approval required",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Projects will have to be arranged individually with the instructors. To obtain approval, a detailed study proposal must be submitted to the Director or Program Coordinator before the beginning of the term.",
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCTR 602",
+    "subject": "CCTR",
+    "number": "602",
+    "title": "Special Topics in Legal Translation 1",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Selected topics in legal translation.",
+    "prerequisites": {
+      "text": "Departmental approval required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCTR 603",
+    "subject": "CCTR",
+    "number": "603",
+    "title": "Special Topics in Legal Translation 2",
+    "credits": 1.5,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Selected topics in legal translation.",
+    "prerequisites": {
+      "text": "Departmental approval required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics will vary by academic year."
+    ]
+  },
+  {
+    "code": "CCTR 605",
+    "subject": "CCTR",
+    "number": "605",
+    "title": "Applied Project 1",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Translation project supervised by external partner, or, related project approved by Department and supervised by Faculty or external partner.",
+    "prerequisites": {
+      "text": "Departmental approval required.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCTR 606",
+    "subject": "CCTR",
+    "number": "606",
+    "title": "Applied Project 2",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Translation project supervised by external partner, or, related project approved by Department and supervised by Faculty or external partner.",
+    "prerequisites": {
+      "text": "CCTR 605 or with departmental approval",
+      "tree": "CCTR 605",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCTR 642",
+    "subject": "CCTR",
+    "number": "642",
+    "title": "Legal Translation: Securities Law (French to English)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Translation of securities documents from French to English. Introduction to the statutes, regulations and rules governing the distribution of financial products and services in Canada. Practical translation exercises include prospectus offerings, regulatory documents, judgments in securities cases, corporate securities compliance documents and shareholders agreements.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 541."
+    ]
+  },
+  {
+    "code": "CCTR 643",
+    "subject": "CCTR",
+    "number": "643",
+    "title": "Language Management in the Justice Sector ",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Critical examination of the concept of multilingualism, its management and its social and economic consequences for the justice sector. Analysis of different models of institutional and corporate language management, as well as their effects on the language industries. Implications of language technology developments on language management in the justice sector, including in crisis communication management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Diploma in Legal Translation and by departmental approval. Not open to students who have taken CCTR 543.",
+      "excludes": [
+        "CCTR 543"
+      ]
+    },
+    "notes": [
+      "This is a bilingual course.",
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCTR 645",
+    "subject": "CCTR",
+    "number": "645",
+    "title": "Legal Translation: Securities Law (English to French)",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Translation of securities documents from English to French. Overview of the legal framework governing the securities market in Canada. Examination of the common securities documents translated in Canada, including prospectuses, material change reports, business acquisition reports, annual information forms, information circulars, take-over bid circulars and directors’ circulars. Application of research techniques to find mandatory language in the English and French versions of securities regulations. Examination of English and French terminology and phraseology in the subfield of securities.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 541."
+    ]
+  },
+  {
+    "code": "CCTR 660",
+    "subject": "CCTR",
+    "number": "660",
+    "title": "Current Trends in Legal Translation",
+    "credits": 2,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Selected current trends related to legal translation.",
+    "prerequisites": {
+      "text": "CCTR 541",
+      "tree": "CCTR 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students enrolled in the Graduate Diploma in Legal Translation.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is bilingual.",
+      "Course includes synchronous and asynchronous activities.",
+      "A minimum grade of B- must have been obtained in the prerequisite course, CCTR 541.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day."
+    ]
+  }
+]

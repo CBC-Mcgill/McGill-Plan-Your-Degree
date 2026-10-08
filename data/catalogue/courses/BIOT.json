@@ -1,0 +1,45 @@
+[
+  {
+    "code": "BIOT 302",
+    "subject": "BIOT",
+    "number": "302",
+    "title": "Introduction to Synthetic Biology",
+    "credits": 3,
+    "offeredBy": "Science",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental theory and techniques pertaining to genetic engineering, bioinformatics, and synthetic biological design, as well as industry-relevant principles such as biomanufacturing, ethics, and the current biotechnology entrepreneurial landscape.",
+    "prerequisites": {
+      "text": "BIOL 201 or by permission of the instructor",
+      "tree": "BIOL 201",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOT 505",
+    "subject": "BIOT",
+    "number": "505",
+    "title": "Selected Topics in Biotechnology",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current methods and recent advances in biological, medical, agricultural and engineering aspects of biotechnology will be described and discussed. An extensive reading list will complement the lecture material.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 students",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  }
+]

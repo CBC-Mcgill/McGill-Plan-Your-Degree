@@ -1,0 +1,115 @@
+[
+  {
+    "code": "INDR 294",
+    "subject": "INDR",
+    "number": "294",
+    "title": "Introduction to Labour-Management Relations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to labour-management relations, the structure, function and government of labour unions, labour legislation, the collective bargaining process, and the public interest in industrial relations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INDR 459",
+    "subject": "INDR",
+    "number": "459",
+    "title": "Comparative Employment Relations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Comparison of employment relations in current socio-political and economic context of a variety of nations. Emphasis on historical and recent developments in labour-management relations, labour legislation, institutional structures, collective bargaining, contract coverage, and the role of multi-national corporations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Prequisite: INDR 294",
+      "INDR459 focuses on traditional industrial relations topics (unionization, collective bargaining, etc.) and complements INDR492 which deals with labour policies in general and in comparative persepctive."
+    ]
+  },
+  {
+    "code": "INDR 492",
+    "subject": "INDR",
+    "number": "492",
+    "title": "Globalization and Labour Policy",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Exploration of contemporary labour policies around the world in the context of globalization. Topics include labour market functioning, international trade, technological change, flexibility, employment standards, protective legislation, employment practices.",
+    "prerequisites": {
+      "text": "INDR 294",
+      "tree": "INDR 294",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INDR 494",
+    "subject": "INDR",
+    "number": "494",
+    "title": "Labour Law",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Introduction to the basic concepts of labour law relevant to the practice of industrial relations. Historical development of labour law in certain social and legal systems and the culmination in the legislative enactments and jurisprudence of Canadian jurisdictions and certain comparative foreign models.",
+    "prerequisites": {
+      "text": "INDR 294",
+      "tree": "INDR 294",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INDR 496",
+    "subject": "INDR",
+    "number": "496",
+    "title": "Collective Bargaining",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Principles of collective bargaining in Canada and abroad. Problem oriented. Mock collective bargaining sessions provide an opportunity for students to apply knowledge gained.",
+    "prerequisites": {
+      "text": "INDR 294",
+      "tree": "INDR 294",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INDR 499",
+    "subject": "INDR",
+    "number": "499",
+    "title": "Internship in Industrial Relations",
+    "credits": 3,
+    "offeredBy": "Arts - Dean's Office",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students after completing 30 credits of a 90 credits program or 45 credits of a 96-120 credit program, a minimum CGPA of 2.7, and permission of the departmental Internship Advisor. This course will normally not fulfill program requirements for seminar or 400-level courses. A letter from a supervisor at the institution must attest to successful completion of the student's tenure.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

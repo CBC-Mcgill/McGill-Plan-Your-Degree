@@ -1,0 +1,857 @@
+[
+  {
+    "code": "ANAT 212",
+    "subject": "ANAT",
+    "number": "212",
+    "title": "Molecular Mechanisms of Cell Function",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introductory course describing the biochemistry and molecular biology of selected key functions of animal cells, including: gene expression; mitochondrial production of metabolic energy; cellular communication with the extra-cellular environment; and regulation of cell division.",
+    "prerequisites": {
+      "text": "BIOL 200",
+      "tree": "BIOL 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is also listed as BIOC 212. Not open to students who have taken or are taking BIOC 212 or BIOL 201",
+      "excludes": [
+        "BIOC 212",
+        "BIOL 201"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "ANAT 214",
+    "subject": "ANAT",
+    "number": "214",
+    "title": "Systemic Human Anatomy",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the gross anatomy of the various organ systems of head, neck and trunk regions of the human body. Emphasis on functional anatomy. Laboratory component includes exploration of the human body through cadaveric prosections, imaging and other materials.",
+    "prerequisites": {
+      "text": "BIOL 112 (or CEGEP equivalent), PHGY 209 and PHGY 210",
+      "tree": {
+        "and": [
+          "BIOL 112",
+          "PHGY 209",
+          "PHGY 210"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lectures, 2 hours laboratory",
+      "This course is limited in size, with guaranteed admission for all students enrolled in the Department of Anatomy and Cell Biology. Students in other programs will be permitted to enroll as space allows."
+    ]
+  },
+  {
+    "code": "ANAT 261",
+    "subject": "ANAT",
+    "number": "261",
+    "title": "Introduction to Dynamic Histology",
+    "credits": 4,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to light and electron microscopic anatomy in which cell and tissue dynamics will be explored in the principal tissues and organs of the body.",
+    "prerequisites": {
+      "text": "BIOL 112 or CEGEP equivalent",
+      "tree": "BIOL 112",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in biological sciences and others by special permission",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures, 2 hours laboratory",
+      "Must be taken in U1 by students in Anatomy and Cell Biology programs"
+    ]
+  },
+  {
+    "code": "ANAT 262",
+    "subject": "ANAT",
+    "number": "262",
+    "title": "Introductory Molecular and Cell Biology",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The architectural, functional and temporal continuity of organelles and the cytoskeleton of mammalian cells is introduced as well as their functional integration in the phenomena of exocytosis, endocytosis, protein trafficking and cell motility and adhesion.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ANAT 212 or BIOC 212 or BIOL 201",
+      "tree": {
+        "or": [
+          "ANAT 212",
+          "BIOC 212",
+          "BIOL 201"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students in biological sciences and others by special permission",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ANAT 314",
+    "subject": "ANAT",
+    "number": "314",
+    "title": "Human Musculoskeletal Anatomy ",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the gross anatomy of the musculoskeletal system (bone, joints, muscles and neurovascular structures) of the head, neck, trunk, upper and lower limb regions of the human body, emphasizing functional anatomy and including surface anatomy and imaging. Exploration of the human body through cadaveric prosections, imaging and other materials.",
+    "prerequisites": {
+      "text": "ANAT 214",
+      "tree": "ANAT 214",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ANAT 315.",
+      "excludes": [
+        "ANAT 315"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "2 hours lectures, 2 hours laboratory"
+    ]
+  },
+  {
+    "code": "ANAT 315",
+    "subject": "ANAT",
+    "number": "315",
+    "title": "Clinical Human Musculoskeletal Anatomy",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The regional human gross anatomy of the skeleton, joints, muscles and neurovascular structures of the body as it relates to physical and occupational therapists. Laboratories include the study of prepared cadaveric specimens and the completion of a cadaveric-dissection.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Physical and Occupational Therapy and Kinesiology. Not open to students who have taken or are taking ANAT 314.",
+      "excludes": [
+        "ANAT 314"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "2 hours lectures, 2 hour laboratory"
+    ]
+  },
+  {
+    "code": "ANAT 316",
+    "subject": "ANAT",
+    "number": "316",
+    "title": "Clinical Human Visceral Anatomy ",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The gross anatomy of the various organ systems of the human body, with emphasis on those aspects of greatest relevance to physical and occupational therapists. Laboratories include the study of prepared specimens.",
+    "prerequisites": {
+      "text": "ANAT 315 or permission of instructor",
+      "tree": "ANAT 315",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Physical and Occupational Therapy and Kinesiology. Not open to students who have taken or are taking ANAT 214.",
+      "excludes": [
+        "ANAT 214"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "Two hours of lecture and two hours of laboratory"
+    ]
+  },
+  {
+    "code": "ANAT 321",
+    "subject": "ANAT",
+    "number": "321",
+    "title": "Circuitry of the Human Brain",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course explores the functional organization of the human brain and spinal cord. The course focuses on how neuronal systems are designed to subserve specific motor, sensory, and cognitive operations.",
+    "prerequisites": {
+      "text": "ANAT/BIOC 212 or BIOL 201; and one of PHGY 209, NSCI 200 or PSYC 211; or permission of instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOC 212",
+              "BIOL 201"
+            ]
+          },
+          {
+            "or": [
+              "PHGY 209",
+              "NSCI 200",
+              "PSYC 211"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ANAT 322",
+    "subject": "ANAT",
+    "number": "322",
+    "title": "Neuroendocrinology",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A lecture course describing brain-endocrine relationships. Emphasis on modern experimental evidence and conceptual developments within the field.",
+    "prerequisites": {
+      "text": "PHGY 210.",
+      "tree": "PHGY 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ANAT 323",
+    "subject": "ANAT",
+    "number": "323",
+    "title": "Clinical Neuroanatomy",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will focus on the structural and functional relationships of the central nervous system. The human neuroanatomy will be introduced via pathological cases and will be illustrated by use of new medical imaging techniques.",
+    "prerequisites": {
+      "text": "for Physical & Occupational Therapy students: ANAT 315 and ANAT 316; for Honours Anatomy & Cell Biology students: ANAT 214 and ANAT 314.",
+      "tree": {
+        "and": [
+          "ANAT 315",
+          "ANAT 316",
+          "ANAT 214",
+          "ANAT 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Honours Anatomy & Cell Biology students and Physical & Occupational Therapy students.; Not open to students who have taken or are taking ANAT 321.",
+      "excludes": [
+        "ANAT 321"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ANAT 365",
+    "subject": "ANAT",
+    "number": "365",
+    "title": "Cellular Trafficking",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course explores the fundamental mechanisms that govern the organizations of intracellular membranes, how vesicle generation is signaled, how the membranes curve and bud, and how vesicles know where to go and fuse. In addition to intracellular vesicles, the principles of mitochondrial dynamics and process of cellular autophagy are examined. Also, there is a focus on \"Applied Cell Biology\", with respect to how the exquisite regulation of cellular transport plays a central role in complex biological systems. A series of modules will take students through the mechanisms of cellular polarity, neurotransmission, metabolic cell biology, pathogen invasion, and more. The emphasis is on the morphological aspects of the processes, and on the major techniques that led to discovery.",
+    "prerequisites": {
+      "text": "ANAT 261, ANAT 262, PHGY 209, or by permission of instructor",
+      "tree": {
+        "and": [
+          "ANAT 261",
+          "ANAT 262",
+          "PHGY 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "ANAT 381",
+    "subject": "ANAT",
+    "number": "381",
+    "title": "Experimental Embryology",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The basic processes of reproduction and embryonic development, such as molecular signaling; cell-cell interaction; differentiation; cell fate determination; genetic and epigenetic control of embryonic development.",
+    "prerequisites": {
+      "text": "ANAT 261, BIOL 202 or permission of instructor",
+      "tree": {
+        "and": [
+          "ANAT 261",
+          "BIOL 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIOL 303.",
+      "excludes": [
+        "BIOL 303"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hour lectures"
+    ]
+  },
+  {
+    "code": "ANAT 396",
+    "subject": "ANAT",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures"
+    ]
+  },
+  {
+    "code": "ANAT 416",
+    "subject": "ANAT",
+    "number": "416",
+    "title": "Development, Disease and Regeneration",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Importance of developmental biology for disease and regeneration. Topics: advanced developmental biology principles; molecular basis for stem cells and their potential applications; organogenesis and its applications to various diseases.",
+    "prerequisites": {
+      "text": "ANAT 381 or BIOL 303 or special permission of instructor",
+      "tree": {
+        "or": [
+          "ANAT 381",
+          "BIOL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ANAT 432",
+    "subject": "ANAT",
+    "number": "432",
+    "title": "Honours Research Project",
+    "credits": 9,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised honours research project in biological sciences.",
+    "prerequisites": {
+      "text": "BIOL 301",
+      "tree": "BIOL 301",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For students in the Honours program.",
+      "excludes": []
+    },
+    "notes": [
+      "Course opened to all Anatomy & Cell Biology students and other BSc students by special permission only."
+    ],
+    "parts": [
+      {
+        "code": "ANAT 432D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ANAT 432D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ANAT 458",
+    "subject": "ANAT",
+    "number": "458",
+    "title": "Membranes and Cellular Signaling",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An integrated treatment of the properties of biological membranes and of intracellular signaling, including the major role that membranes play in transducing and integrating cellular regulatory signals. Biological membrane organization and dynamics; membrane transport; membrane receptors and their associated effectors; mechanisms of regulation of cell growth, morphology, differentiation and death.",
+    "prerequisites": {
+      "text": "BIOC 212 or ANAT 212 or BIOL 201, ANAT 262, one of PHGY 209 or BIOL 205; one of BIOC 312 or ANAT 365; BIOC 311 recommended",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOC 212",
+              "ANAT 212",
+              "BIOL 201"
+            ]
+          },
+          "ANAT 262",
+          {
+            "or": [
+              "PHGY 209",
+              "BIOL 205"
+            ]
+          },
+          {
+            "or": [
+              "BIOC 312",
+              "ANAT 365"
+            ]
+          },
+          "BIOC 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is also listed as BIOC 458. Not open to students who are taking or who have taken BIOC 458",
+      "excludes": [
+        "BIOC 458"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "ANAT 499",
+    "subject": "ANAT",
+    "number": "499",
+    "title": "Supervised Library Research",
+    "credits": 1,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised exploration of the current scientific literature as it pertains to the advanced field of anatomy and cell biology.",
+    "prerequisites": {
+      "text": "ANAT 262 and BIOL 202",
+      "tree": {
+        "and": [
+          "ANAT 262",
+          "BIOL 202"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter",
+      "Open to U3 Anatomy and Cell Biology students; open to other students with permission of instructor"
+    ]
+  },
+  {
+    "code": "ANAT 514",
+    "subject": "ANAT",
+    "number": "514",
+    "title": "Advanced Human Anatomy Laboratory",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A laboratory course exploring human anatomy education through regionally focused dissection-based projects and applications of technology in anatomy teaching and learning.",
+    "prerequisites": {
+      "text": "ANAT 214 and ANAT 314",
+      "tree": {
+        "and": [
+          "ANAT 214",
+          "ANAT 314"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 Anatomy & Cell Biology students",
+      "excludes": []
+    },
+    "notes": [
+      "1 hour lecture, 4 hours laboratory"
+    ]
+  },
+  {
+    "code": "ANAT 541",
+    "subject": "ANAT",
+    "number": "541",
+    "title": "Cell and Molecular Biology of Aging",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Complex aging process, including theories and mechanisms of aging, animal model systems used to study aging, age-dependent diseases, for example, Alzheimer's, osteoporosis, and cancer, and age-related diseases, for example, Werner's syndrome and dyskeratosis congenita.",
+    "prerequisites": {
+      "text": "ANAT 212 (or BIOC 212 or BIOL 201), ANAT 261, ANAT 262, or permission of instructor.",
+      "tree": {
+        "and": [
+          "ANAT 212",
+          {
+            "or": [
+              "BIOC 212",
+              "BIOL 201"
+            ]
+          },
+          "ANAT 261",
+          "ANAT 262"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "BIOL 301.",
+      "tree": "BIOL 301",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lecture"
+    ]
+  },
+  {
+    "code": "ANAT 542",
+    "subject": "ANAT",
+    "number": "542",
+    "title": "Transmission Electron Microscopy of Biological Samples",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of theory, principles and practical applications of conventional and cryo-transmission electron microscopy relevant to biological samples. Major topics to be covered include: sample preparation and imaging, image analysis, three-dimensional reconstruction (including single-particle analysis an tomography).",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 hours lectures, 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "ANAT 565",
+    "subject": "ANAT",
+    "number": "565",
+    "title": "Diseases-Membrane Trafficking",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will examine how research into diseases has played a key role in unraveling the intricate molecular mechanisms controlling membrane trafficking in mammalian cells. Membrane trafficking disorders fall into two groups those arising from a) membrane-associated or b) cytoskeletal defect. Topics include a) mechanisms of endosomal maturation, lysosomal storage disorders and rab protein-mediated vesicular trafficking and b) rho GTPase and cytoskeletal binding protein mediated trafficking associated with neurological diseases and cancer.",
+    "prerequisites": {
+      "text": "ANAT 365",
+      "tree": "ANAT 365",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANAT 601",
+    "subject": "ANAT",
+    "number": "601",
+    "title": "MSc Seminar Examination",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The term before the student graduates, the student is to present a 30 minute seminar on their thesis work in a public seminar open to all members of the Department of Anatomy & Cell Biology, followed by a question period lasting 15 to 20 minutes. All faculty, cross-appointed academic staff, post docs and students are expected to attend the seminar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Masters in Cell Biology students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ANAT 690",
+    "subject": "ANAT",
+    "number": "690",
+    "title": "Cell and Developmental Biology",
+    "credits": 6,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Current developments in molecular cell biology and developmental biology will be presented by course coordinators and staff from primary papers in the scientific literature. These will be researched and critiqued by students through oral and written presentations. Two term papers are required for students taking the course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both ANAT 690D1 and ANAT 690D2",
+      "No credit will be given for this course unless both ANAT 690D1 and ANAT 690D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "ANAT 690D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ANAT 690D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ANAT 695",
+    "subject": "ANAT",
+    "number": "695",
+    "title": "Seminars in Cell Biology 1",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Weekly assignments based on seminars attended will be graded by the supervisor. A grade of P or F will be assigned.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Masters and PhD students in Cell Biology",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ANAT 696",
+    "subject": "ANAT",
+    "number": "696",
+    "title": "Seminars in Cell Biology 2",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Weekly assignments based on seminars attended will be graded by the supervisor. A grade of P or F will be assigned.",
+    "prerequisites": {
+      "text": "ANAT 695",
+      "tree": "ANAT 695",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Graduate students in Cell Biology",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ANAT 697",
+    "subject": "ANAT",
+    "number": "697",
+    "title": "Seminars in Cell Biology 3",
+    "credits": 3,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Weekly assignments based on seminars attended will be graded by the supervisor. A grade of P or F will be assigned.",
+    "prerequisites": {
+      "text": "ANAT 695 and ANAT 696",
+      "tree": {
+        "and": [
+          "ANAT 695",
+          "ANAT 696"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ANAT 698",
+    "subject": "ANAT",
+    "number": "698",
+    "title": "M.Sc. Thesis Research 1",
+    "credits": 24,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction ofthe Thesis Supervisor and the guidance of the thesis advisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ANAT 698D1",
+        "credits": 12,
+        "terms": []
+      },
+      {
+        "code": "ANAT 698D2",
+        "credits": 12,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ANAT 701",
+    "subject": "ANAT",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Anatomy and Cell Biology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Compulsory comprehensive examination to evaluate the students' ability to carry out, present, discuss and defend research in their field of scientific interest.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ANAT 701D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "ANAT 701D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  }
+]

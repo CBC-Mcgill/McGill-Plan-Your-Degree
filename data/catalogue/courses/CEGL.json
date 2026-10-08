@@ -1,0 +1,170 @@
+[
+  {
+    "code": "CEGL 213",
+    "subject": "CEGL",
+    "number": "213",
+    "title": "English Language and Culture - Elementary 1",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a lower-elementary English level. Essential linguistic, communicative, and socio-cultural skills required to function in familiar situations related to daily life and familiar interactions. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "Entrance Placement Test or Permission of the Director",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment."
+    ]
+  },
+  {
+    "code": "CEGL 223",
+    "subject": "CEGL",
+    "number": "223",
+    "title": "English Language and Culture - Elementary 2",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a higher-elementary English level. Essential linguistic, communicative, and socio-cultural skills required to function in real-life situations related to personal life. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CEGL 213 or Entrance Placement Test or Permission of the Director",
+      "tree": "CEGL 213",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment."
+    ]
+  },
+  {
+    "code": "CEGL 313",
+    "subject": "CEGL",
+    "number": "313",
+    "title": "English Language and Culture - Intermediate 1",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a lower-intermediate English level. Essential linguistic, communicative, and socio-cultural skills required to initiate and respond to spontaneous interactions in a variety of real-life situations. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CEGL 223, or Entrance Placement Test or Permission of the Director",
+      "tree": "CEGL 223",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CEGL 323",
+    "subject": "CEGL",
+    "number": "323",
+    "title": "English Language and Culture - Intermediate 2",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a mid-intermediate English level. Essential linguistic, communicative, and socio-cultural skills required to engage effectively with English language media and real-time interactions with native/near-native speakers of English. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CEGL 313, or Entrance Placement Test or Permission of the Director",
+      "tree": "CEGL 313",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CEGL 333",
+    "subject": "CEGL",
+    "number": "333",
+    "title": "English Language and Culture - Intermediate 3",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a higher-intermediate English level. Essential linguistic, communicative, and socio-cultural skills required to understand nuance in public discourse and critically analyze message and meaning. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CEGL 323, Entrance Placement Test or Permission of the Director",
+      "tree": "CEGL 323",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CEGL 355",
+    "subject": "CEGL",
+    "number": "355",
+    "title": "English Language and Culture – Bridge",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Consolidation of fundamental speaking, writing, listening, and reading skills in English in preparation for study at the advanced levels. Review of learning strategies to reinforce linguistic skills and confidence. Exploration of the creative power of language. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CEGL 333, or Entrance Placement Test or Permission of the Director",
+      "tree": "CEGL 333",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CEGL 413",
+    "subject": "CEGL",
+    "number": "413",
+    "title": "English Language and Culture - Advanced 1",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading for autonomous use of English at an advanced level. Essential linguistic, communicative, and socio-cultural skills for academic and professional environments. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CEGL 355 or Entrance Placement Test or Permission of the Director",
+      "tree": "CEGL 355",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment."
+    ]
+  },
+  {
+    "code": "CEGL 423",
+    "subject": "CEGL",
+    "number": "423",
+    "title": "English Language and Culture - Advanced 2",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a high-advanced English level. Essential linguistic, communicative, and socio-cultural skills for academic and professional environments. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CEGL 413 or Entrance Placement Test or Permission of the Director",
+      "tree": "CEGL 413",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment."
+    ]
+  }
+]

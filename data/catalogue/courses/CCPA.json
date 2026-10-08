@@ -1,0 +1,207 @@
+[
+  {
+    "code": "CCPA 601",
+    "subject": "CCPA",
+    "number": "601",
+    "title": "CPA Foundations 1",
+    "credits": 6,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course examines the application of technically complex financial accounting and reporting issues. It will also explore corporate governance, strategy and management accounting, with an emphasis on their integration. The course will foster integration between financial accounting and related audit notions in a case-based setting, while focusing on different roles a CPA may play in an organization, both internal and external.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCPA 631",
+      "tree": "CCPA 631",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Graduate Certificate in CPA Professional Education.",
+      "excludes": []
+    },
+    "notes": [
+      "This course must be taken concurrently with CCPA 631."
+    ]
+  },
+  {
+    "code": "CCPA 602",
+    "subject": "CCPA",
+    "number": "602",
+    "title": "CPA Foundations 2",
+    "credits": 6,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course develops upon the financial accounting and reporting, management accounting, and audit concepts explored in CCPA 601. Tax will be integrated into case scenarios to simulate the complete set of decision variables faced by a CPA. The course will explore how to perform cash flow projections and business valuations. Emphasis will be placed on using these analyses to provide advice to management.",
+    "prerequisites": {
+      "text": "CCPA 601 and CCPA 631",
+      "tree": {
+        "and": [
+          "CCPA 601",
+          "CCPA 631"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Graduate Certificate in CPA Professional Education.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CCPA 621",
+    "subject": "CCPA",
+    "number": "621",
+    "title": "Taxation",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course will focus on providing tax planning and compliance advice for Canadian corporations, trusts individuals and partnerships. This course will integrate tax planning with financial reporting, governance and finance issues.",
+    "prerequisites": {
+      "text": "CCPA 601, CCPA 602 and CCPA 631.",
+      "tree": {
+        "and": [
+          "CCPA 601",
+          "CCPA 602",
+          "CCPA 631"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Graduate Certificate in CPA Professional Education.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CCPA 623",
+    "subject": "CCPA",
+    "number": "623",
+    "title": "Assurance",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course will focus on the different elements of an audit plan and how to tailor that plan to different business settings (private companies, public enterprises and NPOs). The course will also explore how to develop procedures, evaluate the effectiveness of internal controls and conclude on audit results.",
+    "prerequisites": {
+      "text": "CCPA 601, CCPA 602 and CCPA 631.",
+      "tree": {
+        "and": [
+          "CCPA 601",
+          "CCPA 602",
+          "CCPA 631"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the Graduate Certificate in CPA Professional Education.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CCPA 631",
+    "subject": "CCPA",
+    "number": "631",
+    "title": "Case-Writing and Communications for CPAs",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course focuses on developing a structured case writing approach and effective presentation skills. Students will practice case-writing which will be professionally graded and debriefed in class. Students will also learn techniques on how to prepare and deliver board-level presentations.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCPA 601",
+      "tree": "CCPA 601",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "This course must be taken concurrently with CCPA 601."
+    ]
+  },
+  {
+    "code": "CCPA 641",
+    "subject": "CCPA",
+    "number": "641",
+    "title": "Capstone 1 Seminar",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course will provide an introduction to comprehensive case analysis. Teamwork will be used as a means to integrate the enabling competencies and the six technical competency areas required of a CPA to develop a presentation and report aimed at a Board of Directors. Emphasis will be placed on developing case responses using the CPA Way.",
+    "prerequisites": {
+      "text": "CCPA 601, CCPA 602 and CCPA 631; and two of CCPA 621, CCPA 622, CCPA 623, and CCPA 624.",
+      "tree": {
+        "and": [
+          "CCPA 601",
+          "CCPA 602",
+          "CCPA 631",
+          "CCPA 621",
+          "CCPA 622",
+          "CCPA 623",
+          "CCPA 624"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CCPA 642.",
+      "tree": "CCPA 642",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Graduate Certificate in CPA Professional Education.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CCPA 642",
+    "subject": "CCPA",
+    "number": "642",
+    "title": "Capstone 2 Examination Preparation",
+    "credits": 0,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course will explore communication using the case method. Emphasis will be placed on case writing best practices, mastery of technical material and application of enabling competencies acquired during the program.",
+    "prerequisites": {
+      "text": "CCPA 601, CCPA 602 and CCPA 631; and two of CCPA 621, CCPA 622, CCPA 623, and CCPA 624.",
+      "tree": {
+        "and": [
+          "CCPA 601",
+          "CCPA 602",
+          "CCPA 631",
+          "CCPA 621",
+          "CCPA 622",
+          "CCPA 623",
+          "CCPA 624"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CCPA 641.",
+      "tree": "CCPA 641",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Graduate Certificate in CPA Professional Education.",
+      "excludes": []
+    },
+    "notes": [
+      "**Web add deadline is April 26, 2021 which is the day before the start of classes.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable",
+      "**Early opening registration date for CS courses only"
+    ]
+  }
+]

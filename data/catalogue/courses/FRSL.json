@@ -1,0 +1,970 @@
+[
+  {
+    "code": "FRSL 101",
+    "subject": "FRSL",
+    "number": "101",
+    "title": "Beginners French 1",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A comprehensive introduction to basic vocabulary, grammatical structures and speech patterns of written and oral French for students in any degree program having no previous knowledge of French. Learning to communicate at a functional level in a French-speaking environment. Short essays, cultural readings, mandatory lab practice.",
+    "prerequisites": {
+      "text": "Placement test",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FRSL 101D1/D2, FRSL 103, FRSL 104, or FRSL 105.",
+      "excludes": [
+        "FRSL 101D1",
+        "FRSL 103",
+        "FRSL 104",
+        "FRSL 105"
+      ]
+    },
+    "notes": [
+      "Language laboratory and oral practice with a French monitor if available.",
+      "Placement test. No knowledge of French."
+    ]
+  },
+  {
+    "code": "FRSL 102",
+    "subject": "FRSL",
+    "number": "102",
+    "title": "Beginners French 2",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A comprehensive introduction to basic vocabulary, grammatical structures and speech patterns of written and oral French for students in any degree program having no previous knowledge of French. Learning to communicate at a functional level in a French-speaking environment. Short essays, cultural readings, mandatory lab practice.",
+    "prerequisites": {
+      "text": "FRSL 101",
+      "tree": "FRSL 101",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Language laboratory and oral practice with a French monitor if available."
+    ]
+  },
+  {
+    "code": "FRSL 103",
+    "subject": "FRSL",
+    "number": "103",
+    "title": "Near Beginners French",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Refresher course for students who have very little previous French instruction. Instructions in basic vocabulary and grammar applied to oral/written French. Cultural texts, short essay, and practice of basic speech patterns.",
+    "prerequisites": {
+      "text": "Placement test.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking FRSL 102 or FRSL 105.",
+      "excludes": [
+        "FRSL 102",
+        "FRSL 105"
+      ]
+    },
+    "notes": [
+      "Note: For students in any degree program whose knowledge of French is insufficient to qualify for Elementary French (determined by the Placement Test). 3 credits, 3 hours, plus mandatory language laboratory. Not open to student who have grade 10 French or higher in Canada or equivalent (unless special permission is granted)."
+    ]
+  },
+  {
+    "code": "FRSL 104",
+    "subject": "FRSL",
+    "number": "104",
+    "title": "Corrective French Pronunciation",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to French phonetics. Course designed for students who have some previous knowledge of French at a Beginner/Elementary level and need to work on pronunciation, auditory discrimination and oral expression in order to continue developing their French skills. Corrective phonetics. Intensive oral practice. Guided work in language lab.",
+    "prerequisites": {
+      "text": "Placement test or Instructor's recommendation.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students above Elementary level French. Not open to students with no previous knowledge of French.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: 2 hours of oral work, 1 hour of language lab. The course may be taken concurrently with FRSL 101, 102,105, 206 / 207 / 208."
+    ]
+  },
+  {
+    "code": "FRSL 105",
+    "subject": "FRSL",
+    "number": "105",
+    "title": "Intensive Beginners French",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comprehensive introduction to basic vocabulary, grammatical structures and speech patterns of written and oral French for students in any degree program having no previous knowledge of French. Learning to communicate at a functional level in a French social milieu, short essays, cultural readings, mandatory lab practice and conversation class.",
+    "prerequisites": {
+      "text": "Placement test",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FRSL 201 or FRSL 205 or FRSL 101 or FRSL 102.",
+      "excludes": [
+        "FRSL 101",
+        "FRSL 102",
+        "FRSL 201",
+        "FRSL 205"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "6 hours, plus language laboratory and oral practice with a French monitor"
+    ]
+  },
+  {
+    "code": "FRSL 206",
+    "subject": "FRSL",
+    "number": "206",
+    "title": "Elementary French",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This one-term course uses a task-based approach to provide students with authentic materials related to Canadian culture and prepares them for real life communication. Therefore, class time will be mostly dedicated to the completion of communicative tasks which often rely on the use of technology (mobile apps, blogs and other online tools). This course tackles different topics that students can relate to in their personal, social and academic life, and provides a review and further training in elementary language structures to develop their communication skills and digital literacy in French.",
+    "prerequisites": {
+      "text": "FRSL 101 and FRSL102, or FRSL 103, or FRSL 104, or FRSL 105, or Placement test.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "FRSL 101",
+              "FRSL 102"
+            ]
+          },
+          "FRSL 103",
+          "FRSL 104",
+          "FRSL 105"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken Grade 12 or 13 French in Canada, or equivalent or FRSL 207. Only with special permission of the department.",
+      "excludes": [
+        "FRSL 207"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours, plus language laboratory"
+    ]
+  },
+  {
+    "code": "FRSL 207",
+    "subject": "FRSL",
+    "number": "207",
+    "title": "Elementary French 01",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This two-term course uses a task-based approach to provide students with authentic materials related to Canadian culture and prepares them for real life communication. Therefore, class time will be mostly dedicated to the completion of communicative tasks which often rely on the use of technology (mobile apps, blogs and other online tools). This course tackles different topics that students can relate to in their personal, social and academic life, and provides a review and further training in elementary language structures to develop their communication skills and digital literacy in French.",
+    "prerequisites": {
+      "text": "FRSL 101 and FRSL 102, or FRSL 103, or FRSL 104, or FRSL 105, or Placement test required.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "FRSL 101",
+              "FRSL 102"
+            ]
+          },
+          "FRSL 103",
+          "FRSL 104",
+          "FRSL 105"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken Grade 12 or 13 French in Canada, or equivalent",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours, plus language laboratory",
+      "Students must register for both FRSL 207D1 and FRSL 207D2.",
+      "No credit will be given for this course unless both FRSL 207D1 and FRSL 207D2 are successfully completed in consecutive terms",
+      "FRSL 207D1 and FRSL 207D2 together are equivalent to FRSL 207"
+    ],
+    "parts": [
+      {
+        "code": "FRSL 207D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "FRSL 207D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "FRSL 208",
+    "subject": "FRSL",
+    "number": "208",
+    "title": "Intensive Elementary French",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This one-term intensive course uses a task-based approach to provide students with authentic materials related to Canadian culture and prepares them for real life communication. Therefore, class time will be mostly dedicated to the completion of communicative tasks which often rely on the use of technology (mobile apps, blogs and other online tools). This course tackles different topics that students can relate to in their personal, social and academic life, and provides a review and further training in elementary language structures to develop their communication skills and digital literacy in French.",
+    "prerequisites": {
+      "text": "FRSL 101 and FRSL 102, or FRSL 103, or FRSL 104, or FRSL 105, or Placement test.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "FRSL 101",
+              "FRSL 102"
+            ]
+          },
+          "FRSL 103",
+          "FRSL 104",
+          "FRSL 105"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken Grade 12 or 13 French in Canada, or equivalent or FRSL 207",
+      "excludes": [
+        "FRSL 207"
+      ]
+    },
+    "notes": [
+      "6 hours, plus language laboratory"
+    ]
+  },
+  {
+    "code": "FRSL 211",
+    "subject": "FRSL",
+    "number": "211",
+    "title": "Oral and Written French 1",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Language lab attendance required. Grammar review, comprehension, vocabulary development, selected readings and group discussions.",
+    "prerequisites": {
+      "text": "FRSL 207D1 and 207D2, or 208, or Placement test",
+      "tree": {
+        "or": [
+          "FRSL 207",
+          "FRSL 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students from Québec",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours, plus language laboratory",
+      "Students must register for both FRSL 211D1 and FRSL 211D2.",
+      "No credit will be given for this course unless both FRSL 211D1 and FRSL 211D2 are successfully completed in consecutive terms",
+      "FRSL 211D1 and FRSL 211D2 together are equivalent to FRSL 211"
+    ],
+    "parts": [
+      {
+        "code": "FRSL 211D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "FRSL 211D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "FRSL 212",
+    "subject": "FRSL",
+    "number": "212",
+    "title": "Oral and Written French 1",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Equivalent to the first half of FRSL 211. Only with special permission of the Department.",
+    "prerequisites": {
+      "text": "Placement test",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours, plus language laboratory"
+    ]
+  },
+  {
+    "code": "FRSL 213",
+    "subject": "FRSL",
+    "number": "213",
+    "title": "Français fonctionnel 1 : santé et services psychosociaux",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Interacting in client-facing situations, including: functional oral and written skills for routine care situations, focusing on acquisition of essential vocabulary, key structures, and communication strategies.",
+    "prerequisites": {
+      "text": "FRSL 207, FRSL 208, or French Placement Test",
+      "tree": {
+        "and": [
+          "FRSL 207",
+          "FRSL 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in programs offered by: the School of Continuing Studies, Faculty of Dental Medicine and Oral Health Sciences, Faculty of Medicine and Health Sciences, School of Human Nutrition, Institute of Parasitology, School of Social Work, and other students with the approval of the Director of the French Language Centre.",
+      "excludes": []
+    },
+    "notes": [
+      "B1.1 level"
+    ]
+  },
+  {
+    "code": "FRSL 214",
+    "subject": "FRSL",
+    "number": "214",
+    "title": "Français fonctionnel 2 : santé et services psychosociaux",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundational skills to support client interaction in semi- complex care situations. Intermediate oral and written communication, focusing on workplace vocabulary, speech patterns, and grammatical structures to enhance communication strategies.",
+    "prerequisites": {
+      "text": "FRSL 213, FRSL 211, FRSL 215, or French Placement Test",
+      "tree": {
+        "and": [
+          "FRSL 213",
+          "FRSL 211",
+          "FRSL 215"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in programs offered by: the School of Continuing Studies, Faculty of Dental Medicine and Oral Health Sciences, Faculty of Medicine and Health Sciences, School of Human Nutrition, Institute of Parasitology, School of Social Work, and other students with the approval of the Director of the French Language Centre.",
+      "excludes": []
+    },
+    "notes": [
+      "B1.2 level"
+    ]
+  },
+  {
+    "code": "FRSL 215",
+    "subject": "FRSL",
+    "number": "215",
+    "title": "Oral and Written French 1 - Intensive",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Language lab attendance required. Grammar review, comprehension, vocabulary development, selected readings and group discussions.",
+    "prerequisites": {
+      "text": "FRSL 207D1 and 207D2, or 208, or Placement test",
+      "tree": {
+        "or": [
+          "FRSL 207",
+          "FRSL 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students from Québec",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "6 hours, plus language laboratory"
+    ]
+  },
+  {
+    "code": "FRSL 219",
+    "subject": "FRSL",
+    "number": "219",
+    "title": "Français intermédiaire 1 : diététique et nutrition",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course is designed for future dieticians and nutritionists at an intermediate level, but not French speaking, who would like to improve their French oral and written skills while studying specialized vocabulary related to dietetics and nutrition. This course will help prepare them for practicums or work placements (stages) in French speaking environments as well as for their professional exams. Topics of discussion, grammar points, exercises and activities focus on developing the necessary French skills for these future professionals to carry out their tasks as dieticians and nutritionists",
+    "prerequisites": {
+      "text": "French Placement Test or Instructor's recommendation or FRSL 209, FRSL 210 or FRSL 211.",
+      "tree": {
+        "and": [
+          "FRSL 209",
+          {
+            "or": [
+              "FRSL 210",
+              "FRSL 211"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FRSL 332-003 prior to fall 2018.",
+      "excludes": [
+        "FRSL 332"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FRSL 302",
+    "subject": "FRSL",
+    "number": "302",
+    "title": "Listening Comprehension and Oral Expression 1",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on oral discrimination, global comprehension and corrective phonetics.",
+    "prerequisites": {
+      "text": "Placement test. For students who have reached a good standard in grammar and written French but who have difficulty in understanding spoken French and therefore cannot communicate effectively",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours, plus language laboratory"
+    ]
+  },
+  {
+    "code": "FRSL 303",
+    "subject": "FRSL",
+    "number": "303",
+    "title": "Listening Comprehension and Oral Expression 2",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Emphasis will be on the development of oral communication skills, laboratory exercises, vocabulary building, discussions.",
+    "prerequisites": {
+      "text": "FRSL 302, or instructor's recommendation, or Placement test required.",
+      "tree": "FRSL 302",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours, plus language laboratory"
+    ]
+  },
+  {
+    "code": "FRSL 313",
+    "subject": "FRSL",
+    "number": "313",
+    "title": "Français en contexte 1 : santé et services psychosociaux",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Communication in clinical and ethical contexts, including: oral and written skills for nuanced context-appropriate interactions focusing on specialized vocabulary, complex sentence structures, and strategies for expressing opinions, discussing cases, and responding to sensitive client situations.",
+    "prerequisites": {
+      "text": "FRSL213, FRSL 214, FRSL 211, FRSL 215",
+      "tree": {
+        "and": [
+          "FRSL 213",
+          "FRSL 214",
+          "FRSL 211",
+          "FRSL 215"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in programs offered by: the School of Continuing Studies, Faculty of Dental Medicine and Oral Health Sciences, Faculty of Medicine and Health Sciences, School of Human Nutrition, Institute of Parasitology, School of Social Work, and other students with the approval of the Director of the French Language Centre.",
+      "excludes": []
+    },
+    "notes": [
+      "B2.1 level"
+    ]
+  },
+  {
+    "code": "FRSL 314",
+    "subject": "FRSL",
+    "number": "314",
+    "title": "Français en contexte 2 : santé et services psychosociaux",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced communication skills in professional settings, including: precision in oral and written expression. Emphasis on appropriate register, clarity, and strategies for report writing, team collaboration, and intercultural communication to manage complex yet predictable interactions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in programs offered by: the School of Continuing Studies, Faculty of Dental Medicine and Oral Health Sciences, Faculty of Medicine and Health Sciences, School of Human Nutrition, Institute of Parasitology, School of Social Work, and other students with the approval of the Director of the French Language Centre.",
+      "excludes": []
+    },
+    "notes": [
+      "B2.2 level"
+    ]
+  },
+  {
+    "code": "FRSL 321",
+    "subject": "FRSL",
+    "number": "321",
+    "title": "Oral and Written French 2",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Oral work involving discussion and exposés, cultural and literary readings, grammar review. Methodological component integrated in classwork and developed in frequent workshop sessions.",
+    "prerequisites": {
+      "text": "FRSL 211D1 and 211D2, or 215 or 302 or 303, or Placement test required.",
+      "tree": {
+        "or": [
+          "FRSL 211",
+          "FRSL 215",
+          "FRSL 302",
+          "FRSL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "FRSL 321D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "FRSL 321D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "FRSL 322",
+    "subject": "FRSL",
+    "number": "322",
+    "title": "Oral and Written French 2",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Equivalent to the first half of FRSL 321. Only with special permission of the Department.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours"
+    ]
+  },
+  {
+    "code": "FRSL 325",
+    "subject": "FRSL",
+    "number": "325",
+    "title": "Oral and Written French 2 - Intensive",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The program of FRSL 321 will be covered in one semester.",
+    "prerequisites": {
+      "text": "FRSL 211D1 and 211D2, or 215 or 302 or 303, or Placement test required",
+      "tree": {
+        "or": [
+          "FRSL 211",
+          "FRSL 215",
+          "FRSL 302",
+          "FRSL 303"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "6 hours"
+    ]
+  },
+  {
+    "code": "FRSL 330",
+    "subject": "FRSL",
+    "number": "330",
+    "title": "Français écrit en contexte 2: santé et services sociaux ",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Au Québec, les professionnels de la santé et des services sociaux doivent satisfaire aux exigencies de l'Office québécois de la langue française et de leur ordre professionnel. L'écrit professionnel en santé doit être précis et communiquer sans ambiguïté une information qui sera lue à un autre moment par un autre professionnel. En partant de modèles de textes qui presentment différents types de discours (narratifs, prescriptifs, d'opinion, mixtes) et différents formats (textes, lettres, notes de service et rapports de cas), ce cours permet d'améliorer l'écrit tout en faisant une revision de la grammaire fine (concordance des temps, pronominalisation, modalité, etc.)",
+    "prerequisites": {
+      "text": "French placement test or Instructor's recommendation or FRSL 329",
+      "tree": "FRSL 329",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken FRSL 333-02 prior to fall 2018.",
+      "excludes": [
+        "FRSL 333"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "FRSL 332",
+    "subject": "FRSL",
+    "number": "332",
+    "title": "Intermediate French: Grammar 01",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Grammar review, using both a theoretical and a practical approach. Reading materials, in addition to their cultural interest, are selected to illustrate grammatical usage, provide models of writing techniques and aid in vocabulary development.",
+    "prerequisites": {
+      "text": "Placement test. For those who have attained relative fluency but lack accuracy in speaking and writing",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours"
+    ]
+  },
+  {
+    "code": "FRSL 333",
+    "subject": "FRSL",
+    "number": "333",
+    "title": "Intermediate French: Grammar 02",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Second part of FRSL 332.",
+    "prerequisites": {
+      "text": "FRSL 332, or instructor's recommendation, or Placement test required.",
+      "tree": "FRSL 332",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours"
+    ]
+  },
+  {
+    "code": "FRSL 407",
+    "subject": "FRSL",
+    "number": "407",
+    "title": "Compréhension et expression orales",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Identification des niveaux de langue et prononciation du français familier; amélioration de la compréhension auditive par l'écoute d'une variété de documents audio-visuels du Québec et d'ailleurs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 heures par semaine",
+      "Préalable : test de classement. S'adresse aux étudiants qui ont déjà une bonne maîtrise du français écrit."
+    ]
+  },
+  {
+    "code": "FRSL 408",
+    "subject": "FRSL",
+    "number": "408",
+    "title": "Français oral: Textes et expressions",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Suite du cours FRSL 407. Cours de perfectionnement de l'expression orale et écrite: amélioration de la production orale (intonation, débit, spontanéité); enrichissement du vocabulaire idiomatique relié à des fonctions socio-culturelles de la langue par le biais de techniques orales (jeux de rôles, discussions, simulations) et d'un journal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 heures par semaine",
+      "Prequisite(s): FRSL 407, or instructor's recommendation, or Placement test"
+    ]
+  },
+  {
+    "code": "FRSL 431",
+    "subject": "FRSL",
+    "number": "431",
+    "title": "Français fonctionnel avancé",
+    "credits": 6,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Destiné aux étudiants de niveau avancé qui veulent approfondir leurs connaissances lexicales, syntaxiques et culturelles afin de pouvoir exprimer avec clarté leurs opinions sur une variété de sujets. Par l'étude de journaux, revues et textes littéraires, les étudiants se familiariseront avec la réalité québécoise contemporaine.",
+    "prerequisites": {
+      "text": "FRSL 321D1 and FRSL 321D2 or FRSL 325 or FRSL 332 or FRSL 333 or FRSL 407 or FRSL 408",
+      "tree": {
+        "or": [
+          "FRSL 321",
+          "FRSL 325",
+          "FRSL 332",
+          "FRSL 333",
+          "FRSL 407",
+          "FRSL 408"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Les étudiants qui ont suivi le cours FRSL 400, FRSL 402 ou FRSL 432 ne seront pas admis."
+    ],
+    "parts": [
+      {
+        "code": "FRSL 431D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "FRSL 431D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "FRSL 432",
+    "subject": "FRSL",
+    "number": "432",
+    "title": "Français fonctionnel",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Première moitié du programme du cours FRSL 431. Seulement avec la permission spéciale du département.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 heures par semaine",
+      "Préalable : test de classement."
+    ]
+  },
+  {
+    "code": "FRSL 445",
+    "subject": "FRSL",
+    "number": "445",
+    "title": "Français fonctionnel, écrit 1",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Destiné aux étudiants dont le français oral est d'un niveau fonctionnel, mais dont le français écrit est nettement inférieur. Travaux écrits hebdomadaires, analyse de textes divers, exercices et tests en classe. But: corriger l'orthographe, la grammaire et les anglicismes, enrichir le vocabulaire, améliorer l'expression écrite.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 heures par semaine",
+      "Préalable : test de classement."
+    ]
+  },
+  {
+    "code": "FRSL 446",
+    "subject": "FRSL",
+    "number": "446",
+    "title": "Français fonctionnel, écrit 2",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Rédactions de types variés. But: améliorer le style, développer les compétences telles que l'organisation et la présentation d'arguments ou l'identification des registres de langue.",
+    "prerequisites": {
+      "text": "FRSL 445, or instructor's recommendation, or Placement test required",
+      "tree": "FRSL 445",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 heures par semaine",
+      "Prépare aux cours du Département de langue et littérature françaises. Même format que le cours FRSL 445, à un niveau plus avancé"
+    ]
+  },
+  {
+    "code": "FRSL 449",
+    "subject": "FRSL",
+    "number": "449",
+    "title": "Le français des médias",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Cours de perfectionnement mettant l'accent sur l'enrichissement de la langue à l'oral comme à l'écrit. Analyse d'émissions de télévision ou de radio et lecture d'articles de journaux ou de revues. Activités variées portant sur des sujets d'actualité (reportages, débats, etc.) qui reflètent la société et la culture du Québec d'aujourd'hui.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 heures par semaine",
+      "Préalable : test de classement."
+    ]
+  },
+  {
+    "code": "FRSL 455",
+    "subject": "FRSL",
+    "number": "455",
+    "title": "Grammaire et création",
+    "credits": 3,
+    "offeredBy": "French Language Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Perspective analytique et approche inductive et visuelle se combinent pour permettre une meilleure maîtrise du code grammatical. L'étude de textes de niveau soutenu met en relief la richesse des ressources lexicales et stylistiques du français et rend accessible la création littéraire aux étudiants non francophones.",
+    "prerequisites": {
+      "text": "FRSL 449, or instructor's recommendation, or Placement test.",
+      "tree": "FRSL 449",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 heures par semaine"
+    ]
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "code": "AERO 401",
+    "subject": "AERO",
+    "number": "401",
+    "title": "Introduction to Aerospace Engineering",
+    "credits": 3,
+    "offeredBy": "Institute for Aerospace Eng.",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic concepts in all relevant aspects of aerospace engineering. Introduction to aircraft and spacecraft components, systems and operation. Aerodynamic and flight mechanics. Structures and materials. Propulsion systems. Manufacturing processes. Control and systems. Avionics and navigation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "AERO 410",
+    "subject": "AERO",
+    "number": "410",
+    "title": "Aerospace Design and Certification Process",
+    "credits": 3,
+    "offeredBy": "Institute for Aerospace Eng.",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design and certification process for aircraft, helicopters and spacecraft. Operation and performance requirements. Preliminary and detailed design process. Performance analysis. Regulatory agencies overview. Certification process. Life cycle analysis. Cost analysis. Flight testing programs. Delivery and operation.",
+    "prerequisites": {
+      "text": "AERO 401",
+      "tree": "AERO 401",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students enrolled in the Minor in Aerospace Engineering",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "AERO 460",
+    "subject": "AERO",
+    "number": "460",
+    "title": "Aerospace Project",
+    "credits": 6,
+    "offeredBy": "Institute for Aerospace Eng.",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Application of the material learned in other courses in the Minor in Aerospace Engineering to an applied project. Team project work will involve the design, fabrication, verification, and application of an aerospace system / component. Lectures on topics related to design and management of design projects. Emphasis is on the completion of a project of professional quality in collaboration with the aerospace industry.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "AERO 410",
+      "tree": "AERO 410",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to students enrolled in the Minor in Aerospace Engineering.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both AERO 460D1 and AERO 460D2.",
+      "No credit will be given for this course unless both AERO 460D1 and AERO 460D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "AERO 460D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "AERO 460D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AERO 520",
+    "subject": "AERO",
+    "number": "520",
+    "title": "Introduction to Aerospace Design",
+    "credits": 3,
+    "offeredBy": "Institute for Aerospace Eng.",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Multidisciplinary design of an aerospace vehicle thatconsiders the fluid mechanics, performance, stability andcontrol, avionics, electrical system, propulsion, structures,and materials in a systemapproach aimed for a set of specifications.",
+    "prerequisites": {
+      "text": "AERO 401",
+      "tree": "AERO 401",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "AERO 410",
+      "tree": "AERO 410",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken AERO 420.",
+      "excludes": [
+        "AERO 420"
+      ]
+    },
+    "notes": [
+      "Undergraduate students must pass the prerequisite AERO 401 with a grade of B+ or higher."
+    ]
+  },
+  {
+    "code": "AERO 633",
+    "subject": "AERO",
+    "number": "633",
+    "title": "Aerodynamics",
+    "credits": 4,
+    "offeredBy": "Institute for Aerospace Eng.",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Equations of motion, vorticity and circulation, conformal mapping and flow round simple bodies. Two-dimensional flow around aerofoils. Flow separation. Flow around finite wings. High and low aspect-ratio wings. Propeller theory and design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,898 @@
+[
+  {
+    "code": "BIOC 212",
+    "subject": "BIOC",
+    "number": "212",
+    "title": "Molecular Mechanisms of Cell Function",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introductory course describing the biochemistry and molecular biology of selected key functions of animal cells, including: gene expression; mitochondrial production of metabolic energy; cellular communication with the extra-cellular environment; and regulation of cell division.",
+    "prerequisites": {
+      "text": "BIOL 200",
+      "tree": "BIOL 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "A non-terminal course intended to be followed by BIOC 311; BIOC 312 in the U2 year. Not open to students who have taken or are taking BIOL 201 or ANAT 212.",
+      "excludes": [
+        "ANAT 212",
+        "BIOL 201"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 220",
+    "subject": "BIOC",
+    "number": "220",
+    "title": "Laboratory Methods in Biochemistry and Molecular Biology 1",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to key methodologies for the isolation, detection and characterization of proteins, lipids, nucleic acids and subcellular fractions, including spectrophotometry, assays of enzymatic activities and chromatographic and electrophoretic methods. Analysis of biochemical data.",
+    "prerequisites": {
+      "text": "BIOL 200",
+      "tree": "BIOL 200",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "BIOC 212 and CHEM222",
+      "tree": {
+        "and": [
+          "BIOC 212",
+          "CHEM 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL 301. Open to students in Biochemistry programs, others with permission of the instructor.",
+      "excludes": [
+        "BIOL 301"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 301",
+    "subject": "BIOC",
+    "number": "301",
+    "title": "Written Communication in Biomedical Sciences",
+    "credits": 1,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The structure of scientific papers, the interpretation of scientific data, and citation management. Emphasizes practice in writing manuscript-style papers.",
+    "prerequisites": {
+      "text": "BIOL 200",
+      "tree": "BIOL 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking WCOM 314 or MIMM 301.",
+      "excludes": [
+        "MIMM 301",
+        "WCOM 314"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 311",
+    "subject": "BIOC",
+    "number": "311",
+    "title": "Metabolic Biochemistry",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The generation of metabolic energy in higher organisms with an emphasis on its regulation at the molecular, cellular and organ level. Chemical concepts and mechanisms of enzymatic catalysis are also emphasized. Included: selected topics in carbohydrate, lipid and nitrogen metabolism; complex lipids and biological membranes; hormonal signal transduction.",
+    "prerequisites": {
+      "text": "BIOL 200, BIOL 201 or BIOC 212, CHEM 222 or CHEM 234",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          {
+            "or": [
+              "BIOL 201",
+              "BIOC 212"
+            ]
+          },
+          {
+            "or": [
+              "CHEM 222",
+              "CHEM 234"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOC 312",
+    "subject": "BIOC",
+    "number": "312",
+    "title": "Biochemistry of Macromolecules",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Gene expression from the start of transcription to the synthesis of proteins, their modifications and degradation. Topics covered: purine and pyrimidine metabolism; transcription and its regulation; mRNA processing; translation; targeting of proteins to specific cellular sites; protein glycosylation; protein phosphorylation; protein turn-over; programmed cell death (apoptosis).",
+    "prerequisites": {
+      "text": "BIOC 311, BIOL 200, BIOL 201 or BIOC 212",
+      "tree": {
+        "and": [
+          "BIOC 311",
+          "BIOL 200",
+          {
+            "or": [
+              "BIOL 201",
+              "BIOC 212"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 320",
+    "subject": "BIOC",
+    "number": "320",
+    "title": "Laboratory Methods in Biochemistry and Molecular Biology 2",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Modern molecular-biological methods for isolation and characterization of nucleic acids and for analysis of RNA and protein expression, including: plasmid expression, isolation, restriction and ligation; electrophoretic methods and Western blotting; PCR and qPCR applications; immunofluorescence microscopy and basic bioinformatics approaches.",
+    "prerequisites": {
+      "text": "BIOC 220",
+      "tree": "BIOC 220",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL 301. Open to students in Biochemistry programs; others with permission of the instructor.",
+      "excludes": [
+        "BIOL 301"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 396",
+    "subject": "BIOC",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": {
+      "text": "MIMM 212 or BIOC 220 or BlOL 301 or an equivalent laboratory course in molecular and cell-biological methods, at least one term of undergraduate studies, and a CGPA of at least 3.0; or permission of instructor. A project proposal form must be completed by the student and instructor and approved by the course coordinator or his/her delegate before the start of the term. Instructors will list project-specific prerequisites with the project description.",
+      "tree": {
+        "or": [
+          "MIMM 212",
+          "BIOC 220"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental permission required. Student cannot be supervised by same instructor for two 396 Science courses. S/U option not permitted. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall/Winter",
+      "Note that enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures"
+    ]
+  },
+  {
+    "code": "BIOC 404",
+    "subject": "BIOC",
+    "number": "404",
+    "title": "Biophysical Methods in Biochemistry",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Applications and fundamental bases of important biophysical techniques used in modern biochemistry research laboratories to isolate, characterize and determine the structure and dynamics of proteins, nucleic acids, small molecules and complexes that underlie life and disease.",
+    "prerequisites": {
+      "text": "CHEM 204, CHEM 214 or equivalent",
+      "tree": {
+        "and": [
+          "CHEM 204",
+          "CHEM 214"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 450",
+    "subject": "BIOC",
+    "number": "450",
+    "title": "Protein Structure and Function",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Primary, secondary, tertiary and quaternary structure of enzymes. Active site mapping and site-specific mutagenesis of enzymes. Enzyme kinetics and mechanisms of catalysis. Multienzyme complexes.",
+    "prerequisites": {
+      "text": "BIOC 311, BIOC 312 and/or sufficient organic chemistry.",
+      "tree": {
+        "and": [
+          "BIOC 311",
+          "BIOC 312"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended primarily for students at the U3 level",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOC 454",
+    "subject": "BIOC",
+    "number": "454",
+    "title": "Nucleic Acids",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "RNA processing, localization and stability. RNAi mechanisms, regulation and applications. Regulation of DNA replication. Genomics: human genome sequence, regulation and organization. DNA repair mechanisms. Special topics on transgenics, genetic diseases and cancer.",
+    "prerequisites": {
+      "text": "BIOC 311, BIOC 312 or permission of instructor",
+      "tree": {
+        "and": [
+          "BIOC 311",
+          "BIOC 312"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOC 458",
+    "subject": "BIOC",
+    "number": "458",
+    "title": "Membranes and Cellular Signaling",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An integrated treatment of the properties of biological membranes and of intracellular signaling, including the major role that membranes play in transducing and integrating cellular regulatory signals. Biological membrane organization and dynamics: membrane transport; membrane receptors and their associated effectors; mechanisms of regulation of cell growth, morphology, differentiation and death.",
+    "prerequisites": {
+      "text": "BIOC 212 or ANAT 212 or BIOL201, ANAT 262, one of PHGY 209 or BIOL 205; one of BIOC 312 or ANAT 365; BIOC 311 recommended",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOC 212",
+              "ANAT 212",
+              "BIOL 201"
+            ]
+          },
+          "ANAT 262",
+          {
+            "or": [
+              "PHGY 209",
+              "BIOL 205"
+            ]
+          },
+          {
+            "or": [
+              "BIOC 312",
+              "ANAT 365"
+            ]
+          },
+          "BIOC 311"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is also listed as ANAT 458. Not open to students who have taken or are taking ANAT 458.",
+      "excludes": [
+        "ANAT 458"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 462",
+    "subject": "BIOC",
+    "number": "462",
+    "title": "Research Laboratory in Biochemistry",
+    "credits": 6,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A laboratory research project and related written review article all performed under the supervision of the same professor.",
+    "prerequisites": {
+      "text": "BIOC 320 and permission of the course coordinator and the research director.",
+      "tree": "BIOC 320",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Honours students in Biochemistry",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "Students must obtain consent of a prospective research director and the course coordinator in order to register"
+    ]
+  },
+  {
+    "code": "BIOC 470",
+    "subject": "BIOC",
+    "number": "470",
+    "title": "Lipids and Lipoproteins in Disease",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Structure, function and metabolism of lipids and lipoproteins as they relate to lipid storage diseases, obesity, insulin resistance, diabetes, heart disease, Alzheimers disease and other neurological diseases. Transcriptional and post-translational mechanisms governing the synthesis and degradation of important enzymes, lipids, and lipid transport molecules; role of lipid mediators in signaling pathways and protein modification; assembly and dynamics of lipoproteins and biological membranes; genetic disruptions of lipid regulatory proteins such as cell surface receptors leading to human disease.",
+    "prerequisites": {
+      "text": "BIOC 311 or equivalent.",
+      "tree": "BIOC 311",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOC 491",
+    "subject": "BIOC",
+    "number": "491",
+    "title": "Independent Research",
+    "credits": 6,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individual work on a project to be performed in a research laboratory.",
+    "prerequisites": {
+      "text": "BIOC 462",
+      "tree": "BIOC 462",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration by departmental permission only",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 503",
+    "subject": "BIOC",
+    "number": "503",
+    "title": "Biochemistry of Immune Diseases",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current selected topics in immunology. The biochemical mechanisms underlying various immuno-pathologies and the clinical significance of therapeutic interventions.",
+    "prerequisites": {
+      "text": "BIOC 311, BIOC 312",
+      "tree": {
+        "and": [
+          "BIOC 311",
+          "BIOC 312"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 504",
+    "subject": "BIOC",
+    "number": "504",
+    "title": "Molecular Mechanisms of Disease",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Reflecting on and communicating the molecular underpinnings of human disease, their clinical significance, and relevance to diagnosis and treatment. The underlying molecular causes of disease, going from mutations in DNA, RNA stability and proteins structure and function.",
+    "prerequisites": {
+      "text": "BIOC 311, BIOC 312 or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIOC 311",
+          "BIOC 312"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOC 505",
+    "subject": "BIOC",
+    "number": "505",
+    "title": "RNA in Disease and Therapeutics",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Recent advances in understanding the complex role of versatile RNA molecules and related biochemical processes that play a central role in homeostasis. The broad spectrum of pathological states resulting from dysregulated RNA and RNA-based therapeutics are presented.",
+    "prerequisites": {
+      "text": "BIOC 312 (or equivalent), BIOC 320 or BIOL 301, or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIOC 312",
+          {
+            "or": [
+              "BIOC 320",
+              "BIOL 301"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOC 570",
+    "subject": "BIOC",
+    "number": "570",
+    "title": "Lipids and Lipoproteins in Disease",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Structure, function, biogenesis, metabolism and roles of lipids and lipoproteins as they relate to lipid storage diseases, obesity, insul inresistance, diabetes, heart disease, Alzheimer's disease and other neurological diseases. Genetic disruptions of lipid regulatory proteins such as cell surface receptors and their consequences on human health.",
+    "prerequisites": {
+      "text": "BIOC 311 or equivalent.",
+      "tree": "BIOC 311",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIOC 470.",
+      "excludes": [
+        "BIOC 470"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 600",
+    "subject": "BIOC",
+    "number": "600",
+    "title": "Advanced Strategies in Genetics and Genomics",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced technologies and methods in genomics research, presented by experts actively pursuing the experimental approaches discussed.",
+    "prerequisites": {
+      "text": "BIOC 454 or equivalent",
+      "tree": "BIOC 454",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Must take part in the Biochemistry graduate program",
+      "excludes": []
+    },
+    "notes": [
+      "Enrolment limited to 15 graduate students."
+    ]
+  },
+  {
+    "code": "BIOC 603",
+    "subject": "BIOC",
+    "number": "603",
+    "title": "Genomics and Gene Expression",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of recent developments in analysis of eukaryotic cell genomes and control of gene expression during differentiation and growth control. Molecular genetics; genomics and the bioinformatics of analysis of genomic and functional-genomic data; mechanisms and signal-transduction pathways for regulation of gene expression; applications to human disease with a strong emphasis on cancer.",
+    "prerequisites": {
+      "text": "BIOC 454 and permission of instructor.",
+      "tree": "BIOC 454",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "BIOC 604",
+    "subject": "BIOC",
+    "number": "604",
+    "title": "Macromolecular Structure",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "X-Ray crystallography, NMR spectroscopy, Electron Microscopy. Theory and methods used to determine macromolecular structures will be covered. Several practical sessions with hands-on experience for students are included.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered in the Winter term, in even alternate years."
+    ]
+  },
+  {
+    "code": "BIOC 605",
+    "subject": "BIOC",
+    "number": "605",
+    "title": "Protein Biology and Proteomics",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of recent developments in protein biology and proteomics analysis. Proteomics, modeling and biophysical approaches to characterize the functional interactions of biological macromolecules; applications to biological problems. Lectures and in-class discussions are supplemented by practical training in proteomics.",
+    "prerequisites": {
+      "text": "BIOC 450 or equivalent, or permission of instructor.",
+      "tree": "BIOC 450",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 610",
+    "subject": "BIOC",
+    "number": "610",
+    "title": "Seminars in Chemical Biology 1",
+    "credits": 1.5,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "First multidisciplinary seminar in chemical biology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered for the M.Sc. or Ph.D. Graduate Option in Chemical Biology.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 611",
+    "subject": "BIOC",
+    "number": "611",
+    "title": "Seminars in Chemical Biology 2",
+    "credits": 1.5,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Third multidisciplinary seminar in chemical biology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered for the M.Sc. or Ph.D. Graduate Option in Chemical Biology.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 670",
+    "subject": "BIOC",
+    "number": "670",
+    "title": "Biochemistry of Lipoproteins",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Structure, function and metabolism of lipids and lipoproteins as they relate to lipid storage diseases, obesity, diabetes and heart disease.",
+    "prerequisites": {
+      "text": "BIOC 311 or permission of instructor",
+      "tree": "BIOC 311",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students only with permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "BIOC 694",
+    "subject": "BIOC",
+    "number": "694",
+    "title": "Thesis Research 1 - Bioinformatics",
+    "credits": 6,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Laboratory research focusing on the thesis research project for the M.Sc. degree in Biochemistry; Bioinformatics Option.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the M.Sc. in Biochemistry (Bioinformatics Option) program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 695",
+    "subject": "BIOC",
+    "number": "695",
+    "title": "Thesis Research 1 (Chemical - Biology)",
+    "credits": 6,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Research toward completion of thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered for the M.Sc. Graduate Option in Chemical Biology.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BIOC 696",
+    "subject": "BIOC",
+    "number": "696",
+    "title": "Seminars in Biochemistry",
+    "credits": 3,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminars in biochemistry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to M.Sc. and Ph.D. Biochemistry students only.",
+      "excludes": []
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "BIOC 696D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BIOC 696D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "BIOC 696N1",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "BIOC 696N2",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "BIOC 697",
+    "subject": "BIOC",
+    "number": "697",
+    "title": "Thesis Research 1",
+    "credits": 9,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOC 698",
+    "subject": "BIOC",
+    "number": "698",
+    "title": "Thesis Research 2",
+    "credits": 12,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOC 699",
+    "subject": "BIOC",
+    "number": "699",
+    "title": "Thesis Research 3",
+    "credits": 15,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BIOC 701",
+    "subject": "BIOC",
+    "number": "701",
+    "title": "Research Seminar 1",
+    "credits": 0,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation on original current laboratory research carried out by student.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Biochemistry graduate students"
+    ]
+  },
+  {
+    "code": "BIOC 702",
+    "subject": "BIOC",
+    "number": "702",
+    "title": "Ph.D. Thesis Proposal",
+    "credits": 0,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Dissertation presented to Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Biochemistry graduate students"
+    ]
+  },
+  {
+    "code": "BIOC 703",
+    "subject": "BIOC",
+    "number": "703",
+    "title": "Ph.D. Seminar",
+    "credits": 0,
+    "offeredBy": "Biochemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of the planned thesis including central findings and original contribution to knowledge in the field of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Ph.D. students in Biochemistry",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

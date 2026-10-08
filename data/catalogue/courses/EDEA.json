@@ -1,0 +1,551 @@
+[
+  {
+    "code": "EDEA 204",
+    "subject": "EDEA",
+    "number": "204",
+    "title": "Drawing",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Development of sound drafting skills through the study of organic forms and the human figure in various media.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The course includes a fee of $20 for art supplies such as pastels and to cover the cost of live models. The fee is refundable until the end of the course add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 205",
+    "subject": "EDEA",
+    "number": "205",
+    "title": "Painting 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Investigation of color, media, tools, techniques. Studies of natural forms, the human figure.",
+    "prerequisites": {
+      "text": "EDEA 204",
+      "tree": "EDEA 204",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The additional course charge of $20 for EDEA 205 and EDEA 304 covers the cost of live models and selected other materials deemed necessary in the instruction of these courses. The fee is refundable until the end of the course add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 206",
+    "subject": "EDEA",
+    "number": "206",
+    "title": "1st Year Professional Seminar",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "This seminar along with First Field Experience (Music) serves as an orientation to the culture of the school and to teaching as a profession. Emphasis is on the general functioning of elementary and secondary schools. Topics include the role of the arts in the curriculum. Professional portfolios and professional competencies will be addressed.",
+    "prerequisites": {
+      "text": "(EDEC 248 or EDEC 249) and (EDEC 260 or EDEC 261)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDEC 248",
+              "EDEC 249"
+            ]
+          },
+          {
+            "or": [
+              "EDEC 260",
+              "EDEC 261"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDFE 205",
+      "tree": "EDFE 205",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 208",
+    "subject": "EDEA",
+    "number": "208",
+    "title": "Second Professional Seminar (Music) ",
+    "credits": 1,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Preparation for the second field experience through development of basic practices in planning and teaching in music classrooms. Relevant professional competencies and working professional portfolios will be addressed.",
+    "prerequisites": {
+      "text": "EDFE 205, EDEC 260 or EDEC 261, EDEC 248 or EDEC 249, EDPE 300.",
+      "tree": {
+        "and": [
+          "EDFE 205",
+          {
+            "or": [
+              "EDEC 260",
+              "EDEC 261"
+            ]
+          },
+          {
+            "or": [
+              "EDEC 248",
+              "EDEC 249"
+            ]
+          },
+          "EDPE 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDFE 208",
+      "tree": "EDFE 208",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EDEC 253.",
+      "excludes": [
+        "EDEC 253"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDEA 241",
+    "subject": "EDEA",
+    "number": "241",
+    "title": "Basic Art Media for Classroom",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to media that can be easily adapted to elementary classroom studio exploration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Arts supplies such as plaster, clay, and paints provided in class. As well, the fee of $20 includes a museum entrance charge for a guided tour. The fee is refundable until the end of the course add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 242",
+    "subject": "EDEA",
+    "number": "242",
+    "title": "Cultural Skills 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Development of Indigenous skills and knowledge in art, music, handicrafts and other areas both modern and traditional. Topics will vary and be chosen from a range identified by instructors and students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 243",
+    "subject": "EDEA",
+    "number": "243",
+    "title": "Cultural Skills 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Development of Indigenous skills and knowledge in art, music, handicrafts and other areas both modern and traditional.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Topics will vary and will cover different cultural skills than EDEA 242.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day.",
+      "**These courses are only for the Office of First Nations and Inuit Education (OFNIE) for getting people to register online.",
+      "**Web drop deadline is May 23, 2024",
+      "**Web add deadline is June 5, 2024",
+      "**Web withdrawal deadline is June 6, 2024"
+    ]
+  },
+  {
+    "code": "EDEA 244",
+    "subject": "EDEA",
+    "number": "244",
+    "title": "Cultural Skills - Fall",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Development of Indigenous skills and knowledge in art, music, handicrafts and other areas both modern and traditional. Topics will vary and be chosen from a range identified by instructors and students. Seasonally based and will cover Fall cultural skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 245",
+    "subject": "EDEA",
+    "number": "245",
+    "title": "Cultural Skills - Winter",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Development of Indigenous skills and knowledge in art, music, handicrafts and other areas both modern and traditional. Topics will vary and be chosen from a range identified by instructors and students. Seasonally based and will cover Winter cultural skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 246",
+    "subject": "EDEA",
+    "number": "246",
+    "title": "Cultural Skills - Spring",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Development of Indigenous skills and knowledge in art, music, handicrafts and other areas both modern and traditional. Topics will vary and be chosen from a range identified by instructors and students. Seasonally based and will cover Spring cultural skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 247",
+    "subject": "EDEA",
+    "number": "247",
+    "title": "Cultural Skills - Summer",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Development of Indigenous skills and knowledge in art, music, handicrafts and other areas both modern and traditional. Topics will vary and be chosen from a range identified by instructors and students. Seasonally based and will cover Summer cultural skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 296",
+    "subject": "EDEA",
+    "number": "296",
+    "title": "Basic Design",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of the basic elements of visual art through two dimensional composition and three-dimensional constructions. Investigation of materials and tools and the processes of manipulating and relating materials.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Exploration of the basic elements of visual art through two-dimensional composition and three-dimensional constructions. Investigation of materials and tools and the processes of manipulating and relating materials.",
+      "This course carries a fee of $20 for materials to support the exploration of the basic elements of visual art through two-dimensional composition and three-dimensional constructions. Investigation of materials and tools and the processes of manipulating and relating materials."
+    ]
+  },
+  {
+    "code": "EDEA 302",
+    "subject": "EDEA",
+    "number": "302",
+    "title": "Special Topics",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Selected topics and contemporary issues in education in the arts. The content will vary from year to year and will be announced prior to registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "There is a fee of $36 to support the cost of attending a theatre production and art gallery special exhibition."
+    ]
+  },
+  {
+    "code": "EDEA 304",
+    "subject": "EDEA",
+    "number": "304",
+    "title": "Painting 3",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Continuation of course EDEA 205 with emphasis on drawing and structure.",
+    "prerequisites": {
+      "text": "EDEA 205",
+      "tree": "EDEA 205",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The additional course charge of $10 for EDEA 205 and EDEA 304 covers the cost of live models and selected other materials deemed necessary in the instruction of these courses. The fee is refundable until the end of the course add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 307",
+    "subject": "EDEA",
+    "number": "307",
+    "title": "Drawing 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "A course designed to further the individual's natural drawing ability, and to develop a keen, perceptive approach to varied subject matter, including figure drawing.",
+    "prerequisites": {
+      "text": "EDEA 204",
+      "tree": "EDEA 204",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The course includes a fee of $20 for art supplies such as pastels and to cover the cost of live models. The fee is refundable until the end of the course add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 332",
+    "subject": "EDEA",
+    "number": "332",
+    "title": "Art Curriculum and Instruction - Elementary",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to theories on children's visual expression and perception, lesson planning, and classroom-oriented studio practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The course includes a fee of $15 for art supplies such as ink, paper, brushes, fabric, tape, thread, etc. The fee is refundable until the end of the course add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 341",
+    "subject": "EDEA",
+    "number": "341",
+    "title": "Listening for Learning",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Musical knowledge is developed and articulated through a structured approach to listening. Using recorded examples, students learn how to recognize, identify and discuss musical elements, devices, styles and genres.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The ability to read notation is not a prerequisite"
+    ]
+  },
+  {
+    "code": "EDEA 342",
+    "subject": "EDEA",
+    "number": "342",
+    "title": "Curriculum and Instruction in Drama Education",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Pedagogical theory and practical applications in the teaching of developmental drama, dramatic forms, improvisation and theatre arts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The course EDEA 342 includes a $25.19 course fee covering the greatly reduced cost of attending a live, professional theatre production. Attendance is a part of the course requirement. The fee is refundable until the end of the add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 345",
+    "subject": "EDEA",
+    "number": "345",
+    "title": "Music Curriculum and Instruction for Generalists",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study of materials and instructional techniques grounded in an understanding of basic musical concepts and contemporary theories of music teaching and learning. Definition of musical objectives and rationales, selection and development of materials, review of MEQ guidelines. Participation through singing, movement, listening, discussion and lesson planning and implementation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 407",
+    "subject": "EDEA",
+    "number": "407",
+    "title": "Final Year Professional Seminar Music",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Professional competencies and final preparation of professional portfolios will be addressed. Summary of philosophical, theoretical and practical issues related to the profession of teaching.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDFE 407",
+      "tree": "EDFE 407",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Students in B.Ed. in Music or Concurrent B.Ed. and B.Mus.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDEA 410",
+    "subject": "EDEA",
+    "number": "410",
+    "title": "Aesthetics and Art for the Classroom",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "The course is designed to address the need for teachers to be able to lead students to increased perceptual awareness and critical thinking in relation to their visual environment. Museum visits are a regular component of this course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "EDEA 442",
+    "subject": "EDEA",
+    "number": "442",
+    "title": "Methods in Music Education 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Preparation for Third Field Experience. Includes the study of music curriculum content and instructional approaches, classroom management issues, lesson planning and program development for elementary and secondary schools. Relevant professional competencies will be addressed, developed and assessed",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDFE 308, EDES 350",
+      "tree": {
+        "and": [
+          "EDFE 308",
+          "EDES 350"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 472",
+    "subject": "EDEA",
+    "number": "472",
+    "title": "Methods in Music Education 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Preparation for Fourth Year Field Experience. Includes the study of music curriculum content and instructional approaches, classroom management issues, lesson planning and program development for elementary and secondary schools. Relevant professional competencies will be addressed, developed and assessed.",
+    "prerequisites": {
+      "text": "EDEA 442",
+      "tree": "EDEA 442",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDFE 407",
+      "tree": "EDFE 407",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 496",
+    "subject": "EDEA",
+    "number": "496",
+    "title": "Sculpture 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An investigation of basic sculpture methods and concepts with a view toward developing personal aptitudes. Development of three-dimensional thinking through direct experience with processes using new and traditional materials.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The course includes a fee of $40 for art supplies such as clay, plaster, hydrostone and to cover the cost of live models. The fee is refundable until the end of the course add/drop period."
+    ]
+  },
+  {
+    "code": "EDEA 555",
+    "subject": "EDEA",
+    "number": "555",
+    "title": "Applied Theatre",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Exploration of the practices of theatre and drama in non-traditional settings, encompassing theatre practices and process drama that tackle areas of social and cultural policy such as public health, education, housing and social welfare.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEA 655",
+    "subject": "EDEA",
+    "number": "655",
+    "title": "Arts-Based Educational Research",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Forms of thinking and portraying that emanate from the arts: music, dance, drama, visual art, poetry, which provide an aesthetically-oriented lens from which to examine perspectives and premises that influence educational practice, and to develop processes that use one or more of the arts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "code": "WMST 601",
+    "subject": "WMST",
+    "number": "601",
+    "title": "Feminist Theories and Methods",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of feminist theories and research methods from a variety of disciplinary perspectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "WMST 602",
+    "subject": "WMST",
+    "number": "602",
+    "title": "Feminist Research Symposium",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discussion and development of participants' research in gender and women's studies.",
+    "prerequisites": {
+      "text": "WMST 601.",
+      "tree": "WMST 601",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Must be enrolled in the Option in Gender and Women's Studies.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "WMST 610",
+    "subject": "WMST",
+    "number": "610",
+    "title": "Current Topics 1",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Consideration of contemporary issues in gender, sexuality, feminist, and social justice studies. Topic and approach will vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "WMST 620",
+    "subject": "WMST",
+    "number": "620",
+    "title": "Current Topics 2",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Consideration of contemporary issues in gender, sexuality, feminist, and social justice studies. Topic and approach will vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

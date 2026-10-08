@@ -1,0 +1,1430 @@
+[
+  {
+    "code": "URBP 201",
+    "subject": "URBP",
+    "number": "201",
+    "title": "Planning the 21st Century City",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "The study of how urban planners respond to the challenges posed by contemporary cities world-wide. Urban problems related to the environment, shelter, transport, human health, livelihoods and governance are addressed; innovative plans to improve cities and city life are analyzed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "URBP 501",
+    "subject": "URBP",
+    "number": "501",
+    "title": "Principles and Practice 1",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This six-week intensive course exposes students to issues and techniques that are applicable in diverse professional planning contexts. The subject matter, geographic area, scale of intervention and institutional location of planning varies from semester to semester. The course focuses on a specific case study and is taught by a visiting lecturer with professional experience in the selected subject matter.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-0-4)"
+    ]
+  },
+  {
+    "code": "URBP 503",
+    "subject": "URBP",
+    "number": "503",
+    "title": "Public Transport: Planning and Operations",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Overview of topics in planning and operations for public transport with special emphasis on best-practice strategies of contemporary urban systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Graduate students and U3 students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "URBP 504",
+    "subject": "URBP",
+    "number": "504",
+    "title": "Planning for Active Transportation",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The importance of transit, walking, and cycling as modes of transportation in sustainable urban environments. Planning, design, and operation of mass transit systems, bikeways, and footpaths.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "URBP 506",
+    "subject": "URBP",
+    "number": "506",
+    "title": "Environmental Policy and Planning",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analytical and institutional approaches for understanding and addressing environmental issues at various scales; characteristics of environmental issues, science-policy-politics interactions relating to the environment, and implications for policy; sustainability, and the need for and challenges associated with interdisciplinary perspectives; externalities and their regulation; public goods; risk perception and implications; the political-institutional context and policy instruments; cost-benefit analysis; multiple-criteria decision-making approaches; multidimensional life-cycle analysis; policy implementation issues; conflict resolution; case studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is open to students in U3 and above",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "URBP 514",
+    "subject": "URBP",
+    "number": "514",
+    "title": "Community Design Workshop",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Context-focused community-based architectural projects undertaken in collaboration with external partners. Exploration of challenges, needs, and opportunities in architectural and urban-design interventions on real sites through interdisciplinary and cross-sectoral collaboration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ARCH 514.",
+      "excludes": [
+        "ARCH 514"
+      ]
+    },
+    "notes": [
+      "(1-4-4)"
+    ]
+  },
+  {
+    "code": "URBP 530",
+    "subject": "URBP",
+    "number": "530",
+    "title": "Urban Infrastructure and Services in International Context ",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Issues of practical and theoretical importance in relation to urban infrastructure and services in the international context: science and technology, political economy, policy analysis, policy implementation, public finance, and institutions and governance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 536",
+    "subject": "URBP",
+    "number": "536",
+    "title": "Current Issues in Transportation 1",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current transportation issues and topics are addressed from practitioner and academic perspectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-0-5)"
+    ]
+  },
+  {
+    "code": "URBP 537",
+    "subject": "URBP",
+    "number": "537",
+    "title": "Current Issues in Transportation 2",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current transportation issues and topics are addressed from the perspectives of both professional practitioners and academics.",
+    "prerequisites": {
+      "text": "URBP 536",
+      "tree": "URBP 536",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-0-5)"
+    ]
+  },
+  {
+    "code": "URBP 541",
+    "subject": "URBP",
+    "number": "541",
+    "title": "Selected Topics in Planning",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Methods and techniques pertinent to contemporary practice in urban planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-0-2)"
+    ]
+  },
+  {
+    "code": "URBP 542",
+    "subject": "URBP",
+    "number": "542",
+    "title": "Selected Topics in Visual Analysis",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Methods and techniques of visual analysis pertinent to contemporary practice in urban planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-0-2)."
+    ]
+  },
+  {
+    "code": "URBP 543",
+    "subject": "URBP",
+    "number": "543",
+    "title": "Special Topics",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Special topics related to Urban Planning will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 551",
+    "subject": "URBP",
+    "number": "551",
+    "title": "Urban Design and Planning",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamentals of city-building in Canada relative to municipal, regional, and provincial actions used to guide urban growth and development. Contemporary urban design in major metropolitan centres as shaped by legal, political, and cultural realities. Current preoccupations in city-building: reurbanisation and adaptive reuse of infrastructure, collaborative multi-stakeholder projects, strategic initiatives, changing relationships between professional experts and grassroots actors. Introduction to specific aspects of practice: public participation and community engagement; land development and real estate; project feasibility and implementation; policy monitoring and evaluation; emergent city-building regimes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not to be taken by undergraduates before U3. Not open to M.Arch. students.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "URBP 553",
+    "subject": "URBP",
+    "number": "553",
+    "title": "Urban Governance",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical perspectives on the governance of contemporary cities and urban regions, with a focus on North America. The relationship between planners and other important local governance actors, including municipal governments, the realestate industry, and community groups. The role of planning and planners in challenging or perpetuating urban social, political, economic, and environmental inequities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 617 in fall 2015 or URBP 616 in fall 2016.",
+      "excludes": [
+        "URBP 616",
+        "URBP 617"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "URBP 555",
+    "subject": "URBP",
+    "number": "555",
+    "title": "Real Estate and Planning",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic concepts of real estate and property rights and how these are valued. The specificities of property markets and their segmentation. The paradox of realestate uniqueness. Actors and processes of realestate development and investment in practical terms (proforma analysis, investment analysis, leases and property management) and broader terms (institutional investors, financialization). Segmentation of development processes among local, supralocal and international actors, including consultants. Roles of the planner and planning regulations; how these affect property values and property development with specific reference to Québec planning legislation and powers. Market evaluation and analysis of the development potential of specific sites.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 617 in winter 2017.",
+      "excludes": [
+        "URBP 617"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "URBP 556",
+    "subject": "URBP",
+    "number": "556",
+    "title": "Urban Economy: A Spatial Perspective",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Economic functions played by cities; economic processes governing city formation, city growth, and the internal spatial organization of cities. Describing and understanding how cities can be interpreted as economic phenomena. Economic origins of cities, the industrial revolution, city systems and networks, the role of mobility and telecommunications, innovation and creativity as urban phenomena, the internal spatial logic of metropolitan areas.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 557",
+    "subject": "URBP",
+    "number": "557",
+    "title": "Rethinking Zoning",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Zoning and land use planning, and their evolution within social, legal, economic and environmental contexts. The legacy, limitations and potential of zoning. The competing interests in planning of preserving neighbourhood character and accommodating growth. Zoning as a strategic point of negotiation between real estate capital and public goods. The use of inclusionary zoning and the up-zoning of low-density residential neighbourhoods to address affordable housing crises in Canadian and American cities. The practice, politics and potential of zoning towards housing justice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)."
+    ]
+  },
+  {
+    "code": "URBP 581",
+    "subject": "URBP",
+    "number": "581",
+    "title": "Principles and Practice 1A",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to a current and relevant professional, practical or applied theoretical topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 582",
+    "subject": "URBP",
+    "number": "582",
+    "title": "Principles and Practice 1B",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to a current professional, practical or applied theoretical topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 583",
+    "subject": "URBP",
+    "number": "583",
+    "title": "Special Topics 2",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topic or issue of immediate relevance to current urban planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 586",
+    "subject": "URBP",
+    "number": "586",
+    "title": "Planning Theory and Practice 1A",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Conceptual or theoretical issue in urban planning, its wider context and implications, and its relation to current planning practice and policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 587",
+    "subject": "URBP",
+    "number": "587",
+    "title": "Planning Theory and Practice 1B",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "A conceptual or theoretical issue in urban planning, relating it to planning practice and policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 591",
+    "subject": "URBP",
+    "number": "591",
+    "title": "Principles and Practice 2A",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to a current professional, practical or applied theoretical topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 592",
+    "subject": "URBP",
+    "number": "592",
+    "title": "Principles and Practice 2B",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to a current professional, practical or applied theoretical topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 593",
+    "subject": "URBP",
+    "number": "593",
+    "title": "Special Topics 3",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Topic or issue of immediate relevance to current urban planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 596",
+    "subject": "URBP",
+    "number": "596",
+    "title": "Planning Theory and Practice 2A",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Conceptual or theoretical issue in urban planning, its wider context and implications, and its relation to current planning practice and policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 597",
+    "subject": "URBP",
+    "number": "597",
+    "title": "Planning Theory and Practice 2B",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Conceptual or theoretical issue in urban planning, its wider context and implications, and its relation to current planning practice and policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 605",
+    "subject": "URBP",
+    "number": "605",
+    "title": "Geographic Information Systems",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to fundamental geographic information system (GIS) concepts and a range of GIS applications in urban and regional planning.",
+    "prerequisites": {
+      "text": "URBP 611 or equivalent",
+      "tree": "URBP 611",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 505.",
+      "excludes": [
+        "URBP 505"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "URBP 606",
+    "subject": "URBP",
+    "number": "606",
+    "title": "Research Seminar",
+    "credits": 6,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Formulate and develop a research question, methods and literature review for a thesis. Present the research proposal in a seminar format.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students enrolled in the M.Sc. in Urban Planning, Policy and Design (Thesis).",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both URBP 606D1 and URBP 606D2",
+      "No credit will be given for this course unless both URBP 606D1 and URBP 606D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "URBP 606D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "URBP 606D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "URBP 607",
+    "subject": "URBP",
+    "number": "607",
+    "title": "Reading Course: Urban Planning",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The Reading Course offers an opportunity to explore, under the supervision of a staff member, subject areas relevant to urban planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 608",
+    "subject": "URBP",
+    "number": "608",
+    "title": "Advanced Spatial Methods for Planning and Policy",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced methods for research and analysis of complex, real-world urban planning, policy, and design problems.",
+    "prerequisites": {
+      "text": "URBP 505 or URBP 605 or permission of the instructor",
+      "tree": {
+        "or": [
+          "URBP 505",
+          "URBP 605"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "URBP 606D1 or URBP 703 or permission of the instructor",
+      "tree": {
+        "or": [
+          "URBP 606",
+          "URBP 703"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Open to graduate students in Urban Planning, Urban Design, Civil Engineering, Geography (or permission of instructor)",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "URBP 609",
+    "subject": "URBP",
+    "number": "609",
+    "title": "Visual Communication 1",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Techniques used for visual communication in planning practice, including a basic introduction to software.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 610",
+    "subject": "URBP",
+    "number": "610",
+    "title": "Visual Communication 2",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Refinement of techniques used for visual communication in planning practice, including basic use of software.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "URBP 609",
+      "tree": "URBP 609",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 611",
+    "subject": "URBP",
+    "number": "611",
+    "title": "Data Visualization for Planning",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to data visualization for planning, using computer applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 612",
+    "subject": "URBP",
+    "number": "612",
+    "title": "History and Theory of Planning",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A review of planning history and theories of planning. These are examined under three categories: explanation of urban phenomena, substantive theory, and theories of process.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 616",
+    "subject": "URBP",
+    "number": "616",
+    "title": "Selected Topics 1",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Special topics related to Urban Planning will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 617",
+    "subject": "URBP",
+    "number": "617",
+    "title": "Selected Topics 2",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Special topics related to Urban Planning will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 618",
+    "subject": "URBP",
+    "number": "618",
+    "title": "Selected Topics 3",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Special topics related to Urban Planning will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 619",
+    "subject": "URBP",
+    "number": "619",
+    "title": "Land Use and Transport Planning",
+    "credits": 4,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of transport and land use interactions in urban areas. Study of the impacts of transport systems on travel behaviour, residential and work location decisions, and urban form; discussion of implications for planning practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 620",
+    "subject": "URBP",
+    "number": "620",
+    "title": "Transport Economics",
+    "credits": 4,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Economic and financial aspects of urban transport policies and planning. Introduction to impact assessment techniques for major transport projects and policies; discussion of political debates concerning transport financing.",
+    "prerequisites": {
+      "text": "An introductory course in microeconomics or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 622",
+    "subject": "URBP",
+    "number": "622",
+    "title": "Planning Studio 1",
+    "credits": 6,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to planning practice based on real-world urban research and planning at the neighbourhood level. Topics: problem definition, methods for data collection and analysis, goal setting, design and analysis of alternative plans, public policy, plan implementation, and professional presentation techniques. Students work in interdisciplinary teams on assessments of current living conditions and on plans to improve them, including policies and projects related to housing, public space, infrastructure and services, and community development. Research and recommendations are presented in oral presentations and written reports.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Research and design studio."
+    ]
+  },
+  {
+    "code": "URBP 623",
+    "subject": "URBP",
+    "number": "623",
+    "title": "Planning Studio 2",
+    "credits": 6,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research and planning techniques for land development. Students work in teams to do research on context, program and precedents and develop a detailed plan for a site that poses urban and/or environmental challenges. Topics: site analysis, market analysis, and financial analysis; land-use regulation, real-estate development, residential planning, and housing policy; data collection and analysis, design and evaluation of alternatives, and project implementation.",
+    "prerequisites": {
+      "text": "URBP 622",
+      "tree": "URBP 622",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-5-12)"
+    ]
+  },
+  {
+    "code": "URBP 624",
+    "subject": "URBP",
+    "number": "624",
+    "title": "Planning Studio 3",
+    "credits": 6,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of complex planning problems at the local or regional scale, chosen depending on the experience and research interests of the participants, for the acquisition of research and planning skills in greater depth. Students work in teams to fulfill a mandate for a public, private or third-sector client. Substantive issues vary according to clients. Topics: project management, client-consultant interactions, and professional communication.",
+    "prerequisites": {
+      "text": "URBP 622 and URBP 623",
+      "tree": {
+        "and": [
+          "URBP 622",
+          "URBP 623"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(6-0-12)"
+    ]
+  },
+  {
+    "code": "URBP 625",
+    "subject": "URBP",
+    "number": "625",
+    "title": "Principles and Practice 2",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This six-week intensive course exposes students to issues and techniques which are applicable in diverse professional planning contexts that vary in terms of their subject matter, location, scale and the role played by planners. The course focuses on a specific case study and is taught by a visiting lecturer with experience in the selected subject area. Course topics are systematically varied over a two-year cycle.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 626",
+    "subject": "URBP",
+    "number": "626",
+    "title": "Principles and Practice 3",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This six-week intensive course exposes students to issues and techniques that are applicable in diverse professional planning contexts. The subject matter, geographic area, scale of intervention and institutional location of planning vary from semester to semester. The course is taught by a visiting lecturer, adjunct professor or Ph.D. student.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 628",
+    "subject": "URBP",
+    "number": "628",
+    "title": "Practical Experience",
+    "credits": 0,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An internship related to the practice of urban planning is required. The practical experience must be of at least 360 hours' duration and be supervised by a professional in the planning field. An evaluation of the student's performance by the supervisor, as well as a short report by the student, forms the basis for assessment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 629",
+    "subject": "URBP",
+    "number": "629",
+    "title": "Planning Theory and Practice in a Globalizing World",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Planning theory, urban policy and planning practices in comparative perspective Topics covered include: global and local processes shaping cities and urban challenges worldwide; contemporary planning theories, including those from the Global South; and the impacts of planning and governance on urban form, economic growth, ecological balance, and equity, among other urban challenges.",
+    "prerequisites": {
+      "text": "URBP 622 or permission of instructor.",
+      "tree": "URBP 622",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "URBP 630",
+    "subject": "URBP",
+    "number": "630",
+    "title": "Supervised Research Project 1",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Supervised research project, providing foundations to focus on a particular area of enquiry in planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (1-0-8)",
+      "2. Joint research projects are permitted."
+    ]
+  },
+  {
+    "code": "URBP 631",
+    "subject": "URBP",
+    "number": "631",
+    "title": "Supervised Research Project 2",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of the requirements for the Supervised Research Project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 632",
+    "subject": "URBP",
+    "number": "632",
+    "title": "Supervised Research Project 3",
+    "credits": 6,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Continuation of the requirements for the Supervised Research Project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 633",
+    "subject": "URBP",
+    "number": "633",
+    "title": "Research Methods for Planners",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Methods for research on urban planning, policy and design.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "URBP 606D1 or URBP 703 or permission of the instructor",
+      "tree": {
+        "or": [
+          "URBP 606",
+          "URBP 703"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Priority given to Urban Planning Students"
+    ]
+  },
+  {
+    "code": "URBP 635",
+    "subject": "URBP",
+    "number": "635",
+    "title": "Planning Law",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A comparative study of private and public control of land use and development, including master plans, zoning bylaws, subdivision control, urban redevelopment, expropriation, regional planning, environmental protection, and heritage conservation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 640",
+    "subject": "URBP",
+    "number": "640",
+    "title": "Introduction to Planning Statistics",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to descriptive and inferential statistics, focusing on building confidence and intuition in using and manipulating quantitative information. Correlation, t-tests, chi-squared tests, and bivariate regression.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 642 prior to fall 2020.",
+      "excludes": [
+        "URBP 642"
+      ]
+    },
+    "notes": [
+      "Lectures held on Friday, Oct 1, 8, 22 and 29",
+      "Web add/drop deadline is October 1, 2021",
+      "Web withdrawal with refund deadline is October 8, 2021",
+      "Web withdrawal with NO refund deadline is October 22, 2021",
+      "Labs held on Friday, Oct 1, 8, 22 and 29"
+    ]
+  },
+  {
+    "code": "URBP 641",
+    "subject": "URBP",
+    "number": "641",
+    "title": "Reading the Urban Landscape ",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of selected passive techniques that may be used to assess the congruence between urban environments and people as they go about their daily activities. These techniques include: (1) observing physical traces, (2) observing behaviour, (3) cognitive mapping and wayfinding, and (4) the assessment of the overall quality of urban environments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-0-2)"
+    ]
+  },
+  {
+    "code": "URBP 642",
+    "subject": "URBP",
+    "number": "642",
+    "title": "Introduction to Planning Data",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Techniques of exploratory data analysis. Data cleaning and transformation. Visualization techniques. Census data and the methods most commonly used to analyze them. Principles of reproducible research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  },
+  {
+    "code": "URBP 643",
+    "subject": "URBP",
+    "number": "643",
+    "title": "Selected Geographic Information Systems Applications ",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Selected applications in Geographic Information Systems (GIS) related to urban planning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 644",
+    "subject": "URBP",
+    "number": "644",
+    "title": "Multivariate Statistics",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Methods in multivariate analysis, with an emphasis on multiple linear regression models. ANOVA (analysis of variance). Reading and analyzing multiple linear regression analysis results. Designing and running multiple linear regression models for hypothesis testing. Diagnostic tests and data clean up.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  },
+  {
+    "code": "URBP 645",
+    "subject": "URBP",
+    "number": "645",
+    "title": "Social Research Methods 1",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected social research techniques as applied in urban planning, including: the art and craft of interviewing; surveys and questionnaires; ethnography, participant observation and narrative analysis; participatory techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "."
+    ]
+  },
+  {
+    "code": "URBP 646",
+    "subject": "URBP",
+    "number": "646",
+    "title": "Social Research Methods 2",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Selected social research techniques as applied in urban planning, including: the art and craft of interviewing; surveys and questionnaires; ethnography, participant observation and narrative analysis; participatory techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 647",
+    "subject": "URBP",
+    "number": "647",
+    "title": "Selected Methods in Planning 1",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics related to urban planning methods will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 648",
+    "subject": "URBP",
+    "number": "648",
+    "title": "Selected Methods in Planning 2 ",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics related to urban planning methods will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 649",
+    "subject": "URBP",
+    "number": "649",
+    "title": "Visual and Spatial Methods ",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics related to visual and spatial methods in urban planning will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 651",
+    "subject": "URBP",
+    "number": "651",
+    "title": "Redesigning Suburban Space",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Planning and urban design strategies for transforming suburban and exurban settings in North America to meet contemporary needs. Critical approaches to responsible practice in existing cultural landscapes. Adaptive reuse of public space, intensification, densification, transit-oriented retrofit of urban form, community-based design development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 655",
+    "subject": "URBP",
+    "number": "655",
+    "title": "Futures, Time and Temporalities in Urban Planning",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Conceptualizing cities and time in view of thinking about urban futures. Cities as complex systems. Regulating and constraining the future. Politics and power. Impact of the future on current decision-making. Past future thinking (essentially 19th and 20th century 'western' futures). Current future thinking. Incorporating future thinking into planning practice. Visioning, scenario building and strategic planning. Roles, uses and limits of prediction; modelling; trends; foresight; scenarios; forecasting and backcasting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 656",
+    "subject": "URBP",
+    "number": "656",
+    "title": "Urban Innovation and Creativity",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Exploration of contemporary debates on creativity and innovation as inherently urban phenomena linked to interactions and 'buzz' that occur in urban contexts; discussion of policy impacts including how urban and metropolitan growth is premised upon the capacity to enhance creativity and innovation. Examination of what is meant by creativity and innovation, how they can be connected, and why they are seen as vital to economic development. Arguments for and critiques of 'creative cities' and 'innovative urban areas'. Creative class, geography of innovation, culture and urban development, metropolitan creative-city policies, geographic paradoxes that arise.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 618 in Winter 2014 (when topic was \"Creative Cities: Creativity, Innovation and Urban Agglomerations\".",
+      "excludes": [
+        "URBP 618"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "URBP 684",
+    "subject": "URBP",
+    "number": "684",
+    "title": "Advanced Special Topics 1A",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topic or issue of immediate relevance to current urban planning, policy or design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 685",
+    "subject": "URBP",
+    "number": "685",
+    "title": "Advanced Special Topics 1B",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topic or issue of immediate relevance to current urban planning, policy or design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 690",
+    "subject": "URBP",
+    "number": "690",
+    "title": "Thesis Submission",
+    "credits": 18,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Only open to students enrolled in the M.Sc. Urban Planning, Policy and Design (Thesis).",
+    "prerequisites": {
+      "text": "URBP 606",
+      "tree": "URBP 606",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Only open to students enrolled in the M.Sc. Urban Planning, Policy and Design (Thesis)."
+    ]
+  },
+  {
+    "code": "URBP 694",
+    "subject": "URBP",
+    "number": "694",
+    "title": "Advanced Special Topics 2A",
+    "credits": 1,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topic or issue of immediate relevance to current urban planning, policy or design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 695",
+    "subject": "URBP",
+    "number": "695",
+    "title": "Advanced Special Topics 2B",
+    "credits": 2,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced topic or issue of immediate relevance to current urban planning, policy or design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 701",
+    "subject": "URBP",
+    "number": "701",
+    "title": "Doctoral Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of comprehensive review papers covering material central to the student's dissertation research, with an oral defense before an Advisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 703",
+    "subject": "URBP",
+    "number": "703",
+    "title": "Doctoral Research Seminar 1",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of concepts and methods pertinent to the development of the dissertation project proposal and comprehensive exam reading list.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 702.",
+      "excludes": [
+        "URBP 702"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "URBP 704",
+    "subject": "URBP",
+    "number": "704",
+    "title": "Doctoral Research Seminar 2",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Discussion of selected topics in theory and methodology with continued development of dissertation project proposal and comprehensive exam reading list.",
+    "prerequisites": {
+      "text": "URBP 703",
+      "tree": "URBP 703",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 707",
+    "subject": "URBP",
+    "number": "707",
+    "title": "Doctoral Reading Course",
+    "credits": 3,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Exploration of a specific topic relevant to the student's doctoral program under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "URBP 709",
+    "subject": "URBP",
+    "number": "709",
+    "title": "Doctoral Research Proposal",
+    "credits": 0,
+    "offeredBy": "Urban Planning",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation of a detailed dissertation research proposal, with an oral defense before an Advisory Committee.",
+    "prerequisites": {
+      "text": "URBP 701",
+      "tree": "URBP 701",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken URBP 705.",
+      "excludes": [
+        "URBP 705"
+      ]
+    },
+    "notes": []
+  }
+]

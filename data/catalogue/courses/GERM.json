@@ -1,0 +1,1138 @@
+[
+  {
+    "code": "GERM 197",
+    "subject": "GERM",
+    "number": "197",
+    "title": "FYS: Images of Otherness",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The seminar examines images and narratives of the foreign, alien, and uncanny Other in major works of German literature, film, music, and art from Romanticism to the present. Works discussed include Wagner's Lohengrin, expressionist art, and texts by authors such as ETA Hoffmann, Kleist, Freud, Nietzsche, Kafka, and Thomas Mann.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to newly admitted students in U0 or U1, who may take only one FYS. Students who register for more than one will be obliged to withdraw from all but one of them.",
+      "excludes": []
+    },
+    "notes": [
+      "Maximum 25",
+      "Given in English",
+      "Register for AFYR 101/102 and a foundation seminar OR a writing seminar (not both)."
+    ]
+  },
+  {
+    "code": "GERM 200",
+    "subject": "GERM",
+    "number": "200",
+    "title": "German Language, Intensive Beginners",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An intensive language course designed to develop communicative skills; covers the first level (GERM 202D1/GERM 202D2) in one term. Required for program students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "6 hours, plus 1 hour laboratory"
+    ]
+  },
+  {
+    "code": "GERM 202",
+    "subject": "GERM",
+    "number": "202",
+    "title": "German Language, Beginners'",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A comprehensive first-level course designed to develop communicative skills.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "6 hours, plus 1 hour laboratory"
+    ],
+    "parts": [
+      {
+        "code": "GERM 202D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "GERM 202D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "GERM 203",
+    "subject": "GERM",
+    "number": "203",
+    "title": "German for Reading",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Reading German.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking beginning level courses.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter",
+      "Students must register for both GERM 203D1 and GERM 203D2",
+      "No credit will be given for this course unless both GERM 203D1 and GERM 203D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "GERM 203D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "GERM 203D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "GERM 255",
+    "subject": "GERM",
+    "number": "255",
+    "title": "German Holocaust Memory",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Exploration of the multifaceted dimensions of German Holocaust memory through the examination of texts, artworks, monuments, and debates on memory politics. Delves into the intricate interplay between history, culture, and remembrance in the aftermath of one of the darkest chapters in human history.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 259",
+    "subject": "GERM",
+    "number": "259",
+    "title": "Introduction to German Literature 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the major authors, genres, and topics of German literature from the Middle Ages to the Age of Goethe, including the Nibelungenlied, Faust, classical tragedy, and the rise of the novel.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Given in English"
+    ]
+  },
+  {
+    "code": "GERM 260",
+    "subject": "GERM",
+    "number": "260",
+    "title": "Introduction to German Literature 2",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the major authors, genres, and topics of German literature from the 19th century to the present.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Given in English"
+    ]
+  },
+  {
+    "code": "GERM 300",
+    "subject": "GERM",
+    "number": "300",
+    "title": "German Language Intensive Intermediate",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Continuation of GERM 200; covers the second level (GERM 307D1/GERM 307D2) in one term.",
+    "prerequisites": {
+      "text": "GERM 200 or GERM 202,202D1/D2 or equivalent, or permission of Department",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "GERM 200",
+              "GERM 202"
+            ]
+          },
+          "GERM 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "6 hours, plus 1 hour laboratory",
+      "Required for program students"
+    ]
+  },
+  {
+    "code": "GERM 307",
+    "subject": "GERM",
+    "number": "307",
+    "title": "German Language - Intermediate",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review of grammar, further development of basic skills; literary and cultural readings.",
+    "prerequisites": {
+      "text": "GERM 202 or GERM 200, or equivalent, or permission of Department",
+      "tree": {
+        "or": [
+          "GERM 202",
+          "GERM 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "6 hours"
+    ],
+    "parts": [
+      {
+        "code": "GERM 307D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "GERM 307D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "GERM 325",
+    "subject": "GERM",
+    "number": "325",
+    "title": "German Language - Intensive Advanced",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course aims at developing post-intermediate proficiency in listening, speaking, reading, and writing skills, with emphasis on oral and written expression. Special attention is given to word formation and to the proper choice of grammatical structures, vocabulary, and phraseology.",
+    "prerequisites": {
+      "text": "GERM 300 or GERM 307D1/D2, or equivalent, or permission of Department.",
+      "tree": {
+        "or": [
+          "GERM 300",
+          "GERM 307"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter",
+      "6 hours",
+      "Required for program students."
+    ]
+  },
+  {
+    "code": "GERM 326",
+    "subject": "GERM",
+    "number": "326",
+    "title": "Topics: German Language and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course aims to both improve students’ speaking and writing skills at the intermediate and advanced levels and to deepen their understanding of German culture through contemporary short texts and films. Topics include migration and national identity, memory and history, gender roles, and intergenerational conflicts. Students develop their transcultural competencies through critical engagement with the course materials. Selected grammatical topics will be reviewed.",
+    "prerequisites": {
+      "text": "GERM 307 or equivalent or permission of the Instructor.",
+      "tree": "GERM 307",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "May be taken concurrently with GERM 325 and with permission of the instructor.",
+      "tree": "GERM 325",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 331",
+    "subject": "GERM",
+    "number": "331",
+    "title": "Germany after Reunification",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The events which led to the fall of the Berlin Wall, the reunification of Germany in 1990 and the changing cultural, social, political and economic landscape of the 'New Germany'. Highlighting issues of cultural and social politics, texts discussed include historical, literary and film material.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "GERM 332",
+    "subject": "GERM",
+    "number": "332",
+    "title": "Topics in Eighteenth-Century German Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Study of specific topics as they relate to eighteenth-century German literature and culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 335",
+    "subject": "GERM",
+    "number": "335",
+    "title": "Science and Literature",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines the complex exchanges between science and literature across German literature and culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Given in German"
+    ]
+  },
+  {
+    "code": "GERM 336",
+    "subject": "GERM",
+    "number": "336",
+    "title": "German Language, Media and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to German culture through literary and non-literary texts, film, multimedia, commercials, painting and photography. By learning how to read these cultural productions, students will refine their communication skills, expand reading strategies, build vocabulary, and review selective grammatical structures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 337",
+    "subject": "GERM",
+    "number": "337",
+    "title": "Literature and Revolution",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Seminar on the relationship between literature and political, social and aesthetic change.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 340",
+    "subject": "GERM",
+    "number": "340",
+    "title": "Romanticism",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines one of the pivotal moments of cultural transition in German literary history.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 344",
+    "subject": "GERM",
+    "number": "344",
+    "title": "Realism",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "What are the different ways social life has been represented in German literature and culture?",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 348",
+    "subject": "GERM",
+    "number": "348",
+    "title": "Nature and Ecopoetics",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines how German literature and culture engage with and construct an understanding of nature and the environment",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 350",
+    "subject": "GERM",
+    "number": "350",
+    "title": "Modernism and the Avant-Garde",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course will focus on the variety of German modernisms and their schools of thought.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 351",
+    "subject": "GERM",
+    "number": "351",
+    "title": "Berlin",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Interdisciplinary study of the quintessential modern centers within Germanic speaking Europe.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Given in German"
+    ]
+  },
+  {
+    "code": "GERM 352",
+    "subject": "GERM",
+    "number": "352",
+    "title": "German Literature - 19th Century 3",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course offers an introduction to the literary movements of Biedermeier, Junges Deutschland, Vormärz, Poetic Realism, and Naturalism in connection with the political and social developments in 19th century Germany. Tests by major authors such as Buchner, Heine and Fontane will be discussed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "GERM 355",
+    "subject": "GERM",
+    "number": "355",
+    "title": "Nietzsche and Wagner",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines the relationship between the philosopher Friedrich Nietzsche and the composer Richard Wagner. It explores their intellectual kinship, their view of art, music, and philosophy in the context of Nietzsche's critique of modernity and decadence and analyzes the Third Reich's and Hollywood's appropriation of Nietzsche and Wagner.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Given in English"
+    ]
+  },
+  {
+    "code": "GERM 357",
+    "subject": "GERM",
+    "number": "357",
+    "title": "German Culture in European Context",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A comparative examination of selected moments in German literary, artistic and cultural history in relation to broader European movements; focus on influences, exchanges and dialogues across national boundaries.",
+    "prerequisites": {
+      "text": "A culture or literature course at the 200 or 300 level",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Course given in English"
+    ]
+  },
+  {
+    "code": "GERM 358",
+    "subject": "GERM",
+    "number": "358",
+    "title": "Franz Kafka",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course will look at the works on Franz Kafka, a \"classic\" modernist author, in three characteristic genres: the story, the novel, and the short prose piece. A selection of Kafka's letters and diary entries as well as critical approaches to his work will also be studied.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Given in English"
+    ]
+  },
+  {
+    "code": "GERM 360",
+    "subject": "GERM",
+    "number": "360",
+    "title": "German Drama",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course will survey the theatrical tradition within German.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 361",
+    "subject": "GERM",
+    "number": "361",
+    "title": "Weimar Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The course deals with the culture, literature and society of the Weimar Republic and the period of the Third Reich and the Holocaust. Writers studied will include: Brecht, Seghers, Fleisser, Kästner, Tucholsky, Benn, Kolmar, and Lasker-Schüler.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "GERM 362",
+    "subject": "GERM",
+    "number": "362",
+    "title": "20th Century Literature Topics",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to selected topics and genres in twentieth century literature and culture.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Given in German"
+    ]
+  },
+  {
+    "code": "GERM 363",
+    "subject": "GERM",
+    "number": "363",
+    "title": "German Postwar Literature",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The course deals with the literature and culture of the Federal Republic of Germany, the former German Democratic Republic and unified Germany since 1945. It treats major authors and trends. Topics addressed include issues of nationalism and gender, multiculturalism, and other concerns of contemporary German society.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "GERM 364",
+    "subject": "GERM",
+    "number": "364",
+    "title": "Gender and Society in German Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "In connection with notions of identity, nationhood, political change, and cultural difference, this course investigates concepts and issues of gender in contemporary German Society. The readings include critical essays and literary texts by writers, scholars, philosophers, journalists, politicians, and political activists.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 365",
+    "subject": "GERM",
+    "number": "365",
+    "title": "Modern Short Fiction",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A study of short prose forms in German throughout history.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 366",
+    "subject": "GERM",
+    "number": "366",
+    "title": "Lyric Poetry",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to the study of German Poetry from the Middle Ages to the present.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 367",
+    "subject": "GERM",
+    "number": "367",
+    "title": "Topics in German Thought",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A variety of issues significant to the development of German cultural and intellectual life.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Given in English"
+    ]
+  },
+  {
+    "code": "GERM 368",
+    "subject": "GERM",
+    "number": "368",
+    "title": "Fin-de-Siècle Vienna",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Interdisciplinary study of one of the formative periods of modern European culture; examination of literature, art, thought, culture and politics in Vienna around 1900.",
+    "prerequisites": {
+      "text": "A culture or literature course at the 200 or 300 level",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course given in English"
+    ]
+  },
+  {
+    "code": "GERM 369",
+    "subject": "GERM",
+    "number": "369",
+    "title": "The German Novel",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Sustained engagement with the major texts of the German novel from Grimmelshausen to the present.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Given in German"
+    ]
+  },
+  {
+    "code": "GERM 370",
+    "subject": "GERM",
+    "number": "370",
+    "title": "Special Topics in German Film",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Intensive study of selected topics and periods in German film history.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Given in English"
+    ]
+  },
+  {
+    "code": "GERM 371",
+    "subject": "GERM",
+    "number": "371",
+    "title": "German Cinema",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Survey of German cinema from its inception to the present",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 372",
+    "subject": "GERM",
+    "number": "372",
+    "title": "Topics in German Cinema",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course investigates a special topic related to the history of German cinema.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 373",
+    "subject": "GERM",
+    "number": "373",
+    "title": "Weimar German Cinema",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Weimar Cinema brought to the screen a world populated by monsters, lunatics, workers, vamps, strangers, and doubles. These figures embodied the tensions and fears of the Weimar period (1919-1933) in a manner that continues to attract audiences today. This course explores the cultural and political history of the Weimar period through Weimar cinema. It aims to introduce the student to the fundamentals of film analysis, especially formal analysis and textual analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 375",
+    "subject": "GERM",
+    "number": "375",
+    "title": "German Media Studies",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to the history of German media studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 379",
+    "subject": "GERM",
+    "number": "379",
+    "title": "German Visual Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course engages with the different strands of German visual culture across media.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Given in German"
+    ]
+  },
+  {
+    "code": "GERM 381",
+    "subject": "GERM",
+    "number": "381",
+    "title": "Topics in German Thought",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Special topics on German intellectual history and its contributions to major philosophical traditions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 385",
+    "subject": "GERM",
+    "number": "385",
+    "title": "Critical Theory",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Engagement with the history of critique from Kant to Adorno.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 388",
+    "subject": "GERM",
+    "number": "388",
+    "title": "Post-Wall Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Upper level seminar exploring topics in German culture after unification.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 390",
+    "subject": "GERM",
+    "number": "390",
+    "title": "Topics in 21st Century German Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Study of pressing contemporary themes within German literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 397",
+    "subject": "GERM",
+    "number": "397",
+    "title": "Individual Reading Course 01",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Given solely at the discretion of the instructor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "GERM 499",
+    "subject": "GERM",
+    "number": "499",
+    "title": "Internship: German Studies",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": {
+      "text": "Permission of the departmental Internship Advisor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter",
+      "Open to U2 and U3 students after completing 30 credits of a 90 credit degree program or 45 credits of a 69-120 credit program, a minimum CGPA of 2.7, and permission of the departmental Internship Advisor. This course can only be taken as an elective course. German language proficiency required."
+    ]
+  },
+  {
+    "code": "GERM 570",
+    "subject": "GERM",
+    "number": "570",
+    "title": "Joint Honours Thesis",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Research and completion of the Joint Honours thesis on an approved subject.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For students in the Joint Honours Program only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "GERM 575",
+    "subject": "GERM",
+    "number": "575",
+    "title": "Honours Thesis",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Research and completion of the Honours thesis on an approved subject.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For students in the Honours Program only.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "GERM 580",
+    "subject": "GERM",
+    "number": "580",
+    "title": "Topics in German Literature and Culture",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Topics in eighteenth-century German literature.",
+    "prerequisites": {
+      "text": "Permission by Program Advisor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 635",
+    "subject": "GERM",
+    "number": "635",
+    "title": "German Romanticism 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on German Romanticism.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 640",
+    "subject": "GERM",
+    "number": "640",
+    "title": "German Realism and Early Naturalism 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on German realism and early naturalism.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "SLOT COURSE – TOPICS VARY FROM YEAR TO YEAR."
+    ]
+  },
+  {
+    "code": "GERM 645",
+    "subject": "GERM",
+    "number": "645",
+    "title": "German Literature - 20th Century 1",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar on 20th century German literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 675",
+    "subject": "GERM",
+    "number": "675",
+    "title": "Research Seminar",
+    "credits": 3,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 680",
+    "subject": "GERM",
+    "number": "680",
+    "title": "Research Paper 1",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The writing of the research paper.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 681",
+    "subject": "GERM",
+    "number": "681",
+    "title": "Research Paper 2",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The writing of the research paper.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 682",
+    "subject": "GERM",
+    "number": "682",
+    "title": "Research Paper 3",
+    "credits": 6,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": ".",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 690",
+    "subject": "GERM",
+    "number": "690",
+    "title": "Thesis Research 1",
+    "credits": 9,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research under the direction of the thesis supervisor(s).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 691",
+    "subject": "GERM",
+    "number": "691",
+    "title": "Thesis Research 2",
+    "credits": 9,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research under the direction of the thesis supervisor(s).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 692",
+    "subject": "GERM",
+    "number": "692",
+    "title": "Thesis Research 3",
+    "credits": 9,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research under the direction of the thesis supervisor(s).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GERM 701",
+    "subject": "GERM",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Languages,Literatures,Cultures",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

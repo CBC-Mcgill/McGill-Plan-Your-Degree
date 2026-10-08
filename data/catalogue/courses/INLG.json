@@ -1,0 +1,237 @@
+[
+  {
+    "code": "INLG 210",
+    "subject": "INLG",
+    "number": "210",
+    "title": "Introduction to an Indigenous Language",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A linguistically-informed introduction to learning and speaking specific Indigenous languages, including sounds and the sound system of the language (phonetics and phonology), word formation (morphology), sentence structure and meaning (syntax and semantics).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Supplementary Calendar Info: Language of instruction may vary. Courses may be on campus or in an Indigenous community."
+    ]
+  },
+  {
+    "code": "INLG 230",
+    "subject": "INLG",
+    "number": "230",
+    "title": "Phonetics for Indigenous Languages",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Transcription, identification, and production of speech sounds, with a focus on sounds that are relevant to the Indigenous language(s) of study. Introduction to the articulation of speech sounds, acoustic analysis of speech, and orthography versus transcription. Applications of phonetics for practical use in speaking, comprehension, and writing Indigenous languages.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Language(s) of focus may vary depending on instructor."
+    ]
+  },
+  {
+    "code": "INLG 310",
+    "subject": "INLG",
+    "number": "310",
+    "title": "Study of an Indigenous Language",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Continuation of the linguistically-informed learning and speaking of specific Indigenous languages. Advanced study of sounds and the sound system of language (phonetics and phonology), word formation (morphology), sentence structure and meaning (syntax and semantics).",
+    "prerequisites": {
+      "text": "INLG 210",
+      "tree": "INLG 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Language may vary depending on instructor."
+    ]
+  },
+  {
+    "code": "INLG 330",
+    "subject": "INLG",
+    "number": "330",
+    "title": "Analysis of an Indigenous Language",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Topics in word formation (morphology) and sentence formation (syntax) in specific Indigenous languages. Linguistic principles relevant to grammatical phenomena in Indigenous languages, and principles of language structure, grammatical categories, and grammatical analysis. Practical applications in producing and understanding words and sentences.",
+    "prerequisites": {
+      "text": "LING 230",
+      "tree": "LING 230",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Language(s) of focus may vary depending on instructor."
+    ]
+  },
+  {
+    "code": "INLG 411",
+    "subject": "INLG",
+    "number": "411",
+    "title": "Linguistics of Indigenous Languages",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Grammatical properties of Canadian Indigenous languages, focusing on sounds and the sound systems (phonetics and phonology), word formation(morphology), sentence structure and meaning (syntax and semantics), as wellas language in use (discourse and pragmatics), and the applications of these topics to language description, documentation, and language pedagogy.",
+    "prerequisites": {
+      "text": "Either two of: LING 211, LING 315, LING 330, LING 331, LING 371; or intermediate to advanced proficiency in an Indigenous language of North America.",
+      "tree": {
+        "and": [
+          "LING 211",
+          "LING 315",
+          "LING 330",
+          "LING 331",
+          "LING 371"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INLG 421",
+    "subject": "INLG",
+    "number": "421",
+    "title": "Indigenous Knowledge Organization Systems",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Focus on how traditional knowledges are organized, presented, and represented over time by Indigenous peoples in Canada, the U.S., and the Pacific. The discursive divisions between the generation, care, and perpetuation of knowledges in place, and colonial and imperial processes that effaced and transformed these knowledges through various methods. Pedagogies of orality, the mediation of Indigenous knowledges through textual and digital mediums. The politics of access, how knowledge is represented by libraries, archives and museums, and how institutions can partner more effectively with communities.",
+    "prerequisites": {
+      "text": "(INDG 200 or LING 211) and one 300- or higher-level course with primary focus in history or Indigenous studies; or intermediate to advanced knowledge of an Indigenous language of North America.",
+      "tree": {
+        "or": [
+          "INDG 200",
+          "LING 211"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INLG 430",
+    "subject": "INLG",
+    "number": "430",
+    "title": "Advanced Analysis of an Indigenous Language",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Advanced topics in the grammar of specific Indigenous languages, with a focus on conceptual tools needed to produce and understand novel complex utterances and discourse in the language. Techniques for discovering and documenting grammatical and lexical phenomena.",
+    "prerequisites": {
+      "text": "LING 330",
+      "tree": "LING 330",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INLG 480",
+    "subject": "INLG",
+    "number": "480",
+    "title": "Topics in Indigenous Languages",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Intermediate to advanced selected topics in Indigenous languages such as language revitalization theory and practice; digital tools and best practices for language documentation; transcription and translation of Indigenous languages; structures of oral literature and performance; accessing and using archival materials.",
+    "prerequisites": {
+      "text": "LING 330",
+      "tree": "LING 330",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics may vary depending on instructor."
+    ]
+  },
+  {
+    "code": "INLG 501",
+    "subject": "INLG",
+    "number": "501",
+    "title": "Indigenous Language Revitalization",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey and critique of major literature on language endangerment and language revitalization in the context of North American Indigenous languages and societies. Reviews histories of language loss, basic principles of child and adult language learning, global and local ideologies influencing language loss, scales of language endangerment, and social and political phenomena that influence the growth and decline of Indigenous language use in communities. Investigates metaphors of language ‘life’ and ‘death’, studies of language revitalization in specific communities, concepts and methods used in the organization of revitalization programs, and the evaluation of language revitalization ‘success’ and ‘failure’.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INLG 611",
+    "subject": "INLG",
+    "number": "611",
+    "title": "Linguistics for Indigenous Language Study",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics in the field of linguistics with a special focus on linguistic phenomena relevant to Indigenous languages of Canada, including language description, documentation, and language pedagogy.",
+    "prerequisites": {
+      "text": "LING 631 and LING 671; or intermediate to advanced proficiency in an Indigenous language of North America.",
+      "tree": {
+        "and": [
+          "LING 631",
+          "LING 671"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INLG 621",
+    "subject": "INLG",
+    "number": "621",
+    "title": "Indigenous Knowledge Systems Research",
+    "credits": 3,
+    "offeredBy": "Inst Indigenous Rsrch (FAIIRK)",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Critical approach to traditional knowledge organization and representation over time by Indigenous peoples in Canada, the U.S., and the Pacific, including Indigenous language archiving, pedagogies, and accessibility of language material.",
+    "prerequisites": {
+      "text": "A graduate-level course with a primary focus in Indigenous studies, or intermediate to advanced knowledge of an Indigenous language of North America.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,2486 @@
+[
+  {
+    "code": "PHYS 101",
+    "subject": "PHYS",
+    "number": "101",
+    "title": "Introductory Physics - Mechanics",
+    "credits": 4,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introductory course in physics without calculus, covering mechanics (kinematics, dynamics, energy, and rotational motion), oscillations and waves, sound, light, and wave optics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students taking or having taken PHYS 131, CEGEP objective 00UR or equivalent",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures; 2 hours laboratory; tutorial sessions",
+      "Laboratory sections have limited enrolment"
+    ]
+  },
+  {
+    "code": "PHYS 102",
+    "subject": "PHYS",
+    "number": "102",
+    "title": "Introductory Physics - Electromagnetism",
+    "credits": 4,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Electric field and potential. D.C. circuits and measurements. Capacitance. Magnetic field and induction. Electromagnetic waves and geometrical optics.",
+    "prerequisites": {
+      "text": "PHYS 101.",
+      "tree": "PHYS 101",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 139 or higher level calculus course.",
+      "tree": "MATH 139",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students taking or having taken PHYS 142, CEGEP objective 00UR or equivalent",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures; 2 hours laboratory; tutorial sessions",
+      "Laboratory sections have limited enrolment"
+    ]
+  },
+  {
+    "code": "PHYS 107",
+    "subject": "PHYS",
+    "number": "107",
+    "title": "Mechanics Laboratory (Life Sciences)",
+    "credits": 1,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The laboratory component of PHYS 101.",
+    "prerequisites": {
+      "text": "Lecture component of PHYS 101 or equivalent",
+      "tree": "PHYS 101",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 101",
+      "excludes": [
+        "PHYS 101"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHYS 108",
+    "subject": "PHYS",
+    "number": "108",
+    "title": "E&M Laboratory (Life Sciences)",
+    "credits": 1,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The laboratory component of PHYS 102.",
+    "prerequisites": {
+      "text": "Lecture component of PHYS 102 or equivalent",
+      "tree": "PHYS 102",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 102",
+      "excludes": [
+        "PHYS 102"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHYS 117",
+    "subject": "PHYS",
+    "number": "117",
+    "title": "Mechanics Laboratory",
+    "credits": 1,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The laboratory component of PHYS 131.",
+    "prerequisites": {
+      "text": "Lecture component of PHYS 131 or equivalent",
+      "tree": "PHYS 131",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 131",
+      "excludes": [
+        "PHYS 131"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHYS 118",
+    "subject": "PHYS",
+    "number": "118",
+    "title": "E & M Laboratory",
+    "credits": 1,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The laboratory component of PHYS 142.",
+    "prerequisites": {
+      "text": "Lecture component of PHYS 142 or equivalent",
+      "tree": "PHYS 142",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 142",
+      "excludes": [
+        "PHYS 142"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHYS 131",
+    "subject": "PHYS",
+    "number": "131",
+    "title": "Mechanics and Waves",
+    "credits": 4,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The basic laws and principles of Newtonian mechanics; oscillations, waves, and wave optics.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 139 or higher level calculus course.",
+      "tree": "MATH 139",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 101, or who have taken CEGEP objective 00UR or equivalent.",
+      "excludes": [
+        "PHYS 101"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures; 1 hour tutorial, 3 hours laboratory in alternate weeks; tutorial sessions",
+      "Laboratory sections have limited enrolment"
+    ]
+  },
+  {
+    "code": "PHYS 142",
+    "subject": "PHYS",
+    "number": "142",
+    "title": "Electromagnetism and Optics",
+    "credits": 4,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The basic laws of electricity and magnetism; geometrical optics.",
+    "prerequisites": {
+      "text": "PHYS 131.",
+      "tree": "PHYS 131",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 141 or higher level calculus course.",
+      "tree": "MATH 141",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 102, or who have taken CEGEP objective 00US or equivalent.",
+      "excludes": [
+        "PHYS 102"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures, 3 hours laboratory in alternate weeks; tutorial sessions",
+      "Laboratory sections have limited enrolment"
+    ]
+  },
+  {
+    "code": "PHYS 180",
+    "subject": "PHYS",
+    "number": "180",
+    "title": "Space, Time and Matter",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A nonmathematical, conceptual look at physics, beginning with the idea of space and time, continuing with the historical development of Newtonian mechanics of celestial motion, electricity and magnetism, ether and light, Einstein's special and general theories of relativity, quantum mechanics, matter and antimatter, cosmology and the big bang.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students in a Physics program. Not open to students who have taken PHYS 200.",
+      "excludes": [
+        "PHYS 200"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 181",
+    "subject": "PHYS",
+    "number": "181",
+    "title": "Everyday Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The day-to-day physics behind the materials and phenomena around us. Demonstrations of the intriguing properties of materials and the simple physical theories explaining them.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHYS 182",
+    "subject": "PHYS",
+    "number": "182",
+    "title": "Our Evolving Universe",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An elementary course on astronomy and astrophysics. Positional astronomy and finding your way about the sky. Our evolving picture of the universe. Properties and origins of the solar system. The Big Bang and modern cosmology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students in a Physics program. Not open to students who have taken PHYS 204 or PHYS 205.",
+      "excludes": [
+        "PHYS 204",
+        "PHYS 205"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHYS 183",
+    "subject": "PHYS",
+    "number": "183",
+    "title": "The Milky Way Inside and Out",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An elementary course on astronomy. Star origins and star formation, supernovae, white dwarfs, neutron stars, and black holes. Galaxies, their structure and their interactions. Stellar clusters, the interstellar medium. Galactic classification and galaxy evolution.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students in a Physics program. Not open to students who have taken PHYS 204 or PHYS 206.",
+      "excludes": [
+        "PHYS 204",
+        "PHYS 206"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHYS 186",
+    "subject": "PHYS",
+    "number": "186",
+    "title": "Astrobiology",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Astrobiology is the study of life throughout the universe. The course will cover the search for, and characterization of, habitable worlds. We will explore the formation and evolution of stars and planets, the astronomical and geological factors that impact a planet's habitability, the evolution of life on Earth, and the potential for biological evolution beyond an organism's planet of origin.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking EPSC 182, ANAT 182, or EPSC 186.",
+      "excludes": [
+        "ANAT 182",
+        "EPSC 182",
+        "EPSC 186"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "This is a double-prefix course and is identical in content with EPSC 186."
+    ]
+  },
+  {
+    "code": "PHYS 224",
+    "subject": "PHYS",
+    "number": "224",
+    "title": "Physics of Music",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to the physics of music. Properties of sound and their perception as pitch, loudness, and timbre. Dissonance, consonance, and musical intervals and tuning. Physics of sound propagation and reflection. Resonance. Acoustic properties of pipes, strings, bars, and membranes, and sound production in wind, string, and percussion instruments. The human voice. Room reverberation and acoustics. Directional characteristics of sound sources.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 225",
+      "excludes": [
+        "PHYS 225"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures",
+      "Designed for students in the Faculty of Music but suitable for students with an interest in music and its physical basis."
+    ]
+  },
+  {
+    "code": "PHYS 228",
+    "subject": "PHYS",
+    "number": "228",
+    "title": "Energy and the Environment",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Energy fundamentals, generation of electricity, heat engines, fossil fuel production and consumption, local and global effects, economic impact, transportation, and pollution and environmental impact of energy use. Non-renewable energy sources (fossil fuels, nuclear) and renewable sources (solar, wind, hydro, geothermal).",
+    "prerequisites": {
+      "text": "CEGEP Physics or PHYS 102 or PHYS 142 or permission of the instructor",
+      "tree": {
+        "or": [
+          "PHYS 102",
+          "PHYS 142"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 184.",
+      "excludes": [
+        "PHYS 184"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PHYS 230",
+    "subject": "PHYS",
+    "number": "230",
+    "title": "Dynamics of Simple Systems",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Translational motion under Newton's laws; forces, momentum, work/energy theorem. Special relativity; Lorentz transforms, relativistic mechanics, mass/energy equivalence. Topics in rotational dynamics. Noninertial frames.",
+    "prerequisites": {
+      "text": "CEGEP Physics or PHYS 131.",
+      "tree": "PHYS 131",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 222",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students taking or having passed PHYS 251",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 232",
+    "subject": "PHYS",
+    "number": "232",
+    "title": "Heat and Waves",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The laws of thermodynamics and their consequences. Thermodynamics of P-V-T systems and simple heat engines. Free, driven, and damped harmonic oscillators. Coupled systems and normal modes. Fourier methods. Wave motion and dispersion. The wave equation.",
+    "prerequisites": {
+      "text": "CEGEP Physics or PHYS 142, and CEGEP chemistry or CHEM 120, and PHYS 230.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PHYS 142",
+              "CHEM 120"
+            ]
+          },
+          "PHYS 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students taking or having passed PHYS 253",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 241",
+    "subject": "PHYS",
+    "number": "241",
+    "title": "Signal Processing",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Linear circuit elements, resonance, network theorems, diodes, transistors, amplifiers, feedback, integrated circuits.",
+    "prerequisites": {
+      "text": "CEGEP physics or PHYS 142.",
+      "tree": "PHYS 142",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "2 hours lectures; 3 hours laboratory alternate weeks"
+    ]
+  },
+  {
+    "code": "PHYS 242",
+    "subject": "PHYS",
+    "number": "242",
+    "title": "Electricity and Magnetism",
+    "credits": 2,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Properties of electromagnetic fields, dipole and quadropole fields and their interactions, chemical binding of molecules, electromagnetic properties of materials, Maxwell's equations and properties of electromagnetic waves, propagation of waves in media.",
+    "prerequisites": {
+      "text": "CEGEP Physics, MATH 222",
+      "tree": "MATH 222",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 251",
+    "subject": "PHYS",
+    "number": "251",
+    "title": "Honours Classical Mechanics 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Newton's laws, work energy, angular momentum. Harmonic oscillator, forced oscillations. Inertial forces, rotating frames. Central forces, centre of mass, planetary orbits, Kepler's laws.",
+    "prerequisites": {
+      "text": "CEGEP physics or PHYS 131.",
+      "tree": "PHYS 131",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 222",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students taking or having taken PHYS 230.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 253",
+    "subject": "PHYS",
+    "number": "253",
+    "title": "Thermal Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Energy, work, heat; first law. Temperature, entropy; second law. Absolute zero; third law. Equilibrium, equations of state, gases, liquids, solids, magnets; phase transitions.",
+    "prerequisites": {
+      "text": "CEGEP physics or PHYS 131, and CEGEP chemistry or CHEM 120.",
+      "tree": {
+        "or": [
+          "PHYS 131",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 222",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students taking or having taken PHYS 232.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 257",
+    "subject": "PHYS",
+    "number": "257",
+    "title": "Experimental Methods 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introductory laboratory work and data analysis as related to mechanics, optics and thermodynamics. Introduction to computers as they are employed for laboratory work, for data analysis and for numerical computation. Previous experience with computers is an asset, but is not required.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PHYS 230 or PHYS 251",
+      "tree": {
+        "or": [
+          "PHYS 230",
+          "PHYS 251"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "6 hours of laboratory and classroom work"
+    ]
+  },
+  {
+    "code": "PHYS 258",
+    "subject": "PHYS",
+    "number": "258",
+    "title": "Experimental Methods 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced laboratory work and data analysis as related to mechanics, optics and thermodynamics. Computers will be employed routinely for data analysis and for numerical computation, and, particularly, to facilitate the use of Fourier methods.",
+    "prerequisites": {
+      "text": "PHYS 257",
+      "tree": "PHYS 257",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "6 hours of laboratory and classroom work"
+    ]
+  },
+  {
+    "code": "PHYS 260",
+    "subject": "PHYS",
+    "number": "260",
+    "title": "Modern Physics and Relativity",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "History of special relativity; Lorentz transformations: kinematics and dynamics; transformation of electric and magnetic forces; introduction to topics in modern physics.",
+    "prerequisites": {
+      "text": "CEGEP physics or PHYS 142.",
+      "tree": "PHYS 142",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 222",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 319",
+    "subject": "PHYS",
+    "number": "319",
+    "title": "Introduction to Biophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Emerging physical approaches and quantitative measurement techniques are providing new insights into longstanding biological questions. This course will present underlying physical theory, quantitative measurement techniques, and significant findings in molecular and cellular biophysics. Principles covered include Brownian motion, low Reynolds-number environments, forces relevant to cells and molecules, chemical potentials, and free energies. These principles are applied to enzymes as molecular machines, membranes, DNA, and RNA.",
+    "prerequisites": {
+      "text": "BIOL 200 or BIOL 219; MATH 222; PHYS 230 and (PHYS 232 or PHYS 253), or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 200",
+              "BIOL 219"
+            ]
+          },
+          "MATH 222",
+          "PHYS 230",
+          {
+            "or": [
+              "PHYS 232",
+              "PHYS 253"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL 319",
+      "excludes": [
+        "BIOL 319"
+      ]
+    },
+    "notes": [
+      "Winter. Students with training in physics and biology will be well-suited to the course."
+    ]
+  },
+  {
+    "code": "PHYS 320",
+    "subject": "PHYS",
+    "number": "320",
+    "title": "Introductory Astrophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of astrophysics ranging from stars and planets, to compact objects, galaxies, and the large-scale evolution of the Universe. A calculusbased course, with a focus on simple mathematical derivations that capture the essential physics.",
+    "prerequisites": {
+      "text": "MATH 222; PHYS 230 or PHYS 260 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "MATH 222",
+          {
+            "or": [
+              "PHYS 230",
+              "PHYS 260"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 214.",
+      "excludes": [
+        "PHYS 214"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHYS 321",
+    "subject": "PHYS",
+    "number": "321",
+    "title": "Data Science and Observational Astrophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Data analysis methods as applied in experimental physics, with an emphasis on applications in observational astrophysics. An introduction to Bayesian inference, model selection, Markov Chain Monte Carlo, common probability distributions, jackknives and null tests, as they are used in the analysis of observational data from across the electromagnetic spectrum.",
+    "prerequisites": {
+      "text": "COMP 208; PHYS 257",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "PHYS 257"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PHYS 241; PHYS 258",
+      "tree": {
+        "and": [
+          "PHYS 241",
+          "PHYS 258"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Students with sufficient knowledge of computer programming do not need to have taken COMP 208"
+    ]
+  },
+  {
+    "code": "PHYS 328",
+    "subject": "PHYS",
+    "number": "328",
+    "title": "Electronics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Semiconductor devices, basic transistor circuits, operational amplifiers, combinatorial and sequential logic, integrated circuits, analogue to digital converters. The laboratory component covers design, construction and testing of basic electronic circuits.",
+    "prerequisites": {
+      "text": "PHYS 241 or permission of instructor",
+      "tree": "PHYS 241",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lectures; 3 hours laboratory"
+    ]
+  },
+  {
+    "code": "PHYS 329",
+    "subject": "PHYS",
+    "number": "329",
+    "title": "Statistical Physics with Biophysical Applications",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "This interdisciplinary course introduces Statistical Physics illustrated with modern biophysical applications. Principles covered include partition functions, Boltzmann distribution, bosons, fermions, Bose Einstein condensates, Ferni gases, chemical potential, thermodynamical forces, biochemical kinetics, and an introduction to noise and phase transitions in biology.",
+    "prerequisites": {
+      "text": "[BIOL 219 and (PHYS 253 or PHYS 232 or CHEM 345)] or permission of the instructor",
+      "tree": {
+        "and": [
+          "BIOL 219",
+          {
+            "or": [
+              "PHYS 253",
+              "PHYS 232",
+              "CHEM 345"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not opened to students having taken PHYS 333, PHYS 362, or CHEM 365",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 331",
+    "subject": "PHYS",
+    "number": "331",
+    "title": "Topics in Classical Mechanics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Forced and damped oscillators, Newtonian mechanics in three dimensions, rotational motion, Lagrangian and Hamiltonian mechanics, small vibrations, normal modes. Nonlinear dynamics and chaos.",
+    "prerequisites": {
+      "text": "PHYS 230",
+      "tree": "PHYS 230",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 315",
+      "tree": "MATH 315",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students having passed PHYS 451 or PHYS 351",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 333",
+    "subject": "PHYS",
+    "number": "333",
+    "title": "Thermal and Statistical Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introductory equilibrium statistical mechanics. Quantum states, probabilities, ensemble averages. Entropy, temperature, Boltzmann factor, chemical potential. Photons and phonons. Fermi-Dirac and Bose-Einstein distributions; applications.",
+    "prerequisites": {
+      "text": "PHYS 232",
+      "tree": "PHYS 232",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students taking or having passed PHYS 362",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 339",
+    "subject": "PHYS",
+    "number": "339",
+    "title": "Measurements Laboratory in General Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to modern techniques of measurement. The use of computers in performing and analysing experiments. Data reduction, statistical methods, report writing. Extensive use of computers is made in this laboratory; therefore some familiarity with computers and computing is an advantage.",
+    "prerequisites": {
+      "text": "PHYS 241 or permission of instructor",
+      "tree": "PHYS 241",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "6 hours"
+    ]
+  },
+  {
+    "code": "PHYS 340",
+    "subject": "PHYS",
+    "number": "340",
+    "title": "Majors Electricity and Magnetism",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The electrostatic field and scalar potential. Dielectric properties of matter. Energy in the electrostatic field. Methods for solving problems in electrostatics. The magnetic field. Induction and inductance. Energy in the magnetic field. Magnetic properties of matter. Maxwell's equations. The dipole approximation.",
+    "prerequisites": {
+      "text": "CEGEP physics or PHYS 142, MATH 222",
+      "tree": {
+        "and": [
+          "PHYS 142",
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 314",
+      "tree": "MATH 314",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have passed PHYS 242 or PHYS 350",
+      "excludes": [
+        "PHYS 242",
+        "PHYS 350"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 342",
+    "subject": "PHYS",
+    "number": "342",
+    "title": "Majors Electromagnetic Waves",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Maxwell's equations. The wave equation. The electromagnetic wave, reflection, refraction, polarization. Guided waves. Transmission lines and wave guides. Vector potential. Radiation. The elemental dipole; the half-wave dipole; vertical dipole; folded dipoles; Yagi antennas. Accelerating charged particles.",
+    "prerequisites": {
+      "text": "PHYS 340 or PHYS 242, Mathematics MATH 314, MATH 315",
+      "tree": {
+        "or": [
+          "PHYS 340",
+          {
+            "and": [
+              "PHYS 242",
+              "MATH 314",
+              "MATH 315"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 346",
+    "subject": "PHYS",
+    "number": "346",
+    "title": "Majors Quantum Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "De Broglie waves, Bohr atom. Schroedinger equation, wave functions, observables. One dimensional potentials. Schroedinger equation in three dimensions. Angular momentum, hydrogen atom. Spin, experimental consequences.",
+    "prerequisites": {
+      "text": "PHYS 230 and PHYS 232, or PHYS 251",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "PHYS 230",
+              "PHYS 232"
+            ]
+          },
+          "PHYS 251"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 357, PHYS 446, or PHYS 457.",
+      "excludes": [
+        "PHYS 357",
+        "PHYS 446",
+        "PHYS 457"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 350",
+    "subject": "PHYS",
+    "number": "350",
+    "title": "Honours Electricity and Magnetism",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental laws of electric and magnetic fields in both integral and differential form.",
+    "prerequisites": {
+      "text": "MATH 248, MATH 325.",
+      "tree": {
+        "and": [
+          "MATH 248",
+          "MATH 325"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Honours students or permission of the instructor; Not open to students having taken PHYS 340",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 351",
+    "subject": "PHYS",
+    "number": "351",
+    "title": "Honours Classical Mechanics 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Rigid bodies, angular momentum, gyroscope, moment of inertia, principal axes, Euler's equations. Coupled oscillations and normal modes. Lagrangian mechanics and applications. Hamiltonian mechanics. Topics in advanced analytical mechanics.",
+    "prerequisites": {
+      "text": "PHYS 251.",
+      "tree": "PHYS 251",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 451.",
+      "excludes": [
+        "PHYS 451"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 352",
+    "subject": "PHYS",
+    "number": "352",
+    "title": "Honours Electromagnetic Waves",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Vector and scalar potentials; plane waves in homogeneous media; refraction and reflection; guided waves; radiation from simple systems; dipole and quadrupole radiation; introduction to fields of moving charges; synchrotron radiation; Bremsstrahlung.",
+    "prerequisites": {
+      "text": "PHYS 350.",
+      "tree": "PHYS 350",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Honours students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 357",
+    "subject": "PHYS",
+    "number": "357",
+    "title": "Honours Quantum Physics 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Experimental basis for quantum mechanics; wave-packets; uncertainty principle. Hilbert space formalism. Schrodinger equation: eigenvalues and eigenvectors: applications to 1-d problems including the infinite and finite potential wells and the harmonic oscillator. Tunneling. Time independent perturbation theory.",
+    "prerequisites": {
+      "text": "MATH 223 or equivalent, and one of PHYS 230, PHYS 251, or CIVE 281",
+      "tree": {
+        "and": [
+          "MATH 223",
+          {
+            "or": [
+              "PHYS 230",
+              "PHYS 251",
+              "CIVE 281"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Honours students or permission of the instructor; Not open to students taking or having passed PHYS 346",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 359",
+    "subject": "PHYS",
+    "number": "359",
+    "title": "Advanced Physics Laboratory 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced level experiments in physics including quantum effects and some properties of condensed matter physics and modern physics.",
+    "prerequisites": {
+      "text": "PHYS 258",
+      "tree": "PHYS 258",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "PHYS 457 or PHYS 447 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PHYS 457",
+          "PHYS 447"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Open to both Majors and Honours students",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "6 hours",
+      "Students who have taken PHYS 469 will conduct different experiments in this course."
+    ]
+  },
+  {
+    "code": "PHYS 362",
+    "subject": "PHYS",
+    "number": "362",
+    "title": "Statistical Mechanics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Quantum states and ensemble averages. Fermi-Dirac, Bose-Einstein and Boltzmann distribution functions and their applications.",
+    "prerequisites": {
+      "text": "MATH 248 or equivalents, PHYS 253.",
+      "tree": {
+        "and": [
+          "MATH 248",
+          "PHYS 253"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Honours students, or permission of the instructor; Not open to students taking or having passed PHYS 333",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 396",
+    "subject": "PHYS",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See ? https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures."
+    ]
+  },
+  {
+    "code": "PHYS 404",
+    "subject": "PHYS",
+    "number": "404",
+    "title": "Climate Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers the essentials of climate physics through the lens of one-dimensional, vertical atmospheric models. This includes shortwave and longwave radiative transfer, convection, phase changes, clouds, greenhouse gases, and atmospheric escape. This is an adequate level of detail for understanding Earth's climate, paleoclimate, anthropogenic climate change, or pursing studies of Solar System planets and extrasolar planets.",
+    "prerequisites": {
+      "text": "PHYS 230 or PHYS 251, PHYS 232 or PHYS 253, MATH 315 or MATH 325, and MATH 222",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PHYS 230",
+              "PHYS 251"
+            ]
+          },
+          {
+            "or": [
+              "PHYS 232",
+              "PHYS 253"
+            ]
+          },
+          {
+            "or": [
+              "MATH 315",
+              "MATH 325"
+            ]
+          },
+          "MATH 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 404",
+      "excludes": [
+        "ATOC 404"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 432",
+    "subject": "PHYS",
+    "number": "432",
+    "title": "Physics of Fluids",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The physical properties of fluids. The kinematics and dynamics of flow. The effects of viscosity and turbulence. Applications of fluid mechanics in biophysics, geophysics and engineering.",
+    "prerequisites": {
+      "text": "PHYS 230, MATH 223, MATH 314, MATH 315",
+      "tree": {
+        "and": [
+          "PHYS 230",
+          "MATH 223",
+          "MATH 314",
+          "MATH 315"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 332.",
+      "excludes": [
+        "PHYS 332"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 434",
+    "subject": "PHYS",
+    "number": "434",
+    "title": "Optics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental concepts of optics, including applications and modern developments. Light propagation in media; geometric optics and optical instruments; polarization and coherence properties of light; interference and interferometry; diffraction theory and applications in spectrometry and imaging; Gaussian beams, Fourier optics and photonic band structure. A laboratory component provides hands-on experience in optical setup design, construction and testing of concepts introduced in lectures.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PHYS 342 or PHYS 352, or permission of the instructor",
+      "tree": {
+        "or": [
+          "PHYS 342",
+          "PHYS 352"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "2 hours lecture, 3 hours lab"
+    ]
+  },
+  {
+    "code": "PHYS 447",
+    "subject": "PHYS",
+    "number": "447",
+    "title": "Majors Quantum Physics 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Angular momentum and spin, identical particles, multi-electron atoms, perturbation theory, radiation. Selected applications from condensed matter, nuclear and elementary particle physics.",
+    "prerequisites": {
+      "text": "PHYS 346",
+      "tree": "PHYS 346",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students in the following programs: · Bachelor of Engineering (B.Eng.) - Honours Electrical Engineering · Bachelor of Engineering (B.Eng.) - Minor Physics · Bachelor of Science (B.Sc.) - Honours Mathematics and Physics · Bachelor of Science (B.Sc.) - Honours Physics · Bachelor of Science (B.Sc.) - Honours Physics and Chemistry · Bachelor of Science (B.Sc.) - Honours Physics and Computer Science; Not open to students who have taken or are taking PHYS 457.",
+      "excludes": [
+        "PHYS 457"
+      ]
+    },
+    "notes": [
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 449",
+    "subject": "PHYS",
+    "number": "449",
+    "title": "Majors Research Project",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A supervised research project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 or U3 students in a Physics program, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter or Summer",
+      "6 hours"
+    ]
+  },
+  {
+    "code": "PHYS 457",
+    "subject": "PHYS",
+    "number": "457",
+    "title": "Honours Quantum Physics 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Angular momentum and spin operators. Operator methods in quantum mechanics. Coupling of spin and angular momenta. Variational principles and elements of time dependent perturbation theory (the Golden Rule). Solution of the Schrodinger equation in three dimensions. Applications to the hydrogen and helium atoms and to simple problems in atomic and molecular physics.",
+    "prerequisites": {
+      "text": "PHYS 357",
+      "tree": "PHYS 357",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Honours students or permission of instructor; Not open to students who have taken PHYS 346",
+      "excludes": [
+        "PHYS 346"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 459",
+    "subject": "PHYS",
+    "number": "459",
+    "title": "Research Thesis",
+    "credits": 6,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research project and thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Honours students or permission of instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "Permission of the instructor.",
+      "6 hours",
+      "Students must register for both PHYS 459D1 and PHYS 459D2.",
+      "No credit will be given for this course unless both PHYS 459D1 and PHYS 459D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PHYS 459D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHYS 459D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHYS 469",
+    "subject": "PHYS",
+    "number": "469",
+    "title": "Advanced Physics Laboratory 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced level experiments in physics including quantum effects and some properties of condensed matter physics and modern physics.",
+    "prerequisites": {
+      "text": "PHYS 258 or permission of the instructor",
+      "tree": "PHYS 258",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "PHYS 457 or PHYS 447 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "PHYS 457",
+          "PHYS 447"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Honours students or permission of instructor; Open to honours and majors physics students",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "6 hours",
+      "Student who have taken PHYS 359 will conduct different experiments in this course."
+    ]
+  },
+  {
+    "code": "PHYS 478",
+    "subject": "PHYS",
+    "number": "478",
+    "title": "Short Research Project",
+    "credits": 1,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Supervised research project in physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Students are expected to find an appropriate instructor for their project."
+    ]
+  },
+  {
+    "code": "PHYS 479",
+    "subject": "PHYS",
+    "number": "479",
+    "title": "Physics Research Project",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A supervised research project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2 or U3 students in a Physics program, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "6 hours"
+    ]
+  },
+  {
+    "code": "PHYS 489",
+    "subject": "PHYS",
+    "number": "489",
+    "title": "Special Project",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A project incorporating aspects of both physics and computer science, under the joint supervision of the two departments. The Physics aspect may be either laboratory-based or theoretical in nature. The Computational aspect will involve the development and implementation of algorithms arising from the investigation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in their final year of the Joint Major in Physics and Computer Science after consultation with the adviser(s) for the program",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "6 hours"
+    ]
+  },
+  {
+    "code": "PHYS 512",
+    "subject": "PHYS",
+    "number": "512",
+    "title": "Computational Physics with Applications",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Computational methods in Physics illustrated with realworld applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "U3 or graduate students in Physics, Chemistry, or Engineering, or permission of the instructor. Basic familiarity with computer programming highly recommended."
+    ]
+  },
+  {
+    "code": "PHYS 514",
+    "subject": "PHYS",
+    "number": "514",
+    "title": "General Relativity",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Transition from special to general relativity. Non-Euclidian geometry. The basic laws of Physics in co-variant form, Einstein's equations. Gravitational waves; neutron stars; black holes; cosmology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students and graduate students, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 519",
+    "subject": "PHYS",
+    "number": "519",
+    "title": "Advanced Biophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An advanced biophysics course, with a special emphasis on stochastic and out of equilibrium physical processes in living matter.",
+    "prerequisites": {
+      "text": "(PHYS 329 or PHYS 333 or PHYS 362 or MATH 437) and (PHYS 340 or PHYS 350), or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "PHYS 329",
+              "PHYS 333",
+              "PHYS 362",
+              "MATH 437"
+            ]
+          },
+          {
+            "or": [
+              "PHYS 340",
+              "PHYS 350"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 521",
+    "subject": "PHYS",
+    "number": "521",
+    "title": "Astrophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An advanced course in modern astrophysics, covering topics such as the basic tools of astronomy (statistics, mathematical methods, computational tools, and instrumentation); stellar astrophysics (properties, structure, atmospheres, binaries/exoplanets); the interstellar medium, star formation, stellar evolution and endpoints (white dwarfs, neutron stars, black holes); and the Milky Way, galaxies, and cosmology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 students and graduate students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 534",
+    "subject": "PHYS",
+    "number": "534",
+    "title": "Nanoscience and Nanotechnology",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics include scanning probe microscopy, chemical self-assembly, computer modelling, and microfabrication/micromachining.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 or graduate students in Physics, Chemistry, or Engineering, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "PHYS 551",
+    "subject": "PHYS",
+    "number": "551",
+    "title": "Quantum Theory",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "General formulation, scattering theory, WKBJ approximation, time-dependent perturbation, theory and applications, angular momentum, relativistic wave equations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students and graduate students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 557",
+    "subject": "PHYS",
+    "number": "557",
+    "title": "Nuclear Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "General nuclear properties, nucleon-nucleon interaction and scattering theory, radioactivity, nuclear models, nuclear reactions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students, graduate students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 558",
+    "subject": "PHYS",
+    "number": "558",
+    "title": "Solid State Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Properties of crystals; free electron model, band structure; metals, insulators and semi-conductors; phonons; magnetism; selected additional topics in solid-state (e.g. ferroelectrics, elementary transport theory).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students, graduate students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 559",
+    "subject": "PHYS",
+    "number": "559",
+    "title": "Advanced Statistical Mechanics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Scattering and structure factors. Review of thermodynamics and statistical mechanics; correlation functions (static); mean field theory; critical phenomena; broken symmetry; fluctuations, roughening.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students, graduate students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Fall",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 562",
+    "subject": "PHYS",
+    "number": "562",
+    "title": "Electromagnetic Theory",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Electrostatics, dielectrics, magnetostatics, timevarying fields, relativity, radiating systems, fields of moving charges.",
+    "prerequisites": {
+      "text": "U1 or U2 Honours Physics or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students, graduate students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 567",
+    "subject": "PHYS",
+    "number": "567",
+    "title": "Particle Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Survey of elementary particles; hadrons, leptons and hadrons' constituents (quarks). Invariance principles and conservation laws. Detectors and accelerators. Phenomenology of strong, electromagnetic and weak interactions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Honours students, graduate students, or permission of the instructor",
+      "excludes": []
+    },
+    "notes": [
+      "Winter",
+      "3 hours lectures"
+    ]
+  },
+  {
+    "code": "PHYS 601",
+    "subject": "PHYS",
+    "number": "601",
+    "title": "Introduction to Graduate Studies in Physics 1",
+    "credits": 1.5,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Foundational skills in research and communication, including graduate student orientation, research integrityand ethics, proposal writing, science communication both oral and written for a general audience, outreach and equity, diversity, and inclusion, best practices in teaching assistantship.",
+    "prerequisites": {
+      "text": "Permission of the Instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a graduate degree program in Physics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 602",
+    "subject": "PHYS",
+    "number": "602",
+    "title": "Introduction to Graduate Studies in Physics 2",
+    "credits": 1.5,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Core skills in reading, writing, critical thinking and career opportunities. Preparation for the comprehensive oral exams, paper reviews, writing and responding to referee reports, conference presentations, scientific programming, and data management and visualization.",
+    "prerequisites": {
+      "text": "Permission of the Instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in a graduate degree program in Physics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 606",
+    "subject": "PHYS",
+    "number": "606",
+    "title": "Selected Topics: Contemporary Physics 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Selected topics in contemporary physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 607",
+    "subject": "PHYS",
+    "number": "607",
+    "title": "Selected Topics: Contemporary Physics 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected topics in contemporary physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 610",
+    "subject": "PHYS",
+    "number": "610",
+    "title": "Quantum Field Theory 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Relativistic wave equations for spin-0, spin-1/2, and spin-1 particles. Review of Lagrangian and Hamiltonian formalisms for classical mechanics. Canonical, Feynman path-integral, and Schwinger external-source quantization techniques. Relativistic quantum field theories for free spin-0, spin-1/2, and spin-1 particles. Interactions, perturbation theory, and Feynman diagrams.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 620",
+    "subject": "PHYS",
+    "number": "620",
+    "title": "Experimental Methods of Subatomic Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic techniques of experimentation in nuclear and particle physics. Accelerators, beam optics, detection systems, major experiments, Monte-Carlo simulation, data acquisition and data analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 632",
+    "subject": "PHYS",
+    "number": "632",
+    "title": "Seminar in Astrophysics 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on special topics in astrophysics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolled in M.Sc. or Ph.D. degree program or permission of instructor. Not open to students who have taken PHYS 614.",
+      "excludes": [
+        "PHYS 614"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 633",
+    "subject": "PHYS",
+    "number": "633",
+    "title": "Seminar in Astrophysics 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on special topics in astrophysics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolled in M.Sc. or Ph.D. degree program or permission of instructor. Not open to students who have taken PHYS 615.",
+      "excludes": [
+        "PHYS 615"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 641",
+    "subject": "PHYS",
+    "number": "641",
+    "title": "Observational Techniques of Modern Astrophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Mechanical, electrical, optical, and analytic techniques used in modern astrophysics research. Electromagnetic, gravitational and particle-based observing. Relevant and topical observational problems, contact with forefront of observational research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in M.Sc. or Ph.D. program, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 642",
+    "subject": "PHYS",
+    "number": "642",
+    "title": "Radiative Processes in Astrophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Why astrophysical sources look the way they do, and how to understand why we see what we see in astronomy. Fundamental physical processes that produce and modify radiation from astrophysical sources, and how they apply to different astronomical examples.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in M.Sc./Ph.D. program, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 643",
+    "subject": "PHYS",
+    "number": "643",
+    "title": "Astrophysical Fluids",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physics of astrophysical fluids; how it determines the behaviour, formation, evolution, dissipation and death of astrophysical systems, including objects in hydrostatic balance, such as stars, or with inflows and outflows, such as disks and jets.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in M.Sc./Ph.D. program, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 644",
+    "subject": "PHYS",
+    "number": "644",
+    "title": "Galaxies and Cosmology",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Our current understanding of the universe, and tools that are used in developing this understanding. Large scale properties of galaxies in a cosmological context; the most important features of the expanding universe.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment in M.Sc./Ph.D. program, or permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: General relativity not a prerequisite."
+    ]
+  },
+  {
+    "code": "PHYS 645",
+    "subject": "PHYS",
+    "number": "645",
+    "title": "High Energy Astrophysics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Physical bases for phenomena associated with strong gravity and high-energy processes in astrophysical contexts. X-rays, gamma-rays, nuclear processes, strong gravity and magnetic fields. Shocks, acceleration, and jets.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolled in M.Sc. or Ph.D. degree program or permission of instructor. Not open to students who have taken PHYS 621.",
+      "excludes": [
+        "PHYS 621"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHYS 657",
+    "subject": "PHYS",
+    "number": "657",
+    "title": "Classical Condensed Matter",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Coarse-grained dynamical models of condensed matter systems and their application to non-equilibrium phase transformations. Topics include: spontaneously broken symmetry, slow dynamics, phase field models, classical density functional theory, amplitude models, perturbation methods, interface dynamics, phase stability, topological defects in solids and microstructure evolution.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 658",
+    "subject": "PHYS",
+    "number": "658",
+    "title": "Advanced Condensed Matter",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Superconductivity: phenomenology; electron-phonon interaction; BCS theory; gap structure; Ginzburg-Landau formulation; magnetic, transport and thermodynamic properties; vortices; superfluids; unconventional superconductors. Magnetism: local vs itinerant magnetism; magnetic ordering; spin fluctuations; neutron and magnetic X-ray scattering; magnetism at surfaces; frustration. Additional topic amongst: quantum Hall effect; localization; quasicrystals; glasses; etc.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 659",
+    "subject": "PHYS",
+    "number": "659",
+    "title": "Experimental Condensed Matter",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "To obtain an active understanding of the principles, the possibilities and the limitations of various experimental techniques. Possible topics include vacuum and low-temperature techniques; transport, thermal, magnetization and de Haas van Alphen measurements; scattering techniques; Mossbauer spectroscopy, NMR, scanning probe microscopy, electron microscopy; surface science methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 660",
+    "subject": "PHYS",
+    "number": "660",
+    "title": "Quantum Condensed Matter",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Second quantization and quantum mean-field theory. Hartree-Fock theory, Fermi liquids. Broken-symmetry quantum phases: magnetism, charge density waves, Wigner crystals, superfluids, superconductivity. Introduction to mesoscopic physics and quantum transport. Introduction to renormalization techniques within the context of Kondo physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 673",
+    "subject": "PHYS",
+    "number": "673",
+    "title": "Quantum Field Theory 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Loop diagrams, renormalization, Abelian and nonabelian gauge theory, QCD, introduction to the Standard Model.",
+    "prerequisites": {
+      "text": "PHYS 610 or permission of instructor.",
+      "tree": "PHYS 610",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 690",
+    "subject": "PHYS",
+    "number": "690",
+    "title": "M.Sc. Thesis",
+    "credits": 24,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent thesis research work.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 691",
+    "subject": "PHYS",
+    "number": "691",
+    "title": "Thesis Preparation",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Directed study of research papers and experimental or theoretical techniques in the student's designated area of research under the supervision of the graduate studies committee of the Department.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 692",
+    "subject": "PHYS",
+    "number": "692",
+    "title": "Thesis Project",
+    "credits": 6,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Independent work under the direction of the student's supervisor on a research problem in the student's designated area of research leading to a project report or seminar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 693",
+    "subject": "PHYS",
+    "number": "693",
+    "title": "M.Sc. Research",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the direction of the student's supervisor on a research problem in the student's designated area of research leading to a project report or seminar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 700",
+    "subject": "PHYS",
+    "number": "700",
+    "title": "Preliminary Ph.D. Examination",
+    "credits": 0,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 717",
+    "subject": "PHYS",
+    "number": "717",
+    "title": "Many-body Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Real-time and imaginary-time Green functions; Diagrammatic perturbation theory; Quantum linear response and Kubo formulae; Path-integral techniques; Fermi gas; Impurity averaging; Interacting electron gas; Magnetism; Phonons & electron-phonon interaction; Superconductivity; Luttinger liquids",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 718",
+    "subject": "PHYS",
+    "number": "718",
+    "title": "Special Topics: Solid State Physics 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Specialized discussion of some current problems in solid state physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 719",
+    "subject": "PHYS",
+    "number": "719",
+    "title": "Special Topics: Solid State Physics 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Specialized discussion of some current problems in solid state physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 729",
+    "subject": "PHYS",
+    "number": "729",
+    "title": "Special Topics in Nuclear Physics",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Specialized discussion of some current problems in nuclear physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 730",
+    "subject": "PHYS",
+    "number": "730",
+    "title": "Special Topics: High Energy Physics 1",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Specialized discussion of some current problems in theoretical particle physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 731",
+    "subject": "PHYS",
+    "number": "731",
+    "title": "Special Topics: High Energy Physics 2",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Specialized discussion of some current problems in theoretical particle physics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "PHYS 741",
+    "subject": "PHYS",
+    "number": "741",
+    "title": "Superstring Theory",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to the main concepts and tools of modern string theory. Overview of the perturbative worldsheet description of bosonic and supersymmetric string theories. Various concepts in two dimensional conformal field theory. Introduction to the non-perturbative physics of string theory, including D-branes, compactifications and duality.",
+    "prerequisites": {
+      "text": "PHYS 610.",
+      "tree": "PHYS 610",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 743",
+    "subject": "PHYS",
+    "number": "743",
+    "title": "Very Early Universe",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to key tools used in current research in theoretical cosmology, including (i) Review of Standard Big Bang Cosmology, (ii) Inflationary Universe Models, (iii) Theory of Cosmological Perturbations, (iv) Quantum Field Theory Methods of Cosmology. (v) Topological Defects in Cosmology, (vi) Superstring Cosmology.",
+    "prerequisites": {
+      "text": "PHYS 514, General Relativity.",
+      "tree": "PHYS 514",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "PHYS 610, Quantum Field Theory 1.",
+      "tree": "PHYS 610",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 744",
+    "subject": "PHYS",
+    "number": "744",
+    "title": "Finite Temperature Field Theory",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Tools of finite temperature (relativistic) field theory. Thermodynamics, introducing bosonic and fermionic Euclidean path integrals. Pressure in a free theory, the perturbative expansion, thermal masses, and symmetry restoration. Schwinger-Keldysh contour path integral and its perturbative expansion. Collective phenomena such as dispersion corrections, plasma oscillations, Debye screening and Landau damping.",
+    "prerequisites": {
+      "text": "PHYS 610.",
+      "tree": "PHYS 610",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHYS 745",
+    "subject": "PHYS",
+    "number": "745",
+    "title": "Supersymmetry and Supergravity",
+    "credits": 3,
+    "offeredBy": "Physics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to supersymmetry and supergravity, including the Minimal Supersymmetric Standard Model (MSSM). Basic formalism of supersymmetry (SUSY) transformations and the superfield formalism, simple SUSY models, the MSSM and its phenomenology, mechanisms for breaking supersymmetry, introduction to 4-D supergravity.",
+    "prerequisites": {
+      "text": "PHYS 610.",
+      "tree": "PHYS 610",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

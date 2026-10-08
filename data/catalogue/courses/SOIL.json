@@ -1,0 +1,119 @@
+[
+  {
+    "code": "SOIL 300",
+    "subject": "SOIL",
+    "number": "300",
+    "title": "Geosystems",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Interactions between Earth's various geologic systems and how these interactions lead to mineral and rock formation. Geomorphic processes and how various landforms are created by the interactions at the Earth's surface between the various geologic systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken SOIL 200. Restricted to U2 students and above.",
+      "excludes": [
+        "SOIL 200"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "SOIL 315",
+    "subject": "SOIL",
+    "number": "315",
+    "title": "Soil Nutrient Management",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Plant nutrients in the soil, influence of soil properties on nutrient absorption and plant growth, use of organic and inorganic fertilizers.",
+    "prerequisites": {
+      "text": "ENVB 210 or GEOG 305 or SOIL 326 or permission of instructor",
+      "tree": {
+        "or": [
+          "ENVB 210",
+          "GEOG 305",
+          "SOIL 326"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one lab"
+    ]
+  },
+  {
+    "code": "SOIL 326",
+    "subject": "SOIL",
+    "number": "326",
+    "title": "Soils in a Changing Environment",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Soil processes responsible for soil formation will be studied and the impact of changes to the physical and chemical environment will be discussed.",
+    "prerequisites": {
+      "text": "A previous course in soil science, geography, geology or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "SOIL 331",
+    "subject": "SOIL",
+    "number": "331",
+    "title": "Environmental Soil Physics",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "This course addresses physical properties and processes in soil, state and transport of matter and energy affecting environment and agriculture (State: soil texture, structure, temperature, water; Transport: water flow, chemical transport, heat and gas flow), mass and energy balance in soil, effect of various environmental events on soil physical properties, management of physical properties and processes for various practical agricultural, hydrological and environmental applications including land reclamation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "3 lectures and one 3-hour lab"
+    ]
+  },
+  {
+    "code": "SOIL 535",
+    "subject": "SOIL",
+    "number": "535",
+    "title": "Soil Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Exploration of the unique soil habitat for organisms with a focus on the variables that affect the abundance, diversity and interactions of soil biota and, in turn, their influence on soil physicochemical properties, biogeochemical cycles and other factors impacting ecosystem sustainability. Topics include survey of soil fauna, soil food webs, microbial ecology, biological carbon and nitrogen cycling, plant-soil interactions, and the effects of human activities and management on soil ecology, including synthesizing concepts and a critical analysis and interpretation of primary scientific literature in soil ecology.",
+    "prerequisites": {
+      "text": "ENVB 210 or GEOG 305 or SOIL 326 or permission of instructor.",
+      "tree": {
+        "or": [
+          "ENVB 210",
+          "GEOG 305",
+          "SOIL 326"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,1317 @@
+[
+  {
+    "code": "POTH 204",
+    "subject": "POTH",
+    "number": "204",
+    "title": "Introduction to Statistics for OT/PT",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Methods for describing data and testing theories for research and everyday use.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PSYC 204 or equivalent.",
+      "excludes": [
+        "PSYC 204"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 225",
+    "subject": "POTH",
+    "number": "225",
+    "title": "Introduction to Biomechanics in Rehabilitation Sciences",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The study of fundamentals of biomechanical analysis applied to the extremities and lumbar spine. The application of biomechanical principles to clinical and research situations.",
+    "prerequisites": {
+      "text": "PHGY 209 and ANAT 315",
+      "tree": {
+        "and": [
+          "PHGY 209",
+          "ANAT 315"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only for BSc Rehab Science students (U1 students) for both programs (PT and OT).",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 250",
+    "subject": "POTH",
+    "number": "250",
+    "title": "Introduction to Professional Practice 2",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course addresses the fundamentals of professionalism and professional behavior, the principles of massage, professional touch, and basic profession-specific interviewing skills. Interviewing skills will be practiced with client-visits in the community. Cultural competence and its application to clinical practice, patient /therapist relationship, and web searching will be addressed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours/week for 13 weeks"
+    ]
+  },
+  {
+    "code": "POTH 305",
+    "subject": "POTH",
+    "number": "305",
+    "title": "Statistics for Experimental Design OT/PT",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The statistical analysis of research data obtained from experimental designs, including introduction and review of basic statistical concepts, different types of analysis of variance (ANOVA) and simple and multiple linear regression.",
+    "prerequisites": {
+      "text": "Successful completion of POTH 204 or an equivalent introductory statistics course.",
+      "tree": "POTH 204",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PSYC 305 or equivalent.",
+      "excludes": [
+        "PSYC 305"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 401",
+    "subject": "POTH",
+    "number": "401",
+    "title": "Research Methods",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A lecture and seminar course on the principles of and methods used in clinical and rehabilitation science research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 434",
+    "subject": "POTH",
+    "number": "434",
+    "title": "Musculoskeletal Biomechanics",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Lecture-based course, discussing biomechanical properties of musculoskeletal tissues, mechanical factors involved in injury, and potential for adaptation and recovery. By reviewing fundamental principles of motion, biomechanics of motion is integrated with properties of biological tissues. Students learn how fundamental principles relate to injury, and to scientifically-based clinical evaluations and treatments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 446",
+    "subject": "POTH",
+    "number": "446",
+    "title": "Current Topics: Rehabilitation",
+    "credits": 2,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [],
+    "description": "A professional elective course given in a lecture/seminar/practical format as appropriate to a specialized rehabilitation topic. The student selects one theme from a list of current topic themes to be offered in that semester. The topic themes may change from year to year based on current and developing issues in rehabilitation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours/ week for 8 weeks"
+    ]
+  },
+  {
+    "code": "POTH 455",
+    "subject": "POTH",
+    "number": "455",
+    "title": "Neurophysiology",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the neurophysiological principles of sensori-motor interaction as they relate to posture, motor control and cognition.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours/week"
+    ]
+  },
+  {
+    "code": "POTH 508",
+    "subject": "POTH",
+    "number": "508",
+    "title": "Plasticity in Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [],
+    "description": "A seminar course designed to provide students with a review of current research on plasticity in the central and peripheral nervous systems. Particular emphasis is placed on the mechanisms involved in the recovery of function after injury.",
+    "prerequisites": {
+      "text": "POTH 455 or equivalent.",
+      "tree": "POTH 455",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "POTH 563",
+    "subject": "POTH",
+    "number": "563",
+    "title": "Foundations of Professional Practice",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Study and analysis of foundations for professional practice and systems which impact the role of the occupational and physical therapy professional in health service delivery settings. This course includes sections on 1) healthcare environments and systems; 2) management, safety and quality assurance; and 3) professionalism and ethics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the BSc(RehabSc); Major in Physical Therapy and BSc(RehabSc); Major in Occupational Therapy, students in the School of Physical and Occupational Therapy. Not open to students who have taken OCC1 546 and PHTH 570.",
+      "excludes": [
+        "OCC1 546",
+        "PHTH 570"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 602",
+    "subject": "POTH",
+    "number": "602",
+    "title": "Advanced Educational and Management Strategies",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Process of learning, methods of communication and teaching strategies for classrooms and clinical settings. Principles in human resources, practice and business management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 603",
+    "subject": "POTH",
+    "number": "603",
+    "title": "Directed Practicum",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A tutorial with directed practical experience in a clinical setting related to the student's clinical specialization, including curriculum development, and emphasizing current thought in rehabilitation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 604",
+    "subject": "POTH",
+    "number": "604",
+    "title": "Current Topics in Pediatrics",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course will provide an overview of current research in pediatrics.",
+    "prerequisites": {
+      "text": "POTH 260, or permission of instructors.",
+      "tree": "POTH 260",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 609",
+    "subject": "POTH",
+    "number": "609",
+    "title": "Qualitative Research in Rehabilitation Science",
+    "credits": null,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to qualitative inquiry in rehabilitation sciences. Emphasis is placed on prominent research paradigms, qualitative research methodologies, and qualitative research methods as they relate to research on topics pertaining to rehabilitation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 610",
+    "subject": "POTH",
+    "number": "610",
+    "title": "Research Methodology",
+    "credits": 4,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Philosophy of scientific inquiry, principles of research design, and application of statistical techniques, focusing on research studies in health care and rehabilitation.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EPIB 507",
+      "tree": "EPIB 507",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "POTH 611",
+    "subject": "POTH",
+    "number": "611",
+    "title": "Health Research Methods",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to the most common observational and experimental study designs used in health care studies. Evaluation of healthcare literature to determine best clinical practice. Cost analyses, screening and research ethics.",
+    "prerequisites": {
+      "text": "Undergraduate Degree in health profession or permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An online course that is offered to health care practitioners."
+    ]
+  },
+  {
+    "code": "POTH 612",
+    "subject": "POTH",
+    "number": "612",
+    "title": "Applied Clinical Research Methods",
+    "credits": 4,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An intermediate-level research methods course to promote scholarly clinical practice, and to assist students in the design and implementation of their entry-level professional master’s project.",
+    "prerequisites": {
+      "text": "POTH 401 or equivalent content as deemed by the instructor",
+      "tree": "POTH 401",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 614",
+    "subject": "POTH",
+    "number": "614",
+    "title": "Selected Topics in Rehabilitation Science",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A selected topic of current research issues in rehabilitation science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "POTH 616",
+    "subject": "POTH",
+    "number": "616",
+    "title": "Seminars in Rehabilitation Science",
+    "credits": 1,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A weekly seminar course given by staff and invited speakers in different areas of research related to rehabilitation science. Students are expected to participate by reading pertinent literature prior to seminars and asking questions at each seminar. Attendance is compulsory, and the course is graded pass/fail based on participation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 617",
+    "subject": "POTH",
+    "number": "617",
+    "title": "Knowledge Synthesis in Rehabilitation Seminar",
+    "credits": 0,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminars on key steps and processes involved in conducting knowledge syntheses.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 618",
+    "subject": "POTH",
+    "number": "618",
+    "title": "Topics in Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This is a directed reading course on a topic in rehabilitation science. The student will acquire extensive knowledge in the topic of interest and understand the strengths and limitations of the current body of work in the area.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 619",
+    "subject": "POTH",
+    "number": "619",
+    "title": "Rehabilitation Seminars 2",
+    "credits": 0,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar course given by staff and invited speakers covering different areas of research related to rehabilitation science.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "During one academic year, students may not register for POTH 619 in the same term as POTH 616 or POTH 617.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 620",
+    "subject": "POTH",
+    "number": "620",
+    "title": "Measurement: Rehabilitation 1",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical and practical basis for utilization of electronic equipment for quantitative measurement in rehabilitation research. Ambulatory assistive devices, electronic plates and instrumentation to assess normal and pathological human movement will be used to demonstrate the application of theory and techniques for quantitative analysis of human performance. Recording, reduction and analysis of electromyographic, kinetic and kinematic data included.",
+    "prerequisites": {
+      "text": "POTH 222 and permission of instructor.",
+      "tree": "POTH 222",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "POTH 624",
+    "subject": "POTH",
+    "number": "624",
+    "title": "Master's Project",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Project is related to rehabilitation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "OT and PT students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 625",
+    "subject": "POTH",
+    "number": "625",
+    "title": "Design of Assistive Technologies: Principles",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This is an interdisciplinary, project-based course in which small teams of students work with an individual with a disability in the Montreal area to design an assistive technology (e.g. a device, a piece of equipment, an app) that enhances their level of activity and their participation in society. Teams will apply principles of assistive technology (AT) design to create solutions, iterate through multiple prototypes, and learn about the challenges and realities of successfully integrating AT into the lives of individuals with disabilities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval is required to register to this course. Not open to Biomedical Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both POTH 625D1 and POTH 625D2",
+      "No credit will be given for this course unless both POTH 625D1 and POTH 625D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "POTH 625D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "POTH 625D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "POTH 627",
+    "subject": "POTH",
+    "number": "627",
+    "title": "Enabling Eating, Drinking, and Swallowing",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration and application of fundamental skills for competent practice across the lifespan in the areas of dysphagia and feeding.",
+    "prerequisites": {
+      "text": "OCC1 547, OCC1 617",
+      "tree": {
+        "and": [
+          "OCC1 547",
+          "OCC1 617"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the following programs: MSc(Applied) in Occupational Therapy and MSc(Applied) in Physical Therapy. Open to other students by permission of instructor only.",
+      "excludes": []
+    },
+    "notes": [
+      "This course comprises 3.5 hours lecture and 3 hours lab/seminar per week comprising clinical visits and practical exploration."
+    ]
+  },
+  {
+    "code": "POTH 628",
+    "subject": "POTH",
+    "number": "628",
+    "title": "Introduction to Regression Analysis",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Commonly used regression modelling approaches in the health sciences, linear and logistic regression models. Topics include: general concepts behind statistical model building, selection of appropriate model, preparatory descriptive analyses prior to regression modelling, fitting, interpreting and evaluating some linear and logistic regression models.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 630",
+    "subject": "POTH",
+    "number": "630",
+    "title": "Measurement: Rehabilitation 2",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical and practical basis for measurement in rehabilitation research. Introduction to measurement theory, scale development and related statistics, approaches and instruments used to assess outcomes in patients with musculoskeletal, neurological, cardiovascular, respiratory, psychiatric or psychological conditions.",
+    "prerequisites": {
+      "text": "EPIB 607 or PSYC 305 or equivalent.",
+      "tree": {
+        "or": [
+          "EPIB 607",
+          "PSYC 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "POTH 631",
+    "subject": "POTH",
+    "number": "631",
+    "title": "Research Proposal",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course covers issues involved in the development of a research protocol. The presentation of a written thesis proposal is required by the end of the course. This document will serve as the basis for an oral presentation to the student's Supervisory Committee who will also review the written proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "POTH 632",
+    "subject": "POTH",
+    "number": "632",
+    "title": "Research Elective",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Practical research experience.",
+    "prerequisites": {
+      "text": "M1 OT or PT courses.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "M2 OT & PT students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 634",
+    "subject": "POTH",
+    "number": "634",
+    "title": "Childhood Performance Issues",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Specialized interventions of the occupational therapist in developmental paediatrics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 635",
+    "subject": "POTH",
+    "number": "635",
+    "title": "Enabling Upper Extremity Function",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration and application of fundamental skills for competent practice in the area of upper extremity rehabilitation.",
+    "prerequisites": {
+      "text": "OCC1 545, OCC1 549",
+      "tree": {
+        "and": [
+          "OCC1 545",
+          "OCC1 549"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the following programs: MSc(Applied) in Occupational Therapy and MSc(Applied) in Physical Therapy. Open to other students by permission of instructor only.",
+      "excludes": []
+    },
+    "notes": [
+      "This course comprises 2 hours lecture, 2 hours lab/seminar and 2 hours clinical reasoning workshop per week comprising clinical visits and practical exploration."
+    ]
+  },
+  {
+    "code": "POTH 636",
+    "subject": "POTH",
+    "number": "636",
+    "title": "Physical Therapy in Pediatrics",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of the frameworks of neurological, orthopedic and cardio-respiratory rehabilitation to the assessment and treatment of various pediatric conditions.",
+    "prerequisites": {
+      "text": "PHTH 560, PHTH 561, PHTH 552 (or PHTH 554 and PHTH 564).",
+      "tree": {
+        "and": [
+          "PHTH 560",
+          "PHTH 561",
+          "PHTH 552",
+          "PHTH 554",
+          "PHTH 564"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the following programs: MSc(Applied) in Occupational Therapy and MSc(Applied) in Physical Therapy. Open to other students by permission of instructor only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 637",
+    "subject": "POTH",
+    "number": "637",
+    "title": "Cancer Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Cancer pathology, risk stratification, the treatment process and rehabilitation needs throughout the disease trajectory.",
+    "prerequisites": {
+      "text": "PHTH 570 or permission of instructor",
+      "tree": "PHTH 570",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 638",
+    "subject": "POTH",
+    "number": "638",
+    "title": "Promoting Wellness of Seniors",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The complexity of rehabilitation interviews with the geriatric client, the various causes of occupational performance dysfunction, and the structure and organization of geriatric health care delivery are addressed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "OT students only or permision of instructor",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 639",
+    "subject": "POTH",
+    "number": "639",
+    "title": "Motor Control",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Overview of how movement is controlled by the nervous system and how motor skills are learned.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the following programs: MSc. (Applied) in Occupational Therapy, MSc. (Applied) in Physical Therapy and MSc. in Rehabilitation Science. Open to other students by permission of instructor only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 640",
+    "subject": "POTH",
+    "number": "640",
+    "title": "Role-Emerging Management",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Career opportunities in private practice and/or new domains for Occupational Therapists, including small business management, legal and liability considerations, managing organizational growth and service marketing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "OT/PT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 661",
+    "subject": "POTH",
+    "number": "661",
+    "title": "Research Project 1",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent work under the supervision of a full-time faculty member on research aimed at promoting evidence based practice and leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Campus students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 662",
+    "subject": "POTH",
+    "number": "662",
+    "title": "Research Project 2",
+    "credits": 8,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Independent work under the supervision of a full-time faculty member on research aimed at promoting evidence based practice and leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 663",
+    "subject": "POTH",
+    "number": "663",
+    "title": "Pain Assessment in Clinical Practice",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to definitions, models and concepts of pain management and their relationship to professional practice, including frameworks for mechanisms, assessment and management of pain and the evaluation of current research practice in pain management.",
+    "prerequisites": {
+      "text": "Undergraduate Degree in health profession or permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An online course that is offered to health care practitioners.",
+      "Note that a fee of $262.94 is charged to support the cost of the preparation of on-line documents for this course."
+    ]
+  },
+  {
+    "code": "POTH 664",
+    "subject": "POTH",
+    "number": "664",
+    "title": "Neuroscience and Behavioural Perspectives of Pain",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic neuroscience of pain and the interrelationship between psychological, physiological and environmental processes in pain, linking the anatomy and physiology to the psychological processes in the perception and expression of pain.",
+    "prerequisites": {
+      "text": "Undergraduate Degree in Health Profession or permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An online course that is offered to health care practitioners.",
+      "Note that a fee of $262.94 is charged to support the cost of the preparation of on-line documents for this course"
+    ]
+  },
+  {
+    "code": "POTH 665",
+    "subject": "POTH",
+    "number": "665",
+    "title": "Interdisciplinary Management of Chronic Pain",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the principles of pain assessment, treatment and management,including the scientific basis for assessment, diagnosis and treatment, exploring pharmacokinetics and pharmacodynamics, the role of rehabilitation in pain management and other interventions.",
+    "prerequisites": {
+      "text": "POTH 663 and POTH 664 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "POTH 663",
+          "POTH 664"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An online course that is offered to health care practitioners.",
+      "Note that a fee of $262.94 is charged to support the cost of the preparation of on-line documents for this course."
+    ]
+  },
+  {
+    "code": "POTH 666",
+    "subject": "POTH",
+    "number": "666",
+    "title": "Common Clinical Pain Syndromes",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to a range of pain conditions seen in the clinic.",
+    "prerequisites": {
+      "text": "POTH 663 or permission of instructor",
+      "tree": "POTH 663",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "An online course that is offered to health care practitioners. During the semester, the students will have to spend an intensive two-day period on campus (6-hour lecture per day).",
+      "Note that a fee of $262.94 is charged to support the cost of the preparation of on-line documents for this course."
+    ]
+  },
+  {
+    "code": "POTH 673",
+    "subject": "POTH",
+    "number": "673",
+    "title": "Screening for at Risk Drivers",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles for screening at-risk disabled drivers.",
+    "prerequisites": {
+      "text": "Undergraduate or graduate degree in a health-related field.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note that a fee of $270.83 is charged to support the cost of the preparation of on-line documents for this course."
+    ]
+  },
+  {
+    "code": "POTH 674",
+    "subject": "POTH",
+    "number": "674",
+    "title": "Assessing Driving Ability 1",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles of assessment of driving performance in several at-risk populations.",
+    "prerequisites": {
+      "text": "POTH 673.",
+      "tree": "POTH 673",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Primarily designed for Occupational Therapists. Individuals from other disciplines may be considered on a case by case basis.",
+      "excludes": []
+    },
+    "notes": [
+      "Note that a fee of $270.83 is charged to support the cost of the preparation of on-line documents for this course."
+    ]
+  },
+  {
+    "code": "POTH 675",
+    "subject": "POTH",
+    "number": "675",
+    "title": "Driving Assessment Practicum",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Directed practical experience in a clinical setting that focuses on driving evaluations.",
+    "prerequisites": {
+      "text": "POTH 674.",
+      "tree": "POTH 674",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to Occupational Therapists who have successfully completed POTH 674. It is available in both French and English and includes a 5-day intensive workshop.",
+      "excludes": []
+    },
+    "notes": [
+      "Note that a fee of $784.09 is associated with the requirement of the on-site training at a local institution or a rehabilitation center for the practicum portion of the program."
+    ]
+  },
+  {
+    "code": "POTH 676",
+    "subject": "POTH",
+    "number": "676",
+    "title": "Adaptive Equipment and Driving",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Prescription of complex adaptive equipment for driving and the procedures of full van modifications. Safety considerations, vehicle choice and the importance of driver retraining (specifically with adaptive equipment) are addressed.",
+    "prerequisites": {
+      "text": "POTH 675 or permission of instructor.",
+      "tree": "POTH 675",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "The course is restricted to Occupational Therapists who have successfully completed POTH 675, or permission of instructor. It is available in both French and English and includes a 4-day intensive workshop.",
+      "excludes": []
+    },
+    "notes": [
+      "Note that a fee of $627.27 is associated with the requirement of the on-site training at a local institution or a rehabilitation center for the practicum portion of the program.",
+      "Note that a fee of $189.59 is charged to support the cost of the preparation of on-line documents for this course."
+    ]
+  },
+  {
+    "code": "POTH 677",
+    "subject": "POTH",
+    "number": "677",
+    "title": "Retraining Driving Skills",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles of retraining driving skills in various clienteles through the use of different modalities. Several retraining methods will be analyzed, including driving simulators, visual training, on-road training, and compensatory techniques.",
+    "prerequisites": {
+      "text": "POTH 675 or permission of instructor.",
+      "tree": "POTH 675",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is restricted to Occupational Therapists who have successfully completed POTH 675 Driving Assessment Practicum, or permission of instructor. It is available in both French and English and includes a 2-day intensive workshop.",
+      "excludes": []
+    },
+    "notes": [
+      "Note that a fee of $313.64 is associated with the requirement of the on-site training at a local institution or a rehabilitation center for the practicum portion of the program.",
+      "Note that a fee of $189.59 is charged to support the cost of the preparation of on-line documents for this course."
+    ]
+  },
+  {
+    "code": "POTH 680",
+    "subject": "POTH",
+    "number": "680",
+    "title": "Knowledge Translation in Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course focuses on the theory/application of knowledge translation (KT) in rehabilitation science with the goal of promoting evidence-based practice and research utilization. Various client groups and clinical settings will be examined from the perspective of how research evidence can be implemented into daily practice using effective KT interventions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all graduate students in the Faculty of Medicine. Open to clinical staff with permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 682",
+    "subject": "POTH",
+    "number": "682",
+    "title": "Promoting Healthy Activity",
+    "credits": null,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Individual and situational determinants of health behaviours will be examined across the lifespan and in clinical populations. Application of behaviour change theories for the design, implementation and evaluation of health behaviour interventions will be discussed. Strategies to facilitate behaviour change and adherence across the lifespan will be emphasized.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "POTH 684",
+    "subject": "POTH",
+    "number": "684",
+    "title": "Advanced Practice in Stroke Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Current knowledge of best practices in the area of stroke rehabilitation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course open to Professional Masters students and Graduate Rehabilitation Science students in the School of Physical and Occupational Therapy.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "POTH 685",
+    "subject": "POTH",
+    "number": "685",
+    "title": "Perception and Action",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "New research concepts related to perception and action, with a special emphasis on the understanding of motor behaviour in patient populations and the exploration of potential applications in rehabilitation.",
+    "prerequisites": {
+      "text": "POTH 455 or equivalent",
+      "tree": "POTH 455",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "POTH 686",
+    "subject": "POTH",
+    "number": "686",
+    "title": "Public Policy and Knowledge Translation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of and emphasis on features of the policy process, including knowledge generation and translation in the context of complex policy processes. These topics will be oriented to the use of policy as a tool to protect and promote the health of populations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 696",
+    "subject": "POTH",
+    "number": "696",
+    "title": "Thesis Research",
+    "credits": 2,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 697",
+    "subject": "POTH",
+    "number": "697",
+    "title": "Thesis Research 1",
+    "credits": 6,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "POTH 697D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "POTH 697D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "POTH 698",
+    "subject": "POTH",
+    "number": "698",
+    "title": "Thesis Research 2",
+    "credits": 9,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "POTH 698D1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "POTH 698D2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "POTH 699",
+    "subject": "POTH",
+    "number": "699",
+    "title": "Thesis Research 3",
+    "credits": 12,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "POTH 699D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "POTH 699D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "POTH 701",
+    "subject": "POTH",
+    "number": "701",
+    "title": "Ph.D. Comprehensive",
+    "credits": 0,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 716",
+    "subject": "POTH",
+    "number": "716",
+    "title": "PhD 1 Research in Physical and Occupational Therapy 1",
+    "credits": 15,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Physical and Occupational Therapy. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "POTH 717",
+    "subject": "POTH",
+    "number": "717",
+    "title": "PhD 1 Research in Physical and Occupational Therapy 2",
+    "credits": 15,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Physical and Occupational Therapy. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

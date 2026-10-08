@@ -1,0 +1,82 @@
+[
+  {
+    "code": "LEEL 369",
+    "subject": "LEEL",
+    "number": "369",
+    "title": "Labour Law",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to Canadian labour law including collective bargaining, arbitration and industrial relations generally. Emphasis on the Canada Labour Code, the Quebec Labour Code and related statutes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "LEEL 570",
+    "subject": "LEEL",
+    "number": "570",
+    "title": "Employment Law",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Survey of the employment contract including hiring practices, dismissals, duties of the employer and the employee including loyalty, non-competition, impact of statutes (Labour Standards Act, Charter of the French Language, etc...) and recourses. The purpose of the course is to deal with non-collective agreement employment contracts, which govern most of the working population.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken LEEL 470",
+      "excludes": [
+        "LEEL 470"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "LEEL 571",
+    "subject": "LEEL",
+    "number": "571",
+    "title": "Transnational Labour Law",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [],
+    "description": "Study of the emergence of international regulation of labour by tripartite actors within the framework of the International Labour Organization; assessment of the challenge of liberalization and competing understandings of development for labour regulation; Engagement with emerging governance paradigms and alternative understandings of transnational ordering for transnational labour law.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken LAWG 515 when topic was \"Transnational Futures of International Labour Law\" or LAWG 533 when topic was \"International Labour Law\".",
+      "excludes": [
+        "LAWG 515",
+        "LAWG 533"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "LEEL 582",
+    "subject": "LEEL",
+    "number": "582",
+    "title": "Law and Poverty",
+    "credits": 3,
+    "offeredBy": "Law",
+    "faculty": "Faculty of Law",
+    "terms": [],
+    "description": "The differential character of the law concerning rich and poor as reflected in case studies in criminal law, consumer law, housing law, welfare law. The \"delivery systems\" available for legal services to the poor and alternative organizational models for legal services; the role of law schools, government and the professional bar.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken LEEL 482",
+      "excludes": [
+        "LEEL 482"
+      ]
+    },
+    "notes": []
+  }
+]

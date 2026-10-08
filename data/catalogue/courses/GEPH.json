@@ -1,0 +1,224 @@
+[
+  {
+    "code": "GEPH 111",
+    "subject": "GEPH",
+    "number": "111",
+    "title": "Introduction to classical mechanics",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Motion, kinematics, system dynamics, theorems of mechanical energy, angular momentum, central-force problem.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY111 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 112",
+    "subject": "GEPH",
+    "number": "112",
+    "title": "Electric circuits",
+    "credits": 1.25,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Kirchhoff’s laws in a stationary system, quasi-stationary systems, Transient state, Sinusoidal steady state.",
+    "prerequisites": {
+      "text": "GEPH 111, Mechanics.",
+      "tree": "GEPH 111",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY112 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 113",
+    "subject": "GEPH",
+    "number": "113",
+    "title": "Physics 1: Classical Mechanics and Electricity",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Motion, kinematics, system dynamics, theorems of mechanical energy, angular momentum, central-force problem. Kirchhoff’s laws in a stationary system, quasi-stationary systems, Transient state, Sinusoidal steady state.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY113 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 121",
+    "subject": "GEPH",
+    "number": "121",
+    "title": "Thermodynamics",
+    "credits": 1.25,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Description of thermodynamics, first law of thermodynamics, second law of thermodynamics, heat engines.",
+    "prerequisites": {
+      "text": "GEPH 111, Mechanics.",
+      "tree": "GEPH 111",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 122",
+    "subject": "GEPH",
+    "number": "122",
+    "title": "Physics of Waves",
+    "credits": 1.25,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Wave equation, coaxial cable, vibrating wire, acoustic wave in fluids, Concepts of dispersion & absorption.",
+    "prerequisites": {
+      "text": "GEPH 111, Mechanics. GEPH 112, Electric Circuits. GEPH 121, Thermodynamics.",
+      "tree": {
+        "and": [
+          "GEPH 111",
+          "GEPH 112",
+          "GEPH 121"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY112 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 123",
+    "subject": "GEPH",
+    "number": "123",
+    "title": "Physics 2: Physics of Waves and Thermodynamics",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Wave equation, coaxial cable, vibrating wire, acoustic wave in fluids, Concepts of dispersion absorption. Description of thermodynamics, first law of thermodynamics, second law of thermodynamics, heat engines.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY123 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 211",
+    "subject": "GEPH",
+    "number": "211",
+    "title": "Electromagnetism and Conduction",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Electromagnetism of stationary states, Thermal conduction, Mathematical tools, scalar field and vector field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY211 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 212",
+    "subject": "GEPH",
+    "number": "212",
+    "title": "Electromagnetism and Waves",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Maxwell’s equations, formulating, consequences (existence of potentials), symmetry of sources, field symmetry.",
+    "prerequisites": {
+      "text": "GEPH 211, Electromagnetism and Conduction.",
+      "tree": "GEPH 211",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY212 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 213",
+    "subject": "GEPH",
+    "number": "213",
+    "title": "Physics 3: Electromagnetism, Conduction and Waves",
+    "credits": 3,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Electromagnetism of stationary states, Thermal conduction, Mathematical tools, scalar field and vector field. Maxwell’s equations, formulating, consequences (existence of potentials), symmetry of sources, field symmetry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY213 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPH 221",
+    "subject": "GEPH",
+    "number": "221",
+    "title": "Physics 4: Wave Optics",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Scalar model and light ray, light interference, spatial coherence, Michelson interferometer, temporal coherence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PHY221 offered by CentraleSupélec in France."
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+[
+  {
+    "code": "AEPH 100",
+    "subject": "AEPH",
+    "number": "100",
+    "title": "Elements of Physics",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A conceptual survey of topics in physics relevant to the study of agricultural and environmental sciences: Newtonian mechanics, celestial motion, oscillations and waves, sound, electricity and magnetism, and light.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking AEPH 113 and AEPH 115, or equivalent combination.",
+      "excludes": [
+        "AEPH 113",
+        "AEPH 115"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AEPH 112",
+    "subject": "AEPH",
+    "number": "112",
+    "title": "Introductory Physics 1",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Kinematics in one and two dimensions. Newton's laws of motion. Circular motion and orbits. Rotation of a rigid body. Momentum. Work and energy, power. Conservation principles. Simple harmonic motion. Waves and sound.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "AEMA 101 or equivalent",
+      "tree": "AEMA 101",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have passed AEPH 113 or obtained CEGEP competency 00UR. Not open to students in Bioresource Engineering.",
+      "excludes": [
+        "AEPH 113"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "Three 1-hour lectures, one 2-hour lab, one 1.5-hour tutorial per week"
+    ]
+  },
+  {
+    "code": "AEPH 113",
+    "subject": "AEPH",
+    "number": "113",
+    "title": "Physics 1",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Kinematics in one and two dimensions. Newton's laws of motion. Circular motion and orbits. Rotation of a rigid body. Momentum. Work and energy, power. Conservation principles. Simple harmonic motion. Waves and sound. Includes calculus-based applications.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "AEMA 101 or equivalent.",
+      "tree": "AEMA 101",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Note: Not open to students who have taken AEPH 112, PHYS 101 or PHYS 131, and open to students in Bioresource Engineering; Not open to students who have passed AEPH 112 or obtained CEGEP competency 00UR. Open only to students in Bioresource Engineering.",
+      "excludes": [
+        "AEPH 112",
+        "PHYS 101",
+        "PHYS 131"
+      ]
+    },
+    "notes": [
+      "Three 1-hour lectures, one 2-hour lab, and one 1-hour tutorial per week."
+    ]
+  },
+  {
+    "code": "AEPH 114",
+    "subject": "AEPH",
+    "number": "114",
+    "title": "Introductory Physics 2",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "Electric and magnetic properties of matter: electrostatics, electric currents, the link between electric and magnetic phenomena, geometrical optics, interference diffraction.",
+    "prerequisites": {
+      "text": "AEPH 112 or AEPH 113 or PHYS 101 or PHYS 131 or CEGEP objective 00UR or equivalents, or permission of instructor",
+      "tree": {
+        "or": [
+          "AEPH 112",
+          "AEPH 113",
+          "PHYS 101",
+          "PHYS 131"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "AEMA 102 (or MATH 141 or higher level calculus course) or CEGEP objective 00UP, or permission of instructor.",
+      "tree": {
+        "and": [
+          "AEMA 102",
+          "MATH 141"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken PHYS 102 or PHYS 142 or AEPH 115 or CEGEP objective 00US or equivalent. Not open to students in Bioresource Engineering.",
+      "excludes": [
+        "AEPH 115",
+        "PHYS 102",
+        "PHYS 142"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 lecture hours, 2 lab hours, 2 tutorial hours"
+    ]
+  },
+  {
+    "code": "AEPH 115",
+    "subject": "AEPH",
+    "number": "115",
+    "title": "Physics 2",
+    "credits": 4,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Electric forces, electric fields, electric potential. Current. Electric circuits. Magnetic fields and forces. Electromagnetic induction. Electromagnetic waves. Geometrical and physical optics. Includes calculus-based applications.",
+    "prerequisites": {
+      "text": "AEPH 112 or AEPH 113 or PHYS 101or PHYS 131 or equivalent.",
+      "tree": {
+        "or": [
+          "AEPH 112",
+          {
+            "and": [
+              "AEPH 113",
+              "PHYS 131"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "AEMA 102 or equivalent",
+      "tree": "AEMA 102",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Note: Not open to students who have taken AEPH 114, PHYS 102 or PHYS 142, and open only to students in Bioresource Engineering; Not open to students who have passed AEPH 114 or obtained CEGEP competencies 00US and 00UT. Open only to students in Bioresource Engineering.",
+      "excludes": [
+        "AEPH 114",
+        "PHYS 102",
+        "PHYS 142"
+      ]
+    },
+    "notes": [
+      "Three 1-hour lectures, one 2-hour lab, and one 1-hour tutorial per week"
+    ]
+  },
+  {
+    "code": "AEPH 120",
+    "subject": "AEPH",
+    "number": "120",
+    "title": "Physics Laboratory 1",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The laboratory component of AEPH 112/AEPH 113. Illustrative experiments.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to entering students who have the lecture equivalent of AEPH 112 or AEPH 113. Not open to students who have taken or are taking AEPH 112, AEPH 113, PHYS 101, PHYS 107, PHYS 117, PHYS 131.",
+      "excludes": [
+        "AEPH 112",
+        "AEPH 113",
+        "PHYS 101",
+        "PHYS 107",
+        "PHYS 117",
+        "PHYS 131"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "AEPH 122",
+    "subject": "AEPH",
+    "number": "122",
+    "title": "Physics Laboratory 2",
+    "credits": 1,
+    "offeredBy": "Bioresource Engineering",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The laboratory component of AEPH 114/AEPH 115. Illustrative experiments.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to entering students who have the lecture equivalent of AEPH 114 or AEPH 115. Not open to students who have taken or are taking AEPH 114, AEPH 115, PHYS 102, PHYS 108, PHYS 118, PHYS 142.",
+      "excludes": [
+        "AEPH 114",
+        "AEPH 115",
+        "PHYS 102",
+        "PHYS 108",
+        "PHYS 118",
+        "PHYS 142"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  }
+]

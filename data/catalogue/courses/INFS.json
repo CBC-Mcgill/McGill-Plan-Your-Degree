@@ -1,0 +1,1703 @@
+[
+  {
+    "code": "INFS 601",
+    "subject": "INFS",
+    "number": "601",
+    "title": "Foundations of Information Studies",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Overview of foundations of information studies andrelevant concepts and theoretical frameworks.Examination of research methdologies used in thefield, including quantitative, qualitative and projectmanagement methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 601.",
+      "excludes": [
+        "GLIS 601"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 603",
+    "subject": "INFS",
+    "number": "603",
+    "title": "Research Project 1",
+    "credits": 6,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Under the supervision of a faculty member,exploration and analysis of the literature related to anarea of interest in information studies, anddevelopment of the research proposal.",
+    "prerequisites": {
+      "text": "INFS 601.",
+      "tree": "INFS 601",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "INFS 611",
+      "tree": "INFS 611",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 603.",
+      "excludes": [
+        "GLIS 603"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 604",
+    "subject": "INFS",
+    "number": "604",
+    "title": "Research Project 2",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Under the supervision of a faculty member,application of research methodologies and collectionof research data.",
+    "prerequisites": {
+      "text": "INFS 603, INFS 611.",
+      "tree": {
+        "and": [
+          "INFS 603",
+          "INFS 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 604.",
+      "excludes": [
+        "GLIS 604"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 605",
+    "subject": "INFS",
+    "number": "605",
+    "title": "Research Project 3",
+    "credits": 6,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Under the supervision of a faculty member, data analysis and preparation of a research paper with potential for publication.",
+    "prerequisites": {
+      "text": "INFS 603, INFS 604, INFS 611",
+      "tree": {
+        "and": [
+          "INFS 603",
+          "INFS 604",
+          "INFS 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Prerequisites: INFS 603, INFS 604, INFS 611; Not open to students who have taken GLIS 647, 647D1/D2.",
+      "excludes": [
+        "GLIS 647",
+        "GLIS 647D1"
+      ]
+    },
+    "notes": [
+      "Students must register for both INFS\\ 605D1 and INFS 605D2.",
+      "No credit will be given for this course unless both INFS 605D1 and INFS 605D2 are successfully completed in consecutive terms.",
+      "INFS 605D1 and INFS 605D2 together are equivalent to INFS 605."
+    ],
+    "parts": [
+      {
+        "code": "INFS 605D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "INFS 605D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "INFS 607",
+    "subject": "INFS",
+    "number": "607",
+    "title": "Organization of Information",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the theory, principles, standards, andmethods of information organization. Students learnto provide intellectual and physical access toinformation. Topics include principles of informationrepresentation, tools for information access,metadata, controlled vocabulary.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 607.",
+      "excludes": [
+        "GLIS 607"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 608",
+    "subject": "INFS",
+    "number": "608",
+    "title": "Classification and Cataloguing",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Cataloguing in depth with a view to such specialtiesas original cataloguing, catalogue maintenance, andadministration of the cataloguing department.Investigation of alternative methods of librarydocumentation. The study of developments ininternational cataloguing standards, codes, andformats. Includes laboratory sessions.",
+    "prerequisites": {
+      "text": "INFS 607",
+      "tree": "INFS 607",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 608.",
+      "excludes": [
+        "GLIS 608"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 609",
+    "subject": "INFS",
+    "number": "609",
+    "title": "Metadata and Access",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Archival descriptive tools in metadata-based accesssystems. Metadata schemas (MARC, Dublin Coreand EAD), markup languages (SGML, HTML, andXML), DTD, vocabulary control, and metadatamanagement issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 609.",
+      "excludes": [
+        "GLIS 609"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 611",
+    "subject": "INFS",
+    "number": "611",
+    "title": "Research Principles & Analysis",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental aspects of reflective thinking and themethods and techniques of research appropriate tothe investigation of library/information problems.Criteria helpful in evaluating published research inlibrary/information studies by analyzing the varioussteps of the research process, thereby providingguidelines for planning, conducting, and reportingresearch.",
+    "prerequisites": {
+      "text": "INFS 601",
+      "tree": "INFS 601",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 611.",
+      "excludes": [
+        "GLIS 611"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 612",
+    "subject": "INFS",
+    "number": "612",
+    "title": "History of Books and Printing",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Surveyed are the development of writing, alphabets,and books from their inception, and of printing fromits invention in the fifteenth century. Historicalbibliography dealing with the various physicalelements in book production, including design.",
+    "prerequisites": {
+      "text": "INFS 601, INFS 619.",
+      "tree": {
+        "and": [
+          "INFS 601",
+          "INFS 619"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 612.",
+      "excludes": [
+        "GLIS 612"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 614",
+    "subject": "INFS",
+    "number": "614",
+    "title": "Public Libraries",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A review of the Public Library Movement in Englishand French Canada. The development of publiclibraries in North America over the last twenty yearswith an emphasis on the library's role andresponsibilities for the future. The impact ofinformation technologies on the definition anddelivery of services.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 614.",
+      "excludes": [
+        "GLIS 614"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 615",
+    "subject": "INFS",
+    "number": "615",
+    "title": "Reference and Information Services",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design and evaluation of reference and informationresources and services, collection development, andresource management.",
+    "prerequisites": {
+      "text": "INFS 619.",
+      "tree": "INFS 619",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 615.",
+      "excludes": [
+        "GLIS 615"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 616",
+    "subject": "INFS",
+    "number": "616",
+    "title": "Information Retrieval",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical and applied explanation of informationretrieval in a variety of digital environments and inrelation to both textual and multimedia data:Information retrieval capabilities, information-seekingmodels, interface design issues, informationvisualization and information system evaluationcriteria.",
+    "prerequisites": {
+      "text": "INFS 617.",
+      "tree": "INFS 617",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 616.",
+      "excludes": [
+        "GLIS 616"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 617",
+    "subject": "INFS",
+    "number": "617",
+    "title": "Information System Design",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to tools for developing informationsystems. Topics include computer terminology andsyntax and semantics of programming languages,with emphasis on their use for text parsing,searching, and database design, which arefundamental concepts in the field of informationscience.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 617.",
+      "excludes": [
+        "GLIS 617"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 618",
+    "subject": "INFS",
+    "number": "618",
+    "title": "Practices of Critical Theory and Information Studies",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to how critical theory is used in information studies (IS) and information professions. Topics include: critiques of LIS and its systems, structures, standards, theories, and designs; critical theory and its applications; historically marginalized or minoritized communities; vocabulary of critical theory as it applies to IS.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The course will be offered, synchronously, in a blended format of 1/3 in-person and 2/3 online (via Zoom)."
+    ]
+  },
+  {
+    "code": "INFS 619",
+    "subject": "INFS",
+    "number": "619",
+    "title": "Information Behaviour andResources",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to information behaviour, informationneeds assessment at individual, organizational andcommunity levels, information search strategies,user-focused information resources and services.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 619.",
+      "excludes": [
+        "GLIS 619"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 620",
+    "subject": "INFS",
+    "number": "620",
+    "title": "Managing Information Organizations",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course is an introduction to management theory,in the context of information and knowledge-basedorganizations. Emphasis is placed on strategicplanning, leadership, and human-capitalmanagement (e.g. delegation, motivation, andconflict resolution). Other topics include projectmanagement, organizational design, change management, decision-making, communication,teamwork and collaboration.",
+    "prerequisites": {
+      "text": "INFS 601",
+      "tree": "INFS 601",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 620.",
+      "excludes": [
+        "GLIS 620"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 625",
+    "subject": "INFS",
+    "number": "625",
+    "title": "Information Architecture",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Information Architecture (IA) is the process ofanalyzing, designing, implementing and evaluatinginformation spaces. The course provides an overviewof use-design aspects of human information andcomputer interaction. Topics include: human factorsin IA; IA and information systems (IS) designprinciples and methodologies; work, task, andprocess analysis; IS modeling, requirementsgathering and evaluation; and informationvisualization.",
+    "prerequisites": {
+      "text": "INFS 617",
+      "tree": "INFS 617",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "INFS 634 recommended",
+      "tree": "INFS 634",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 625.",
+      "excludes": [
+        "GLIS 625"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 626",
+    "subject": "INFS",
+    "number": "626",
+    "title": "Usability Analysis and Assessment",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and techniques for evaluating interactivecomputer-based information systems. Topics includemodels of human information processing, userexperience and decision-making; methods forrequirements gathering and task analysis; andtechniques for user testing, analytic evaluation, andperformance modelling.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 626.",
+      "excludes": [
+        "GLIS 626"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 627",
+    "subject": "INFS",
+    "number": "627",
+    "title": "User-Centered Design",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A project-based introduction to interaction design,oriented toward practical methods for designinginteractive systems. Emphasis is placed on iterativeand user-oriented approaches to design, includingthe role of observation, ideation, sketching andprototyping, and formative and summativeevaluation. The role of participatory and value-sensitive approaches to design are also examined.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 627.",
+      "excludes": [
+        "GLIS 627"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 629",
+    "subject": "INFS",
+    "number": "629",
+    "title": "Information Security",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to information security. Topics includebasic concepts of confidentiality, integrity, andavailability; security threats; malware; operatingsystems security; access control; network security(encryption, decryption, passwords and digitalsignature); security policies and practices; riskassessments; common criteria; privacy threats andprotection techniques; cybercrime and cyberforensics.",
+    "prerequisites": {
+      "text": "INFS 617",
+      "tree": "INFS 617",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 629.",
+      "excludes": [
+        "GLIS 629"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 630",
+    "subject": "INFS",
+    "number": "630",
+    "title": "Data Mining",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to data mining. Topics include datapreprocessing, data warehouse architecture, onlineanalytical processing (OLAP), online analyticalmining (OLAM), basic concepts and methods offrequent patterns mining, association rules mining,classification analysis, cluster analysis, and textmining.",
+    "prerequisites": {
+      "text": "INFS 617 or basic knowledge of database systems.",
+      "tree": "INFS 617",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 630.",
+      "excludes": [
+        "GLIS 630"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 631",
+    "subject": "INFS",
+    "number": "631",
+    "title": "Data Science for Information Professionals",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the field of data science with a focus on the application of its various tools and methodologies in a professional context, covering the theoretical background and context of data science as a new field and the basics of the end-to-end data science workflow, including data modelling, descriptive and predictive analytics, technical implementation and results reporting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 633",
+    "subject": "INFS",
+    "number": "633",
+    "title": "Digital Media",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Foundational scientific concepts and basictechniques of digital media production andmanipulation and their relevance in galleries,libraries, archives, and museums (GLAM). Toolsand techniques for creating and handling digitalmedia. Digitizing audio, image, video, and textmaterials, and using various software packagesfor manipulating and preserving digital sound,images, and video.",
+    "prerequisites": {
+      "text": "INFS 617.",
+      "tree": "INFS 617",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 633.",
+      "excludes": [
+        "GLIS 633"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 634",
+    "subject": "INFS",
+    "number": "634",
+    "title": "Web System Design and Management",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles and practices of designing websites inthe context of libraries and information centres,focusing on a conceptual approach to organizinginformation for the world wide web includingdesign, implementation and management issues.Topics include web development tools, markuplanguages, internet security and web serveradministration.",
+    "prerequisites": {
+      "text": "INFS 617.",
+      "tree": "INFS 617",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "INFS 625 recommended.",
+      "tree": "INFS 625",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 634.",
+      "excludes": [
+        "GLIS 634"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 635",
+    "subject": "INFS",
+    "number": "635",
+    "title": "Computer Programming for Information Professionals",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to the fundamentals of computer programming, focusing on the application of programming techniques to the domain of information science. Topics include software principles and practices, programming concepts and techniques, data structures, and algorithms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 636",
+    "subject": "INFS",
+    "number": "636",
+    "title": "Government Information",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An introduction to the structure of governments, andthe nature and variety of government information.Emphasis is placed on the governments of Canada,the provinces, the United States and selectedinternational governmental organizations. Topicsinclude the acquisition, organization, bibliographiccontrol and use of government information.",
+    "prerequisites": {
+      "text": "INFS 619.",
+      "tree": "INFS 619",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 636.",
+      "excludes": [
+        "GLIS 636"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 639",
+    "subject": "INFS",
+    "number": "639",
+    "title": "Introduction to Museology",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An introduction to current theories, principles, andfunctions of museology. Examines museumdocumentation, digitization, conservation,preservation, exhibition, education and research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 639.",
+      "excludes": [
+        "GLIS 639"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 641",
+    "subject": "INFS",
+    "number": "641",
+    "title": "Archival Description and Access",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced theory and practice of archival appraisal,arrangement, description, and the creation of accesstools to archival records and collections, including theselection and application of appropriate archivaldescriptive standards, metadata schemes,management tools, and outreach programs includingthe creation and dissemination of finding aids.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 641.",
+      "excludes": [
+        "GLIS 641"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 642",
+    "subject": "INFS",
+    "number": "642",
+    "title": "Preservation Management",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles and practices for intellectual and physicalpreservation of historical and cultural heritagematerials in all forms to extend their durability andassure continued accessibility, through selection,conservation, migration, digitization, preservationstrategies, preservation management and ongoingevaluation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 642",
+      "excludes": [
+        "GLIS 642"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 645",
+    "subject": "INFS",
+    "number": "645",
+    "title": "Archival Principles and Practice",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamental principles and practices of archivalstudies, including records life cycle, history ofarchives, cultural memory, authentic recordkeepingsystems, acquisition, appraisal, arrangement,description, preservation, reference and access,social and cultural systems, financial and legalsystems, ethics, advocacy programs, fund raising,legal issues, archives-related professions, researchmethodology and implementation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 645",
+      "excludes": [
+        "GLIS 645"
+      ]
+    },
+    "notes": [
+      "NOTE: Advanced work in archival science is available to a few students who do well in the introductory course."
+    ]
+  },
+  {
+    "code": "INFS 649",
+    "subject": "INFS",
+    "number": "649",
+    "title": "Digital Curation",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The life-cycle and value-added management of digital content for future use, re-use and access. Addresses strategies, principles, and practices of digital preservation, digital curation, digital collection management, institutional repositories, trusted digital repositories, metadata, and file formats at archives, libraries, museums, data centers, and other cultural heritage institutions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 650",
+    "subject": "INFS",
+    "number": "650",
+    "title": "Digital Libraries",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Analysis of the complex concepts and applications that professionals are likely to encounter in the design, development, and management of digital libraries. Topics include digital objects, knowledge representations and discovery, architecture, user behaviour, services, and evaluation.",
+    "prerequisites": {
+      "text": "INFS 617 and GLIS 617.",
+      "tree": {
+        "and": [
+          "INFS 617",
+          "GLIS 617"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 650.",
+      "excludes": [
+        "GLIS 650"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 656",
+    "subject": "INFS",
+    "number": "656",
+    "title": "Abstracting and Indexing",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and practical methods of abstracting and indexing. Topics include pre- and post-coordinate indexing, concept analysis, vocabulary control, construction and evaluation of thesauri and of indexes for books, periodicals, and series; emphasis on the role of the computer in indexing.",
+    "prerequisites": {
+      "text": "INFS 607 and GLIS 607.",
+      "tree": {
+        "and": [
+          "INFS 607",
+          "GLIS 607"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 656.",
+      "excludes": [
+        "GLIS 656"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 657",
+    "subject": "INFS",
+    "number": "657",
+    "title": "Database Design and Development",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical and applied principles of relational database design. Includes relational theory, conceptual design, database normalization, relational database management systems, SQL queries and database management.",
+    "prerequisites": {
+      "text": "INFS 617 and GLIS 617.",
+      "tree": {
+        "and": [
+          "INFS 617",
+          "GLIS 617"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 657.",
+      "excludes": [
+        "GLIS 657"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 660",
+    "subject": "INFS",
+    "number": "660",
+    "title": "Records Management",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Management of an organization’s content in digital forms that relate to the organization’s operational processes for compliance, governance and decision-making purposes. Addresses principles, strategies, methods and tools used in the lifecycle management of the content, including capture, workflow, classification, metadata, collaboration, preservation, and delivery.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 660.",
+      "excludes": [
+        "GLIS 660"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 661",
+    "subject": "INFS",
+    "number": "661",
+    "title": "Knowledge Management",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to knowledge management and its links to information systems and information professionals. A broad overview of the creation, capture, codification, sharing and application of knowledge in both tacit and explicit forms. Emphasis is placed on the tools and techniques as well as the role of organizational culture.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "INFS 601.",
+      "tree": "INFS 601",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 661.",
+      "excludes": [
+        "GLIS 661"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 662",
+    "subject": "INFS",
+    "number": "662",
+    "title": "Intellectual Capital",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Understanding the strategic role of intellectual assets: how individuals, communities and organizations can identify and leverage their knowledge, experience, expertise and innovations more systematically to create value for the organization. Emphasis is placed on understanding the links between individuals and the organization in the sharing of intellectual assets.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 662.",
+      "excludes": [
+        "GLIS 662"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 663",
+    "subject": "INFS",
+    "number": "663",
+    "title": "Knowledge Taxonomies",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Basic classification and categorization methods, major taxonomy tools and technologies and practice in knowledge mapping and modelling. Theory and techniques of organization of both tacit and explicit knowledge at three levels: individual, community and the organization. Emphasis will be placed on the social nature of knowledge codification.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 663.",
+      "excludes": [
+        "GLIS 663"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 664",
+    "subject": "INFS",
+    "number": "664",
+    "title": "Managing Knowledge Communities",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Stages in the development of informal knowledge sharing groups and the roles and responsibilities of information professionals are examined. Focus is on the analysis of knowledge flow, knowledge creation and dissemination within and between different networks of knowledge.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 664.",
+      "excludes": [
+        "GLIS 664"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 665",
+    "subject": "INFS",
+    "number": "665",
+    "title": "Competitive Intelligence",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Competitive intelligence process in for-profit and not\u0002for-profit organizations. Principles and tools for identifying competitive intelligence needs; acquiring, organizing and storing information; creating intelligence through analytical techniques; developing and distributing intelligence products. Legal and ethical aspects, information audits, and cooperative intelligence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 665.",
+      "excludes": [
+        "GLIS 665"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 671",
+    "subject": "INFS",
+    "number": "671",
+    "title": "Health Sciences Information",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A survey of information services and sources (both electronic and print) for health care professionals and the general public. An exploration of the information needs of health professionals and scientists; the role of health libraries and librarians; principles of health and biomedical library practice, functions, and management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 671.",
+      "excludes": [
+        "GLIS 671"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 672",
+    "subject": "INFS",
+    "number": "672",
+    "title": "Law Information",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The nature and scope of law librarianship and legal information sources; examination of the organization of legal knowledge, the legal research process, law information sources both print and electronic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 673",
+    "subject": "INFS",
+    "number": "673",
+    "title": "Bioinformatics Resources",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Bioinformatics from a library and information science perspective: biological foundation for bioinformatics; bioinformatics information needs and behaviours; information retrieval using key bioinformatics resources; the role of biology, computer science and library and information science; ethics.",
+    "prerequisites": {
+      "text": "INFS 619 and GLIS 619.",
+      "tree": {
+        "and": [
+          "INFS 619",
+          "GLIS 619"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 673.",
+      "excludes": [
+        "GLIS 673"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 674",
+    "subject": "INFS",
+    "number": "674",
+    "title": "Advanced Threat Intelligence and Analysis",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Essential skills to combat the dynamic digital threat landscape. Topics include: malware analysis, cyber threat intelligence gathering, dark web investigations, proactive cyber threat hunting strategies, retro-hunting methodologies, cyber threat attribution, Open-Source Intelligence (OSINT), vulnerability assessment, IoT security, and Security Information and Event Management (SIEM) tools.",
+    "prerequisites": {
+      "text": "INFS 681, INFS 682, and INFS 683",
+      "tree": {
+        "and": [
+          "INFS 681",
+          "INFS 682",
+          "INFS 683"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 675",
+    "subject": "INFS",
+    "number": "675",
+    "title": "Secure Application Development and Testing",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Secure coding practices, authentication and authorization. Resilient software architecture design, vulnerability assessment, security testing techniques for continuous integration, and secure deployment strategies. Identifying, addressing, and mitigating potential vulnerabilities. Improving resilience and integrity of applications in the face of evolving cyber risks.",
+    "prerequisites": {
+      "text": "INFS 681",
+      "tree": "INFS 681",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 676",
+    "subject": "INFS",
+    "number": "676",
+    "title": "Cloud Security and Virtualization",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental principles and advanced strategies for securing applications deployed on AWS, Azure, and Google Cloud. Topics include: identifying and accessing management, encryption methodologies, secure development practices, and the implementation of robust monitoring and incident response protocols. The expertise needed to effectively develop, configure, maintain, and monitor secure applications in diverse cloud environments.",
+    "prerequisites": {
+      "text": "INFS 682",
+      "tree": "INFS 682",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 677",
+    "subject": "INFS",
+    "number": "677",
+    "title": "OT Security and Industrial Control Systems",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The unique security challenges and best practices associated with operational technology (OT) and industrial control systems (ICS). Topics include: critical components of OT and ICS environments, such as SCADA systems, PLCs, and other industrial devices. Potential risks and vulnerabilities in these systems and develop strategies for securing them against cyber threats, methods for monitoring, detecting, and responding to incidents in OT/ICS environments, the integration of IT and OT security strategies within organizations.",
+    "prerequisites": {
+      "text": "INFS 683",
+      "tree": "INFS 683",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 678",
+    "subject": "INFS",
+    "number": "678",
+    "title": "Incidence Response and Digital Forensics",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Critical aspects of incident response and digital forensics, including the identification, containment, eradication, and recovery from cybersecurity incidents. Effective incident response plans, digital forensic investigations, and forensic tools and techniques to analyze and preserve evidence.",
+    "prerequisites": {
+      "text": "INFS 683",
+      "tree": "INFS 683",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 679",
+    "subject": "INFS",
+    "number": "679",
+    "title": "Information Literacy",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "",
+    "prerequisites": {
+      "text": "INFS 619 and GLIS 619.",
+      "tree": {
+        "and": [
+          "INFS 619",
+          "GLIS 619"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 679.",
+      "excludes": [
+        "GLIS 679"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 680",
+    "subject": "INFS",
+    "number": "680",
+    "title": "Introduction to Cybersecurity and Cryptography",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to cybersecurity and cryptography. Examination of the main threats that organizations face inthe protection of data and information concerning their customers and trade secrets. Basic control mechanisms and processes that can be put in place to protect against these threats as well as a general introduction to the concepts of cryptography as a way to ensure secure communications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Certificate in Cybersecurity and other students with permission of the instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "This course has an additional course fee of $32.15 charged to all students registered to support the cost of using an online platform for interactive lab activities in a secure online virtual environment."
+    ]
+  },
+  {
+    "code": "INFS 681",
+    "subject": "INFS",
+    "number": "681",
+    "title": "Modern Software Exploitation and Defence",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Modern exploitation and defence techniques for binary executables, web applications and practices that compromise modern protective techniques. Topics include reverse engineering, string format vulnerability, code injection, tools used against web applications such a cross-site scripting, session hijacking and SQL injection.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "INFS 680",
+      "tree": "INFS 680",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Certificate in Cybersecurity and other students with permission of the Graduate Program Director.",
+      "excludes": []
+    },
+    "notes": [
+      "This course has an additional course fee of $155.30 charged to all students registered to support the cost of using an online platform for interactive lab activities in a secure online virtual environment."
+    ]
+  },
+  {
+    "code": "INFS 682",
+    "subject": "INFS",
+    "number": "682",
+    "title": "Network and Endpoint Security",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Network security and the various technologies, policies, and procedures that are used in combination to create multiple layers of protection within an organizations computer network. Vulnerabilities and threats to networks and the many network security controls that are currently available to address them.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "INFS 680",
+      "tree": "INFS 680",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Certificate in Cybersecurity and other students with permission of the Graduate Program Director.",
+      "excludes": []
+    },
+    "notes": [
+      "This course has an additional course fee of $32.15 charged to all students registered to support the cost of using an online platform for interactive lab activities in a secure online virtual environment."
+    ]
+  },
+  {
+    "code": "INFS 683",
+    "subject": "INFS",
+    "number": "683",
+    "title": "Windows and Linux OS Hardening",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Operating system (OS) hardening techniques for Windows and Linux. Fundamental and advanced topics in operating system security and provides an awareness of potential OS security breaches and practical skills used to secure modern operating systems. Topics include credential management, process protection, memory protection, malware mitigation, firewall configuration, and intrusion detection tools.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "INFS 680",
+      "tree": "INFS 680",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Certificate in Cybersecurity and other students with permission of the Graduate Program Director.",
+      "excludes": []
+    },
+    "notes": [
+      "This course has an additional course fee of $45.85 charged to all students registered to support the cost of using an online platform for interactive lab activities in a secure online virtual environment."
+    ]
+  },
+  {
+    "code": "INFS 684",
+    "subject": "INFS",
+    "number": "684",
+    "title": "Information Security Management",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "An overview of information security management within an organization. Management of and response to information security threats, whether they be internal or external, discrete or persistent, non-destructive or catastrophic. Topics include information security policy and governance, risk and vulnerability detection, threat readiness, investigation, recovery, privacy and legislation. Includes a capstone project.",
+    "prerequisites": {
+      "text": "INFS 680 and INFS 681 or INFS 682 or INFS 683.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "INFS 680",
+              "INFS 681"
+            ]
+          },
+          "INFS 682",
+          "INFS 683"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students enrolled in the Graduate Certificate in Cybersecurity and other students with permission of the Graduate Program Director.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 685",
+    "subject": "INFS",
+    "number": "685",
+    "title": "Artificial Intelligence for Cybersecurity",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Exploration of the fusion of artificial intelligence (AI) and cybersecurity, offering insights into data science basics, interpretability, and ethical AI. Topics include: feature engineering, anomaly detection, ethical considerations and secure practices in cyber defence strategies.",
+    "prerequisites": {
+      "text": "INFS 631 and (INFS 681 or INFS 682 or INFS 683)",
+      "tree": {
+        "and": [
+          "INFS 631",
+          {
+            "or": [
+              "INFS 681",
+              "INFS 682",
+              "INFS 683"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "INFS 688",
+    "subject": "INFS",
+    "number": "688",
+    "title": "Independent Study",
+    "credits": 6,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A research study on a topic in library and information studies that augments or elaborates upon the curriculum.",
+    "prerequisites": {
+      "text": "INFS 611 or GLIS 611.",
+      "tree": {
+        "or": [
+          "INFS 611",
+          "GLIS 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 688, 688D1/D2.",
+      "excludes": [
+        "GLIS 688",
+        "GLIS 688D1"
+      ]
+    },
+    "notes": [
+      "The subject will vary according to the student’s interests.",
+      "The student will work with a faculty supervisor to plan and pursue an individualized program of research.",
+      "Students must register for both INFS 688D1 and INFS 688D2.",
+      "No credit will be given for this course unless both INFS 688D1 and INFS 688D2 are successfully completed in consecutive terms.",
+      "INFS 688D1 and INFS 688D2 together are equivalent to INFS 688."
+    ],
+    "parts": [
+      {
+        "code": "INFS 688D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "INFS 688D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "INFS 689",
+    "subject": "INFS",
+    "number": "689",
+    "title": "Selected Topics",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Exploration of a topic in library and information studies which elaborates or augments the curriculum through an individualized program of directed study which will vary according to the student's interests.",
+    "prerequisites": {
+      "text": "INFS 601 and permission of Graduate Program Director.",
+      "tree": "INFS 601",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 689.",
+      "excludes": [
+        "GLIS 689"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 690",
+    "subject": "INFS",
+    "number": "690",
+    "title": "Information Policy",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Information societies are examined from a global perspective, emphasizing political, economic, social cultural and ethical issues including the roles of government and the private sector in providing information systems and services, transborder data flow, information access at personal, institutional and national level, censorship, copyright and data security.",
+    "prerequisites": {
+      "text": "INFS 601 and GLIS 601.",
+      "tree": {
+        "and": [
+          "INFS 601",
+          "GLIS 601"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 690.",
+      "excludes": [
+        "GLIS 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 691",
+    "subject": "INFS",
+    "number": "691",
+    "title": "Special Topics 1",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminar to explore topics of particular interest to library and information studies. Topics vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 691.",
+      "excludes": [
+        "GLIS 691"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 692",
+    "subject": "INFS",
+    "number": "692",
+    "title": "Special Topics 2",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Seminar to explore topics of particular interest to library and information studies. Topics vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 692.",
+      "excludes": [
+        "GLIS 692"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 693",
+    "subject": "INFS",
+    "number": "693",
+    "title": "Special Topics 3",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar to explore topics of particular interest to library and information studies. Topics vary from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 693.",
+      "excludes": [
+        "GLIS 693"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 696",
+    "subject": "INFS",
+    "number": "696",
+    "title": "Research Paper 2",
+    "credits": 12,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Explores a minor topic relevant to the Graduate Diploma student's program of study and results in a scholarly paper with potential for publication.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 696D1/D2.",
+      "excludes": [
+        "GLIS 696D1"
+      ]
+    },
+    "notes": [
+      "Students must register for both INFS 696D1 and INFS 696D2",
+      "No credit will be given for this course unless both INFS 696D1 and INFS 696D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "INFS 696D1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "INFS 696D2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "INFS 699",
+    "subject": "INFS",
+    "number": "699",
+    "title": "Practicum",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of theoretical knowledge in an information environment and acquisition of basic professional skills through practice.",
+    "prerequisites": {
+      "text": "24 credits (4 required and 4 complementary courses) and approval of academic adviser and practicum coordinator.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 699.",
+      "excludes": [
+        "GLIS 699"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 701",
+    "subject": "INFS",
+    "number": "701",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Defence of a comprehensive research proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 701.",
+      "excludes": [
+        "GLIS 701"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 702",
+    "subject": "INFS",
+    "number": "702",
+    "title": "Seminar in Information Studies",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of students' own specific areas of doctoral research within the broader field of information studies and comparisons of those areas with other traditions of inquiry. Theoretical models and research methodologies as applied in information studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 702.",
+      "excludes": [
+        "GLIS 702"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 703",
+    "subject": "INFS",
+    "number": "703",
+    "title": "Research Paradigms in Information Studies",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Philisophical foundations of research in information studies, including traditions, approaches, methods, and models of inquiry to provide the capacity to critically assess the value of qualitative and quantitative research methods in relation to specific research problems identified in the discipline.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 703.",
+      "excludes": [
+        "GLIS 703"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 704",
+    "subject": "INFS",
+    "number": "704",
+    "title": "Research Design in Information Studies",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research project design and its application to the specific dissertation proposal through the exploration of ways to operationalize key concepts in information studies and to identify critical steps in data collection and analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 704.",
+      "excludes": [
+        "GLIS 704"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "INFS 705",
+    "subject": "INFS",
+    "number": "705",
+    "title": "Readings in Information Studies",
+    "credits": 3,
+    "offeredBy": "Information Studies",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Exploration of the literature specifically relevant to the proposed area of research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken GLIS 705.",
+      "excludes": [
+        "GLIS 705"
+      ]
+    },
+    "notes": []
+  }
+]

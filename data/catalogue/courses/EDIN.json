@@ -1,0 +1,210 @@
+[
+  {
+    "code": "EDIN 510",
+    "subject": "EDIN",
+    "number": "510",
+    "title": "Internship 1A",
+    "credits": 6,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Mentored student teaching in a school beginning with observation followed by a gradual increase in teaching and related duties, culminating with independent teaching.",
+    "prerequisites": {
+      "text": "EDPS 600, EDTL 515",
+      "tree": {
+        "and": [
+          "EDPS 600",
+          "EDTL 515"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDPS 610",
+      "tree": "EDPS 610",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDIN 601 or EDIN 610.",
+      "excludes": [
+        "EDIN 601",
+        "EDIN 610"
+      ]
+    },
+    "notes": [
+      "Students are expected to apprise themselves of internship dates, workload percentages, and responsibilities at www.mcgill.ca/isa. Normally students must pass both EDIN 510 and EDPS 610, failure in a course may necessitate repeating both courses."
+    ]
+  },
+  {
+    "code": "EDIN 520",
+    "subject": "EDIN",
+    "number": "520",
+    "title": "Internship 2A",
+    "credits": 5,
+    "offeredBy": "Education - Dean's Office",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Mentored student teaching in a school requiring full responsibilities for lesson planning, student learning, classroom management, and evaluation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDIN 601",
+    "subject": "EDIN",
+    "number": "601",
+    "title": "Internship 1",
+    "credits": 9,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Mentored student teaching in a school requiring a gradual increase in teaching and related duties. Students are expected to apprise themselves of internship dates, workload percentages and responsibilities at www.mcgill.ca/isa. Includes a 2-credit (26 hour) concurrent professional seminar providing support, developing reflexive thinking, examining classroom situations with a view to improving practice, including classroom management, and developing teacher collaboration and community-building. Practical implications of capstone research projects are developed. Artefacts are selected/contextualized for inclusion in e-portfolios. Professional Competencies are addressed, developed and assessed. Students must pass both the 'mentored student teaching' and the ‘professional seminar' components to pass the course.",
+    "prerequisites": {
+      "text": "EDPS 600, EDTL 515 , EDTL 601",
+      "tree": {
+        "and": [
+          "EDPS 600",
+          "EDTL 515",
+          "EDTL 601"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDIN 602",
+    "subject": "EDIN",
+    "number": "602",
+    "title": "Internship 2",
+    "credits": 10,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Mentored student teaching in a school requiring full responsibility for lesson planning, student learning, classroom management, and evaluation. Students are expected to apprise themselves of internship dates, workload percentages and responsibilities at www.mcgill.ca/isa. Includes 2-credit concurrent professional seminar providing support/discussion of professional and ethical considerations during internship and as novice teachers. Capstone research projects (CPRs) are completed and presented in a professional conference context. Artefacts are selected and refined for inclusion in completed e-portfolios. Professional Competencies are developed and assessed. Students must pass both 'mentored student teaching' and 'professional seminar' components, including CRP presentation, to pass the course.",
+    "prerequisites": {
+      "text": "EDIN 601, EDTL 604, EDEM 690",
+      "tree": {
+        "and": [
+          "EDIN 601",
+          "EDTL 604",
+          "EDEM 690"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDTL 626 OR EDTL 628 OR EDTL 630 OR EDTL 612 OR EDTL 634 OR EDTL 636",
+      "tree": {
+        "or": [
+          "EDTL 626",
+          "EDTL 628",
+          "EDTL 630",
+          "EDTL 612",
+          "EDTL 634",
+          "EDTL 636"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Range of hours will be determined based on performance in EDIN 601."
+    ]
+  },
+  {
+    "code": "EDIN 610",
+    "subject": "EDIN",
+    "number": "610",
+    "title": "Internship 1",
+    "credits": 7,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Mentored student teaching in a school requiring a gradual increase in teaching and related duties.",
+    "prerequisites": {
+      "text": "EDTL 601, EDTL 515",
+      "tree": {
+        "and": [
+          "EDTL 601",
+          "EDTL 515"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDPS 610",
+      "tree": "EDPS 610",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDIN 601.",
+      "excludes": [
+        "EDIN 601"
+      ]
+    },
+    "notes": [
+      "Students are expected to apprise themselves of internship dates, workload percentages, and responsibilities at www.mcgill.ca/isa. Normally students must pass both EDIN 610 and EDPS 610, failure in a course may necessitate repeating both courses."
+    ]
+  },
+  {
+    "code": "EDIN 620",
+    "subject": "EDIN",
+    "number": "620",
+    "title": "Internship 2",
+    "credits": 8,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Mentored student teaching in a school requiring full responsibilities for lesson planning, student learning, classroom management, and evaluation.",
+    "prerequisites": {
+      "text": "EDIN 610 and EDTL 604 and EDTL 640",
+      "tree": {
+        "and": [
+          "EDIN 610",
+          "EDTL 604",
+          "EDTL 640"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDTL 612 or EDTL 626 or EDTL 628 or EDTL 630 or EDTL 634 or EDTL 636",
+      "tree": {
+        "or": [
+          "EDTL 612",
+          "EDTL 626",
+          "EDTL 628",
+          "EDTL 630",
+          "EDTL 634",
+          "EDTL 636"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDIN 602.",
+      "excludes": [
+        "EDIN 602"
+      ]
+    },
+    "notes": [
+      "Students are expected to apprise themselves of internship dates, workload percentages and responsibilities at www.mcgill.ca/isa. Normally students must pass both EDIN 620 and EDPS 620, failure in a course may necessitate repeating both courses."
+    ]
+  }
+]

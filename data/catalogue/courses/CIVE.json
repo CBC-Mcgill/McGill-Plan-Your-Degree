@@ -1,0 +1,2432 @@
+[
+  {
+    "code": "CIVE 202",
+    "subject": "CIVE",
+    "number": "202",
+    "title": "Construction Materials",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Classification of materials; atomic bonds; phase diagrams; elementary crystallography;imperfections; engineering properties, uses and durability of metals, concrete, wood, polymers, composites and asphalt; sustainable development; group laboratory projects.",
+    "prerequisites": {
+      "text": "CIVE 290 or GEPR 221.",
+      "tree": {
+        "or": [
+          "CIVE 290",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-6)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "CIVE 203",
+    "subject": "CIVE",
+    "number": "203",
+    "title": "Solid Mechanics Laboratory",
+    "credits": 1,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Laboratory in solid mechanics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 205",
+    "subject": "CIVE",
+    "number": "205",
+    "title": "Statics",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Systems of forces and couples, resultants, equilibrium. Trusses, frames and beams, reactions, shear forces, bending moments. Centroids, centres of gravity, distributed forces, moments of inertia. Friction, limiting equilibrium, screws, belts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 206",
+    "subject": "CIVE",
+    "number": "206",
+    "title": "Dynamics",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Kinematics and kinetics of particles, systems, and rigid bodies; mass-acceleration, work-energy, impulse-momentum. Moving coordinate systems. Lagrange's equations. Vibrations and waves.",
+    "prerequisites": {
+      "text": "CIVE 205.",
+      "tree": "CIVE 205",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 262, MATH 263",
+      "tree": {
+        "and": [
+          "MATH 262",
+          "MATH 263"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 207",
+    "subject": "CIVE",
+    "number": "207",
+    "title": "Solid Mechanics",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Stress-strain relationships; elastic and inelastic behaviour; performance criteria. Elementary and compound stress states, Mohr's circle. Shear strains, torsion. Bending and shear stresses in flexural members. Deflections of beams. Statically indeterminate systems under flexural and axial loads. Columns. Dynamic loading.",
+    "prerequisites": {
+      "text": "CIVE 205 or MECH 210 or MECH 215 or GEPR 221.",
+      "tree": {
+        "or": [
+          "CIVE 205",
+          "MECH 210",
+          "MECH 215",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-6)",
+      "Four laboratory sessions and weekly tutorials",
+      "GEPR courses can only serve as pre-courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "CIVE 208",
+    "subject": "CIVE",
+    "number": "208",
+    "title": "Civil Engineering System Analysis",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to civil engineering systems; system modelling process; systems approach and optimization techniques; linear programming; simplex method; duality theory; sensitivity analysis; transportation problem; assignment problem; network analysis; introduction to integer, nonlinear, and dynamic programming methods.",
+    "prerequisites": {
+      "text": "COMP 208.",
+      "tree": "COMP 208",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 264.",
+      "tree": "MATH 264",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 210",
+    "subject": "CIVE",
+    "number": "210",
+    "title": "Surveying",
+    "credits": 2,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The construction and use of modern survey instruments; transit, level, etc.; linear and angular measurements and errors; horizontal and vertical curves; error analysis, significance of figures; use of computers and software; recent developments.",
+    "prerequisites": {
+      "text": "MECH 289 (formerly MECH 290)",
+      "tree": {
+        "and": [
+          "MECH 289",
+          "MECH 290"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop, and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "CIVE 219",
+    "subject": "CIVE",
+    "number": "219",
+    "title": "Introduction to Design in Civil Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to design in the context of civil engineering and its sub-disciplines. Identification and formulation of problems. Definition of objectives, constraints and success criteria. The creative process, including idea generation, evaluation of options, and decision making. Conceptual designs considering technical and non-technical factors. Team-based collaborations and stakeholder engagement. Strategies for knowledge acquisition, planning, task allocation, execution, and delivery of projects. Written and oral communications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(2-3-4)"
+    ]
+  },
+  {
+    "code": "CIVE 224",
+    "subject": "CIVE",
+    "number": "224",
+    "title": "Sustainability in Civil Engineering Practice",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the social, environmental, and economic impacts of technologies through case studies from the past, present, and future, with an emphasis on civil engineering practice. A systems approach to engineering, considering broader constraints, objectives, risks, and impacts. Professional obligations and responsibilities. Decision-making considering tradeoffs, competing goals, ethical issues and ambiguity. Use and abuse of sustainability metrics. Collaborative and inclusive approaches to problem formulation, problem solving, design and implementation. Strategies for minimizing or mitigating unintended negative consequences of technologies. Sustainability frameworks such as circular economy, industrial ecology, and technological stewardship.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 225",
+    "subject": "CIVE",
+    "number": "225",
+    "title": "Environmental Engineering",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to environmental engineering; mass balance analyses in engineered and natural systems; foundations of environmental chemistry and microbiology; water, soil, air pollution characterization, transport, and control; water quality parameters; drinking water and wastewater treatment technologies; environmental risk assessment; waste management; applicable sustainable practices; experimental errors; instrumentation principles.",
+    "prerequisites": {
+      "text": "(CIVE 290 and MATH 263) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CIVE 290",
+              "MATH 263"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-6)"
+    ]
+  },
+  {
+    "code": "CIVE 281",
+    "subject": "CIVE",
+    "number": "281",
+    "title": "Analytical Mechanics",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Kinematics of particles, dynamics of particles. Work, conservative forces, potential energy. Relative motion and general moving frames of reference. Central force fields and orbits. Dynamics of a system of particles. General motion of rigid bodies, angular momentum and kinetic energy of rigid bodies. Generalized coordinates and forces, Lagrange's equations.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 262, MATH 263.",
+      "tree": {
+        "and": [
+          "MATH 262",
+          "MATH 263"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 284",
+    "subject": "CIVE",
+    "number": "284",
+    "title": "Structural Engineering Basics",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Basic principles of statics; force systems; trusses; centroids and second moment of areas; stress and strain; beams; shearing and bending stresses; deflections; combined stresses; columns.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CIVE 205 and CIVE 283.",
+      "excludes": [
+        "CIVE 205",
+        "CIVE 283"
+      ]
+    },
+    "notes": [
+      "(3-3-6)"
+    ]
+  },
+  {
+    "code": "CIVE 289",
+    "subject": "CIVE",
+    "number": "289",
+    "title": "Design Graphics in Civil Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "The design process and the role of visualization in the production of engineering designs. Engineering drawing techniques of free-hand sketching, isometric drawings,orthographic projections. Drawings for geometry of construction and detailed civil engineering drawings.Technology and standards of engineering graphic communication. Drafting with CAD software with 2-D and 3-Drepresentation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U1 students or higher. Not open to students who have taken or are taking MECH 289.",
+      "excludes": [
+        "MECH 289"
+      ]
+    },
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 290",
+    "subject": "CIVE",
+    "number": "290",
+    "title": "Thermodynamics and Heat Transfer",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Thermodynamic states and processes, properties of pure substances, phase equilibria; internal energy, enthalpy, and entropy; equations of state; specific heats; work and heat interactions; conservation of mass; First and Second Laws of Thermodynamics for open and closed systems; gas-vapour mixtures; humidity and psychrometrics; introduction to heat transfer via conduction, convection, and radiation; combined resistance networks; engineering applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 302",
+    "subject": "CIVE",
+    "number": "302",
+    "title": "Probabilistic Systems",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to probability and statistics with applications to Civil Engineering design. Descriptive statistics, common probability models, statistical estimation, regression and correlation, acceptance sampling.",
+    "prerequisites": {
+      "text": "MATH 262, COMP 208 (a D grade is acceptable for prerequisite purposes)",
+      "tree": {
+        "and": [
+          "MATH 262",
+          "COMP 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 311",
+    "subject": "CIVE",
+    "number": "311",
+    "title": "Geotechnical Mechanics",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The origin and formation of soils. Soil classification systems and phase composition in soils. Stress states in geotechnical materials. Total stresses, pore fluid pressures and effective stresses. Terzaghi's concept of effective stresses. Time-dependent influences of pore pressure development during loading. Water flow in porous media. Darcy's law. Laboratory and field measurement of hydraulic conductivity. Hydraulic conductivity of soil composites. Deformation of geomaterials. Elastic deformations and consolidation behaviour. Failure of soils. The Mohr-Coulomb criterion. Stress paths. Dilatancy, Taylor's interpretation of stress dilatancy and applications.",
+    "prerequisites": {
+      "text": "CIVE 207",
+      "tree": "CIVE 207",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-6)"
+    ]
+  },
+  {
+    "code": "CIVE 317",
+    "subject": "CIVE",
+    "number": "317",
+    "title": "Structural Engineering 1",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The design process; loads, sources, classifications, load factors, combinations; limit states design; structural systems and foundations; choice of materials; virtual work and energy methods; statical and kinematic indeterminacy; slope deflection method, introduction to matrix methods; analysis of indeterminate systems; force envelopes.",
+    "prerequisites": {
+      "text": "CIVE 202, CIVE 207 and MECH 289 (formerly MECH 290).",
+      "tree": {
+        "and": [
+          "CIVE 202",
+          "CIVE 207",
+          "MECH 289",
+          "MECH 290"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 318",
+    "subject": "CIVE",
+    "number": "318",
+    "title": "Structural Engineering 2",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Durability and service life; fire resistance and protection; steel, reinforced concrete and timber; behaviour and design of components in tension, compression, bending and shear; slenderness, global and local instability; axial load and moment interaction; curvature, deflection, ductility; connections; bond and anchorage of reinforcement; simple footings.",
+    "prerequisites": {
+      "text": "CIVE 317",
+      "tree": "CIVE 317",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 319",
+    "subject": "CIVE",
+    "number": "319",
+    "title": "Transportation Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to design and operating principles and procedures for surface transportation systems, including vehicle motion and performance, pavements, geometric design of roadbeds, vehicle flow and capacity, traffic control, demand, supply and cost concepts.",
+    "prerequisites": {
+      "text": "(CIVE 208 and COMP 208) or GEPR 221.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CIVE 208",
+              "COMP 208"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CIVE 302 or GEPR 121.",
+      "tree": {
+        "or": [
+          "CIVE 302",
+          "GEPR 121"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "CIVE 320",
+    "subject": "CIVE",
+    "number": "320",
+    "title": "Numerical Methods",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Numerical procedures applicable to civil engineering problems: integration, differentiation, solution of initial-value problems, solving linear and non-linear systems of equations, boundary-value problems for ordinary-differential equations, and for partial-differential equations.",
+    "prerequisites": {
+      "text": "COMP 208, MATH 264.",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "MATH 264"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-6)"
+    ]
+  },
+  {
+    "code": "CIVE 323",
+    "subject": "CIVE",
+    "number": "323",
+    "title": "Hydrology and Water Resources",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Precipitation, evaporation and transpiration. Streamflow, storage reservoirs, flood routing. Groundwater hydrology. Ecohydrology. Statistical analysis in hydrology, stochastic modelling. Simulations using hydrologic models. Case studies in flood damage mitigation, surface and ground water management, and water-energy-food nexus.",
+    "prerequisites": {
+      "text": "CIVE 302 or GEPR 221.",
+      "tree": {
+        "or": [
+          "CIVE 302",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "CIVE 324",
+    "subject": "CIVE",
+    "number": "324",
+    "title": "Project Management",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Civil engineering project management life cycle including initiation, planning, execution, monitoring and controlling, and closing; scope definition, feasibility analysis, economic evaluation, scheduling, quantity and cost estimation, financing, procurement, contracting; frameworks for risk management, quality assurance, performance measurement; leadership, accountability, communication, organizational behaviour; multi-criteria decision analysis under uncertainty; software tools including emerging artificial intelligence.",
+    "prerequisites": {
+      "text": "(CIVE 208 or GEPR 221) and FACC 300.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CIVE 208",
+              "GEPR 221"
+            ]
+          },
+          "FACC 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 326",
+    "subject": "CIVE",
+    "number": "326",
+    "title": "Fluids and Hydraulics Laboratory",
+    "credits": 1,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Laboratory experiments in fluid mechanics and hydraulics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CIVE 327",
+      "excludes": [
+        "CIVE 327"
+      ]
+    },
+    "notes": [
+      "(0-1-2)"
+    ]
+  },
+  {
+    "code": "CIVE 327",
+    "subject": "CIVE",
+    "number": "327",
+    "title": "Fluid Mechanics and Hydraulics",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fluid properties; hydrostatics; dimensional analysis and similitude, fluxes of mass, momentum and energy; Bemoulli's equation; method of control volume; streamline curvature; potential flow and boundary layers; pipe flow, hydraulic machinery and introduction to open-channel flow.",
+    "prerequisites": {
+      "text": "(CIVE 206 and MATH 264) or GEPR 221.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CIVE 206",
+              "MATH 264"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(4-2-6)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "CIVE 385",
+    "subject": "CIVE",
+    "number": "385",
+    "title": "Structural Steel and Timber Design",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Structural loadings, load factors, code requirements and design procedures. Characteristics of structural steel and structural timber in building construction. Structural design of axially loaded tension and compression members, joists, beams, girders, trusses and framing systems.",
+    "prerequisites": {
+      "text": "CIVE 284.",
+      "tree": "CIVE 284",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ARCH 240",
+      "tree": "ARCH 240",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 388",
+    "subject": "CIVE",
+    "number": "388",
+    "title": "Foundation and Concrete Design",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Physical properties of concrete; behaviour and design of reinforced concrete members in compression, tension, bending, shear and combined loadings; bond and anchorage; soil properties, soil testing, footings; pile foundation; shorting; retaining walls.",
+    "prerequisites": {
+      "text": "CIVE 284.",
+      "tree": "CIVE 284",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 416",
+    "subject": "CIVE",
+    "number": "416",
+    "title": "Geotechnical Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Earth pressure theory, retaining walls, sheet pile walls, braced excavations. Slope stability analysis. 2D flow through isotropic and anisotropic soils. Bearing capacity and settlement of shallow foundations, stress distribution. Deep foundations, single pile, pile groups. Geotechnical investigation and reports.",
+    "prerequisites": {
+      "text": "CIVE 311",
+      "tree": "CIVE 311",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 418",
+    "subject": "CIVE",
+    "number": "418",
+    "title": "Design Project",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A team-based capstone design project carried out under the supervision of an experienced engineer. Involves a design project in one or more of the subdisciplines; environmental engineering, water resources engineering, transportation engineering, geotechnical engineering or structural engineering. Includes the definition of the problem, contains an iterative solution-finding process, and results in a final design. Addresses professionalism, as well as, economic, environmental, societal, safety and regulatory aspects of design. Contains the writing of a technical report and oral presentations. Emphasis is placed on the completion of a project of professional quality replicating the design process commonly implemented by practicing engineers.",
+    "prerequisites": {
+      "text": "Completion of an approved set of required and complementary courses; normally restricted to final semester.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-2-6)"
+    ]
+  },
+  {
+    "code": "CIVE 419",
+    "subject": "CIVE",
+    "number": "419",
+    "title": "Final Civil Engineering Design Project",
+    "credits": 5,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Team-based capstone design project under the supervision of an experienced engineer. Design project topics: environmental engineering, water resources engineering, transportation engineering, geotechnical engineering or structural engineering. Problem definition, iterative solution-finding process, and final design. Professionalism, economic, environmental, societal, safety and regulatory aspects of design. Preparation and delivery of technical reports and oral presentations, reflecting standards of professional practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Normally open only to students in their final semester.",
+      "excludes": []
+    },
+    "notes": [
+      "(1-2-12)",
+      "Requires completion of two technical complementaries from either List A - Design Technical Complementaries or List B - General Technical Complementaries, or both List A and List B."
+    ]
+  },
+  {
+    "code": "CIVE 421",
+    "subject": "CIVE",
+    "number": "421",
+    "title": "Municipal Systems",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Design of water-related municipal services; sources of water and intake design; estimation of water demand and wastewater production rates; design, construction and maintenance of water distribution, wastewater and stormwater collection systems; pumps and pumping stations; pipe materials, network analysis and optimization; storage; treatment objectives for water and wastewater.",
+    "prerequisites": {
+      "text": "CIVE 327",
+      "tree": "CIVE 327",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 428",
+    "subject": "CIVE",
+    "number": "428",
+    "title": "Water Resources and Hydraulic Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of continuity, energy and momentum equations to open channel flow; design of channels considering uniform flow and flow resistance, non-uniform flow and longitudinal profiles; design of channel controls and transitions; unsteady flow and flood routing; river ice engineering; sediment transport and river morphology; sustainability in river engineering; industry standard numerical models.",
+    "prerequisites": {
+      "text": "CIVE 327",
+      "tree": "CIVE 327",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 430",
+    "subject": "CIVE",
+    "number": "430",
+    "title": "Water Treatment and Pollution Control",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of water and sewage treatment. Water and sewage characteristics; design of conventional unit operations and processes; laboratory analyses of potable and waste waters.",
+    "prerequisites": {
+      "text": "CIVE 225 and CIVE 327",
+      "tree": {
+        "and": [
+          "CIVE 225",
+          "CIVE 327"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 432",
+    "subject": "CIVE",
+    "number": "432",
+    "title": "Technical Paper",
+    "credits": 1,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A technical paper, on a suitable topic, is to be prepared in accordance with detailed instructions which are provided by the Department. This paper will normally be written in the U3 year and may be submitted in September or January.",
+    "prerequisites": {
+      "text": "CCOM 206 or WCOM 206",
+      "tree": {
+        "or": [
+          "CCOM 206",
+          "WCOM 206"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(0-0-3)"
+    ]
+  },
+  {
+    "code": "CIVE 440",
+    "subject": "CIVE",
+    "number": "440",
+    "title": "Traffic Engineering and Simulation",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Driver, vehicle and traffic flow characteristics; origin-destination studies, traffic studies and analysis, queuing theory applications, microsimulation, highway design and capacity analysis, non-motorized facility design, HOV lane design, public transportation priority design, parking analysis, traffic signal design and control, traffic microsimulation with HCS, VISSIM and SYNCHRO.",
+    "prerequisites": {
+      "text": "CIVE 319 (a D grade is acceptable for prerequisite purposes)",
+      "tree": "CIVE 319",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 446",
+    "subject": "CIVE",
+    "number": "446",
+    "title": "Construction Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Construction and as-built documents; means and methods; equipment economics, selection, management and maintenance; construction loading; operational planning; field communication; task coordination and contingency planning; quality control; safety tools and processes; hazards and risks; excavation, trenching and tunneling challenges; inspection; joining techniques; formwork design; temporary structures, shoring and support, relevant codes.",
+    "prerequisites": {
+      "text": "CIVE 208 and FACC 300",
+      "tree": {
+        "and": [
+          "CIVE 208",
+          "FACC 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 460",
+    "subject": "CIVE",
+    "number": "460",
+    "title": "Matrix Structural Analysis",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Computer structural analysis, direct stiffness applied to two and three dimensional frames and trusses, matrix force method, nonlinear problems, buckling of trusses and frames, introduction to finite element analysis.",
+    "prerequisites": {
+      "text": "CIVE 206 and CIVE 317",
+      "tree": {
+        "and": [
+          "CIVE 206",
+          "CIVE 317"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 462",
+    "subject": "CIVE",
+    "number": "462",
+    "title": "Design of Steel Structures",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Design of structural steel members: plate girders, members under combined loadings, eccentrically loaded connections, composite floor systems. Design of single-storey concentrically braced frame buildings subjected to gravity, wind and seismic loading. Introduction to design software.",
+    "prerequisites": {
+      "text": "CIVE 318",
+      "tree": "CIVE 318",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 463",
+    "subject": "CIVE",
+    "number": "463",
+    "title": "Design of Concrete Structures",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Design of reinforced concrete members: beams, one-way slabs, columns, disturbed regions, two-way slabs, shear walls, footings, retaining walls. Aspects of seismic design of columns and shear walls. Introduction to design software and the design of prestressed concrete members.",
+    "prerequisites": {
+      "text": "CIVE 318",
+      "tree": "CIVE 318",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-3)"
+    ]
+  },
+  {
+    "code": "CIVE 470",
+    "subject": "CIVE",
+    "number": "470",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project under the supervision of an academic staff member. Selection of a research problem, formulation of hypotheses and objectives, research design, literature review, analysis, discussion, report.",
+    "prerequisites": {
+      "text": "Prerequisite: Permission of the Department.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 students and above, CGPA ≥ 3.0",
+      "excludes": []
+    },
+    "notes": [
+      "(0-1-8)",
+      "The research project needs to be established with the supervisor before registration."
+    ]
+  },
+  {
+    "code": "CIVE 480",
+    "subject": "CIVE",
+    "number": "480",
+    "title": "Data-Driven and AI Methods",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to computational and AI-driven approaches for solving civil engineering problems, with emphasis on reproducible workflows and end-to-end data pipelines. Acquisition, cleaning, analysis, and interpretation of real world datasets to build practical analytics and machine learning solutions for transportation, infrastructure, and environmental applications. Exploratory data analysis, regression and evaluation, introductory machine learning and neural networks, and the practical application of large language models and retrieval-augmented generation for engineering analysis and documentation.",
+    "prerequisites": {
+      "text": "COMP 208 and CIVE 208 and CIVE 302 and CIVE 320",
+      "tree": {
+        "and": [
+          "COMP 208",
+          "CIVE 208",
+          "CIVE 302",
+          "CIVE 320"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 507",
+    "subject": "CIVE",
+    "number": "507",
+    "title": "Wind Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Davenport wind loading chain, wind climate, atmospheric boundary layer and turbulence, wind risk and statistics, bluff body aerodynamics, wind loads and structural responses, aeroelastic effects, building code approaches to estimate design wind loads, wind energy and sustainability, and introduction to wind tunnel tests and computational fluid dynamics.",
+    "prerequisites": {
+      "text": "CIVE 318 and CIVE 327, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CIVE 318",
+          "CIVE 327"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 512",
+    "subject": "CIVE",
+    "number": "512",
+    "title": "Advanced Civil Engineering Materials",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Production, structure and properties of engineering materials; ferrous alloys, treatments, welding, special steels, cast iron; ceramic materials; polymers; composite materials; concrete, admixtures, structure, creep, shrinkage; asphalt and asphaltic materials; clay materials and bricks; impact of environment on material response, durability, quality assessment and control, industrial specifications; recent advances.",
+    "prerequisites": {
+      "text": "CIVE 202",
+      "tree": "CIVE 202",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 520",
+    "subject": "CIVE",
+    "number": "520",
+    "title": "Groundwater Hydrology",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of subsurface hydrological processes. Field data and simulation under parameter uncertainty. Numerical modelling. Quantifying groundwater resources and groundwater flow to wells. Groundwater sustainability from a multidisciplinary perspective including engineering and policy.",
+    "prerequisites": {
+      "text": "CIVE 311 and CIVE 323; Graduate students: Permission of instructor.",
+      "tree": {
+        "and": [
+          "CIVE 311",
+          "CIVE 323"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CIVE 546 in Winter 2012.",
+      "excludes": [
+        "CIVE 546"
+      ]
+    },
+    "notes": [
+      "Note 1: (3-0-6)."
+    ]
+  },
+  {
+    "code": "CIVE 521",
+    "subject": "CIVE",
+    "number": "521",
+    "title": "Nanomaterials and the Aquatic Environment",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Environmental impacts and applications of nanomaterials. Topics: physicochemical characterization of nanoparticles in aquatic media, colloid chemistry for understanding nanoparticle aggregation and mobility in the environment, mechanisms of reactive oxygen species (ROS) production by nanomaterials, nanomaterials for environmental remediation and water treatment, methodologies for assessing nanoparticle toxicity, novel research developments.",
+    "prerequisites": {
+      "text": "CHEE 315 or CIVE 225 or MIME 356 or equivalent; CHEE 310 or CIVE 430 or CHEM 233 or equivalent; or permission of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CHEE 315",
+              "CIVE 225",
+              "MIME 356"
+            ]
+          },
+          {
+            "or": [
+              "CHEE 310",
+              "CIVE 430",
+              "CHEM 233"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 521.",
+      "excludes": [
+        "CHEE 521"
+      ]
+    },
+    "notes": [
+      "3-0-6",
+      "Offered each year, one year by the Department of Chemical Engineering and one year by the Department of Civil Engineering"
+    ]
+  },
+  {
+    "code": "CIVE 527",
+    "subject": "CIVE",
+    "number": "527",
+    "title": "Renovation and Preservation: Infrastructure",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Maintenance, rehabilitation, renovation and preservation of infrastructure; infrastructure degradation mechanisms; mechanical, chemical and biological degradation; corrosion of steel; condition surveys and evaluation of buildings and bridges; repair and preservation of materials, techniques and strategies; codes and guidelines; case studies, sustainable development; group project.",
+    "prerequisites": {
+      "text": "CIVE 202 and CIVE 318",
+      "tree": {
+        "and": [
+          "CIVE 202",
+          "CIVE 318"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CIVE 528",
+    "subject": "CIVE",
+    "number": "528",
+    "title": "Design of Wood Structures",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of wood material properties and grades. Design of sawn lumber and timber tension, bending, compression and beam-column members. Design of engineered wood products, glued-laminated and cross-laminated timber members. Design of connections. Moisture and humidity effects, deterioration and protection, fire performance, prescriptive design versus engineering design.",
+    "prerequisites": {
+      "text": "CIVE 318 or equivalent, or permission of the instructor",
+      "tree": "CIVE 318",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 529",
+    "subject": "CIVE",
+    "number": "529",
+    "title": "Structural Design Optimization",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to optimization; formulation of topology optimization using ground-structure or density-based approach. Optimization of structural members including beams, columns and frames. Graphic statics, load path, and form finding. Application of graphic statics to trusses and cable-supported structures in buildings and bridges.",
+    "prerequisites": {
+      "text": "CIVE 207 and CIVE 208 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CIVE 207",
+          "CIVE 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 540",
+    "subject": "CIVE",
+    "number": "540",
+    "title": "Urban Transportation Planning",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Process and techniques of urban transportation engineering and planning, including demand analysis framework, data collection procedures, travel demand modelling and forecasting, and cost-effectiveness framework for evaluation of project and system alternatives.",
+    "prerequisites": {
+      "text": "CIVE 319 or permission of instructor.",
+      "tree": "CIVE 319",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 542",
+    "subject": "CIVE",
+    "number": "542",
+    "title": "Transportation Network Analysis",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to transportation network algorithms; analytical frameworks used in traditional transportation network software, including routing algorithms, deterministic equilibrium approach, static traffic assignment, dynamic traffic assignment, vehicle routing algorithms, network reliability and design and several stochastic variants.",
+    "prerequisites": {
+      "text": "CIVE 208.",
+      "tree": "CIVE 208",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: (3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 543",
+    "subject": "CIVE",
+    "number": "543",
+    "title": "System Dynamics for Civil and Environmental Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Systems modelling, simulation, and analysis for transportation, energy, structural, construction, and environmental engineering. Overview of common feedback phenomena and their analysis using causal loop diagrams. Simulation using stock-flow, event-based, and agent-based approaches. Network representation and state-space representation of complex systems. Markov decision process. Model calibration and testing. System forecasting and optimization.",
+    "prerequisites": {
+      "text": "CIVE 302 and CIVE 320 or permission of the instructor",
+      "tree": {
+        "and": [
+          "CIVE 302",
+          "CIVE 320"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 545",
+    "subject": "CIVE",
+    "number": "545",
+    "title": "Life Cycle Assessment and the Circular Economy",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of life cycle assessment (LCA) for civil engineering, focusing on the integration with circular economy and life cycle costing. Circular economy and LCA methods standardized by International Organization for Standardization. Integration of environmental metrics into life cycle costing. Combining LCA, circular economy and life cycle costing methods. Application of LCA in environmental and economic decision-making related to specific civil engineering projects, focused on topics such as buildings and transportation.",
+    "prerequisites": {
+      "text": "FACC 300 and CIVE 324 or Permission of the instructor",
+      "tree": {
+        "and": [
+          "FACC 300",
+          "CIVE 324"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking SEAD 520.",
+      "excludes": [
+        "SEAD 520"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CIVE 546",
+    "subject": "CIVE",
+    "number": "546",
+    "title": "Selected Topics in Civil Engineering 1",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Special topics related to Civil Engineering will be presented by staff and visiting lecturers.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 550",
+    "subject": "CIVE",
+    "number": "550",
+    "title": "Water Resources Management",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "State-of-the-art water resources management techniques; case studies of their application to Canadian situations; identification of major issues and problem areas; interprovincial and international river basins; implications of development alternatives; institutional arrangements for planning and development of water resources; and, legal and economic aspects.",
+    "prerequisites": {
+      "text": "CIVE 323 or equivalent",
+      "tree": "CIVE 323",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 555",
+    "subject": "CIVE",
+    "number": "555",
+    "title": "Environmental Data Analysis",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of statistical principles to design of measurement systems and sampling programs. Introduction to experimental design. Graphical data analysis. Description of uncertainty. Hypothesis tests. Model parameter estimation methods: linear and nonlinear regression methods. Trend analysis. Statistical analysis of censored data. Statistics of extremes.",
+    "prerequisites": {
+      "text": "CIVE 302 or permission of instructor",
+      "tree": "CIVE 302",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 557",
+    "subject": "CIVE",
+    "number": "557",
+    "title": "Microbiology for Environmental Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Microbiological concepts applied to the practice of environmental engineering and biotechnologies including the following topics: cellular and pathway organizations, evolution, growth, gene expression, horizontal gene transfer, metabolic microbial diversity, ecosystem structures, and quantitative mathematical modelling.",
+    "prerequisites": {
+      "text": "CIVE 225 or permission of the instructor",
+      "tree": "CIVE 225",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 560",
+    "subject": "CIVE",
+    "number": "560",
+    "title": "Transportation Safety and Design",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamental concepts on transportation safety, traffic data collection techniques, crash database management, statistical methods for safety analysis, network screening methods, evaluation and design of treatments, railway safety analysis, surrogate safety methods, intersection safety and engineering countermeasures, non-motorized safety and facilities designs and accident severity analysis.",
+    "prerequisites": {
+      "text": "CIVE 319",
+      "tree": "CIVE 319",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CIVE 561",
+    "subject": "CIVE",
+    "number": "561",
+    "title": "Greenhouse Gas Emissions",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Greenhouse gas inventories at various scales from national to institutional. Emission estimation methods including field measurements and engineering calculations for anthropogenic sources including fossil fuel combustion from transportation and energy production, cement production, hydroelectric reservoirs, oil and gas systems, landfills, wastewater treatment and sewer systems, and agriculture. Technical and policy options for reducing greenhouse gas emissions. Group project.",
+    "prerequisites": {
+      "text": "CIVE 225 and CIVE 302 or equivalent, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CIVE 225",
+          "CIVE 302"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Students are expected to have a background in data mining, statistical analysis, e.g. spatiotemporal analysis, and chemistry. WHMIS and other lab training is recommended."
+    ]
+  },
+  {
+    "code": "CIVE 570",
+    "subject": "CIVE",
+    "number": "570",
+    "title": "Solar Driven Environmental Processes and Technologies",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "An overview of natural and engineered processes that are driven by solar energy. Fundamental physics of light and environmental photochemistry. Terrestrial energy balance. Solar driven environmental transformation and decay processes, including chemical and biological case studies. Solar energy harnessing materials and their applications in sustainable green energy generation and environmental remediation including solar cells, photocatalysts, solar heating and cooling, and solar water treatment.",
+    "prerequisites": {
+      "text": "CIVE 225 and CIVE 290, or permission of the instructor",
+      "tree": {
+        "and": [
+          "CIVE 225",
+          "CIVE 290"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. (3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 572",
+    "subject": "CIVE",
+    "number": "572",
+    "title": "Computational Hydraulics",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Computation of unsteady flows in open channels; abrupt waves, flood waves, tidal propagations; method of characteristics; mathematical modelling of river and coastal currents.",
+    "prerequisites": {
+      "text": "CIVE 327 or equivalent",
+      "tree": "CIVE 327",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 573",
+    "subject": "CIVE",
+    "number": "573",
+    "title": "Hydraulic Structures",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Hydraulic aspects of the theory and design of hydraulic structures. Storage dams, spillways, outlet works, diversion works, drop structures, stone structures, conveyance and control structures, flow measurement and culverts.",
+    "prerequisites": {
+      "text": "CIVE 323 and CIVE 327",
+      "tree": {
+        "and": [
+          "CIVE 323",
+          "CIVE 327"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 574",
+    "subject": "CIVE",
+    "number": "574",
+    "title": "Fluid Mechanics of Water Pollution",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Mixing, dilution and dispersion of pollutants discharged into lakes, rivers, estuaries and oceans; salinity intrusion in estuaries and its effects on dispersion; biochemical oxygen demand and dissolved oxygen as water quality indicators; thermal pollution; oil pollution.",
+    "prerequisites": {
+      "text": "CIVE 327 or equivalent.",
+      "tree": "CIVE 327",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 577",
+    "subject": "CIVE",
+    "number": "577",
+    "title": "River Engineering",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fluvial geomorphology; sediment properties; river turbulence; mechanics of the entrainment, transportation and deposition of solids by fluids; threshold of movement; bed forms; suspended load, bed load and total load equations; stable channel design and regime rivers; river modelling; river engineering; and river management.",
+    "prerequisites": {
+      "text": "CIVE 428 or permission of the instructor.",
+      "tree": "CIVE 428",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CIVE 428",
+      "tree": "CIVE 428",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CIVE 584",
+    "subject": "CIVE",
+    "number": "584",
+    "title": "Mechanics of Groundwater Flow",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Origins and types of groundwater; Darcy's law; hydraulic anisotropy; conservation laws; fundamental equations of porous media flow; Laplace's and Poisson's equations: analytical solution of potential flow problems; determination of hydraulic conductivity; flow in unconfined and confined acquifers; seepage modelling; unsaturated flow; transient flows in porous media; introduction to computational methods.",
+    "prerequisites": {
+      "text": "CIVE 311 or Permission of Instructor.",
+      "tree": "CIVE 311",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1.5-4.5)"
+    ]
+  },
+  {
+    "code": "CIVE 602",
+    "subject": "CIVE",
+    "number": "602",
+    "title": "Finite Element Analysis",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Development of displacement based simple and high order, one, two and three dimensional elements for linear elastic stress analysis. Variational and other methods for element formulation. Plate bending and shell elements. Finite element programming. Use of package programs in static analysis of structures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-9)"
+    ]
+  },
+  {
+    "code": "CIVE 603",
+    "subject": "CIVE",
+    "number": "603",
+    "title": "Structural Dynamics",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Dynamic loads on structures; equations of motion of linear single- and multiple-degree-of-freedom systems and of continuous systems; free and forced vibrations; damping in structures; modal superposition and time-history analysis; earthquake effects; provisions of the National Building Code of Canada for seismic analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 604",
+    "subject": "CIVE",
+    "number": "604",
+    "title": "Theory of Plates and Shells",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Analysis of stresses and deformations in plates bent by transverse loads. Circular and rectangular plates. Membrane theory of shells. Axially symmetric bending of cylindrical, conical and spherical shells. Shells of revolution; theory of shallow shells. Use of package programs in the analysis of plate and shell structures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 605",
+    "subject": "CIVE",
+    "number": "605",
+    "title": "Stability of Structures",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Buckling of elastic columns by equilibrium analysis. Buckling of inelastic columns. Energy analysis and approximate methods. Stability of frames. Torsional buckling of columns and flexural-torsional buckling of beams. Buckling of plates and axially compressed circular cylindrical shells. Stability analysis using the finite element method.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 607",
+    "subject": "CIVE",
+    "number": "607",
+    "title": "Advanced Design in Steel",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Design and behaviour of cold formed and hot rolled structural steel members and systems. Lateral load resistance design of steel roof diaphragms, flexural design of composite slabs, bracing requirements and design procedures for steel structures, floor vibration, member torsion, slender members and design procedures for low rise steel frame buildings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 609",
+    "subject": "CIVE",
+    "number": "609",
+    "title": "Risk Engineering",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Quantitative analysis of uncertainty in planning, design, construction, operation and rehabilitation of engineered facilities. Interprets fundamentals of probabilities, random processes, statistics, and decision analysis in the context of engineering applications, in particular description of variability of loads and environmental conditions, material properties performance prediction, system reliability analysis, and risk-based decision analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 610",
+    "subject": "CIVE",
+    "number": "610",
+    "title": "Special Topics in Structural Mechanics",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Special topics in structural mechanics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 612",
+    "subject": "CIVE",
+    "number": "612",
+    "title": "Earthquake-Resistant Design",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Static and dynamic analyses, design codes, effects of local ground conditions, ductility demands on structural components. Inelastic behaviour of beams, columns, joints, shear walls and bracing under cyclic loading of steel concrete and masonry structures. Design applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 614",
+    "subject": "CIVE",
+    "number": "614",
+    "title": "Composites for Construction",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Fibre reinforced plastics (FRP), civil engineering applications; fibre, matrix, processing; plymechanics, strength, rigidity, stability, durability; FRP rebars and tendons for concrete, laminates for strengthening, pultruded beams and columns, FRP stay-in-place formwork for concrete, FRP - glulam beams; design criteria, design project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 615",
+    "subject": "CIVE",
+    "number": "615",
+    "title": "Environmental Engineering Seminar",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course will expose the students to various environmental engineering issues. Lectures will be given by faculty and invited speakers from industry. Each student is required to prepare a written technical paper and make oral presentation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 616",
+    "subject": "CIVE",
+    "number": "616",
+    "title": "Nonlinear Structural Analysis for Buildings",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Methods of geometric and material nonlinear static and dynamic analysis, cumulative damage effects, concentrated and distributed plasticity models, pushover analysis, response modification and performance-based design. The class integrates state-of-the-art simulation models and methods with physical experimentation of structural components and energy dissipation devices for nonlinear analysis and evaluation of buildings.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 617",
+    "subject": "CIVE",
+    "number": "617",
+    "title": "Bridge Engineering",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Bridge components, connections, and constraints; girder bridges; arch bridges; cable-stayed and suspension bridges; probabilistic design; design loads; analysis of superstructures; evaluation, repair, and rehabilitation of bridges; coastal bridge vulnerability; seismic design and retrofit of bridges; case studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 621",
+    "subject": "CIVE",
+    "number": "621",
+    "title": "Sustainable Design of Municipal Systems",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Design of water-related municipal services. Estimation of water demand and wastewater production rates, conception of sources water intake, construction and maintenance of water distribution and wastewater / stormwater collection systems, selection of pumps and pipe materials, conception of pumping stations, planning of storage, and optimization of network. Emphasis on the theory and applications of life cycle analysis and of public acceptability specific to municipal system design.",
+    "prerequisites": {
+      "text": "SEAD 520",
+      "tree": "SEAD 520",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or who have taken CIVE 421.",
+      "excludes": [
+        "CIVE 421"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CIVE 622",
+    "subject": "CIVE",
+    "number": "622",
+    "title": "Design of Prestressed Concrete Structures",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Material properties; prestressing methods and systems; the behaviour and design of members subjected to axial forces, bending, shear and torsion; prestress losses; design of statically determinate and indeterminate structures; composite precast construction; prestressed concrete floor and low-damage wall systems. Design case studies and failures, with applications to building and bridge design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 623",
+    "subject": "CIVE",
+    "number": "623",
+    "title": "Durability of Construction Materials ",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Durability-related deterioration mechanisms relevant to construction materials with an emphasis on promoting sustainability in the construction industry. Portland cement concrete, asphalt cement concrete, masonry, steel, wood, and fibre reinforced composites. Factors affecting durability, service life prediction, diagnosis, remediation, and protective measures. Introduction to relevant standards, specifications, guides, and design codes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 625",
+    "subject": "CIVE",
+    "number": "625",
+    "title": "Condition Assessment of Existing Structures",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Procedures and testing techniques for the in situ and laboratory evaluation of existing structures and infrastructure materials. Destructive and nondestructive techniques, forensic analysis, and evaluation and deterioration mechanisms are addressed through lectures and case studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "A group laboratory project is also required."
+    ]
+  },
+  {
+    "code": "CIVE 628",
+    "subject": "CIVE",
+    "number": "628",
+    "title": "Advanced Design of Wood Buildings ",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced design of wood buildings: calculation of gravity and lateral loads, lateral design principles, load-resisting systems for multi-storey wood buildings. Design of multi-storey light-framed wood buildings, mass timber buildings. Design of connection systems. Hybrid timber buildings. Innovative structural systems for timber buildings.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 629",
+    "subject": "CIVE",
+    "number": "629",
+    "title": "Sustainable Design: Water and Wastewater Facilities ",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Design principles of drinking water and wastewater resource recovery facilities. Characteristics of water and wastewater developed in theory and through laboratory exercises. Conventional unit operations; derivation and application of process models. Emphasis on the theory and applications of life cycle analysis (LCA) specific to the design of water and wastewater treatment facilities.",
+    "prerequisites": {
+      "text": "SEAD 520",
+      "tree": "SEAD 520",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CIVE 430.",
+      "excludes": [
+        "CIVE 430"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CIVE 630",
+    "subject": "CIVE",
+    "number": "630",
+    "title": "Thesis Research 1",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 631",
+    "subject": "CIVE",
+    "number": "631",
+    "title": "Thesis Research 2",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 632",
+    "subject": "CIVE",
+    "number": "632",
+    "title": "Thesis Research 3",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 633",
+    "subject": "CIVE",
+    "number": "633",
+    "title": "Thesis Research 4",
+    "credits": 6,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 634",
+    "subject": "CIVE",
+    "number": "634",
+    "title": "Thesis Research 5",
+    "credits": 6,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 635",
+    "subject": "CIVE",
+    "number": "635",
+    "title": "Thesis Research 6",
+    "credits": 6,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 648",
+    "subject": "CIVE",
+    "number": "648",
+    "title": "Special Topics in Civil Engineering",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Special topics of an advanced nature relating to Civil Engineering will be presented by staff and visiting lecturers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 650",
+    "subject": "CIVE",
+    "number": "650",
+    "title": "Spatiotemporal Data Mining",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to spatiotemporal sensing data and general research questions (imputation, forecasting, kriging, classification, regression, anomaly detection). Overview of traditional models and techniques in modeling temporal processes, spatial processes, and spatiotemporal processes. Introduction of state-of-the-art methods for large-scale data sets, including low-rank tensor learning, spectral methods, Gaussian process regression, graph signal processing, and deep neural networks.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 651",
+    "subject": "CIVE",
+    "number": "651",
+    "title": "Theory: Water / Wastewater Treatment",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theoretical aspects of the chemistry of water and wastewater treatment. This will include acid-base and solubility equilibria; redox reactions; reaction kinetics; reactor design; surface and colloid chemistry; gas transfer; mass transfer; stabilization and softening; disinfection; corrosion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 652",
+    "subject": "CIVE",
+    "number": "652",
+    "title": "Bioprocesses for Wastewater Resource Recovery",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Technologies and design approaches for reclaiming water, nutrients, carbon and energy, while achieving protection of human and environmental health in the context of enhancing sustainability. Unit processes for both wastewater and solids-handling trains. Advanced mathematical modeling to describe suspended-growth and attached-growth multispecies bioreactors for aerobic, anaerobic and phototrophic processes. Microbial diversity in different reactor conditions, and specific population metabolisms explaining important stoichiometries and kinetics. Advanced molecular microbiology techniques to document microbial diversity and dynamics. Bioreactor designs in the context of stakeholder interactions and energy efficiency.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 660",
+    "subject": "CIVE",
+    "number": "660",
+    "title": "Chemical and Physical Treatment of Waters",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theory and design of specific processes used for the physical and/or chemical purification of waters and wastewaters, including mixing, flocculation, sedimentation, flotation, filtration, disinfection, adsorption, ion exchange, aeration, membrane processes, distillation, removal of specific inorganics and organics, taste and odour control, process control, sludge treatment. Laboratory exercises will complement theoretical aspects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 661",
+    "subject": "CIVE",
+    "number": "661",
+    "title": "Modelling of Transportation Emissions",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Interactions between transportation modeling and emissions modeling; models for on-road and non-road emissions; impacts of technology, fuel quality, and driving behaviour on the generation of vehicle emissions. Effects of alternative fuels.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Permission of instructor."
+    ]
+  },
+  {
+    "code": "CIVE 662",
+    "subject": "CIVE",
+    "number": "662",
+    "title": "Master's (Thesis) Research Seminar",
+    "credits": 1,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Oral presentation of research topics (M.Eng. Thesis students) and attendance at a minimum of five seminars.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For civil engineering students in the final semester of the thesis masters program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CIVE 663",
+    "subject": "CIVE",
+    "number": "663",
+    "title": "Environmental Fate of Organic Chemicals",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Theoretical and applied environmental organic chemistry concerning organic pollutants in aquatic and soil systems. Topics include: vapour pressure; activity coefficient and aqueous solubility; air-liquid phase partitioning; sorption; bioaccumulation and biomagnification; hydrolysis and nucleophilic substitution reactions; redox reactions; legacy pollutants; pollutants of emerging concern; novel research developments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered in alternate years."
+    ]
+  },
+  {
+    "code": "CIVE 664",
+    "subject": "CIVE",
+    "number": "664",
+    "title": "MEng (Non-thesis) Research Seminar",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course will expose the students to various civil engineering research issues. Lectures will be given by faculty, invited speakers from industry, and graduate students. Each student is required to prepare a written technical paper and make an oral presentation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 677",
+    "subject": "CIVE",
+    "number": "677",
+    "title": "Water-Energy Sustainability",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Sustainable water resources management: water requirements and frameworks for allocations for agriculture, urbanization, resource extraction, energy production and the environment. Analysis and modelling of the constraints and implications, within and across sectors, of water allocation and energy production choices and their climate change impacts. Critical assessment of contemporary case studies related to the water-energy nexus",
+    "prerequisites": {
+      "text": "Permission of the instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 683",
+    "subject": "CIVE",
+    "number": "683",
+    "title": "Advanced Foundation Design",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Earth retaining structures, retaining walls, braced excavations, tie-back anchors. Buried structures, earth loading, arching, embankment loading. Soft ground tunnelling, ground response to tunnelling, surface settlement prediction. Design of shallow foundations, bearing capacity and settlement. Design of deep foundations, single pile, pile groups, laterally loaded piles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 686",
+    "subject": "CIVE",
+    "number": "686",
+    "title": "Site Remediation",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Field investigations; geotechnical and geophysical techniques; hydrogeological conditions; risk assessment; contaminant transport; remedial action plan; containment systems (gas, surface water, and ground water); on-site and off-site treatment techniques (solidification, stabilization, landfilling, and soil washing); In-situ treatment techniques (physical, biological, and chemical).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 691",
+    "subject": "CIVE",
+    "number": "691",
+    "title": "Research Project 1",
+    "credits": 1,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 692",
+    "subject": "CIVE",
+    "number": "692",
+    "title": "Research Project 2",
+    "credits": 2,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 693",
+    "subject": "CIVE",
+    "number": "693",
+    "title": "Research Project 3",
+    "credits": 3,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 694",
+    "subject": "CIVE",
+    "number": "694",
+    "title": "Research Project 4",
+    "credits": 4,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 695",
+    "subject": "CIVE",
+    "number": "695",
+    "title": "Research Project 5",
+    "credits": 5,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 696",
+    "subject": "CIVE",
+    "number": "696",
+    "title": "Research Project 6",
+    "credits": 6,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 697",
+    "subject": "CIVE",
+    "number": "697",
+    "title": "Research Project 7",
+    "credits": 7,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CIVE 701",
+    "subject": "CIVE",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation of a written literature review and a qualifying oral examination of the student's background in related areas that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This exam must be taken within 13 months of the student’s initial registration in the program."
+    ]
+  },
+  {
+    "code": "CIVE 702",
+    "subject": "CIVE",
+    "number": "702",
+    "title": "Ph.D. Research Proposal",
+    "credits": 0,
+    "offeredBy": "Civil Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ph.D. thesis proposal.",
+    "prerequisites": {
+      "text": "CIVE 701",
+      "tree": "CIVE 701",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course must be completed within 16 months of initial registration in the program."
+    ]
+  }
+]

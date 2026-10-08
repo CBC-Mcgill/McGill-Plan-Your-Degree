@@ -1,0 +1,51 @@
+[
+  {
+    "code": "GEPR 121",
+    "subject": "GEPR",
+    "number": "121",
+    "title": "Project-Sustainable Development",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Improving skills by using situations linked to sustainable development, first experience of a “project approach.",
+    "prerequisites": {
+      "text": "GEHS 111. GEHS 122.",
+      "tree": {
+        "and": [
+          "GEHS 111",
+          "GEHS 122"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PRO121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEPR 221",
+    "subject": "GEPR",
+    "number": "221",
+    "title": "Research and Design Project",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "This scientific project of an experimental nature uses training through research as its scientific methodology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to PRO221 offered by CentraleSupélec in France."
+    ]
+  }
+]

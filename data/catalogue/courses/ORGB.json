@@ -1,0 +1,776 @@
+[
+  {
+    "code": "ORGB 321",
+    "subject": "ORGB",
+    "number": "321",
+    "title": "Leadership",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Leadership theories provide students with opportunities to assess and work on improving their leadership skills. Topics include: the ability to know oneself as a leader, to formulate a vision, to have the courage to lead, to lead creatively, and to lead effectively with others.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U1, U2, and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 325",
+    "subject": "ORGB",
+    "number": "325",
+    "title": "Negotiations and Conflict Resolution",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A conceptual framework to guide participants through negotiation and conflict resolution process.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 330",
+    "subject": "ORGB",
+    "number": "330",
+    "title": "People Analytics",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This is the era of big data. Companies and organizations are collecting an enormous amount of information and we are only just beginning to grasp the ways in which this information might be used. This course covers the emerging field of people analytics, which involves applying data collection and analysis techniques to improve the management of people within organizations. We will cover current people analytics techniques, common pitfalls, and possible shortcomings of people analytics, as well as the ethical questions involved in undertaking such analyses.",
+    "prerequisites": {
+      "text": "MGCR 271 or an equivalent introductory statistics class, and MGCR 222.",
+      "tree": {
+        "and": [
+          "MGCR 271",
+          "MGCR 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 380",
+    "subject": "ORGB",
+    "number": "380",
+    "title": "Cross Cultural Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Addresses dilemmas and opportunities that managers experience in international, multicultural environments. Development of conceptual knowledge and behavioural skills (e.g. bridging skills, communication, tolerance of ambiguity, cognitive complexity) relevant to the interaction of different cultures in business and organizational settings, using several methods including research, case studies and experiential learning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2, U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 401",
+    "subject": "ORGB",
+    "number": "401",
+    "title": "Leadership Practicum in Social Sector",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Students apply a wealth of OB concepts and leadership strategies by spending the equivalent of one full day (8 hours) per week at an organization within Montreal’s social sector. Course material will supplement field experiences. The Practicum complements ORGB 321, which offers a more comprehensive survey of leadership theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 420",
+    "subject": "ORGB",
+    "number": "420",
+    "title": "Managing Organizational Teams",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theory, research, and applications. Principles of team processes and effectiveness in organizational settings, specifically the theoretical developments and empirical findings of group dynamics and team effectiveness, and practical strategies and skills for successful management of organizational teams.",
+    "prerequisites": {
+      "text": "MGCR 222",
+      "tree": "MGCR 222",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 421",
+    "subject": "ORGB",
+    "number": "421",
+    "title": "Managing Organizational Change",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Organizational change theory and techniques are examined with an emphasis on techno-structural interventions such as Quality-of-Work-Life approaches. Through simulations and case-studies, the course explores initiatives in organizational change, primarily in contemporary Canadian organizations. It also includes opportunities for \"hands-on\" experience in work and organization redesign.",
+    "prerequisites": {
+      "text": "MGCR 222 or permission of the instructor and approval of the BCom Program Office.",
+      "tree": "MGCR 222",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 423",
+    "subject": "ORGB",
+    "number": "423",
+    "title": "Human Resources Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Issues involved in personnel administration. Topics include: human resource planning, job analysis, recruitment and selection, training and development, performance appraisal, organization development and change, issues in compensation and benefits, and labour-management relations.",
+    "prerequisites": {
+      "text": "MGCR 222 or permission of the instructor and approval of the B.Com. Office.",
+      "tree": "MGCR 222",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": [
+      "Requirement for the Institute of Internal Auditors"
+    ]
+  },
+  {
+    "code": "ORGB 434",
+    "subject": "ORGB",
+    "number": "434",
+    "title": "Topics in Organizational Behaviour 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "This is an advanced course for students with a special interest in Organizational Behaviour. Topics will be selected from current issues or themes in literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 436",
+    "subject": "ORGB",
+    "number": "436",
+    "title": "Topics in Organizational Behaviour 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "This is an advanced course for students with a special interest in Organizational Behaviour. Topics will be selected from current issues or themes in literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 440",
+    "subject": "ORGB",
+    "number": "440",
+    "title": "Career Theory and Development",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Includes state of the art theory and research on careers and opportunity for exploration and development of personal career goals and dreams. Analytical and practical skills are honed through the study of careers of \"real life\" individuals as presented in films, panels of guest speakers, and interview assignments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 509",
+    "subject": "ORGB",
+    "number": "509",
+    "title": "Organizational Research Methods",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Field research in organizational behaviour.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ORGB 409. Open to undergraduate, M.Sc., and Ph.D. students.",
+      "excludes": [
+        "ORGB 409"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 525",
+    "subject": "ORGB",
+    "number": "525",
+    "title": "Compensation Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Compensation policies and practices, consistent with motivational theories, are examined. Topics include: design and evaluation of job evaluation systems, salary structures, and performance-based pay; compensation of special employee groups; and current pay equity laws. Projects and simulations provide \"hands-on\" experience in the use of compensation techniques.",
+    "prerequisites": {
+      "text": "ORGB 423",
+      "tree": "ORGB 423",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 625",
+    "subject": "ORGB",
+    "number": "625",
+    "title": "Managing Organizational Change",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Examine strategies of organizational development (OD) that enhance the organization's capacity to respond to change, maximize productivity and allow employees to experience dignity and meaning in their work. Explores the strategic, techno-structural, human process, and human resource management types of OD interventions. In addition, the course will provide opportunities for the practice of various OD skills (process consultation, feedback, observation) which enable managers to identify dysfunctional policies or behaviours. The fundamental theoretical framework of the course will draw upon developments in the behavioural and socio-technical systems approaches to organizational change.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on June 20, 21, 27, 28, July 4, 5 and there is a paper due on July 13, 2020.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "ORGB 632",
+    "subject": "ORGB",
+    "number": "632",
+    "title": "Managing Teams in Organizations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The dynamics of group and interpersonal behaviour. As well as learning conceptual frameworks, participants will examine their own interpersonal style and behaviour in group processes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 633",
+    "subject": "ORGB",
+    "number": "633",
+    "title": "Managerial Negotiations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Negotiating is a critical managerial skill. The purpose of this course is to allow students to learn to be more effective negotiators. The class environment used to accomplish this goal includes many exercises, personality inventories, and cases. The focus of the course will be on the processes of bargaining and the emphasis is \"hands on\" learning, although theories of negotiation and research examining negotiation will also be covered. Each student will have a great deal of control over how much he or she will develop into a better negotiator as a result of participating in this course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 634",
+    "subject": "ORGB",
+    "number": "634",
+    "title": "Career Development",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The broad objective of this course is to increase students' understanding of the phenomenon of careers, in the business world as well as other spheres. Students will be exposed to \"state of the art\" theory and research on careers, and will then be expected to examine the usefulness and relevance of current theory by analyzing the careers of \"real life\" individuals, from novels, films, biographies, and case histories. The course will focus on the evolution of careers over time, and will consider in-depth the many factors which influence (and are influenced by) career development, including such things as individual characteristics and background: age and family, status; occupational, job, and organizational characteristics etc. Career development will be considered both from the perspective of the individual and the organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 635",
+    "subject": "ORGB",
+    "number": "635",
+    "title": "Advanced Managerial Negotiations",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course explores in greater depth the negotiation concepts developed in ORGB 633. It also looks at other aspects and topics that impact negotiation, such as communication, culture and cognitive processes. Participants will explore the challenges they face to effectively incorporate these skills into their personal and professional lives.",
+    "prerequisites": {
+      "text": "ORGB 633.",
+      "tree": "ORGB 633",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 640",
+    "subject": "ORGB",
+    "number": "640",
+    "title": "The Art of Leadership",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Influence of personality, situational and cultural factors on strategic decision making. The role of power and political behaviour in organizational life. Topics include: managerial style, superior-subordinate relationships, organizational stress, entrepreneurial behaviour patterns, power and politics in decision making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 643",
+    "subject": "ORGB",
+    "number": "643",
+    "title": "Leading and Managing People in Healthcare",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Applying leadership and management, human decision-making, human motivation, teams and conflict, persuasion, influence, and inter-dependence, power and politics, learning in teams and organizations, and leading change to healthcare organizations and healthcare professionals.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ORGB 643D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "ORGB 643D2",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ORGB 644",
+    "subject": "ORGB",
+    "number": "644",
+    "title": "Managerial Negotiations in Healthcare",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Fundamentals of negotiation and dispute resolution in order to better understand the dynamics that lead to successful negotiation outcomes in healthcare settings: distributive negotiations, integrative negotiations, ethics, salary and contract negotiations, cross cultural negotiations, gender and negotiations, interests rights and power, online and third party negotiations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ORGB 644D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "ORGB 644D2",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ORGB 645",
+    "subject": "ORGB",
+    "number": "645",
+    "title": "People Analytics for Managers",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Three people analytics modules: talent analytics; organizational network analysis; and business demography.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ORGB 690 when topic was \"People Analytics\".",
+      "excludes": [
+        "ORGB 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 660",
+    "subject": "ORGB",
+    "number": "660",
+    "title": "Managing Data Analytics Teams",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "In this course, students will learn to: understand barriers to effective work in teams or more broadly in organizations; develop a collaboration style and learn about themselves as team members and leaders – what are their strengths, what can they improve on; learn how to jointly develop a vision and superordinate goal; develop skills in team communication, using the ‘power of framing’; build effective working relationships with diverse individuals and groups; become familiar with common organizational functional areas, their analytics perspectives, and their role in cross-functional teams.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is August 8th and withdrawal is August 15th.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable.",
+      "**Web ADD only."
+    ]
+  },
+  {
+    "code": "ORGB 661",
+    "subject": "ORGB",
+    "number": "661",
+    "title": "Ethical Leadership and Leading Change",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students will learn to: excel in the practice of distributed and shared leadership, critical to contemporary business; develop a collaboration style and learn about themselves as leaders – their strengths, areas for improvement; learn how to jointly develop a vision and superordinate goal; establish guidelines, protocols, and criteria for leading change and for the respectful and ethical collection, storage, and use of data derived from others; develop their capacity to lead across hierarchical levels, including ‘leading upwards’; understand how leadership is necessary for resolving ‘wicked problems’ (problems that require leadership, not management).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the second lecture day",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable.",
+      "**Web ADD only."
+    ]
+  },
+  {
+    "code": "ORGB 671",
+    "subject": "ORGB",
+    "number": "671",
+    "title": "Talent Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Learning objectives: to gain experience in collecting and integrating performance and personnel outcome data; to develop and practice skills needed to analyze these types data; to cultivate knowledge and an understanding of the potential and limitations of talent analytics; to become able to apply the skills and knowledge from class to future organizational settings.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day.",
+      "**During the last week, there will be a make-up class on Thursday, May 28th.",
+      "**Web ADD only.",
+      "**No Web Drop.",
+      "*Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "ORGB 672",
+    "subject": "ORGB",
+    "number": "672",
+    "title": "Organizational Network Analysis",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Learning objectives: to gain experience in collecting and representing organizational network data; to develop and practice the skills needed to analyze network data; to cultivate knowledge and understanding of how social networks are related to consequential organizational outcomes; to become able to apply the skills and knowledge from class to future organizational settings.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "ORGB 680",
+    "subject": "ORGB",
+    "number": "680",
+    "title": "Talent Management in a Global World",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Effectively managing talent in the context of increasing globalization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BUSA 690 when topic was \"Global Talent Management\", \"Talent Management\", or “Managing Talent in a Global World”.",
+      "excludes": [
+        "BUSA 690"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ORGB 685",
+    "subject": "ORGB",
+    "number": "685",
+    "title": "Cross Cultural Management",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Cross-cultural awareness and communication skills necessary to manage in multicultural organizations. The focus of the course is on the relationship between cultural values and communication styles as they affect inter-and-intra cultural communication of managers, personnel and clients of multinational and multicultural corporations and organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ORGB 685D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "ORGB 685D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ORGB 690",
+    "subject": "ORGB",
+    "number": "690",
+    "title": "Advanced Topics in Organizational Behaviour 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Current selected topics in organizational behaviour.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 691",
+    "subject": "ORGB",
+    "number": "691",
+    "title": "Advanced Topics in Organizational Behaviour 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current selected topics in organizational behaviour.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 692",
+    "subject": "ORGB",
+    "number": "692",
+    "title": "Advanced Topics in Organizational Behaviour 3",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current selected topics in organizational behaviour.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 695",
+    "subject": "ORGB",
+    "number": "695",
+    "title": "Advanced Topics in Organizational Behaviour",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current emerging topics in organizational behaviour. Course content will vary each term.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 705",
+    "subject": "ORGB",
+    "number": "705",
+    "title": "Seminar in Behavioural Science",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in behavioural science issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 706",
+    "subject": "ORGB",
+    "number": "706",
+    "title": "Meso Organizational Behaviour",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "To familiarize students with the intra-organizational processes including theories, methods, and approaches that address social, political, and cultural action in organizations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 707",
+    "subject": "ORGB",
+    "number": "707",
+    "title": "The Use and Abuse of Power",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Course will provide foundation knowledge on individual and group behavior, as well as institutional practices associated with the use and abuse of power. Will also include classic and contemporary theories, ongoing controversies, and ground breaking empirical studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ORGB 708",
+    "subject": "ORGB",
+    "number": "708",
+    "title": "Social Network Analysis for Social Science Research",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to social network analysis (SNA) methods for social science research. The particular analytical concerns when dealing with network data, the implications of different network data collection and analytical approaches and how network analysis may be useful in advancing students’ individual research. Social network analysis techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students are expected to have experience with research design, statistical methods, and have a research project or dataset that would benefit from SNA."
+    ]
+  }
+]

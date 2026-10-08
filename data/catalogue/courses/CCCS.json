@@ -1,0 +1,696 @@
+[
+  {
+    "code": "CCCS 280",
+    "subject": "CCCS",
+    "number": "280",
+    "title": "Introduction to Computer Information Systems",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "An introduction to the role of computer information systems in modern society and organizations. Topics include: current trends in information systems, decision support systems, social media, business process improvements and competitive advantage, database technology, e-business and the digital economy, knowledge management, telecommunications and networking.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCCS 300",
+    "subject": "CCCS",
+    "number": "300",
+    "title": "Programming Techniques 1",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Fundamental programming techniques, concepts, and data structures, including modularization and maintainability. Emphasis on facilitating communication and understanding between systems analysts and programmers to support decision-making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 301",
+    "subject": "CCCS",
+    "number": "301",
+    "title": "Programming Techniques 2",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Object oriented design and programming techniques, including the creation of classes, the use of objects, inheritance, and other object oriented principles. Strong focus on problem solving techniques and ways in which programmers can support decision-making within an organization. Inheritance. Interfaces. Design patterns. Application development frameworks. Build automation tools.",
+    "prerequisites": {
+      "text": "CCCS 300 or approval of the Director or Program Coordinator.",
+      "tree": "CCCS 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 310",
+    "subject": "CCCS",
+    "number": "310",
+    "title": "Web Development",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Development of web sites and web-based applications using page markup, style sheets, and client-side scripting. Emphasis will be placed on developing pages that support current standards and accessibility requirements, as well as multimedia, cross-platform development, and site deployment.",
+    "prerequisites": {
+      "text": "CCCS 300 or approval of the Director or Program Coordinator.",
+      "tree": "CCCS 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 315",
+    "subject": "CCCS",
+    "number": "315",
+    "title": "Data Structures and Algorithms",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Programming techniques used to implement algorithms on computers with an object oriented programming language through the careful design of data structures which support the efficient manipulation of data.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 321",
+    "subject": "CCCS",
+    "number": "321",
+    "title": "Operating Systems Administration",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Operating systems such as Windows and LINUX/UNIX environments, administration of computer servers, usage of script languages in various operating systems, back up procedures and remote access, communication protocol used among different systems, managing information and system security.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 325",
+    "subject": "CCCS",
+    "number": "325",
+    "title": "Mobile Application Development",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Examines the limitations and technical challenges of current mobile devices and wireless communications by using up-to-date software development tools and application programming interfaces. Develop small realistic applications for mobile devices by using a standard software development environment.",
+    "prerequisites": {
+      "text": "CCCS 300 or approval of the Director or Program Coordinator.",
+      "tree": "CCCS 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 330",
+    "subject": "CCCS",
+    "number": "330",
+    "title": "Database Design and Business Applications Development",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Design and implement applications that make use of different database management systems. Simple and complex Structured Query Language (SQL) used in manipulation of information, data design, querying, and programming. Connectivity to different databases through programming languages to implement web applications.",
+    "prerequisites": {
+      "text": "CCCS 300 or approval of the Director or Program Coordinator.",
+      "tree": "CCCS 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 385",
+    "subject": "CCCS",
+    "number": "385",
+    "title": "Independent Studies: Technology & Innovation",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Individual projects, which may involve guided readings,applied research and development components.",
+    "prerequisites": {
+      "text": "The topic of study requires the approval of the Technology & Innovation unit.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "A project plan outlining a topic and the scope of the project must be approved by the relevant academic coordinator, under the supervision of an instructor and, when appropriate, an external subject-matter expert."
+    ]
+  },
+  {
+    "code": "CCCS 400",
+    "subject": "CCCS",
+    "number": "400",
+    "title": "Special Topics in Technology and Innovation",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Selected topics in technology and innovation based on contemporary issues, current trends and emerging research in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Course may be offered in person or online with synchronous and asynchronous components.",
+      "2. The topics might vary from semester-to-semester."
+    ]
+  },
+  {
+    "code": "CCCS 401",
+    "subject": "CCCS",
+    "number": "401",
+    "title": "Special Topics: Programming",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCCS 402",
+    "subject": "CCCS",
+    "number": "402",
+    "title": "Special Topics: Information Systems Security",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCCS 425",
+    "subject": "CCCS",
+    "number": "425",
+    "title": "Web Services",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Design, implementation, and deployment of web services-based solutions to solve common problems in the distributed application domain.",
+    "prerequisites": {
+      "text": "CCCS 300 or approval of the Director or Program Coordinator.",
+      "tree": "CCCS 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 431",
+    "subject": "CCCS",
+    "number": "431",
+    "title": "Networking Fundamentals",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Fundamental concepts and practices of network principles, technical and managerial aspects of data communications, overview of local area and wide-area networks, network topology, network protocols, Internet/intranets, client/server communication, and file sharing.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCCS 300",
+      "tree": "CCCS 300",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 450",
+    "subject": "CCCS",
+    "number": "450",
+    "title": "Access Control and Defence Methods",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Covers different authentication methods, identifies management, access controls implementation, attackers’ tactics and strategies, anomalous traffic detection, various types of hacking tools and prevention systems against attacks.",
+    "prerequisites": {
+      "text": "CCCS 300, CCCS 321, CCCS 431 and CMIS 422; or approval of the Director or Program Coordinator.",
+      "tree": {
+        "and": [
+          "CCCS 300",
+          "CCCS 321",
+          "CCCS 431",
+          "CMIS 422"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 451",
+    "subject": "CCCS",
+    "number": "451",
+    "title": "Communication and Network Security",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Introduction to modern wireless communication and networking technology, including different approaches to secure the wireless networks, with necessary tools to adapt to the revolutionary change in mobile communications and networking.",
+    "prerequisites": {
+      "text": "CCCS 300, CCCS 321, CCCS 431 and CMIS 422; or approval of the Director or Program Coordinator.",
+      "tree": {
+        "and": [
+          "CCCS 300",
+          "CCCS 321",
+          "CCCS 431",
+          "CMIS 422"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 452",
+    "subject": "CCCS",
+    "number": "452",
+    "title": "Security Program Architecture and Engineering",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Information security concepts of security models, engineering processes using secure design principles, assessing and mitigating vulnerabilities in systems, designing and implementing physical security.",
+    "prerequisites": {
+      "text": "CCCS 300, CCCS 321, CCCS 431 and CMIS 422; or approval of the Director or Program Coordinator.",
+      "tree": {
+        "and": [
+          "CCCS 300",
+          "CCCS 321",
+          "CCCS 431",
+          "CMIS 422"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 453",
+    "subject": "CCCS",
+    "number": "453",
+    "title": "Security Risk Management and Governance",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ethical, legal and regulatory issues surrounding cyber security so as to design networks and policies for security and compliance, including cyber security risks, threats, opportunities and vulnerabilities at the strategic and operational levels.",
+    "prerequisites": {
+      "text": "CCCS 300, CCCS 321, CCCS 431 and CMIS 422; or approval of the Director or Program Coordinator.",
+      "tree": {
+        "and": [
+          "CCCS 300",
+          "CCCS 321",
+          "CCCS 431",
+          "CMIS 422"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 454",
+    "subject": "CCCS",
+    "number": "454",
+    "title": "Security Incident Response and Recovery",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The incident lifecycle, incident management plans, business continuity plans, disaster recovery plans that are in place to identify, analyze and respond to attacks and threats.",
+    "prerequisites": {
+      "text": "CCCS 300, CCCS 321, CCCS 431 and CMIS 422; or approval of the Director or Program Coordinator.",
+      "tree": {
+        "and": [
+          "CCCS 300",
+          "CCCS 321",
+          "CCCS 431",
+          "CMIS 422"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 455",
+    "subject": "CCCS",
+    "number": "455",
+    "title": "Intrusion Testing and Security Assessment",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The fundamentals and tool set needed to discover and exploit system vulnerabilities, penetrate organization infrastructure; tools and hacking techniques used in cyber-attacks, and planning intrusion tests.",
+    "prerequisites": {
+      "text": "CCCS 300, CCCS 321, CCCS 431 and CMIS 422; or approval of the Director or Program Coordinator.",
+      "tree": {
+        "and": [
+          "CCCS 300",
+          "CCCS 321",
+          "CCCS 431",
+          "CMIS 422"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 600",
+    "subject": "CCCS",
+    "number": "600",
+    "title": "Advanced Special Topics in Technology and Innovation",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Advanced selected topics in technology and innovation based on contemporary issues, current trends and emerging research in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Course may be offered in person or online with synchronous and asynchronous components.",
+      "2. The topics might vary from semester-to-semester."
+    ]
+  },
+  {
+    "code": "CCCS 610",
+    "subject": "CCCS",
+    "number": "610",
+    "title": "Digital Thinking for Data Analysis",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of programmable tools for data analysis. Application methods to implement fundamental algorithms making use of data structures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 620",
+    "subject": "CCCS",
+    "number": "620",
+    "title": "Data Analysis and Modelling ",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Analysis of fundamental concepts and techniques for data analysis and modelling; basic mathematical and computational concepts needed for data analysis. Application of programmable tools to real-world examples.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCS2 505.",
+      "excludes": [
+        "CCS2 505"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 630",
+    "subject": "CCCS",
+    "number": "630",
+    "title": "Complex Systems",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Tools and techniques for modelling and simulating diverse complex systems; network analysis with applications in social, biological, and infrastructure networks; and chaotic systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 640",
+    "subject": "CCCS",
+    "number": "640",
+    "title": "Applied Decision Science",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Analysis of concepts, tools, and techniques provided by mathematical and computational sciences for decision making in its diverse formats. Examination of decision science techniques and their applicability.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMS2 505.",
+      "excludes": [
+        "CMS2 505"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 650",
+    "subject": "CCCS",
+    "number": "650",
+    "title": "Applied Data Science",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Analysis of techniques provided by statistics and computational sciences for machine learning and data science. Examination of real-world applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMS2 529.",
+      "excludes": [
+        "CMS2 529"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 660",
+    "subject": "CCCS",
+    "number": "660",
+    "title": "Computational Intelligence",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Analysis of tools provided by mathematical and computational sciences for artificial intelligence as well as an examination of the numerous contexts in which computational intelligence can be applied.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 670",
+    "subject": "CCCS",
+    "number": "670",
+    "title": "Information Visualization",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Examination of the application of computational and mathematical concepts, tools, and techniques to visualize quantitative multi-dimensional information. Qualitative information in static, animated, and interactive digital formats. Guidelines and best practices from cognitive psychology, UX, and graphic design, including dashboard tools and storytelling methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities"
+    ]
+  },
+  {
+    "code": "CCCS 680",
+    "subject": "CCCS",
+    "number": "680",
+    "title": "Scalable Data Analysis",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Concepts, tools, and metrics related to scaling up data analysis to handle massive amounts of data. Examination of methods for enabling technologies and applications such as big data and cloud computing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CMIS 550.",
+      "excludes": [
+        "CMIS 550"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCCS 685",
+    "subject": "CCCS",
+    "number": "685",
+    "title": "Advanced Independent Studies: Technology and Innovation",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Individual advanced projects, which may involve guidedreadings, applied research and development components.",
+    "prerequisites": {
+      "text": "The topic of study requires the approval of the Technology & Innovation unit.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "A project plan outlining a topic and the scope of the project must be approved by the relevant academic coordinator, under the supervision of an instructor and, when appropriate, an external subject-matter expert."
+    ]
+  },
+  {
+    "code": "CCCS 690",
+    "subject": "CCCS",
+    "number": "690",
+    "title": "Applied Computational Research",
+    "credits": 3,
+    "offeredBy": "Technology & Innovation",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Analysis of a real-world case study of choice. Examination of version-controlled repositories and project management tools for tracking the tasks. Identification, formulation, and application of data-driven projects in areas of interest.",
+    "prerequisites": {
+      "text": "CCCS 630 or CCCS 640",
+      "tree": {
+        "or": [
+          "CCCS 630",
+          "CCCS 640"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  }
+]

@@ -1,0 +1,345 @@
+[
+  {
+    "code": "NSCI 200",
+    "subject": "NSCI",
+    "number": "200",
+    "title": "Introduction to Neuroscience 1",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to how nerve cells generate action potentials, communicate with one another at synapses, develop synaptic connections, early brain development, and the construction of specific neural circuits.",
+    "prerequisites": {
+      "text": "BIOL 112, CHEM 110, CHEM 120, PHYS 101 or PHYS 131, and PHYS 102 or PHYS 142. Pre-/Co-requisite BIOL 200, CHEM 212 or permission of instructor.",
+      "tree": {
+        "and": [
+          "BIOL 112",
+          "CHEM 110",
+          "CHEM 120",
+          {
+            "or": [
+              "PHYS 101",
+              "PHYS 131"
+            ]
+          },
+          {
+            "or": [
+              "PHYS 102",
+              "PHYS 142"
+            ]
+          },
+          "BIOL 200",
+          "CHEM 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken PHGY 209.",
+      "excludes": [
+        "PHGY 209"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "NSCI 201",
+    "subject": "NSCI",
+    "number": "201",
+    "title": "Introduction to Neuroscience 2",
+    "credits": 3,
+    "offeredBy": "Psychology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to how the nervous system acquires and integrates information and uses it to produce behaviour.",
+    "prerequisites": {
+      "text": "NSCI 200 or PSYC 211 or permission of instructor.",
+      "tree": {
+        "or": [
+          "NSCI 200",
+          "PSYC 211"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 308.",
+      "excludes": [
+        "PSYC 308"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "NSCI 300",
+    "subject": "NSCI",
+    "number": "300",
+    "title": "Neuroethics",
+    "credits": 3,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "An introduction to ethical issues arising from basic and clinical neuroscience. Overview of therapeutic, diagnostic, and research interventions in mental and neurological disorders, and their implications on society.",
+    "prerequisites": {
+      "text": "NSCI 200 and NSCI 201 or permission of instructor",
+      "tree": {
+        "and": [
+          "NSCI 200",
+          "NSCI 201"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Major Neuroscience Program",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "NSCI 396",
+    "subject": "NSCI",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": {
+      "text": "At least one term of undergraduate studies, a CGPA of at least 3.0, or permission of instructor to waive these requirements. A project proposal form must be completed by the student and instructor and approved by the unit head or his/her delegate before the start of the term. Instructors will list project-specific prerequisites with the project description.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Coordinator's permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: To receive approval to register for this course, a student must present a research proposal to the Coordinator. Seehttps://www.mcgill.ca/neuroscience/research/nsci-396-research-project-form/ for instructions."
+    ]
+  },
+  {
+    "code": "NSCI 400",
+    "subject": "NSCI",
+    "number": "400",
+    "title": "Neuroscience Seminar",
+    "credits": 1,
+    "offeredBy": "Physiology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Analysis of current research in neuroscience.",
+    "prerequisites": {
+      "text": "NSCI 200, 201, and 300",
+      "tree": {
+        "and": [
+          "NSCI 200",
+          "NSCI 201",
+          "NSCI 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in their final year of a B.Sc. Major Neuroscience Program",
+      "excludes": []
+    },
+    "notes": [
+      "Fall/Winter",
+      "Students will demonstrate their understanding of neuroscience by writing critical analyses of selected published papers and research seminars."
+    ],
+    "parts": [
+      {
+        "code": "NSCI 400D1",
+        "credits": 0.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "NSCI 400D2",
+        "credits": 0.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "NSCI 410",
+    "subject": "NSCI",
+    "number": "410",
+    "title": "Independent Research 1",
+    "credits": 6,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent laboratory research in neuroscience.",
+    "prerequisites": {
+      "text": "NSCI 200 and NSCI 201",
+      "tree": {
+        "and": [
+          "NSCI 200",
+          "NSCI 201"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students registered in the B.Sc. Neuroscience Major. Not open to students who have taken or are taking NSCI 420D1 and NSCI 420D2.",
+      "excludes": [
+        "NSCI 420"
+      ]
+    },
+    "notes": [],
+    "parts": [
+      {
+        "code": "NSCI 410D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "NSCI 410D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "NSCI 420",
+    "subject": "NSCI",
+    "number": "420",
+    "title": "Independent Research 2",
+    "credits": 9,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent laboratory research in neuroscience.",
+    "prerequisites": {
+      "text": "NSCI 200 and NSCI 201",
+      "tree": {
+        "and": [
+          "NSCI 200",
+          "NSCI 201"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "NSCI 420D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "NSCI 420D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "NSCI 420N1",
+        "credits": 4.5,
+        "terms": []
+      },
+      {
+        "code": "NSCI 420N2",
+        "credits": 4.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "NSCI 430",
+    "subject": "NSCI",
+    "number": "430",
+    "title": "Honours Research Project",
+    "credits": 9,
+    "offeredBy": "Biology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students undertake an independent research project in the field of neursocience under the guidance of an established McGill neuroscientist. They are expected to obtain hands-on research experience in their supervisor's laboratory, learn about the strengths and limitations of the methodology and work independently.",
+    "prerequisites": {
+      "text": "NSCI 200, NSCI 201, NSCI 300",
+      "tree": {
+        "and": [
+          "NSCI 200",
+          "NSCI 201",
+          "NSCI 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "NSCI 400D1, NSCI 400D2",
+      "tree": "NSCI 400",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to U3 students registered in the B.Sc. Honours Neuroscience. Requires departmental approval.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both NSCI 430D1 and NSCI 430D2",
+      "No credit will be given for this course unless both NSCI 430D1 and NSCI 430D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "NSCI 430D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "NSCI 430D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  }
+]

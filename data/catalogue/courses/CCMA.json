@@ -1,0 +1,99 @@
+[
+  {
+    "code": "CCMA 523",
+    "subject": "CCMA",
+    "number": "523",
+    "title": "Managerial Accounting 3",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Core management control problems, the management control systems available to address those problems, and important situational factors that can cause managers to choose one set of management controls over another are examined. Coverage of management controls is extended to situations that deserve special attention.",
+    "prerequisites": {
+      "text": "CCMA 522",
+      "tree": "CCMA 522",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCMA 611",
+    "subject": "CCMA",
+    "number": "611",
+    "title": "Managerial Accounting 1",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Introduction to cost accounting. Elements of cost; job order and process cost systems; budgeting; standard costs and analysis of variances; cost/volume/profit relationships; variable costing; relevant costs.",
+    "prerequisites": {
+      "text": "(CCFC 511 or CCFC 611) and (CPL2 552 or CPL2 652)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CCFC 511",
+              "CCFC 611"
+            ]
+          },
+          {
+            "or": [
+              "CPL2 552",
+              "CPL2 652"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CCFA 605",
+      "tree": "CCFA 605",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCMA 511.",
+      "excludes": [
+        "CCMA 511"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCMA 622",
+    "subject": "CCMA",
+    "number": "622",
+    "title": "Managerial Accounting 2",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Building on Managerial Accounting I, this course examines the processes used by management to make decisions relating to business operations; investments and cost management. Process costing, cost linked to quality (spoilage, rework, scrap), joint products and transfer pricing are also included.",
+    "prerequisites": {
+      "text": "CCMA 511 or CCMA 611",
+      "tree": {
+        "or": [
+          "CCMA 511",
+          "CCMA 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCMA 522.",
+      "excludes": [
+        "CCMA 522"
+      ]
+    },
+    "notes": []
+  }
+]

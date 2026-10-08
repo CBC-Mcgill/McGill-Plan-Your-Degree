@@ -1,0 +1,256 @@
+[
+  {
+    "code": "QLSC 600",
+    "subject": "QLSC",
+    "number": "600",
+    "title": "Foundations of Quantitative Life Sciences",
+    "credits": 6,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Provides an overview of important problems in the life sciences and introduces students to the latest computational, mathematical, and statistical approaches involved in their solution. Includes a survey of modern technologies for biological data acquisition and promotes a common language to communicate across the biological, physical, mathematical, and computational sciences. Topics will include bioinformatics and computational genomics, nonlinear dynamics in biological systems, linear and nonlinear models of biological signals, biophysical imaging technology, emergent behaviour in biophysical networks, and ecosystem dynamics and modeling.",
+    "prerequisites": {
+      "text": "BIOL 200 or BIOL 201; COMP 206, COMP 250, MATH 314; MATH 223 or MATH 236; MATH 323 or MATH 324",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 200",
+              "BIOL 201"
+            ]
+          },
+          "COMP 206",
+          "COMP 250",
+          "MATH 314",
+          {
+            "or": [
+              "MATH 223",
+              "MATH 236"
+            ]
+          },
+          {
+            "or": [
+              "MATH 323",
+              "MATH 324"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Priority given to students enrolled in the ad hoc Quantitative Life Sciences Ph.D. program.",
+      "excludes": []
+    },
+    "notes": [
+      "No credit will be given for this course unless both QLSC 600D1 and QLSC 600D2 are successfully completed in consecutive terms.",
+      "Students must register for both QLSC 600D1 and QLSC 600D2"
+    ],
+    "parts": [
+      {
+        "code": "QLSC 600D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "QLSC 600D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "QLSC 601",
+    "subject": "QLSC",
+    "number": "601",
+    "title": "Quantitative Life Sciences Seminars 1",
+    "credits": 0,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "QLS Monthly Seminar Series and Journal Club.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students enrolled in QLS.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both QLSC 601D1 and QLSC 601D2",
+      "No credit will be given for this course unless both QLSC 601D1 and QLSC 601D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "QLSC 601D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "QLSC 601D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "QLSC 602",
+    "subject": "QLSC",
+    "number": "602",
+    "title": "Quantitative Life Sciences Seminars 2",
+    "credits": 0,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "QLS Monthly Seminar Series and Journal Club.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students enrolled in QLS.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both QLSC 602D1 and QLSC 602D2",
+      "No credit will be given for this course unless both QLSC 602D1 and QLSC 602D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "QLSC 602D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "QLSC 602D2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "QLSC 603",
+    "subject": "QLSC",
+    "number": "603",
+    "title": "Quantitative Life Sciences Seminars 3",
+    "credits": 0,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "QLS Monthly Seminar Series and Journal Club.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students enrolled in QLS.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both QLSC 603D1 and QLSC 603D2",
+      "No credit will be given for this course unless both QLSC 603D1 and QLSC 603D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "QLSC 603D1",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "QLSC 603D2",
+        "credits": 0,
+        "terms": []
+      },
+      {
+        "code": "QLSC 603N2",
+        "credits": 0,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "QLSC 611",
+    "subject": "QLSC",
+    "number": "611",
+    "title": "Directed Readings",
+    "credits": 3,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Directed reading and writing assignments under the guidance of a QLS supervisor. Topics will be chosen to suit individual needs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "QLSC 612",
+    "subject": "QLSC",
+    "number": "612",
+    "title": "Fundamentals for Neuro Data Science",
+    "credits": 3,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Analyzing neuroscience and neuroimaging data in a reproducible and collaborative manner using the Python software stack, including the fundamentals of both tools (bash, git, github, jupyter, docker, visualization) and analysis methods (hypothesis testing, machine learning) at the conceptual and practical levels.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students will be expected to have basic programming skills and to bring a laptop."
+    ]
+  },
+  {
+    "code": "QLSC 701",
+    "subject": "QLSC",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Exam",
+    "credits": 0,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Compulsory comprehensive examination to evaluate the students' ability to carry out, present, discuss and defend research in their field of interest. The examination must be completed within the first 18 months of enrollment in the program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "QLSC 716",
+    "subject": "QLSC",
+    "number": "716",
+    "title": "PhD 1 Research in Quantitative and Life Sciences 1",
+    "credits": 15,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Quantitative and Life Sciences. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "QLSC 717",
+    "subject": "QLSC",
+    "number": "717",
+    "title": "PhD 1 Research in Quantitative and Life Sciences 2",
+    "credits": 15,
+    "offeredBy": "Quantitative Life Sciences",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Quantitative and Life Sciences. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

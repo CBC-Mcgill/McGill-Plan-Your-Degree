@@ -1,0 +1,93 @@
+[
+  {
+    "code": "MICR 331",
+    "subject": "MICR",
+    "number": "331",
+    "title": "Microbial Ecology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The ecology of microorganisms, primarily bacteria and archaea, and their roles in biogeochemical cycles. Microbial interactions with the environment, plants, animals and other microbes emphasizing the underlying genetics and physiology. Diversity, evolution (microbial phylogenetics) and the application of molecular biology in microbial ecology.",
+    "prerequisites": {
+      "text": "LSCI 230 or AEBI 212 or ENVR 202 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "LSCI 230",
+          "AEBI 212",
+          "ENVR 202"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Not recommended for U1 students."
+    ]
+  },
+  {
+    "code": "MICR 338",
+    "subject": "MICR",
+    "number": "338",
+    "title": "Bacterial Molecular Genetics",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic bacterial genetics, DNA damage and repair, mutagenesis, gene cloning, mapping and regulation, molecular biology. Laboratory sessions will provide the student with practical experience in the genetic manipulation of microbes and in molecular biology techniques.",
+    "prerequisites": {
+      "text": "LSCI 230",
+      "tree": "LSCI 230",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MICR 341",
+    "subject": "MICR",
+    "number": "341",
+    "title": "Mechanisms of Pathogenicity",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [],
+    "description": "A study of the means by which bacteria cause disease in animals and humans. Includes response of host to invading bacteria, bacterial attachment and penetration processes, and modes of actions of exotoxins and endotoxins.",
+    "prerequisites": {
+      "text": "LSCI 230",
+      "tree": "LSCI 230",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MICR 450",
+    "subject": "MICR",
+    "number": "450",
+    "title": "Environmental Microbiology",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Focus on microbes in the environment. Topics include extreme environments, polar microbiology, biotechnology and bioremediation. Emphasis will be on population studies based upon molecular biological methods.",
+    "prerequisites": {
+      "text": "LSCI 230",
+      "tree": "LSCI 230",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

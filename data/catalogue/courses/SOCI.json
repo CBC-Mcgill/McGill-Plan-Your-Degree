@@ -1,0 +1,2656 @@
+[
+  {
+    "code": "SOCI 210",
+    "subject": "SOCI",
+    "number": "210",
+    "title": "Sociological Perspectives",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Major theoretical perspectives and research methods in sociology. The linkages of theory and method in various substantive areas including: the family, community and urban life, religion, ethnicity, occupations and stratification, education, and social change.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 211",
+    "subject": "SOCI",
+    "number": "211",
+    "title": "Sociological Inquiry",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introductory review of methods of sociological research including research design, elementary quantitative data analysis, observation, and use of official statistics. Detailed examination of published examples of the use of each of the major techniques of data analysis and collection.",
+    "prerequisites": {
+      "text": "or Corequisite: SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 212",
+    "subject": "SOCI",
+    "number": "212",
+    "title": "International Migration",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to social science research on international migration. Covers theories about why people migrate, constraints to migration, and various aspects of immigrant integration. Will explore key theoretical debates of the field and the empirical data and case studies on which these debates hinge.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 213",
+    "subject": "SOCI",
+    "number": "213",
+    "title": "Deviance",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the sociological study of deviance. The course examines biological, psychological and sociological explanations for deviance. Topics covered include sexual deviance, mental disorders, and drug use.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken SOCI 377.",
+      "excludes": [
+        "SOCI 377"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 222",
+    "subject": "SOCI",
+    "number": "222",
+    "title": "Urban Sociology",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Comparative analysis of the process of urbanization in Europe, North America and the Third World; effects of urbanization upon social institutions and individuals; theories of urbanization and urbanism; the Canadian urban system; urban problems in comparative view.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 225",
+    "subject": "SOCI",
+    "number": "225",
+    "title": "Medicine and Health in Modern Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Socio-medical problems and ways in which sociological analysis and research are being used to understand and deal with them. Canadian and Québec problems include: poverty and health; mental illness; aging; death and dying; professionalism; health service organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 227",
+    "subject": "SOCI",
+    "number": "227",
+    "title": "Jews in North America",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An introduction to the study contemporary North American Jewry using findings of sociology and other social sciences. Social, cultural, and political issues of concern to the Jewish community. Specific characteristics of Jewish life in Canada, and Québec in particular, in comparison to the American Jewish experience.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken SOCI 327.",
+      "excludes": [
+        "SOCI 327"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 230",
+    "subject": "SOCI",
+    "number": "230",
+    "title": "Sociology of Ethnic Relations",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the sociological study of minority groups in Canada. The course will explore the themes of racism, prejudice, and discrimination, ethnic and racial inequalities, cultural identities, multiculturalism, immigration. Theoretical, empirical, and policy issues will be discussed. While the focus will be primarily on Canada, comparisons will be made with the United States.",
+    "prerequisites": {
+      "text": "SOCI 210 or permission of instructor",
+      "tree": "SOCI 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 234",
+    "subject": "SOCI",
+    "number": "234",
+    "title": "Population and Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to the reciprocal linkages in the social world between population size, structure and dynamics on the one hand, social structure, action and change on the other. An examination of population processes and their relation to the social world.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 235",
+    "subject": "SOCI",
+    "number": "235",
+    "title": "Technology and Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An examination of the extent to which technological developments impose constraints on ways of arranging social relationships in bureaucratic organizations and in the wider society: the compatibility of current social structures with the effective utilization of technology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 245",
+    "subject": "SOCI",
+    "number": "245",
+    "title": "The Sociology of Emotions",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the sociology of emotions. Exploration of how social relations and emotions affect one another, focusing on the social determinants of emotions, the social construction of emotions, and the effects of emotions on social consensus and conflict. The sociological study of emotions intersects with psychology and neuroscience, and this course helps to situate sociology in these related disciplines.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 247",
+    "subject": "SOCI",
+    "number": "247",
+    "title": "Family and Modern Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Contrasting family in Canada and in the United States for the recent past. Examination of theories on family; changes and diversity of family life; complex relationships among marriage, work, and family; domestic violence; various types of family experience; and the future of the family.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course for the Women's Studies Concentrations"
+    ]
+  },
+  {
+    "code": "SOCI 250",
+    "subject": "SOCI",
+    "number": "250",
+    "title": "Social Problems",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Contrasting theoretical approaches to social problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 254",
+    "subject": "SOCI",
+    "number": "254",
+    "title": "Development and Underdevelopment",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Competing theories about the causes of underdevelopment in the poor countries. Topics include the impact of geography, the population explosion, culture and national character, economic and sexual inequalities, democracy and dictatorship. Western imperialism and multi-national corporations, reliance on the market, and development through local participation, cooperation, and appropriate technology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Summer"
+    ]
+  },
+  {
+    "code": "SOCI 255",
+    "subject": "SOCI",
+    "number": "255",
+    "title": "Gender and the State",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "How is political participation, representation, and mobilization within existing democracies gendered? This course provides an introduction to social scientific literature on gender and politics. Using theoretical and empirical work in sociology, political science, and history, this course helps students identify gender disparities in political processes and debate their causes.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 270",
+    "subject": "SOCI",
+    "number": "270",
+    "title": "Sociology of Gender",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "This course focuses on social changes in gender relations, gender inequalities and the social construction of gender. Using sociological theories of gender, different social institutions and spheres of society will be analyzed. Topics such as gender socialization, gender relations in work, family, education, and media will be covered.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 300",
+    "subject": "SOCI",
+    "number": "300",
+    "title": "Sociology of Sexualities",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Topics covered include sexual diversity, historical and cross-cultural perspectives on sexuality, sex work, pornography, non-monogamy, and casual sex.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 301",
+    "subject": "SOCI",
+    "number": "301",
+    "title": "Artificial Intelligence and Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A critical approach to dissecting artificial intelligence's (AI) origin, proliferation, and ubiquity. Examinations of its impact on societal norms and institutions. A dynamic look at AI's promises and limits in delivering a utopic technological future.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 304",
+    "subject": "SOCI",
+    "number": "304",
+    "title": "Sociology of the Welfare State",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The origins and history of the welfare state and the differences between types of welfare state regimes; debates about and empirical evidence for current developments in welfare state programs. Special attention will be paid to the interconnections between the evolution of the labour market and the resulting pressures on the welfare state.",
+    "prerequisites": {
+      "text": "SOCI 210 and SOCI 211 or instructors permission.",
+      "tree": {
+        "and": [
+          "SOCI 210",
+          "SOCI 211"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 305",
+    "subject": "SOCI",
+    "number": "305",
+    "title": "Socialization",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The effects of early childhood experiences upon adult personality, and the transmission of social roles and values. Topics include: social reinforcement theories, modeling theories, maternal deprivation, culture and personality studies, cognitive development and infantile sexuality. The processes of sex role socialization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 307",
+    "subject": "SOCI",
+    "number": "307",
+    "title": "Globalization",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Socio-economic, political and cultural dynamics related to processes of globalization. An examination of the following: key theoretical foundations of the globalization debate; the extent and implications of economic globalization; global governance and the continuing relevance of nation-states; instances of transnational activism; the diffusion of cultural practices; patterns and management of global migration and mobility.",
+    "prerequisites": {
+      "text": "SOCI 210 or Permission of Instructor",
+      "tree": "SOCI 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 309",
+    "subject": "SOCI",
+    "number": "309",
+    "title": "Health and Illness",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Health and illness as social rather than purely bio-medical phenomena. Topics include: studies of ill persons, health care occupations and organizations; poverty and health; inequalities in access to and use of health services; recent policies, ideologies, and problems in reform of health services organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 310",
+    "subject": "SOCI",
+    "number": "310",
+    "title": "Sociology of Mental Health",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Three broad areas of sociological research on mental health and illness: definitions and measurement; social origins; and societal responses. Mental health and illness as a product of social circumstances.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 312",
+    "subject": "SOCI",
+    "number": "312",
+    "title": "Sociology of Work and Industry",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The development of the world of work from the rise of industrial capitalism to the postindustrial age. Responses of workers and managers to changing organizational, technological and economic realities. Interrelations between changing demands in the workplace and the functioning of the labour market. Canadian materials in comparative perspective.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 318",
+    "subject": "SOCI",
+    "number": "318",
+    "title": "Sociology of the Media",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A survey course; examines various topics, theories, and research related to the sociological and cultural study of the media, both traditional and new.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 320",
+    "subject": "SOCI",
+    "number": "320",
+    "title": "Topics in Sociology 2",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Examination of selected topics in sociological theory and research.",
+    "prerequisites": {
+      "text": "SOC1 210 or Permission of instructor.",
+      "tree": "SOC1 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Topics will vary from year to year."
+    ]
+  },
+  {
+    "code": "SOCI 321",
+    "subject": "SOCI",
+    "number": "321",
+    "title": "Gender and Work",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Focus on men's and women's work in North American societies, historically and contemporarily, in order to understand the dynamisms of gender (in)equality in and outside of the home. Topics explored include: housework; the relationship(s) between gender, organizations and bureaucracy; emotional labour; occupational segregation and stratification; sexual harassment; and work-family policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course for the Women's Studies Concentrations"
+    ]
+  },
+  {
+    "code": "SOCI 322",
+    "subject": "SOCI",
+    "number": "322",
+    "title": "Sociology of Literature",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A review of sociological research on the production, readership, and broader social implications of literature. Topics will include: the issue of whether literature \"reflects\" society, the use of literature in establishing collective identities, and reading as a social practice.",
+    "prerequisites": {
+      "text": "SOCI-219.",
+      "tree": "SOCI 219",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 325",
+    "subject": "SOCI",
+    "number": "325",
+    "title": "Sociology of Science",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A review of sociological research on science as an institution. Topics include the culture and practice of science, societal influences on scientific processes, the use of scientific output and technology in media and society, and the impact of cultural and institutional forces on the evolution of scientific knowledge.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 326",
+    "subject": "SOCI",
+    "number": "326",
+    "title": "Political Sociology 01",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "An examination of the social changes that underlie the emergence of modern politics. An outline and empirical critique of the principal alternative models of political functioning in industrial societies. Empirical analysis of elite and mass political behaviour.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 330",
+    "subject": "SOCI",
+    "number": "330",
+    "title": "Sociological Theory",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Major themes in sociological theory as developed by key classical and contemporary theorists. Uses and limitations of social theory for understanding the social world. Themes may include inequality/power; culture/structure/values; strategic action; and social construction.",
+    "prerequisites": {
+      "text": "SOCI 210 or permission of instructor",
+      "tree": "SOCI 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 331",
+    "subject": "SOCI",
+    "number": "331",
+    "title": "Population and Environment",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Main topics and controversies linking population processes and the environment. Topics include how population processes influence the environment, population responses to changing environments, policies related to these effects, variation across and within developed and developing countries.",
+    "prerequisites": {
+      "text": "SOCI 210 or SOCI 211 or SOCI 234 or SOCI 254",
+      "tree": {
+        "or": [
+          "SOCI 210",
+          "SOCI 211",
+          "SOCI 234",
+          "SOCI 254"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 333",
+    "subject": "SOCI",
+    "number": "333",
+    "title": "Social Stratification",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The pattern, causes and consequences of social inequality. Among the inequalities considered are those of economic class, sex (gender), race, ethnicity and age. Competing theories of the causes of social inequalities are compared and assessed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 335",
+    "subject": "SOCI",
+    "number": "335",
+    "title": "Sociology of Aging and the Life Course",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This class will introduce students to the growing body of interdisciplinary research suggesting social factors strongly influence healthy and successful aging. Topics will include the impact of stratification (race, class, gender), neighborhood processes, social networks, family and partnerships, and bio-social interactions, on life trajectories and the aging process.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 341",
+    "subject": "SOCI",
+    "number": "341",
+    "title": "Current Problems in Sociology 02",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Intended for students who are adequately prepared to undertake advanced work and have an explicit proposal to submit.",
+    "prerequisites": {
+      "text": "permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 342",
+    "subject": "SOCI",
+    "number": "342",
+    "title": "Independent Study 1",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Intended for students who are adequately prepared to undertake advanced work and have an explicit proposal to submit.",
+    "prerequisites": {
+      "text": "permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 343",
+    "subject": "SOCI",
+    "number": "343",
+    "title": "Independent Study 2",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Intended for students who are adequately prepared to undertake advanced work and have an explicit proposal to submit.",
+    "prerequisites": {
+      "text": "permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 345",
+    "subject": "SOCI",
+    "number": "345",
+    "title": "Topics in Sociology",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Topics in Sociology. Topic varies by year.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 350",
+    "subject": "SOCI",
+    "number": "350",
+    "title": "Statistics in Social Research",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This is an introductory course in descriptive and inferential statistics. The course is designed to help students develop a critical attitude toward statistical argument. It serves as a background for further statistics courses, helping to provide the intuition which can sometimes be lost amid the formulas.",
+    "prerequisites": {
+      "text": "SOCI 211",
+      "tree": "SOCI 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken PSYC 204, PSYC 305 or ECON 227",
+      "excludes": [
+        "ECON 227",
+        "PSYC 204",
+        "PSYC 305"
+      ]
+    },
+    "notes": [
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "SOCI 354",
+    "subject": "SOCI",
+    "number": "354",
+    "title": "Dynamics of Industrial Societies",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Theories of social, economic, and political change in the industrialized societies. Causes of cycles in economic growth; imperialism and war; and in ethnic, religious, and industrial conflict. Causes of long run trends in social inequality, crime, family stability, and the position of women. Comparison of North America, Europe, Russia, and Japan.",
+    "prerequisites": {
+      "text": "SOCI 210 or any other introductory course in the social sciences",
+      "tree": "SOCI 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 355",
+    "subject": "SOCI",
+    "number": "355",
+    "title": "Rural Life in a Global Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Focus on rural life in North America in the context of rapid globalization and accompanying social, demographic, economic, and cultural change. Topics include rural identity, persistent poverty, gender, race/ethnicity, environmental issues, politics, economic development strategies, education, demographic decline and aging, internal migration, health, and family dynamics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 365",
+    "subject": "SOCI",
+    "number": "365",
+    "title": "Health and Development",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Main concepts and controversies linking health to broader social and economic conditions in low income countries. Topics include the demographic and epidemiological transitions, the health and wealth conundrum, the social determinants of health, health as an economic development strategy, and the impact of the AIDS pandemic.",
+    "prerequisites": {
+      "text": "SOCI 234 or SOCI 254",
+      "tree": {
+        "or": [
+          "SOCI 234",
+          "SOCI 254"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 366",
+    "subject": "SOCI",
+    "number": "366",
+    "title": "Neighborhoods and Inequality ",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The causes and consequences of neighbourhood-based social inequalities in the United States, Canada, and Western Europe. Forms of inequality covered include poverty, segregation, ethnic enclaves, unemployment, educational attainment, crime, and health. Methodological issues and social policy will also be examined.",
+    "prerequisites": {
+      "text": "SOCI 210 & SOCI 222",
+      "tree": {
+        "and": [
+          "SOCI 210",
+          "SOCI 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered in Winter 2014"
+    ]
+  },
+  {
+    "code": "SOCI 370",
+    "subject": "SOCI",
+    "number": "370",
+    "title": "Sociology: Gender and Development",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of the main development theories and discussion of how gender is placed within them, analysis of the practical application of development projects and discussion of how they affect gender dynamics, and examination of power relations between development agencies and developing countries. Examples from Sub-Saharan Africa and Latin America are used.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 375",
+    "subject": "SOCI",
+    "number": "375",
+    "title": "Suspect Minorities in Canada",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course will address the challenge of diverse, liberal societies like Canada, of dealing with \"suspect\" minorities of various types --racial, ethnic, religious, linguistic -- from the perspective of the minority group, and majority group, and the society and polity at large.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Prequisite(s): SOCI 210, or SOCI230, or consent of the instructor"
+    ]
+  },
+  {
+    "code": "SOCI 385",
+    "subject": "SOCI",
+    "number": "385",
+    "title": "Sociology of Human Sexuality",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Sociological perspectives on sexual activity and attitudes, and their consequences for individuals and society. Topics include gender and life-course patterns, race and class differences, social networks and STDs, and interactions of biological (hormonal, genetic) and social factors in shaping sex. Emphasis is on quantitative evidence from recent national surveys.",
+    "prerequisites": {
+      "text": "SOCI 210 Sociological Perspectives",
+      "tree": "SOCI 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 386",
+    "subject": "SOCI",
+    "number": "386",
+    "title": "Contemporary Social Movements",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will focus on contemporary social movements in Canada, the U.S., and Western Europe, such as the civil rights movement, the women's movement, and the environmental movement. Empirical studies of movements will be used to explore such general issues as how social movements emerge, grow, and decline.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 388",
+    "subject": "SOCI",
+    "number": "388",
+    "title": "Crime",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introductory course on methods and theories in criminology. Exploration of the nature and distribution of crime; and critical evaluation of definitions and the measurement of crime; review of theoretical approaches used to understand such a phenomenon; a comparative overview of the criminal justice system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 395",
+    "subject": "SOCI",
+    "number": "395",
+    "title": "Sociology of Law",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The course provides an overview of the role that law plays in modern society from a sociological perspective. The first part of the course explores major theoretical traditions within the sociology of law emphasizing relevant theoretical statements by Durkheim, Marx, and Weber and examines how these theories continue to influence our understanding of the law today. The second part draws from both theoretical and empirical work to assess the ways in which the law serves as a form of social control, produces and reproduces inequality in society, and finally considers the possibility that law can act as a vehicle for social change.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 400",
+    "subject": "SOCI",
+    "number": "400",
+    "title": "Comparative Migration and Citizenship",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Advanced course on international migration, belonging and diversity in contemporary societies. Will examine dynamics of exclusion and inclusion, the accommodation of cultural diversity, the adaptation of immigrants and how global international migration challenges and re-shapes citizenship. Will cover key theoretical debates in the field and the data and case studies on which these debates hinge.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 405",
+    "subject": "SOCI",
+    "number": "405",
+    "title": "Families over the Life Course",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course examines the comparative and interdisciplinary dimensions of family changes and their repercussions on individuals' life courses. It examines topics such as the effects of parental separation on children's well-being and development, or the impact of the diversification of family trajectories on the provision of care at old age.",
+    "prerequisites": {
+      "text": "SOCI 210 or SOCI 247 or permission of the instructor",
+      "tree": {
+        "or": [
+          "SOCI 210",
+          "SOCI 247"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 410",
+    "subject": "SOCI",
+    "number": "410",
+    "title": "Urban Ethnography",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course surveys the tradition of urban ethnography in sociology. Students will read, discuss, and assess major classic and modern urban ethnographies as well as theoretical and methodological debates that pertain to urban ethnography. Special attention will be paid to scholarship that illuminates race and ethnicity, crime, and poverty as social phenomena.",
+    "prerequisites": {
+      "text": "SOCI 222 or SOCI 366",
+      "tree": {
+        "or": [
+          "SOCI 222",
+          "SOCI 366"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 415",
+    "subject": "SOCI",
+    "number": "415",
+    "title": "Education and Inequality",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Focuses on the mechanisms by which educational institutions foster and maintain equalities and inequalities around the world, considers the kinds of inequalities which exist in our society, their bases and sources, and analyzes educational practices and structures related to the production and maintenance of equalities and inequalities. Considers the consequences of educational opportunity of recent reform proposals, and the relation of education to occupational opportunities. Engages with multidisciplinary theories of social stratification and examines empirical and theoretical studies from both low-and high-income societies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 420",
+    "subject": "SOCI",
+    "number": "420",
+    "title": "Organizations",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A survey of theories of organization with particular reference to problems of growth, technology, centralization and decentralization, and organizational environments.",
+    "prerequisites": {
+      "text": "SOCI 210 or SOCI 235",
+      "tree": {
+        "or": [
+          "SOCI 210",
+          "SOCI 235"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 424",
+    "subject": "SOCI",
+    "number": "424",
+    "title": "Networks and Social Structures",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Relational and network-analytical approaches to social structure. The theory and methods of network analysis. Subjects will include communication networks, online community structure, social support, influence processes, and overlapping networks.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Familiarity with R, Stata, or another programming language is strongly encouraged."
+    ]
+  },
+  {
+    "code": "SOCI 426",
+    "subject": "SOCI",
+    "number": "426",
+    "title": "Introduction to Demographic Methods",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to core demographic concepts and methods for analyzing population size, structure, and dynamics. Topics include the collection, evaluation, and analysis of demographic data from censuses, vital registration, and surveys; measures of fertility, mortality, and migration; life table construction; stable population theory; population projections; and related themes. Emphasis is placed on how populations change through growth, mortality, fertility, marriage, migration, and shifts in rates and composition, as well as the strengths and limitations of demographic measures and techniques.",
+    "prerequisites": {
+      "text": "SOCI 350 or equivalent (AEMA 310, BIOL 373, ECON 227D1/D2, ECON 257D1/D2, GEOG 202, MATH 203, MGCR 271, MGCR 273, POTH 204, PSYC 204)",
+      "tree": {
+        "and": [
+          "SOCI 350",
+          "AEMA 310",
+          "BIOL 373",
+          "ECON 227",
+          "ECON 257",
+          "GEOG 202",
+          "MATH 203",
+          "MGCR 271",
+          "MGCR 273",
+          "POTH 204",
+          "PSYC 204"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "SOCI 626",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 430",
+    "subject": "SOCI",
+    "number": "430",
+    "title": "Sociology of Citizenship",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced course on theoretical approaches to citizenship. Focus will be on multiple dimensions of citizenship: legal status, rights, participation and belonging. Examines how class, race, ethnicity, gender and immigrant status inform the relationship between individuals and states. Will address contemporary debates about the reconfiguration of citizenship.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 441",
+    "subject": "SOCI",
+    "number": "441",
+    "title": "Current Problems in Sociology 03",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Intended for students who are adequately prepared to undertake advanced work and have an explicit proposal to submit.",
+    "prerequisites": {
+      "text": "permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 442",
+    "subject": "SOCI",
+    "number": "442",
+    "title": "Independent Reading and Research 01",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Intended for students who are adequately prepared to undertake advanced work and have an explicit proposal to submit.",
+    "prerequisites": {
+      "text": "permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 443",
+    "subject": "SOCI",
+    "number": "443",
+    "title": "Independent Reading and Research 02",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Intended for students who are adequately prepared to undertake advanced work and have an explicit proposal to submit.",
+    "prerequisites": {
+      "text": "permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 445",
+    "subject": "SOCI",
+    "number": "445",
+    "title": "Readings: Sociological Theory",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Specialist examination of key issues in sociological theory, either through treatment in depth of a single theorist or through concentration on analytic issues that form the centre of continuing debates in the philosophy of social science.",
+    "prerequisites": {
+      "text": "SOCI 330 or permission of instructor",
+      "tree": "SOCI 330",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 446",
+    "subject": "SOCI",
+    "number": "446",
+    "title": "Colonialism and Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Forms that colonialism took, its impact on colonial societies, and its modern legacies, focusing on overseas colonialism between 1600 and the 1970s.",
+    "prerequisites": {
+      "text": "SOCI 210 or permission from instructor.",
+      "tree": "SOCI 210",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 455",
+    "subject": "SOCI",
+    "number": "455",
+    "title": "Post-Socialist Societies",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The demise of Communist Party rule between 1989 - 1991 throughout Eastern Europe and the Soviet Union. The societal implications (e.g. class formation, gender relations, nationalism, corruption, religious freedom) of these dramatic economic and political changes.",
+    "prerequisites": {
+      "text": "SOCI 210.",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 461",
+    "subject": "SOCI",
+    "number": "461",
+    "title": "Quantitative Data Analysis",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course blends theory and applications in regression analysis. It focuses on fitting a straight line regression using matrix algebra, extending models for multivariate analysis and discusses problems in the use of regression analysis, providing criteria for model building and selection, and using statistical software to apply statistics efficiently.",
+    "prerequisites": {
+      "text": "SOCI 350",
+      "tree": "SOCI 350",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "You may not be able to get credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ]
+  },
+  {
+    "code": "SOCI 470",
+    "subject": "SOCI",
+    "number": "470",
+    "title": "Topics in Economic Sociology",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Topics in economic sociology. Topics vary by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 475",
+    "subject": "SOCI",
+    "number": "475",
+    "title": "Canadian Ethnic Studies Seminar",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An interdisciplinary seminar focusing on current social sciences research and public policies in areas relating to Canadian ethnic studies. Topics will include ethnic and racial inequalities, prejudice and discrimination, ethnic identities and cultural expressions, the structure and organization of minority groups.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students following the Minor Concentration in Canadian Ethnic Studies; or to students with at least nine credits, three at the 300 level, in the social sciences; or with permission of instructor. Not open to students who took CANS 404 in 2007-08.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 477",
+    "subject": "SOCI",
+    "number": "477",
+    "title": "Qualitative Methods in Sociology",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to qualitative research methods. Students will be exposed to various types of data collection (e.g., textual, observational) and data analysis techniques (e.g., in vivo coding) for qualitative data in an experiential, hands-on fashion.",
+    "prerequisites": {
+      "text": "SOCI 211",
+      "tree": "SOCI 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 480",
+    "subject": "SOCI",
+    "number": "480",
+    "title": "Honours Project",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The Honours Project, normally in the form of a paper, provides every Honours student with the opportunity to work independently on a topic of special interest. The student works out the topic for the Honours Project through discussions with appropriate potential supervisors (aided by the Honours Adviser when necessary).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Sociology U3 Honours and Joint Honours students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 484",
+    "subject": "SOCI",
+    "number": "484",
+    "title": "Emerging Democratic States",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Focus on the sociological aspects of recent transitions to democracy within developing countries - particularly within Sub-Saharan Africa and Latin America. Exploration of why democratization has taken place, to what extent it has been successful and the implications of democratization.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 485",
+    "subject": "SOCI",
+    "number": "485",
+    "title": "Crises, Population and Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Examination of how specific crises and their interconnectedness - or 'polycrisis' - affect population dynamics through sociological and demographic perspectives. Integration of theoretical frameworks with empirical research across high-, middle-, and low-income countries, with attention to social inequalities related to race, ethnicity, indigeneity, socioeconomic status, and gender. Methodological approaches including surveys, spatial and administrative data, social media, and qualitative methods for analyzing population and social change during crises.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 488",
+    "subject": "SOCI",
+    "number": "488",
+    "title": "Punishment and Prisons",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of research on prison \"communities\" and prison riots. An assessment of incapacitation, deterrence and labelling effects of incarceration. A conceptual framework for analyzing variations (across societies) and changes (over time) in the overall aggregate rates of punishment that social systems impose on their offender populations.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 489",
+    "subject": "SOCI",
+    "number": "489",
+    "title": "Gender, Deviance and Social Control",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This seminar examines how the definition of deviance, reactions to deviance and explanations of deviance are gendered. Specific topics vary from year to year.",
+    "prerequisites": {
+      "text": "Permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "open to U3 students concentrating on social problems.",
+      "excludes": []
+    },
+    "notes": [
+      "Course for Women's Studies Concentrations"
+    ]
+  },
+  {
+    "code": "SOCI 495",
+    "subject": "SOCI",
+    "number": "495",
+    "title": "Social Problems and Conflicts",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course explores the social construction of \"social problems\". It focuses on the social conflicts involved in the definition of social issues and on how and why \"problems\" change over time. Issues such as drinking, smoking, drug use, pornography, abortion, and homosexuality will be discussed.",
+    "prerequisites": {
+      "text": "permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 499",
+    "subject": "SOCI",
+    "number": "499",
+    "title": "Internship: Sociology",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students with a minimum CGPA of 2.7, and permission of the departmental Internship Advisor. This course will normally not fulfill program requirements for seminar or 400-level courses. A letter from a supervisor at the institution must attest to successful completion of the student's tenure.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 501",
+    "subject": "SOCI",
+    "number": "501",
+    "title": "Capitalism, Socialism, and Democracy",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course traces the historical development of the conflict between labor, capital, and the state over the meaning and content of democracy, and how that conflict has shaped politics, economics, and ideology over time. Through a combination of theoretical analysis of core concepts and empirical case studies, students will gain a sociological understanding of the complex forces that have shaped our modern world. Includes analysis of nation-state formation, class formation and class conflict, welfare state emergence and development, and labour unions and labour policy.",
+    "prerequisites": {
+      "text": "SOCI 210 and SOCI 211, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "SOCI 210",
+          "SOCI 211"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 502",
+    "subject": "SOCI",
+    "number": "502",
+    "title": "Sociology of Childbearing",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Seminar on the major theories and findings from the social scientific study of childbearing and child-rearing (i.e., fertility). Focus on the causal linkages between social change and changes in childbearing. Examination of contemporary and historical behaviour and attitudes across the globe.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students and final year undergraduates",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 503",
+    "subject": "SOCI",
+    "number": "503",
+    "title": "Surveillance in Modern Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course traces the historical evolution, contemporary tactics, objectives, and social effects of government surveillance and examines how people perceive and respond to surveillance in a post-9/11 world. Through this empirically grounded study, the course takes on a broader sociological question, asking how new surveillance technologies have influenced the relationship between states and citizens.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 504",
+    "subject": "SOCI",
+    "number": "504",
+    "title": "Quantitative Methods 1",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to basic regression techniques commonly used in the social sciences. Covers the least squares linear regression model in depth and may introduce models for discrete dependent variables as well as the maximum-likelihood approach to statistical inference. Emphasis on the assumptions behind regression models and correct interpretation of results. Assignments will emphasize practical aspects of quantitative analysis.",
+    "prerequisites": {
+      "text": "SOCI 350 and SOCI 461 or equivalents",
+      "tree": {
+        "and": [
+          "SOCI 350",
+          "SOCI 461"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 505",
+    "subject": "SOCI",
+    "number": "505",
+    "title": "Sociology of Digital Intimacy",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the rise of digitally mediated romantic connections and their influence on contemporary dating and relational practices. How technology's encroachment into the private sphere implicates discourses around culture, gender, sexuality, economics, and selfhood through the lens of online dating and human-artificial intelligence relationships.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 506",
+    "subject": "SOCI",
+    "number": "506",
+    "title": "Quantitative Methods 3",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Advanced statistical analyses focusing on advanced methods such as event history analysis and analysis of contingency tables.",
+    "prerequisites": {
+      "text": "SOCI 504 or equivalent or permission of instructor.",
+      "tree": "SOCI 504",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 507",
+    "subject": "SOCI",
+    "number": "507",
+    "title": "Social Change",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of the major sociological theories of long term macro social change. Topics include why industrialization began in Europe instead of Asia, the divergence among societies in systems of class, gender, ethnic and racial inequality, and whether industrial society has entered a new post-industrial or post-modern phase.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken SOCI 672. Undergraduates by permission of instructor only.",
+      "excludes": [
+        "SOCI 672"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 514",
+    "subject": "SOCI",
+    "number": "514",
+    "title": "Criminology",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A survey of the major schools of thought that have developed to explain criminal behaviour from the emergence of modern criminology in the 18th and 19th centuries to current debates.",
+    "prerequisites": {
+      "text": "Permission of Instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Grad students and U3 students only."
+    ]
+  },
+  {
+    "code": "SOCI 515",
+    "subject": "SOCI",
+    "number": "515",
+    "title": "Medicine and Society",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The sociology of health and illness. Reading in areas of interest, such as: the sociology of illness, health services occupations, organizational settings of health care, the politics of change in national health service systems, and contemporary ethical issues in medical care and research.",
+    "prerequisites": {
+      "text": "Undergraduate students require permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 519",
+    "subject": "SOCI",
+    "number": "519",
+    "title": "Gender and Globalization",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on the diverse forces of globalization that impact the lives of men and women. Critical analysis of key theories and concepts implicated in the intersection of globalization processes with gender dynamisms.",
+    "prerequisites": {
+      "text": "SOCI 270 or permission of instructor.",
+      "tree": "SOCI 270",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 520",
+    "subject": "SOCI",
+    "number": "520",
+    "title": "Migration and Immigrant Groups",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of the major demographic, economic and sociological theories of internal and international migration. The main emphasis will be on empirical research on migration and immigrant groups.",
+    "prerequisites": {
+      "text": "15 credits in the Social Sciences",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 524",
+    "subject": "SOCI",
+    "number": "524",
+    "title": "Culture, Knowledge, and Meaning",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar on cultural sociology covering foundational theories of culture, the role of culture in meaning-making and cognition, and the production and maintenance of norms. Contemporary cultural approaches to topics such as ideology, expertise, consumption, and taste.",
+    "prerequisites": {
+      "text": "SOCI 318 or SOCI 325 or SOCI 330 or permission of the instructor",
+      "tree": {
+        "or": [
+          "SOCI 318",
+          "SOCI 325",
+          "SOCI 330"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 525",
+    "subject": "SOCI",
+    "number": "525",
+    "title": "Health Care Systems in Comparative Perspective",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Comparative perspective to illustrate processes involved in the development and evolution of health care systems around the world. Countries examined will represent different welfare state regimes, health care system typologies, levels of development and wealth.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EPIB 525. Not open to students who are taking or have taken PPHS 525.",
+      "excludes": [
+        "EPIB 525",
+        "PPHS 525"
+      ]
+    },
+    "notes": [
+      "Note: This course is cross-listed in Epidemiology, Biostatistics and Occupational Health and in Sociology."
+    ]
+  },
+  {
+    "code": "SOCI 526",
+    "subject": "SOCI",
+    "number": "526",
+    "title": "Indigenous Women's Health and Healthcare ",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines (i) the health status of Indigenous women in Canada, (ii) Indigenous ways of knowing about health, (iii) healthcare services, delivery, and access for Indigenous women in rural and remote areas as well as in urban centres, (iv) and participatory health research with Indigenous communities.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Undergraduate students must obtain permission of instructor to enroll in the course.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 530",
+    "subject": "SOCI",
+    "number": "530",
+    "title": "Sex and Gender",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This seminar critically reviews theoretical perspectives and research on sex and gender in various domains of social life. It gives special emphasis to work which considers the meaning of gender and how it differs across time and place.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Honours Sociology students and to Sociology Majors with the permission of the instructor",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 535",
+    "subject": "SOCI",
+    "number": "535",
+    "title": "Sociology of the Family",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This seminar reviews literature on major research areas in family. The course examines families in the past, the study of family using a life course approach, and considers selective areas which may have had significant influences on contemporary family such as work and family, family violence, and cultural variation in families.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Undergraduate students require permission of instructor"
+    ]
+  },
+  {
+    "code": "SOCI 538",
+    "subject": "SOCI",
+    "number": "538",
+    "title": "Selected Topics in Sociology of Biomedical Knowledge",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The seminar will examine recent work in the sociology of biomedical knowledge. It will focus on the technological shaping of biomedical knowledge, i.e., on the impact of new technologies and equipments on the development of biomedical knowledge.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 540",
+    "subject": "SOCI",
+    "number": "540",
+    "title": "Comparative Ethnicity and Race",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the sociological study of ethnicity and ‘race’. Exploration of the range of meanings and the contours of theoretical debates across a range of places in order to put in perspective the North-American experience.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students. Undergraduate students admitted with permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 545",
+    "subject": "SOCI",
+    "number": "545",
+    "title": "Sociology of Population",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The classic literature of sociology of population. Drawing reciprocal linkages between social and population processes: Historical, family and labour force demography, demographic and fertility transitions, mortality, ethnic and race relations, gender, macro-structural interaction theory, and the relation of population and the environment.",
+    "prerequisites": {
+      "text": "SOCI 234 or equivalent",
+      "tree": "SOCI 234",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 550",
+    "subject": "SOCI",
+    "number": "550",
+    "title": "Developing Societies",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Comparison of alternative explanations of underdevelopment: the impact of social stratification, relations of domination and subordination between countries, state interference with the market. Alternative strategies of change: revolution, structural adjustment, community development and cooperatives. Students will write and present a research paper, and participate extensively in class discussion.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 571",
+    "subject": "SOCI",
+    "number": "571",
+    "title": "Deviance and Social Control",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This seminar focuses on how social groups enforce rules (and maintain social order) through coercion and socialization. It reviews current research and critiques key theoretical approaches to social control. Included are discussions of regulating institutions such as prisons and mental asylums, and the roles of gossip, manners and etiquettes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 580",
+    "subject": "SOCI",
+    "number": "580",
+    "title": "Social Research Design and Practice",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Asking researchable sociological questions and evaluation of different research designs used to answer such questions. Development of cogent research proposals, including data collection procedures. Principles, dynamics, strengths and practical limitations of research designs. Examples from recent publications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 and graduate students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 588",
+    "subject": "SOCI",
+    "number": "588",
+    "title": "Biosociology/Biodemography",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will explore linkages between social and biological systems, their influence on health and well-being over the life course, and on health disparities. Topics include classical sociological approaches to biosocial processes, sociobiology (reductionist, but population-based), and newer demographic studies on gen-environment, epigenetic, and stress-metabolic/allostatic processes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 590",
+    "subject": "SOCI",
+    "number": "590",
+    "title": "Social Conflict and Violence",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course examines recent theory and research on the comparative study of social conflict and political violence. Topics covered include the causes and consequences of international wars, state repression, civil violence, guerrilla warfare, and terrorism.",
+    "prerequisites": {
+      "text": "SOCI 210",
+      "tree": "SOCI 210",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 595",
+    "subject": "SOCI",
+    "number": "595",
+    "title": "Migration Governance and Stratification",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of how states and other actors govern the movement of people across international borders, and how this governance contributes to new and ongoing patterns of stratification by race, ethnicity, gender, class, sexuality. Topics include: theoretical paradigms for understanding migration governance and its relation to inequalities; the economic, social, and political factors that influence immigration and refugee policy making; the social construction of migrant categories in historical perspective; the role of international organizations and non-state actors in migration governance; and the relationship between migration governance and migrants' experiences of economic, social, and political stratification.",
+    "prerequisites": {
+      "text": "By permission of instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 600",
+    "subject": "SOCI",
+    "number": "600",
+    "title": "Qualitative Research Methods 1",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of qualitative research design and modes of data collection, particularly observation, interviewing and focus groups. Students are required to design and undertake their own qualitative research project. Introduction to computerized tools for qualitative data management, transcription and analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor. Not open to students who have taken SOCI 540.",
+      "excludes": [
+        "SOCI 540"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 601",
+    "subject": "SOCI",
+    "number": "601",
+    "title": "Qualitative Research Methods 2",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Qualitative data interpretation and analysis. Coding, identifying themes and memo-writing. Students conclude their qualitative research project, writing up findings in the form of a publishable-quality paper.",
+    "prerequisites": {
+      "text": "SOCI 600",
+      "tree": "SOCI 600",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Seminar will be offered once a week, during the Fall term, for a duration of two hours (1x2)."
+    ]
+  },
+  {
+    "code": "SOCI 602",
+    "subject": "SOCI",
+    "number": "602",
+    "title": "Comparative-Historical Methods",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course reviews the diverse methods of comparative-historical sociology and prepares students to employ these methods for their research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 603",
+    "subject": "SOCI",
+    "number": "603",
+    "title": "Bibliographic Methods 1",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Research-related skills for the production of a research bibliography under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "SOCI 604.",
+      "tree": "SOCI 604",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to Sociology M.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 604",
+    "subject": "SOCI",
+    "number": "604",
+    "title": "Bibliographic Methods 2",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Advanced research-related skills for the production of a research bibliography under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "SOCI 603.",
+      "tree": "SOCI 603",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to Sociology M.A. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 620",
+    "subject": "SOCI",
+    "number": "620",
+    "title": "Quantitative Methods 2",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course provides an introduction to generalized linear models for analyzing categorical and correlated data. The main topics include: (1) logistic/probit models (including multinomial logit, logit models for ordinal data) and (2) Extensions to multilevel and panel data analysis. The exposition covers model specification,estimation, hypothesis testing, remedies for violations of statistical assumptions, and interpretation of the results. The emphasis is on applications of these models in social science research, and research articles in sociology are used to illustrate the application of these models and techniques.",
+    "prerequisites": {
+      "text": "SOCI 504 or equivalent",
+      "tree": "SOCI 504",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Premission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 621",
+    "subject": "SOCI",
+    "number": "621",
+    "title": "Fixed and Random Effects",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Fixed and random effect regression. Emphasis on longitudinal panel data and hierarchical data.",
+    "prerequisites": {
+      "text": "SOCI 504 or equivalent",
+      "tree": "SOCI 504",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 622",
+    "subject": "SOCI",
+    "number": "622",
+    "title": "Event History Analysis",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Applied introduction to event history analysis, a set of statistical methods used to analyze changes from one state to another (i.e. transitions) and the effects of independent variables on the timing and likelihood of these transitions.",
+    "prerequisites": {
+      "text": "SOCI 504 or equivalent",
+      "tree": "SOCI 504",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 623",
+    "subject": "SOCI",
+    "number": "623",
+    "title": "Latent Variable Models",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Latent variable models attempt to explain complex relations between manifest/observed variables by simple relations between these variables and an underlying unobservable or “latent” structure. Topics include both cross-sectional (Latent Class, factor analysis) and longitudinal (Latent Transition/Hidden Markov, Latent Class Growth Analysis, Growth Mixture Models) versions.",
+    "prerequisites": {
+      "text": "SOCI 504 or equivalent",
+      "tree": "SOCI 504",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission of instructor.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 624",
+    "subject": "SOCI",
+    "number": "624",
+    "title": "Social Networks",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Social networks from various standpoints, including classical theory, formal models, methods for empirical analysis, and substantive applications.",
+    "prerequisites": {
+      "text": "SOCI 652 or Permission of Instructor",
+      "tree": "SOCI 652",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 625",
+    "subject": "SOCI",
+    "number": "625",
+    "title": "Professional Development Seminar in Sociology",
+    "credits": 0,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Professional development of incoming graduate students in sociology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to incoming graduate students in the Department of Sociology.",
+      "excludes": []
+    },
+    "notes": [
+      "Course will be offered every other week, during the Fall and Winter terms, for a duration of one hour.",
+      "Students must register at the same time for SOCI 625 D1 and SOCI 625D2."
+    ],
+    "parts": [
+      {
+        "code": "SOCI 625D1",
+        "credits": 0,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "SOCI 625D2",
+        "credits": 0,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SOCI 626",
+    "subject": "SOCI",
+    "number": "626",
+    "title": "Demographic Methods",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to demographic measurement and modeling. Course covers direct and indirect estimation, standardization, life table construction, and population projections.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Specific topics may vary from semester to semester."
+    ]
+  },
+  {
+    "code": "SOCI 631",
+    "subject": "SOCI",
+    "number": "631",
+    "title": "Informing Social Policy with Canadian Data",
+    "credits": 6,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Tools needed to work with complex Canadian surveys in order to address social issues. Theoretical sessions given by experts from the academic community and statistical agencies are combined with laboratory workshops where students apply advanced statistical methods to survey data and complete their own research projects.",
+    "prerequisites": {
+      "text": "Advanced undergraduate course in statistics (SOCI 461 or equivalent); passive bilinguism (French and English); and permission of the instructor",
+      "tree": "SOCI 461",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Passive bilingualism (English and French) required, as training will be given in both languages. Maximum enrollment: 12. With permission of the instructor. The course is offered over 2 semesters, and meets 6 hours every 2 weeks.",
+      "Students must register for both SOCI 631D1 and SOCI 631D2.",
+      "No credit will be given for this course unless both SOCI 631D1 and SOCI 631D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "SOCI 631D1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "SOCI 631D2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "SOCI 652",
+    "subject": "SOCI",
+    "number": "652",
+    "title": "Current Sociological Theory",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of works in some major areas of Sociology with a focus on: antecedent thought and research in the area; the internal structure and consistency of these works; the validity of the major claims made; and the implications for future theoretical development and research.",
+    "prerequisites": {
+      "text": "SOCI 330",
+      "tree": "SOCI 330",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 690",
+    "subject": "SOCI",
+    "number": "690",
+    "title": "M.A. Thesis 1",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploratory thesis research for the selection of a thesis topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the M.A. thesis program of the Sociology Department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 691",
+    "subject": "SOCI",
+    "number": "691",
+    "title": "M.A. Thesis 2",
+    "credits": 6,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Preparation, submission and approval of the thesis proposal by the student to his/her committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the M.A. thesis program of the Sociology Department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 692",
+    "subject": "SOCI",
+    "number": "692",
+    "title": "M.A. Thesis 3",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Fieldwork and data analysis on the thesis. Progress report to the supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the M.A. thesis program of the Sociology Department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 693",
+    "subject": "SOCI",
+    "number": "693",
+    "title": "M.A. Thesis 4",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Fieldwork and data analysis on the thesis. Progress report to the supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the M.A. thesis program of the Sociology Department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 694",
+    "subject": "SOCI",
+    "number": "694",
+    "title": "M.A. Thesis 5",
+    "credits": 18,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Completion, submission, and approval of the M.A. Thesis by the committee and the Graduate and Postdoctoral Studies Office.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the M.A. thesis program of the Sociology Department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 695",
+    "subject": "SOCI",
+    "number": "695",
+    "title": "M.A. Thesis 6",
+    "credits": 15,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Completion, submission, and approval of the M.A. Thesis by the committee and the Graduate and Postdoctoral Studies Office.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the Medical Sociology thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 696",
+    "subject": "SOCI",
+    "number": "696",
+    "title": "Research Paper 1",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Exploratory research for the selection of a research topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the M.A. thesis program of the Sociology Department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 697",
+    "subject": "SOCI",
+    "number": "697",
+    "title": "Research Paper 2",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Preparation, submission and approval of the proposal by the student to his/her supervisor.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 698",
+    "subject": "SOCI",
+    "number": "698",
+    "title": "Research Paper 3",
+    "credits": 6,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Fieldwork and data analysis on the research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students registered in the M.A. thesis program of the Sociology Department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 699",
+    "subject": "SOCI",
+    "number": "699",
+    "title": "Research Paper 4",
+    "credits": 12,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Completion, submission and approval of the research paper by the committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 700",
+    "subject": "SOCI",
+    "number": "700",
+    "title": "Ph.D. Area Examination 1",
+    "credits": 0,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The examination assesses the student's breadth of knowledge in one substantive area. This is the first of two required comprehensive examinations for the Ph.D. Program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to Ph.D. students in the Sociology Department",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 701",
+    "subject": "SOCI",
+    "number": "701",
+    "title": "Ph.D. Area Examination 2",
+    "credits": 0,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The examination assesses the student's breadth of knowledge in one substantive area. This is the second of two required comprehensive examinations for the Ph.D. Program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to Ph.D. students in the Sociology Department",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 702",
+    "subject": "SOCI",
+    "number": "702",
+    "title": "Ph.D. Proposal Approval",
+    "credits": 0,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation and acceptance of the Ph.D. Proposal Defense by the student to the Department Proposal Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to Ph.D. students in the Sociology Department",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 703",
+    "subject": "SOCI",
+    "number": "703",
+    "title": "Bibliographic Methods 3",
+    "credits": 0,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Further development of research-related skills and the production of a research bibliography under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Sociology Ph.D. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 704",
+    "subject": "SOCI",
+    "number": "704",
+    "title": "Bibliographic Methods 4",
+    "credits": 0,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Further development of research-related skills and the production of a research bibliography under the supervision of a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Sociology Ph.D. students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "SOCI 705",
+    "subject": "SOCI",
+    "number": "705",
+    "title": "PhD Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The Comprehensive Examination in Sociology provides an opportunity for students to read broadly in two sub-fields within the discipline, after which they take a written examination that assesses their competence in each sub-field. Students are required to be examined in two of the ten areas of specialization identified by the Department. The comprehensive examination must be successfully passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 720",
+    "subject": "SOCI",
+    "number": "720",
+    "title": "Reading in Social Theory",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised readings in social theory supervised by a member of staff. Topics will be chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "SOCI 730",
+    "subject": "SOCI",
+    "number": "730",
+    "title": "Reading and Research",
+    "credits": 3,
+    "offeredBy": "Sociology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised readings and research supervised by a memeber of staff. Topics will be chosen to suit individual interests.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

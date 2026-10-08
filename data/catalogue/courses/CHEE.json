@@ -1,0 +1,1573 @@
+[
+  {
+    "code": "CHEE 200",
+    "subject": "CHEE",
+    "number": "200",
+    "title": "Chemical Engineering Principles 1",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the design of industrial processes. Survey of unit operations, and systems of units. Elementary material balances, first and second laws of thermodynamics, use of property tables and charts, steady flow processes. Relationships between thermodynamic properties, property estimation techniques. Laboratory and design exercise.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 204",
+    "subject": "CHEE",
+    "number": "204",
+    "title": "Chemical Engineering Principles 2",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Material and energy balances in chemical processes. Introduction to process design. Problem solving in the design of various industrial processes such as combustion, humidification, separation processes (evaporation, crystallization), and other reactive systems used in the diverse areas of chemical engineering.",
+    "prerequisites": {
+      "text": "CHEE 200",
+      "tree": "CHEE 200",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CHEE 220",
+    "subject": "CHEE",
+    "number": "220",
+    "title": "Chemical Engineering Thermodynamics",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of thermodynamic equilibrium; free energy and equilibrium; phase rule; chemical reaction equilibrium for homogenous and multicomponent/multiphase systems. Application to the design of binary distillation. Laboratory exercise.",
+    "prerequisites": {
+      "text": "CHEE 200 or GEPR 221",
+      "tree": {
+        "or": [
+          "CHEE 200",
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 262 or GEPR 121",
+      "tree": {
+        "or": [
+          "MATH 262",
+          "GEPR 121"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1.5-4.5)",
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program"
+    ]
+  },
+  {
+    "code": "CHEE 231",
+    "subject": "CHEE",
+    "number": "231",
+    "title": "Data Analysis and Design of Experiments",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Foundation of the design and execution of experiments based on statistical principles and of the results analysis. Topics: Data visualization, significant digits; uncertainty, precision, accuracy, propagation of uncertainty; univariate data analysis, normal distribution; sampling distribution and point estimates, confidence intervals, hypothesis testing; simple and multiple linear regression; design of experiments.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 262",
+      "tree": "MATH 262",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 291",
+    "subject": "CHEE",
+    "number": "291",
+    "title": "Instrumentation and Measurement 1",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introductions to safe laboratory practices, technical report-writing, electrically-based measurements and modern methods for instrumentation and control. Goals are that students can safely perform accurate measurements of physical variables without detailed theoretical knowledge. Common software for report writing and instrumentation are introduced and used extensively.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "(CHEE 231 and MATH 262) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEE 231",
+              "MATH 262"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-3-6)",
+      "GEPR courses can only serve as co-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "CHEE 301",
+    "subject": "CHEE",
+    "number": "301",
+    "title": "Resource Recovery and Circular Use",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the concept of seeing human-generated waste material and energy as valuable resources, and to the emerging practices related to the circular use of resources. Topics: 1. Distribution, availability and geopolitics of natural resources; waste production and waste hierarchy; environmental impacts; incentives for recovery; classifying waste, challenges associated with large-scale recovery; thermodynamics of waste and resource recovery. 2. Detailed examples of resource recovery. 3.Environmental, health and safety considerations, local regulations and international exchanges. 4. Circular use of resources and circular economy: reuse, upgrade, remanufacture, recycling; product and process design for circular use.",
+    "prerequisites": {
+      "text": "CHEE 204 and CHEE 220",
+      "tree": {
+        "and": [
+          "CHEE 204",
+          "CHEE 220"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 310",
+    "subject": "CHEE",
+    "number": "310",
+    "title": "Physical Chemistry for Engineers",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to chemical kinetics, adsorption, surface tension, and electrochemistry. Topics emphasize applications of physical chemistry for chemical engineers.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHEE 220",
+      "tree": "CHEE 220",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students having taken CHEM 233.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 314",
+    "subject": "CHEE",
+    "number": "314",
+    "title": "Fluid Mechanics",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fluid properties; dimensional analysis; drag; packed/fluidized beds; macroscopic energy balances, Bernoulli's equation and linear momentum theorem; flowmeters, pipeline systems, non-Newtonian fluids, microscopic balances leading to continuity and Navier-Stokes equations; boundary layer approximation; turbulence. Laboratory exercises.",
+    "prerequisites": {
+      "text": "CHEE 204",
+      "tree": "CHEE 204",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MATH 264",
+      "tree": "MATH 264",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CHEE 315",
+    "subject": "CHEE",
+    "number": "315",
+    "title": "Heat and Mass Transfer",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Transport of heat and mass by diffusion and convection; transport of heat by radiation; diffusion; convective mass transfer; drying; absorption; mathematical formulation of problems and equipment design for heat and mass transfer; laboratory exercises.",
+    "prerequisites": {
+      "text": "CHEE 314",
+      "tree": "CHEE 314",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CHEE 351",
+    "subject": "CHEE",
+    "number": "351",
+    "title": "Separation Processes",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Concepts underlying equilibrium based separation, design of processes and equipment for distillation, absorption/stripping, liquid extraction, washing, and leaching. Consideration of mass transfer effects.",
+    "prerequisites": {
+      "text": "CHEE 204 and CHEE 220",
+      "tree": {
+        "and": [
+          "CHEE 204",
+          "CHEE 220"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CHEE 315",
+      "tree": "CHEE 315",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-2-4)"
+    ]
+  },
+  {
+    "code": "CHEE 370",
+    "subject": "CHEE",
+    "number": "370",
+    "title": "Elements of Biotechnology",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Biological macromolecules; cell structure and metabolism; industrially significant microbes; enzyme kinetics; introduction to molecular biology and genetic engineering, laboratory exercises.",
+    "prerequisites": {
+      "text": "CHEM 212",
+      "tree": "CHEM 212",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 374",
+    "subject": "CHEE",
+    "number": "374",
+    "title": "Biochemical Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Bioreactor design for biotechnology and environmental applications; microbial growth kinetics; application of transport phenomena and selected chemical engineering unit operations. Bioreactor instrumentation and performance optimization. Air and media sterilization processes. Selected operations of downstream processing and product recovery.",
+    "prerequisites": {
+      "text": "CHEE 370",
+      "tree": "CHEE 370",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CHEE 315",
+      "tree": "CHEE 315",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 474.",
+      "excludes": [
+        "CHEE 474"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 380",
+    "subject": "CHEE",
+    "number": "380",
+    "title": "Materials Science",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Structure/property relationship for metals, ceramics, polymers and composite materials. Atomic and molecular structure, bonds, electronic band structure and semi-conductors. Order in solids: crystal structure, disorders, solid phases. Mechanical properties and fracture, physico-chemical properties, design. Laboratory exercises.",
+    "prerequisites": {
+      "text": "CHEE 220",
+      "tree": "CHEE 220",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 384",
+    "subject": "CHEE",
+    "number": "384",
+    "title": "Materials Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Processes for forming and producing engineering materials such as amorphous, semicrystalline, textured and crystal-oriented substances and composites. Phase transformations, nucleation and growth. Effect of processing variables on the properties of the finished article. Process of blending and alloying. Shaping and joining operations. Vessel equipment design for chemical engineering applications.",
+    "prerequisites": {
+      "text": "CHEE 380",
+      "tree": "CHEE 380",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 484.",
+      "excludes": [
+        "CHEE 484"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 390",
+    "subject": "CHEE",
+    "number": "390",
+    "title": "Computational Methods in Chemical Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Linear systems of algebraic equations, Gaussian elimination; non-linear algebraic systems: Taylor series, incremental search, bisection method, linear interpolation, Newton-Raphson's method; differentiation and integration; initial value problems: Euler's and Runge Kutta's methods, stiff equations, adaptive solvers; boundary value problems; curve fitting; numerical optimization; probability theory and stochastic simulation: Monte Carlo method.",
+    "prerequisites": {
+      "text": "CHEE 204 and (COMP 208 and MATH 263) or GEPR 221",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEE 204",
+              "COMP 208",
+              "MATH 263"
+            ]
+          },
+          "GEPR 221"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 264 or GEPR 121",
+      "tree": {
+        "or": [
+          "MATH 264",
+          "GEPR 121"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "GEPR courses can only serve as pre- and co-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "CHEE 400",
+    "subject": "CHEE",
+    "number": "400",
+    "title": "Principles of Sustainable Energy Conversion",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Energy resources; resource characterization, science and technology of energy conversion, efficiency; energy systems' metrics and optimization; material systems in energy conversion.",
+    "prerequisites": {
+      "text": "CHEE 315 and (CHEE 384 or CHEE 484)",
+      "tree": {
+        "and": [
+          "CHEE 315",
+          {
+            "or": [
+              "CHEE 384",
+              "CHEE 484"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CHEE 390",
+      "tree": "CHEE 390",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 401",
+    "subject": "CHEE",
+    "number": "401",
+    "title": "Energy Systems Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Applied engineering principles of major energy technologies, including quantitative performance evaluation, cost and environmental impact. Criteria for energy system selection. System engineering methodologies for energy, including efficiency, project scope, trade-offs, energy consumption, and environmental impact.",
+    "prerequisites": {
+      "text": "CHEE 400",
+      "tree": "CHEE 400",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "FACC 300",
+      "tree": "FACC 300",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 423",
+    "subject": "CHEE",
+    "number": "423",
+    "title": "Chemical Reaction Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Review of fundamental concepts in chemical reaction thermodynamics and kinetics. Mass and energy balances for homogenous ideal reactors. Batch, semi-batch and continuous operation. Minimization of by-product and pollution production. Heterogenous reactions, effect of heat and mass transfer on the global rate. Laboratory exercises.",
+    "prerequisites": {
+      "text": "(CHEE 310 or GEPR 221) and CHEE 315",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CHEE 310",
+              "GEPR 221"
+            ]
+          },
+          "CHEE 315"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)",
+      "GEPR courses can only serve as pre-requisite courses for students enrolled in the Bachelor of Global Engineering program."
+    ]
+  },
+  {
+    "code": "CHEE 440",
+    "subject": "CHEE",
+    "number": "440",
+    "title": "Process Modelling",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles of mathematical modelling in chemical engineering: problem formulation, solution, discrete systems; difference and difference-differential equations, methods of solution; understanding system behaviour, optimization.",
+    "prerequisites": {
+      "text": "MATH 264 and CHEE 423",
+      "tree": {
+        "and": [
+          "MATH 264",
+          "CHEE 423"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 340",
+      "excludes": [
+        "CHEE 340"
+      ]
+    },
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 453",
+    "subject": "CHEE",
+    "number": "453",
+    "title": "Process Design",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The role of the chemical engineer. Steps in the preparation of a process design. Detailed information about most common chemical engineering equipment. Materials of construction. Analysis of process control and application to large systems. Structure of process design systems. Safety, environmental control in plant design. Process design costing and return on investment. Computer-aided process and plant design programs.",
+    "prerequisites": {
+      "text": "CHEE 315 and CHEE 351",
+      "tree": {
+        "and": [
+          "CHEE 315",
+          "CHEE 351"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-6)"
+    ]
+  },
+  {
+    "code": "CHEE 455",
+    "subject": "CHEE",
+    "number": "455",
+    "title": "Process Control",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Needs for process control; simple transient models and responses, first and higher-order systems, empirical determination of models, transfer functions and Laplace domain analysis, control loop hardware and associated realistic models; process and instrumentation diagrams; control philosophy; safety; open and closed loop responses; feedback control; stability analysis; controller tuning; feedforward, cascade and ratio control; control of batch and start-up processes.",
+    "prerequisites": {
+      "text": "CHEE 291",
+      "tree": "CHEE 291",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CHEE 423, CHEE 453",
+      "tree": {
+        "and": [
+          "CHEE 423",
+          "CHEE 453"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 456",
+    "subject": "CHEE",
+    "number": "456",
+    "title": "Design Project",
+    "credits": 9,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Chemical engineering process and plant design. Preliminary engineering design, feasibility analysis considering important decision factors such as economics, environmental impact, hazards and safety, site selection, sustainability and social acceptability. Professional skills such as: effective communication in a technical setting, ethics in engineering design, and effective teamwork.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHEE 453, FACC 300",
+      "tree": {
+        "and": [
+          "CHEE 453",
+          "FACC 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 457.",
+      "excludes": [
+        "CHEE 457"
+      ]
+    },
+    "notes": [
+      "(2.5-1-10)"
+    ],
+    "parts": [
+      {
+        "code": "CHEE 456D1",
+        "credits": 4.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "CHEE 456D2",
+        "credits": 4.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CHEE 491",
+    "subject": "CHEE",
+    "number": "491",
+    "title": "Instrumentation and Measurement 2",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Measurement devices, valves, controllers and actuators; common failure modes and error sources; static and dynamic responses; first and higher-order instrument responses; calibration and biases; frequency response analysis; chemical analysis; elements of spectroscopy; optical measurements; integration projects for typical instruments used in chemical engineering.",
+    "prerequisites": {
+      "text": "CHEE 231, CHEE 455",
+      "tree": {
+        "and": [
+          "CHEE 231",
+          "CHEE 455"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-3-6)"
+    ]
+  },
+  {
+    "code": "CHEE 494",
+    "subject": "CHEE",
+    "number": "494",
+    "title": "Research Project and Seminar 1",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent study and experimental work on topic(s) chosen by consultation between the student and professor. Students must find a supervisor amongst the department faculty before registering for this course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-6-2)",
+      "Students are required to complete a written report and a presentation before the end of the semester."
+    ]
+  },
+  {
+    "code": "CHEE 495",
+    "subject": "CHEE",
+    "number": "495",
+    "title": "Research Project and Seminar 2",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent study and experimental work on topic(s) chosen by consultation between the student and professor. Students must find a supervisor amongst the department faculty before registering for this course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-9-2)",
+      "Students are required to complete a written report and a presentation before the end of the semester."
+    ]
+  },
+  {
+    "code": "CHEE 496",
+    "subject": "CHEE",
+    "number": "496",
+    "title": "Environmental Research Project",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Independent study and experimental work on environmental topic(s) chosen by consultation between the student and professor. Students must find a supervisor amongst department faculty before registering for this course.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(1-6-2)",
+      "Students are required to complete a written report and a presentation before the end of the semester."
+    ]
+  },
+  {
+    "code": "CHEE 511",
+    "subject": "CHEE",
+    "number": "511",
+    "title": "Catalysis for Sustainable Fuels and Chemicals",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to catalytic processes for the production of sustainable fuels and chemicals. Topics: From fossil fuel to renewable fuel. Syngas vs. platform route. Biomass upgrading. Renewable natural gas. CO2 as chemical building block. Theory of photo- and electro-catalysis.",
+    "prerequisites": {
+      "text": "CHEE 204 and CHEE 310 or permission of instructor.",
+      "tree": {
+        "and": [
+          "CHEE 204",
+          "CHEE 310"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)",
+      "Course open to U3 Chemical Engineering undergraduate students and graduate students in Chemical Engineering."
+    ]
+  },
+  {
+    "code": "CHEE 512",
+    "subject": "CHEE",
+    "number": "512",
+    "title": "Stem Cell Bioprocess Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to stem cell biology. Cell growth models applicable to stem cells and their progeny. Upstream processing (cell culture systems, bioreactors), downstream processing (cell separation, purification) and quality management (current good manufacturing practice, regulations) applied to therapeutic cells.",
+    "prerequisites": {
+      "text": "MATH 262 and CHEE 370 or BIOL 200, or Permission of Instructor.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "MATH 262",
+              "CHEE 370"
+            ]
+          },
+          "BIOL 200"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to undergraduate and graduate students registered in Chemical Engineering, as well as graduate students registered in the McGill Graduate Certificate in Regenerative Medicine program or in the M.Eng. in Biological and Biomedical Engineering program.",
+      "excludes": []
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 513",
+    "subject": "CHEE",
+    "number": "513",
+    "title": "Nanoscale Transport Phenomena",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Breakdown of classical transport at the nanoscale; microscopic and quantum transport processes; essentials of statistical mechanics; role of interfaces, confinement, and surface chemistry in nanoscale systems; nanoscale transport in membranes, nanoporous media, and energy systems; design and analysis of nanoscale chemical engineering devices.",
+    "prerequisites": {
+      "text": "CHEE 310 and CHEE 315 and CHEE 380 and CHEE 390; or permission of the instructor",
+      "tree": {
+        "and": [
+          "CHEE 310",
+          "CHEE 315",
+          "CHEE 380",
+          "CHEE 390"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 515",
+    "subject": "CHEE",
+    "number": "515",
+    "title": "Interface Design: Biomimetic Approach",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Investigation of the factors that cause biological surfaces to have superb functionalities; chemical and physical concepts responsible for the respective interfacial phenomena, such as surface tension, thermodynamics, kinetics, electrical double layers, surface wetting, adhesion and structural coloration; comparison of nature's solutions to engineering problems with synthetic approaches.",
+    "prerequisites": {
+      "text": "(CHEE 310 and CHEE 380) or (CHEM 233 and MIME 261 and MIME 317) or permission of instructor",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEE 310",
+              "CHEE 380"
+            ]
+          },
+          {
+            "and": [
+              "CHEM 233",
+              "MIME 261",
+              "MIME 317"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 521",
+    "subject": "CHEE",
+    "number": "521",
+    "title": "Nanomaterials and the Aquatic Environment",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Environmental impacts and applications of nanomaterials. Topics: physicochemical characterization of nanoparticles in aquatic media, colloid chemistry for understanding nanoparticle aggregation and mobility in the environment, mechanisms of reactive oxygen species (ROS) production by nanomaterials, nanomaterials for environmental remediation and water treatment, methodologies for assessing nanoparticle toxicity, novel research developments.",
+    "prerequisites": {
+      "text": "CHEE 315 or CIVE 225 or MIME 356 or equivalent; and CHEE 310 or CIVE 430 or CHEM 233 or equivalent; or permission of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CHEE 315",
+              "CIVE 225",
+              "MIME 356"
+            ]
+          },
+          {
+            "or": [
+              "CHEE 310",
+              "CIVE 430",
+              "CHEM 233"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CIVE 521.",
+      "excludes": [
+        "CIVE 521"
+      ]
+    },
+    "notes": [
+      "3-0-6",
+      "Offered each year, one year by the Department of Chemical Engineering and one year by the Department of Civil Engineering"
+    ]
+  },
+  {
+    "code": "CHEE 541",
+    "subject": "CHEE",
+    "number": "541",
+    "title": "Electrochemical Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Electrochemical systems: electrodes, reactors. Electrochemical stoichiometry, thermodynamics and kinetics. Mass and charge transport. Current and potential distribution in an electrochemical reactor. Electrocatalysis. Fuel cells technology. Batteries. Industrial electrochemical processes. Electrochemical sensors. Biomedical electrochemistry. Passivity, corrosion and corrosion prevention. Electrocrystalization. Experimental Methods.",
+    "prerequisites": {
+      "text": "CHEE 310 or permission of instructor.",
+      "tree": "CHEE 310",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 489.",
+      "excludes": [
+        "CHEE 489"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 543",
+    "subject": "CHEE",
+    "number": "543",
+    "title": "Plasma Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Description of the plasma state and parameters, plasma generation methods, and of the related process control and instrumentation. Electrical breakdown in gases and a series of discharge models are covered. Plasma processing applications such as PVD, PECVD, plasma polymerisation and etching, environmental applications, nanoparticle synthesis, spraying and sterilization are treated.",
+    "prerequisites": {
+      "text": "CHEE 220 and CHEE 314 or equivalent.",
+      "tree": {
+        "and": [
+          "CHEE 220",
+          "CHEE 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-1-5)"
+    ]
+  },
+  {
+    "code": "CHEE 563",
+    "subject": "CHEE",
+    "number": "563",
+    "title": "Biofluids and Cardiovascular Mechanics",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Basic principles of circulation including vascular fluid and solid mechanics, modelling techniques, clinical and experimental methods and the design of cardiovascular devices.",
+    "prerequisites": {
+      "text": "CHEE 314 or MECH 331 or permission of instructor.",
+      "tree": {
+        "or": [
+          "CHEE 314",
+          "MECH 331"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken MECH 563.",
+      "excludes": [
+        "MECH 563"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 582",
+    "subject": "CHEE",
+    "number": "582",
+    "title": "Polymer Science and Engineering",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Application of engineering fundamentals to the preparation and processing of polymers emphasizing the relationship between polymer structure and properties. Topics include: polymer synthesis techniques, characterization of molecular weight, crystallinity, glass transition, phase behaviour, mechanical properties, visco-elasticity, rheology, and polymer processing for use in blends and composite materials.",
+    "prerequisites": {
+      "text": "CHEE 314 or equivalent.",
+      "tree": "CHEE 314",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 481.",
+      "excludes": [
+        "CHEE 481"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 584",
+    "subject": "CHEE",
+    "number": "584",
+    "title": "Polymer Processing",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Survey of polymer processing operations with emphasis on the application of polymer rheology and transport phenomena to predict performance, including polymer rheology and constitutive equations, mixing, extrusion, injection molding, coating flows, fiber spinning, film blowing, blow molding, compression molding, thermoforming and composites processing.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHEE 315 or MIME 356 or equivalent.",
+      "tree": {
+        "or": [
+          "CHEE 315",
+          "MIME 356"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 684.",
+      "excludes": [
+        "CHEE 684"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 585",
+    "subject": "CHEE",
+    "number": "585",
+    "title": "Foundations of Soft Matter",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to soft condensed matter. Atomic and molecular origins of hydrodynamics and elasticity. Microscale order and disorder, phase transitions and dynamics. Polymer solutions, melts and gels. Surfactants, self-assembled structures, and fluid membranes. Colloidal dispersions, their dynamics, gels and crystals. Liquid crystals. Integration of the foregoing topics with modern experimental techniques in soft-matter research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 591",
+    "subject": "CHEE",
+    "number": "591",
+    "title": "Environmental Bioremediation",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The presence and role of microorganisms in the environment, the role of microbes in environmental remediation either through natural or human-mediated processes, the application of microbes in pollution control and the monitoring of environmental pollutants.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 592",
+    "subject": "CHEE",
+    "number": "592",
+    "title": "Industrial Air Pollution Control",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Air pollution effects, control laws and regulations, measurements; emission estimates, meteorology for air pollution control engineers, dispersion models, nature of particulate pollutants, control of primary particulates, control of volatile organic compounds, sulfur oxides and nitrogen oxides; air pollutants and global climate.",
+    "prerequisites": {
+      "text": "CHEE 314 or permission of instructor.",
+      "tree": "CHEE 314",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 472.",
+      "excludes": [
+        "CHEE 472"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 593",
+    "subject": "CHEE",
+    "number": "593",
+    "title": "Industrial Water Pollution Control",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Wastewater constituents of concern; legislation pertinent to wastewater treatment; wastewater sampling and analysis techniques; process analysis and selection; physical, chemical and biological processes; advanced wastewater treatment methods; integration of sciences and engineering principles to design wastewater treatment processes.",
+    "prerequisites": {
+      "text": "CHEE 314 or equivalent.",
+      "tree": "CHEE 314",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEE 471.",
+      "excludes": [
+        "CHEE 471"
+      ]
+    },
+    "notes": [
+      "(3-0-6)"
+    ]
+  },
+  {
+    "code": "CHEE 611",
+    "subject": "CHEE",
+    "number": "611",
+    "title": "Heat and Mass Transfer",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "General conservation equations for volumes and interfaces; scaling analysis and approximate solutions to diffusion problems; reaction-diffusion processes; phase changes; convective heat and mass transfer; selected advanced topics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 621",
+    "subject": "CHEE",
+    "number": "621",
+    "title": "Thermodynamics",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theory and application of phase and chemical equilibria in multicomponent systems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 631",
+    "subject": "CHEE",
+    "number": "631",
+    "title": "Foundations of Fluid Mechanics",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Rigorous derivation of equations of motion; creeping flow inviscid flow; boundary layer theory; hydrodynamic stability; turbulent flow, separated flows, drag on submerged bodies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 641",
+    "subject": "CHEE",
+    "number": "641",
+    "title": "Chemical Reaction Engineering",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Interpretation of chemical reaction data, especially for heterogeneous systems. Residence time, complete segregation, maximum mixedness, other advanced concepts. Reactor design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 651",
+    "subject": "CHEE",
+    "number": "651",
+    "title": "Advanced Biochemical Engineering",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The use of chemical engineering and biological principles in the study, design, use and creation of biologically-based processes and products. Topics: biochemical thermodynamics, protein engineering, manipulation of gene expression, transport phenomena and bioreactor design.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEE 662",
+    "subject": "CHEE",
+    "number": "662",
+    "title": "Computational Methods",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Methods of weighted residuals; solution to non-linear algebraic equations; stability in nonlinear equations; bifurcations; mesh refinement strategies; convection dominated transport; hyperbolic equations, particle simulation methods.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 672",
+    "subject": "CHEE",
+    "number": "672",
+    "title": "Process Dynamics and Control",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Process representation and identification and simulation; sensor stability; sensitivity of feedback control systems; feedward control; discrete representation of continuous systems; controller tuning; adaptive control.",
+    "prerequisites": {
+      "text": "CHEE 455",
+      "tree": "CHEE 455",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 681",
+    "subject": "CHEE",
+    "number": "681",
+    "title": "Laboratory Safety 1",
+    "credits": 1,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The basics of laboratory safety in a chemical engineering laboratory. Mandatory safety orientation (administration, contacts, fire, waste, emergency procedures) and official WHIMIS training.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to Chemical Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "The course must be completed by the end of the first semester in which the course is offered during the student's program."
+    ]
+  },
+  {
+    "code": "CHEE 682",
+    "subject": "CHEE",
+    "number": "682",
+    "title": "Laboratory Safety 2",
+    "credits": 1,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Demonstration of the safety of students' thesis experiments to the departmental safety committee.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CHEE 681",
+      "tree": "CHEE 681",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to Chemical Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "M.Eng. students must complete the course by the end of the first year of their degree. Ph.D. students must complete the course by the end of the third term of their degree."
+    ]
+  },
+  {
+    "code": "CHEE 687",
+    "subject": "CHEE",
+    "number": "687",
+    "title": "Research Skills and Ethics",
+    "credits": 2,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course provides a foundation in three areas: (i) integrity and ethical conduct, (ii) knowledge dissemination and translation, and (iii) research management. Ethical considerations in situations involving conflict of interest, authorship, and intellectual property attributions are discussed. Students will gain experience in identifying and selecting key information for different situations. Best practices in data reporting, maintenance of research notebooks and legal aspects of data ownership and rights are discussed.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students registered in the Department of Chemical Engineering.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEE 688",
+    "subject": "CHEE",
+    "number": "688",
+    "title": "Advanced Materials in Chemical Engineering",
+    "credits": 4,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Fundamentals of materials science and engineering for chemical engineers,applying thermodynamic, transport, reaction kinetics principles to thesynthesis, characterization and performance of advanced nano-, micro- and meso-structured materials, polymer solutions, gels, colloidal dispersions, emulsions, natural materials, bio-inspired materials, and composites. Applications of advanced materials in chemical engineering, including design for sustainability, and environmental/health considerations. Critical analysis of contemporary advanced-materials research literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3-0-9"
+    ]
+  },
+  {
+    "code": "CHEE 690",
+    "subject": "CHEE",
+    "number": "690",
+    "title": "Research Techniques",
+    "credits": 3,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course introduces techniques and develops skills necessary for commencing a particular thesis research project. A written report is required.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 695",
+    "subject": "CHEE",
+    "number": "695",
+    "title": "Project in Chemical Engineering",
+    "credits": 6,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the general direction of a full-time staff member, on a problem of industrially-oriented design or research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 696",
+    "subject": "CHEE",
+    "number": "696",
+    "title": "Extended Project",
+    "credits": 6,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Extended independent work on a problem of industrially-oriented design or research, leading to a comprehensive project report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 697",
+    "subject": "CHEE",
+    "number": "697",
+    "title": "Thesis Proposal",
+    "credits": 6,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the supervision of the thesis advisor(s) leading to a thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 698",
+    "subject": "CHEE",
+    "number": "698",
+    "title": "Thesis Research 1",
+    "credits": 12,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to thesis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 699",
+    "subject": "CHEE",
+    "number": "699",
+    "title": "Thesis Research 2",
+    "credits": 13,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Ongoing research pertaining to thesis.",
+    "prerequisites": {
+      "text": "CHEE 698",
+      "tree": "CHEE 698",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 795",
+    "subject": "CHEE",
+    "number": "795",
+    "title": "Ph.D. Thesis Proposal",
+    "credits": 0,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent work under the supervision of the thesis advisor(s) leading to a thesis proposal.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 796",
+    "subject": "CHEE",
+    "number": "796",
+    "title": "Ph.D. Proposal Defence",
+    "credits": 0,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation and defence of thesis proposal at an oral examination.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 797",
+    "subject": "CHEE",
+    "number": "797",
+    "title": "Ph.D. Seminar. 1",
+    "credits": 0,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Presentation of a seminar on an aspect of the Ph.D. candidate's research thesis work.",
+    "prerequisites": {
+      "text": "CHEE 796",
+      "tree": "CHEE 796",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEE 798",
+    "subject": "CHEE",
+    "number": "798",
+    "title": "Ph.D. Seminar 2",
+    "credits": 0,
+    "offeredBy": "Chemical Engineering",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Presentation of a seminar on an aspect of the Ph.D. candidate's research thesis work.",
+    "prerequisites": {
+      "text": "CHEE 797",
+      "tree": "CHEE 797",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

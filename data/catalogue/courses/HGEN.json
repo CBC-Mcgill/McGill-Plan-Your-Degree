@@ -1,0 +1,844 @@
+[
+  {
+    "code": "HGEN 396",
+    "subject": "HGEN",
+    "number": "396",
+    "title": "Human Genetic Research Project",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Independent research project with a final written report and an oral presentation.",
+    "prerequisites": {
+      "text": "Completion of at least one undergraduate term with cGPA 3.0",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 400",
+    "subject": "HGEN",
+    "number": "400",
+    "title": "Genetics in Medicine",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Using clinical vignettes, this course will emphasize the principles, ethical and legal issues of human heredity in medical genetics in the context of nature and genetic diversity of the human population.",
+    "prerequisites": {
+      "text": "BIOL 200 and BIOL 201 or ANAT 212/BIOC212, BIOL 202 or permission from the instructor",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "BIOL 200",
+              "BIOL 201"
+            ]
+          },
+          "ANAT 212",
+          {
+            "and": [
+              "BIOC 212",
+              "BIOL 202"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U2/U3 or permission from instructor",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 575",
+    "subject": "HGEN",
+    "number": "575",
+    "title": "Human Biochemical Genetics",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Selected human diseases, from the molecular and cellular levels to tissue effects and emerging novel therapies.",
+    "prerequisites": {
+      "text": "BIOL 202 or BIOL 302, and BIOL300; or permission of the instructor",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "BIOL 202",
+              "BIOL 302"
+            ]
+          },
+          "BIOL 300"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken BIOL 575.",
+      "excludes": [
+        "BIOL 575"
+      ]
+    },
+    "notes": [
+      "Fall",
+      "Three hours of lecture per week"
+    ]
+  },
+  {
+    "code": "HGEN 600",
+    "subject": "HGEN",
+    "number": "600",
+    "title": "Genetic Counselling Practicum",
+    "credits": 6,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Designed for students enrolled in the M.Sc. in Genetic Counselling. Students will be taught how to take family histories, read pedigrees and the basic skills required for interviewing patients. Discussions with example cases. Attendance at Genetics Rounds is compulsory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "HGEN 600D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "HGEN 600D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "HGEN 601",
+    "subject": "HGEN",
+    "number": "601",
+    "title": "Genetic Counselling Principles",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theoretical foundations for the contemporary practice of genetic counselling and the role of the genetic counsellor in the health care delivery system. Topics include counselling theory and psychosocial counselling techniques, the clinical genetics evaluation and case management, and professional ethics, conduct and development.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the M.Sc. in Genetic Counselling Program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 610",
+    "subject": "HGEN",
+    "number": "610",
+    "title": "Genetic Counselling: Independent Studies",
+    "credits": 6,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students enrolled in the M.Sc. in Genetic Counselling will become involved in an Independent Studies Project with a staff member. Students will also be responsible for specific assigned readings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "HGEN 610D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "HGEN 610D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "HGEN 610N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "HGEN 610N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "HGEN 617",
+    "subject": "HGEN",
+    "number": "617",
+    "title": "Principles of Medical Genetics",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course will provide students with an overview of the fundamental principles of medical genetics. Topics will include gene structure and function, inheritance patterns, molecular genetics, population genetics, genetic epidemiology, prenatal diagnosis, developmental genetics and birth defects, cancer, pharmacogenomics, treatment, and ethical and public policy issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 620",
+    "subject": "HGEN",
+    "number": "620",
+    "title": "Introductory Field Work Rotations 1",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Students are required to spend a minimum of 600 hours in field work. They will rotate through the various laboratories (cytogenetics, biochemical/molecular genetics) and clinical settings (prenatal diagnosis, screening, medical genetics) at the Montreal Children's Hospital.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Restrictionn(s): Open only to students in the M.Sc. in Genetic Counselling; Non-Thesis program."
+    ]
+  },
+  {
+    "code": "HGEN 621",
+    "subject": "HGEN",
+    "number": "621",
+    "title": "Introductory Field Work Rotations 2",
+    "credits": 6,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Students are required to spend a minimum of 600 hours in field work. They will rotate through the various laboratories (cytogenetics, biochemical/molecular genetics) and clinical settings (prenatal diagnosis, screening, medical genetics) at the Montreal Children's Hospital.",
+    "prerequisites": {
+      "text": "HGEN 620",
+      "tree": "HGEN 620",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the M.Sc. in Genetic Counselling; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 630",
+    "subject": "HGEN",
+    "number": "630",
+    "title": "Advanced Field Work Rotations",
+    "credits": 12,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students are required to spend a minimum of 600 hours in advanced clinical work. Students will rotate through the Division of Medical Genetics at the Montreal Children's Hospital, in some of its disease-oriented clinics and screening programs; at the Neurogenetics Unit of the Montreal Neurological Hospital; and the Medical Genetics Divisions at the adult hospitals (Montreal General Hospital, Royal Victoria Hospital and the Sir Mortimer B. Davis-Jewish General Hospital).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "HGEN 630D1",
+        "credits": 6,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "HGEN 630D2",
+        "credits": 6,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "HGEN 630N1",
+        "credits": 6,
+        "terms": []
+      },
+      {
+        "code": "HGEN 630N2",
+        "credits": 6,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "HGEN 640",
+    "subject": "HGEN",
+    "number": "640",
+    "title": "Second Year Practicum 1",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course aims to further develop the practical skills required for the contemporary practice of genetic counseling. Areas of skill development will include multiculturalism, counseling issues relevant to specific patient populations, and more advanced risk assessment, psychosocial counseling techniques and problem solving.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the MSc. in Genetic Counselling program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 641",
+    "subject": "HGEN",
+    "number": "641",
+    "title": "Second Year Practicum 2",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course aims to further develop the practical skills required for the contemporary practice of genetic counselling. Areas of skill development will include multiculturalism, counselling issues relevant to specific patient populations, and more advanced risk assessment, psychosocial counselling techniques and problem solving.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the MSc. in Genetic Counselling program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 650",
+    "subject": "HGEN",
+    "number": "650",
+    "title": "Genetic Counselling: Reading Project",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Students in the M.Sc. in Genetic Counselling will be assigned a Reading/Literature Search project on various topics: Bereavement, Pregnancy Loss, etc. Students will prepare and present information in seminar/discussion format.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 660",
+    "subject": "HGEN",
+    "number": "660",
+    "title": "Genetics and Bioethics",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will deal with ethical issues in the gathering, dissemination, and use of genetic information for decisions concerning reproduction, health care, and research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 661",
+    "subject": "HGEN",
+    "number": "661",
+    "title": "Population Genetics",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles and concepts of the genetics of human populations.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 662",
+    "subject": "HGEN",
+    "number": "662",
+    "title": "Laboratory Research Techniques",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Directed training in selected methods. Form and content are flexible to allow the department to meet specific student demands and needs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 663",
+    "subject": "HGEN",
+    "number": "663",
+    "title": "Beyond the Human Genome",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A review of recent advances in human genomics and current state of the art technologies of DNA sequence and whole genomics analyses, as well as future directions in the post-genomic era.",
+    "prerequisites": {
+      "text": "BIOL 370 or by permission of the instructor.",
+      "tree": "BIOL 370",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 670",
+    "subject": "HGEN",
+    "number": "670",
+    "title": "Advances in Human Genetics 1",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will deal with recent progress in human genetics, and its applications to health care, by identifying different fields including different disciplines (e.g. cancer genetics, neurogenetics), different conceptual approaches, or different methodologic approaches.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 673",
+    "subject": "HGEN",
+    "number": "673",
+    "title": "Methods and Concepts in Epigenetic Regulation Studies",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced concepts in epigenetics and chromatin regulation, experimental methods used in epigenetics research, and computational methods for analysis of epigenomics data.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHAR 565.",
+      "excludes": [
+        "PHAR 565"
+      ]
+    },
+    "notes": [
+      "Enrolment limitations: minimum 4 students, maximum 15 students.",
+      "Language of instruction: English",
+      "Course is graded."
+    ]
+  },
+  {
+    "code": "HGEN 674",
+    "subject": "HGEN",
+    "number": "674",
+    "title": "Research Internship",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Research Internship on the ethico-legal and policy issues in human genetics in both the research and the clinical settings.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall or Winter"
+    ]
+  },
+  {
+    "code": "HGEN 675",
+    "subject": "HGEN",
+    "number": "675",
+    "title": "Stem Cell Biology",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to the field of stem cell research. Definition of stem cells. Pluripotent stem cells and reprogramming. Adult stem cells, niche and asymmetric division. Clinical applications of stem cells. Cancer stem cells. Ethical issues surrounding stem cell research and clinical treatment.",
+    "prerequisites": {
+      "text": "HGEN692 or equivalent Minimum grade attained by student must be: B+",
+      "tree": "HGEN 692",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 676",
+    "subject": "HGEN",
+    "number": "676",
+    "title": "Lab Course in Genomics",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Introduction to Next Generation Sequencing (NGS) Based Genomics in the form of seminars and laboratory work. Lectures in state of the art sequencing technologies and their applications. Laboratory work in the preparation of high quality libraries for analyzing DNA and large/small RNAs. Hands on experience in setting up next Generation Sequencing using specialized equipment. Tutorials in use of Bio-informatics Analysis tools in experimental design, quality control, and in depth analysis of data. Practicum in using computational tools for personalized data analyses. Technology paper presentation, as well as production of a report on course data generation and analysis.",
+    "prerequisites": {
+      "text": "HGEN 692 or equivalent.",
+      "tree": "HGEN 692",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 677",
+    "subject": "HGEN",
+    "number": "677",
+    "title": "Statistical Concepts in Genetic and Genomic Analysis",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will introduce key statistical concepts that motivate and underlie the many statistical analysis methods currently used in analysis of genetic and genomic data. Emphasis will be placed on understanding how these concepts can influence study designs and analysis choices, and when substantial unanticipated biases can occur. Concepts include an understanding of variability and error, bias and its sources, independence, how distributions of variables impact analysis, outliers, covariates, missing data, the goals of data cleaning, multiple testing, and some consideration of clustering and prediction models.",
+    "prerequisites": {
+      "text": "A course introducing basic statistics or equivalent knowledge. Registration is by permission of the course coordinator.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 678",
+    "subject": "HGEN",
+    "number": "678",
+    "title": "Neurogenetics",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on advanced methods in genetics and their applications to understand the genetics of the brain in health and disease. Topics include high throughput sequencing, genome-wide association studies, disease models, organoids, RNA sequencing, single-cell sequencing and more to better understand the brain.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all graduate students enrolled in Human Genetics and students in other graduate programs, with permission from the course coordinator.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 679",
+    "subject": "HGEN",
+    "number": "679",
+    "title": "Cancer Genetics: Precision Oncology",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The past, present, and future of cancer research and treatment with an emphasis on precision medicine driven by significant advances in genomics. Precision medicine uses genomics, RNA and protein abundance, as well as key metabolic and physiological markers to best design and implement treatment.",
+    "prerequisites": {
+      "text": "Approval of the course instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 680",
+    "subject": "HGEN",
+    "number": "680",
+    "title": "M.Sc. Thesis Research 1",
+    "credits": 9,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 681",
+    "subject": "HGEN",
+    "number": "681",
+    "title": "M.Sc. Thesis Research 2",
+    "credits": 12,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 682",
+    "subject": "HGEN",
+    "number": "682",
+    "title": "M.Sc. Thesis Research 3",
+    "credits": 12,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 683",
+    "subject": "HGEN",
+    "number": "683",
+    "title": "M.Sc. Thesis Research 4",
+    "credits": 6,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work under the direction of the Thesis Supervisor and the Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 692",
+    "subject": "HGEN",
+    "number": "692",
+    "title": "Human Genetics",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course will emphasize the principles and practice of human genetics, including an overview of the fundamental aspects of human genetics pertaining to chromosomes and mutations, population, cancer and development genetics, the inheritance of complex traits.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Department of Human Genetics graduate students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 693",
+    "subject": "HGEN",
+    "number": "693",
+    "title": "Using Bioinformatics Resources",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study of internet resources relevant to biomedical research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "As the emphasis of the course instruction will be on the human genome, a preference will be given to graduate students in the Dept. of Human Genetics. Graduate students with basic knowledge of human genome from the Faculty of Medicine can apply with permission of the course coordinator.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "HGEN 696",
+    "subject": "HGEN",
+    "number": "696",
+    "title": "Advanced Readings in Genetics 1",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A review and discussion of specific topics in genetics (genetic models: population-based, animal, and in vitro genetic models, genomics, and medical genetics) centred on current literature and latest advances in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Course enrolment is limited to 12 students."
+    ]
+  },
+  {
+    "code": "HGEN 697",
+    "subject": "HGEN",
+    "number": "697",
+    "title": "Advanced Readings in Genetics 2",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A review and discussion of specific topics in genetics (genetic models: population-based, animal, and in vitro genetic models, genomics, and medical genetics) centred on current literature and latest advances in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Course enrolment is limited to 12 students."
+    ]
+  },
+  {
+    "code": "HGEN 698",
+    "subject": "HGEN",
+    "number": "698",
+    "title": "Advanced Readings in Genetics 3",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A review and discussion of specific topics in genetics (genetic models: population-based, animal, and in vitro genetic models, genomics, and medical genetics) centred on current literature and latest advances in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Course enrolment is limited to 12 students."
+    ]
+  },
+  {
+    "code": "HGEN 699",
+    "subject": "HGEN",
+    "number": "699",
+    "title": "Advanced Readings in Genetics 4",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A review and discussion of specific topics in genetics (genetic models: population-based, animal, and in vitro genetic models, genomics, and medical genetics) centred on current literature and latest advances in the field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Course enrolment is limited to 12 students."
+    ]
+  },
+  {
+    "code": "HGEN 701",
+    "subject": "HGEN",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 702",
+    "subject": "HGEN",
+    "number": "702",
+    "title": "Kyoto-McGill Ph.D Seminar",
+    "credits": 3,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Required for Kyoto-McGill Ph.D. students. Coordinated in conjunction with the Human Genetics Senior Seminars, students will present a research seminar of their major thesis research, prior to initial thesis submission and as a requirement for graduation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 716",
+    "subject": "HGEN",
+    "number": "716",
+    "title": "PhD 1 Research in Human Genetics 1",
+    "credits": 15,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Human Genetics. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "HGEN 717",
+    "subject": "HGEN",
+    "number": "717",
+    "title": "PhD 1 Research in Human Genetics 2",
+    "credits": 15,
+    "offeredBy": "Human Genetics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Human Genetics. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

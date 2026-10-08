@@ -1,0 +1,2842 @@
+[
+  {
+    "code": "ECON 199",
+    "subject": "ECON",
+    "number": "199",
+    "title": "First Year Seminar: Economics Seminar: A Reflection",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Research, economic data, and analysis of current issues from an economic perspective. Basic economic concepts and models on one or more current economic issues.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to newly admitted BA students in U0, who may take only one FYS. Students who register for more than one will be obliged to withdraw from all but one of them.",
+      "excludes": []
+    },
+    "notes": [
+      "Maximum cap 25."
+    ]
+  },
+  {
+    "code": "ECON 205",
+    "subject": "ECON",
+    "number": "205",
+    "title": "An Introduction to Political Economy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A critical study of the insights to be gained through economic analysis of a number of problems of broad interest. The focus will be on the application of economics to issues of public policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 205D.; This course does not count for credit towards the Minor Concentration, Major Concentration, or Honours degree in Economics.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 208",
+    "subject": "ECON",
+    "number": "208",
+    "title": "Microeconomic Analysis and Applications",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A university-level introduction to demand and supply, consumer behaviour, production theory, market structures and income distribution theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MGCR 293, ECON 230 or ECON 250",
+      "excludes": [
+        "ECON 230",
+        "ECON 250",
+        "MGCR 293"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 209",
+    "subject": "ECON",
+    "number": "209",
+    "title": "Macroeconomic Analysis and Applications",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A university-level introduction to national income determination, money and banking, inflation, unemployment and economic policy.",
+    "prerequisites": {
+      "text": "ECON 208 or permission of the instructor",
+      "tree": "ECON 208",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECON 295, ECON 330 or ECON 352",
+      "excludes": [
+        "ECON 295",
+        "ECON 330",
+        "ECON 352"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 219",
+    "subject": "ECON",
+    "number": "219",
+    "title": "Current Economic Problems: Topics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will deal with topical issues of importance to the Canadian economy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course will also be of interest to students outside of Economics"
+    ]
+  },
+  {
+    "code": "ECON 221",
+    "subject": "ECON",
+    "number": "221",
+    "title": "Economic History",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Survey of economic development. The evolution of economic institutions and the process of economic growth. Topics include demographic change, agrarian institutions, financial and industrial organization, technological change and the expansion of trade and markets.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ECON 208 and ECON 209 or ECON 230D1/D2 or ECON 250D1/D2.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECON 208",
+              "ECON 209"
+            ]
+          },
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 201 or ECON 221D1/D2.",
+      "excludes": [
+        "ECON 201",
+        "ECON 221D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 223",
+    "subject": "ECON",
+    "number": "223",
+    "title": "Political Economy of Trade Policy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The course introduces students to the economics of international trade, what constitutes good trade policy, and how trade policy is decided. The course examines Canadian trade policy since 1945, including the GATT, Auto Pact, the FTA and NAFTA, and concludes with special topics in trade policy.",
+    "prerequisites": {
+      "text": "ECON 208",
+      "tree": "ECON 208",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 225",
+    "subject": "ECON",
+    "number": "225",
+    "title": "Economics of the Environment",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A study of the application of economic theory to questions of environmental policy. Particular attention will be given to the measurement and regulation of pollution, congestion and waste and other environmental aspects of specific economies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken 154-325 or 154-425",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 227",
+    "subject": "ECON",
+    "number": "227",
+    "title": "Economic Statistics",
+    "credits": 6,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Distributions, averages, dispersions, sampling, testing, estimation, correlation, regression, index numbers, trends and seasonals.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ],
+    "parts": [
+      {
+        "code": "ECON 227D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ECON 227D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ECON 230",
+    "subject": "ECON",
+    "number": "230",
+    "title": "Microeconomic Theory",
+    "credits": 6,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The introductory course for Economics Major students in microeconomic theory. In depth and critical presentation of the theory of consumer behaviour, theory of production and cost curves, theory of the firm, theory of distribution, welfare economics and the theory of general equilibrium.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ECON 230D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ECON 230D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ECON 250",
+    "subject": "ECON",
+    "number": "250",
+    "title": "Introduction to Economic Theory: Honours",
+    "credits": 6,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An intermediate level microeconomics course. Includes theory of exchange, theory of consumer behaviour, theory of production and cost curves, theory of the firm, theory of distribution; general equilibrium and welfare economics. The assumptions underlying the traditional neo-classical approach to economic theory will be carefully specified.",
+    "prerequisites": {
+      "text": "MATH 140 and MATH 141 or equivalent",
+      "tree": {
+        "and": [
+          "MATH 140",
+          "MATH 141"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both ECON 250D1 and ECON 250D2.",
+      "No credit will be given for this course unless both ECON 250D1 and ECON 250D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "ECON 250D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ECON 250D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ECON 257",
+    "subject": "ECON",
+    "number": "257",
+    "title": "Economic Statistics - Honours",
+    "credits": 6,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Stochastic phenomena; probability and frequency distributions, introduction to probability theory. Statistical inference about proportions, means and variances; analysis of variance; nonparametric statistics; index numbers and time series; economic forecasting; regression and correlation analysis; introduction to general linear models, its uses and limitations; uses and misuses of statistics.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MATH 141 and MATH 133 and ECON 250",
+      "tree": {
+        "and": [
+          "MATH 141",
+          "MATH 133",
+          "ECON 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken 154-357 or are taking ECON 217 or ECON 227.",
+      "excludes": [
+        "ECON 217",
+        "ECON 227"
+      ]
+    },
+    "notes": [
+      "Students must register for both ECON 257D1 and ECON 257D2.",
+      "No credit will be given for this course unless both ECON 257D1 and ECON 257D2 are successfully completed in consecutive terms",
+      "You may not be able to receive credit for this course and other statistic courses. Be sure to check the Course Overlap section under Faculty Degree Requirements in the Arts or Science section of the Calendar."
+    ],
+    "parts": [
+      {
+        "code": "ECON 257D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ECON 257D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ECON 295",
+    "subject": "ECON",
+    "number": "295",
+    "title": "Macroeconomic Policy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This applied macroeconomics course focuses on current and recurrent macroeconomic issues important in understanding the public policy environment in which firms make their decisions. Topics include national accounts; national income determination; economic growth and fluctuations; money, monetary policy and financial markets; international trade and finance.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "MGCR 293",
+      "tree": "MGCR 293",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "For B.Com. students; Not open to students who have taken or are taking ECON 209, ECON 330D1/D2 or ECON 352D1/D2.",
+      "excludes": [
+        "ECON 209",
+        "ECON 330D1",
+        "ECON 352D1"
+      ]
+    },
+    "notes": [
+      "Continuing Studies: requirement for CMA, CGA, I.C.B., the EA of AACI, and the CRA",
+      "Continuing Studies: not open to full-time day students"
+    ]
+  },
+  {
+    "code": "ECON 302",
+    "subject": "ECON",
+    "number": "302",
+    "title": "Money, Banking and Government Policy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of the market for money; its macroeconomic effects; the theory and policy of central banking; monetary policy rules, the Taylor Rule, inflation targeting, quantitative easing; central bank independence; currency boards; commercial banking and economic stability; regulated versus free banking; cross-border banking and policy.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 302D1/D2 (6 credits).",
+      "excludes": [
+        "ECON 302D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 303",
+    "subject": "ECON",
+    "number": "303",
+    "title": "Canadian Economic Policy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Major theories of how economic policy is made and goes on to use economic tools of analysis to investigate selected policy problems of current interest.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209 or those listed under Prerequisites above.",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 303D1/D2 or ECON 403.",
+      "excludes": [
+        "ECON 303D1",
+        "ECON 403"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 304",
+    "subject": "ECON",
+    "number": "304",
+    "title": "Financial Instruments and Institutions",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Economic analysis of initiating, assembling, pricing and marketing equities of bonds, bills and complex financial instruments; financial innovation; its implications for financial stability and market failure; banks as brokers, underwriters, market makers and international allocators of credit; strategies of private and public agents operating in financial markets, monetary history.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 302D1/D2 (6 credits).",
+      "excludes": [
+        "ECON 302D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 305",
+    "subject": "ECON",
+    "number": "305",
+    "title": "Industrial Organization",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course analyzes the structure, conduct, and performance of industries, particularly but not exclusively in Canada. Topics include effects of mergers, barriers to entry, product line and promotion policies, vertical integration, and R & D policies of firms.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209.",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 306",
+    "subject": "ECON",
+    "number": "306",
+    "title": "Labour Markets and Wages",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of the implications on wage structures of differences in job conditions, levels and type training, long-term employment relationships, unionization etc. A variety of socioeconomic policy issues including subsidies for higher education, government regulation of workplace safety, and the role and treatment of women in today's labour force are explored.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209, or ECON 230D1/D2, or ECON 250D1/D2",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECON 208",
+              "ECON 209"
+            ]
+          },
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 306D1/D2.",
+      "excludes": [
+        "ECON 306D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 308",
+    "subject": "ECON",
+    "number": "308",
+    "title": "Governmental Policy Towards Business",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Covers the major public policies toward business in Canada, such as competition policy, regulation, public ownership and privatization, industrial policies, and trade policies. Includes comparison with policies of other countries, especially the U.S. Readings will include some legal decisions.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209.",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 310",
+    "subject": "ECON",
+    "number": "310",
+    "title": "Introduction to Behavioural Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to economic decision-making in markets and strategic environments, including bounded rationality, individual decision-making under uncertainty, and behavioural game theory.",
+    "prerequisites": {
+      "text": "ECON 208 and a statistics course or permission of the instructor.",
+      "tree": "ECON 208",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 313",
+    "subject": "ECON",
+    "number": "313",
+    "title": "Economic Development 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Microeconomic theories of economic development and empirical evidence on population, labour, firms, poverty. Inequality and environment.",
+    "prerequisites": {
+      "text": "ECON 208 and either ECON 209 or one development course.",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 314",
+    "subject": "ECON",
+    "number": "314",
+    "title": "Economic Development 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Macroeconomic development issues, including theories of growth, public finance, debt, currency crises, corruption, structural adjustment, democracy and global economic organization.",
+    "prerequisites": {
+      "text": "ECON 313",
+      "tree": "ECON 313",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 316",
+    "subject": "ECON",
+    "number": "316",
+    "title": "The Underground Economy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The origins, structure and operation of the \"underground\" sectors of modern economies around the world. Topics include the causes of black marketeering in Western economies; international contraband trade in guns and drugs; money laundering through the world financial system.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209 or those listed under Prerequisites above",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 318",
+    "subject": "ECON",
+    "number": "318",
+    "title": "The Criminal Economy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A seminar course focusing on the nature and operation of criminal enterprise in markets for goods, services and factors of production within advanced industrial economies. Topics include the debate over \"organized'' crime; the structure of the criminal firm; labour racketeering; and crime in the money and capital markets.",
+    "prerequisites": {
+      "text": "ECON 316.",
+      "tree": "ECON 316",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Departmental approval required",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 319",
+    "subject": "ECON",
+    "number": "319",
+    "title": "Economic Crises",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Review of economic knowledge on the causes and consequences of financial and economic crises such as that which began in August 2007.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 326",
+    "subject": "ECON",
+    "number": "326",
+    "title": "Ecological Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Macroeconomic and structural aspects of the ecological crisis. A course in which subjects discussed include the conflict between economic growth and the laws of thermodynamics; the search for alternative economic indicators; the fossil fuels crisis; and \"green'' fiscal policy.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209 or consent of instructor",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 332",
+    "subject": "ECON",
+    "number": "332",
+    "title": "Macroeconomic Theory: Majors 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A review of basic economic concepts and tools with an in depth and critical presentation of the fundamental areas of macroeconomic theory. Topics include: the measurement of economic aggregates, economic growth, and the consumption-savings decision and other basic elements of a business cycle.",
+    "prerequisites": {
+      "text": "ECON 230D1/2 or ECON 250D1/2.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 330D1/D2.",
+      "excludes": [
+        "ECON 330D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 333",
+    "subject": "ECON",
+    "number": "333",
+    "title": "Macroeconomic Theory - Majors 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A review of basic economic concepts and tools with an in depth and critical presentation of the fundamental areas of macroeconomic theory. Topics include: money and banking and business cycles, stabilization policy, and international finance.",
+    "prerequisites": {
+      "text": "ECON 332",
+      "tree": "ECON 332",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 330D1/2.",
+      "excludes": [
+        "ECON 330D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 334",
+    "subject": "ECON",
+    "number": "334",
+    "title": "History of Economic Doctrines",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The course surveys the development of economics, how the discipline and the thinking of economists evolved, and the significance of some of the analytical tools used.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209 or those listed under Prerequisites above",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 337",
+    "subject": "ECON",
+    "number": "337",
+    "title": "Introductory Econometrics 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The practical application of quantitative methods in statistical investigations.",
+    "prerequisites": {
+      "text": "a grade of 65% or better in ECON 227 or ECON 257 or an equivalent qualification in statistics. Familiarity with matrix algebra is highly recommended.",
+      "tree": {
+        "or": [
+          "ECON 227",
+          "ECON 257"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 338",
+    "subject": "ECON",
+    "number": "338",
+    "title": "Introductory Econometrics 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Estimation and forecasting using simultaneous equation systems, dynamic simulation, time series analysis.",
+    "prerequisites": {
+      "text": "ECON 337",
+      "tree": "ECON 337",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 347",
+    "subject": "ECON",
+    "number": "347",
+    "title": "Economics of Climate Change",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The course focuses on the economic implications of, and problems posed by, predictions of global warming due to anthropogenic emissions of greenhouse gases. Attention is given to economic policies such as carbon taxes and tradeable emission permits and to the problems of displacing fossil fuels with new energy technologies.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 209 or those listed under Prerequisites above",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 348",
+    "subject": "ECON",
+    "number": "348",
+    "title": "Urban Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Conceptual and mathematical models used to understand the spatial distribution of economic activity. Analysis of a variety of policy issues related to cities, such as urban transportation, pollution, housing, poverty, and crime.",
+    "prerequisites": {
+      "text": "ECON 230D1, ECON 230D2, ECON 227D1, ECON 227D2 or equivalent, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "ECON 230",
+          "ECON 227"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For U2 or U3 students only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 350",
+    "subject": "ECON",
+    "number": "350",
+    "title": "Gender and Economics ",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of the theoretical and empirical issues of gender and economics. Emphasis is placed on gender in the context of household economics, labour economics, development economics and a critical assessment of economic policies in these spheres. Gender norms (for example, traditional gender roles, dowries, son preferences) will be explored in how they interact with economics. Material is drawn from Canada, OECD and the Global South to address debates, policies and examples around gender equality and gender gaps.",
+    "prerequisites": {
+      "text": "ECON 230D1/D2",
+      "tree": "ECON 230",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 353",
+    "subject": "ECON",
+    "number": "353",
+    "title": "Macroeconomics - Honours 1 ",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Basic macroeconomic theory, emphasizing the Classical and Keynesian ideas for the short-run determination of output, employment, interest rates and prices in the economy.",
+    "prerequisites": {
+      "text": "ECON 250D1/ECON 250D2",
+      "tree": "ECON 250",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ECON 257D1",
+      "tree": "ECON 257",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 352D1/D2.",
+      "excludes": [
+        "ECON 352D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 354",
+    "subject": "ECON",
+    "number": "354",
+    "title": "Macroeconomics - Honours 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Elements of international economics, money and banking and growth theory. The structure of the Canadian economy.",
+    "prerequisites": {
+      "text": "ECON 353",
+      "tree": "ECON 353",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "ECON 257D2",
+      "tree": "ECON 257",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 352D1/D2.",
+      "excludes": [
+        "ECON 352D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 399",
+    "subject": "ECON",
+    "number": "399",
+    "title": "Internship: Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students with a minimum CGPA of 3.0 and permission of the departmental Internship Advisor. This course will not fulfill program requirements for honours, major or minor programs. A letter from a supervisor at the institution must attest to the successful completion of the student's tenure. The topic must fall within the student's program in economics and have the prior approval of a faculty member in the department.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 405",
+    "subject": "ECON",
+    "number": "405",
+    "title": "Natural Resource Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Topics include: Malthusian and Ricardian Scarcity; optimal depletion of renewable and non-renewable resources; exploration, risk and industry structure, and current resources, rent and taxation. Current public policies applied to the resource industries, particularly those of a regulatory nature.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 406",
+    "subject": "ECON",
+    "number": "406",
+    "title": "Topics in Economic Policy",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Selected policy issues are investigated using economic theory. For details on topics covered in the current year, consult the instructor.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250 and one of ECON 227, ECON 257",
+      "tree": {
+        "or": [
+          "ECON 230",
+          {
+            "and": [
+              "ECON 250",
+              {
+                "or": [
+                  "ECON 227",
+                  "ECON 257"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 408",
+    "subject": "ECON",
+    "number": "408",
+    "title": "Public Sector Economics 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theoretical and empirical economic analysis of the public sector with an emphasis on public goods and government spending. Study of Canadian institutions in international perspective.",
+    "prerequisites": {
+      "text": "ECON 230D1/D2 or 250D1/D2 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Not open to students who have already completed ECON 408D1/D2."
+    ]
+  },
+  {
+    "code": "ECON 409",
+    "subject": "ECON",
+    "number": "409",
+    "title": "Public Sector Economics 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Theoretical and empirical economic analysis of the public sector with an emphasis on taxation. Study of Canadian institutions in international perspective.",
+    "prerequisites": {
+      "text": "ECON 408 or permission of the instructor",
+      "tree": "ECON 408",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 408D1/D2",
+      "excludes": [
+        "ECON 408D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 416",
+    "subject": "ECON",
+    "number": "416",
+    "title": "Topics in Economic Development 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course gives students a broad overview of the economics of developing countries. The course covers micro and macro topics, with particular emphasis on the economic analysis at the micro level.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250 and ECON 227D1/D2 or equivalent, or permission of the instructor.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          {
+            "and": [
+              "ECON 250",
+              "ECON 227"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 420",
+    "subject": "ECON",
+    "number": "420",
+    "title": "Topics in Economic Theory",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The course discusses selected topics in micro or macroeconomic theory at an advanced level. Possible topics include welfare economics, general equilibrium, theories of firms, consumer behaviour, intertemporal choice, uncertainty, game theory, etc.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 423",
+    "subject": "ECON",
+    "number": "423",
+    "title": "International Trade",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A review of the theory and policy of international trade. Topics examined include: classical and modern theories of trade; tariffs; labour and capital mobility; trade and development; the WTO.",
+    "prerequisites": {
+      "text": "ECON 230D1/D2 or ECON 250D1/D2",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 423D1/D2",
+      "excludes": [
+        "ECON 423D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 424",
+    "subject": "ECON",
+    "number": "424",
+    "title": "International Payments",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A review of the theory and policy of international financial relations. Topics examined include: the balance of payments; exchange rates; global capital markets; the international monetary system.",
+    "prerequisites": {
+      "text": "ECON 230D1/D2 or ECON 250D1/D2",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 423D1/D2",
+      "excludes": [
+        "ECON 423D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 426",
+    "subject": "ECON",
+    "number": "426",
+    "title": "Labour Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The determinants of labour supply, demand and the structure of earnings are considered. The economic effects of government policies, such as minimum wage laws, unemployment insurance, welfare and training programs and subsidies to higher education are analyzed. A rigorous theoretical and \"hands on'' empirical approach is emphasized.",
+    "prerequisites": {
+      "text": "ECON 230D1/D2 or ECON 250D1/D2 or ECON 306D1/D2.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250",
+          "ECON 306D1"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 430",
+    "subject": "ECON",
+    "number": "430",
+    "title": "The Economics of Well-Being",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Definition, measurement, and determinants of subjective well-being and their implications for policy, growth, and the environment.",
+    "prerequisites": {
+      "text": "ECON 230D1/D2 or ECON 250D1/D2; ECON 227D1/D2 or ECON 257D1/D2 or equivalent; MATH 122 or MATH 139 or MATH 140 or MATH 150 or permission of instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECON 230",
+              "ECON 250"
+            ]
+          },
+          {
+            "or": [
+              "ECON 227",
+              "ECON 257"
+            ]
+          },
+          {
+            "or": [
+              "MATH 122",
+              "MATH 139",
+              "MATH 140",
+              "MATH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "ECON 430 is not open to students who have taken or are taking ENVR 430.",
+      "excludes": [
+        "ENVR 430"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 434",
+    "subject": "ECON",
+    "number": "434",
+    "title": "Current Economic Problems",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A discussion of contemporary economic problems. Topics will reflect economic issues of current interest.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 437",
+    "subject": "ECON",
+    "number": "437",
+    "title": "Methods for Causal Inference",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Foundations for empirical methods in causal inference in empirical economics. Standard Ordinary Least Squares model and its limitations, counterfactual analysis, including randomized experiments, instrumental variables, difference-in-differences, regression discontinuity.",
+    "prerequisites": {
+      "text": "ECON 337, ECON 338",
+      "tree": {
+        "and": [
+          "ECON 337",
+          "ECON 338"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 440",
+    "subject": "ECON",
+    "number": "440",
+    "title": "Health Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The organization and performance of Canada's health care system are examined from an economist's perspective. The system is described and its special features analyzed. Much attention is given to the role of government in the system and to financing arrangements for hospital and medical services. Current financial problems are discussed.",
+    "prerequisites": {
+      "text": "ECON 208 and ECON 227 or comparable courses or consent of the instructor",
+      "tree": {
+        "and": [
+          "ECON 208",
+          "ECON 227"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 447",
+    "subject": "ECON",
+    "number": "447",
+    "title": "Economics of Information and Uncertainty",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course considers how uncertainty can be incorporated into the standard model of consumer and producer choice central to explaining or analysing a number of different economic phenomena. Topics include the information approach to explaining unemployment and problems in controlling health care costs.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 450",
+    "subject": "ECON",
+    "number": "450",
+    "title": "Advanced Economic Theory 1 - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Selected topics in economic theory from recent periodical and monograph literature.",
+    "prerequisites": {
+      "text": "ECON 250D1/ECON 250D2 and ECON 352D1/ECON 352D2",
+      "tree": {
+        "or": [
+          "ECON 250",
+          {
+            "and": [
+              "ECON 250",
+              "ECON 352D1"
+            ]
+          },
+          "ECON 352D2"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 450D1 and ECON 450D2.",
+      "excludes": [
+        "ECON 450D1",
+        "ECON 450D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 452",
+    "subject": "ECON",
+    "number": "452",
+    "title": "Advanced Economic Theory 2 - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected topics in economic theory from recent periodical and monograph literature.",
+    "prerequisites": {
+      "text": "ECON 250D1/ECON 250D2 and ECON 352D1/ECON 352D2",
+      "tree": {
+        "or": [
+          "ECON 250",
+          {
+            "and": [
+              "ECON 250",
+              "ECON 352D1"
+            ]
+          },
+          "ECON 352D2"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 450D1 and ECON 450D2.",
+      "excludes": [
+        "ECON 450D1",
+        "ECON 450D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 453",
+    "subject": "ECON",
+    "number": "453",
+    "title": "International Trade - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Economic theories (classical and 'new trade theories') that analyze the impact of trade between nations are presented. In addition to the economic analysis of trade policies other topics such as trade in cultural goods, multilateral trade agreements, free trade and the environment may be covered.",
+    "prerequisites": {
+      "text": "ECON 250D1/D2",
+      "tree": "ECON 250",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 453D1/D2.",
+      "excludes": [
+        "ECON 453D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 454",
+    "subject": "ECON",
+    "number": "454",
+    "title": "Open Economy Macroeconomics - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "This course examines major theoretical and policy issues in open-economy macroeconomics. Topics include exchange rate adjustments, currency crises, the current accounts, global imbalance, and related issues. Empirical studies will also be discussed.",
+    "prerequisites": {
+      "text": "ECON 250D1/D2",
+      "tree": "ECON 250",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 453D1/D2.",
+      "excludes": [
+        "ECON 453D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 459",
+    "subject": "ECON",
+    "number": "459",
+    "title": "Topics in Monetary Economics - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An advanced treatment of selected topics in monetary economics, including the theory and practice of monetary policy.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250, and knowledge of calculus.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Honours in Economics; Not open to students who have taken ECON 458",
+      "excludes": [
+        "ECON 458"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 460",
+    "subject": "ECON",
+    "number": "460",
+    "title": "History of Thought 1 - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The evolution of economic thought prior to the close of the 19th century, as reflected in the writings of prominent economists from the time of Adam Smith to the emergence of marginalism and neoclassical economics.",
+    "prerequisites": {
+      "text": "ECON 250",
+      "tree": "ECON 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 461",
+    "subject": "ECON",
+    "number": "461",
+    "title": "History of Thought 2 - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "The evolution of economic thought in the 20th century, as reflected in the writings of prominent economists on equilibrium, dynamics, games, expectations, econometrics, industrial structure, economic policy and other primary areas of interest.",
+    "prerequisites": {
+      "text": "ECON 250.",
+      "tree": "ECON 250",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 462",
+    "subject": "ECON",
+    "number": "462",
+    "title": "Seminar in Economic History",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In this course economic theory is explicitly employed to elucidate issues in economic history. The topics will be announced at the beginning of the academic year.",
+    "prerequisites": {
+      "text": "either ECON 227 or ECON 257, and either ECON 330 or ECON 352",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECON 227",
+              "ECON 257"
+            ]
+          },
+          {
+            "or": [
+              "ECON 330",
+              "ECON 352"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 451 before fall 2014.",
+      "excludes": [
+        "ECON 451"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 468",
+    "subject": "ECON",
+    "number": "468",
+    "title": "Econometrics 1 - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The statistical basis of econometric modelling and treatment of the linear regression model; simple time series models; procedures for inference in linear cases; an introduction to methods for dealing with endogeneity and non-constant variance.",
+    "prerequisites": {
+      "text": "ECON 257D1/D2 or permission of the instructor.",
+      "tree": "ECON 257",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECON 467D1/D2",
+      "excludes": [
+        "ECON 467D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 469",
+    "subject": "ECON",
+    "number": "469",
+    "title": "Econometrics 2 - Honours",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Treatment of asymptotic theory and classical inferential procedures, an introduction to the bootstrap, maximum likelihood, non-linear models, mis-specification testing, non-stationarity and limited dependent variable models.",
+    "prerequisites": {
+      "text": "ECON 468",
+      "tree": "ECON 468",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ECON 467D1/D2",
+      "excludes": [
+        "ECON 467D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 473",
+    "subject": "ECON",
+    "number": "473",
+    "title": "Income Distribution",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Economics of income and wealth distribution, and the study of inequality. The dynamics of income, saving and wealth and their determinants. Macroeconomic implications. Effects of fiscal and redistributive programmes. The role of unemployment.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250; ECON 227 or ECON 257 or equivalent; Calculus 1 and 2.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ECON 230",
+              "ECON 250"
+            ]
+          },
+          {
+            "or": [
+              "ECON 227",
+              "ECON 257"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 480",
+    "subject": "ECON",
+    "number": "480",
+    "title": "Research Project 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "In this course students must undertake a research project under close supervision. They must also do such special reading and research as their advisers direct.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U3 students.",
+      "excludes": []
+    },
+    "notes": [
+      "A minimum average GPA of 3.15 is required in ECON 250D/230D, ECON 332, ECON 333, ECON 353, ECON 354 and ECON 257D/227D as well as in all economics courses. Students must complete a Research Project Registration Form, have it signed by the professor who has agreed to supervise the research project, countersigned by the Director of the Undergraduate Program in Economics, and submit it to the Economics Department Office prior toregistering in this course."
+    ]
+  },
+  {
+    "code": "ECON 510",
+    "subject": "ECON",
+    "number": "510",
+    "title": "Experimental Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Experimental methodology, current topics in experimental economics, and market design.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250 or permission of the instructor.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 511",
+    "subject": "ECON",
+    "number": "511",
+    "title": "Energy, Economy and Environment",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Interdisciplinary study of the short-term and long-term interactions between economic activity, energy usage and the environment. Implications of rising fossil fuels usage for environmental damage and its consequences for the future. The political economy of energy in national politics and international relations; the interface of energy and financial flows; the challenge of globally managing toxic residues.",
+    "prerequisites": {
+      "text": "3 credits of microeconomics and 3 credits of macroeconomics.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 525",
+    "subject": "ECON",
+    "number": "525",
+    "title": "Project Analysis",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "A course in cost benefit analysis for graduate and advanced undergraduate students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to advanced undergraduate students. Prerequisite: ECON 250, ECON 352 or equivalent",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 546",
+    "subject": "ECON",
+    "number": "546",
+    "title": "Game Theory",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course introduces students to game theory, the branch of the social sciences that focuses on the formal modelling and analysis of human interactions and strategic behaviour. Basic concepts in cooperative and non-cooperative games are applied to economic models.",
+    "prerequisites": {
+      "text": "ECON 230 or ECON 250",
+      "tree": {
+        "or": [
+          "ECON 230",
+          "ECON 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 446. Open to advanced undergraduate students",
+      "excludes": [
+        "ECON 446"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 581",
+    "subject": "ECON",
+    "number": "581",
+    "title": "Selected Topics in Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Open to advanced undergraduate and graduate students. Topics may vary from year to year.",
+    "prerequisites": {
+      "text": "ECON 230D1/D2 or ECON 250D1/D2 and ECON 330D1/D2 or ECON 352D1/D2.",
+      "tree": {
+        "or": [
+          "ECON 230",
+          {
+            "and": [
+              "ECON 250",
+              "ECON 330D1"
+            ]
+          },
+          "ECON 352D1"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students, final year Honours students, and other advanced undergraduate students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 610",
+    "subject": "ECON",
+    "number": "610",
+    "title": "Microeconomic Theory 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This is the first in a two-course sequence in microeconomics. The core microeconomics sequence (ECON 610, ECON 611) provides a rigorous coverage of the economic foundation upon which economic fields are built. Most of the sequence is devoted to building up this foundation of consumer and firm optimisation (including choice under uncertainty), partial and general equilibrium, and welfare economics. The remainder of ECON 611 covers special topics that vary from year to year. These are likely to be drawn from the following: social choice; externalities and public goods; models of asymmetric information; the principal-agent framework; search; basic game theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 620",
+    "subject": "ECON",
+    "number": "620",
+    "title": "Macroeconomic Theory 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is the first in a two-course sequence in macroeconomics. The course offers a thorough treatment of the fundamentals of macroeconomic theory. Emphasis is placed on the construction of economic models with microeconomic foundations. Topics include market-clearing and non-market-clearing models, capital accumulation, business cycles, monetary policy and fiscal policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 624",
+    "subject": "ECON",
+    "number": "624",
+    "title": "International Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A detailed examination of theories and policies in international trade and finance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ECON 624D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "ECON 624D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ECON 625",
+    "subject": "ECON",
+    "number": "625",
+    "title": "Economics of Natural Resources",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The concept of optimal resource management and the associated rules, such as Hotelling's rule and Faustmann's rule. Implications of the need to sink capital for equilibrium in resource utilization under certainty and uncertainty. Conditions under which there is market failure and the merits of price and quantity instruments.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 634",
+    "subject": "ECON",
+    "number": "634",
+    "title": "Economic Development 3",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A systematic treatment of the characteristics and problems of economic development in underdeveloped countries.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 637",
+    "subject": "ECON",
+    "number": "637",
+    "title": "Industrial Organization and Regulation",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An analysis of the nature of the firm, industrial structure and the effect of structure on firm and industry behaviour and performance.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 641",
+    "subject": "ECON",
+    "number": "641",
+    "title": "Labour Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A synthesis of theoretical developments in the area of labour economics with stress upon problems of empirical testing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 647",
+    "subject": "ECON",
+    "number": "647",
+    "title": "Applied Computational Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study of tools that allow numerical solutions to selected economics problems for which closed-form analytical solutions are not available. Coverage includes solutions to dynamic stochastic models in economics and finance, including dynamic programming in discrete and continuous time.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ECON 620",
+      "tree": "ECON 620",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 752 when topic was \"Applied Computational Economics\"",
+      "excludes": [
+        "ECON 752"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 650",
+    "subject": "ECON",
+    "number": "650",
+    "title": "Research 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparation for work on M.A. thesis and M.A. research report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 651",
+    "subject": "ECON",
+    "number": "651",
+    "title": "Research 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparation for work on M.A. thesis and M.A. research report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 652",
+    "subject": "ECON",
+    "number": "652",
+    "title": "Research 3",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparation for work on M.A. thesis and M.A. research report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 653",
+    "subject": "ECON",
+    "number": "653",
+    "title": "Research 4",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparation for work on M.A. thesis and M.A. research report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 654",
+    "subject": "ECON",
+    "number": "654",
+    "title": "Research Methods in Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Preparation of M.A. research papers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 661",
+    "subject": "ECON",
+    "number": "661",
+    "title": "Applied Time-Series and Forecasting",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Essential methods used in practical forecasting and modelling contexts: standard time series models for forecasting; non-stationary data; conditional variance forecasts; nowcasting macroeconomic quantities; density and probability forecasts; feasible forecast horizons; forecast evaluation and presentation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 662",
+    "subject": "ECON",
+    "number": "662",
+    "title": "Econometrics 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A broad treatment of linear methods: OLS, GLS, and IV mainly, and show how to apply the bootstrap to these models, with particular reference to parametric specification testing, and diagnostic testing (autocorrelation, heteroskedasticity, normality, parameter constancy).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 662D1/D2",
+      "excludes": [
+        "ECON 662D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 663",
+    "subject": "ECON",
+    "number": "663",
+    "title": "Econometrics 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Topics include: non-linear regression, maximum likelihood, generalised method of moments (GMM), and non-stationary processes, basically tests for unit roots and cointegration.",
+    "prerequisites": {
+      "text": "ECON 662",
+      "tree": "ECON 662",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 662D1/D2",
+      "excludes": [
+        "ECON 662D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 664",
+    "subject": "ECON",
+    "number": "664",
+    "title": "Applied Cross-Sectional Methods",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "With limited public resources, determining which programs, reforms, policies are beneficial, and at what cost, is crucial, and allows public policy to be driven by evidence. However, evaluating programs is made difficult by the “counterfactual problem”: one cannot observe the outcomes or behavior of a participant, had (s)he not participated. This course will describe the standard OLS model, its limitations, and an improvement (panel data models). This course will then present the state-of-the-art empirical techniques used by economists to address the counterfactual issue (randomized experiments, instrumental variables, difference-in-differences, regression discontinuity design; and time permitting selection models and matching). For each of these approaches, we will give the basic intuition, discuss the necessary assumptions, present the strengths and weaknesses, and analyze applications drawn from the literature. Moreover, each technique will be implemented by the students in hands-on Stata sessions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 665",
+    "subject": "ECON",
+    "number": "665",
+    "title": "Quantitative Methods",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A survey of quantitative methods frequently used in economic research. Special emphasis will be placed upon the formulation and evaluation of econometric models. Illustrations will be drawn from the existing empirical literature in economics. Required for all Ph.D. students who have not taken Econometrics as a field.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 670",
+    "subject": "ECON",
+    "number": "670",
+    "title": "Thesis 1",
+    "credits": 6,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Written and oral presentation of thesis proposal to the research Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 671",
+    "subject": "ECON",
+    "number": "671",
+    "title": "Thesis 2",
+    "credits": 6,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Written and oral presentation of thesis proposal to the research Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 672",
+    "subject": "ECON",
+    "number": "672",
+    "title": "Thesis 3",
+    "credits": 6,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Written and oral presentation of thesis proposal to the research Supervisory Committee.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 680",
+    "subject": "ECON",
+    "number": "680",
+    "title": "M.A. Report 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The M.A. Report must demonstrate the candidate's ability to do independent work at the graduate level in a particular field of economics. While length will vary with the subject matter, it is expected that on average reports will be about 50 pages long. The Report will be graded jointly by two members of the Department. The supervisor will normally be one of the examiners.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 681",
+    "subject": "ECON",
+    "number": "681",
+    "title": "M.A. Report 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The M.A. Report must demonstrate the candidate's ability to do independent work at the graduate level in a particular field of economics. While length will vary with the subject matter, it is expected that on average reports will be about 50 pages long. The Report will be graded jointly by two members of the Department. The supervisor will normally be one of the examiners.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ECON 681D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "ECON 681D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ECON 682",
+    "subject": "ECON",
+    "number": "682",
+    "title": "M.A. Report 3",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The M.A. Report must demonstrate the candidate's ability to do independent work at the graduate level in a particular field of economics. While length will vary with the subject matter, it is expected that on average reports will be about 50 pages long. The Report will be graded jointly by two members of the Department. The supervisor will normally be one of the examiners.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ECON 682D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "ECON 682D2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ECON 683",
+    "subject": "ECON",
+    "number": "683",
+    "title": "M.A. Report 4",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The M.A. Report must demonstrate the candidate's ability to do independent work at the graduate level in a particular field of economics. While length will vary with the subject matter, it is expected that on average reports will be about 50 pages long. The Report will be graded jointly by two members of the Department. The supervisor will normally be one of the examiners.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 688",
+    "subject": "ECON",
+    "number": "688",
+    "title": "Seminar on Social Statistics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar on social statistics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 701",
+    "subject": "ECON",
+    "number": "701",
+    "title": "Ph.D. Comprehensive Examination 1",
+    "credits": 0,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ECON 799, ECON 799D1, ECON 799D2.",
+      "excludes": [
+        "ECON 799",
+        "ECON 799D1",
+        "ECON 799D2"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "ECON 702",
+    "subject": "ECON",
+    "number": "702",
+    "title": "Ph.D. Comprehensive Examination 2",
+    "credits": 0,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 703",
+    "subject": "ECON",
+    "number": "703",
+    "title": "Ph.D. Field 1 Synthesis",
+    "credits": 0,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Milestone assessment of mastery in a field area of economics, demonstrating ability to read, understand, critically assess frontier research work, and make significant original contributions in the field.",
+    "prerequisites": {
+      "text": "Two field courses, which vary depending on the field chosen the by the students. These courses are approved by the GPD at the start of the academic year.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 704",
+    "subject": "ECON",
+    "number": "704",
+    "title": "Ph.D. Field 2 Synthesis",
+    "credits": 0,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Milestone assessment of mastery in a field area of economics, demonstrating ability to read, understand, critically assess frontier research work, and make significant original contributions in the field.",
+    "prerequisites": {
+      "text": "Two field courses, which vary depending on the field chosen the by the students. These courses are approved by the GPD at the start of the academic year.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 705",
+    "subject": "ECON",
+    "number": "705",
+    "title": "Reading Course: Selected Topics Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Reading course in Economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 706",
+    "subject": "ECON",
+    "number": "706",
+    "title": "Selected Topics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Reading course in Economics.",
+    "prerequisites": {
+      "text": "ECON 610, ECON 620 and 6 additional credits at the 600 level",
+      "tree": {
+        "and": [
+          "ECON 610",
+          "ECON 620"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 709",
+    "subject": "ECON",
+    "number": "709",
+    "title": "Microeconomic Theory 3",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Doctoral-level microeconomic theory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 710",
+    "subject": "ECON",
+    "number": "710",
+    "title": "Selected Topics in Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Selected topics in specialized areas of Economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 711",
+    "subject": "ECON",
+    "number": "711",
+    "title": "Microeconomic Theory 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course is the second part of a two-semester doctoral level microeconomic theory sequence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 712",
+    "subject": "ECON",
+    "number": "712",
+    "title": "Macroeconomic Theory 1",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course is the first part of a two-semester doctorals level macroeconomic theory sequence.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 713",
+    "subject": "ECON",
+    "number": "713",
+    "title": "Macroeconomic Theory 2",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course is the second part of a two-semester doctoral level macroeconomic theory sequence",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 722",
+    "subject": "ECON",
+    "number": "722",
+    "title": "Advanced Topics in Macroeconomics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course covers papers at the research frontier of selected areas in macroeconomics. The goal is to teach students how to do research on such topics and thus put them on a path to their doctoral thesis.",
+    "prerequisites": {
+      "text": "ECON 712 and ECON 713 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "ECON 712",
+          "ECON 713"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 724",
+    "subject": "ECON",
+    "number": "724",
+    "title": "International Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected problems in international trade, foreign exchange and international movements of capital.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 726",
+    "subject": "ECON",
+    "number": "726",
+    "title": "Topics in Environmental Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Topics in environmental economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 734",
+    "subject": "ECON",
+    "number": "734",
+    "title": "Economic Development 4",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Problems of economic growth and planning in selected underdeveloped countries. Topics covered vary from year to year in response to student interests; growth, poverty and income distribution, LDC labour markets and institutions, trade and development, international debt problems, issues in trade policy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 737",
+    "subject": "ECON",
+    "number": "737",
+    "title": "Industrial Organization and Regulation Seminar",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Builds on material covered in ECON 637. Problems are examined in greater depth with specific topics varying from year to year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 741",
+    "subject": "ECON",
+    "number": "741",
+    "title": "Advanced Labour Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Selected theoretical and policy issues in labour economics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 742",
+    "subject": "ECON",
+    "number": "742",
+    "title": "Empirical Microeconomics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Surveys the empirical techniques used in applied microeconomic fields, particularly development and labour economics. Focus is on the formulation of empirical models derived from economic theory, and on various estimation methodologies, including panel data econometrics, limited dependent variable models, and duration analysis. A \"hands on\" approach is emphasized.",
+    "prerequisites": {
+      "text": "First term of ECON 662 and either ECON 634 or ECON 641, or consent of the instructor",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "ECON 662",
+              "ECON 634"
+            ]
+          },
+          "ECON 641"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 744",
+    "subject": "ECON",
+    "number": "744",
+    "title": "Health Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The emphasis will be on describing and analyzing the structure and performance of the Canadian health system, though some attention will be given to recent attempts by the federal and provincial governments to deal with current problems in this field. Readings will be selected from the economics and health literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 761",
+    "subject": "ECON",
+    "number": "761",
+    "title": "Econometrics: Time Series Analysis",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theory and application of linear, non-linear expectational and asymptotic time series models to economic phenomena. Probabilistic models of economic dynamics and experimental economies, including simulation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 762",
+    "subject": "ECON",
+    "number": "762",
+    "title": "Econometrics - Asymptotic and Finite - Sample",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exact and asymptotic distribution theory in econometrics: basic results for estimation and inference in regression models, extensions and other selected topics including nonparametric and distribution-free methods for econometric models.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 763",
+    "subject": "ECON",
+    "number": "763",
+    "title": "Financial Econometrics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course covers advanced time series methods used in the analysis of financial data and other potentially non-stationary time series. Topics: integrated time series, co-integration, unit root testing, conditional heteroscedasticity, long memory, non-parametric and neural network models. Applications include market efficiency, stochastic volatility and predictability of asset returns.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 765",
+    "subject": "ECON",
+    "number": "765",
+    "title": "Models for Financial Economics",
+    "credits": 3,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A review of mathematical techniques used in modern finance theory, including measure theory and stochastic processes in continuous time (e.g., Brownian motion) and other techniques essential to understanding arbitrage pricing theory, including the pricing of options.",
+    "prerequisites": {
+      "text": "Permission of instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ECON 770",
+    "subject": "ECON",
+    "number": "770",
+    "title": "PhD Research Seminar 1",
+    "credits": 1,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Presentation of PhD research.",
+    "prerequisites": {
+      "text": "All comprehensive and field examinations are to be completed.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "ECON 770 must be taken before ECON 771."
+    ]
+  },
+  {
+    "code": "ECON 771",
+    "subject": "ECON",
+    "number": "771",
+    "title": "PhD Research Seminar 2",
+    "credits": 1,
+    "offeredBy": "Economics",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Presentation of PhD research.",
+    "prerequisites": {
+      "text": "All comprehensive and field examinations are to be completed. ECON 770 must be taken before ECON 771.",
+      "tree": "ECON 770",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

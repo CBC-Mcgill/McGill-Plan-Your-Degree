@@ -1,0 +1,280 @@
+[
+  {
+    "code": "PATH 300",
+    "subject": "PATH",
+    "number": "300",
+    "title": "Human Disease",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Provides a fundamental understanding of the diseases prevalent in North America, for upper level students in the biological sciences. Includes: general responses of cells and organ systems to injury; assessment of individual diseases by relating the causes, symptoms, diagnosis, treatment and prevention to the primary biological abnormalities in each disorder.",
+    "prerequisites": {
+      "text": "BIOL 200, BIOL 201 or BIOC 212, PHGY 209. Pre-/co-requisite: PHGY 210",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          {
+            "or": [
+              "BIOL 201",
+              "BIOC 212"
+            ]
+          },
+          "PHGY 209",
+          "PHGY 210"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "PATH 396",
+    "subject": "PATH",
+    "number": "396",
+    "title": "Undergraduate Research Project in Pathology",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": {
+      "text": "Completion of at least one full undergraduate term with a CGPA of at least 3.0 plus permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Student cannot be supervised by same instructor for two 396 Science courses.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Enrollment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term that may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures.",
+      "S/U option not permitted."
+    ]
+  },
+  {
+    "code": "PATH 504",
+    "subject": "PATH",
+    "number": "504",
+    "title": "Disease in Depth",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Faculty of Medicine & Hlth Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Mechanisms controlling the cellular life cycle in normal versus disease states such as cancer, infectious disease, cardiovascular, neurodegenerative, and immune disorders.",
+    "prerequisites": {
+      "text": "PATH 300",
+      "tree": "PATH 300",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 607",
+    "subject": "PATH",
+    "number": "607",
+    "title": "Biochemical Pathology",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Immunopathogenesis of Human Disease: Lectures and seminars on immune-regulatory mechanisms (cellular/molecular), maintaining the balance between protection and pathology; pathogenesis of major infectious diseases with bacterial, viral and parasitic involvement (e.g. tuberculosis, AIDS, malaria) and classical immune disorders (e.g. asthma).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking MIMM 607.",
+      "excludes": [
+        "MIMM 607"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PATH 613",
+    "subject": "PATH",
+    "number": "613",
+    "title": "Research Topics in Pathology 1",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of research topics in pathology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 614",
+    "subject": "PATH",
+    "number": "614",
+    "title": "Research Topics in Pathology 2",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Review of research topics in pathology.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 620",
+    "subject": "PATH",
+    "number": "620",
+    "title": "Research Seminar 1",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar presentation to staff and students on the Master's research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 622",
+    "subject": "PATH",
+    "number": "622",
+    "title": "Research Seminar 2",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar presentation to staff and students on the Master's research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 652",
+    "subject": "PATH",
+    "number": "652",
+    "title": "Molecular Biology of Disease",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Lectures and seminars dealing with concepts and current techniques in molecular biology applied to the study of human diseases with emphasis on cancer.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 653",
+    "subject": "PATH",
+    "number": "653",
+    "title": "Reading and Conference",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Cytogenetics is the science and art of making and analyzing chromosome preparations. This course focuses on human chromosomes, although methodologies and principles apply broadly to other species as well. Basic facts and mysteries about chromosomes will be explained and discussed in the light of clinical examples.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered in conjunction with the Department of Human Genetics."
+    ]
+  },
+  {
+    "code": "PATH 690",
+    "subject": "PATH",
+    "number": "690",
+    "title": "M.Sc. Thesis Research Project 1",
+    "credits": 9,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 691",
+    "subject": "PATH",
+    "number": "691",
+    "title": "M.Sc. Thesis Research Project 2",
+    "credits": 9,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 692",
+    "subject": "PATH",
+    "number": "692",
+    "title": "M.Sc. Thesis Research Project 3",
+    "credits": 12,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the general direction of a full-time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 693",
+    "subject": "PATH",
+    "number": "693",
+    "title": "M.Sc Thesis Research Project 4",
+    "credits": 3,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent work under the general direction of a full- time staff member on research leading to a comprehensive report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PATH 701",
+    "subject": "PATH",
+    "number": "701",
+    "title": "Comprehensive Examination - Ph.D. Candidates",
+    "credits": 0,
+    "offeredBy": "Pathology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

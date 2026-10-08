@@ -1,0 +1,818 @@
+[
+  {
+    "code": "EDEE 223",
+    "subject": "EDEE",
+    "number": "223",
+    "title": "Language Arts",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Different approaches to language arts education in the contexts of kindergarten and elementary classrooms will be investigated. Explores current research and theories related to language and literacy development, learning and teaching. Opportunities for cultivating techniques for aligning language arts pedagogy, curriculum, instruction and assessment will be provided.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEE 253 or EDEE 254, and EDEE 283 or EDEE 284.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDEE 253",
+              "EDEE 254"
+            ]
+          },
+          {
+            "or": [
+              "EDEE 283",
+              "EDEE 284"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "EDEE 230",
+    "subject": "EDEE",
+    "number": "230",
+    "title": "Elementary School Mathematics 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Elementary Education: The first of two courses specially designed for elementary school pre-service teachers. Focused on key areas of what teachers need to know and be able to do to support students' development of mathematical understanding (focus on mathematics content, students' reasoning, and pedagogy). Provides insight and understanding of the Quebec elementary mathematics program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 231",
+    "subject": "EDEE",
+    "number": "231",
+    "title": "Mathématique au primaire 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Les éléments essentiels à connaître et maîtriser afin de soutenir le développement de la compréhension mathématique des élèves (contenus mathématiques, raisonnement des élèves et approches pédagogiques).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Permet d’approfondir la compréhension du Programme de formation de l’école québécoise en mathématique au primaire."
+    ]
+  },
+  {
+    "code": "EDEE 240",
+    "subject": "EDEE",
+    "number": "240",
+    "title": "Use and Adaptation of Curricula",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Provincial or Nunavut curricula as a basis for planning, materials production and evaluation. Methods of adapting curricula to local needs and of developing local courses of study in First Nations and Inuit community schools.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 243",
+    "subject": "EDEE",
+    "number": "243",
+    "title": "Reading Methods for First Nations/Inuit Languages",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Overview of reading theories and their application to First Nations and Inuit languages; processes used by proficient readers. Methods of teaching reading.",
+    "prerequisites": {
+      "text": "Fluency in the Indigenous language of study.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 245",
+    "subject": "EDEE",
+    "number": "245",
+    "title": "Orientation to Education",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Introduction to planning and maintaining a learning environment in Indigenous classroom as a unique pedagogical setting. Study and application of differential learning styles.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 248",
+    "subject": "EDEE",
+    "number": "248",
+    "title": "Reading and Writing in First Nations and Inuit Languages",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Methods of teaching reading and writing in syllabics and other First Nations and Inuit writing systems. The principles of sight word reading instruction, child observation, material development and guided instruction.",
+    "prerequisites": {
+      "text": "Fluency in the First Nations and Inuit language of study.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "These courses are only for the Office of First Nations and Inuit Education (OFNIE) for getting people to register online.",
+      "The drop deadlines vary according to OFNIE program cohort scheduling."
+    ]
+  },
+  {
+    "code": "EDEE 253",
+    "subject": "EDEE",
+    "number": "253",
+    "title": "Kindergarten Classroom Pedagogy",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elementary Education : An orientation to the Kindergarten curriculum. Integration of the school subject areas (language arts, second language, mathematics, social sciences, science, expressive arts, moral and religious education, and physical education) in a manner appropriate to the developmental level of the pre-school child.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEE 223, and EDEE 283 or EDEE 284",
+      "tree": {
+        "and": [
+          "EDEE 223",
+          {
+            "or": [
+              "EDEE 283",
+              "EDEE 284"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDEC 310 and EDEE 250.",
+      "excludes": [
+        "EDEC 310",
+        "EDEE 250"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDEE 254",
+    "subject": "EDEE",
+    "number": "254",
+    "title": "Pédagogie en maternelle",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Initiation au programme de la maternelle en contexte d’immersion française. Intégration des différentes disciplines scolaires - français langue d’enseignement; français langue seconde; mathématique; univers social; science et technologie; arts plastiques; art dramatique; musique; culture et citoyenneté québécoise; et éducation physique et à la santé - de manière adaptée au développement global de l’enfant à la maternelle.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEE 223 and EDEE 284",
+      "tree": {
+        "and": [
+          "EDEE 223",
+          "EDEE 284"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 260",
+    "subject": "EDEE",
+    "number": "260",
+    "title": "Reading Methods - Kindergarten/Elementary",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Methods and materials for the teaching of reading.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**These courses are only for the Office of First Nations and Inuit Education (OFNIE) for getting people to register online."
+    ]
+  },
+  {
+    "code": "EDEE 270",
+    "subject": "EDEE",
+    "number": "270",
+    "title": "Elementary School Science",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Science as a means of exploring and explaining our environment. A study of some of the fundamental concepts and process skills common to most elementary programs.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The course includes a fee of $15 for required lab supplies, including take-home experimental kits"
+    ]
+  },
+  {
+    "code": "EDEE 271",
+    "subject": "EDEE",
+    "number": "271",
+    "title": "Science au primaire 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "La science comme moyen d’explorer et d’expliquer notre environnement en contexte d’immersion française au primaire. Étude de certains concepts fondamentaux et des démarches d’investigation scientifique communes à la plupart des programmes de science au primaire.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "S'appuie principalement sur le Programme de formation de l'école québécoise.",
+      "Le cours comprend des frais de 15 $ pour le matériel de laboratoire obligatoire, y compris des trousses expérimentales à emporter à la maison."
+    ]
+  },
+  {
+    "code": "EDEE 273",
+    "subject": "EDEE",
+    "number": "273",
+    "title": "Elementary School Science 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elementary Education : A study of science programs and teaching strategies appropriate for providing elementary school children with an appreciation of the nature and method of science inquiry.",
+    "prerequisites": {
+      "text": "EDEE 270 or EDEE 271",
+      "tree": {
+        "or": [
+          "EDEE 270",
+          "EDEE 271"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDEE 275.",
+      "excludes": [
+        "EDEE 275"
+      ]
+    },
+    "notes": [
+      "The course includes a fee of $20.60 for required lab supplies, including take-home experimental kits."
+    ]
+  },
+  {
+    "code": "EDEE 274",
+    "subject": "EDEE",
+    "number": "274",
+    "title": "Science au primaire 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Étude des programmes de science et des stratégies d’enseignement appropriées afin de permettre aux élèves du primaire, en contexte d’immersion française, de développer une compréhension et une appréciation de la nature des sciences et des démarches d’investigation scientifique.",
+    "prerequisites": {
+      "text": "EDEE 271",
+      "tree": "EDEE 271",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "S'appuie principalement sur le Programme de formation de l'école québécoise.",
+      "Le cours comprend des frais de 20,60 $ pour le matériel de laboratoire obligatoire, notamment des trousses expérimentales à emporter à la maison."
+    ]
+  },
+  {
+    "code": "EDEE 280",
+    "subject": "EDEE",
+    "number": "280",
+    "title": "Geography, History and Citizenship Education",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Designed for elementary school teachers. A multi-disciplinary and cross-curricular investigation of various citizenship education themes, geographical regions and historical periods as outlined in the Quebec Education Program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Faculty of Education students.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day."
+    ]
+  },
+  {
+    "code": "EDEE 283",
+    "subject": "EDEE",
+    "number": "283",
+    "title": "Social Studies Pedagogy",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elementary Education : Programs, materials and strategies for social studies from Kindergarten through grade six.",
+    "prerequisites": {
+      "text": "EDEE 280",
+      "tree": "EDEE 280",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEE 223, and EDEE 253 or EDEE 254",
+      "tree": {
+        "and": [
+          "EDEE 223",
+          {
+            "or": [
+              "EDEE 253",
+              "EDEE 254"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken EDEE 282.",
+      "excludes": [
+        "EDEE 282"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDEE 284",
+    "subject": "EDEE",
+    "number": "284",
+    "title": "L'univers social au primaire",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Étude des programmes, des ressources et des stratégies pédagogiques en univers social, dans des classes de maternelle et de primaire en contexte d’immersion française.",
+    "prerequisites": {
+      "text": "EDEE 280",
+      "tree": "EDEE 280",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEE 223, EDEE 254",
+      "tree": {
+        "and": [
+          "EDEE 223",
+          "EDEE 254"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "S'appuie principalement sur le Programme de formation de l'école québécoise."
+    ]
+  },
+  {
+    "code": "EDEE 292",
+    "subject": "EDEE",
+    "number": "292",
+    "title": "Using Instructional Resources",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Students will learn to find, assess, and use a variety of instructional resources. Specifically, they will learn how to evaluate the instructional value of software packages and other established audio-visual materials; how to make and use simple audio-visual materials; and how to find additional resource material in the library.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 325",
+    "subject": "EDEE",
+    "number": "325",
+    "title": "Children's Literature",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Selection and use of literature suitable for children in the elementary school.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ENGL 240, ENGL 341",
+      "excludes": [
+        "ENGL 240",
+        "ENGL 341"
+      ]
+    },
+    "notes": [
+      "Limited enrolment"
+    ]
+  },
+  {
+    "code": "EDEE 332",
+    "subject": "EDEE",
+    "number": "332",
+    "title": "Teaching Elementary Mathematics 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Elementary Education: The second of two courses specifically designed for elementary school pre-service teachers. Provides opportunities for the development of increasingly sophisticated knowledge and practices specific to elementary mathematics teaching. Provides insight and understanding of the Quebec modern elementary mathematics program.",
+    "prerequisites": {
+      "text": "EDEE 230 or EDEE 231, EDFE 306.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDEE 230",
+              "EDEE 231"
+            ]
+          },
+          "EDFE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 333",
+    "subject": "EDEE",
+    "number": "333",
+    "title": "Mathématique au primaire 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Deuxième de deux cours conçus spécialement pour les futures personnes enseignantes du primaire en contexte d’immersion française. Développement des connaissances et des pratiques de plus en plus approfondies propres à l’enseignement de la mathématique au primaire.",
+    "prerequisites": {
+      "text": "EDEE 231, EDFE 306",
+      "tree": {
+        "and": [
+          "EDEE 231",
+          "EDFE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Permet d’approfondir la compréhension du Programme de formation de l’école québécoise en mathématique au primaire."
+    ]
+  },
+  {
+    "code": "EDEE 347",
+    "subject": "EDEE",
+    "number": "347",
+    "title": "Grammar and Composition 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Reading and writing of an Indigenous language which includes using a computer. Focus is on nouns, verbs, prefixes, suffixes, along with specific Indigenous lexicon.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 348",
+    "subject": "EDEE",
+    "number": "348",
+    "title": "Grammar and Composition 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Reading and writing of an Indigenous language. Intermediate and advanced aspects of grammar of the Indigenous language. Continuation of language development.",
+    "prerequisites": {
+      "text": "EDEE 347",
+      "tree": "EDEE 347",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 350",
+    "subject": "EDEE",
+    "number": "350",
+    "title": "Integrating the Curriculum",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Strategies and methods for integrating the individual subject areas in the elementary school curriculum, using the Québec curriculum as the primary example.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEE 352, EDEE 355, EDFE 303 or EDFE 306",
+      "tree": {
+        "and": [
+          "EDEE 352",
+          "EDEE 355",
+          {
+            "or": [
+              "EDFE 303",
+              "EDFE 306"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 352",
+    "subject": "EDEE",
+    "number": "352",
+    "title": "Classroom Practices",
+    "credits": 2,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Theory-based strategies for setting up, managing and teaching in the elementary school classroom.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEE 350, EDEE 355 and EDFE 303 or EDFE 306",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "EDEE 350",
+              "EDEE 355",
+              "EDFE 303"
+            ]
+          },
+          "EDFE 306"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "B.Ed. (K/Elem) students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDEE 353",
+    "subject": "EDEE",
+    "number": "353",
+    "title": "Third Year Professional Seminar (Kindergarten/Elementary)",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Theory-based strategies for setting up, managing and teaching in the elementary school classroom. Methods for integrating the individual subject areas in the elementary school curriculum, using the Quebec curriculum as the primary example. Professional portfolios and professional competencies will be addressed.",
+    "prerequisites": {
+      "text": "EDEC 253",
+      "tree": "EDEC 253",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "EDEE 355 and EDFE 306",
+      "tree": {
+        "and": [
+          "EDEE 355",
+          "EDFE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "B.Ed (K/Elem) students. Not open to students who have taken EDEE 350 or EDEE 352.",
+      "excludes": [
+        "EDEE 350",
+        "EDEE 352"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDEE 355",
+    "subject": "EDEE",
+    "number": "355",
+    "title": "Classroom-based Evaluation",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "The role of evaluation within kindergarten/elementary school programs. Topics include the kinds of information needed, different techniques for collecting that information, and ways of interpreting it to make educational decisions. Principles and a variety of methods for evaluation are discussed and practiced.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDEE 353 or EDSL 353, EDFE 306",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "EDEE 353",
+              "EDSL 353"
+            ]
+          },
+          "EDFE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "B.Ed. (K/Elem) students",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day.",
+      "**This course is only for the Office of First Nations and Inuit Education (OFNIE) for getting people to register online.",
+      "**Web drop deadline is May 22, 2025",
+      "**Web add deadline is June 4, 2025",
+      "**Web withdrawal deadline is June 5, 2025"
+    ]
+  },
+  {
+    "code": "EDEE 356",
+    "subject": "EDEE",
+    "number": "356",
+    "title": "Évaluation en français langue seconde",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Rôle de l’évaluation dans les programmes d’éducation maternelle et primaire en français langue seconde. Exploration des informations nécessaires à une évaluation efficace, des diverses méthodes de collecte de données et des modalités d’interprétation permettant d’éclairer la prise de décision pédagogique. Une attention particulière est accordée aux pratiques d’évaluation en immersion française ainsi qu'aux approches critiques en évaluation.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "EDSL 353, EDFE 306",
+      "tree": {
+        "and": [
+          "EDSL 353",
+          "EDFE 306"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 370",
+    "subject": "EDEE",
+    "number": "370",
+    "title": "Traditional Indigenous Life Skills",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Sharing, modelling and transferring of Indigenous knowledge about living in harmony with the elements and the environment. Featured topics include weather and its traditional interpretation, ice conditions, animal behaviours and their interactions with the environment. Hands-on learning will be emphasized.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is offered only to students registered in First Nations and Inuit Education programs.",
+      "excludes": []
+    },
+    "notes": [
+      "**These courses are only for the Office of First Nations and Inuit Education (OFNIE) for getting people to register online.",
+      "**Web drop deadline is May 23, 2024",
+      "**Web add deadline is June 5, 2024",
+      "**Web withdrawal deadline is June 6, 2024"
+    ]
+  },
+  {
+    "code": "EDEE 371",
+    "subject": "EDEE",
+    "number": "371",
+    "title": "Integrating Indigenous Storytelling and Creative Writing",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Students will be involved in storytelling and practical writing activities. Stories will be gathered from elders, residential school survivors and/or from their own experience. The intent of this course is to broaden knowledge and skill in the reading and writing of the students' heritage language.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is offered only to students registered in First Nations and Inuit Education programs.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "EDEE 373",
+    "subject": "EDEE",
+    "number": "373",
+    "title": "Traditional Healing",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Indigenous traditional healing and its cultural value. The origins of Indigenous traditional medicines will be explored through elders' knowledge and stories.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 383",
+    "subject": "EDEE",
+    "number": "383",
+    "title": "Oral and Family History",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "Oral and family history techniques, emphasising kinship terms and the importance of kinship values to Indigenous Cultures.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 444",
+    "subject": "EDEE",
+    "number": "444",
+    "title": "First Nations and Inuit Curriculum",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "An introduction to First Nations and Inuit curriculum: how curriculum needs in Aboriginal communities are similar to and different from mainstream ones, the range of ways in which First Nations and Inuit have responded to curriculum needs based on language, culture, and community perceptions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDEE 473",
+    "subject": "EDEE",
+    "number": "473",
+    "title": "Ecological Studies",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [],
+    "description": "A lecture, laboratory and field course to train elementary school teachers in the principles and practices of field biology and nature tours. The observation and identification of various organisms and a study of their ecological relationships in the web of life.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Offered through Summer Studies"
+    ]
+  }
+]

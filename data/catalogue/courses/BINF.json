@@ -1,0 +1,96 @@
+[
+  {
+    "code": "BINF 511",
+    "subject": "BINF",
+    "number": "511",
+    "title": "Bioinformatics for Genomics",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Bioinformatics methods and reasoning in relation to genomics, proteomics and metabolomics strategies with an emphasis on functional genomics data. The course will cover introduction to UNIX, Perl programming, data processing and integration, file parsing, relational database design and implementation, angled towards solutions relevant for genomics.",
+    "prerequisites": {
+      "text": "Understanding of cell and molecular biology (equivalent to a cell or molecular biology course) or permission from instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "BINF 531",
+    "subject": "BINF",
+    "number": "531",
+    "title": "Statistical Bioinformatics",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Underlying concepts and techniques for the analyses of large-scale data sets, generated from \"omics\" platforms (e.g., metagenomics, metabolomics, transcriptomics, etc.), as well as different approaches for working with high-dimensional data. Students will gain experience in such software packages as R and Bioconductor for statistical analysis and data visualization.",
+    "prerequisites": {
+      "text": "AEMA 310 or equivalent; LSCI 204, LSCI 211, LSCI 230, or equivalent",
+      "tree": {
+        "and": [
+          "AEMA 310",
+          "LSCI 204",
+          "LSCI 211",
+          "LSCI 230"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U3 students and above. Not open to students who have taken or are taking MIMM 531.",
+      "excludes": [
+        "MIMM 531"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "BINF 621",
+    "subject": "BINF",
+    "number": "621",
+    "title": "Bioinformatics: Molecular Biology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The main problems related to the analysis of biological sequences (sequence comparison, homology, gene annotation, phylogenetic inference, comparative genomics) and the computational approaches (dynamic programming algorithms, Blast heuristics, hidden Markov models, Bayesian statistics).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Enrolment by students in the Bioinformatics option or by permission from the course coordinators only. Limited to 30 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BINF 660",
+    "subject": "BINF",
+    "number": "660",
+    "title": "Advances in Bioinformatics",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An advanced bioinformatics project course with emphasis on creating solutions to biological questions. Course involves conducting a literature review, writing a short proposal, carrying out the project and writing a final report in the form of software documentation and/or a manuscript.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Graduate Certificate in Bioinformatics.",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

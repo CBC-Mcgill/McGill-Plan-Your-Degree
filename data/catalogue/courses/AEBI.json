@@ -1,0 +1,231 @@
+[
+  {
+    "code": "AEBI 120",
+    "subject": "AEBI",
+    "number": "120",
+    "title": "Integrated Life Sciences",
+    "credits": 4,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Integrated survey of life sciences with emphasis on the interconnectivity of biological processes from the molecular to the ecosystem level. Analysis of energy flux, information transfer, and population dynamics within agricultural and environmental contexts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking BIOL 111 or equivalent.",
+      "excludes": [
+        "BIOL 111"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "AEBI 210",
+    "subject": "AEBI",
+    "number": "210",
+    "title": "Organisms 1",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The biology of plants and plant-based systems in managed and natural terrestrial environments. The interactions between autotrophs and soil organisms and selected groups of animals with close ecological and evolutionary connections with plants (e.g., herbivores and pollinators) will be explored in lecture and laboratory.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours of lecture and 2 hours of lab, per week."
+    ]
+  },
+  {
+    "code": "AEBI 211",
+    "subject": "AEBI",
+    "number": "211",
+    "title": "Organisms 2",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the biology of heterotrophs, focusing on animal diversity from the perspectives of phylogenetics, physiology, and ecology. Introduction to major animal taxa, comparing and contrasting these taxa, and exploration of the relationships among them.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "None",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "AEBI 212",
+    "subject": "AEBI",
+    "number": "212",
+    "title": "Evolution and Phylogeny",
+    "credits": 3,
+    "offeredBy": "Natural Resource Sciences",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of the tree of life and exploration of the central role evolution plays in the field of biology. Difficulties inherent to classifying life and critically assessing evolutionary theory among scientific and popular audiences. The importance of phylogenetics and the relationships among major groups of organisms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "AEBI 421",
+    "subject": "AEBI",
+    "number": "421",
+    "title": "Tropical Horticultural Ecology",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "A comprehensive survey of the major fruit, vegetable, turf, and ornamental crops grown in Barbados. Effect of cultural practices, environment, pests and pathogens, social and touristic activities, and importation of horticultural produce on local horticulture.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "AEBI 423, AEBI 425, AEBI 427",
+      "tree": {
+        "and": [
+          "AEBI 423",
+          "AEBI 425",
+          "AEBI 427"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to students that are participating in the Barbados Interdisciplinary Tropical Studies Field Semester",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day.",
+      "Project course AEBI 427 runs concurrently with the other courses (AEBI 421, AEBI 423 & AEBI 425) and the Mondays of each week are dedicated to AEBI 427."
+    ]
+  },
+  {
+    "code": "AEBI 423",
+    "subject": "AEBI",
+    "number": "423",
+    "title": "Sustainable Land Use",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Management, preservation, and utilization of forage crops in sustainable tropical environments; examination of their value as livestock feed in terms of nutritional composition and impact on animal performance; land use issues as it pertains to forage and animal production in insular environments.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "AEBI 421, AEBI 425, AEBI 427",
+      "tree": {
+        "and": [
+          "AEBI 421",
+          "AEBI 425",
+          "AEBI 427"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to students that are participating in the Barbados Interdisciplinary Tropical Studies Field Semester",
+      "excludes": []
+    },
+    "notes": [
+      "**Since this course is being taught abroad, la Fête Nationale du Québec (June 24th) and Canada Day (July 1st) statutory holidays will not be taken into consideration. Therefore, students are expected to attend their lectures on both Wednesday, June 24 and Wednesday, July 1, 2020.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day.",
+      "Project course AEBI 427 runs concurrently with the other courses (AEBI 421, AEBI 423 & AEBI 425) and the Mondays of each week are dedicated to AEBI 427."
+    ]
+  },
+  {
+    "code": "AEBI 425",
+    "subject": "AEBI",
+    "number": "425",
+    "title": "Tropical Energy and Food",
+    "credits": 3,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Tropical biofuel crops, conversion processes and final products, particularly energy and greenhouse gas balances and bionutraceuticals. Topics include effects of process extraction during refining on biofuel economics, the food versus fuel debate and impact of biofuels and bioproducts on tropical agricultural economics.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "AEBI 421, AEBI 423 and AEBI 427.",
+      "tree": {
+        "and": [
+          "AEBI 421",
+          "AEBI 423",
+          "AEBI 427"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to students that are participating in the Barbados Interdisciplinary Tropical Studies Field Semester",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day.",
+      "Project course AEBI 427 runs concurrently with the other courses (AEBI 421, AEBI 423 & AEBI 425) and the Mondays of each week are dedicated to AEBI 427."
+    ]
+  },
+  {
+    "code": "AEBI 427",
+    "subject": "AEBI",
+    "number": "427",
+    "title": "Barbados Interdisciplinary Project",
+    "credits": 6,
+    "offeredBy": "Plant Science",
+    "faculty": "Faculty of Agric Environ Sci",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "The planning of projects and research activities related to tropical food, nutrition, or energy at the local, regional, or national scale in Barbados. Projects and activities designed in consultation with university instructors, government, NGO, or private partners, and prepared by teams of 2-3 students working cooperatively with these mentors.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "AEBI 421, AEBI 423 and AEBI 425",
+      "tree": {
+        "and": [
+          "AEBI 421",
+          "AEBI 423",
+          "AEBI 425"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to students that are participating in the Barbados Interdisciplinary Tropical Studies Field Semester",
+      "excludes": []
+    },
+    "notes": [
+      "**Since this course is being taught abroad, the Victoria Day statutory holiday will not be taken into consideration. Therefore, students are expected to attend their lecture on Monday, May 18, 2020.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is the sixth lecture day.",
+      "Project course AEBI 427 runs concurrently with the other courses (AEBI 421, AEBI 423 & AEBI 425) and the Mondays of each week are dedicated to AEBI 427."
+    ]
+  },
+  {
+    "code": "AEBI 665",
+    "subject": "AEBI",
+    "number": "665",
+    "title": "Fundamentals in Advanced Bioimaging",
+    "credits": 3,
+    "offeredBy": "Parasitology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the principles of fluorescence microscopy, hands-on training on fluorescence imaging, a review of advanced fluorescence microscopy techniques with an emphasis on super-resolution microscopy, and case studies on the application of imaging techniques in biomedical research with a focus on infectious disease models.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

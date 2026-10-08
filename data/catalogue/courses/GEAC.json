@@ -1,0 +1,50 @@
+[
+  {
+    "code": "GEAC 211",
+    "subject": "GEAC",
+    "number": "211",
+    "title": "Introduction to Automation and Control",
+    "credits": 2,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Fundamental concepts to analyze the behavior of dynamic systems and determination of control laws, Systems modelling, Transfer functions, Open and closed- loop system analysis, PID Control, State feedback and observers.",
+    "prerequisites": {
+      "text": "GEMO 121 or MOD121.",
+      "tree": "GEMO 121",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to ACE211 offered by CentraleSupélec in France"
+    ]
+  },
+  {
+    "code": "GEAC 212",
+    "subject": "GEAC",
+    "number": "212",
+    "title": "Robotics Bootcamp",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Mini projects centered around concrete design of command and embedded systems of the Arduino type.",
+    "prerequisites": {
+      "text": "GEAC 211, Intro to Automation & Control.",
+      "tree": "GEAC 211",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to ACE212 offered by CentraleSupélec in France."
+    ]
+  }
+]

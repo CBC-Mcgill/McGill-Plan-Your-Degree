@@ -1,0 +1,122 @@
+[
+  {
+    "code": "CGM2 590",
+    "subject": "CGM2",
+    "number": "590",
+    "title": "Topics in Management",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Specialized course covering an advanced topic in the management area selected from current issues or themes in literature.",
+    "prerequisites": {
+      "text": "CACC 520, CFIN 512 and (CMR2 542 or CMR2 642)",
+      "tree": {
+        "and": [
+          "CACC 520",
+          "CFIN 512",
+          {
+            "or": [
+              "CMR2 542",
+              "CMR2 642"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Content will vary from year to year.",
+      "**Restricted registration - under partnership. Departmental approval required."
+    ],
+    "parts": [
+      {
+        "code": "CGM2 590D1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CGM2 590D2",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CGM2 590N1",
+        "credits": 1.5,
+        "terms": []
+      },
+      {
+        "code": "CGM2 590N2",
+        "credits": 1.5,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "CGM2 610",
+    "subject": "CGM2",
+    "number": "610",
+    "title": "Project Management: Tools and Techniques",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Analysis of the development, scheduling, and planning of projects in both public and private organizations. Focus on theories of project management from initiation of a project to close-out. Exploration of project life cycle, planning, scheduling, implementing, monitoring, controlling, close-out and ethics applicable to projects of various sizes, types and degrees of complexity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CGM2 510. Not open to Special Students.",
+      "excludes": [
+        "CGM2 510"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous components."
+    ]
+  },
+  {
+    "code": "CGM2 620",
+    "subject": "CGM2",
+    "number": "620",
+    "title": "Agile Project Management: Theory and Practice",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of the principles and techniques of agile project management to improve project delivery, reduce risk, and improve quality when dealing with a project with undefined and continually changing requirements. Applications of a collaborative method for resolving conflicts and interest-based problems. Assessment of change readiness in project teams.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CGM2 625",
+    "subject": "CGM2",
+    "number": "625",
+    "title": "Sales Management and Negotiation Strategies",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Application of principles and theories of sales management for large, medium, and small-sized enterprises. Focus on crystallizing a venture’s customer value proposition to develop effective sales strategies to achieve business and marketing objectives. Strategies for personal selling, team selling, and online and offline selling as well as B-to-B and B-to-C models.Business negotiation strategies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CGM2 520.",
+      "excludes": [
+        "CGM2 520"
+      ]
+    },
+    "notes": []
+  }
+]

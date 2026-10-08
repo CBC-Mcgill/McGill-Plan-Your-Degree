@@ -1,0 +1,964 @@
+[
+  {
+    "code": "WCOM 140",
+    "subject": "WCOM",
+    "number": "140",
+    "title": "Public Speaking",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Introduction to the principles of argumentation, organization, and delivery of public speech. History of the role of public speech in democratic society. Practice of public speaking as a skill.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "WCOM 150",
+    "subject": "WCOM",
+    "number": "150",
+    "title": "Critical Analysis and Composition",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Principles of effective written communication: audience, purpose, organization, and style. Emphasis on short writing assignments leading to the composition of longer essays. Critical analysis of academic and popular genres. Application of rhetorical strategies. Pre-writing and re-writing processes. Multiple drafts and peer review.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEAP 150.",
+      "excludes": [
+        "CEAP 150"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 160",
+    "subject": "WCOM",
+    "number": "160",
+    "title": "Writing in the Social Sciences",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduces the analytical, research-oriented, and evidence-based writing practices common to the socials ciences. Focus on genres such as research reports, policy briefs, data commentaries, and structured arguments grounded in empirical evidence. Emphasizes disciplinary conventions, the use of sources, and rhetorical strategies within the social sciences. Early engagement with the writing demands of research-driven disciplines.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "WCOM 190",
+    "subject": "WCOM",
+    "number": "190",
+    "title": "Academic Skills",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to producing university-level academic writing and oral presentations that incorporate research synthesis, well-supported arguments, and reliable evidence. Topics include metacognitive skills, note-taking strategies, ethical use of Artificial Intelligence/Large Language Models, and other strategies to support learner autonomy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "WCOM 202",
+    "subject": "WCOM",
+    "number": "202",
+    "title": "Communication in Management 1",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Written and oral communication in Management (in English): emphasis on strategies for identifying, analyzing, and solving writing and speaking problems. Course work based on academic and professional communication in management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 205.",
+      "excludes": [
+        "CCOM 205"
+      ]
+    },
+    "notes": [
+      "Because this course uses a workshop format, attendance at first class is desirable.",
+      "Continuing Studies: requirement for the EA, AAC, and the Canadian Institute of Management."
+    ]
+  },
+  {
+    "code": "WCOM 203",
+    "subject": "WCOM",
+    "number": "203",
+    "title": "Introduction to Creative Writing",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Production of original creative works in English. Study and application of writing techniques and craft elements observed in both traditional and contemporary forms, ranging from poetic forms such as the sonnet, the villanelle, and free verse,to short fiction forms such as the short story and the vignette, to hybrid forms such as prose poetry and flash fiction. Craft, analysis of literary texts, workshop-style critique, and multiple drafts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 200.",
+      "excludes": [
+        "CCOM 200"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 206",
+    "subject": "WCOM",
+    "number": "206",
+    "title": "Communication in Engineering",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Written and oral communication in Engineering (in English): strategies for generating, developing, organizing, and presenting ideas in a technical setting; problem-solving; communicating to different audiences; editing and revising; and public speaking. Course work based on academic, technical, and professional writing in engineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in Engineering degree programs.",
+      "excludes": []
+    },
+    "notes": [
+      "3-1-5"
+    ]
+  },
+  {
+    "code": "WCOM 225",
+    "subject": "WCOM",
+    "number": "225",
+    "title": "ESL: Foundations of Academic English",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Focus on core academic English competencies at the intermediate level, including sentence structure, grammar, cohesion, paragraph development, and academic vocabulary. Introduces short academic texts and foundational writing and communication practices, alongside strategies for note-taking, vocabulary building, editing, and oral presentation structure. Provides essential linguistic skills for engaging in academic communication and more advanced writing contexts.",
+    "prerequisites": {
+      "text": "Placement test.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 200. Open only to students in degree programs.",
+      "excludes": [
+        "CESL 200"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 235",
+    "subject": "WCOM",
+    "number": "235",
+    "title": "ESL: Academic Writing and Communication Competencies",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on upper-intermediate academic English competencies through extended paragraphing, short essays, and genre-based writing. Emphasizes academic vocabulary development, grammatical accuracy in common academic structures, rhetorical organization, and effective communication across academic contexts.Foundational source integration and presentation skills in more complex university-level writing and communicative tasks.",
+    "prerequisites": {
+      "text": "CESL 200 or WCOM 225 or placement test.",
+      "tree": {
+        "or": [
+          "CESL 200",
+          "WCOM 225"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 300. Only open to students in degree programs.",
+      "excludes": [
+        "CESL 300"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 245",
+    "subject": "WCOM",
+    "number": "245",
+    "title": "ESL: Essay and Critical Thinking",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Academic writing skills and communicative competence in English at the upper-intermediate level. Critical thinking and reading applied to the whole writing process. Focus on integrating sources, creating effective arguments, and understanding essay structure and paragraph essentials. Academic genres: summary, paraphrase, quotation, and critique. Review of writing mechanics and grammar.",
+    "prerequisites": {
+      "text": "CESL 300 or WCOM 235 or placement test.",
+      "tree": {
+        "or": [
+          "CESL 300",
+          "WCOM 235"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 400. Only open to students in degree programs.",
+      "excludes": [
+        "CESL 400"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 250",
+    "subject": "WCOM",
+    "number": "250",
+    "title": "Research Essay and Rhetoric",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Academic research-based writing across the disciplines. Article summary, critical analysis, rhetorical strategies, citation and paraphrase of academic sources, and editing for cohesion and clarity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 500 or CEAP 250 or WCOM 255. Only open to students in degree programs - all years and faculties.",
+      "excludes": [
+        "CEAP 250",
+        "CESL 500",
+        "WCOM 255"
+      ]
+    },
+    "notes": [
+      "Intended for students whose first language is English.",
+      "Entrance test: Short essay first day of classes."
+    ]
+  },
+  {
+    "code": "WCOM 255",
+    "subject": "WCOM",
+    "number": "255",
+    "title": "ESL: Research Essay and Rhetoric",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Principles and use of academic research skills to generate academic writing at an advanced level of English across the disciplines. Focus on article summary, critical analysis, and logical reasoning to develop sound arguments and well-reasoned essays. Common rhetorical strategies, citation and paraphrase of academic sources, and editing skills to enhance cohesion and avoid common English-as-a-Second Language (ESL) errors in grammar, syntax, and vocabulary.",
+    "prerequisites": {
+      "text": "CESL 400 or WCOM 245 or placement test.",
+      "tree": {
+        "or": [
+          "CESL 400",
+          "WCOM 245"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEAP 250 or CESL 500. Only open to students in degree programs.",
+      "excludes": [
+        "CEAP 250",
+        "CESL 500"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 295",
+    "subject": "WCOM",
+    "number": "295",
+    "title": "ESL: Academic Skills",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "The university classroom: note-taking and summary of lectures; paraphrase and summary of written and multimedia materials; oral and seminar presentations; ethical use of Artificial Intelligence/Large Language Models. Critical thinking, reading, writing, listening, and speaking skills and strategies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 299.",
+      "excludes": [
+        "CESL 299"
+      ]
+    },
+    "notes": [
+      "**Due to the condensed nature of this course, the standard add/drop, and withdrawal deadlines do not apply. Add/drop is the fourth lecture day and withdrawal with financial penalty is the fifth lecture day.",
+      "Although this course follows a MTWR class schedule pattern, the last day of class may be on a Friday."
+    ]
+  },
+  {
+    "code": "WCOM 300",
+    "subject": "WCOM",
+    "number": "300",
+    "title": "Writing and Community Action",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Exploration of the relationship between experiential writing and community engagement. Instruction in and application of principles of writing pedagogy (in English) and best practices in community leadership.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 300.",
+      "excludes": [
+        "CCOM 300"
+      ]
+    },
+    "notes": [
+      "On-site facilitation (1.5 hours per week) of small-group writing events at community organizations and associations."
+    ]
+  },
+  {
+    "code": "WCOM 313",
+    "subject": "WCOM",
+    "number": "313",
+    "title": "Writing Poetry",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Production of original works of literary poetry in English. Advanced study and application ofwriting techniques,craft elements, poetic approaches and formal considerations used in contemporary free verse. In-depth instruction in the nuanced use of sound, line, image, rhythm, figurative language, and form. Craft, analysis of modern and contemporary literary poems, workshop-style critique, multiple drafts, and substantive revision.",
+    "prerequisites": {
+      "text": "CCOM 200 or WCOM 203 or permission of the Centre.",
+      "tree": {
+        "or": [
+          "CCOM 200",
+          "WCOM 203"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 321.",
+      "excludes": [
+        "CCOM 321"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 314",
+    "subject": "WCOM",
+    "number": "314",
+    "title": "Communicating Science",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Production of written and oral assignments (in English) designed to communicate scientific problems and findings to varied audiences Analysis of the disciplinary conventions of scientific discourse in terms of audience, purpose, organization, and style; comparative rhetorical analysis of academic and popular genres, including abstracts, lab reports, research papers, print and online journalism.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 314.",
+      "excludes": [
+        "CCOM 314"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 317",
+    "subject": "WCOM",
+    "number": "317",
+    "title": "Writing the Internet",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Critical assessment of digital genres in terms of audience, purpose, organization, and style; application of rhetorical strategies for effective communication in digital contexts in English. Topics and readings derived from writing pedagogy and critical analyses of online environments: technological affordances, non-linear structure, “living” texts, online identity, network dynamics, authorial collaboration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 315.",
+      "excludes": [
+        "CCOM 315"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 323",
+    "subject": "WCOM",
+    "number": "323",
+    "title": "Writing Short Fiction",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Production of original works of literary short fiction in English. Advanced study and application of written storytelling techniques and craft elements used in contemporary short fiction forms, with a main focus on the short story. In-depth instruction in the nuanced creation of character, dialogue, scene, setting, point of view, narrative distance, and structure. Craft, analysis of published literary short fiction, workshop\u0002style critique, multiple drafts, and substantive revision.",
+    "prerequisites": {
+      "text": "CCOM 200 or WCOM 203 or permission of the Centre.",
+      "tree": {
+        "or": [
+          "CCOM 200",
+          "WCOM 203"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 322.",
+      "excludes": [
+        "CCOM 322"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 333",
+    "subject": "WCOM",
+    "number": "333",
+    "title": "Writing Creative Nonfiction",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Production of original works of literary creative nonfiction in English. Advanced study and application of story telling techniques and craft elements used in forms such as the memoir essay, literary journalism, and the lyric essay. In-depth instruction in the nuanced use of structure, scene, narration, reflection, description, and researched information. Craft, analysis of published literary creative nonfiction essays, workshop-style critique, multiple drafts, and substantive revision.",
+    "prerequisites": {
+      "text": "CCOM 200 or WCOM 203 or permission of the Centre.",
+      "tree": {
+        "or": [
+          "CCOM 200",
+          "WCOM 203"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 323.",
+      "excludes": [
+        "CCOM 323"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 363",
+    "subject": "WCOM",
+    "number": "363",
+    "title": "Plurilingual Writing",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Explores writing as a plurilingual practice through creative and academic compositions that draw on multiple linguistic resources. Examines how languages interact in meaning-making, narrative construction, and rhetorical expression. Focuses on translanguaging strategies, cross-linguistic genres, and plurilingual voice across diverse written forms.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "WCOM 371",
+    "subject": "WCOM",
+    "number": "371",
+    "title": "Selected Communication Topic 1",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Study of a selected topic in written and/or oral communication in English that is relevant to undergraduate students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The content can vary from year to year and will be announced prior to registration."
+    ]
+  },
+  {
+    "code": "WCOM 372",
+    "subject": "WCOM",
+    "number": "372",
+    "title": "Selected Communication Topic 2",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Study of a selected topic in written and/or oral communication in English that is relevant to undergraduate students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "The content can vary from year to year and will be announced prior to registration."
+    ]
+  },
+  {
+    "code": "WCOM 414",
+    "subject": "WCOM",
+    "number": "414",
+    "title": "Advanced Communicating Science",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Use of digital platforms to produce written and oral assignments (in English) designed to communicate scientific challenges and findings to broad audiences. Rhetorical analysis of academic and popular genres including abstracts, researcher profiles, infographics, and serial and episodic podcasting.",
+    "prerequisites": {
+      "text": "CCOM 314 or WCOM 314 or permission of the Centre.",
+      "tree": {
+        "or": [
+          "CCOM 314",
+          "WCOM 314"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 414.",
+      "excludes": [
+        "CCOM 414"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "WCOM 417",
+    "subject": "WCOM",
+    "number": "417",
+    "title": "Digital Storytelling",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Analysis and application of digital storytelling strategiesthrough the production of long-form written and spokencontent for English-language audiences. Drafting,revision, concision, precision, and digital affordances inlong-form journalism, essays, and podcasts. Topicsinclude narrative structure, character development,accessibility, socio-technical analysis, and audioproduction.",
+    "prerequisites": {
+      "text": "CCOM 315 or WCOM 317, or permission of the Centre",
+      "tree": {
+        "or": [
+          "CCOM 315",
+          "WCOM 317"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "WCOM 550",
+    "subject": "WCOM",
+    "number": "550",
+    "title": "Business and Professional Communication",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Written and oral communication skills in English for business and professional purposes. Concepts and principles of effective written communication. Planning, composing, editing, and polishing documents of various lengths and formats; conventions of workplace correspondence; direct and indirect approaches to workplace messages; composing routine, persuasive, positive, and negative messages; planning and delivering effective presentations, including creating effective visuals.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCOM 550 or CESL 525; not open to students who have taken or are taking WCOM 555. Open to graduate students, and to undergraduate students in third or fourth year.",
+      "excludes": [
+        "CCOM 550",
+        "CESL 525",
+        "WCOM 555"
+      ]
+    },
+    "notes": [
+      "WCOM 550 is designed for students with fluency in spoken and written English. Students for whom English is a second or additional language should take WCOM 555."
+    ]
+  },
+  {
+    "code": "WCOM 555",
+    "subject": "WCOM",
+    "number": "555",
+    "title": "ESL: Business and Professional Communication",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Written and oral communication skills for business and professional purposes for students whose first language is not English. Concepts and principles of effective written communication. Planning, composing, editing, and polishing documents of various lengths and formats; conventions of workplace correspondence; direct and indirect approaches to workplace messages; composing routine, persuasive, positive, and negative messages; planning and delivering effective presentations, including creating effective visuals; strategies to address common English as Second Language (ESL) errors in grammar, syntax, and vocabulary.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to graduate students, and to undergraduate students in third or fourth year. McGill Writing Centre ESL Placement Test required for admission. Not open to students who have taken CCOM 550 or CESL 525; not open to students who have taken or are taking WCOM 550.",
+      "excludes": [
+        "CCOM 550",
+        "CESL 525",
+        "WCOM 550"
+      ]
+    },
+    "notes": [
+      "WCOM 555 is designed for students for whom English is a second or additional language. Students whose first language is English should take WCOM 550."
+    ]
+  },
+  {
+    "code": "WCOM 624",
+    "subject": "WCOM",
+    "number": "624",
+    "title": "Communicating Research to the Public",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Production of written assignments designed to communicate complex ideas and research problems and findings to varied audiences in English. Analysis of discursive academic and policy conventions in terms of audience, purpose, organization, and style for their translation to non-specialist audiences, including the general public and/or policymakers.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Grading in this course is pass/fail.",
+      "2. Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 627",
+    "subject": "WCOM",
+    "number": "627",
+    "title": "Communicating Research to the Digital Public",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Production of written and oral assignments designed to communicate complex ideas and research findings through digital platforms in English. Creation of projects that may include lay audience abstracts, content creation on social media, and the production of infographics, and podcasts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines so not apply."
+    ]
+  },
+  {
+    "code": "WCOM 635",
+    "subject": "WCOM",
+    "number": "635",
+    "title": "ESL: Strategies for Academic Communication",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Key language learning strategies for expressing complex ideas in academic writing across the disciplines. Corpus tools to identify collocations; strategies to build productive scholarly vocabulary; self-editing techniques to avoid common English-as-Second-Language (ESL) errors in grammar, syntax and mechanics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 631.",
+      "excludes": [
+        "CESL 631"
+      ]
+    },
+    "notes": [
+      "Intended for graduate students whose first language is not English.",
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 642",
+    "subject": "WCOM",
+    "number": "642",
+    "title": "Cornerstones of Academic Writing",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Key strategies for scholarly communication across disciplines: reading scholarly texts for structure; applying these structures in writing assignments. Four cornerstones of academic writing: audience, purpose, organization, and style. Identifying and targeting audiences, clarifying the purposes served by different writing projects, organizing ideas, and developing mastery of rhetorical and stylistic conventions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEAP 642. Only open to graduate students.",
+      "excludes": [
+        "CEAP 642"
+      ]
+    },
+    "notes": [
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply.",
+      "Grading in this course is pass/fail."
+    ]
+  },
+  {
+    "code": "WCOM 645",
+    "subject": "WCOM",
+    "number": "645",
+    "title": "ESL: Fundamentals of Academic Writing ",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Key strategies for academic writing across disciplines: reading scholarly texts for structure; applying these structures in writing assignments; developing vocabulary building strategies; identifying and practicing nuances of scholarly English syntax. Self-editing techniques to avoid common English-as-Second-Language (ESL) errors; review of English grammar and mechanics.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 641.",
+      "excludes": [
+        "CESL 641"
+      ]
+    },
+    "notes": [
+      "Intended for graduate students whose first language is not English.",
+      "Grading in course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 652",
+    "subject": "WCOM",
+    "number": "652",
+    "title": "Fundamentals of Academic Presentations",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Developing and delivering academic presentations, with emphasis on how to structure content, critically evaluate content, and use rhetorical devices to enhance clarity.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEAP 652.",
+      "excludes": [
+        "CEAP 652"
+      ]
+    },
+    "notes": [
+      "Intended for graduate students.",
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 655",
+    "subject": "WCOM",
+    "number": "655",
+    "title": "ESL: Pronunciation for Effective Communication",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Pronunciation skills for effective communication in English about research and complex ideas in academic settings with emphasis on features of pronunciation that most affect intelligibility.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 651.",
+      "excludes": [
+        "CESL 651"
+      ]
+    },
+    "notes": [
+      "Intended for graduate students whose first language is not English.",
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 661",
+    "subject": "WCOM",
+    "number": "661",
+    "title": "Literature Review 1: Summary and Critique",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Responsible and effective engagement with other scholars’ work in order to summarize and critique research literature. Focus on economic use of language and techniques for mobilizing existing scholarship in service of an original research project.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEAP 661.",
+      "excludes": [
+        "CEAP 661"
+      ]
+    },
+    "notes": [
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 662",
+    "subject": "WCOM",
+    "number": "662",
+    "title": "Literature Review 2: Establishing Scholarly Niches",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Situating original student research in existing scholarship through analysis of literature in a discipline; application of techniques for framing contributions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CEAP 665.",
+      "excludes": [
+        "CEAP 665"
+      ]
+    },
+    "notes": [
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 671",
+    "subject": "WCOM",
+    "number": "671",
+    "title": "Selected Topics in Communication 1",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Study of a selected topic in written and/or oral communication relevant to postgraduates. The content can vary from year to year and will be announced prior to registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 672",
+    "subject": "WCOM",
+    "number": "672",
+    "title": "Selected Topics in Communication 2",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Study of a selected topic in written and/or oral communication relevant to postgraduates. The content can vary from year to year and will be announced prior to registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply."
+    ]
+  },
+  {
+    "code": "WCOM 676",
+    "subject": "WCOM",
+    "number": "676",
+    "title": "Thesis Writing Lab",
+    "credits": 1,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Writing and revising of a chapter or manuscript for structure, clarity, cohesion, and disciplinary conventions; practical strategies for writing and rewriting productively; techniques for organizing ideas and editing for flow; peer review.",
+    "prerequisites": {
+      "text": "Permission of the course coordinator.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Grading in this course is pass/fail.",
+      "Due to the condensed nature of this course, the standard add/drop and withdrawal deadlines do not apply.",
+      "For graduate students from related disciplines who are working on a thesis chapter or publishable manuscript.",
+      "Mode of delivery is online synchronous."
+    ]
+  },
+  {
+    "code": "WCOM 690",
+    "subject": "WCOM",
+    "number": "690",
+    "title": "Writing for Graduate Students",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Audience, purpose, organization, and style of graduate-level academic writing with attention to mechanics, textual analysis, critical thinking and editing skills. Common rhetorical patterns to organize research writing, including problem-solution, general-specific, process description, data commentary, article summary/critique.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CESL 690.",
+      "excludes": [
+        "CESL 690"
+      ]
+    },
+    "notes": [
+      "For graduate students only",
+      "**Due to the condensed nature of this course, the standard add/drop, and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal with financial penalty is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "WCOM 695",
+    "subject": "WCOM",
+    "number": "695",
+    "title": "ESL: Academic Writing for Graduate Students",
+    "credits": 3,
+    "offeredBy": "McGill Writing Centre",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Structuring an academic paper and expressing complex ideas in English using common rhetorical patterns. Academic reading, critical thinking, vocabulary building, and writing mechanics. Self-editing to enhance cohesion and avoid common English-as-a-Second Language (ESL) errors in grammar, syntax, and vocabulary.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to graduate students in degree programs for whom English is not their first language. Not open to students who have taken CESL 640.",
+      "excludes": [
+        "CESL 640"
+      ]
+    },
+    "notes": [
+      "This course cannot be counted towards course requirements of any graduate program."
+    ]
+  }
+]

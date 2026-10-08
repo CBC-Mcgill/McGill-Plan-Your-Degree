@@ -1,0 +1,884 @@
+[
+  {
+    "code": "ACCT 351",
+    "subject": "ACCT",
+    "number": "351",
+    "title": "Intermediate Financial Accounting 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination of the theoretical foundation for financial reporting and revenue recognition. The tools of accounting, including a review of the accounting process and compound interest concepts. Asset recognition, measurement and disclosure. Partnership accounting.",
+    "prerequisites": {
+      "text": "MGCR 211",
+      "tree": "MGCR 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 352",
+    "subject": "ACCT",
+    "number": "352",
+    "title": "Intermediate Financial Accounting 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A continuation of Intermediate Financial Accounting 1. An examination of liability recognition, measurement and disclosure, including leases, pension costs and corporate income tax. Shareholders' equity, dilutive securities and earnings per share. The statement of changes in financial position, basic financial statement analysis and full disclosure in financial reporting.",
+    "prerequisites": {
+      "text": "ACCT 351 and MGCR 341",
+      "tree": {
+        "and": [
+          "ACCT 351",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 354",
+    "subject": "ACCT",
+    "number": "354",
+    "title": "Financial Statement Analysis",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Interpretative nature of the conceptual framework underlying a multitude of financial reporting standards, including the impact of alternative accounting methods, management biases and stakeholder interests in the analysis and valuation of the firm.",
+    "prerequisites": {
+      "text": "MGCR 211 and MGCR 341",
+      "tree": {
+        "and": [
+          "MGCR 211",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 361",
+    "subject": "ACCT",
+    "number": "361",
+    "title": "Management Accounting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The role of management accounting information to support internal management decisions and to provide performance incentives.",
+    "prerequisites": {
+      "text": "MGCR 211",
+      "tree": "MGCR 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 362",
+    "subject": "ACCT",
+    "number": "362",
+    "title": "Cost Accounting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination of a number of recurring issues in the area of decision-making and control, including cost allocation, alternative costing systems, and innovations in costing and performance measurement.",
+    "prerequisites": {
+      "text": "ACCT 361",
+      "tree": "ACCT 361",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 385",
+    "subject": "ACCT",
+    "number": "385",
+    "title": "Principles of Taxation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to the concepts underlying the Canadian tax system and how they are applied in relation to the taxation of individuals and businesses.",
+    "prerequisites": {
+      "text": "MGCR 211",
+      "tree": "MGCR 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to U0 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 401",
+    "subject": "ACCT",
+    "number": "401",
+    "title": "Sustainability and Environmental Accounting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Developing measures of corporate environmental performance, assessing their reliability and reporting to external stakeholders. Using sustainability metrics in strategic and operational business decisions. Implementing and utilizing Environmental management systems and standards. Managing corporate environmental risks and accounting for environmental costs. Environmental auditing.",
+    "prerequisites": {
+      "text": "MGCR 211",
+      "tree": "MGCR 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Open only to U2 and U3 students."
+    ]
+  },
+  {
+    "code": "ACCT 434",
+    "subject": "ACCT",
+    "number": "434",
+    "title": "Topics in Accounting 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Topics will be selected from current issues in the Accounting Area.",
+    "prerequisites": {
+      "text": "MGCR 211",
+      "tree": "MGCR 211",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 451",
+    "subject": "ACCT",
+    "number": "451",
+    "title": "Data Analytics in Capital Market",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [],
+    "description": "Exploration of how financial and non-financial metrics can be linked to business performance through experiential learning, with a focus on financial statement analysis, earnings and return predictability, textural analysis, earnings management and fraud detection. Introduction to SAS software and financial accounting databases such as CRSP, Compustat, and I/B/E/S, and alternative data sources such as SEC Edgar that enables work across different database to make better financial statement analysis and decisions.",
+    "prerequisites": {
+      "text": "MGCR 211, MGCR 341",
+      "tree": {
+        "and": [
+          "MGCR 211",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 452",
+    "subject": "ACCT",
+    "number": "452",
+    "title": "Financial Reporting Valuation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Models to determine firm value from accounting information and a broader perspective on key sources of information, key value drivers, in a setting where evaluating firm value is the ultimate purpose.",
+    "prerequisites": {
+      "text": "MGCR 211 and MGCR 341",
+      "tree": {
+        "and": [
+          "MGCR 211",
+          "MGCR 341"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to U2 and U3 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 453",
+    "subject": "ACCT",
+    "number": "453",
+    "title": "Advanced Financial Accounting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Reporting relevant financial information subsequent to long term intercorporate investments. The preparation of consolidated financial statements with emphasis on their economic substance rather than legal form.",
+    "prerequisites": {
+      "text": "ACCT 352",
+      "tree": "ACCT 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 455",
+    "subject": "ACCT",
+    "number": "455",
+    "title": "Development of Accounting Thought",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The conceptual underpinning of accounting thought, including its historical development and the modifications that have occurred over time. A review of accounting literature and its relevance to practice.",
+    "prerequisites": {
+      "text": "ACCT 352",
+      "tree": "ACCT 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 463",
+    "subject": "ACCT",
+    "number": "463",
+    "title": "Management Control",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The theoretical frameworks for the examination and evaluation of management accounting and control systems. The technical aspects of accounting along with behavioural issues of management control.",
+    "prerequisites": {
+      "text": "ACCT 361",
+      "tree": "ACCT 361",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 475",
+    "subject": "ACCT",
+    "number": "475",
+    "title": "Principles of Auditing",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to basic auditing concepts and internal controls of an accounting system. Topics include current auditing standards, ethical conduct, legal liability, planning of an audit, sampling techniques, non-audit engagements, the study and evaluation of internal controls in an accounting system.",
+    "prerequisites": {
+      "text": "ACCT 352",
+      "tree": "ACCT 352",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 486",
+    "subject": "ACCT",
+    "number": "486",
+    "title": "Business Taxation 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Desautels Faculty Management",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A study of the Income Tax Act as it applies to the taxation of individuals and corporations, including capital cost allowances, capital gains, corporate reorganisations, trusts and partnerships and administrative regulations. A review of consumption taxes.",
+    "prerequisites": {
+      "text": "ACCT 385",
+      "tree": "ACCT 385",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 604",
+    "subject": "ACCT",
+    "number": "604",
+    "title": "Financial Statements 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Explores financial reporting and statement analysis, focusing on extracting and interpreting financial and non-financial information to assess and forecast firm performance. Covers accounting principles, major financial statements, ESG metrics, management biases, fraud detection, major financial patterns, and valuation. Evaluation of firm performance and application of valuation techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**This course will be held on June 26, 27, 28, July 2, 4, 5, 8, 9, 11, 12, 15, 16, 18 & 19 and final exam on July 22nd.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Course Add is the fourth lecture day.",
+      "**Web ADD only.",
+      "**No web drop allowed.",
+      "**Web withdrawal not applicable."
+    ]
+  },
+  {
+    "code": "ACCT 605",
+    "subject": "ACCT",
+    "number": "605",
+    "title": "Financial Statements 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The company valuation process. Establish frameworks using public data.",
+    "prerequisites": {
+      "text": "ACCT 604",
+      "tree": "ACCT 604",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 618",
+    "subject": "ACCT",
+    "number": "618",
+    "title": "Financial Reporting: Structure and Analysis",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An in-depth analysis of corporate financial reporting principles and practices, with emphasis on developing the abilities of the student to discriminate between the form and substance of corporate financial reports. Analysis of all components of the financial statements with the effect of reference to alternative practices on financial reports.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 623",
+    "subject": "ACCT",
+    "number": "623",
+    "title": "Intermediate Financial Reporting 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Theoretical foundation for financial reporting concepts such as liability and equity measurement, intercorporate investments.",
+    "prerequisites": {
+      "text": "ACCT 622.",
+      "tree": "ACCT 622",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 626",
+    "subject": "ACCT",
+    "number": "626",
+    "title": "Data Analytics in Accounting",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of how financial and non-financial metrics can be linked to business performance through practica application learning. Examination of mandatory and voluntary corporate disclosure, financial statement analysis, return predictability, and fraud detection.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 645",
+    "subject": "ACCT",
+    "number": "645",
+    "title": "Financial Management in Healthcare",
+    "credits": 2,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Concepts of financial accounting to the non-accountant user of financial information. Fundamental knowledge of financial accounting, including financial statements, accounting “rules”, assets, liabilities and equity, the income statements as well as the financial statement analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [],
+    "parts": [
+      {
+        "code": "ACCT 645D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "ACCT 645D2",
+        "credits": 1,
+        "terms": [
+          "Summer 2026"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ACCT 653",
+    "subject": "ACCT",
+    "number": "653",
+    "title": "Issues in Professional Accounting 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "How fundamental concepts in financial accounting and reporting, including technically complex accounting issues and their audit, performance management, tax and finance implications, are integrated into decision-making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is June 20, 2023.",
+      "*Desautels GCPA Prog students only. Intensive course. Add/drop May 23, w/withdrawal Jun 20."
+    ]
+  },
+  {
+    "code": "ACCT 654",
+    "subject": "ACCT",
+    "number": "654",
+    "title": "Issues in Professional Accounting 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Fundamental concepts in financial accounting and reporting, including technically complex accounting issues and their audit, performance management, tax and finance implications, are integrated into decision-making and strategies through case scenarios.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is June 20, 2023.",
+      "*Desautels GCPA Prog students only. Intensive course. Add/drop May 25, w/withdrawal Jun 20."
+    ]
+  },
+  {
+    "code": "ACCT 663",
+    "subject": "ACCT",
+    "number": "663",
+    "title": "Strategic Aspects of Accounting 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Corporate governance, strategy, risk management, and management reporting needs, with a particular emphasis on their integration with accounting practice, finance and taxation. Formulating deliberate and emergent strategies, and translating those strategies into specific objectives and actions which are used in decision-making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is June 20, 2023.",
+      "*Desautels GCPA Prog students only. Intensive course. Add/drop May 23, w/withdrawal Jun 20."
+    ]
+  },
+  {
+    "code": "ACCT 664",
+    "subject": "ACCT",
+    "number": "664",
+    "title": "Strategic Aspects of Accounting 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Corporate governance, strategy, risk management, and management reporting needs, with a particular emphasis on their integration with accounting practice, finance and taxation. Emphasis is also placed on competence required to build good monitoring and control systems and perform financial analysis for different types of entities. Case scenarios are used to integrate these concepts into decision-making.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting.",
+      "excludes": []
+    },
+    "notes": [
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is June 20, 2023.",
+      "*Desautels GCPA Prog students only. Intensive course. Add/drop May 25, w/withdrawal Jun 20."
+    ]
+  },
+  {
+    "code": "ACCT 683",
+    "subject": "ACCT",
+    "number": "683",
+    "title": "Practice of Taxation",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Providing taxation services and guidance, including assisting individual and corporate entities to minimize taxes and meet their objectives while complying with tax laws and regulations. Addressing compliance and tax-planning issues for both individuals and corporate entities, as well as, to a lesser extent, partnerships and trusts. Recognizing the interrelationship between financial reporting decisions and taxation, and the importance of taking taxes into account when making business and investment decisions.",
+    "prerequisites": {
+      "text": "ACCT 653, ACCT 654, ACCT 663, ACCT 664",
+      "tree": {
+        "and": [
+          "ACCT 653",
+          "ACCT 654",
+          "ACCT 663",
+          "ACCT 664"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting (GCPA) program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 687",
+    "subject": "ACCT",
+    "number": "687",
+    "title": "Assurance Services",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Performing both internal audit projects and external assurance engagements; from understanding how governance plays a key role, assessing the need for an engagement, to developing and performing the procedures, through to documenting and reporting results.",
+    "prerequisites": {
+      "text": "ACCT 653, ACCT 654, ACCT 663, ACCT 664",
+      "tree": {
+        "and": [
+          "ACCT 653",
+          "ACCT 654",
+          "ACCT 663",
+          "ACCT 664"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting (GCPA) program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 689",
+    "subject": "ACCT",
+    "number": "689",
+    "title": "Financial Business Analysis",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Developing overall finance policies and identifying, analyzing, evaluating, and recommending investment and financing decisions. Applying appropriate finance principles and conceptual approaches to determine appropriate courses of action. Providing finance-related services for an entity, either individually or as part of a larger team, understanding when the advice of a finance specialist is required, and understanding and communicating with other finance professionals.",
+    "prerequisites": {
+      "text": "ACCT 653, ACCT 654, ACCT 663, ACCT 664",
+      "tree": {
+        "and": [
+          "ACCT 653",
+          "ACCT 654",
+          "ACCT 663",
+          "ACCT 664"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting (GCPA) program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ACCT 690",
+    "subject": "ACCT",
+    "number": "690",
+    "title": "Advanced Topics in Accounting 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "A learning cell in which one or more students work with a faculty member.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 695",
+    "subject": "ACCT",
+    "number": "695",
+    "title": "Integrative Analysis",
+    "credits": 4,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Integration of the enabling competencies and the six technical competency areas required of a CPA. Developing strategic leadership capabilities and the ability to bring an integrative perspective to decision-making including: professional and ethical behaviour, problem-solving and decision-making, communication (both written and oral), self-management, teamwork and leadership.",
+    "prerequisites": {
+      "text": "Any two of the following: ACCT 683, ACCT 685, ACCT 687, ACCT 689.",
+      "tree": {
+        "and": [
+          "ACCT 683",
+          "ACCT 685",
+          "ACCT 687",
+          "ACCT 689"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "ACCT 699",
+      "tree": "ACCT 699",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in the Graduate Certificate in Professional Accounting.",
+      "excludes": []
+    },
+    "notes": [
+      "This is an intensive offering. In addition to Tuesday and Thursday evening classes, there will four (4) Saturday classes offered from 9 to 3 pm.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day.",
+      "*Desautels GCPA Prog students only. Intensive course. Add/drop May 17, w/withdrawal Jun 21.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the third lecture day and withdrawal is June 21, 2023."
+    ]
+  },
+  {
+    "code": "ACCT 696",
+    "subject": "ACCT",
+    "number": "696",
+    "title": "Advanced Topics in Accounting Analytics",
+    "credits": 1.5,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Current emerging topics in accounting analytics. Course content will vary each term.",
+    "prerequisites": {
+      "text": "(INSY 660 OR INSY 662 OR Instructor's approval) AND (MGSC 660 OR MGSC 661 OR Instructor's approval)",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "INSY 660",
+              "INSY 662"
+            ]
+          },
+          {
+            "or": [
+              "MGSC 660",
+              "MGSC 661"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 699",
+    "subject": "ACCT",
+    "number": "699",
+    "title": "Exam Preparation Seminar",
+    "credits": 8,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Using complex and highly integrative cases that simulate real-life business issues to apply the technical and enabling competencies acquired throughout the CPA certification program. Practicing developing responses to business simulations and communicating a well-structured response.",
+    "prerequisites": {
+      "text": "Any two courses of the following: ACCT 683, ACCT 685, ACCT 687, ACCT 689.",
+      "tree": {
+        "and": [
+          "ACCT 683",
+          "ACCT 685",
+          "ACCT 687",
+          "ACCT 689"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "ACCT 695",
+      "tree": "ACCT 695",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "This is an intensive offering.",
+      "**Web add deadline is before the start of classes.",
+      "**No web drop allowed.",
+      "**No web withdrawal allowed."
+    ]
+  },
+  {
+    "code": "ACCT 705",
+    "subject": "ACCT",
+    "number": "705",
+    "title": "Seminar in Accounting 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in Accounting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 706",
+    "subject": "ACCT",
+    "number": "706",
+    "title": "Research Design in Accounting",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Course is designed in two parts. The first part covers major research design issues relevant to all fields of accounting. The second part addresses critical methodological issues specific to various fields of accounting research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 707",
+    "subject": "ACCT",
+    "number": "707",
+    "title": "Accountability and Sustainability",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "The course provides an overview of key research on the broader role of accounting and accountability in shaping sustainable organizational and societal practices. The course focuses on most recent theoretical and empirical advances in two rapidly growing interrelated fields of research: environmental accounting and social accounting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ACCT 710",
+    "subject": "ACCT",
+    "number": "710",
+    "title": "Seminar in Accounting 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar in Accounting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

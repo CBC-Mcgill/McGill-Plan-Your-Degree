@@ -1,0 +1,133 @@
+[
+  {
+    "code": "CFRN 203",
+    "subject": "CFRN",
+    "number": "203",
+    "title": "French Language and Culture - Beginner",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading for students with no knowledge of French. Essential linguistic, communicative, and socio-cultural skills required to satisfy basic needs in familiar and predictable everyday situations. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "Entrance Placement Test or Permission of the Director",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment."
+    ]
+  },
+  {
+    "code": "CFRN 323",
+    "subject": "CFRN",
+    "number": "323",
+    "title": "French Language and Culture - Elementary",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading for students with a limited knowledge of French. Essential linguistic, communicative, and socio-cultural skills required to accomplish simple and routine tasks in familiar and predictable situations. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CFRN 203 or Entrance Placement Test or Permission of the Director",
+      "tree": "CFRN 203",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CFRN 333",
+    "subject": "CFRN",
+    "number": "333",
+    "title": "French Language and Culture - Intermediate 1",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a low-intermediate French level. Essential linguistic, communicative, and socio-cultural skills required to function in predictable real-life personal and social situations. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CFRN 323, or Entrance Placement Test or Permission of the Director",
+      "tree": "CFRN 323",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CFRN 343",
+    "subject": "CFRN",
+    "number": "343",
+    "title": "French Language and Culture - Intermediate 2",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a mid-intermediate French level. Essential linguistic, communicative, and socio-cultural skills required to function independently in familiar personal, social, and work-related situations. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CFRN 333, or Entrance Placement Test or Permission of the Director",
+      "tree": "CFRN 333",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CFRN 355",
+    "subject": "CFRN",
+    "number": "355",
+    "title": "French Language and Culture - Intermediate 3",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at a high-intermediate French level. Essential linguistic, communicative, and socio-cultural skills required to function independently in personal, social, and professional environments, on both concrete and abstract topics. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CFRN 343 or Entrance Placement Test or Permission of the Director",
+      "tree": "CFRN 343",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment"
+    ]
+  },
+  {
+    "code": "CFRN 423",
+    "subject": "CFRN",
+    "number": "423",
+    "title": "French Language and Culture - Advanced",
+    "credits": 20,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Speaking, writing, listening, and reading at an advanced level in French. Essential linguistic, communicative, and socio-cultural skills required to interact independently, with fluency and spontaneity, in most personal, social, and professional situations, on concrete as well as abstract topics. Strategies for independent learning and cultural discovery.",
+    "prerequisites": {
+      "text": "CFRN 343 or CFRN 355 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "or": [
+          "CFRN 343",
+          "CFRN 355"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course is subject to limited enrolment."
+    ]
+  }
+]

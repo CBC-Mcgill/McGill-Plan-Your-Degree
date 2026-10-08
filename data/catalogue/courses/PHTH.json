@@ -1,0 +1,687 @@
+[
+  {
+    "code": "PHTH 245",
+    "subject": "PHTH",
+    "number": "245",
+    "title": "Introduction to Professional Practice 1",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Physical therapy and its domains through promoting health and well-being of individuals across the life span.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 301",
+    "subject": "PHTH",
+    "number": "301",
+    "title": "Sports Medicine Practicum",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course is intended to provide students with a directed, practical experience in pre-event, on-field and post-event sports therapy interventions. Students will be introduced to current concepts in sports medicine. Students will work closely with at least one of the McGill varsity teams, as well as intra- and interprofessionally with the staff of the McGill Sport Medicine Clinic (including physiotherapists, athletic therapists, physicians, and other allied health-care professionals).",
+    "prerequisites": {
+      "text": "PHTH 245; ANAT 315; PHGY 209; ANAT 316; PHGY 210; POTH 225; POTH 250. Students require a valid CPR-AED level HCP certificate before the practical work begins. Required interviews and selection process for this course will be conducted by the McGill Sport Medicine Clinic staff.",
+      "tree": {
+        "and": [
+          "PHTH 245",
+          "ANAT 315",
+          "PHGY 209",
+          "ANAT 316",
+          "PHGY 210",
+          "POTH 225",
+          "POTH 250"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to U2 of the B.Sc. (Rehabilitation Science) students.",
+      "excludes": []
+    },
+    "notes": [
+      "Team allocation will be determined after the interview according to interview performance, availability and student interests."
+    ],
+    "parts": [
+      {
+        "code": "PHTH 301D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHTH 301D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHTH 440",
+    "subject": "PHTH",
+    "number": "440",
+    "title": "Clinical Exercise Physiology",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Safe and effective prescription of exercise as a preventive and therapeutic tool in patients suffering from clinical conditions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to PT students - School of Physical & Occupational Therapy.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 450",
+    "subject": "PHTH",
+    "number": "450",
+    "title": "Introduction to PT Clinical Practice",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "In this course, students will be introduced to clinical skills applicable to various physiotherapy domains of practice. Through clinical skills laboratories, self-directed learning, and interactive learning sessions, students will be developing observation skills, as well as analyzing normal and common deviant movements. They will also be introduced to the development of hypotheses to explain movement impairment. Throughout the course, emphasis will be put on palpation and patient handling skills.",
+    "prerequisites": {
+      "text": "PHTH 245 and POTH 250",
+      "tree": {
+        "and": [
+          "PHTH 245",
+          "POTH 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to PT students - School of Physical & Occupational Therapy",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 460",
+    "subject": "PHTH",
+    "number": "460",
+    "title": "Introduction to Functional Movement",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the assessment and instruction of human functional movement patterns, including anatomy, physiology, and biomechanics. Principles of progressive functional resistance training.",
+    "prerequisites": {
+      "text": "ANAT 315, ANAT 323, POTH 225, PHTH 440",
+      "tree": {
+        "and": [
+          "ANAT 315",
+          "ANAT 323",
+          "POTH 225",
+          "PHTH 440"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 students in the B.Sc.(Rehab.Sc.); Major in Physical Therapy program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 482",
+    "subject": "PHTH",
+    "number": "482",
+    "title": "Introduction to Health, Fitness and Lifestyle",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to lifestyle concepts and practices, complementary to the scope of physiotherapy practice, which influence individual health and fitness. Topics include: physical activity, sedentary behaviour, diet, sleep, and psychological and mental wellbeing. Certain external factors that influence these concepts and practices, and approaches to promoting behavioural change.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to U2 students in the B.Sc.(Rehab.Sc.); Major in Physical Therapy program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 505",
+    "subject": "PHTH",
+    "number": "505",
+    "title": "Physical Therapy Clinical Practicum Seminars",
+    "credits": 0,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "How the seven entry to practice domains play out in clinical practice, including the resources available while on placement. The clinical education program requirements and preparatory activities, feedback and conflict management, the evaluation process concerning practice domains, the role of the Ordre professionnel de la Physiotherapie du Québec, and different associations in physiotherapy.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to Bachelor of Science(Rehabilitation Science); Major in Physical Therapy U3 students and Qualifying Year for the Master of Science(Applied) in Physical Therapy; Non-Thesis students.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both PHTH 505D1 and PHTH 505D2.",
+      "No credit will be given for this course unless both PHTH 505D1 and PHTH 505D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "PHTH 505D1",
+        "credits": 0,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "PHTH 505D2",
+        "credits": 0,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PHTH 550",
+    "subject": "PHTH",
+    "number": "550",
+    "title": "Physical Therapy Orthopedic Management",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Evaluation and treatment in a neuromuscular framework.",
+    "prerequisites": {
+      "text": "ANAT 315 or EDKP 206 or equivalent, EDKP 395 or equivalent as judged by the admission process",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "ANAT 315",
+              "EDKP 206"
+            ]
+          },
+          "EDKP 395"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 551",
+    "subject": "PHTH",
+    "number": "551",
+    "title": "Physical Therapy Neurological Rehabilitation",
+    "credits": 4,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Principles of neurorehabilitation motor learning and neuroplasticity including assessment and treatment.",
+    "prerequisites": {
+      "text": "ANAT 321, POTH 455. Restriction: Not open to students who have taken OCC1 335 and PHTH 338.",
+      "tree": {
+        "and": [
+          "ANAT 321",
+          "POTH 455",
+          "OCC1 335",
+          "PHTH 338"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Prerequisites: ANAT 321, POTH 455. Restriction: Not open to students who have taken OCC1 335 and PHTH 338.",
+      "excludes": [
+        "OCC1 335",
+        "PHTH 338"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 554",
+    "subject": "PHTH",
+    "number": "554",
+    "title": "PT Cardiorespiratory Rehabilitation",
+    "credits": 2,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the principles of cardiorespiratory physical therapy. Students will gain the necessary theoretical knowledge pertaining to the pathophysiology of various medical and surgical respiratory conditions as well as the practical skills needed for evaluating and treating such acute and chronic conditions. This course introduces students to the clinical decision making process involved in the planning, implementation and progression of a cardiorespiratory physiotherapy treatment program.",
+    "prerequisites": {
+      "text": "ANAT 316, PHTH 225, PHTH 440, PHGY 209, or equivalent as judged by the admission process.",
+      "tree": {
+        "and": [
+          "ANAT 316",
+          "PHTH 225",
+          "PHTH 440",
+          "PHGY 209"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 560",
+    "subject": "PHTH",
+    "number": "560",
+    "title": "Integrated Orthopedic Management",
+    "credits": 6,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Assessment and treatment of patients with multiple comorbidities or multiple injuries that require a multidisciplinary approach, integrated intervention strategies, life-style changes, integration into the work force and/or reintegration into the community.",
+    "prerequisites": {
+      "text": "PHTH 550.",
+      "tree": "PHTH 550",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 561",
+    "subject": "PHTH",
+    "number": "561",
+    "title": "Integrated Neurological Rehabilitation",
+    "credits": 5,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "PT assessment and treatment of clients with complex problems and/or multiple handicaps.",
+    "prerequisites": {
+      "text": "PHTH 551",
+      "tree": "PHTH 551",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 564",
+    "subject": "PHTH",
+    "number": "564",
+    "title": "Integrated Cardiorespiratory Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Building on previously learned knowledge of cardiorespiratory physiotherapy, students will gain conceptual and procedural knowledge and skills for the physiotherapy assessment and management of patients with various cardiovascular and respiratory conditions, patients undergoing lung/heart-lung transplantation, and critically ill patients managed in the intensive care unit (ICU). This course aims to enhance critical thinking and problem-solving skills in the area of cardiovascular and respiratory physiotherapy through interactive lectures as well as case-based labs run at the McGill Simulation center.",
+    "prerequisites": {
+      "text": "PHTH 554 or permission from the instructor.",
+      "tree": "PHTH 554",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 571",
+    "subject": "PHTH",
+    "number": "571",
+    "title": "PT Clinical Practicum 1",
+    "credits": 6,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "A first clinical practicum course.",
+    "prerequisites": {
+      "text": "PHTH 550, PHTH 551, PHTH 552 (or PHTH 554 and PHTH 564), PHTH 560, PHTH 561.",
+      "tree": {
+        "and": [
+          "PHTH 550",
+          "PHTH 551",
+          "PHTH 552",
+          "PHTH 554",
+          "PHTH 564",
+          "PHTH 560",
+          "PHTH 561"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 572",
+    "subject": "PHTH",
+    "number": "572",
+    "title": "PT Clinical Practicum 2",
+    "credits": 6,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A second clinical practicum including advanced skills in assessment and treatment management in a core area of practice.",
+    "prerequisites": {
+      "text": "PHTH 571",
+      "tree": "PHTH 571",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the length of the clinical course, add/drop is the sixth lecture day and withdrawal is the eleventh lecture day."
+    ]
+  },
+  {
+    "code": "PHTH 573",
+    "subject": "PHTH",
+    "number": "573",
+    "title": "PT Clinical Practicum 3",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced assessment and treatment management in an area of practice.",
+    "prerequisites": {
+      "text": "PHTH 571, PHTH 572",
+      "tree": {
+        "and": [
+          "PHTH 571",
+          "PHTH 572"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 606",
+    "subject": "PHTH",
+    "number": "606",
+    "title": "Introduction to Pediatric Physical Therapy",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course introduces the principles of pediatric habilitation and rehabilitation pertinent to the practice of physical therapy.",
+    "prerequisites": {
+      "text": "Successful completion of the QY/U3 PT year.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to MSc.(A) PT M1 students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 620",
+    "subject": "PHTH",
+    "number": "620",
+    "title": "PT Clinical Practicum 4",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Final clinical practicum in an area of practice.",
+    "prerequisites": {
+      "text": "PHTH 571, PHTH 572, PHTH 573",
+      "tree": {
+        "and": [
+          "PHTH 571",
+          "PHTH 572",
+          "PHTH 573"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 622",
+    "subject": "PHTH",
+    "number": "622",
+    "title": "Integrated Pain Management",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This M1 entry-level physiotherapy course focuses on understanding and managing complex and chronic pain conditions. Through lectures, personal reflection, interactive class activities, case study analyses, quizzes, assignments and practical lab activities, students will develop a conceptual framework for approaching the clinical assessment and management of pain and pain-related disability. By the end of the course, students will be ready to apply this framework within clinical settings.",
+    "prerequisites": {
+      "text": "Clinical Affiliation 1 & 2 or permission of instructor. PHTH 552 (or PHTH 554 and PHTH 564), PHTH 561.",
+      "tree": {
+        "and": [
+          "PHTH 552",
+          "PHTH 554",
+          "PHTH 564",
+          "PHTH 561"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 623",
+    "subject": "PHTH",
+    "number": "623",
+    "title": "Differential Diagnosis and Management",
+    "credits": 4,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Building on previously learned orthopaedic knowledge, screening for medical conditions and establishing functional differential diagnosis.",
+    "prerequisites": {
+      "text": "PHTH 550, PHTH 560.",
+      "tree": {
+        "and": [
+          "PHTH 550",
+          "PHTH 560"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 633",
+    "subject": "PHTH",
+    "number": "633",
+    "title": "X-Ray Prescription for Physical Therapy",
+    "credits": 1,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Requirements for X-ray prescription described by the Québec Code des Professions (chapter M-9, r. 4).",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "PHTH 623",
+      "tree": "PHTH 623",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in the M.Sc.(A.) in Physical Therapy; Non-Thesis program.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 645",
+    "subject": "PHTH",
+    "number": "645",
+    "title": "Pelvic Floor Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This course explores the physiotherapy approach to pelvic floor disorders, with an in-depth focus on urinary incontinence. Students will understand the role of the pelvic floor in relation to urinary, sexual and ano-rectal function, and acquire the ability to evaluate and treat patients suffering urinary incontinence.",
+    "prerequisites": {
+      "text": "PHTH 623",
+      "tree": "PHTH 623",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the MSc (A) in Physical Therapy. Open to other students by permission of instructor only.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 652",
+    "subject": "PHTH",
+    "number": "652",
+    "title": "Integrated Clinical Exercise Rehabilitation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "This case-based course aims to provide students with an in-depth knowledge of exercise rehabilitation as a preventative and therapeutic tool in patients with selective chronic diseases and disabilities across the lifespan. This course aims to enhance critical thinking and problem-solving skills through interactive lectures, clinical reasoning workshops and assignments.",
+    "prerequisites": {
+      "text": "PHTH 440 and PHTH 552 (or PHTH 554 and PHTH 564).",
+      "tree": {
+        "and": [
+          "PHTH 440",
+          "PHTH 552",
+          "PHTH 554",
+          "PHTH 564"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to MSc(A) PT M1 Students.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "PHTH 661",
+    "subject": "PHTH",
+    "number": "661",
+    "title": "Sport Physiotherapy",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Injury prevention for recreational and elite athletes and rehabilitation of injured athletes.",
+    "prerequisites": {
+      "text": "PHTH 623",
+      "tree": "PHTH 623",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "PHTH 662",
+    "subject": "PHTH",
+    "number": "662",
+    "title": "Advanced Manual Therapy",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Use of manual therapy in the assessment and treatment of patients with musculoskeletal disorders.",
+    "prerequisites": {
+      "text": "PHTH 551, PHTH 552 (or PHTH 554 and PHTH 564) , PHTH 623",
+      "tree": {
+        "and": [
+          "PHTH 551",
+          "PHTH 552",
+          "PHTH 554",
+          "PHTH 564",
+          "PHTH 623"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

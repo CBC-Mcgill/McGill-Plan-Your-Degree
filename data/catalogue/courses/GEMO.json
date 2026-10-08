@@ -1,0 +1,62 @@
+[
+  {
+    "code": "GEMO 111",
+    "subject": "GEMO",
+    "number": "111",
+    "title": "Introduction to Modelling",
+    "credits": 1,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Multi-disciplinary course, modeling challenge by team, epidemiology, climate science and aeronautics.",
+    "prerequisites": {
+      "text": "GEMA 111. GEMA 112. GEPH 111. GEPH 112. GECH 111. GECH 112. GEBI 111. GECS 111. GECS 112.",
+      "tree": {
+        "and": [
+          "GEMA 111",
+          "GEMA 112",
+          "GEPH 111",
+          "GEPH 112",
+          "GECH 111",
+          "GECH 112",
+          "GEBI 111",
+          "GECS 111",
+          "GECS 112"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MOD111 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEMO 211",
+    "subject": "GEMO",
+    "number": "211",
+    "title": "Data and Modelling Week",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Projects in mini-groups co-supervised by a professional engineer on an interdisciplinary-type subject.",
+    "prerequisites": {
+      "text": "The whole assignment brings together the cross-section of scientific knowledge covered in earlier courses.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to MOD211 offered by CentraleSupélec in France."
+    ]
+  }
+]

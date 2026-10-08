@@ -1,0 +1,165 @@
+[
+  {
+    "code": "CCFC 516",
+    "subject": "CCFC",
+    "number": "516",
+    "title": "Forensic Accounting",
+    "credits": 3,
+    "offeredBy": "Career & Professional Develop",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Forensic accounting including legislative and regulatory approaches to economic crime; accountants' professional legal responsibilities concerning error and fraud detection during engagements; and fraud prevention, detection and management.",
+    "prerequisites": {
+      "text": "ACCT 475 or CCAU 511 or Departmental Approval",
+      "tree": {
+        "or": [
+          "ACCT 475",
+          "CCAU 511"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFC 590",
+    "subject": "CCFC",
+    "number": "590",
+    "title": "Topics in Accounting and Auditing",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Specialized course covering an advanced topic in the accounting and auditing areas selected from current issues or themes in literature.",
+    "prerequisites": {
+      "text": "CCAU 511 and CCFC 513",
+      "tree": {
+        "and": [
+          "CCAU 511",
+          "CCFC 513"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Content will vary from year to year."
+    ]
+  },
+  {
+    "code": "CCFC 611",
+    "subject": "CCFC",
+    "number": "611",
+    "title": "Financial Accounting 1",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Theoretical and practical foundation of financial reporting, specifically focusing on the accounting concepts, the accounting process, revenue and asset recognition, their measurement and disclosure.",
+    "prerequisites": {
+      "text": "CACC 521 or CACC 621",
+      "tree": {
+        "or": [
+          "CACC 521",
+          "CACC 621"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CCFA 605 and CPL2 652",
+      "tree": {
+        "and": [
+          "CCFA 605",
+          "CPL2 652"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCFC 511.",
+      "excludes": [
+        "CCFC 511"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFC 612",
+    "subject": "CCFC",
+    "number": "612",
+    "title": "Financial Accounting 2",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A detailed review of the accounting for current and long term assets and liabilities, intangibles and shareholders' equity; determination of accounting income and the treatment of prior period adjustments and extraordinary items; working capital and flow of funds; financial statement presentation; partnerships. Current practices and the relevant CICA recommendations will be reviewed in terms of theoretical concepts and principles.",
+    "prerequisites": {
+      "text": "CCFC 511 or CCFC 611",
+      "tree": {
+        "or": [
+          "CCFC 511",
+          "CCFC 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CCFA 605",
+      "tree": "CCFA 605",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCFC 512.",
+      "excludes": [
+        "CCFC 512"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFC 613",
+    "subject": "CCFC",
+    "number": "613",
+    "title": "Financial Accounting 3",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The underlying concepts and accounting treatment of inter-corporate investments, foreign currency, interim reporting and accounting for not-for-profit including a detailed examination of CPA Canada recommendations. Reporting of relevant financial information and the preparation of consolidated financial statements with emphasis on their economic substance rather than legal form.",
+    "prerequisites": {
+      "text": "CCFC 512 or CCFC 612",
+      "tree": {
+        "or": [
+          "CCFC 512",
+          "CCFC 612"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CCFA 605",
+      "tree": "CCFA 605",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCFC 513.",
+      "excludes": [
+        "CCFC 513"
+      ]
+    },
+    "notes": []
+  }
+]

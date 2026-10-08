@@ -1,0 +1,750 @@
+[
+  {
+    "code": "MUCO 230",
+    "subject": "MUCO",
+    "number": "230",
+    "title": "The Art of Composition",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "An introduction to compositional techniques and notational practices of the twentieth and twenty-first centuries, including the analysis of selected works.",
+    "prerequisites": {
+      "text": "MUTH 151, MUSP 141",
+      "tree": {
+        "and": [
+          "MUTH 151",
+          "MUSP 141"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to non-composition majors.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUCO 241",
+    "subject": "MUCO",
+    "number": "241",
+    "title": "Tonal Composition 1A",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A writing course based upon the stylistic concepts and resources of European music (Classical to late-Romantic styles), designed to develop control of factors such as phrase structure, melodic shape, rhythm, linear continuity, economy of means, and basic contrapuntal procedures. Extensive analysis of characteristic forms.",
+    "prerequisites": {
+      "text": "MUTH 151 and MUSP 140",
+      "tree": {
+        "and": [
+          "MUTH 151",
+          "MUSP 140"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUSP 171",
+      "tree": "MUSP 171",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in Composition.; Students from other programs may be accepted with the permission of the instructor, after submitting samples of previous work",
+      "excludes": []
+    },
+    "notes": [
+      "Must attain minimum grade of B- in prerequisites before taking MUCO 241."
+    ]
+  },
+  {
+    "code": "MUCO 242",
+    "subject": "MUCO",
+    "number": "242",
+    "title": "Tonal Composition 1B",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An advanced writing course based upon the stylistic concepts and resources of European music (Classical to late-Romantic styles), designed to develop control of factors such as phrase structure, melodic shape, rhythm, linear continuity, economy of means, and basic contrapuntal procedures. Extensive analysis of characteristic forms.",
+    "prerequisites": {
+      "text": "MUCO 241",
+      "tree": "MUCO 241",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students in Composition.; Students from other programs may be accepted with the permission of the instructor, after submitting samples of previous work.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUCO 245",
+    "subject": "MUCO",
+    "number": "245",
+    "title": "Composition 1A",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "20th- and 21st-century techniques and approaches. Basic parameters such as pitch, rhythm and timbre, and their inter-relationship at all structural levels. Notation and score preparation. Performance practice. Analysis of selected 20th- and 21st-century scores. Writing of short pieces for solo instruments and small ensembles, including voice.",
+    "prerequisites": {
+      "text": "MUTH 150 and MUSP 141.",
+      "tree": {
+        "and": [
+          "MUTH 150",
+          "MUSP 141"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUSP 170 and MUSP 240.",
+      "tree": {
+        "and": [
+          "MUSP 170",
+          "MUSP 240"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in Composition.; Not open to students who have taken MUCO 245D1/D2.",
+      "excludes": [
+        "MUCO 245D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUCO 246",
+    "subject": "MUCO",
+    "number": "246",
+    "title": "Composition 1B",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "More advanced 20th- and 21st-century techniques and approaches. Basic parameters such as pitch, rhythm and timbre, and their inter-relationship at all structural levels. Notation and score preparation. Performance practice. Analysis of selected 20th- and 21st-century scores. Writing of short pieces for solo instruments and small ensembles, including voice.",
+    "prerequisites": {
+      "text": "MUCO 245",
+      "tree": "MUCO 245",
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUSP 171 and MUSP 241.",
+      "tree": {
+        "and": [
+          "MUSP 171",
+          "MUSP 241"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in Composition.; Not open to students who have taken MUCO 245D1/D2.",
+      "excludes": [
+        "MUCO 245D1"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MUCO 260",
+    "subject": "MUCO",
+    "number": "260",
+    "title": "Instruments of the Orchestra",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introductory study of the instruments of string, woodwind and brass families, elementary acoustics of the instruments. Techniques of playing including embouchure, fingering, bowing, hand-stopping, transposing instruments. Evolution of the instruments, their technique and their music from the 18th century to the present.",
+    "prerequisites": {
+      "text": "MUTH 150 or MUTH 111 or MUJZ 160",
+      "tree": {
+        "or": [
+          "MUTH 150",
+          "MUTH 111",
+          "MUJZ 160"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students in the Major Composition",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours",
+      "Priority will be given to students in the Minor Composition and Special Students in the prerequisite package for Sound Recording. Other students may be admitted with permission of the instructor."
+    ]
+  },
+  {
+    "code": "MUCO 261",
+    "subject": "MUCO",
+    "number": "261",
+    "title": "Orchestration 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Study of the instruments of the western orchestra, including performance techniques, used in different combinations. Score reading and notation. Analysis of excerpts of the repertoire from the point of view of instrumental writing and timbral combination. Reduction of orchestral scores for piano; scoring and transcription of piano works for different ensembles. Instruments studied: strings, harp, woodwinds, standard keyboards. Orchestration: scoring for string quartet, string ensembles, woodwind quintet and ensembles, small orchestra.",
+    "prerequisites": {
+      "text": "MUTH 150 and MUSP 140.",
+      "tree": {
+        "and": [
+          "MUTH 150",
+          "MUSP 140"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "MUSP 170",
+      "tree": "MUSP 170",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to B.Mus. Major in Composition students; students from other programs may be accepted with the permission of the instructor. Samples of previous work may be requested.",
+      "excludes": []
+    },
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUCO 340",
+    "subject": "MUCO",
+    "number": "340",
+    "title": "Composition 2",
+    "credits": 4,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Composition tutorial. Weekly hour-long private composition lessons. Students are required to complete, at a minimum, a five-minute composition in each of the fall and winter semesters, or the equivalent (for example, a 10-minute composition completed over the course of both semesters). Works may include acoustic instruments and/or voices, with or without electronics. Goals may include advancement of technique, study of relevant repertoire and development of a personal musical style.",
+    "prerequisites": {
+      "text": "MUCO 245D1/D2 and MUCO 246.",
+      "tree": {
+        "and": [
+          "MUCO 245D1",
+          "MUCO 246"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "one 300-level MUSP course",
+      "tree": null,
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "2 hours",
+      "Students must register for both MUCO 340D1 and MUCO 340D2.",
+      "No credit will be given for this course unless both MUCO 340D1 and MUCO 340D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MUCO 340D1",
+        "credits": 2,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUCO 340D2",
+        "credits": 2,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUCO 341",
+    "subject": "MUCO",
+    "number": "341",
+    "title": "Digital Studio Composition 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Composition with MIDI, audio recording, digital audio signal processing software and hardware. Creation of small-scale composition studies using technological resources in the context of electroacoustic music. The hands-on activities will include critical listening and evaluation of electronic and computer music repertoire.",
+    "prerequisites": {
+      "text": "MUCO 246 or MUCO 230",
+      "tree": {
+        "or": [
+          "MUCO 246",
+          "MUCO 230"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lecture-demonstration and 3 hours studio time"
+    ]
+  },
+  {
+    "code": "MUCO 342",
+    "subject": "MUCO",
+    "number": "342",
+    "title": "Digital Studio Composition 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced composition with MIDI, audio recording, digital audio signal processing software and hardware. Creation of complete electroacoustic pieces and/or production of audio media materials.",
+    "prerequisites": {
+      "text": "MUCO 341",
+      "tree": "MUCO 341",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours lecture-demonstration and 3 hours studio time"
+    ]
+  },
+  {
+    "code": "MUCO 360",
+    "subject": "MUCO",
+    "number": "360",
+    "title": "Orchestration 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Reduction of orchestral scores for piano. Scoring and transcription of piano works for different ensembles. Instruments studied: brass and percussion. Orchestration: brass ensembles, percussion ensembles and combinations. Scoring for full orchestra.",
+    "prerequisites": {
+      "text": "MUCO 261",
+      "tree": "MUCO 261",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to B.Mus. Major in Composition students; students from other programs may be accepted with the permission of the instructor, after submitting samples of previous work.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUCO 374",
+    "subject": "MUCO",
+    "number": "374",
+    "title": "Special Topic in Composition 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "Special topic in composition.",
+    "prerequisites": {
+      "text": "MUHL 184, MUHL 185, MUTH 211 or MUCO 240D1/D2, MUSP 231; or MUHL 186, MUHL 286, MUTH 250 or MUCO 240D1/D2, MUSP 241",
+      "tree": {
+        "and": [
+          "MUHL 184",
+          "MUHL 185",
+          {
+            "or": [
+              "MUTH 211",
+              "MUCO 240D1"
+            ]
+          },
+          "MUSP 231",
+          "MUHL 186",
+          "MUHL 286",
+          {
+            "or": [
+              "MUTH 250",
+              "MUCO 240D1"
+            ]
+          },
+          "MUSP 241"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUCO 440",
+    "subject": "MUCO",
+    "number": "440",
+    "title": "Composition 3",
+    "credits": 4,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Composition tutorial. Continuation of MUCO 340. Students may work with the same instructor, or choose to work with a different instructor.",
+    "prerequisites": {
+      "text": "MUCO 340",
+      "tree": "MUCO 340",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 hours",
+      "Students must register for both MUCO 440D1 and MUCO 440D2.",
+      "No credit will be given for this course unless both MUCO 440D1 and MUCO 440D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MUCO 440D1",
+        "credits": 2,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUCO 440D2",
+        "credits": 2,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUCO 460",
+    "subject": "MUCO",
+    "number": "460",
+    "title": "Orchestration 3",
+    "credits": 2,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Analysis of advanced orchestration techniques. Various orchestration theories and practices used by composers, particularly in the twentieth century including the study of extended techniques.",
+    "prerequisites": {
+      "text": "MUCO 240 and MUCO 261; or MUCO 360",
+      "tree": {
+        "and": [
+          "MUCO 240",
+          "MUCO 261",
+          "MUCO 360"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "2 hours"
+    ]
+  },
+  {
+    "code": "MUCO 475",
+    "subject": "MUCO",
+    "number": "475",
+    "title": "Special Project: Composition",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [],
+    "description": "A student or students may engage in an individual research project with the approval of the Departmental Chair and under appropriate supervision.",
+    "prerequisites": {
+      "text": "MUCO 340 or permission of the instructor.",
+      "tree": "MUCO 340",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Approval of the Department Chair and the Associate Dean."
+    ]
+  },
+  {
+    "code": "MUCO 541",
+    "subject": "MUCO",
+    "number": "541",
+    "title": "Advanced Digital Studio Composition 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Advanced topics in digital studio composition. Aesthetics and poetics of electroacoustic composition. Analytical approaches to this repertoire. Use of digital signal processing and synthesis techniques. Creation of complete pieces incorporating music technology which may include a live performance component.",
+    "prerequisites": {
+      "text": "MUCO 342 or permission of the instructor.",
+      "tree": "MUCO 342",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUCO 542",
+    "subject": "MUCO",
+    "number": "542",
+    "title": "Advanced Digital Studio Composition 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Further advanced topics in digital studio composition culminating in a complete large-scale work incorporating music technology, including computer-assisted composition, analysis/resynthesis techniques, and new gestural controllers for live performance of digital musical instruments.",
+    "prerequisites": {
+      "text": "MUCO 541.",
+      "tree": "MUCO 541",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MUCO 575",
+    "subject": "MUCO",
+    "number": "575",
+    "title": "Topics in Composition",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Schulich School of Music",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Pitch systems, harmonic concepts and compositional techniques from the late 19th Century to the present.",
+    "prerequisites": {
+      "text": "MUCO 340D1/D2",
+      "tree": "MUCO 340",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Topics will change from semester to semester."
+    ]
+  },
+  {
+    "code": "MUCO 622",
+    "subject": "MUCO",
+    "number": "622",
+    "title": "Composition Tutorial",
+    "credits": 6,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individualized guided composition research on an approved topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both MUCO 622D1 and MUCO 622D2",
+      "No credit will be given for this course unless both MUCO 622D1 and MUCO 622D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MUCO 622D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUCO 622D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MUCO 631",
+    "subject": "MUCO",
+    "number": "631",
+    "title": "Seminar in Composition 1",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in composition. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUCO 632",
+    "subject": "MUCO",
+    "number": "632",
+    "title": "Seminar in Composition 2",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in composition. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUCO 633",
+    "subject": "MUCO",
+    "number": "633",
+    "title": "Seminar in Composition 3",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in composition. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUCO 634",
+    "subject": "MUCO",
+    "number": "634",
+    "title": "Seminar in Composition 4",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Seminar in composition. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUCO 635",
+    "subject": "MUCO",
+    "number": "635",
+    "title": "Seminar in Composition 5",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar in composition. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUCO 636",
+    "subject": "MUCO",
+    "number": "636",
+    "title": "Seminar in Composition 6",
+    "credits": 3,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminar in composition. Topic varies by year.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "3 hours"
+    ]
+  },
+  {
+    "code": "MUCO 710",
+    "subject": "MUCO",
+    "number": "710",
+    "title": "General Examinations",
+    "credits": 0,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Series of examinations (harmony, counterpoint, orchestration and analysis presentation).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to students in the D.Mus. Music; Composition and the Ph.D. Music; Composition programs.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "MUCO 722",
+    "subject": "MUCO",
+    "number": "722",
+    "title": "Doctoral Composition Tutorial",
+    "credits": 6,
+    "offeredBy": "Music Research",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Individualized guided composition research on an approved topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both MUCO 722D1 and MUCO 722D2",
+      "No credit will be given for this course unless both MUCO 722D1 and MUCO 722D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "MUCO 722D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "MUCO 722D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,2529 @@
+[
+  {
+    "code": "CHEM 110",
+    "subject": "CHEM",
+    "number": "110",
+    "title": "General Chemistry 1",
+    "credits": 4,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A study of the fundamental principles of atomic structure, radiation and nuclear chemistry, valence theory, coordination chemistry, and the periodic table.",
+    "prerequisites": {
+      "text": "Prerequisites/corequisites: High school mathematics and physics or permission of the instructor; CHEM 120 is not a prerequisite",
+      "tree": "CHEM 120",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Each lab section is limited enrolment"
+    ]
+  },
+  {
+    "code": "CHEM 112",
+    "subject": "CHEM",
+    "number": "112",
+    "title": "General Chemistry Laboratory 1",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Illustrative experiments. Laboratory section of CHEM 110. New students will be issued lab sections in OM 1 on the first day of classes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Open only to entering students who have the lecture equivalent of CHEM 110",
+      "Each lab section is limited enrolment"
+    ]
+  },
+  {
+    "code": "CHEM 120",
+    "subject": "CHEM",
+    "number": "120",
+    "title": "General Chemistry 2",
+    "credits": 4,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A study of the fundamental principles of physical chemistry.",
+    "prerequisites": {
+      "text": "Prerequisites/corequisites: High school level mathematics and physics, or permission of the instructor; CHEM 110 is not a prerequisite",
+      "tree": "CHEM 110",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Each lab section is limited enrolment"
+    ]
+  },
+  {
+    "code": "CHEM 122",
+    "subject": "CHEM",
+    "number": "122",
+    "title": "General Chemistry Laboratory 2",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Illustrative experiments. Laboratory section of CHEM 120.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Open only to entering students who have the lecture equivalent of CHEM 120"
+    ]
+  },
+  {
+    "code": "CHEM 180",
+    "subject": "CHEM",
+    "number": "180",
+    "title": "World of Chemistry: Environment",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Risks, water, air pollution, sick-building syndrome, the chemistry of the car, energy (fossil fuel, nuclear), nano and biotechnology, smells, garbage and human waste, dental chemistry and green chemistry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "No prerequisites"
+    ]
+  },
+  {
+    "code": "CHEM 181",
+    "subject": "CHEM",
+    "number": "181",
+    "title": "World of Chemistry: Food",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A series of lectures on the historical, practical, and simple chemical aspects of: food, food additives; vitamins; minerals, diet and cancer; dieting; food-borne illnesses, health food and cooking.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 150.",
+      "excludes": [
+        "CHEM 150"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 lecture hours/week"
+    ]
+  },
+  {
+    "code": "CHEM 183",
+    "subject": "CHEM",
+    "number": "183",
+    "title": "World of Chemistry: Drugs",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Drug history and marketing, over the counter drugs (e.g. aspirin, cough and cold remedies, allergy preparations), street and heart drugs, mental illness, hormones, brain chemistry and diabetes.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "3 lecture hours/week"
+    ]
+  },
+  {
+    "code": "CHEM 203",
+    "subject": "CHEM",
+    "number": "203",
+    "title": "Survey of Physical Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The fundamentals of thermodynamics and chemical kinetics with applications to biomolecular systems. Thermodynamic and kinetic control of biological processes.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120 or equivalent.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Intended for students in biological science programs requiring only one course in physical chemistry. Not open to students who have taken or are taking CHEM 204 or CHEM 213 or CHEM 223 and CHEM 243.",
+      "excludes": [
+        "CHEM 204",
+        "CHEM 213",
+        "CHEM 223",
+        "CHEM 243"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 204",
+    "subject": "CHEM",
+    "number": "204",
+    "title": "Physical Chemistry/Biological Sciences 1",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Similar to CHEM 223/CHEM 243. Emphasis on the use of biological examples to illustrate the principles of physical chemistry. The relevance of physical chemistry to biology is stressed.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120 or equivalent and one full course in calculus",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CHEM 203 or CHEM 213.",
+      "excludes": [
+        "CHEM 203",
+        "CHEM 213"
+      ]
+    },
+    "notes": [
+      "Fall, Winter"
+    ]
+  },
+  {
+    "code": "CHEM 211",
+    "subject": "CHEM",
+    "number": "211",
+    "title": "Organic Chemistry 1 Lectures",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "A survey of reactions of aliphatic and aromatic compounds including modern concepts of bonding, mechanisms, conformational analysis, and stereochemistry.",
+    "prerequisites": {
+      "text": "CHEM 110 or equivalent.",
+      "tree": "CHEM 110",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CHEM 120 or equivalent.",
+      "tree": "CHEM 120",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who are taking or have taken CHEM 212 or equivalent. Permission of the Department of Chemistry is required.",
+      "excludes": [
+        "CHEM 212"
+      ]
+    },
+    "notes": [
+      "Fall, Winter, Summer",
+      "Note: Some CEGEP programs provide equivalency for this course. For more information, please see the Department of Chemistry's Web page (http://www.chemistry.mcgill.ca/advising/outside/equivalent.htm)."
+    ]
+  },
+  {
+    "code": "CHEM 212",
+    "subject": "CHEM",
+    "number": "212",
+    "title": "Introductory Organic Chemistry 1",
+    "credits": 4,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "A fundamental study of aliphatic compounds and saturated functional groups including modern concepts of bonding, reaction mechanisms, conformational analysis, spectroscopy, and stereochemistry.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120 or equivalent.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students registered in Chemistry or Biochemistry. Not open to students who have taken or are taking CHEM 211, CHEM 242, or equivalent.",
+      "excludes": [
+        "CHEM 211",
+        "CHEM 242"
+      ]
+    },
+    "notes": [
+      "Fall, Summer",
+      "Each lab section is limited enrolment",
+      "Note: Some CEGEP programs provide equivalency for this course. For more information, please see the Department of Chemistry's Web page (https://www.mcgill.ca/transfercredit/prospective/cegep)."
+    ]
+  },
+  {
+    "code": "CHEM 213",
+    "subject": "CHEM",
+    "number": "213",
+    "title": "Introductory Physical Chemistry 1: Thermodynamics",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Thermodynamics. Topics include gas laws, kinetic theory of collisions, heat capacity, enthalpy, thermochemistry, bond energies, the entropy and free energy functions, absolute entropies, Maxwell relations and chemical and thermodynamic equilibrium states, phase rule and phase diagrams, ideal solutions, colligative properties, solubility, electrochemistry, Debye-Hückel Theory.",
+    "prerequisites": {
+      "text": "CHEM 110, CHEM 120 or equivalent, PHYS 102 or PHYS 142, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120",
+          {
+            "or": [
+              "PHYS 102",
+              "PHYS 142"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 222",
+      "tree": "MATH 222",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 214",
+    "subject": "CHEM",
+    "number": "214",
+    "title": "Physical Chemistry/Biological Sciences 2",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Emphasis is placed on the use of biological examples to illustrate the principles of physical chemistry. The relevance of physical chemistry to biology is stressed.",
+    "prerequisites": {
+      "text": "CHEM 204 or CHEM 223/CHEM 243.",
+      "tree": {
+        "or": [
+          "CHEM 204",
+          "CHEM 223",
+          "CHEM 243"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 219",
+    "subject": "CHEM",
+    "number": "219",
+    "title": "Introduction to Atmospheric Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to the basic topics in atmospheric chemistry. The fundamentals of the chemical composition of the atmosphere and its chemical reactions. Selected topics such as; a smog chamber, acid rain, and the ozone hole, will be examined.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120, and one of MATH 139 or MATH 140 or MATH 150, or a CEGEP DEC in Science, or permission of instructor.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120",
+          {
+            "or": [
+              "MATH 139",
+              "MATH 140",
+              "MATH 150"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken ATOC 219, CHEM 419, or ATOC 419",
+      "excludes": [
+        "ATOC 219",
+        "ATOC 419",
+        "CHEM 419"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "Offered in even years. Students should register in ATOC 219 in odd years"
+    ]
+  },
+  {
+    "code": "CHEM 222",
+    "subject": "CHEM",
+    "number": "222",
+    "title": "Introductory Organic Chemistry 2",
+    "credits": 4,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Modern spectroscopic techniques for structure determination. The chemistry of alcohols, ethers, carbonyl compounds, and amines, with special attention to mechanistic aspects. Special topics.",
+    "prerequisites": {
+      "text": "CHEM 212 or CHEM 242 or equivalent.",
+      "tree": {
+        "or": [
+          "CHEM 212",
+          "CHEM 242"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to Chemistry or Biochemistry students. Not open to students who have taken or are taking CHEM 234 or CHEM252.",
+      "excludes": [
+        "CHEM 234",
+        "CHEM 252"
+      ]
+    },
+    "notes": [
+      "Winter, Summer"
+    ]
+  },
+  {
+    "code": "CHEM 224",
+    "subject": "CHEM",
+    "number": "224",
+    "title": "Organic Chemistry Laboratory 1",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Illustrative experiments in organic chemistry. Laboratory section of CHEM 212.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter, Summer",
+      "Open only to students who have the lecture equivalent of CHEM 212",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "CHEM 233",
+    "subject": "CHEM",
+    "number": "233",
+    "title": "Topics in Physical Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to chemical kinetics, surface and colloid chemistry and electrochemistry. The topics to be discussed will be of particular interest to students in chemical engineering.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Engineers only.",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 234",
+    "subject": "CHEM",
+    "number": "234",
+    "title": "Topics in Organic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Engineering",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Modern spectroscopic techniques for structure determination. The chemistry of alcohols, ethers, carbonyl compounds, and amines, with special attention to mechanistic aspects. Special topics.",
+    "prerequisites": {
+      "text": "CHEM 212 or equivalent",
+      "tree": "CHEM 212",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Chemical Engineers only or permission of department.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter, Summer"
+    ]
+  },
+  {
+    "code": "CHEM 242",
+    "subject": "CHEM",
+    "number": "242",
+    "title": "Organic Chemistry 1 for Chemistry and Biochemistry",
+    "credits": 4,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A fundamental study of aliphatic compounds and saturated functional groups including modern concepts of bonding, reaction mechanisms, conformational analysis, spectroscopy, and stereochemistry.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120 or equivalent",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in Chemistry or Biochemistry or by permission of the department. Not open to students who are taking or have taken CHEM 211, CHEM 212, or equivalent.",
+      "excludes": [
+        "CHEM 211",
+        "CHEM 212"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 244",
+    "subject": "CHEM",
+    "number": "244",
+    "title": "Organic Chemistry Laboratory 2",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Laboratory section of CHEM 222.",
+    "prerequisites": {
+      "text": "CHEM 234 or equivalent",
+      "tree": "CHEM 234",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter",
+      "Open only to students who have the lecture equivalent of CHEM 222.",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "CHEM 252",
+    "subject": "CHEM",
+    "number": "252",
+    "title": "Organic Chemistry 2 for Chemistry and Biochemistry",
+    "credits": 4,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A fundamental study of aromatic and polar unsaturated functional groups including reaction mechanisms, multi-step synthesis, regioselectivity, and modern spectroscopic techniques for structure determination.",
+    "prerequisites": {
+      "text": "CHEM 212 or CHEM 242 or equivalent",
+      "tree": {
+        "or": [
+          "CHEM 212",
+          "CHEM 242"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restriction: Open to students in Chemistry and Biochemistry or by permission of the department. Not open to students who have taken or are taking CHEM 234 or CHEM 222.",
+      "excludes": [
+        "CHEM 222",
+        "CHEM 234"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 253",
+    "subject": "CHEM",
+    "number": "253",
+    "title": "Introductory Physical Chemistry Laboratory",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Illustrative experiments in physical chemistry.",
+    "prerequisites": {
+      "text": "CHEM 110, CHEM 120 or equivalent.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CHEM 204 or permission of instructor.",
+      "tree": "CHEM 204",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Only open to B.A. & Sc.; Major Concentration in Chemistry students. Not open to students who have taken or are taking CHEM 273.",
+      "excludes": [
+        "CHEM 273"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 267",
+    "subject": "CHEM",
+    "number": "267",
+    "title": "Introductory Chemical Analysis",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Qualitative and quantitative analysis. A survey of methods of analysis including theory and practice of semimicro qualitative analysis and representative gravimetric, volumetric and instrumental methods. The laboratory component includes introductory experiments in analytical chemistry emphasizing classical and instrumental methods of quantitative analysis.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120, or equivalent",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 287 or CHEM 297",
+      "excludes": [
+        "CHEM 287",
+        "CHEM 297"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 273",
+    "subject": "CHEM",
+    "number": "273",
+    "title": "Introductory Physical Chemistry 2: Kinetics and Methods",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Kinetics: Transition State Theory, complex reactions, free-radical reactions, chain reactions, catalysis, reactions at surfaces, ionic effects of reactions in solution, photochemistry. Methods: physical chemistry laboratory, differential equations and linear algebra applied to physical chemistry, computation methods for data analysis and modeling",
+    "prerequisites": {
+      "text": "CHEM 213 and MATH 222 or equivalent",
+      "tree": {
+        "and": [
+          "CHEM 213",
+          "MATH 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CHEM 253.",
+      "excludes": [
+        "CHEM 253"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 281",
+    "subject": "CHEM",
+    "number": "281",
+    "title": "Inorganic Chemistry 1",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Basic concepts of electronic structure and molecular bonding will be developed and applied to the understanding of common materials. Acid-base chemistry. Survey of the chemistry of the main group elements. Introduction to coordination and organometallic chemistry.",
+    "prerequisites": {
+      "text": "CHEM 110 and CHEM 120 or equivalent.",
+      "tree": {
+        "and": [
+          "CHEM 110",
+          "CHEM 120"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "MATH 133",
+      "tree": "MATH 133",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 302",
+    "subject": "CHEM",
+    "number": "302",
+    "title": "Introductory Organic Chemistry 3",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics covered may include the following: Aromatic compounds, heterocyclic chemistry, sulfur and phosphorus chemistry, organosulfur and organophosphorus compounds, and biomolecules such as lipids, carbohydrates, amino acids, polypeptides, DNA and RNA.",
+    "prerequisites": {
+      "text": "CHEM 222, or permission of the instructor.",
+      "tree": "CHEM 222",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 332",
+    "subject": "CHEM",
+    "number": "332",
+    "title": "Biological Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An introduction to biological chemistry. Topics will include chemistry and structure of proteins, nucleic acids, and lipids; protein and nucleic acid biosynthesis; enzyme kinetics and mechanisms; membranes and membrane transport; bioenergetics; redox reactions in biological chemistry; gene expression; cloning, RNA and antibody technologies; genomics and proteomics.",
+    "prerequisites": {
+      "text": "CHEM 222 and CHEM 273.",
+      "tree": {
+        "and": [
+          "CHEM 222",
+          "CHEM 273"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": {
+      "text": "CHEM 302",
+      "tree": "CHEM 302",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Restricted to Chemistry Majors/Honours only except by permission of instructor.; Not open to students who are taking or have taken BIOL 200 or BIOL 201.",
+      "excludes": [
+        "BIOL 200",
+        "BIOL 201"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 334",
+    "subject": "CHEM",
+    "number": "334",
+    "title": "Advanced Materials",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Survey of the physical and chemical structure-function relationships defining advanced materials, including an introduction to basic materials science and characterization. Topics include supramolecular polymers, self-healing materials, advanced surfaces and adhesives, bio-inspired materials, shape memory materials, sensors and actuators, and photonic materials.",
+    "prerequisites": {
+      "text": "CHEM 110/CHEM 120 and PHYS101/PHYS 102 or PHYS 131/PHYS 142, or CEGEP Physics and Chemistry, or equivalent. Prerequisite or Corequisite: one of CHEM 203, CHEM 204, CHEM 213 and CHEM 273, or equivalent; or one of PHYS 230 and PHYS 232, or equivalent; or permission of the instructor.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "CHEM 110",
+              {
+                "and": [
+                  "CHEM 120",
+                  "PHYS 101"
+                ]
+              },
+              "PHYS 102",
+              "PHYS 131",
+              "PHYS 142"
+            ]
+          },
+          {
+            "or": [
+              "CHEM 203",
+              "CHEM 204",
+              {
+                "and": [
+                  "CHEM 213",
+                  "CHEM 273"
+                ]
+              }
+            ]
+          },
+          "PHYS 230",
+          "PHYS 232"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 345",
+    "subject": "CHEM",
+    "number": "345",
+    "title": "Introduction to Quantum Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to quantum chemistry covering the historical development, wave theory, methods of quantum mechanics, and applications of quantum chemistry.",
+    "prerequisites": {
+      "text": "CHEM 213 and CHEM 273, and PHYS 142, or permission of instructor.",
+      "tree": {
+        "and": [
+          "CHEM 213",
+          "CHEM 273",
+          "PHYS 142"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 355",
+    "subject": "CHEM",
+    "number": "355",
+    "title": "Applications of Quantum Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A survey of the principles of electronic, vibrational and rotational spectroscopy. Magnetic resonance and computational methods.",
+    "prerequisites": {
+      "text": "CHEM 281, CHEM 345, and PHYS 242; or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CHEM 281",
+          "CHEM 345",
+          "PHYS 242"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 362",
+    "subject": "CHEM",
+    "number": "362",
+    "title": "Advanced Organic Chemistry Laboratory",
+    "credits": 2,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An advanced laboratory with experiments related to the theoretical principles and synthetic methods of modern organic chemistry.",
+    "prerequisites": {
+      "text": "or corequisite: CHEM 302. Not open to Honours or Majors in Chemistry",
+      "tree": "CHEM 302",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter"
+    ]
+  },
+  {
+    "code": "CHEM 365",
+    "subject": "CHEM",
+    "number": "365",
+    "title": "Statistical Thermodynamics",
+    "credits": 2,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Molecular basis of thermodynamics with applications to ideal gases and simple solids. Topics to be covered will include: calculation of thermodynamic functions, chemical equilibrium constants, Einstein and Debye models of solids, absolute reaction rate theory, Debye-Hückel theory of strong electrolytes.",
+    "prerequisites": {
+      "text": "CHEM 345",
+      "tree": "CHEM 345",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 367",
+    "subject": "CHEM",
+    "number": "367",
+    "title": "Instrumental Analysis 1",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An introduction to modern instrumental analysis emphasizing chromatography, atomic spectroscopy and computational data analysis. Analytical methods to be examined in detail include gas-liquid and high performance liquid chromatography, LC mass spectrometry, and common methods of atomic determinations using flames/furnaces/plasma sources.",
+    "prerequisites": {
+      "text": "CHEM 267.",
+      "tree": "CHEM 267",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall",
+      "Each lab section is limited enrolment"
+    ]
+  },
+  {
+    "code": "CHEM 377",
+    "subject": "CHEM",
+    "number": "377",
+    "title": "Instrumental Analysis 2",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Spectroscopic methods of analysis will be studied with respect to fundamentals, operational aspects and instrument design. Topics will range from UV-visible to x-ray spectrometry. Methodologies will be evaluated with respect to their application in spectrometric systems. Laboratory automation will be studied and applied in the laboratory.",
+    "prerequisites": {
+      "text": "CHEM 367",
+      "tree": "CHEM 367",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Each lab section is limited enrolment"
+    ]
+  },
+  {
+    "code": "CHEM 381",
+    "subject": "CHEM",
+    "number": "381",
+    "title": "Inorganic Chemistry 2",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to transition metal chemistry, coordination numbers and geometry, and nomenclature will be followed by a discussion of crystal field theory and its applications to problems in spectroscopy, magnetochemistry, thermodynamics and kinetics. Several aspects related to applications of organometallic compounds in catalysis and bioinorganic systems will be discussed.",
+    "prerequisites": {
+      "text": "CHEM 281.",
+      "tree": "CHEM 281",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Honours and Major Chemistry students",
+      "excludes": []
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 392",
+    "subject": "CHEM",
+    "number": "392",
+    "title": "Experimental Chemistry 1",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Experiments related to the theoretical principles, synthetic techniques and instrumental methods used in modern experimental chemistry, including aspects of green chemistry and nanochemistry.",
+    "prerequisites": {
+      "text": "Prerequisite/corequisites: CHEM 381 and CHEM 302. Advanced laboratory for Chemistry Honours and Majors students.",
+      "tree": {
+        "and": [
+          "CHEM 381",
+          "CHEM 302"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 362.",
+      "excludes": [
+        "CHEM 362"
+      ]
+    },
+    "notes": [
+      "Fall, Winter",
+      "2 hours Drop-in lab",
+      "4 hours laboratory"
+    ]
+  },
+  {
+    "code": "CHEM 396",
+    "subject": "CHEM",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course cannot be taken under the S/U option. Departmental permission required. Students cannot be supervised by the same instructor for two 396 Science courses. Open to students in programs offered by the Faculty of Science only. This course must be taken as an elective, and cannot be used to fulfill program requirements.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter",
+      "Note: Enrolment may be limited. Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. Some projects may be accessible to students in other disciplines. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures.",
+      "**Although this is a project course from May 3rd until August 31st, it does not follow the standard add/drop and withdrawal deadlines. Therefore, add/drop is July 1st and withdrawal is July 22nd."
+    ]
+  },
+  {
+    "code": "CHEM 400",
+    "subject": "CHEM",
+    "number": "400",
+    "title": "Independent Study in Chemistry",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised research.",
+    "prerequisites": {
+      "text": "CHEM 243, CHEM 222, CHEM 287, CHEM 281, plus at least one course in Chemistry at 300 level or higher.",
+      "tree": {
+        "and": [
+          "CHEM 243",
+          "CHEM 222",
+          "CHEM 287",
+          "CHEM 281"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Registration is restricted to Honours and Major students in Chemistry and requires the approval of the Course Instructor.",
+      "excludes": []
+    },
+    "notes": [
+      "Fall, Winter",
+      "**Although this is a research course from May 3rd until August 31st, it does not follow the standard add/drop and withdrawal deadlines. Therefore, add/drop is July 6th and withdrawal is August 3rd."
+    ]
+  },
+  {
+    "code": "CHEM 429",
+    "subject": "CHEM",
+    "number": "429",
+    "title": "Chemistry of Energy, Storage and Utilization",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Energy consumption and human development; green house gases; primary and secondary sources of energy, fuels vs. electricity; energy transport and storage; fossil fuels; nuclear energy; fusion and fission; bioenergetics, natural and artificial photosynthesis; novel materials; nanocomposites; photochemistry; electrochemistry; photovoltaics and batteries; fuel cells; catalysis and biomass.",
+    "prerequisites": {
+      "text": "CHEM 212; CHEM 223 and CHEM 243; or CHEM 213 and CHEM 273; or CHEM 204 or CHEM 203; or permission of instructor",
+      "tree": {
+        "and": [
+          "CHEM 212",
+          "CHEM 223",
+          "CHEM 243",
+          "CHEM 213",
+          "CHEM 273",
+          {
+            "or": [
+              "CHEM 204",
+              "CHEM 203"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 319.",
+      "excludes": [
+        "CHEM 319"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 434",
+    "subject": "CHEM",
+    "number": "434",
+    "title": "Advanced Materials",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The physicochemical properties of advanced materials. Topics discussed include photonics, information storage, 'smart' materials, biomaterials, clean energy materials, porous materials, and polymers.",
+    "prerequisites": {
+      "text": "One of CHEM 203, CHEM 204, or CHEM 223 or equivalent, and one of CHEM 214 or 243 or equivalent, and CHEM 381 or equivalent, or permission of instructor.",
+      "tree": {
+        "or": [
+          "CHEM 203",
+          "CHEM 204",
+          {
+            "and": [
+              "CHEM 223",
+              {
+                "or": [
+                  "CHEM 214",
+                  "CHEM 243"
+                ]
+              },
+              "CHEM 381"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 334.",
+      "excludes": [
+        "CHEM 334"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 462",
+    "subject": "CHEM",
+    "number": "462",
+    "title": "Green Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "New reactions and methods which can be used for the production of chemicals from renewable feedstocks; the use of new environmentally benign solvents, catalysts and reagents; organic reactions in aqueous media and in supercritical carbon dioxide; bio-catalysis and bio-processes.",
+    "prerequisites": {
+      "text": "CHEM 302 and CHEM 381",
+      "tree": {
+        "and": [
+          "CHEM 302",
+          "CHEM 381"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 470",
+    "subject": "CHEM",
+    "number": "470",
+    "title": "Research Project 1",
+    "credits": 6,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A course designed to give students research experience. The student will be assigned a project supervisor and a research project at the beginning of the session. The project will consist of a literature survey, experimental and /or theoretical work, a written research report and an oral examination.",
+    "prerequisites": {
+      "text": "registration by Departmental permission only",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter",
+      "**Although this is a research course from May 3rd until August 31st, it does not follow the standard add/drop and withdrawal deadlines. Therefore, add/drop is July 1st and withdrawal is July 22nd."
+    ],
+    "parts": [
+      {
+        "code": "CHEM 470D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "CHEM 470D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CHEM 480",
+    "subject": "CHEM",
+    "number": "480",
+    "title": "Undergraduate Research Project 2",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A course designed to give students additional research experience. The student will be assigned a project supervisor and a research project at the beginning of the session. The project will consist of a literature survey, experimental or theoretical work, a written research report and an oral examination.",
+    "prerequisites": {
+      "text": "CHEM 396 or CHEM 470. Registration by Departmental permission only.",
+      "tree": {
+        "or": [
+          "CHEM 396",
+          "CHEM 470"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter, Summer",
+      "**Although this is a project course from May 3rd until August 31st, it does not follow the standard add/drop and withdrawal deadlines. Therefore, add/drop is July 1st and withdrawal is July 22nd."
+    ],
+    "parts": [
+      {
+        "code": "CHEM 480D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "CHEM 480D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CHEM 482",
+    "subject": "CHEM",
+    "number": "482",
+    "title": "Organic Chemistry: Natural Products",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Structure, synthesis, stereochemistry and biosynthesis of terpenes, alkaloids, antibiotics and selected molecules of medicinal interest.",
+    "prerequisites": {
+      "text": "CHEM 302",
+      "tree": "CHEM 302",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 382.",
+      "excludes": [
+        "CHEM 382"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 493",
+    "subject": "CHEM",
+    "number": "493",
+    "title": "Advanced Physical Chemistry Laboratory",
+    "credits": 2,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Selected experiments to illustrate more advanced physico-chemical principles.",
+    "prerequisites": {
+      "text": "CHEM 273 and CHEM 345 or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CHEM 273",
+          "CHEM 345"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CHEM 355",
+      "tree": "CHEM 355",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Fall, Winter",
+      "Each lab section has limited enrolment."
+    ],
+    "parts": [
+      {
+        "code": "CHEM 493D1",
+        "credits": 1,
+        "terms": []
+      },
+      {
+        "code": "CHEM 493D2",
+        "credits": 1,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "CHEM 502",
+    "subject": "CHEM",
+    "number": "502",
+    "title": "Advanced Bio-Organic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will cover biologically relevant molecules, particularly nucleic acids, proteins, and their building blocks. In each case, synthesis and biological functions will be discussed. The topics include synthesis of oligonucleotides and peptides; chemistry of phosphates; enzyme structure and function; coenzymes, and enzyme catalysis; polyketides; antiviral and anticancer agents.",
+    "prerequisites": {
+      "text": "CHEM 302",
+      "tree": "CHEM 302",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 402.",
+      "excludes": [
+        "CHEM 402"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 503",
+    "subject": "CHEM",
+    "number": "503",
+    "title": "Drug Discovery",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The aim of this course is to provide an introduction to the overall drug discovery process. The main focus of the course will be on medicinal chemistry, synthesis and catalysis, as they relate to large-scale production of pharmaceutical agents. However, other aspects of drug discovery, including structural research (e.g. NMR, X-ray), biochemistry, drug metabolism and bioavailability will also be included.",
+    "prerequisites": {
+      "text": "CHEM 302 and one of BIOL 200 or CHEM 332, or permission of instructor.",
+      "tree": {
+        "and": [
+          "CHEM 302",
+          {
+            "or": [
+              "BIOL 200",
+              "CHEM 332"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 505",
+    "subject": "CHEM",
+    "number": "505",
+    "title": "Computer Modeling of Molecules and Materials",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "A comprehensive introduction to computational methods and software for graduate students and advanced undergraduates. The main focus of the course is on important practical aspects of chemistry-related computer modeling: how to perform simulations reliably and efficiently, and how to interpret simulation results. Two main classes of computer simulations--electronic structure methods and statistical mechanics methods--will be discussed in detail together with a wide range of chemical examples.",
+    "prerequisites": {
+      "text": "CHEM 345 or equivalent and CHEM 365 or PHYS 329 or equivalent, and COMP 202 or COMP 208 or equivalent.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEM 345",
+              "CHEM 365"
+            ]
+          },
+          {
+            "and": [
+              "PHYS 329",
+              "COMP 202"
+            ]
+          },
+          "COMP 208"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 512",
+    "subject": "CHEM",
+    "number": "512",
+    "title": "Catalysis, Concepts and Applications",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "General concepts governing catalysis and practical aspects of its implementation including its most important applications. A global perspective on industrial catalysis. A general introduction about catalysis including homogeneous catalysis, heterogeneous catalysis, organocatalysis, and biocatalysis. A select number of reactions will be studied in detail, based on the most recent research efforts made in the field of catalysis.",
+    "prerequisites": {
+      "text": "CHEM 381, CHEM 302, CHEM 243",
+      "tree": {
+        "and": [
+          "CHEM 381",
+          "CHEM 302",
+          "CHEM 243"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Course open to U3 undergraduate students and graduate students",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 514",
+    "subject": "CHEM",
+    "number": "514",
+    "title": "Biophysical Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Physical chemistry concepts needed to understand the function of biological systems at the molecular level, including the structure, stability, transport, and interactions of biological macromolecules.",
+    "prerequisites": {
+      "text": "CHEM 203 or CHEM 204 or CHEM 223 and CHEM 243, or permission of instructor.",
+      "tree": {
+        "or": [
+          "CHEM 203",
+          "CHEM 204",
+          {
+            "and": [
+              "CHEM 223",
+              "CHEM 243"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 404.",
+      "excludes": [
+        "CHEM 404"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 516",
+    "subject": "CHEM",
+    "number": "516",
+    "title": "Nuclear and Radiochemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Basic properties of the atomic nucleus, nuclear reactions as well as nuclear fission. Kinetics of the radioactive decay, the interaction of radiation with matter and the different kinds of radiation. Hot atom chemistry, modern aspects of medicinal radiochemistry such as Positron Emission Tomography.",
+    "prerequisites": {
+      "text": "CHEM 302 and (CHEM 214 or higher, or CHEM 281), or permission of instructor.",
+      "tree": {
+        "and": [
+          "CHEM 302",
+          {
+            "or": [
+              "CHEM 214",
+              "CHEM 281"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 519",
+    "subject": "CHEM",
+    "number": "519",
+    "title": "Advances in Chemistry of Atmosphere",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the field of atmospheric chemistry that is identified as the significant driver of climate change and the cause of millions of premature death every year. Discussion of cutting-edge novel technologies for observing and quantifying pollutants (from ground to satellite) using artificial intelligence, the fate of emerging contaminants (e.g., nano/microplastics, trace metals, persistent organic), and modelling of atmospheric and interfacial processes. Examination of topics like atmospheric gaseous and multiphase components like bioaerosols. Study of photochemical, photophysical, and aerosol nucleation processes that affect air quality, climate change, and ecosystem health.",
+    "prerequisites": {
+      "text": "CHEM 213, CHEM 273, MATH 222, MATH 315 or equivalents, or permission of the instructor.",
+      "tree": {
+        "and": [
+          "CHEM 213",
+          "CHEM 273",
+          "MATH 222",
+          "MATH 315"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking ATOC 519.",
+      "excludes": [
+        "ATOC 519"
+      ]
+    },
+    "notes": [
+      "3 lectures",
+      "Cross Linked courses: ATOC 519"
+    ]
+  },
+  {
+    "code": "CHEM 520",
+    "subject": "CHEM",
+    "number": "520",
+    "title": "Methods in Chemical Biology",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An overview of advanced techniques at the leading edge of Chemical Biology, including some or all of: biological imaging, kinetics of enzyme inhibition, combinatorial synthesis, atomic force microscopy of biological molecules, self assembling biomimetic structures, oligonucleotide therapeutics, biomolecular X-ray crystallography, computational methods, and nuclear magnetic resonance applied to protein interactions.",
+    "prerequisites": {
+      "text": "BIOL 200 and CHEM 345 and CHEM 302, or permission of instructor",
+      "tree": {
+        "and": [
+          "BIOL 200",
+          "CHEM 345",
+          "CHEM 302"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 522",
+    "subject": "CHEM",
+    "number": "522",
+    "title": "Stereochemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Stereoisomers, their nomenclature and configuration. Conformational analysis, separation of stereoisomers, and stereocontrol in organic synthesis.",
+    "prerequisites": {
+      "text": "CHEM 302",
+      "tree": "CHEM 302",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 623",
+      "excludes": [
+        "CHEM 623"
+      ]
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 531",
+    "subject": "CHEM",
+    "number": "531",
+    "title": "Chemistry of Inorganic Materials",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Structure, bonding, synthesis, properties and applications of covalent, ionic, metallic crystals, and amorphous solids. Defect structures and their use in synthesis of specialty materials such as electronic conductors, semiconductors, and superconductors, and solid electrolytes. Basic principles of composite materials and applications of chemistry to materials processing.",
+    "prerequisites": {
+      "text": "CHEM 381",
+      "tree": "CHEM 381",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 532",
+    "subject": "CHEM",
+    "number": "532",
+    "title": "Structural Organic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A practical course on the application of modern spectroscopic methods for the determination of structures of complex organic and organometallic compounds.",
+    "prerequisites": {
+      "text": "CHEM 302",
+      "tree": "CHEM 302",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 352",
+      "excludes": [
+        "CHEM 352"
+      ]
+    },
+    "notes": [
+      "Winter",
+      "3 hours lecture",
+      "1 hour Drop-in lab"
+    ]
+  },
+  {
+    "code": "CHEM 533",
+    "subject": "CHEM",
+    "number": "533",
+    "title": "Small Molecule Crystallography",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Fundamentals of x-ray diffraction related to small molecule structure resolution, space groups, diffraction theory, strategies for structure solution, and refinement will be covered.",
+    "prerequisites": {
+      "text": "CHEM 355 or permission of instructor.",
+      "tree": "CHEM 355",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 534",
+    "subject": "CHEM",
+    "number": "534",
+    "title": "Nanoscience and Nanotechnology",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics discussed include scanning probe microscopy, chemical self-assembly, computer modelling, and microfabrication/micromachining.",
+    "prerequisites": {
+      "text": "CHEM 434 or PHYS 334 or permission of instructor",
+      "tree": {
+        "or": [
+          "CHEM 434",
+          "PHYS 334"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "one of CHEM 345, PHYS 357, or PHYS 346 or permission of instructor",
+      "tree": {
+        "or": [
+          "CHEM 345",
+          "PHYS 357",
+          "PHYS 346"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking PHYS 534",
+      "excludes": [
+        "PHYS 534"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 540",
+    "subject": "CHEM",
+    "number": "540",
+    "title": "Advances in Industrial Biotechnology",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to emerging technologies and research advances in biotechnologies. Topics include semisynthetic production of drugs and drug candidates through large-scale fermentation, next generation synthesis of DNA and whole genes, green toxicology, single-molecule diagnostics, orphan-drug re-purposing, and next- generation genomic analyses in drug development. Translational research, issues of entrepreneurship, sustainability, and ethics are also covered.",
+    "prerequisites": {
+      "text": "CHEM 222 (or equivalent) and BIOL 200 or CHEM 332",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEM 222",
+              "BIOL 200"
+            ]
+          },
+          "CHEM 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3 Students or higher. Not open to students who have taken or are taking PHAR 540.",
+      "excludes": [
+        "PHAR 540"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 542",
+    "subject": "CHEM",
+    "number": "542",
+    "title": "Advanced Nucleic Acid Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced-level chemical reactivity and metal binding properties, advanced methods for synthesis, purification and characterization of DNA/RNA, non-canonical DNA/RNA structures and functions, self-assembly of functional nucleic acid-based materials, chemical and fluorescence-based methods for probing nucleic acids in vitro and in vivo, in vitro evolution of functional nucleic acids for biotechnology, and diagnostic and therapeutic applications of modified nucleic acids.",
+    "prerequisites": {
+      "text": "CHEM 302 CHEM 332 or BIOL 200 BIOL 201 or permission of the instructor.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEM 302",
+              "CHEM 332"
+            ]
+          },
+          {
+            "and": [
+              "BIOL 200",
+              "BIOL 201"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 552",
+    "subject": "CHEM",
+    "number": "552",
+    "title": "Physical Organic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The correlation of theory with physical measurements on organic systems; an introduction to photochemistry; solvent and substituent effects on organic reaction rates, etc.; reaction mechanisms.",
+    "prerequisites": {
+      "text": "CHEM 302",
+      "tree": "CHEM 302",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 555",
+    "subject": "CHEM",
+    "number": "555",
+    "title": "Magnetic Resonance Spectroscopy",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The fundamental principles underlying Nuclear magnetic resonance (NMR), Electron Paramagnetic resonance (EPR) and Magnetic Resonance Imaging (MRI) will be covered and applied to biomolecules and materials chemistry. Topics include multidimensional spectra, molecular dynamics, the density matrix, and the product operator formalism.",
+    "prerequisites": {
+      "text": "CHEM 355 or equivalent",
+      "tree": "CHEM 355",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 556",
+    "subject": "CHEM",
+    "number": "556",
+    "title": "Advanced Quantum Mechanics",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Quantum mechanical treatment of species of chemical interest. Introduction to perturbation theory, both time-dependent and time-independent. Treatment of the variational principle. Introduction to atomic spectra. Chemical bonding in terms of both the valence bond and molecular orbital theory. Elementary collision theory. Interaction of radiation with molecules.",
+    "prerequisites": {
+      "text": "CHEM 345 and PHYS 242",
+      "tree": {
+        "and": [
+          "CHEM 345",
+          "PHYS 242"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 571",
+    "subject": "CHEM",
+    "number": "571",
+    "title": "Polymer Synthesis",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A survey of polymer preparation and characterization; mechanisms of chain growth, including free radical, cationic, anionic, condensation and transition metal-mediated polymerization, and the effects of these mechanisms on polymer architecture; preparation of alternating, block, graft and stereoblock copolymers; novel macromolecular structures including dendrimers and other nanostructures.",
+    "prerequisites": {
+      "text": "CHEM 302 or equivalent, or permission of instructor.",
+      "tree": "CHEM 302",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 572",
+    "subject": "CHEM",
+    "number": "572",
+    "title": "Synthetic Organic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Synthetic methods in organic chemistry and their application to the synthesis of complex molecules.",
+    "prerequisites": {
+      "text": "CHEM 382",
+      "tree": "CHEM 382",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 574",
+    "subject": "CHEM",
+    "number": "574",
+    "title": "Introductory Polymer Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A survey course on the structure of polymers, kinetics and mechanisms of polymer and copolymer synthesis; characterization and molecular weight distributions; polymer microstructure, the thermodynamics of polymer solutions; the crystalline and amorphous states, rubber elasticity and structure-property relationships.",
+    "prerequisites": {
+      "text": "Prerequisites: CHEM 223 and CHEM 243 or CHEM 213 and CHEM 273, or CHEM 233 (for engineering students only), or permission of the instructor.",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEM 223",
+              "CHEM 243"
+            ]
+          },
+          {
+            "and": [
+              "CHEM 213",
+              "CHEM 273"
+            ]
+          },
+          "CHEM 233"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CHEM 455 or CHEM 674.",
+      "excludes": [
+        "CHEM 455",
+        "CHEM 674"
+      ]
+    },
+    "notes": [
+      "Fall"
+    ]
+  },
+  {
+    "code": "CHEM 575",
+    "subject": "CHEM",
+    "number": "575",
+    "title": "Chemical Kinetics",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Kinetic laws, measurement of reaction rates, transition state and collision theory, experimental techniques in reaction kinetics, reaction mechanisms, RRKM theory, Marcus theory of electron transfer, photochemistry and catalysis. Recent developments and their application to chemical and biological problems. Elementary reactions in gas, solution and solid phases and on surfaces.",
+    "prerequisites": {
+      "text": "CHEM 273 and CHEM 223/CHEM 243 (formerly CHEM 213).",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "CHEM 273",
+              "CHEM 223"
+            ]
+          },
+          {
+            "and": [
+              "CHEM 243",
+              "CHEM 213"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 577",
+    "subject": "CHEM",
+    "number": "577",
+    "title": "Electrochemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals of electrochemistry and the application of electrochemical methods to chemical and biochemical problems. Emphasis is given to the study of electrode reaction mechanisms and the interpretation of electrochemical results for organic and inorganic systems. Voltammetric and coulometric methods are rigorously discussed. Several topics of interest in electrochemistry will be covered as time permits.",
+    "prerequisites": {
+      "text": "CHEM 243 or CHEM 203/CHEM 204, CHEM 367 and CHEM 377",
+      "tree": {
+        "or": [
+          "CHEM 243",
+          "CHEM 203",
+          {
+            "and": [
+              "CHEM 204",
+              "CHEM 367",
+              "CHEM 377"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 582",
+    "subject": "CHEM",
+    "number": "582",
+    "title": "Supramolecular Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to supramolecular organization will be followed by discussions on the nature of interactions and methodologies to create ordered aggregates of high complexity. Potential of supramolecular chemistry in fabricating smart materials will be explored using specific topics including inclusion chemistry, dendrimers, molecular self-assembly and crystal engineering.",
+    "prerequisites": {
+      "text": "CHEM 222, CHEM 381",
+      "tree": {
+        "and": [
+          "CHEM 222",
+          "CHEM 381"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 585",
+    "subject": "CHEM",
+    "number": "585",
+    "title": "Colloid Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "Principles of the physical chemistry of phase boundaries. Electrical double layer theory; van der Waals forces; Brownian motion; kinetics of coagulation; electrokinetics; light scattering; solid/liquid interactions; adsorption; surfactants; hydrodynamic interactions; rheology of dispersions.",
+    "prerequisites": {
+      "text": "CHEM 345, MATH 233 and MATH 315, PHYS 241 and PHYS 242. Students who haven't taken CHEM 223 and CHEM 243 must have taken CHEM 273 or permission of instructor.",
+      "tree": {
+        "and": [
+          "CHEM 345",
+          "MATH 233",
+          "MATH 315",
+          "PHYS 241",
+          "PHYS 242",
+          "CHEM 223",
+          "CHEM 243",
+          "CHEM 273"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 591",
+    "subject": "CHEM",
+    "number": "591",
+    "title": "Bioinorganic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [],
+    "description": "The roles of transition and main group elements in biology and medicine will be examined with an emphasis on using tools for structure and genome searching as well as becoming acquainted with experimental spectroscopic methods useful for bioinorganic chemistry such as macromolecular X-ray diffraction, EPR and EXAFS.",
+    "prerequisites": {
+      "text": "CHEM 381",
+      "tree": "CHEM 381",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "For Honours and Major Chemistry students or with permission",
+      "excludes": []
+    },
+    "notes": [
+      "Winter"
+    ]
+  },
+  {
+    "code": "CHEM 593",
+    "subject": "CHEM",
+    "number": "593",
+    "title": "Statistical Mechanics and Machine Learning for Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Faculty of Science",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Intermediate topics in statistical mechanics and related machine learning: ensemble theory, critical phenomena, static and time-dependent phenomena, linear response and fluctuations, Monte Carlo and molecular dynamics simulation methods, data driven simulation methods: MaxEnt modeling, generative machine learning, active learning.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Winter",
+      "Term paper",
+      "Recommended: CHEM 345 and CHEM 365"
+    ]
+  },
+  {
+    "code": "CHEM 603",
+    "subject": "CHEM",
+    "number": "603",
+    "title": "Principles and Applications of Materials Characterization",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Fundamentals of materials characterization methods and their applications in materials chemistry. Topics include static and dynamic mechanical testing, vibrational spectroscopy (Raman and FTIR), surface-based spectroscopies (XPS, Auger), advanced electron microscopy methods, X-ray absorption spectroscopy and X-ray diffraction (pXRD, WAXD, SAXS).",
+    "prerequisites": {
+      "text": "CHEM 355 or equivalent, or permission of instructor",
+      "tree": "CHEM 355",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 612",
+    "subject": "CHEM",
+    "number": "612",
+    "title": "Organometallic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A first course at the graduate level in organometallic chemistry. The theory and practice of the field is treated starting from basic principles of inorganic and organic chemistry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 621",
+    "subject": "CHEM",
+    "number": "621",
+    "title": "Reaction Mechanisms in Organic Chemistry",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A systematic survey of the mechanisms of the most common organic reactions from studies of reactions in the current literature.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 629",
+    "subject": "CHEM",
+    "number": "629",
+    "title": "Organic Synthesis",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An advanced course in the synthesis of organic molecules with an emphasis on stereoselective transformations. Topics will include multiple bond formation, functional group interconversions, carbon-carbon bond formation and stereoselective oxidations and reductions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 634",
+    "subject": "CHEM",
+    "number": "634",
+    "title": "Seminar in Advanced Materials",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A series of research-level seminars about topics of current interest in advanced materials. Topics include molecular and nanoelectronics, computational approaches to materials design and property predictions, new techniques in molecular and atomic imaging, advances in materials preparation, quantum devices and quantum computing.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 650",
+    "subject": "CHEM",
+    "number": "650",
+    "title": "Seminars in Chemistry 1",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A seminar course designed for graduate students in chemistry which in conjunction with McGill Chemical Society will provide exposure to a broad range of special topics within the discipline.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 seminar",
+      "Required of first year graduate students in Chemistry."
+    ]
+  },
+  {
+    "code": "CHEM 651",
+    "subject": "CHEM",
+    "number": "651",
+    "title": "Seminars in Chemistry 2",
+    "credits": 1,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "A seminar course designed for graduate students in chemistry which in conjunction with McGill Chemical Society will provide exposure to a broad range of special topics within the discipline.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1 seminar",
+      "Required of first year graduate students in Chemistry."
+    ]
+  },
+  {
+    "code": "CHEM 666",
+    "subject": "CHEM",
+    "number": "666",
+    "title": "Special Topics 2",
+    "credits": 6,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Critical and original essays are required on various subjects of current interest in chemistry.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 667",
+    "subject": "CHEM",
+    "number": "667",
+    "title": "Special Topics 3",
+    "credits": 4,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to basic concepts in the field of advanced materials.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This multi-university course is offered by the members of the Quebec Center for Advanced Materials (QCAM)."
+    ]
+  },
+  {
+    "code": "CHEM 688",
+    "subject": "CHEM",
+    "number": "688",
+    "title": "Progress Assessment 1",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An evaluation that is completed before the end of the second year of registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to graduate students in Chemistry.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 691",
+    "subject": "CHEM",
+    "number": "691",
+    "title": "M.Sc. Thesis Research 1",
+    "credits": 3,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work leading to writing of M.Sc. thesis for final submission to Graduate and Postdoctoral Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 692",
+    "subject": "CHEM",
+    "number": "692",
+    "title": "M.Sc. Thesis Research 2",
+    "credits": 6,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work leading to writing of M.Sc. thesis for final submission to Graduate and Postdoctoral Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 693",
+    "subject": "CHEM",
+    "number": "693",
+    "title": "M.Sc. Thesis Research 3",
+    "credits": 9,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work leading to writing of M.Sc. thesis for final submission to Graduate and Postdoctoral Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 694",
+    "subject": "CHEM",
+    "number": "694",
+    "title": "M.Sc. Thesis Research 4",
+    "credits": 12,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work leading to writing of M.Sc. thesis for final submission to Graduate and Postdoctoral Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 695",
+    "subject": "CHEM",
+    "number": "695",
+    "title": "M.Sc. Thesis Research 5",
+    "credits": 15,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Independent research work leading to writing of M.Sc. thesis for final submission to Graduate and Postdoctoral Studies.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 701",
+    "subject": "CHEM",
+    "number": "701",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An evaluation that is completed before the end of the third year of registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Ph.D. students in Chemistry.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 702",
+    "subject": "CHEM",
+    "number": "702",
+    "title": "Progress Assessment 2 ",
+    "credits": 0,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An evaluation that is completed before the end of the fourth year of registration.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Ph.D. students in Chemistry.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CHEM 716",
+    "subject": "CHEM",
+    "number": "716",
+    "title": "PhD 1 Research in Chemistry 1",
+    "credits": 15,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Research for PhD 1.This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Chemistry. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CHEM 717",
+    "subject": "CHEM",
+    "number": "717",
+    "title": "PhD 1 Research in Chemistry 2",
+    "credits": 15,
+    "offeredBy": "Chemistry",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "This course is part of a set of first-year research courses (Parts 1 and 2), meant for students who have been admitted directly from a bachelor’s program, that recognize the initial steps in research in the field of Chemistry. Students may begin developing their research project through literature reviews, research activities, and the exploration of initial research questions. They may become familiar with the relevant literature and ethical requirements of the field and, where appropriate, may begin preparing ethics review applications.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

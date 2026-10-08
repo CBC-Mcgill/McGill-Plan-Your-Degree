@@ -1,0 +1,955 @@
+[
+  {
+    "code": "CEEN 102",
+    "subject": "CEEN",
+    "number": "102",
+    "title": "Basic English",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Instruction in listening, speaking, reading and writing English at a basic level. The basic communicative skills required to operate in simple social contexts.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have successfully completed CEGL/YCGL 102",
+      "excludes": []
+    },
+    "notes": [
+      "Early opening registration date for Continuing Studies courses only."
+    ]
+  },
+  {
+    "code": "CEEN 104",
+    "subject": "CEEN",
+    "number": "104",
+    "title": "Elementary English 1",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Instruction in listening, speaking, reading and writing English at an elementary level. The communicative skills required to operate in various simple social contexts.",
+    "prerequisites": {
+      "text": "CEEN 102 or Entrance Placement Test or Permission of Director",
+      "tree": "CEEN 102",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have successfully completed CEGL/YCGL 104.",
+      "excludes": []
+    },
+    "notes": [
+      "Early opening registration date for Continuing Studies courses only."
+    ]
+  },
+  {
+    "code": "CEEN 106",
+    "subject": "CEEN",
+    "number": "106",
+    "title": "Elementary English 2",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Instruction in listening, speaking, reading and writing English at a high elementary level. The communicative skills required to operate in various simple social and cultural contexts.",
+    "prerequisites": {
+      "text": "CEEN 104 or Entrance Placement Test or Permission of Director",
+      "tree": "CEEN 104",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have successfully completed CEGL/YCGL 106.",
+      "excludes": []
+    },
+    "notes": [
+      "Early opening registration date for Continuing Studies courses only."
+    ]
+  },
+  {
+    "code": "CEEN 111",
+    "subject": "CEEN",
+    "number": "111",
+    "title": "Elementary English 1: Reading and Writing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction in English as an additional language at a low elementary level. Focus on reading and writing.",
+    "prerequisites": {
+      "text": "CEEN 102 or Entrance Placement Test or permission of Director.",
+      "tree": "CEEN 102",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 112",
+      "tree": "CEEN 112",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CEEN 104.",
+      "excludes": [
+        "CEEN 104"
+      ]
+    },
+    "notes": [
+      "You must obtain a minimum grade of B- in the prerequisite course to be permitted to register in the next level."
+    ]
+  },
+  {
+    "code": "CEEN 112",
+    "subject": "CEEN",
+    "number": "112",
+    "title": "Elementary English 1: Listening and Speaking",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction in English as an additional language at a low elementary level. Focus on listening and speaking.",
+    "prerequisites": {
+      "text": "CEEN 102 or Entrance Placement Test or permission of Director.",
+      "tree": "CEEN 102",
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 111",
+      "tree": "CEEN 111",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CEEN 104.",
+      "excludes": [
+        "CEEN 104"
+      ]
+    },
+    "notes": [
+      "You must obtain a minimum grade of B- in the prerequisite course to be permitted to register in the next level."
+    ]
+  },
+  {
+    "code": "CEEN 121",
+    "subject": "CEEN",
+    "number": "121",
+    "title": "Elementary English 2: Reading and Writing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction in English as an additional language at an upper elementary level. Focus on reading and writing.",
+    "prerequisites": {
+      "text": "(CEEN 111 and CEEN 112) or Entrance Placement Test or permission of Director.",
+      "tree": {
+        "and": [
+          "CEEN 111",
+          "CEEN 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 122",
+      "tree": "CEEN 122",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CEEN 106.",
+      "excludes": [
+        "CEEN 106"
+      ]
+    },
+    "notes": [
+      "You must obtain a minimum grade of B- in the prerequisite courses to be permitted to register in the next level."
+    ]
+  },
+  {
+    "code": "CEEN 122",
+    "subject": "CEEN",
+    "number": "122",
+    "title": "Elementary English 2: Listening and Speaking",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction in English as an additional language at an upper elementary level. Focus on listening and speaking.",
+    "prerequisites": {
+      "text": "(CEEN 111 and CEEN 112) or Entrance Placement Test or permission of Director.",
+      "tree": {
+        "and": [
+          "CEEN 111",
+          "CEEN 112"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 121",
+      "tree": "CEEN 121",
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking CEEN 106.",
+      "excludes": [
+        "CEEN 106"
+      ]
+    },
+    "notes": [
+      "You must obtain a minimum grade of B- in the prerequisite courses to be permitted to register in the next level."
+    ]
+  },
+  {
+    "code": "CEEN 201",
+    "subject": "CEEN",
+    "number": "201",
+    "title": "Vocabulary and Reading Strategies",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Further opportunities, beyond those provided in the core courses of the low-intermediate level, for students to increase their English language vocabulary and develop their reading skills. The course is designed to help students develop strategies for extrapolating meaning from context at both the sentence and paragraph level. Students will develop techniques for using sentence level and paragraph level clues to understand word meaning, sentence meaning, and paragraph meaning.",
+    "prerequisites": {
+      "text": "CEEN 121 and CEEN 122 or permission of the Director.",
+      "tree": {
+        "and": [
+          "CEEN 121",
+          "CEEN 122"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 202, or CEEN 211, or CEEN 212",
+      "tree": {
+        "or": [
+          "CEEN 202",
+          "CEEN 211",
+          "CEEN 212"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Certificate of Proficiency - English for Professional Communication",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade for prerequisite(s) is B-"
+    ]
+  },
+  {
+    "code": "CEEN 202",
+    "subject": "CEEN",
+    "number": "202",
+    "title": "Introduction: English Pronunciation System",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Further opportunities, beyond those provided in the core courses of the low-intermediate and mid-intermediate levels, for students to develop their English pronunciation skills, with a goal of increasing their comprehensibility. The course is designed to help students develop a knowledge of the segmental sounds of the English language and the method and location for producing these sounds. In addition, students will be introduced to word stress.",
+    "prerequisites": {
+      "text": "CEEN 121 and CEEN 122 or permission of the Director.",
+      "tree": {
+        "and": [
+          "CEEN 121",
+          "CEEN 122"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 201, or CEEN 211, or CEEN 212, or CEEN 221, or CEEN 222",
+      "tree": {
+        "or": [
+          "CEEN 201",
+          "CEEN 211",
+          "CEEN 212",
+          "CEEN 221",
+          "CEEN 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Certificate of Proficiency - English for Professional Communication",
+      "excludes": []
+    },
+    "notes": [
+      "Passing grade for prerequisite(s) is B-"
+    ]
+  },
+  {
+    "code": "CEEN 211",
+    "subject": "CEEN",
+    "number": "211",
+    "title": "Intermediate English 1: Reading and Writing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in reading and writing at a low-intermediate level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 106 or (CEEN 121 and CEEN 122) or Entrance Placement Test or Permission of Director.",
+      "tree": {
+        "or": [
+          "CEEN 106",
+          {
+            "and": [
+              "CEEN 121",
+              "CEEN 122"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 212",
+      "tree": "CEEN 212",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Passing grade for prerequisite(s) is B-.",
+      "**Although this course follows a Monday class schedule, there will be a make up class on Friday, May 23rd due to the statutory holiday on Monday, May 19th."
+    ]
+  },
+  {
+    "code": "CEEN 212",
+    "subject": "CEEN",
+    "number": "212",
+    "title": "Intermediate English 1: Listening and Speaking",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in listening and speaking at a low-intermediate level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 106 or (CEEN 121 and CEEN 122) or Entrance Placement Test or Permission of Director.",
+      "tree": {
+        "or": [
+          "CEEN 106",
+          {
+            "and": [
+              "CEEN 121",
+              "CEEN 122"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 211",
+      "tree": "CEEN 211",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Passing grade for prerequisite(s) is B-."
+    ]
+  },
+  {
+    "code": "CEEN 221",
+    "subject": "CEEN",
+    "number": "221",
+    "title": "Intermediate English 2: Reading and Writing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in reading and writing at a mid-intermediate level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 211 and CEEN 212 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 211",
+          "CEEN 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 222",
+      "tree": "CEEN 222",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Although this course follows a Monday class schedule, there will be a make up class on Friday, May 23rd due to the statutory holiday on Monday, May 19th."
+    ]
+  },
+  {
+    "code": "CEEN 222",
+    "subject": "CEEN",
+    "number": "222",
+    "title": "Intermediate English 2: Listening and Speaking",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in listening and speaking at a mid-intermediate level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 211 and CEEN 212 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 211",
+          "CEEN 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 221",
+      "tree": "CEEN 221",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CEEN 266",
+    "subject": "CEEN",
+    "number": "266",
+    "title": "Introduction to Creative Writing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Further opportunities, beyond those provided in the core courses of the intermediate-mid level, for students to develop their English writing skills. The course is designed to encourage students to further develop their English writing capabilities by developing an understanding of different styles of creative writing through reading and analyzing short texts, and by developing creative ideas and expressing them through paragraph writing.",
+    "prerequisites": {
+      "text": "CEEN 211, CEEN 212 or permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 211",
+          "CEEN 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 221, CEEN 222",
+      "tree": {
+        "and": [
+          "CEEN 221",
+          "CEEN 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Certificate in Proficiency in English for Professional Communication.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CEEN 267",
+    "subject": "CEEN",
+    "number": "267",
+    "title": "English Study Topics: The Story of Canada",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Practice of English skills at the intermediate-mid level by reviewing material focused on the history of Canada, from pre-colonial Indigenous history to modern times.",
+    "prerequisites": {
+      "text": "CEEN 211, CEEN 212, EPT - Placement test (Intermediate Mid), or permission of the department.",
+      "tree": {
+        "and": [
+          "CEEN 211",
+          "CEEN 212"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 221, CEEN 222",
+      "tree": {
+        "and": [
+          "CEEN 221",
+          "CEEN 222"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "Please note: this course may be offered on a hybrid schedule, with some lectures delivered online.",
+      "As per the Department's internal program regulations, level advancement requires a minimum grade of B- (65)."
+    ]
+  },
+  {
+    "code": "CEEN 301",
+    "subject": "CEEN",
+    "number": "301",
+    "title": "English Grammar in Context",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course is intended for ESL students who need further training in grammatical accuracy, applied grammar, and syntax. They will review the metalanguage necessary to facilitate their learning, review important grammatical structures and apply them in different professional and social contexts. / Ce cours s'adresse aux étudiants en anglais langue seconde (ESL), qui doivent en apprendre davantage au sujet du choix grammatical, de la grammaire appliquée et de la syntaxe. Ils y passeront en revue le métalangage nécessaire pour simplifier leur apprentissage et réviseront les structures grammaticales d'importance afin de les utiliser dans différents contextes professionnels et sociaux.",
+    "prerequisites": {
+      "text": "CEEN 221 and CEEN 222, Entrance Placement Test, or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 221",
+          "CEEN 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 331 and/or CEEN 332",
+      "tree": {
+        "or": [
+          "CEEN 331",
+          "CEEN 332"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "39 hours",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day.",
+      "Continuing Studies PTP program",
+      "Early opening registration date for CS courses only"
+    ]
+  },
+  {
+    "code": "CEEN 302",
+    "subject": "CEEN",
+    "number": "302",
+    "title": "English Pronunciation: Stress and Intonation",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Further opportunities, beyond those provided in the core courses of the intermediate-high level, for students to hone their English pronunciation skills, with a goal of increasing their comprehensibility. The course is designed to encourage students to develop a knowledge of English pronunciation at the suprasegmental level. Students will further investigate word stress, and will be introduced to sentence stress, and intonation.",
+    "prerequisites": {
+      "text": "CEEN 221, CEEN 222 or permission of the Director.",
+      "tree": {
+        "and": [
+          "CEEN 221",
+          "CEEN 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 331, CEEN 332",
+      "tree": {
+        "and": [
+          "CEEN 331",
+          "CEEN 332"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Certificate in Proficiency in English for Professional Communication.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CEEN 331",
+    "subject": "CEEN",
+    "number": "331",
+    "title": "Intermediate English 3: Reading and Writing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in reading and writing at a high-intermediate level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 221 and CEEN 222 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 221",
+          "CEEN 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 332",
+      "tree": "CEEN 332",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CEEN 332",
+    "subject": "CEEN",
+    "number": "332",
+    "title": "Intermediate English 3: Listening and Speaking",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in listening and speaking at a high-intermediate level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 221 and CEEN 222 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 221",
+          "CEEN 222"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 331",
+      "tree": "CEEN 331",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Although this course follows a Monday class schedule, there will be a make up class on Friday, May 23rd due to the statutory holiday on Monday, May 19th."
+    ]
+  },
+  {
+    "code": "CEEN 401",
+    "subject": "CEEN",
+    "number": "401",
+    "title": "English Vocabulary in Context",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Focuses on English communication through the study of vocabulary and its function in discourse. Broadens the field and mode of oral/written communication by developing \"lexical competence\". Identifies the nature and role of words, phrasal verbs and idioms through the study of semantics and intense practice of vocabulary in context./ Ce cours se concentre sur la communication par le truchement de l'étude du vocabulaire et de ses fonctions dans le discours. Il cherche à développer une véritable « compétence lexicale » tant à l'oral qu'à l'écrit. L'enrichissement du vocabulaire se fera par l'identification de la nature et du rôle des mots, des locutions ou des expressions figées, par l'étude des champs sémantiques et par une pratique intensive favorisant le réemploi en contexte.",
+    "prerequisites": {
+      "text": "CEEN 331 and CEEN 332, or Entrance Placement Test (EPT), or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 331",
+          "CEEN 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "39 hours",
+      "Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fourth lecture day."
+    ]
+  },
+  {
+    "code": "CEEN 402",
+    "subject": "CEEN",
+    "number": "402",
+    "title": "English Communication and Cultural Patterns",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examines the impact of cultural patterns in communication in English. Intended for those visiting/working abroad, and/or dealing with international associates. Explores the fundamental cultural differences and business practices in the different regions of the world, and how the English language should be used in specific situations./ Destiné aux personnes qui séjournent ou travaillent à l'étranger, ou encore qui traitent avec des associés de divers pays, ce cours étudie l'effet des modèles culturels sur la communication en langue anglaise. Il inclut l'exploration des différences culturelles fondamentales et des pratiques commerciales en usage dans diverses régions du monde, de même que les différentes façons dont la langue anglaise devrait être utilisée dans des cas bien précis.",
+    "prerequisites": {
+      "text": "CEEN 331 and CEEN 332, or Entrance Placement Test (EPT), or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 331",
+          "CEEN 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "39 hours",
+      "**Due to the intensive nature of this course, the standard add/drop and withdrawal deadlines do not apply. Add/drop is the second lecture day and withdrawal is the fifth lecture day.",
+      "Continuing Studies PTP program",
+      "Early opening registration date for CS courses only"
+    ]
+  },
+  {
+    "code": "CEEN 403",
+    "subject": "CEEN",
+    "number": "403",
+    "title": "Strategic Communication in English",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This course will prepare ESL/EFL students for specific types of strategic communication in organizations and interpersonal relationships at work. Students will develop discursive and pragmatic competence in oral and written communication as well as learn about factors that influence group communication in professional and social situations. / Ce cours préparera les étudiants en anglais langue seconde (ESL) ou étrangère (EFL) à élaborer des types précis de communication stratégique au sein d'entreprises et lors d'échanges interpersonnels au travail. Ils y acquerront des compétences discursives et pragmatiques en communication orale et écrite et ils en apprendront sur les facteurs qui influent sur les communications de groupe, tant professionnelles que sociales.",
+    "prerequisites": {
+      "text": "CEEN 411 and CEEN 412, Entrance Placement Test, or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 411",
+          "CEEN 412"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 421 and/or CEEN 422",
+      "tree": {
+        "or": [
+          "CEEN 421",
+          "CEEN 422"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "39 hours",
+      "**Although this course follows a Monday class schedule, there will be a make up class on Friday, May 23rd due to the statutory holiday on Monday, May 19th."
+    ]
+  },
+  {
+    "code": "CEEN 404",
+    "subject": "CEEN",
+    "number": "404",
+    "title": "English Creative Non-fiction Writing",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An exploration of creative non-fiction writing for ESL students. Students will read, write, and respond to creative non-fiction. An emphasis will be on narrative and descriptive forms.",
+    "prerequisites": {
+      "text": "CEEN 411 and CEEN 412 or English Placement Test (EPT).",
+      "tree": {
+        "and": [
+          "CEEN 411",
+          "CEEN 412"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 421, CEEN 422.",
+      "tree": {
+        "and": [
+          "CEEN 421",
+          "CEEN 422"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Only open to students in the Certificate in Proficiency in English for Professional Communication.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CEEN 411",
+    "subject": "CEEN",
+    "number": "411",
+    "title": "Advanced English 1: Reading and Writing ",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in reading and writing at a low-advanced level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 331 and CEEN 332 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 331",
+          "CEEN 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 412",
+      "tree": "CEEN 412",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Although this course follows a Tuesday class schedule, there will be a make up class on Friday, June 27th and Friday, July 4th due to statutory holidays on both Tuesday, June 24th and Tuesday, July 1st."
+    ]
+  },
+  {
+    "code": "CEEN 412",
+    "subject": "CEEN",
+    "number": "412",
+    "title": "Advanced English 1: Listening and Speaking",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction in listening and speaking at a low-advanced level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 331 and CEEN 332 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 331",
+          "CEEN 332"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 411",
+      "tree": "CEEN 411",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CEEN 421",
+    "subject": "CEEN",
+    "number": "421",
+    "title": "Advanced English 2: Reading and Writing ",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in reading and writing at a mid-advanced level of English as an additional language level.",
+    "prerequisites": {
+      "text": "CEEN 411 and CEEN 412 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 411",
+          "CEEN 412"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 422",
+      "tree": "CEEN 422",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": [
+      "**Although this course follows a Monday class schedule, there will be a make up class on Friday, May 23rd due to the statutory holiday on Monday, May 19th."
+    ]
+  },
+  {
+    "code": "CEEN 422",
+    "subject": "CEEN",
+    "number": "422",
+    "title": "Advanced English 2:Listening and Speaking",
+    "credits": 3,
+    "offeredBy": "Global & Strategic Comm.",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Instruction and practice in listening and speaking at a mid-advanced level of English as an additional language.",
+    "prerequisites": {
+      "text": "CEEN 411 and CEEN 412 or Entrance Placement Test or Permission of the Director",
+      "tree": {
+        "and": [
+          "CEEN 411",
+          "CEEN 412"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": {
+      "text": "CEEN 421",
+      "tree": "CEEN 421",
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  }
+]

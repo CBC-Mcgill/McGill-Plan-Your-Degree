@@ -1,0 +1,197 @@
+[
+  {
+    "code": "ONCO 610",
+    "subject": "ONCO",
+    "number": "610",
+    "title": "Fundamentals of Oncology and Cancer Research",
+    "credits": 6,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A multidisciplinary approach to the entire spectrum of principles and practice in all fields of oncology, as well as to its research domains, from basic science to clinical and population health sciences. Content areas will include mechanisms of carcinogenesis, tumour pathology, cancer epidemiology, prevention, screening, diagnosis, treatment, psychosocial support, palliative care, global cancer control, and quality of cancer care services. The multidisciplinary nature of cancer research and clinical care and how research findings inform clinical practice and policymaking in cancer control will be illustrated.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all graduate students in the Faculty of Medicine and Health Sciences, however priority will be given to those enrolled in the Graduate Diploma in Oncology program.",
+      "excludes": []
+    },
+    "notes": [
+      "English is the language of instruction but students may present in either of the official languages.",
+      "Students must register for both ONCO 610D1 and ONCO 610D2",
+      "No credit will be given for this course unless both ONCO 610D1 and ONCO 610D2 are successfully completed in consecutive terms"
+    ],
+    "parts": [
+      {
+        "code": "ONCO 610D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "ONCO 610D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "ONCO 610N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "ONCO 610N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  },
+  {
+    "code": "ONCO 611",
+    "subject": "ONCO",
+    "number": "611",
+    "title": "Proteomics for Precision Medicine",
+    "credits": 3,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Proteomic applications in medicine, including an introduction to mass spectrometry and related state-of-the-art proteomics techniques, and how these techniques can be used to answer important medical questions using clinical samples. The determination of levels and post-translational modifications of diagnostic/prognostic protein markers, the concentration of protein therapeutics in plasma, the simultaneous imaging of multiple proteins on tissue slices by MALDI-MS, and global proteome and phosphoproteome analyses to study signaling pathways. Additionally, strategies for data analysis and data interpretation using modern bioinformatic tools.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "ONCO 615",
+    "subject": "ONCO",
+    "number": "615",
+    "title": "Principles and Practice of Clinical Trials",
+    "credits": 3,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An overview of the design, conduct and analysis of clinical trials. Topics include types of clinical trials, study designs, practical considerations when setting up a clinical trial, ethics, regulatory requirements, trial monitoring, data management, investigator responsibilities and statistical analysis.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students who have an undergraduate degree or professional designation in fields related to health or biomedical disciplines. In the absence of the latter, the instructor's permission is required. Priority will be given to students enrolled in the Graduate Diploma in Oncology program.",
+      "excludes": []
+    },
+    "notes": [
+      "English is the language of instruction but students may present in either of the official languages."
+    ]
+  },
+  {
+    "code": "ONCO 620",
+    "subject": "ONCO",
+    "number": "620",
+    "title": "Best Practices in Biomedical Research",
+    "credits": 3,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of research ethics as well as best practices and guiding principles in planning, conducting and publishing a research investigation. Topics include (i) ethics in biomedical research, (ii) reading and reviewing papers, (iii)research integrity and (iv) scholarly publishing. Examples will be taken from the field of cancer research. The importance of interdisciplinary collaboration in enhancing the value of biomedical research will be illustrated.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to all graduate students in the Faculty of Medicine and Health Sciences but priority will be given to those enrolled in the Graduate Diploma in Oncology program.",
+      "excludes": []
+    },
+    "notes": [
+      "English is the language of instruction but students may present in either of the official languages"
+    ]
+  },
+  {
+    "code": "ONCO 625",
+    "subject": "ONCO",
+    "number": "625",
+    "title": "Quality Improvement Principles and Methods",
+    "credits": 3,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Principles and methodology of quality improvement in the delivery of health services with a focus on clinical care in oncology. Topics include developing and conducting quality improvement initiatives, data collection, data analysis and implementation of change in clinical practice.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to those in health services research or practice who are involved with healthcare administration and management, however, priority will be given to those enrolled in the Graduate Diploma in Oncology program.",
+      "excludes": []
+    },
+    "notes": [
+      "English is the language of instruction but students may present in either of the official languages."
+    ]
+  },
+  {
+    "code": "ONCO 630",
+    "subject": "ONCO",
+    "number": "630",
+    "title": "Oncology Practicum",
+    "credits": 3,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Involvement in a real-world research or quality improvement project with relevance to the students’ chosen area of focus.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "ONCO 610, ONCO 620",
+      "tree": {
+        "and": [
+          "ONCO 610",
+          "ONCO 620"
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": {
+      "text": "Open only to students in the Graduate Diploma in Oncology program.",
+      "excludes": []
+    },
+    "notes": [
+      "English is the language of instruction but students may write their paper/present in either of the official languages."
+    ]
+  },
+  {
+    "code": "ONCO 635",
+    "subject": "ONCO",
+    "number": "635",
+    "title": "Qualitative and Psychosocial Health Research",
+    "credits": 3,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "An overview of the theoretical, methodological and analytical skillsets required to design, conduct and analyze qualitative health research studies, with emphasis on psychosocial oncology and palliative care research.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Only open to graduate students in the Gerald Bronfman Department of Oncology.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "ONCO 645",
+    "subject": "ONCO",
+    "number": "645",
+    "title": "Seminars in Global Oncology",
+    "credits": 3,
+    "offeredBy": "Gerald Bronfman Dept Oncology",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Identification of the challenges and strategies for addressing cancer prevention, diagnosis and care, as well as cancer research and education from an international perspective.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to students in the Graduate Diploma in Oncology. It is also open to graduate students in the Faculty of Medicine and Health Sciences; however, permission from the instructor is required for the latter students.",
+      "excludes": []
+    },
+    "notes": [
+      "English is the language of instruction but students may present in either of the official languages"
+    ]
+  }
+]

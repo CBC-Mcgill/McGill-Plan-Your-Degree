@@ -1,0 +1,552 @@
+[
+  {
+    "code": "OCC1 245",
+    "subject": "OCC1",
+    "number": "245",
+    "title": "Introduction to Professional Practice 1",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to Occupational Therapy through interactive seminars.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "OCC1 443",
+    "subject": "OCC1",
+    "number": "443",
+    "title": "Constructing Mental Health",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course provides foundational knowledge for occupational therapy practice in psychiatry from a historical and critical perspective. Students will have the opportunity to develop mental health literacy, and apply previously learned concepts for occupation-focused reasoning in the domain of mental illness and mental health.",
+    "prerequisites": {
+      "text": "OCC1 245 & POTH 250",
+      "tree": {
+        "and": [
+          "OCC1 245",
+          "POTH 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is only open to U2 students in the BSc. (Rehab.Sc); Major in Occupational Therapy.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 450",
+    "subject": "OCC1",
+    "number": "450",
+    "title": "Enabling Leisure Occupations",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "An examination of the concepts of leisure and play as occupations throughout the lifespan. Students will explore a variety of adapted leisure activities including those available within local community organizations and will appreciate the role of occupational therapy in, and importance of, enabling leisure occupations.",
+    "prerequisites": {
+      "text": "OCC1 245 & POTH 250",
+      "tree": {
+        "and": [
+          "OCC1 245",
+          "POTH 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "This course is only open to students in the BSc. (Rehab.Sc); Major in Occupational Therapy.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 500",
+    "subject": "OCC1",
+    "number": "500",
+    "title": "Pre-Clinical Practicum Seminar",
+    "credits": 0,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This compulsory seminar course will comprise 5 pre-clinical seminars of two hours each to be offered in the U3/QY year during the Fall term (one seminar; total of 2 hrs) and during the Winter term (4 seminars; total of 8 hrs). This course is a prerequisite for Clinical Practicum 1 and 2 (OCC1 501 and OCC1 502).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the following programs: BSc Rehabilitation Science (Major Occupational Therapy) and MSc Applied Qualifying Year for Occupational Therapy.",
+      "excludes": []
+    },
+    "notes": [
+      "Students must register for both OCC1 500D1 and OCC1 500D2.",
+      "No credit will be given for this course unless both OCC1 500D1 and OCC1 500D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "OCC1 500D1",
+        "credits": 0,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "OCC1 500D2",
+        "credits": 0,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "OCC1 501",
+    "subject": "OCC1",
+    "number": "501",
+    "title": "Clinical Practicum 1",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "First supervised clinical practicum. Introduction to history taking, clinical reasoning, assessment and treatment for physical and psychiatric conditions.",
+    "prerequisites": {
+      "text": "OCC1 545, OCC1 546, OCC1 547, OCC1 548, OCC1 549, OCC1 550, OCC1 551",
+      "tree": {
+        "and": [
+          "OCC1 545",
+          "OCC1 546",
+          "OCC1 547",
+          "OCC1 548",
+          "OCC1 549",
+          "OCC1 550",
+          "OCC1 551"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the COVID-19 situation, add/drop is the tenth lecture day and withdrawal is the thirteenth lecture day."
+    ]
+  },
+  {
+    "code": "OCC1 502",
+    "subject": "OCC1",
+    "number": "502",
+    "title": "Clinical Practicum 2",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Summer 2026"
+    ],
+    "description": "Second supervised clinical practicum.",
+    "prerequisites": {
+      "text": "OCC1 501",
+      "tree": "OCC1 501",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "**Due to the COVID-19 situation, add/drop is the eleventh lecture day and withdrawal is the fifteenth lecture day."
+    ]
+  },
+  {
+    "code": "OCC1 503",
+    "subject": "OCC1",
+    "number": "503",
+    "title": "Clinical Practicum 3",
+    "credits": 8,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Third supervised clinical practicum.",
+    "prerequisites": {
+      "text": "OCC1 502 and Fall Courses in M1 OT",
+      "tree": "OCC1 502",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "OCC1 545",
+    "subject": "OCC1",
+    "number": "545",
+    "title": "Therapeutic Strategies in OT 1",
+    "credits": 8,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Evaluation, intervention and planning using a neuromuscular skeletal framework.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3/QY OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 547",
+    "subject": "OCC1",
+    "number": "547",
+    "title": "Occupational Solutions 1",
+    "credits": 6,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Assessment and treatment of clients with disorders of the nervous system.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3/QY OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 548",
+    "subject": "OCC1",
+    "number": "548",
+    "title": "Holistic Approaches in OT",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "The theory, principles of treatment, clinical reasoning and therapeutic use of activities in the OT intervention of acute and chronic medical and surgical conditions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3/QY OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 549",
+    "subject": "OCC1",
+    "number": "549",
+    "title": "Therapeutic Strategies in OT 2",
+    "credits": 4,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced Therapeutic Strategies for systemic and complex conditions.",
+    "prerequisites": {
+      "text": "OCC1 545",
+      "tree": "OCC1 545",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3/QY OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 550",
+    "subject": "OCC1",
+    "number": "550",
+    "title": "Enabling Human Occupation",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Occupational performance (productivity, self-care, leisure) is examined through the Canadian Occupational Performance Model and the Model of Human Occupation, both of which focus on the interaction of the individual with the environment. Human performance is analyzed focusing on prevention of disability and/or restoration of function.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3/QY OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 551",
+    "subject": "OCC1",
+    "number": "551",
+    "title": "Psychosocial Practice in OT",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "School of Phys & Occ Therapy",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Principles of basic psychosocial assessments and treatment approaches for psychiatric conditions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "U3/QY OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 600",
+    "subject": "OCC1",
+    "number": "600",
+    "title": "Clinical Practicum Seminars",
+    "credits": 0,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "This compulsory course will comprise 9 pre-clinical seminars to be offered in the M1 and M2 years prior to Clinical Practicum 3 and 4. The seminars will be implemented during the M1 Summer term (1 seminar; total of 2 hrs), M1 Fall term (2 seminars; total of 4 hrs), M1 Winter term (5 seminars; total of 11.5 hrs) and the M2 Fall term (1 seminars; total of 1 hr). This course is a prerequisite for Clinical Practicum 3 and 4 (OCC1 503 and OCC1 602).",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the following program: M.Sc.(Applied) in Occupational Therapy.",
+      "excludes": []
+    },
+    "notes": [
+      "No credit will be given for this course unless OCC1 600J1, OCC1 600J2 and OCC1 600J3 are successfully completed in consecutive terms.",
+      "Students must register for OCC1 600J1, OCC1 600J2 and OCC1 600J3."
+    ],
+    "parts": [
+      {
+        "code": "OCC1 600J1",
+        "credits": 0,
+        "terms": [
+          "Summer 2026"
+        ]
+      },
+      {
+        "code": "OCC1 600J2",
+        "credits": 0,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "OCC1 600J3",
+        "credits": 0,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "OCC1 602",
+    "subject": "OCC1",
+    "number": "602",
+    "title": "Clinical Practicum 4",
+    "credits": 7,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Fourth clinical practicum.",
+    "prerequisites": {
+      "text": "OCC1 503",
+      "tree": "OCC1 503",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 617",
+    "subject": "OCC1",
+    "number": "617",
+    "title": "Occupational Solutions 2",
+    "credits": 6,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "OT assessment and treatment of clients with disorders of the nervous system.",
+    "prerequisites": {
+      "text": "OCC1 547",
+      "tree": "OCC1 547",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 618",
+    "subject": "OCC1",
+    "number": "618",
+    "title": "Applied OT: Psychosocial Theory",
+    "credits": 5,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Current theories of psychosocial OT, including advanced psychosocial assessments and individual and/or group interventions relevant to specific psychosocial theories.",
+    "prerequisites": {
+      "text": "OCC1 551",
+      "tree": "OCC1 551",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 620",
+    "subject": "OCC1",
+    "number": "620",
+    "title": "Work/Ergonomics",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "The principles of vocational rehabilitation including job demands analysis, functional capacity evaluation, and return to work. Examines environmental influences, ergonomic principles and assessment, the fitting of the workplace to the capabilities of the human worker, promotion of work safety, and injury prevention.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 622",
+    "subject": "OCC1",
+    "number": "622",
+    "title": "Community-Based OT",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Assessment of community needs, development of OT community services, and the different roles of the OT in mental health and in the international community. Reintegration of the client in the socio-cultural community.",
+    "prerequisites": {
+      "text": "OCC1 618",
+      "tree": "OCC1 618",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 623",
+    "subject": "OCC1",
+    "number": "623",
+    "title": "Assistive Technology",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Application of high and low-technology assistive devices to enhance performance and individual human needs, including alternative computer access, manual and powered mobility, augmentative communication, telecommunications and environmental control, social and professional issues regarding technology service delivery.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 625",
+    "subject": "OCC1",
+    "number": "625",
+    "title": "Functional Environments",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Problems and solutions of the environment that impact negatively on the physically or mentally disabled individual.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT and Architecture students only",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "OCC1 626",
+    "subject": "OCC1",
+    "number": "626",
+    "title": "Mental Health: Child and Youth",
+    "credits": 3,
+    "offeredBy": "Phys and Occ Therapy",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Orientation to children and adolescents with psychiatric disorders as well as evaluation and remediation techniques.",
+    "prerequisites": {
+      "text": "OCC1 551, OCC1 618",
+      "tree": {
+        "and": [
+          "OCC1 551",
+          "OCC1 618"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "M1 OT students only",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

@@ -1,0 +1,280 @@
+[
+  {
+    "code": "EDES 304",
+    "subject": "EDES",
+    "number": "304",
+    "title": "Educational Techniques for Planning and Assessment",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of the roles of planning and assessment in teaching and learning with attention to the Quebec context, culturally responsive assessment, the impact of technological advancements such as generative AI, backward design, writing learning objectives, assessment for, of, and as learning, differentiated planning practices, and the creation of assessment tools.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDES 334",
+    "subject": "EDES",
+    "number": "334",
+    "title": "Teaching Secondary Social Studies 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "An examination of Quebec and other secondary school social studies curricula: Objectives; theoretical orientation; course structures; curriculum resources. Teaching and learning methodologies both common to the social studies and specific to the disciplines of history, geography, and economics.",
+    "prerequisites": {
+      "text": "18 credits of university social science courses at or above the 200 level",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDEC 334",
+      "excludes": [
+        "EDEC 334"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDES 335",
+    "subject": "EDES",
+    "number": "335",
+    "title": "Teaching Secondary Science 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "A survey of the philosophy and curriculum principles behind modern high school courses in the physical and life sciences, especially related to the Quebec context. An examination of teaching methods for junior and senior high school science.",
+    "prerequisites": {
+      "text": "18 credits of university science courses at or above the 200 level",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDEC 335",
+      "excludes": [
+        "EDEC 335"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDES 350",
+    "subject": "EDES",
+    "number": "350",
+    "title": "Classroom Practices",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Competency-based discipline skills and methods of classroom management, emphasizing the relationship between theory and practice; the rationale for various approaches to classroom management; strategies for developing instruction that focus attention and reduce off-task behaviour.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "(EDEC 351 and EDFE 351) or (EDFE 359 and EDSL 315) or (EDEA 442 and EDFE 308)",
+      "tree": {
+        "or": [
+          {
+            "and": [
+              "EDEC 351",
+              "EDFE 351"
+            ]
+          },
+          {
+            "and": [
+              "EDFE 359",
+              "EDSL 315"
+            ]
+          },
+          {
+            "and": [
+              "EDEA 442",
+              "EDFE 308"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDES 353",
+    "subject": "EDES",
+    "number": "353",
+    "title": "Teaching Secondary Mathematics 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Provides insight and understanding of the Quebec secondary mathematics program. Focuses on key areas of what secondary mathematics teachers need to know and be able to do to support students' development of mathematical understanding (focus on mathematics content, students' reasoning, and pedagogy).",
+    "prerequisites": {
+      "text": "18 credits in university mathematics courses at or above the 200 level.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDES 361",
+    "subject": "EDES",
+    "number": "361",
+    "title": "Teaching Secondary English 1",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of appropriate materials related to the high school English programs; exploration of various techniques of teaching language, literature, writing and dramatics in the secondary school.",
+    "prerequisites": {
+      "text": "18 credits of university ENGL, COMS, or LING courses at or above the 200 level or EDSL 330",
+      "tree": "EDSL 330",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDES 366",
+    "subject": "EDES",
+    "number": "366",
+    "title": "Literature for Young Adults",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Selection and use of literature for the differing abilities and interests of high school students.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "EDES 434",
+    "subject": "EDES",
+    "number": "434",
+    "title": "Teaching Secondary Social Studies 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course will examine the nature, content, and methodology of social studies education in the secondary school.",
+    "prerequisites": {
+      "text": "EDES 334",
+      "tree": "EDES 334",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDES 389",
+      "excludes": [
+        "EDES 389"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDES 435",
+    "subject": "EDES",
+    "number": "435",
+    "title": "Teaching Secondary Science 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Principles and procedures for implementation of the general science curriculum in the secondary schools of Québec. A survey of teaching methods and laboratory management appropriate to the junior and senior high school level.",
+    "prerequisites": {
+      "text": "EDES 335",
+      "tree": "EDES 335",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDES 370",
+      "excludes": [
+        "EDES 370"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDES 453",
+    "subject": "EDES",
+    "number": "453",
+    "title": "Teaching Secondary Mathematics 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "This course supplements EDES 353 for students who select Mathematics as a single teachable subject. Evaluation of learning in Mathematics, obstacles to learning, technological aids to learning.",
+    "prerequisites": {
+      "text": "EDES 353",
+      "tree": "EDES 353",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken EDEC 338",
+      "excludes": [
+        "EDEC 338"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "EDES 461",
+    "subject": "EDES",
+    "number": "461",
+    "title": "Teaching Secondary English 2",
+    "credits": 3,
+    "offeredBy": "Integrated Studies in Ed",
+    "faculty": "Faculty of Education",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced inquiry into special interest areas in the teaching of Secondary English Language Arts in light of contemporary theory and research. Parts of this course may be undertaken in school settings.",
+    "prerequisites": {
+      "text": "EDES 361",
+      "tree": "EDES 361",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open to B.Ed. Secondary students having English as a teaching option",
+      "excludes": []
+    },
+    "notes": []
+  }
+]

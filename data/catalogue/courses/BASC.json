@@ -1,0 +1,104 @@
+[
+  {
+    "code": "BASC 201",
+    "subject": "BASC",
+    "number": "201",
+    "title": "Arts and Science Integrative Topics",
+    "credits": 3,
+    "offeredBy": "Science",
+    "faculty": "Interfaculty, B.A. & Sc.",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Topics that integrate information from Arts & Science (e.g. biomedical ethics; history of science; scientific reasoning; military conflict and geography; philosophy of mind, etc.) to exemplify the benefits of applying scholarship from diverse areas to a problem.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the B.A.& Sc.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "BASC 396",
+    "subject": "BASC",
+    "number": "396",
+    "title": "Undergraduate Research Project",
+    "credits": 3,
+    "offeredBy": "Science",
+    "faculty": "Interfaculty, B.A. & Sc.",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Independent research project with a final written report.",
+    "prerequisites": {
+      "text": "Prerequisites: BASC 201, at least one term of undergraduate studies and a CGPA of at least 3.0; or permission of instructor.",
+      "tree": "BASC 201",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Permission required via the Office of Undergraduate Reseach in Science (OURS). Student cannot be supervised by same instructor for two 396 courses. S/U option not permitted. Only open to students in BA&Sc programs.",
+      "excludes": []
+    },
+    "notes": [
+      "Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. Individual projects may be suggested each term which may have project-specific prerequisites. Students may also approach professors to devise their own projects. See https://www.mcgill.ca/science/research/undergraduate-research/science-research-courses for more information about available projects and application forms and procedures.",
+      "For projects that are not integrative, students should consider other research project or independent study courses offered by the Faculties of Arts or Science."
+    ]
+  },
+  {
+    "code": "BASC 449",
+    "subject": "BASC",
+    "number": "449",
+    "title": "Integrative Research Project",
+    "credits": 6,
+    "offeredBy": "Arts & Science Admin (Shared)",
+    "faculty": "Interfaculty, B.A. & Sc.",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised integrative research project.",
+    "prerequisites": {
+      "text": "BASC 201, at least one term of undergraduate studies and a CGPA of at least 3.0; or permission of instructor.",
+      "tree": "BASC 201",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to B.A. & Sc. students. Before registration, projects must be arranged individually with professors. Each project will be approved by chair/delegate of the B.A. & Sc. Program Administration Committee.",
+      "excludes": []
+    },
+    "notes": [
+      "Students are advised to start the application process well before the start of the term and to plan for an alternative course in the case that no suitable project is available. See http://www.mcgill.ca/science/ours for more information about available projects and application forms and procedures.",
+      "For projects that are not integrative, students should consider other research project or independent study courses offered by the Faculties of Arts or Science."
+    ],
+    "parts": [
+      {
+        "code": "BASC 449D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "BASC 449D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      },
+      {
+        "code": "BASC 449N1",
+        "credits": 3,
+        "terms": []
+      },
+      {
+        "code": "BASC 449N2",
+        "credits": 3,
+        "terms": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "code": "HSED 601",
+    "subject": "HSED",
+    "number": "601",
+    "title": "Introduction to Leadership in Health Sciences Education ",
+    "credits": 3,
+    "offeredBy": "Health Sciences Education",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Overview of the major leadership issues encountered by emerging leaders in health sciences education, including competencies and skills needed to function as a leader.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. The blended format requires a total of 130 hours of learning time. This will be achieved by 15 hours of face-to-face instruction, 65 hours of online synchronous and asynchronous instruction, and 50 hours of individual work including readings, assignments and projects."
+    ]
+  },
+  {
+    "code": "HSED 602",
+    "subject": "HSED",
+    "number": "602",
+    "title": "Introduction to Scholarship in Health Sciences Education",
+    "credits": 3,
+    "offeredBy": "Health Sciences Education",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Foundations in health sciences education including a broad introduction to ideas of scholarship, research and evidence-based practice, and theory-informed educational decision-making. Essentials of different research traditions and methodological approaches to advance, use, and critically evaluate works of scholarship in health sciences education. Fundamentals of ethical research, knowledge translation, and dissemination for responsible application of knowledge to important problems.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. The blended format requires a total of 130 hours of learning time. This will be achieved by 15 hours of face-to-face instruction, 65 hours of online synchronous and asynchronous instruction, and 50 hours of individual work including readings, assignments and projects."
+    ]
+  },
+  {
+    "code": "HSED 625",
+    "subject": "HSED",
+    "number": "625",
+    "title": "Introduction to Qualitative Research in Health",
+    "credits": 3,
+    "offeredBy": "Health Sciences Education",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction, discussion, and practice of qualitative methodologies and methods for conducting rigorous and reflective qualitative research projects in health, with particular focus on family medicine education and health professions education.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken or are taking FMED 625 or PSYT 625.",
+      "excludes": [
+        "FMED 625",
+        "PSYT 625"
+      ]
+    },
+    "notes": [
+      "Permission of the instructor if graduate student is outside of the Department of Family Medicine or the Institute of Health Sciences Education.",
+      "Course will be given in English. Course work maybe submitted in English or French."
+    ]
+  },
+  {
+    "code": "HSED 701",
+    "subject": "HSED",
+    "number": "701",
+    "title": "PhD Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Health Sciences Education",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination process covering two components: a written component and an oral component. Submission of a written proposal for examination which, following responses or amendments and re-examination, is the basis of an oral examination. The comprehensive examination must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": {
+      "text": "HSED 702, HSED 703",
+      "tree": {
+        "and": [
+          "HSED 702",
+          "HSED 703"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Language of instruction is English"
+    ]
+  },
+  {
+    "code": "HSED 702",
+    "subject": "HSED",
+    "number": "702",
+    "title": "Advanced Topics in Health Sciences Education",
+    "credits": 6,
+    "offeredBy": "Health Sciences Education",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "The relationship between research knowledge and health educational practice, including the continuum of knowledge creation and engagement; education and healthcare systems, including research on: policy, governance and regulation; program design and teaching and learning approaches in health sciences education (HSE); assessment and evaluation frameworks, including: quantitative and qualitative approaches; social accountability in HSE and HSE research including: equity, diversity and inclusion; and professional research skills, including: research management, academic communication in various genres, and research supervision.",
+    "prerequisites": {
+      "text": "Permission of the Instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Students must register for both HSED 702D1 and HSED 702D2",
+      "No credit will be given for this course unless both HSED 702D1 and HSED 702D2 are successfully completed in consecutive terms",
+      "Language of instruction is English."
+    ],
+    "parts": [
+      {
+        "code": "HSED 702D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "HSED 702D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "HSED 703",
+    "subject": "HSED",
+    "number": "703",
+    "title": "Research Design for Health Sciences Education",
+    "credits": 3,
+    "offeredBy": "Health Sciences Education",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Various frameworks, theories and methodologies that contribute to health sciences education (HSE) research, and how these elements fit together to make a particular project coherent. Examination of the character of inter-disciplinary academic contributions and foci in HSE research. Emphasis on different types of research perspectives (such as constructionism, postmodernism and positivism) and approaches (qualitative, quantitative, participatory and mixed-methods).",
+    "prerequisites": {
+      "text": "Permission of the Instructor",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Language of Instruction is English."
+    ]
+  },
+  {
+    "code": "HSED 704",
+    "subject": "HSED",
+    "number": "704",
+    "title": "Advanced Qualitative Research",
+    "credits": 3,
+    "offeredBy": "Health Sciences Education",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Review various philosophical and theoretical perspectives that underpin schools of qualitative inquiry and identify perspectives relevant to coherent and rigorous research design; identify consequences for validity of particular methodological choices from the range of forms that each particular methodology takes; explore theoretical perspectives relevant to their research interests; investigate implications for the design and appraisal of qualitative research in health and social care; defensible knowledge claims from a qualitative research perspective; consider approaches to representing and writing and qualitative research; and specialized terminology in the field.",
+    "prerequisites": {
+      "text": "Permission of the instructor.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Must have completed an introduction to a qualitative research course.",
+      "Priority given to Institute of Health Sciences Education students."
+    ]
+  }
+]

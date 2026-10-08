@@ -1,0 +1,66 @@
+[
+  {
+    "code": "QCST 200",
+    "subject": "QCST",
+    "number": "200",
+    "title": "Introduction to the Study of Quebec",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Introduction to the ideas and approaches that scholars have used and developed to study Quebec, including some of the foremost issues that have shaped Quebec historically and continue to influence contemporary life. The changing notions about territory, identity, language, citizenship and belonging, the complexity and diversity of Quebec (11 Aboriginal nations, multilingual, multiethnic and religious communities, minority status within Canada) will also be explored from a comparative perspective to identify characteristics that Quebec shares with other nations and those that are different.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "This course offers students the possibility of doing a community engagement internship (or ExCELR option)."
+    ]
+  },
+  {
+    "code": "QCST 300",
+    "subject": "QCST",
+    "number": "300",
+    "title": "Quebec Culture and Society",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "A multidisciplinary course that looks at Quebec's key social, economic, cultural, political and historical aspects.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Required course for all students in Quebec Studies. Open to all students.",
+      "This course offers students the possibility of doing a community engagement internship (or ExCELR option)."
+    ]
+  },
+  {
+    "code": "QCST 440",
+    "subject": "QCST",
+    "number": "440",
+    "title": "Contemporary Issues in Quebec",
+    "credits": 3,
+    "offeredBy": "Institute for Study of Canada",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Seminar on a selected theme or topic concerning Quebec society with the goal of integrating social, economic, cultural, political and historic aspects.",
+    "prerequisites": {
+      "text": "QCST 300 or permission of the instructor",
+      "tree": "QCST 300",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Required course for all students in Quebec Studies.",
+      "Instruction, discussions, oral presentations and papers can be in French or English",
+      "This course offers students the possibility of doing a community engagement internship (or ExCELR option)."
+    ]
+  }
+]

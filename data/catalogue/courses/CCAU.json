@@ -1,0 +1,60 @@
+[
+  {
+    "code": "CCAU 611",
+    "subject": "CCAU",
+    "number": "611",
+    "title": "Auditing 1",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An introduction to: the nature and purpose of auditing, appointment, remuneration, powers, duties and responsibilities of an auditor; internal control; audit programs, financial statement presentation; procedures for verification of items in financial statements; audit reports.",
+    "prerequisites": {
+      "text": "CCFC 512 or CCFC 612",
+      "tree": {
+        "or": [
+          "CCFC 512",
+          "CCFC 612"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCAU 511.",
+      "excludes": [
+        "CCAU 511"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCAU 612",
+    "subject": "CCAU",
+    "number": "612",
+    "title": "Auditing 2",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced and specialized subjects in auditing and assurance services essential for professional accountants. Emphasis on application and decision- making processes used by auditors. Topics include planning, risk assessment, evidence gathering, internal controls, and reporting.",
+    "prerequisites": {
+      "text": "CCAU 511 or CCAU 611",
+      "tree": {
+        "or": [
+          "CCAU 511",
+          "CCAU 611"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "code": "GEHS 111",
+    "subject": "GEHS",
+    "number": "111",
+    "title": "Philosophy, Ethics and Critical Thinking 1&2",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Cornerstone of an approach based on rich, high quality “critical thinking”, legitimate scientific knowledge.",
+    "prerequisites": {
+      "text": "Secondary level knowledge.",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to HSS111 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEHS 121",
+    "subject": "GEHS",
+    "number": "121",
+    "title": "Sustainable Development, Environmental Economics and Policy",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Introduction to Sustainable Development & Energy & Environmental Economics, global warming.",
+    "prerequisites": {
+      "text": "This course is linked to the work in project GEPR 121.",
+      "tree": "GEPR 121",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to HSS121 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEHS 211",
+    "subject": "GEHS",
+    "number": "211",
+    "title": "Principles of Microeconomics and Industrial Organization",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Ind trade & geo-economics, globalization & intl trade, Economies of Scale & Intl Location of Production.",
+    "prerequisites": {
+      "text": "GEHS 121",
+      "tree": "GEHS 121",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering Students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to HSS211 offered by CentraleSupélec in France."
+    ]
+  },
+  {
+    "code": "GEHS 221",
+    "subject": "GEHS",
+    "number": "221",
+    "title": "Introduction to Geopolitics & Geoeconomics",
+    "credits": 1.5,
+    "offeredBy": "Engineering - Dean's Office",
+    "faculty": "Faculty of Engineering",
+    "terms": [],
+    "description": "Microeconomics & Ind Org, Consumer theory, Partial equilibrium, applications in antitrust & competition policy.",
+    "prerequisites": {
+      "text": "GEHS 121",
+      "tree": "GEHS 121",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Global Engineering students.",
+      "excludes": []
+    },
+    "notes": [
+      "This course is equivalent to HSS221 offered by CentraleSupélec in France."
+    ]
+  }
+]

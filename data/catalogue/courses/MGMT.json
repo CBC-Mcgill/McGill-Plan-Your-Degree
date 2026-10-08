@@ -1,0 +1,126 @@
+[
+  {
+    "code": "MGMT 701",
+    "subject": "MGMT",
+    "number": "701",
+    "title": "Comprehensive Examination",
+    "credits": 0,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "An examination that must be passed by all doctoral candidates in order to continue in the doctoral program.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGMT 707",
+    "subject": "MGMT",
+    "number": "707",
+    "title": "Research Methodology",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Philosophy of scientific inquiry, principles of research design, and application of statistical techniques.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGMT 708",
+    "subject": "MGMT",
+    "number": "708",
+    "title": "General Research Methods",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Developing a research topic.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGMT 709",
+    "subject": "MGMT",
+    "number": "709",
+    "title": "Designing for Causal Inference",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Design-based causal inference. Leveraging design choices, rather than statistical models, to establish causal effects in research. Causal inference in quantitative and qualitative research. Topics include the structure of theoretical arguments, measurement, causal graphs, sampling, and study design (e.g., quasi, natural, and field experiments and case studies).",
+    "prerequisites": {
+      "text": "introductory statistics course",
+      "tree": null,
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to Ph.D. students. Not open to students who have taken MGMT 710 when topic was \"Designing Social Science Research for Causal Inference\".",
+      "excludes": [
+        "MGMT 710"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "MGMT 710",
+    "subject": "MGMT",
+    "number": "710",
+    "title": "Seminars in Management 1",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [],
+    "description": "Seminars in management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGMT 714",
+    "subject": "MGMT",
+    "number": "714",
+    "title": "Seminars in Management 2",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "MGMT 720",
+    "subject": "MGMT",
+    "number": "720",
+    "title": "Research Paper",
+    "credits": 3,
+    "offeredBy": "Management",
+    "faculty": "Graduate Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Research paper in management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  }
+]

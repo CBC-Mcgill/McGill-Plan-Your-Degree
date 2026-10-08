@@ -1,0 +1,295 @@
+[
+  {
+    "code": "CPL2 511",
+    "subject": "CPL2",
+    "number": "511",
+    "title": "Business Analytics for Decision-Making ",
+    "credits": 1.5,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The focus is on the practical application of data analytics concepts, models, tools and techniques to solve business problems and improve organizational decision-making. Students will apply insights gathered from inside and outside an organization to improve operations, productivity and business results.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CPL2 512",
+    "subject": "CPL2",
+    "number": "512",
+    "title": "People Analytics for Decision-Making",
+    "credits": 1.5,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "People analytics is a data-driven approach to recruit, retain and manage people. The focus of the course is on the systematic collection of data from inside or outside an organization and, the analysis and interpretation of the data to improve human resources decisions that are aligned with an organization’s strategic goals.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CPL2 524",
+    "subject": "CPL2",
+    "number": "524",
+    "title": "Introduction: International Business",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course deals with fundamental international business issues: the international business environment, foreign exchange risk, multinational corporations, international organizations, international sources of financing, international marketing policies, essential factors to be considered when entering foreign markets (licensing and exporting) and international management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Core Program"
+    ]
+  },
+  {
+    "code": "CPL2 530",
+    "subject": "CPL2",
+    "number": "530",
+    "title": "Canadian Import, Export and Customs Regulations ",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course provides students with an understanding of Canadian import, export, and customs regulations. Students have the opportunity to learn how the Canadian Import-Export Act may be applied and to understand customs procedures. The course also develops students’ ability to classify products for tariffs, draft commercial documents, and calculate the duties and taxes on imports and exports.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CPL2 554",
+    "subject": "CPL2",
+    "number": "554",
+    "title": "International Business Policy",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Development and application of conceptual approaches to general management policy and strategy formulation in multinational enterprises. Alternative forms of international business involvement; location strategy; technology transfer; ownership strategy; planning for international divestment. Emphasis on developing practical skills, using case studies and simulated negotiating exercises.",
+    "prerequisites": {
+      "text": "CPL2 524",
+      "tree": "CPL2 524",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CPL2 590",
+    "subject": "CPL2",
+    "number": "590",
+    "title": "Topics in International Business",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Specialized course covering an advanced topic in the international business area selected from current issues or themes in literature.",
+    "prerequisites": {
+      "text": "CPL2 524",
+      "tree": "CPL2 524",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Note: Content vary from year to year."
+    ]
+  },
+  {
+    "code": "CPL2 592",
+    "subject": "CPL2",
+    "number": "592",
+    "title": "Performance and Developmental Coaching Skills",
+    "credits": 1,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course deals with roles and responsibilities of coaching, change and transition issues, performance coaching and developmental coaching skills. As a key practical component of this course, participants will be given the opportunity to learn, apply, and hone coaching skills for effective leadership in an organizational setting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the Graduate Certificate in Leadership. The course must be taken in the first term.",
+      "excludes": []
+    },
+    "notes": [
+      "Prerequiste: CPL2 591"
+    ]
+  },
+  {
+    "code": "CPL2 593",
+    "subject": "CPL2",
+    "number": "593",
+    "title": "Transformative Coaching Skills",
+    "credits": 1,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course complements the previous coaching courses. It incorporates coaching as a key component of leadership acumen. Students apply new tools and techniques to coach agile teams to high performance. Topics such as ethical issues, integral coaching and transformative coaching skills, using real-life examples, will also be discussed.",
+    "prerequisites": {
+      "text": "CPL2 592",
+      "tree": "CPL2 592",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricted to students in the Graduate Certificate in Leadership.",
+      "excludes": []
+    },
+    "notes": []
+  },
+  {
+    "code": "CPL2 610",
+    "subject": "CPL2",
+    "number": "610",
+    "title": "Practical Communication and Presentation Skills ",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Winter 2027"
+    ],
+    "description": "Overview of management skills pertaining to communication and networking in the workplace, including review of one's professional brand and career performance. Focus on preparing and delivering oral presentations for in-person, remote, and hybrid audiences; writing for business purposes such as reports; and creating business-related content for digital media.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CPL2 510.",
+      "excludes": [
+        "CPL2 510"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CPL2 632",
+    "subject": "CPL2",
+    "number": "632",
+    "title": "Leading Change and Innovation ",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Review of advanced techniques and models of change that leaders can use to foster follower commitment while coping up with the changing environment. Topics include: leading the change process, agile leadership, and risks and challenges that come along while leading change and implementing innovation within an organization.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CPL2 532, 532D1/D2, 532N1/N2, 532J1/J2/J3 .",
+      "excludes": [
+        "CPL2 532",
+        "CPL2 532D1",
+        "CPL2 532J1",
+        "CPL2 532N1"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous components."
+    ]
+  },
+  {
+    "code": "CPL2 633",
+    "subject": "CPL2",
+    "number": "633",
+    "title": "Developing Leadership Skills",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Exploration of how to lead organizations. Examination of why and how leadership skills are critical to organizational success. Application of leadership skills to work effectively with others in an organizational setting.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CPL2 533.",
+      "excludes": [
+        "CPL2 533"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous components."
+    ]
+  },
+  {
+    "code": "CPL2 634",
+    "subject": "CPL2",
+    "number": "634",
+    "title": "Leading in Diverse and Inclusive Workplaces",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Exploration of how to successfully lead diverse and inclusive organizations. Analysis of a variety of trends that have made managing workforce diversity an essential competency for leaders to succeed in an inclusive environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CPL2 534.",
+      "excludes": [
+        "CPL2 534"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous components."
+    ]
+  },
+  {
+    "code": "CPL2 652",
+    "subject": "CPL2",
+    "number": "652",
+    "title": "Strategic Management",
+    "credits": 3,
+    "offeredBy": "Management & Entrepreneurship",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Analysis of strategic thinking, problem-solving, decision-making in organizations in response to changing conditions. Exploration of directions and goals of private and public organizations, environments (social, political, technological, economic, and global factors), industry, and market structures, and organizational strengths and weaknesses that are critical for success in a changing environment.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CPL2 552, CPL2 552N1/N2, or CPL2 552J1/J2/J3.",
+      "excludes": [
+        "CPL2 552",
+        "CPL2 552J1",
+        "CPL2 552N1"
+      ]
+    },
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous components."
+    ]
+  },
+  {
+    "code": "CPL2 695",
+    "subject": "CPL2",
+    "number": "695",
+    "title": "Special Topics in Leadership",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Selected advanced topics in leadership.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CPL2 595, 595D1/D2, 595N1/N2, 595J1/J2/J3 .",
+      "excludes": [
+        "CPL2 595",
+        "CPL2 595D1",
+        "CPL2 595J1",
+        "CPL2 595N1"
+      ]
+    },
+    "notes": [
+      "The topics may vary from term to term."
+    ]
+  }
+]

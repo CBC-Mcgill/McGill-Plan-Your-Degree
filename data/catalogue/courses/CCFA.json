@@ -1,0 +1,662 @@
+[
+  {
+    "code": "CCFA 505",
+    "subject": "CCFA",
+    "number": "505",
+    "title": "Financial Modeling",
+    "credits": 1.5,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Financial modeling involves the building of an abstract representation (a model) of a real-world financial situation. This mathematical model is designed to represent a simplified version of the performance of a financial asset or portfolio of a business, project, or other investment. Students will be introduced to, and are expected to generate and refine, financial modeling in mergers and acquisitions, portfolio management, corporate treasury, and risk management contexts in which derivative products will be used or in situations where analysis and decision making would be enhanced by modeling.",
+    "prerequisites": {
+      "text": "CACC 521 or Departmental approval",
+      "tree": "CACC 521",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 510",
+    "subject": "CCFA",
+    "number": "510",
+    "title": "Current Operations in Global Financial Markets",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course reviews the current role of financial institutions and financial markets, the transactions effected through intermediaries in facilitating global trade, and the current scheme of regulations across major trading centres. The course also considers threats to the regulated intermediary through crypto currencies and other forms of trade.",
+    "prerequisites": {
+      "text": "CEC2 532 or CEC2 632",
+      "tree": {
+        "or": [
+          "CEC2 532",
+          "CEC2 632"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 523",
+    "subject": "CCFA",
+    "number": "523",
+    "title": "Corporate Treasury Management",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course covers topics related to the management of an enterprise’s holdings to manage and mitigate the firm’s liquidity as well as its market, operational, financial, and reputational risks. Corporate treasury management includes a firm’s receipts and disbursements, concentration, investment, and funding activities. In larger firms, it may also include trading in bonds, currencies, and financial derivatives, as well as the associated financial risk management.",
+    "prerequisites": {
+      "text": "CACC 521",
+      "tree": "CACC 521",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 528",
+    "subject": "CCFA",
+    "number": "528",
+    "title": "Investment Decisions and Effect of Behavioural Finance",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The standard economic paradigm—rational agents in an efficient market—does not adequately describe behaviour in financial markets. In this course, students will survey the evidence and use psychological criteria to guide alternative theories of financial markets. The standard argument that smart, profit-seeking agents can correct any distortions caused by irrational investors is reviewed. Furthermore, the preferences and trading decisions of individual investors in the age of artificial intelligence and robot advisors are examined, and the assertion that systematic biases can aggregate into observed market inefficiencies debated. The second half of the course extends the analysis to corporate decision-making.",
+    "prerequisites": {
+      "text": "CCFA 505, (CCFA 515 or CCFA 615), (CMS2 521 or CMS2 621) and (CEC2 532 or CEC2 632)",
+      "tree": {
+        "and": [
+          "CCFA 505",
+          {
+            "or": [
+              "CCFA 515",
+              "CCFA 615"
+            ]
+          },
+          {
+            "or": [
+              "CMS2 521",
+              "CMS2 621"
+            ]
+          },
+          {
+            "or": [
+              "CEC2 532",
+              "CEC2 632"
+            ]
+          }
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 530",
+    "subject": "CCFA",
+    "number": "530",
+    "title": "Introduction to Applications and Uses of Derivatives",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Montreal is the second largest derivative market in North America. The main objective of this course is to help students gain understanding of and enhance their intuition and skills on the pricing of derivative securities. Thereafter, they will be able to use these skills in effective investment and/or risk management. The course includes an in-depth review of a wide range of applications and real-life cases, including the use of derivatives in asset management, valuation of corporate securities such as stocks and corporate bonds with embedded options, interest rate derivatives, credit derivatives, and crude oil and currency derivatives. The practical considerations of implementing strategies using derivatives are emphasized.",
+    "prerequisites": {
+      "text": "CCFA 510, CCFA 527 and CCFA 529",
+      "tree": {
+        "and": [
+          "CCFA 510",
+          "CCFA 527",
+          "CCFA 529"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 536",
+    "subject": "CCFA",
+    "number": "536",
+    "title": "Behavioural Finance and Wealth Planning",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "The standard economic paradigm - rational agents in an efficient market - does not adequately describe behaviour in financial markets. Students will survey emotional and cognitive biases, as well as the use of psychological criteria to guide alternative theories of financial markets. Introduces students to the management and planning of individual and family portfolios as well as tax considerations and tax efficiency strategies in portfolio management.",
+    "prerequisites": {
+      "text": "CCFA 527",
+      "tree": "CCFA 527",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 538",
+    "subject": "CCFA",
+    "number": "538",
+    "title": "Mergers and Acquisitions Including Firm Valuation Methods",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course focuses on developing the skills and strategies required for the design and evaluation of mergers, acquisition deals, and transactions. It provides students with knowledge of current processes in mergers and acquisitions through the use of case studies and a review of recent Canadian and global transaction discussions. Valuation analysis, which is at the core of mergers and acquisition, is also covered. Topics include: valuation techniques, financial modelling, analyses of strategy, dilution, financing risk, deal design, and structuring and post-merger integration.",
+    "prerequisites": {
+      "text": "CCFA 515 and CCFA 520",
+      "tree": {
+        "and": [
+          "CCFA 515",
+          "CCFA 520"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 540",
+    "subject": "CCFA",
+    "number": "540",
+    "title": "Portfolio Strategies and Management",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "In this course, students discuss and review stock market movements and the news in the past week. The aim is to enable students to research, analyze, and make recommendations for a sector or corporation and prepare them to advocate a buy or sell decision within the context of a strategy for managing an investment portfolio.",
+    "prerequisites": {
+      "text": "CCFA527",
+      "tree": "CCFA 527",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 542",
+    "subject": "CCFA",
+    "number": "542",
+    "title": "Hedge Fund",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course introduces students to types of hedge funds, key participants in the market, and the role of and interdependencies between each participant and the market. Students explore the difference between traditional funds and hedge funds, including the attractiveness of or need for hedge funds and misconceptions thereof. Students survey the different hedge funds within major industry groups, especially those that have a major impact on the Quebec economy. The course explores relevant strategies, including market-trend driven, event-driven, or Arbitrage. Furthermore, the course provides a methodology by which to evaluate hedge funds. Finally, institutional issues related to liquidity, margin requirements, risk management, and performance measurement are examined.",
+    "prerequisites": {
+      "text": "CCFA 540",
+      "tree": "CCFA 540",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 547",
+    "subject": "CCFA",
+    "number": "547",
+    "title": "Advanced Portfolio Management",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "A conceptual framework is presented for understanding asset allocation considerations and key implementation approaches, including an examination of the effects of investor constraints and adaptations to address them. Finally, elements of currency, fixed-income, and equity portfolio management are discussed at an advanced level.",
+    "prerequisites": {
+      "text": "CCFA 527",
+      "tree": "CCFA 527",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 548",
+    "subject": "CCFA",
+    "number": "548",
+    "title": "Alternative Investments",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "This course explores non-traditional investment strategies currently used by investment managers to diversify their portfolio. This course covers: real estate, private equity/venture capital and valuation, investment entities, managed futures, timberland/farmland, intellectual property, distressed securities, bankruptcies, hedge fund strategies, and commodities.",
+    "prerequisites": {
+      "text": "CCFA 505",
+      "tree": "CCFA 505",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 595",
+    "subject": "CCFA",
+    "number": "595",
+    "title": "Special Topics in Finance",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Advanced specialized course that exposes students to emerging and current trends in the finance area.",
+    "prerequisites": {
+      "text": "CCFA 520",
+      "tree": "CCFA 520",
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 600",
+    "subject": "CCFA",
+    "number": "600",
+    "title": "Ethics in Finance",
+    "credits": 1.5,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study of the Code of Ethics and Standards of Professional Conduct of Chartered Financial Analyst (CFA) Institute. Topics include professionalism and the integrity of capital markets, duties to clients and employers, investment analysis and recommendations, conflicts of interest, and responsibilities of CFA members and candidates.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCFA 500.",
+      "excludes": [
+        "CCFA 500"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFA 601",
+    "subject": "CCFA",
+    "number": "601",
+    "title": "Financial Analysis Tools",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study of statistical and economics tools used in the analysis of investments and other financial aspects of businesses. Topics include statistical concepts and methodologies, such as statistical inference and linear regression, as well as micro- and macroeconomics concepts, such as the analysis of demand and supply, understanding business cycles and international trade, and the effects of fiscal and monetary policy",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCFA 605 or exemption by examination.",
+      "tree": "CCFA 605",
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCFA 605",
+    "subject": "CCFA",
+    "number": "605",
+    "title": "Quantitative Methods for Accounting and Finance",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Focusing on accounting and finance applications, study of fundamental statistical concepts and tools used in the description and analysis of businesses and investments. Review of principles and results of the method used in estimating value of financial assets, namely Time Value of Money. Topics include descriptive statistics, probability theory, statistical inference, simple and compound interest, annuities, loans and bonds, equities and projects, and the cash flow additivity principle.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 615",
+    "subject": "CCFA",
+    "number": "615",
+    "title": "Financial Statement Analysis ",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of accounting standards and financial reporting principles in investment decision making from both the internal and external perspectives of a corporation. Study of the interplay between the balance sheet, the income statement, and the cash flow statement, and examination of financial statement elements, such as inventories, long-lived assets, income taxes, and long-term liabilities, contrasting International Financial Reporting Standards (IFRS) and United States Generally Accepted Accounting Principles (US GAAP).",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCFA 605 or exemption by examination.",
+      "tree": "CCFA 605",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCFA 515.",
+      "excludes": [
+        "CCFA 515"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFA 620",
+    "subject": "CCFA",
+    "number": "620",
+    "title": "Contemporary Finance 1 ",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Comprehensive overview of corporations and other businesses from the point of view of internal and external financial decisions, including how the risk and return measures associated with businesses are used in corporate decision making and in assembling investment portfolios. Introduction to behavioural factors in investments, the management of risk for the enterprise, and the emerging field of financial technology.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CMS2 500 or CCFA 605 or exemption by examination.",
+      "tree": {
+        "or": [
+          "CMS2 500",
+          "CCFA 605"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCFA 520.",
+      "excludes": [
+        "CCFA 520"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFA 627",
+    "subject": "CCFA",
+    "number": "627",
+    "title": "Financial Risk Management ",
+    "credits": 1.5,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of financial risk management techniques that can be used by investors and businesses alike. Topics include derivatives, alternative investments, and the value of these assets.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCFA 605 or exemption by examination",
+      "tree": "CCFA 605",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCFA 527.",
+      "excludes": [
+        "CCFA 527"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFA 629",
+    "subject": "CCFA",
+    "number": "629",
+    "title": "Fixed-Income and Equity Investments",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examination of the characteristics of fixed-income and equity investments, their markets and indexes. Topics include yield and valuation measures, risk factors and drivers of fixed-income securities, industry and company analysis, and equity valuation models.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCFA 605 or exemption by examination.",
+      "tree": "CCFA 605",
+      "unparsed": true
+    },
+    "restrictions": {
+      "text": "Not open to students who have taken CCFA 529.",
+      "excludes": [
+        "CCFA 529"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFA 635",
+    "subject": "CCFA",
+    "number": "635",
+    "title": "Contemporary Finance 2 ",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Comprehensive and extended overview of corporations and other businesses from the point of view of internal and external financial decisions, including how the split of raised capital between equity and debt, as well as a firm’s policy for returning benefits to shareholders, are used in corporate decision making and in assembling investment portfolios. Consideration of mergers and acquisitions, and further exploration of behavioral finance, governance and sustainability, and the management of both individual and institutional investment portfolios.",
+    "prerequisites": {
+      "text": "CCFA 620 or exemption by examination",
+      "tree": "CCFA 620",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken CCFA 535.",
+      "excludes": [
+        "CCFA 535"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "CCFA 639",
+    "subject": "CCFA",
+    "number": "639",
+    "title": "ESG Investing",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examination of ESG (Environmental, Social, and Governance) investing. Study of the benefits of using ESG factors in investment decision making, from both a portfolio performance and a sustainability standpoint, and the integration of ESG factors in portfolio construction and management.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "CCFA 655",
+    "subject": "CCFA",
+    "number": "655",
+    "title": "Financial Modelling and Visualization",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Examination of essential skills and techniques currently used to treat and summarize financial data. Applications discussed include Excel, and the computer languages Power BI, R and Python.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCCS 620 or CCFA 601 or exemption by examination.",
+      "tree": {
+        "or": [
+          "CCCS 620",
+          "CCFA 601"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCFA 660",
+    "subject": "CCFA",
+    "number": "660",
+    "title": "Fintech and the Financial System",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Study of financial technology (Fintech) and the impact of the digitization of financial products and services on the structure of financial markets and the traditional role of financial institutions. A comprehensive introduction to Fintech detailing the business models of Fintech disruptors in various industries in the financial sector.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCCS 620 or CCFA 601 or exemption by examination.",
+      "tree": {
+        "or": [
+          "CCCS 620",
+          "CCFA 601"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Course may be offered in person or online with synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCFA 665",
+    "subject": "CCFA",
+    "number": "665",
+    "title": "Machine Learning and Big Data in Finance",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "In-depth examination of the Artificial Intelligence paradigm as it applies to and is transforming the financial services sector. Analysis of data issues associated with the financial applications of such new technology. Topics include machine learning and modelling techniques, data security and data governance.",
+    "prerequisites": null,
+    "corequisites": {
+      "text": "CCCS 620 or CCFA 601 or exemption by examination.",
+      "tree": {
+        "or": [
+          "CCCS 620",
+          "CCFA 601"
+        ]
+      },
+      "unparsed": true
+    },
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCFA 670",
+    "subject": "CCFA",
+    "number": "670",
+    "title": "Advanced Financial Modelling and Visualization ",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Analysis of the advanced skills and techniques currently used to treat and summarize financial data for decision making. Focus on advanced applications of the methods for analyzing financial data using Excel, R, and Python.",
+    "prerequisites": {
+      "text": "CCFA 655 or exemption by examination.",
+      "tree": "CCFA 655",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCFA 675",
+    "subject": "CCFA",
+    "number": "675",
+    "title": "Decentralized Finance and Digital Assets",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Analysis of foundational concepts indecentralized finance, such as blockchain,decentralized exchanges, decentralized applications, “stablecoins”, smart contracts, and digital collateral. In-depth analysis of the functions of Central Banks and other regulatory bodies facing the decentralization transformation.",
+    "prerequisites": {
+      "text": "CCFA 660 or exemption by examination.",
+      "tree": "CCFA 660",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCFA 680",
+    "subject": "CCFA",
+    "number": "680",
+    "title": "Advanced Financial Technologies",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "In-depth analysis of the underlying foundational technologies of Fintech companies, such ascloud computing, advanced data analytics, no-code development, and cybersecurity. Examination of real-life cases where applications of these technologies enable the building of a Fintech company to solve identified problems.",
+    "prerequisites": {
+      "text": "CCFA 660 or exemption by examination",
+      "tree": "CCFA 660",
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Course includes synchronous and asynchronous activities."
+    ]
+  },
+  {
+    "code": "CCFA 690",
+    "subject": "CCFA",
+    "number": "690",
+    "title": "Special Topics in Financial Technology",
+    "credits": 3,
+    "offeredBy": "Administration & Governance",
+    "faculty": "School of Continuing Studies",
+    "terms": [],
+    "description": "Special topics in emerging and current trends in the Fintech area, including: fintech entrepreneurship and fintech regulation.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "1. Topics may vary from semester to semester.",
+      "2. Course includes synchronous and asynchronous activities."
+    ]
+  }
+]

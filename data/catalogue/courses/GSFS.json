@@ -1,0 +1,842 @@
+[
+  {
+    "code": "GSFS 200",
+    "subject": "GSFS",
+    "number": "200",
+    "title": "Feminist and Social Justice Studies",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Introduction to the key concepts, issues, and modes of analysis in the interdisciplinary fields of feminist and social justice studies. Emphasis on the intersections of gender, race, class, sex, sexuality, and nation in systems of power from historical and contemporary perspectives and the means for collectively transforming them.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 200.",
+      "excludes": [
+        "WMST 200"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 250",
+    "subject": "GSFS",
+    "number": "250",
+    "title": "Sexual and Gender Diversity Studies",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026"
+    ],
+    "description": "Introduction to the interdisciplinary fields of sexual and gender diversity studies from a range of theoretical, historical, and contemporary perspectives with an anti-oppressive and intersectional emphasis on marginalized identities, communities, practices and expressions.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken SDST 250.",
+      "excludes": [
+        "SDST 250"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 300",
+    "subject": "GSFS",
+    "number": "300",
+    "title": "Research Inquiry in GSFS",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Practices and methods of research inquiry in Gender, Sexuality, Feminist, and Social Justice Studies with a particular emphasis on feminist epistemologies, research methodologies and methods in interdisciplinary contexts.",
+    "prerequisites": {
+      "text": "GSFS 200 and GSFS 250",
+      "tree": {
+        "and": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 303.",
+      "excludes": [
+        "WMST 303"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 301",
+    "subject": "GSFS",
+    "number": "301",
+    "title": "Current Topics 1",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Consideration of contemporary issues in gender, sexuality, feminist, and social justice studies. Topic and approach will vary from year to year.",
+    "prerequisites": {
+      "text": "GSFS 200 or GSFS 250",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 301 or WMST 302 with the same topic.",
+      "excludes": [
+        "WMST 301",
+        "WMST 302"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 302",
+    "subject": "GSFS",
+    "number": "302",
+    "title": "Current Topics 2",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Consideration of contemporary issues in gender, sexuality, feminist, and social justice studies. Topic and approach will vary from year to year.",
+    "prerequisites": {
+      "text": "GSFS 200 or GSFS 250.",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 301 or WMST 302 with the same topic.",
+      "excludes": [
+        "WMST 301",
+        "WMST 302"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 303",
+    "subject": "GSFS",
+    "number": "303",
+    "title": "Gender and Disability",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Focus on critical theories of impairment and visions of social justice from gender and disability studies perspectives.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 302 when topic was “Gender and Disability”.",
+      "excludes": [
+        "WMST 302"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 304",
+    "subject": "GSFS",
+    "number": "304",
+    "title": "Postcolonial Feminist Theories",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Critically examines bodies of postcolonial feminist theories from a variety of cross-disciplinary and transnational perspectives.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 401 when topic was “Women and the State in India: Colonial and Postcolonial Perspectives”.",
+      "excludes": [
+        "WMST 401"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 305",
+    "subject": "GSFS",
+    "number": "305",
+    "title": "Critical Race and Social Justice Theories",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "An examination of critical race feminisms and social justice theories in historical and contemporary perspectives, exploring how critical race, transnational, and indigenous feminist theorizing inform social justice, liberation struggles, and other activism.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 402 when topic was “Anti-Racism and Activism in Canada”, or WMST 301 when topic was “Women of Colour in Canada”.",
+      "excludes": [
+        "WMST 301",
+        "WMST 402"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 306",
+    "subject": "GSFS",
+    "number": "306",
+    "title": "Queer Theory",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Examines the emergence of queer theory in the context of major social movements and key bodies of theory such as women of color feminisms, poststructuralism, performativity, affect and psychoanalysis. Engages with contemporary queer critiques such as queer of colour, transnational, and Indigenous perspectives.",
+    "prerequisites": null,
+    "corequisites": null,
+    "restrictions": null,
+    "notes": []
+  },
+  {
+    "code": "GSFS 307",
+    "subject": "GSFS",
+    "number": "307",
+    "title": "Indigenous Feminisms",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Explores Indigenous feminisms in historical and contemporary contexts, with a critical focus on the tensions between feminist and Indigenous epistemologies. The relationships between feminisms, settler-colonialism, nation-building, and Indigenous social justice struggles will be emphasized.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 302 in Winter 2014 when topic was “Indigenous Women of the North”.",
+      "excludes": [
+        "WMST 302"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 308",
+    "subject": "GSFS",
+    "number": "308",
+    "title": "Sex and Gender Minority Cultures",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Examination of cultural expression associated with non-normative and minoritarian gender, sex, and sexualities as shaped by local, regional, and global ideologies, economies, and social practices.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          "GSFS 250"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 301 when the topic was “Queer Cultures: Gendered Systems and Sexual Meanings in a Modern, Global World”.",
+      "excludes": [
+        "WMST 301"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "code": "GSFS 400",
+    "subject": "GSFS",
+    "number": "400",
+    "title": "Capstone: Engaging Fields of GSFS",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examines the current state and debates within the interdisciplinary fields of Gender, Sexuality, Feminist, and Social Justice Studies. Emphasis will be placed on how students can situate their knowledge and scholarship within and beyond these fields.",
+    "prerequisites": {
+      "text": "GSFS 200, GSFS 250 and GSFS 300",
+      "tree": {
+        "and": [
+          "GSFS 200",
+          "GSFS 250",
+          "GSFS 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": null,
+    "notes": [
+      "Restriction(s); Open only to students in the GSFS Major Concentration, Honours, or Joint Honours.",
+      "This course is only open to students in the Gender, Sexuality, Feminist, and Social Justice Studies (GSFS) Major Concentration, Joint Honours Component, and Honours. It is required for Major Concentration students in their final year of study, and optional but recommended for Joint Honours Component and Honours."
+    ]
+  },
+  {
+    "code": "GSFS 401",
+    "subject": "GSFS",
+    "number": "401",
+    "title": "Special Topics 1",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Advanced seminar in selected themes and issues in gender, sexuality, feminist, and social justice studies. Topics and theoretical or disciplinary approach will vary from year to year.",
+    "prerequisites": {
+      "text": "GSFS 200 or GSFS 250 and any GSFS 300 level course",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          {
+            "and": [
+              "GSFS 250",
+              "GSFS 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 401 or WMST 402 with the same topic.",
+      "excludes": [
+        "WMST 401",
+        "WMST 402"
+      ]
+    },
+    "notes": [
+      "Note: Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level."
+    ]
+  },
+  {
+    "code": "GSFS 402",
+    "subject": "GSFS",
+    "number": "402",
+    "title": "Special Topics 2",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Advanced seminar in selected themes and issues in gender, sexuality, feminist, and social justice studies. Topics and theoretical or disciplinary approach will vary from year to year.",
+    "prerequisites": {
+      "text": "GSFS 200 or GSFS 250 and any GSFS 300 level course.",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          {
+            "and": [
+              "GSFS 250",
+              "GSFS 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 401 or WMST 402 with the same topic.",
+      "excludes": [
+        "WMST 401",
+        "WMST 402"
+      ]
+    },
+    "notes": [
+      "Note: Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level."
+    ]
+  },
+  {
+    "code": "GSFS 403",
+    "subject": "GSFS",
+    "number": "403",
+    "title": "Feminisms and the Law",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Examines the relationship between feminisms and the law by drawing on feminist legal theory, feminist theories of jurisprudence, post coloniality, critical race epistemologies, and decolonizing methodologies for studying legal culture and law as a site of social struggles.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250 and any GSFS 300 level course",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          {
+            "and": [
+              "GSFS 250",
+              "GSFS 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 501 when the topic was “Feminist Legal Theory”.",
+      "excludes": [
+        "WMST 501"
+      ]
+    },
+    "notes": [
+      "Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level."
+    ]
+  },
+  {
+    "code": "GSFS 404",
+    "subject": "GSFS",
+    "number": "404",
+    "title": "Politics of Identity",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Examines the emergence of identity politics as a corrective to the erasures of gender, sexed, and raced differences in class-based struggles, and to feminist complicities with racism, heterosexism, colonialism, and transphobia. The course engages contemporary debates on identity politics and subjectivity formation, the psychic life of power, struggles for recognition, and solidarity politics.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250 and any GSFS 300 level course",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          {
+            "and": [
+              "GSFS 250",
+              "GSFS 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 301 or WMST 402 as the topic Feminist Theories of Identity.",
+      "excludes": [
+        "WMST 301",
+        "WMST 402"
+      ]
+    },
+    "notes": [
+      "Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level."
+    ]
+  },
+  {
+    "code": "GSFS 405",
+    "subject": "GSFS",
+    "number": "405",
+    "title": "Social Justice and Activism",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [],
+    "description": "Develops frameworks for understanding the relationships between critical knowledge production, activism, and social justice. Emphasis on activist strategies, social change initiatives, and their underlying theories and methodologies. Explores the emergence of social justice frameworks in response to ongoing histories of colonization, imperialism, and alternative world making.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250 and any GSFS 300 level course. Recommended GSFS 305.",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "GSFS 200",
+              {
+                "and": [
+                  "GSFS 250",
+                  "GSFS 300"
+                ]
+              }
+            ]
+          },
+          "GSFS 305"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 401 when the topic was “The Women’s Movement in Canada”.",
+      "excludes": [
+        "WMST 401"
+      ]
+    },
+    "notes": [
+      "Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level."
+    ]
+  },
+  {
+    "code": "GSFS 406",
+    "subject": "GSFS",
+    "number": "406",
+    "title": "Trans*Feminisms",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Winter 2027"
+    ],
+    "description": "Contemporary debates in the field of trans*feminist studies, with an emphasis on the historical emergence of trans studies in relation to feminist and queer scholarship and activism. Consideration of the politics of sex/gender transformation vis-à-vis race-racism, sexuality, class, culture, nation, and social justice.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250 and any GSFS 300 level course",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          {
+            "and": [
+              "GSFS 250",
+              "GSFS 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 401 when the topic was “Trans*Feminisms”.",
+      "excludes": [
+        "WMST 401"
+      ]
+    },
+    "notes": [
+      "Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level."
+    ]
+  },
+  {
+    "code": "GSFS 407",
+    "subject": "GSFS",
+    "number": "407",
+    "title": "Sexuality and Gender: New Directions",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026"
+    ],
+    "description": "Examines the latest critical scholarship in sexual and gender diversity studies.",
+    "prerequisites": {
+      "text": "GSFS 200 OR GSFS 250 and any GSFS 300 level course. Recommended GSFS 306",
+      "tree": {
+        "and": [
+          {
+            "or": [
+              "GSFS 200",
+              {
+                "and": [
+                  "GSFS 250",
+                  "GSFS 300"
+                ]
+              }
+            ]
+          },
+          "GSFS 306"
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Restricion(s): Not open to students who have taken WMST 402 when the topic was “Advanced Theories of Sexuality”.",
+      "excludes": [
+        "WMST 402"
+      ]
+    },
+    "notes": [
+      "Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level."
+    ]
+  },
+  {
+    "code": "GSFS 450",
+    "subject": "GSFS",
+    "number": "450",
+    "title": "Independent Reading and Research",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Advanced reading course and independent research project under the supervision of an instructor on aspects of gender, sexuality, feminist, and social justice studies.",
+    "prerequisites": {
+      "text": "GSFS 200 or GSFS 250 and any GSFS 300 level course.",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          {
+            "and": [
+              "GSFS 250",
+              "GSFS 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the Gender, Sexuality, Feminist, and Social Justice Studies programs. Chair and adviser approval required.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level. Students can consult the IGSF Internships page at http://www.mcgill.ca/igsf/academic-resources/internships for current internship opportunities."
+    ]
+  },
+  {
+    "code": "GSFS 495",
+    "subject": "GSFS",
+    "number": "495",
+    "title": "Honours/Joint Honours Colloquium",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Students will research, discuss, and present their thesis topics.",
+    "prerequisites": {
+      "text": "GSFS 200, GSFS 250, GSFS 300.",
+      "tree": {
+        "and": [
+          "GSFS 200",
+          "GSFS 250",
+          "GSFS 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 495D1/D2. Only open to Honours/Joint Honours students in Gender, Sexuality, Feminist, and Social Justice Studies.",
+      "excludes": [
+        "WMST 495D1"
+      ]
+    },
+    "notes": [
+      "Note: GSFS Honours/Joint Honours Colloquium must be completed concurrently with either Honours Thesis or Joint Honours Thesis course in the students’ final year of study.",
+      "Students must register for both GSFS 495D1 and GSFS 495D2.",
+      "No credit will be given for this course unless both GSFS 495D1 and GSFS 495D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "GSFS 495D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "GSFS 495D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "GSFS 496",
+    "subject": "GSFS",
+    "number": "496",
+    "title": "Honours Thesis",
+    "credits": 6,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised reading and preparation of an Honours Thesis under the direction of a faculty supervisor.",
+    "prerequisites": {
+      "text": "GSFS 200, GSFS 250, GSFS 300.",
+      "tree": {
+        "and": [
+          "GSFS 200",
+          "GSFS 250",
+          "GSFS 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 496D1/D2. Only open to Honours/Joint Honours students in Gender, Sexuality, Feminist, and Social Justice Studies.",
+      "excludes": [
+        "WMST 496D1"
+      ]
+    },
+    "notes": [
+      "Note: GSFS Honours Thesis course must be completed concurrently with GSFS Honours/Joint Honours Colloquium in students’ final year of study.",
+      "Students must register for both GSFS 496D1 and GSFS 496D2.",
+      "No credit will be given for this course unless both GSFS 496D1 and GSFS 496D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "GSFS 496D1",
+        "credits": 3,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "GSFS 496D2",
+        "credits": 3,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "GSFS 497",
+    "subject": "GSFS",
+    "number": "497",
+    "title": "Joint Honours Thesis",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Supervised reading and preparation of a Joint Honours thesis under the direction of a faculty supervisor.",
+    "prerequisites": {
+      "text": "GSFS 200, GSFS 250, GSFS 300.",
+      "tree": {
+        "and": [
+          "GSFS 200",
+          "GSFS 250",
+          "GSFS 300"
+        ]
+      },
+      "unparsed": false
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Not open to students who have taken WMST 497D1/D2. Only open to Honours/Joint Honours students in Gender, Sexuality, Feminist, and Social Justice Studies.",
+      "excludes": [
+        "WMST 497D1"
+      ]
+    },
+    "notes": [
+      "Note: GSFS Honours Thesis course must be completed concurrently with GSFS Honours/Joint Honours Colloquium in students’ final year of study.",
+      "Students must register for both GSFS 497D1 and GSFS 497D2.",
+      "No credit will be given for this course unless both GSFS 497D1 and GSFS 497D2 are successfully completed in consecutive terms."
+    ],
+    "parts": [
+      {
+        "code": "GSFS 497D1",
+        "credits": 1.5,
+        "terms": [
+          "Fall 2026"
+        ]
+      },
+      {
+        "code": "GSFS 497D2",
+        "credits": 1.5,
+        "terms": [
+          "Winter 2027"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "GSFS 499",
+    "subject": "GSFS",
+    "number": "499",
+    "title": "GSFS Internship",
+    "credits": 3,
+    "offeredBy": "Inst for Gender, Sex & Fem St",
+    "faculty": "Faculty of Arts",
+    "terms": [
+      "Summer 2026",
+      "Fall 2026",
+      "Winter 2027"
+    ],
+    "description": "Internship with an approved host institution or organization.",
+    "prerequisites": {
+      "text": "GSFS 200 or GSFS 250 and any GSFS 300 level course.",
+      "tree": {
+        "or": [
+          "GSFS 200",
+          {
+            "and": [
+              "GSFS 250",
+              "GSFS 300"
+            ]
+          }
+        ]
+      },
+      "unparsed": true
+    },
+    "corequisites": null,
+    "restrictions": {
+      "text": "Open only to students registered in the Gender, Sexuality, Feminist, and Social Justice Studies programs. Chair and adviser approval required.",
+      "excludes": []
+    },
+    "notes": [
+      "Note: Students are required to take the intro course(s) and one GSFS course at the 300 level before taking GSFS courses at the 400 level. Students can consult the IGSF Internships page at http://www.mcgill.ca/igsf/academic-resources/internships"
+    ]
+  }
+]
