@@ -45,3 +45,6 @@ export interface Course {
   notes: string[];
   parts?: CoursePart[];
 }
+
+/** What the browser downloads: everything but the long text. */
+export type CourseSummary = Omit<Course, "description" | "notes">;

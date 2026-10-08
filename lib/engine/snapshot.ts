@@ -1,4 +1,4 @@
-import type { Course } from "../catalogue/types.ts";
+import type { CourseSummary } from "../catalogue/types.ts";
 import {
   type CourseRecord,
   earnsCredit,
@@ -8,7 +8,7 @@ import {
 } from "../profile/types.ts";
 
 /** Courses by logical code. */
-export type Catalogue = ReadonlyMap<string, Course>;
+export type Catalogue = ReadonlyMap<string, CourseSummary>;
 
 /** What a student has done, is doing, and has planned, indexed once so every lookup is a set hit. */
 export interface Snapshot {
