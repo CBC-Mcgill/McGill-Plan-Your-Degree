@@ -53,6 +53,11 @@ test.each([
     },
     true,
   ],
+  [
+    "COMP 250 and either MATH 235 or MATH 240",
+    { and: ["COMP 250", { or: ["MATH 235", "MATH 240"] }] },
+    false,
+  ],
   ["a course in functions", null, true],
 ])("parses %s", (text, tree, unparsed) => {
   expect(parseRequirement(text)).toEqual({ text, tree, unparsed });

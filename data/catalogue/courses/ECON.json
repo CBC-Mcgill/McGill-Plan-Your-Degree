@@ -2696,14 +2696,14 @@
     "prerequisites": {
       "text": "First term of ECON 662 and either ECON 634 or ECON 641, or consent of the instructor",
       "tree": {
-        "or": [
+        "and": [
+          "ECON 662",
           {
-            "and": [
-              "ECON 662",
-              "ECON 634"
+            "or": [
+              "ECON 634",
+              "ECON 641"
             ]
-          },
-          "ECON 641"
+          }
         ]
       },
       "unparsed": true

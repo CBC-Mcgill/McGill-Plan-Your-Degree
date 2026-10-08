@@ -1984,14 +1984,14 @@
     "prerequisites": {
       "text": "ANTH 209 or another instructor-approved introduction to the anthropology of religion and either ANTH 352 or ANTH 355.",
       "tree": {
-        "or": [
+        "and": [
+          "ANTH 209",
           {
-            "and": [
-              "ANTH 209",
-              "ANTH 352"
+            "or": [
+              "ANTH 352",
+              "ANTH 355"
             ]
-          },
-          "ANTH 355"
+          }
         ]
       },
       "unparsed": true
