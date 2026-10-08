@@ -276,10 +276,7 @@ const SORT_KEYS: SortKey[] = ["recommended", "code", "level", "credits"];
 
 /** Reads the URL. Without a profile the student-only views fall back to All. */
 export function readQuery(params: URLSearchParams, hasProfile: boolean): Query {
-  // The home page links here with status=available, so keep reading it.
-  const wanted =
-    params.get("view") ??
-    (params.get("status") === "available" ? "can-take" : null);
+  const wanted = params.get("view");
   const filters = { ...NO_FILTERS };
   for (const prop of PROPS) {
     const allowed = FIXED[prop];
