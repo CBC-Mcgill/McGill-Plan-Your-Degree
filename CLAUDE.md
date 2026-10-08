@@ -25,6 +25,8 @@ Planned: shadcn/ui and Motion (add with the first UI phase), Zustand for the loc
 
 ## UI rules
 
-- Mobile-first: every screen works at 320 px with no horizontal scroll, and touch targets are at least 44 by 44 px.
-- Tap must work everywhere. Drag is a desktop extra, never the only way.
+- Desktop-only MVP: design for a 1280 px window, keep it usable down to 1024 px, no horizontal scroll. No mobile layouts yet.
+- Click and keyboard must work everywhere. Drag and drop is an extra, never the only way.
 - Game animations respect `prefers-reduced-motion`.
+- Fun but never confusing: one obvious primary action per screen, plain labels, game elements only for real progress.
+- Banned styles: cream or off-white backgrounds, italic accent words in headings, numbered "01 / 02" section labels, monospace labels, pill-shaped buttons.

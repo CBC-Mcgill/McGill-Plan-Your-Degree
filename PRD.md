@@ -15,7 +15,7 @@ Mistakes surface late, as a blocked registration or a missing required course in
 Visual Schedule Builder handles timetables and the catalogue holds the rules, but nothing connects a student's actual record to their program and turns it into a plan.
 
 Evidence so far is anecdotal (firsthand experience and the v1 PRD).
-Validating with real students is open question 6.
+Validating with real students is open question 5.
 
 ---
 
@@ -43,7 +43,7 @@ Validating with real students is open question 6.
 | Registering for courses or touching Minerva | No public API, and acting on a student's account is a liability. |
 | Requirement tracking beyond the 5 MVP programs | Each program needs hand verification. More programs come from contributors. |
 | Degree audit PDF import | The transcript already gives completed courses. A second parser adds little for the MVP. |
-| Native mobile apps and French UI | A mobile-first web app covers phones. French comes after the English MVP. |
+| Mobile layouts, native apps, and French UI | Students plan at a desk during registration, so the MVP is desktop-only. Mobile and French come after launch. |
 
 ---
 
@@ -66,7 +66,7 @@ Validating with real students is open question 6.
 - As a student with a withdrawn or failed course, I want it excluded from my completed courses, so that what shows as unlocked is accurate.
 - As a student whose transcript has a line the app does not recognize, I want it flagged and editable before anything is saved, so that one bad line does not corrupt my profile.
 - As a student who uploads the wrong PDF, I want a clear message that it is not a McGill unofficial transcript, so that I know what to upload instead.
-- As a student on a shared computer, I want to delete all my data in one tap, so that my record does not stay in the browser.
+- As a student on a shared computer, I want to delete all my data in one click, so that my record does not stay in the browser.
 - As a student switching devices without an account, I want to export my profile to a file and import it elsewhere, so that I keep my plan.
 
 ### Contributor
@@ -98,14 +98,14 @@ Crawls every course page on coursecatalogue.mcgill.ca and writes the full catalo
 #### P0-2 Scheduled data refresh
 
 - [ ] A GitHub Actions workflow runs the crawler on demand and on a schedule before each registration period.
-- [ ] It opens a PR containing the data diff and a summary of added, removed, and changed courses.
+- [ ] It pushes a data branch and offers a one-click PR link with a summary of added, removed, and changed courses. The CBC-Mcgill org blocks Actions from opening PRs itself, so it opens one only if an org admin allows that.
 - [ ] Catalogue data reaches production only by merging that PR.
 
 #### P0-3 Course browser
 
-- [ ] Search by code, title, or keyword across all courses, with results updating in under 100 ms per keystroke on a mid-range phone.
+- [ ] Search by code, title, or keyword across all courses, with results updating in under 100 ms per keystroke on a mid-range laptop.
 - [ ] Filter by subject, faculty, level, term offered, and "available to me".
-- [ ] A course page shows every P0-1 field, prerequisites as tappable links, and the student's status for that course: completed, in progress, available, locked, or planned.
+- [ ] A course page shows every P0-1 field, prerequisites as clickable links, and the student's status for that course: completed, in progress, available, locked, or planned.
 - [ ] Works without a profile (status hidden) and without an account.
 - [ ] Every course has a stable, shareable URL.
 
@@ -129,7 +129,7 @@ Crawls every course page on coursecatalogue.mcgill.ca and writes the full catalo
 - [ ] Stores completed and in-progress courses, program, start term, and plan in browser storage, with no account.
 - [ ] Students can add or remove courses by hand when the import gets something wrong.
 - [ ] Export to a JSON file and import it back. The schema is versioned with migrations, so old exports keep loading.
-- [ ] One tap deletes all local data.
+- [ ] One click deletes all local data.
 
 #### P0-6 What's next
 
@@ -148,7 +148,7 @@ Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Soft
 #### P0-8 Semester planner
 
 - [ ] Generates terms from the student's start term to expected graduation (Fall and Winter, Summer optional).
-- [ ] Students add, move, and remove courses per term by tap. Drag is a desktop extra, never the only way.
+- [ ] Students add, move, and remove courses per term by click or keyboard. Drag and drop is an extra, never the only way.
 - [ ] Warns, without blocking, when a course is placed before its prerequisites, in a term it is not offered, against a restriction, or in a term over a credit limit (default 17, editable).
 - [ ] Shows whether the whole plan satisfies the program, and lists what is still missing.
 
@@ -157,14 +157,14 @@ Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Soft
 - [ ] XP comes from completed credits only. Planned courses show potential XP but do not award it.
 - [ ] Levels follow McGill year standing (U0 to U4) with sub-levels between years.
 - [ ] Badges mark real milestones, such as first import, finishing a required block, finishing a complementary list, a fully valid plan, and graduation-ready. The MVP ships at least 10 badges.
-- [ ] The quest path shows every term from start to graduation as a stage on one path. Completed, current, and planned stages look distinct, and tapping a stage opens that term.
+- [ ] The quest path shows every term from start to graduation as a stage on one path. Completed, current, and planned stages look distinct, and clicking a stage opens that term.
 - [ ] Every game element reflects real academic progress. No streaks, timers, or rewards for opening the app.
 
-#### P0-10 Mobile-first and accessible
+#### P0-10 Desktop-first and accessible
 
-- [ ] Every screen works at 320 px wide, with touch targets of at least 44 by 44 px.
+- [ ] Every screen is designed for a 1280 px wide window and stays usable down to 1024 px. Mobile layouts are out of scope for the MVP.
 - [ ] Meets WCAG 2.2 AA: full keyboard use, visible focus, sufficient contrast, and game animations respect reduced motion.
-- [ ] Lighthouse mobile performance is at least 90 on the browse and course pages.
+- [ ] Lighthouse desktop performance is at least 90 on the browse and course pages.
 
 #### P0-11 Open-source readiness
 
@@ -193,7 +193,7 @@ Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Soft
 
 ## 6. Success Metrics
 
-All metrics come from anonymous, privacy-friendly analytics. No personal data or transcript content is ever sent.
+The MVP ships without analytics. Usage metrics start once privacy-friendly analytics is added after launch (open question 4), and no personal data or transcript content is ever sent.
 
 ### Leading (first registration period after launch)
 
@@ -208,7 +208,7 @@ All metrics come from anonymous, privacy-friendly analytics. No personal data or
 
 | Metric | Success | Stretch | Measured by |
 |---|---|---|---|
-| Users returning the next registration period | 30% | 50% | Analytics (see open question 5) |
+| Users returning the next registration period | 30% | 50% | Analytics (see open question 4) |
 | External PRs merged within 6 months | 3 | 10 | GitHub |
 | Programs added by contributors within 6 months | 1 | 4 | GitHub |
 | Crawl PRs merged with no manual data fixes | 3 of 4 | 4 of 4 | GitHub |
@@ -225,12 +225,12 @@ Review points: 1 week after launch, end of the first registration period, and 6 
 | Package manager | pnpm 12 (12.10), pinned in `packageManager` | Strict dependency resolution, fast installs, one lockfile. |
 | Framework | Next.js 16 App Router, React 19 | Static course pages plus client-heavy planner in one app. |
 | Language | TypeScript strict, with `noUncheckedIndexedAccess` | Catches missing-course and empty-array bugs at compile time. |
-| Styling | Tailwind CSS v4 | Mobile-first utilities, no runtime cost. |
+| Styling | Tailwind CSS v4 | Utility classes, no runtime cost. |
 | Components | shadcn/ui, restyled for a game look | Accessible primitives copied into the repo, so the look is fully ours. |
 | Animation | Motion | Unlock, XP, and level-up animations, with reduced-motion support. |
 | Lint and format | Biome | One fast tool replaces ESLint and Prettier. |
 | Unit tests | Vitest | Prerequisite parser, transcript parser, requirement engine. |
-| E2E tests | Playwright, mobile and desktop viewports | Import, browse, and plan flows as a student uses them. |
+| E2E tests | Playwright, desktop viewport | Import, browse, and plan flows as a student uses them. |
 | Crawler | TypeScript script in the same repo, run by Node 24 directly | Native type stripping, no extra build step. |
 | Catalogue storage | Versioned JSON in the repo | Every change is a reviewable diff. No database needed to browse. |
 | Profile storage | Zustand store persisted to browser storage, with `version` and `migrate` | Local-first. Built-in schema versioning covers P0-5 migrations. |
@@ -238,7 +238,7 @@ Review points: 1 week after launch, end of the first registration period, and 6 
 | PDF parsing | pdf.js in a Web Worker | Mature, text-only extraction, runs off the main thread. |
 | CI | GitHub Actions on every PR: frozen install, lint, typecheck, unit, build, E2E | Nothing merges red. |
 | Dependency updates | Dependabot | Built into GitHub. |
-| Hosting | Vercel | Native Next.js hosting. |
+| Hosting | Vercel, personal scope | Native Next.js hosting. Course pages are cached static files, so no server of our own runs. |
 
 One package, no monorepo, until a second deployable exists.
 
@@ -250,6 +250,7 @@ Checked on 2026-10-08 with direct requests.
 
 - **Course pages:** `https://coursecatalogue.mcgill.ca/courses/<subject>-<number>`, 10,118 linked from `/courses/`. Server-rendered HTML. The COMP 251 page shows credits, offering unit, terms offered (Fall 2026, Winter 2027), description, prerequisites, and restrictions.
 - **Program pages:** listed in `/sitemap.xml` (2,040 URLs). Requirement tables use the `sc_courselist` class with code, title, and credit columns.
+- **Crawler identity:** an AWS WAF challenges generic User-Agents with HTTP 202. A bot User-Agent in the standard `Mozilla/5.0 (compatible; Name/version; +repo-url)` format gets HTTP 200.
 - **robots.txt:** allows `/courses/` and program pages. Disallows `/course-search/api/`, `/ribbit/`, `/search/`, and `/pdf/`.
 - **Old eCalendar (`mcgill.ca/study`):** returned HTTP 403 to a script. Not used.
 - **Unofficial transcript** (one real sample, read 2026-10-08): a browser print to PDF of Minerva's HTML page, so the text layout depends on the browser that printed it. Markers: the title `UNOFFICIAL Transcript`, form name `SWFTRAN`, and the footer URL `horizon.mcgill.ca/pban1/bzsktran.P_Display_Form`. Each term block lists degree, year, program, and minor, then rows of subject, number, section, abbreviated title, credits, grade, remarks, earned credits, and class average. Registered future courses start with `RW` and have no grade. A legend defines remarks I, E, and A, `*` for credits not counted, and `²` for multi-term courses.
@@ -263,11 +264,10 @@ Checked on 2026-10-08 with direct requests.
 |---|---|---|---|
 | 1 | One real transcript is in hand (Chrome print, Engineering). Still needed: Safari and Firefox prints, a Science student, and records with transfer course credits, withdrawals, failures, and deferred grades. | Thai | Non-blocking, synthetic fixtures cover gaps |
 | 2 | Do McGill's terms of use allow crawling the catalogue? Should we notify McGill before launch? | Thai, legal | Blocks public launch, not development |
-| 3 | Does the catalogue serve an honest crawler User-Agent? A plain curl request got HTTP 202 while a browser User-Agent got 200. | Engineering | Blocks P0-1 |
-| 4 | Students follow the requirements of the catalogue year they entered. The MVP assumes the current year for everyone. Is that acceptable for launch? | Thai | Non-blocking |
-| 5 | Analytics tool, and whether a random local install ID is acceptable for measuring return rate. | Engineering | Non-blocking |
-| 6 | Interview 5 students to validate the problem and the game style before the design pass. | Thai | Non-blocking |
-| 7 | Visual direction for the quest path, XP, levels, and badges (superdesign exploration). | Design | Blocks P0-9 build only |
+| 3 | Students follow the requirements of the catalogue year they entered. The MVP assumes the current year for everyone. Is that acceptable for launch? | Thai | Non-blocking |
+| 4 | Analytics tool after launch, and whether a random local install ID is acceptable for measuring return rate. | Engineering | Non-blocking |
+| 5 | Interview 5 students to validate the problem and the game style before the design pass. | Thai | Non-blocking |
+| 6 | Visual direction for the quest path, XP, levels, and badges (superdesign exploration). | Design | Blocks P0-9 build only |
 
 ---
 

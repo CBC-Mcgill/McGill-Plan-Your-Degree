@@ -27,7 +27,7 @@ Open http://localhost:3000.
 | `pnpm format` | Fix lint and formatting |
 | `pnpm typecheck` | Generate route types and run `tsc` |
 | `pnpm test` | Unit tests (Vitest) |
-| `pnpm test:e2e` | End-to-end tests (Playwright, mobile and desktop) |
+| `pnpm test:e2e` | End-to-end tests (Playwright, desktop) |
 
 Run `pnpm exec playwright install chromium` once before the first E2E run.
 
