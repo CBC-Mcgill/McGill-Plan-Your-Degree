@@ -26,6 +26,7 @@ const TERMS: Season[] = ["Fall", "Winter", "Summer"];
 const STATUSES: { value: BrowseStatus; label: string }[] = [
   { value: "available", label: "Available to me" },
   { value: "completed", label: "Completed" },
+  { value: "covered", label: "Covered by my DEC" },
   { value: "in-progress", label: "In progress" },
   { value: "planned", label: "Planned" },
   { value: "locked", label: "Locked" },

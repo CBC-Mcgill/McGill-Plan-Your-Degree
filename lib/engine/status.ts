@@ -4,6 +4,7 @@ import type { Snapshot } from "./snapshot.ts";
 
 export type BrowseStatus =
   | "completed"
+  | "covered"
   | "in-progress"
   | "planned"
   | "available"
@@ -82,6 +83,9 @@ export function courseStatus(
   snapshot: Snapshot,
 ): CourseState {
   const uncertain = isUncertain(course);
+  if (snapshot.covered.has(course.code)) {
+    return { status: "covered", uncertain: false, blockedBy: NONE };
+  }
   if (snapshot.done.has(course.code)) {
     return { status: "completed", uncertain: false, blockedBy: NONE };
   }

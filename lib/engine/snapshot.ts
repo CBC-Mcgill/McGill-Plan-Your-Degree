@@ -22,6 +22,8 @@ export interface Snapshot {
   planned: ReadonlySet<string>;
   /** Done plus in progress: what satisfies a prerequisite and what blocks through a restriction. */
   taken: ReadonlySet<string>;
+  /** Science DEC equivalents in `done` that the student did not take at McGill. */
+  covered: ReadonlySet<string>;
 }
 
 /** Courses a Quebec Science DEC covers at every CEGEP, from mcgill.ca/transfercredit/prospective/cegep. They meet prerequisites but carry no McGill credit. */
@@ -63,9 +65,14 @@ export function buildSnapshot(
       }
     }
   }
-  if (entry === "cegep") {
-    for (const code of CEGEP_SCIENCE_EQUIVALENTS) done.add(code);
-  }
+  const covered = new Set(
+    entry === "cegep"
+      ? CEGEP_SCIENCE_EQUIVALENTS.filter(
+          (code) => !done.has(code) && !inProgress.has(code),
+        )
+      : [],
+  );
+  for (const code of covered) done.add(code);
   // A multi-term course with one part still running is not done yet.
   for (const code of inProgress.keys()) {
     done.delete(code);
@@ -77,5 +84,6 @@ export function buildSnapshot(
     inProgress,
     planned: new Set(plan.flatMap((entry) => entry.courses)),
     taken: new Set([...done, ...inProgress.keys()]),
+    covered,
   };
 }

@@ -132,6 +132,7 @@ export const BADGES: Badge[] = [
             listed?.kind === "complementary" &&
             namesCourses(listed) &&
             group.satisfied &&
+            !group.credited &&
             group.creditsDone > 0
           );
         }),

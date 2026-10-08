@@ -10,6 +10,7 @@ import {
   TermSelect,
 } from "@/components/profile/selects";
 import { Button } from "@/components/ui/button";
+import { TextField } from "@/components/ui/field";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { useProfileStore } from "@/lib/profile/store";
 import { groupByTerm, guessGraduation } from "@/lib/profile/terms";
@@ -45,6 +46,13 @@ export function ReviewScreen({
     isCegep(transcript.previousEducation)
       ? "cegep"
       : useProfileStore.getState().entry,
+  );
+  const [advancedStanding, setAdvancedStanding] = useState(
+    transcript.advancedStanding,
+  );
+  const [creditsRequired, setCreditsRequired] = useState<number | null>(
+    () =>
+      transcript.creditsRequired ?? useProfileStore.getState().creditsRequired,
   );
   const [startTerm, setStartTerm] = useState<Term | null>(
     () => earliest(transcript) ?? useProfileStore.getState().startTerm,
@@ -92,7 +100,7 @@ export function ReviewScreen({
       courses: kept.map(({ course }) => course),
     });
     store.setProgram(programId);
-    store.setBackground({ entry });
+    store.setBackground({ entry, advancedStanding, creditsRequired });
     store.setTerms({ startTerm, graduationTerm });
     router.push("/next");
   }
@@ -138,12 +146,39 @@ export function ReviewScreen({
           </div>
           <div className="mt-4 grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)] items-end gap-4">
             <EntrySelect value={entry} onChange={setEntry} />
-            {background && (
-              <p className="col-span-2 pb-3 text-muted-foreground text-sm">
-                Started from: {background}
-              </p>
-            )}
+            <TextField
+              label="Advanced standing credits"
+              type="number"
+              min={0}
+              max={60}
+              placeholder="0"
+              value={advancedStanding || ""}
+              onChange={(event) =>
+                setAdvancedStanding(
+                  Math.max(0, Math.min(60, Number(event.target.value))),
+                )
+              }
+            />
+            <TextField
+              label="Credits required for your degree"
+              type="number"
+              min={1}
+              max={200}
+              placeholder="Optional"
+              value={creditsRequired ?? ""}
+              onChange={(event) => {
+                const credits = Number(event.target.value);
+                setCreditsRequired(
+                  credits >= 1 ? Math.min(200, credits) : null,
+                );
+              }}
+            />
           </div>
+          {background && (
+            <p className="mt-3 text-muted-foreground text-sm">
+              Found on your transcript: {background}
+            </p>
+          )}
           {programId === null && (
             <p className="mt-3 text-muted-foreground text-sm">
               Your courses are still saved. Requirements can't be tracked for

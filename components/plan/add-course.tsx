@@ -128,11 +128,13 @@ export function AddCourse({
               className="mt-1 divide-y divide-border rounded-lg border-2 border-border bg-card"
             >
               {results.map((course) => {
-                const state = snapshot.done.has(course.code)
-                  ? "completed"
-                  : snapshot.inProgress.has(course.code)
-                    ? "in-progress"
-                    : null;
+                const state = snapshot.covered.has(course.code)
+                  ? "covered"
+                  : snapshot.done.has(course.code)
+                    ? "completed"
+                    : snapshot.inProgress.has(course.code)
+                      ? "in-progress"
+                      : null;
                 return (
                   <CourseLine key={course.code} course={course}>
                     {state ? (
