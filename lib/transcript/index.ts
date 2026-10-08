@@ -5,7 +5,12 @@ import {
 } from "pdfjs-dist/legacy/build/pdf.mjs";
 // Sets globalThis.pdfjsWorker, so pdf.js parses in this thread instead of spawning its own worker.
 import "pdfjs-dist/legacy/build/pdf.worker.mjs";
-import { parseTranscript, type Transcript } from "./parse";
+import { parseTranscript } from "./parse";
+import {
+  IMPORT_ERROR_MESSAGES,
+  type ImportError,
+  type ReadResult,
+} from "./result";
 
 export type {
   CourseStatus,
@@ -15,32 +20,10 @@ export type {
   TranscriptCourse,
 } from "./parse";
 
+export { IMPORT_ERROR_MESSAGES, type ImportError, type ReadResult };
+
 export const MAX_FILE_BYTES = 5 * 1024 * 1024;
 export const MAX_PAGES = 20;
-
-export type ImportError =
-  | "not-pdf"
-  | "too-large"
-  | "too-many-pages"
-  | "unreadable"
-  | "not-transcript";
-
-export const IMPORT_ERROR_MESSAGES: Record<ImportError, string> = {
-  "not-pdf":
-    "This file is not a PDF. Save your unofficial transcript from Minerva as a PDF and try again.",
-  "too-large":
-    "This PDF is larger than 5 MB. An unofficial transcript is much smaller, so check that you picked the right file.",
-  "too-many-pages":
-    "This PDF has more than 20 pages. An unofficial transcript is much shorter, so check that you picked the right file.",
-  unreadable:
-    "This PDF could not be read. It may be damaged or password protected. Print your transcript to PDF again and retry.",
-  "not-transcript":
-    "This PDF is not a McGill unofficial transcript. In Minerva, open Student Records, then View Your Unofficial Transcript, and print that page to PDF.",
-};
-
-export type ReadResult =
-  | { ok: true; transcript: Transcript }
-  | { ok: false; error: ImportError; message: string };
 
 const fail = (error: ImportError): ReadResult => ({
   ok: false,

@@ -1,14 +1,20 @@
 import { cn } from "cn";
 import {
+  ArrowRightLeft,
+  BadgeCheck,
   CalendarDays,
   Check,
+  CircleSlash,
   Clock,
+  Hourglass,
   Info,
   Lock,
   LockOpen,
   type LucideIcon,
+  X,
 } from "lucide-react";
 import type { CourseState } from "@/lib/engine/status";
+import type { CourseStatus as RecordStatus } from "@/lib/profile/types";
 
 export type CourseStatus =
   | "completed"
@@ -17,8 +23,8 @@ export type CourseStatus =
   | "locked"
   | "planned";
 
-/** A locked course whose requirement text has conditions we cannot check shows this instead of "Locked". */
-export type ChipStatus = CourseStatus | "check-requirements";
+/** A locked course whose requirement text has conditions we cannot check shows "Check requirements" instead of "Locked". */
+export type ChipStatus = CourseStatus | "check-requirements" | RecordStatus;
 
 const statuses: Record<
   ChipStatus,
@@ -53,6 +59,31 @@ const statuses: Record<
     label: "Check requirements",
     icon: Info,
     tone: "border-locked/50 border-dashed bg-locked-surface text-locked",
+  },
+  failed: {
+    label: "Failed",
+    icon: X,
+    tone: "border-failed/30 bg-failed-surface text-failed",
+  },
+  withdrawn: {
+    label: "Withdrawn",
+    icon: CircleSlash,
+    tone: "border-locked/30 bg-locked-surface text-locked",
+  },
+  deferred: {
+    label: "Deferred",
+    icon: Hourglass,
+    tone: "border-available/30 bg-available-surface text-available",
+  },
+  transfer: {
+    label: "Transfer credit",
+    icon: ArrowRightLeft,
+    tone: "border-completed/30 bg-completed-surface text-completed",
+  },
+  exemption: {
+    label: "Exemption",
+    icon: BadgeCheck,
+    tone: "border-completed/30 bg-completed-surface text-completed",
   },
 };
 

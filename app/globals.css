@@ -28,6 +28,8 @@
   --locked-surface: #eceff4;
   --planned: #5b2fc2;
   --planned-surface: #eee8fd;
+  --failed: #a8132a;
+  --failed-surface: #fde4e7;
 }
 
 @theme inline {
@@ -54,6 +56,8 @@
   --color-locked-surface: var(--locked-surface);
   --color-planned: var(--planned);
   --color-planned-surface: var(--planned-surface);
+  --color-failed: var(--failed);
+  --color-failed-surface: var(--failed-surface);
 
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
