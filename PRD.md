@@ -38,7 +38,7 @@ Validating with real students is open question 5.
 
 | Non-goal | Why it is out |
 |---|---|
-| AI course advisor | Needs trustworthy course data first. Revisit once the catalogue and planner are solid (P2). |
+| AI course advisor answers | Needs trustworthy course data first. The chat ships as a preview (P1-8), and real answers come later (P2). |
 | Timetables and section times | Visual Schedule Builder already does this. We link to it instead (P1). |
 | Registering for courses or touching Minerva | No public API, and acting on a student's account is a liability. |
 | Requirement tracking beyond the 5 MVP programs | Each program needs hand verification. More programs come from contributors. |
@@ -114,7 +114,7 @@ Crawls every course page on coursecatalogue.mcgill.ca and writes the full catalo
 - [ ] Parsing runs entirely in the browser. The PDF never leaves the device and is never stored.
 - [ ] Rejects files that are not PDFs (checked by file signature, not extension), larger than 5 MB, or longer than 20 pages, with a specific message for each.
 - [ ] Extracts text only, in a Web Worker with a timeout. No scripts, forms, or embedded files are run or rendered, so a malformed PDF cannot freeze or attack the page.
-- [ ] Detects whether the file is a McGill unofficial transcript (markers in section 8) and says so clearly when it is not.
+- [ ] Detects whether the file is a McGill unofficial transcript (markers in section 9) and says so clearly when it is not.
 - [ ] Discards the identity header (name, McGill ID, permanent code) and holds. They are never stored or shown again.
 - [ ] Strips the repeating browser page header and footer, and joins term blocks that break across pages.
 - [ ] Reads program, minor, and credits required, and pre-fills them in the profile.
@@ -177,17 +177,19 @@ Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Soft
 - **P1-1 Optional login with cloud sync.** Built on Supabase Auth and Postgres with row-level security. The local profile merges into the account on first login.
 - **P1-2 Shareable read-only plan link.**
 - **P1-3 Visual Schedule Builder link** per course and term, as the catalogue already offers.
-- **P1-4 Prerequisite chain view** on each course page, showing what it needs and what it unlocks.
+- **P1-4 Prerequisite chain view** on each course page, showing what it needs and what it unlocks. The "Unlocks" list ships first.
 - **P1-5 Minimum-grade prerequisites** enforced using transcript grades.
 - **P1-6 Dark mode.**
+- **P1-7 Student ratings from mcgill.courses** on each course page: average rating, difficulty, and review count fetched live from its public API, with a link to read the reviews there. Review text is never copied.
+- **P1-8 AI advisor chat preview** at `/advisor`, styled after the Claude desktop app, that explains the advisor is coming soon. No AI is called.
 
 ### P2 - Design for, do not build
 
-- **AI advisor.** Keep catalogue and profile data in clean typed shapes that an LLM can read later.
+- **AI advisor answers.** Keep catalogue and profile data in clean typed shapes that an LLM can read later. The P1-8 chat is the shell it plugs into.
 - **All programs, minors, and multiple catalogue years.** Program files carry their catalogue year from day one.
 - **French UI.**
 - **Degree audit PDF import.**
-- **Workload and difficulty data.**
+- **Workload data.** Difficulty comes from mcgill.courses (P1-7).
 
 ---
 
@@ -244,7 +246,16 @@ One package, no monorepo, until a second deployable exists.
 
 ---
 
-## 8. Data Sources
+## 8. Related Projects
+
+- **mcgill.courses** (open source, Rust and React, MongoDB): course search and student reviews, plus a schedule builder. We link to its reviews and borrow its "leading to" idea for the Unlocks list. It does not plan a whole degree or read transcripts.
+- **Visual Schedule Builder:** McGill's official timetable tool. We link to it instead of building timetables.
+
+What sets this project apart is the gamified, local-first degree plan: transcript import, what's next, and a quest path to graduation.
+
+---
+
+## 9. Data Sources
 
 Checked on 2026-10-08 with direct requests.
 
@@ -254,11 +265,12 @@ Checked on 2026-10-08 with direct requests.
 - **robots.txt:** allows `/courses/` and program pages. Disallows `/course-search/api/`, `/ribbit/`, `/search/`, and `/pdf/`.
 - **Old eCalendar (`mcgill.ca/study`):** returned HTTP 403 to a script. Not used.
 - **Unofficial transcript** (one real sample, read 2026-10-08): a browser print to PDF of Minerva's HTML page, so the text layout depends on the browser that printed it. Markers: the title `UNOFFICIAL Transcript`, form name `SWFTRAN`, and the footer URL `horizon.mcgill.ca/pban1/bzsktran.P_Display_Form`. Each term block lists degree, year, program, and minor, then rows of subject, number, section, abbreviated title, credits, grade, remarks, earned credits, and class average. Registered future courses start with `RW` and have no grade. A legend defines remarks I, E, and A, `*` for credits not counted, and `²` for multi-term courses.
+- **mcgill.courses API** (checked 2026-10-08): public read endpoints with no login, OpenAPI docs at `https://mcgill.courses/api/docs`, and CORS open to any origin. `GET /api/courses/COMP251` returns about 6 KB, including `avgRating`, `avgDifficulty`, and `reviewCount`. The code is CC0, but the reviews are written by students on that site, so we show aggregates and link out instead of copying text.
 - **Not confirmed:** McGill's terms of use for automated access (not checked).
 
 ---
 
-## 9. Open Questions
+## 10. Open Questions
 
 | # | Question | Owner | Blocking? |
 |---|---|---|---|
@@ -268,10 +280,11 @@ Checked on 2026-10-08 with direct requests.
 | 4 | Analytics tool after launch, and whether a random local install ID is acceptable for measuring return rate. | Engineering | Non-blocking |
 | 5 | Interview 5 students to validate the problem and the game style before the design pass. | Thai | Non-blocking |
 | 6 | Visual direction for the quest path, XP, levels, and badges (superdesign exploration). | Design | Blocks P0-9 build only |
+| 7 | Tell the mcgill.courses maintainers we link to their reviews and read their public API, and ask whether they want a lighter ratings endpoint or a partnership. | Thai | Non-blocking |
 
 ---
 
-## 10. Timeline and Phasing
+## 11. Timeline and Phasing
 
 Solo, no hard deadline.
 Registration periods are natural launch moments.
