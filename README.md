@@ -1,38 +1,36 @@
-REMINDER START DATE: MID-MAY
+# McGill Plan Your Degree
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Open-source degree planner for McGill students.
+Browse every McGill course, import your unofficial transcript, see what you can and must take next, and plan your path to graduation.
 
-## Getting Started
+Status: early development. The product spec is in [PRD.md](PRD.md).
 
-First, run the development server:
+## Setup
+
+Requires Node 24 and pnpm 12.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+nvm use
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | What it does |
+|---|---|
+| `pnpm dev` | Start the dev server |
+| `pnpm build` | Production build |
+| `pnpm lint` | Lint and format check (Biome) |
+| `pnpm format` | Fix lint and formatting |
+| `pnpm typecheck` | Generate route types and run `tsc` |
+| `pnpm test` | Unit tests (Vitest) |
+| `pnpm test:e2e` | End-to-end tests (Playwright, mobile and desktop) |
 
-## Learn More
+Run `pnpm exec playwright install chromium` once before the first E2E run.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
