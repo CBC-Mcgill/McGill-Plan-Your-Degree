@@ -1,17 +1,89 @@
 @import "tailwindcss";
 
+/* Light theme. Dark mode (P1) redefines these variables only. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f1f4f9;
+  --foreground: #172036;
+  --card: #ffffff;
+  --muted: #e3e8ef;
+  --muted-foreground: #4d5870;
+  --border: #d7dde7;
+  --border-strong: #b8c1cf;
+  --ring: #1f5bd8;
+
+  --primary: #da1a2e;
+  --primary-hover: #c2162a;
+  --primary-edge: #8f0f1f;
+  --primary-foreground: #ffffff;
+
+  --xp: #178347;
+
+  --completed: #146c3a;
+  --completed-surface: #ddf3e5;
+  --in-progress: #1d4fbf;
+  --in-progress-surface: #e1ebfd;
+  --available: #8f5d00;
+  --available-surface: #fdf0cf;
+  --locked: #4a5468;
+  --locked-surface: #eceff4;
+  --planned: #5b2fc2;
+  --planned-surface: #eee8fd;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-edge: var(--primary-edge);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-xp: var(--xp);
+  --color-completed: var(--completed);
+  --color-completed-surface: var(--completed-surface);
+  --color-in-progress: var(--in-progress);
+  --color-in-progress-surface: var(--in-progress-surface);
+  --color-available: var(--available);
+  --color-available-surface: var(--available-surface);
+  --color-locked: var(--locked);
+  --color-locked-surface: var(--locked-surface);
+  --color-planned: var(--planned);
+  --color-planned-surface: var(--planned-surface);
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Solid bottom edges that make surfaces look pressable */
+  --shadow-edge: 0 4px 0 0 var(--border-strong);
+  --shadow-edge-primary: 0 4px 0 0 var(--primary-edge);
+  --shadow-edge-available: 0 4px 0 0
+    color-mix(in oklab, var(--available) 40%, transparent);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 800;
+    font-stretch: 112.5%;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
 }
