@@ -9,7 +9,10 @@ import {
   CourseRowHeader,
   CourseRowSkeleton,
 } from "@/components/course-row";
+import { STATUS } from "@/components/status";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { controlStyles, SelectField } from "@/components/ui/field";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses, searchCourses } from "@/lib/catalogue/search";
 import {
@@ -23,14 +26,16 @@ import { useSnapshot } from "@/lib/profile/use-snapshot";
 const PAGE_SIZE = 50;
 const LEVELS = ["100", "200", "300", "400", "500", "600", "700"] as const;
 const TERMS: Season[] = ["Fall", "Winter", "Summer"];
-const STATUSES: { value: BrowseStatus; label: string }[] = [
-  { value: "available", label: "Available to me" },
-  { value: "completed", label: "Completed" },
-  { value: "covered", label: "Covered by my DEC" },
-  { value: "in-progress", label: "In progress" },
-  { value: "planned", label: "Planned" },
-  { value: "locked", label: "Locked" },
-];
+const STATUSES = (
+  [
+    "available",
+    "completed",
+    "covered",
+    "in-progress",
+    "planned",
+    "locked",
+  ] as const
+).map((value) => ({ value, label: STATUS[value].label }));
 
 interface Filters {
   q: string;
@@ -66,9 +71,6 @@ function toQueryString(filters: Filters): string {
   }
   return params.toString();
 }
-
-const field =
-  "h-12 rounded-md border-2 border-border-strong bg-card px-3 text-base";
 
 export function CourseBrowser() {
   const params = useSearchParams();
@@ -146,7 +148,7 @@ export function CourseBrowser() {
       <div className="relative mt-6">
         <Search
           aria-hidden
-          className="absolute top-1/2 left-4 size-5 -translate-y-1/2 text-muted-foreground"
+          className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
         />
         <input
           ref={input}
@@ -155,7 +157,7 @@ export function CourseBrowser() {
           placeholder="Search by code or title, like COMP 251 or algorithms"
           value={filters.q}
           onChange={(event) => update({ q: event.target.value })}
-          className={`${field} w-full pl-12 text-lg`}
+          className={`${controlStyles} w-full pl-9`}
         />
       </div>
 
@@ -200,7 +202,7 @@ export function CourseBrowser() {
         {filtered && (
           <Button
             variant="secondary"
-            className="h-12 px-4"
+            className="mb-0.5"
             onClick={() => {
               update(NO_FILTERS);
               input.current?.focus();
@@ -214,11 +216,8 @@ export function CourseBrowser() {
 
       <div className="mt-8">
         {catalogue.status !== "error" && (
-          <div className="mb-2 flex items-baseline justify-between gap-6 text-sm">
-            <p
-              aria-live="polite"
-              className="font-semibold text-muted-foreground"
-            >
+          <div className="mb-2 flex items-baseline justify-between gap-6 text-[13px]">
+            <p aria-live="polite" className="font-medium text-muted-foreground">
               {courses
                 ? `${count.toLocaleString()} ${count === 1 ? "course" : "courses"}`
                 : "Loading courses..."}
@@ -227,7 +226,7 @@ export function CourseBrowser() {
               <p className="text-muted-foreground">
                 <Link
                   href="/profile"
-                  className="font-semibold text-foreground underline underline-offset-2 hover:text-primary"
+                  className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
                 >
                   Import your transcript
                 </Link>{" "}
@@ -244,8 +243,8 @@ export function CourseBrowser() {
         )}
         {courses &&
           (count === 0 ? (
-            <div className="rounded-lg border-2 border-border bg-card px-6 py-12 text-center">
-              <p className="font-bold text-lg">No courses match</p>
+            <Card className="px-6 py-12 text-center">
+              <p className="font-semibold text-base">No courses match</p>
               <p className="mt-1 text-muted-foreground">
                 Check the spelling, or clear your filters to see every course.
               </p>
@@ -261,19 +260,21 @@ export function CourseBrowser() {
                   Clear filters
                 </Button>
               )}
-            </div>
+            </Card>
           ) : (
             <>
               <CourseRowHeader withStatus={Boolean(states)} />
-              <ul className="divide-y divide-border rounded-lg border-2 border-border bg-card">
-                {results.slice(0, limit).map((course) => (
-                  <CourseRow
-                    key={course.code}
-                    course={course}
-                    state={states?.get(course.code)}
-                  />
-                ))}
-              </ul>
+              <Card asChild className="divide-y divide-border overflow-hidden">
+                <ul>
+                  {results.slice(0, limit).map((course) => (
+                    <CourseRow
+                      key={course.code}
+                      course={course}
+                      state={states?.get(course.code)}
+                    />
+                  ))}
+                </ul>
+              </Card>
               {count > limit && (
                 <div className="mt-6 flex flex-col items-center gap-2">
                   <Button
@@ -282,7 +283,7 @@ export function CourseBrowser() {
                   >
                     Show more
                   </Button>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-[13px] text-muted-foreground">
                     Showing {limit} of {count.toLocaleString()}
                   </p>
                 </div>
@@ -310,21 +311,19 @@ function Select({
   className?: string;
 }) {
   return (
-    <label className="flex flex-col gap-1.5 font-semibold text-sm">
-      {label}
-      <select
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        className={`${field} font-normal ${className ?? "w-40"}`}
-      >
-        <option value="">{all}</option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-    </label>
+    <SelectField
+      label={label}
+      value={value}
+      onChange={(event) => onChange(event.target.value)}
+      className={className ?? "w-40"}
+    >
+      <option value="">{all}</option>
+      {options.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </SelectField>
   );
 }
 

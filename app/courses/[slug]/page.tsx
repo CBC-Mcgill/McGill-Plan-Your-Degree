@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { CourseRatings } from "@/components/course-ratings";
 import { CourseStatusPanel } from "@/components/course-status-panel";
 import { LinkedCourseText } from "@/components/linked-course-text";
+import { Card } from "@/components/ui/card";
 import { getCourse, getUnlocks } from "@/lib/catalogue/server";
 import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
 import type { Course } from "@/lib/catalogue/types";
@@ -43,44 +44,48 @@ export default async function CoursePage({
   ).filter((unlocked): unlocked is Course => unlocked !== undefined);
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-8 py-10">
+    <div className="mx-auto w-full max-w-page px-8 py-8">
       <Link
         href="/courses"
-        className="-ml-2 inline-flex h-10 items-center gap-1.5 rounded-md px-2 font-semibold text-muted-foreground text-sm hover:text-foreground"
+        className="-ml-2 inline-flex h-8 items-center gap-1.5 rounded-md px-2 font-medium text-[13px] text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft aria-hidden className="size-4" />
         Browse courses
       </Link>
 
-      <div className="mt-4 grid grid-cols-[minmax(0,1fr)_20rem] items-start gap-10">
+      <div className="mt-3 grid grid-cols-[minmax(0,1fr)_20rem] items-start gap-8">
         <article>
           <h1>
-            <span className="block text-primary text-xl">{course.code}</span>{" "}
-            <span className="block text-4xl">{course.title}</span>
+            <span className="block font-medium font-sans text-muted-foreground text-sm tracking-normal font-stretch-normal">
+              {course.code}
+            </span>{" "}
+            <span className="mt-1 block">{course.title}</span>
           </h1>
 
-          <dl className="mt-6 grid grid-cols-3 gap-x-6 gap-y-4 rounded-lg border-2 border-border bg-card p-5">
-            <Fact label="Credits" value={creditsText(course.credits)} />
-            <Fact label="Offered by" value={course.offeredBy} />
-            <Fact label="Faculty" value={course.faculty} />
-            <Fact
-              className="col-span-3"
-              label="Terms offered"
-              value={course.terms.join(", ") || "Not offered this year"}
-            />
-          </dl>
+          <Card asChild className="mt-6 p-5">
+            <dl className="grid grid-cols-3 gap-x-6 gap-y-4">
+              <Fact label="Credits" value={creditsText(course.credits)} />
+              <Fact label="Offered by" value={course.offeredBy} />
+              <Fact label="Faculty" value={course.faculty} />
+              <Fact
+                className="col-span-3"
+                label="Terms offered"
+                value={course.terms.join(", ") || "Not offered this year"}
+              />
+            </dl>
+          </Card>
 
-          <p className="mt-8 max-w-prose text-lg leading-relaxed">
+          <p className="mt-6 max-w-prose leading-6">
             {description || "No description."}
           </p>
 
-          <section id="requirements" className="mt-10 scroll-mt-6">
-            <h2 className="text-2xl">Requirements</h2>
+          <section id="requirements" className="mt-8 scroll-mt-6">
+            <h2 className="text-lg">Requirements</h2>
             {requirements.length > 0 ? (
-              <dl className="mt-4 flex flex-col gap-5">
+              <dl className="mt-3 flex flex-col gap-4">
                 {requirements.map(({ title, text }) => (
                   <div key={title}>
-                    <dt className="font-bold">{title}</dt>
+                    <dt className="font-semibold">{title}</dt>
                     <dd className="mt-1 max-w-prose">
                       <LinkedCourseText text={text ?? ""} />
                     </dd>
@@ -95,15 +100,15 @@ export default async function CoursePage({
           </section>
 
           {unlocks.length > 0 && (
-            <section className="mt-10">
-              <h2 className="text-2xl">Unlocks</h2>
+            <section className="mt-8">
+              <h2 className="text-lg">Unlocks</h2>
               <p className="mt-3 text-muted-foreground">
                 Courses that list {course.code} as a prerequisite.
               </p>
               <UnlockList courses={unlockedCourses.slice(0, 12)} />
               {unlockedCourses.length > 12 && (
                 <details className="group mt-1.5">
-                  <summary className="inline-flex h-10 cursor-pointer items-center rounded-md font-semibold text-muted-foreground hover:text-foreground group-open:hidden">
+                  <summary className="inline-flex h-8 cursor-pointer items-center rounded-md font-medium text-muted-foreground hover:text-foreground group-open:hidden">
                     Show {unlockedCourses.length - 12} more
                   </summary>
                   <UnlockList courses={unlockedCourses.slice(12)} />
@@ -113,8 +118,8 @@ export default async function CoursePage({
           )}
 
           {notes.length > 0 && (
-            <section className="mt-10">
-              <h2 className="text-2xl">Notes</h2>
+            <section className="mt-8">
+              <h2 className="text-lg">Notes</h2>
               <ul className="mt-3 flex max-w-prose list-disc flex-col gap-1.5 pl-5">
                 {notes.map((note) => (
                   <li key={note}>{note}</li>
@@ -127,7 +132,7 @@ export default async function CoursePage({
             href={`https://coursecatalogue.mcgill.ca/courses/${catalogueSlug}/`}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-2 font-semibold underline underline-offset-2 hover:text-primary"
+            className="mt-8 inline-flex items-center gap-2 font-medium underline underline-offset-2 hover:text-primary"
           >
             View on the McGill course catalogue
             <ExternalLink aria-hidden className="size-4" />
@@ -158,8 +163,8 @@ function Fact({
 }) {
   return (
     <div className={className}>
-      <dt className="font-semibold text-muted-foreground text-sm">{label}</dt>
-      <dd className="mt-0.5 font-semibold">{value ?? "Not listed"}</dd>
+      <dt className="font-medium text-muted-foreground text-xs">{label}</dt>
+      <dd className="mt-0.5 font-medium">{value ?? "Not listed"}</dd>
     </div>
   );
 }

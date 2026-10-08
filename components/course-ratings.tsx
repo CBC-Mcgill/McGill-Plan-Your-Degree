@@ -2,6 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Card } from "@/components/ui/card";
 import { courseSlug } from "@/lib/catalogue/slug";
 
 interface Ratings {
@@ -65,66 +66,64 @@ function RatingsCard({ code }: { code: string }) {
   const url = `https://mcgill.courses/course/${courseSlug(code)}`;
 
   return (
-    <section
-      aria-labelledby="ratings-heading"
-      className="mt-6 rounded-lg border-2 border-border bg-card p-6"
-    >
-      <h2 id="ratings-heading" className="text-lg">
-        Student ratings
-      </h2>
-      <div className="mt-4 flex flex-col gap-4">
-        {ratings === null && <Skeleton />}
-        {ratings === "unavailable" && (
-          <SourceLink
-            href={url}
-            label="See student reviews on mcgill.courses"
-          />
-        )}
-        {typeof ratings === "object" && ratings !== null && (
-          <>
-            {ratings.reviews > 0 ? (
-              <>
-                <dl className="grid grid-cols-2 gap-5">
-                  <Meter label="Rating" value={ratings.rating} />
-                  <Meter label="Difficulty" value={ratings.difficulty} />
-                </dl>
-                <SourceLink
-                  href={url}
-                  label={`Read the ${ratings.reviews.toLocaleString("en-CA")} ${ratings.reviews === 1 ? "review" : "reviews"} on mcgill.courses`}
-                />
-              </>
-            ) : (
-              <>
-                <p className="font-semibold">No reviews yet</p>
-                <SourceLink
-                  href={url}
-                  label="Write the first review on mcgill.courses"
-                />
-              </>
-            )}
-            <p className="text-muted-foreground text-sm">
-              Ratings from mcgill.courses, written by McGill students.
-            </p>
-          </>
-        )}
-      </div>
-    </section>
+    <Card asChild className="mt-4 p-5">
+      <section aria-labelledby="ratings-heading">
+        <h2 id="ratings-heading" className="text-base">
+          Student ratings
+        </h2>
+        <div className="mt-3 flex flex-col gap-3">
+          {ratings === null && <Skeleton />}
+          {ratings === "unavailable" && (
+            <SourceLink
+              href={url}
+              label="See student reviews on mcgill.courses"
+            />
+          )}
+          {typeof ratings === "object" && ratings !== null && (
+            <>
+              {ratings.reviews > 0 ? (
+                <>
+                  <dl className="grid grid-cols-2 gap-4">
+                    <Meter label="Rating" value={ratings.rating} />
+                    <Meter label="Difficulty" value={ratings.difficulty} />
+                  </dl>
+                  <SourceLink
+                    href={url}
+                    label={`Read the ${ratings.reviews.toLocaleString("en-CA")} ${ratings.reviews === 1 ? "review" : "reviews"} on mcgill.courses`}
+                  />
+                </>
+              ) : (
+                <>
+                  <p className="font-medium">No reviews yet</p>
+                  <SourceLink
+                    href={url}
+                    label="Write the first review on mcgill.courses"
+                  />
+                </>
+              )}
+              <p className="text-[13px] text-muted-foreground">
+                Ratings from mcgill.courses, written by McGill students.
+              </p>
+            </>
+          )}
+        </div>
+      </section>
+    </Card>
   );
 }
 
 function Meter({ label, value }: { label: string; value: number }) {
   return (
     <div>
-      <dt className="font-semibold text-muted-foreground text-sm">{label}</dt>
+      <dt className="font-medium text-muted-foreground text-xs">{label}</dt>
       <dd className="mt-0.5">
-        <span className="font-extrabold text-2xl">{value.toFixed(1)}</span>
-        <span className="font-semibold text-muted-foreground text-sm">
-          {" "}
-          out of 5
+        <span className="font-semibold text-2xl tabular-nums">
+          {value.toFixed(1)}
         </span>
+        <span className="text-[13px] text-muted-foreground"> out of 5</span>
         <div
           aria-hidden
-          className="relative mt-2 h-2 overflow-hidden rounded-sm bg-muted"
+          className="relative mt-2 h-1.5 overflow-hidden rounded-full bg-muted"
         >
           <div
             className="h-full bg-in-progress"
@@ -145,7 +144,7 @@ function Meter({ label, value }: { label: string; value: number }) {
 
 function Skeleton() {
   return (
-    <div aria-busy className="grid grid-cols-2 gap-5 motion-safe:animate-pulse">
+    <div aria-busy className="grid grid-cols-2 gap-4 motion-safe:animate-pulse">
       {[0, 1].map((i) => (
         <div key={i} className="flex flex-col gap-2">
           <div className="h-4 w-16 rounded-sm bg-muted" />
@@ -164,7 +163,7 @@ function SourceLink({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="font-semibold underline underline-offset-2 hover:text-primary"
+      className="font-medium underline underline-offset-2 hover:text-primary"
     >
       {label.slice(0, split)}
       <span className="whitespace-nowrap">

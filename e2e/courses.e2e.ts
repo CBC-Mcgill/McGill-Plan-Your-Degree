@@ -76,7 +76,7 @@ test("an unknown course is a 404", async ({ page }) => {
   expect(response?.status()).toBe(404);
 });
 
-test("with a profile, Available to me narrows the list and a course can be planned", async ({
+test("with a profile, Can take narrows the list and a course can be planned", async ({
   page,
 }) => {
   await page.addInitScript(

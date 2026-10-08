@@ -4,6 +4,7 @@ import { useId, useState } from "react";
 import { CourseRow, TermGroup } from "@/components/profile/course-row";
 import { TermSelect } from "@/components/profile/selects";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { SelectField, TextField } from "@/components/ui/field";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { useProfileStore } from "@/lib/profile/store";
@@ -86,81 +87,83 @@ export function CoursesCard() {
   const groups = groupByTerm(records).reverse();
 
   return (
-    <section className="rounded-lg border-2 border-border bg-card p-6">
-      <h2 className="text-xl">Your courses</h2>
+    <Card asChild className="p-5">
+      <section>
+        <h2 className="text-base">Your courses</h2>
 
-      <form
-        onSubmit={add}
-        className="mt-4 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 rounded-md bg-muted/60 p-4"
-      >
-        <TextField
-          label="Add a course by code"
-          value={text}
-          list={listId}
-          placeholder="COMP 250"
-          autoComplete="off"
-          spellCheck={false}
-          onChange={(event) => {
-            setText(event.target.value);
-            setError(null);
-          }}
-        />
-        <datalist id={listId}>
-          {suggestions.map((course) => (
-            <option key={course.code} value={course.code}>
-              {course.title}
-            </option>
-          ))}
-        </datalist>
-        <TermSelect label="Term" value={chosenTerm} onChange={setTerm} />
-        <SelectField
-          label="Status"
-          value={chosenStatus}
-          onChange={(event) =>
-            setStatus(event.target.value as "completed" | "in-progress")
-          }
+        <form
+          onSubmit={add}
+          className="mt-3 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 rounded-lg bg-subtle p-4 shadow-[inset_0_0_0_1px_var(--border)]"
         >
-          <option value="completed">Completed</option>
-          <option value="in-progress">In progress</option>
-        </SelectField>
-        <Button type="submit" variant="secondary">
-          Add course
-        </Button>
-        {error && (
-          <p role="alert" className="col-span-4 font-semibold text-failed">
-            {error}
-          </p>
-        )}
-      </form>
+          <TextField
+            label="Add a course by code"
+            value={text}
+            list={listId}
+            placeholder="COMP 250"
+            autoComplete="off"
+            spellCheck={false}
+            onChange={(event) => {
+              setText(event.target.value);
+              setError(null);
+            }}
+          />
+          <datalist id={listId}>
+            {suggestions.map((course) => (
+              <option key={course.code} value={course.code}>
+                {course.title}
+              </option>
+            ))}
+          </datalist>
+          <TermSelect label="Term" value={chosenTerm} onChange={setTerm} />
+          <SelectField
+            label="Status"
+            value={chosenStatus}
+            onChange={(event) =>
+              setStatus(event.target.value as "completed" | "in-progress")
+            }
+          >
+            <option value="completed">Completed</option>
+            <option value="in-progress">In progress</option>
+          </SelectField>
+          <Button type="submit" variant="secondary" className="mb-0.5">
+            Add course
+          </Button>
+          {error && (
+            <p role="alert" className="col-span-4 font-medium text-danger">
+              {error}
+            </p>
+          )}
+        </form>
 
-      {groups.length === 0 ? (
-        <p className="mt-6 rounded-md border-2 border-border border-dashed p-6 text-center text-muted-foreground">
-          No courses yet. Add one above, or import your transcript.
-        </p>
-      ) : (
-        <div className="mt-6 grid gap-6">
-          {groups.map(({ term: groupTerm, items }) => (
-            <TermGroup
-              key={groupTerm ? termKey(groupTerm) : "before"}
-              term={groupTerm}
-              count={items.length}
-            >
-              {items.map((record) => (
-                <CourseRow
-                  key={`${record.code}-${record.term ? termKey(record.term) : "none"}`}
-                  code={record.code}
-                  title={ready?.get(record.code)?.title ?? null}
-                  credits={record.credits}
-                  grade={record.grade}
-                  status={record.status}
-                  missing={ready !== null && !ready.has(record.code)}
-                  onRemove={() => removeCourse(record.code)}
-                />
-              ))}
-            </TermGroup>
-          ))}
-        </div>
-      )}
-    </section>
+        {groups.length === 0 ? (
+          <p className="mt-5 rounded-lg border border-border-strong border-dashed p-6 text-center text-muted-foreground">
+            No courses yet. Add one above, or import your transcript.
+          </p>
+        ) : (
+          <div className="mt-5 grid gap-5">
+            {groups.map(({ term: groupTerm, items }) => (
+              <TermGroup
+                key={groupTerm ? termKey(groupTerm) : "before"}
+                term={groupTerm}
+                count={items.length}
+              >
+                {items.map((record) => (
+                  <CourseRow
+                    key={`${record.code}-${record.term ? termKey(record.term) : "none"}`}
+                    code={record.code}
+                    title={ready?.get(record.code)?.title ?? null}
+                    credits={record.credits}
+                    grade={record.grade}
+                    status={record.status}
+                    missing={ready !== null && !ready.has(record.code)}
+                    onRemove={() => removeCourse(record.code)}
+                  />
+                ))}
+              </TermGroup>
+            ))}
+          </div>
+        )}
+      </section>
+    </Card>
   );
 }

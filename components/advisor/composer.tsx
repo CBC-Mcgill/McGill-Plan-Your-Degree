@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import { DropdownMenu } from "radix-ui";
 import { type RefObject, useLayoutEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { earnedCredits } from "@/lib/engine/credits";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
@@ -39,11 +40,11 @@ const MODES = [
 ] as const;
 
 const menuContent =
-  "z-50 min-w-60 rounded-lg border border-border bg-card p-1.5 shadow-[0_8px_30px_rgb(23_32_54/0.12)] outline-none";
+  "z-50 min-w-60 rounded-lg bg-card p-1 shadow-float outline-none";
 const menuItem =
-  "flex cursor-pointer select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none data-[highlighted]:bg-muted";
+  "flex cursor-pointer select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none data-[highlighted]:bg-subtle";
 const toolButton =
-  "flex h-9 items-center gap-1.5 rounded-md px-2.5 font-semibold text-muted-foreground text-sm transition-[background-color,color] hover:bg-muted hover:text-foreground data-[state=open]:bg-muted data-[state=open]:text-foreground";
+  "flex h-8 items-center gap-1.5 rounded-md px-2.5 font-medium text-muted-foreground text-sm transition-[background-color,color] hover:bg-subtle hover:text-foreground data-[state=open]:bg-subtle data-[state=open]:text-foreground";
 
 /** Credits earned, advanced standing included, using the catalogue for records that do not state them. */
 function ProfileDetail({
@@ -112,7 +113,7 @@ export function Composer({
           event.preventDefault();
           onSend();
         }}
-        className="rounded-[1.25rem] border border-border bg-card shadow-[0_1px_2px_rgb(23_32_54/0.04),0_8px_28px_rgb(23_32_54/0.06)] transition-[border-color,box-shadow] focus-within:border-ring focus-within:shadow-[0_0_0_3px_color-mix(in_oklab,var(--ring)_22%,transparent),0_8px_28px_rgb(23_32_54/0.06)]"
+        className="rounded-xl bg-card shadow-float transition-shadow focus-within:shadow-[0_8px_24px_-6px_rgb(23_32_54/0.22),0_0_0_2px_var(--ring)]"
       >
         {attached.length > 0 && (
           <ul
@@ -124,13 +125,13 @@ export function Composer({
               return (
                 <li
                   key={kind}
-                  className="flex h-8 max-w-full items-center gap-2 rounded-md border border-border bg-background pr-1 pl-2.5 text-sm"
+                  className="flex h-8 max-w-full items-center gap-2 rounded-md bg-subtle pr-1 pl-2.5 text-[13px] shadow-[inset_0_0_0_1px_var(--border)]"
                 >
                   <Icon
                     aria-hidden
                     className="size-4 shrink-0 text-muted-foreground"
                   />
-                  <span className="shrink-0 font-semibold">{label}</span>
+                  <span className="shrink-0 font-medium">{label}</span>
                   {kind === "profile" && <ProfileDetail snapshot={snapshot} />}
                   <button
                     type="button"
@@ -163,19 +164,21 @@ export function Composer({
           }}
           aria-label="Message the advisor"
           placeholder="Ask anything about your degree"
-          className="block max-h-56 min-h-[3.75rem] w-full resize-none bg-transparent px-5 pt-4 pb-2 text-base leading-6 outline-none placeholder:text-muted-foreground"
+          className="block max-h-56 min-h-[3.75rem] w-full resize-none bg-transparent px-5 pt-4 pb-2 text-base leading-6 outline-none placeholder:text-faint"
         />
 
         <div className="flex items-center px-3 pb-3">
           <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild>
-              <button
+              <Button
                 type="button"
+                variant="ghost"
+                size="icon"
                 aria-label="Add context"
-                className="grid size-9 place-items-center rounded-md text-muted-foreground transition-[background-color,color] hover:bg-muted hover:text-foreground data-[state=open]:bg-muted data-[state=open]:text-foreground"
+                className="size-8 data-[state=open]:bg-subtle data-[state=open]:text-foreground"
               >
-                <Plus aria-hidden className="size-5" />
-              </button>
+                <Plus aria-hidden />
+              </Button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Portal>
               <DropdownMenu.Content
@@ -184,7 +187,7 @@ export function Composer({
                 sideOffset={8}
                 className={menuContent}
               >
-                <DropdownMenu.Label className="px-2.5 pt-1.5 pb-1 font-semibold text-muted-foreground text-xs">
+                <DropdownMenu.Label className="px-2.5 pt-1.5 pb-1 font-medium text-muted-foreground text-xs">
                   Add context
                 </DropdownMenu.Label>
                 {menuKinds.map((kind) => {
@@ -243,7 +246,7 @@ export function Composer({
                         className={menuItem}
                       >
                         <span className="grid">
-                          <span className="font-semibold">{label}</span>
+                          <span className="font-medium">{label}</span>
                           <span className="text-muted-foreground text-xs">
                             {hint}
                           </span>
@@ -258,14 +261,15 @@ export function Composer({
               </DropdownMenu.Portal>
             </DropdownMenu.Root>
 
-            <button
+            <Button
               type="submit"
+              size="icon"
               aria-label="Send message"
               disabled={!value.trim()}
-              className="grid size-9 place-items-center rounded-md bg-primary text-primary-foreground transition-[background-color,opacity] hover:bg-primary-hover disabled:pointer-events-none disabled:bg-muted disabled:text-muted-foreground"
+              className="size-8"
             >
-              <ArrowUp aria-hidden className="size-5" strokeWidth={2.5} />
-            </button>
+              <ArrowUp aria-hidden strokeWidth={2.25} />
+            </Button>
           </div>
         </div>
       </form>

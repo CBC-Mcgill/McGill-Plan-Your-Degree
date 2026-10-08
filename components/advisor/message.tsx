@@ -71,7 +71,7 @@ export function UserMessage({ text }: { text: string }) {
       >
         Y
       </span>
-      <p className="w-fit max-w-full whitespace-pre-wrap break-words rounded-2xl bg-muted/70 px-4 py-2.5 leading-7">
+      <p className="w-fit max-w-full whitespace-pre-wrap break-words rounded-xl bg-muted px-4 py-2 leading-6">
         <span className="sr-only">You: </span>
         {text}
       </p>
@@ -106,7 +106,7 @@ function Thinking() {
         aria-expanded={open}
         aria-controls={id}
         onClick={() => setOpen(!open)}
-        className="-ml-1.5 flex items-center gap-1 rounded-md px-1.5 py-1 text-muted-foreground text-sm transition-[color] hover:text-foreground"
+        className="-ml-1.5 flex items-center gap-1 rounded-md px-1.5 py-1 text-[13px] text-muted-foreground transition-[color] hover:text-foreground"
       >
         <ChevronRight
           aria-hidden
@@ -127,7 +127,7 @@ function Thinking() {
             transition={{ duration: reduce ? 0 : 0.2 }}
             className="overflow-hidden"
           >
-            <div className="mt-1 mb-1 ml-2 grid gap-2 border-border border-l pl-4 text-muted-foreground text-sm leading-6">
+            <div className="mt-1 mb-1 ml-2 grid gap-2 border-border border-l pl-4 text-[13px] text-muted-foreground leading-5">
               <p>
                 Nothing ran for this message, because the advisor is still being
                 built. Once it ships, it will:
@@ -171,7 +171,7 @@ function Action({
           aria-label={label}
           aria-disabled={onClick ? undefined : true}
           onClick={onClick}
-          className="grid size-8 place-items-center rounded-md text-muted-foreground transition-[background-color,color] hover:bg-muted hover:text-foreground aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:hover:bg-transparent aria-disabled:hover:text-muted-foreground [&_svg]:size-4"
+          className="grid size-7 place-items-center rounded-md text-muted-foreground transition-[background-color,color] hover:bg-subtle hover:text-foreground aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:hover:bg-transparent aria-disabled:hover:text-muted-foreground [&_svg]:size-4"
         >
           {children}
         </button>
@@ -179,7 +179,7 @@ function Action({
       <Tooltip.Portal>
         <Tooltip.Content
           sideOffset={6}
-          className="z-50 rounded-md bg-foreground px-2.5 py-1.5 font-semibold text-background text-xs"
+          className="z-50 rounded-md bg-foreground px-2.5 py-1.5 font-medium text-background text-xs"
         >
           {tip}
         </Tooltip.Content>
@@ -226,7 +226,7 @@ export function AssistantMessage({ prompt }: { prompt: string }) {
           initial={reduce ? false : "hidden"}
           animate="show"
           transition={{ staggerChildren: 0.02, delayChildren: 0.1 }}
-          className="mt-1 grid gap-4 leading-7"
+          className="mt-1 grid gap-3 leading-6"
         >
           {paragraphs.map((pieces) => (
             <p
@@ -245,7 +245,7 @@ export function AssistantMessage({ prompt }: { prompt: string }) {
                   >
                     <Link
                       href={piece.href}
-                      className="font-semibold underline underline-offset-2 hover:text-primary"
+                      className="font-medium underline underline-offset-2 hover:text-primary"
                     >
                       {piece.label}
                     </Link>
