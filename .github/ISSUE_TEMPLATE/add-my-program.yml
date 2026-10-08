@@ -1,0 +1,36 @@
+name: Add my program
+description: Ask for a degree program to be added to the planner.
+title: "Add program: "
+body:
+  - type: input
+    id: program
+    attributes:
+      label: Program name
+      placeholder: Mathematics Major (B.Sc.)
+    validations:
+      required: true
+  - type: input
+    id: faculty
+    attributes:
+      label: Faculty
+      placeholder: Science
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link to the program page
+      placeholder: https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/
+    validations:
+      required: true
+  - type: dropdown
+    id: help
+    attributes:
+      label: Can you help encode it?
+      description: A program is a data file, and the steps are in CONTRIBUTING.md.
+      options:
+        - "Yes, I can open a PR"
+        - "I can review it once someone else writes it"
+        - "No, I just need it added"
+    validations:
+      required: true

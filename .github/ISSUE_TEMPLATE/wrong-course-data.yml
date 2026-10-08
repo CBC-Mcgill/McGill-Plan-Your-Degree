@@ -1,0 +1,25 @@
+name: Wrong course data
+description: A course shows a wrong title, prerequisite, term, or other detail.
+title: "Wrong data: "
+body:
+  - type: input
+    id: code
+    attributes:
+      label: Course code
+      placeholder: COMP 251
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Say what the app shows and what it should show.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link to the official catalogue page
+      placeholder: https://coursecatalogue.mcgill.ca/courses/comp-251/
+    validations:
+      required: true
