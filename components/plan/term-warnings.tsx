@@ -30,7 +30,7 @@ function Others({ codes }: { codes: string[] }) {
   ));
 }
 
-function Sentence({
+export function Sentence({
   warning,
   snapshot,
   catalogue,
