@@ -2,6 +2,7 @@
   "name": "mcgill-plan-your-degree",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +11,8 @@
     "format": "biome check --write",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run --passWithNoTests",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "crawl": "node crawler/crawl.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -30,6 +32,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "cheerio": "1.2.0",
     "tailwindcss": "^4",
     "typescript": "^7",
     "vitest": "^5.0.3"

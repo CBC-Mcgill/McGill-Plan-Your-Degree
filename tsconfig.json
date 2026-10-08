@@ -21,7 +21,9 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true
   },
   "include": [
     "next-env.d.ts",

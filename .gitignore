@@ -43,3 +43,9 @@ next-env.d.ts
 # playwright
 /test-results/
 /playwright-report/
+
+# crawler cache
+/.cache/
+
+# claude code agent worktrees
+/.claude/worktrees/
