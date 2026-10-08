@@ -4,12 +4,10 @@ import { exportProfile, parseProfileFile } from "./file.ts";
 import type { Term } from "./types.ts";
 
 const data = new Map<string, string>();
-vi.stubGlobal("window", {
-  localStorage: {
-    getItem: (key: string) => data.get(key) ?? null,
-    setItem: (key: string, value: string) => data.set(key, value),
-    removeItem: (key: string) => data.delete(key),
-  },
+vi.stubGlobal("localStorage", {
+  getItem: (key: string) => data.get(key) ?? null,
+  setItem: (key: string, value: string) => data.set(key, value),
+  removeItem: (key: string) => data.delete(key),
 });
 const { useProfileStore } = await import("./store.ts");
 const store = useProfileStore;

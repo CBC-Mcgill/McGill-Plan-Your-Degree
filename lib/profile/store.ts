@@ -142,9 +142,23 @@ export const useProfileStore = create<ProfileState>()(
       storage: createJSONStorage(() => localStorage),
       migrate: (persisted, version) =>
         migrateProfile(persisted, version) as ProfileState,
+      merge: (persisted, current) => ({
+        ...current,
+        ...initial,
+        ...(persisted as Partial<Profile> | undefined),
+      }),
     },
   ),
 );
+
+// Each tab writes its whole profile, so take other tabs' edits and resets before this tab writes again.
+if (typeof window !== "undefined") {
+  window.addEventListener("storage", (event) => {
+    if (event.key === PROFILE_STORAGE_KEY || event.key === null) {
+      void useProfileStore.persist.rehydrate();
+    }
+  });
+}
 
 /**
  * False on the server and during hydration, true after. Render nothing profile-specific until it is true.

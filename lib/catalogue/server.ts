@@ -34,7 +34,3 @@ export function loadCatalogue(): Promise<ReadonlyMap<string, Course>> {
   });
   return catalogue;
 }
-
-export async function getCourse(code: string): Promise<Course | undefined> {
-  return (await loadCatalogue()).get(code);
-}
