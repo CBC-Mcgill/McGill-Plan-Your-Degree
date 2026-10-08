@@ -190,12 +190,12 @@ Sources: McGill's CEGEP transfer credit page, the Faculty of Engineering transfe
 
 | Case | What McGill does | Status |
 |---|---|---|
-| Quebec CEGEP graduate (DEC) | Enters U1 with up to 29 or 30 advanced standing credits. A B.Sc. or B.A. is 90 credits. Engineering Year 0 courses are credited. | Handled: lump-sum advanced standing from the transcript, Year 0 groups credited, degree credits shown |
+| Quebec CEGEP graduate (DEC) | Enters U1 with up to 29 or 30 advanced standing credits. A B.Sc. or B.A. is 90 credits. Engineering Year 0 courses are credited. | Handled: lump-sum advanced standing from the transcript, Year 0 groups credited, Science DEC equivalents (MATH 133, 140, 141, PHYS 131, 142, CHEM 110, 120, BIOL 111) meet prerequisites, earned degree credits shown |
 | Course exemption without credit | The course counts as done, but its credits must be replaced. | Handled: a note names the course and the credits to replace |
 | AP, IB, A-Level, French Baccalaureate or CAPE | Up to 29 or 30 credits of advanced standing. 24 or more credits places the student in U1. | Mostly handled: per-course transfer credits and lump sums both count |
 | Outside Quebec, from high school | Enters U0 and completes a 30-credit Foundation year, so a B.Sc. or B.A. is 120 credits. | Partly handled: the student can choose this entry and degree credits use 120, but Foundation course choices are not checked |
 | CEGEP with only part of Year 0 covered | Some Year 0 courses are credited and some must still be taken. | Not handled: Year 0 is credited as a whole |
-| Incomplete DEC or a non-science DEC | Missing CEGEP prerequisites must be taken at McGill. | Not handled |
+| Incomplete DEC or a non-science DEC | Missing CEGEP prerequisites must be taken at McGill. | Not handled: every CEGEP student is assumed to hold a Science DEC |
 | Transfer from another university | Per-course transfer credit, and at least 60 credits (or half of a B.Eng.) must be taken at McGill. | Partly handled: transfer credits count, the residency rule is not checked |
 | Mature student | Usually starts in U0. | Partly handled through the Foundation entry |
 | Entered under an older catalogue year | Follows the requirements of the year they entered. | Not handled: every student uses the current catalogue |
