@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { type ReactNode, useId, useMemo, useState } from "react";
 import { seasonsOffered } from "@/components/course-row";
-import { addWithUndo } from "@/components/plan/add-with-undo";
+import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon, UncertainFlag } from "@/components/status";
 import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
@@ -619,7 +619,7 @@ function Row({
             className="opacity-0 focus-visible:opacity-100 group-focus-within/row:opacity-100 group-hover/row:opacity-100"
             onClick={() => {
               if (here) {
-                useProfileStore.getState().removeFromPlan(term, course.code);
+                removeWithUndo(term, course.code);
               } else {
                 setPops((n) => n + 1);
                 addWithUndo(term, course.code);

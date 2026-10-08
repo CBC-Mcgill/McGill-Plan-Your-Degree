@@ -17,3 +17,13 @@ export function addWithUndo(term: Term, code: string) {
     },
   });
 }
+
+/** Takes the course out of the term, with a toast that can put it back. */
+export function removeWithUndo(term: Term, code: string) {
+  const { addToPlan, removeFromPlan } = useProfileStore.getState();
+  removeFromPlan(term, code);
+  toast(`Removed from ${termLabel(term)}`, {
+    label: "Undo",
+    run: () => addToPlan(term, code),
+  });
+}
