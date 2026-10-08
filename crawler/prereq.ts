@@ -131,6 +131,8 @@ class Parser {
       if (type === "semi" || type === "close") break;
       if (type === "and" || type === "or" || type === "comma") {
         if (type === "comma") afterComma = true;
+        // "; or X" and "(or X)" join to an operand outside this list.
+        else if (operands.length === 0) this.ambiguous = true;
         // ", or" and ", and" read as the word.
         if (pending === null || pending === "comma") pending = type;
         this.index++;

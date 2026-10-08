@@ -41,6 +41,18 @@ test.each([
     { or: ["COMP 202", "COMP 204", "COMP 208"] },
     true,
   ],
+  [
+    "BIOL 200, BIOL 201 (or ANAT 212/BIOC 212); or BIOL 219",
+    {
+      and: [
+        "BIOL 200",
+        "BIOL 201",
+        { or: ["ANAT 212", "BIOC 212"] },
+        "BIOL 219",
+      ],
+    },
+    true,
+  ],
   ["a course in functions", null, true],
 ])("parses %s", (text, tree, unparsed) => {
   expect(parseRequirement(text)).toEqual({ text, tree, unparsed });
