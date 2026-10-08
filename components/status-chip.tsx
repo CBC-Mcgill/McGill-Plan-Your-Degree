@@ -3,10 +3,12 @@ import {
   CalendarDays,
   Check,
   Clock,
+  Info,
   Lock,
   LockOpen,
   type LucideIcon,
 } from "lucide-react";
+import type { CourseState } from "@/lib/engine/status";
 
 export type CourseStatus =
   | "completed"
@@ -15,8 +17,11 @@ export type CourseStatus =
   | "locked"
   | "planned";
 
+/** A locked course whose requirement text has conditions we cannot check shows this instead of "Locked". */
+export type ChipStatus = CourseStatus | "check-requirements";
+
 const statuses: Record<
-  CourseStatus,
+  ChipStatus,
   { label: string; icon: LucideIcon; tone: string }
 > = {
   completed: {
@@ -44,13 +49,23 @@ const statuses: Record<
     icon: CalendarDays,
     tone: "border-planned/30 bg-planned-surface text-planned",
   },
+  "check-requirements": {
+    label: "Check requirements",
+    icon: Info,
+    tone: "border-locked/50 border-dashed bg-locked-surface text-locked",
+  },
 };
+
+/** The chip for a course state: "Check requirements" when it is locked but the requirement text is not fully checkable. */
+export function chipStatus({ status, uncertain }: CourseState): ChipStatus {
+  return status === "locked" && uncertain ? "check-requirements" : status;
+}
 
 export function StatusChip({
   status,
   className,
 }: {
-  status: CourseStatus;
+  status: ChipStatus;
   className?: string;
 }) {
   const { label, icon: Icon, tone } = statuses[status];
