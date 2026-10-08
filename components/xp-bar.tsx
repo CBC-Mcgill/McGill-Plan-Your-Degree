@@ -6,10 +6,13 @@ const format = (n: number) => n.toLocaleString("en-US");
 export function XpBar({
   xp,
   max,
+  label,
   className,
 }: {
   xp: number;
   max: number;
+  /** Replaces the default "xp / max XP" text. */
+  label?: string;
   className?: string;
 }) {
   return (
@@ -22,7 +25,7 @@ export function XpBar({
         className="w-28 text-xp"
       />
       <span className="whitespace-nowrap font-semibold text-muted-foreground text-xs tabular-nums">
-        {format(xp)} / {format(max)} XP
+        {label ?? `${format(xp)} / ${format(max)} XP`}
       </span>
     </div>
   );

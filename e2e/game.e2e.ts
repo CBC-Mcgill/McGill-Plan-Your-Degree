@@ -48,7 +48,7 @@ test("progress shows as a level, badges, and a one-time celebration", async ({
   await expect(toast).toContainText("Level 3 reached");
   await expect(toast).toContainText("5 badges earned");
   await expect(level).toHaveAttribute("href", "/profile#badges");
-  await expect(level).toContainText("200 / 1,500 XP");
+  await expect(level).toContainText("3,200 XP");
 
   const badges = page.locator("#badges");
   await expect(badges.getByRole("heading", { name: "Badges" })).toBeVisible();
