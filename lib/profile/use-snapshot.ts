@@ -12,10 +12,11 @@ export function useSnapshot(): Snapshot | null | undefined {
   const hydrated = useProfileHydrated();
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
+  const entry = useProfileStore((state) => state.entry);
   return useMemo(() => {
     if (!hydrated) return undefined;
     return records.length > 0 || plan.length > 0
-      ? buildSnapshot(records, plan)
+      ? buildSnapshot(records, plan, entry)
       : null;
-  }, [hydrated, records, plan]);
+  }, [hydrated, records, plan, entry]);
 }

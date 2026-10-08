@@ -374,14 +374,14 @@ function ProgramCard({
       )}
       {degree && (
         <p className="mt-2 text-sm">
-          <span className="font-semibold">Degree credits:</span>{" "}
+          <span className="font-semibold">Earned so far:</span>{" "}
           <span className="tabular-nums">
-            {degree.done} of {degree.required}
+            {degree.done}
+            {degree.required !== credits && ` of ${degree.required}`} credits
           </span>
           {degree.advancedStanding > 0 && (
             <span className="text-muted-foreground">
-              {" "}
-              ({degree.advancedStanding} are advanced standing)
+              , including {degree.advancedStanding} advanced standing credits
             </span>
           )}
         </p>

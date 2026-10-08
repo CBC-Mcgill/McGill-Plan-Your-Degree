@@ -81,8 +81,11 @@ const undergraduate = (s: Suggestion) => level(s.course) < 600;
 
 /** Electives worth a look: 100 to 400 level courses with credits, the student's own subjects first. */
 function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
+  // Only courses actually taken at McGill, so CEGEP-credited courses don't steer the ranking.
   const subjects = new Set(
-    [...snapshot.taken].map((code) => code.split(" ")[0]),
+    [...snapshot.earned.keys(), ...snapshot.inProgress.keys()].map(
+      (code) => code.split(" ")[0],
+    ),
   );
   return suggestions
     .filter((s) => level(s.course) < 500 && (s.course.credits ?? 0) > 0)

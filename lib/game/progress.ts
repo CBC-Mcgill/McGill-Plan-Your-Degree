@@ -52,7 +52,7 @@ export function gameProgress(
   program: Program | null,
 ): GameProgress {
   const { records, plan, entry } = profile;
-  const snapshot = buildSnapshot(records, plan);
+  const snapshot = buildSnapshot(records, plan, entry);
   const creditsOf = (code: string) => catalogue.get(code)?.credits ?? 0;
 
   const credits = earnedCredits(snapshot, catalogue) + profile.advancedStanding;

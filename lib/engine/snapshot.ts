@@ -1,6 +1,7 @@
 import type { CourseSummary } from "../catalogue/types.ts";
 import {
   type CourseRecord,
+  type EntryRoute,
   earnsCredit,
   isDone,
   type Plan,
@@ -23,9 +24,23 @@ export interface Snapshot {
   taken: ReadonlySet<string>;
 }
 
+/** Courses a Quebec Science DEC covers at every CEGEP, from mcgill.ca/transfercredit/prospective/cegep. They meet prerequisites but carry no McGill credit. */
+export const CEGEP_SCIENCE_EQUIVALENTS = [
+  "BIOL 111",
+  "CHEM 110",
+  "CHEM 120",
+  "MATH 133",
+  "MATH 139",
+  "MATH 140",
+  "MATH 141",
+  "PHYS 131",
+  "PHYS 142",
+];
+
 export function buildSnapshot(
   records: readonly CourseRecord[],
   plan: Plan = [],
+  entry: EntryRoute | null = null,
 ): Snapshot {
   const done = new Set<string>();
   const earned = new Map<string, number | null>();
@@ -47,6 +62,9 @@ export function buildSnapshot(
         );
       }
     }
+  }
+  if (entry === "cegep") {
+    for (const code of CEGEP_SCIENCE_EQUIVALENTS) done.add(code);
   }
   // A multi-term course with one part still running is not done yet.
   for (const code of inProgress.keys()) {
