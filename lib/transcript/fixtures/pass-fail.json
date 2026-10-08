@@ -1,0 +1,91 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Science",
+      "programs": [
+        "Major Computer Science"
+      ],
+      "minors": [],
+      "creditsRequired": 90,
+      "courses": [
+        {
+          "code": "COMP 202",
+          "title": "Foundations of Programming",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 250",
+          "title": "Resp. of the Prof. Engineer",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 0,
+          "grade": "P",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 100",
+          "title": "Intro to the Eng. Profession",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 1,
+          "grade": "F",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "failed"
+        },
+        {
+          "code": "PSYC 100",
+          "title": "Introduction to Psychology",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "S",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ARTH 205",
+          "title": "Intro to Modern Art",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "U",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "failed"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Roy, Camille",
+    "260900003",
+    "ROYC03040599"
+  ]
+}

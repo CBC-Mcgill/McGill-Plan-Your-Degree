@@ -1,0 +1,175 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Science",
+      "programs": [
+        "Major Computer Science"
+      ],
+      "minors": [],
+      "creditsRequired": 90,
+      "courses": [
+        {
+          "code": "COMP 202",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": null,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "exemption"
+        },
+        {
+          "code": "MATH 133",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": null,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "exemption"
+        },
+        {
+          "code": "MATH 140",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "transfer"
+        },
+        {
+          "code": "CHEM 110",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 4,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 4,
+          "multiTerm": false,
+          "status": "transfer"
+        },
+        {
+          "code": "PSYC 100",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "transfer"
+        },
+        {
+          "code": "ECON 2XX",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "transfer"
+        },
+        {
+          "code": "COMP 250",
+          "title": "Intro to Computer Science",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 141",
+          "title": "Calculus 2",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 4,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 4,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "TRNS XXX",
+          "title": null,
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 6,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 6,
+          "multiTerm": false,
+          "status": "transfer"
+        },
+        {
+          "code": "PHYS 131",
+          "title": null,
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": null,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "exemption"
+        },
+        {
+          "code": "COMP 251",
+          "title": "Algorithms and Data Structures",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Haddad, Hana",
+    "260900008",
+    "HADH08091099"
+  ]
+}

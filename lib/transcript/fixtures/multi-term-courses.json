@@ -1,0 +1,133 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Engineering",
+      "programs": [
+        "Computer Engineering"
+      ],
+      "minors": [],
+      "creditsRequired": 133,
+      "courses": [
+        {
+          "code": "ECSE 458D1",
+          "title": "Capstone Design Project",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": true,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 324",
+          "title": "Computer Organization",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 4,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 4,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 470J1",
+          "title": "Honours Research Project",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 1,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 1,
+          "multiTerm": true,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 458D2",
+          "title": "Capstone Design Project",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": true,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 470J2",
+          "title": "Honours Research Project",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 1,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 1,
+          "multiTerm": true,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 400N1",
+          "title": "Engineering Professional Practice",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 1,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": true,
+          "status": "in-progress"
+        },
+        {
+          "code": "MATH 470J3",
+          "title": "Honours Research Project",
+          "term": {
+            "season": "Summer",
+            "year": 2026
+          },
+          "credits": 1,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": true,
+          "status": "in-progress"
+        },
+        {
+          "code": "FACC 400N2",
+          "title": "Engineering Professional Practice",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 1,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": true,
+          "status": "in-progress"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Okafor, Ines",
+    "260900009",
+    "OKAI09101199"
+  ]
+}

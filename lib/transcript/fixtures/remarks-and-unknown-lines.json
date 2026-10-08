@@ -1,0 +1,80 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Science",
+      "programs": [
+        "Major Computer Science"
+      ],
+      "minors": [],
+      "creditsRequired": 90,
+      "courses": [
+        {
+          "code": "COMP 251",
+          "title": "Algorithms and Data Structures",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": "I",
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 222",
+          "title": "Calculus 3",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": "E",
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 223",
+          "title": "Linear Algebra",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": "A",
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "BIOL 111",
+          "title": "Principles: Organismal Biology",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": "EXC",
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "completed"
+        }
+      ],
+      "unrecognized": [
+        "COMP 302 001 Programming Lang & Paradigms 3 ZZ 3",
+        "COMP 303 001 Software Design TBA A NaN B"
+      ]
+    }
+  },
+  "mustNotContain": [
+    "Silva, Gabriel",
+    "260900007",
+    "SILG07080999"
+  ]
+}

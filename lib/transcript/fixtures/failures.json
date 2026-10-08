@@ -1,0 +1,105 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Engineering",
+      "programs": [
+        "Software Engineering"
+      ],
+      "minors": [],
+      "creditsRequired": 133,
+      "courses": [
+        {
+          "code": "MATH 262",
+          "title": "Intermediate Calculus",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "F",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "failed"
+        },
+        {
+          "code": "ECSE 200",
+          "title": "Electric Circuits 1",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "J",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "failed"
+        },
+        {
+          "code": "COMP 202",
+          "title": "Foundations of Programming",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "KF",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "failed"
+        },
+        {
+          "code": "ECSE 205",
+          "title": "Prob and Stats for Engineers",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 262",
+          "title": "Intermediate Calculus",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "C",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 200",
+          "title": "Electric Circuits 1",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Martin, Eli",
+    "260900005",
+    "MARE05060799"
+  ]
+}

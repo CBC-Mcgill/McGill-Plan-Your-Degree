@@ -1,0 +1,91 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Science",
+      "programs": [
+        "Major Computer Science"
+      ],
+      "minors": [],
+      "creditsRequired": 90,
+      "courses": [
+        {
+          "code": "COMP 202",
+          "title": "Foundations of Programming",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 133",
+          "title": "Linear Algebra and Geometry",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "W",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "withdrawn"
+        },
+        {
+          "code": "MATH 140",
+          "title": "Calculus 1",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "WF",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "withdrawn"
+        },
+        {
+          "code": "COMP 250",
+          "title": "Intro to Computer Science",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "WL",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "withdrawn"
+        },
+        {
+          "code": "MATH 141",
+          "title": "Calculus 2",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 4,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 4,
+          "multiTerm": false,
+          "status": "completed"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Lee, Dana",
+    "260900004",
+    "LEED04050699"
+  ]
+}
