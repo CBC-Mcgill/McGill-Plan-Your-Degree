@@ -29,7 +29,7 @@ test("importing a transcript saves its courses", async ({ page }) => {
     page.getByRole("heading", { level: 1, name: "Your profile" }),
   ).toBeVisible();
   await expect(page.getByText("COMP 250", { exact: true })).toBeVisible();
-  await expect(page.getByLabel("Program")).toHaveValue(
+  await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue(
     "computer-science-major-bsc",
   );
 });

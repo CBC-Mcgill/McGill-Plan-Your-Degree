@@ -114,12 +114,10 @@ test("with a profile, Can take now is the default tab and a course can be planne
   await page.keyboard.press("Escape");
 
   await rows.filter({ hasText: "COMP 251" }).click();
-  await expect(page.getByLabel("Term")).toBeVisible();
-  await page.getByRole("button", { name: "Add to plan" }).click();
-  await expect(page.getByRole("main").getByRole("status")).toContainText(
-    "Added to",
+  await page.getByRole("button", { name: /^Add to / }).click();
+  await expect(page.getByText(/^Planned for /)).toBeVisible();
+  await expect(page.getByRole("button", { name: /^Remove/ })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Your status" })).toContainText(
+    "Planned",
   );
-  await expect(
-    page.getByRole("link", { name: "View your plan" }),
-  ).toHaveAttribute("href", "/plan");
 });

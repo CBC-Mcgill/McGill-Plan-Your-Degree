@@ -1,83 +1,73 @@
 "use client";
 
+import { FileUp, Plus, X } from "lucide-react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { addWithUndo } from "@/components/plan/add-with-undo";
+import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
+import { StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
-import { SelectField } from "@/components/ui/field";
 import type { CourseSummary } from "@/lib/catalogue/types";
-import { isOffered } from "@/lib/engine/status";
+import { courseStatus, isOffered } from "@/lib/engine/status";
 import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
-import { termFromKey, termKey } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
-/** Picks a term and puts the course in the plan. Without a profile it sends the student to import one. */
+/** The page's one primary action: plan the course for the next term it runs, or take it back out. Courses the student has taken or is taking have none. */
 export function AddToPlan({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
   const plan = useProfileStore((state) => state.plan);
-  const options = useMemo(() => planTermOptions(plan), [plan]);
-  const [picked, setPicked] = useState<number | null>(null);
-  const [notice, setNotice] = useState<string | null>(null);
 
-  if (snapshot === undefined) return <div className="h-[8.5rem]" />;
+  if (snapshot === undefined) return null;
   if (snapshot === null) {
     return (
-      <Button asChild>
-        <Link href="/profile">Import your transcript</Link>
+      <Button asChild size="lg">
+        <Link href="/profile">
+          <FileUp aria-hidden />
+          Import your transcript
+        </Link>
       </Button>
     );
   }
+  const { status } = courseStatus(course, snapshot);
+  if (
+    status === "completed" ||
+    status === "covered" ||
+    status === "in-progress"
+  )
+    return null;
 
-  const planned = plan.find((entry) => entry.courses.includes(course.code));
-  const fallback =
-    planned?.term ??
-    options.find((term) => isOffered(course, term.season)) ??
-    options[0];
-  const selected = picked ?? (fallback ? termKey(fallback) : null);
-  const term = selected === null ? null : termFromKey(selected);
+  const planned = plan.find((entry) =>
+    entry.courses.includes(course.code),
+  )?.term;
+  const options = planTermOptions([]);
+  const next =
+    options.find((term) => isOffered(course, term.season)) ?? options[0];
 
   return (
-    <div className="flex flex-col gap-3">
-      <SelectField
-        label="Term"
-        value={selected ?? ""}
-        onChange={(event) => {
-          setPicked(Number(event.target.value));
-          setNotice(null);
-        }}
-      >
-        {options.map((option) => (
-          <option key={termKey(option)} value={termKey(option)}>
-            {termLabel(option)}
-          </option>
-        ))}
-      </SelectField>
-      <div>
+    <div className="flex items-center gap-3">
+      {planned && (
+        <span className="inline-flex items-center gap-1.5 font-medium text-planned">
+          <StatusIcon status="planned" />
+          Planned for {termLabel(planned)}
+        </span>
+      )}
+      {planned ? (
         <Button
-          className="w-full"
-          onClick={() => {
-            if (!term) return;
-            addWithUndo(term, course.code);
-            setNotice(`${planned ? "Moved" : "Added"} to ${termLabel(term)}.`);
-          }}
+          variant="secondary"
+          size="lg"
+          onClick={() => removeWithUndo(planned, course.code)}
         >
-          {planned ? "Move to this term" : "Add to plan"}
+          <X aria-hidden />
+          Remove
+          <span className="sr-only"> from {termLabel(planned)}</span>
         </Button>
-        <p role="status" className="mt-3 min-h-5">
-          {notice && (
-            <>
-              {notice}{" "}
-              <Link
-                href="/plan"
-                className="font-medium underline underline-offset-2 hover:text-primary"
-              >
-                View your plan
-              </Link>
-            </>
-          )}
-        </p>
-      </div>
+      ) : (
+        next && (
+          <Button size="lg" onClick={() => addWithUndo(next, course.code)}>
+            <Plus aria-hidden />
+            Add to {termLabel(next)}
+          </Button>
+        )
+      )}
     </div>
   );
 }
