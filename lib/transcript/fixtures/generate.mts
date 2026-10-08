@@ -539,6 +539,93 @@ const fixtures: Fixture[] = [
     creditsRequired: "B Eng Software - 133 credits",
     terms: longRecordTerms(),
   },
+  {
+    name: "cegep-engineering",
+    identity: { name: "Gagnon, Louis", id: "260900011", code: "GAGL11121399" },
+    previousEducation: "Quebec CEGEP/IB",
+    creditsRequired: "B Eng Computer - 133 credits",
+    terms: [
+      {
+        term: "Fall 2025",
+        degree: "Bachelor of Engineering",
+        load: "Year 1",
+        programs: ["Computer Engineering"],
+        credits: [
+          {
+            from: "Vanier College - 25 credits",
+            rows: [{ code: "COMP 202", value: "EXC", status: "exemption" }],
+          },
+        ],
+        rows: [
+          row("ECSE 200", "Electric Circuits 1", 3, "A-", "completed"),
+          row("ECSE 250", "Fundamentals of Software Dev", 3, "B+", "completed"),
+          row("MATH 262", "Intermediate Calculus", 3, "B", "completed"),
+          row("COMP 206", "Intro to Software Systems", 3, "B+", "completed"),
+          row("FACC 100", "Intro to the Eng. Profession", 1, "A", "completed"),
+        ],
+      },
+      {
+        term: "Winter 2026",
+        degree: "Bachelor of Engineering",
+        load: "Year 1",
+        programs: ["Computer Engineering"],
+        rows: [
+          row("ECSE 205", "Prob and Stats for Engineers", 3, "B", "completed"),
+          row("ECSE 222", "Digital Logic", 3, "A-", "completed"),
+          row("ECSE 223", "Model-Based Programming", 3, "B+", "completed"),
+          row("MATH 263", "ODE for Engineers", 3, "B-", "completed"),
+          row(
+            "COMP 251",
+            "Algorithms and Data Structures",
+            3,
+            "B",
+            "completed",
+          ),
+          row("FACC 250", "Resp. of the Prof. Engineer", 0, "P", "completed", {
+            average: "",
+          }),
+        ],
+      },
+      {
+        term: "Fall 2026",
+        degree: "Bachelor of Engineering",
+        load: "Year 2",
+        programs: ["Computer Engineering"],
+        rows: [
+          row(
+            "ECSE 206",
+            "Intro to Signals and Systems",
+            3,
+            undefined,
+            "in-progress",
+            { registration: "RW" },
+          ),
+          row("ECSE 210", "Electric Circuits 2", 3, undefined, "in-progress", {
+            registration: "RW",
+          }),
+          row(
+            "ECSE 211",
+            "Design Principles and Methods",
+            3,
+            undefined,
+            "in-progress",
+            { registration: "RW" },
+          ),
+          row("MATH 240", "Discrete Structures", 3, undefined, "in-progress", {
+            registration: "RW",
+          }),
+          row(
+            "WCOM 206",
+            "Communication in Engineering",
+            3,
+            undefined,
+            "in-progress",
+            { registration: "RW" },
+          ),
+        ],
+      },
+    ],
+  },
 ];
 
 function longRecordTerms(): TermSpec[] {
@@ -761,6 +848,21 @@ If you are using Internet Explorer or Microsoft Edge, try switching to Chrome or
 </body></html>`;
 }
 
+/** Each "From:" block's credits minus the transfer rows listed under it. */
+function advancedStandingOf(f: Fixture): number {
+  let total = 0;
+  for (const group of f.terms.flatMap((t) => t.credits ?? [])) {
+    const listed = group.rows
+      .filter((c) => c.status === "transfer")
+      .reduce((sum, c) => sum + Number(c.value), 0);
+    total += Math.max(
+      0,
+      Number(/(\d+) credits/.exec(group.from)?.[1]) - listed,
+    );
+  }
+  return total;
+}
+
 function expected(f: Fixture) {
   const courses = [];
   const unrecognized = [];
@@ -811,6 +913,8 @@ function expected(f: Fixture) {
       minors: block?.programs.filter((p) => p.startsWith("Minor")) ?? [],
       creditsRequired:
         Number(/(\d+) credits/.exec(f.creditsRequired ?? "")?.[1]) || null,
+      previousEducation: f.previousEducation ?? null,
+      advancedStanding: advancedStandingOf(f),
       courses,
       unrecognized,
     },

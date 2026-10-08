@@ -9,6 +9,8 @@ export interface RequiredGroup {
   credits: number;
   courses: RequiredItem[];
   note?: string;
+  /** Year 0 or Foundation courses that Quebec CEGEP students are credited for. */
+  foundation?: true;
 }
 
 /** Selects courses by code list, by subject and level, or both. */
@@ -47,6 +49,8 @@ export interface ComplementaryGroup {
   minCourses?: number;
   rules: Rule[];
   note?: string;
+  /** Year 0 or Foundation courses that Quebec CEGEP students are credited for. */
+  foundation?: true;
 }
 
 export type Group = RequiredGroup | ComplementaryGroup;

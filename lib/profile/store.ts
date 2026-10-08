@@ -8,6 +8,7 @@ import { migrateProfile, PROFILE_VERSION } from "./file.ts";
 import {
   type CourseRecord,
   compareTerms,
+  isCegep,
   logicalCode,
   type Plan,
   type Profile,
@@ -18,13 +19,18 @@ import {
 export const PROFILE_STORAGE_KEY = "plan-your-degree:profile";
 
 export interface ProfileActions {
-  /** Replaces the earlier transcript records, keeps manual ones, and starts the profile at the earliest term. */
+  /** Replaces the earlier transcript records, keeps manual ones, and starts the profile at the earliest term. A CEGEP transcript sets the entry, any other leaves it as it is. */
   applyTranscript: (transcript: Transcript, programId?: string) => void;
   /** Replaces the record with the same code and term, if any. */
   addCourse: (record: Omit<CourseRecord, "source">) => void;
   /** Removes every record of the course, all parts of a multi-term course included. */
   removeCourse: (code: string) => void;
   setProgram: (programId: string | null) => void;
+  setBackground: (
+    background: Partial<
+      Pick<Profile, "entry" | "advancedStanding" | "creditsRequired">
+    >,
+  ) => void;
   setTerms: (
     terms: Partial<Pick<Profile, "startTerm" | "graduationTerm">>,
   ) => void;
@@ -44,6 +50,9 @@ export type ProfileState = Profile & ProfileActions;
 const initial: Profile = {
   records: [],
   programId: null,
+  entry: null,
+  advancedStanding: 0,
+  creditsRequired: null,
   startTerm: null,
   graduationTerm: null,
   plan: [],
@@ -99,6 +108,12 @@ export const useProfileStore = create<ProfileState>()(
               ),
             ],
             programId: programId ?? state.programId,
+            entry: isCegep(transcript.previousEducation)
+              ? "cegep"
+              : state.entry,
+            advancedStanding: transcript.advancedStanding,
+            creditsRequired:
+              transcript.creditsRequired ?? state.creditsRequired,
             startTerm: earliest ?? state.startTerm,
             importedAt: new Date().toISOString(),
           };
@@ -117,6 +132,7 @@ export const useProfileStore = create<ProfileState>()(
           records: state.records.filter((r) => r.code !== code),
         })),
       setProgram: (programId) => set({ programId }),
+      setBackground: (background) => set(background),
       setTerms: (terms) => set(terms),
       setCreditLimit: (creditLimit) => set({ creditLimit }),
       addToPlan: (term, code) =>

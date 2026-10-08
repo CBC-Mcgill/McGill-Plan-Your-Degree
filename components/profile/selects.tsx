@@ -3,7 +3,12 @@
 import type * as React from "react";
 import { SelectField } from "@/components/ui/field";
 import { currentTerm, formatTerm, termRange } from "@/lib/profile/terms";
-import { type Term, termFromKey, termKey } from "@/lib/profile/types";
+import {
+  type EntryRoute,
+  type Term,
+  termFromKey,
+  termKey,
+} from "@/lib/profile/types";
 import { PROGRAMS } from "@/lib/programs";
 
 type SelectProps = Omit<
@@ -33,6 +38,33 @@ export function ProgramSelect({
         </option>
       ))}
       <option value="">My program isn't listed yet</option>
+    </SelectField>
+  );
+}
+
+/** The empty value is "Not sure", for a student who cannot say how they started. */
+export function EntrySelect({
+  value,
+  onChange,
+  ...props
+}: {
+  value: EntryRoute | null;
+  onChange: (entry: EntryRoute | null) => void;
+} & SelectProps) {
+  return (
+    <SelectField
+      {...props}
+      label="How you started at McGill"
+      value={value ?? ""}
+      onChange={(event) =>
+        onChange(event.target.value ? (event.target.value as EntryRoute) : null)
+      }
+    >
+      <option value="cegep">Quebec CEGEP (DEC), started in U1</option>
+      <option value="foundation">
+        Outside Quebec, started in U0 (Foundation year)
+      </option>
+      <option value="">Not sure</option>
     </SelectField>
   );
 }

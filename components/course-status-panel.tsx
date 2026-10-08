@@ -13,6 +13,8 @@ import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 const SENTENCE = {
   completed: "You have completed this course.",
+  covered:
+    "Your Science DEC covers this course, so you do not need to take it.",
   "in-progress": "You are taking this course now.",
   available: "You are not missing any prerequisite courses.",
 } as const;
@@ -30,7 +32,9 @@ export function CourseStatusPanel({ course }: { course: CourseSummary }) {
     ? !meets(course.prerequisites?.tree, snapshot.taken)
     : false;
   const closed =
-    state?.status === "completed" || state?.status === "in-progress";
+    state?.status === "completed" ||
+    state?.status === "covered" ||
+    state?.status === "in-progress";
 
   return (
     <section
@@ -61,6 +65,7 @@ export function CourseStatusPanel({ course }: { course: CourseSummary }) {
                 <p>You are missing prerequisite courses.</p>
               )}
               {(state.status === "completed" ||
+                state.status === "covered" ||
                 state.status === "in-progress" ||
                 state.status === "available") && (
                 <p>{SENTENCE[state.status]}</p>

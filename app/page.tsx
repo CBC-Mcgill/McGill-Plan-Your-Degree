@@ -25,6 +25,7 @@ const examplePath: { code: string; title: string; status: CourseStatus }[] = [
 
 const nodeColor: Record<CourseStatus, string> = {
   completed: "bg-completed",
+  covered: "bg-completed",
   "in-progress": "bg-in-progress",
   available: "bg-available",
   planned: "bg-planned",

@@ -81,6 +81,7 @@ export function TermPanel({
 }) {
   const removeFromPlan = useProfileStore((state) => state.removeFromPlan);
   const moveInPlan = useProfileStore((state) => state.moveInPlan);
+  const entry = useProfileStore((state) => state.entry);
   const [notice, setNotice] = useState("");
 
   const label = termLabel(stage.term);
@@ -100,7 +101,7 @@ export function TermPanel({
   const destinations = moveOptions.filter((t) => termKey(t) !== stage.key);
   const suggestions =
     !past && program
-      ? suggestForTerm(program, snapshot, catalogue, plan, stage.term)
+      ? suggestForTerm(program, snapshot, catalogue, plan, stage.term, entry)
       : null;
 
   return (

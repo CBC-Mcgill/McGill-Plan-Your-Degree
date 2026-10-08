@@ -35,10 +35,22 @@ export interface PlannedTerm {
 
 export type Plan = PlannedTerm[];
 
+/** How the student started at McGill: a Quebec CEGEP diploma (DEC) in U1, or the U0 Foundation year. */
+export type EntryRoute = "cegep" | "foundation";
+
+/** True when the transcript's previous education line names a Quebec CEGEP, such as "Quebec CEGEP/IB". */
+export const isCegep = (previousEducation: string | null) =>
+  /cegep/i.test(previousEducation ?? "");
+
 /** Everything a student keeps locally. */
 export interface Profile {
   records: CourseRecord[];
   programId: string | null;
+  entry: EntryRoute | null;
+  /** Lump-sum credits from the transcript's advanced standing, on top of the course records. 0 to 60. */
+  advancedStanding: number;
+  /** Total credits the degree needs, when the student or the transcript says. */
+  creditsRequired: number | null;
   startTerm: Term | null;
   graduationTerm: Term | null;
   plan: Plan;

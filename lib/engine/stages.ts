@@ -3,6 +3,7 @@ import { defaultGraduation } from "../profile/term-options.ts";
 import {
   type CourseRecord,
   compareTerms,
+  type EntryRoute,
   earnsCredit,
   isDone,
   type Plan,
@@ -164,10 +165,12 @@ export function suggestForTerm(
   catalogue: Catalogue,
   plan: Plan,
   term: Term,
+  entry: EntryRoute | null = null,
 ): CourseSummary[] {
   const { remaining } = programProgress(program, snapshot, catalogue, {
     inProgress: true,
     planned: true,
+    entry,
   });
   const { before } = termContext(snapshot, plan, term);
   const taken = new Set([...snapshot.taken, ...snapshot.planned]);

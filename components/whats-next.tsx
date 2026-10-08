@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "cn";
-import { Check, ChevronDown, Compass, FileUp } from "lucide-react";
+import { Check, ChevronDown, Compass, FileUp, Info } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useMemo, useState } from "react";
 import { AddToPlan, PlannedLink } from "@/components/add-to-plan";
@@ -10,6 +10,12 @@ import { StatusChip } from "@/components/status-chip";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useCatalogue } from "@/lib/catalogue/client";
+import {
+  degreeCredits,
+  type Exemption,
+  earnedCredits,
+  exemptionsToReplace,
+} from "@/lib/engine/credits";
 import {
   type Bucket,
   type Entry,
@@ -37,6 +43,12 @@ const NO_COURSES: ReadonlySet<string> = new Set();
 interface Context {
   term: Term;
   planned: ReadonlySet<string>;
+}
+
+/** Credits toward the whole degree, and exemptions that left credits to make up. */
+interface Background {
+  degree: { done: number; required: number; advancedStanding: number } | null;
+  exemptions: Exemption[];
 }
 
 export function WhatsNext() {
@@ -78,6 +90,10 @@ function Header({ children }: { children?: ReactNode }) {
 // Split out so a visitor without a profile does not download the catalogue.
 function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const programId = useProfileStore((state) => state.programId);
+  const entry = useProfileStore((state) => state.entry);
+  const advancedStanding = useProfileStore((state) => state.advancedStanding);
+  const creditsRequired = useProfileStore((state) => state.creditsRequired);
+  const records = useProfileStore((state) => state.records);
   const catalogue = useCatalogue();
   const options = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
   const [picked, setPicked] = useState<number | null>(null);
@@ -94,10 +110,32 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const view = useMemo(
     () =>
       courses && selected
-        ? nextView(courses, unplanned, selected, program)
+        ? nextView(courses, unplanned, selected, program, entry)
         : null,
-    [unplanned, courses, selected, program],
+    [unplanned, courses, selected, program, entry],
   );
+  const background = useMemo((): Background => {
+    const required = degreeCredits(creditsRequired, entry, program);
+    return {
+      degree:
+        courses && required !== null
+          ? {
+              done: earnedCredits(snapshot, courses) + advancedStanding,
+              required,
+              advancedStanding,
+            }
+          : null,
+      exemptions: courses ? exemptionsToReplace(records, courses) : [],
+    };
+  }, [
+    courses,
+    snapshot,
+    creditsRequired,
+    entry,
+    program,
+    advancedStanding,
+    records,
+  ]);
 
   return (
     <>
@@ -128,6 +166,7 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
         <Content
           view={view}
           program={program}
+          background={background}
           context={{ term: selected, planned: snapshot.planned }}
           inProgress={snapshot.inProgress.size > 0}
         />
@@ -141,11 +180,13 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
 function Content({
   view,
   program,
+  background,
   context,
   inProgress,
 }: {
   view: NextView;
   program: Program | null;
+  background: Background;
   context: Context;
   inProgress: boolean;
 }) {
@@ -157,6 +198,7 @@ function Content({
         <ProgramCard
           program={program}
           progress={view.progress}
+          background={background}
           inProgress={inProgress}
         />
       ) : (
@@ -296,10 +338,12 @@ function Section({
 function ProgramCard({
   program,
   progress,
+  background: { degree, exemptions },
   inProgress,
 }: {
   program: Program;
   progress: ProgramProgress;
+  background: Background;
   inProgress: boolean;
 }) {
   const { creditsDone, credits } = progress;
@@ -328,6 +372,20 @@ function ProgramCard({
           Includes the courses you are taking now.
         </p>
       )}
+      {degree && (
+        <p className="mt-2 text-sm">
+          <span className="font-semibold">Earned so far:</span>{" "}
+          <span className="tabular-nums">
+            {degree.done}
+            {degree.required !== credits && ` of ${degree.required}`} credits
+          </span>
+          {degree.advancedStanding > 0 && (
+            <span className="text-muted-foreground">
+              , including {degree.advancedStanding} advanced standing credits
+            </span>
+          )}
+        </p>
+      )}
       <ul className="mt-5 columns-2 gap-x-10">
         {progress.groups.map((group) => (
           <li
@@ -351,13 +409,33 @@ function ProgramCard({
               {group.title}
             </span>
             <span className="shrink-0 text-muted-foreground tabular-nums">
-              {Math.min(group.creditsDone, group.credits)} of {group.credits}{" "}
-              credits
+              {group.credited
+                ? "Credited from CEGEP"
+                : `${Math.min(group.creditsDone, group.credits)} of ${group.credits} credits`}
               {group.satisfied && <span className="sr-only">, done</span>}
             </span>
           </li>
         ))}
       </ul>
+      {exemptions.length > 0 && (
+        <ul className="mt-2 flex flex-col gap-2">
+          {exemptions.map(({ code, credits }) => (
+            <li
+              key={code}
+              className="flex items-start gap-2.5 rounded-md border border-border bg-muted p-3 text-sm"
+            >
+              <Info aria-hidden className="mt-0.5 size-4 shrink-0" />
+              <span>
+                {code} was exempted without credit. Replace{" "}
+                {credits === null
+                  ? "its credits"
+                  : `its ${credits} ${credits === 1 ? "credit" : "credits"}`}{" "}
+                with another course.
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

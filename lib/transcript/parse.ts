@@ -22,6 +22,10 @@ export interface Transcript {
   programs: string[];
   minors: string[];
   creditsRequired: number | null;
+  /** The line under "PREVIOUS EDUCATION", such as "Quebec CEGEP/IB". */
+  previousEducation: string | null;
+  /** Lump-sum advanced standing credits: each "From:" block's total minus the credits of its listed transfer rows. */
+  advancedStanding: number;
   courses: TranscriptCourse[];
   /** Raw text of lines that look like course lines but did not parse. */
   unrecognized: string[];
@@ -135,17 +139,38 @@ export function parseTranscript(lines: string[][]): Transcript | null {
     programs: [],
     minors: [],
     creditsRequired: null,
+    previousEducation: null,
+    advancedStanding: 0,
     courses: [],
     unrecognized: [],
   };
   let term: Term | null = null;
   let block: string[] | null = null;
   let inCredits = false;
+  let afterPreviousEducation = false;
+  // The open "From: X - N credits" block, so transfer rows listed under it are not counted twice.
+  let from: { total: number; listed: number } | null = null;
+  const closeFrom = () => {
+    if (from) result.advancedStanding += Math.max(0, from.total - from.listed);
+    from = null;
+  };
 
   for (const cells of lines.slice(start)) {
     if (cells.some((c) => PAGE_CHROME.some((p) => p.test(c)))) continue;
     if (IDENTITY.test(cells[0] ?? "")) continue;
     const line = cells.join(" ");
+
+    if (afterPreviousEducation) {
+      afterPreviousEducation = false;
+      if (cells.length === 1 && !/^Credits Required for\b/.test(line)) {
+        result.previousEducation = line;
+        continue;
+      }
+    }
+    if (line === "PREVIOUS EDUCATION") {
+      afterPreviousEducation = true;
+      continue;
+    }
 
     const required = /^Credits Required for .+ - (\d+) credits?$/.exec(line);
     if (required) {
@@ -176,10 +201,16 @@ export function parseTranscript(lines: string[][]): Transcript | null {
     }
 
     if (line === "Credits/Exemptions") {
+      closeFrom();
       inCredits = true;
       continue;
     }
-    if (inCredits && line.startsWith("From:")) continue;
+    if (inCredits && line.startsWith("From:")) {
+      closeFrom();
+      const total = /^From: .+ - (\d+(?:\.\d+)?) credits?$/.exec(line)?.[1];
+      from = { total: Number(total ?? 0), listed: 0 };
+      continue;
+    }
 
     const course = parseCourse(cells, term, inCredits);
     if (course === null) {
@@ -189,10 +220,13 @@ export function parseTranscript(lines: string[][]): Transcript | null {
     } else {
       if (course.status !== "transfer" && course.status !== "exemption") {
         inCredits = false;
+      } else if (from && course.status === "transfer") {
+        from.listed += course.credits ?? 0;
       }
       result.courses.push(course);
     }
   }
+  closeFrom();
   return result;
 }
 

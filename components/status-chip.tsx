@@ -18,6 +18,7 @@ import type { CourseStatus as RecordStatus } from "@/lib/profile/types";
 
 export type CourseStatus =
   | "completed"
+  | "covered"
   | "in-progress"
   | "available"
   | "locked"
@@ -33,6 +34,11 @@ const statuses: Record<
   completed: {
     label: "Completed",
     icon: Check,
+    tone: "border-completed/30 bg-completed-surface text-completed",
+  },
+  covered: {
+    label: "Covered by your DEC",
+    icon: BadgeCheck,
     tone: "border-completed/30 bg-completed-surface text-completed",
   },
   "in-progress": {

@@ -1,5 +1,5 @@
 import type { CourseSummary } from "../catalogue/types.ts";
-import type { Term } from "../profile/types.ts";
+import type { EntryRoute, Term } from "../profile/types.ts";
 import type { Program, Rule } from "../programs/types.ts";
 import { type Suggestion, whatsNext } from "./next.ts";
 import {
@@ -81,8 +81,11 @@ const undergraduate = (s: Suggestion) => level(s.course) < 600;
 
 /** Electives worth a look: 100 to 400 level courses with credits, the student's own subjects first. */
 function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
+  // Only courses actually taken at McGill, so CEGEP-credited courses don't steer the ranking.
   const subjects = new Set(
-    [...snapshot.taken].map((code) => code.split(" ")[0]),
+    [...snapshot.earned.keys(), ...snapshot.inProgress.keys()].map(
+      (code) => code.split(" ")[0],
+    ),
   );
   return suggestions
     .filter((s) => level(s.course) < 500 && (s.course.credits ?? 0) > 0)
@@ -123,10 +126,11 @@ export function nextView(
   snapshot: Snapshot,
   term: Term,
   program: Program | null,
+  entry: EntryRoute | null = null,
 ): NextView {
-  const next = whatsNext(catalogue, snapshot, term, program);
+  const next = whatsNext(catalogue, snapshot, term, program, entry);
   const progress = program
-    ? programProgress(program, snapshot, catalogue, { inProgress: true })
+    ? programProgress(program, snapshot, catalogue, { inProgress: true, entry })
     : null;
 
   const takeable = new Map(next.mustTake.map((s) => [s.course.code, s]));

@@ -19,7 +19,7 @@ export interface BadgeContext {
   /** Also counts courses in progress and planned. Null without a program. */
   projected: ProgramProgress | null;
   warnings: PlanWarning[];
-  /** Credits earned: completed and transfer. */
+  /** Credits earned: completed, transfer and advanced standing. */
   credits: number;
   /** Credits completed in each term, transfer credits left out. */
   termCredits: number[];
@@ -114,6 +114,7 @@ export const BADGES: Badge[] = [
           (group) =>
             group.kind === "required" &&
             group.satisfied &&
+            !group.credited &&
             group.coursesDone > 0,
         ),
       ),
@@ -131,6 +132,7 @@ export const BADGES: Badge[] = [
             listed?.kind === "complementary" &&
             namesCourses(listed) &&
             group.satisfied &&
+            !group.credited &&
             group.creditsDone > 0
           );
         }),

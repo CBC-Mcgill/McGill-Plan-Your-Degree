@@ -4,13 +4,20 @@ import { TriangleAlert } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CourseRow, TermGroup } from "@/components/profile/course-row";
-import { ProgramSelect, TermSelect } from "@/components/profile/selects";
+import {
+  EntrySelect,
+  ProgramSelect,
+  TermSelect,
+} from "@/components/profile/selects";
 import { Button } from "@/components/ui/button";
+import { TextField } from "@/components/ui/field";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { useProfileStore } from "@/lib/profile/store";
 import { groupByTerm, guessGraduation } from "@/lib/profile/terms";
 import {
   compareTerms,
+  type EntryRoute,
+  isCegep,
   logicalCode,
   type Term,
   termKey,
@@ -34,6 +41,18 @@ export function ReviewScreen({
     () =>
       guessProgram(transcript.degree, transcript.programs) ??
       useProfileStore.getState().programId,
+  );
+  const [entry, setEntry] = useState<EntryRoute | null>(() =>
+    isCegep(transcript.previousEducation)
+      ? "cegep"
+      : useProfileStore.getState().entry,
+  );
+  const [advancedStanding, setAdvancedStanding] = useState(
+    transcript.advancedStanding,
+  );
+  const [creditsRequired, setCreditsRequired] = useState<number | null>(
+    () =>
+      transcript.creditsRequired ?? useProfileStore.getState().creditsRequired,
   );
   const [startTerm, setStartTerm] = useState<Term | null>(
     () => earliest(transcript) ?? useProfileStore.getState().startTerm,
@@ -64,6 +83,15 @@ export function ReviewScreen({
     ...transcript.programs,
     ...transcript.minors,
   ].filter(Boolean);
+  const background = [
+    isCegep(transcript.previousEducation)
+      ? "Quebec CEGEP"
+      : transcript.previousEducation,
+    transcript.advancedStanding > 0 &&
+      `${transcript.advancedStanding} advanced standing credits`,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   function save() {
     const store = useProfileStore.getState();
@@ -72,6 +100,7 @@ export function ReviewScreen({
       courses: kept.map(({ course }) => course),
     });
     store.setProgram(programId);
+    store.setBackground({ entry, advancedStanding, creditsRequired });
     store.setTerms({ startTerm, graduationTerm });
     router.push("/next");
   }
@@ -115,6 +144,41 @@ export function ReviewScreen({
               onChange={setGraduationTerm}
             />
           </div>
+          <div className="mt-4 grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)] items-end gap-4">
+            <EntrySelect value={entry} onChange={setEntry} />
+            <TextField
+              label="Advanced standing credits"
+              type="number"
+              min={0}
+              max={60}
+              placeholder="0"
+              value={advancedStanding || ""}
+              onChange={(event) =>
+                setAdvancedStanding(
+                  Math.max(0, Math.min(60, Number(event.target.value))),
+                )
+              }
+            />
+            <TextField
+              label="Credits required for your degree"
+              type="number"
+              min={1}
+              max={200}
+              placeholder="Optional"
+              value={creditsRequired ?? ""}
+              onChange={(event) => {
+                const credits = Number(event.target.value);
+                setCreditsRequired(
+                  credits >= 1 ? Math.min(200, credits) : null,
+                );
+              }}
+            />
+          </div>
+          {background && (
+            <p className="mt-3 text-muted-foreground text-sm">
+              Found on your transcript: {background}
+            </p>
+          )}
           {programId === null && (
             <p className="mt-3 text-muted-foreground text-sm">
               Your courses are still saved. Requirements can't be tracked for
@@ -217,7 +281,7 @@ function guessGraduationTerm(transcript: Transcript): Term | null {
   const done = transcript.courses.reduce(
     (sum, c) =>
       COUNTS_TOWARD_CREDITS.includes(c.status) ? sum + (c.credits ?? 0) : sum,
-    0,
+    transcript.advancedStanding,
   );
   return guessGraduation(
     terms[0] ?? null,
