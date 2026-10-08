@@ -11,7 +11,7 @@ import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
-/** The page's one primary action: plan the course for the next term it runs, or take it back out. Courses the student has taken or is taking have none. */
+/** The page's one primary action: plan the course for the next term it runs, or take it back out. Courses the student has taken, is taking, or that do not run this year have none. */
 export function AddToPlan({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
   const plan = useProfileStore((state) => state.plan);
@@ -38,9 +38,9 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
   const planned = plan.find((entry) =>
     entry.courses.includes(course.code),
   )?.term;
-  const options = planTermOptions([]);
-  const next =
-    options.find((term) => isOffered(course, term.season)) ?? options[0];
+  const next = planTermOptions([]).find((term) =>
+    isOffered(course, term.season),
+  );
 
   return (
     <div className="flex items-center gap-3">
@@ -60,13 +60,13 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
           Remove
           <span className="sr-only"> from {termLabel(planned)}</span>
         </Button>
+      ) : next ? (
+        <Button size="lg" onClick={() => addWithUndo(next, course.code)}>
+          <Plus aria-hidden />
+          Add to {termLabel(next)}
+        </Button>
       ) : (
-        next && (
-          <Button size="lg" onClick={() => addWithUndo(next, course.code)}>
-            <Plus aria-hidden />
-            Add to {termLabel(next)}
-          </Button>
-        )
+        <span className="text-muted-foreground">Not offered this year</span>
       )}
     </div>
   );
