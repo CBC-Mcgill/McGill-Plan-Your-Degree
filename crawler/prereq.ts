@@ -7,8 +7,8 @@ import type {
 type Join = "and" | "or" | "comma";
 type Joined = { join: Join; afterComma: boolean };
 type Token =
-  | { type: "code" | "word"; value: string }
-  | { type: Join | "semi" | "open" | "close" | "oneOf" };
+  | { type: "code"; value: string }
+  | { type: Join | "semi" | "open" | "close" | "oneOf" | "word" };
 
 const CODE = /^([A-Z]{4}|[A-Z]{3}\d)\s*-?\s*(\d{3}(?:[DJN]\d)?)\b/;
 const BARE_NUMBER = /^(\d{3}(?:[DJN]\d)?)\b(?!\s*-?\s*(?:level|credits?)\b)/i;
@@ -68,12 +68,12 @@ function tokenize(text: string): Token[] {
       tokens.push({ type: symbol } as Token);
       length = 1;
     } else {
-      const word = /^[^\s;.:,()[\]/&+]+/.exec(rest)?.[0] ?? rest;
+      const word = /^(?:and\/or\b|[^\s;.:,()[\]/&+]+)/i.exec(rest)?.[0] ?? rest;
       const lower = word.toLowerCase();
       if (lower === "and" || lower === "plus") tokens.push({ type: "and" });
       else if (lower === "or" || lower === "and/or")
         tokens.push({ type: "or" });
-      else tokens.push({ type: "word", value: word });
+      else if (!FILLER.has(lower)) tokens.push({ type: "word" });
       length = word.length;
     }
     rest = rest.slice(length).trimStart();
@@ -121,12 +121,11 @@ class Parser {
   }
 
   /** Operands joined by and, or, and commas. A comma takes the operator its list uses. */
-  private parseList(): RequirementTree | null {
+  private parseList(oneOf = false): RequirementTree | null {
     const operands: RequirementTree[] = [];
     const joins: Joined[] = [];
     let pending: Join | null = null;
     let afterComma = false;
-    let oneOf = false;
     while (this.index < this.tokens.length) {
       const type = this.peek();
       if (type === "semi" || type === "close") break;
@@ -135,8 +134,9 @@ class Parser {
         // ", or" and ", and" read as the word.
         if (pending === null || pending === "comma") pending = type;
         this.index++;
-      } else if (type === "oneOf") {
-        oneOf = true;
+      } else if (type === "word") {
+        pending = null;
+        afterComma = false;
         this.index++;
       } else {
         const operand = this.parseOperand();
@@ -156,6 +156,7 @@ class Parser {
   private parseOperand(): RequirementTree | null {
     const token = this.tokens[this.index++];
     if (token?.type === "code") return token.value;
+    if (token?.type === "oneOf") return this.parseList(true);
     if (token?.type !== "open") return null;
     const inner = this.parseClauses();
     if (this.peek() === "close") this.index++;
@@ -284,9 +285,7 @@ export function parseRequirement(text: string): Requirement {
   const tokens = tokenize(text);
   const parser = new Parser(tokens);
   const tree = parser.parseAll();
-  const hasConditions = tokens.some(
-    (token) => token.type === "word" && !FILLER.has(token.value.toLowerCase()),
-  );
+  const hasConditions = tokens.some((token) => token.type === "word");
   return {
     text,
     tree,

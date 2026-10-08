@@ -9,7 +9,7 @@ const page = (name: string) =>
     readFileSync(new URL(`fixtures/${name}.html`, import.meta.url), "utf8"),
   );
 
-test("parses a real course page and merges multi-term parts", () => {
+test("parses real course pages, merges multi-term parts and guards the crawl", () => {
   expect(page("comp-251")).toMatchObject({
     code: "COMP 251",
     title: "Algorithms and Data Structures",
@@ -31,9 +31,7 @@ test("parses a real course page and merges multi-term parts", () => {
     terms: ["Fall 2026", "Winter 2027"],
     parts: [{ code: "ECSE 458D1" }, { code: "ECSE 458D2" }],
   });
-});
 
-test("guardrails fail a crawl that lost courses or fields", () => {
   const catalogue = Array.from({ length: 100 }, (_, i) => ({
     ...page("comp-251"),
     code: `TEST ${100 + i}`,
