@@ -74,6 +74,28 @@ function reasonFor(
   }
 }
 
+const level = (course: CourseSummary) => Number.parseInt(course.number, 10);
+
+// Suggestions stay undergraduate: graduate courses (600+) are left to the course browser.
+const undergraduate = (s: Suggestion) => level(s.course) < 600;
+
+/** Electives worth a look: 100 to 400 level courses with credits, the student's own subjects first. */
+function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
+  const subjects = new Set(
+    [...snapshot.taken].map((code) => code.split(" ")[0]),
+  );
+  return suggestions
+    .filter((s) => level(s.course) < 500 && (s.course.credits ?? 0) > 0)
+    .sort(
+      (a, b) =>
+        Number(!subjects.has(a.course.subject)) -
+          Number(!subjects.has(b.course.subject)) ||
+        level(a.course) - level(b.course) ||
+        (a.course.code < b.course.code ? -1 : 1),
+    )
+    .map(asEntry);
+}
+
 const hasMinimum = (rule: Rule) =>
   rule.minCredits !== undefined || rule.minCourses !== undefined;
 
@@ -148,7 +170,7 @@ export function nextView(
       : [];
   // A course is listed once, under the first open group and rule that take it.
   const placed = openGroups.map(() => [] as Suggestion[]);
-  for (const s of next.canTake.complementary) {
+  for (const s of next.canTake.complementary.filter(undergraduate)) {
     const { code, credits } = s.course;
     const at = openGroups.findIndex(
       ({ group, done }) =>
@@ -199,6 +221,6 @@ export function nextView(
     mustTake,
     later,
     complementary,
-    other: next.canTake.other.map(asEntry),
+    other: electives(next.canTake.other, snapshot),
   };
 }
