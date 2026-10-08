@@ -10,7 +10,7 @@ Plan Your Degree is not affiliated with McGill University.
 - Import your unofficial transcript privately, and review it before anything is saved.
 - See what's next: the courses you can take next term and the required ones you still need.
 - Plan each term on a quest path, with warnings for missing prerequisites, terms a course is not offered, and credit overloads.
-- Earn XP and badges from real progress, with levels that follow McGill year standing.
+- Earn XP and badges from real progress, with a new level for every 15 credits.
 
 ## Privacy
 
