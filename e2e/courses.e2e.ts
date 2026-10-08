@@ -9,6 +9,11 @@ const done = (code: string) => ({
   source: "manual",
 });
 
+// Course pages ask mcgill.courses for ratings, and tests never reach the real site.
+test.beforeEach(({ page }) =>
+  page.route("https://mcgill.courses/**", (route) => route.abort()),
+);
+
 test("search finds COMP 251 and its page links the prerequisites", async ({
   page,
 }) => {
@@ -44,6 +49,26 @@ test("search finds COMP 251 and its page links the prerequisites", async ({
       })
       .getByRole("link", { name: "COMP 251" }),
   ).toHaveAttribute("href", "/courses/comp-251");
+});
+
+test("a course page shows the mcgill.courses rating and links to the reviews", async ({
+  page,
+}) => {
+  await page.route("https://mcgill.courses/api/courses/COMP251", (route) =>
+    route.fulfill({
+      json: {
+        course: { avgRating: 3.07, avgDifficulty: 4.17, reviewCount: 2609 },
+      },
+      headers: { "access-control-allow-origin": "*" },
+    }),
+  );
+  await page.goto("/courses/comp-251");
+  const ratings = page.getByRole("region", { name: "Student ratings" });
+  await expect(ratings).toContainText("3.1");
+  await expect(ratings).toContainText("4.2");
+  await expect(
+    ratings.getByRole("link", { name: "Read the 2,609 reviews" }),
+  ).toHaveAttribute("href", "https://mcgill.courses/course/comp-251");
 });
 
 test("an unknown course is a 404", async ({ page }) => {
