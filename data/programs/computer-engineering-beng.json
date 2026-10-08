@@ -1,0 +1,287 @@
+{
+  "id": "computer-engineering-beng",
+  "name": "Computer Engineering",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/electrical-computer-engineering/computer-engineering-beng/",
+  "credits": 133,
+  "groups": [
+    {
+      "title": "Required Year 0 Courses",
+      "kind": "required",
+      "credits": 22,
+      "courses": [
+        "CHEM 120",
+        "MATH 133",
+        "MATH 140",
+        "MATH 141",
+        "PHYS 131",
+        "PHYS 142"
+      ]
+    },
+    {
+      "title": "Required Non-Departmental Courses",
+      "kind": "required",
+      "credits": 26,
+      "courses": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 251",
+        "FACC 100",
+        "FACC 250",
+        "FACC 300",
+        "FACC 400",
+        "MATH 240",
+        "MATH 262",
+        "MATH 263",
+        "WCOM 206"
+      ]
+    },
+    {
+      "title": "Required Computer Engineering Courses",
+      "kind": "required",
+      "credits": 64,
+      "courses": [
+        "ECSE 200",
+        "ECSE 205",
+        "ECSE 206",
+        "ECSE 210",
+        "ECSE 211",
+        "ECSE 222",
+        "ECSE 223",
+        "ECSE 250",
+        "ECSE 308",
+        "ECSE 310",
+        "ECSE 321",
+        "ECSE 324",
+        "ECSE 325",
+        "ECSE 331",
+        "ECSE 353",
+        "ECSE 425",
+        "ECSE 427",
+        "ECSE 444",
+        "ECSE 458"
+      ],
+      "note": "ECSE 458N1 and N2 can be taken instead of ECSE 458D1 and D2."
+    },
+    {
+      "title": "Technical Complementaries",
+      "kind": "complementary",
+      "credits": 9,
+      "minCourses": 3,
+      "rules": [
+        {
+          "title": "List A, 3-12 credits with at least 1 course",
+          "minCourses": 1,
+          "maxCredits": 12,
+          "courses": [
+            "ECSE 307",
+            "ECSE 335",
+            "ECSE 403",
+            "ECSE 408",
+            "ECSE 412",
+            "ECSE 415",
+            "ECSE 416",
+            "ECSE 420",
+            "ECSE 428",
+            "ECSE 435",
+            "ECSE 439",
+            "ECSE 472",
+            "ECSE 508",
+            "ECSE 544"
+          ]
+        },
+        {
+          "title": "List B, at most 8 credits",
+          "maxCredits": 8,
+          "courses": [
+            "COMP 307",
+            "COMP 370",
+            "COMP 421",
+            "COMP 424",
+            "COMP 445",
+            "COMP 512",
+            "COMP 520",
+            "COMP 549",
+            "COMP 550",
+            "COMP 551",
+            "COMP 559",
+            "COMP 562",
+            "COMP 579",
+            "COMP 588",
+            "ECSE 343",
+            "ECSE 421",
+            "ECSE 422",
+            "ECSE 424",
+            "ECSE 429",
+            "ECSE 437",
+            "ECSE 446",
+            "ECSE 500",
+            "ECSE 501",
+            "ECSE 507",
+            "ECSE 509",
+            "ECSE 516",
+            "ECSE 520",
+            "ECSE 521",
+            "ECSE 525",
+            "ECSE 526",
+            "ECSE 532",
+            "ECSE 551",
+            "ECSE 552",
+            "ECSE 554",
+            "ECSE 556",
+            "ECSE 557",
+            "ECSE 561",
+            "ECSE 575",
+            "MATH 247"
+          ]
+        },
+        {
+          "title": "COMP 424 and ECSE 526 cannot both be taken",
+          "maxCourses": 1,
+          "courses": ["COMP 424", "ECSE 526"]
+        },
+        {
+          "title": "ECSE 551 and COMP 551 cannot both be taken",
+          "maxCourses": 1,
+          "courses": ["ECSE 551", "COMP 551"]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Studies Group A",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Impact of Technology on Society",
+          "minCredits": 3,
+          "courses": [
+            "ANTH 212",
+            "BTEC 502",
+            "COMS 200",
+            "COMS 411",
+            "ECON 225",
+            "ECON 347",
+            "ENVR 201",
+            "GEOG 203",
+            "GEOG 205",
+            "GEOG 302",
+            "INSY 331",
+            "INSY 334",
+            "INSY 455",
+            "LLCU 212",
+            "MGCR 331",
+            "MGPO 440",
+            "MGPO 460",
+            "PHIL 343",
+            "MGPO 485",
+            "SEAD 500",
+            "SEAD 530",
+            "SOCI 235",
+            "SOCI 312",
+            "SOCI 325"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Studies Group B",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Faculty of Arts, 200 or 300 level",
+          "match": {
+            "subjects": [
+              "ANTH",
+              "ARTH",
+              "COMS",
+              "EAST",
+              "ECON",
+              "FREN",
+              "GSFS",
+              "HIST",
+              "CLAS",
+              "CANS",
+              "INDG",
+              "AFRI",
+              "ISLA",
+              "JWST",
+              "GERM",
+              "HISP",
+              "ITAL",
+              "LLCU",
+              "RUSS",
+              "PHIL",
+              "POLI",
+              "CATH",
+              "RELG",
+              "SOCI"
+            ],
+            "minLevel": 200,
+            "maxLevel": 300,
+            "exclude": [
+              "ECON 227",
+              "ECON 337",
+              "FREN 222",
+              "FREN 333",
+              "PHIL 210",
+              "PHIL 310",
+              "POLI 311",
+              "SOCI 211",
+              "SOCI 331",
+              "SOCI 342",
+              "SOCI 343",
+              "SOCI 350"
+            ]
+          }
+        },
+        {
+          "title": "French Language Centre, 200 level or higher",
+          "match": {
+            "subjects": ["FRSL"],
+            "minLevel": 200
+          }
+        },
+        {
+          "title": "Desautels Faculty of Management",
+          "courses": [
+            "BUSA 465",
+            "INDR 294",
+            "INTG 215",
+            "MGCR 222",
+            "MGCR 352",
+            "ORGB 321",
+            "ORGB 420",
+            "ORGB 423"
+          ]
+        },
+        {
+          "title": "Faculty of Science",
+          "courses": ["ENVR 203", "ENVR 400", "MATH 338", "PSYC 100"]
+        },
+        {
+          "title": "Faculty of Engineering",
+          "courses": ["ARCH 528", "FACC 220", "FACC 500", "FACC 501"]
+        }
+      ],
+      "note": "Arts courses exclude seminars, field courses, surveys, special topics, courses with science or math content, and courses reserved for majors or Honours. The 200 to 300 level limit applies to the Arts rule only, since the named lists include higher levels. The page also excludes HIST 339, which is not in the catalogue."
+    },
+    {
+      "title": "Elective Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "One course at the 200 level or higher",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 200
+          }
+        }
+      ]
+    }
+  ]
+}
