@@ -1,0 +1,55 @@
+name: Crawl catalogue
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Before Fall/Winter registration opens and before each add/drop period.
+    - cron: "0 9 15 3,4 *"
+    - cron: "0 9 1 8,12 *"
+
+concurrency:
+  group: crawl
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm crawl
+        env:
+          CRAWL_SUMMARY_FILE: ${{ runner.temp }}/summary.md
+      - name: Push a data branch and offer a PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SUMMARY_FILE: ${{ runner.temp }}/summary.md
+        run: |
+          cat "$SUMMARY_FILE" >> "$GITHUB_STEP_SUMMARY"
+          if [ -z "$(git status --porcelain data/catalogue)" ]; then
+            echo "No catalogue changes." | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          branch="data/catalogue-$(date -u +%Y-%m-%d)-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/catalogue
+          git commit -m "data: refresh course catalogue" -m "$(cat "$SUMMARY_FILE")"
+          git push origin "$branch"
+          # The CBC-Mcgill org blocks Actions from opening PRs, so fall back to a link.
+          if ! gh pr create --base main --head "$branch" --title "data: refresh course catalogue" --body-file "$SUMMARY_FILE"; then
+            link="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/main...${branch}?expand=1"
+            printf '\n**Open the data PR:** %s\n' "$link" >> "$GITHUB_STEP_SUMMARY"
+            echo "::notice title=Open the data PR::$link"
+          fi

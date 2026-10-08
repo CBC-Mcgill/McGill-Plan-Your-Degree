@@ -42,6 +42,11 @@ Prerequisites are parsed into AND/OR trees of course codes, and the raw text is 
 Text with conditions the tree cannot express, such as instructor permission, is marked `unparsed`.
 Never edit files in `data/catalogue/` by hand.
 
+The `Crawl catalogue` GitHub Actions workflow runs the crawler on demand and before each registration period.
+When the data changed, it pushes a `data/catalogue-*` branch and opens a PR with a summary of added, removed, and changed courses.
+The CBC-Mcgill organization blocks Actions from opening PRs, so the run summary shows a one-click link to open it instead.
+Catalogue data reaches production only by merging that PR.
+
 ## License
 
 MIT
