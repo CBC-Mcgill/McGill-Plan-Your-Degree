@@ -2,6 +2,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CourseRatings } from "@/components/course-ratings";
 import { CourseStatusPanel } from "@/components/course-status-panel";
 import { LinkedCourseText } from "@/components/linked-course-text";
 import { getCourse, getUnlocks } from "@/lib/catalogue/server";
@@ -135,6 +136,7 @@ export default async function CoursePage({
 
         <aside className="sticky top-6">
           <CourseStatusPanel course={summary} />
+          <CourseRatings code={course.parts?.[0]?.code ?? course.code} />
         </aside>
       </div>
     </div>
