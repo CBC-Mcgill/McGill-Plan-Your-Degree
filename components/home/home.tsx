@@ -6,9 +6,8 @@ import Link from "next/link";
 import { type ReactNode, useMemo } from "react";
 import { Landing } from "@/components/home/landing";
 import { SetupGuide } from "@/components/home/setup-guide";
-import { addWithUndo } from "@/components/plan/add-with-undo";
+import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon, UncertainFlag } from "@/components/status";
-import { toast } from "@/components/toast";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProgressRing } from "@/components/ui/progress";
@@ -290,15 +289,6 @@ const Value = ({ children }: { children: ReactNode }) => (
 const Caption = ({ children }: { children: ReactNode }) => (
   <p className="text-muted-foreground text-xs leading-4">{children}</p>
 );
-
-function removeWithUndo(term: Term, code: string) {
-  const { addToPlan, removeFromPlan } = useProfileStore.getState();
-  removeFromPlan(term, code);
-  toast(`Removed from ${termLabel(term)}`, {
-    label: "Undo",
-    run: () => addToPlan(term, code),
-  });
-}
 
 function NextUp({
   mustTake,
