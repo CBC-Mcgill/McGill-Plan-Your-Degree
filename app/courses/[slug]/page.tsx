@@ -4,8 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CourseStatusPanel } from "@/components/course-status-panel";
 import { LinkedCourseText } from "@/components/linked-course-text";
-import { getCourse } from "@/lib/catalogue/server";
+import { getCourse, getUnlocks } from "@/lib/catalogue/server";
 import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
+import type { Course } from "@/lib/catalogue/types";
 
 // Nothing is built ahead, so each course renders on its first visit and is then served from the static cache.
 export async function generateStaticParams() {
@@ -35,6 +36,10 @@ export default async function CoursePage({
   ].filter((item) => item.text);
   // A multi-term course has no page of its own on the catalogue, only its parts do.
   const catalogueSlug = courseSlug(course.parts?.[0]?.code ?? course.code);
+  const unlocks = await getUnlocks(course.code);
+  const unlockedCourses = (
+    await Promise.all(unlocks.slice(0, 12).map((code) => getCourse(code)))
+  ).filter((unlocked): unlocked is Course => unlocked !== undefined);
 
   return (
     <div className="mx-auto w-full max-w-6xl px-8 py-10">
@@ -87,6 +92,33 @@ export default async function CoursePage({
               </p>
             )}
           </section>
+
+          {unlocks.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-2xl">Unlocks</h2>
+              <p className="mt-3 text-muted-foreground">
+                Courses that list {course.code} as a prerequisite.
+              </p>
+              <ul className="mt-3 flex max-w-prose flex-col gap-1.5">
+                {unlockedCourses.map((unlocked) => (
+                  <li key={unlocked.code}>
+                    <Link
+                      href={`/courses/${courseSlug(unlocked.code)}`}
+                      className="font-semibold text-in-progress underline underline-offset-2 hover:text-foreground"
+                    >
+                      {unlocked.code}
+                    </Link>{" "}
+                    {unlocked.title}
+                  </li>
+                ))}
+              </ul>
+              {unlocks.length > 12 && (
+                <p className="mt-3 text-muted-foreground">
+                  and {unlocks.length - 12} more
+                </p>
+              )}
+            </section>
+          )}
 
           {notes.length > 0 && (
             <section className="mt-10">
