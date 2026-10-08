@@ -76,7 +76,9 @@ test("with a profile, Available to me narrows the list and a course can be plann
   await rows.filter({ hasText: "COMP 251" }).click();
   await expect(page.getByLabel("Term")).toBeVisible();
   await page.getByRole("button", { name: "Add to plan" }).click();
-  await expect(page.getByRole("status")).toContainText("Added to");
+  await expect(page.getByRole("main").getByRole("status")).toContainText(
+    "Added to",
+  );
   await expect(
     page.getByRole("link", { name: "View your plan" }),
   ).toHaveAttribute("href", "/plan");
