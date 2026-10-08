@@ -21,7 +21,11 @@ function LevelLink() {
       className="-mr-3 ml-auto flex shrink-0 items-center gap-3 rounded-md px-3 py-2 transition-[background-color] hover:bg-muted"
     >
       <span className="font-extrabold">Level {game.level}</span>
-      <XpBar xp={game.xpIntoLevel} max={XP_PER_LEVEL} />
+      <XpBar
+        xp={game.xpIntoLevel}
+        max={XP_PER_LEVEL}
+        label={`${game.xp.toLocaleString("en-US")} XP`}
+      />
     </Link>
   );
 }
