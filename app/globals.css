@@ -60,6 +60,7 @@
   --color-failed-surface: var(--failed-surface);
 
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
 
   --radius-sm: 6px;
   --radius-md: 10px;
