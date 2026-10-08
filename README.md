@@ -9,6 +9,7 @@ Plan Your Degree is not affiliated with McGill University.
 - Browse every McGill course, with search, filters, and a shareable page for each course.
 - Import your unofficial transcript privately, and review it before anything is saved.
 - See what's next: the courses you can take next term and the required ones you still need.
+- Start from a Quebec CEGEP diploma: Year 0 is credited, Science DEC courses meet prerequisites, and advanced standing counts toward your degree.
 - Plan each term on a quest path, with warnings for missing prerequisites, terms a course is not offered, and credit overloads.
 - Earn XP and badges from real progress, with a new level for every 15 credits.
 
