@@ -3223,17 +3223,17 @@
     "prerequisites": {
       "text": "MATH 356 and either MATH 247 or MATH 251.",
       "tree": {
-        "or": [
+        "and": [
+          "MATH 356",
           {
-            "and": [
-              "MATH 356",
-              "MATH 247"
+            "or": [
+              "MATH 247",
+              "MATH 251"
             ]
-          },
-          "MATH 251"
+          }
         ]
       },
-      "unparsed": true
+      "unparsed": false
     },
     "corequisites": null,
     "restrictions": {
@@ -3399,8 +3399,12 @@
       "tree": {
         "and": [
           "MATH 556",
-          "MATH 324",
-          "MATH 357"
+          {
+            "or": [
+              "MATH 324",
+              "MATH 357"
+            ]
+          }
         ]
       },
       "unparsed": true

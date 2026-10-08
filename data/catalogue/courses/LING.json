@@ -681,14 +681,14 @@
     "prerequisites": {
       "text": "LING 201 and either LING 330 or LING 331, or permission of instructor.",
       "tree": {
-        "or": [
+        "and": [
+          "LING 201",
           {
-            "and": [
-              "LING 201",
-              "LING 330"
+            "or": [
+              "LING 330",
+              "LING 331"
             ]
-          },
-          "LING 331"
+          }
         ]
       },
       "unparsed": true

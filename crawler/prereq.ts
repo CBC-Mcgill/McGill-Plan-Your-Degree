@@ -8,7 +8,7 @@ type Join = "and" | "or" | "comma";
 type Joined = { join: Join; afterComma: boolean };
 type Token =
   | { type: "code"; value: string }
-  | { type: Join | "semi" | "open" | "close" | "oneOf" | "word" };
+  | { type: Join | "semi" | "open" | "close" | "oneOf" | "either" | "word" };
 
 const CODE = /^([A-Z]{4}|[A-Z]{3}\d)\s*-?\s*(\d{3}(?:[DJN]\d)?)\b/;
 const BARE_NUMBER = /^(\d{3}(?:[DJN]\d)?)\b(?!\s*-?\s*(?:level|credits?)\b)/i;
@@ -29,7 +29,6 @@ const SYMBOLS: Record<string, Token["type"]> = {
 // Words that only connect course codes, so they do not make a requirement unparsed.
 const FILLER = new Set([
   "both",
-  "either",
   "the",
   "following",
   "course",
@@ -73,6 +72,7 @@ function tokenize(text: string): Token[] {
       if (lower === "and" || lower === "plus") tokens.push({ type: "and" });
       else if (lower === "or" || lower === "and/or")
         tokens.push({ type: "or" });
+      else if (lower === "either") tokens.push({ type: "either" });
       else if (!FILLER.has(lower)) tokens.push({ type: "word" });
       length = word.length;
     }
@@ -163,11 +163,48 @@ class Parser {
       if (list === null) this.ambiguous = true;
       return list;
     }
+    if (token?.type === "either") return this.parseEither();
     if (token?.type !== "open") return null;
     const inner = this.parseClauses();
     if (this.peek() === "close") this.index++;
     else this.ambiguous = true;
     return inner;
+  }
+
+  private startsOperand(offset: number): boolean {
+    const type = this.tokens[this.index + offset]?.type;
+    return (
+      type === "code" ||
+      type === "open" ||
+      type === "oneOf" ||
+      type === "either"
+    );
+  }
+
+  /** "either A or B" is one OR group that binds tighter than an enclosing "and". */
+  private parseEither(): RequirementTree | null {
+    const options: RequirementTree[] = [];
+    let sawOr = false;
+    while (this.startsOperand(0)) {
+      const option = this.parseOperand();
+      if (option) options.push(option);
+      // "either A, B or C": a comma only continues the group before its first "or".
+      const type = this.peek();
+      const commaThenOr =
+        type === "comma" && this.tokens[this.index + 1]?.type === "or";
+      const skip =
+        type === "or"
+          ? 1
+          : commaThenOr
+            ? 2
+            : type === "comma" && !sawOr
+              ? 1
+              : 0;
+      if (skip === 0 || !this.startsOperand(skip)) break;
+      if (type === "or" || commaThenOr) sawOr = true;
+      this.index += skip;
+    }
+    return group("or", options);
   }
 
   private combine(

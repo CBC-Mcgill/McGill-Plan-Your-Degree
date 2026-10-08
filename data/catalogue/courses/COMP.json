@@ -264,17 +264,17 @@
     "prerequisites": {
       "text": "COMP 250 and either MATH 235 or MATH 240",
       "tree": {
-        "or": [
+        "and": [
+          "COMP 250",
           {
-            "and": [
-              "COMP 250",
-              "MATH 235"
+            "or": [
+              "MATH 235",
+              "MATH 240"
             ]
-          },
-          "MATH 240"
+          }
         ]
       },
-      "unparsed": true
+      "unparsed": false
     },
     "corequisites": null,
     "restrictions": {
