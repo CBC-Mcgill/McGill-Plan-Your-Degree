@@ -12,8 +12,8 @@ Before calling work done, run `pnpm lint && pnpm typecheck && pnpm test && pnpm 
 
 ## Stack
 
-Node 24 LTS, pnpm 12, Next.js 16 App Router, React 19 with React Compiler, TypeScript strict with `noUncheckedIndexedAccess`, Tailwind CSS v4, shadcn/ui, Motion, pdf.js for transcript import, Biome, Vitest, Playwright.
-Planned: Zustand for the local profile, Supabase for P1 login and sync only.
+Node 24 LTS, pnpm 12, Next.js 16 App Router, React 19 with React Compiler, TypeScript strict with `noUncheckedIndexedAccess`, Tailwind CSS v4, shadcn/ui, Motion, pdf.js for transcript import, Biome, Vitest, Playwright, Zustand for the local profile.
+Planned: Supabase for P1 login and sync only.
 
 ## Hard rules
 
