@@ -1,4 +1,4 @@
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import type { Course } from "../catalogue/types.ts";
 import { guessProgram, PROGRAMS } from "./index.ts";
@@ -12,10 +12,7 @@ test("every program file passes the schema", () => {
   }
 });
 
-test("every program course exists in the catalogue", (ctx) => {
-  if (!existsSync(catalogueDir)) {
-    ctx.skip("data/catalogue/courses is not in the repo yet");
-  }
+test("every program course exists in the catalogue", () => {
   const codes = new Set(
     readdirSync(catalogueDir)
       .filter((file) => file.endsWith(".json"))
