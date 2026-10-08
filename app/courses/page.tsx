@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { CourseBrowser } from "@/components/course-browser";
+import { CourseRowSkeleton } from "@/components/course-row";
 
 export const metadata: Metadata = { title: "Browse courses" };
 
 export default function CoursesPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-8 py-14">
+    <div className="mx-auto w-full max-w-6xl px-8 py-10">
       <h1 className="text-4xl">Browse courses</h1>
-      <p className="mt-3 max-w-prose text-lg text-muted-foreground">
-        Soon you can search every McGill course here and see which ones you can
-        take.
-      </p>
+      <Suspense
+        fallback={
+          <div className="mt-8">
+            <CourseRowSkeleton />
+          </div>
+        }
+      >
+        <CourseBrowser />
+      </Suspense>
     </div>
   );
 }
