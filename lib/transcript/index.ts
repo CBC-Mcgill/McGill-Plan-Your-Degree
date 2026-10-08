@@ -66,14 +66,15 @@ export async function readTranscript(bytes: Uint8Array): Promise<ReadResult> {
     isImageDecoderSupported: false,
   });
   try {
-    let doc: PDFDocumentProxy;
+    let lines: string[][];
     try {
-      doc = await task.promise;
+      const doc = await task.promise;
+      if (doc.numPages > MAX_PAGES) return fail("too-many-pages");
+      lines = await readLines(doc);
     } catch {
       return fail("unreadable");
     }
-    if (doc.numPages > MAX_PAGES) return fail("too-many-pages");
-    const transcript = parseTranscript(await readLines(doc));
+    const transcript = parseTranscript(lines);
     return transcript ? { ok: true, transcript } : fail("not-transcript");
   } finally {
     await task.destroy();

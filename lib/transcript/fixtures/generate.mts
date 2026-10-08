@@ -779,7 +779,7 @@ function expected(f: Fixture) {
           grade: null,
           remarks: null,
           earnedCredits: credits ?? 0,
-          multiTerm: false,
+          multiTerm: /[A-Z]\d$/.test(c.code),
           status: c.status,
         });
       }
@@ -797,7 +797,7 @@ function expected(f: Fixture) {
         grade: r.grade ?? null,
         remarks: r.remarks ?? null,
         earnedCredits: earnedOf(r) ?? null,
-        multiTerm: r.mark !== undefined,
+        multiTerm: r.mark !== undefined || /[A-Z]\d$/.test(r.code),
         status: r.status,
       });
     }

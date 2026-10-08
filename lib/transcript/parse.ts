@@ -108,7 +108,7 @@ const PAGE_CHROME = [
   /^\d{1,2}\/\d{1,2}\/\d{2,4},? \d{1,2}:\d{2}/,
   /^UNOFFICIAL Transcript for\b/,
   /bzsktran\.P_Display_Form/,
-  /^(Page )?\d+ ?(\/|of) ?\d+$/,
+  /^\d+ ?\/ ?\d+$/,
 ];
 const IDENTITY = /^(Student Name|McGill ID|Permanent Code|Email Address)/;
 // Multi-term mark: a Wingdings "²", which Chrome prints as U+F0B2.
@@ -119,8 +119,8 @@ const NUMBER = /^[0-9X]{3}(?:[A-Z][0-9])?$/;
 const CODE = /^[A-Z]{3}[A-Z0-9] [0-9X]{3}(?:[A-Z][0-9])?$/;
 const SECTION = /^[A-Z0-9]{3}$/;
 const CREDITS = /^\*?\d+(?:\.\d+)?\*?$/;
-const TRANSFER_CREDITS = /^(\d+(?:\.\d+)?)(?: ?cr)?$/;
-const EXEMPTION = /^(EXC|EX|Exemption)$/i;
+const TRANSFER_CREDITS = /^(\d+(?:\.\d+)?)$/;
+const EXEMPTION = /^EXC$/;
 const CLASS_AVERAGE = /^[A-DF][+-]?$/;
 
 const isCredits = (cell: string | undefined) => CREDITS.test(cell ?? "");
@@ -213,7 +213,7 @@ function parseCourse(
   term: Term | null,
   inCredits: boolean,
 ): TranscriptCourse | "unrecognized" | null {
-  const multiTerm = raw.some((c) => c.search(MULTI_TERM) >= 0);
+  const hasMark = raw.some((c) => c.search(MULTI_TERM) >= 0);
   const cells = raw
     .map((c) => c.replace(MULTI_TERM, "").trim())
     .filter(Boolean);
@@ -224,6 +224,7 @@ function parseCourse(
   }
   const [code, ...rest] = cells;
   if (!code || !CODE.test(code)) return registration ? "unrecognized" : null;
+  const multiTerm = hasMark || /[A-Z][0-9]$/.test(code);
   const base = { code, term, multiTerm, remarks: null };
 
   // Course table row: section, title, credits, then grade, remarks, earned credits and class average once graded.
