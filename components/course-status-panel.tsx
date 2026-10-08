@@ -35,7 +35,7 @@ export function CourseStatusPanel({ course }: { course: CourseSummary }) {
   return (
     <section
       aria-labelledby="status-heading"
-      className="rounded-lg border-2 border-border-strong bg-card p-6 shadow-edge"
+      className="rounded-lg border-2 border-border bg-card p-6"
     >
       <h2 id="status-heading" className="text-lg">
         Your status
