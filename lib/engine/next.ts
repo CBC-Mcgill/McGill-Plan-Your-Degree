@@ -1,4 +1,4 @@
-import type { Course } from "../catalogue/types.ts";
+import type { CourseSummary } from "../catalogue/types.ts";
 import type { Term } from "../profile/types.ts";
 import type { ComplementaryGroup, Program } from "../programs/types.ts";
 import {
@@ -12,7 +12,7 @@ import type { Catalogue, Snapshot } from "./snapshot.ts";
 import { blockedBy, isOffered, isUncertain, meets } from "./status.ts";
 
 export interface Suggestion {
-  course: Course;
+  course: CourseSummary;
   /** True when the requirement text has conditions the tree cannot express. */
   uncertain: boolean;
 }

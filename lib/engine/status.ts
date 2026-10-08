@@ -1,4 +1,4 @@
-import type { Course, RequirementTree } from "../catalogue/types.ts";
+import type { CourseSummary, RequirementTree } from "../catalogue/types.ts";
 import type { Season } from "../profile/types.ts";
 import type { Snapshot } from "./snapshot.ts";
 
@@ -31,7 +31,7 @@ export function meets(
 }
 
 export function blockedBy(
-  course: Course,
+  course: CourseSummary,
   taken: ReadonlySet<string>,
 ): readonly string[] {
   const excludes = course.restrictions?.excludes;
@@ -39,14 +39,14 @@ export function blockedBy(
   return excludes.filter((code) => taken.has(code));
 }
 
-export function isUncertain(course: Course): boolean {
+export function isUncertain(course: CourseSummary): boolean {
   return Boolean(
     course.prerequisites?.unparsed || course.corequisites?.unparsed,
   );
 }
 
 /** Seasons are matched because the catalogue lists only the current year's terms. */
-export function isOffered(course: Course, season: Season): boolean {
+export function isOffered(course: CourseSummary, season: Season): boolean {
   // A multi-term course can start only in the term its first part (D1, N1) runs.
   const starts = course.parts?.filter((part) => part.code.endsWith("1"));
   const terms = starts?.length
@@ -56,7 +56,10 @@ export function isOffered(course: Course, season: Season): boolean {
 }
 
 /** The student's status for one course now, for the browse and course pages. */
-export function courseStatus(course: Course, snapshot: Snapshot): CourseState {
+export function courseStatus(
+  course: CourseSummary,
+  snapshot: Snapshot,
+): CourseState {
   const uncertain = isUncertain(course);
   if (snapshot.done.has(course.code)) {
     return { status: "completed", uncertain: false, blockedBy: NONE };

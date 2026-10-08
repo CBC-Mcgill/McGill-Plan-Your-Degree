@@ -6,14 +6,17 @@ export interface Term {
   year: number;
 }
 
-export type CourseStatus =
-  | "completed"
-  | "in-progress"
-  | "failed"
-  | "withdrawn"
-  | "deferred"
-  | "transfer"
-  | "exemption";
+export const COURSE_STATUSES = [
+  "completed",
+  "in-progress",
+  "failed",
+  "withdrawn",
+  "deferred",
+  "transfer",
+  "exemption",
+] as const;
+
+export type CourseStatus = (typeof COURSE_STATUSES)[number];
 
 export interface CourseRecord {
   /** Logical catalogue code: ECSE 458D1 on a transcript becomes ECSE 458. */
@@ -32,8 +35,21 @@ export interface PlannedTerm {
 
 export type Plan = PlannedTerm[];
 
+/** Everything a student keeps locally. */
+export interface Profile {
+  records: CourseRecord[];
+  programId: string | null;
+  startTerm: Term | null;
+  graduationTerm: Term | null;
+  plan: Plan;
+  /** Credits per term before the planner warns. */
+  creditLimit: number;
+  /** ISO time of the last transcript import. */
+  importedAt: string | null;
+}
+
 const SEASON_ORDER: Record<Season, number> = { Winter: 0, Summer: 1, Fall: 2 };
-const SEASONS: Season[] = ["Winter", "Summer", "Fall"];
+export const SEASONS: Season[] = ["Winter", "Summer", "Fall"];
 
 /** Strips the multi-term suffix: ECSE 458D1, ECSE 458N2 and COMP 361D1 become ECSE 458, ECSE 458 and COMP 361. */
 export function logicalCode(code: string): string {
