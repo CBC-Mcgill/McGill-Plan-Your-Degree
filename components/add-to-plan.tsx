@@ -1,17 +1,84 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { type Ref, useEffect, useMemo, useRef, useState } from "react";
+import { StatusChip } from "@/components/status-chip";
 import { Button } from "@/components/ui/button";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { isOffered } from "@/lib/engine/status";
 import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
-import { termFromKey, termKey } from "@/lib/profile/types";
+import { type Term, termFromKey, termKey } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
-/** Picks a term and puts the course in the plan. Without a profile it sends the student to import one. */
-export function AddToPlan({ course }: { course: CourseSummary }) {
+/** Picks a term and puts the course in the plan. Without a profile it sends the student to import one. Pass `term` for a one-click button into that term. */
+export function AddToPlan({
+  course,
+  term,
+}: {
+  course: CourseSummary;
+  term?: Term;
+}) {
+  return term ? (
+    <AddToTerm course={course} term={term} />
+  ) : (
+    <PickTerm course={course} />
+  );
+}
+
+/** The "Planned" mark that links to the planner. */
+export function PlannedLink({
+  code,
+  ref,
+}: {
+  code: string;
+  ref?: Ref<HTMLAnchorElement>;
+}) {
+  return (
+    <Link
+      ref={ref}
+      href="/plan"
+      aria-label={`Planned: ${code}. View your plan`}
+      className="rounded-sm transition-opacity hover:opacity-70"
+    >
+      <StatusChip status="planned" className="h-9 px-3 text-sm" />
+    </Link>
+  );
+}
+
+function AddToTerm({ course, term }: { course: CourseSummary; term: Term }) {
+  const planned = useProfileStore((state) =>
+    state.plan.some((entry) => entry.courses.includes(course.code)),
+  );
+  const addToPlan = useProfileStore((state) => state.addToPlan);
+  const link = useRef<HTMLAnchorElement>(null);
+  const justAdded = useRef(false);
+
+  // The button turns into the link, so move focus along with it.
+  useEffect(() => {
+    if (planned && justAdded.current) {
+      justAdded.current = false;
+      link.current?.focus();
+    }
+  }, [planned]);
+
+  if (planned) return <PlannedLink code={course.code} ref={link} />;
+  return (
+    <Button
+      variant="secondary"
+      className="h-9 px-3 text-sm"
+      aria-label={`Add to ${termLabel(term)}, ${course.code}`}
+      onClick={() => {
+        justAdded.current = true;
+        addToPlan(term, course.code);
+      }}
+    >
+      Add to {termLabel(term)}
+    </Button>
+  );
+}
+
+function PickTerm({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
   const plan = useProfileStore((state) => state.plan);
   const addToPlan = useProfileStore((state) => state.addToPlan);
