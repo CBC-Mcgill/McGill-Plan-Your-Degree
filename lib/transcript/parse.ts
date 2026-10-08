@@ -1,18 +1,6 @@
-export type Season = "Fall" | "Winter" | "Summer";
+import type { CourseStatus, Season, Term } from "../profile/types";
 
-export interface Term {
-  season: Season;
-  year: number;
-}
-
-export type CourseStatus =
-  | "completed"
-  | "in-progress"
-  | "failed"
-  | "withdrawn"
-  | "deferred"
-  | "transfer"
-  | "exemption";
+export type { CourseStatus, Season, Term };
 
 export interface TranscriptCourse {
   /** Subject, number and optional multi-term suffix, e.g. "COMP 250" or "ECSE 458D1". */
