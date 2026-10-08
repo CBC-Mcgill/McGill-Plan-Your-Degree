@@ -1,0 +1,147 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Science",
+      "programs": [
+        "Major Computer Science"
+      ],
+      "minors": [],
+      "creditsRequired": 90,
+      "courses": [
+        {
+          "code": "COMP 202",
+          "title": "Foundations of Programming",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 133",
+          "title": "Linear Algebra and Geometry",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 140",
+          "title": "Calculus 1",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "PHYS 101",
+          "title": "Intro Physics - Mechanics",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 4,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 4,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 250",
+          "title": "Intro to Computer Science",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 141",
+          "title": "Calculus 2",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 4,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 4,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 240",
+          "title": "Discrete Structures",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "D",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "CHEM 110",
+          "title": "General Chemistry 1",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 4,
+          "grade": "C",
+          "remarks": null,
+          "earnedCredits": 4,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ENGL 202",
+          "title": "Departmental Survey of Engl Lit",
+          "term": {
+            "season": "Summer",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Tremblay, Alex",
+    "260900001",
+    "TREA01020399"
+  ]
+}

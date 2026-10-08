@@ -1,0 +1,133 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Science",
+      "programs": [
+        "Major Software Engineering"
+      ],
+      "minors": [],
+      "creditsRequired": 90,
+      "courses": [
+        {
+          "code": "COMP 206",
+          "title": "Intro to Software Systems",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 250",
+          "title": "Intro to Computer Science",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 251",
+          "title": "Algorithms and Data Structures",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "COMP 273",
+          "title": "Intro to Computer Systems",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "MATH 240",
+          "title": "Discrete Structures",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "ECSE 223",
+          "title": "Model-Based Programming",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "withdrawn"
+        },
+        {
+          "code": "COMP 302",
+          "title": "Programming Lang & Paradigms",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "COMP 303",
+          "title": "Software Design",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Nguyen, Bao",
+    "260900002",
+    "NGUB02030499"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Science",
+      "programs": [
+        "Major Computer Science"
+      ],
+      "minors": [],
+      "creditsRequired": 90,
+      "courses": [
+        {
+          "code": "COMP 251",
+          "title": "Algorithms and Data Structures",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "L",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "deferred"
+        },
+        {
+          "code": "COMP 273",
+          "title": "Intro to Computer Systems",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "K",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "deferred"
+        },
+        {
+          "code": "MATH 223",
+          "title": "Linear Algebra",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "L*",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "deferred"
+        },
+        {
+          "code": "MATH 235",
+          "title": "Algebra 1",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "KE",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "deferred"
+        },
+        {
+          "code": "MATH 248",
+          "title": "Honours Vector Calculus",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "NR",
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "in-progress"
+        },
+        {
+          "code": "COMP 330",
+          "title": "Theory of Computation",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Kaur, Farah",
+    "260900006",
+    "KAUF06070899"
+  ]
+}

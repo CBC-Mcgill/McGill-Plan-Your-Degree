@@ -14,7 +14,8 @@
       "!dist",
       "!build",
       "!data/catalogue",
-      "!crawler/fixtures"
+      "!crawler/fixtures",
+      "!lib/transcript/fixtures/*.json"
     ]
   },
   "formatter": {

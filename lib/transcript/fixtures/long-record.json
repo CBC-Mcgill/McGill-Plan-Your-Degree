@@ -1,0 +1,714 @@
+{
+  "result": {
+    "ok": true,
+    "transcript": {
+      "degree": "Bachelor of Engineering",
+      "programs": [
+        "Software Engineering"
+      ],
+      "minors": [
+        "Minor Management"
+      ],
+      "creditsRequired": 133,
+      "courses": [
+        {
+          "code": "ECSE 203",
+          "title": "Synthetic Course 1",
+          "term": {
+            "season": "Fall",
+            "year": 2022
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 206",
+          "title": "Synthetic Course 2",
+          "term": {
+            "season": "Fall",
+            "year": 2022
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 209",
+          "title": "Synthetic Course 3",
+          "term": {
+            "season": "Fall",
+            "year": 2022
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 212",
+          "title": "Synthetic Course 4",
+          "term": {
+            "season": "Fall",
+            "year": 2022
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 215",
+          "title": "Synthetic Course 5",
+          "term": {
+            "season": "Fall",
+            "year": 2022
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 218",
+          "title": "Synthetic Course 6",
+          "term": {
+            "season": "Fall",
+            "year": 2022
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 221",
+          "title": "Synthetic Course 7",
+          "term": {
+            "season": "Winter",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 224",
+          "title": "Synthetic Course 8",
+          "term": {
+            "season": "Winter",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 227",
+          "title": "Synthetic Course 9",
+          "term": {
+            "season": "Winter",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 230",
+          "title": "Synthetic Course 10",
+          "term": {
+            "season": "Winter",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 233",
+          "title": "Synthetic Course 11",
+          "term": {
+            "season": "Winter",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 236",
+          "title": "Synthetic Course 12",
+          "term": {
+            "season": "Winter",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 239",
+          "title": "Synthetic Course 13",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 242",
+          "title": "Synthetic Course 14",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 245",
+          "title": "Synthetic Course 15",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 248",
+          "title": "Synthetic Course 16",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 251",
+          "title": "Synthetic Course 17",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 254",
+          "title": "Synthetic Course 18",
+          "term": {
+            "season": "Fall",
+            "year": 2023
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 257",
+          "title": "Synthetic Course 19",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 260",
+          "title": "Synthetic Course 20",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 263",
+          "title": "Synthetic Course 21",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 266",
+          "title": "Synthetic Course 22",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 269",
+          "title": "Synthetic Course 23",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 272",
+          "title": "Synthetic Course 24",
+          "term": {
+            "season": "Winter",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 275",
+          "title": "Synthetic Course 25",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 278",
+          "title": "Synthetic Course 26",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 281",
+          "title": "Synthetic Course 27",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 284",
+          "title": "Synthetic Course 28",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 287",
+          "title": "Synthetic Course 29",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 290",
+          "title": "Synthetic Course 30",
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 293",
+          "title": "Synthetic Course 31",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 296",
+          "title": "Synthetic Course 32",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 299",
+          "title": "Synthetic Course 33",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 302",
+          "title": "Synthetic Course 34",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 305",
+          "title": "Synthetic Course 35",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 308",
+          "title": "Synthetic Course 36",
+          "term": {
+            "season": "Winter",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 311",
+          "title": "Synthetic Course 37",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 314",
+          "title": "Synthetic Course 38",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 317",
+          "title": "Synthetic Course 39",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 320",
+          "title": "Synthetic Course 40",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 323",
+          "title": "Synthetic Course 41",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 326",
+          "title": "Synthetic Course 42",
+          "term": {
+            "season": "Fall",
+            "year": 2025
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 329",
+          "title": "Synthetic Course 43",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "A-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "COMP 332",
+          "title": "Synthetic Course 44",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "B+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MATH 335",
+          "title": "Synthetic Course 45",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "B",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "MGCR 338",
+          "title": "Synthetic Course 46",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "B-",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 341",
+          "title": "Synthetic Course 47",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "C+",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "FACC 344",
+          "title": "Synthetic Course 48",
+          "term": {
+            "season": "Winter",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": "A",
+          "remarks": null,
+          "earnedCredits": 3,
+          "multiTerm": false,
+          "status": "completed"
+        },
+        {
+          "code": "ECSE 428",
+          "title": "Software Engineering Practice",
+          "term": {
+            "season": "Fall",
+            "year": 2026
+          },
+          "credits": 3,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": null,
+          "multiTerm": false,
+          "status": "in-progress"
+        }
+      ],
+      "unrecognized": []
+    }
+  },
+  "mustNotContain": [
+    "Fortin, Jules",
+    "260900010",
+    "FORJ10111299",
+    "Academic Advising Hold",
+    "Aug 1, 2023",
+    "Dec 31, 2099",
+    "replace MATH 133 3cr exemption",
+    "Registration"
+  ]
+}
