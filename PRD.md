@@ -183,6 +183,27 @@ Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Soft
 - **P1-7 Student ratings from mcgill.courses** on each course page: average rating, difficulty, and review count fetched live from its public API, with a link to read the reviews there. Review text is never copied.
 - **P1-8 AI advisor chat preview** at `/advisor`, styled after the Claude desktop app, that explains the advisor is coming soon. No AI is called.
 
+### Student backgrounds
+
+McGill places students by how they arrive, and the plan has to follow.
+Sources: McGill's CEGEP transfer credit page, the Faculty of Engineering transfer credit page, and the Foundation program page (checked 2026-10-08).
+
+| Case | What McGill does | Status |
+|---|---|---|
+| Quebec CEGEP graduate (DEC) | Enters U1 with up to 29 or 30 advanced standing credits. A B.Sc. or B.A. is 90 credits. Engineering Year 0 courses are credited. | Handled: lump-sum advanced standing from the transcript, Year 0 groups credited, Science DEC equivalents (MATH 133, 140, 141, PHYS 131, 142, CHEM 110, 120, BIOL 111) meet prerequisites, earned degree credits shown |
+| Course exemption without credit | The course counts as done, but its credits must be replaced. | Handled: a note names the course and the credits to replace |
+| AP, IB, A-Level, French Baccalaureate or CAPE | Up to 29 or 30 credits of advanced standing. 24 or more credits places the student in U1. | Mostly handled: per-course transfer credits and lump sums both count |
+| Outside Quebec, from high school | Enters U0 and completes a 30-credit Foundation year, so a B.Sc. or B.A. is 120 credits. | Partly handled: the student can choose this entry and degree credits use 120, but Foundation course choices are not checked |
+| CEGEP with only part of Year 0 covered | Some Year 0 courses are credited and some must still be taken. | Not handled: Year 0 is credited as a whole |
+| Incomplete DEC or a non-science DEC | Missing CEGEP prerequisites must be taken at McGill. | Not handled: every CEGEP student is assumed to hold a Science DEC |
+| Transfer from another university | Per-course transfer credit, and at least 60 credits (or half of a B.Eng.) must be taken at McGill. | Partly handled: transfer credits count, the residency rule is not checked |
+| Mature student | Usually starts in U0. | Partly handled through the Foundation entry |
+| Entered under an older catalogue year | Follows the requirements of the year they entered. | Not handled: every student uses the current catalogue |
+| Double major, joint honours, minor or concentration | Two or more sets of requirements. | Not handled: one program per profile |
+| Changed program or faculty | Some earlier credits may not count toward the new program. | Not handled |
+| Co-op work terms | Work terms sit between study terms. | Not handled in the planner |
+| Second bachelor's degree | Reduced requirements and residency rules. | Not handled |
+
 ### P2 - Design for, do not build
 
 - **AI advisor answers.** Keep catalogue and profile data in clean typed shapes that an LLM can read later. The P1-8 chat is the shell it plugs into.
@@ -281,6 +302,7 @@ Checked on 2026-10-08 with direct requests.
 | 5 | Interview 5 students to validate the problem and the game style before the design pass. | Thai | Non-blocking |
 | 6 | Visual direction for the quest path, XP, levels, and badges (superdesign exploration). | Design | Blocks P0-9 build only |
 | 7 | Tell the mcgill.courses maintainers we link to their reviews and read their public API, and ask whether they want a lighter ratings endpoint or a partnership. | Thai | Non-blocking |
+| 8 | Which unhandled student backgrounds in section 5 matter most to real users? Ask during the student interviews. | Thai | Non-blocking |
 
 ---
 
