@@ -1,6 +1,7 @@
 import { MotionConfig } from "motion/react";
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
+import { Celebration } from "@/components/celebration";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               . Not affiliated with McGill University.
             </p>
           </footer>
+          <Celebration />
         </MotionConfig>
       </body>
     </html>

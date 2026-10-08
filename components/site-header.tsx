@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeaderLevel } from "@/components/header-level";
 import { NavLinks } from "@/components/nav-links";
 
 export function SiteHeader() {
@@ -15,6 +16,7 @@ export function SiteHeader() {
         <nav aria-label="Main">
           <NavLinks />
         </nav>
+        <HeaderLevel />
       </div>
     </header>
   );

@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { BadgesCard } from "@/components/profile/badges-card";
 import { CoursesCard } from "@/components/profile/courses-card";
 import { DataCard } from "@/components/profile/data-card";
 import { ImportNotice } from "@/components/profile/import-notice";
@@ -58,6 +59,7 @@ export function ProfileView() {
 
       <div className="mt-8 grid gap-6">
         <ProgramCard />
+        <BadgesCard />
         <CoursesCard />
         <DataCard flow={flow} onReset={() => setStarted(false)} />
       </div>
