@@ -31,6 +31,8 @@ test("every text token meets 4.5:1 on its surfaces and --fg-subtle meets 3:1", (
     ["fg", "tint"],
     ["fg-muted", "bg"],
     ["fg-muted", "tint"],
+    ["fg-muted", "subtle"],
+    ["fg", "muted"],
     ["danger", "bg"],
     ["warn", "bg"],
     ["warn", "tint"],
