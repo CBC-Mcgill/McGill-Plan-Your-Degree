@@ -38,11 +38,6 @@
   --locked-surface: color-mix(in oklab, var(--locked) 12%, white);
   --failed: var(--danger);
   --failed-surface: color-mix(in oklab, var(--failed) 12%, white);
-
-  /* Gold is only for XP and levels. */
-  --xp: #d99a1e;
-  --xp-surface: color-mix(in oklab, var(--xp) 18%, white);
-  --xp-foreground: #7a5300;
 }
 
 @theme inline {
@@ -79,9 +74,6 @@
   --color-locked-surface: var(--locked-surface);
   --color-failed: var(--failed);
   --color-failed-surface: var(--failed-surface);
-  --color-xp: var(--xp);
-  --color-xp-surface: var(--xp-surface);
-  --color-xp-foreground: var(--xp-foreground);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;

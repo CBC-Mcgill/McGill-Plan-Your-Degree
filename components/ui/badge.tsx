@@ -18,7 +18,6 @@ const badgeVariants = cva(
         warn: "bg-warn-surface text-[color-mix(in_oklab,var(--warn)_85%,black)]",
         danger:
           "bg-failed-surface text-[color-mix(in_oklab,var(--danger)_85%,black)]",
-        xp: "bg-xp-surface text-xp-foreground",
       },
       size: {
         sm: "h-5 gap-1 px-1.5 text-xs [&_svg]:size-3",

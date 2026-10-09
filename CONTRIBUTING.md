@@ -41,8 +41,8 @@ pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm test:e2e
   Design for a 1280 px window, keep it usable down to 1024 px, and avoid horizontal scroll.
 - Click and keyboard must both work everywhere.
   Drag and drop is an extra, never the only way.
-- Game animations respect `prefers-reduced-motion`.
-- Game elements show real progress only, and each screen has one obvious primary action.
+- Animations respect `prefers-reduced-motion`.
+- Clean and never confusing: one obvious primary action per screen, plain labels, no gamification.
 - Banned styles are cream or off-white backgrounds, italic accent words in headings, numbered "01 / 02" section labels, monospace labels, and pill-shaped buttons.
 
 Never hand-edit files in `data/catalogue/` or `data/programs/generated/`.

@@ -6,8 +6,8 @@ import { useMemo, useState } from "react";
 import { flushSync } from "react-dom";
 import { CatalogueError } from "@/components/catalogue-error";
 import { PlanSummary } from "@/components/plan/plan-summary";
-import { QuestPath } from "@/components/plan/quest-path";
 import { TermPanel } from "@/components/plan/term-panel";
+import { TermPath } from "@/components/plan/term-path";
 import { StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -142,7 +142,7 @@ function PlannerReady({
       />
       {selected ? (
         <div className="grid grid-cols-[18.75rem_minmax(0,1fr)] items-start gap-6">
-          <QuestPath
+          <TermPath
             stages={stages}
             selected={selected.key}
             onSelect={setPicked}

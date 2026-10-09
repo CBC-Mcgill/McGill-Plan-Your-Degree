@@ -25,12 +25,11 @@ Validating with real students is open question 5.
 
 1. A student goes from transcript PDF to a correct "what's next" view in under 3 minutes, with no manual course entry.
 2. A student in one of the 5 MVP programs builds a plan to graduation where every prerequisite and program requirement is satisfied, in one session.
-3. Students come back every registration period because planning feels like progress, not paperwork.
 
 **Project goals**
 
-4. The catalogue stays correct every term through one reviewed data PR per crawl, with no hand-entered course data.
-5. A student in an unsupported program can add their program in a PR without help from the maintainer.
+3. The catalogue stays correct every term through one reviewed data PR per crawl, with no hand-entered course data.
+4. A student in an unsupported program can add their program in a PR without help from the maintainer.
 
 ---
 
@@ -59,7 +58,6 @@ Validating with real students is open question 5.
 - As a Software Engineering student, I want to upload my unofficial transcript and have every completed course saved, so that I never type them in.
 - As a CS Major student, I want to see the required courses I still have left and my progress on each complementary list, so that I know what I must take before graduating.
 - As any student, I want to lay out my remaining terms and get warned when a course sits before its prerequisite or in a term it is not offered, so that my plan is actually possible.
-- As any student, I want my progress shown as XP, levels, badges, and a path to graduation, so that planning feels rewarding.
 
 ### Edge cases
 
@@ -151,22 +149,15 @@ Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Soft
 - [ ] Students add, move, and remove courses per term by click or keyboard. Drag and drop is an extra, never the only way.
 - [ ] Warns, without blocking, when a course is placed before its prerequisites, in a term it is not offered, against a restriction, or in a term over a credit limit (default 17, editable).
 - [ ] Shows whether the whole plan satisfies the program, and lists what is still missing.
+- [ ] A term path shows every term from start to graduation, with completed, current, and planned terms looking distinct. Clicking a term opens it.
 
-#### P0-9 Gamified progress
-
-- [ ] XP comes from completed credits only. Planned courses show potential XP but do not award it.
-- [ ] Levels follow McGill year standing (U0 to U4) with sub-levels between years.
-- [ ] Badges mark real milestones, such as first import, finishing a required block, finishing a complementary list, a fully valid plan, and graduation-ready. The MVP ships at least 10 badges.
-- [ ] The quest path shows every term from start to graduation as a stage on one path. Completed, current, and planned stages look distinct, and clicking a stage opens that term.
-- [ ] Every game element reflects real academic progress. No streaks, timers, or rewards for opening the app.
-
-#### P0-10 Desktop-first and accessible
+#### P0-9 Desktop-first and accessible
 
 - [ ] Every screen is designed for a 1280 px wide window and stays usable down to 1024 px. Mobile layouts are out of scope for the MVP.
-- [ ] Meets WCAG 2.2 AA: full keyboard use, visible focus, sufficient contrast, and game animations respect reduced motion.
+- [ ] Meets WCAG 2.2 AA: full keyboard use, visible focus, sufficient contrast, and animations respect reduced motion.
 - [ ] Lighthouse desktop performance is at least 90 on the browse and course pages.
 
-#### P0-11 Open-source readiness
+#### P0-10 Open-source readiness
 
 - [ ] README with one-command local setup.
 - [ ] CONTRIBUTING with guides for code changes, crawler fixes, and adding a program.
@@ -249,8 +240,8 @@ Review points: 1 week after analytics lands, end of the first registration perio
 | Framework | Next.js 16 App Router, React 19 | Static course pages plus client-heavy planner in one app. |
 | Language | TypeScript strict, with `noUncheckedIndexedAccess` | Catches missing-course and empty-array bugs at compile time. |
 | Styling | Tailwind CSS v4 | Utility classes, no runtime cost. |
-| Components | shadcn/ui, restyled for a game look | Accessible primitives copied into the repo, so the look is fully ours. |
-| Animation | Motion | Unlock, XP, and level-up animations, with reduced-motion support. |
+| Components | shadcn/ui, restyled for a clean look | Accessible primitives copied into the repo, so the look is fully ours. |
+| Animation | Motion | Small transitions, with reduced-motion support. |
 | Lint and format | Biome | One fast tool replaces ESLint and Prettier. |
 | Unit tests | Vitest | Prerequisite parser, transcript parser, requirement engine. |
 | E2E tests | Playwright, 1280 px and 1024 px desktop viewports | Import, browse, and plan flows as a student uses them. |
@@ -272,7 +263,7 @@ One package, no monorepo, until a second deployable exists.
 - **mcgill.courses** (open source, Rust and React, MongoDB): course search and student reviews, plus a schedule builder. We link to its reviews and borrow its "leading to" idea for the Unlocks list. It does not plan a whole degree or read transcripts.
 - **Visual Schedule Builder:** McGill's official timetable tool. We link to it instead of building timetables.
 
-What sets this project apart is the gamified, local-first degree plan: transcript import, what's next, and a quest path to graduation.
+What sets this project apart is the local-first degree plan: transcript import, what's next, and a term path to graduation.
 
 ---
 
@@ -299,10 +290,9 @@ Checked on 2026-10-08 with direct requests.
 | 2 | Do McGill's terms of use allow crawling the catalogue? Should we notify McGill before launch? | Thai, legal | Blocks public launch, not development |
 | 3 | Students follow the requirements of the catalogue year they entered. The MVP assumes the current year for everyone. Is that acceptable for launch? | Thai | Non-blocking |
 | 4 | Analytics tool after launch, and whether a random local install ID is acceptable for measuring return rate. | Engineering | Non-blocking |
-| 5 | Interview 5 students to validate the problem and the game style before the design pass. | Thai | Non-blocking |
-| 6 | Visual direction for the quest path, XP, levels, and badges (superdesign exploration). | Design | Blocks P0-9 build only |
-| 7 | Tell the mcgill.courses maintainers we link to their reviews and read their public API, and ask whether they want a lighter ratings endpoint or a partnership. | Thai | Non-blocking |
-| 8 | Which unhandled student backgrounds in section 5 matter most to real users? Ask during the student interviews. | Thai | Non-blocking |
+| 5 | Interview 5 students to validate the problem before the design pass. | Thai | Non-blocking |
+| 6 | Tell the mcgill.courses maintainers we link to their reviews and read their public API, and ask whether they want a lighter ratings endpoint or a partnership. | Thai | Non-blocking |
+| 7 | Which unhandled student backgrounds in section 5 matter most to real users? Ask during the student interviews. | Thai | Non-blocking |
 
 ---
 
@@ -316,10 +306,10 @@ Estimates are rough and count focused working days.
 |---|---|---|
 | 0. Foundation | Remove old code, scaffold with the stack in section 7, CI green, new CLAUDE.md | 1 day |
 | 1. Catalogue | Crawler, prerequisite parser, data PR workflow (P0-1, P0-2) | 1 to 2 weeks, the riskiest phase |
-| 2. Design direction | Superdesign exploration for the gamified UI, run in parallel with phase 1 | 2 to 3 days |
+| 2. Design direction | Superdesign exploration for the UI, run in parallel with phase 1 | 2 to 3 days |
 | 3. Browse and profile | Course browser and local profile (P0-3, P0-5) | 1 week |
 | 4. Import | Transcript parser and review screen (P0-4), starts once samples exist | 1 week |
 | 5. Plan | Program files, what's next, semester planner (P0-6, P0-7, P0-8) | 2 weeks |
-| 6. Game and launch | XP, levels, badges, quest path, accessibility and performance pass (P0-9 to P0-11) | 1 to 2 weeks |
+| 6. Launch | Accessibility and performance pass, open-source readiness (P0-9, P0-10) | 1 to 2 weeks |
 
 Total: about 7 to 10 focused weeks.

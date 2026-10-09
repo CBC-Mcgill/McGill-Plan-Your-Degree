@@ -25,7 +25,7 @@ import { blockedBy, isOffered, meets } from "./status.ts";
 /** Completed: every course done. Past: a finished term with failed or withdrawn courses. */
 export type StageState = "completed" | "current" | "past" | "planned" | "empty";
 
-/** One term on the quest path. */
+/** One term on the term path. */
 export interface Stage {
   term: Term;
   key: number;
