@@ -20,7 +20,7 @@ import { useCatalogue } from "@/lib/catalogue/client";
 import { earnedCredits } from "@/lib/engine/credits";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
-import { getProgram } from "@/lib/programs";
+import { useProgram } from "@/lib/programs/client";
 
 const NO_COURSES: Catalogue = new Map();
 
@@ -57,7 +57,7 @@ function ProfileDetail({
   const catalogue = useCatalogue();
 
   const parts: string[] = [];
-  const program = programId ? getProgram(programId) : undefined;
+  const program = useProgram(programId);
   if (program) parts.push(program.name);
   const credits =
     (snapshot

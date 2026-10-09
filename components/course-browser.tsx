@@ -48,7 +48,7 @@ import { courseStatus } from "@/lib/engine/status";
 import { useProfileStore } from "@/lib/profile/store";
 import type { CourseRecord, Plan } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { getProgram } from "@/lib/programs";
+import { useProgram } from "@/lib/programs/client";
 import { replaceUrl, useScrollMemory } from "@/lib/use-scroll-memory";
 
 const PAGE_SIZE = 50;
@@ -76,6 +76,7 @@ function useBrowse(): BrowseData {
   const catalogue = useCatalogue();
   const snapshot = useSnapshot();
   const programId = useProfileStore((state) => state.programId);
+  const program = useProgram(programId);
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
@@ -85,13 +86,10 @@ function useBrowse(): BrowseData {
   );
   const inProgram = useMemo(
     () =>
-      base
-        ? programCodes(
-            programId ? getProgram(programId) : undefined,
-            base.index,
-          )
+      base && program !== undefined
+        ? programCodes(program ?? undefined, base.index)
         : null,
-    [base, programId],
+    [base, program],
   );
   const states = useMemo(
     () =>

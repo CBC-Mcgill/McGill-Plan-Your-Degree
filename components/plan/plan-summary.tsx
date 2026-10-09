@@ -18,14 +18,19 @@ const requiredText = (items: RequiredItem[]) =>
     .map((item) => (typeof item === "string" ? item : item.oneOf.join(" or ")))
     .join(", ");
 
-/** What a complementary group lacks: credits first, then the first rule it fails. */
-function lacking(group: GroupProgress): string {
+/** What a complementary group lacks: credits first, then the first rule it fails. Null when only rules to check are left. */
+function lacking(group: GroupProgress): string | null {
   if (group.creditsDone < group.credits) {
     return `${creditsText(group.credits - group.creditsDone)} to go`;
   }
-  const open = group.rules.filter((rule) => !rule.satisfied);
+  const open = group.rules.filter((rule) => !rule.satisfied && !rule.unparsed);
   const [rule] = open;
-  if (!rule) return `${group.coursesDone} of ${group.minCourses} courses`;
+  if (!rule) {
+    return group.minCourses !== undefined &&
+      group.coursesDone < group.minCourses
+      ? `${group.coursesDone} of ${group.minCourses} courses`
+      : null;
+  }
   const need =
     rule.minCredits === undefined
       ? `${rule.coursesDone} of ${rule.minCourses} courses`
@@ -33,8 +38,20 @@ function lacking(group: GroupProgress): string {
   return `${rule.title} (${need})${open.length > 1 ? ` and ${open.length - 1} more` : ""}`;
 }
 
-/** One line of what the plan lacks. When the line does not fit, Show all opens the rest. */
-function Missing({ text }: { text: string }) {
+/** Rule text can run to a paragraph, which has no place in a one-line summary. */
+const brief = (text: string) =>
+  text.length > 100 ? `${text.slice(0, 99).trimEnd()}…` : text;
+
+/** One line of what the plan lacks, then the rules to check. When the line does not fit, Show all opens the rest. */
+function Missing({
+  text,
+  checks,
+  source,
+}: {
+  text: string;
+  checks: string[];
+  source: string;
+}) {
   const line = useRef<HTMLParagraphElement>(null);
   const [open, setOpen] = useState(false);
   const [clipped, setClipped] = useState(false);
@@ -58,8 +75,21 @@ function Missing({ text }: { text: string }) {
           !open && "truncate",
         )}
       >
-        <span className="font-medium text-foreground">Still missing</span>{" "}
-        {text}
+        {text && (
+          <>
+            <span className="font-medium text-foreground">Still missing</span>{" "}
+            {text}
+          </>
+        )}
+        {text && checks.length > 0 && " · "}
+        {checks.length > 0 && (
+          <>
+            <span className="font-medium text-foreground">
+              Check this requirement
+            </span>{" "}
+            {checks.map(brief).join(" · ")}
+          </>
+        )}
       </p>
       {(clipped || open) && (
         <button
@@ -70,6 +100,17 @@ function Missing({ text }: { text: string }) {
         >
           {open ? "Show less" : "Show all"}
         </button>
+      )}
+      {checks.length > 0 && (
+        <a
+          href={source}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${linkClass} shrink-0 rounded-sm`}
+        >
+          Program page
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
       )}
     </div>
   );
@@ -95,13 +136,19 @@ export function PlanSummary({
   /** The graduation term's label when it is already in the past. */
   graduationPassed: string | null;
 }) {
-  const missing = (progress?.groups ?? [])
-    .filter((group) => !group.satisfied)
-    .map(
-      (group) =>
-        `${sentence(group.title)}: ${group.kind === "required" ? requiredText(group.remaining) : lacking(group)}`,
-    )
+  const groups = (progress?.groups ?? []).filter((group) => !group.satisfied);
+  const missing = groups
+    .flatMap((group) => {
+      const what =
+        group.kind === "required"
+          ? requiredText(group.remaining)
+          : lacking(group);
+      return what === null ? [] : `${sentence(group.title)}: ${what}`;
+    })
     .join(" · ");
+  const checks = groups.flatMap((group) =>
+    group.rules.flatMap((rule) => (rule.unparsed ? [rule.title] : [])),
+  );
   return (
     <>
       <Card asChild className="flex items-stretch gap-6 px-5 py-4">
@@ -134,7 +181,12 @@ export function PlanSummary({
                     Your plan satisfies {program.name}.
                   </p>
                 ) : (
-                  <Missing key={missing} text={missing} />
+                  <Missing
+                    key={`${missing}|${checks.length}`}
+                    text={missing}
+                    checks={checks}
+                    source={program.source}
+                  />
                 )}
               </>
             ) : (

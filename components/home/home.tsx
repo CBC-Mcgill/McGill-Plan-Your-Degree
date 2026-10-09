@@ -44,7 +44,7 @@ import {
   termKey,
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { getProgram } from "@/lib/programs";
+import { useProgram } from "@/lib/programs/client";
 import type { Program } from "@/lib/programs/types";
 
 const NEXT_UP_LIMIT = 5;
@@ -102,19 +102,23 @@ function Ready({
   const programId = useProfileStore((state) => state.programId);
   const entry = useProfileStore((state) => state.entry);
   const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
-  const program = programId ? (getProgram(programId) ?? null) : null;
+  const loaded = useProgram(programId);
+  const program = loaded ?? null;
   // Planned courses stay in the list, so adding one shows "Planned" and the row does not vanish.
   const view = useMemo(
     () =>
-      nextView(
-        catalogue,
-        { ...snapshot, planned: NO_COURSES },
-        term,
-        program,
-        entry,
-      ),
-    [catalogue, snapshot, term, program, entry],
+      loaded === undefined
+        ? null
+        : nextView(
+            catalogue,
+            { ...snapshot, planned: NO_COURSES },
+            term,
+            program,
+            entry,
+          ),
+    [catalogue, snapshot, term, loaded, program, entry],
   );
+  if (!view) return <Skeleton />;
 
   return (
     <div className="mt-6 flex flex-col gap-6">

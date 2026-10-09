@@ -9,40 +9,11 @@ import {
   termFromKey,
   termKey,
 } from "@/lib/profile/types";
-import { PROGRAMS } from "@/lib/programs";
 
 type SelectProps = Omit<
   React.ComponentProps<typeof SelectField>,
   "label" | "value" | "onChange" | "children"
 >;
-
-/** The empty value reads "Choose a program" until one is picked, then it is the choice for a program that is not in the list. */
-export function ProgramSelect({
-  value,
-  onChange,
-  ...props
-}: {
-  value: string | null;
-  onChange: (programId: string | null) => void;
-} & SelectProps) {
-  return (
-    <SelectField
-      {...props}
-      label="Program"
-      value={value ?? ""}
-      onChange={(event) => onChange(event.target.value || null)}
-    >
-      {PROGRAMS.map((program) => (
-        <option key={program.id} value={program.id}>
-          {program.name} ({program.degree})
-        </option>
-      ))}
-      <option value="">
-        {value === null ? "Choose a program" : "My program isn't listed yet"}
-      </option>
-    </SelectField>
-  );
-}
 
 /** The empty value is "Not sure", for a student who cannot say how they started. */
 export function EntrySelect({
