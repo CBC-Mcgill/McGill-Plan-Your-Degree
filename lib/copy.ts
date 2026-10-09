@@ -59,6 +59,7 @@ export const COPY = {
   countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",
   catalogueLink: "McGill catalogue",
+  vsbLink: "Visual Schedule Builder",
   generated: "Read automatically from the catalogue",
   minorTitle,
   importTranscript: "Import your transcript",

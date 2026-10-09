@@ -8,6 +8,7 @@ import { type ReactNode, useId, useRef, useState } from "react";
 import { CourseCode } from "@/components/course-code";
 import { ROW, ROW_LINK, ROW_TITLE } from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
+import { VsbLink } from "@/components/external-link";
 import { AddCourse } from "@/components/plan/add-course";
 import {
   addAllWithUndo,
@@ -698,6 +699,13 @@ export function TermPanel({
             }
           />
         </div>
+      )}
+
+      {(open || stage.state === "current") && (
+        <p className="px-5 py-4 text-fg-muted">
+          This plan picks your courses. Pick their sections and times in
+          McGill's <VsbLink />.
+        </p>
       )}
     </section>
   );

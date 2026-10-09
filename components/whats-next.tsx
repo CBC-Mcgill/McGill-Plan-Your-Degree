@@ -14,7 +14,7 @@ import {
   seasonsOffered,
 } from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
-import { CatalogueLink } from "@/components/external-link";
+import { CatalogueLink, VsbLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
@@ -365,7 +365,8 @@ function Page({
           term ·{" "}
           <Link href="/plan" className="link">
             Plan later terms
-          </Link>
+          </Link>{" "}
+          · Sections and times in <VsbLink />
         </p>
         <TermLoad
           credits={termLoad(plan, catalogue, term)}
