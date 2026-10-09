@@ -11,7 +11,12 @@ import {
   termKey,
 } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
-import { type PlanWarning, termRange } from "./plan.ts";
+import {
+  type PlannedLoad,
+  type PlanWarning,
+  planLoads,
+  termRange,
+} from "./plan.ts";
 import { programProgress } from "./progress.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 import { blockedBy, isOffered, meets } from "./status.ts";
@@ -28,14 +33,16 @@ export interface Stage {
   records: CourseRecord[];
   /** Planned course codes. */
   planned: string[];
-  /** Credits earned, in progress, or planned. */
+  /** Second and later parts of multi-term courses that started in an earlier term. */
+  continued: PlannedLoad[];
+  /** Credits earned, in progress, or planned, counting every part a planned course holds in the term. */
   credits: number;
   /** Courses that count: done, in progress, or planned. */
   count: number;
   warnings: PlanWarning[];
 }
 
-/** What a planned course adds to its term, the same way planWarnings counts it. */
+/** What a planned course adds to the term it starts in, which is its first part for a multi-term course. */
 export function plannedCredits(course: CourseSummary | undefined): number {
   return course ? (course.parts?.[0]?.credits ?? course.credits ?? 0) : 0;
 }
@@ -59,7 +66,7 @@ export interface StageInput {
 
 /**
  * One stage per term from the start to graduation, Fall and Winter only.
- * Any other term holding a course or a plan gets a stage too, so nothing the student saved is hidden.
+ * Any other term holding a course, a plan, or the second half of a planned multi-term course gets a stage too, so nothing the student saved is hidden.
  * Without a start the path begins at the earliest saved term, and without a graduation term it runs four years.
  */
 export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
@@ -72,8 +79,13 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
   const start = input.startTerm ?? saved[0] ?? now;
   const end = input.graduationTerm ?? defaultGraduation(start);
 
+  const loads = planLoads(plan, catalogue);
   const terms = new Map<number, Term>();
-  for (const term of [...termRange(start, end), ...saved]) {
+  for (const term of [
+    ...termRange(start, end),
+    ...saved,
+    ...loads.map((load) => load.term),
+  ]) {
     terms.set(termKey(term), term);
   }
 
@@ -82,6 +94,9 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
     const held = records.filter((r) => r.term && termKey(r.term) === key);
     const planned =
       plan.find((entry) => termKey(entry.term) === key)?.courses ?? [];
+    const continued = loads.filter(
+      (load) => load.part > 1 && termKey(load.term) === key,
+    );
     const active = held.filter(
       (r) => r.status === "in-progress" || isDone(r.status),
     );
@@ -89,18 +104,17 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
       held
         .filter((r) => r.status === "in-progress" || earnsCredit(r.status))
         .reduce((sum, r) => sum + recordCredits(r, catalogue), 0) +
-      planned.reduce(
-        (sum, code) => sum + plannedCredits(catalogue.get(code)),
-        0,
-      );
+      loads
+        .filter((load) => termKey(load.term) === key)
+        .reduce((sum, load) => sum + load.credits, 0);
     const state: StageState =
       key === nowKey
         ? "current"
         : key > nowKey
-          ? planned.length + active.length > 0
+          ? planned.length + continued.length + active.length > 0
             ? "planned"
             : "empty"
-          : held.length === 0 && planned.length === 0
+          : held.length === 0 && planned.length + continued.length === 0
             ? "empty"
             : held.length > 0 && held.every((r) => isDone(r.status))
               ? "completed"
@@ -111,8 +125,9 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
       state,
       records: held,
       planned: [...planned],
+      continued,
       credits,
-      count: active.length + planned.length,
+      count: active.length + planned.length + continued.length,
       warnings: input.warnings.filter((w) => termKey(w.term) === key),
     };
   });
