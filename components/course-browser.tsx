@@ -29,6 +29,7 @@ import {
   optionsOf,
   type Prop,
   passes,
+  pinSubjects,
   programCodes,
   type Query,
   queryString,
@@ -47,8 +48,10 @@ import { useProfileStore } from "@/lib/profile/store";
 import type { CourseRecord, Plan } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { getProgram } from "@/lib/programs";
+import { replaceUrl, useScrollMemory } from "@/lib/use-scroll-memory";
 
 const PAGE_SIZE = 50;
+const PANEL = "course-panel";
 const PROMOTED: Prop[] = ["subject", "level", "term"];
 const EXTRA: Prop[] = ["faculty", "credits"];
 const TH = "px-2 font-medium";
@@ -102,16 +105,21 @@ function useBrowse(): BrowseData {
     [base, snapshot],
   );
   const programSubjects = useMemo(
-    () => new Set([...(inProgram ?? [])].map(subjectOf)),
+    () => new Set([...(inProgram?.keys() ?? [])].map(subjectOf)),
     [inProgram],
   );
+  const subjects = useMemo(
+    () => (base ? pinSubjects(base.subjects, programSubjects) : null),
+    [base, programSubjects],
+  );
   if (catalogue.status === "error") return { status: "error" };
-  if (!base || !inProgram || !states || snapshot === undefined) {
+  if (!base || !subjects || !inProgram || !states || snapshot === undefined) {
     return { status: "loading" };
   }
   return {
     status: "ready",
     ...base,
+    subjects,
     states,
     inProgram,
     programSubjects,
@@ -154,7 +162,26 @@ function CourseTable({ b }: { b: Browse }) {
     }
   }
 
-  useEffect(() => input.current?.focus(), []);
+  useScrollMemory();
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      const target = event.target as HTMLElement;
+      if (
+        event.key !== "/" ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.altKey ||
+        target.closest("input, textarea, select, [contenteditable]")
+      ) {
+        return;
+      }
+      event.preventDefault();
+      input.current?.focus();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   const counts = useMemo(() => viewCounts(b.index, b), [b]);
   const searched = useMemo(
@@ -169,7 +196,8 @@ function CourseTable({ b }: { b: Browse }) {
             inView(query.view, course, b) && passes(course, query.filters),
         ),
         query.sort,
-        b.programSubjects,
+        b,
+        query.view,
         query.q.trim() !== "",
       ),
     [searched, query.view, query.filters, query.sort, query.q, b],
@@ -180,16 +208,20 @@ function CourseTable({ b }: { b: Browse }) {
   const first = (current - 1) * PAGE_SIZE;
   const shown = rows.slice(first, first + PAGE_SIZE);
 
+  // A URL the page cannot honor, such as page=999 or view=nope, is rewritten to what is shown.
+  useEffect(() => {
+    const canonical = queryString({ ...query, page: current }, b.hasProfile);
+    if (canonical !== window.location.search.slice(1)) {
+      replaceUrl(canonical ? `?${canonical}` : window.location.pathname);
+    }
+  }, [query, current, b.hasProfile]);
+
   /** Any change but the page number starts again from page 1. */
   function update(patch: Partial<Query>) {
     const next = { ...query, page: 1, ...patch };
     setQuery(next);
     const string = queryString(next, b.hasProfile);
-    window.history.replaceState(
-      null,
-      "",
-      string ? `?${string}` : window.location.pathname,
-    );
+    replaceUrl(string ? `?${string}` : window.location.pathname);
   }
   const setProp = (prop: Prop, values: string[]) =>
     update({ filters: { ...query.filters, [prop]: values } });
@@ -233,6 +265,7 @@ function CourseTable({ b }: { b: Browse }) {
         <div className="flex h-12 items-center border-border border-b px-3">
           <ViewTabs
             label="Saved views"
+            panelId={PANEL}
             value={query.view}
             onChange={(view) => update({ view })}
             tabs={(b.hasProfile ? VIEWS : VIEWS.slice(0, 1)).map((tab) => ({
@@ -240,28 +273,32 @@ function CourseTable({ b }: { b: Browse }) {
               count: counts[tab.value],
             }))}
           />
-          {!b.hasProfile && (
-            <p className="ml-auto text-[13px] text-muted-foreground">
-              <Link
-                href="/profile"
-                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
-              >
-                Import your transcript
-              </Link>{" "}
-              to see which courses you can take.
-            </p>
-          )}
+          <div className="ml-auto flex items-center gap-4">
+            {!b.hasProfile && (
+              <p className="text-[13px] text-muted-foreground">
+                <Link
+                  href="/profile"
+                  className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
+                >
+                  Import your transcript
+                </Link>{" "}
+                to see which courses you can take.
+              </p>
+            )}
+            <SortMenu sort={query.sort} onChange={(sort) => update({ sort })} />
+          </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 border-border border-b px-3 py-2.5">
+        <div className="flex items-center gap-2 border-border border-b px-3 py-2.5">
           <SearchField
             ref={input}
-            className="w-[280px]"
+            className="min-w-40 max-w-[280px] flex-1"
             value={query.q}
             onChange={(q) => update({ q })}
-            placeholder={`Search ${b.index.length.toLocaleString()} courses`}
+            placeholder="Search courses"
+            shortcut="/"
           />
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex min-w-0 items-center gap-2">
             {PROMOTED.map(chip)}
             {added.map(chip)}
             {left.length > 0 && (
@@ -274,79 +311,84 @@ function CourseTable({ b }: { b: Browse }) {
               />
             )}
           </div>
-          <SortMenu sort={query.sort} onChange={(sort) => update({ sort })} />
         </div>
 
-        {rows.length === 0 ? (
-          <EmptyState
-            onClear={() => {
-              setAdded([]);
-              update({
-                q: "",
-                filters: NO_FILTERS,
-                view: counts[query.view] === 0 ? "all" : query.view,
-              });
-            }}
-          />
-        ) : (
-          <>
-            <table className="w-full table-fixed border-collapse">
-              <caption className="sr-only">Courses</caption>
-              <colgroup>
-                <col className="w-[148px]" />
-                <col />
-                <col className="w-20" />
-                <col className="w-40" />
-                <col className="w-[152px]" />
-              </colgroup>
-              <thead>
-                <tr className="h-9 border-border border-b bg-subtle text-left font-medium text-[12px] text-muted-foreground">
-                  <th className={cn(TH, "pl-4")}>Course</th>
-                  <th className={TH}>Title</th>
-                  <th className={cn(TH, "text-right")}>Credits</th>
-                  <th className={TH}>Offered</th>
-                  <th className={cn(TH, "pr-4")}>
-                    <span className="sr-only">Conditions</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                {shown.map((course) => (
-                  <CourseTableRow key={course.code} course={course} b={b} />
-                ))}
-              </tbody>
-            </table>
-            <div className="flex h-12 items-center justify-between border-border border-t px-4">
-              <p
-                aria-live="polite"
-                className="text-[13px] text-muted-foreground tabular-nums"
-              >
-                {first + 1}-{first + shown.length} of{" "}
-                {rows.length.toLocaleString()}
-              </p>
-              <div className="flex items-center gap-1.5">
-                <Button
-                  variant="secondary"
-                  className="size-8 px-0"
-                  aria-label="Previous page"
-                  disabled={current === 1}
-                  onClick={() => goTo(current - 1)}
+        <div
+          role="tabpanel"
+          id={PANEL}
+          aria-labelledby={`${PANEL}-${query.view}`}
+        >
+          {rows.length === 0 ? (
+            <EmptyState
+              onClear={() => {
+                setAdded([]);
+                update({
+                  q: "",
+                  filters: NO_FILTERS,
+                  view: counts[query.view] === 0 ? "all" : query.view,
+                });
+              }}
+            />
+          ) : (
+            <>
+              <table className="w-full table-fixed border-collapse">
+                <caption className="sr-only">Courses</caption>
+                <colgroup>
+                  <col className="w-[148px]" />
+                  <col />
+                  <col className="w-20" />
+                  <col className="w-40" />
+                  <col className="w-[152px]" />
+                </colgroup>
+                <thead>
+                  <tr className="h-9 border-border border-b bg-subtle text-left font-medium text-[12px] text-muted-foreground">
+                    <th className={cn(TH, "pl-4")}>Course</th>
+                    <th className={TH}>Title</th>
+                    <th className={cn(TH, "text-right")}>Credits</th>
+                    <th className={TH}>Offered</th>
+                    <th className={cn(TH, "pr-4")}>
+                      <span className="sr-only">Conditions</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {shown.map((course) => (
+                    <CourseTableRow key={course.code} course={course} b={b} />
+                  ))}
+                </tbody>
+              </table>
+              <div className="flex h-12 items-center justify-between border-border border-t px-4">
+                <p
+                  aria-live="polite"
+                  className="text-[13px] text-muted-foreground tabular-nums"
                 >
-                  <ChevronLeft aria-hidden strokeWidth={1.75} />
-                </Button>
-                <Button
-                  variant="secondary"
-                  className="size-8 px-0"
-                  aria-label="Next page"
-                  disabled={current >= pages}
-                  onClick={() => goTo(current + 1)}
-                >
-                  <ChevronRight aria-hidden strokeWidth={1.75} />
-                </Button>
+                  {first + 1}-{first + shown.length} of{" "}
+                  {rows.length.toLocaleString()}
+                </p>
+                <div className="flex items-center gap-1.5">
+                  <Button
+                    variant="secondary"
+                    className="size-8 px-0"
+                    aria-label="Previous page"
+                    disabled={current === 1}
+                    onClick={() => goTo(current - 1)}
+                  >
+                    <ChevronLeft aria-hidden strokeWidth={1.75} />
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    className="size-8 px-0"
+                    aria-label="Next page"
+                    disabled={current >= pages}
+                    onClick={() => goTo(current + 1)}
+                  >
+                    <ChevronRight aria-hidden strokeWidth={1.75} />
+                  </Button>
+                </div>
               </div>
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
       </Card>
     </Tooltip.Provider>
   );
