@@ -9,9 +9,8 @@ import { StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
-import { planWarnings } from "@/lib/engine/plan";
+import { planLoads, planWarnings } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
-import { plannedCredits } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
 import { defaultGraduation, termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
@@ -74,13 +73,13 @@ export function SetupGuide({
   const [picked, setPicked] = useState<string | null>(null);
 
   const warnings = useMemo(
-    () => planWarnings(plan, snapshot, catalogue, creditLimit),
-    [plan, snapshot, catalogue, creditLimit],
+    () => planWarnings(plan, snapshot, catalogue, creditLimit, graduationTerm),
+    [plan, snapshot, catalogue, creditLimit, graduationTerm],
   );
   const label = termLabel(term);
-  const plannedNext = (
-    plan.find((entry) => termKey(entry.term) === termKey(term))?.courses ?? []
-  ).reduce((sum, code) => sum + plannedCredits(catalogue.get(code)), 0);
+  const plannedNext = planLoads(plan, catalogue)
+    .filter((load) => termKey(load.term) === termKey(term))
+    .reduce((sum, load) => sum + load.credits, 0);
   const graduationGuess = defaultGraduation(startTerm ?? term);
 
   const steps: Step[] = [

@@ -80,16 +80,25 @@ function Title({
   catalogue,
   value,
   warned,
+  caption,
 }: {
   catalogue: Catalogue;
   value: string;
   warned: boolean;
+  caption?: string;
 }) {
   const title = catalogue.get(value)?.title ?? "Not in the catalogue";
   return (
     <span className="flex min-w-0 flex-1 items-center gap-2">
-      <span className="truncate" title={title}>
-        {title}
+      <span className="min-w-0">
+        <span className="block truncate" title={title}>
+          {title}
+        </span>
+        {caption && (
+          <span className="block truncate text-muted-foreground text-xs leading-4">
+            {caption}
+          </span>
+        )}
       </span>
       {warned && (
         <TriangleAlert
@@ -207,6 +216,10 @@ export function TermPanel({
   );
   const plannedTotal = stage.planned.reduce(
     (sum, value) => sum + plannedCredits(catalogue.get(value)),
+    0,
+  );
+  const continuedTotal = stage.continued.reduce(
+    (sum, load) => sum + load.credits,
     0,
   );
   const targets = moveOptions.filter(
@@ -341,6 +354,35 @@ export function TermPanel({
           </section>
         )}
 
+        {stage.continued.length > 0 && (
+          <section aria-label="Continuing courses">
+            <div className={band}>
+              Continuing
+              <span className="font-normal text-muted-foreground tabular-nums">
+                {stage.continued.length}
+              </span>
+              <span className="ml-auto font-normal text-muted-foreground tabular-nums">
+                {continuedTotal} credits
+              </span>
+            </div>
+            <ul className={list}>
+              {stage.continued.map((load) => (
+                <li key={load.code} className={row}>
+                  <RowStatus status="planned" />
+                  <CourseCode value={load.code} />
+                  <Title
+                    catalogue={catalogue}
+                    value={load.code}
+                    warned={false}
+                    caption={`${load.parts === 2 ? "Second half" : `Part ${load.part} of ${load.parts}`}, started in ${termLabel(load.start)}`}
+                  />
+                  <span className={credits}>{load.credits} cr</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {(stage.planned.length > 0 || !past) && (
           <section aria-label="Planned courses">
             <div className={band}>
@@ -400,11 +442,14 @@ export function TermPanel({
           </section>
         )}
 
-        {past && records.length === 0 && stage.planned.length === 0 && (
-          <p className="px-5 py-4 text-[13px] text-muted-foreground">
-            Nothing was recorded for this term.
-          </p>
-        )}
+        {past &&
+          records.length === 0 &&
+          stage.planned.length === 0 &&
+          stage.continued.length === 0 && (
+            <p className="px-5 py-4 text-[13px] text-muted-foreground">
+              Nothing was recorded for this term.
+            </p>
+          )}
 
         {!past && (
           <section aria-label="Add a course" className="px-5 py-4">

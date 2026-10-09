@@ -4,7 +4,7 @@ import type { CourseRecord, Term } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { whatsNext } from "./next.ts";
-import { planWarnings } from "./plan.ts";
+import { planLoads, planWarnings } from "./plan.ts";
 import { programProgress } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { courseStatus } from "./status.ts";
@@ -236,6 +236,53 @@ test("plan warnings cover prerequisites, offering, restrictions, and credits", (
       course: "ECSE 526",
       blockedBy: ["COMP 424"],
     },
+  ]);
+});
+
+test("a multi-term course loads each part in its own term", () => {
+  const part = (code: string, term: string) => ({
+    code,
+    credits: 3,
+    terms: [term],
+  });
+  const capstone = new Map([
+    [
+      "ECSE 458",
+      course("ECSE 458", {
+        credits: 6,
+        parts: [
+          part("ECSE 458D1", "Fall 2026"),
+          part("ECSE 458D2", "Winter 2027"),
+          part("ECSE 458N1", "Winter 2027"),
+          part("ECSE 458N2", "Fall 2026"),
+        ],
+      }),
+    ],
+  ]);
+  const fall = { season: "Fall", year: 2026 } as const;
+  const winter = { season: "Winter", year: 2027 } as const;
+  const terms = (start: Term) =>
+    planLoads([{ term: start, courses: ["ECSE 458"] }], capstone).map(
+      (load) => [load.term, load.credits],
+    );
+  expect(terms(fall)).toEqual([
+    [fall, 3],
+    [winter, 3],
+  ]);
+  expect(terms(winter)).toEqual([
+    [winter, 3],
+    [{ season: "Fall", year: 2027 }, 3],
+  ]);
+  expect(
+    planWarnings(
+      [{ term: fall, courses: ["ECSE 458"] }],
+      buildSnapshot([]),
+      capstone,
+      17,
+      fall,
+    ).filter((w) => w.kind === "after-graduation"),
+  ).toEqual([
+    { kind: "after-graduation", term: fall, course: "ECSE 458", ends: winter },
   ]);
 });
 

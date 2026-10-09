@@ -89,7 +89,13 @@ export function gameProgress(
           entry,
         })
       : null,
-    warnings: planWarnings(plan, snapshot, catalogue, profile.creditLimit),
+    warnings: planWarnings(
+      plan,
+      snapshot,
+      catalogue,
+      profile.creditLimit,
+      profile.graduationTerm,
+    ),
     credits,
     termCredits: [...byTerm.values()],
   };

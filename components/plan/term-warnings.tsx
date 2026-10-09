@@ -6,6 +6,8 @@ import type { RequirementTree } from "@/lib/catalogue/types";
 import type { PlanWarning } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { termContext, unmet } from "@/lib/engine/stages";
+import { useProfileStore } from "@/lib/profile/store";
+import { termLabel } from "@/lib/profile/term-options";
 import type { Plan } from "@/lib/profile/types";
 
 function Need({ tree, nested }: { tree: RequirementTree; nested?: boolean }) {
@@ -41,6 +43,7 @@ export function Sentence({
   catalogue: Catalogue;
   plan: Plan;
 }) {
+  const graduation = useProfileStore((state) => state.graduationTerm);
   if (warning.kind === "credit-limit") {
     return (
       <>
@@ -49,6 +52,14 @@ export function Sentence({
     );
   }
   const course = <CourseLink code={warning.course} />;
+  if (warning.kind === "after-graduation") {
+    return (
+      <>
+        {course} continues into {termLabel(warning.ends)}, after your expected
+        graduation{graduation && ` in ${termLabel(graduation)}`}.
+      </>
+    );
+  }
   if (warning.kind === "not-offered") {
     return (
       <>

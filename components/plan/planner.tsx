@@ -77,8 +77,8 @@ function PlannerReady({
   const program = programId ? (getProgram(programId) ?? null) : null;
   const index = useMemo(() => indexCourses(catalogue.values()), [catalogue]);
   const warnings = useMemo(
-    () => planWarnings(plan, snapshot, catalogue, creditLimit),
-    [plan, snapshot, catalogue, creditLimit],
+    () => planWarnings(plan, snapshot, catalogue, creditLimit, graduationTerm),
+    [plan, snapshot, catalogue, creditLimit, graduationTerm],
   );
   const { stages, end } = useMemo(
     () =>
