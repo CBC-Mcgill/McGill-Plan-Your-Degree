@@ -132,7 +132,8 @@ test("a course placed before its prerequisite warns until it is moved later", as
   await expect(warnings).toContainText(
     "COMP 251 needs COMP 250 in an earlier term",
   );
-  await expect(page.getByText("1 warning", { exact: true })).toBeVisible();
+  // The headline and the term's warning box both count it.
+  await expect(page.getByText("1 warning", { exact: true })).toHaveCount(2);
 
   // The same term is not earlier.
   await search.fill("COMP 250");
@@ -154,6 +155,30 @@ test("a course placed before its prerequisite warns until it is moved later", as
   await page.getByRole("button", { name: "Undo" }).click();
   await expect(page.getByRole("heading", { name: fall })).toBeFocused();
   await expect(warnings).toContainText("COMP 251 needs COMP 250");
+});
+
+test("a term's checklist adds several courses at once, with the load shown first", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
+  await seedProfile(page, [done("COMP 202")], [], "computer-engineering-beng");
+  await page.goto("/plan");
+
+  const fill = page.getByRole("region", { name: "Fill Winter 2027" });
+  await fill.getByRole("tab", { name: "Required" }).click();
+  const boxes = fill.getByRole("checkbox");
+  await boxes.nth(0).click();
+  await boxes.nth(1).focus();
+  await page.keyboard.press("Space");
+  await expect(fill).toContainText(
+    /2 selected, \d+ credits\. Winter 2027 would hold \d+ of 17 credits/,
+  );
+
+  await fill.getByRole("button", { name: "Add 2 courses" }).click();
+  const planned = page.getByRole("list", { name: "Planned courses" });
+  await expect(planned.getByRole("listitem")).toHaveCount(2);
+  await page.getByRole("button", { name: "Undo" }).click();
+  await expect(planned).toHaveCount(0);
 });
 
 test("the add box highlights the first course it can add and explains the rest", async ({

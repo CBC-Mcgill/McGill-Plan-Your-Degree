@@ -110,3 +110,38 @@ export function removeWithUndo(term: Term, code: string) {
   removeFromPlan(term, code);
   toast(COPY.toast.removed(name, ...terms), action);
 }
+
+/** Puts several courses in the term at once with one toast, whose Undo takes back those still where they landed. */
+export function addAllWithUndo(requested: Term, codes: readonly string[]) {
+  const [only] = codes;
+  if (codes.length === 1 && only) {
+    addWithUndo(requested, only);
+    return;
+  }
+  const { addToPlan, removeFromPlan } = useProfileStore.getState();
+  const placed = codes.map((code) => {
+    const course = courseOf(code);
+    return { code, term: course ? startTerm(course, requested) : requested };
+  });
+  const label = COPY.term(requested);
+  const refocus = rememberFocus();
+  for (const { code, term } of placed) addToPlan(term, code);
+  toast(`${codes.length} courses added to ${label}`, {
+    label: COPY.undo,
+    run: () => {
+      const still = placed.filter(({ code, term }) => {
+        const now = termOf(code);
+        return now !== undefined && termKey(now) === termKey(term);
+      });
+      if (still.length === 0) {
+        toast("Already changed");
+        return;
+      }
+      for (const { code, term } of still) removeFromPlan(term, code);
+      toast(
+        `${still.length} ${still.length === 1 ? "course" : "courses"} removed from ${label}`,
+      );
+      refocus();
+    },
+  });
+}

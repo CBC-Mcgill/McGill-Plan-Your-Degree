@@ -6,6 +6,7 @@ import { Fragment, type ReactNode } from "react";
 import { CourseCode } from "@/components/course-code";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
+import { StatusBar } from "@/components/status";
 import { ShowMore } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
 import { Section } from "@/components/ui/section";
@@ -17,6 +18,7 @@ import {
   type GroupProgress,
   lacking,
   type ProgramProgress,
+  programSplit,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { creditsText, sentence } from "@/lib/format";
@@ -64,7 +66,7 @@ function CourseTag({
 }
 
 /** A group's credits split by the status of the courses it claimed, with what is left in grey. */
-function StatusBar({
+function GroupBar({
   group,
   snapshot,
 }: {
@@ -199,7 +201,7 @@ function missingRows(
           </span>
           {what}
           <span className="flex items-center justify-end gap-3 tabular-nums">
-            <StatusBar group={group} snapshot={snapshot} />
+            <GroupBar group={group} snapshot={snapshot} />
             <span className="w-16 text-right">
               {gap > 0 && (
                 <>
@@ -290,6 +292,16 @@ export function PlanSummary({
         )}
         {warnings}
       </div>
+      {standing && (
+        <div className="mt-4">
+          <StatusBar
+            {...programSplit(standing.progress, snapshot)}
+            total={standing.progress.credits}
+            legend
+            className="w-80"
+          />
+        </div>
+      )}
 
       <div className="mt-2 flex flex-col gap-1 empty:hidden">
         {graduationPassed && (

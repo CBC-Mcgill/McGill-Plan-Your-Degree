@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "cn";
 import { useMemo, useState } from "react";
 import { flushSync } from "react-dom";
 import { CatalogueError } from "@/components/catalogue-error";
@@ -174,7 +175,7 @@ function PlannerReady({
         }
       />
       {selected ? (
-        <div className="mt-8 grid grid-cols-[15rem_minmax(0,1fr)] items-start gap-6">
+        <div className={cn(GRID, "mt-6")}>
           <TermPath
             stages={stages}
             selected={selected.key}
@@ -212,6 +213,10 @@ function PlannerReady({
   );
 }
 
+/** The path beside the term card. */
+const GRID =
+  "grid grid-cols-[16.5rem_minmax(0,1fr)] items-start gap-6 xl:grid-cols-[18.75rem_minmax(0,1fr)]";
+
 const bone = "rounded-md bg-tint motion-safe:animate-pulse";
 
 function PlannerSkeleton() {
@@ -221,7 +226,7 @@ function PlannerSkeleton() {
       <div aria-hidden>
         <div className={`${bone} h-11 w-[560px]`} />
         <div className={`${bone} mt-2 h-5 w-[480px]`} />
-        <div className="mt-8 grid grid-cols-[15rem_minmax(0,1fr)] gap-6">
+        <div className={cn(GRID, "mt-8")}>
           <div className="flex flex-col gap-1">
             {Array.from({ length: 6 }, (_, row) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder

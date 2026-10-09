@@ -1,7 +1,8 @@
+import { TriangleAlert } from "lucide-react";
 import { Fragment } from "react";
 import { CourseLink } from "@/components/course-link";
 import { RequirementText } from "@/components/requirement-text";
-import { Notice } from "@/components/ui/notice";
+import { COPY } from "@/lib/copy";
 import type { PlanWarning } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { termContext, unmet } from "@/lib/engine/stages";
@@ -109,7 +110,7 @@ export function Sentence({
   );
 }
 
-/** The term's warnings in plain language, one per line. Warnings never block the plan. */
+/** The term's warnings in plain language, one per line, in a tinted box that is hard to miss. Warnings never block the plan. */
 export function TermWarnings({
   warnings,
   snapshot,
@@ -123,21 +124,31 @@ export function TermWarnings({
 }) {
   if (warnings.length === 0) return null;
   return (
-    <ul aria-label="Warnings" className="flex flex-col gap-2">
-      {warnings.map((warning) => (
-        <li
-          key={`${warning.kind}-${"course" in warning ? warning.course : "term"}`}
-        >
-          <Notice tone="warn">
+    <div
+      className="rounded-md px-4 py-3 shadow-[inset_0_0_0_1px_color-mix(in_oklab,var(--warn)_24%,white)]"
+      style={{ background: "color-mix(in oklab, var(--warn) 7%, white)" }}
+    >
+      <p className="flex items-center gap-2 font-semibold text-warn">
+        <TriangleAlert aria-hidden className="size-4 shrink-0" />
+        {COPY.warnings(warnings.length)}
+      </p>
+      <ul aria-label="Warnings" className="mt-1 flex flex-col gap-1 pl-6">
+        {warnings.map((warning) => (
+          <li
+            key={`${warning.kind}-${"course" in warning ? warning.course : "term"}`}
+          >
             <Sentence
               warning={warning}
               snapshot={snapshot}
               catalogue={catalogue}
               plan={plan}
             />
-          </Notice>
-        </li>
-      ))}
-    </ul>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-2 pl-6 text-[13px] text-warn leading-[18px]">
+        These do not block your plan, but check them before you register.
+      </p>
+    </div>
   );
 }
