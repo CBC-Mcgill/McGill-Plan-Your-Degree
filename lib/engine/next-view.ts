@@ -45,6 +45,8 @@ export interface OpenGroup {
   buckets: Bucket[];
   /** The catalogue text of each rule that needs a manual check. */
   checks: string[];
+  /** False when every rule needs a check, so no course counts toward the group and its credits would read as zero. */
+  counted: boolean;
 }
 
 export interface NextView {
@@ -229,6 +231,7 @@ export function nextView(
             credits: group.credits,
             buckets: listed,
             checks,
+            counted: checks.length < group.rules.length,
           },
         ]
       : [];

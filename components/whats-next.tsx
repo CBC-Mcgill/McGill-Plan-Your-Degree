@@ -728,7 +728,11 @@ function ComplementaryGroup({
   return (
     <Group
       title={group.title}
-      fraction={{ done: group.creditsDone, of: group.credits }}
+      fraction={
+        group.counted
+          ? { done: group.creditsDone, of: group.credits }
+          : undefined
+      }
       checks={group.checks.length}
       collapsed={collapsed}
       onToggle={onToggle}

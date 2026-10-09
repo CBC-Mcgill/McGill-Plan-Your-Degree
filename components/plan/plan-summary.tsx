@@ -42,7 +42,7 @@ function lacking(group: GroupProgress): string | null {
 const brief = (text: string) =>
   text.length > 100 ? `${text.slice(0, 99).trimEnd()}…` : text;
 
-/** One line of what the plan lacks, then the rules to check. When the line does not fit, Show all opens the rest. */
+/** One line of what the plan lacks and one of the rules to check. When a line does not fit, Show all opens the rest. */
 function Missing({
   text,
   checks,
@@ -52,65 +52,69 @@ function Missing({
   checks: string[];
   source: string;
 }) {
-  const line = useRef<HTMLParagraphElement>(null);
+  const lines = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const [clipped, setClipped] = useState(false);
 
   useLayoutEffect(() => {
-    const element = line.current;
+    const element = lines.current;
     if (!element) return;
-    const measure = () => setClipped(element.scrollWidth > element.clientWidth);
+    const measure = () =>
+      setClipped(
+        [...element.querySelectorAll("p")].some(
+          (line) => line.scrollWidth > line.clientWidth,
+        ),
+      );
     measure();
     const observer = new ResizeObserver(measure);
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
 
+  const line = cn("min-w-0 text-muted-foreground", !open && "truncate");
+  const showAll = (clipped || open) && (
+    <button
+      type="button"
+      aria-expanded={open}
+      onClick={() => setOpen(!open)}
+      className={`${linkClass} rounded-sm`}
+    >
+      {open ? "Show less" : "Show all"}
+    </button>
+  );
   return (
-    <div className="flex items-baseline gap-3 text-[13px] leading-[18px]">
-      <p
-        ref={line}
-        className={cn(
-          "min-w-0 flex-1 text-muted-foreground",
-          !open && "truncate",
-        )}
-      >
-        {text && (
-          <>
-            <span className="font-medium text-foreground">Still missing</span>{" "}
-            {text}
-          </>
-        )}
-        {text && checks.length > 0 && " · "}
-        {checks.length > 0 && (
-          <>
+    <div
+      ref={lines}
+      className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-x-3 gap-y-0.5 text-[13px] leading-[18px]"
+    >
+      {text && (
+        <p className={line}>
+          <span className="font-medium text-foreground">Still missing</span>{" "}
+          {text}
+        </p>
+      )}
+      {text && <span>{showAll}</span>}
+      {checks.length > 0 && (
+        <>
+          <p className={line}>
             <span className="font-medium text-foreground">
               Check this requirement
             </span>{" "}
             {checks.map(brief).join(" · ")}
-          </>
-        )}
-      </p>
-      {(clipped || open) && (
-        <button
-          type="button"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-          className={`${linkClass} shrink-0 rounded-sm`}
-        >
-          {open ? "Show less" : "Show all"}
-        </button>
-      )}
-      {checks.length > 0 && (
-        <a
-          href={source}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${linkClass} shrink-0 rounded-sm`}
-        >
-          Program page
-          <span className="sr-only"> (opens in a new tab)</span>
-        </a>
+          </p>
+          <span className="flex gap-3">
+            {!text && showAll}
+            <a
+              href={source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${linkClass} rounded-sm`}
+            >
+              Program page
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </span>
+        </>
       )}
     </div>
   );
