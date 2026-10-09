@@ -10,7 +10,7 @@
     "lint": "biome check",
     "format": "biome check --write",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "vitest run --passWithNoTests",
+    "test": "vitest run --passWithNoTests --exclude '.claude/**'",
     "test:e2e": "playwright test",
     "crawl": "node crawler/crawl.ts",
     "crawl:programs": "node crawler/crawl-programs.ts"
