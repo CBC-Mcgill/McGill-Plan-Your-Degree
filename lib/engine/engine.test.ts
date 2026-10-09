@@ -7,7 +7,12 @@ import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
 import { nextView } from "./next-view.ts";
 import { planLoads, planWarnings, schoolTerms, termChoices } from "./plan.ts";
-import { fitsCaps, programProgress, ruleMatches } from "./progress.ts";
+import {
+  creditSources,
+  fitsCaps,
+  programProgress,
+  ruleMatches,
+} from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { courseStatus } from "./status.ts";
 
@@ -289,6 +294,31 @@ test("a group with an unparsed rule is never satisfied and counts the rules to c
   });
   expect(group?.rules.map((rule) => rule.satisfied)).toEqual([true, false]);
   expect(programProgress(checked, snapshot, catalogue).satisfied).toBe(false);
+});
+
+test("credit sources name plain rule titles and give up on sentences", () => {
+  const group = (titles: string[]) => ({
+    title: "Technical Complementaries",
+    kind: "complementary" as const,
+    credits: 9,
+    rules: titles.map((title) => ({ title, courses: ["COMP 330"] })),
+  });
+  expect(
+    creditSources({
+      ...group(["List A, 3-12 credits", "List B, at most 8 credits"]),
+      rules: [
+        ...group(["List A, 3-12 credits", "List B, at most 8 credits"]).rules,
+        { title: "COMP 424 and ECSE 526 cannot both be taken", maxCourses: 1 },
+        {
+          title: "At least 6 credits at the 400 level",
+          match: { minLevel: 400 },
+        },
+      ],
+    }),
+  ).toBe("List A or List B");
+  expect(creditSources(group(["3 credits from the following"]))).toBeNull();
+  expect(creditSources(group(["Complementary Courses"]))).toBeNull();
+  expect(creditSources(group(["A", "B", "C", "D"]))).toBeNull();
 });
 
 test("a CEGEP entry credits foundation groups and drops their courses from what's next", () => {

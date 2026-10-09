@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "cn";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
 import { type ReactNode, useId, useState } from "react";
 import { Tooltip } from "@/components/ui/tooltip";
 import type { Definition } from "@/lib/glossary";
@@ -77,7 +77,7 @@ export function Disclosure({
   );
 }
 
-/** The rest of a list behind "Show N more", which turns into "Show fewer" while open. The one way to shorten a long list. */
+/** The rest of a list behind "Show N more", which turns into "Show fewer" while open. The toggle stays under the rows it reveals. The one way to shorten a long list. */
 export function ShowMore({
   count,
   children,
@@ -85,9 +85,26 @@ export function ShowMore({
   count: number;
   children: ReactNode;
 }) {
+  const [open, setOpen] = useState(false);
+  const id = useId();
+  const Chevron = open ? ChevronUp : ChevronDown;
   return (
-    <Disclosure summary={`Show ${count} more`} openSummary="Show fewer">
-      {children}
-    </Disclosure>
+    <div>
+      <div id={id} hidden={!open}>
+        {open && children}
+      </div>
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls={id}
+        onClick={() => setOpen(!open)}
+        className="-mx-2 flex min-h-11 w-[calc(100%+1rem)] items-center gap-2 rounded-md px-2 text-left hover:bg-tint focus-visible:bg-tint focus-visible:-outline-offset-2"
+      >
+        <Chevron aria-hidden className="size-4 shrink-0 text-fg-muted" />
+        <span className="min-w-0 flex-1">
+          {open ? "Show fewer" : `Show ${count} more`}
+        </span>
+      </button>
+    </div>
   );
 }

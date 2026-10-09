@@ -104,6 +104,33 @@ export function namesCourses(group: ComplementaryGroup): boolean {
   return group.rules.some((rule) => !isFilter(rule));
 }
 
+const or = new Intl.ListFormat("en-GB", { type: "disjunction" });
+
+/** Where a complementary group's credits come from, such as "List A or List B", read from its rule titles. Null when the titles do not read as plain names. */
+export function creditSources(group: ComplementaryGroup): string | null {
+  const names = [
+    ...new Set(
+      group.rules
+        .filter(
+          (rule) =>
+            !rule.unparsed && !isFilter(rule) && rule.maxCourses === undefined,
+        )
+        .map((rule) => rule.title.replace(/,[\s\S]*/, "").trim()),
+    ),
+  ];
+  // ponytail: a naming heuristic, since crawled titles are often "3 credits from the following" or "Complementary Courses".
+  const plain =
+    names.length > 0 &&
+    names.length <= 3 &&
+    names.every(
+      (name) =>
+        name !== "" &&
+        name !== group.title &&
+        !/[\d:]|complementary|elective/i.test(name),
+    );
+  return plain ? or.format(names) : null;
+}
+
 /** The union of the rules that name courses. A group of only filters allows whatever they match. */
 export function groupAllows(group: ComplementaryGroup, code: string): boolean {
   const rules = namesCourses(group)

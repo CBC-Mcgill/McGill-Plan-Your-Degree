@@ -163,6 +163,8 @@ function PlannerReady({
             ? { program: minor, progress: minorProgress }
             : null
         }
+        snapshot={snapshot}
+        catalogue={catalogue}
         warningCount={warnings.length}
         onShowWarnings={() => firstWarned && follow(firstWarned.key)}
         graduationPassed={
