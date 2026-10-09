@@ -1,13 +1,10 @@
-import { TriangleAlert } from "lucide-react";
 import { Fragment } from "react";
 import { CourseLink } from "@/components/course-link";
 import { RequirementText } from "@/components/requirement-text";
-import { Banner } from "@/components/ui/banner";
-import { InfoTip } from "@/components/ui/tooltip";
+import { Notice } from "@/components/ui/notice";
 import type { PlanWarning } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { termContext, unmet } from "@/lib/engine/stages";
-import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
 import { currentTerm } from "@/lib/profile/terms";
@@ -112,7 +109,7 @@ export function Sentence({
   );
 }
 
-/** The term's warnings in plain language. Warnings never block the plan. */
+/** The term's warnings in plain language, one per line. Warnings never block the plan. */
 export function TermWarnings({
   warnings,
   snapshot,
@@ -126,37 +123,21 @@ export function TermWarnings({
 }) {
   if (warnings.length === 0) return null;
   return (
-    <Banner
-      tone="warn"
-      role="group"
-      aria-labelledby="warnings-heading"
-      className="block text-warn"
-    >
-      <div className="flex items-center gap-1.5 text-[13px] leading-[18px]">
-        <h3 id="warnings-heading" className="flex items-center gap-1.5">
-          <TriangleAlert aria-hidden className="mt-0" strokeWidth={2} />
-          {warnings.length === 1 ? "1 warning" : `${warnings.length} warnings`}
-        </h3>
-        <InfoTip {...GLOSSARY.warnings} />
-      </div>
-      <ul aria-label="Warnings" className="mt-1.5 flex flex-col gap-1">
-        {warnings.map((warning) => (
-          <li
-            key={`${warning.kind}-${"course" in warning ? warning.course : "term"}`}
-            className="text-[13px] leading-[18px]"
-          >
+    <ul aria-label="Warnings" className="flex flex-col gap-2">
+      {warnings.map((warning) => (
+        <li
+          key={`${warning.kind}-${"course" in warning ? warning.course : "term"}`}
+        >
+          <Notice tone="warn">
             <Sentence
               warning={warning}
               snapshot={snapshot}
               catalogue={catalogue}
               plan={plan}
             />
-          </li>
-        ))}
-      </ul>
-      <p className="mt-1.5 text-xs leading-4 opacity-80">
-        These do not block your plan, but check them before you register.
-      </p>
-    </Banner>
+          </Notice>
+        </li>
+      ))}
+    </ul>
   );
 }

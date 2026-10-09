@@ -1,79 +1,88 @@
 "use client";
 
 import { cn } from "cn";
-import { GraduationCap, Minus, TriangleAlert } from "lucide-react";
+import { GraduationCap, TriangleAlert } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
-import { StatusIcon } from "@/components/status";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
+import { type Status, StatusIcon } from "@/components/status";
 import { Tooltip } from "@/components/ui/tooltip";
+import { COPY } from "@/lib/copy";
 import type { Stage } from "@/lib/engine/stages";
-import { creditsText } from "@/lib/format";
-import { GLOSSARY } from "@/lib/glossary";
 import { termLabel } from "@/lib/profile/term-options";
 import type { Term } from "@/lib/profile/types";
 import { isDone } from "@/lib/profile/types";
 
-function detail(stage: Stage, nowKey: number): string {
-  const credits = creditsText(stage.credits);
-  const courses = `${stage.count} ${stage.count === 1 ? "course" : "courses"}`;
+/** The glyph, the word it stands for, and the line under the term. Only "Now" and an empty term show a word, the glyph and the tab's name carry the rest. */
+function describe(
+  stage: Stage,
+  nowKey: number,
+): { status: Status; word: string; detail: string } {
+  const credits = COPY.credits(stage.credits);
   switch (stage.state) {
     case "completed":
-      return `Completed · ${credits}`;
+      return { status: "completed", word: "Completed", detail: credits };
     case "current":
-      return `Current term · ${credits}`;
+      return {
+        status: "in-progress",
+        word: "In progress",
+        detail: `${COPY.now} · ${credits}`,
+      };
     case "planned":
-      return `Planned · ${courses} · ${credits}`;
+      return { status: "planned", word: "Planned", detail: credits };
     case "past": {
       const unfinished =
         stage.records.filter((r) => !isDone(r.status)).length +
         stage.owed.length;
-      return unfinished > 0
-        ? `${credits} · ${unfinished} not completed`
-        : credits;
+      return {
+        status: "withdrawn",
+        word: `${unfinished} not completed`,
+        detail: credits,
+      };
     }
-    case "empty":
-      return stage.key < nowKey ? "No courses" : "Nothing planned";
+    case "empty": {
+      const word = stage.key < nowKey ? "No courses" : "Nothing planned";
+      return { status: "available", word, detail: word };
+    }
   }
 }
 
-function Line({ className, done }: { className: string; done: boolean }) {
+/** The cap at the end of the path, filled once the plan meets the program. */
+function Cap({ done }: { done: boolean }) {
   return (
     <span
       aria-hidden
       className={cn(
-        "absolute left-1/2 w-0.5 -translate-x-1/2",
-        done ? "bg-completed" : "bg-border-strong",
-        className,
+        "relative grid size-3.5 shrink-0 place-items-center",
+        done ? "text-fg" : "text-fg-subtle",
       )}
-    />
+    >
+      <svg
+        aria-hidden
+        viewBox="0 0 14 14"
+        className="absolute inset-0 size-3.5"
+      >
+        {done ? (
+          <circle cx="7" cy="7" r="6.25" fill="currentColor" />
+        ) : (
+          <circle
+            cx="7"
+            cy="7"
+            r="5.5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          />
+        )}
+      </svg>
+      <GraduationCap
+        className={cn("relative size-2", done && "text-white")}
+        strokeWidth={2.5}
+      />
+    </span>
   );
 }
 
-/** The same glyphs as the course status, so a term reads like a course: dashed when empty, a check when done. */
-function Node({ stage }: { stage: Stage }) {
-  switch (stage.state) {
-    case "completed":
-      return <StatusIcon status="completed" size={16} className="relative" />;
-    case "current":
-      return <StatusIcon status="in-progress" size={16} className="relative" />;
-    case "planned":
-      return <StatusIcon status="planned" size={16} className="relative" />;
-    case "past":
-      return (
-        <span
-          aria-hidden
-          className="relative grid size-4 place-items-center rounded-full bg-card text-locked shadow-[inset_0_0_0_1.5px_currentColor]"
-        >
-          <Minus className="size-2.5" strokeWidth={3} />
-        </span>
-      );
-    case "empty":
-      return <StatusIcon status="available" size={16} className="relative" />;
-  }
-}
-
-/** One stage per term on a vertical path, with the Graduation stage at the end. Arrow keys move between terms. */
+/** One tab per term, oldest first, with the Graduation stage at the end. Arrow keys move between terms. */
 export function TermPath({
   stages,
   selected,
@@ -85,7 +94,8 @@ export function TermPath({
   selected: number;
   onSelect: (key: number) => void;
   nowKey: number;
-  graduation: { term: Term; satisfied: boolean };
+  /** `set` is false when the term is an estimate from the start term. */
+  graduation: { term: Term; set: boolean; satisfied: boolean };
 }) {
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -109,8 +119,7 @@ export function TermPath({
   }
 
   return (
-    <Card className="sticky top-4 max-h-[calc(100vh-2rem)] self-start overflow-y-auto p-2">
-      <h2 className="px-2 pt-1 pb-2 text-base">Your path</h2>
+    <div className="sticky top-6 -mx-2 max-h-[calc(100vh-3rem)] overflow-y-auto px-2">
       <div
         role="tablist"
         aria-label="Terms"
@@ -119,7 +128,8 @@ export function TermPath({
       >
         {stages.map((stage, i) => {
           const isSelected = stage.key === selected;
-          const next = stages[i + 1];
+          const { status, word, detail } = describe(stage, nowKey);
+          const warned = stage.warnings.length > 0;
           return (
             <button
               key={stage.key}
@@ -134,79 +144,54 @@ export function TermPath({
               tabIndex={isSelected ? 0 : -1}
               onClick={() => onSelect(stage.key)}
               className={cn(
-                "relative flex h-12 w-full items-center gap-3 rounded-md px-2 text-left transition-colors hover:bg-subtle",
-                isSelected &&
-                  "bg-subtle shadow-[inset_0_0_0_1px_var(--border)]",
+                "-mx-2 flex min-h-11 w-[calc(100%+1rem)] items-start gap-2 rounded-md px-2 py-1 text-left hover:bg-tint focus-visible:-outline-offset-2",
+                isSelected && "selected",
               )}
             >
-              <span className="relative flex h-full w-5 shrink-0 items-center justify-center">
-                {i > 0 && (
-                  <Line className="top-0 h-4" done={stage.key <= nowKey} />
-                )}
-                <Line
-                  className="bottom-0 h-4"
-                  done={next ? next.key <= nowKey : false}
-                />
-                <Node stage={stage} />
-              </span>
+              <Tooltip content={word}>
+                <span className="flex h-5 shrink-0 items-center">
+                  <StatusIcon status={status} />
+                </span>
+              </Tooltip>
               <span className="min-w-0 flex-1">
-                <span className="flex items-center justify-between gap-2">
-                  <span className="truncate font-semibold leading-5">
-                    {termLabel(stage.term)}
-                  </span>
-                  {stage.warnings.length > 0 && (
-                    <Tooltip content={GLOSSARY.warnings.tip}>
-                      <Badge tone="warn">
-                        <TriangleAlert aria-hidden />
-                        {stage.warnings.length}
-                        <span className="sr-only">
-                          {stage.warnings.length === 1 ? "warning" : "warnings"}
-                        </span>
-                      </Badge>
-                    </Tooltip>
+                <span className="flex items-center gap-2 font-semibold">
+                  {termLabel(stage.term)}
+                  {warned && (
+                    <TriangleAlert
+                      aria-hidden
+                      className="size-3.5 shrink-0 text-warn"
+                    />
                   )}
                 </span>
-                <span className="block truncate text-[13px] text-muted-foreground leading-[18px]">
-                  {detail(stage, nowKey)}
+                {word !== detail && <span className="sr-only">{word}, </span>}
+                {warned && <span className="sr-only">with warnings, </span>}
+                <span className="block font-normal text-fg-muted">
+                  {detail}
                 </span>
               </span>
             </button>
           );
         })}
-        <div className="relative flex h-12 items-center gap-3 px-2">
-          <span className="relative flex h-full w-5 shrink-0 items-center justify-center">
-            <Line className="top-0 h-3.5" done={false} />
-            <span
-              aria-hidden
-              className={cn(
-                "relative grid size-5 place-items-center rounded-full",
-                graduation.satisfied
-                  ? "bg-completed text-white"
-                  : "bg-card text-muted-foreground shadow-[inset_0_0_0_1.5px_var(--border-strong)]",
-              )}
-            >
-              <GraduationCap className="size-3" strokeWidth={2} />
-            </span>
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="block truncate font-semibold leading-5">
-              Graduation
-            </span>
-            <span
-              className={cn(
-                "block truncate text-[13px] leading-[18px]",
-                graduation.satisfied
-                  ? "font-medium text-completed"
-                  : "text-muted-foreground",
-              )}
-            >
-              {graduation.satisfied
-                ? "Your plan meets your program"
-                : `Expected ${termLabel(graduation.term)}`}
-            </span>
-          </span>
-        </div>
       </div>
-    </Card>
+      <div className="flex items-start gap-2 py-1">
+        <span className="flex h-5 items-center">
+          <Cap done={graduation.satisfied} />
+        </span>
+        <span>
+          <span className="block font-semibold">Graduation</span>
+          <span className="block text-fg-muted">
+            {termLabel(graduation.term)}
+            {!graduation.set && (
+              <>
+                , estimated ·{" "}
+                <Link href="/profile#graduation" className="link">
+                  Set
+                </Link>
+              </>
+            )}
+          </span>
+        </span>
+      </div>
+    </div>
   );
 }

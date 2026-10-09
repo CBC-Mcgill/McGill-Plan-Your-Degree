@@ -1,29 +1,23 @@
 "use client";
 
-import { cn } from "cn";
-import { ChevronDown, Plus, TriangleAlert, X } from "lucide-react";
-import { DropdownMenu } from "radix-ui";
-import { type ReactNode, useRef } from "react";
-import { CourseLink } from "@/components/course-link";
+import { ChevronDown, TriangleAlert, X } from "lucide-react";
+import Link from "next/link";
+import { Popover } from "radix-ui";
+import { type ReactNode, useRef, useState } from "react";
 import { seasonsOffered } from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
 import { AddCourse } from "@/components/plan/add-course";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { TermWarnings } from "@/components/plan/term-warnings";
-import {
-  STATUS,
-  type Status,
-  StatusIcon,
-  StatusLabel,
-  StatusTip,
-} from "@/components/status";
-import { Badge } from "@/components/ui/badge";
+import { STATUS, type Status, StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ProgressBar } from "@/components/ui/progress";
-import { InfoTip, Tooltip } from "@/components/ui/tooltip";
+import { TextField } from "@/components/ui/field";
+import { Menu, MenuItem } from "@/components/ui/menu";
+import { Tooltip } from "@/components/ui/tooltip";
 import type { IndexedCourse } from "@/lib/catalogue/search";
+import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
+import { COPY } from "@/lib/copy";
 import { creditNote } from "@/lib/engine/parts";
 import {
   courseLoads,
@@ -39,32 +33,14 @@ import {
   suggestForTerm,
 } from "@/lib/engine/stages";
 import { isOffered } from "@/lib/engine/status";
-import { creditsText } from "@/lib/format";
 import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
-import type { CourseStatus, Plan, Term } from "@/lib/profile/types";
+import type { Plan, Term } from "@/lib/profile/types";
 import { recordLabel, termKey } from "@/lib/profile/types";
 import type { Program } from "@/lib/programs/types";
 
 const MAX_SUGGESTIONS = 5;
-
-/** What a record shows in the grade column when the transcript has no grade for it. */
-const WITHOUT_GRADE: Partial<Record<CourseStatus, string>> = {
-  failed: "Failed",
-  withdrawn: "Withdrawn",
-  deferred: "Deferred",
-  transfer: "Transfer",
-  exemption: "Exempt",
-};
-
-const band =
-  "flex h-9 items-center gap-2 bg-subtle px-5 font-semibold text-[13px] leading-[18px]";
-const list = "divide-y divide-border border-border border-t";
-const row = "flex h-11 items-center gap-3 px-5";
-const code = "w-24 shrink-0 whitespace-nowrap font-semibold tabular-nums";
-const credits =
-  "w-12 shrink-0 text-right text-[13px] text-muted-foreground tabular-nums";
 
 export interface MoveOption {
   term: Term;
@@ -73,38 +49,77 @@ export interface MoveOption {
   label?: string;
 }
 
-/** The status glyph of a dense row, with the course link beside it. The word and why sit in a tooltip, and the word is in the accessible name. */
-function RowStatus({
+/**
+ * A course row with the same columns as `CourseRow`, for what a term holds: a part code like ECSE 458D1, a record's credits, or a course the catalogue lacks.
+ * `action` shows on hover and focus within the row. Pass `action={null}` to keep its column so rows line up.
+ */
+function Row({
+  code,
+  label = code,
+  title,
   status,
-  word,
-  reason,
-  children,
+  note,
+  meta,
+  credits,
+  tip,
+  action,
 }: {
-  status: Status;
-  word?: string;
-  reason?: string;
-  children: ReactNode;
+  code: string;
+  label?: string;
+  /** Missing when the catalogue has no such course, so the row does not link. */
+  title: string | undefined;
+  status?: Status;
+  note?: string;
+  meta?: ReactNode;
+  credits: ReactNode;
+  tip?: string;
+  action?: ReactNode;
 }) {
-  return (
-    <StatusTip
-      status={status}
-      word={word}
-      reason={reason}
-      className="flex shrink-0 items-center gap-3"
-    >
-      <StatusIcon status={status} label={word ?? STATUS[status].label} />
-      {children}
-    </StatusTip>
+  const body = (
+    <>
+      <span className="w-24 shrink-0 font-semibold tabular-nums">{label}</span>
+      <span className="min-w-0 flex-1">
+        <span
+          className={title ? "block truncate" : "block text-fg-muted"}
+          title={title}
+        >
+          {title ?? "Not in the catalogue"}
+        </span>
+        {note && <span className="block text-fg-muted">{note}</span>}
+      </span>
+    </>
   );
-}
-
-function CourseCode({ value, label }: { value: string; label?: string }) {
+  const link = title ? (
+    <Link
+      href={`/courses/${courseSlug(code)}`}
+      prefetch={false}
+      className="-my-3 flex min-w-0 flex-1 gap-4 rounded-md py-3 focus-visible:-outline-offset-2"
+    >
+      {body}
+    </Link>
+  ) : (
+    <span className="flex min-w-0 flex-1 gap-4">{body}</span>
+  );
   return (
-    <CourseLink
-      code={value}
-      label={label}
-      className={cn(code, "text-foreground no-underline hover:underline")}
-    />
+    <li className="group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint">
+      <span className="flex min-w-0 flex-1 gap-2">
+        {status && (
+          <span className="flex h-5 w-4 shrink-0 items-center">
+            <StatusIcon status={status} />
+          </span>
+        )}
+        {tip ? <Tooltip content={tip}>{link}</Tooltip> : link}
+      </span>
+      {meta && <span className="max-w-80 flex-none text-fg-muted">{meta}</span>}
+      <span className="w-24 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums">
+        {credits}
+      </span>
+      {action !== undefined && (
+        <span className="-my-2 flex w-32 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100">
+          {action}
+        </span>
+      )}
+    </li>
   );
 }
 
@@ -120,108 +135,105 @@ function partCaption(load: PlannedLoad): string | undefined {
     : of;
 }
 
-function Title({
-  catalogue,
-  value,
-  warned,
-  caption,
-}: {
-  catalogue: Catalogue;
-  value: string;
-  warned: boolean;
-  caption?: string;
-}) {
-  const title = catalogue.get(value)?.title ?? "Not in the catalogue";
-  return (
-    <span className="flex min-w-0 flex-1 items-center gap-2">
-      <span className="min-w-0">
-        <span className="block truncate" title={title}>
-          {title}
-        </span>
-        {caption && (
-          <span
-            className="block truncate text-muted-foreground text-xs leading-4"
-            title={caption}
-          >
-            {caption}
-          </span>
-        )}
-      </span>
-      {warned && (
-        <TriangleAlert
-          aria-label="Has a warning"
-          role="img"
-          className="size-3.5 shrink-0 text-warn"
-          strokeWidth={2}
-        />
-      )}
-    </span>
-  );
-}
-
-const menuItem =
-  "flex h-8 cursor-default select-none items-center gap-3 rounded-md px-2 text-[13px] outline-none data-[highlighted]:option-active";
-
-/** The terms a planned course can move to, with the credits each already holds and a note when the course does not run in that season. */
+/** The terms a planned course can move to, with the credits each already holds and a tag when the course does not run in that season. */
 function MoveMenu({
-  code,
+  name,
   course,
   options,
   onMove,
 }: {
-  code: string;
+  name: string;
   course: CourseSummary | undefined;
   options: MoveOption[];
   onMove: (to: Term) => void;
 }) {
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <Button
-          variant="ghost"
-          size="sm"
-          aria-label={`Move ${code} to another term`}
-        >
+    <Menu
+      align="end"
+      trigger={
+        <Button variant="text" aria-label={`Move ${name} to another term`}>
           Move
-          <ChevronDown aria-hidden strokeWidth={1.75} />
+          <ChevronDown aria-hidden />
         </Button>
-      </DropdownMenu.Trigger>
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          align="end"
-          sideOffset={4}
-          collisionPadding={16}
-          className="z-50 max-h-[min(360px,var(--radix-dropdown-menu-content-available-height))] min-w-56 overflow-y-auto rounded-lg bg-card p-1 text-foreground antialiased shadow-float"
-        >
-          <DropdownMenu.Label className="px-2 pt-1.5 pb-1 font-medium text-muted-foreground text-xs leading-4">
-            Move {code} to
-          </DropdownMenu.Label>
-          {options.map((option) => (
-            <DropdownMenu.Item
-              key={termKey(option.term)}
-              className={menuItem}
-              onSelect={() => onMove(option.term)}
-            >
-              <span className="flex-1">
-                {option.label ?? termLabel(option.term)}
-              </span>
+      }
+    >
+      {options.map((option) => (
+        <MenuItem
+          key={termKey(option.term)}
+          onSelect={() => onMove(option.term)}
+          meta={
+            <>
               {course &&
                 !course.parts?.length &&
                 !isOffered(course, option.term.season) && (
-                  <span className="text-warn text-xs">Not offered</span>
+                  <span>{COPY.notOffered}</span>
                 )}
-              <span className="w-9 text-right text-muted-foreground text-xs tabular-nums">
-                {option.credits} cr
-              </span>
-            </DropdownMenu.Item>
-          ))}
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+              <span>{COPY.termCredits(option.credits)}</span>
+            </>
+          }
+        >
+          {option.label ?? termLabel(option.term)}
+        </MenuItem>
+      ))}
+    </Menu>
   );
 }
 
-/** The selected term: its courses, an add box and the required courses that fit. Planned courses can move or go. */
+/** The "17" of "3 of 17 credits": a popover that edits the credit limit (pattern C). */
+function CreditLimit({ limit }: { limit: number }) {
+  const setCreditLimit = useProfileStore((state) => state.setCreditLimit);
+  const [open, setOpen] = useState(false);
+  return (
+    <Popover.Root open={open} onOpenChange={setOpen}>
+      <Popover.Trigger asChild>
+        <button
+          type="button"
+          aria-label={`${GLOSSARY.creditLimit.label}, ${limit}`}
+          className="rounded-md underline decoration-1 decoration-fg-subtle underline-offset-3 hover:decoration-current"
+        >
+          {limit}
+        </button>
+      </Popover.Trigger>
+      <Popover.Portal>
+        <Popover.Content
+          align="end"
+          sideOffset={8}
+          collisionPadding={16}
+          className="z-[85] w-64 rounded-lg bg-bg p-4 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
+        >
+          <form
+            className="flex flex-col gap-4"
+            onSubmit={(event) => {
+              event.preventDefault();
+              const value = new FormData(event.currentTarget).get("limit");
+              setCreditLimit(Number(value));
+              setOpen(false);
+            }}
+          >
+            <TextField
+              label={GLOSSARY.creditLimit.label}
+              hint={GLOSSARY.creditLimit.tip}
+              name="limit"
+              type="number"
+              inputMode="numeric"
+              min={1}
+              max={30}
+              step={1}
+              required
+              defaultValue={limit}
+              onFocus={(event) => event.currentTarget.select()}
+            />
+            <Button type="submit" variant="text" className="-mr-3 self-end">
+              Save
+            </Button>
+          </form>
+        </Popover.Content>
+      </Popover.Portal>
+    </Popover.Root>
+  );
+}
+
+/** The selected term: its warnings, courses, an add box and the required courses that fit. Planned courses can move or go. */
 export function TermPanel({
   stage,
   now,
@@ -251,37 +263,16 @@ export function TermPanel({
   const heading = useRef<HTMLHeadingElement>(null);
 
   const label = termLabel(stage.term);
-  const past = stage.key < termKey(now);
+  // Only terms after the current one take new courses.
+  const open = stage.key > termKey(now);
   const over = stage.credits > creditLimit;
-  const status =
-    stage.state === "completed"
-      ? "completed"
-      : stage.state === "current"
-        ? "in-progress"
-        : stage.state === "planned"
-          ? "planned"
-          : null;
-  const warned = new Set(
-    stage.warnings.flatMap((w) => ("course" in w ? w.course : [])),
-  );
   const records = [...stage.records].sort((a, b) =>
     recordLabel(a) < recordLabel(b) ? -1 : 1,
   );
-  const recordTotal = records.reduce(
-    (sum, record) => sum + recordCredits(record, catalogue),
-    0,
-  );
-  const plannedTotal = stage.planned.reduce(
-    (sum, load) => sum + load.credits,
-    0,
-  );
-  const owedTotal = stage.owed.reduce(
-    (sum, owed) => sum + owedCredits(owed, catalogue),
-    0,
-  );
-  const showPlanned =
-    stage.planned.length > 0 ||
-    (!past && records.length === 0 && stage.owed.length === 0);
+  // Grades get their own column so the status words line up.
+  const graded = records.some((record) => record.grade);
+  // Rows keep an action column whenever some row in the term has actions, so the credits line up.
+  const actions = open || stage.planned.length > 0;
   const targets = moveOptions.filter(
     (option) => termKey(option.term) !== stage.key,
   );
@@ -300,7 +291,7 @@ export function TermPanel({
           }))
       : targets;
   const suggestions =
-    !past && program
+    open && program
       ? suggestForTerm(
           program,
           snapshot,
@@ -310,6 +301,7 @@ export function TermPanel({
           entry,
         ).slice(0, MAX_SUGGESTIONS)
       : [];
+  const empty = records.length + stage.planned.length + stage.owed.length === 0;
 
   // The row a move or remove acted on is gone, so keep keyboard focus inside the panel.
   function move(value: string, to: Term) {
@@ -323,295 +315,175 @@ export function TermPanel({
   }
 
   return (
-    <Card asChild className="divide-y divide-border">
-      <section
-        role="tabpanel"
-        id="term-panel"
-        aria-labelledby={`stage-${stage.key}`}
-      >
-        <header className="flex h-16 items-center gap-4 px-5">
-          <h2
-            ref={heading}
-            id="term-heading"
-            tabIndex={-1}
-            className="rounded-sm text-base leading-6"
-          >
-            {label}
-          </h2>
-          {status && <StatusLabel status={status} />}
-          <div className="ml-auto flex items-center gap-3">
-            {past ? (
-              <>
-                <span className="text-[13px] text-muted-foreground tabular-nums">
-                  {creditsText(stage.credits)}
-                </span>
-                <Tooltip content="This term has passed, so your record is read-only.">
-                  <Badge>Read only</Badge>
-                </Tooltip>
-              </>
-            ) : (
-              <>
-                <ProgressBar
-                  value={Math.min(stage.credits, creditLimit)}
-                  max={creditLimit}
-                  label={`Credits in ${label}`}
-                  valueText={`${stage.credits} of ${creditLimit} credits`}
-                  fill={
-                    over
-                      ? "warn"
-                      : stage.state === "current"
-                        ? "in-progress"
-                        : "planned"
-                  }
-                  className="w-40"
-                />
-                <span
-                  className={cn(
-                    "w-[116px] text-right font-semibold tabular-nums",
-                    over && "text-warn",
-                  )}
-                >
-                  {stage.credits} of {creditLimit} credits
-                </span>
-                <InfoTip {...GLOSSARY.creditLimit} />
-              </>
+    <section
+      role="tabpanel"
+      id="term-panel"
+      aria-labelledby={`stage-${stage.key}`}
+    >
+      <header className="flex items-baseline justify-between gap-4">
+        <h2
+          ref={heading}
+          id="term-heading"
+          tabIndex={-1}
+          className="rounded-md"
+        >
+          {label}
+        </h2>
+        {open ? (
+          <p className={over ? "text-warn tabular-nums" : "tabular-nums"}>
+            {over && (
+              <TriangleAlert
+                aria-hidden
+                className="mr-2 inline size-4 align-[-3px]"
+              />
             )}
-          </div>
-        </header>
+            {stage.credits} of <CreditLimit limit={creditLimit} /> credits
+            {over && ", over your limit"}
+          </p>
+        ) : (
+          <p className="text-fg-muted tabular-nums">
+            {COPY.credits(stage.credits)}
+          </p>
+        )}
+      </header>
 
+      <div className="mt-4 flex flex-col gap-6">
         {stage.warnings.length > 0 && (
-          <div className="p-5">
-            <TermWarnings
-              warnings={stage.warnings}
-              snapshot={snapshot}
-              catalogue={catalogue}
-              plan={plan}
-            />
+          <TermWarnings
+            warnings={stage.warnings}
+            snapshot={snapshot}
+            catalogue={catalogue}
+            plan={plan}
+          />
+        )}
+
+        {stage.owed.length > 0 && (
+          <div>
+            <h3 className="mb-2">Required</h3>
+            <ul>
+              {stage.owed.map((owed) => (
+                <Row
+                  key={owed.course + owed.part}
+                  code={owed.course}
+                  label={owed.course + owed.part}
+                  title={catalogue.get(owed.course)?.title}
+                  note={`Required after ${owed.course + owed.after} in ${termLabel(owed.afterTerm)}`}
+                  credits={`${owedCredits(owed, catalogue)} cr`}
+                  action={actions ? null : undefined}
+                />
+              ))}
+            </ul>
           </div>
         )}
 
         {records.length > 0 && (
-          <section aria-label="Your courses">
-            <div className={band}>
-              Your courses
-              <span className="font-normal text-muted-foreground tabular-nums">
-                {records.length}
-              </span>
-              <span className="ml-auto font-normal text-muted-foreground tabular-nums">
-                {creditsText(recordTotal)}
-              </span>
-            </div>
-            <ul className={list}>
-              {records.map((record) => (
-                <li
-                  key={`${recordLabel(record)}-${record.status}`}
-                  className={row}
-                >
-                  <RowStatus status={record.status}>
-                    <CourseCode
-                      value={record.code}
-                      label={recordLabel(record)}
-                    />
-                  </RowStatus>
-                  <Title
-                    catalogue={catalogue}
-                    value={record.code}
-                    warned={warned.has(record.code)}
-                    caption={creditNote(record, snapshot.pending)}
-                  />
-                  <span className="w-20 shrink-0 text-right font-semibold text-[13px] text-muted-foreground tabular-nums">
-                    {record.grade ?? WITHOUT_GRADE[record.status]}
+          <ul aria-label="Your courses">
+            {records.map((record) => (
+              <Row
+                key={`${recordLabel(record)}-${record.status}`}
+                code={record.code}
+                label={recordLabel(record)}
+                title={catalogue.get(record.code)?.title}
+                status={record.status}
+                note={creditNote(record, snapshot.pending)}
+                meta={
+                  <span className="flex gap-2">
+                    {STATUS[record.status].label}
+                    {graded && (
+                      <span className="w-6 font-semibold text-fg">
+                        {record.grade}
+                      </span>
+                    )}
                   </span>
-                  <span className={credits}>
-                    {recordCredits(record, catalogue)} cr
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
+                }
+                credits={`${recordCredits(record, catalogue)} cr`}
+                action={actions ? null : undefined}
+              />
+            ))}
+          </ul>
         )}
 
-        {stage.owed.length > 0 && (
-          <section aria-label="Required courses">
-            <div className={band}>
-              Required
-              <span className="font-normal text-muted-foreground tabular-nums">
-                {stage.owed.length}
-              </span>
-              <span className="ml-auto font-normal text-muted-foreground tabular-nums">
-                {creditsText(owedTotal)}
-              </span>
-            </div>
-            <ul className={list}>
-              {stage.owed.map((owed) => (
-                <li key={owed.course + owed.part} className={row}>
-                  <RowStatus
-                    status="available"
-                    word="Required"
-                    reason={`Required after ${owed.course + owed.after} in ${termLabel(owed.afterTerm)}.`}
-                  >
-                    <CourseCode
-                      value={owed.course}
-                      label={owed.course + owed.part}
-                    />
-                  </RowStatus>
-                  <Title
-                    catalogue={catalogue}
-                    value={owed.course}
-                    warned
-                    caption={`Required after ${owed.course + owed.after} in ${termLabel(owed.afterTerm)}`}
-                  />
-                  <span className={credits}>
-                    {owedCredits(owed, catalogue)} cr
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {showPlanned && (
-          <section aria-label="Planned courses">
-            <div className={band}>
-              Planned
-              <span className="font-normal text-muted-foreground tabular-nums">
-                {stage.planned.length}
-              </span>
-              {stage.planned.length > 0 && (
-                <span className="ml-auto font-normal text-muted-foreground tabular-nums">
-                  {creditsText(plannedTotal)}
-                </span>
-              )}
-            </div>
-            {stage.planned.length === 0 ? (
-              <div className="border-border border-t px-5 py-4">
-                <p className="font-semibold text-[13px] leading-[18px]">
-                  Nothing planned for {label}
-                </p>
-                <p className="text-[13px] text-muted-foreground leading-[18px]">
-                  Add a course from the suggestions or search for one.
-                </p>
-              </div>
-            ) : (
-              <ul className={list}>
-                {stage.planned.map((load) => {
-                  const course = catalogue.get(load.code);
-                  const whole = course
-                    ? courseLoads(load.code, course, load.start)
-                    : [load];
-                  const name = loadsName(whole);
-                  return (
-                    <li
-                      key={load.label}
-                      className={cn(row, "group hover:bg-subtle")}
-                    >
-                      <RowStatus status="planned">
-                        <CourseCode value={load.code} label={load.label} />
-                      </RowStatus>
-                      <Title
-                        catalogue={catalogue}
-                        value={load.code}
-                        warned={warned.has(load.code)}
-                        caption={partCaption(load)}
+        {stage.planned.length > 0 && (
+          <ul aria-label="Planned courses">
+            {stage.planned.map((load) => {
+              const course = catalogue.get(load.code);
+              const whole = course
+                ? courseLoads(load.code, course, load.start)
+                : [load];
+              const name = loadsName(whole);
+              return (
+                <Row
+                  key={load.label}
+                  code={load.code}
+                  label={load.label}
+                  title={course?.title}
+                  note={partCaption(load)}
+                  credits={`${load.credits} cr`}
+                  action={
+                    <>
+                      <MoveMenu
+                        name={name}
+                        course={course}
+                        options={targetsFor(load, course)}
+                        onMove={(to) => move(load.code, to)}
                       />
-                      <div className="flex items-center gap-0.5 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100 motion-reduce:transition-none">
-                        <MoveMenu
-                          code={name}
-                          course={course}
-                          options={targetsFor(load, course)}
-                          onMove={(to) => move(load.code, to)}
-                        />
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          aria-label={`Remove ${name} from ${loadsTerms(whole)}`}
-                          onClick={() => remove(load)}
-                        >
-                          <X aria-hidden strokeWidth={1.75} />
-                        </Button>
-                      </div>
-                      <span className={credits}>{load.credits} cr</span>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </section>
+                      <Button
+                        variant="text"
+                        icon
+                        aria-label={`Remove ${name} from ${loadsTerms(whole)}`}
+                        onClick={() => remove(load)}
+                      >
+                        <X aria-hidden />
+                      </Button>
+                    </>
+                  }
+                />
+              );
+            })}
+          </ul>
         )}
 
-        {past &&
-          records.length === 0 &&
-          stage.planned.length === 0 &&
-          stage.owed.length === 0 && (
-            <p className="px-5 py-4 text-[13px] text-muted-foreground">
-              Nothing was recorded for this term.
-            </p>
-          )}
-
-        {!past && (
-          <section aria-label="Add a course" className="px-5 py-4">
-            <p className="mb-2 font-semibold text-[13px] leading-[18px]">
-              Add a course
-            </p>
-            <AddCourse
-              term={stage.term}
-              index={index}
-              snapshot={snapshot}
-              plan={plan}
-            />
-          </section>
+        {!open && empty && (
+          <p className="text-fg-muted">Nothing was recorded for this term.</p>
         )}
 
-        {!past && program && (
-          <section aria-label={`Suggested for ${label}`}>
-            <div className={band}>
-              Suggested for {label}
-              <span className="ml-auto font-normal text-muted-foreground text-xs">
-                Needed by your program, offered in {stage.term.season}
-              </span>
-            </div>
-            {suggestions.length === 0 ? (
-              <p className="border-border border-t px-5 py-4 text-[13px] text-muted-foreground">
-                No remaining required course fits this term.
-              </p>
-            ) : (
-              <ul className={list}>
-                {suggestions.map((course) => (
-                  <li key={course.code} className={cn(row, "pr-3")}>
-                    <RowStatus
-                      status="available"
-                      reason={`Needed by your program, offered in ${stage.term.season}.`}
-                    >
-                      <CourseCode value={course.code} />
-                    </RowStatus>
-                    <span
-                      className="min-w-0 flex-1 truncate"
-                      title={course.title}
-                    >
-                      {course.title}
-                    </span>
-                    <span className="w-32 shrink-0 text-right text-[13px] text-muted-foreground">
-                      {seasonsOffered(course)}
-                    </span>
-                    <span className={cn(credits, "w-24 whitespace-nowrap")}>
-                      <CreditsLabel course={course} />
-                    </span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      aria-label={`Add ${course.code} to ${label}`}
-                      onClick={() => addWithUndo(stage.term, course.code)}
-                    >
-                      <Plus aria-hidden strokeWidth={1.75} />
-                      Add
-                    </Button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
+        {open && (
+          <AddCourse
+            term={stage.term}
+            index={index}
+            snapshot={snapshot}
+            plan={plan}
+          />
         )}
-      </section>
-    </Card>
+      </div>
+
+      {suggestions.length > 0 && (
+        <section aria-labelledby="suggestions-heading" className="mt-8">
+          <h3 id="suggestions-heading" className="mb-2 text-fg-muted">
+            Needed by your program
+          </h3>
+          <ul>
+            {suggestions.map((course) => (
+              <Row
+                key={course.code}
+                code={course.code}
+                title={course.title}
+                tip={`Offered ${seasonsOffered(course)}`}
+                credits={<CreditsLabel course={course} />}
+                action={
+                  <Button
+                    variant="text"
+                    aria-label={`Add ${course.code} to ${label}`}
+                    onClick={() => addWithUndo(stage.term, course.code)}
+                  >
+                    Add
+                  </Button>
+                }
+              />
+            ))}
+          </ul>
+        </section>
+      )}
+    </section>
   );
 }

@@ -18,7 +18,7 @@ import {
   planLoads,
   termRange,
 } from "./plan.ts";
-import { programProgress } from "./progress.ts";
+import { programStanding } from "./progress.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 import { blockedBy, isOffered, meets } from "./status.ts";
 
@@ -197,11 +197,13 @@ export function suggestForTerm(
   term: Term,
   entry: EntryRoute | null = null,
 ): CourseSummary[] {
-  const { remaining } = programProgress(program, snapshot, catalogue, {
-    inProgress: true,
-    planned: true,
+  const { remaining } = programStanding(
+    program,
+    snapshot,
+    catalogue,
     entry,
-  });
+    "plan",
+  );
   const { before } = termContext(snapshot, plan, term);
   const taken = new Set([...snapshot.taken, ...snapshot.planned]);
   const suggestions = new Map<string, CourseSummary>();
