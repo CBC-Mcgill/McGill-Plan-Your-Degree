@@ -67,6 +67,8 @@ function reasonFor(
   term: Term,
   snapshot: Snapshot,
 ): string | undefined {
+  if (!course.terms.length && !course.parts?.length)
+    return "Not offered this year";
   if (!isOffered(course, term.season)) return `Not offered in ${term.season}`;
   const blocked = blockedBy(course, snapshot.taken);
   if (blocked.length > 0) {
@@ -130,6 +132,9 @@ function minimumText(rule: Rule, done: RuleProgress | undefined) {
   }
   return null;
 }
+
+const flatten = (items: (string | { oneOf: string[] })[]) =>
+  items.flatMap((item) => (typeof item === "string" ? [item] : item.oneOf));
 
 /** Everything the "What's next" page shows for one term. Pass a snapshot without the plan, so planned courses stay in the lists. */
 export function nextView(
@@ -195,6 +200,38 @@ export function nextView(
     );
     placed[at]?.push(s);
   }
+  // The rest of each listed rule follows, with why it is not open, so the whole list shows.
+  const seen = new Set([
+    ...next.canTake.complementary.map((s) => s.course.code),
+    ...flatten(progress?.remaining ?? []),
+  ]);
+  const waiting = openGroups.map(() => [] as Entry[]);
+  for (const { group } of openGroups) {
+    for (const code of group.rules.flatMap((rule) => rule.courses ?? [])) {
+      const course = catalogue.get(code);
+      if (
+        !course ||
+        seen.has(code) ||
+        level(course) >= 600 ||
+        snapshot.done.has(code) ||
+        snapshot.inProgress.has(code)
+      ) {
+        continue;
+      }
+      seen.add(code);
+      const at = openGroups.findIndex(
+        ({ group, done }) =>
+          namesCourses(group) &&
+          groupAllows(group, code) &&
+          fitsCaps(group, done.rules, code, course.credits ?? 0),
+      );
+      waiting[at]?.push({
+        course,
+        uncertain: isUncertain(course),
+        reason: reasonFor(course, term, snapshot),
+      });
+    }
+  }
   const complementary = openGroups.flatMap(({ group, done }, i) => {
     const buckets = group.rules.map((rule, r) => ({
       rule,
@@ -202,12 +239,19 @@ export function nextView(
       entries: [] as Entry[],
     }));
     const rest: Entry[] = [];
-    for (const s of placed[i] ?? []) {
+    const entries = [
+      ...(placed[i] ?? []).map(asEntry),
+      ...(waiting[i] ?? []).sort((a, b) =>
+        a.course.code < b.course.code ? -1 : 1,
+      ),
+    ];
+    for (const entry of entries) {
       const bucket = buckets.find(
         (b) =>
-          hostsCourses(b.rule, b.done) && ruleMatches(b.rule, s.course.code),
+          hostsCourses(b.rule, b.done) &&
+          ruleMatches(b.rule, entry.course.code),
       );
-      (bucket?.entries ?? rest).push(asEntry(s));
+      (bucket?.entries ?? rest).push(entry);
     }
     const listed: Bucket[] = buckets
       .filter((b) => b.entries.length > 0)
