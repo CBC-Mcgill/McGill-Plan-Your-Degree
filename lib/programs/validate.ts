@@ -7,9 +7,9 @@ export type ValidationResult =
 
 type Obj = Record<string, unknown>;
 
-const CODE = /^[A-Z]{4} \d{3}$/;
-const PART_CODE = /^[A-Z]{4} \d{3}[DJN]\d$/;
-const SUBJECT = /^[A-Z]{4}$/;
+const CODE = /^[A-Z]{3}[A-Z\d] \d{3}$/;
+const PART_CODE = /^[A-Z]{3}[A-Z\d] \d{3}[DJN]\d$/;
+const SUBJECT = /^[A-Z]{3}[A-Z\d]$/;
 
 const isObj = (value: unknown): value is Obj =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -168,10 +168,16 @@ export function validateProgram(value: unknown): ValidationResult {
       "maxCourses",
       "courses",
       "match",
+      "unparsed",
     ]);
     if (!r) return;
     text(r, "title", path);
-    if (r.courses === undefined && r.match === undefined) {
+    optionalTrue(r, "unparsed", path);
+    if (
+      r.unparsed !== true &&
+      r.courses === undefined &&
+      r.match === undefined
+    ) {
       fail(path, "expected courses or match");
     }
     if (r.courses !== undefined) list(r.courses, `${path}.courses`, 1, code);
@@ -246,8 +252,10 @@ export function validateProgram(value: unknown): ValidationResult {
     "source",
     "credits",
     "groups",
+    "generated",
   ]);
   if (program) {
+    optionalTrue(program, "generated", "program");
     text(
       program,
       "id",

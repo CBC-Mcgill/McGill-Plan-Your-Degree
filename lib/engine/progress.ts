@@ -72,9 +72,12 @@ function matchesMatch(match: Match, code: string): boolean {
 }
 
 export function ruleMatches(rule: Rule, code: string): boolean {
-  return Boolean(
-    rule.courses?.includes(code) ||
-      (rule.match && matchesMatch(rule.match, code)),
+  return (
+    !rule.unparsed &&
+    Boolean(
+      rule.courses?.includes(code) ||
+        (rule.match && matchesMatch(rule.match, code)),
+    )
   );
 }
 

@@ -37,6 +37,8 @@ export interface Rule {
   maxCourses?: number;
   courses?: string[];
   match?: Match;
+  /** The crawler could not turn this catalogue text into a rule, so it matches no course and `title` holds the text for a person to read. */
+  unparsed?: true;
 }
 
 /** A course counts once toward the group total but can satisfy several rules in the group. */
@@ -69,4 +71,6 @@ export interface Program {
   /** Total program credits, the lower bound when the page gives a range. */
   credits: number;
   groups: Group[];
+  /** Written by the program crawler rather than by hand. */
+  generated?: true;
 }

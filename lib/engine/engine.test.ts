@@ -5,7 +5,7 @@ import type { Program } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { whatsNext } from "./next.ts";
 import { planLoads, planWarnings } from "./plan.ts";
-import { programProgress } from "./progress.ts";
+import { fitsCaps, programProgress, ruleMatches } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { courseStatus } from "./status.ts";
 
@@ -173,6 +173,26 @@ test("program progress counts exemptions as satisfied but not as credit", () => 
   ]);
   expect(
     programProgress(tiny, planned, catalogue, { planned: true }).satisfied,
+  ).toBe(true);
+});
+
+test("an unparsed rule matches no course and caps nothing", () => {
+  const rule = {
+    title: "9 credits from Groups A and B",
+    unparsed: true as const,
+  };
+  expect(ruleMatches(rule, "COMP 202")).toBe(false);
+  expect(ruleMatches({ ...rule, courses: ["COMP 202"] }, "COMP 202")).toBe(
+    false,
+  );
+  const group = {
+    title: "Complementary",
+    kind: "complementary" as const,
+    credits: 9,
+    rules: [{ ...rule, maxCredits: 3 }],
+  };
+  expect(
+    fitsCaps(group, [{ creditsDone: 3, coursesDone: 1 }], "COMP 202", 3),
   ).toBe(true);
 });
 
