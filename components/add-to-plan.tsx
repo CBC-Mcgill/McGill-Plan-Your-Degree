@@ -213,11 +213,11 @@ function PlanActions({
   );
 }
 
-/** What a choice cannot do or does badly, shown as a tag. */
-function tagOf(choice: TermChoice, never: boolean, year: string) {
+/** What a choice cannot do or does badly, shown as a tag. A course that never runs gets one note for the whole menu instead. */
+function tagOf(choice: TermChoice, never: boolean) {
   if (choice.endsAfter) return "Ends after graduation";
-  if (choice.offered) return null;
-  return never ? `Not offered in ${year}` : "Not offered";
+  if (choice.offered || never) return null;
+  return "Not offered";
 }
 
 /** Every term in the school period, with the credits it holds. Terms where the course does not run stay selectable and the planner warns. `current` marks the term the course is planned in. */
@@ -257,11 +257,16 @@ function TermMenu({
           <DropdownMenu.Label className="px-2 pt-1.5 pb-1 font-medium text-muted-foreground text-xs leading-4">
             {title}
           </DropdownMenu.Label>
+          {never && (
+            <p className="px-2 pb-1.5 text-[color-mix(in_oklab,var(--warn)_85%,black)] text-xs leading-4">
+              Not offered in {year}
+            </p>
+          )}
           {choices.map((choice) => {
             const here =
               current !== undefined &&
               termKey(current) === termKey(choice.term);
-            const tag = tagOf(choice, never, year);
+            const tag = tagOf(choice, never);
             return (
               <DropdownMenu.Item
                 key={termKey(choice.term)}
@@ -285,7 +290,10 @@ function TermMenu({
                 )}
                 {limit !== null && (
                   <span className="whitespace-nowrap text-muted-foreground text-xs tabular-nums">
-                    {list.format(choice.planned.map(String))} of {limit} credits
+                    {list.format(
+                      choice.planned.map((credits) => `${credits} of ${limit}`),
+                    )}{" "}
+                    credits
                   </span>
                 )}
               </DropdownMenu.Item>
