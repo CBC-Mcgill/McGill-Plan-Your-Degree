@@ -32,6 +32,7 @@ export function Planner() {
       <NoProfile
         title="Plan every term to graduation"
         lede="Import your unofficial transcript and every course you have taken lands on your path."
+        sample="plan"
       />
     );
   }

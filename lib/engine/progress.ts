@@ -388,7 +388,7 @@ export interface CreditSplit {
 
 /** A group's credits by the status of the courses it claimed, capped at what it needs: earned first, then in progress, then planned. Pass a group counted with the plan. */
 export function creditSplit(
-  group: GroupProgress,
+  group: Pick<GroupProgress, "credited" | "credits" | "courses">,
   snapshot: Snapshot,
 ): CreditSplit {
   if (group.credited) {
