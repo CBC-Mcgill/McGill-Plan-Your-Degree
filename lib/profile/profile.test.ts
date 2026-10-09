@@ -68,12 +68,14 @@ test("applyTranscript maps lines to records and keeps manual ones", () => {
     );
 
   const state = store.getState();
-  expect(state.records.map((r) => [r.code, r.status, r.source])).toEqual([
-    ["MATH 240", "completed", "manual"],
-    ["ECSE 458", "in-progress", "transcript"],
-    ["ECSE 458", "completed", "transcript"],
-    ["COMP 250", "failed", "transcript"],
-    ["COMP 202", "exemption", "transcript"],
+  expect(
+    state.records.map((r) => [r.code, r.part, r.status, r.source]),
+  ).toEqual([
+    ["MATH 240", undefined, "completed", "manual"],
+    ["ECSE 458", "D1", "in-progress", "transcript"],
+    ["ECSE 458", "D2", "completed", "transcript"],
+    ["COMP 250", undefined, "failed", "transcript"],
+    ["COMP 202", undefined, "exemption", "transcript"],
   ]);
   expect(state.startTerm).toEqual(fall2024);
   expect(state.programId).toBe("software-engineering-major-bsc");

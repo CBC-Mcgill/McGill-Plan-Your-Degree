@@ -14,7 +14,9 @@ import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useCatalogue } from "@/lib/catalogue/client";
-import { useProfileStore } from "@/lib/profile/store";
+import { creditNote } from "@/lib/engine/parts";
+import { buildSnapshot } from "@/lib/engine/snapshot";
+import { recordFromLine, useProfileStore } from "@/lib/profile/store";
 import { defaultGraduation } from "@/lib/profile/term-options";
 import { groupByTerm, lastTerm } from "@/lib/profile/terms";
 import {
@@ -59,6 +61,9 @@ export function ReviewScreen({
     removed.has(index) ? [] : [{ course, index, term: course.term }],
   );
   const groups = groupByTerm(kept);
+  const pending = buildSnapshot(
+    kept.map(({ course }) => recordFromLine(course)),
+  ).pending;
   const termCount = groups.filter((g) => g.term).length;
   const titleOf = (code: string) => {
     const known =
@@ -175,6 +180,7 @@ export function ReviewScreen({
                       credits={course.credits}
                       grade={course.grade}
                       status={course.status}
+                      note={creditNote(recordFromLine(course), pending)}
                       missing={missing}
                       onRemove={() => {
                         setRemoved((current) => new Set(current).add(index));

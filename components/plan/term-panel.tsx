@@ -21,9 +21,16 @@ import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
 import type { IndexedCourse } from "@/lib/catalogue/search";
 import type { CourseSummary } from "@/lib/catalogue/types";
+import { creditNote, creditsLabel } from "@/lib/engine/parts";
+import {
+  courseLoads,
+  loadsName,
+  loadsTerms,
+  type PlannedLoad,
+} from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import {
-  plannedCredits,
+  owedCredits,
   recordCredits,
   type Stage,
   suggestForTerm,
@@ -33,7 +40,7 @@ import { creditsText } from "@/lib/format";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
 import type { CourseStatus, Plan, Term } from "@/lib/profile/types";
-import { termKey } from "@/lib/profile/types";
+import { recordLabel, termKey } from "@/lib/profile/types";
 import type { Program } from "@/lib/programs/types";
 
 const MAX_SUGGESTIONS = 5;
@@ -51,18 +58,20 @@ const band =
   "flex h-9 items-center gap-2 bg-subtle px-5 font-semibold text-[13px] leading-[18px]";
 const list = "divide-y divide-border border-border border-t";
 const row = "flex h-11 items-center gap-3 px-5";
-const code = "w-20 shrink-0 whitespace-nowrap font-semibold tabular-nums";
+const code = "w-24 shrink-0 whitespace-nowrap font-semibold tabular-nums";
 const credits =
   "w-12 shrink-0 text-right text-[13px] text-muted-foreground tabular-nums";
 
 export interface MoveOption {
   term: Term;
   credits: number;
+  /** What the menu says when it is not the term alone, such as "Fall 2027 and Winter 2028". */
+  label?: string;
 }
 
 /** The status glyph of a dense row. The word sits in a tooltip and in the accessible name. */
-function RowStatus({ status }: { status: Status }) {
-  const { label } = STATUS[status];
+function RowStatus({ status, word }: { status: Status; word?: string }) {
+  const label = word ?? STATUS[status].label;
   return (
     <span title={label} className="flex">
       <StatusIcon status={status} label={label} />
@@ -70,13 +79,26 @@ function RowStatus({ status }: { status: Status }) {
   );
 }
 
-function CourseCode({ value }: { value: string }) {
+function CourseCode({ value, label }: { value: string; label?: string }) {
   return (
     <CourseLink
       code={value}
+      label={label}
       className={cn(code, "text-foreground no-underline hover:underline")}
     />
   );
+}
+
+/** Where a part of a multi-term course sits among the others. */
+function partCaption(load: PlannedLoad): string | undefined {
+  if (load.parts < 2) return undefined;
+  const of = `Part ${load.part} of ${load.parts}`;
+  if (load.previous) {
+    return `${of}, after ${load.previous.label} in ${termLabel(load.previous.term)}`;
+  }
+  return load.next
+    ? `${of}, ${load.next.label} follows in ${termLabel(load.next.term)}`
+    : of;
 }
 
 function Title({
@@ -98,7 +120,10 @@ function Title({
           {title}
         </span>
         {caption && (
-          <span className="block truncate text-muted-foreground text-xs leading-4">
+          <span
+            className="block truncate text-muted-foreground text-xs leading-4"
+            title={caption}
+          >
             {caption}
           </span>
         )}
@@ -158,7 +183,9 @@ function MoveMenu({
               className={menuItem}
               onSelect={() => onMove(option.term)}
             >
-              <span className="flex-1">{termLabel(option.term)}</span>
+              <span className="flex-1">
+                {option.label ?? termLabel(option.term)}
+              </span>
               {course &&
                 !course.parts?.length &&
                 !isOffered(course, option.term.season) && (
@@ -220,25 +247,41 @@ export function TermPanel({
   const warned = new Set(
     stage.warnings.flatMap((w) => ("course" in w ? w.course : [])),
   );
-  const records = [...stage.records].sort((a, b) => (a.code < b.code ? -1 : 1));
+  const records = [...stage.records].sort((a, b) =>
+    recordLabel(a) < recordLabel(b) ? -1 : 1,
+  );
   const recordTotal = records.reduce(
     (sum, record) => sum + recordCredits(record, catalogue),
     0,
   );
   const plannedTotal = stage.planned.reduce(
-    (sum, value) => sum + plannedCredits(catalogue.get(value)),
+    (sum, load) => sum + load.credits,
     0,
   );
-  const continuedTotal = stage.continued.reduce(
-    (sum, load) => sum + load.credits,
+  const owedTotal = stage.owed.reduce(
+    (sum, owed) => sum + owedCredits(owed, catalogue),
     0,
   );
   const showPlanned =
     stage.planned.length > 0 ||
-    (!past && records.length === 0 && stage.continued.length === 0);
+    (!past && records.length === 0 && stage.owed.length === 0);
   const targets = moveOptions.filter(
     (option) => termKey(option.term) !== stage.key,
   );
+  // A multi-term course moves as a whole, so its targets are the terms its first part can start in.
+  const targetsFor = (load: PlannedLoad, course: CourseSummary | undefined) =>
+    course?.parts?.length
+      ? moveOptions
+          .filter(
+            (option) =>
+              termKey(option.term) !== termKey(load.start) &&
+              isOffered(course, option.term.season),
+          )
+          .map((option) => ({
+            ...option,
+            label: loadsTerms(courseLoads(load.code, course, option.term)),
+          }))
+      : targets;
   const suggestions =
     !past && program
       ? suggestForTerm(
@@ -257,8 +300,8 @@ export function TermPanel({
     onSelect(termKey(to));
   }
 
-  function remove(value: string) {
-    removeWithUndo(stage.term, value);
+  function remove(load: PlannedLoad) {
+    removeWithUndo(load.start, load.code);
     heading.current?.focus();
   }
 
@@ -342,13 +385,17 @@ export function TermPanel({
             </div>
             <ul className={list}>
               {records.map((record) => (
-                <li key={`${record.code}-${record.status}`} className={row}>
+                <li
+                  key={`${recordLabel(record)}-${record.status}`}
+                  className={row}
+                >
                   <RowStatus status={record.status} />
-                  <CourseCode value={record.code} />
+                  <CourseCode value={record.code} label={recordLabel(record)} />
                   <Title
                     catalogue={catalogue}
                     value={record.code}
                     warned={warned.has(record.code)}
+                    caption={creditNote(record, snapshot.pending)}
                   />
                   <span className="w-20 shrink-0 text-right font-semibold text-[13px] text-muted-foreground tabular-nums">
                     {record.grade ?? WITHOUT_GRADE[record.status]}
@@ -362,29 +409,34 @@ export function TermPanel({
           </section>
         )}
 
-        {stage.continued.length > 0 && (
-          <section aria-label="Continuing courses">
+        {stage.owed.length > 0 && (
+          <section aria-label="Required courses">
             <div className={band}>
-              Continuing
+              Required
               <span className="font-normal text-muted-foreground tabular-nums">
-                {stage.continued.length}
+                {stage.owed.length}
               </span>
               <span className="ml-auto font-normal text-muted-foreground tabular-nums">
-                {creditsText(continuedTotal)}
+                {creditsText(owedTotal)}
               </span>
             </div>
             <ul className={list}>
-              {stage.continued.map((load) => (
-                <li key={load.code} className={row}>
-                  <RowStatus status="planned" />
-                  <CourseCode value={load.code} />
+              {stage.owed.map((owed) => (
+                <li key={owed.course + owed.part} className={row}>
+                  <RowStatus status="available" word="Required" />
+                  <CourseCode
+                    value={owed.course}
+                    label={owed.course + owed.part}
+                  />
                   <Title
                     catalogue={catalogue}
-                    value={load.code}
-                    warned={false}
-                    caption={`${load.parts === 2 ? "Second half" : `Part ${load.part} of ${load.parts}`}, started in ${termLabel(load.start)}`}
+                    value={owed.course}
+                    warned
+                    caption={`Required after ${owed.course + owed.after} in ${termLabel(owed.afterTerm)}`}
                   />
-                  <span className={credits}>{load.credits} cr</span>
+                  <span className={credits}>
+                    {owedCredits(owed, catalogue)} cr
+                  </span>
                 </li>
               ))}
             </ul>
@@ -415,36 +467,45 @@ export function TermPanel({
               </div>
             ) : (
               <ul className={list}>
-                {stage.planned.map((value) => (
-                  <li key={value} className={cn(row, "group hover:bg-subtle")}>
-                    <RowStatus status="planned" />
-                    <CourseCode value={value} />
-                    <Title
-                      catalogue={catalogue}
-                      value={value}
-                      warned={warned.has(value)}
-                    />
-                    <div className="flex items-center gap-0.5 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100 motion-reduce:transition-none">
-                      <MoveMenu
-                        code={value}
-                        course={catalogue.get(value)}
-                        options={targets}
-                        onMove={(to) => move(value, to)}
+                {stage.planned.map((load) => {
+                  const course = catalogue.get(load.code);
+                  const whole = course
+                    ? courseLoads(load.code, course, load.start)
+                    : [load];
+                  const name = loadsName(whole);
+                  return (
+                    <li
+                      key={load.label}
+                      className={cn(row, "group hover:bg-subtle")}
+                    >
+                      <RowStatus status="planned" />
+                      <CourseCode value={load.code} label={load.label} />
+                      <Title
+                        catalogue={catalogue}
+                        value={load.code}
+                        warned={warned.has(load.code)}
+                        caption={partCaption(load)}
                       />
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        aria-label={`Remove ${value} from ${label}`}
-                        onClick={() => remove(value)}
-                      >
-                        <X aria-hidden strokeWidth={1.75} />
-                      </Button>
-                    </div>
-                    <span className={credits}>
-                      {plannedCredits(catalogue.get(value))} cr
-                    </span>
-                  </li>
-                ))}
+                      <div className="flex items-center gap-0.5 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100 motion-reduce:transition-none">
+                        <MoveMenu
+                          code={name}
+                          course={course}
+                          options={targetsFor(load, course)}
+                          onMove={(to) => move(load.code, to)}
+                        />
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          aria-label={`Remove ${name} from ${loadsTerms(whole)}`}
+                          onClick={() => remove(load)}
+                        >
+                          <X aria-hidden strokeWidth={1.75} />
+                        </Button>
+                      </div>
+                      <span className={credits}>{load.credits} cr</span>
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </section>
@@ -453,7 +514,7 @@ export function TermPanel({
         {past &&
           records.length === 0 &&
           stage.planned.length === 0 &&
-          stage.continued.length === 0 && (
+          stage.owed.length === 0 && (
             <p className="px-5 py-4 text-[13px] text-muted-foreground">
               Nothing was recorded for this term.
             </p>
@@ -500,7 +561,9 @@ export function TermPanel({
                     <span className="w-32 shrink-0 text-right text-[13px] text-muted-foreground">
                       {seasonsOffered(course)}
                     </span>
-                    <span className={credits}>{course.credits ?? "?"} cr</span>
+                    <span className={cn(credits, "w-24 whitespace-nowrap")}>
+                      {creditsLabel(course)}
+                    </span>
                     <Button
                       variant="ghost"
                       size="sm"

@@ -1,6 +1,11 @@
 import { toast } from "@/components/toast";
 import { catalogueNow } from "@/lib/catalogue/client";
-import { planWarnings } from "@/lib/engine/plan";
+import {
+  courseLoads,
+  loadsName,
+  planWarnings,
+  startTerm,
+} from "@/lib/engine/plan";
 import { buildSnapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
@@ -9,6 +14,19 @@ import { type Term, termKey } from "@/lib/profile/types";
 const termOf = (code: string) =>
   useProfileStore.getState().plan.find((entry) => entry.courses.includes(code))
     ?.term;
+
+function courseOf(code: string) {
+  const catalogue = catalogueNow();
+  return catalogue.status === "ready"
+    ? catalogue.catalogue.get(code)
+    : undefined;
+}
+
+/** How a toast names the course: "ECSE 458D1 and D2" for a multi-term course, the plain code otherwise. */
+function nameOf(code: string, start: Term) {
+  const course = courseOf(code);
+  return (course && loadsName(courseLoads(code, course, start))) || code;
+}
 
 /** The plan warnings as keys, so a change shows which ones it created. Empty until the catalogue has loaded. */
 function warningKeys(): Set<string> {
@@ -69,37 +87,40 @@ function undo(
   };
 }
 
-/** Puts the course in the term, or moves it there, and shows a toast that can take it back. */
-export function addWithUndo(term: Term, code: string) {
+/** Puts the course in the term, or moves it there, and shows a toast that can take it back. A multi-term course starts in the first term from there that runs its first part. */
+export function addWithUndo(requested: Term, code: string) {
   const { addToPlan, removeFromPlan } = useProfileStore.getState();
+  const course = courseOf(code);
+  const term = course ? startTerm(course, requested) : requested;
+  const name = nameOf(code, term);
   const from = termOf(code);
   const before = warningKeys();
-  const label = termLabel(term);
   const action = undo(
     code,
     term,
     () => (from ? addToPlan(from, code) : removeFromPlan(term, code)),
     from
-      ? `${code} moved back to ${termLabel(from)}`
-      : `${code} removed from ${label}`,
+      ? `${name} moved back to ${termLabel(from)}`
+      : `${name} removed from ${termLabel(term)}`,
   );
   addToPlan(term, code);
   const warned = [...warningKeys()].filter((key) => !before.has(key)).length;
   toast(
-    `${code} ${from ? "moved" : "added"} to ${label}${warned ? `. ${warned} ${warned === 1 ? "warning" : "warnings"}` : ""}`,
+    `${name} ${from ? "moved" : "added"} to ${termLabel(term)}${warned ? `. ${warned} ${warned === 1 ? "warning" : "warnings"}` : ""}`,
     action,
   );
 }
 
-/** Takes the course out of the term, with a toast that can put it back. */
+/** Takes the course out of the term it starts in, with a toast that can put it back. */
 export function removeWithUndo(term: Term, code: string) {
   const { addToPlan, removeFromPlan } = useProfileStore.getState();
+  const name = nameOf(code, term);
   const action = undo(
     code,
     undefined,
     () => addToPlan(term, code),
-    `${code} added back to ${termLabel(term)}`,
+    `${name} added back to ${termLabel(term)}`,
   );
   removeFromPlan(term, code);
-  toast(`${code} removed from ${termLabel(term)}`, action);
+  toast(`${name} removed from ${termLabel(term)}`, action);
 }

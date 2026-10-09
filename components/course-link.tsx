@@ -8,14 +8,17 @@ import { courseSlug } from "@/lib/catalogue/slug";
 /** A course code that links to its page, or plain text when the catalogue has no such course. */
 export function CourseLink({
   code,
+  label = code,
   className,
 }: {
   code: string;
+  /** What the link says, such as ECSE 458D1 for a link to ECSE 458. */
+  label?: string;
   className?: string;
 }) {
   const catalogue = useCatalogue();
   if (catalogue.status === "ready" && !catalogue.catalogue.has(code)) {
-    return <span className={className}>{code}</span>;
+    return <span className={className}>{label}</span>;
   }
   return (
     <Link
@@ -26,7 +29,7 @@ export function CourseLink({
         className,
       )}
     >
-      {code}
+      {label}
     </Link>
   );
 }

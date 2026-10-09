@@ -38,6 +38,7 @@ import {
   nextView,
   type OpenGroup,
 } from "@/lib/engine/next-view";
+import { creditsLabel } from "@/lib/engine/parts";
 import { termLoad } from "@/lib/engine/plan";
 import type { Snapshot } from "@/lib/engine/snapshot";
 import { creditsText, sentence } from "@/lib/format";
@@ -609,8 +610,8 @@ function Row({
         >
           {caption}
         </span>
-        <span className="w-14 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
-          {course.credits === null ? "-" : `${course.credits} cr`}
+        <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
+          {creditsLabel(course)}
         </span>
       </Link>
       <span className="flex w-[84px] shrink-0 justify-end">

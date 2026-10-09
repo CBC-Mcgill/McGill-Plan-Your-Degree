@@ -8,6 +8,7 @@ import { STATUS, StatusIcon } from "@/components/status";
 import { controlStyles } from "@/components/ui/field";
 import { type IndexedCourse, searchCourses } from "@/lib/catalogue/search";
 import type { CourseSummary } from "@/lib/catalogue/types";
+import { creditsLabel } from "@/lib/engine/parts";
 import type { Snapshot } from "@/lib/engine/snapshot";
 import { courseStatus } from "@/lib/engine/status";
 import { termLabel } from "@/lib/profile/term-options";
@@ -174,7 +175,7 @@ export function AddCourse({
                       {course.title}
                     </span>
                     <span className="shrink-0 text-muted-foreground text-xs tabular-nums">
-                      {state.note || `${course.credits ?? "?"} cr`}
+                      {state.note || creditsLabel(course)}
                     </span>
                   </button>
                 );

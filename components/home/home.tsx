@@ -14,11 +14,17 @@ import { Card } from "@/components/ui/card";
 import { ProgressRing } from "@/components/ui/progress";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { courseSlug } from "@/lib/catalogue/slug";
-import { degreeCredits, earnedCredits } from "@/lib/engine/credits";
+import {
+  degreeCredits,
+  earnedCredits,
+  pendingCredits,
+} from "@/lib/engine/credits";
 import { type Entry, nextView } from "@/lib/engine/next-view";
+import { creditsLabel } from "@/lib/engine/parts";
 import { termRange } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { recordCredits } from "@/lib/engine/stages";
+import { creditsText } from "@/lib/format";
 import { XP_PER_LEVEL } from "@/lib/game/progress";
 import { useGameProgress } from "@/lib/game/use-game-progress";
 import { useProfileStore } from "@/lib/profile/store";
@@ -192,6 +198,7 @@ function Metrics({
   const game = useGameProgress();
 
   const earned = earnedCredits(snapshot, catalogue) + advancedStanding;
+  const pending = pendingCredits(snapshot);
   const required = degreeCredits(creditsRequired, entry, program);
   const bars = useMemo(
     () => termBars(records, catalogue),
@@ -228,9 +235,16 @@ function Metrics({
           </div>
         </div>
         <Caption>
-          {required
-            ? `of ${required} toward your degree`
-            : "toward your degree"}
+          {pending > 0 ? (
+            <span title="Credit for a multi-term course arrives when its last part is done">
+              {required && `of ${required} · `}
+              {creditsText(pending)} pending
+            </span>
+          ) : required ? (
+            `of ${required} toward your degree`
+          ) : (
+            "toward your degree"
+          )}
         </Caption>
       </Metric>
 
@@ -371,8 +385,8 @@ function NextUp({
                       Planned for {termLabel(at)}
                     </span>
                   )}
-                  <span className="w-10 shrink-0 text-right text-[13px] text-muted-foreground tabular-nums">
-                    {course.credits === null ? "-" : `${course.credits} cr`}
+                  <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
+                    {creditsLabel(course)}
                   </span>
                   <span className="flex w-[84px] shrink-0 justify-end">
                     {at ? (

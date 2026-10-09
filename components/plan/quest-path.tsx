@@ -23,7 +23,9 @@ function detail(stage: Stage, nowKey: number): string {
     case "planned":
       return `Planned · ${courses} · ${credits}`;
     case "past": {
-      const unfinished = stage.records.filter((r) => !isDone(r.status)).length;
+      const unfinished =
+        stage.records.filter((r) => !isDone(r.status)).length +
+        stage.owed.length;
       return unfinished > 0
         ? `${credits} · ${unfinished} not completed`
         : credits;

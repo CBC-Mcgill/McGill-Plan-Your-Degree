@@ -3,6 +3,7 @@ import type { Course, Requirement } from "../catalogue/types.ts";
 import type { CourseRecord, Term } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
+import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
 import { planLoads, planWarnings } from "./plan.ts";
 import { fitsCaps, programProgress, ruleMatches } from "./progress.ts";
@@ -313,6 +314,50 @@ test("a multi-term course loads each part in its own term", () => {
       fall,
     ).map((w) => w.kind),
   ).toContain("after-graduation");
+});
+
+test("a done first part is pending, not earned, until the next part is done", () => {
+  const winter2027: Term = { season: "Winter", year: 2027 };
+  const part = (
+    part: string,
+    term: Term,
+    status: CourseRecord["status"] = "completed",
+  ): CourseRecord => ({ ...record("ECSE 458", status), part, term });
+  const d1 = buildSnapshot([part("D1", fall2026)]);
+  expect(d1.done.has("ECSE 458")).toBe(false);
+  expect(courseStatus(catalogue.get("ECSE 458") as Course, d1).status).toBe(
+    "in-progress",
+  );
+  expect(earnedCredits(d1, catalogue)).toBe(0);
+  expect(pendingCredits(d1)).toBe(3);
+  expect(planWarnings([], d1, catalogue)).toEqual([
+    {
+      kind: "missing-part",
+      term: winter2027,
+      course: "ECSE 458",
+      part: "D2",
+      after: "D1",
+      afterTerm: fall2026,
+    },
+  ]);
+
+  const both = buildSnapshot([part("D1", fall2026), part("D2", winter2027)]);
+  expect(both.done.has("ECSE 458")).toBe(true);
+  expect(earnedCredits(both, catalogue)).toBe(6);
+  expect(planWarnings([], both, catalogue)).toEqual([]);
+
+  const j = (n: string, status: CourseRecord["status"]) => ({
+    ...part(`J${n}`, fall2026, status),
+    code: "MATH 470",
+  });
+  const running = buildSnapshot([
+    j("1", "completed"),
+    j("2", "completed"),
+    j("3", "in-progress"),
+  ]);
+  expect(running.inProgress.has("MATH 470")).toBe(true);
+  expect(pendingCredits(running)).toBe(6);
+  expect(planWarnings([], running, catalogue)).toEqual([]);
 });
 
 test("status for 10,000 courses takes under 100 ms", () => {

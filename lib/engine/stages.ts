@@ -32,27 +32,36 @@ export interface Stage {
   state: StageState;
   /** Transcript and manual records of the term. */
   records: CourseRecord[];
-  /** Planned course codes. */
-  planned: string[];
-  /** Second and later parts of multi-term courses that started in an earlier term. */
-  continued: PlannedLoad[];
-  /** Credits earned, in progress, or planned, counting every part a planned course holds in the term. */
+  /** What the plan holds in the term, with later parts of multi-term courses first. */
+  planned: PlannedLoad[];
+  /** Parts a done part still needs in this term. */
+  owed: MissingPart[];
+  /** Credits earned, in progress, planned or owed. */
   credits: number;
-  /** Courses that count: done, in progress, or planned. */
+  /** Courses that count: done, in progress, planned or owed. */
   count: number;
   warnings: PlanWarning[];
 }
 
-/** What a planned course adds to the term it starts in, which is its first part for a multi-term course. */
-export function plannedCredits(course: CourseSummary | undefined): number {
-  return course ? (course.parts?.[0]?.credits ?? course.credits ?? 0) : 0;
+export type MissingPart = Extract<PlanWarning, { kind: "missing-part" }>;
+
+/** The credits of the part a done part still needs. */
+export function owedCredits(owed: MissingPart, catalogue: Catalogue): number {
+  const code = owed.course + owed.part;
+  return (
+    catalogue.get(owed.course)?.parts?.find((part) => part.code === code)
+      ?.credits ?? 0
+  );
 }
 
 export function recordCredits(
   record: CourseRecord,
   catalogue: Catalogue,
 ): number {
-  return record.credits ?? catalogue.get(record.code)?.credits ?? 0;
+  const course = catalogue.get(record.code);
+  const code = record.code + (record.part ?? "");
+  const part = course?.parts?.find((p) => p.code === code);
+  return record.credits ?? part?.credits ?? course?.credits ?? 0;
 }
 
 export interface StageInput {
@@ -68,7 +77,7 @@ export interface StageInput {
 
 /**
  * One stage per term from the start to graduation, Fall and Winter only.
- * Any other term holding a course, a plan, or the second half of a planned multi-term course gets a stage too, so nothing the student saved is hidden.
+ * Any other term holding a course, a plan, or a later part of a multi-term course, planned or owed, gets a stage too, so nothing the student saved is hidden.
  * Without a start the path begins at the earliest saved term, and without a graduation term it runs four years.
  */
 export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
@@ -84,11 +93,15 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
     defaultGraduation(start, input.entry, lastTerm(records), now);
 
   const loads = planLoads(plan, catalogue);
+  const missing = input.warnings.filter(
+    (w): w is MissingPart => w.kind === "missing-part",
+  );
   const terms = new Map<number, Term>();
   for (const term of [
     ...termRange(start, end),
     ...saved,
     ...loads.map((load) => load.term),
+    ...missing.map((owed) => owed.term),
   ]) {
     terms.set(termKey(term), term);
   }
@@ -96,11 +109,10 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
   const stages = [...terms.values()].sort(compareTerms).map((term): Stage => {
     const key = termKey(term);
     const held = records.filter((r) => r.term && termKey(r.term) === key);
-    const planned =
-      plan.find((entry) => termKey(entry.term) === key)?.courses ?? [];
-    const continued = loads.filter(
-      (load) => load.part > 1 && termKey(load.term) === key,
-    );
+    const planned = loads
+      .filter((load) => termKey(load.term) === key)
+      .sort((a, b) => Number(b.part > 1) - Number(a.part > 1));
+    const owed = missing.filter((w) => termKey(w.term) === key);
     const active = held.filter(
       (r) => r.status === "in-progress" || isDone(r.status),
     );
@@ -108,17 +120,16 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
       held
         .filter((r) => r.status === "in-progress" || earnsCredit(r.status))
         .reduce((sum, r) => sum + recordCredits(r, catalogue), 0) +
-      loads
-        .filter((load) => termKey(load.term) === key)
-        .reduce((sum, load) => sum + load.credits, 0);
+      planned.reduce((sum, load) => sum + load.credits, 0) +
+      owed.reduce((sum, w) => sum + owedCredits(w, catalogue), 0);
     const state: StageState =
       key === nowKey
         ? "current"
         : key > nowKey
-          ? planned.length + continued.length + active.length > 0
+          ? planned.length + owed.length + active.length > 0
             ? "planned"
             : "empty"
-          : held.length === 0 && planned.length + continued.length === 0
+          : held.length === 0 && planned.length + owed.length === 0
             ? "empty"
             : held.length > 0 && held.every((r) => isDone(r.status))
               ? "completed"
@@ -128,10 +139,10 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
       key,
       state,
       records: held,
-      planned: [...planned],
-      continued,
+      planned,
+      owed,
       credits,
-      count: active.length + planned.length + continued.length,
+      count: active.length + planned.length + owed.length,
       warnings: input.warnings.filter((w) => termKey(w.term) === key),
     };
   });

@@ -410,8 +410,12 @@ export function statusDetail(
       )?.term;
       return term ? `Planned for ${formatTerm(term)}.` : "Planned.";
     }
-    case "in-progress":
-      return "You are taking this now.";
+    case "in-progress": {
+      const pending = student.snapshot.pending.get(course.code);
+      return pending
+        ? `Part of this course is done. Credit comes when ${course.code}${pending.last} is done.`
+        : "You are taking this now.";
+    }
     case "completed": {
       const record = student.records.find(
         (r) =>

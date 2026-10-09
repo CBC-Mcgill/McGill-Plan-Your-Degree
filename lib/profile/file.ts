@@ -19,6 +19,7 @@ const MAX_PLAN_TERMS = 60;
 const MAX_TERM_COURSES = 30;
 // Loose on purpose, since the catalogue has codes like FIGG MYR1 and HIST 298AA.
 const CODE = /^[A-Z0-9]{4} [A-Z0-9]{3,6}$/;
+const PART = /^[DJN]\d$/;
 const ISO_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
 const PROGRAM_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
@@ -83,6 +84,7 @@ function term(value: unknown, path: string): Term {
 function record(value: unknown, path: string): CourseRecord {
   const o = object(value, path, [
     "code",
+    "part",
     "term",
     "credits",
     "grade",
@@ -96,8 +98,12 @@ function record(value: unknown, path: string): CourseRecord {
   if (o.source !== "transcript" && o.source !== "manual") {
     bad(`${path}.source`, 'must be "transcript" or "manual"');
   }
+  if (o.part !== undefined && !PART.test(String(o.part))) {
+    bad(`${path}.part`, "must be a multi-term part such as D1");
+  }
   return {
     code: code(o.code, `${path}.code`),
+    ...(o.part !== undefined && { part: String(o.part) }),
     term: nullable(o.term, (v) => term(v, `${path}.term`)),
     credits: nullable(o.credits, (v) => number(v, `${path}.credits`, 0, 200)),
     grade: nullable(o.grade, (v) => text(v, `${path}.grade`, 10)),

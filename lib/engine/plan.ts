@@ -1,4 +1,5 @@
-import type { CoursePart } from "../catalogue/types.ts";
+import type { CoursePart, CourseSummary } from "../catalogue/types.ts";
+import { termLabel } from "../profile/term-options.ts";
 import {
   compareTerms,
   type Plan,
@@ -6,6 +7,7 @@ import {
   termFromKey,
   termKey,
 } from "../profile/types.ts";
+import { list, nextPartTerm, partRoutes } from "./parts.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 import { isOffered, meets } from "./status.ts";
 
@@ -20,11 +22,22 @@ export type PlanWarning =
   | { kind: "not-offered"; term: Term; course: string }
   | { kind: "restriction"; term: Term; course: string; blockedBy: string[] }
   | { kind: "credit-limit"; term: Term; credits: number; limit: number }
-  | { kind: "after-graduation"; term: Term; course: string; ends: Term };
+  | { kind: "after-graduation"; term: Term; course: string; ends: Term }
+  /** A part is done and the next part is missing. It belongs in `term`, and without it neither part counts. */
+  | {
+      kind: "missing-part";
+      term: Term;
+      course: string;
+      part: string;
+      after: string;
+      afterTerm: Term;
+    };
 
 /** What a planned course holds in one term. A multi-term course has one load per part, all tied to the term it starts in. */
 export interface PlannedLoad {
   code: string;
+  /** What to call it: ECSE 458D1 for a part, the plain code otherwise. */
+  label: string;
   term: Term;
   /** The term the plan starts the course in. */
   start: Term;
@@ -32,53 +45,89 @@ export interface PlannedLoad {
   /** 1-based, so a second half is part 2. */
   part: number;
   parts: number;
+  /** The parts on either side, for captions. */
+  previous?: { label: string; term: Term };
+  next?: { label: string; term: Term };
 }
 
-/** The next Fall or Winter term after a term key. */
-const nextTermKey = (key: number) =>
-  termFromKey(key + 1).season === "Summer" ? key + 2 : key + 1;
+const digit = (part: CoursePart) => Number(part.code.slice(-1));
 
-/** Every planned course as loads: one in its term, or one per part in the Fall and Winter terms from its start. Codes the catalogue lacks are skipped. */
+/** What a course holds when the plan starts it in a term: one load, or one per part in the terms that follow. A multi-term course takes the D or N route whose first part runs in the start season. */
+export function courseLoads(
+  code: string,
+  course: CourseSummary,
+  start: Term,
+): PlannedLoad[] {
+  if (!course.parts?.length) {
+    const credits = course.credits ?? 0;
+    return [
+      { code, label: code, term: start, start, credits, part: 1, parts: 1 },
+    ];
+  }
+  const routes = partRoutes(course);
+  const chosen =
+    routes.find((parts) =>
+      parts.some(
+        (part) =>
+          digit(part) === 1 &&
+          part.terms.some((term) => term.startsWith(start.season)),
+      ),
+    ) ??
+    routes[0] ??
+    [];
+  let term = start;
+  const loads = chosen.map((part, i): PlannedLoad => {
+    if (i > 0) term = nextPartTerm(part.code.slice(-2, -1), term);
+    return {
+      code,
+      label: part.code,
+      term,
+      start,
+      credits: part.credits ?? 0,
+      part: i + 1,
+      parts: chosen.length,
+    };
+  });
+  return loads.map((load, i) => {
+    const before = loads[i - 1];
+    const after = loads[i + 1];
+    return {
+      ...load,
+      ...(before && { previous: { label: before.label, term: before.term } }),
+      ...(after && { next: { label: after.label, term: after.term } }),
+    };
+  });
+}
+
+/** What the loads of one course are called together: "COMP 250", or "ECSE 458D1 and D2" for a multi-term course. */
+export function loadsName(loads: readonly PlannedLoad[]): string {
+  const [first, ...rest] = loads;
+  return first
+    ? list.format([first.label, ...rest.map((load) => load.label.slice(-2))])
+    : "";
+}
+
+/** The terms the loads fall in, such as "Fall 2027 and Winter 2028". */
+export function loadsTerms(loads: readonly PlannedLoad[]): string {
+  return list.format(loads.map((load) => termLabel(load.term)));
+}
+
+/** The term a request to start the course in `term` lands in. A multi-term course starts only where its first part runs, so it takes the first such term from there. */
+export function startTerm(course: CourseSummary, term: Term): Term {
+  if (!course.parts?.length) return term;
+  for (let key = termKey(term); key < termKey(term) + 3; key++) {
+    const next = termFromKey(key);
+    if (isOffered(course, next.season)) return next;
+  }
+  return term;
+}
+
+/** Every planned course as loads: one in its term, or one per part in the terms from its start. Codes the catalogue lacks are skipped. */
 export function planLoads(plan: Plan, catalogue: Catalogue): PlannedLoad[] {
   return plan.flatMap(({ term: start, courses }) =>
-    courses.flatMap((code): PlannedLoad[] => {
+    courses.flatMap((code) => {
       const course = catalogue.get(code);
-      if (!course) return [];
-      if (!course.parts?.length) {
-        const credits = course.credits ?? 0;
-        return [{ code, term: start, start, credits, part: 1, parts: 1 }];
-      }
-      const routes = new Map<string, CoursePart[]>();
-      for (const part of course.parts) {
-        const route = part.code.slice(-2, -1);
-        routes.set(route, [...(routes.get(route) ?? []), part]);
-      }
-      const digit = (part: CoursePart) => Number(part.code.slice(-1));
-      const options = [...routes.values()];
-      const chosen =
-        options.find((parts) =>
-          parts.some(
-            (part) =>
-              digit(part) === 1 &&
-              part.terms.some((term) => term.startsWith(start.season)),
-          ),
-        ) ??
-        options[0] ??
-        [];
-      let key = termKey(start);
-      return chosen
-        .sort((a, b) => digit(a) - digit(b))
-        .map((part, i) => {
-          if (i > 0) key = nextTermKey(key);
-          return {
-            code,
-            term: termFromKey(key),
-            start,
-            credits: part.credits ?? 0,
-            part: i + 1,
-            parts: chosen.length,
-          };
-        });
+      return course ? courseLoads(code, course, start) : [];
     }),
   );
 }
@@ -182,6 +231,18 @@ export function planWarnings(
         const end = ends.get(code)?.term ?? entry.term;
         if (termKey(end) === key) earlier.add(code);
       }
+    }
+  }
+  for (const [course, { owed }] of snapshot.pending) {
+    if (owed && !placed.has(course)) {
+      warnings.push({
+        kind: "missing-part",
+        term: owed.due,
+        course,
+        part: owed.part,
+        after: owed.after,
+        afterTerm: owed.afterTerm,
+      });
     }
   }
   return warnings;

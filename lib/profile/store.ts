@@ -7,7 +7,7 @@ import {
   persist,
   type StateStorage,
 } from "zustand/middleware";
-import type { Transcript } from "../transcript/parse.ts";
+import type { Transcript, TranscriptCourse } from "../transcript/parse.ts";
 import { migrateProfile, PROFILE_VERSION } from "./file.ts";
 import {
   type CourseRecord,
@@ -16,6 +16,7 @@ import {
   logicalCode,
   type Plan,
   type Profile,
+  partOf,
   type Term,
   termKey,
 } from "./types.ts";
@@ -56,10 +57,10 @@ const storage: StateStorage = {
 export interface ProfileActions {
   /** Replaces the earlier transcript records, keeps manual ones, and starts the profile at the earliest term. A CEGEP transcript sets the entry, any other leaves it as it is. */
   applyTranscript: (transcript: Transcript, programId?: string) => void;
-  /** Replaces the record with the same code and term, if any. */
+  /** Replaces the record with the same code, part and term, if any. */
   addCourse: (record: Omit<CourseRecord, "source">) => void;
-  /** Removes every record of the course, all parts of a multi-term course included. */
-  removeCourse: (code: string) => void;
+  /** Removes every record of the course, or only the records of one part of a multi-term course. */
+  removeCourse: (code: string, part?: string) => void;
   setProgram: (programId: string | null) => void;
   setBackground: (
     background: Partial<
@@ -94,6 +95,17 @@ const initial: Profile = {
   creditLimit: 17,
   importedAt: null,
 };
+
+/** The record a transcript line becomes. */
+export const recordFromLine = (c: TranscriptCourse): CourseRecord => ({
+  code: logicalCode(c.code),
+  part: partOf(c.code),
+  term: c.term,
+  credits: c.credits,
+  grade: c.grade,
+  status: c.status,
+  source: "transcript",
+});
 
 const sameTerm = (a: Term | null, b: Term | null) =>
   a === null || b === null ? a === b : termKey(a) === termKey(b);
@@ -131,16 +143,7 @@ export const useProfileStore = create<ProfileState>()(
           return {
             records: [
               ...state.records.filter((r) => r.source === "manual"),
-              ...transcript.courses.map(
-                (c): CourseRecord => ({
-                  code: logicalCode(c.code),
-                  term: c.term,
-                  credits: c.credits,
-                  grade: c.grade,
-                  status: c.status,
-                  source: "transcript",
-                }),
-              ),
+              ...transcript.courses.map(recordFromLine),
             ],
             programId: programId ?? state.programId,
             entry: isCegep(transcript.previousEducation)
@@ -157,14 +160,21 @@ export const useProfileStore = create<ProfileState>()(
         set((state) => ({
           records: [
             ...state.records.filter(
-              (r) => !(r.code === record.code && sameTerm(r.term, record.term)),
+              (r) =>
+                !(
+                  r.code === record.code &&
+                  r.part === record.part &&
+                  sameTerm(r.term, record.term)
+                ),
             ),
             { ...record, source: "manual" },
           ],
         })),
-      removeCourse: (code) =>
+      removeCourse: (code, part) =>
         set((state) => ({
-          records: state.records.filter((r) => r.code !== code),
+          records: state.records.filter(
+            (r) => r.code !== code || (part !== undefined && r.part !== part),
+          ),
         })),
       setProgram: (programId) => set({ programId }),
       setBackground: (background) => set(background),

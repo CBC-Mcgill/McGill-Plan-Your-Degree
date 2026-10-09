@@ -14,6 +14,13 @@ export function earnedCredits(
   return credits;
 }
 
+/** Credits of finished parts of multi-term courses that are not finished. They count once the last part is done. */
+export function pendingCredits(snapshot: Snapshot): number {
+  let credits = 0;
+  for (const course of snapshot.pending.values()) credits += course.credits;
+  return credits;
+}
+
 const BSC_CREDITS: Record<EntryRoute, number> = { cegep: 90, foundation: 120 };
 
 /** The credits the whole degree needs: the stated total, else the program's for a B.Eng., else 90 or 120 for a B.Sc. by entry. Null when unknown. */
