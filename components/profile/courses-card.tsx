@@ -1,16 +1,19 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { CourseRow, TermGroup } from "@/components/profile/course-row";
 import { TermSelect } from "@/components/profile/selects";
-import { SectionCard } from "@/components/section-card";
+import { toast } from "@/components/toast";
 import { Button } from "@/components/ui/button";
 import { SelectField, TextField } from "@/components/ui/field";
+import { Section } from "@/components/ui/section";
 import { useCatalogue } from "@/lib/catalogue/client";
+import { COPY } from "@/lib/copy";
 import { creditNote } from "@/lib/engine/parts";
 import { useProfileStore } from "@/lib/profile/store";
 import { currentTerm, groupByTerm } from "@/lib/profile/terms";
 import {
+  type CourseRecord,
   logicalCode,
   partOf,
   recordLabel,
@@ -29,13 +32,35 @@ const normalizeCode = (text: string) =>
     .toUpperCase()
     .replace(/^([A-Z0-9]{4})\s*([A-Z0-9]{3,6})$/, "$1 $2");
 
+/** Removes a record and offers Undo, which puts back exactly the records it took. */
+function removeWithUndo(record: CourseRecord) {
+  const before = useProfileStore.getState().records;
+  useProfileStore.getState().removeCourse(record.code, record.part);
+  const after = new Set(useProfileStore.getState().records);
+  const removed = before.filter((r) => !after.has(r));
+  toast(`${recordLabel(record)} removed`, {
+    label: COPY.undo,
+    run: () =>
+      useProfileStore.setState((s) => ({
+        records: [...s.records, ...removed],
+      })),
+  });
+}
+
 export function CoursesCard() {
   const records = useProfileStore((s) => s.records);
   const addCourse = useProfileStore((s) => s.addCourse);
-  const removeCourse = useProfileStore((s) => s.removeCourse);
   const catalogue = useCatalogue();
   const snapshot = useSnapshot();
   const listId = useId();
+  const formId = useId();
+
+  const [adding, setAdding] = useState(false);
+  const toggle = useRef<HTMLButtonElement>(null);
+  const codeField = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    if (adding) codeField.current?.focus();
+  }, [adding]);
 
   const [text, setText] = useState("");
   const [term, setTerm] = useState<Term | null>(null);
@@ -67,6 +92,12 @@ export function CoursesCard() {
     (termKey(chosenTerm) >= termKey(currentTerm())
       ? "in-progress"
       : "completed");
+
+  function close() {
+    setAdding(false);
+    setError(null);
+    toggle.current?.focus();
+  }
 
   function add(event: React.FormEvent) {
     event.preventDefault();
@@ -103,18 +134,34 @@ export function CoursesCard() {
   const groups = groupByTerm(records);
 
   return (
-    <SectionCard
+    <Section
       id="courses"
-      title="Your courses"
-      trailing={`${records.length} ${records.length === 1 ? "course" : "courses"}`}
-      bodyClassName=""
+      title="Courses"
+      action={
+        <Button
+          ref={toggle}
+          variant="text"
+          aria-expanded={adding}
+          aria-controls={formId}
+          onClick={() => (adding ? close() : setAdding(true))}
+          className="-mr-3"
+        >
+          Add a course
+        </Button>
+      }
     >
       <form
+        id={formId}
+        hidden={!adding}
         onSubmit={add}
-        className="grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 border-border border-y bg-subtle px-5 py-4"
+        onKeyDown={(event) => {
+          if (event.key === "Escape") close();
+        }}
+        className="mb-6 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4"
       >
         <TextField
-          label="Add a course by code"
+          ref={codeField}
+          label="Code"
           value={text}
           list={listId}
           placeholder="COMP 250"
@@ -143,43 +190,42 @@ export function CoursesCard() {
           <option value="completed">Completed</option>
           <option value="in-progress">In progress</option>
         </SelectField>
-        <Button type="submit" variant="secondary" className="h-9">
-          Add course
+        <Button type="submit" variant="text" className="-mr-3">
+          Add
         </Button>
         {error && (
-          <p role="alert" className="col-span-4 font-medium text-danger">
+          <p role="alert" className="col-span-4 text-danger">
             {error}
           </p>
         )}
       </form>
 
       {groups.length === 0 ? (
-        <p className="px-5 py-8 text-center text-muted-foreground">
-          No courses yet. Add one above, or import your transcript.
-        </p>
+        <p className="text-fg-muted">No courses yet.</p>
       ) : (
-        groups.map(({ term: groupTerm, items }) => (
-          <TermGroup
-            key={groupTerm ? termKey(groupTerm) : "before"}
-            term={groupTerm}
-            count={items.length}
-          >
-            {items.map((record) => (
-              <CourseRow
-                key={`${recordLabel(record)}-${record.term ? termKey(record.term) : "none"}`}
-                code={recordLabel(record)}
-                title={ready?.get(record.code)?.title ?? null}
-                credits={record.credits}
-                grade={record.grade}
-                status={record.status}
-                note={creditNote(record, snapshot?.pending)}
-                missing={ready !== null && !ready.has(record.code)}
-                onRemove={() => removeCourse(record.code, record.part)}
-              />
-            ))}
-          </TermGroup>
-        ))
+        <div>
+          {groups.map(({ term: groupTerm, items }) => (
+            <TermGroup
+              key={groupTerm ? termKey(groupTerm) : "before"}
+              term={groupTerm}
+            >
+              {items.map((record) => (
+                <CourseRow
+                  key={`${recordLabel(record)}-${record.term ? termKey(record.term) : "none"}`}
+                  code={recordLabel(record)}
+                  title={ready?.get(record.code)?.title ?? null}
+                  credits={record.credits}
+                  grade={record.grade}
+                  status={record.status}
+                  note={creditNote(record, snapshot?.pending)}
+                  missing={ready !== null && !ready.has(record.code)}
+                  onRemove={() => removeWithUndo(record)}
+                />
+              ))}
+            </TermGroup>
+          ))}
+        </div>
       )}
-    </SectionCard>
+    </Section>
   );
 }

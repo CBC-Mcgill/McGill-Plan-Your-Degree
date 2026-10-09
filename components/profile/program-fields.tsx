@@ -1,12 +1,18 @@
-import { GeneratedBanner } from "@/components/generated-banner";
+"use client";
+
+import { useEffect, useId, useRef, useState } from "react";
+import { CatalogueLink } from "@/components/external-link";
+import { GeneratedNote } from "@/components/generated-banner";
 import { ProgramCombobox } from "@/components/profile/program-combobox";
 import { EntrySelect, TermSelect } from "@/components/profile/selects";
+import { Button } from "@/components/ui/button";
 import { TextField } from "@/components/ui/field";
 import { degreeCredits } from "@/lib/engine/credits";
 import { GLOSSARY } from "@/lib/glossary";
 import { currentTerm } from "@/lib/profile/terms";
 import type { EntryRoute, Term } from "@/lib/profile/types";
 import { useProgram } from "@/lib/programs/client";
+import type { Program } from "@/lib/programs/types";
 
 export interface ProgramValues {
   programId: string | null;
@@ -18,16 +24,19 @@ export interface ProgramValues {
   creditsRequired: number | null;
 }
 
-/** The fields that describe a student's program, shared by the profile and the transcript review. */
+/** The fields that describe a student's program, shared by the profile and the transcript review. `detected` is what the transcript names, shown on the Program label. */
 export function ProgramFields({
   value,
   onChange,
+  detected,
 }: {
   value: ProgramValues;
   onChange: (patch: Partial<ProgramValues>) => void;
+  detected?: string;
 }) {
   // Null credits mean "use the default", so the field only holds what the student typed.
   const program = useProgram(value.programId);
+  const minor = useProgram(value.minorId);
   const defaultCredits = degreeCredits(null, value.entry, program ?? null);
   // A number that only repeats the old default would be wrong for the new program or entry.
   const changeProgramOrEntry = (patch: Partial<ProgramValues>) =>
@@ -39,25 +48,33 @@ export function ProgramFields({
 
   return (
     <div className="grid grid-cols-2 items-start gap-4">
-      <ProgramCombobox
-        className="col-span-2"
-        value={value.programId}
-        onChange={(programId) => changeProgramOrEntry({ programId })}
-      />
-      {program && <GeneratedBanner program={program} className="col-span-2" />}
-      <ProgramCombobox
-        kind="minor"
-        className="col-span-2"
-        value={value.minorId}
-        onChange={(minorId) => onChange({ minorId })}
-      />
+      <div className="col-span-2">
+        <ProgramCombobox
+          value={value.programId}
+          onChange={(programId) => changeProgramOrEntry({ programId })}
+          info={
+            detected
+              ? { label: "Program", tip: `On your transcript: ${detected}` }
+              : undefined
+          }
+        />
+        {program?.generated && <GeneratedLine program={program} />}
+      </div>
+      <div className="col-span-2">
+        <ProgramCombobox
+          kind="minor"
+          value={value.minorId}
+          onChange={(minorId) => onChange({ minorId })}
+        />
+        {minor?.generated && <GeneratedLine program={minor} />}
+      </div>
       <TermSelect
         label="Start term"
-        info={GLOSSARY.startTerm}
         value={value.startTerm}
         onChange={(startTerm) => onChange({ startTerm })}
       />
       <TermSelect
+        id="graduation"
         label="Expected graduation"
         info={GLOSSARY.graduation}
         notBefore={currentTerm()}
@@ -70,49 +87,114 @@ export function ProgramFields({
         value={value.entry}
         onChange={(entry) => changeProgramOrEntry({ entry })}
       />
-      <TextField
-        label="Advanced standing credits"
-        info={GLOSSARY.advancedStanding}
-        type="number"
-        min={0}
-        max={60}
-        placeholder="0"
-        value={value.advancedStanding || ""}
-        onChange={(event) =>
-          onChange({
-            advancedStanding: Math.max(
-              0,
-              Math.min(60, Number(event.target.value)),
-            ),
-          })
-        }
+      <Credits
+        value={value}
+        onChange={onChange}
+        defaultCredits={program === undefined ? undefined : defaultCredits}
       />
-      <TextField
-        label="Credits required for your degree"
-        info={GLOSSARY.creditsRequired}
-        type="number"
-        min={1}
-        max={200}
-        placeholder={
-          program === undefined
-            ? ""
-            : defaultCredits === null
-              ? "Optional"
-              : String(defaultCredits)
-        }
-        hint={
-          value.creditsRequired === null && defaultCredits !== null
-            ? "From your program"
-            : undefined
-        }
-        value={value.creditsRequired ?? ""}
-        onChange={(event) => {
-          const credits = Number(event.target.value);
-          onChange({
-            creditsRequired: credits >= 1 ? Math.min(200, credits) : null,
-          });
-        }}
-      />
+    </div>
+  );
+}
+
+/** "Read automatically from the catalogue · McGill catalogue" under a crawled program or minor (D39). */
+function GeneratedLine({ program }: { program: Program }) {
+  const hasChecks = program.groups.some(
+    (group) =>
+      group.kind === "complementary" &&
+      group.rules.some((rule) => rule.unparsed),
+  );
+  return (
+    <p className="mt-2 text-fg-muted">
+      <GeneratedNote hasChecks={hasChecks} /> ·{" "}
+      <CatalogueLink href={program.source} />
+    </p>
+  );
+}
+
+/** The two credit settings are set once, so a summary line shows their values and Edit opens the fields (pattern B). `defaultCredits` is undefined while the program loads. */
+function Credits({
+  value,
+  onChange,
+  defaultCredits,
+}: {
+  value: ProgramValues;
+  onChange: (patch: Partial<ProgramValues>) => void;
+  defaultCredits: number | null | undefined;
+}) {
+  const [open, setOpen] = useState(false);
+  const fieldsId = useId();
+  const first = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    if (open) first.current?.focus();
+  }, [open]);
+
+  const required =
+    value.creditsRequired !== null
+      ? `${value.creditsRequired} required`
+      : defaultCredits === undefined
+        ? null
+        : defaultCredits === null
+          ? "total not set"
+          : `${defaultCredits} required (from your program)`;
+
+  return (
+    <div className="col-span-2">
+      <div className="flex items-center justify-between gap-4">
+        <p className="tabular-nums">
+          Credits:{" "}
+          {[required, `${value.advancedStanding} advanced standing`]
+            .filter(Boolean)
+            .join(", ")}
+        </p>
+        <Button
+          variant="text"
+          aria-expanded={open}
+          aria-controls={fieldsId}
+          onClick={() => setOpen(!open)}
+          className="-my-2 -mr-3"
+        >
+          Edit
+        </Button>
+      </div>
+      <div
+        id={fieldsId}
+        hidden={!open}
+        className="mt-4 grid grid-cols-2 items-start gap-4"
+      >
+        <TextField
+          ref={first}
+          label="Advanced standing credits"
+          info={GLOSSARY.advancedStanding}
+          type="number"
+          min={0}
+          max={60}
+          placeholder="0"
+          value={value.advancedStanding || ""}
+          onChange={(event) =>
+            onChange({
+              advancedStanding: Math.max(
+                0,
+                Math.min(60, Number(event.target.value)),
+              ),
+            })
+          }
+        />
+        <TextField
+          label="Credits required for your degree"
+          info={GLOSSARY.creditsRequired}
+          type="number"
+          min={1}
+          max={200}
+          placeholder={defaultCredits ? String(defaultCredits) : "Optional"}
+          value={value.creditsRequired ?? ""}
+          onChange={(event) => {
+            const credits = Number(event.target.value);
+            onChange({
+              creditsRequired: credits >= 1 ? Math.min(200, credits) : null,
+            });
+          }}
+        />
+      </div>
     </div>
   );
 }

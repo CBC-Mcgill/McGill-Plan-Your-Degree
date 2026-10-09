@@ -12,7 +12,7 @@ import {
   useState,
 } from "react";
 import { controlStyles, FieldLabel } from "@/components/ui/field";
-import { type Definition, GLOSSARY } from "@/lib/glossary";
+import type { Definition } from "@/lib/glossary";
 import { useProgramIndex } from "@/lib/programs/client";
 import { isMinor } from "@/lib/programs/minor";
 import type { ProgramSummary } from "@/lib/programs/types";
@@ -24,7 +24,6 @@ const COPY: Record<
   "program" | "minor",
   {
     label: string;
-    info: Definition;
     placeholder: string;
     none: string;
     list: string;
@@ -33,15 +32,13 @@ const COPY: Record<
 > = {
   program: {
     label: "Program",
-    info: GLOSSARY.program,
     placeholder: "Choose a program",
     none: "My program isn't listed",
     list: "Programs",
     noun: "program",
   },
   minor: {
-    label: GLOSSARY.minor.label,
-    info: GLOSSARY.minor,
+    label: "Minor",
     placeholder: "No minor",
     none: "No minor",
     list: "Minors",
@@ -80,17 +77,17 @@ function search(programs: ProgramSummary[], query: string) {
     }));
 }
 
-/** A searchable list of every program, or of every minor. The empty choice is "My program isn't listed" for a program the catalogue does not have, and "No minor" for a minor. */
+/** A searchable list of every program, or of every minor. The empty choice is "My program isn't listed" for a program the catalogue does not have, and "No minor" for a minor. `info` makes the label a `Term`. */
 export function ProgramCombobox({
   value,
   onChange,
-  className,
   kind = "program",
+  info,
 }: {
   value: string | null;
   onChange: (programId: string | null) => void;
-  className?: string;
   kind?: "program" | "minor";
+  info?: Definition;
 }) {
   const copy = COPY[kind];
   const index = useProgramIndex();
@@ -106,6 +103,7 @@ export function ProgramCombobox({
   const chosen = programs.find((program) => program.id === value);
   const listId = useId();
   const inputId = useId();
+  const infoId = useId();
   const field = useRef<HTMLSpanElement>(null);
   const [open, setOpen] = useState(false);
   // Null shows the chosen program, so the field only holds what the student typed.
@@ -156,8 +154,13 @@ export function ProgramCombobox({
 
   return (
     <Popover.Root open={open} onOpenChange={(next) => !next && close()}>
-      <div className={cn("grid gap-1.5", className)}>
-        <FieldLabel htmlFor={inputId} label={copy.label} info={copy.info} />
+      <div className="grid gap-2">
+        <FieldLabel
+          htmlFor={inputId}
+          label={copy.label}
+          info={info}
+          describedBy={infoId}
+        />
         <Popover.Anchor asChild>
           <span ref={field} className="relative">
             <input
@@ -167,6 +170,7 @@ export function ProgramCombobox({
               aria-controls={open ? listId : undefined}
               aria-autocomplete="list"
               aria-activedescendant={open ? optionId(active) : undefined}
+              aria-describedby={info && infoId}
               autoComplete="off"
               spellCheck={false}
               placeholder={copy.placeholder}
@@ -199,7 +203,7 @@ export function ProgramCombobox({
             />
             <ChevronDown
               aria-hidden
-              className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-muted-foreground"
+              className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-fg-muted"
             />
           </span>
         </Popover.Anchor>
@@ -219,20 +223,16 @@ export function ProgramCombobox({
           }}
           // Keeps focus in the field while a click or a scrollbar drag lands on the list.
           onMouseDown={(event) => event.preventDefault()}
-          className="z-[85] max-h-[min(22rem,var(--radix-popover-content-available-height))] w-(--radix-popover-trigger-width) overflow-y-auto rounded-lg bg-card p-1 shadow-float outline-none"
+          className="z-[85] max-h-[min(400px,var(--radix-popover-content-available-height))] w-(--radix-popover-trigger-width) overflow-y-auto rounded-lg bg-bg p-1 shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
         >
           <div id={listId} role="listbox" aria-label={copy.list}>
-            {message && (
-              <p className="px-2.5 py-2 text-[13px] text-muted-foreground">
-                {message}
-              </p>
-            )}
+            {message && <p className="px-3 py-2.5 text-fg-muted">{message}</p>}
             {groups.map((group) => (
               // biome-ignore lint/a11y/useSemanticElements: a fieldset cannot sit inside a listbox
               <div key={group.faculty} role="group" aria-label={group.faculty}>
                 <p
                   aria-hidden
-                  className="sticky top-0 z-10 bg-card px-2.5 pt-2 pb-1 font-medium text-muted-foreground text-xs"
+                  className="sticky top-0 z-10 bg-bg px-3 pt-2 pb-1 text-fg-muted"
                 >
                   {group.faculty}
                 </p>
@@ -248,14 +248,14 @@ export function ProgramCombobox({
                     <span className="min-w-0 flex-1 truncate">
                       {program.name}
                     </span>
-                    <span className="shrink-0 text-[13px] text-muted-foreground">
+                    <span className="shrink-0 font-normal text-fg-muted">
                       {program.degree}
                     </span>
                   </Option>
                 ))}
               </div>
             ))}
-            <div className="mt-1 border-border border-t pt-1">
+            <div className="mt-1">
               <Option
                 id={optionId(options.length - 1)}
                 active={active === options.length - 1}
@@ -298,14 +298,14 @@ function Option({
       onMouseMove={onActivate}
       onClick={onChoose}
       className={cn(
-        "flex h-9 scroll-mt-8 cursor-pointer items-center gap-2 rounded-md pr-2.5 pl-2 text-sm",
-        active && "bg-subtle",
+        "flex h-10 scroll-mt-8 cursor-pointer items-center gap-2 rounded-md px-3",
+        active && "selected",
       )}
     >
       <Check
         aria-hidden
         strokeWidth={2}
-        className={cn("size-4 shrink-0 text-primary", !selected && "invisible")}
+        className={cn("size-4 shrink-0", !selected && "invisible")}
       />
       {children}
     </div>

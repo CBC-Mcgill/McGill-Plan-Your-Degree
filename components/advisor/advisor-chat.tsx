@@ -1,83 +1,28 @@
 "use client";
 
-import { cn } from "cn";
-import {
-  CalendarRange,
-  Compass,
-  GitFork,
-  GraduationCap,
-  type LucideIcon,
-} from "lucide-react";
-import { motion } from "motion/react";
-import { useRef, useState, useSyncExternalStore } from "react";
-import {
-  CONTEXT,
-  Composer,
-  type ContextKind,
-} from "@/components/advisor/composer";
+import { useEffect, useRef, useState } from "react";
+import { Composer } from "@/components/advisor/composer";
 import { AssistantMessage, UserMessage } from "@/components/advisor/message";
-import { Sidebar } from "@/components/advisor/sidebar";
-import { Spark } from "@/components/advisor/spark";
-import { useSnapshot } from "@/lib/profile/use-snapshot";
+import { Button } from "@/components/ui/button";
+import { COPY } from "@/lib/copy";
 
-const SUGGESTIONS: { title: string; line: string; icon: LucideIcon }[] = [
-  {
-    title: "Plan my next term",
-    line: "Pick courses that fit your program.",
-    icon: CalendarRange,
-  },
-  {
-    title: "Am I on track to graduate?",
-    line: "See what is left in your program.",
-    icon: GraduationCap,
-  },
-  {
-    title: "Find electives I'd enjoy",
-    line: "Ideas that still count for your degree.",
-    icon: Compass,
-  },
-  {
-    title: "Explain a prerequisite chain",
-    line: "See which courses lead to the one you want.",
-    icon: GitFork,
-  },
+const SUGGESTIONS = [
+  "Plan my next term",
+  "Am I on track to graduate?",
+  "Find electives I'd enjoy",
+  "Explain a prerequisite chain",
 ];
 
-function timeOfDayGreeting(): string {
-  const hour = new Date().getHours();
-  if (hour >= 5 && hour < 12) return "Good morning";
-  if (hour >= 12 && hour < 18) return "Good afternoon";
-  return "Good evening";
-}
-
-/** Null on the server and during hydration, so the server HTML never shows the wrong time of day. */
-function useGreeting(): string | null {
-  return useSyncExternalStore(
-    () => () => {},
-    timeOfDayGreeting,
-    () => null,
-  );
-}
-
-const scrollToEnd = (el: HTMLElement | null) => {
-  el?.scrollIntoView({ block: "end" });
-};
-
 export function AdvisorChat() {
-  const snapshot = useSnapshot();
-  const greeting = useGreeting();
   const [turns, setTurns] = useState<{ id: number; prompt: string }[]>([]);
   const [draft, setDraft] = useState("");
-  const [overrides, setOverrides] = useState<
-    Partial<Record<ContextKind, boolean>>
-  >({});
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  const hasProfile = Boolean(snapshot);
-  const isAttached = (kind: ContextKind) =>
-    overrides[kind] ?? (kind === "profile" && hasProfile);
-  const attached = (Object.keys(CONTEXT) as ContextKind[]).filter(isAttached);
-  const empty = turns.length === 0;
+  const composer = useRef<HTMLDivElement>(null);
+  // Each reply pushes the composer down, so keep it in view.
+  useEffect(() => {
+    if (turns.length > 0)
+      composer.current?.scrollIntoView({ block: "nearest" });
+  }, [turns.length]);
 
   function send() {
     const prompt = draft.trim();
@@ -86,114 +31,61 @@ export function AdvisorChat() {
     setDraft("");
   }
 
-  function newChat() {
-    setTurns([]);
-    setDraft("");
-    setOverrides({});
+  function suggest(text: string) {
+    setDraft(text);
     textareaRef.current?.focus();
   }
 
-  function suggest(title: string) {
-    setDraft(title);
-    textareaRef.current?.focus();
-  }
-
-  // The viewport less the header (3.5rem) and the footer (4.1875rem), so the page never scrolls.
   return (
-    <div className="flex h-[calc(100dvh-7.6875rem)] min-h-[36rem]">
-      <Sidebar onNewChat={newChat} />
-      <section
-        aria-label="Advisor chat"
-        className={cn(
-          "flex min-w-0 flex-1 flex-col",
-          empty && "justify-center pb-12",
-        )}
-      >
-        {empty ? (
-          <div className="mx-auto w-full max-w-3xl px-6 pb-8">
-            <h1
-              className={cn(
-                "flex items-center justify-center gap-3.5 font-normal font-serif font-stretch-normal text-5xl tracking-normal transition-opacity duration-300 motion-reduce:transition-none",
-                greeting ? "opacity-100" : "opacity-0",
-              )}
-            >
-              <Spark className="size-9 text-primary" />
-              {greeting ?? "Hello"}
-            </h1>
-            <p className="mt-3 text-center text-base text-muted-foreground">
-              Ask about your courses, requirements, or what to take next.
-            </p>
-          </div>
-        ) : (
-          <h1 className="sr-only">Advisor</h1>
-        )}
+    <div className="mx-auto w-full max-w-page px-8 pt-12">
+      <div className="max-w-reading">
+        <h1>{COPY.advisor}</h1>
+        <p className="mt-2 text-fg-muted">
+          Coming soon. This preview shows how it will work. Nothing you type is
+          saved or sent.
+        </p>
 
         <div
           role="log"
           aria-live="polite"
           aria-label="Conversation"
-          className={cn(
-            empty
-              ? "sr-only"
-              : "min-h-0 flex-1 overflow-y-auto overscroll-contain",
-          )}
+          className={
+            turns.length === 0 ? "sr-only" : "mt-8 flex flex-col gap-8"
+          }
         >
-          <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-6 py-8">
-            {turns.map(({ id, prompt }) => (
-              <div key={id} className="flex flex-col gap-6">
-                <UserMessage text={prompt} />
-                <AssistantMessage prompt={prompt} />
-              </div>
-            ))}
-            {!empty && <div key={turns.length} ref={scrollToEnd} />}
-          </div>
+          {turns.map(({ id, prompt }) => (
+            <div key={id} className="flex flex-col gap-4">
+              <UserMessage text={prompt} />
+              <AssistantMessage prompt={prompt} />
+            </div>
+          ))}
         </div>
 
-        <motion.div
-          layout="position"
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className={cn("mx-auto w-full max-w-3xl px-6", !empty && "pt-2 pb-4")}
-        >
+        <div ref={composer} className="mt-8 scroll-mb-8">
           <Composer
             value={draft}
             onChange={setDraft}
             onSend={send}
             textareaRef={textareaRef}
-            attached={attached}
-            hasProfile={hasProfile}
-            snapshot={snapshot}
-            onToggle={(kind) =>
-              setOverrides({ ...overrides, [kind]: !isAttached(kind) })
-            }
           />
-        </motion.div>
+        </div>
 
-        {empty && (
-          <ul className="mx-auto mt-6 grid w-full max-w-3xl grid-cols-2 gap-3 px-6">
-            {SUGGESTIONS.map(({ title, line, icon: Icon }) => (
-              <li key={title}>
-                <button
-                  type="button"
-                  onClick={() => suggest(title)}
-                  className="flex h-full w-full items-start gap-3 rounded-lg bg-card p-4 text-left shadow-card transition-colors hover:bg-subtle"
+        {turns.length === 0 && (
+          <ul className="-mx-3 mt-4 grid grid-cols-2">
+            {SUGGESTIONS.map((text) => (
+              <li key={text}>
+                <Button
+                  variant="text"
+                  onClick={() => suggest(text)}
+                  className="w-full justify-start"
                 >
-                  <Icon
-                    aria-hidden
-                    className="mt-0.5 size-5 shrink-0 text-muted-foreground"
-                    strokeWidth={1.75}
-                  />
-                  <span className="grid gap-0.5">
-                    <span className="font-semibold">{title}</span>
-                    <span className="text-[13px] text-muted-foreground leading-[18px]">
-                      {line}
-                    </span>
-                  </span>
-                </button>
+                  {text}
+                </Button>
               </li>
             ))}
           </ul>
         )}
-      </section>
+      </div>
     </div>
   );
 }

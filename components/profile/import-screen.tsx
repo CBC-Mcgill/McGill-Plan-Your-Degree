@@ -1,24 +1,46 @@
 "use client";
 
-import { FileUp, ShieldCheck } from "lucide-react";
-import { useState } from "react";
+import { ShieldCheck } from "lucide-react";
+import { useEffect, useState } from "react";
 import { ImportNotice } from "@/components/profile/import-notice";
 import type { ImportFlow } from "@/components/profile/use-import-flow";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { FileButton } from "@/components/ui/file-button";
+import { COPY } from "@/lib/copy";
 
-const steps = [
-  <>
-    Log in to Minerva and open <strong>Student Records</strong>.
-  </>,
-  <>
-    Choose <strong>View Your Unofficial Transcript</strong>.
-  </>,
-  <>
-    Print the page and choose <strong>Save as PDF</strong>.
-  </>,
-];
+const hasFiles = (event: DragEvent) =>
+  event.dataTransfer?.types.includes("Files") ?? false;
+
+/** The whole page takes a dropped PDF. The overlay shows only while a file is over the window. */
+function usePageDrop(onFile: (file: File) => void) {
+  const [dragging, setDragging] = useState(false);
+  useEffect(() => {
+    const over = (event: DragEvent) => {
+      if (!hasFiles(event)) return;
+      event.preventDefault();
+      setDragging(true);
+    };
+    const leave = (event: DragEvent) => {
+      if (event.relatedTarget === null) setDragging(false);
+    };
+    const drop = (event: DragEvent) => {
+      if (!hasFiles(event)) return;
+      event.preventDefault();
+      setDragging(false);
+      const file = event.dataTransfer?.files[0];
+      if (file) onFile(file);
+    };
+    window.addEventListener("dragover", over);
+    window.addEventListener("dragleave", leave);
+    window.addEventListener("drop", drop);
+    return () => {
+      window.removeEventListener("dragover", over);
+      window.removeEventListener("dragleave", leave);
+      window.removeEventListener("drop", drop);
+    };
+  }, [onFile]);
+  return dragging;
+}
 
 export function ImportScreen({
   flow,
@@ -27,105 +49,75 @@ export function ImportScreen({
   flow: ImportFlow;
   onStartEmpty: () => void;
 }) {
-  const [dragging, setDragging] = useState(false);
+  const dragging = usePageDrop(flow.importFile);
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-10">
-      <h1>Build your profile</h1>
-      <p className="mt-1 max-w-prose text-muted-foreground">
-        Import your unofficial transcript and your courses fill in on their own.
-        You check everything before anything is saved.
-      </p>
+    <div className="mx-auto w-full max-w-page px-8 pt-12">
+      <h1>{COPY.importTranscript}</h1>
+      <p className="mt-2 text-fg-muted">Your courses fill in on their own.</p>
 
-      <div className="mt-6 grid grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] items-start gap-6">
-        <div className="flex flex-col gap-4">
-          <fieldset
-            onDragEnter={() => setDragging(true)}
-            onDragOver={(event) => event.preventDefault()}
-            onDragLeave={(event) => {
-              if (!event.currentTarget.contains(event.relatedTarget as Node)) {
-                setDragging(false);
-              }
-            }}
-            onDrop={(event) => {
-              event.preventDefault();
-              setDragging(false);
-              const file = event.dataTransfer.files[0];
-              if (file) flow.importFile(file);
-            }}
-            data-dragging={dragging}
-            className="flex min-w-0 flex-col items-center gap-3 rounded-lg border border-input border-dashed bg-card px-8 py-10 text-center transition-colors data-[dragging=true]:border-primary data-[dragging=true]:bg-subtle"
+      <div className="mt-8 grid grid-cols-2 items-start gap-12">
+        <div>
+          <FileButton
+            data-import
+            accept="application/pdf,.pdf"
+            onFile={flow.importFile}
+            disabled={flow.reading}
           >
-            <legend className="sr-only">Transcript PDF</legend>
-            <FileUp
-              aria-hidden
-              className="size-8 text-muted-foreground"
-              strokeWidth={1.5}
-            />
-            <FileButton
-              data-import
-              size="lg"
-              accept="application/pdf,.pdf"
-              onFile={flow.importFile}
-              disabled={flow.reading}
-            >
-              Choose your transcript PDF
-            </FileButton>
-            <p className="text-[13px] text-muted-foreground">
-              or drop the file here
-            </p>
-          </fieldset>
-
-          <div className="empty:hidden">
-            <ImportNotice reading={flow.reading} notice={flow.notice} />
+            Choose your transcript PDF
+          </FileButton>
+          <p className="mt-2 text-fg-muted">or drop it anywhere on this page</p>
+          <div className="mt-4 empty:hidden">
+            <ImportNotice reading={flow.reading} error={flow.error} steps />
           </div>
-
-          <div className="flex items-center gap-3">
-            <Button variant="secondary" onClick={onStartEmpty}>
-              Start without a transcript
+          <div className="-ml-3 mt-6 flex items-center">
+            <Button variant="text" onClick={onStartEmpty}>
+              {COPY.startWithout}
             </Button>
             <FileButton
-              variant="secondary"
+              variant="text"
               accept="application/json,.json"
               onFile={flow.restoreFile}
             >
-              Restore from a backup file
+              {COPY.restore}
             </FileButton>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <Card asChild className="p-5">
-            <figure>
-              <figcaption className="text-sm font-semibold leading-5">
-                Get your PDF from Minerva
-              </figcaption>
-              <ol className="mt-3 grid gap-3">
-                {steps.map((step, i) => (
-                  // biome-ignore lint/suspicious/noArrayIndexKey: the steps are fixed and never reordered
-                  <li key={i} className="flex items-center gap-4">
-                    <span
-                      aria-hidden
-                      className="grid size-6 shrink-0 place-items-center rounded-full bg-muted font-semibold text-[13px]"
-                    >
-                      {i + 1}
-                    </span>
-                    <span>{step}</span>
-                  </li>
-                ))}
-              </ol>
-            </figure>
-          </Card>
-          <p className="flex items-start gap-2.5 text-muted-foreground">
-            <ShieldCheck
-              aria-hidden
-              className="mt-0.5 size-4 shrink-0 text-completed"
-            />
-            Your transcript is read in this browser and never uploaded. Your
-            name and McGill ID are not kept, only your courses.
+        <div>
+          <h2>Get your PDF from Minerva</h2>
+          <ol className="mt-4 grid list-inside list-decimal gap-2">
+            <li>
+              Log in to Minerva and open{" "}
+              <strong className="font-semibold">Student Records</strong>.
+            </li>
+            <li>
+              Choose{" "}
+              <strong className="font-semibold">
+                View Your Unofficial Transcript
+              </strong>
+              .
+            </li>
+            <li>
+              Print the page and choose{" "}
+              <strong className="font-semibold">Save as PDF</strong>.
+            </li>
+          </ol>
+          <p className="mt-4 flex items-start gap-2 text-fg-muted">
+            <ShieldCheck aria-hidden className="mt-0.5 size-4 shrink-0" />
+            {COPY.privacy} Your name and McGill ID are not kept, only your
+            courses.
           </p>
         </div>
       </div>
+
+      {dragging && (
+        <div className="pointer-events-none fixed inset-0 z-[90] grid place-items-center bg-scrim transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none">
+          <p className="rounded-lg bg-bg px-6 py-4 font-semibold shadow-float">
+            Drop your transcript PDF
+          </p>
+        </div>
+      )}
     </div>
   );
 }

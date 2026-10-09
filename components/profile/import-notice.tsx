@@ -1,40 +1,30 @@
-import { CircleAlert, CircleCheck, LoaderCircle } from "lucide-react";
-import type { Notice } from "@/components/profile/use-import-flow";
-import { Banner } from "@/components/ui/banner";
+import type { ImportFailure } from "@/components/profile/use-import-flow";
+import { Notice } from "@/components/ui/notice";
 
+/** Reading a PDF, or why an import or a restore failed. `steps` points a wrong PDF at the Minerva steps beside it. */
 export function ImportNotice({
-  reading = false,
-  notice,
+  reading,
+  error,
+  steps = false,
 }: {
-  reading?: boolean;
-  notice?: Notice | null;
+  reading: boolean;
+  error: ImportFailure | null;
+  steps?: boolean;
 }) {
   if (reading) {
     return (
-      <Banner
-        tone="progress"
-        role="status"
-        className="items-center px-4 py-3 font-medium"
-      >
-        <LoaderCircle
-          aria-hidden
-          className="mt-0! animate-spin motion-reduce:animate-none"
-        />
+      <Notice tone="info" role="status">
         Reading your transcript...
-      </Banner>
+      </Notice>
     );
   }
-  if (!notice) return null;
-  const error = notice.kind === "error";
-  const Icon = error ? CircleAlert : CircleCheck;
+  if (!error) return null;
   return (
-    <Banner
-      tone={error ? "danger" : "success"}
-      role={error ? "alert" : "status"}
-      className="px-4 py-3 font-medium"
-    >
-      <Icon aria-hidden />
-      {notice.text}
-    </Banner>
+    <Notice tone="danger" role="alert">
+      {error.text}
+      {steps &&
+        error.code === "not-transcript" &&
+        " Follow the steps on the right to save the right page."}
+    </Notice>
   );
 }

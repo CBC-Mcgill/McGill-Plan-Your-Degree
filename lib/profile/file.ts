@@ -226,8 +226,9 @@ export function migrateProfile(data: unknown, version: number): unknown {
   return migrated;
 }
 
-export function exportProfile(state: Profile): string {
-  const data: Profile = {
+/** The saved fields of the store, without its actions. */
+export function profileOf(state: Profile): Profile {
+  return {
     records: state.records,
     programId: state.programId,
     minorId: state.minorId,
@@ -240,8 +241,11 @@ export function exportProfile(state: Profile): string {
     creditLimit: state.creditLimit,
     importedAt: state.importedAt,
   };
+}
+
+export function exportProfile(state: Profile): string {
   return JSON.stringify(
-    { format: FORMAT, version: PROFILE_VERSION, profile: data },
+    { format: FORMAT, version: PROFILE_VERSION, profile: profileOf(state) },
     null,
     2,
   );

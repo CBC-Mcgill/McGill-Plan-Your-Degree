@@ -2,6 +2,7 @@ import { expect, test, vi } from "vitest";
 import type { Transcript, TranscriptCourse } from "../transcript/parse.ts";
 import { exportProfile, parseProfileFile } from "./file.ts";
 import { defaultGraduation } from "./term-options.ts";
+import { groupByTerm } from "./terms.ts";
 import type { Term } from "./types.ts";
 
 const data = new Map<string, string>();
@@ -188,4 +189,18 @@ test("defaultGraduation follows entry and never lands in the past", () => {
   expect(
     defaultGraduation({ season: "Fall", year: 2020 }, null, null, now),
   ).toEqual(now);
+});
+
+test("groupByTerm lists terms oldest first, after the credits with no term", () => {
+  const groups = groupByTerm([
+    { term: winter2025 },
+    { term: null },
+    { term: fall2024 },
+    { term: winter2025 },
+  ]);
+  expect(groups.map((g) => [g.term, g.items.length])).toEqual([
+    [null, 1],
+    [fall2024, 1],
+    [winter2025, 2],
+  ]);
 });
