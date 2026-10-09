@@ -1,0 +1,150 @@
+{
+  "id": "history-joint-honours-component-ba",
+  "name": "History Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/history-classical-studies/history-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "HIST 399"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Group A: 3 credits from Group A",
+          "courses": [
+            "HIST 202",
+            "HIST 203",
+            "HIST 211",
+            "HIST 212",
+            "HIST 214",
+            "HIST 215",
+            "HIST 216",
+            "HIST 221",
+            "HIST 226",
+            "HIST 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group B: 3 credits from Group B",
+          "courses": [
+            "HIST 200",
+            "HIST 201",
+            "HIST 205",
+            "HIST 206",
+            "HIST 208",
+            "HIST 209",
+            "HIST 210",
+            "HIST 218",
+            "HIST 275"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group C: 3 credits from Group C",
+          "courses": [
+            "HIST 207",
+            "HIST 213",
+            "HIST 219",
+            "HIST 222",
+            "HIST 223",
+            "HIST 224",
+            "HIST 238",
+            "HIST 240",
+            "HIST 249",
+            "HIST 262",
+            "HIST 292",
+            "HIST 298",
+            "HIST 299"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Cognate Courses (max. 6 credits)",
+          "courses": [
+            "CLAS 303",
+            "CLAS 304",
+            "CLAS 305",
+            "CLAS 406",
+            "ISLA 305",
+            "ISLA 311",
+            "ISLA 315",
+            "ISLA 355",
+            "ISLA 365",
+            "ISLA 375",
+            "ISLA 410",
+            "ISLA 411",
+            "ISLA 421",
+            "ISLA 511",
+            "ISLA 515",
+            "ISLA 516",
+            "ISLA 530",
+            "ISLA 580",
+            "JWST 240",
+            "JWST 245",
+            "JWST 303",
+            "JWST 311",
+            "JWST 312",
+            "JWST 334",
+            "JWST 348",
+            "JWST 365",
+            "JWST 366",
+            "JWST 371",
+            "RELG 326"
+          ]
+        },
+        {
+          "title": "33 credits of HIST courses or cognate courses (see list below) according to the following requirements",
+          "unparsed": true
+        },
+        {
+          "title": "At least 3 credits focused on the period before 1800",
+          "unparsed": true
+        },
+        {
+          "title": "At least 3 credits focused on the period after 1800",
+          "unparsed": true
+        },
+        {
+          "title": "Minimum 6 credits of honours seminars (500-level D1/D2 courses)",
+          "unparsed": true
+        },
+        {
+          "title": "Minimum 3 additional credits of 400- or 500-level HIST courses",
+          "unparsed": true
+        },
+        {
+          "title": "Maximum 12 credits complementary courses at 200-level",
+          "unparsed": true
+        },
+        {
+          "title": "3.30 in program courses",
+          "unparsed": true
+        },
+        {
+          "title": "3.0 (B) or higher in each program course",
+          "unparsed": true
+        },
+        {
+          "title": "Notes: 200-level cognate courses count toward the 12-credit limit of 200-level courses allowed for the program",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,82 @@
+{
+  "id": "economics-accounting-joint-honours-component-ba",
+  "name": "Economics / Accounting Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/economics/economics-accounting-joint-honours-component-ba/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Economics - Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "ECON 250",
+        "ECON 257",
+        "ECON 353",
+        "ECON 354",
+        "ECON 450",
+        "ECON 452",
+        "ECON 468"
+      ]
+    },
+    {
+      "title": "Economics - Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Economics - Complementary Courses",
+          "courses": [
+            "ECON 460",
+            "ECON 461",
+            "ECON 469"
+          ]
+        },
+        {
+          "title": "3 credits selected from the following Economics courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Accounting - Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "ACCT 351",
+        "ACCT 352",
+        "ACCT 361",
+        "ACCT 455",
+        "MGCR 211",
+        "MGCR 341"
+      ]
+    },
+    {
+      "title": "Accounting - Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Accounting - Complementary Courses",
+          "courses": [
+            "ACCT 354",
+            "ACCT 362",
+            "ACCT 385",
+            "ACCT 452",
+            "ACCT 453",
+            "ACCT 463",
+            "ACCT 475",
+            "ACCT 486"
+          ]
+        },
+        {
+          "title": "12 credits of Accounting courses selected from",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

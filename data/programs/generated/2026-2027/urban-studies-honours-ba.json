@@ -1,0 +1,225 @@
+{
+  "id": "urban-studies-honours-ba",
+  "name": "Urban Studies Honours",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/geography/urban-studies-honours-ba/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "GEOG 201",
+        "GEOG 217",
+        "GEOG 351",
+        "GEOG 381",
+        "GEOG 491"
+      ]
+    },
+    {
+      "title": "Complementary Courses Statistics",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 373",
+            "GEOG 202",
+            "MATH 203",
+            "PSYC 204",
+            "SOCI 350"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Field Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "GEOG 398",
+            "GEOG 425",
+            "GEOG 475",
+            "GEOG 494"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "NOTE: Students may take either GEOG 425 or GEOG 494, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "GEOG 425",
+            "GEOG 494"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Geography",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Complementary Courses Geography",
+          "courses": [
+            "GEOG 210",
+            "GEOG 216",
+            "GEOG 221",
+            "GEOG 303",
+            "GEOG 310",
+            "GEOG 311",
+            "GEOG 314",
+            "GEOG 315",
+            "GEOG 316",
+            "GEOG 325",
+            "GEOG 331",
+            "GEOG 333",
+            "GEOG 408",
+            "GEOG 409",
+            "GEOG 414",
+            "GEOG 417",
+            "GEOG 418",
+            "GEOG 420"
+          ]
+        },
+        {
+          "title": "12 credits selected from the course list below",
+          "unparsed": true
+        },
+        {
+          "title": "Of these 12 credits, at least 6 credits must be at the 300-level or above",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Remaining Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Architecture",
+          "courses": [
+            "ARCH 517",
+            "ARCH 528"
+          ]
+        },
+        {
+          "title": "Art History and Communication Studies",
+          "courses": [
+            "ARTH 204",
+            "COMS 425"
+          ]
+        },
+        {
+          "title": "Civil Engineering",
+          "courses": [
+            "CIVE 540"
+          ]
+        },
+        {
+          "title": "Geography",
+          "courses": [
+            "GEOG 503",
+            "GEOG 504",
+            "GEOG 507",
+            "GEOG 511",
+            "GEOG 512",
+            "GEOG 525"
+          ]
+        },
+        {
+          "title": "History",
+          "courses": [
+            "HIST 353",
+            "HIST 397"
+          ]
+        },
+        {
+          "title": "Islamic Studies",
+          "courses": [
+            "ISLA 395",
+            "ISLA 311"
+          ]
+        },
+        {
+          "title": "Management",
+          "courses": [
+            "FINE 445"
+          ]
+        },
+        {
+          "title": "Political Science",
+          "courses": [
+            "POLI 318",
+            "POLI 321"
+          ]
+        },
+        {
+          "title": "Quebec Studies",
+          "courses": [
+            "QCST 200"
+          ]
+        },
+        {
+          "title": "Sociology",
+          "courses": [
+            "SOCI 222",
+            "SOCI 230",
+            "SOCI 333",
+            "SOCI 366",
+            "SOCI 388"
+          ]
+        },
+        {
+          "title": "Urban Planning",
+          "courses": [
+            "URBP 201",
+            "URBP 501",
+            "URBP 504",
+            "URBP 506",
+            "URBP 530",
+            "URBP 536",
+            "URBP 537",
+            "URBP 551",
+            "URBP 556"
+          ]
+        },
+        {
+          "title": "18 credits selected from the course lists below",
+          "unparsed": true
+        },
+        {
+          "title": "Of these 18 credits, at least 12 credits must be at the 300-level or above",
+          "unparsed": true
+        },
+        {
+          "title": "At least 6 credits must also be taken outside of Geography",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Additional Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits to be taken at the 300-level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

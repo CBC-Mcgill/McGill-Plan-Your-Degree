@@ -1,0 +1,98 @@
+{
+  "id": "biochemistry-liberal-program-core-science-component-bsc",
+  "name": "Biochemistry Liberal Program - Core Science Component",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biochemistry/biochemistry-liberal-program-core-science-component-bsc/",
+  "credits": 44,
+  "groups": [
+    {
+      "title": "U1 Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "BIOC 212",
+        "BIOC 220",
+        "BIOC 301",
+        "BIOL 200",
+        "BIOL 202",
+        "CHEM 204",
+        "CHEM 242",
+        "CHEM 252"
+      ],
+      "note": "Students with CEGEP-level credit for CHEM 242 should replace this course with an elective course."
+    },
+    {
+      "title": "U1 Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "BIOL 205",
+            "MIMM 211",
+            "MIMM 214",
+            "PHGY 209",
+            "PHGY 210"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "U2 Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "BIOC 311",
+        "BIOC 312",
+        "BIOC 320",
+        "CHEM 302"
+      ]
+    },
+    {
+      "title": "U2 Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "BIOL 373",
+            "CHEM 267",
+            "COMP 202",
+            "COMP 204",
+            "MATH 203",
+            "MATH 222",
+            "PSYC 204"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "U3 Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "BIOC 450",
+            "BIOC 454",
+            "BIOC 504",
+            "BIOC 505",
+            "BIOC 570"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

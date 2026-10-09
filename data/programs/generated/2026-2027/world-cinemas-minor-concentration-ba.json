@@ -1,0 +1,105 @@
+{
+  "id": "world-cinemas-minor-concentration-ba",
+  "name": "World Cinemas Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/english/world-cinemas-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        {
+          "oneOf": [
+            "EAST 279",
+            "LLCU 279"
+          ]
+        },
+        "ENGL 277"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "CANS 300",
+            "EAST 353",
+            "EAST 361",
+            "EAST 362",
+            "EAST 368",
+            "EAST 369",
+            "EAST 454",
+            "EAST 467",
+            "EAST 564",
+            "ENGL 279",
+            "ENGL 280",
+            "ENGL 350",
+            "ENGL 351",
+            "ENGL 354",
+            "ENGL 363",
+            "ENGL 366",
+            "ENGL 374",
+            "ENGL 381",
+            "ENGL 382",
+            "ENGL 385",
+            "ENGL 391",
+            "ENGL 393",
+            "ENGL 451",
+            "ENGL 476",
+            "ENGL 479",
+            "ENGL 480",
+            "ENGL 481",
+            "ENGL 482",
+            "ENGL 484",
+            "ENGL 492",
+            "ENGL 585",
+            "FILM 499",
+            "FREN 310",
+            "FREN 311",
+            "FREN 315",
+            "GERM 357",
+            "GERM 369",
+            "GERM 370",
+            "GERM 373",
+            "HISP 340",
+            "HISP 341",
+            "HIST 435",
+            "ITAL 329",
+            "ITAL 374",
+            "ITAL 375",
+            "ITAL 477",
+            "LLCU 200",
+            "LLCU 300",
+            "MUHL 330",
+            "RUSS 213",
+            "RUSS 395"
+          ]
+        },
+        {
+          "title": "12 credits selected from the course list below with the following specifications",
+          "unparsed": true
+        },
+        {
+          "title": "a minimum of 6 credits in non-U.S. cinemas",
+          "unparsed": true
+        },
+        {
+          "title": "a maximum of 6 credits from any one department",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 6 credits may be taken from the same discipline as the student's other major or minor concentrations",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

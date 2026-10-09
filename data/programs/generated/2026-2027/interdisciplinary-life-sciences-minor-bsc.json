@@ -1,0 +1,174 @@
+{
+  "id": "interdisciplinary-life-sciences-minor-bsc",
+  "name": "Interdisciplinary Life Sciences Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/interdisciplinary-life-sciences/interdisciplinary-life-sciences-minor-bsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Basic Life Sciences: At least 9 credits from",
+          "courses": [
+            "ANAT 212",
+            "ANAT 214",
+            "ANAT 261",
+            "ANAT 262",
+            "ANAT 321",
+            "ANAT 365",
+            "ANAT 381",
+            "BIOC 212",
+            "BIOC 311",
+            "BIOC 450",
+            "BIOC 458",
+            "BIOL 200",
+            "BIOL 201",
+            "BIOL 202",
+            "BIOL 300",
+            "BIOL 301",
+            "BIOL 303",
+            "BIOL 306",
+            "BIOL 314",
+            "BIOL 320",
+            "CHEM 212",
+            "CHEM 222",
+            "CHEM 302",
+            "CHEM 502",
+            "CHEM 503",
+            "EXMD 401",
+            "MIMM 211",
+            "MIMM 214",
+            "MIMM 314",
+            "MIMM 323",
+            "MIMM 324",
+            "MIMM 387",
+            "MIMM 465",
+            "MIMM 466",
+            "NSCI 201",
+            "NUTR 307",
+            "PATH 300",
+            "PHAR 300",
+            "PHAR 301",
+            "PHAR 303",
+            "PHAR 503",
+            "PHAR 504",
+            "PHGY 209",
+            "PHGY 210",
+            "PHGY 311",
+            "PHGY 312",
+            "PHGY 313",
+            "PHGY 314",
+            "PSYC 211",
+            "PSYC 311",
+            "PSYC 317",
+            "PSYC 318",
+            "PSYC 342"
+          ],
+          "minCredits": 9
+        },
+        {
+          "title": "Students take either ANAT 212 or BIOC 212, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ANAT 212",
+            "BIOC 212"
+          ]
+        },
+        {
+          "title": "Health Social Science: At least 3 credits from",
+          "courses": [
+            "ANTH 204",
+            "ANTH 227",
+            "ANTH 302",
+            "ANTH 314",
+            "ECON 440",
+            "GEOG 221",
+            "GEOG 303",
+            "HIST 249",
+            "HIST 335",
+            "HIST 350",
+            "HIST 381",
+            "HIST 424",
+            "HSEL 308",
+            "HSEL 309",
+            "PHIL 237",
+            "PHIL 343",
+            "POLI 417",
+            "PSYC 215",
+            "PSYC 304",
+            "PSYC 333",
+            "PSYC 412",
+            "PSYC 413",
+            "PSYC 414",
+            "SOCI 225",
+            "SOCI 309",
+            "SOCI 310",
+            "SOCI 365",
+            "SOCI 515",
+            "SOCI 525",
+            "SOCI 538"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "Empirical Science and Technology: At least 3 credits from",
+          "courses": [
+            "BIOL 309",
+            "BIOL 373",
+            "COMP 202",
+            "COMP 462",
+            "GEOG 202",
+            "MATH 203",
+            "MATH 204",
+            "MATH 323",
+            "MATH 324",
+            "PSYC 204",
+            "PSYC 305"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "Students who have already received credit for MATH 324 will NOT receive credit for GEOG 202, MATH 203, PSYC 204, BIOL 373, MATH 204, or PSYC 305",
+          "unparsed": true
+        },
+        {
+          "title": "The 24 credits required for this program must satisfy the following criteria",
+          "unparsed": true
+        },
+        {
+          "title": "At least 18 credits must be outside the student's main discipline",
+          "unparsed": true
+        },
+        {
+          "title": "at least 6 credits must be at the 300 level or above",
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300
+          }
+        },
+        {
+          "title": "​at least 9 credits must be taken from the Basic Life Sciences List,",
+          "unparsed": true
+        },
+        {
+          "title": "at least 3 credits from the Health Social Sciences List,",
+          "unparsed": true
+        },
+        {
+          "title": "​at least 3 credits from the Empirical Science and Technology List",
+          "unparsed": true
+        },
+        {
+          "title": "The remaining 9 credits may be selected from any of the lists",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

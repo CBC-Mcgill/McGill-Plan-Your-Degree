@@ -1,0 +1,130 @@
+{
+  "id": "biochemistry-major-bsc",
+  "name": "Biochemistry Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biochemistry/biochemistry-major-bsc/",
+  "credits": 58,
+  "groups": [
+    {
+      "title": "U1 Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "BIOC 212",
+        "BIOC 220",
+        "BIOC 301",
+        "BIOL 200",
+        "BIOL 202",
+        "CHEM 204",
+        "CHEM 242",
+        "CHEM 252"
+      ],
+      "note": "Note: Students with CEGEP-level credit for the equivalents of CHEM 212 (see http://www.mcgill.ca/students/courses/plan/transfer/ for accepted equivalents) may not take this course at McGill and should replace it with 3 credits of an elective course to satisfy the total credit requirement for their degree."
+    },
+    {
+      "title": "U1 Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "BIOL 205",
+            "MIMM 211",
+            "MIMM 214",
+            "PHGY 209",
+            "PHGY 210"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "U2 Required Courses",
+      "kind": "required",
+      "credits": 17,
+      "courses": [
+        "BIOC 311",
+        "BIOC 312",
+        "BIOC 320",
+        "CHEM 214",
+        "CHEM 302",
+        "CHEM 362"
+      ]
+    },
+    {
+      "title": "U2 Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "BIOL 309",
+            "BIOL 373",
+            "CHEM 267",
+            "COMP 202",
+            "COMP 204",
+            "MATH 203",
+            "MATH 222",
+            "PSYC 204"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "U3 Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "BIOC 450",
+        "BIOC 454"
+      ]
+    },
+    {
+      "title": "U3 Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3-6 credits selected from",
+          "courses": [
+            "BIOC 458",
+            "BIOC 462",
+            "BIOC 503",
+            "BIOC 504",
+            "BIOC 505",
+            "BIOC 570",
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 304",
+            "BIOL 313",
+            "BIOL 314",
+            "CHEM 267",
+            "CHEM 482",
+            "CHEM 502",
+            "CHEM 532",
+            "CHEM 552",
+            "CHEM 572",
+            "EXMD 502",
+            "MIMM 324",
+            "PHAR 300",
+            "PHGY 311"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "BIOC 462 is worth 6 credits in the Major Program; only 3 credits will be counted against the requirement for 6 total Complementary credits",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

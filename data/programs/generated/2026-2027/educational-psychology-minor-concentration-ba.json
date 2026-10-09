@@ -1,0 +1,60 @@
+{
+  "id": "educational-psychology-minor-concentration-ba",
+  "name": "Educational Psychology Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/educational-psychology/educational-psychology-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "EDPE 335"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EDPE 355",
+            "EDPE 555"
+          ]
+        },
+        {
+          "title": "12 credits selected from the following list",
+          "courses": [
+            "EDPE 208",
+            "EDPE 304",
+            "EDPE 355",
+            "EDPE 377",
+            "EDPE 515",
+            "EDPE 535",
+            "EDPE 555",
+            "EDPI 341",
+            "EDPI 526",
+            "EDPI 527",
+            "EDPI 543"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "15 credits to be selected as follows",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits to be taken near the end of program completion, one of",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

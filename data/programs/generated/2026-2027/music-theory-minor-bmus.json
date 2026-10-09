@@ -1,0 +1,45 @@
+{
+  "id": "music-theory-minor-bmus",
+  "name": "Music Theory Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/music-theory-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits from the following",
+          "courses": [
+            "MUCO 575",
+            "MUJZ 260",
+            "MUJZ 261",
+            "MUMT 250",
+            "MUTH 202",
+            "MUTH 204",
+            "MUTH 251",
+            "MUTH 302",
+            "MUTH 304",
+            "MUTH 321",
+            "MUTH 322",
+            "MUTH 350",
+            "MUTH 426",
+            "MUTH 526",
+            "MUTH 528",
+            "MUTH 529",
+            "MUTH 538",
+            "MUTH 539",
+            "MUTH 541"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

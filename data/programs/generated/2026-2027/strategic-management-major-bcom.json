@@ -1,0 +1,88 @@
+{
+  "id": "strategic-management-major-bcom",
+  "name": "Strategic Management Major",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/majors/strategic-management-major-bcom/",
+  "credits": 72,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 42,
+      "courses": [
+        "MGCR 211",
+        "MGCR 222",
+        "MGCR 233",
+        "MGCR 250",
+        "MGCR 271",
+        "MGCR 293",
+        "MGCR 294",
+        "MGCR 331",
+        "MGCR 341",
+        "MGCR 352",
+        "MGCR 372",
+        "MGCR 382",
+        "MGCR 423",
+        "MGCR 460"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "9-15 credits from the following",
+          "courses": [
+            "MGPO 383",
+            "MGPO 445",
+            "MGPO 460",
+            "MGPO 469",
+            "MGPO 470"
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
+        },
+        {
+          "title": "9-15 credits from the following",
+          "courses": [
+            "MGPO 365",
+            "MGPO 438",
+            "MGPO 440",
+            "MGPO 450",
+            "MGPO 475",
+            "MGPO 485"
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
+        },
+        {
+          "title": "0-12 credits from the following",
+          "courses": [
+            "AGRI 411",
+            "ANTH 212",
+            "BUSA 300",
+            "BUSA 391",
+            "BUSA 432",
+            "BUSA 451",
+            "ECON 305",
+            "ECON 313",
+            "ECON 314",
+            "INTD 200",
+            "MGPO 362",
+            "MGPO 402",
+            "MGPO 430",
+            "MGPO 433",
+            "MGPO 434",
+            "MGPO 435",
+            "ORGB 380"
+          ],
+          "maxCredits": 12
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,90 @@
+{
+  "id": "linguistics-honours-ba",
+  "name": "Linguistics Honours",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/linguistics/linguistics-honours-ba/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "LING 201",
+        "LING 330",
+        "LING 331",
+        "LING 360",
+        "LING 371",
+        "LING 480"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 39,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "COMP 230",
+            "MATH 318",
+            "PHIL 210",
+            "INLG 411"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Computer Science",
+          "courses": [
+            "COMP 202",
+            "COMP 230",
+            "COMP 250"
+          ]
+        },
+        {
+          "title": "French Language and Literature",
+          "courses": [
+            "FREN 231",
+            "FREN 336",
+            "FREN 434"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 240"
+          ]
+        },
+        {
+          "title": "Philosophy",
+          "courses": [
+            "PHIL 306",
+            "PHIL 415"
+          ]
+        },
+        {
+          "title": "Psychology",
+          "courses": [
+            "PSYC 311",
+            "PSYC 340",
+            "PSYC 341",
+            "PSYC 433",
+            "PSYC 530"
+          ]
+        },
+        {
+          "title": "24 credits of Linguistics (LING) courses, 15 of the credits in Linguistics must be at the 400/500 level and only 3 credits in Linguistics can be at the 200 level; this requirement may include",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits in related fields selected from the following list",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "musical-science-technology-minor-bmus",
+  "name": "Musical Science and Technology Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/musical-science-technology-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "MUMT 203",
+        "MUMT 250",
+        "MUMT 306",
+        "MUMT 307"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "MUMT 501",
+            "MUMT 502",
+            "MUSR 200",
+            "MUSR 232",
+            "MUSR 300",
+            "PHYS 224"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

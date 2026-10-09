@@ -1,0 +1,120 @@
+{
+  "id": "microbiology-immunology-major-bsc",
+  "name": "Microbiology and Immunology Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/microbiology-immunology/microbiology-immunology-major-bsc/",
+  "credits": 66,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 60,
+      "courses": [
+        "BIOL 200",
+        "BIOL 202",
+        "CHEM 212",
+        "CHEM 222",
+        "MIMM 211",
+        "MIMM 212",
+        "MIMM 214",
+        {
+          "oneOf": [
+            "BIOC 212",
+            "BIOL 201"
+          ]
+        },
+        {
+          "oneOf": [
+            "BIOL 373",
+            "MATH 203",
+            "PSYC 204"
+          ]
+        },
+        "BIOC 311",
+        "MIMM 301",
+        "MIMM 314",
+        "MIMM 323",
+        "MIMM 324",
+        "MIMM 384",
+        "MIMM 385",
+        "MIMM 413"
+      ],
+      "note": "Students who have taken CHEM 212 in CEGEP are exempt and must replace these credits with an elective course(s). Students who have taken CHEM 222 in CEGEP are exempt and must replace these credits with an elective course(s)."
+    },
+    {
+      "title": "U3 Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "MIMM 414",
+            "MIMM 465",
+            "MIMM 466"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits selected from",
+          "courses": [
+            "ANAT 261",
+            "ANAT 262",
+            "ANAT 365",
+            "ANAT 458",
+            "BIOC 312",
+            "BIOC 450",
+            "BIOC 454",
+            "BIOC 458",
+            "BIOL 300",
+            "BIOL 309",
+            "BIOL 314",
+            "BIOT 505",
+            "CHEM 203",
+            "CHEM 204",
+            "CHEM 302",
+            "COMP 204",
+            "COMP 206",
+            "COMP 250",
+            "EXMD 504",
+            "MIMM 387",
+            "MIMM 390",
+            "MIMM 391",
+            "MIMM 414",
+            "MIMM 465",
+            "MIMM 466",
+            "MIMM 496",
+            "MIMM 497",
+            "MIMM 509",
+            "PATH 300",
+            "PHAR 300",
+            "PHAR 301",
+            "PHGY 209",
+            "PHGY 210"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "Students may select either ANAT 458 or BIOC 458, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ANAT 458",
+            "BIOC 458"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,117 @@
+{
+  "id": "aerospace-engineering-minor-beng",
+  "name": "Aerospace Engineering Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/aerospace-engineering-minor-beng/",
+  "credits": 21,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "AERO 401",
+        "AERO 410",
+        "AERO 520"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Aerodynamics and Propulsion Stream",
+          "courses": [
+            "MECH 447",
+            "MECH 516",
+            "MECH 532",
+            "MECH 533",
+            "MECH 535",
+            "MECH 539",
+            "MECH 562",
+            "MECH 566",
+            "MECH 579"
+          ]
+        },
+        {
+          "title": "Aircraft Structures Stream",
+          "courses": [
+            "MECH 530",
+            "MECH 536",
+            "MECH 543",
+            "MECH 544",
+            "MECH 560",
+            "MECH 567",
+            "MIME 560",
+            "MIME 565"
+          ]
+        },
+        {
+          "title": "Spacecraft and Systems Stream",
+          "courses": [
+            "GEOG 308",
+            "MECH 513",
+            "MECH 536",
+            "MECH 542",
+            "MECH 559",
+            "MIME 565",
+            "PHYS 320"
+          ]
+        },
+        {
+          "title": "Material and Processes Stream",
+          "courses": [
+            "CHEE 515",
+            "CHEE 541",
+            "CHEE 543",
+            "MECH 544",
+            "MIME 512",
+            "MIME 515",
+            "MIME 559",
+            "MIME 560",
+            "MIME 563",
+            "MIME 565",
+            "MIME 571",
+            "MIME 580"
+          ]
+        },
+        {
+          "title": "Avionics Stream",
+          "courses": [
+            "ECSE 403",
+            "ECSE 408",
+            "ECSE 412",
+            "ECSE 420",
+            "ECSE 421",
+            "ECSE 422",
+            "ECSE 425",
+            "ECSE 427",
+            "ECSE 429",
+            "ECSE 444",
+            "ECSE 465",
+            "ECSE 501",
+            "ECSE 507",
+            "ECSE 508",
+            "ECSE 512",
+            "ECSE 516",
+            "ECSE 525",
+            "ECSE 541",
+            "ECSE 593"
+          ]
+        },
+        {
+          "title": "12 credits from one of the following streams",
+          "unparsed": true
+        },
+        {
+          "title": "Students may take one complementary course outside of their stream, but their selection must be approved by the Minor Advisor prior to the registration for the course",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

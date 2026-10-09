@@ -1,0 +1,106 @@
+{
+  "id": "geography-honours-ba",
+  "name": "Geography Honours",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/geography/geography-honours-ba/",
+  "credits": 61,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 19,
+      "courses": [
+        "GEOG 201",
+        "GEOG 216",
+        "GEOG 290",
+        "GEOG 351",
+        "GEOG 381",
+        "GEOG 491"
+      ]
+    },
+    {
+      "title": "Complementary Courses Introductory Physical Geography",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "GEOG 203",
+            "GEOG 272"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Statistics",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 373",
+            "GEOG 202",
+            "MATH 203",
+            "PSYC 204",
+            "SOCI 350"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Field Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "GEOG 398",
+            "GEOG 425",
+            "GEOG 475",
+            "GEOG 494",
+            "GEOG 495",
+            "GEOG 496"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Geography",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "24 credits of Geography (GEOG) courses excluding GEOG 200 and GEOG 205, selected in consultation with the Program Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 6 credits may be taken from 200-level courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Outside Geography",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits at the 300 or 400 level or above of courses taught by units other than Geography selected from the humanities, social and physical sciences or engineering that have been approved by the Program Adviser as related to the student's focus within Geography",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

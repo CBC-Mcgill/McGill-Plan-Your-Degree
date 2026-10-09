@@ -1,0 +1,29 @@
+{
+  "id": "statistics-liberal-program-core-science-component-bsc",
+  "name": "Statistics Liberal Program - Core Science Component",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/statistics-liberal-program-core-science-component-bsc/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "COMP 202",
+        "MATH 204",
+        "MATH 222",
+        "MATH 235",
+        "MATH 236",
+        "MATH 242",
+        "MATH 323",
+        "MATH 324",
+        "MATH 423"
+      ],
+      "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202, but must replace it by either COMP 250 or COMP 350. Students have to take MATH 204 prior to MATH 324. Students who have successfully completed a course equivalent to MATH 222 with a grade of C or better may omit MATH 222, but must replace it with 3 credits of complementary courses. MATH 236 is an equivalent prerequisiste to MATH 223 for required and complementary Computer Science courses listed below."
+    }
+  ],
+  "generated": true
+}

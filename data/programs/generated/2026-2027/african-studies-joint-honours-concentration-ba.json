@@ -1,0 +1,139 @@
+{
+  "id": "african-studies-joint-honours-concentration-ba",
+  "name": "African Studies Joint Honours Component",
+  "degree": "B.A. & Sc.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts-science/programs/world-islamic-middle-east-studies/african-studies-joint-honours-concentration-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "AFRI 200",
+        "AFRI 480",
+        "AFRI 598"
+      ],
+      "note": "Honours Thesis course must be taken for the AFRI Joint Honours component. Students must meet the specific requirements regarding Thesis credits of their second program in addition to the AFRI 480 Honours Thesis."
+    },
+    {
+      "title": "Complementary Courses Group A",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from",
+          "courses": [
+            "ANTH 322",
+            "HIST 200",
+            "HIST 201",
+            "POLI 324"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group B",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "African Studies",
+          "courses": [
+            "AFRI 401",
+            "AFRI 481",
+            "AFRI 499"
+          ]
+        },
+        {
+          "title": "Anthropology",
+          "courses": [
+            "ANTH 212",
+            "ANTH 222",
+            "ANTH 322",
+            "ANTH 355",
+            "ANTH 416",
+            "ANTH 451"
+          ]
+        },
+        {
+          "title": "Economics",
+          "courses": [
+            "ECON 208",
+            "ECON 313",
+            "ECON 314"
+          ]
+        },
+        {
+          "title": "English",
+          "courses": [
+            "ENGL 320",
+            "ENGL 352",
+            "ENGL 421"
+          ]
+        },
+        {
+          "title": "Geography",
+          "courses": [
+            "GEOG 216",
+            "GEOG 302",
+            "GEOG 403",
+            "GEOG 404",
+            "GEOG 408",
+            "GEOG 416",
+            "GEOG 423",
+            "GEOG 451",
+            "GEOG 493"
+          ]
+        },
+        {
+          "title": "History",
+          "courses": [
+            "HIST 200",
+            "HIST 201",
+            "HIST 382",
+            "HIST 498",
+            "HIST 528"
+          ]
+        },
+        {
+          "title": "Islamic Studies",
+          "courses": [
+            "ISLA 221",
+            "ISLA 360",
+            "ISLA 375",
+            "ISLA 410",
+            "ISLA 530"
+          ]
+        },
+        {
+          "title": "Political Science",
+          "courses": [
+            "POLI 227",
+            "POLI 324",
+            "POLI 522"
+          ]
+        },
+        {
+          "title": "Sociology",
+          "courses": [
+            "SOCI 365",
+            "SOCI 370",
+            "SOCI 446",
+            "SOCI 484",
+            "SOCI 550"
+          ]
+        },
+        {
+          "title": "18 credits from the Group B course lists below drawn from at least 3 disciplines with no more than 9 credits from any one discipline",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

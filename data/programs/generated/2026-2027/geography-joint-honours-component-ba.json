@@ -1,0 +1,71 @@
+{
+  "id": "geography-joint-honours-component-ba",
+  "name": "Geography Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/geography/geography-joint-honours-component-ba/",
+  "credits": 37,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 13,
+      "courses": [
+        "GEOG 201",
+        "GEOG 216",
+        "GEOG 290",
+        "GEOG 351",
+        "GEOG 381"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Introductory Physical Geography: 3 credits from",
+          "courses": [
+            "GEOG 203",
+            "GEOG 272"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Statistics: 3 credits from",
+          "courses": [
+            "BIOL 373",
+            "GEOG 202",
+            "MATH 203",
+            "PSYC 204",
+            "SOCI 350"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Research",
+          "courses": [
+            "GEOG 491",
+            "GEOG 492"
+          ]
+        },
+        {
+          "title": "3-6 credits of research courses",
+          "unparsed": true
+        },
+        {
+          "title": "12-15 credits from a coherent set of Geography (GEOG) courses excluding GEOG 200 and GEOG 205, approved by the Program Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 6 credits may be taken from 200-level courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

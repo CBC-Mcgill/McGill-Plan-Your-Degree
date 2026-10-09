@@ -1,0 +1,156 @@
+{
+  "id": "major-music-studies-bmus",
+  "name": "Music Studies Major",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/major-music-studies-bmus/",
+  "credits": 123,
+  "groups": [
+    {
+      "title": "Program Prerequisites - Foundation Program",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Program Prerequisites - Foundation Program",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 8,
+      "courses": [
+        "MUHL 286",
+        "MUPD 245",
+        "MUPD 350"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 46,
+      "rules": [
+        {
+          "title": "Theory",
+          "courses": [
+            "MUTH 250",
+            "MUTH 251"
+          ]
+        },
+        {
+          "title": "Musicianship",
+          "courses": [
+            "MUSP 240",
+            "MUSP 241"
+          ]
+        },
+        {
+          "title": "Theory",
+          "courses": [
+            "MUJZ 260",
+            "MUJZ 261"
+          ]
+        },
+        {
+          "title": "Musicianship",
+          "courses": [
+            "MUJZ 213",
+            "MUJZ 214"
+          ]
+        },
+        {
+          "title": "Practical Studies (entry by audition)",
+          "courses": [
+            "MUIN 180",
+            "MUIN 181",
+            "MUIN 280",
+            "MUIN 281",
+            "MUIN 283"
+          ]
+        },
+        {
+          "title": "Composition",
+          "courses": [
+            "MUCO 230",
+            "MUCO 260",
+            "MUHL 375",
+            "MUHL 385",
+            "MUHL 388",
+            "MUHL 391",
+            "MUHL 392",
+            "MUHL 393",
+            "MUHL 396",
+            "MUTH 322",
+            "MUTH 526",
+            "MUTH 528",
+            "MUTH 538",
+            "MUTH 539"
+          ]
+        },
+        {
+          "title": "Applied Performance Sciences: 3-9 credits from the following",
+          "courses": [
+            "MUGT 205",
+            "MUGT 350",
+            "MUGT 405",
+            "MUPG 300"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        },
+        {
+          "title": "10 credits from one of the following two streams",
+          "unparsed": true
+        },
+        {
+          "title": "36 credits selected from any combination of the following lists of courses",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 6 credits from courses with a MUEN prefix",
+          "unparsed": true
+        },
+        {
+          "title": "3-9 credits from courses with a MUHL or MUPP prefix at the 300 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "3-9 credits from courses with a MUGT, MUCT, MUIT prefix at the 200 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "3-9 credits from courses with a MUMT or MUSR prefix at the 200 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "3-9 credits from courses with a MUPD prefix at the 200 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "3-9 credits from the following, of which at least 3 credits must be from a course with a MUCO prefix",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 48,
+      "rules": [
+        {
+          "title": "6 credits of Non-Music Electives",
+          "unparsed": true
+        },
+        {
+          "title": "42 credits of Free Electives",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

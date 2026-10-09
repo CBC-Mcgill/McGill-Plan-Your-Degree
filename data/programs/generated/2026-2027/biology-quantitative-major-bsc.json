@@ -1,0 +1,172 @@
+{
+  "id": "biology-quantitative-major-bsc",
+  "name": "Biology - Quantitative Biology Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biology/biology-quantitative-major-bsc/",
+  "credits": 73,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 43,
+      "courses": [
+        "BIOL 219",
+        "BIOL 301",
+        "BIOL 395",
+        "CHEM 212",
+        "COMP 202",
+        "MATH 222",
+        "MATH 223",
+        "MATH 315",
+        "MATH 323",
+        "MATH 324",
+        "BIOL 202",
+        "BIOL 215",
+        "PHYS 230",
+        "PHYS 232"
+      ],
+      "note": "Students who have taken the equivalent of CHEM 212 or MATH 222 can make up the credits with a complementary 3 or 4 credit course in consultation with a stream adviser. Students who have sufficient knowledge of programming should take COMP 250 rather than COMP 202."
+    },
+    {
+      "title": "Stream 1: Theoretical Ecology and Evolutionary Biology",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Biology",
+          "courses": [
+            "BIOL 205",
+            "BIOL 206",
+            "BIOL 304",
+            "BIOL 308"
+          ]
+        },
+        {
+          "title": "Field Courses",
+          "courses": [
+            "BIOL 240",
+            "BIOL 331",
+            "BIOL 432"
+          ]
+        },
+        {
+          "title": "Field Courses",
+          "courses": [
+            "BIOL 432",
+            "BIOL 435",
+            "BIOL 465",
+            "BIOL 510",
+            "BIOL 515",
+            "BIOL 540",
+            "BIOL 594",
+            "BIOL 596"
+          ]
+        },
+        {
+          "title": "3 credits from the following list or any other field course with permission",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits chosen from the following list of courses at the 400 level or above",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Stream 2: Physical Biology",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Stream 2: Physical Biology",
+          "courses": [
+            "BIOL 319",
+            "PHYS 329",
+            "PHYS 346"
+          ]
+        },
+        {
+          "title": "Stream 2: Physical Biology",
+          "courses": [
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 306",
+            "BIOL 309",
+            "BIOL 313"
+          ]
+        },
+        {
+          "title": "Stream 2: Physical Biology",
+          "courses": [
+            "BIOL 518",
+            "BIOL 520",
+            "BIOL 524",
+            "BIOL 530",
+            "BIOL 551",
+            "BIOL 588"
+          ]
+        },
+        {
+          "title": "300-level complementary courses: 6 credits from the following",
+          "unparsed": true
+        },
+        {
+          "title": "500-level complementary courses: 6 credits from the following",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Quantitative Biology - Theoretical Ecology and Evolutionary Biology, and Physical Biology Streams: 9 credits from the following",
+          "courses": [
+            "BIOL 466",
+            "COMP 206",
+            "COMP 250",
+            "COMP 251",
+            "COMP 350",
+            "MATH 235",
+            "MATH 240",
+            "MATH 314",
+            "MATH 317",
+            "MATH 319",
+            "MATH 326",
+            "MATH 327",
+            "MATH 348",
+            "MATH 437",
+            "MATH 447",
+            "BIEN 310",
+            "BIEN 320",
+            "BIEN 340",
+            "BIEN 510",
+            "BIEN 530",
+            "CHEM 222",
+            "PHYS 242",
+            "PHYS 257",
+            "PHYS 342",
+            "PHYS 434",
+            "PHYS 519",
+            "PHYS 534",
+            "BIOL 310",
+            "BIOL 324",
+            "MATH 242",
+            "MATH 340",
+            "MATH 423",
+            "MATH 524",
+            "MATH 525",
+            "PHYS 329"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

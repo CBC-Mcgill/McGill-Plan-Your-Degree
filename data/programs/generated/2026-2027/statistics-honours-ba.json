@@ -1,0 +1,201 @@
+{
+  "id": "statistics-honours-ba",
+  "name": "Statistics Honours",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/mathematics-statistics/statistics-honours-ba/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 28,
+      "courses": [
+        "COMP 250",
+        "MATH 208",
+        "MATH 222",
+        {
+          "oneOf": [
+            "MATH 251",
+            "MATH 247"
+          ]
+        },
+        "MATH 255",
+        "MATH 356",
+        "MATH 357",
+        "MATH 470",
+        "MATH 533"
+      ],
+      "note": "Students with limited programming experience should take COMP 202/COMP 204/COMP 208 or equivalent before COMP 250. Students who have successfully completed MATH 150/MATH 151 or an equivalent of MATH 222 on entering the program are not required to take MATH 222."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 35,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "MATH 547",
+            "MATH 587",
+            "MATH 589"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "MATH 329",
+            "MATH 430",
+            "MATH 524",
+            "MATH 545",
+            "MATH 547"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "COMP 206",
+            "COMP 251",
+            "COMP 370",
+            "COMP 424",
+            "COMP 551",
+            "MATH 308",
+            "MATH 350",
+            "MATH 378",
+            "MATH 462",
+            "MATH 517",
+            "MATH 562",
+            "MATH 563"
+          ]
+        },
+        {
+          "title": "Part I: 3 credits selected from",
+          "courses": [
+            "MATH 242",
+            "MATH 254"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Part I: 3 credits from",
+          "courses": [
+            "MATH 235",
+            "MATH 245"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Part II",
+          "courses": [
+            "COMP 206",
+            "COMP 252",
+            "MATH 248",
+            "MATH 325",
+            "MATH 350",
+            "MATH 352",
+            "MATH 358",
+            "MATH 376",
+            "MATH 387",
+            "MATH 397",
+            "MATH 398",
+            "MATH 454",
+            "MATH 455",
+            "MATH 458",
+            "MATH 466",
+            "MATH 475",
+            "MATH 478",
+            "MATH 480",
+            "MATH 527"
+          ]
+        },
+        {
+          "title": "Students can select either MATH 248 or MATH 358, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 248",
+            "MATH 358"
+          ]
+        },
+        {
+          "title": "Part III: 15-23 credits selected from",
+          "courses": [
+            "MATH 204",
+            "MATH 308",
+            "MATH 511",
+            "MATH 523",
+            "MATH 524",
+            "MATH 525",
+            "MATH 526",
+            "MATH 545",
+            "MATH 547",
+            "MATH 556",
+            "MATH 557",
+            "MATH 558",
+            "MATH 559",
+            "MATH 587",
+            "MATH 589",
+            "MATH 329",
+            "MATH 378",
+            "MATH 427"
+          ],
+          "minCredits": 15,
+          "maxCredits": 23
+        },
+        {
+          "title": "Part III: 0-8 credits selected from",
+          "courses": [
+            "COMP 370",
+            "COMP 424",
+            "COMP 451",
+            "COMP 551",
+            "COMP 579",
+            "COMP 588",
+            "MATH 430",
+            "MATH 462",
+            "MATH 510",
+            "MATH 562",
+            "MATH 594",
+            "MATH 598"
+          ],
+          "maxCredits": 8
+        },
+        {
+          "title": "Students may select either MATH 594 or MATH 598 but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 594",
+            "MATH 598"
+          ]
+        },
+        {
+          "title": "Students wishing to pursue mathematical statistics in graduate school are advised to take MATH 587 and recommended to take honours mathematics courses as complementary courses in Part II, in particular MATH 358, MATH 454 (preferably prior to MATH 587), and MATH 455",
+          "unparsed": true
+        },
+        {
+          "title": "Students wishing to pursue applied statistics and/or careers as statisticians in industry or government are advised to take MATH 523, MATH 524, MATH 547, at least one of MATH 525 and MATH 558, and as many courses as possible from Part III of the list of Complementary Courses below",
+          "unparsed": true
+        },
+        {
+          "title": "6-11 credits in mathematics and computer science selected from",
+          "unparsed": true
+        },
+        {
+          "title": "and any 500-level course offered by the Department of Mathematics and Statistics not listed in Part III below",
+          "unparsed": true
+        },
+        {
+          "title": "18-23 credits in probability and statistics selected as follows",
+          "unparsed": true
+        },
+        {
+          "title": "0-3 credits from the following courses for which no Honours equivalent exists",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,42 @@
+{
+  "id": "operations-management-concentration-bcom",
+  "name": "Operations Management Concentration",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/concentrations/operations-management-concentration-bcom/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "MGSC 373",
+        "MGSC 431"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "MGSC 372",
+            "MGSC 403",
+            "MGSC 404",
+            "MGSC 416",
+            "MGSC 417",
+            "MGSC 434",
+            "MGSC 488"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

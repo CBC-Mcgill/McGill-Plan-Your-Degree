@@ -1,0 +1,73 @@
+{
+  "id": "mathematics-concentration-supplementary-minor",
+  "name": "Mathematics Concentration",
+  "degree": "Supplementary Minor",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/mathematics-statistics/mathematics-concentration-supplementary-minor/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "MATH 315"
+      ],
+      "note": "Note: If MATH 315 has already been taken as part of the Major Concentration Mathematics, an additional 3-credit complementary course must be taken to replace it."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "MATH 249",
+            "MATH 316"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Note: If either of MATH 249 or MATH 316 has been taken as part of the Major Concentration Mathematics, another 3-credit complementary course must be taken",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits from",
+          "courses": [
+            "MATH 204",
+            "MATH 308",
+            "MATH 317",
+            "MATH 318",
+            "MATH 319",
+            "MATH 324",
+            "MATH 326",
+            "MATH 327",
+            "MATH 329",
+            "MATH 335",
+            "MATH 338",
+            "MATH 340",
+            "MATH 346",
+            "MATH 348",
+            "MATH 352",
+            "MATH 378",
+            "MATH 410",
+            "MATH 417",
+            "MATH 423",
+            "MATH 430",
+            "MATH 447",
+            "MATH 463",
+            "MATH 523",
+            "MATH 524",
+            "MATH 525"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

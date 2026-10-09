@@ -1,0 +1,81 @@
+{
+  "id": "geology-major-bsc",
+  "name": "Geology Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/earth-planetary-sciences/geology-major-bsc/",
+  "credits": 66,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 30,
+      "courses": [
+        "EPSC 210",
+        "EPSC 212",
+        "EPSC 220",
+        "EPSC 231",
+        "EPSC 233",
+        "EPSC 240",
+        "EPSC 303",
+        "EPSC 320",
+        "EPSC 340",
+        "MATH 222"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "15 credits of advanced earth science",
+          "courses": [
+            "EPSC 355",
+            "EPSC 423",
+            "EPSC 425",
+            "EPSC 445",
+            "EPSC 452",
+            "GEOG 272"
+          ]
+        },
+        {
+          "title": "3 credits of environmental and ore-forming processes",
+          "courses": [
+            "EPSC 519",
+            "EPSC 325",
+            "EPSC 549",
+            "EPSC 561",
+            "EPSC 590",
+            "GEOG 305"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EPSC 331",
+            "EPSC 334",
+            "EPSC 470",
+            "EPSC 482",
+            "EPSC 501",
+            "EPSC 520",
+            "EPSC 522",
+            "EPSC 525",
+            "EPSC 530",
+            "EPSC 547",
+            "EPSC 548",
+            "EPSC 567",
+            "GEOG 201",
+            "GEOG 322"
+          ]
+        },
+        {
+          "title": "18 credits of other specializations can be drawn from the categories above or from",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

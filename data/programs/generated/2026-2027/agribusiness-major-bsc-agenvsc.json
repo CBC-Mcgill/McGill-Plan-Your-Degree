@@ -1,0 +1,50 @@
+{
+  "id": "agribusiness-major-bsc-agenvsc",
+  "name": "Agribusiness Specialization",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/natural-resource-sciences/agribusiness-major-bsc-agenvsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "AEBI 210",
+        "AGEC 450",
+        "AGEC 491",
+        "ANSC 250"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "9 credits selected from",
+          "courses": [
+            "ACCT 361",
+            "AGRI 310",
+            "BUSA 364",
+            "MGCR 222",
+            "MGCR 331",
+            "MGCR 341",
+            "MGCR 352",
+            "MGCR 382",
+            "ORGB 321"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "3 credits of a course in Animal Production or Plant Production approved by the Adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

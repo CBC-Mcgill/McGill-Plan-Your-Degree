@@ -1,0 +1,54 @@
+{
+  "id": "geology-minor-bsc",
+  "name": "Geology Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/earth-planetary-sciences/geology-minor-bsc/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "EPSC 210",
+        "EPSC 212"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EPSC 201",
+            "EPSC 233"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EPSC 231",
+            "EPSC 303",
+            "EPSC 334",
+            "EPSC 350",
+            "EPSC 452",
+            "EPSC 561"
+          ]
+        },
+        {
+          "title": "3 credits, one of",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits selected from the list below and other 300-level and higher courses in Earth and Planetary Sciences may be substituted with permission",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

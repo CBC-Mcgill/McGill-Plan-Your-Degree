@@ -1,0 +1,96 @@
+{
+  "id": "nutrition-major-sports-bsc-nutrsc",
+  "name": "Nutrition Major - Sports Nutrition",
+  "degree": "B.Sc.(Nutr.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/human-nutrition/nutrition-major-sports-bsc-nutrsc/",
+  "credits": 90,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 63,
+      "courses": [
+        "AEMA 310",
+        "ANSC 234",
+        "ANSC 323",
+        "ANSC 424",
+        "EDKP 395",
+        "FDSC 200",
+        "FDSC 251",
+        "FDSC 305",
+        "LSCI 204",
+        "LSCI 211",
+        "LSCI 230",
+        "NUTR 207",
+        "NUTR 214",
+        "NUTR 307",
+        "NUTR 322",
+        "NUTR 337",
+        "NUTR 344",
+        "NUTR 401",
+        "NUTR 450",
+        "NUTR 503",
+        "NUTR 512"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Common Complementary Courses: 6 credits selected from",
+          "courses": [
+            "ANSC 433",
+            "ANSC 560",
+            "FDSC 537",
+            "FDSC 545",
+            "NUTR 501",
+            "NUTR 505",
+            "NUTR 507",
+            "NUTR 511",
+            "NUTR 537",
+            "NUTR 545",
+            "NUTR 546",
+            "NUTR 551",
+            "PARA 438"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Common Complementary Courses: 6 credits selected from",
+          "courses": [
+            "ANAT 214",
+            "EDKP 261",
+            "EDKP 330",
+            "EDKP 445",
+            "EDKP 446",
+            "EDKP 448",
+            "EDKP 449",
+            "EDKP 485",
+            "EDKP 495",
+            "NUTR 430",
+            "NUTR 551"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits of electives are taken to meet the minimum credit requirement for the degree",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

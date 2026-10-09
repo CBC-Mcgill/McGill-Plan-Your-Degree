@@ -1,0 +1,201 @@
+{
+  "id": "earth-system-science-honours-bsc",
+  "name": "Earth System Science Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/earth-system-science/earth-system-science-honours-bsc/",
+  "credits": 66,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "ENVR 201",
+        "ESYS 200",
+        "ESYS 300",
+        "ESYS 301",
+        "ESYS 480",
+        "ESYS 500",
+        "MATH 222",
+        "MATH 315"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 39,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EPSC 340",
+            "MATH 203"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "COMP 202",
+            "COMP 208"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "ATOC 214",
+            "ATOC 219"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EPSC 210",
+            "EPSC 220"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "GEOG 308",
+            "GEOG 314",
+            "GEOG 428"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "ENVR 200",
+            "GEOG 203"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "BIOL 215",
+            "ENVR 202"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "ANTH 339",
+            "GEOG 217",
+            "GEOG 221",
+            "GEOG 300",
+            "GEOG 310",
+            "ATOC 215",
+            "ATOC 309",
+            "ATOC 312",
+            "ATOC 315",
+            "ATOC 404",
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 541",
+            "BIOL 308",
+            "BIOL 309",
+            "BIOL 310",
+            "BIOL 432",
+            "BIOL 441",
+            "BIOL 465",
+            "BIOL 540",
+            "BIOL 573",
+            "BREE 217",
+            "BREE 319",
+            "BREE 509",
+            "BREE 510",
+            "BREE 533",
+            "ECON 347",
+            "ECON 405",
+            "EPSC 212",
+            "EPSC 320",
+            "EPSC 325",
+            "EPSC 331",
+            "EPSC 334",
+            "EPSC 340",
+            "EPSC 341",
+            "EPSC 350",
+            "EPSC 355",
+            "EPSC 423",
+            "EPSC 425",
+            "EPSC 445",
+            "EPSC 452",
+            "EPSC 519",
+            "EPSC 525",
+            "EPSC 530",
+            "EPSC 549",
+            "EPSC 561",
+            "EPSC 567",
+            "EPSC 590",
+            "GEOG 272",
+            "GEOG 305",
+            "GEOG 321",
+            "GEOG 322",
+            "GEOG 351",
+            "GEOG 372",
+            "GEOG 401",
+            "GEOG 414",
+            "GEOG 470",
+            "GEOG 495",
+            "GEOG 505",
+            "GEOG 506",
+            "GEOG 530",
+            "GEOG 535",
+            "GEOG 536",
+            "GEOG 550",
+            "MATH 314",
+            "MATH 317",
+            "MATH 319",
+            "MATH 323",
+            "MATH 326",
+            "MATH 423",
+            "MATH 437",
+            "MATH 447",
+            "MATH 525",
+            "PHYS 331",
+            "PHYS 340",
+            "PHYS 342",
+            "PHYS 404",
+            "PHYS 432"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "15 credits from the following course list, with at least 3 credits from each of subject codes ATOC, EPSC, and GEOG",
+          "unparsed": true
+        },
+        {
+          "title": "At least 9 of the 15 credits must be at the 400 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "Courses at the 300 level or higher in other departments in the Faculties of Science and Engineering may also be used as complementary credits, with the permission of an academic adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

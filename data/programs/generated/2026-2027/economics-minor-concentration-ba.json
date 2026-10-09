@@ -1,0 +1,39 @@
+{
+  "id": "economics-minor-concentration-ba",
+  "name": "Economics Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/economics/economics-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Group A",
+          "courses": [
+            "ECON 208",
+            "ECON 209",
+            "ECON 230"
+          ]
+        },
+        {
+          "title": "18 credits, of which 6 credits must be from Group A and 12 credits from Group B",
+          "unparsed": true
+        },
+        {
+          "title": "Economics courses with course numbers above ECON 208 (excluding ECON 295), at least 6 credits of which must be at the 300, 400 or 500 level",
+          "unparsed": true
+        },
+        {
+          "title": "Only one of ECON 209 or the 6 credit combination of (ECON 332 and ECON 333) or (ECON 353 and ECON 354 can be credited to the Economics Minor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

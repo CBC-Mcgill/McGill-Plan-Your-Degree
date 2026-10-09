@@ -1,0 +1,79 @@
+{
+  "id": "biology-liberal-program-core-science-component",
+  "name": "Biology, Liberal Program - Core Science Component",
+  "degree": "Bachelor of Science",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biology/biology-liberal-program-core-science-component/",
+  "credits": 47,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "BIOL 200",
+        "BIOL 201",
+        "BIOL 205",
+        "BIOL 206",
+        "BIOL 215",
+        "BIOL 216",
+        "BIOL 302",
+        "COMP 204"
+      ]
+    },
+    {
+      "title": "Core",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Core",
+          "courses": [
+            "CHEM 204",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "If a student has already taken CHEM 212 or its equivalent, the credits can be made up with CHEM 204, CHEM 222, or a 3- or 4-credit Biology complementary course to be approved by the Biology Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "Core",
+          "courses": [
+            "BIOL 301",
+            "BIOL 311"
+          ]
+        },
+        {
+          "title": "3 or 4 credits selected from",
+          "unparsed": true
+        },
+        {
+          "title": "3 or 4 credits selected from",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits of Biology complementary courses at the 300-500 levels, including at least 3 credits at the 400-500 levels",
+          "unparsed": true
+        },
+        {
+          "title": "Up to 6 credits may be from non-BIOL science courses, with Adviser permission",
+          "unparsed": true
+        },
+        {
+          "title": "Up to 6 credits of independent research may be included",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

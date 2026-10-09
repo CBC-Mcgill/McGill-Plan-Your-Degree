@@ -1,0 +1,47 @@
+{
+  "id": "human-resources-mgmt-concentration-bcom",
+  "name": "Human Resources Management Concentration",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/concentrations/human-resources-mgmt-concentration-bcom/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "INDR 294",
+        "ORGB 423"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "INDR 459",
+            "INDR 492",
+            "INDR 494",
+            "INDR 496",
+            "ORGB 321",
+            "ORGB 325",
+            "ORGB 330",
+            "ORGB 401",
+            "ORGB 421",
+            "ORGB 440",
+            "ORGB 509",
+            "ORGB 525"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

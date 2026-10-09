@@ -1,0 +1,100 @@
+{
+  "id": "architecture-bsc",
+  "name": "Architecture",
+  "degree": "B.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/architecture/architecture-bsc/",
+  "credits": 126,
+  "groups": [
+    {
+      "title": "Required Year 0 Courses",
+      "kind": "required",
+      "credits": 28,
+      "courses": [
+        "MATH 133",
+        "MATH 140",
+        "PHYS 131"
+      ],
+      "foundation": true,
+      "note": "A PHYS course equivalent to Mechanics with labs may be substituted upon approval of the department."
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 83,
+      "courses": [
+        "ARCH 201",
+        "ARCH 202",
+        "ARCH 240",
+        "ARCH 241",
+        "ARCH 250",
+        "ARCH 251",
+        "ARCH 303",
+        "ARCH 304",
+        "ARCH 325",
+        "ARCH 342",
+        "ARCH 354",
+        "ARCH 355",
+        "ARCH 375",
+        "ARCH 377",
+        "ARCH 378",
+        "ARCH 405",
+        "ARCH 406",
+        "ARCH 445",
+        "ARCH 447",
+        "ARCH 512",
+        "ARCH 551"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from among the following",
+          "courses": [
+            "ARCH 379",
+            "ARCH 383",
+            "ARCH 461",
+            "ARCH 490",
+            "ARCH 514",
+            "ARCH 515",
+            "ARCH 517",
+            "ARCH 519",
+            "ARCH 520",
+            "ARCH 523",
+            "ARCH 525",
+            "ARCH 528",
+            "ARCH 531",
+            "ARCH 532",
+            "ARCH 535",
+            "ARCH 536",
+            "ARCH 540",
+            "ARCH 541",
+            "ARCH 542",
+            "ARCH 543",
+            "ARCH 562",
+            "ARCH 564",
+            "ARCH 566"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits of elective courses outside the School of Architecture must be completed, subject to approval by the Student Advisor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

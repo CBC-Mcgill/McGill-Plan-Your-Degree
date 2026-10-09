@@ -1,0 +1,63 @@
+{
+  "id": "statistics-minor-bsc",
+  "name": "Statistics Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/statistics-minor-bsc/",
+  "credits": 27,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "MATH 222",
+        "MATH 223",
+        "MATH 323",
+        "MATH 324",
+        "MATH 423"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9-12 credits selected from",
+          "courses": [
+            "CHEM 593",
+            "COMP 451",
+            "COMP 551",
+            "GEOG 351",
+            "MATH 208",
+            "MATH 209",
+            "MATH 308",
+            "MATH 427",
+            "MATH 447",
+            "MATH 523",
+            "MATH 524",
+            "MATH 525",
+            "MATH 545",
+            "MATH 556",
+            "MATH 557",
+            "MATH 558",
+            "MATH 559",
+            "MATH 562",
+            "PHYS 362",
+            "PHYS 559",
+            "SOCI 504"
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
+        },
+        {
+          "title": "No more than 6 credits from the above list of complementary courses may be taken outside the Department of Mathematics and Statistics",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "music-entrepreneurship-minor-bmus",
+  "name": "Music Entrepreneurship Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/music-entrepreneurship-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "INTG 215",
+        "MGPO 362",
+        "MUPD 350"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "MGCR 211",
+            "MGCR 222",
+            "MGCR 331",
+            "MGCR 341",
+            "MGCR 352",
+            "MGCR 372",
+            "MGCR 382",
+            "MGCR 423",
+            "MGCR 460"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3-6 credits chosen from the following",
+          "courses": [
+            "MUMT 301",
+            "MUPD 200",
+            "MUPD 201",
+            "MUPD 475",
+            "MUSR 200",
+            "MUSR 201"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "0-3 credits chosen from the following",
+          "courses": [
+            "BUSA 465",
+            "MGPO 364",
+            "MGPO 438",
+            "PSYC 471"
+          ],
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

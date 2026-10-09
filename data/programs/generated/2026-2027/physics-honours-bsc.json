@@ -1,0 +1,92 @@
+{
+  "id": "physics-honours-bsc",
+  "name": "Physics Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/physics-honours-bsc/",
+  "credits": 81,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 51,
+      "courses": [
+        "MATH 247",
+        "MATH 248",
+        "MATH 249",
+        "MATH 325",
+        "MATH 475",
+        "PHYS 241",
+        "PHYS 251",
+        "PHYS 253",
+        "PHYS 257",
+        "PHYS 258",
+        "PHYS 260",
+        "PHYS 350",
+        "PHYS 351",
+        "PHYS 352",
+        "PHYS 357",
+        "PHYS 362",
+        "PHYS 457"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "MATH 222"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "Students who did not complete an equivalent of MATH 222 on entering the program must take this course in the first semester",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHYS 359",
+            "PHYS 469"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "PHYS 359",
+            "PHYS 459",
+            "PHYS 469",
+            "PHYS 479",
+            "PHYS 404",
+            "PHYS 432",
+            "PHYS 434",
+            "PHYS 512",
+            "PHYS 514",
+            "PHYS 519",
+            "PHYS 521",
+            "PHYS 534",
+            "PHYS 551",
+            "PHYS 557",
+            "PHYS 558",
+            "PHYS 559",
+            "PHYS 562",
+            "PHYS 567"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "18 credits selected from the list below (students may substitute one or more courses with any 3-credit course approved by the Department of Physics)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

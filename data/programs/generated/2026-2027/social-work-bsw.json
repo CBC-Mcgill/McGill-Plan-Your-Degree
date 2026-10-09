@@ -1,0 +1,66 @@
+{
+  "id": "social-work-bsw",
+  "name": "Social Work (Three-Year Program)",
+  "degree": "B.S.W.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/social-work/social-work-bsw/",
+  "credits": 90,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 63,
+      "courses": [
+        "SWRK 219",
+        "SWRK 220",
+        "SWRK 221",
+        "SWRK 222",
+        "SWRK 224",
+        "SWRK 319",
+        "SWRK 320",
+        "SWRK 321",
+        "SWRK 322",
+        "SWRK 323",
+        "SWRK 326",
+        "SWRK 327",
+        "SWRK 344",
+        "SWRK 353",
+        "SWRK 420",
+        "SWRK 421",
+        "SWRK 422",
+        "SWRK 423",
+        "SWRK 428",
+        "SWRK 445",
+        "SWRK 527"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "9 credits of Social Work (SWRK) courses",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits of non-Social Work courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits of non-Social Work courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

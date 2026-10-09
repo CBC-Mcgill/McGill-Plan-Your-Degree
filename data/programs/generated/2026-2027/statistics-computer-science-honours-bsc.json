@@ -1,0 +1,139 @@
+{
+  "id": "statistics-computer-science-honours-bsc",
+  "name": "Statistics and Computer Science Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/statistics-computer-science-honours-bsc/",
+  "credits": 79,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 43,
+      "courses": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 250",
+        "COMP 252",
+        "COMP 273",
+        "COMP 302",
+        "COMP 330",
+        "COMP 362",
+        "MATH 248",
+        {
+          "oneOf": [
+            "MATH 251",
+            "MATH 247"
+          ]
+        },
+        "MATH 255",
+        "MATH 356",
+        "MATH 357",
+        "MATH 533"
+      ],
+      "note": "Students who have sufficient knowledge in a programming language are not required to take COMP 202."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "MATH 242",
+            "MATH 254"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "MATH 235",
+            "MATH 245"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "MATH 387",
+            "MATH 397"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "8-12 credits selected from",
+          "courses": [
+            "MATH 523",
+            "MATH 524",
+            "MATH 525",
+            "MATH 526",
+            "MATH 527",
+            "MATH 556",
+            "MATH 557",
+            "MATH 558",
+            "MATH 559"
+          ],
+          "minCredits": 8,
+          "maxCredits": 12
+        },
+        {
+          "title": "0-4 credits selected from",
+          "courses": [
+            "MATH 350",
+            "MATH 352",
+            "MATH 454",
+            "MATH 462",
+            "MATH 545",
+            "MATH 563",
+            "MATH 578",
+            "MATH 587",
+            "MATH 594"
+          ],
+          "maxCredits": 4
+        },
+        {
+          "title": "MATH 578 and COMP 540 cannot both be taken for program credit",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 578",
+            "COMP 540"
+          ]
+        },
+        {
+          "title": "6-15 credits selected from",
+          "courses": [
+            "COMP 424",
+            "COMP 462",
+            "COMP 540",
+            "COMP 547",
+            "COMP 551",
+            "COMP 552",
+            "COMP 564",
+            "COMP 567"
+          ],
+          "minCredits": 6,
+          "maxCredits": 15
+        },
+        {
+          "title": "MATH 578 and COMP 540 cannot both be taken for program credit",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 578",
+            "COMP 540"
+          ]
+        },
+        {
+          "title": "0-9 credits selected from Computer Science courses selected from COMP courses at the 300 level or above excluding COMP 396",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

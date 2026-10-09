@@ -1,0 +1,129 @@
+{
+  "id": "conducting-minor-bmus",
+  "name": "Conducting Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/conducting-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "complementary",
+      "credits": 4,
+      "rules": [
+        {
+          "title": "Required Course",
+          "courses": [
+            "MUIN 384"
+          ]
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "MUPG 580"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 14,
+      "rules": [
+        {
+          "title": "Orchestral Stream: 4 credits from the following",
+          "courses": [
+            "MUPG 315"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "Large Ensembles: 4 credits from the following",
+          "courses": [
+            "MUEN 573",
+            "MUEN 590",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "Large Ensembles: 6 credits from the following",
+          "courses": [
+            "MUCO 261",
+            "MUCO 360",
+            "MUHL 383",
+            "MUHL 384",
+            "MUHL 385",
+            "MUHL 387",
+            "MUHL 388",
+            "MUHL 391",
+            "MUHL 392"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Choral Stream: 4 credits from the following",
+          "courses": [
+            "MUPG 316"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "Large Ensembles: 4 credits from the following",
+          "courses": [
+            "MUEN 563",
+            "MUEN 572",
+            "MUEN 593"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "Large Ensembles: 6 credits from the following",
+          "courses": [
+            "MUCO 261",
+            "MUCT 235",
+            "MUHL 377",
+            "MUHL 380",
+            "MUHL 381",
+            "MUHL 382",
+            "MUHL 383",
+            "MUHL 384",
+            "MUHL 385",
+            "MUHL 387",
+            "MUHL 388",
+            "MUHL 390",
+            "MUHL 391",
+            "MUHL 392",
+            "MUHL 591",
+            "MUPG 209",
+            "MUPG 210",
+            "MUPG 211",
+            "MUPG 212",
+            "MUPG 213",
+            "MUTH 202",
+            "MUTH 204",
+            "MUTH 302",
+            "MUTH 304"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "14 credits from one of the two streams",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

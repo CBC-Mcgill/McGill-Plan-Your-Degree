@@ -1,0 +1,274 @@
+{
+  "id": "environment-major-ecological-determinants-health-cellular-bscagenvsc-bsc",
+  "name": "Environment Major - Ecological Determinants of Health - Cellular",
+  "degree": "B.Sc.(Ag.Env.Sc.) or B.Sc.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/environment-bscagenvsc-bsc/environment-major-ecological-determinants-health-cellular-bscagenvsc-bsc/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Core: Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400"
+      ]
+    },
+    {
+      "title": "Core: Complementary Course - Senior Research Project",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Core: Complementary Course - Senior Research Project",
+          "courses": [
+            "AEBI 427",
+            "ENVR 401",
+            "ENVR 451",
+            "FSCI 444"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Domain: Required Course",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "GEOG 403",
+        "PARA 410"
+      ]
+    },
+    {
+      "title": "Domain: Complementary Courses Fundamentals",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Health, Society, and Environment",
+          "courses": [
+            "GEOG 221",
+            "GEOG 303",
+            "GEOG 503",
+            "NRSC 221",
+            "PPHS 529",
+            "SOCI 234",
+            "SOCI 309",
+            "SOCI 331"
+          ]
+        },
+        {
+          "title": "Note: You may take GEOG 221 or NRSC 221, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "GEOG 221",
+            "NRSC 221"
+          ]
+        },
+        {
+          "title": "Cellular Biology",
+          "courses": [
+            "ANSC 234",
+            "BIOL 201",
+            "LSCI 202"
+          ]
+        },
+        {
+          "title": "Note: You will not receive credit for either LSCI 211 or LSCI 202 if you have already received credit for both BIOL 200 and BIOL 201; you will not receive credit for either BIOL 200 or BIOL 201 if you have already received credit for both LSCI 202 and LSCI 211",
+          "unparsed": true
+        },
+        {
+          "title": "Genetics",
+          "courses": [
+            "BIOL 202",
+            "LSCI 204"
+          ]
+        },
+        {
+          "title": "Molecular Biology",
+          "courses": [
+            "BIOL 200",
+            "LSCI 211"
+          ]
+        },
+        {
+          "title": "Note: You will not receive credit for either LSCI 211 or LSCI 202 if you have already received credit for both BIOL 200 and BIOL 201; you will not receive credit for either BIOL 200 or BIOL 201 if you have already received credit for both LSCI 202 and LSCI 211",
+          "unparsed": true
+        },
+        {
+          "title": "Statistics: One of the following Statistics courses or equivalent",
+          "courses": [
+            "AEMA 310",
+            "MATH 203"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Nutrition",
+          "courses": [
+            "ANSC 433",
+            "NUTR 207",
+            "NUTR 307"
+          ]
+        },
+        {
+          "title": "18 credits of Fundamentals, 3 credits from each category",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Domain: Complementary Courses Human Health",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Immunology and Pathogenicity",
+          "courses": [
+            "MICR 341",
+            "MIMM 214",
+            "MIMM 314",
+            "PARA 438",
+            "PATH 300"
+          ]
+        },
+        {
+          "title": "Infectious Disease",
+          "courses": [
+            "ANSC 400",
+            "MIMM 324",
+            "MIMM 413",
+            "PARA 424",
+            "PPHS 501"
+          ]
+        },
+        {
+          "title": "Note: You can take MIMM 413 or PARA 424, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MIMM 413",
+            "PARA 424"
+          ]
+        },
+        {
+          "title": "Toxicology",
+          "courses": [
+            "ANSC 312",
+            "ENVB 500",
+            "NUTR 512",
+            "PHAR 300",
+            "PHAR 303"
+          ]
+        },
+        {
+          "title": "Hormones",
+          "courses": [
+            "ANSC 424",
+            "PHGY 210",
+            "PSYC 342"
+          ]
+        },
+        {
+          "title": "Note: You will not receive credit for ANSC 424 if you have already received credit for both PHGY 209 and PHGY 210; you will not receive credit for PHGY 210 if you have already received credit for both ANSC 323 and ANSC 424",
+          "unparsed": true
+        },
+        {
+          "title": "Physiology",
+          "courses": [
+            "ANSC 323",
+            "PHGY 209"
+          ]
+        },
+        {
+          "title": "Note: You will not receive credit ANSC 323 if you have already received credit for both PHGY 209 and PHGY 210; you will not receive credit for PHGY 209 if you have already received credit for both ANSC 323 and ANSC 424",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits chosen from Human Health, maximum of 3 credits from any one category",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Domain: Complementary Courses Natural Environment",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Hydrology and Climate",
+          "courses": [
+            "ATOC 341",
+            "BREE 217",
+            "GEOG 321",
+            "GEOG 322"
+          ]
+        },
+        {
+          "title": "Note: You may take BREE 217 or GEOG 322, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BREE 217",
+            "GEOG 322"
+          ]
+        },
+        {
+          "title": "Techniques and Management",
+          "courses": [
+            "AEBI 423",
+            "ENVB 437",
+            "ENVR 422",
+            "GEOG 302",
+            "GEOG 340",
+            "NUTR 450"
+          ]
+        },
+        {
+          "title": "Pest Management",
+          "courses": [
+            "BIOL 350",
+            "ENTO 352"
+          ]
+        },
+        {
+          "title": "Pollution Control and Management",
+          "courses": [
+            "BREE 322",
+            "BREE 518",
+            "NRSC 333",
+            "NRSC 515"
+          ]
+        },
+        {
+          "title": "Ecology",
+          "courses": [
+            "AEBI 421",
+            "BIOL 343",
+            "BIOL 432",
+            "BIOL 451",
+            "BIOL 465",
+            "BIOL 540",
+            "BIOL 553",
+            "ENVB 410",
+            "ENVR 540",
+            "MICR 331",
+            "NRSC 451",
+            "PLNT 304",
+            "PLNT 460"
+          ]
+        },
+        {
+          "title": "6 credits chosen from the Natural Environment, maximum of 3 credits from any one category",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

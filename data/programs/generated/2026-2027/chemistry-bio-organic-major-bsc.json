@@ -1,0 +1,60 @@
+{
+  "id": "chemistry-bio-organic-major-bsc",
+  "name": "Chemistry - Bio-organic Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/chemistry/chemistry-bio-organic-major-bsc/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 57,
+      "courses": [
+        "BIOL 200",
+        "BIOL 201",
+        "CHEM 213",
+        "CHEM 242",
+        "CHEM 252",
+        "CHEM 267",
+        "CHEM 273",
+        "CHEM 281",
+        "CHEM 302",
+        "CHEM 345",
+        "CHEM 355",
+        "CHEM 367",
+        "CHEM 377",
+        "CHEM 381",
+        "CHEM 392",
+        "CHEM 493",
+        "CHEM 502",
+        "MATH 222",
+        "PHYS 242"
+      ],
+      "note": "Denotes courses with CEGEP equivalents. The courses are omitted from the program of students who have successfully completed them at the CEGEP level but the Chemistry courses must be replaced by courses in that discipline if students wish to be eligible for admission to the Ordre des chimistes du Québec. Students from outside Quebec or transfer students should consult the Academic Adviser. See http://www.mcgill.ca/chemistry/current-undergraduate-students/advising/. Students who have successfully completed MATH 150 and MATH 151 are not required to take MATH 222."
+    },
+    {
+      "title": "Complementary Course",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from",
+          "courses": [
+            "BIOL 202",
+            "BIOL 301",
+            "CHEM 365",
+            "MATH 315",
+            "MIMM 211",
+            "PHGY 209",
+            "PHGY 210"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

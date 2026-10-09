@@ -1,0 +1,55 @@
+{
+  "id": "physics-computer-science-major-bsc",
+  "name": "Physics and Computer Science Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/physics-computer-science-major-bsc/",
+  "credits": 66,
+  "groups": [
+    {
+      "title": "U1 Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "COMP 250",
+        "MATH 222",
+        "MATH 223",
+        "MATH 240",
+        "PHYS 230",
+        "PHYS 257",
+        "PHYS 258"
+      ]
+    },
+    {
+      "title": "U2 Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "COMP 206",
+        "COMP 251",
+        "COMP 302",
+        "COMP 350",
+        "MATH 314",
+        "MATH 315",
+        "PHYS 232",
+        "PHYS 241"
+      ]
+    },
+    {
+      "title": "U3 Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "COMP 360",
+        "MATH 323",
+        "PHYS 331",
+        "PHYS 339",
+        "PHYS 340",
+        "PHYS 346",
+        "PHYS 489"
+      ]
+    }
+  ],
+  "generated": true
+}

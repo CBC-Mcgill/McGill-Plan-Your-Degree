@@ -1,0 +1,44 @@
+{
+  "id": "geography-minor-concentration-ba",
+  "name": "Geography Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/geography/geography-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "GEOG 216"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "GEOG 201",
+            "GEOG 203",
+            "GEOG 210",
+            "GEOG 217",
+            "GEOG 221",
+            "GEOG 272"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "9 credits from Geography (GEOG) courses at the 300 level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

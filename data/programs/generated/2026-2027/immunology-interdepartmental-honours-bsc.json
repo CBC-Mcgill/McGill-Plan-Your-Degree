@@ -1,0 +1,184 @@
+{
+  "id": "immunology-interdepartmental-honours-bsc",
+  "name": "Immunology (Interdepartmental) Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/immunology/immunology-interdepartmental-honours-bsc/",
+  "credits": 75,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 48,
+      "courses": [
+        {
+          "oneOf": [
+            "BIOC 212",
+            "BIOL 201"
+          ]
+        },
+        "BIOL 200",
+        "CHEM 212",
+        "CHEM 222",
+        "MIMM 214",
+        {
+          "oneOf": [
+            "PHGY 209",
+            "MIMM 211"
+          ]
+        },
+        "ANAT 261",
+        "BIOC 311",
+        "BIOC 312",
+        "MIMM 314",
+        "PHGY 419",
+        "PHGY 513",
+        "PHGY 531"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "U1: 3 credits selected from",
+          "courses": [
+            "BIOL 373",
+            "MATH 203",
+            "PSYC 204"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "U1: 3 credits selected from the following",
+          "courses": [
+            "ANAT 214",
+            "ANAT 262",
+            "BIOL 202",
+            "BIOL 205",
+            "BIOL 304",
+            "CHEM 203",
+            "CHEM 204",
+            "COMP 204",
+            "COMP 250",
+            "MATH 204",
+            "MIMM 211",
+            "MIMM 212",
+            "PHGY 209",
+            "PHGY 210"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "If chosen, students take either CHEM 203 or CHEM 204",
+          "maxCourses": 1,
+          "courses": [
+            "CHEM 203",
+            "CHEM 204"
+          ]
+        },
+        {
+          "title": "If chosen, students take either PHGY 209 or MIMM 211",
+          "maxCourses": 1,
+          "courses": [
+            "PHGY 209",
+            "MIMM 211"
+          ]
+        },
+        {
+          "title": "U2: 6 credits selected from",
+          "courses": [
+            "BIOC 220",
+            "BIOC 320",
+            "BIOL 301",
+            "MIMM 384",
+            "MIMM 385",
+            "PHGY 212",
+            "PHGY 213"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "U2: 6 credits selected from",
+          "courses": [
+            "ANAT 365",
+            "BIOL 300",
+            "BIOL 309",
+            "BIOL 314",
+            "CHEM 302",
+            "MATH 222",
+            "MATH 315",
+            "MIMM 323",
+            "MIMM 324",
+            "PATH 300",
+            "PHAR 300",
+            "PHAR 301",
+            "PHAR 303",
+            "PHGY 311",
+            "PHGY 312",
+            "PHGY 313",
+            "PHGY 314"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "If chosen, students take either BIOL 309 or MATH 315, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 309",
+            "MATH 315"
+          ]
+        },
+        {
+          "title": "U3: 3 credits selected from",
+          "courses": [
+            "BIOC 503",
+            "MIMM 414",
+            "MIMM 509"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "U3: 6 credits selected from",
+          "courses": [
+            "ANAT 458",
+            "BIOC 404",
+            "BIOC 450",
+            "BIOC 454",
+            "BIOC 458",
+            "BIOC 503",
+            "BIOL 520",
+            "EXMD 504",
+            "MIMM 413",
+            "MIMM 414",
+            "MIMM 465",
+            "MIMM 466",
+            "MIMM 509",
+            "NEUR 502",
+            "PHAR 503",
+            "PHAR 504",
+            "PHGY 488"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "If chosen, students take either ANAT 458 or BIOC 458, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ANAT 458",
+            "BIOC 458"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

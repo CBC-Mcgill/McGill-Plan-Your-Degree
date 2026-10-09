@@ -1,0 +1,51 @@
+{
+  "id": "strategic-management-global-concentration-bcom",
+  "name": "Strategic Management - Global Strategy Concentration",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/concentrations/strategic-management-global-concentration-bcom/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "9-15 credits from",
+          "courses": [
+            "MGPO 383",
+            "MGPO 445",
+            "MGPO 460",
+            "MGPO 469",
+            "MGPO 470"
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
+        },
+        {
+          "title": "0-6 credits from",
+          "courses": [
+            "BUSA 300",
+            "BUSA 391",
+            "BUSA 432",
+            "BUSA 451",
+            "ECON 305",
+            "MGPO 362",
+            "MGPO 434",
+            "MGPO 435",
+            "MGPO 438",
+            "MGPO 440",
+            "MGPO 450",
+            "MGPO 475",
+            "MGPO 485",
+            "ORGB 380"
+          ],
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

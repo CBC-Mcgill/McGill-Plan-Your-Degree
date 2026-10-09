@@ -1,0 +1,34 @@
+{
+  "id": "earth-system-science-minor-bsc",
+  "name": "Earth System Science Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/earth-system-science/earth-system-science-minor-bsc/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "ESYS 200",
+        "ESYS 300",
+        "ESYS 301",
+        "ESYS 500"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits (3 credits from two of the three ESYS Departments",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

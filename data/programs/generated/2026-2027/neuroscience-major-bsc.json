@@ -1,0 +1,181 @@
+{
+  "id": "neuroscience-major-bsc",
+  "name": "Neuroscience Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/neuroscience/neuroscience-major-bsc/",
+  "credits": 65,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 23,
+      "courses": [
+        "BIOL 200",
+        "CHEM 222",
+        "NSCI 200",
+        "NSCI 201",
+        "NSCI 300",
+        "NSCI 400",
+        "PHGY 311",
+        "PSYC 311"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 42,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOC 212",
+            "BIOL 201"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "MATH 204",
+            "MATH 324",
+            "PSYC 305"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "COMP 202",
+            "COMP 204",
+            "COMP 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "MATH 222",
+            "MATH 315",
+            "MATH 323"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "ANAT 262",
+            "BIOL 202",
+            "BIOL 309",
+            "COMP 206",
+            "COMP 250",
+            "MATH 324",
+            "MATH 315",
+            "MATH 323"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 306",
+            "PHGY 314"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from",
+          "courses": [
+            "ANAT 321",
+            "BIOC 311",
+            "BIOC 312",
+            "BIOL 300",
+            "BIOL 309",
+            "BIOL 320",
+            "PSYC 302",
+            "PSYC 303",
+            "PSYC 315",
+            "PSYC 318",
+            "PSYC 342"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "3-6 credits from",
+          "courses": [
+            "BIOL 389",
+            "BIOL 301",
+            "NSCI 410"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "List A",
+          "courses": [
+            "BIOL 506",
+            "BIOL 530",
+            "BMDE 519",
+            "COMP 546",
+            "NEUR 503",
+            "NEUR 507",
+            "PHGY 425",
+            "PHGY 451",
+            "PHGY 520",
+            "PHGY 524",
+            "PHGY 556"
+          ]
+        },
+        {
+          "title": "List B",
+          "courses": [
+            "ANAT 458",
+            "BIOC 454",
+            "BIOC 458",
+            "BIOC 570",
+            "BIOL 532",
+            "BIOL 580",
+            "BIOL 588",
+            "EXMD 502",
+            "PSYC 410",
+            "PSYC 427",
+            "PSYC 433",
+            "PSYC 443",
+            "PSYC 444",
+            "PSYC 493",
+            "PSYC 502",
+            "PSYC 506",
+            "PSYC 513",
+            "PSYT 500",
+            "PSYT 522"
+          ]
+        },
+        {
+          "title": "Students who have successfully completed an equivalent to MATH 222 at CEGEP or elsewhere, must replace these credits with a 3-credit elective course to satisfy the total credit requirement for the Neuroscience Major",
+          "unparsed": true
+        },
+        {
+          "title": "12-15 credits of 400/500 level courses",
+          "unparsed": true
+        },
+        {
+          "title": "Note: if completing NSCI 410 then 9 credits from list A or B and 3 credits from the other list",
+          "unparsed": true
+        },
+        {
+          "title": "If completing BIOL 301 or BIOL 389, then a minimum of 12 credits from list A or B and 3 credits from the other list",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

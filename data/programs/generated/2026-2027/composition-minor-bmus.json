@@ -1,0 +1,48 @@
+{
+  "id": "composition-minor-bmus",
+  "name": "Composition Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/composition-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "MUCO 230",
+        "MUCO 260",
+        "MUCO 341"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits selected from: 9 credits selected from",
+          "courses": [
+            "MUHL 375",
+            "MUHL 385",
+            "MUHL 388",
+            "MUHL 391",
+            "MUHL 392",
+            "MUHL 393",
+            "MUHL 396",
+            "MUTH 322",
+            "MUTH 526",
+            "MUTH 528",
+            "MUTH 538",
+            "MUTH 539"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

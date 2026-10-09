@@ -1,0 +1,80 @@
+{
+  "id": "planetary-sciences-honours-bsc",
+  "name": "Planetary Sciences Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/earth-planetary-sciences/planetary-sciences-honours-bsc/",
+  "credits": 78,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 66,
+      "courses": [
+        "EPSC 210",
+        "EPSC 212",
+        "EPSC 220",
+        "EPSC 231",
+        "EPSC 233",
+        "EPSC 240",
+        "EPSC 303",
+        "EPSC 320",
+        "EPSC 340",
+        "EPSC 350",
+        "EPSC 423",
+        "EPSC 480",
+        "EPSC 510",
+        "EPSC 570",
+        "MATH 222",
+        "MATH 223",
+        "MATH 314",
+        "MATH 315",
+        "MATH 317",
+        "MATH 319",
+        "PHYS 340"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHYS 230",
+            "PHYS 251",
+            "EPSC 334",
+            "EPSC 425",
+            "EPSC 445",
+            "EPSC 501",
+            "EPSC 519",
+            "EPSC 520",
+            "EPSC 530",
+            "EPSC 547",
+            "EPSC 548",
+            "EPSC 549",
+            "EPSC 550",
+            "EPSC 551",
+            "EPSC 552",
+            "EPSC 561",
+            "EPSC 567",
+            "EPSC 590"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "plus 9 credits (three courses) chosen from the following",
+          "unparsed": true
+        },
+        {
+          "title": "Courses at the 300 level or higher in other departments in the Faculties of Science and Engineering may also be used as complementary credits, with the permission of the Director of undergraduate studies",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

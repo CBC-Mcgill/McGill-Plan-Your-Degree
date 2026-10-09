@@ -1,0 +1,109 @@
+{
+  "id": "performance-major-lmus",
+  "name": "Performance Major (All Instruments except Piano, Voice and Jazz)",
+  "degree": "L.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/performance-major-lmus/",
+  "credits": 93,
+  "groups": [
+    {
+      "title": "Required Performance",
+      "kind": "required",
+      "credits": 48,
+      "courses": [
+        "MUIN 250",
+        "MUIN 251",
+        "MUIN 252",
+        "MUIN 350",
+        "MUIN 351",
+        "MUIN 352",
+        "MUIN 450",
+        "MUIN 451",
+        "MUIN 452"
+      ]
+    },
+    {
+      "title": "Complementary Performance",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "12 credits from",
+          "courses": [
+            "MUEN 563",
+            "MUEN 565",
+            "MUEN 572",
+            "MUEN 573",
+            "MUEN 587",
+            "MUEN 590",
+            "MUEN 592",
+            "MUEN 593",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "6 credits from",
+          "courses": [
+            "MUEN 540",
+            "MUEN 541",
+            "MUEN 560",
+            "MUEN 562",
+            "MUEN 580",
+            "MUEN 585",
+            "MUEN 589",
+            "MUEN 591",
+            "MUEN 598"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 25,
+      "courses": [
+        "MUTH 150",
+        "MUTH 151",
+        "MUTH 250",
+        "MUSP 140",
+        "MUSP 141",
+        "MUSP 170",
+        "MUSP 171",
+        "MUSP 240",
+        "MUSP 241",
+        "MUSP 363",
+        "MUHL 186",
+        "MUHL 286"
+      ]
+    },
+    {
+      "title": "Complementary Musicianship",
+      "kind": "complementary",
+      "credits": 2,
+      "rules": [
+        {
+          "title": "2 credits from",
+          "courses": [
+            "MUSP 324",
+            "MUSP 346",
+            "MUSP 354",
+            "MUSP 355",
+            "MUSP 361",
+            "MUSP 363",
+            "MUSP 381"
+          ],
+          "minCredits": 2,
+          "maxCredits": 2
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

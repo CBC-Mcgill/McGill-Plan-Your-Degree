@@ -1,0 +1,85 @@
+{
+  "id": "geography-major-concentration-ba",
+  "name": "Geography Major Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts and Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/geography/geography-major-concentration-ba/",
+  "credits": 37,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 7,
+      "courses": [
+        "GEOG 201",
+        "GEOG 216",
+        "GEOG 290"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Physical Geography: 3 credits from",
+          "courses": [
+            "GEOG 203",
+            "GEOG 272"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Statistics: 3 credits from",
+          "courses": [
+            "BIOL 373",
+            "GEOG 202",
+            "MATH 203",
+            "PSYC 204",
+            "SOCI 350"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Field Courses: 3 credits from",
+          "courses": [
+            "GEOG 398",
+            "GEOG 425",
+            "GEOG 475",
+            "GEOG 494",
+            "GEOG 495",
+            "GEOG 496"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Analysis and Methodology: 3 credits from",
+          "courses": [
+            "GEOG 308",
+            "GEOG 314",
+            "GEOG 333",
+            "GEOG 351",
+            "GEOG 414",
+            "GEOG 506",
+            "GEOG 512"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "The remaining 18 credits are to be selected from Geography (GEOG) courses excluding GEOG 200 and GEOG 205",
+          "unparsed": true
+        },
+        {
+          "title": "Of these 18 credits, at least 3 credits must be at the 400 level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

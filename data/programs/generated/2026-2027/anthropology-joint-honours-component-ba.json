@@ -1,0 +1,53 @@
+{
+  "id": "anthropology-joint-honours-component-ba",
+  "name": "Anthropology Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/anthropology/anthropology-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "ANTH 491"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Core (350 Level)",
+          "courses": [
+            "ANTH 352",
+            "ANTH 355",
+            "ANTH 357",
+            "ANTH 358",
+            "ANTH 359"
+          ]
+        },
+        {
+          "title": "A maximum of 12 credits of Anthropology (ANTH) courses at the 200 level",
+          "unparsed": true
+        },
+        {
+          "title": "A minimum of 6 credits of Anthropology (ANTH) courses at the 300 level (only one 3-credit Special Topic course at the 300 level is permitted)",
+          "unparsed": true
+        },
+        {
+          "title": "A minimum of 9 credits of core courses at the 350 level selected from",
+          "unparsed": true
+        },
+        {
+          "title": "A minimum of 6 credits of Anthropology (ANTH) courses at the 400 or 500 level (maximum of one 3-credit Special Topic course at the 400 level)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

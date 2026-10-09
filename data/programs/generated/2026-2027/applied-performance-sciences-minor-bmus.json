@@ -1,0 +1,65 @@
+{
+  "id": "applied-performance-sciences-minor-bmus",
+  "name": "Applied Performance Sciences Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/applied-performance-sciences-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "MUGT 205",
+        "MUGT 350",
+        "MUGT 405",
+        "MUPG 300"
+      ]
+    },
+    {
+      "title": "Complementary Courses Special Projects",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "MUGT 475",
+            "MUPD 475",
+            "MUPG 475"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Interdisciplinary courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "EDKP 250",
+            "EDKP 292",
+            "EDKP 293",
+            "MUPG 296",
+            "MUPG 297",
+            "MUPG 563",
+            "MUPG 564",
+            "MUPG 565",
+            "PSYC 100",
+            "PSYC 204",
+            "PSYC 311"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

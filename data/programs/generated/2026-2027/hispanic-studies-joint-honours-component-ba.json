@@ -1,0 +1,52 @@
+{
+  "id": "hispanic-studies-joint-honours-component-ba",
+  "name": "Hispanic Studies Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/languages-literatures-cultures/hispanic-studies-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "HISP 490"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Introductory Courses",
+          "courses": [
+            "HISP 245",
+            "HISP 246",
+            "HISP 247",
+            "HISP 248"
+          ]
+        },
+        {
+          "title": "6-12 credits in Introductory courses from",
+          "unparsed": true
+        },
+        {
+          "title": "18-24 credits taken form undergraduate courses in Hispanic Studies at the 300 level or higher, of which 9 credits should be at the 400 level or higher {excluding HISP 490D1 and HISP 490D2}",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 12 credits in courses taught in English shall count towards this program",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 12 credits in courses taught in English shall count towards the major",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

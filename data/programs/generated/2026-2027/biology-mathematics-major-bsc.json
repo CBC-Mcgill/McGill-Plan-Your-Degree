@@ -1,0 +1,214 @@
+{
+  "id": "biology-mathematics-major-bsc",
+  "name": "Biology and Mathematics Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biology/biology-mathematics-major-bsc/",
+  "credits": 76,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 37,
+      "courses": [
+        "BIOL 219",
+        "BIOL 301",
+        "BIOL 395",
+        "CHEM 212",
+        "COMP 202",
+        "COMP 204",
+        "MATH 222",
+        {
+          "oneOf": [
+            "MATH 223",
+            "MATH 247"
+          ]
+        },
+        "MATH 315",
+        "MATH 323",
+        "BIOL 215",
+        "MATH 242",
+        "MATH 243"
+      ],
+      "note": "If a student has already taken CHEM 212 or its equivalent, or MATH 222 or its equivalent, the credits can be made up with elective credits. Students may take either COMP 202 or COMP 204 Students who have sufficient knowledge in a programming language should take COMP 250 rather than COMP 202."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 39,
+      "rules": [
+        {
+          "title": "Math or Biology Research Course",
+          "courses": [
+            "BIOL 466",
+            "BIOL 467",
+            "BIOL 468",
+            "MATH 410"
+          ]
+        },
+        {
+          "title": "Stream 1: Applied Mathematics: 9-12 credits from the following courses",
+          "courses": [
+            "MATH 314",
+            "MATH 317",
+            "MATH 319",
+            "MATH 326"
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
+        },
+        {
+          "title": "Stream 2: Statistics: 9-12 credits from the following",
+          "courses": [
+            "MATH 208",
+            "MATH 324",
+            "MATH 423",
+            "MATH 447"
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
+        },
+        {
+          "title": "Remaining Math Courses",
+          "courses": [
+            "COMP 551",
+            "MATH 204",
+            "MATH 308",
+            "MATH 340",
+            "MATH 437",
+            "MATH 463",
+            "MATH 478",
+            "MATH 523",
+            "MATH 524",
+            "MATH 525",
+            "MATH 558",
+            "MATH 559"
+          ]
+        },
+        {
+          "title": "Ecology and Evolutionary Biology Stream: 3 credits from",
+          "courses": [
+            "BIOL 206",
+            "BIOL 240",
+            "BIOL 331",
+            "BIOL 334",
+            "BIOL 432",
+            "BIOL 573"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Ecology and Evolutionary Biology Stream: 9-15 credits from",
+          "courses": [
+            "BIOL 202",
+            "BIOL 205",
+            "BIOL 302",
+            "BIOL 304",
+            "BIOL 305",
+            "BIOL 308",
+            "BIOL 310",
+            "BIOL 324",
+            "BIOL 569",
+            "BIOL 594"
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
+        },
+        {
+          "title": "If chosen, students may take either BIOL 202 or BIOL 302",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 202",
+            "BIOL 302"
+          ]
+        },
+        {
+          "title": "Molecular Evolution Stream: 3 credits from",
+          "courses": [
+            "BIOL 202",
+            "BIOL 302"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Molecular Evolution Stream: 12-18 credits selected from the following list",
+          "courses": [
+            "BIOL 303",
+            "BIOL 304",
+            "BIOL 313",
+            "BIOL 518",
+            "BIOL 569",
+            "BIOL 592"
+          ],
+          "minCredits": 12,
+          "maxCredits": 18
+        },
+        {
+          "title": "Neurosciences Stream: 6 credits from",
+          "courses": [
+            "BIOL 216",
+            "BIOL 306"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Neurosciences Stream: 9-15 credits selected from",
+          "courses": [
+            "BIOL 320",
+            "BIOL 389",
+            "BIOL 530",
+            "BIOL 580",
+            "NEUR 310",
+            "NEUR 507",
+            "PHGY 314",
+            "PHGY 425",
+            "PSYC 427"
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
+        },
+        {
+          "title": "For the 39 credits, students complete 21 credits of BIOL, NEUR, PHGY, PSYC courses including one of three streams (Ecology and Evolutionary Ecology, Molecular Evolution, Neurosciences) and 18 credits of MATH courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students selecting a BIOL course count this toward their 21 credits of BIOL, NEUR, PHGY, PSYC courses while students selecting a MATH course count this toward their 18 credits of MATH courses",
+          "unparsed": true
+        },
+        {
+          "title": "3-6 credits from the following Math or Biology research courses",
+          "unparsed": true
+        },
+        {
+          "title": "Of the remaining complementary courses, at least 6 credits must be at the 400 level or above",
+          "unparsed": true
+        },
+        {
+          "title": "15 credits (if MATH 410 was selected as a research course) or 18 credits of MATH courses chosen from Stream 1 or 2 and from \"Remaining Math Courses\" as follows",
+          "unparsed": true
+        },
+        {
+          "title": "Remaining 3-9 credits of MATH courses may be chosen from any of the two preceding sequences and/or from the following list",
+          "unparsed": true
+        },
+        {
+          "title": "18 credits (if 3 credit BIOL course was selected as a research course) or 15 credits (if 6 credit BIOL research course was selected) of BIOL, NEUR, PHGY, PHYS, PSYC courses including one of three streams",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from the following field courses or any other field course with permission",
+          "unparsed": true
+        },
+        {
+          "title": "For the remaining BIOL, NEUR, PHGY, PSYC complementary course credits, if any, students top up their credits to the necessary 18-21 credits with any course listed in the above three streams",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

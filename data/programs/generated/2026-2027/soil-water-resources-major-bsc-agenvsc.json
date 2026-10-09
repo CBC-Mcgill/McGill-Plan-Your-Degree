@@ -1,0 +1,51 @@
+{
+  "id": "soil-water-resources-major-bsc-agenvsc",
+  "name": "Soil and Water Resources Specialization",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/plant-science/soil-water-resources-major-bsc-agenvsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "AGRI 435",
+        "BREE 217",
+        "SOIL 326",
+        "SOIL 331",
+        "SOIL 535"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BREE 322",
+            "BREE 327",
+            "BREE 510",
+            "BREE 529",
+            "ENVB 529",
+            "NRSC 333",
+            "SOIL 300"
+          ]
+        },
+        {
+          "title": "Note: Students may take BREE 529 or ENVB 529, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BREE 529",
+            "ENVB 529"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

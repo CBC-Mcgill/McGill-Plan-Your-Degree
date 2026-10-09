@@ -1,0 +1,83 @@
+{
+  "id": "physiology-physics-major-bsc",
+  "name": "Physiology and Physics Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physiology/physiology-physics-major-bsc/",
+  "credits": 82,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 76,
+      "courses": [
+        "BIOL 219",
+        "BIOL 395",
+        "MATH 222",
+        {
+          "oneOf": [
+            "MATH 223",
+            "MATH 247"
+          ]
+        },
+        {
+          "oneOf": [
+            "MATH 315",
+            "MATH 325"
+          ]
+        },
+        "PHYS 329",
+        "BMDE 519",
+        {
+          "oneOf": [
+            "MATH 248",
+            "MATH 314"
+          ]
+        },
+        "MATH 326",
+        "MATH 437",
+        "PHGY 209",
+        "PHGY 210",
+        "PHGY 212",
+        "PHGY 213",
+        "PHGY 312",
+        "PHGY 313",
+        "PHGY 461",
+        "PHYS 230",
+        "PHYS 232",
+        "PHYS 241",
+        "PHYS 257",
+        "PHYS 258",
+        "PHYS 339",
+        "PHYS 340",
+        "PHYS 346"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "PHGY 311",
+            "PHGY 314"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "PHYS 519"
+          ]
+        },
+        {
+          "title": "3 credits, one of",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,32 @@
+{
+  "id": "music-pedagogy-minor-bmus",
+  "name": "Music Pedagogy Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/music-pedagogy-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "MUGT 302",
+        "MUGT 401"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits selected from any undergraduate-level courses with a prefix of MUCT, MUGT, MUIT, of which 6 credits must be at the 300-level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

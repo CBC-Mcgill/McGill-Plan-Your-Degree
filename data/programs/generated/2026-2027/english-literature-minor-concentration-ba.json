@@ -1,0 +1,103 @@
+{
+  "id": "english-literature-minor-concentration-ba",
+  "name": "English - Literature Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/english/english-literature-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "ENGL 202",
+        "ENGL 203"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Major Author",
+          "courses": [
+            "ENGL 315",
+            "ENGL 316",
+            "ENGL 357",
+            "ENGL 409",
+            "ENGL 416",
+            "ENGL 417",
+            "ENGL 418"
+          ]
+        },
+        {
+          "title": "Pre-1800",
+          "courses": [
+            "ENGL 301",
+            "ENGL 302",
+            "ENGL 304",
+            "ENGL 305",
+            "ENGL 307",
+            "ENGL 308",
+            "ENGL 315",
+            "ENGL 316",
+            "ENGL 342",
+            "ENGL 347",
+            "ENGL 348",
+            "ENGL 349",
+            "ENGL 356",
+            "ENGL 357",
+            "ENGL 400",
+            "ENGL 401",
+            "ENGL 403",
+            "ENGL 416",
+            "ENGL 444",
+            "ENGL 452",
+            "ENGL 456"
+          ]
+        },
+        {
+          "title": "Additional Literature",
+          "courses": [
+            "ENGL 199",
+            "ENGL 204",
+            "ENGL 237",
+            "ENGL 295",
+            "ENGL 297",
+            "ENGL 343",
+            "ENGL 345",
+            "ENGL 354",
+            "ENGL 364",
+            "ENGL 385",
+            "ENGL 394",
+            "ENGL 421",
+            "ENGL 424",
+            "ENGL 437",
+            "ENGL 438",
+            "ENGL 440",
+            "ENGL 444",
+            "ENGL 447",
+            "ENGL 460",
+            "ENGL 461"
+          ]
+        },
+        {
+          "title": "3 credits on a Major Author",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from a list of pre-1800 literature courses",
+          "unparsed": true
+        },
+        {
+          "title": "6 additional credits from ENGL offerings in Literature which includes all the courses specifically listed in the Literature categories for the Major Concentration in English - Literature program and the courses listed below",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

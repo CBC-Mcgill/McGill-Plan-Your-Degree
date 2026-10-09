@@ -1,0 +1,87 @@
+{
+  "id": "mathematics-major-bsc",
+  "name": "Mathematics Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/mathematics-major-bsc/",
+  "credits": 54,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "MATH 222",
+        "MATH 235",
+        "MATH 236",
+        "MATH 242",
+        "MATH 243",
+        {
+          "oneOf": [
+            "MATH 249",
+            "MATH 316"
+          ]
+        },
+        "MATH 314",
+        "MATH 315",
+        "MATH 323"
+      ],
+      "note": "Students who have successfully completed a course equivalent to MATH 222 with a grade of C or better may omit MATH 222, but must replace it with 3 credits of complementary courses."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "6-12 credits selected from the following",
+          "courses": [
+            "MATH 317",
+            "MATH 324",
+            "MATH 335",
+            "MATH 340",
+            "MATH 204",
+            "MATH 208",
+            "MATH 308",
+            "MATH 318",
+            "MATH 319",
+            "MATH 326",
+            "MATH 327",
+            "MATH 329",
+            "MATH 338",
+            "MATH 346",
+            "MATH 348",
+            "MATH 352",
+            "MATH 378",
+            "MATH 410",
+            "MATH 417",
+            "MATH 423",
+            "MATH 427",
+            "MATH 430",
+            "MATH 447",
+            "MATH 451",
+            "MATH 462",
+            "MATH 463",
+            "MATH 478",
+            "MATH 510",
+            "MATH 523",
+            "MATH 525",
+            "MATH 545"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        },
+        {
+          "title": "15-21 credits selected from the following: at least 6 credits must be at the 400 or 500 level",
+          "unparsed": true
+        },
+        {
+          "title": "If necessary, 6 additional credits in Mathematics or related disciplines selected in consultation with the Adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

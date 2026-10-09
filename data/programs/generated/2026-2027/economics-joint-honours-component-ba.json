@@ -1,0 +1,43 @@
+{
+  "id": "economics-joint-honours-component-ba",
+  "name": "Economics Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/economics/economics-joint-honours-component-ba/",
+  "credits": 30,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "ECON 250",
+        "ECON 257",
+        "ECON 353",
+        "ECON 354",
+        "ECON 450",
+        "ECON 452",
+        "ECON 468"
+      ]
+    },
+    {
+      "title": "Complementary Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "ECON 460",
+            "ECON 461",
+            "ECON 469"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "hispanic-studies-honours-ba",
+  "name": "Hispanic Studies Honours",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/languages-literatures-cultures/hispanic-studies-honours-ba/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "HISP 245",
+        "HISP 246",
+        "HISP 247",
+        "HISP 248",
+        "HISP 490"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 42,
+      "rules": [
+        {
+          "title": "At least 9 credits of undergraduate courses at the 400-level or above",
+          "unparsed": true
+        },
+        {
+          "title": "All remaining credits may be selected from courses given in Spanish in the Department at or above the intermediate Spanish language level (HISP 219 OR HISP 220D1/HISP 220D2)",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 18 credits in courses taught in English will count towards the Honours program",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

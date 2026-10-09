@@ -1,0 +1,89 @@
+{
+  "id": "biology-major-bsc",
+  "name": "Biology Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biology/biology-major-bsc/",
+  "credits": 59,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 31,
+      "courses": [
+        "BIOL 200",
+        "BIOL 201",
+        "BIOL 205",
+        "BIOL 206",
+        "BIOL 215",
+        "BIOL 216",
+        "BIOL 301",
+        "BIOL 302",
+        "BIOL 311",
+        "COMP 204"
+      ]
+    },
+    {
+      "title": "Core",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Core",
+          "courses": [
+            "CHEM 204",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "If a student has already taken CHEM 212 or its equivalent, the credits can be made up with CHEM 204, or CHEM 222, or a 3- or 4-credit Biology complementary course to be approved by the Biology Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "Block A-Ecology and Evolution",
+          "courses": [
+            "BIOL 304",
+            "BIOL 305",
+            "BIOL 308"
+          ]
+        },
+        {
+          "title": "Block B-Molecular and Cellular",
+          "courses": [
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 313"
+          ]
+        },
+        {
+          "title": "Block C-Neuro/Behaviour",
+          "courses": [
+            "BIOL 306",
+            "BIOL 307"
+          ]
+        },
+        {
+          "title": "3 or 4 credits selected from CHEM block",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits (3 credits from each of Blocks A, B and C)",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits other Biology courses at the 300-500 levels, of which 6 credits must be at the 400-500 levels; may include up to 6 credits of research, and may include up to 6 credits of other non-BIOL science courses subject to Adviser approval",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

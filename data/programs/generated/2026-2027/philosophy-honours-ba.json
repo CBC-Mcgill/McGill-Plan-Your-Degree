@@ -1,0 +1,105 @@
+{
+  "id": "philosophy-honours-ba",
+  "name": "Philosophy Honours",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/philosophy/philosophy-honours-ba/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "PHIL 210",
+        "PHIL 301",
+        "PHIL 334",
+        "PHIL 499"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 45,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHIL 306",
+            "PHIL 310",
+            "PHIL 411",
+            "PHIL 415",
+            "PHIL 419",
+            "PHIL 421",
+            "PHIL 470"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHIL 230",
+            "PHIL 237",
+            "PHIL 240",
+            "PHIL 242"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from",
+          "courses": [
+            "PHIL 345",
+            "PHIL 350",
+            "PHIL 353",
+            "PHIL 354",
+            "PHIL 355",
+            "PHIL 452",
+            "PHIL 453",
+            "PHIL 454"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "6 credits from",
+          "courses": [
+            "PHIL 360",
+            "PHIL 361",
+            "PHIL 366",
+            "PHIL 367",
+            "PHIL 444",
+            "PHIL 445"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHIL 375",
+            "PHIL 474",
+            "PHIL 475"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "45 credits distributed as follows",
+          "unparsed": true
+        },
+        {
+          "title": "24 additional credits in Philosophy (PHIL) with 12 credits at the 400 and 500 levels (not including the Honours tutorial PHIL 499) at least 3 credits of which must be at the 500 level",
+          "unparsed": true
+        },
+        {
+          "title": "A maximum of 15 credits from 200-level courses may be used toward the Honours program",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

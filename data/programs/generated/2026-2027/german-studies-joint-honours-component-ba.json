@@ -1,0 +1,97 @@
+{
+  "id": "german-studies-joint-honours-component-ba",
+  "name": "German Studies Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/languages-literatures-cultures/german-studies-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "GERM 570"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Language Courses",
+          "courses": [
+            "GERM 200",
+            "GERM 202",
+            "GERM 300",
+            "GERM 307",
+            "GERM 325"
+          ]
+        },
+        {
+          "title": "Literature and Culture Courses",
+          "courses": [
+            "GERM 255",
+            "GERM 259",
+            "GERM 260",
+            "GERM 331",
+            "GERM 332",
+            "GERM 336",
+            "GERM 337",
+            "GERM 340",
+            "GERM 344",
+            "GERM 348",
+            "GERM 350",
+            "GERM 351",
+            "GERM 355",
+            "GERM 357",
+            "GERM 358",
+            "GERM 362",
+            "GERM 364",
+            "GERM 365",
+            "GERM 366",
+            "GERM 368",
+            "GERM 369",
+            "GERM 371",
+            "GERM 372",
+            "GERM 375",
+            "GERM 379",
+            "GERM 381",
+            "GERM 385",
+            "GERM 388",
+            "GERM 390",
+            "GERM 397",
+            "GERM 580"
+          ]
+        },
+        {
+          "title": "NOTE: Students can take either GERM 331 or GERM 336 but not both",
+          "maxCourses": 1,
+          "courses": [
+            "GERM 331",
+            "GERM 336"
+          ]
+        },
+        {
+          "title": "33 credits of complementary courses selected with the following specifications",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits must be in pre-20th Century literature and culture",
+          "unparsed": true
+        },
+        {
+          "title": "Students of the German language stream can take a maximum of 9 credits of LLCU courses or German Studies courses taught in English, only with prior approval",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits at the 400 level (only applies to German language stream)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

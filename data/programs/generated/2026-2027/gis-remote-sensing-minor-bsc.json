@@ -1,0 +1,64 @@
+{
+  "id": "gis-remote-sensing-minor-bsc",
+  "name": "GIS and Remote Sensing Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/geography/gis-remote-sensing-minor-bsc/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "GEOG 201",
+        "GEOG 314"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "COMP 202",
+            "GEOG 333"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "ATOC 309",
+            "GEOG 308",
+            "GEOG 414"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "ATOC 309",
+            "COMP 250",
+            "ESYS 300",
+            "GEOG 202",
+            "GEOG 308",
+            "GEOG 384",
+            "GEOG 414",
+            "GEOG 428",
+            "GEOG 506",
+            "GEOG 535"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

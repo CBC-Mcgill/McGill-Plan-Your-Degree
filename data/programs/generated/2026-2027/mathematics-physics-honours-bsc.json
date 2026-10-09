@@ -1,0 +1,123 @@
+{
+  "id": "mathematics-physics-honours-bsc",
+  "name": "Mathematics and Physics Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/mathematics-physics-honours-bsc/",
+  "credits": 81,
+  "groups": [
+    {
+      "title": "U1 Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "MATH 235",
+        "MATH 248",
+        "MATH 249",
+        "MATH 325",
+        "PHYS 241",
+        "PHYS 251",
+        "PHYS 257",
+        "PHYS 258",
+        "PHYS 260"
+      ]
+    },
+    {
+      "title": "U2 Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "MATH 255",
+        "MATH 475",
+        "PHYS 253",
+        "PHYS 350",
+        "PHYS 351",
+        "PHYS 357",
+        "PHYS 362",
+        "PHYS 457"
+      ]
+    },
+    {
+      "title": "U3 Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "MATH 454",
+        "MATH 458",
+        "PHYS 352",
+        "PHYS 359"
+      ]
+    },
+    {
+      "title": "U1 Complementary Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "U1 Complementary Course",
+          "courses": [
+            "MATH 247",
+            "MATH 251"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "U2 Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "U2 Complementary Courses",
+          "courses": [
+            "MATH 242",
+            "MATH 254"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "U3 Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "MATH 455",
+            "MATH 456"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "PHYS 404",
+            "PHYS 432",
+            "PHYS 459",
+            "PHYS 479",
+            "PHYS 512",
+            "PHYS 514",
+            "PHYS 519",
+            "PHYS 521",
+            "PHYS 551",
+            "PHYS 557",
+            "PHYS 558",
+            "PHYS 559",
+            "PHYS 562",
+            "PHYS 567"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "3 credits in Honours Mathematics",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

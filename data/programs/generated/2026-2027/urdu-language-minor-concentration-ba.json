@@ -1,0 +1,31 @@
+{
+  "id": "urdu-language-minor-concentration-ba",
+  "name": "Urdu Language Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/islamic-studies/urdu-language-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits of Urdu language (3 levels) from the list below",
+          "courses": [
+            "ISLA 251",
+            "ISLA 352",
+            "ISLA 553",
+            "ISLA 554",
+            "ISLA 555"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "chemistry-honours-bsc",
+  "name": "Chemistry Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/chemistry/chemistry-honours-bsc/",
+  "credits": 71,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 53,
+      "courses": [
+        "CHEM 213",
+        "CHEM 242",
+        "CHEM 252",
+        "CHEM 267",
+        "CHEM 273",
+        "CHEM 281",
+        "CHEM 302",
+        "CHEM 332",
+        "CHEM 345",
+        "CHEM 355",
+        "CHEM 365",
+        "CHEM 367",
+        "CHEM 377",
+        "CHEM 381",
+        "CHEM 392",
+        "CHEM 493",
+        "MATH 222",
+        "PHYS 242"
+      ],
+      "note": "Denotes courses with CEGEP equivalents. The courses are omitted from the program of students who have successfully completed them at the CEGEP level but the Chemistry courses must be replaced by courses in that discipline if students wish to be eligible for admission to the Ordre des chimistes du Québec. Students from outside Quebec or transfer students should consult the Academic Adviser. See http://www.mcgill.ca/chemistry/current-undergraduate-students/advising/. Students who have successfully completed MATH 150 and MATH 151 are not required to take MATH 222."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "CHEM 470",
+            "CHEM 480"
+          ]
+        },
+        {
+          "title": "Students may take up to 12 Research Project credits but only 6 of these may be used to fulfil the program requirement",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of research",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Chemistry courses at the 300 level or higher, or MATH 315 plus 3 credits of Chemistry courses at the 300 level or higher, and",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Chemistry courses at the 400 level or higher",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

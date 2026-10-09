@@ -1,0 +1,93 @@
+{
+  "id": "environment-joint-honours-component-ba",
+  "name": "Environment Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/joint-honours-component/environment-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400",
+        "ENVR 401"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Statistics",
+          "courses": [
+            "GEOG 202",
+            "MATH 203",
+            "PSYC 204"
+          ]
+        },
+        {
+          "title": "Honours Research: 0-6 credits from the following",
+          "courses": [
+            "ENVR 494",
+            "ENVR 495"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "3 credits of statistics from the following (or equivalent)",
+          "unparsed": true
+        },
+        {
+          "title": "Students must complete 6 credits of Honours research between their two Joint Honours components",
+          "unparsed": true
+        },
+        {
+          "title": "If the second Joint Honours component requires 0 credits of Honours research, the student must take 6 credits of ENVR Honours research",
+          "unparsed": true
+        },
+        {
+          "title": "If the second Joint Honours component requires 3 credits of Honours research, the student must take 3 credits of ENVR Honours research",
+          "unparsed": true
+        },
+        {
+          "title": "If the second Joint Honours component requires 6 credits of Honours research, the student is not required to take any credits of ENVR Honours research",
+          "unparsed": true
+        },
+        {
+          "title": "Students must complete 6 credits of Honours research between their two Joint Honours components",
+          "unparsed": true
+        },
+        {
+          "title": "If the second Joint Honours component requires 0 credits of Honours research, the student must take 6 credits of ENVR Honours research",
+          "unparsed": true
+        },
+        {
+          "title": "If the second Joint Honours component requires 3 credits of Honours research, the student must take 3 credits of ENVR Honours research",
+          "unparsed": true
+        },
+        {
+          "title": "If the second Joint Honours component requires 6 credits of Honours research, the student is not required to take any credits of ENVR Honours research",
+          "unparsed": true
+        },
+        {
+          "title": "6-12 credits selected in consultation with the Program Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "A maximum of 3 credits may be at the 200 or 300 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

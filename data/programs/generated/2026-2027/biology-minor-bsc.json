@@ -1,0 +1,49 @@
+{
+  "id": "biology-minor-bsc",
+  "name": "Biology Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biology/biology-minor-bsc/",
+  "credits": 25,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "BIOL 200",
+        "BIOL 201",
+        "BIOL 202",
+        "BIOL 205",
+        "BIOL 215"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 10,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "Students who have already taken CHEM 212 or its equivalent will choose another appropriate course, to be approved by the Biology Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "Students complete a minimum of 9 or a maximum of 10 complementary course credits depending on their choice of complementary courses",
+          "unparsed": true
+        },
+        {
+          "title": "Plus an additional two courses from the Biology department's course offerings, at the 300 level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

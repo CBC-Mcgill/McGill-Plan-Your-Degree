@@ -1,0 +1,50 @@
+{
+  "id": "statistics-minor-concentration-ba",
+  "name": "Statistics Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/mathematics-statistics/statistics-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "MATH 222",
+        "MATH 223",
+        "MATH 323",
+        "MATH 324",
+        "MATH 423"
+      ],
+      "note": "Note: If the Minor Concentration Statistics is combined with the Major Concentration Mathematics, the required courses MATH 222, MATH 223 and MATH 323 must be replaced by courses selected from the Complementary Courses. Credit cannot be received for both MATH 223 and MATH 236 (listed as a required course in the Major Concentration Mathematics)."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "MATH 204",
+            "MATH 208",
+            "MATH 308",
+            "MATH 317",
+            "MATH 427",
+            "MATH 447",
+            "MATH 523",
+            "MATH 524",
+            "MATH 525",
+            "MATH 558",
+            "MATH 559"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

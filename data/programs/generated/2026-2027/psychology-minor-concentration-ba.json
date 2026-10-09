@@ -1,0 +1,42 @@
+{
+  "id": "psychology-minor-concentration-ba",
+  "name": "Psychology Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/psychology/psychology-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "PSYC 204",
+            "PSYC 211",
+            "PSYC 212",
+            "PSYC 213",
+            "PSYC 215"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "12 credits in Psychology at the 300 level or above",
+          "match": {
+            "subjects": [
+              "PSYC"
+            ],
+            "minLevel": 300
+          },
+          "minCredits": 12,
+          "maxCredits": 12
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,297 @@
+{
+  "id": "atmospheric-science-honours-bsc",
+  "name": "Atmospheric Science Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/atmospheric-oceanic-sciences/atmospheric-science-honours-bsc/",
+  "credits": 75,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "ATOC 214",
+        "ATOC 312",
+        "ATOC 315",
+        "ATOC 480",
+        "COMP 208",
+        "MATH 222",
+        "MATH 223",
+        "MATH 314",
+        "MATH 315"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 45,
+      "rules": [
+        {
+          "title": "Core (24-25 credits): 3-6 credits selected from",
+          "courses": [
+            "ATOC 215",
+            "ATOC 219",
+            "CHEM 219"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "If chosen, students may take either ATOC 219 or CHEM 219",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 219",
+            "CHEM 219"
+          ]
+        },
+        {
+          "title": "Core (24-25 credits): 3 credits selected from",
+          "courses": [
+            "ATOC 357",
+            "PHYS 257"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Core (24-25 credits): 3 credits selected from",
+          "courses": [
+            "PHYS 230",
+            "PHYS 251"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Core (24-25 credits): 3 credits selected from",
+          "courses": [
+            "PHYS 232",
+            "PHYS 253"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Core (24-25 credits): 3 credits selected from",
+          "courses": [
+            "CHEM 213",
+            "MATH 319"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Core (24-25 credits): 6-10 credits selected from",
+          "courses": [
+            "CHEM 273",
+            "CHEM 367",
+            "CHEM 575",
+            "COMP 551",
+            "MATH 203",
+            "MATH 317",
+            "MATH 319",
+            "MATH 323",
+            "MATH 324",
+            "PHYS 333",
+            "PHYS 340",
+            "PHYS 342",
+            "PHYS 350",
+            "PHYS 352"
+          ],
+          "minCredits": 6,
+          "maxCredits": 10
+        },
+        {
+          "title": "If chosen, students may take either MATH 203 or MATH 324",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 203",
+            "MATH 324"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either PHYS 340 or PHYS 350",
+          "maxCourses": 1,
+          "courses": [
+            "PHYS 340",
+            "PHYS 350"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either PHYS 342 or PHYS 352",
+          "maxCourses": 1,
+          "courses": [
+            "PHYS 342",
+            "PHYS 352"
+          ]
+        },
+        {
+          "title": "Weather Analysis and Forecasting Stream: 16 credits from",
+          "courses": [
+            "ATOC 309",
+            "ATOC 512",
+            "ATOC 521",
+            "ATOC 540",
+            "ATOC 541",
+            "ATOC 546"
+          ],
+          "minCredits": 16,
+          "maxCredits": 16
+        },
+        {
+          "title": "Weather Analysis and Forecasting Stream: 6-7 credits selected from",
+          "courses": [
+            "ATOC 404",
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 517",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 548",
+            "ATOC 557",
+            "ATOC 558",
+            "ATOC 568",
+            "ESYS 300",
+            "ESYS 301",
+            "MATH 555",
+            "PHYS 404",
+            "PHYS 432",
+            "PHYS 512"
+          ],
+          "minCredits": 6,
+          "maxCredits": 7
+        },
+        {
+          "title": "If chosen, students may take either PHYS 432 or MATH 555",
+          "maxCourses": 1,
+          "courses": [
+            "PHYS 432",
+            "MATH 555"
+          ]
+        },
+        {
+          "title": "Climate Science Stream: 15 credits from",
+          "courses": [
+            "ATOC 404",
+            "ATOC 512",
+            "ATOC 531",
+            "MATH 323",
+            "MATH 324",
+            "PHYS 404",
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 540",
+            "ATOC 557",
+            "ATOC 558",
+            "ATOC 568",
+            "ESYS 300",
+            "ESYS 301",
+            "MATH 423",
+            "MATH 555",
+            "PHYS 432",
+            "PHYS 512"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        },
+        {
+          "title": "If chosen, students may take either ATOC 404 or PHYS 404",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 404",
+            "PHYS 404"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either PHYS 432 or MATH 555",
+          "maxCourses": 1,
+          "courses": [
+            "PHYS 432",
+            "MATH 555"
+          ]
+        },
+        {
+          "title": "Atmospheric Chemistry and Physics Stream: 15 credits from",
+          "courses": [
+            "ATOC 309",
+            "ATOC 519",
+            "ATOC 521",
+            "CHEM 213",
+            "CHEM 273"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        },
+        {
+          "title": "Atmospheric Chemistry and Physics Stream: 6 credits selected from",
+          "courses": [
+            "ATOC 404",
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 517",
+            "ATOC 519",
+            "ATOC 525",
+            "ATOC 540",
+            "ATOC 557",
+            "ATOC 558",
+            "CHEM 367",
+            "CHEM 575",
+            "MATH 423",
+            "PHYS 404",
+            "PHYS 512",
+            "ATOC 309",
+            "ATOC 521",
+            "ATOC 531",
+            "ATOC 541",
+            "ATOC 546",
+            "ATOC 548",
+            "ATOC 568",
+            "ESYS 300",
+            "ESYS 301",
+            "MATH 555",
+            "PHYS 432"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "If chosen, students may take either ATOC 404 or PHYS 404",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 404",
+            "PHYS 404"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either ATOC 404 or PHYS 404",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 404",
+            "PHYS 404"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either PHYS 432 or MATH 555",
+          "maxCourses": 1,
+          "courses": [
+            "PHYS 432",
+            "MATH 555"
+          ]
+        },
+        {
+          "title": "21-23 credits from one of the following four streams",
+          "unparsed": true
+        },
+        {
+          "title": "6-7 credits (3 credits must be an ATOC course) selected from",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

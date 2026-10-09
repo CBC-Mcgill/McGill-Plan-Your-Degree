@@ -1,0 +1,107 @@
+{
+  "id": "computer-science-biology-major-bsc",
+  "name": "Computer Science and Biology Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/computer-science/computer-science-biology-major-bsc/",
+  "credits": 74,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 46,
+      "courses": [
+        "BIOL 219",
+        "BIOL 301",
+        "BIOL 395",
+        "CHEM 212",
+        "MATH 222",
+        "MATH 223",
+        "MATH 323",
+        "COMP 202",
+        "COMP 204",
+        "COMP 206",
+        "COMP 250",
+        "COMP 251",
+        "MATH 240",
+        "BIOL 202",
+        "BIOL 215",
+        "COMP 401"
+      ],
+      "note": "Students with CEGEP-level credit for the equivalents of MATH 222 and/or CHEM 212 do not have to take these courses. Students should speak with an advisor if uncertain if they are exempted. Students may take either COMP 202 or COMP 204, but not both. Students who have taken the equivalent of COMP 202/COMP 204 prior to their McGill studies are exempt from COMP 202/COMP 204."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "3-4 credits from the following",
+          "courses": [
+            "COMP 462",
+            "COMP 561",
+            "MATH 315",
+            "MATH 324"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "Computer Science Block: 9-12 credits from",
+          "courses": [
+            "COMP 273"
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
+        },
+        {
+          "title": "Biology Block",
+          "courses": [
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 304",
+            "BIOL 306",
+            "BIOL 308",
+            "BIOL 309",
+            "BIOL 310",
+            "BIOL 313",
+            "BIOL 314",
+            "BIOL 316",
+            "BIOL 319",
+            "BIOL 320",
+            "BIOL 389",
+            "BIOL 416",
+            "BIOL 435",
+            "BIOL 518",
+            "BIOL 520",
+            "BIOL 524",
+            "BIOL 530",
+            "BIOL 532",
+            "BIOL 546",
+            "BIOL 551",
+            "BIOL 568",
+            "BIOL 569",
+            "BIOL 580",
+            "BIOL 588",
+            "HGEN 575",
+            "NEUR 310"
+          ]
+        },
+        {
+          "title": "The remaining 18-21 credits is to be chosen from the following, with at least 9 credits at the 400 level or above",
+          "unparsed": true
+        },
+        {
+          "title": "At least 3 of these 9-12 credits must be at the 400 level or above",
+          "unparsed": true
+        },
+        {
+          "title": "9-12 credits from the following, with 3-6 credits at the 400 level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,93 @@
+{
+  "id": "geography-urban-studies-minor-concentration-ba",
+  "name": "Geography (Urban Studies) Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/geography/geography-urban-studies-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "GEOG 217"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Group A: 6-9 credits selected from",
+          "courses": [
+            "GEOG 201",
+            "GEOG 210",
+            "GEOG 216",
+            "GEOG 303",
+            "GEOG 310",
+            "GEOG 311",
+            "GEOG 314",
+            "GEOG 315",
+            "GEOG 316",
+            "GEOG 325",
+            "GEOG 331",
+            "GEOG 333",
+            "GEOG 408",
+            "GEOG 409",
+            "GEOG 414",
+            "GEOG 417",
+            "GEOG 418",
+            "GEOG 420"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        },
+        {
+          "title": "Group B: 6-9 credits selected from",
+          "courses": [
+            "ARCH 528",
+            "ARTH 204",
+            "COMS 425",
+            "CIVE 540",
+            "HIST 353",
+            "HIST 397",
+            "ISLA 311",
+            "ISLA 395",
+            "FINE 445",
+            "POLI 318",
+            "POLI 321",
+            "QCST 200",
+            "SOCI 222",
+            "SOCI 230",
+            "SOCI 333",
+            "SOCI 366",
+            "SOCI 388",
+            "URBP 201",
+            "URBP 501",
+            "URBP 504",
+            "URBP 506",
+            "URBP 530",
+            "URBP 536",
+            "URBP 537",
+            "URBP 551",
+            "URBP 556"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        },
+        {
+          "title": "15 credits selected from the following lists",
+          "unparsed": true
+        },
+        {
+          "title": "At least 9 credits must be completed at the 300-level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

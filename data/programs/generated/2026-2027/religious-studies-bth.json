@@ -1,0 +1,126 @@
+{
+  "id": "religious-studies-bth",
+  "name": "Religious Studies",
+  "degree": "B.Th.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/religious-studies/religious-studies-bth/",
+  "credits": 120,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "RELG 302",
+        "RELG 303",
+        "RELG 309",
+        "RELG 311",
+        "RELG 312",
+        "RELG 322",
+        "RELG 323",
+        "RELG 333",
+        "RELG 341",
+        "RELG 434",
+        "RELG 470"
+      ]
+    },
+    {
+      "title": "Complementary Courses Theology",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3-6 credits from",
+          "courses": [
+            "CATH 310",
+            "RELG 211",
+            "RELG 334",
+            "RELG 336"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Bible (Old Testament)",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3-6 credits from",
+          "courses": [
+            "RELG 201",
+            "RELG 202",
+            "RELG 407",
+            "RELG 408",
+            "RELG 491",
+            "RELG 492"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Bible (New Testament)",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3-6 credits from",
+          "courses": [
+            "CLAS 220",
+            "CLAS 222",
+            "RELG 210",
+            "RELG 279",
+            "RELG 326",
+            "RELG 381",
+            "RELG 410",
+            "RELG 411",
+            "RELG 482"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Church History",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3-6 credits from",
+          "courses": [
+            "CATH 330",
+            "RELG 310",
+            "RELG 338",
+            "RELG 399",
+            "RELG 423",
+            "RELG 498"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses (15-36)",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15-36 credits chosen from Arts or Science disciplines",
+          "unparsed": true
+        },
+        {
+          "title": "Students with advanced standing take the minimum number of elective credits",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

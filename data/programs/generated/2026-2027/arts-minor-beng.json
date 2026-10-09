@@ -1,0 +1,38 @@
+{
+  "id": "arts-minor-beng",
+  "name": "Arts Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/arts-minor-beng/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Requirements",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "24 credits as follows",
+          "unparsed": true
+        },
+        {
+          "title": "At least two areas of concentration in the Faculty of Arts must be chosen, with a minimum of 6 credits in any one area",
+          "unparsed": true
+        },
+        {
+          "title": "At least 12 credits must be at the 300 level or higher",
+          "minCredits": 12,
+          "match": {
+            "minLevel": 300
+          }
+        },
+        {
+          "title": "No more than 9 credits of these courses can be credited toward the Arts Minor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

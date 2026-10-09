@@ -1,0 +1,98 @@
+{
+  "id": "russian-major-concentration-ba",
+  "name": "Russian Major Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/languages-literatures-cultures/russian-major-concentration-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Group A: Russian Language",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits selected from the following courses or their equivalent",
+          "courses": [
+            "RUSS 210",
+            "RUSS 211",
+            "RUSS 215",
+            "RUSS 301",
+            "RUSS 310",
+            "RUSS 311",
+            "RUSS 316",
+            "RUSS 327",
+            "RUSS 328",
+            "RUSS 410",
+            "RUSS 411",
+            "RUSS 415",
+            "RUSS 453"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        }
+      ]
+    },
+    {
+      "title": "Group B",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits selected from the following courses or their equivalent",
+          "courses": [
+            "RUSS 217",
+            "RUSS 218",
+            "RUSS 223",
+            "RUSS 224",
+            "RUSS 229"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    },
+    {
+      "title": "Group C",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits selected from the following courses or their equivalent",
+          "courses": [
+            "RUSS 213",
+            "RUSS 250",
+            "RUSS 330",
+            "RUSS 333",
+            "RUSS 337",
+            "RUSS 340",
+            "RUSS 347",
+            "RUSS 350",
+            "RUSS 357",
+            "RUSS 358",
+            "RUSS 365",
+            "RUSS 369",
+            "RUSS 381",
+            "RUSS 382",
+            "RUSS 385",
+            "RUSS 390",
+            "RUSS 395",
+            "RUSS 397",
+            "RUSS 398",
+            "RUSS 427",
+            "RUSS 428",
+            "RUSS 430",
+            "RUSS 440",
+            "RUSS 475",
+            "RUSS 500",
+            "RUSS 501"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

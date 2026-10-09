@@ -1,0 +1,84 @@
+{
+  "id": "atmospheric-science-physics-major-bsc",
+  "name": "Atmospheric Science and Physics Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/atmospheric-oceanic-sciences/atmospheric-science-physics-major-bsc/",
+  "credits": 67,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 54,
+      "courses": [
+        "ATOC 214",
+        "ATOC 215",
+        "ATOC 309",
+        "ATOC 312",
+        "ATOC 315",
+        "COMP 208",
+        "MATH 222",
+        "MATH 223",
+        "MATH 314",
+        "MATH 315",
+        "PHYS 230",
+        "PHYS 232",
+        "PHYS 241",
+        "PHYS 257",
+        "PHYS 333",
+        "PHYS 340",
+        "PHYS 342",
+        "PHYS 346"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "ATOC 357",
+            "PHYS 258"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "9-10 credits selected from",
+          "courses": [
+            "ATOC 357",
+            "ATOC 404",
+            "ATOC 480",
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 517",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 541",
+            "ATOC 548",
+            "ATOC 557",
+            "ATOC 558",
+            "ATOC 568",
+            "COMP 551",
+            "PHYS 331",
+            "PHYS 339",
+            "PHYS 404",
+            "PHYS 432",
+            "PHYS 434",
+            "PHYS 449",
+            "PHYS 512"
+          ],
+          "minCredits": 9,
+          "maxCredits": 10
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

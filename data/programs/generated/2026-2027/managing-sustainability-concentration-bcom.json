@@ -1,0 +1,64 @@
+{
+  "id": "managing-sustainability-concentration-bcom",
+  "name": "Managing for Sustainability Concentration",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/concentrations/managing-sustainability-concentration-bcom/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "MGPO 440",
+        "MSUS 402"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3-9 credits from the following",
+          "courses": [
+            "ACCT 401",
+            "FINE 465",
+            "INSY 455",
+            "MGPO 438",
+            "MGSC 488",
+            "MRKT 351"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        },
+        {
+          "title": "0-6 credits from the following",
+          "courses": [
+            "BUSA 432",
+            "BUSA 451",
+            "INDR 294",
+            "INDR 492",
+            "MGPO 365",
+            "MGPO 430",
+            "MGPO 435",
+            "MGPO 450",
+            "MGPO 469",
+            "MGPO 475",
+            "MGSC 483",
+            "MSUS 401",
+            "MSUS 434",
+            "ORGB 321",
+            "ORGB 325",
+            "ORGB 421",
+            "RETL 410"
+          ],
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

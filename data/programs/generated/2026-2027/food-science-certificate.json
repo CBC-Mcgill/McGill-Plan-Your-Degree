@@ -1,0 +1,57 @@
+{
+  "id": "food-science-certificate",
+  "name": "Food Science",
+  "degree": "Certificate",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/food-science-agricultural-chemistry/food-science-certificate/",
+  "credits": 30,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "FDSC 200"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "27 credits (select no more than two 200-level courses)",
+          "courses": [
+            "AGRI 510",
+            "BREE 324",
+            "BREE 535",
+            "FDSC 213",
+            "FDSC 251",
+            "FDSC 300",
+            "FDSC 305",
+            "FDSC 310",
+            "FDSC 315",
+            "FDSC 319",
+            "FDSC 330",
+            "FDSC 400",
+            "FDSC 405",
+            "FDSC 442",
+            "FDSC 495",
+            "FDSC 515",
+            "FDSC 516",
+            "FDSC 519",
+            "FDSC 520",
+            "FDSC 525",
+            "FDSC 536",
+            "FDSC 537",
+            "LSCI 211",
+            "LSCI 230",
+            "NUTR 207"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

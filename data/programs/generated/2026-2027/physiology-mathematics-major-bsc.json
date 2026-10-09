@@ -1,0 +1,90 @@
+{
+  "id": "physiology-mathematics-major-bsc",
+  "name": "Physiology and Mathematics Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physiology/physiology-mathematics-major-bsc/",
+  "credits": 79,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 70,
+      "courses": [
+        "BIOL 219",
+        "BIOL 395",
+        "MATH 222",
+        {
+          "oneOf": [
+            "MATH 223",
+            "MATH 247"
+          ]
+        },
+        {
+          "oneOf": [
+            "MATH 315",
+            "MATH 325"
+          ]
+        },
+        "MATH 323",
+        "BIOL 309",
+        "BMDE 519",
+        "MATH 242",
+        "MATH 243",
+        {
+          "oneOf": [
+            "MATH 248",
+            "MATH 314"
+          ]
+        },
+        "MATH 317",
+        "MATH 319",
+        "MATH 324",
+        "MATH 326",
+        "MATH 437",
+        "PHGY 209",
+        "PHGY 210",
+        "PHGY 212",
+        "PHGY 213",
+        "PHGY 312",
+        "PHGY 313",
+        "PHGY 461"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "COMP 204",
+            "COMP 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHGY 311",
+            "PHGY 314"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHYS 519"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

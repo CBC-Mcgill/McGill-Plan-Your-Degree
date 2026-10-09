@@ -1,0 +1,56 @@
+{
+  "id": "construction-engineering-management-minor-beng",
+  "name": "Construction Engineering and Management Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/construction-engineering-management-minor-beng/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses: Management and Law",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "CIVE 324",
+        "FACC 220",
+        "INDR 294",
+        "MGCR 211",
+        "MGCR 341"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "List A: 3 credits from List A",
+          "courses": [
+            "ARCH 447",
+            "ARCH 451",
+            "MIME 322",
+            "MIME 333"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "List B: 6 credits from List B",
+          "courses": [
+            "CIVE 446",
+            "CIVE 527",
+            "ECSE 461",
+            "FINE 445",
+            "MIME 520",
+            "MIME 521",
+            "MPMC 321"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

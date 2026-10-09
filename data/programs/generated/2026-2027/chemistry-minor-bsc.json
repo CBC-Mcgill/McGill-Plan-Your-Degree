@@ -1,0 +1,47 @@
+{
+  "id": "chemistry-minor-bsc",
+  "name": "Chemistry Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/chemistry/chemistry-minor-bsc/",
+  "credits": 20,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 13,
+      "courses": [
+        "CHEM 204",
+        "CHEM 212",
+        "CHEM 267",
+        "CHEM 281"
+      ],
+      "note": "Denotes courses with CEGEP equivalents."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6-7 credits",
+          "courses": [
+            "CHEM 214",
+            "CHEM 219",
+            "CHEM 222",
+            "CHEM 302",
+            "CHEM 334",
+            "CHEM 381",
+            "CHEM 462"
+          ]
+        },
+        {
+          "title": "Any level 300-500 CHEM course can be substituted for courses within this list",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,100 @@
+{
+  "id": "neuroscience-minor-bsc",
+  "name": "Neuroscience Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/neuroscience/neuroscience-minor-bsc/",
+  "credits": 25,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "BIOL 200",
+        "NSCI 200",
+        "NSCI 201"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 16,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ANAT 212",
+            "BIOC 212",
+            "BIOL 201",
+            "BIOL 202",
+            "BIOL 300",
+            "BIOL 306",
+            "BIOL 320",
+            "BIOL 389",
+            "CHEM 212",
+            "NEUR 310",
+            "PHGY 311",
+            "PHGY 314",
+            "PSYC 302",
+            "PSYC 311",
+            "PSYC 315",
+            "PSYC 317",
+            "PSYC 318",
+            "PSYC 342"
+          ]
+        },
+        {
+          "title": "Students may select either BIOL 306 or PHGY 314",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 306",
+            "PHGY 314"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BIOL 530",
+            "BIOL 532",
+            "BIOL 580",
+            "BIOL 588",
+            "NEUR 502",
+            "PHGY 425",
+            "PHGY 451",
+            "PHGY 524",
+            "PHGY 556",
+            "PSYC 410",
+            "PSYC 427",
+            "PSYC 433",
+            "PSYC 444",
+            "PSYC 470",
+            "PSYC 506",
+            "PSYC 514",
+            "PSYC 522",
+            "PSYC 526",
+            "PSYT 500"
+          ]
+        },
+        {
+          "title": "At least 12-13 credits must be from outside the student's home department",
+          "unparsed": true
+        },
+        {
+          "title": "At least 6 of the 12-13 credits have to be at the 400 or 500 level",
+          "unparsed": true
+        },
+        {
+          "title": "0-10 credits from the following list of 200- and 300-level courses",
+          "unparsed": true
+        },
+        {
+          "title": "6-15 credits from the following list of 400- and 500-level courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

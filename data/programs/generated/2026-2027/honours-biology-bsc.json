@@ -1,0 +1,121 @@
+{
+  "id": "honours-biology-bsc",
+  "name": "Biology Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biology/honours-biology-bsc/",
+  "credits": 72,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 35,
+      "courses": [
+        "BIOL 200",
+        "BIOL 201",
+        "BIOL 205",
+        "BIOL 206",
+        "BIOL 215",
+        "BIOL 216",
+        "BIOL 301",
+        "BIOL 302",
+        "BIOL 311",
+        "BIOL 499",
+        "COMP 204"
+      ]
+    },
+    {
+      "title": "Core",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Core",
+          "courses": [
+            "CHEM 204",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "If a student has already taken CHEM 212 or its equivalent, the credits can be made up with CHEM 204, CHEM 222, or a 3- or 4-credit Biology complementary course to be approved by the Biology Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "Block A- Ecology and Evolution",
+          "courses": [
+            "BIOL 304",
+            "BIOL 305",
+            "BIOL 308"
+          ]
+        },
+        {
+          "title": "Block B- Molecular and Cellular",
+          "courses": [
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 313"
+          ]
+        },
+        {
+          "title": "Block C-Neuro/Behaviour",
+          "courses": [
+            "BIOL 306",
+            "BIOL 307"
+          ]
+        },
+        {
+          "title": "3 or 4 credits selected from CHEM block",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits (3 credits from each of Block A, Block B and Block C)",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Honours Block",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Honours Block",
+          "courses": [
+            "BIOL 479"
+          ]
+        },
+        {
+          "title": "Honours Block",
+          "courses": [
+            "BIOL 480"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "15 credits of Biology courses at the 300-500 levels if taking BIOL 479D1/BIOL 479D2, or 12 credits if taking BIOL 480D1/BIOL 480D2",
+          "unparsed": true
+        },
+        {
+          "title": "With permission of the Biology Adviser, up to 6 credits may be taken from other science department courses (300-500 levels)",
+          "unparsed": true
+        },
+        {
+          "title": "Up to 3 credits of previous independent research courses may be included",
+          "unparsed": true
+        },
+        {
+          "title": "Must include 6 credits of 400-500 levels",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

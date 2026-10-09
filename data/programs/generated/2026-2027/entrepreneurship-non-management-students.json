@@ -1,0 +1,101 @@
+{
+  "id": "entrepreneurship-non-management-students",
+  "name": "Entrepreneurship (for Non-Management Students)",
+  "degree": "Minor",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/minors-management-non-management-students/entrepreneurship-non-management-students/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "INTG 215",
+        "MGPO 362",
+        "MGPO 364"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "MGCR 211",
+            "MGCR 222",
+            "MGCR 233",
+            "MGCR 331",
+            "MGCR 341",
+            "MGCR 352",
+            "MGCR 372",
+            "MGCR 382",
+            "MGCR 423",
+            "MGCR 460"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Social Entrepreneurship Stream: 3 credits from the following",
+          "courses": [
+            "MGPO 438"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Social Entrepreneurship Stream: 3 credits from the following",
+          "courses": [
+            "COMS 355",
+            "COMS 492",
+            "ECON 310",
+            "ECON 447",
+            "LLCU 212",
+            "PHIL 237",
+            "POLI 318",
+            "POLI 473",
+            "SOCI 307",
+            "SOCI 386"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Kinesiology and Physical Education Stream: 6 credits from the following",
+          "courses": [
+            "BUSA 465",
+            "EDKP 302",
+            "MGPO 438",
+            "MIMM 387"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Agribusiness Stream: 6 credits from the following",
+          "courses": [
+            "AGEC 231",
+            "AGEC 332",
+            "AGEC 430",
+            "AGEC 450",
+            "AGRI 411",
+            "AGRI 493",
+            "FAES 300",
+            "FAES 310"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "6 credits from one of the following streams",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

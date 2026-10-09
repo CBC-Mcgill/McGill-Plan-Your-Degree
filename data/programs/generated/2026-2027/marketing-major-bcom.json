@@ -1,0 +1,61 @@
+{
+  "id": "marketing-major-bcom",
+  "name": "Marketing Major",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/majors/marketing-major-bcom/",
+  "credits": 72,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 51,
+      "courses": [
+        "MGCR 211",
+        "MGCR 222",
+        "MGCR 233",
+        "MGCR 250",
+        "MGCR 271",
+        "MGCR 293",
+        "MGCR 294",
+        "MGCR 331",
+        "MGCR 341",
+        "MGCR 352",
+        "MGCR 372",
+        "MGCR 382",
+        "MGCR 423",
+        "MGCR 460",
+        "MRKT 354",
+        "MRKT 451",
+        "MRKT 452"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "21 credits selected from",
+          "courses": [
+            "MRKT 351",
+            "MRKT 355",
+            "MRKT 357",
+            "MRKT 365",
+            "MRKT 434",
+            "MRKT 438",
+            "MRKT 440",
+            "MRKT 453",
+            "MRKT 455",
+            "MRKT 459",
+            "MRKT 483"
+          ],
+          "minCredits": 21,
+          "maxCredits": 21
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

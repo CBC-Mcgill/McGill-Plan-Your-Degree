@@ -1,0 +1,120 @@
+{
+  "id": "statistics-computer-science-major-bsc",
+  "name": "Statistics and Computer Science Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/statistics-computer-science-major-bsc/",
+  "credits": 72,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 51,
+      "courses": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 250",
+        "COMP 251",
+        "COMP 273",
+        "COMP 302",
+        "COMP 330",
+        {
+          "oneOf": [
+            "COMP 350",
+            "MATH 317"
+          ]
+        },
+        "COMP 360",
+        "MATH 222",
+        "MATH 223",
+        "MATH 235",
+        "MATH 236",
+        "MATH 242",
+        "MATH 314",
+        "MATH 323",
+        "MATH 324",
+        "MATH 423"
+      ],
+      "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202 but can replace it with an additional Computer Science complementary course. Students take either MATH 223 or MATH 236, but not both. Both courses are equivalent as prerequisites for required and complementary Computer Science courses listed."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "MATH 204",
+            "MATH 208",
+            "MATH 308",
+            "MATH 327",
+            "MATH 340",
+            "MATH 350",
+            "MATH 352",
+            "MATH 410",
+            "MATH 427",
+            "MATH 447",
+            "MATH 523",
+            "MATH 524",
+            "MATH 525",
+            "MATH 526",
+            "MATH 527",
+            "MATH 545",
+            "MATH 558",
+            "MATH 559",
+            "MATH 578",
+            "MATH 598"
+          ]
+        },
+        {
+          "title": "If chosen, students take either MATH 340 or MATH 350, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 340",
+            "MATH 350"
+          ]
+        },
+        {
+          "title": "MATH 578 and COMP 540 cannot both be taken for program credit",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 578",
+            "COMP 540"
+          ]
+        },
+        {
+          "title": "At least 6 credits selected from",
+          "courses": [
+            "COMP 424",
+            "COMP 462",
+            "COMP 540",
+            "COMP 547",
+            "COMP 551",
+            "COMP 564",
+            "COMP 567"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "MATH 578 and COMP 540 cannot both be taken for program credit",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 578",
+            "COMP 540"
+          ]
+        },
+        {
+          "title": "12 credits in Mathematics selected from",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits in Computer Science selected as follows",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}
