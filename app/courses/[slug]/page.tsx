@@ -12,6 +12,7 @@ import { UncertainFlag } from "@/components/status";
 import { UnlockRows } from "@/components/unlock-rows";
 import { getUnlocks, leaves, loadCatalogue } from "@/lib/catalogue/server";
 import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
+import { creditsLabel, routesText } from "@/lib/engine/parts";
 import { toStatusInput } from "@/lib/engine/status";
 import { logicalCode } from "@/lib/profile/types";
 
@@ -62,11 +63,12 @@ export default async function CoursePage({
           {
             course: toStatusInput(unlocked),
             title: unlocked.title,
-            credits: unlocked.credits,
+            credits: creditsLabel(unlocked),
           },
         ]
       : [];
   });
+  const routes = routesText(course);
   const tree = course.prerequisites?.tree;
   const prerequisites = Object.fromEntries(
     (tree ? leaves(tree) : []).flatMap((leaf) => {
@@ -86,12 +88,17 @@ export default async function CoursePage({
       </Link>
 
       <div className="mt-3 flex items-end justify-between gap-6">
-        <h1>
-          <span className="block font-medium font-sans text-[13px] text-muted-foreground leading-[18px] tracking-normal font-stretch-normal">
-            {course.code}
-          </span>{" "}
-          <span className="mt-1 block">{course.title}</span>
-        </h1>
+        <div className="min-w-0">
+          <h1>
+            <span className="block font-medium font-sans text-[13px] text-muted-foreground leading-[18px] tracking-normal font-stretch-normal">
+              {course.code}
+            </span>{" "}
+            <span className="mt-1 block">{course.title}</span>
+          </h1>
+          {routes && (
+            <p className="mt-2 max-w-prose text-muted-foreground">{routes}</p>
+          )}
+        </div>
         <AddToPlan course={summary} />
       </div>
 

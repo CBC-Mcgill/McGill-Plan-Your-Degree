@@ -10,7 +10,8 @@ import { useSnapshot } from "@/lib/profile/use-snapshot";
 export interface Unlock {
   course: StatusInput;
   title: string;
-  credits: number | null;
+  /** "3 cr", or "6 cr, 2 terms" for a multi-term course. */
+  credits: string;
 }
 
 const SHOWN = 12;
@@ -63,8 +64,8 @@ function Rows({
               <span className="min-w-0 flex-1 truncate" title={title}>
                 {title}
               </span>
-              <span className="w-12 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
-                {credits === null ? "-" : `${credits} cr`}
+              <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
+                {credits}
               </span>
             </Link>
           </li>

@@ -6,9 +6,11 @@ import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import type { CourseSummary } from "@/lib/catalogue/types";
+import { courseLoads, loadsTerms } from "@/lib/engine/plan";
 import { courseStatus, isOffered } from "@/lib/engine/status";
 import { useProfileStore } from "@/lib/profile/store";
-import { planTermOptions, termLabel } from "@/lib/profile/term-options";
+import { planTermOptions } from "@/lib/profile/term-options";
+import type { Term } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 /** The page's one primary action: plan the course for the next term it runs, or take it back out. Courses the student has taken, is taking, or that do not run this year have none. */
@@ -41,6 +43,8 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
   const next = planTermOptions([]).find((term) =>
     isOffered(course, term.season),
   );
+  const terms = (start: Term) =>
+    loadsTerms(courseLoads(course.code, course, start));
 
   const locked = status === "locked";
   const reason =
@@ -54,7 +58,7 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
         {planned && (
           <span className="inline-flex items-center gap-1.5 font-medium text-planned">
             <StatusIcon status="planned" />
-            Planned for {termLabel(planned)}
+            Planned for {terms(planned)}
           </span>
         )}
         {planned ? (
@@ -65,12 +69,12 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
           >
             <X aria-hidden />
             Remove
-            <span className="sr-only"> from {termLabel(planned)}</span>
+            <span className="sr-only"> from {terms(planned)}</span>
           </Button>
         ) : next ? (
           <Button size="lg" onClick={() => addWithUndo(next, course.code)}>
             <Plus aria-hidden />
-            Add to {termLabel(next)}
+            Add to {terms(next)}
             {locked && " anyway"}
           </Button>
         ) : (

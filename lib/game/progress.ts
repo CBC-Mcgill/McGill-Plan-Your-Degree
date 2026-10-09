@@ -73,7 +73,8 @@ export function gameProgress(
 
   const byTerm = new Map<number, number>();
   for (const record of records) {
-    if (record.status === "completed" && record.term) {
+    const unfinished = record.part && snapshot.pending.has(record.code);
+    if (record.status === "completed" && record.term && !unfinished) {
       const key = termKey(record.term);
       byTerm.set(
         key,

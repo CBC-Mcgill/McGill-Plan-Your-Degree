@@ -37,6 +37,7 @@ export function CourseStatusPanel({
   const snapshot = useSnapshot();
 
   const state = snapshot ? courseStatus(course, snapshot) : null;
+  const pending = snapshot?.pending.get(course.code);
   const exempt =
     state?.status === "completed" && !snapshot?.earned.has(course.code);
   const tree = course.prerequisites?.tree;
@@ -75,7 +76,11 @@ export function CourseStatusPanel({
             {(state.status === "completed" ||
               state.status === "covered" ||
               state.status === "in-progress") && (
-              <p>{SENTENCE[exempt ? "exempt" : state.status]}</p>
+              <p>
+                {pending
+                  ? `You have done part of this course. Credit comes when ${course.code}${pending.last} is done.`
+                  : SENTENCE[exempt ? "exempt" : state.status]}
+              </p>
             )}
             {missing && (
               <div>

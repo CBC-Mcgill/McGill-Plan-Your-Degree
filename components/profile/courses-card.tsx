@@ -7,9 +7,17 @@ import { SectionCard } from "@/components/section-card";
 import { Button } from "@/components/ui/button";
 import { SelectField, TextField } from "@/components/ui/field";
 import { useCatalogue } from "@/lib/catalogue/client";
+import { creditNote } from "@/lib/engine/parts";
 import { useProfileStore } from "@/lib/profile/store";
 import { currentTerm, groupByTerm } from "@/lib/profile/terms";
-import { type Term, termKey } from "@/lib/profile/types";
+import {
+  logicalCode,
+  partOf,
+  recordLabel,
+  type Term,
+  termKey,
+} from "@/lib/profile/types";
+import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 const MAX_SUGGESTIONS = 8;
 const CODE = /^[A-Z0-9]{4} [A-Z0-9]{3,6}$/;
@@ -26,6 +34,7 @@ export function CoursesCard() {
   const addCourse = useProfileStore((s) => s.addCourse);
   const removeCourse = useProfileStore((s) => s.removeCourse);
   const catalogue = useCatalogue();
+  const snapshot = useSnapshot();
   const listId = useId();
 
   const [text, setText] = useState("");
@@ -62,20 +71,27 @@ export function CoursesCard() {
   function add(event: React.FormEvent) {
     event.preventDefault();
     const code = normalizeCode(text);
-    const course = ready?.get(code);
+    const part = partOf(code);
+    const course = ready?.get(logicalCode(code));
+    const credits = part
+      ? course?.parts?.find((p) => p.code === code)?.credits
+      : course?.credits;
     if (!CODE.test(code)) {
       setError("Enter a course code such as COMP 250.");
-    } else if (ready && !course) {
+    } else if (ready && (!course || (part && credits === undefined))) {
       setError(
         `${code} is not in the catalogue. Check the code and try again.`,
       );
-    } else if (records.some((r) => r.code === code)) {
+    } else if (
+      records.some((r) => r.code === logicalCode(code) && r.part === part)
+    ) {
       setError(`${code} is already in your profile.`);
     } else {
       addCourse({
-        code,
+        code: logicalCode(code),
+        ...(part && { part }),
         term: chosenTerm,
-        credits: course?.credits ?? null,
+        credits: credits ?? null,
         grade: null,
         status: chosenStatus,
       });
@@ -150,14 +166,15 @@ export function CoursesCard() {
           >
             {items.map((record) => (
               <CourseRow
-                key={`${record.code}-${record.term ? termKey(record.term) : "none"}`}
-                code={record.code}
+                key={`${recordLabel(record)}-${record.term ? termKey(record.term) : "none"}`}
+                code={recordLabel(record)}
                 title={ready?.get(record.code)?.title ?? null}
                 credits={record.credits}
                 grade={record.grade}
                 status={record.status}
+                note={creditNote(record, snapshot?.pending)}
                 missing={ready !== null && !ready.has(record.code)}
-                onRemove={() => removeCourse(record.code)}
+                onRemove={() => removeCourse(record.code, record.part)}
               />
             ))}
           </TermGroup>

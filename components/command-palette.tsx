@@ -30,6 +30,7 @@ import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses, searchCourses } from "@/lib/catalogue/search";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
+import { creditsLabel } from "@/lib/engine/parts";
 import { courseStatus } from "@/lib/engine/status";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
@@ -354,7 +355,7 @@ function PaletteDialog() {
                               {item.course.title}
                             </span>
                             <span className="text-[13px] text-muted-foreground tabular-nums">
-                              {item.course.credits ?? "?"} cr
+                              {creditsLabel(item.course)}
                             </span>
                           </>
                         ) : (

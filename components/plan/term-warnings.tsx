@@ -8,6 +8,7 @@ import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { termContext, unmet } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
+import { currentTerm } from "@/lib/profile/terms";
 import { compareTerms, type Plan } from "@/lib/profile/types";
 
 function Others({ codes }: { codes: string[] }) {
@@ -39,6 +40,22 @@ export function Sentence({
     );
   }
   const course = <CourseLink code={warning.course} />;
+  if (warning.kind === "missing-part") {
+    const part = (suffix: string) => (
+      <CourseLink code={warning.course} label={warning.course + suffix} />
+    );
+    return compareTerms(warning.term, currentTerm()) < 0 ? (
+      <>
+        {part(warning.part)} was due in {termLabel(warning.term)}. Neither part
+        counts until it is done.
+      </>
+    ) : (
+      <>
+        {part(warning.part)} must follow {part(warning.after)} in{" "}
+        {termLabel(warning.term)} or neither counts.
+      </>
+    );
+  }
   if (warning.kind === "after-graduation") {
     const starts = graduation && compareTerms(warning.term, graduation) > 0;
     return (

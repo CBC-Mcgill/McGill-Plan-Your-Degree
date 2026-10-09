@@ -10,6 +10,8 @@ interface Row {
   credits: number | null;
   grade: string | null;
   status: CourseStatus;
+  /** A line under the title, such as when a part's credit arrives. */
+  note?: string;
 }
 
 /** One course of a term, 44px tall like the rows on What's next. */
@@ -19,20 +21,31 @@ export function CourseRow({
   credits,
   grade,
   status,
+  note,
   missing = false,
   onRemove,
 }: Row & { missing?: boolean; onRemove: () => void }) {
   return (
     <li className="flex h-11 items-center gap-4 border-border border-t pr-3 pl-5">
-      <span className="w-[76px] shrink-0 font-semibold tabular-nums">
+      <span className="w-24 shrink-0 whitespace-nowrap font-semibold tabular-nums">
         {code}
       </span>
       <span className="flex min-w-0 flex-1 items-center gap-3">
-        {title && (
-          <span title={title} className="truncate">
-            {title}
-          </span>
-        )}
+        <span className="min-w-0">
+          {title && (
+            <span title={title} className="block truncate">
+              {title}
+            </span>
+          )}
+          {note && (
+            <span
+              title={note}
+              className="block truncate text-muted-foreground text-xs leading-4"
+            >
+              {note}
+            </span>
+          )}
+        </span>
         {missing && (
           <span className="flex shrink-0 items-center gap-1 font-medium text-warn text-xs">
             <TriangleAlert aria-hidden className="size-3.5" strokeWidth={2} />

@@ -7,6 +7,7 @@ import {
   type Plan,
   type Term,
 } from "../profile/types.ts";
+import { type PendingCourse, settleParts } from "./parts.ts";
 
 /** Courses by logical code. */
 export type Catalogue = ReadonlyMap<string, CourseSummary>;
@@ -17,8 +18,10 @@ export interface Snapshot {
   done: ReadonlySet<string>;
   /** Credit-bearing done courses with the credits the record states. Null means use the catalogue. */
   earned: ReadonlyMap<string, number | null>;
-  /** Registered now, with the term when known. */
+  /** Registered now, with the term when known. A multi-term course with a part done and the rest missing counts as in progress. */
   inProgress: ReadonlyMap<string, Term | null>;
+  /** Multi-term courses with some parts done and no credit yet. */
+  pending: ReadonlyMap<string, PendingCourse>;
   planned: ReadonlySet<string>;
   /** Done plus in progress: what satisfies a prerequisite and what blocks through a restriction. */
   taken: ReadonlySet<string>;
@@ -47,7 +50,9 @@ export function buildSnapshot(
   const done = new Set<string>();
   const earned = new Map<string, number | null>();
   const inProgress = new Map<string, Term | null>();
+  const pending = new Map<string, PendingCourse>();
   for (const record of records) {
+    if (record.part) continue;
     if (record.status === "in-progress") {
       inProgress.set(record.code, record.term);
     } else if (isDone(record.status)) {
@@ -65,6 +70,15 @@ export function buildSnapshot(
       }
     }
   }
+  for (const [code, parts] of settleParts(records)) {
+    if (!parts.finished) {
+      inProgress.set(code, parts.term);
+      if (parts.pending) pending.set(code, parts.pending);
+    } else {
+      done.add(code);
+      if (parts.earns) earned.set(code, parts.credits);
+    }
+  }
   const covered = new Set(
     entry === "cegep"
       ? CEGEP_SCIENCE_EQUIVALENTS.filter(
@@ -73,7 +87,7 @@ export function buildSnapshot(
       : [],
   );
   for (const code of covered) done.add(code);
-  // A multi-term course with one part still running is not done yet.
+  // A multi-term course with a part still running is not done yet.
   for (const code of inProgress.keys()) {
     done.delete(code);
     earned.delete(code);
@@ -82,6 +96,7 @@ export function buildSnapshot(
     done,
     earned,
     inProgress,
+    pending,
     planned: new Set(plan.flatMap((entry) => entry.courses)),
     taken: new Set([...done, ...inProgress.keys()]),
     covered,

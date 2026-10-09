@@ -21,6 +21,8 @@ export type CourseStatus = (typeof COURSE_STATUSES)[number];
 export interface CourseRecord {
   /** Logical catalogue code: ECSE 458D1 on a transcript becomes ECSE 458. */
   code: string;
+  /** The multi-term part, such as "D1". Absent for single-term courses and for records that stand for the whole course. */
+  part?: string;
   term: Term | null;
   credits: number | null;
   grade: string | null;
@@ -67,6 +69,15 @@ export const SEASONS: Season[] = ["Winter", "Summer", "Fall"];
 export function logicalCode(code: string): string {
   return code.replace(/^(.+ \d{3})[DJN]\d$/, "$1");
 }
+
+/** The multi-term suffix: ECSE 458D1 gives "D1", COMP 250 gives undefined. */
+export function partOf(code: string): string | undefined {
+  return /^.+ \d{3}([DJN]\d)$/.exec(code)?.[1];
+}
+
+/** What a record is called on screen: ECSE 458D1 for a part, the plain code otherwise. */
+export const recordLabel = (record: Pick<CourseRecord, "code" | "part">) =>
+  record.code + (record.part ?? "");
 
 /** A number that sorts terms chronologically: Winter, Summer, Fall within a year. */
 export function termKey(term: Term): number {
