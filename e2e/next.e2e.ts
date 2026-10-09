@@ -59,7 +59,7 @@ test("the old requirements page redirects here for good", async ({
   await expect(page).toHaveURL("/next");
 });
 
-test("a required course can be added, and it opens the course after it in the following term", async ({
+test("a required course can be added to the next term, and the planner opens the course after it in the term after", async ({
   page,
 }) => {
   await openWith(page, {
@@ -67,12 +67,10 @@ test("a required course can be added, and it opens the course after it in the fo
     programId: "computer-science-major-bsc",
     plan: [],
   });
-  await expect(
-    page.getByRole("tab", { name: "Winter 2027", selected: true }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("tablist", { name: "Term" }).getByRole("tab"),
-  ).toHaveCount(2);
+  await expect(page.getByRole("main")).toContainText(
+    "What you can take in Winter 2027, your next term",
+  );
+  await expect(page.getByRole("tablist", { name: "Term" })).toHaveCount(0);
   await expect(row(page, "Required courses", "COMP 310")).toContainText(
     "Needs COMP 273 first",
   );
@@ -85,17 +83,15 @@ test("a required course can be added, and it opens the course after it in the fo
   });
   await expect(remove).toBeFocused();
 
-  await page.getByRole("tab", { name: "Fall 2027" }).click();
-  await expect(row(page, "Required courses", "COMP 273")).toContainText(
-    "Winter 2027",
-  );
+  await page.getByRole("link", { name: "Plan later terms" }).click();
+  await page.getByRole("tab", { name: /^Fall 2027/ }).click();
   await expect(
-    row(page, "Required courses", "COMP 310").getByRole("button", {
-      name: "Add COMP 310 to Fall 2027",
-    }),
+    page
+      .getByRole("region", { name: "Fill Fall 2027" })
+      .getByRole("checkbox", { name: /COMP 310/ }),
   ).toBeAttached();
 
-  await page.getByRole("tab", { name: "Winter 2027" }).click();
+  await page.goBack();
   await remove.click();
   await expect(
     page.getByRole("button", { name: "Add COMP 273 to Winter 2027" }),
