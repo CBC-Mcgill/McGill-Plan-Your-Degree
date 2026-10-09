@@ -13,9 +13,10 @@ const seedProfile = (
   page: Page,
   records: unknown[],
   graduationTerm: unknown = null,
+  plan: unknown[] = [],
 ) =>
   page.addInitScript(
-    ([key, records, graduationTerm]) =>
+    ([key, records, graduationTerm, plan]) =>
       localStorage.setItem(
         key as string,
         JSON.stringify({
@@ -24,14 +25,14 @@ const seedProfile = (
             programId: null,
             startTerm: null,
             graduationTerm,
-            plan: [],
+            plan,
             creditLimit: 17,
             importedAt: null,
           },
           version: 1,
         }),
       ),
-    ["plan-your-degree:profile", records, graduationTerm],
+    ["plan-your-degree:profile", records, graduationTerm, plan],
   );
 
 // Course pages ask mcgill.courses for ratings, and tests never reach the real site.
@@ -90,11 +91,10 @@ test("a course page shows the mcgill.courses rating and links to the reviews", a
     }),
   );
   await page.goto("/courses/comp-251");
-  const ratings = page.getByRole("region", { name: "Student ratings" });
-  await expect(ratings).toContainText("3.1");
-  await expect(ratings).toContainText("4.2");
   await expect(
-    ratings.getByRole("link", { name: "Read the 2,609 reviews" }),
+    page.getByRole("link", {
+      name: "Rating 3.1, difficulty 4.2, 2,609 reviews on mcgill.courses",
+    }),
   ).toHaveAttribute("href", "https://mcgill.courses/course/comp-251");
 });
 
@@ -122,21 +122,44 @@ test("with a profile, Can take now is the default tab and a course can be planne
   await expect(rows.filter({ hasText: "COMP 251" })).toBeVisible();
   await expect(rows.filter({ hasText: "COMP 250" })).toHaveCount(0);
 
-  await page.getByRole("tab", { name: /^All/ }).click();
+  await page.getByRole("tab", { name: "All" }).click();
   await expect(rows.filter({ hasText: "COMP 250" })).toBeVisible();
-  await page.getByRole("tab", { name: /^Can take now/ }).click();
+  await page.getByRole("tab", { name: "Can take now" }).click();
 
   await page.getByRole("button", { name: "Level" }).click();
   await page.getByRole("checkbox", { name: "200" }).click();
   await expect(page).toHaveURL(/level=200/);
   await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: "Clear Level" }).click();
+  await expect(page).not.toHaveURL(/level=200/);
 
   await rows.filter({ hasText: "COMP 251" }).click();
-  await page.getByRole("button", { name: /^Add to / }).click();
-  await expect(page.getByText(/^Planned for /)).toBeVisible();
-  await expect(page.getByRole("button", { name: /^Remove/ })).toBeVisible();
-  await expect(page.getByRole("region", { name: "Your status" })).toContainText(
-    "Planned",
+  await expect(page.getByText("Can take", { exact: true })).toBeVisible();
+  const add = page.getByRole("button", { name: /^Add to / });
+  const name = await add.textContent();
+  await add.click();
+  const planned = page.getByRole("button", { name: /^Planned for / });
+  await expect(planned).toBeFocused();
+  await planned.click();
+  await expect(page.getByRole("menuitem").last()).toHaveText(
+    "Remove from plan",
+  );
+  await page.getByRole("menuitem", { name: "Remove from plan" }).click();
+  await expect(page.getByRole("button", { name: name ?? "" })).toBeVisible();
+  await page.getByRole("button", { name: "Undo" }).click();
+  await expect(planned).toBeVisible();
+});
+
+test("a course not offered this year never reads Can take", async ({
+  page,
+}) => {
+  await seedProfile(page, [done("COMP 250")]);
+  await page.goto("/courses/comp-280");
+  await expect(page.getByText("Not offered in 2026-2027")).toHaveCount(1);
+  await expect(page.getByText("Can take")).toHaveCount(0);
+  await page.getByRole("button", { name: "Add to a term" }).click();
+  await expect(page.getByRole("menu")).toContainText(
+    "Not offered in 2026-2027",
   );
 });
 
@@ -162,9 +185,9 @@ test("a course page adds the course to any term before graduation and moves it",
   await expect(page.getByText("Planned for Fall 2027")).toBeVisible();
   await expect(page.getByRole("button", { name: /^Add to / })).toHaveCount(0);
 
-  await page.getByRole("button", { name: "Move", exact: true }).click();
+  await page.getByRole("button", { name: "Planned for Fall 2027" }).click();
   await expect(
-    page.getByRole("menuitem", { name: /^Fall 2027.*current term/ }),
+    page.getByRole("menuitem", { name: /^Fall 2027.*planned here/ }),
   ).toBeVisible();
   await page.getByRole("menuitem", { name: /^Winter 2028/ }).click();
   await expect(page.getByText("Planned for Winter 2028")).toBeVisible();
@@ -178,29 +201,36 @@ test("view tabs move with the arrow keys", async ({ page }) => {
   await seedProfile(page, [done("COMP 250")]);
   await page.goto("/courses");
   const tabs = page.getByRole("tab");
-  await expect(tabs.nth(1)).toHaveAttribute("tabindex", "0");
-  await tabs.nth(1).focus();
+  await expect(tabs).toHaveText(["Can take now", "All"]);
+  await expect(tabs.first()).toHaveAttribute("tabindex", "0");
+  await tabs.first().focus();
   await page.keyboard.press("ArrowRight");
-  await expect(tabs.nth(2)).toBeFocused();
-  await expect(tabs.nth(2)).toHaveAttribute("aria-selected", "true");
-  await expect(page).toHaveURL(/view=program/);
+  await expect(tabs.nth(1)).toBeFocused();
+  await expect(tabs.nth(1)).toHaveAttribute("aria-selected", "true");
+  await expect(page).toHaveURL(/view=all/);
   await page.keyboard.press("Home");
   await expect(tabs.first()).toBeFocused();
-  await expect(page).toHaveURL(/view=all/);
+  await expect(page).not.toHaveURL(/view=/);
   await expect(page.getByRole("tabpanel")).toBeVisible();
 });
 
 test("a URL the page cannot honor is rewritten to what it shows", async ({
   page,
 }) => {
-  await page.goto("/courses?view=nope");
-  await expect(page.getByRole("tab", { name: /^All/ })).toBeVisible();
-  await expect(page).toHaveURL(/\/courses$/);
-
-  await page.goto("/courses?sort=credits&page=999");
-  await expect(page.getByRole("tab", { name: /^All/ })).toBeVisible();
-  await expect(page).toHaveURL(/sort=credits&page=\d+$/);
+  await page.goto("/courses?view=nope&sort=code&page=999");
+  await expect(page.locator("tbody tr").first()).toBeVisible();
+  await expect(page.getByRole("tab")).toHaveCount(0);
+  await expect(page).toHaveURL(/\/courses\?page=\d+$/);
   await expect(page).not.toHaveURL(/page=999/);
+
+  await seedProfile(page, [done("COMP 250")]);
+  for (const view of ["planned", "completed"]) {
+    await page.goto(`/courses?view=${view}`);
+    await expect(
+      page.getByRole("tab", { name: "Can take now" }),
+    ).toHaveAttribute("aria-selected", "true");
+    await expect(page).toHaveURL(/\/courses$/);
+  }
 });
 
 test("Back to the course list restores the scroll position", async ({

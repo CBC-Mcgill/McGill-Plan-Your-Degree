@@ -1,23 +1,34 @@
-import { ArrowLeft, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AddToPlan } from "@/components/add-to-plan";
-import { CourseRatings } from "@/components/course-ratings";
-import { CourseStatusPanel } from "@/components/course-status-panel";
-import { LinkedCourseText } from "@/components/linked-course-text";
+import { AddToPlan, CourseFacts } from "@/components/add-to-plan";
+import {
+  LinkedCode,
+  RequirementSection,
+} from "@/components/linked-course-text";
 import { RequirementText } from "@/components/requirement-text";
-import { SectionCard } from "@/components/section-card";
-import { UncertainFlag } from "@/components/status";
-import { InfoTip } from "@/components/ui/tooltip";
+import { Section } from "@/components/ui/section";
+import { Term } from "@/components/ui/tooltip";
 import { UnlockRows } from "@/components/unlock-rows";
-import meta from "@/data/catalogue/meta.json";
-import { getUnlocks, leaves, loadCatalogue } from "@/lib/catalogue/server";
+import { codeRuns } from "@/lib/catalogue/codes";
+import { getUnlocks, loadCatalogue } from "@/lib/catalogue/server";
 import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
-import { creditsLabel, routesText } from "@/lib/engine/parts";
+import type { Course, CourseSummary } from "@/lib/catalogue/types";
+import { facultyName } from "@/lib/engine/browse";
 import { toStatusInput } from "@/lib/engine/status";
-import { type Definition, GLOSSARY } from "@/lib/glossary";
 import { logicalCode } from "@/lib/profile/types";
+
+/** Catalogue notes the page already says another way: hours ("3 hours", "(3-4-5)"), the seasons, and on a multi-term course the rules its routes line covers. */
+const HOURS =
+  /^\(?\d[\d.]*-\d[\d.]*-\d[\d.]*\)?$|^\d[\d.]* (hours?|lectures?)\b/i;
+const SEASONS = /^(Fall|Winter|Summer)((,| or| and) (Fall|Winter|Summer))*$/;
+const PARTS =
+  /^(Students must (also )?register for|No credit will be given for this course unless both)/;
+
+const summaryOf = ({
+  description: _description,
+  notes: _notes,
+  ...summary
+}: Course): CourseSummary => summary;
 
 // Nothing is built ahead, so each course renders on its first visit and is then served from the static cache.
 export async function generateStaticParams() {
@@ -40,191 +51,114 @@ export default async function CoursePage({
   const course = catalogue.get(codeFromSlug((await params).slug));
   if (!course) notFound();
 
-  const { description, notes, ...summary } = course;
+  const summary = summaryOf(course);
+  const owner = toStatusInput(course);
+  const notes = course.notes.filter(
+    (note) =>
+      !HOURS.test(note) &&
+      !SEASONS.test(note) &&
+      !(course.parts && PARTS.test(note)),
+  );
+  const unlocks = (await getUnlocks(course.code)).flatMap((code) => {
+    const unlocked = catalogue.get(code);
+    return unlocked ? [summaryOf(unlocked)] : [];
+  });
+  // A multi-term course has no page of its own on the catalogue, only its parts do.
+  const catalogueSlug = courseSlug(course.parts?.[0]?.code ?? course.code);
+  const offeredBy = [course.offeredBy, facultyName(course.faculty)]
+    .filter(Boolean)
+    .join(" · ");
+
+  /** The text as written, with every code the catalogue knows as a link. */
+  const linked = (text: string, onlyTaken = false) =>
+    codeRuns(text).map(({ at, run, code }) => {
+      const found = code ? catalogue.get(logicalCode(run)) : undefined;
+      return found ? (
+        <LinkedCode
+          key={at}
+          course={toStatusInput(found)}
+          label={run}
+          onlyTaken={onlyTaken}
+        />
+      ) : (
+        run
+      );
+    });
+
   const requirements = [
     { title: "Prerequisites", item: course.prerequisites },
     { title: "Corequisites", item: course.corequisites },
     { title: "Restrictions", item: course.restrictions },
-  ].flatMap(({ title, item }) =>
-    item?.text
-      ? [
-          {
-            title,
-            text: item.text,
-            tree: "tree" in item ? item.tree : null,
-            unparsed: "unparsed" in item && item.unparsed,
-          },
-        ]
-      : [],
-  );
-  // A multi-term course has no page of its own on the catalogue, only its parts do.
-  const catalogueSlug = courseSlug(course.parts?.[0]?.code ?? course.code);
-  const unlocks = (await getUnlocks(course.code)).flatMap((code) => {
-    const unlocked = catalogue.get(code);
-    return unlocked
-      ? [
-          {
-            course: toStatusInput(unlocked),
-            title: unlocked.title,
-            credits: creditsLabel(unlocked),
-          },
-        ]
-      : [];
-  });
-  const routes = routesText(course);
-  const tree = course.prerequisites?.tree;
-  const prerequisites = Object.fromEntries(
-    (tree ? leaves(tree) : []).flatMap((leaf) => {
-      const required = catalogue.get(logicalCode(leaf));
-      return required ? [[required.code, toStatusInput(required)]] : [];
-    }),
-  );
+  ];
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-8">
-      <div className="flex items-center justify-between gap-6">
-        <Link
-          href="/courses"
-          className="-ml-2 inline-flex h-8 items-center gap-1.5 rounded-md px-2 font-medium text-[13px] text-muted-foreground hover:text-foreground"
-        >
-          <ArrowLeft aria-hidden className="size-4" />
-          Browse courses
-        </Link>
-        <a
-          href={`https://coursecatalogue.mcgill.ca/courses/${catalogueSlug}/`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="-mr-2 inline-flex h-8 items-center gap-1.5 rounded-md px-2 font-medium text-[13px] text-muted-foreground hover:text-foreground"
-        >
-          Official page on the McGill catalogue
-          <ExternalLink aria-hidden className="size-3.5" />
-          <span className="sr-only"> (opens in a new tab)</span>
-        </a>
-      </div>
-
-      <div className="mt-3 flex items-end justify-between gap-6">
-        <div className="min-w-0">
-          <h1>
-            <span className="block font-medium font-sans text-[13px] text-muted-foreground leading-[18px] tracking-normal font-stretch-normal">
-              {course.code}
-            </span>{" "}
-            <span className="mt-1 block">{course.title}</span>
-          </h1>
-          {routes && (
-            <p className="mt-2 max-w-prose text-muted-foreground">{routes}</p>
-          )}
+    <div className="mx-auto w-full max-w-page px-8 pt-12">
+      <p className="font-semibold text-fg-muted">{course.code}</p>
+      <div className="mt-2 flex items-start justify-between gap-8">
+        <h1 className="min-w-0 max-w-reading">{course.title}</h1>
+        <div className="mt-1 shrink-0">
+          <AddToPlan course={summary} />
         </div>
-        <AddToPlan course={summary} year={meta.catalogueYear} />
       </div>
 
-      <div className="mt-6 grid grid-cols-[minmax(0,2fr)_minmax(0,1fr)] items-start gap-6">
-        <div className="flex flex-col gap-6">
-          <SectionCard id="about" title="About">
-            <p className="leading-6">{description || "No description."}</p>
-            {notes.length > 0 && (
-              <ul className="mt-4 flex list-disc flex-col gap-1.5 pl-5 text-muted-foreground">
-                {notes.map((note) => (
-                  <li key={note}>{note}</li>
-                ))}
-              </ul>
-            )}
-          </SectionCard>
+      <div className="max-w-reading">
+        <CourseFacts
+          course={summary}
+          catalogueUrl={`https://coursecatalogue.mcgill.ca/courses/${catalogueSlug}/`}
+          noPrerequisites={!course.prerequisites?.text}
+        />
 
-          <SectionCard id="requirements" title="Requirements">
-            {requirements.length > 0 ? (
-              <dl className="divide-y divide-border">
-                {requirements.map(({ title, text, tree, unparsed }) => (
-                  <div key={title} className="py-3 first:pt-0 last:pb-0">
-                    <dt className="flex items-center gap-3 font-medium text-[13px] text-muted-foreground">
-                      {title}
-                      {unparsed && <UncertainFlag withLabel />}
-                    </dt>
-                    <dd className="mt-1 leading-7">
-                      {tree && !unparsed ? (
-                        <RequirementText
-                          tree={tree}
-                          leaf={(code) => <LinkedCourseText text={code} />}
-                        />
-                      ) : (
-                        <LinkedCourseText
-                          text={text}
-                          onlyTaken={title === "Restrictions"}
-                        />
-                      )}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            ) : (
-              <p className="text-muted-foreground">
-                No prerequisites, corequisites, or restrictions are listed.
+        {(course.description || notes.length > 0) && (
+          <div className="mt-12 flex max-w-[68ch] flex-col gap-2">
+            {course.description && <p>{course.description}</p>}
+            {notes.map((note) => (
+              <p key={note} className="text-fg-muted">
+                {note}
               </p>
-            )}
-          </SectionCard>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-12 space-y-12">
+          {requirements.map(({ title, item }) => {
+            if (!item?.text) return null;
+            const tree = "tree" in item ? item.tree : null;
+            const unparsed = "unparsed" in item && item.unparsed;
+            return (
+              <RequirementSection
+                key={title}
+                title={title}
+                course={owner}
+                uncertain={unparsed}
+                collapse={title === "Prerequisites"}
+              >
+                {tree && !unparsed ? (
+                  <RequirementText tree={tree} leaf={(code) => linked(code)} />
+                ) : (
+                  linked(item.text, title === "Restrictions")
+                )}
+              </RequirementSection>
+            );
+          })}
 
           {unlocks.length > 0 && (
-            <SectionCard
-              id="unlocks"
-              title="Unlocks"
-              caption={`Courses that list ${course.code} as a prerequisite.`}
-              bodyClassName=""
+            <Section
+              title={
+                <Term
+                  def={{
+                    label: "Unlocks",
+                    tip: `Courses that list ${course.code} as a prerequisite.`,
+                  }}
+                />
+              }
             >
               <UnlockRows courses={unlocks} />
-            </SectionCard>
+            </Section>
           )}
+
+          {offeredBy && <p className="text-fg-muted">{offeredBy}</p>}
         </div>
-
-        <aside aria-label="About this course" className="flex flex-col gap-6">
-          <CourseStatusPanel course={summary} prerequisites={prerequisites} />
-
-          <SectionCard id="details" title="Details" bodyClassName="">
-            <dl className="divide-y divide-border border-border border-t text-[13px]">
-              <Fact
-                label="Credits"
-                info={GLOSSARY.credits}
-                value={creditsText(course.credits)}
-              />
-              <Fact
-                label="Terms offered"
-                info={GLOSSARY.termsOffered}
-                value={course.terms.join(", ") || "Not offered this year"}
-              />
-              <Fact
-                label="Offered by"
-                info={GLOSSARY.offeredBy}
-                value={course.offeredBy}
-              />
-              <Fact label="Faculty" value={course.faculty} />
-            </dl>
-          </SectionCard>
-
-          <CourseRatings code={course.parts?.[0]?.code ?? course.code} />
-        </aside>
       </div>
-    </div>
-  );
-}
-
-function creditsText(credits: number | null) {
-  return credits === null ? null : String(credits);
-}
-
-function Fact({
-  label,
-  info,
-  value,
-}: {
-  label: string;
-  info?: Definition;
-  value: string | null;
-}) {
-  return (
-    <div className="flex items-baseline justify-between gap-4 px-5 py-2.5">
-      <dt className="flex shrink-0 items-center gap-1.5 text-muted-foreground">
-        {label}
-        {info && <InfoTip {...info} />}
-      </dt>
-      <dd className="text-right font-medium">{value ?? "Not listed"}</dd>
     </div>
   );
 }

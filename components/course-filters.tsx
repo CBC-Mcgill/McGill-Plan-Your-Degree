@@ -1,37 +1,29 @@
 "use client";
 
 import { cn } from "cn";
-import { ArrowUpDown, Check, Plus, Search, X } from "lucide-react";
-import { Checkbox, DropdownMenu, Popover } from "radix-ui";
+import { Check, ChevronDown, Search, X } from "lucide-react";
+import { Checkbox, Popover } from "radix-ui";
 import type * as React from "react";
 import { Fragment, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/ui/chip";
-import { compactControlStyles } from "@/components/ui/field";
-import { Kbd } from "@/components/ui/kbd";
+import { controlStyles } from "@/components/ui/field";
+import { Menu, MenuItem } from "@/components/ui/menu";
 import {
   chipText,
   type Option,
   PROP_LABEL,
   type Prop,
+  SORTS,
   type SortKey,
 } from "@/lib/engine/browse";
 
-const FLOAT = "z-[85] rounded-lg bg-card shadow-float outline-none";
-const MENU_ITEM =
-  "relative flex h-8 cursor-default select-none items-center gap-2 rounded-sm px-2 text-[13px] outline-none data-[disabled]:text-faint data-[highlighted]:option-active";
 const PLURAL: Partial<Record<Prop, string>> = {
   subject: "subjects",
   faculty: "faculties",
 };
-const SORTS: { key: SortKey; label: string }[] = [
-  { key: "recommended", label: "Recommended" },
-  { key: "code", label: "Code, A to Z" },
-  { key: "level", label: "Level, low to high" },
-  { key: "credits", label: "Credits, high to low" },
-];
 
-/** `shortcut` is the key that focuses the field, shown while it is empty. */
+/** The page's search field. `shortcut` is the key that focuses it, announced but not drawn. */
 export function SearchField({
   value,
   onChange,
@@ -47,8 +39,7 @@ export function SearchField({
     <div className={cn("relative", className)}>
       <Search
         aria-hidden
-        className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
-        strokeWidth={1.75}
+        className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-fg-muted"
       />
       <input
         type="search"
@@ -60,48 +51,22 @@ export function SearchField({
         spellCheck={false}
         aria-keyshortcuts={shortcut}
         className={cn(
-          compactControlStyles,
-          "w-full pr-8 pl-9 text-sm hover:shadow-[inset_0_0_0_1px_var(--faint)] [&::-webkit-search-cancel-button]:hidden",
+          controlStyles,
+          "w-full pr-9 pl-9 [&::-webkit-search-cancel-button]:hidden",
         )}
         {...props}
       />
-      {shortcut && !value && (
-        <Kbd
-          aria-hidden
-          className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2"
-        >
-          {shortcut}
-        </Kbd>
-      )}
       {value && (
         <button
           type="button"
           onClick={() => onChange("")}
           aria-label="Clear search"
-          className="absolute top-1/2 right-1.5 flex size-6 -translate-y-1/2 items-center justify-center rounded-sm text-muted-foreground hover:bg-subtle hover:text-foreground"
+          className="absolute top-1/2 right-1.5 flex size-6 -translate-y-1/2 items-center justify-center rounded-md text-fg-muted hover:text-fg"
         >
-          <X aria-hidden className="size-3.5" strokeWidth={2} />
+          <X aria-hidden className="size-4" />
         </button>
       )}
     </div>
-  );
-}
-
-/** Chip that opens a popover. `chipText` still starts Level and Credits values with the label, which the chip now shows itself. */
-function FilterChip({
-  label,
-  value,
-  ...props
-}: React.ComponentProps<typeof Chip>) {
-  const text = value?.replace(`${label} `, "");
-  return (
-    <Chip
-      label={label}
-      value={text}
-      title={text}
-      className="max-w-64"
-      {...props}
-    />
   );
 }
 
@@ -116,12 +81,12 @@ function CheckRow({
 }) {
   return (
     // biome-ignore lint/a11y/noLabelWithoutControl: the Radix checkbox inside is the control
-    <label className="flex h-8 cursor-pointer items-center gap-2.5 rounded-sm px-2 text-[13px] hover:bg-subtle">
+    <label className="flex h-10 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-tint has-focus-visible:bg-tint">
       <Checkbox.Root
         data-nav
         checked={checked}
         onCheckedChange={(value) => onChange(value === true)}
-        className="flex size-4 shrink-0 items-center justify-center rounded-[4px] bg-card shadow-[inset_0_0_0_1.5px_var(--border-strong)] data-[state=checked]:bg-ring data-[state=checked]:shadow-none"
+        className="flex size-4 shrink-0 items-center justify-center rounded-[4px] border border-fg-subtle bg-bg focus-visible:outline-offset-2 data-[state=checked]:border-fg data-[state=checked]:bg-fg"
       >
         <Checkbox.Indicator>
           <Check aria-hidden className="size-3 text-white" strokeWidth={3} />
@@ -148,13 +113,12 @@ function navKeys(event: React.KeyboardEvent<HTMLElement>) {
   }
 }
 
-/** One filter: a chip that opens a checkbox list, with a search field when the list is long. */
+/** One filter: a chip that opens a checkbox list, with a search field when the list is long. The chip's × clears it. */
 export function FilterPopover({
   prop,
   options,
   selected,
   onChange,
-  onClear,
   open,
   onOpenChange,
 }: {
@@ -162,7 +126,6 @@ export function FilterPopover({
   options: Option[];
   selected: string[];
   onChange: (values: string[]) => void;
-  onClear?: () => void;
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
@@ -177,6 +140,7 @@ export function FilterPopover({
           o.hint?.toLowerCase().includes(text),
       )
     : options;
+  const value = selected.length ? chipText(prop, selected) : undefined;
   return (
     <Popover.Root
       open={open}
@@ -186,25 +150,30 @@ export function FilterPopover({
       }}
     >
       <Popover.Trigger asChild>
-        <FilterChip
+        <Chip
           label={PROP_LABEL[prop]}
-          value={selected.length ? chipText(prop, selected) : undefined}
-          onClear={onClear}
+          value={value}
+          title={value}
+          onClear={() => onChange([])}
+          className="max-w-64"
         />
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Content
           align="start"
-          sideOffset={6}
+          sideOffset={4}
+          collisionPadding={16}
           onKeyDown={navKeys}
-          className={cn(FLOAT, prop === "faculty" ? "w-[380px]" : "w-[264px]")}
+          className={cn(
+            "z-[85] rounded-lg bg-bg p-1 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none",
+            prop === "faculty" ? "w-96" : "w-64",
+          )}
         >
           {searchable && (
-            <div className="flex h-10 items-center gap-2 border-border border-b px-3 focus-within:border-ring">
+            <div className="relative">
               <Search
                 aria-hidden
-                className="size-4 shrink-0 text-muted-foreground"
-                strokeWidth={1.75}
+                className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-fg-muted"
               />
               <input
                 data-nav
@@ -212,22 +181,15 @@ export function FilterPopover({
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={`Search ${noun}`}
                 aria-label={`Search ${noun}`}
-                className="h-full min-w-0 flex-1 bg-transparent text-[13px] outline-none placeholder:text-faint"
+                className="h-10 w-full rounded-md bg-transparent pr-3 pl-9 placeholder:text-fg-muted focus-visible:-outline-offset-2"
               />
             </div>
           )}
-          <div className="max-h-[280px] overflow-y-auto p-1.5">
-            {!searchable && (
-              <p className="px-2 pt-1 pb-1.5 font-medium text-[12px] text-muted-foreground">
-                {prop === "term" ? "Offered in" : PROP_LABEL[prop]}
-              </p>
-            )}
+          <div className="max-h-[280px] overflow-y-auto">
             {visible.map((option, i) => (
               <Fragment key={option.value}>
                 {option.group && option.group !== visible[i - 1]?.group && (
-                  <p className="px-2 pt-2 pb-1 font-medium text-[12px] text-muted-foreground first:pt-1">
-                    {option.group}
-                  </p>
+                  <p className="px-3 pt-2 pb-1 text-fg-muted">{option.group}</p>
                 )}
                 <CheckRow
                   checked={selected.includes(option.value)}
@@ -240,7 +202,7 @@ export function FilterPopover({
                   }
                 >
                   <span
-                    className={cn(prop === "subject" && "font-medium")}
+                    className={cn(prop === "subject" && "font-semibold")}
                     title={
                       option.hint
                         ? `${option.label} - ${option.hint}`
@@ -249,7 +211,7 @@ export function FilterPopover({
                   >
                     {option.label}
                     {option.hint && (
-                      <span className="ml-2 font-normal text-muted-foreground">
+                      <span className="ml-2 font-normal text-fg-muted">
                         {option.hint}
                       </span>
                     )}
@@ -258,25 +220,10 @@ export function FilterPopover({
               </Fragment>
             ))}
             {visible.length === 0 && (
-              <p className="px-2 py-6 text-center text-[13px] text-muted-foreground">
+              <p className="px-3 py-6 text-center text-fg-muted">
                 Nothing matches "{query}"
               </p>
             )}
-          </div>
-          <div className="flex h-10 items-center justify-between border-border border-t pr-2 pl-3">
-            <span className="text-[12px] text-muted-foreground tabular-nums">
-              {selected.length
-                ? `${selected.length} selected`
-                : "None selected"}
-            </span>
-            <Button
-              variant="ghost"
-              size="sm"
-              disabled={selected.length === 0}
-              onClick={() => onChange([])}
-            >
-              Clear
-            </Button>
           </div>
         </Popover.Content>
       </Popover.Portal>
@@ -284,44 +231,7 @@ export function FilterPopover({
   );
 }
 
-/** Lists the filters that have no chip yet. Picking one adds its chip and opens it. */
-export function AddFilterMenu({
-  props,
-  onPick,
-}: {
-  props: Prop[];
-  onPick: (prop: Prop) => void;
-}) {
-  return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <Button variant="ghost" className="shrink-0">
-          <Plus aria-hidden strokeWidth={1.75} />
-          Add filter
-        </Button>
-      </DropdownMenu.Trigger>
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          align="start"
-          sideOffset={6}
-          onCloseAutoFocus={(event) => event.preventDefault()}
-          className={cn(FLOAT, "w-44 p-1")}
-        >
-          {props.map((prop) => (
-            <DropdownMenu.Item
-              key={prop}
-              className={MENU_ITEM}
-              onSelect={() => onPick(prop)}
-            >
-              {PROP_LABEL[prop]}
-            </DropdownMenu.Item>
-          ))}
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
-  );
-}
-
+/** "Program first" or "Code A to Z" as a text menu button (D29). */
 export function SortMenu({
   sort,
   onChange,
@@ -329,44 +239,26 @@ export function SortMenu({
   sort: SortKey;
   onChange: (sort: SortKey) => void;
 }) {
-  const current = SORTS.find((s) => s.key === sort)?.label;
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <Button variant="secondary">
-          <ArrowUpDown aria-hidden strokeWidth={1.75} />
-          Sort
-          <span className="text-muted-foreground">{current}</span>
+    <Menu
+      align="end"
+      trigger={
+        <Button variant="text">
+          <span className="sr-only">Sort: </span>
+          {SORTS.find((s) => s.key === sort)?.label}
+          <ChevronDown aria-hidden className="text-fg-muted" />
         </Button>
-      </DropdownMenu.Trigger>
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          align="end"
-          sideOffset={6}
-          className={cn(FLOAT, "w-[220px] p-1")}
-        >
-          <DropdownMenu.Label className="px-2 pt-1.5 pb-1 font-medium text-[12px] text-muted-foreground">
-            Sort by
-          </DropdownMenu.Label>
-          <DropdownMenu.RadioGroup
-            value={sort}
-            onValueChange={(value) => onChange(value as SortKey)}
-          >
-            {SORTS.map((option) => (
-              <DropdownMenu.RadioItem
-                key={option.key}
-                value={option.key}
-                className={cn(MENU_ITEM, "pl-7")}
-              >
-                <DropdownMenu.ItemIndicator className="absolute left-2">
-                  <Check aria-hidden className="size-3.5" strokeWidth={2.25} />
-                </DropdownMenu.ItemIndicator>
-                {option.label}
-              </DropdownMenu.RadioItem>
-            ))}
-          </DropdownMenu.RadioGroup>
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+      }
+    >
+      {SORTS.map((option) => (
+        <MenuItem key={option.key} onSelect={() => onChange(option.key)}>
+          <span className="flex w-4 shrink-0">
+            {option.key === sort && <Check aria-hidden className="size-4" />}
+          </span>
+          {option.label}
+          {option.key === sort && <span className="sr-only"> (selected)</span>}
+        </MenuItem>
+      ))}
+    </Menu>
   );
 }

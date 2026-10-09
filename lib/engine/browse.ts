@@ -1,8 +1,8 @@
 import type { IndexedCourse } from "../catalogue/search.ts";
 import { indexCourses } from "../catalogue/search.ts";
 import type { CourseSummary } from "../catalogue/types.ts";
-import { formatTerm } from "../profile/terms.ts";
-import type { CourseRecord, Plan, Season, Term } from "../profile/types.ts";
+import { COPY } from "../copy.ts";
+import type { CourseRecord, Plan, Season } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import { groupAllows, namesCourses } from "./progress.ts";
 import type { Snapshot } from "./snapshot.ts";
@@ -15,30 +15,21 @@ import {
 
 export const SEASONS: Season[] = ["Fall", "Winter", "Summer"];
 const LEVELS = ["100", "200", "300", "400", "500", "600", "700"];
-const CREDIT_LABELS: Record<string, string> = {
-  "1": "1 or fewer",
-  "2": "2",
-  "3": "3",
-  "4": "4",
-  "5": "5 or more",
-};
 
-export type Prop = "subject" | "level" | "term" | "faculty" | "credits";
+export type Prop = "subject" | "level" | "term" | "faculty";
 export type Filters = Record<Prop, string[]>;
-export const PROPS: Prop[] = ["subject", "level", "term", "faculty", "credits"];
+export const PROPS: Prop[] = ["subject", "level", "term", "faculty"];
 export const PROP_LABEL: Record<Prop, string> = {
   subject: "Subject",
   level: "Level",
   term: "Term",
   faculty: "Faculty",
-  credits: "Credits",
 };
 export const NO_FILTERS: Filters = {
   subject: [],
   level: [],
   term: [],
   faculty: [],
-  credits: [],
 };
 
 export interface Option {
@@ -65,6 +56,10 @@ const FACULTY_LABEL: Record<string, string> = {
 /** Catalogue placeholders that name no faculty. */
 const NO_FACULTY = new Set(["No College Designated", "Not used in standing"]);
 const facultyLabel = (name: string) => FACULTY_LABEL[name] ?? name;
+
+/** The readable faculty name, or null for a placeholder that names none. */
+export const facultyName = (name: string | null) =>
+  name && !NO_FACULTY.has(name) ? facultyLabel(name) : null;
 
 /** Everything that depends only on the catalogue, so a status change never rebuilds it. */
 export interface CatalogueBase {
@@ -122,28 +117,45 @@ export function pinSubjects(
   return [...group(true), ...group(false)];
 }
 
-export type ProgramRole = "required" | "complementary";
+export type ProgramRole = "required" | "complementary" | "minor";
 
-/** The program's required courses plus every course a complementary group names. A course in both counts as required. */
+/** The program's required courses, every course a complementary group names, then the minor's courses. Each keeps its first role, and graduate courses (600 and up) are left out. */
 export function programCodes(
-  program: Program | undefined,
+  program: Program | null,
+  minor: Program | null,
   index: readonly IndexedCourse[],
 ): Map<string, ProgramRole> {
   const codes = new Map<string, ProgramRole>();
-  for (const group of program?.groups ?? []) {
-    if (group.kind === "required") {
-      for (const item of group.courses) {
-        for (const code of typeof item === "string" ? [item] : item.oneOf) {
-          codes.set(code, "required");
+  const sources = [
+    { groups: program?.groups ?? [], minor: false },
+    { groups: minor?.groups ?? [], minor: true },
+  ];
+  for (const source of sources) {
+    for (const group of source.groups) {
+      const role: ProgramRole = source.minor
+        ? "minor"
+        : group.kind === "required"
+          ? "required"
+          : "complementary";
+      const add = (code: string) => {
+        if (!codes.has(code)) codes.set(code, role);
+      };
+      if (group.kind === "required") {
+        for (const item of group.courses) {
+          for (const code of typeof item === "string" ? [item] : item.oneOf) {
+            add(code);
+          }
         }
-      }
-    } else if (namesCourses(group)) {
-      for (const { course } of index) {
-        if (groupAllows(group, course.code) && !codes.has(course.code)) {
-          codes.set(course.code, "complementary");
+      } else if (namesCourses(group)) {
+        for (const { course } of index) {
+          if (groupAllows(group, course.code)) add(course.code);
         }
       }
     }
+  }
+  for (const { course } of index) {
+    if (levelRank(course) >= 6 && levelRank(course) < 9)
+      codes.delete(course.code);
   }
   return codes;
 }
@@ -154,8 +166,6 @@ const levelRank = (c: { number: string }) =>
   /^[1-7]/.test(c.number) ? Number(c.number.slice(0, 1)) : 9;
 const levelOf = (c: { number: string }) =>
   levelRank(c) === 9 ? "Other" : `${levelRank(c)}00`;
-const creditBucket = (credits: number) =>
-  String(Math.min(5, Math.max(1, Math.round(credits))));
 const offeredIn = (c: CourseSummary) =>
   SEASONS.filter((season) => isOffered(c, season));
 
@@ -169,8 +179,6 @@ function valuesOf(c: CourseSummary, prop: Prop): string[] {
       return offeredIn(c);
     case "faculty":
       return c.faculty ? [c.faculty] : [];
-    case "credits":
-      return c.credits === null ? [] : [creditBucket(c.credits)];
   }
 }
 
@@ -196,41 +204,38 @@ export function optionsOf(prop: Prop, base: CatalogueBase): Option[] {
         value,
         label: facultyLabel(value),
       }));
-    case "credits":
-      return Object.entries(CREDIT_LABELS).map(([value, label]) => ({
-        value,
-        label,
-      }));
   }
 }
 
-/** "COMP, MATH", "Level 100, 200 and 2 more": the value only, for a set chip. */
+/** "COMP, MATH", "100, 200 and 2 more": the value only, since the chip shows the label. */
 export function chipText(prop: Prop, values: string[]): string {
   if (prop === "faculty") {
     return values.length > 1
       ? `${values.length} faculties`
       : facultyLabel(values[0] ?? "");
   }
-  const labels = values.map((value) =>
-    prop === "credits" ? (CREDIT_LABELS[value] ?? value) : value,
-  );
-  const text =
-    labels.length > 3
-      ? `${labels.slice(0, 2).join(", ")} and ${labels.length - 2} more`
-      : labels.join(", ");
-  if (prop === "level") return `Level ${text}`;
-  if (prop === "credits") return `Credits ${text}`;
-  return text;
+  return values.length > 3
+    ? `${values.slice(0, 2).join(", ")} and ${values.length - 2} more`
+    : values.join(", ");
 }
 
-export type SortKey = "recommended" | "code" | "level" | "credits";
+export type SortKey = "program" | "code";
+export const SORTS: { key: SortKey; label: string }[] = [
+  { key: "program", label: "Program first" },
+  { key: "code", label: "Code A to Z" },
+];
 
 const DONE: ReadonlySet<BrowseStatus> = new Set(["completed", "covered"]);
+const RANK: Record<ProgramRole, number> = {
+  required: 0,
+  complementary: 1,
+  minor: 2,
+};
 
 /**
- * Recommended lists program courses the student can take now (required before complementary),
+ * Program first lists the program courses the student can take now (required, then complementary, then the minor's),
  * then the program's subjects, then the rest, each by level then code.
- * In "In my program" finished courses go last. A search keeps its relevance order.
+ * In "In my program" the other program courses follow, then the minor's, and finished courses go last. A search keeps its relevance order.
  */
 export function sortCourses(
   list: readonly CourseSummary[],
@@ -239,26 +244,20 @@ export function sortCourses(
   view: View,
   searched: boolean,
 ): CourseSummary[] {
-  if (key === "recommended" && searched) return [...list];
   const byCode = (a: CourseSummary, b: CourseSummary) =>
     a.code < b.code ? -1 : 1;
+  if (key === "code") return [...list].sort(byCode);
+  if (searched) return [...list];
   const byLevel = (a: CourseSummary, b: CourseSummary) =>
     levelRank(a) - levelRank(b) || byCode(a, b);
-  if (key === "code") return [...list].sort(byCode);
-  if (key === "level") return [...list].sort(byLevel);
-  if (key === "credits") {
-    return [...list].sort(
-      (a, b) => (b.credits ?? 0) - (a.credits ?? 0) || byCode(a, b),
-    );
-  }
   const tier = (course: CourseSummary) => {
-    const status = statusOf(student.states, course.code);
-    if (view === "program" && DONE.has(status)) return 4;
     const role = student.inProgram.get(course.code);
-    if (role && status === "available" && offeredIn(course).length > 0) {
-      return role === "required" ? 0 : 1;
+    if (view === "program" && DONE.has(statusOf(student.states, course.code))) {
+      return 9;
     }
-    return student.programSubjects.has(course.subject) ? 2 : 3;
+    if (role && student.canTake.has(course.code)) return RANK[role];
+    if (view === "program") return role === "minor" ? 4 : 3;
+    return student.programSubjects.has(course.subject) ? 3 : 4;
   };
   return list
     .map((course) => ({ course, tier: tier(course) }))
@@ -266,18 +265,31 @@ export function sortCourses(
     .map(({ course }) => course);
 }
 
-export type View = "all" | "can-take" | "program" | "planned" | "completed";
-export const VIEWS: { value: View; label: string }[] = [
-  { value: "all", label: "All" },
-  { value: "can-take", label: "Can take now" },
-  { value: "program", label: "In my program" },
-  { value: "planned", label: "Planned" },
-  { value: "completed", label: "Completed" },
-];
+export type View = "can-take" | "program" | "all";
+const VIEW_LABEL: Record<View, string> = {
+  "can-take": "Can take now",
+  program: "In my program",
+  all: "All",
+};
+
+/** The views a student has, the default first: All for a visitor, and In my program only with a program. */
+export function viewsFor(
+  hasProfile: boolean,
+  hasProgram: boolean,
+): { value: View; label: string }[] {
+  const views: View[] = !hasProfile
+    ? ["all"]
+    : hasProgram
+      ? ["can-take", "program", "all"]
+      : ["can-take", "all"];
+  return views.map((value) => ({ value, label: VIEW_LABEL[value] }));
+}
 
 export interface Student {
   states: ReadonlyMap<string, CourseState>;
   inProgram: ReadonlyMap<string, ProgramRole>;
+  /** Courses `canTakeNow` accepts, the one definition of "Can take" (D33). */
+  canTake: ReadonlySet<string>;
 }
 
 export const statusOf = (
@@ -288,45 +300,16 @@ export const statusOf = (
 export function inView(
   view: View,
   course: CourseSummary,
-  { states, inProgram }: Student,
+  { inProgram, canTake }: Student,
 ): boolean {
-  const status = statusOf(states, course.code);
   switch (view) {
     case "all":
       return true;
-    // Open to the student, offered this year, and undergraduate.
     case "can-take":
-      return (
-        status === "available" &&
-        offeredIn(course).length > 0 &&
-        levelRank(course) < 5
-      );
+      return canTake.has(course.code);
     case "program":
       return inProgram.has(course.code);
-    case "planned":
-      return status === "planned";
-    case "completed":
-      return status === "completed";
   }
-}
-
-export function viewCounts(
-  index: readonly IndexedCourse[],
-  student: Student,
-): Record<View, number> {
-  const counts: Record<View, number> = {
-    all: 0,
-    "can-take": 0,
-    program: 0,
-    planned: 0,
-    completed: 0,
-  };
-  for (const { course } of index) {
-    for (const { value } of VIEWS) {
-      if (inView(value, course, student)) counts[value]++;
-    }
-  }
-  return counts;
 }
 
 export interface Query {
@@ -338,18 +321,17 @@ export interface Query {
   page: number;
 }
 
-export const defaultView = (hasProfile: boolean): View =>
-  hasProfile ? "can-take" : "all";
+/** What the page offers: its views, the default first. Sorting needs a program, since without one only one order applies. */
+type Offer = readonly { value: View }[];
+const sortable = (views: Offer) => views.some((v) => v.value === "program");
 
 const FIXED: Partial<Record<Prop, string[]>> = {
   level: LEVELS,
   term: SEASONS,
-  credits: Object.keys(CREDIT_LABELS),
 };
-const SORT_KEYS: SortKey[] = ["recommended", "code", "level", "credits"];
 
-/** Reads the URL. Without a profile the student-only views fall back to All. */
-export function readQuery(params: URLSearchParams, hasProfile: boolean): Query {
+/** Reads the URL. A view, filter value or sort the page does not offer falls back to the default. */
+export function readQuery(params: URLSearchParams, views: Offer): Query {
   const wanted = params.get("view");
   const filters = { ...NO_FILTERS };
   for (const prop of PROPS) {
@@ -359,30 +341,28 @@ export function readQuery(params: URLSearchParams, hasProfile: boolean): Query {
       .filter((value) => !allowed || allowed.includes(value));
   }
   return {
-    view: hasProfile
-      ? (VIEWS.find((v) => v.value === wanted)?.value ?? defaultView(true))
-      : "all",
+    view:
+      views.find((v) => v.value === wanted)?.value ?? views[0]?.value ?? "all",
     q: params.get("q") ?? "",
     filters,
-    sort: SORT_KEYS.find((key) => key === params.get("sort")) ?? "recommended",
+    sort: sortable(views) && params.get("sort") === "code" ? "code" : "program",
     page: Math.max(1, Number.parseInt(params.get("page") ?? "", 10) || 1),
   };
 }
 
 /** Leaves out every default, so the plain page has a plain URL. */
-export function queryString(query: Query, hasProfile: boolean): string {
+export function queryString(query: Query, views: Offer): string {
   const params = new URLSearchParams();
-  if (query.view !== defaultView(hasProfile)) params.set("view", query.view);
+  if (query.view !== views[0]?.value) params.set("view", query.view);
   if (query.q) params.set("q", query.q);
   for (const prop of PROPS) {
     for (const value of query.filters[prop]) params.append(prop, value);
   }
-  if (query.sort !== "recommended") params.set("sort", query.sort);
+  if (query.sort !== "program") params.set("sort", query.sort);
   if (query.page > 1) params.set("page", String(query.page));
   return params.toString();
 }
 
-const list = new Intl.ListFormat("en", { style: "long", type: "conjunction" });
 const article = (grade: string) =>
   /^[AEFHILMNORSX]/i.test(grade) ? "an" : "a";
 
@@ -394,21 +374,19 @@ export function statusDetail(
 ): string {
   switch (state?.status ?? "available") {
     case "locked": {
-      if (state?.blockedBy.length) {
-        return `Not open to students who have taken ${list.format(state.blockedBy)}.`;
-      }
+      if (state?.blockedBy.length) return COPY.notOpen(state.blockedBy);
       const tree = course.prerequisites?.tree;
       return tree
-        ? `Needs ${missingText(tree, student.snapshot.taken)} first.`
+        ? COPY.needs(missingText(tree, student.snapshot.taken))
         : "Check the prerequisites on the course page.";
     }
     case "available":
       return "You have every prerequisite.";
     case "planned": {
-      const term: Term | undefined = student.plan.find((entry) =>
+      const term = student.plan.find((entry) =>
         entry.courses.includes(course.code),
       )?.term;
-      return term ? `Planned for ${formatTerm(term)}.` : "Planned.";
+      return term ? COPY.plannedFor(term) : "Planned.";
     }
     case "in-progress": {
       const pending = student.snapshot.pending.get(course.code);
@@ -428,7 +406,7 @@ export function statusDetail(
       if (record?.status === "exemption") {
         return "You are exempt from this course.";
       }
-      const when = record?.term ? ` in ${formatTerm(record.term)}` : "";
+      const when = record?.term ? ` in ${COPY.term(record.term)}` : "";
       const grade = record?.grade
         ? ` with ${article(record.grade)} ${record.grade}`
         : "";
