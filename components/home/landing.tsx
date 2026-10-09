@@ -1,145 +1,232 @@
-import { CalendarRange, FileUp, ListChecks } from "lucide-react";
-import {
-  SampleRow,
-  SampleTag,
-  StartActions,
-  sampleTerm,
-} from "@/components/no-profile";
-import { STATUS, type Status, StatusBar } from "@/components/status";
-import { CARD } from "@/components/ui/card";
-import { termLabel } from "@/lib/profile/term-options";
+"use client";
 
-/** A made-up student's terms, from last term to later, by offset from today's term. */
-const PREVIEW: {
-  offset: number | null;
-  rows: { code: string; title: string; status: Status }[];
-}[] = [
-  {
-    offset: -1,
-    rows: [
-      {
-        code: "COMP 250",
-        title: "Introduction to Computer Science",
-        status: "completed",
-      },
-    ],
-  },
-  {
-    offset: 0,
-    rows: [
-      {
-        code: "COMP 251",
-        title: "Algorithms and Data Structures",
-        status: "in-progress",
-      },
-      {
-        code: "COMP 273",
-        title: "Introduction to Computer Systems",
-        status: "in-progress",
-      },
-    ],
-  },
-  {
-    offset: 1,
-    rows: [
-      { code: "COMP 310", title: "Operating Systems", status: "planned" },
-      { code: "COMP 303", title: "Software Design", status: "available" },
-    ],
-  },
-  {
-    offset: null,
-    rows: [
-      { code: "COMP 409", title: "Concurrent Programming", status: "locked" },
-    ],
-  },
-];
+import { ArrowUpRight, Gift, ShieldCheck, Star } from "lucide-react";
+import { motion, useScroll, useTransform } from "motion/react";
+import Link from "next/link";
+import type { ReactNode } from "react";
+import { useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { COPY } from "@/lib/copy";
+import { REPO_URL } from "@/lib/github";
+import { startProfile } from "@/lib/profile/started";
+import { Mark, useReduce } from "./landing/parts";
+import { Story } from "./landing/story";
+import { PlannerWindow } from "./landing/window";
+import { useDarkNav } from "./use-dark-nav";
 
-const PROMISES = [
-  {
-    icon: FileUp,
-    title: "Start from your transcript",
-    text: "Drop the unofficial transcript PDF from Minerva and every course you took fills in.",
-  },
-  {
-    icon: ListChecks,
-    title: "See what you can take",
-    text: "Each course checks its prerequisites against what you have done, and says what is missing.",
-  },
-  {
-    icon: CalendarRange,
-    title: "Plan every term",
-    text: "Lay out each term until graduation, with a warning when a course does not run or a prerequisite is late.",
-  },
-];
+const INK = "bg-[#121a2d] text-white";
 
-export function Landing() {
+/** The brand red brightened just enough for 3:1 on the ink and its red glow, for "McGill" in the h1. */
+const RED_ON_INK = "text-[#e8283d]";
+
+/** The calls to action as glass on the ink, see `.glass` and `.glass-red` in globals.css. */
+const GLASS_BUTTON =
+  "glass h-12 rounded-[10px] px-6 text-[15px] text-white focus-visible:outline-white";
+
+/** The landing for first-time visitors: a centered headline over the planner in 3D that flattens as you scroll, a pinned scroll story, then one last call to action. */
+export function Landing({ stars }: { stars: number | null }) {
+  const reduce = useReduce();
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-12">
-      <h1 className="text-[56px] leading-[60px]">
-        Your McGill degree, mapped out
-      </h1>
-      <div className="mt-10 grid grid-cols-12 items-start gap-x-12">
-        <div className="col-span-5">
-          <p className="text-pretty text-fg-muted text-xl">
-            See what you can take next, what is left to graduate, and a plan for
-            every term that checks each prerequisite.
-          </p>
-          <div className="mt-8">
-            <StartActions />
-          </div>
-        </div>
+    <>
+      <Hero reduce={reduce} stars={stars} />
+      <Story reduce={reduce} />
+      <FinalCall stars={stars} />
+    </>
+  );
+}
 
-        <figure className="col-span-7">
-          <figcaption className="mb-3 flex items-center gap-4 text-fg-muted">
-            A Computer Science student in {termLabel(sampleTerm(0))}
-            <SampleTag />
-          </figcaption>
-          <div aria-hidden className={CARD}>
-            <div className="px-5 pt-4 pb-5">
-              <div className="flex items-baseline justify-between gap-4">
-                <p className="font-semibold">36 of 90 credits earned</p>
-                <p className="text-fg-muted">
-                  Graduates {termLabel(sampleTerm(3))}
-                </p>
-              </div>
-              <StatusBar
-                completed={36}
-                inProgress={12}
-                planned={3}
-                total={90}
-                className="mt-3 w-full"
-              />
-            </div>
-            {PREVIEW.map(({ offset, rows }) => (
-              <div key={offset ?? "later"} className="border-line border-t">
-                <p className="flex h-9 items-center border-line border-b bg-subtle px-5 font-semibold text-fg-muted">
-                  {offset === null ? "Later" : termLabel(sampleTerm(offset))}
-                </p>
-                <ul>
-                  {rows.map((row) => (
-                    <SampleRow
-                      key={row.code}
-                      {...row}
-                      word={STATUS[row.status].label}
-                      className="px-5 first:border-t-0"
-                    />
-                  ))}
-                </ul>
-              </div>
-            ))}
+function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
+  const hero = useRef<HTMLElement>(null);
+  const stage = useRef<HTMLDivElement>(null);
+  useDarkNav(hero);
+  const { scrollYProgress } = useScroll({
+    target: stage,
+    offset: ["start start", "end start"],
+  });
+  const rotateX = useTransform(scrollYProgress, [0, 0.4], [20, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.4], [0.95, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.4], [-40, 0]);
+  // The text fades before it slides under the see-through header.
+  const { scrollY } = useScroll();
+  const titleOpacity = useTransform(scrollY, [0, 160], [1, 0]);
+  const actionsOpacity = useTransform(scrollY, [180, 340], [1, 0]);
+
+  return (
+    <div ref={stage} className={`relative -mt-16 overflow-hidden pt-16 ${INK}`}>
+      <LogoLight className="-top-24 size-[46rem]" />
+      <section
+        ref={hero}
+        className="relative z-10 px-8 pt-10 pb-10 text-center"
+      >
+        <motion.div style={{ opacity: titleOpacity }}>
+          <h1 className="mx-auto mt-6 max-w-[15ch] text-[clamp(3.5rem,6vw,5rem)] leading-[0.98] tracking-[-0.03em]">
+            Your <span className={RED_ON_INK}>McGill</span> degree, mapped out
+          </h1>
+        </motion.div>
+        <motion.div style={{ opacity: actionsOpacity }}>
+          <div className="mt-7 flex justify-center gap-3">
+            <Button asChild className={`glass-red ${GLASS_BUTTON}`}>
+              <Link href="/profile">{COPY.importTranscript}</Link>
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={startProfile}
+              className={GLASS_BUTTON}
+            >
+              {COPY.startWithout}
+            </Button>
           </div>
-        </figure>
+          <Facts stars={stars} className="mt-6" />
+        </motion.div>
+      </section>
+      <div className="relative mx-auto max-w-page px-8 pb-28 [perspective:1600px]">
+        <p className="sr-only">
+          A sample planner: a transcript drops in, past terms fill with
+          completed courses, the next terms fill with planned courses whose
+          prerequisites are checked, and the credits bar fills to graduation.
+        </p>
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-[30%] bottom-0 bg-[radial-gradient(closest-side_at_36%_62%,rgb(218_26_46/0.5),transparent),radial-gradient(closest-side_at_64%_56%,rgb(139_124_235/0.55),transparent)]"
+        />
+        <motion.div
+          aria-hidden
+          className="mx-auto max-w-[68rem] will-change-transform"
+          style={reduce ? undefined : { rotateX, scale, y }}
+        >
+          <PlannerWindow reduce={reduce} />
+        </motion.div>
       </div>
-
-      <ul className="mt-20 grid grid-cols-3 gap-12 border-line border-t pt-8">
-        {PROMISES.map(({ icon: Icon, title, text }) => (
-          <li key={title}>
-            <Icon aria-hidden className="size-5 text-fg-muted" />
-            <h2 className="mt-3 text-base leading-6">{title}</h2>
-            <p className="mt-1 text-fg-muted">{text}</p>
-          </li>
-        ))}
-      </ul>
     </div>
+  );
+}
+
+/** The GitHub link as a glass button: the repo's mark and name, then its stars and an arrow. */
+const GITHUB_LINK =
+  "glass flex h-14 items-center gap-3 rounded-[12px] pr-3.5 pl-4 focus-visible:outline-white";
+
+/** Three facts under the calls to action: free and private as plain lines, open source as a link to the repo with its stars. */
+function Facts({
+  stars,
+  className,
+}: {
+  stars: number | null;
+  className: string;
+}) {
+  const count = stars === null ? null : stars.toLocaleString("en-US");
+  return (
+    <ul
+      className={`flex flex-wrap items-center justify-center gap-x-9 gap-y-3 text-left ${className}`}
+    >
+      <li className="flex items-center gap-3">
+        <FactText
+          icon={<Gift />}
+          title="100% free"
+          note="No account, no fees"
+        />
+      </li>
+      <li className="flex items-center gap-3">
+        <FactText
+          icon={<ShieldCheck />}
+          title="Your data stays in your browser"
+          note="We never see or store it"
+        />
+      </li>
+      <li>
+        <a
+          href={REPO_URL}
+          aria-label={
+            count === null
+              ? "Open source on GitHub"
+              : `Open source on GitHub, ${count} ${stars === 1 ? "star" : "stars"}`
+          }
+          className={GITHUB_LINK}
+        >
+          <FactText
+            icon={<GitHubMark />}
+            title="Open source"
+            note="Code on GitHub"
+          />
+          <span className="h-8 w-px bg-white/15" />
+          {count !== null && (
+            <span className="flex items-center gap-1.5 font-semibold tabular-nums">
+              <Star className="size-4" strokeWidth={2} />
+              {count}
+            </span>
+          )}
+          <ArrowUpRight className="size-4 text-white/72" strokeWidth={2} />
+        </a>
+      </li>
+    </ul>
+  );
+}
+
+function FactText({
+  icon,
+  title,
+  note,
+}: {
+  icon: ReactNode;
+  title: string;
+  note: string;
+}) {
+  return (
+    <>
+      <span className="shrink-0 text-white/85 [&_svg]:size-5">{icon}</span>
+      <span>
+        <span className="block font-semibold text-[14px] leading-[18px]">
+          {title}
+        </span>
+        <span className="block text-[12px] text-white/68 leading-4">
+          {note}
+        </span>
+      </span>
+    </>
+  );
+}
+
+/** GitHub's mark (Octicons mark-github, MIT). */
+function GitHubMark() {
+  return (
+    <svg aria-hidden viewBox="0 0 16 16" fill="currentColor">
+      <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" />
+    </svg>
+  );
+}
+
+/** The logo, large and blurred, as the light behind a headline. */
+function LogoLight({ className }: { className: string }) {
+  return (
+    <div
+      aria-hidden
+      className={`pointer-events-none absolute left-1/2 -translate-x-1/2 ${className}`}
+    >
+      <Mark className="size-full opacity-[0.16] blur-[12px]" />
+    </div>
+  );
+}
+
+function FinalCall({ stars }: { stars: number | null }) {
+  return (
+    <section
+      className={`relative overflow-hidden px-8 py-28 text-center ${INK}`}
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[28rem] w-[64rem] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side_at_40%_50%,rgb(218_26_46/0.22),transparent),radial-gradient(closest-side_at_62%_50%,rgb(139_124_235/0.22),transparent)]"
+      />
+      <LogoLight className="top-1/2 size-[36rem] -translate-y-1/2" />
+      <div className="relative">
+        <h2 className="font-display font-extrabold text-[44px] leading-[50px] tracking-[-0.025em] [font-stretch:112.5%]">
+          Start mapping your degree
+        </h2>
+        <div className="mt-8 flex justify-center">
+          <Button asChild className={`glass-red ${GLASS_BUTTON}`}>
+            <Link href="/profile">{COPY.importTranscript}</Link>
+          </Button>
+        </div>
+        <Facts stars={stars} className="mt-8" />
+      </div>
+    </section>
   );
 }

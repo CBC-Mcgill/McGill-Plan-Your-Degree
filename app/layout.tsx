@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { StorageBanner } from "@/components/storage-banner";
 import { Toaster } from "@/components/toast";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { FIRST_PAINT } from "@/lib/profile/first-paint";
 import "./globals.css";
 
 const inter = Inter({
@@ -33,7 +34,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${inter.variable} ${archivo.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: our own constant, it must run before the first paint */}
+        <script dangerouslySetInnerHTML={{ __html: FIRST_PAINT }} />
+      </head>
       <body className="flex min-h-full flex-col">
         <MotionConfig reducedMotion="user">
           <TooltipProvider>

@@ -57,14 +57,27 @@ const OPEN_LIMIT = 5;
 /** Full time at McGill, the "12 credits" of `GLOSSARY.fullTime`. */
 const FULL_TIME_CREDITS = 12;
 
-/** The landing page for visitors and the dashboard for students. Nobody sees either until the profile has loaded. */
-export function Home() {
+/** The landing page for visitors and the dashboard for students. Until the profile loads, the server's landing shows, or the skeleton for a student the first-paint script marked `data-returning`. */
+export function Home({ stars }: { stars: number | null }) {
   const snapshot = useSnapshot();
-  if (snapshot === null) return <Landing />;
+  if (snapshot)
+    return (
+      <div className="mx-auto w-full max-w-page px-8 py-12">
+        <Dashboard snapshot={snapshot} />
+      </div>
+    );
+  const loading = snapshot === undefined;
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-12">
-      {snapshot ? <Dashboard snapshot={snapshot} /> : <Skeleton />}
-    </div>
+    <>
+      {loading && (
+        <div className="mx-auto hidden w-full max-w-page px-8 py-12 [[data-returning]_&]:block">
+          <Skeleton />
+        </div>
+      )}
+      <div className={cn("contents", loading && "[[data-returning]_&]:hidden")}>
+        <Landing stars={stars} />
+      </div>
+    </>
   );
 }
 

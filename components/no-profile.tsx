@@ -50,7 +50,7 @@ export function NoProfile({
 }
 
 /** Import a transcript, or start an empty profile and stay on this page, with the privacy promise under them. */
-export function StartActions() {
+function StartActions() {
   return (
     <>
       <div className="flex flex-wrap items-center gap-4">
@@ -70,7 +70,7 @@ export function StartActions() {
 }
 
 /** Says the courses beside it are made up, so nobody takes them for their own. */
-export function SampleTag() {
+function SampleTag() {
   return (
     <span className="ml-auto rounded-[6px] bg-tint px-2 font-medium text-[13px] text-fg-muted leading-6">
       Sample
@@ -91,7 +91,7 @@ export function sampleTerm(offset: number): Term {
 }
 
 /** A made-up course row: glyph, subject tag, title, then an optional status word and credits. */
-export function SampleRow({
+function SampleRow({
   status,
   code,
   title,
