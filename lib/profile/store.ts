@@ -7,6 +7,7 @@ import {
   persist,
   type StateStorage,
 } from "zustand/middleware";
+import { forgetRecentCourses } from "../recent-courses.ts";
 import type { Transcript, TranscriptCourse } from "../transcript/parse.ts";
 import { migrateProfile, PROFILE_VERSION } from "./file.ts";
 import {
@@ -205,6 +206,7 @@ export const useProfileStore = create<ProfileState>()(
         set(initial);
         // Storage is missing when the browser blocks it, and then there is nothing to clear.
         api.persist?.clearStorage();
+        forgetRecentCourses();
       },
     }),
     {
