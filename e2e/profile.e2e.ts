@@ -62,7 +62,11 @@ test("a program read from the catalogue can be found and used", async ({
 
   await page.getByRole("link", { name: "What's next", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "Psychology Major", exact: true }),
+    page.getByRole("heading", {
+      name: "Psychology Major",
+      exact: true,
+      level: 1,
+    }),
   ).toBeVisible();
   await expect(page.getByText("Check this requirement").first()).toBeVisible();
 });

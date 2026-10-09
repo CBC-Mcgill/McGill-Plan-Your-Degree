@@ -1,172 +1,158 @@
 "use client";
 
 import { cn } from "cn";
-import {
-  ArrowRight,
-  ChevronDown,
-  CircleAlert,
-  Compass,
-  ExternalLink,
-  FileUp,
-  Info,
-  Plus,
-  TriangleAlert,
-  X,
-} from "lucide-react";
-import { motion } from "motion/react";
+import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useId, useMemo, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
-import { seasonsOffered } from "@/components/course-row";
-import { CreditsLabel } from "@/components/credits-label";
-import { GeneratedBanner } from "@/components/generated-banner";
+import { CourseRow } from "@/components/course-row";
+import { CatalogueLink } from "@/components/external-link";
+import { GeneratedNote } from "@/components/generated-banner";
+import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { StatusIcon, StatusTip, UncertainFlag } from "@/components/status";
-import { Badge } from "@/components/ui/badge";
-import { Banner } from "@/components/ui/banner";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { SelectField } from "@/components/ui/field";
-import { ProgressBar, ProgressRing } from "@/components/ui/progress";
-import { InfoTip } from "@/components/ui/tooltip";
-import { useCatalogue } from "@/lib/catalogue/client";
-import { courseSlug } from "@/lib/catalogue/slug";
 import {
-  degreeCredits,
-  type Exemption,
-  earnedCredits,
-  exemptionsToReplace,
-} from "@/lib/engine/credits";
+  STATUS,
+  type Status,
+  StatusIcon,
+  UncertainFlag,
+} from "@/components/status";
+import { Button } from "@/components/ui/button";
+import { Disclosure } from "@/components/ui/disclosure";
+import { Section } from "@/components/ui/section";
+import { ViewTabs } from "@/components/ui/tabs";
+import { Term as Defined } from "@/components/ui/tooltip";
+import { useCatalogue } from "@/lib/catalogue/client";
+import type { CourseSummary } from "@/lib/catalogue/types";
+import { COPY } from "@/lib/copy";
+import { exemptionsToReplace } from "@/lib/engine/credits";
 import {
   type Entry,
   type Item,
   type NextView,
   nextView,
-  type OpenGroup,
+  termSnapshot,
 } from "@/lib/engine/next-view";
 import { termLoad } from "@/lib/engine/plan";
-import type { Snapshot } from "@/lib/engine/snapshot";
-import { creditsText, sentence } from "@/lib/format";
-import { type Definition, GLOSSARY } from "@/lib/glossary";
+import {
+  type Claimed,
+  type GroupProgress,
+  programStanding,
+} from "@/lib/engine/progress";
+import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
+import { sentence } from "@/lib/format";
+import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
-import { planTermOptions, termLabel } from "@/lib/profile/term-options";
-import { type Term, termKey } from "@/lib/profile/types";
+import {
+  currentTerm,
+  planTermOptions,
+  termLabel,
+} from "@/lib/profile/term-options";
+import {
+  type CourseRecord,
+  isDone,
+  type Plan,
+  type Term,
+  termKey,
+} from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
-import { minorName } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
-const TERMS_SHOWN = 4;
+const TERMS_SHOWN = 2;
 const BUCKET_LIMIT = 5;
+const OTHER_STEP = 20;
 
 // The catalogue opens a program page on its overview tab, and this hash opens the course lists instead.
-export const coursesTab = (source: string) => `${source}#coursestext`;
-const OTHER_STEP = 20;
-const OTHER = "other";
-const NO_COURSES: ReadonlySet<string> = new Set();
+const coursesTab = (source: string) => `${source}#coursestext`;
+
+const courseCount = (n: number) => `${n} ${n === 1 ? "course" : "courses"}`;
+const dot = <span aria-hidden> · </span>;
+
+/** How a course stands for this student, and the term it was taken or is planned in. */
+interface Fact {
+  status: Status;
+  term: Term | null;
+}
 
 interface Context {
+  catalogue: Catalogue;
   term: Term;
-  /** Course code to the term it is planned in. */
+  /** Course code to the term the plan starts it in. */
   planned: ReadonlyMap<string, Term>;
-  /** Courses the program's lists already show, so the minor's rows for them say they count for both. */
+  facts: ReadonlyMap<string, Fact>;
+  /** Courses the program lists or counts, so the minor's rows for them say they count for both. */
   both?: ReadonlySet<string>;
-}
-
-/** A minor with what is open in it. */
-interface Minor {
-  program: Program;
-  view: NextView;
-}
-
-/** Credits toward the whole degree, and exemptions that left credits to make up. */
-interface Background {
-  degree: { done: number; required: number; advancedStanding: number } | null;
-  exemptions: Exemption[];
-}
-
-/** A required group with the courses still missing, split into open now and not open yet. */
-interface RequiredBlock {
-  title: string;
-  creditsDone: number;
-  credits: number;
-  ready: Item[];
-  later: Item[];
 }
 
 export function WhatsNext() {
   const snapshot = useSnapshot();
   if (snapshot === null) {
     return (
-      <>
-        <Header />
-        <EmptyState />
-      </>
+      <NoProfile
+        title="See what you can take next"
+        lede="Import your unofficial transcript to see the courses you can take next term and what you still need to graduate."
+      />
     );
   }
-  if (snapshot === undefined) {
-    return (
-      <>
-        <Header />
-        <PageSkeleton />
-      </>
-    );
-  }
-  return <WhatsNextReady snapshot={snapshot} />;
-}
-
-function Header({ term, children }: { term?: Term; children?: ReactNode }) {
-  return (
-    <div className="flex items-end justify-between gap-6">
-      <div>
-        <h1>What's next</h1>
-        <p className="mt-1 text-muted-foreground">
-          The courses you can take{" "}
-          {term ? `in ${termLabel(term)}` : "next term"}, and what you still
-          need to graduate.
-        </p>
-      </div>
-      {children}
-    </div>
-  );
-}
-
-/** What the plan holds in the chosen term against the credit limit, amber once it goes over. */
-function TermLoad({ credits, limit }: { credits: number; limit: number }) {
-  const over = credits > limit;
-  return (
-    <div className="flex items-center gap-1.5">
-      <Badge tone={over ? "warn" : "neutral"} size="md">
-        {over && <TriangleAlert aria-hidden />}
-        {credits} of {limit} credits planned
-        {over && <span className="sr-only">, over your credit limit</span>}
-      </Badge>
-      <InfoTip {...GLOSSARY.termLoad} />
-    </div>
-  );
+  if (snapshot === undefined) return <PageSkeleton />;
+  return <Ready snapshot={snapshot} />;
 }
 
 // Split out so a visitor without a profile does not download the catalogue.
-function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
+function Ready({ snapshot }: { snapshot: Snapshot }) {
   const programId = useProfileStore((state) => state.programId);
   const minorId = useProfileStore((state) => state.minorId);
+  const catalogue = useCatalogue();
+  const program = useProgram(programId);
+  const minor = useProgram(minorId);
+  if (catalogue.status === "error") {
+    return (
+      <>
+        <h1 className="sr-only">What's next</h1>
+        <CatalogueError />
+      </>
+    );
+  }
+  if (
+    catalogue.status !== "ready" ||
+    program === undefined ||
+    minor === undefined
+  ) {
+    return <PageSkeleton />;
+  }
+  return (
+    <Page
+      snapshot={snapshot}
+      catalogue={catalogue.catalogue}
+      program={program}
+      minor={minor}
+    />
+  );
+}
+
+function Page({
+  snapshot,
+  catalogue,
+  program,
+  minor,
+}: {
+  snapshot: Snapshot;
+  catalogue: Catalogue;
+  program: Program | null;
+  minor: Program | null;
+}) {
   const entry = useProfileStore((state) => state.entry);
-  const advancedStanding = useProfileStore((state) => state.advancedStanding);
-  const creditsRequired = useProfileStore((state) => state.creditsRequired);
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
   const creditLimit = useProfileStore((state) => state.creditLimit);
-  const catalogue = useCatalogue();
-  const options = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
-  const [picked, setPicked] = useState<number | null>(null);
-  const selected =
-    options.find((option) => termKey(option) === picked) ?? options[0];
+  const panelId = useId();
+  const terms = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
+  const [picked, setPicked] = useState<string>();
+  const term =
+    terms.find((t) => String(termKey(t)) === picked) ??
+    terms[0] ??
+    currentTerm();
 
-  // Planned courses stay in the lists, so adding one shows "Planned" and the row does not vanish.
-  const unplanned = useMemo(
-    () => ({ ...snapshot, planned: NO_COURSES }),
-    [snapshot],
-  );
   const planned = useMemo(
     () =>
       new Map(
@@ -176,605 +162,371 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
       ),
     [plan],
   );
-  const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
-  const loaded = useProgram(programId);
-  const loadedMinor = useProgram(minorId);
-  const program = loaded ?? null;
+  const facts = useMemo(
+    () => courseFacts(records, plan, snapshot),
+    [records, plan, snapshot],
+  );
+  const judged = useMemo(
+    () => termSnapshot(snapshot, plan, term),
+    [snapshot, plan, term],
+  );
   const view = useMemo(
-    () =>
-      courses && selected && loaded !== undefined
-        ? nextView(courses, unplanned, selected, program, entry)
-        : null,
-    [unplanned, courses, selected, loaded, program, entry],
+    () => nextView(catalogue, judged, term, program, entry),
+    [catalogue, judged, term, program, entry],
   );
   const minorView = useMemo(
-    () =>
-      courses && selected && loadedMinor
-        ? nextView(courses, unplanned, selected, loadedMinor, entry)
-        : null,
-    [unplanned, courses, selected, loadedMinor, entry],
+    () => minor && nextView(catalogue, judged, term, minor, entry),
+    [catalogue, judged, term, minor, entry],
   );
-  const background = useMemo((): Background => {
-    const required = degreeCredits(creditsRequired, entry, program);
-    return {
-      degree:
-        courses && required !== null
-          ? {
-              done: earnedCredits(snapshot, courses) + advancedStanding,
-              required,
-              advancedStanding,
-            }
-          : null,
-      exemptions: courses ? exemptionsToReplace(records, courses) : [],
-    };
-  }, [
-    courses,
-    snapshot,
-    creditsRequired,
-    entry,
-    program,
-    advancedStanding,
-    records,
-  ]);
+  // Not counted reads the plan too, so a planned course that counts nowhere shows before the student takes it.
+  const unclaimed = useMemo(
+    () =>
+      program
+        ? programStanding(program, snapshot, catalogue, entry, "plan").unclaimed
+        : [],
+    [program, snapshot, catalogue, entry],
+  );
+  const exemptions = useMemo(
+    () => exemptionsToReplace(records, catalogue),
+    [records, catalogue],
+  );
+  const context: Context = { catalogue, term, planned, facts };
+
+  if (!program || !view.progress) {
+    return (
+      <>
+        <h1 className="sr-only">What's next</h1>
+        <p>
+          <Link href="/profile#program" className="link font-semibold">
+            {COPY.pickProgram}
+          </Link>{" "}
+          to see what you still need.
+        </p>
+        <div className="mt-12">
+          <OtherCourses entries={view.other} context={context} />
+        </div>
+      </>
+    );
+  }
+
+  const { creditsDone, credits, groups } = view.progress;
+  const met = groups.filter((group) => group.satisfied);
+  const required = groups.filter(
+    (group) => group.kind === "required" && !group.credited,
+  );
+  const requiredDone =
+    required.length > 0 &&
+    required.every((group) => group.remaining.length === 0);
 
   return (
     <>
-      <Header term={view ? selected : undefined}>
-        {view && courses && selected && (
-          <div className="flex shrink-0 items-center gap-4">
-            <TermLoad
-              credits={termLoad(plan, courses, selected)}
-              limit={creditLimit}
-            />
-            <SelectField
-              label="Term"
-              value={termKey(selected)}
-              onChange={(event) => setPicked(Number(event.target.value))}
-              className="grid-cols-[auto_10rem] items-center gap-2.5"
-            >
-              {options.map((option) => (
-                <option key={termKey(option)} value={termKey(option)}>
-                  {termLabel(option)}
-                </option>
-              ))}
-            </SelectField>
-          </div>
+      <h1>{program.name}</h1>
+      <p className="mt-2 text-fg-muted">
+        <span className="tabular-nums">
+          {creditsDone} of {credits}
+        </span>{" "}
+        program credits <Defined def={GLOSSARY.earnedOrInProgress} />
+        {dot}
+        <CatalogueLink href={coursesTab(program.source)} />
+        {program.generated && (
+          <>
+            {dot}
+            <GeneratedNote hasChecks={hasChecks(program)} />
+          </>
         )}
-      </Header>
-
-      {catalogue.status === "error" ? (
-        <div className="mt-6">
-          <CatalogueError />
-        </div>
-      ) : view && selected && loadedMinor !== undefined ? (
-        <Content
-          view={view}
-          minor={
-            loadedMinor && minorView
-              ? { program: loadedMinor, view: minorView }
-              : null
-          }
-          program={program}
-          background={background}
-          context={{ term: selected, planned }}
-          inProgress={snapshot.inProgress.size > 0}
+      </p>
+      <div className="mt-6 flex items-center justify-between gap-4">
+        <ViewTabs
+          label="Term"
+          tabs={terms.map((t) => ({
+            id: String(termKey(t)),
+            label: termLabel(t),
+          }))}
+          value={String(termKey(term))}
+          onChange={setPicked}
+          panelId={panelId}
         />
-      ) : (
-        <PageSkeleton />
+        <TermLoad
+          credits={termLoad(plan, catalogue, term)}
+          limit={creditLimit}
+        />
+      </div>
+      {exemptions.length > 0 && (
+        <ul className="mt-4">
+          {exemptions.map(({ code, credits }) => (
+            <li key={code}>
+              {code} was exempted without credit. Replace{" "}
+              {credits === null
+                ? "its credits"
+                : `its ${COPY.credits(credits)}`}{" "}
+              with another course.
+            </li>
+          ))}
+        </ul>
       )}
+
+      <div
+        role="tabpanel"
+        id={panelId}
+        aria-labelledby={`${panelId}-${termKey(term)}`}
+        className="mt-12 [&>*+*]:mt-12"
+      >
+        {requiredDone && <p>Every required course is done or in progress.</p>}
+        {groups.map((group, index) =>
+          group.satisfied ? null : (
+            <Section
+              // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
+              key={index}
+              title={sentence(group.title)}
+              meta={<GroupMeta group={group} />}
+            >
+              <GroupBody
+                group={group}
+                index={index}
+                program={program}
+                view={view}
+                context={context}
+                label="h3"
+              />
+            </Section>
+          ),
+        )}
+        {minor && minorView && (
+          <MinorSection
+            minor={minor}
+            view={minorView}
+            context={{ ...context, both: programCodes(view) }}
+          />
+        )}
+        {met.length > 0 && (
+          <Section title="Completed requirements">
+            <MetLines groups={met} context={context} />
+          </Section>
+        )}
+        {unclaimed.length > 0 && (
+          <NotCounted courses={unclaimed} context={context} />
+        )}
+        <OtherCourses entries={view.other} context={context} />
+      </div>
     </>
   );
 }
 
-function Content({
-  view,
-  minor,
-  program,
-  background,
-  context,
-  inProgress,
-}: {
-  view: NextView;
-  minor: Minor | null;
-  program: Program | null;
-  background: Background;
-  context: Context;
-  inProgress: boolean;
-}) {
-  const label = termLabel(context.term);
-  const blocks = useMemo(() => requiredBlocks(view), [view]);
-  const listed = useMemo(() => listedCodes(view, blocks), [view, blocks]);
-  const [collapsed, setCollapsed] = useState<ReadonlySet<string>>(
-    () => new Set([OTHER]),
-  );
-  const toggle = (key: string) =>
-    setCollapsed((current) => {
-      const next = new Set(current);
-      if (!next.delete(key)) next.add(key);
-      return next;
+const DONE_ORDER = ["completed", "transfer", "exemption"];
+
+/** The status and term of every course the student has done, is taking or planned. */
+function courseFacts(
+  records: readonly CourseRecord[],
+  plan: Plan,
+  snapshot: Snapshot,
+): ReadonlyMap<string, Fact> {
+  const facts = new Map<string, Fact>();
+  for (const { term, courses } of plan) {
+    for (const code of courses) facts.set(code, { status: "planned", term });
+  }
+  for (const [code, term] of snapshot.inProgress) {
+    facts.set(code, { status: "in-progress", term });
+  }
+  const best = new Map<string, CourseRecord>();
+  for (const record of records) {
+    const before = best.get(record.code);
+    if (
+      isDone(record.status) &&
+      (!before ||
+        DONE_ORDER.indexOf(record.status) < DONE_ORDER.indexOf(before.status))
+    ) {
+      best.set(record.code, record);
+    }
+  }
+  for (const code of snapshot.done) {
+    const record = best.get(code);
+    facts.set(code, {
+      status: snapshot.covered.has(code)
+        ? "covered"
+        : (record?.status ?? "completed"),
+      term: record?.term ?? null,
     });
-
-  return (
-    <div className="mt-6 flex flex-col gap-6">
-      {program && view.progress ? (
-        <ProgramSummary
-          program={program}
-          creditsDone={view.progress.creditsDone}
-          credits={view.progress.credits}
-          mustTake={view.mustTake.length}
-          label={label}
-          background={background}
-          inProgress={inProgress}
-        />
-      ) : (
-        <Card className="px-5 py-4">
-          <Link
-            href="/profile#program"
-            className="font-medium underline underline-offset-2 hover:text-primary"
-          >
-            Pick your program
-          </Link>{" "}
-          to see which required courses you still need.
-        </Card>
-      )}
-
-      <Card className="overflow-hidden">
-        {blocks.map((block) => (
-          <RequiredGroup
-            key={block.title}
-            block={block}
-            collapsed={collapsed.has(block.title)}
-            onToggle={() => toggle(block.title)}
-            context={context}
-          />
-        ))}
-        {program && blocks.length === 0 && (
-          <p className="px-4 py-3 text-muted-foreground">
-            You have taken every required course. Nice work!
-          </p>
-        )}
-        {view.complementary.map((group) => (
-          <ComplementaryGroup
-            key={group.title}
-            group={group}
-            source={program?.source}
-            collapsed={collapsed.has(group.title)}
-            onToggle={() => toggle(group.title)}
-            context={context}
-          />
-        ))}
-        {minor && (
-          <MinorSection
-            minor={minor}
-            both={listed}
-            collapsed={collapsed}
-            toggle={toggle}
-            context={context}
-          />
-        )}
-        <OtherGroup
-          entries={view.other}
-          collapsed={collapsed.has(OTHER)}
-          onToggle={() => toggle(OTHER)}
-          context={context}
-        />
-      </Card>
-    </div>
-  );
+  }
+  return facts;
 }
 
-/** The program's lists stop at what is open, so a minor row for one of these courses counts for both. */
-function listedCodes(view: NextView, blocks: RequiredBlock[]): Set<string> {
+const flatten = (items: Item[]) =>
+  items.flatMap((item) => ("oneOf" in item ? item.oneOf : [item]));
+
+/** Every course the program still lists or already counts, so a minor row for one of them counts for both. */
+function programCodes(view: NextView): ReadonlySet<string> {
   return new Set([
-    ...blocks.flatMap(({ ready, later }) =>
-      flatten([...ready, ...later]).map(({ course }) => course.code),
+    ...flatten([...view.mustTake, ...view.later]).map(
+      ({ course }) => course.code,
     ),
     ...view.complementary.flatMap(({ buckets }) =>
       buckets.flatMap(({ entries }) =>
         entries.map(({ course }) => course.code),
       ),
     ),
+    ...(view.progress?.groups ?? []).flatMap(({ courses }) =>
+      courses.map(({ code }) => code),
+    ),
   ]);
 }
 
-function RequiredGroup({
-  block,
-  collapsed,
-  onToggle,
-  context,
-}: {
-  block: RequiredBlock;
-  collapsed: boolean;
-  onToggle: () => void;
-  context: Context;
-}) {
+const hasChecks = (program: Program) =>
+  program.groups.some(
+    (group) =>
+      group.kind === "complementary" &&
+      group.rules.some((rule) => rule.unparsed),
+  );
+
+/** What the plan holds in the term against the credit limit, with a warn icon once it goes over. */
+function TermLoad({ credits, limit }: { credits: number; limit: number }) {
+  const over = credits > limit;
   return (
-    <Group
-      title={block.title}
-      info={GLOSSARY.required}
-      fraction={{ done: block.creditsDone, of: block.credits }}
-      collapsed={collapsed}
-      onToggle={onToggle}
+    <p
+      className={cn(
+        "flex items-center gap-2 tabular-nums",
+        over ? "text-warn" : "text-fg-muted",
+      )}
     >
-      <ItemRows items={block.ready} context={context} />
-      {block.later.length > 0 && (
-        <>
-          <SubLabel
-            left={`Not open in ${termLabel(context.term)}`}
-            info={GLOSSARY.notOpen}
-          />
-          <ItemRows items={block.later} context={context} />
-        </>
-      )}
-    </Group>
+      {over && <TriangleAlert aria-hidden className="size-4" />}
+      {COPY.termLoad(credits, limit)}
+    </p>
   );
 }
 
-/** The minor's open groups under their own heading, built by the same engine as the program's. */
-function MinorSection({
-  minor: { program, view },
-  both,
-  collapsed,
-  toggle,
-  context,
-}: {
-  minor: Minor;
-  both: ReadonlySet<string>;
-  collapsed: ReadonlySet<string>;
-  toggle: (key: string) => void;
-  context: Context;
-}) {
-  const id = useId();
-  const blocks = useMemo(() => requiredBlocks(view), [view]);
-  const shared = { ...context, both };
-  const key = (title: string) => `minor:${title}`;
-  const creditsDone = view.progress?.creditsDone ?? 0;
-  const credits = view.progress?.credits ?? program.credits;
+const fraction = (group: GroupProgress) =>
+  COPY.fraction(Math.min(group.creditsDone, group.credits), group.credits);
+
+/** Rules to check, then credits, unless every rule needs a check and nothing can count. */
+function GroupMeta({ group }: { group: GroupProgress }) {
+  const checks = group.unparsed;
   return (
-    <section aria-labelledby={id}>
-      <div className="flex h-11 items-center gap-2 border-border border-t px-4">
-        <h2
-          id={id}
-          className="min-w-0 truncate text-sm leading-5"
-          title={program.name}
-        >
-          Minor: {minorName(program.name)}
-        </h2>
-        <InfoTip {...GLOSSARY.minor} />
-        <span className="ml-auto text-[13px] text-muted-foreground tabular-nums">
-          {creditsDone} of {credits} credits
+    <span className="inline-flex items-center gap-4">
+      {checks > 0 && (
+        <span className="inline-flex items-center gap-2">
+          <TriangleAlert aria-hidden className="size-4 text-warn" />
+          {checks === 1 ? "1 rule to check" : `${checks} rules to check`}
         </span>
-        <ProgressRing
-          value={creditsDone}
-          max={credits}
-          label={`${creditsDone} of ${credits} credits`}
-        />
-      </div>
-      {blocks.map((block) => (
-        <RequiredGroup
-          key={block.title}
-          block={block}
-          collapsed={collapsed.has(key(block.title))}
-          onToggle={() => toggle(key(block.title))}
-          context={shared}
-        />
-      ))}
-      {view.complementary.map((group) => (
-        <ComplementaryGroup
-          key={group.title}
-          group={group}
-          source={program.source}
-          collapsed={collapsed.has(key(group.title))}
-          onToggle={() => toggle(key(group.title))}
-          context={shared}
-        />
-      ))}
-      {blocks.length + view.complementary.length === 0 && (
-        <p className="border-border border-t px-4 py-3 text-muted-foreground">
-          Your courses cover every requirement of this minor.
-        </p>
       )}
-    </section>
+      {(group.kind === "required" || checks < group.rules.length) &&
+        fraction(group)}
+    </span>
   );
 }
 
-const flatten = (items: Item[]) =>
-  items.flatMap((item) => ("oneOf" in item ? item.oneOf : [item]));
-
-/** The program's required groups that still have courses to take. */
-function requiredBlocks(view: NextView): RequiredBlock[] {
-  return (view.progress?.groups ?? []).flatMap((group) => {
-    if (group.kind !== "required" || group.credited) return [];
-    const mine = new Set(
-      group.remaining.flatMap((item) =>
-        typeof item === "string" ? [item] : item.oneOf,
-      ),
-    );
-    const owns = (item: Item) =>
-      flatten([item]).some(({ course }) => mine.has(course.code));
-    const ready = view.mustTake.filter(owns);
-    const later = view.later.filter(owns);
-    return ready.length + later.length > 0
-      ? [
-          {
-            title: group.title,
-            creditsDone: Math.min(group.creditsDone, group.credits),
-            credits: group.credits,
-            ready,
-            later,
-          },
-        ]
-      : [];
-  });
-}
-
-/** One strip for the program, then the degree credits and any exemption notes under it. */
-function ProgramSummary({
-  program,
-  creditsDone,
-  credits,
-  mustTake,
-  label,
-  background: { degree, exemptions },
-  inProgress,
+/** A label above a list inside a section: a rule of a program group, or a group of the minor. */
+function Label({
+  as: Heading,
+  title,
+  meta,
 }: {
-  program: Program;
-  creditsDone: number;
-  credits: number;
-  mustTake: number;
-  label: string;
-  background: Background;
-  inProgress: boolean;
+  as: "h3" | "h4";
+  title: string;
+  meta?: ReactNode;
 }) {
   return (
-    <section aria-labelledby="program" className="flex flex-col gap-3">
-      <Card className="flex h-[72px] items-center gap-6 px-5">
-        <div className="shrink-0">
-          <h2 id="program" className="text-sm leading-5">
-            {program.name}
-          </h2>
-          <p className="text-muted-foreground text-xs leading-4">
-            Program progress
-          </p>
-        </div>
-        <ProgressBar
-          value={creditsDone}
-          max={credits}
-          label={`${program.name} progress`}
-          valueText={`${creditsDone} of ${credits} credits`}
-          className="flex-1"
-        />
-        <Stat
-          value={`${creditsDone} of ${credits}`}
-          caption="program credits"
-          info={GLOSSARY.programCredits}
-        />
-        <span aria-hidden className="h-8 w-px bg-border" />
-        <Stat
-          value={String(mustTake)}
-          caption={`required courses open in ${label}`}
-          info={GLOSSARY.required}
-        />
-      </Card>
-      <div className="flex flex-col gap-1 text-[13px]">
-        {inProgress && (
-          <p className="text-muted-foreground">
-            Program credits include the courses you are taking now.
-          </p>
-        )}
-        {degree && (
-          <p>
-            <span className="font-medium">Earned so far:</span>{" "}
-            <span className="tabular-nums">
-              {degree.done}
-              {degree.required !== credits && ` of ${degree.required}`} credits
-            </span>
-            {degree.advancedStanding > 0 && (
-              <span className="text-muted-foreground">
-                , including {degree.advancedStanding} advanced standing credits
-              </span>
-            )}{" "}
-            <InfoTip
-              {...GLOSSARY.creditsEarned}
-              className="align-text-bottom"
-            />
-          </p>
-        )}
-        <Link
-          href="/requirements"
-          className="inline-flex items-center gap-1 self-start rounded-sm text-muted-foreground hover:text-foreground hover:underline"
-        >
-          See where your courses count
-          <ArrowRight aria-hidden className="size-3.5" />
-        </Link>
-      </div>
-      {exemptions.length > 0 && (
-        <ul className="flex flex-col gap-2">
-          {exemptions.map(({ code, credits }) => (
-            <li key={code}>
-              <Banner>
-                <Info aria-hidden />
-                <span>
-                  {code} was exempted without credit. Replace{" "}
-                  {credits === null
-                    ? "its credits"
-                    : `its ${creditsText(credits)}`}{" "}
-                  with another course.
-                </span>
-              </Banner>
-            </li>
-          ))}
-        </ul>
-      )}
-      <GeneratedBanner program={program} />
-    </section>
-  );
-}
-
-export function Stat({
-  value,
-  caption,
-  info,
-}: {
-  value: string;
-  caption: string;
-  info: Definition;
-}) {
-  return (
-    <div className="shrink-0 text-right">
-      <p className="font-semibold text-[15px] leading-5 tabular-nums">
-        {value}
-      </p>
-      <p className="flex items-center justify-end gap-1.5 text-muted-foreground text-xs leading-4">
-        {caption}
-        <InfoTip {...info} />
-      </p>
+    <div className="mb-2 flex items-baseline gap-4">
+      <Heading className={cn(Heading === "h4" && "font-normal text-fg-muted")}>
+        {title}
+      </Heading>
+      {meta && <p className="ml-auto shrink-0 text-fg-muted">{meta}</p>}
     </div>
   );
 }
 
-/** Group header band: chevron, name, fraction and ring. The toggle stretches over the whole band, and the info buttons sit above it. */
-export function Group({
-  title,
-  info,
-  fraction,
-  met = false,
-  checks = 0,
-  trailing,
-  source,
-  collapsed,
-  onToggle,
-  children,
+/** What a group still needs: its rows, rules to check and the courses it already counts. */
+function GroupBody({
+  group,
+  index,
+  program,
+  view,
+  context,
+  label,
 }: {
-  title: string;
-  info?: Definition;
-  fraction?: { done: number; of: number; unit?: "credits" | "courses" };
-  /** Swaps the ring for a check once every requirement of the group is met. */
-  met?: boolean;
-  /** Rules in the group that need a manual check. */
-  checks?: number;
-  trailing?: string;
-  /** The program page on the McGill catalogue, linked from the header. */
-  source?: string;
-  collapsed: boolean;
-  onToggle: () => void;
-  children: ReactNode;
+  group: GroupProgress;
+  index: number;
+  program: Program;
+  view: NextView;
+  context: Context;
+  label: "h3" | "h4";
 }) {
-  const id = useId();
+  if (group.kind === "required") {
+    return <RequiredBody group={group} view={view} context={context} />;
+  }
+  const open = view.complementary.find((g) => g.index === index);
+  const definition = program.groups[index];
   return (
-    <section
-      aria-labelledby={`${id}-title`}
-      className="border-border border-t first:border-t-0"
-    >
-      <div className="relative flex h-9 items-center gap-2 bg-subtle px-4">
-        <h2 id={`${id}-title`} className="min-w-0 text-[13px] leading-[18px]">
-          <button
-            type="button"
-            onClick={onToggle}
-            aria-expanded={!collapsed}
-            aria-controls={collapsed ? undefined : `${id}-list`}
-            className="flex h-9 w-full items-center gap-3 rounded-sm text-left -outline-offset-2 after:absolute after:inset-0"
-          >
-            <ChevronDown
-              aria-hidden
-              strokeWidth={2}
-              className={cn(
-                "size-3.5 shrink-0 text-muted-foreground transition-transform motion-reduce:transition-none",
-                collapsed && "-rotate-90",
-              )}
+    <div>
+      {open
+        ? open.buckets.map((bucket) => (
+            <Bucket
+              key={bucket.title}
+              title={open.titled ? bucket.title : null}
+              progress={bucket.progress}
+              entries={bucket.entries}
+              context={context}
+              label={label}
             />
-            <span className="truncate" title={sentence(title)}>
-              {sentence(title)}
-            </span>
-          </button>
-        </h2>
-        {info && <InfoTip {...info} />}
-        <div className="ml-auto flex shrink-0 items-center gap-2">
-          {source && (
-            <a
-              href={coursesTab(source)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative mr-2 inline-flex items-center gap-1 rounded-sm text-[13px] text-muted-foreground hover:text-foreground hover:underline"
-            >
-              Catalogue
-              <ExternalLink aria-hidden className="size-3" />
-              <span className="sr-only">
-                {" "}
-                page for {sentence(title)} (opens in a new tab)
-              </span>
-            </a>
-          )}
-          {checks > 0 && (
-            <>
-              <Badge tone="warn">
-                <CircleAlert aria-hidden />
-                {checks === 1 ? "1 rule to check" : `${checks} rules to check`}
-              </Badge>
-              <InfoTip {...GLOSSARY.checkRules} />
-            </>
-          )}
-          {fraction && (
-            <>
-              <span className="text-[13px] text-muted-foreground tabular-nums">
-                {fraction.done} of {fraction.of} {fraction.unit ?? "credits"}
-              </span>
-              {met ? (
-                <StatusIcon status="completed" label="Done" />
-              ) : (
-                <ProgressRing
-                  value={fraction.done}
-                  max={fraction.of}
-                  label={`${fraction.done} of ${fraction.of} ${fraction.unit ?? "credits"}`}
-                />
-              )}
-            </>
-          )}
-          {trailing && (
-            <span className="text-[13px] text-muted-foreground tabular-nums">
-              {trailing}
-            </span>
-          )}
-        </div>
-      </div>
-      {!collapsed && <ul id={`${id}-list`}>{children}</ul>}
-    </section>
-  );
-}
-
-export function SubLabel({
-  left,
-  right,
-  info,
-  className,
-}: {
-  left: string;
-  right?: string | null;
-  info?: Definition;
-  className?: string;
-}) {
-  return (
-    <li
-      className={cn(
-        "flex h-8 items-center justify-between gap-4 border-border border-t pr-[108px] pl-[42px] font-medium text-muted-foreground text-xs leading-4",
-        className,
+          ))
+        : definition?.kind === "complementary" &&
+          definition.rules.map((rule, i) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
+            <p key={i} className="text-fg-muted">
+              {rule.title}
+            </p>
+          ))}
+      {open && open.checks.length > 0 && (
+        <ul className="mt-2 first:mt-0">
+          {open.checks.map((text, i) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share the same text and the list never reorders
+            <CheckRow key={i} text={text} source={program.source} />
+          ))}
+        </ul>
       )}
-    >
-      <span className="flex min-w-0 items-center gap-1.5">
-        <span className="truncate">{left}</span>
-        {info && <InfoTip {...info} />}
-      </span>
-      {right && <span className="tabular-nums">{right}</span>}
-    </li>
+      <Counted courses={group.courses} context={context} />
+    </div>
   );
 }
 
-/** The band above a list of courses of which the student takes one. */
-export function OneOfLabel() {
+/** Open rows, then planned rows, then the rows not open in the term with why. */
+function RequiredBody({
+  group,
+  view,
+  context,
+}: {
+  group: GroupProgress;
+  view: NextView;
+  context: Context;
+}) {
+  const mine = new Set(
+    group.remaining.flatMap((item) =>
+      typeof item === "string" ? [item] : item.oneOf,
+    ),
+  );
+  const owns = (item: Item) =>
+    flatten([item]).some(({ course }) => mine.has(course.code));
+  const isPlanned = (item: Item) =>
+    flatten([item]).some(({ course }) => context.planned.has(course.code));
+  const ready = view.mustTake.filter(owns);
+  const later = view.later.filter(owns);
+  const first = [
+    ...ready.filter((item) => !isPlanned(item)),
+    ...[...ready, ...later].filter(isPlanned),
+  ];
+  const blocked = later.filter((item) => !isPlanned(item));
   return (
-    <p className="flex h-7 items-center bg-subtle pl-[42px] font-medium text-in-progress text-xs leading-4">
-      Take one of these
-    </p>
+    <div>
+      {first.length > 0 && (
+        <ul>
+          <ItemRows items={first} context={context} />
+        </ul>
+      )}
+      {blocked.length > 0 && (
+        <ul className="mt-4 first:mt-0">
+          <ItemRows items={blocked} context={context} />
+        </ul>
+      )}
+      <Counted courses={group.courses} context={context} />
+    </div>
   );
 }
 
@@ -783,9 +535,9 @@ function ItemRows({ items, context }: { items: Item[]; context: Context }) {
     "oneOf" in item ? (
       <li
         key={item.oneOf.map(({ course }) => course.code).join()}
-        className="border-border border-t"
+        className="my-4 first:mt-0 last:mb-0"
       >
-        <OneOfLabel />
+        <p className="pb-1 text-fg-muted">Take one of these</p>
         <ul>
           {item.oneOf.map((entry) => (
             <Row key={entry.course.code} entry={entry} context={context} />
@@ -798,7 +550,7 @@ function ItemRows({ items, context }: { items: Item[]; context: Context }) {
   );
 }
 
-/** Course row, 44px. The action stays hidden until hover or focus, so the list is quiet at rest. */
+/** A course still to take: open with Add, planned with Remove in its own term, or locked with the reason. */
 function Row({
   entry: { course, uncertain, reason },
   context: { term, planned, both },
@@ -807,309 +559,389 @@ function Row({
   context: Context;
 }) {
   const plannedIn = planned.get(course.code);
-  const here = plannedIn && termKey(plannedIn) === termKey(term);
-  const [pops, setPops] = useState(0);
+  const here = plannedIn !== undefined && termKey(plannedIn) === termKey(term);
   const status = plannedIn ? "planned" : reason ? "locked" : "available";
-  const plannedText = plannedIn && `Planned for ${termLabel(plannedIn)}`;
-  const tipReason = plannedText ? `${plannedText}.` : reason && `${reason}.`;
-  const caption =
-    plannedIn && !here ? plannedText : (reason ?? seasonsOffered(course));
-  const showAction = here || (!plannedIn && !reason);
-
+  const label = `${here ? "Remove" : "Add"} ${course.code} ${here ? "from" : "to"} ${termLabel(term)}`;
   return (
-    <li
-      className={cn(
-        "group/row flex h-11 items-center gap-3 border-border border-t pr-3 pl-4 focus-within:bg-subtle hover:bg-subtle",
-        status === "locked" && "text-muted-foreground",
-      )}
-    >
-      <motion.span
-        key={pops}
-        initial={pops > 0 ? { scale: 0.5 } : false}
-        animate={{ scale: 1 }}
-        transition={{ type: "spring", duration: 0.15, bounce: 0.5 }}
-        className="flex shrink-0"
-      >
-        <StatusTip status={status} reason={tipReason}>
-          <StatusIcon status={status} label={plannedText} />
-        </StatusTip>
-      </motion.span>
-      <Link
-        href={`/courses/${courseSlug(course.code)}`}
-        prefetch={false}
-        className="-mx-2 flex h-full min-w-0 flex-1 items-center gap-3 rounded-sm px-2 -outline-offset-2"
-      >
-        <span className="w-[84px] shrink-0 whitespace-nowrap font-semibold tabular-nums">
-          {course.code}
-        </span>
-        <span className="flex min-w-0 flex-1 items-center gap-1.5">
-          <span className="truncate" title={course.title}>
-            {course.title}
-          </span>
-          {uncertain && <UncertainFlag />}
-          {both?.has(course.code) && (
-            <Badge className="shrink-0">Counts for both</Badge>
-          )}
-        </span>
-        <span
-          className="line-clamp-2 w-64 shrink-0 text-[13px] text-muted-foreground leading-4"
-          title={caption}
-        >
-          {caption}
-        </span>
-        <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
-          <CreditsLabel course={course} />
-        </span>
-      </Link>
-      <span className="flex w-[84px] shrink-0 justify-end">
-        {showAction && (
+    <CourseRow
+      course={course}
+      status={status}
+      showGlyph
+      reason={plannedIn ? COPY.plannedFor(plannedIn) : reason}
+      meta={
+        <RowMeta uncertain={uncertain} both={both?.has(course.code) ?? false} />
+      }
+      action={
+        here || status === "available" ? (
           <Button
-            variant="ghost"
-            size="sm"
-            className="opacity-0 focus-visible:opacity-100 group-focus-within/row:opacity-100 group-hover/row:opacity-100"
-            onClick={() => {
-              if (here) {
-                removeWithUndo(term, course.code);
-              } else {
-                setPops((n) => n + 1);
-                addWithUndo(term, course.code);
-              }
-            }}
+            variant="text"
+            aria-label={label}
+            onClick={() =>
+              here
+                ? removeWithUndo(term, course.code)
+                : addWithUndo(term, course.code)
+            }
           >
-            {here ? <X aria-hidden /> : <Plus aria-hidden />}
             {here ? "Remove" : "Add"}
-            <span className="sr-only">
-              {" "}
-              {course.code} {here ? "from" : "to"} {termLabel(term)}
-            </span>
           </Button>
-        )}
-      </span>
-    </li>
+        ) : null
+      }
+    />
   );
 }
 
-/** A rule the crawler could not read. It shows the catalogue text and links to the program page, and never counts as done. */
-export function CheckRow({
-  text,
-  source,
-}: {
-  text: string;
-  source: string | undefined;
-}) {
+function RowMeta({ uncertain, both }: { uncertain: boolean; both: boolean }) {
+  if (!uncertain && !both) return null;
   return (
-    <li className="flex min-h-11 items-center gap-3 border-border border-t py-2 pr-3 pl-4">
-      <CircleAlert
-        aria-hidden
-        strokeWidth={2}
-        className="size-4 shrink-0 text-warn"
-      />
-      <div className="min-w-0 flex-1">
-        <p className="font-semibold">Check this requirement</p>
-        <p
-          className="line-clamp-2 text-[13px] text-muted-foreground leading-4"
-          title={text}
-        >
-          {text}
-        </p>
-      </div>
-      {source && (
-        <Button asChild variant="ghost" size="sm" className="shrink-0">
-          <a
-            href={coursesTab(source)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Program page
-            <ExternalLink aria-hidden />
-            <span className="sr-only"> (opens in a new tab)</span>
-          </a>
-        </Button>
-      )}
-    </li>
+    <>
+      {uncertain && <UncertainFlag />}
+      {both && <Defined def={GLOSSARY.countsForBoth} />}
+    </>
   );
 }
 
-function ShowMore({
-  hidden,
-  step,
-  onClick,
-}: {
-  hidden: number;
-  step: number;
-  onClick: () => void;
-}) {
-  return (
-    <li className="flex h-10 items-center border-border border-t pl-8">
-      <Button variant="ghost" size="sm" onClick={onClick}>
-        {hidden > step ? "Show more" : `Show ${hidden} more`}
-      </Button>
-    </li>
-  );
-}
+const stub = (code: string): CourseSummary => ({
+  code,
+  subject: code.split(" ")[0] ?? code,
+  number: code.split(" ")[1] ?? "",
+  title: code,
+  credits: null,
+  offeredBy: null,
+  faculty: null,
+  terms: [],
+  prerequisites: null,
+  corequisites: null,
+  restrictions: null,
+});
 
-function ComplementaryGroup({
-  group,
-  source,
-  collapsed,
-  onToggle,
-  context,
+const byCode = (a: Claimed, b: Claimed) => (a.code < b.code ? -1 : 1);
+
+/** A course a requirement counts, or one no requirement counts, with the student's status and term for it. */
+function CountedRow({
+  claimed: { code, credits },
+  context: { catalogue, facts, both },
 }: {
-  group: OpenGroup;
-  source: string | undefined;
-  collapsed: boolean;
-  onToggle: () => void;
+  claimed: Claimed;
   context: Context;
 }) {
+  const { status, term } = facts.get(code) ?? {
+    status: "completed",
+    term: null,
+  };
   return (
-    <Group
-      title={group.title}
-      info={GLOSSARY.complementary}
-      fraction={
-        group.counted
-          ? { done: group.creditsDone, of: group.credits }
-          : undefined
+    <CourseRow
+      course={{ ...(catalogue.get(code) ?? stub(code)), credits }}
+      status={status}
+      showGlyph
+      meta={
+        <>
+          <span>
+            {STATUS[status].label}
+            {term && ` · ${termLabel(term)}`}
+          </span>
+          {both?.has(code) && <Defined def={GLOSSARY.countsForBoth} />}
+        </>
       }
-      checks={group.checks.length}
-      source={source}
-      collapsed={collapsed}
-      onToggle={onToggle}
-    >
-      {group.checks.map((text, i) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share the same text and the list never reorders
-        <CheckRow key={i} text={text} source={source} />
-      ))}
-      {group.buckets.map((bucket) => (
-        <Bucket
-          key={bucket.title}
-          title={group.titled ? bucket.title : null}
-          progress={bucket.progress}
-          entries={bucket.entries}
-          context={context}
-        />
-      ))}
-    </Group>
+      action={null}
+    />
   );
 }
 
+/** The courses a group counts, one click away. */
+function Counted({
+  courses: counted,
+  context,
+}: {
+  courses: Claimed[];
+  context: Context;
+}) {
+  if (counted.length === 0) return null;
+  return (
+    <Disclosure summary={`${courseCount(counted.length)} counted`}>
+      <ul>
+        {[...counted].sort(byCode).map((claimed) => (
+          <CountedRow key={claimed.code} claimed={claimed} context={context} />
+        ))}
+      </ul>
+    </Disclosure>
+  );
+}
+
+/** One rule's list: planned rows first, then at most five more until the student asks for the rest. */
 function Bucket({
   title,
   progress,
   entries,
   context,
+  label,
 }: {
   title: string | null;
   progress: string | null;
   entries: Entry[];
   context: Context;
+  label: "h3" | "h4";
 }) {
   const [all, setAll] = useState(false);
-  const shown = all ? entries : entries.slice(0, BUCKET_LIMIT);
-  const hidden = entries.length - shown.length;
+  const isPlanned = (entry: Entry) => context.planned.has(entry.course.code);
+  const ordered = [
+    ...entries.filter(isPlanned),
+    ...entries.filter((entry) => !isPlanned(entry)),
+  ];
+  const shown = all ? ordered : ordered.slice(0, BUCKET_LIMIT);
+  const hidden = ordered.length - shown.length;
   return (
-    <>
-      {title && <SubLabel left={title} right={progress} />}
-      {shown.map((entry) => (
-        <Row key={entry.course.code} entry={entry} context={context} />
-      ))}
-      {hidden > 0 && (
-        <ShowMore hidden={hidden} step={hidden} onClick={() => setAll(true)} />
-      )}
-    </>
+    <div className="mt-6 first:mt-0">
+      {title && <Label as={label} title={title} meta={progress} />}
+      <ul>
+        {shown.map((entry) => (
+          <Row key={entry.course.code} entry={entry} context={context} />
+        ))}
+      </ul>
+      {hidden > 0 && <ShowMore count={hidden} onClick={() => setAll(true)} />}
+    </div>
   );
 }
 
-function OtherGroup({
+function ShowMore({ count, onClick }: { count: number; onClick: () => void }) {
+  return (
+    <Button variant="text" className="-ml-3" onClick={onClick}>
+      Show {count} more
+    </Button>
+  );
+}
+
+/** A rule the crawler could not read. It shows the catalogue text and links to the program, and never counts as done. */
+function CheckRow({ text, source }: { text: string; source: string }) {
+  return (
+    <li className="flex min-h-11 items-start gap-2 py-3">
+      <span className="flex h-5 w-4 shrink-0 items-center">
+        <TriangleAlert aria-hidden className="size-4 text-warn" />
+      </span>
+      <p className="min-w-0">
+        <span className="font-semibold">
+          <Defined def={GLOSSARY.checkRequirement} />
+        </span>
+        <span className="text-fg-muted">
+          {dot}
+          {text}
+          {dot}
+        </span>
+        <CatalogueLink href={coursesTab(source)} />
+      </p>
+    </li>
+  );
+}
+
+/** The minor under its own heading, built by the same engine as the program. */
+function MinorSection({
+  minor,
+  view,
+  context,
+}: {
+  minor: Program;
+  view: NextView;
+  context: Context;
+}) {
+  const groups = view.progress?.groups ?? [];
+  const met = groups.filter((group) => group.satisfied);
+  return (
+    <Section
+      title={
+        <Defined
+          def={{ label: COPY.minorTitle(minor.name), tip: GLOSSARY.minor.tip }}
+        />
+      }
+      meta={
+        <>
+          {minor.generated && (
+            <>
+              <GeneratedNote hasChecks={hasChecks(minor)} />
+              {dot}
+            </>
+          )}
+          {COPY.fraction(
+            view.progress?.creditsDone ?? 0,
+            view.progress?.credits ?? minor.credits,
+          )}
+        </>
+      }
+    >
+      <div>
+        {groups.map((group, index) =>
+          group.satisfied ? null : (
+            // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
+            <div key={index} className="mt-8 first:mt-0">
+              <Label
+                as="h3"
+                title={sentence(group.title)}
+                meta={<GroupMeta group={group} />}
+              />
+              <GroupBody
+                group={group}
+                index={index}
+                program={minor}
+                view={view}
+                context={context}
+                label="h4"
+              />
+            </div>
+          ),
+        )}
+        {met.length > 0 && (
+          <div className="mt-8 first:mt-0">
+            <MetLines groups={met} context={context} />
+          </div>
+        )}
+      </div>
+    </Section>
+  );
+}
+
+/** One line per met group: its credits, and its courses one click away. A CEGEP-credited group says so instead. */
+function MetLines({
+  groups,
+  context,
+}: {
+  groups: GroupProgress[];
+  context: Context;
+}) {
+  return groups.map((group, i) => (
+    // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
+    <MetLine key={i} group={group} context={context} />
+  ));
+}
+
+function MetLine({
+  group,
+  context,
+}: {
+  group: GroupProgress;
+  context: Context;
+}) {
+  const title = sentence(group.title);
+  if (group.courses.length === 0) {
+    return (
+      <div className="flex min-h-11 items-center gap-2 pl-6">
+        <StatusIcon status="completed" />
+        <h3>{title}</h3>
+        <p className="ml-auto text-fg-muted">
+          {group.credited
+            ? "Credited from your Quebec CEGEP diploma"
+            : fraction(group)}
+        </p>
+      </div>
+    );
+  }
+  return (
+    <Disclosure
+      as="h3"
+      summary={
+        <span className="inline-flex items-center gap-2">
+          <StatusIcon status="completed" />
+          {title}
+        </span>
+      }
+      meta={
+        <>
+          {fraction(group)}
+          {dot}
+          {courseCount(group.courses.length)} counted
+        </>
+      }
+    >
+      <ul>
+        {[...group.courses].sort(byCode).map((claimed) => (
+          <CountedRow key={claimed.code} claimed={claimed} context={context} />
+        ))}
+      </ul>
+    </Disclosure>
+  );
+}
+
+/** Done, current and planned courses no requirement takes. They still count toward the degree as electives. */
+function NotCounted({
+  courses: unclaimed,
+  context,
+}: {
+  courses: Claimed[];
+  context: Context;
+}) {
+  const credits = unclaimed.reduce((sum, claimed) => sum + claimed.credits, 0);
+  return (
+    <Disclosure
+      as="h2"
+      summary={GLOSSARY.notCounted.label}
+      def={GLOSSARY.notCounted}
+      meta={`${courseCount(unclaimed.length)}, ${COPY.credits(credits)}`}
+    >
+      <ul>
+        {[...unclaimed].sort(byCode).map((claimed) => (
+          <CountedRow key={claimed.code} claimed={claimed} context={context} />
+        ))}
+      </ul>
+    </Disclosure>
+  );
+}
+
+function OtherCourses({
   entries,
-  collapsed,
-  onToggle,
   context,
 }: {
   entries: Entry[];
-  collapsed: boolean;
-  onToggle: () => void;
   context: Context;
 }) {
   const [limit, setLimit] = useState(OTHER_STEP);
   const shown = entries.slice(0, limit);
   const hidden = entries.length - shown.length;
+  const term = termLabel(context.term);
   return (
-    <Group
-      title="Other courses you can take"
-      trailing={`${entries.length.toLocaleString()} courses`}
-      collapsed={collapsed}
-      onToggle={onToggle}
+    <Disclosure
+      as="h2"
+      summary={`Other courses you can take in ${term}`}
+      meta={entries.length.toLocaleString()}
     >
-      {shown.map((entry) => (
-        <Row key={entry.course.code} entry={entry} context={context} />
-      ))}
+      {entries.length === 0 ? (
+        <p className="text-fg-muted">Nothing else is open to you in {term}.</p>
+      ) : (
+        <ul>
+          {shown.map((entry) => (
+            <Row key={entry.course.code} entry={entry} context={context} />
+          ))}
+        </ul>
+      )}
       {hidden > 0 && (
         <ShowMore
-          hidden={hidden}
-          step={OTHER_STEP}
+          count={Math.min(hidden, OTHER_STEP)}
           onClick={() => setLimit((n) => n + OTHER_STEP)}
         />
       )}
-      {entries.length === 0 && (
-        <li className="border-border border-t px-4 py-3 text-muted-foreground">
-          Nothing else is open to you in {termLabel(context.term)}.
-        </li>
-      )}
-    </Group>
+    </Disclosure>
   );
 }
 
-function EmptyState() {
-  return (
-    <Card className="mt-6 flex flex-col items-center px-6 py-14 text-center">
-      <span
-        aria-hidden
-        className="flex size-12 items-center justify-center rounded-lg bg-muted text-foreground"
-      >
-        <Compass className="size-6" strokeWidth={1.75} />
-      </span>
-      <h2 className="mt-4 text-lg">See what you can take next</h2>
-      <p className="mt-1 max-w-md text-muted-foreground">
-        Import your transcript and this page lists the courses you can take next
-        term, and the ones you still need to graduate.
-      </p>
-      <div className="mt-6 flex items-center gap-3">
-        <Button asChild size="lg">
-          <Link href="/profile">
-            <FileUp aria-hidden />
-            Import your transcript
-          </Link>
-        </Button>
-        <Button asChild variant="secondary" size="lg">
-          <Link href="/courses">Browse courses</Link>
-        </Button>
-      </div>
-    </Card>
-  );
-}
+const bone = "rounded-md bg-tint motion-safe:animate-pulse";
 
-export function PageSkeleton() {
+function PageSkeleton() {
   return (
-    <div className="mt-6 flex flex-col gap-6">
+    <div>
       <p role="status" className="sr-only">
         Loading your courses
       </p>
-      <Card aria-hidden className="flex h-[72px] items-center px-5">
-        <div className="h-5 w-60 rounded-sm bg-muted motion-safe:animate-pulse" />
-      </Card>
-      <Card aria-hidden className="overflow-hidden">
-        <div className="h-9 bg-subtle" />
-        {Array.from({ length: 6 }, (_, row) => (
-          <div
+      <div aria-hidden>
+        <div className={cn(bone, "h-11 w-[400px]")} />
+        <div className={cn(bone, "mt-2 h-5 w-[480px]")} />
+        <div className={cn(bone, "mt-6 h-9 w-56")} />
+        <div className={cn(bone, "mt-12 h-7 w-48")} />
+        <div className="mt-4">
+          {Array.from({ length: 6 }, (_, row) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-            key={row}
-            className="flex h-11 items-center gap-4 border-border border-t px-4"
-          >
-            <div className="h-4 w-20 rounded-sm bg-muted motion-safe:animate-pulse" />
-            <div className="h-4 flex-1 rounded-sm bg-muted motion-safe:animate-pulse" />
-          </div>
-        ))}
-      </Card>
+            <div key={row} className="flex h-11 items-center gap-4">
+              <div className={cn(bone, "h-5 w-24")} />
+              <div className={cn(bone, "h-5 flex-1")} />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

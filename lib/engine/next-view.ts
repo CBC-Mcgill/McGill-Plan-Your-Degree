@@ -1,5 +1,11 @@
 import type { CourseSummary } from "../catalogue/types.ts";
-import type { EntryRoute, Term } from "../profile/types.ts";
+import { COPY } from "../copy.ts";
+import {
+  type EntryRoute,
+  type Plan,
+  type Term,
+  termKey,
+} from "../profile/types.ts";
 import type { Program, Rule } from "../programs/types.ts";
 import { type Suggestion, whatsNext } from "./next.ts";
 import {
@@ -7,7 +13,7 @@ import {
   groupAllows,
   namesCourses,
   type ProgramProgress,
-  programProgress,
+  programStanding,
   type RuleProgress,
   ruleMatches,
 } from "./progress.ts";
@@ -37,6 +43,8 @@ export interface Bucket {
 }
 
 export interface OpenGroup {
+  /** Position in the program's groups. */
+  index: number;
   title: string;
   /** True when the group has several rules, so each list needs its rule title. */
   titled: boolean;
@@ -62,23 +70,49 @@ const asEntry = ({ course, uncertain }: Suggestion): Entry => ({
   uncertain,
 });
 
-/** Why the student cannot take the course in the term, or undefined when it is open. */
+const either = new Intl.ListFormat("en-GB", {
+  style: "long",
+  type: "disjunction",
+});
+
+/** Why the student cannot take the course in the term, or undefined when it is open. A required course blocked by a restriction also asks the advisor, since the course that blocks it may count instead. */
 export function reasonFor(
   course: CourseSummary,
   term: Term,
   snapshot: Snapshot,
+  required = false,
 ): string | undefined {
-  if (!course.terms.length && !course.parts?.length)
-    return "Not offered this year";
-  if (!isOffered(course, term.season)) return `Not offered in ${term.season}`;
+  if (!course.terms.length && !course.parts?.length) return COPY.notOfferedYear;
+  if (!isOffered(course, term.season)) return COPY.notOfferedIn(term.season);
   const blocked = blockedBy(course, snapshot.taken);
   if (blocked.length > 0) {
-    return `Not open to students who have taken ${blocked.join(", ")}`;
+    const reason = COPY.notOpen(blocked);
+    return required
+      ? `${reason}. Ask your advisor whether ${either.format(blocked)} counts instead.`
+      : reason;
   }
   const tree = course.prerequisites?.tree;
   if (tree && !meets(tree, snapshot.taken)) {
-    return `Needs ${missingText(tree, snapshot.taken)} first`;
+    return COPY.needs(missingText(tree, snapshot.taken));
   }
+}
+
+const NO_COURSES: ReadonlySet<string> = new Set();
+
+/** The snapshot a term's lists are judged against: courses planned in earlier terms count as taken, as on the Planner, and planned courses stay in the lists. */
+export function termSnapshot(
+  snapshot: Snapshot,
+  plan: Plan,
+  term: Term,
+): Snapshot {
+  const before = plan.flatMap((entry) =>
+    termKey(entry.term) < termKey(term) ? entry.courses : [],
+  );
+  return {
+    ...snapshot,
+    planned: NO_COURSES,
+    taken: new Set([...snapshot.taken, ...before]),
+  };
 }
 
 const level = (course: CourseSummary) => Number.parseInt(course.number, 10);
@@ -137,7 +171,7 @@ export function minimumText(rule: Rule, done: RuleProgress | undefined) {
 const flatten = (items: (string | { oneOf: string[] })[]) =>
   items.flatMap((item) => (typeof item === "string" ? [item] : item.oneOf));
 
-/** Everything the "What's next" page shows for one term. Pass a snapshot without the plan, so planned courses stay in the lists. */
+/** Everything the "What's next" page shows for one term. Pass a snapshot without the plan (`termSnapshot`), so planned courses stay in the lists. */
 export function nextView(
   catalogue: Catalogue,
   snapshot: Snapshot,
@@ -147,7 +181,7 @@ export function nextView(
 ): NextView {
   const next = whatsNext(catalogue, snapshot, term, program, entry);
   const progress = program
-    ? programProgress(program, snapshot, catalogue, { inProgress: true, entry })
+    ? programStanding(program, snapshot, catalogue, entry, "counting")
     : null;
 
   const takeable = new Map(next.mustTake.map((s) => [s.course.code, s]));
@@ -160,7 +194,7 @@ export function nextView(
           {
             course,
             uncertain: isUncertain(course),
-            reason: reasonFor(course, term, snapshot),
+            reason: reasonFor(course, term, snapshot, true),
           },
         ]
       : [];
@@ -185,7 +219,7 @@ export function nextView(
             done &&
             !done.satisfied &&
             (namesCourses(group) || done.unparsed > 0)
-            ? [{ group, done }]
+            ? [{ group, done, index: i }]
             : [];
         })
       : [];
@@ -233,7 +267,7 @@ export function nextView(
       });
     }
   }
-  const complementary = openGroups.flatMap(({ group, done }, i) => {
+  const complementary = openGroups.flatMap(({ group, done, index }, i) => {
     const buckets = group.rules.map((rule, r) => ({
       rule,
       done: done.rules[r],
@@ -270,6 +304,7 @@ export function nextView(
     return listed.length + checks.length > 0
       ? [
           {
+            index,
             title: group.title,
             titled: group.rules.length > 1,
             creditsDone: Math.min(done.creditsDone, group.credits),
