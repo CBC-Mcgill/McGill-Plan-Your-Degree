@@ -1,7 +1,8 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import type { Course } from "../catalogue/types.ts";
-import { guessProgram, PROGRAMS } from "./index.ts";
+import { guessMinor, guessProgram, PROGRAMS } from "./index.ts";
+import { isMinor } from "./minor.ts";
 import { programCourseCodes, validateProgram } from "./validate.ts";
 
 const catalogueDir = new URL("../../data/catalogue/courses/", import.meta.url);
@@ -83,4 +84,40 @@ test("guessProgram falls back to the program list by degree and name", () => {
   expect(guess("Bachelor of Arts", "Major Accounting")).toBeNull();
   expect(guess("Bachelor of Science", "Major Physics")).toBeNull();
   expect(guessProgram(null, ["Major Psychology"], index)).toBeNull();
+});
+
+test("isMinor reads the id or the degree, and guessMinor matches a transcript minor by name", () => {
+  const program = (id: string, name: string, degree: string) => ({
+    id,
+    name,
+    degree,
+    faculty: "Any",
+  });
+  const index = [
+    program("management-minor-beng", "Management Minor", "B.Eng."),
+    program("management-minor-bsc", "Management Minor", "B.Sc."),
+    program(
+      "entrepreneurship-non-management-students",
+      "Entrepreneurship (for Non-Management Students)",
+      "Minor",
+    ),
+    program("computer-science-major-bsc", "Computer Science Major", "B.Sc."),
+  ];
+  expect(index.map(isMinor)).toEqual([true, true, true, false]);
+  expect(
+    guessMinor("Bachelor of Engineering", ["Minor Management"], index),
+  ).toBe("management-minor-beng");
+  expect(
+    guessMinor("Bachelor of Arts", ["Minor Management"], index),
+  ).toBeNull();
+  expect(
+    guessMinor(
+      "Bachelor of Arts",
+      ["Minor Entrepreneurship (for Non-Management Students)"],
+      index,
+    ),
+  ).toBe("entrepreneurship-non-management-students");
+  expect(
+    guessProgram("Bachelor of Science", ["Major Computer Science"], index),
+  ).toBe("computer-science-major-bsc");
 });

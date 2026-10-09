@@ -69,6 +69,7 @@ export interface ProfileActions {
   /** Removes every record of the course, or only the records of one part of a multi-term course. */
   removeCourse: (code: string, part?: string) => void;
   setProgram: (programId: string | null) => void;
+  setMinor: (minorId: string | null) => void;
   setBackground: (
     background: Partial<
       Pick<Profile, "entry" | "advancedStanding" | "creditsRequired">
@@ -93,6 +94,7 @@ export type ProfileState = Profile & ProfileActions;
 const initial: Profile = {
   records: [],
   programId: null,
+  minorId: null,
   entry: null,
   advancedStanding: 0,
   creditsRequired: null,
@@ -184,6 +186,7 @@ export const useProfileStore = create<ProfileState>()(
           ),
         })),
       setProgram: (programId) => set({ programId }),
+      setMinor: (minorId) => set({ minorId }),
       setBackground: (background) => set(background),
       setTerms: (terms) => set(terms),
       setCreditLimit: (creditLimit) => set({ creditLimit }),

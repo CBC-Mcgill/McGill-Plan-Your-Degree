@@ -10,7 +10,7 @@ import {
   termKey,
 } from "./types.ts";
 
-export const PROFILE_VERSION = 3;
+export const PROFILE_VERSION = 4;
 
 const FORMAT = "plan-your-degree-profile";
 const MAX_FILE_CHARS = 1_000_000;
@@ -135,10 +135,18 @@ function plan(value: unknown, path: string): Plan {
   return result;
 }
 
+function programId(value: unknown, path: string): string {
+  const id = text(value, path, 100);
+  if (!PROGRAM_ID.test(id))
+    bad(path, "must be lowercase words joined by dashes");
+  return id;
+}
+
 function profile(value: unknown): Profile {
   const o = object(value, "profile", [
     "records",
     "programId",
+    "minorId",
     "entry",
     "advancedStanding",
     "creditsRequired",
@@ -152,13 +160,8 @@ function profile(value: unknown): Profile {
     records: array(o.records, "profile.records", MAX_RECORDS).map((r, i) =>
       record(r, `profile.records[${i}]`),
     ),
-    programId: nullable(o.programId, (v) => {
-      const id = text(v, "profile.programId", 100);
-      if (!PROGRAM_ID.test(id)) {
-        bad("profile.programId", "must be lowercase words joined by dashes");
-      }
-      return id;
-    }),
+    programId: nullable(o.programId, (v) => programId(v, "profile.programId")),
+    minorId: nullable(o.minorId, (v) => programId(v, "profile.minorId")),
     entry: nullable(o.entry, (v) => {
       if (v !== "cegep" && v !== "foundation") {
         bad("profile.entry", 'must be "cegep" or "foundation"');
@@ -217,6 +220,9 @@ export function migrateProfile(data: unknown, version: number): unknown {
   if (version < 3 && typeof migrated === "object" && migrated !== null) {
     migrated = dropDefaultCredits(migrated as Obj);
   }
+  if (version < 4 && typeof migrated === "object" && migrated !== null) {
+    migrated = { minorId: null, ...migrated };
+  }
   return migrated;
 }
 
@@ -224,6 +230,7 @@ export function exportProfile(state: Profile): string {
   const data: Profile = {
     records: state.records,
     programId: state.programId,
+    minorId: state.minorId,
     entry: state.entry,
     advancedStanding: state.advancedStanding,
     creditsRequired: state.creditsRequired,

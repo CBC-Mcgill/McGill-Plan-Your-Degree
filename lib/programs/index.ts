@@ -3,6 +3,7 @@ import computerEngineering from "../../data/programs/computer-engineering-beng.j
 import computerScienceHonours from "../../data/programs/computer-science-honours-bsc.json";
 import computerScienceMajor from "../../data/programs/computer-science-major-bsc.json";
 import softwareEngineeringMajor from "../../data/programs/software-engineering-major-bsc.json";
+import { isMinor } from "./minor.ts";
 import type { Program, ProgramSummary } from "./types.ts";
 
 export const PROGRAMS = [
@@ -57,6 +58,13 @@ function kindAndName(text: string): [kind: string, name: string] {
   return [kind, name];
 }
 
+/** True when the catalogue's degree, such as "B.Sc. or B.A.", includes the degree whose letters are given. */
+const fitsDegree = (degree: string, letters: string) =>
+  degree
+    .toLowerCase()
+    .split(/\s+or\s+/)
+    .some((d) => d.replace(/[^a-z]/g, "") === letters);
+
 function guessFromIndex(
   degree: string,
   lines: string[],
@@ -67,10 +75,8 @@ function guessFromIndex(
   const wanted = lines.map(kindAndName);
   const fits = index.filter(
     (program) =>
-      program.degree
-        .toLowerCase()
-        .split(/\s+or\s+/)
-        .some((d) => d.replace(/[^a-z]/g, "") === letters) &&
+      !isMinor(program) &&
+      fitsDegree(program.degree, letters) &&
       wanted.some(([kind, name]) => {
         const [programKind, programName] = kindAndName(program.name);
         return kind === programKind && name === programName;
@@ -96,4 +102,22 @@ export function guessProgram(
   return ids.size === 1 && exact
     ? exact
     : guessFromIndex(wantedDegree, lines, index);
+}
+
+/** Maps the minor lines of a transcript, such as "Minor Management", to a minor in `index`, or null when none or several fit. A minor whose degree is just "Minor" fits any degree. */
+export function guessMinor(
+  degree: string | null,
+  minors: string[],
+  index: readonly ProgramSummary[],
+): string | null {
+  const letters = DEGREE_LETTERS[degree?.trim().toLowerCase() ?? ""];
+  const wanted = minors.map((line) => kindAndName(line)[1]);
+  const fits = index.filter(
+    (program) =>
+      isMinor(program) &&
+      (/^(supplementary )?minor$/i.test(program.degree) ||
+        (letters !== undefined && fitsDegree(program.degree, letters))) &&
+      wanted.includes(kindAndName(program.name)[1]),
+  );
+  return fits.length === 1 ? (fits[0]?.id ?? null) : null;
 }

@@ -10,6 +10,7 @@ import { useProgram } from "@/lib/programs/client";
 
 export interface ProgramValues {
   programId: string | null;
+  minorId: string | null;
   startTerm: Term | null;
   graduationTerm: Term | null;
   entry: EntryRoute | null;
@@ -17,7 +18,7 @@ export interface ProgramValues {
   creditsRequired: number | null;
 }
 
-/** The six fields that describe a student's program, shared by the profile and the transcript review. */
+/** The fields that describe a student's program, shared by the profile and the transcript review. */
 export function ProgramFields({
   value,
   onChange,
@@ -44,6 +45,12 @@ export function ProgramFields({
         onChange={(programId) => changeProgramOrEntry({ programId })}
       />
       {program && <GeneratedBanner program={program} className="col-span-2" />}
+      <ProgramCombobox
+        kind="minor"
+        className="col-span-2"
+        value={value.minorId}
+        onChange={(minorId) => onChange({ minorId })}
+      />
       <TermSelect
         label="Start term"
         info={GLOSSARY.startTerm}

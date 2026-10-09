@@ -93,3 +93,45 @@ test("a started profile with no program asks for one", async ({ page }) => {
     page.getByRole("link", { name: "Pick your program" }),
   ).toHaveAttribute("href", "/profile#program");
 });
+
+test("a minor picked on the profile shows on the requirements page", async ({
+  page,
+}) => {
+  await page.addInitScript((key) => {
+    if (localStorage.getItem(key as string)) return;
+    localStorage.setItem(
+      key as string,
+      JSON.stringify({
+        state: {
+          records: [],
+          programId: "computer-engineering-beng",
+          startTerm: { season: "Fall", year: 2026 },
+        },
+        version: 4,
+      }),
+    );
+  }, "plan-your-degree:profile");
+  await page.goto("/profile");
+
+  const minorName = "Technological Entrepreneurship Minor";
+  await page
+    .getByRole("combobox", { name: "Program" })
+    .fill("technological entrepreneurship");
+  await expect(page.getByText("No program matches")).toBeVisible();
+
+  const minor = page.getByRole("combobox", { name: "Minor (optional)" });
+  await minor.fill("technological entrepreneurship");
+  await minor.press("Enter");
+  await expect(minor).toHaveValue(`${minorName} (B.Eng.)`);
+
+  await page
+    .getByRole("navigation", { name: "Main" })
+    .getByRole("link", { name: "Requirements" })
+    .click();
+  await expect(
+    page.getByRole("heading", { level: 2, name: minorName }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("up to a limit set by your faculty"),
+  ).toBeVisible();
+});

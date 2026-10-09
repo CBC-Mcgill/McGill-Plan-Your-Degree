@@ -9,6 +9,7 @@ export function ProgramCard() {
   const value = useProfileStore(
     useShallow((s) => ({
       programId: s.programId,
+      minorId: s.minorId,
       startTerm: s.startTerm,
       graduationTerm: s.graduationTerm,
       entry: s.entry,

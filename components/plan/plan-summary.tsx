@@ -24,6 +24,25 @@ const requiredText = (items: RequiredItem[]) =>
 const brief = (text: string) =>
   text.length > 100 ? `${text.slice(0, 99).trimEnd()}…` : text;
 
+/** The groups of a program the plan leaves open, each with what is missing and the rules to check. A prefix marks the minor's. */
+function unmet(progress: ProgramProgress | null, prefix: string) {
+  return (progress?.groups ?? [])
+    .filter((group) => !group.satisfied)
+    .map((group) => {
+      const what =
+        group.kind === "required"
+          ? requiredText(group.remaining)
+          : lacking(group);
+      return {
+        missing:
+          what === null ? [] : [`${prefix}${sentence(group.title)}: ${what}`],
+        checks: group.rules.flatMap((rule) =>
+          rule.unparsed ? [`${prefix}${rule.title}`] : [],
+        ),
+      };
+    });
+}
+
 /** One line of what the plan lacks and one of the rules to check. When a line does not fit, Show all opens the rest. */
 function Missing({
   text,
@@ -117,6 +136,7 @@ function Missing({
 export function PlanSummary({
   program,
   progress,
+  minor,
   warningCount,
   onShowWarnings,
   graduation,
@@ -125,6 +145,8 @@ export function PlanSummary({
 }: {
   program: Program | null;
   progress: ProgramProgress | null;
+  /** The student's minor, counted on its own from the same courses. */
+  minor: { program: Program; progress: ProgramProgress } | null;
   warningCount: number;
   onShowWarnings: () => void;
   /** The graduation term's label, or four years from the start when none is set. */
@@ -133,19 +155,12 @@ export function PlanSummary({
   /** The graduation term's label when it is already in the past. */
   graduationPassed: string | null;
 }) {
-  const groups = (progress?.groups ?? []).filter((group) => !group.satisfied);
-  const missing = groups
-    .flatMap((group) => {
-      const what =
-        group.kind === "required"
-          ? requiredText(group.remaining)
-          : lacking(group);
-      return what === null ? [] : `${sentence(group.title)}: ${what}`;
-    })
-    .join(" · ");
-  const checks = groups.flatMap((group) =>
-    group.rules.flatMap((rule) => (rule.unparsed ? [rule.title] : [])),
-  );
+  const open = [
+    ...unmet(progress, ""),
+    ...unmet(minor?.progress ?? null, "Minor: "),
+  ];
+  const missing = open.flatMap((group) => group.missing).join(" · ");
+  const checks = open.flatMap((group) => group.checks);
   return (
     <>
       <Card asChild className="flex items-stretch gap-6 px-5 py-4">
@@ -176,9 +191,27 @@ export function PlanSummary({
                   label={`Credits of ${program.name} your plan covers`}
                   valueText={`${progress.creditsDone} of ${progress.credits} credits`}
                 />
-                {progress.satisfied ? (
+                {minor && (
+                  <p className="flex items-baseline justify-between gap-4 text-[13px] leading-[18px]">
+                    <span
+                      className="min-w-0 truncate"
+                      title={minor.program.name}
+                    >
+                      <span className="font-medium">Minor</span>{" "}
+                      <span className="text-muted-foreground">
+                        {minor.program.name}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-muted-foreground tabular-nums">
+                      {minor.progress.creditsDone} of {minor.progress.credits}{" "}
+                      credits
+                    </span>
+                  </p>
+                )}
+                {progress.satisfied && (minor?.progress.satisfied ?? true) ? (
                   <p className="font-medium text-[13px] text-completed leading-[18px]">
-                    Your plan satisfies {program.name}.
+                    Your plan satisfies {program.name}
+                    {minor && ` and ${minor.program.name}`}.
                   </p>
                 ) : (
                   <Missing

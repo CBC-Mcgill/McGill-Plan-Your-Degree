@@ -304,7 +304,7 @@ The profile holds:
 
 - **records:** one `CourseRecord` per transcript line or manual entry, with the logical code, an optional part such as `D1`, term, credits, grade, status and source.
   Statuses are `completed`, `in-progress`, `failed`, `withdrawn`, `deferred`, `transfer` and `exemption`.
-- **program and background:** `programId`, the entry route (`cegep` or `foundation`), advanced standing credits and credits required.
+- **program and background:** `programId`, an optional `minorId` (its progress is counted on its own from the same courses, so a course can count for both), the entry route (`cegep` or `foundation`), advanced standing credits and credits required.
 - **terms and plan:** the start term, the graduation term, a credit limit per term (17 by default) and the plan.
 - **importedAt:** the time of the last transcript import.
 

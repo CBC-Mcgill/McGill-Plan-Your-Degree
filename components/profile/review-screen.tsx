@@ -26,7 +26,7 @@ import {
   type Term,
   termKey,
 } from "@/lib/profile/types";
-import { guessProgram } from "@/lib/programs";
+import { guessMinor, guessProgram } from "@/lib/programs";
 import { useProgramIndex } from "@/lib/programs/client";
 import type { ProgramSummary } from "@/lib/programs/types";
 import type { Transcript } from "@/lib/transcript/parse";
@@ -79,6 +79,9 @@ function Review({
       programId:
         guessProgram(transcript.degree, transcript.programs, programs) ??
         store.programId,
+      minorId:
+        guessMinor(transcript.degree, transcript.minors, programs) ??
+        store.minorId,
       entry,
       advancedStanding: transcript.advancedStanding,
       creditsRequired: transcript.creditsRequired ?? store.creditsRequired,
@@ -130,6 +133,7 @@ function Review({
       courses: kept.map(({ course }) => course),
     });
     store.setProgram(values.programId);
+    store.setMinor(values.minorId);
     store.setBackground({
       entry: values.entry,
       advancedStanding: values.advancedStanding,

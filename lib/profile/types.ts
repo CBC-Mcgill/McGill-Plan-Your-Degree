@@ -48,6 +48,8 @@ export const isCegep = (previousEducation: string | null) =>
 export interface Profile {
   records: CourseRecord[];
   programId: string | null;
+  /** A minor taken alongside the program. Its credits sit inside the degree's total. */
+  minorId: string | null;
   entry: EntryRoute | null;
   /** Lump-sum credits from the transcript's advanced standing, on top of the course records. 0 to 60. */
   advancedStanding: number;

@@ -68,6 +68,14 @@ interface Context {
   term: Term;
   /** Course code to the term it is planned in. */
   planned: ReadonlyMap<string, Term>;
+  /** Courses the program's lists already show, so the minor's rows for them say they count for both. */
+  both?: ReadonlySet<string>;
+}
+
+/** A minor with what is open in it. */
+interface Minor {
+  program: Program;
+  view: NextView;
 }
 
 /** Credits toward the whole degree, and exemptions that left credits to make up. */
@@ -140,6 +148,7 @@ function TermLoad({ credits, limit }: { credits: number; limit: number }) {
 // Split out so a visitor without a profile does not download the catalogue.
 function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const programId = useProfileStore((state) => state.programId);
+  const minorId = useProfileStore((state) => state.minorId);
   const entry = useProfileStore((state) => state.entry);
   const advancedStanding = useProfileStore((state) => state.advancedStanding);
   const creditsRequired = useProfileStore((state) => state.creditsRequired);
@@ -168,6 +177,7 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   );
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
   const loaded = useProgram(programId);
+  const loadedMinor = useProgram(minorId);
   const program = loaded ?? null;
   const view = useMemo(
     () =>
@@ -175,6 +185,13 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
         ? nextView(courses, unplanned, selected, program, entry)
         : null,
     [unplanned, courses, selected, loaded, program, entry],
+  );
+  const minorView = useMemo(
+    () =>
+      courses && selected && loadedMinor
+        ? nextView(courses, unplanned, selected, loadedMinor, entry)
+        : null,
+    [unplanned, courses, selected, loadedMinor, entry],
   );
   const background = useMemo((): Background => {
     const required = degreeCredits(creditsRequired, entry, program);
@@ -228,9 +245,14 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
         <div className="mt-6">
           <CatalogueError />
         </div>
-      ) : view && selected ? (
+      ) : view && selected && loadedMinor !== undefined ? (
         <Content
           view={view}
+          minor={
+            loadedMinor && minorView
+              ? { program: loadedMinor, view: minorView }
+              : null
+          }
           program={program}
           background={background}
           context={{ term: selected, planned }}
@@ -245,12 +267,14 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
 
 function Content({
   view,
+  minor,
   program,
   background,
   context,
   inProgress,
 }: {
   view: NextView;
+  minor: Minor | null;
   program: Program | null;
   background: Background;
   context: Context;
@@ -258,6 +282,7 @@ function Content({
 }) {
   const label = termLabel(context.term);
   const blocks = useMemo(() => requiredBlocks(view), [view]);
+  const listed = useMemo(() => listedCodes(view, blocks), [view, blocks]);
   const [collapsed, setCollapsed] = useState<ReadonlySet<string>>(
     () => new Set([OTHER]),
   );
@@ -294,25 +319,13 @@ function Content({
 
       <Card className="overflow-hidden">
         {blocks.map((block) => (
-          <Group
+          <RequiredGroup
             key={block.title}
-            title={block.title}
-            info={GLOSSARY.required}
-            fraction={{ done: block.creditsDone, of: block.credits }}
+            block={block}
             collapsed={collapsed.has(block.title)}
             onToggle={() => toggle(block.title)}
-          >
-            <ItemRows items={block.ready} context={context} />
-            {block.later.length > 0 && (
-              <>
-                <SubLabel
-                  left={`Not open in ${label}`}
-                  info={GLOSSARY.notOpen}
-                />
-                <ItemRows items={block.later} context={context} />
-              </>
-            )}
-          </Group>
+            context={context}
+          />
         ))}
         {program && blocks.length === 0 && (
           <p className="px-4 py-3 text-muted-foreground">
@@ -329,6 +342,15 @@ function Content({
             context={context}
           />
         ))}
+        {minor && (
+          <MinorSection
+            minor={minor}
+            both={listed}
+            collapsed={collapsed}
+            toggle={toggle}
+            context={context}
+          />
+        )}
         <OtherGroup
           entries={view.other}
           collapsed={collapsed.has(OTHER)}
@@ -337,6 +359,121 @@ function Content({
         />
       </Card>
     </div>
+  );
+}
+
+/** The program's lists stop at what is open, so a minor row for one of these courses counts for both. */
+function listedCodes(view: NextView, blocks: RequiredBlock[]): Set<string> {
+  return new Set([
+    ...blocks.flatMap(({ ready, later }) =>
+      flatten([...ready, ...later]).map(({ course }) => course.code),
+    ),
+    ...view.complementary.flatMap(({ buckets }) =>
+      buckets.flatMap(({ entries }) =>
+        entries.map(({ course }) => course.code),
+      ),
+    ),
+  ]);
+}
+
+function RequiredGroup({
+  block,
+  collapsed,
+  onToggle,
+  context,
+}: {
+  block: RequiredBlock;
+  collapsed: boolean;
+  onToggle: () => void;
+  context: Context;
+}) {
+  return (
+    <Group
+      title={block.title}
+      info={GLOSSARY.required}
+      fraction={{ done: block.creditsDone, of: block.credits }}
+      collapsed={collapsed}
+      onToggle={onToggle}
+    >
+      <ItemRows items={block.ready} context={context} />
+      {block.later.length > 0 && (
+        <>
+          <SubLabel
+            left={`Not open in ${termLabel(context.term)}`}
+            info={GLOSSARY.notOpen}
+          />
+          <ItemRows items={block.later} context={context} />
+        </>
+      )}
+    </Group>
+  );
+}
+
+/** The minor's open groups under their own heading, built by the same engine as the program's. */
+function MinorSection({
+  minor: { program, view },
+  both,
+  collapsed,
+  toggle,
+  context,
+}: {
+  minor: Minor;
+  both: ReadonlySet<string>;
+  collapsed: ReadonlySet<string>;
+  toggle: (key: string) => void;
+  context: Context;
+}) {
+  const id = useId();
+  const blocks = useMemo(() => requiredBlocks(view), [view]);
+  const shared = { ...context, both };
+  const key = (title: string) => `minor:${title}`;
+  const creditsDone = view.progress?.creditsDone ?? 0;
+  const credits = view.progress?.credits ?? program.credits;
+  return (
+    <section aria-labelledby={id}>
+      <div className="flex h-11 items-center gap-2 border-border border-t px-4">
+        <h2
+          id={id}
+          className="min-w-0 truncate text-sm leading-5"
+          title={program.name}
+        >
+          Minor: {program.name}
+        </h2>
+        <InfoTip {...GLOSSARY.minor} />
+        <span className="ml-auto text-[13px] text-muted-foreground tabular-nums">
+          {creditsDone} of {credits} credits
+        </span>
+        <ProgressRing
+          value={creditsDone}
+          max={credits}
+          label={`${creditsDone} of ${credits} credits`}
+        />
+      </div>
+      {blocks.map((block) => (
+        <RequiredGroup
+          key={block.title}
+          block={block}
+          collapsed={collapsed.has(key(block.title))}
+          onToggle={() => toggle(key(block.title))}
+          context={shared}
+        />
+      ))}
+      {view.complementary.map((group) => (
+        <ComplementaryGroup
+          key={group.title}
+          group={group}
+          source={program.source}
+          collapsed={collapsed.has(key(group.title))}
+          onToggle={() => toggle(key(group.title))}
+          context={shared}
+        />
+      ))}
+      {blocks.length + view.complementary.length === 0 && (
+        <p className="border-border border-t px-4 py-3 text-muted-foreground">
+          Your courses cover every requirement of this minor.
+        </p>
+      )}
+    </section>
   );
 }
 
@@ -663,7 +800,7 @@ function ItemRows({ items, context }: { items: Item[]; context: Context }) {
 /** Course row, 44px. The action stays hidden until hover or focus, so the list is quiet at rest. */
 function Row({
   entry: { course, uncertain, reason },
-  context: { term, planned },
+  context: { term, planned, both },
 }: {
   entry: Entry;
   context: Context;
@@ -709,6 +846,9 @@ function Row({
             {course.title}
           </span>
           {uncertain && <UncertainFlag />}
+          {both?.has(course.code) && (
+            <Badge className="shrink-0">Counts for both</Badge>
+          )}
         </span>
         <span
           className="line-clamp-2 w-64 shrink-0 text-[13px] text-muted-foreground leading-4"
