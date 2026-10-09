@@ -484,6 +484,9 @@ export function TermPanel({
   // Only terms after the current one take new courses.
   const open = stage.key > nowKey;
   const over = stage.credits > creditLimit;
+  const registered = stage.records
+    .filter((record) => record.status === "in-progress")
+    .reduce((sum, record) => sum + recordCredits(record, catalogue), 0);
   const records = [...stage.records].sort((a, b) =>
     recordLabel(a) < recordLabel(b) ? -1 : 1,
   );
@@ -543,8 +546,8 @@ export function TermPanel({
           <div className="ml-auto flex items-center gap-3">
             <StatusBar
               completed={0}
-              inProgress={stage.state === "current" ? stage.credits : 0}
-              planned={stage.state === "current" ? 0 : stage.credits}
+              inProgress={registered}
+              planned={stage.credits - registered}
               total={creditLimit}
               className="w-24 xl:w-32"
             />

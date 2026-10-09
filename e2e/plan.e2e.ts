@@ -42,6 +42,26 @@ async function seedProfile(
   );
 }
 
+test("a later term with registered courses counts them on the path", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
+  await seedProfile(page, [
+    done("COMP 202"),
+    ...["COMP 206", "COMP 250"].map((code) => ({
+      ...done(code),
+      term: { season: "Winter", year: 2027 },
+      grade: null as unknown as string,
+      status: "in-progress",
+      source: "transcript",
+    })),
+  ]);
+  await page.goto("/plan");
+  await expect(page.getByRole("tab", { name: /^Winter 2027/ })).toContainText(
+    "Registered · 2 courses · 6 credits",
+  );
+});
+
 test("starting without a transcript opens the path on the next term to plan", async ({
   page,
 }) => {
