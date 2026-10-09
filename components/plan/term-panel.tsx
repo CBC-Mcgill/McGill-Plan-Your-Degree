@@ -208,9 +208,7 @@ function MoveMenu({
               {course &&
                 !course.parts?.length &&
                 !isOffered(course, option.term.season) && (
-                  <span className="text-[color-mix(in_oklab,var(--warn)_85%,black)] text-xs">
-                    Not offered
-                  </span>
+                  <span className="text-warn text-xs">Not offered</span>
                 )}
               <span className="w-9 text-right text-muted-foreground text-xs tabular-nums">
                 {option.credits} cr

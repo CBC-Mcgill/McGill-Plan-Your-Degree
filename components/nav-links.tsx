@@ -4,20 +4,37 @@ import { cn } from "cn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { Badge } from "@/components/ui/badge";
+import { SearchBar } from "@/components/command-palette";
 
-const links: { href: string; label: string; soon?: boolean }[] = [
+const PAGES = [
   { href: "/courses", label: "Browse courses" },
   { href: "/next", label: "What's next" },
-  { href: "/requirements", label: "Requirements" },
   { href: "/plan", label: "Planner" },
-  { href: "/profile", label: "Profile" },
-  { href: "/advisor", label: "Advisor", soon: true },
 ];
 
+function NavLink({ href, label }: { href: string; label: string }) {
+  const pathname = usePathname();
+  const active = pathname === href || pathname.startsWith(`${href}/`);
+  return (
+    <Link
+      href={href}
+      aria-current={active ? "page" : undefined}
+      data-label={label}
+      className={cn(
+        "steady-width h-9 whitespace-nowrap rounded-md px-3",
+        active ? "selected" : "text-fg-muted hover:text-fg",
+      )}
+    >
+      {label}
+    </Link>
+  );
+}
+
+/** Browse courses, What's next and Planner, then search and Profile on the right. /courses has its own search field, so the header one hides there (D22). */
 export function NavLinks() {
   const pathname = usePathname();
   const previous = useRef(pathname);
+  const search = !(pathname === "/courses");
 
   // A client navigation leaves keyboard focus on the header link, so the next Tab would walk the header again.
   useEffect(() => {
@@ -30,27 +47,20 @@ export function NavLinks() {
   }, [pathname]);
 
   return (
-    <ul className="flex h-full items-center gap-1">
-      {links.map(({ href, label, soon }) => {
-        const active = pathname === href || pathname.startsWith(`${href}/`);
-        return (
-          <li key={href} className="h-full">
-            <Link
-              href={href}
-              aria-current={active ? "page" : undefined}
-              className={cn(
-                "relative flex h-full shrink-0 items-center gap-1.5 whitespace-nowrap rounded-sm px-2.5 font-medium text-sm transition-colors focus-visible:outline-offset-[-2px]",
-                active
-                  ? "text-foreground after:absolute after:inset-x-2.5 after:bottom-0 after:h-0.5 after:rounded-full after:bg-primary"
-                  : "text-muted-foreground hover:text-foreground",
-              )}
-            >
-              {label}
-              {soon && <Badge>Soon</Badge>}
-            </Link>
-          </li>
-        );
-      })}
+    <ul className="flex items-center gap-1">
+      {PAGES.map((page) => (
+        <li key={page.href}>
+          <NavLink {...page} />
+        </li>
+      ))}
+      {search && (
+        <li className="ml-auto">
+          <SearchBar />
+        </li>
+      )}
+      <li className={search ? "ml-3" : "ml-auto"}>
+        <NavLink href="/profile" label="Profile" />
+      </li>
     </ul>
   );
 }

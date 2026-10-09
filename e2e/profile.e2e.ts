@@ -121,7 +121,7 @@ test("starting without a transcript counts as a profile everywhere", async ({
   await expect(page.locator("#program")).toBeInViewport();
 });
 
-test("the expected graduation info button defines the term on focus", async ({
+test("the expected graduation label defines the term on focus", async ({
   page,
 }) => {
   await page.goto("/profile");
@@ -129,7 +129,7 @@ test("the expected graduation info button defines the term on focus", async ({
     .getByRole("button", { name: "Start without a transcript" })
     .click();
 
-  await page.getByRole("button", { name: "About Expected graduation" }).focus();
+  await page.getByRole("button", { name: "Expected graduation" }).focus();
   await expect(page.getByRole("tooltip")).toContainText(
     "The last term you take courses.",
   );

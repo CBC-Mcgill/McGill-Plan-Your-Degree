@@ -329,6 +329,29 @@ export function programProgress(
   };
 }
 
+/** The three ways to count progress (D1): earned, earned or in progress, and with the plan. */
+export type Basis = "earned" | "counting" | "plan";
+
+export const BASIS: Record<Basis, Omit<CountOptions, "entry">> = {
+  earned: {},
+  counting: { inProgress: true },
+  plan: { inProgress: true, planned: true },
+};
+
+/** Program progress on one basis. Pages call this, never `programProgress` with options of their own. */
+export function programStanding(
+  program: Program,
+  snapshot: Snapshot,
+  catalogue: Catalogue,
+  entry: EntryRoute | null,
+  basis: Basis,
+): ProgramProgress {
+  return programProgress(program, snapshot, catalogue, {
+    ...BASIS[basis],
+    entry,
+  });
+}
+
 /** What a complementary group lacks: credits first, then the first rule it fails. Null when only rules to check are left. */
 export function lacking(group: GroupProgress): string | null {
   if (group.creditsDone < group.credits) {

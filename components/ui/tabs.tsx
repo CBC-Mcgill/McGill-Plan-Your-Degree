@@ -2,24 +2,26 @@ import { cn } from "cn";
 import type * as React from "react";
 import { Tooltip } from "@/components/ui/tooltip";
 
-/** Saved views of one list, switching the one panel below them. Arrow keys, Home and End move between tabs. */
+/**
+ * Views of one panel, such as Browse views or What's next terms. Arrow keys, Home and End move between tabs.
+ * Each tab's id is `${panelId}-${tab.id}`, so the panel can take `id={panelId}` and `aria-labelledby` the selected tab.
+ */
 function ViewTabs<T extends string>({
-  value,
-  tabs,
-  onChange,
   label,
+  tabs,
+  value,
+  onChange,
   panelId,
 }: {
-  value: T;
-  tabs: { value: T; label: string; count?: number; tip?: string }[];
-  onChange: (value: T) => void;
   label: string;
-  /** The id of the tabpanel the selected tab controls. */
+  tabs: { id: T; label: string; tip?: string }[];
+  value: T;
+  onChange: (id: T) => void;
   panelId: string;
 }) {
   function move(event: React.KeyboardEvent<HTMLDivElement>) {
     const n = tabs.length;
-    const at = tabs.findIndex((tab) => tab.value === value);
+    const at = tabs.findIndex((tab) => tab.id === value);
     const to = (
       {
         ArrowRight: (at + 1) % n,
@@ -31,7 +33,7 @@ function ViewTabs<T extends string>({
     const tab = to === undefined ? undefined : tabs[to];
     if (to === undefined || !tab || to === at) return;
     event.preventDefault();
-    onChange(tab.value);
+    onChange(tab.id);
     event.currentTarget
       .querySelectorAll<HTMLElement>('[role="tab"]')
       [to]?.focus();
@@ -45,34 +47,28 @@ function ViewTabs<T extends string>({
       className="flex items-center gap-1"
     >
       {tabs.map((tab) => {
-        const selected = tab.value === value;
+        const selected = tab.id === value;
         const button = (
           <button
-            key={tab.value}
+            key={tab.id}
             type="button"
             role="tab"
-            id={`${panelId}-${tab.value}`}
+            id={`${panelId}-${tab.id}`}
             aria-selected={selected}
             aria-controls={panelId}
             tabIndex={selected ? 0 : -1}
-            onClick={() => onChange(tab.value)}
+            onClick={() => onChange(tab.id)}
+            data-label={tab.label}
             className={cn(
-              "inline-flex h-8 items-center gap-1.5 rounded-md px-3 font-medium text-[13px] transition-colors",
-              selected
-                ? "bg-muted text-foreground"
-                : "text-muted-foreground hover:bg-subtle hover:text-foreground",
+              "steady-width h-9 rounded-md px-3",
+              selected ? "selected" : "text-fg-muted hover:text-fg",
             )}
           >
             {tab.label}
-            {tab.count !== undefined && (
-              <span className="text-faint tabular-nums">
-                {tab.count.toLocaleString()}
-              </span>
-            )}
           </button>
         );
         return tab.tip ? (
-          <Tooltip key={tab.value} content={tab.tip}>
+          <Tooltip key={tab.id} content={tab.tip}>
             {button}
           </Tooltip>
         ) : (

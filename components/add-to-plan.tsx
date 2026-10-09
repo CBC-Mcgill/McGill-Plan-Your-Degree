@@ -258,7 +258,7 @@ function TermMenu({
             {title}
           </DropdownMenu.Label>
           {never && (
-            <p className="px-2 pb-1.5 text-[color-mix(in_oklab,var(--warn)_85%,black)] text-xs leading-4">
+            <p className="px-2 pb-1.5 text-warn text-xs leading-4">
               Not offered in {year}
             </p>
           )}

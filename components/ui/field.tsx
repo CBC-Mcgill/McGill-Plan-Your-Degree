@@ -2,84 +2,92 @@ import { cn } from "cn";
 import { ChevronDown } from "lucide-react";
 import type * as React from "react";
 import { useId } from "react";
-import { InfoTip } from "@/components/ui/tooltip";
+import { Term } from "@/components/ui/tooltip";
 import type { Definition } from "@/lib/glossary";
 
-const control =
-  "rounded-md bg-card px-3 text-foreground shadow-[inset_0_0_0_1px_var(--input)] placeholder:text-faint disabled:opacity-50";
+/** The shared look of a text input or select: 36px tall, 8px radius, a 1px --fg-subtle edge. Add `w-full` or a width. */
+const controlStyles =
+  "h-9 rounded-md border border-fg-subtle bg-bg px-3 text-fg text-sm placeholder:text-fg-muted disabled:opacity-50";
+/** @deprecated Every control is 36px. Use `controlStyles`. */
+const compactControlStyles = controlStyles;
 
-/** The shared look of a text input or select: 36px tall, 8px radius, one hairline. Add `w-full` or a width. */
-const controlStyles = `h-9 text-sm ${control}`;
-const compactControlStyles = `h-8 text-[13px] ${control}`;
-
-/** The label with its optional definition. The label is a sibling of the info button, so the button never joins the field's name. */
+/** The label, Body 600. With `info`, its words are a `Term` and `describedBy` holds the definition for the control. */
 function FieldLabel({
   htmlFor,
   label,
   info,
+  describedBy,
   hidden = false,
 }: {
   htmlFor: string;
   label: string;
   info?: Definition;
+  describedBy?: string;
   hidden?: boolean;
 }) {
   return (
-    <span className={cn("flex items-center gap-1.5", hidden && "sr-only")}>
+    <>
       <label
         htmlFor={htmlFor}
-        className="font-medium text-[13px] leading-[18px]"
+        className={cn("justify-self-start font-semibold", hidden && "sr-only")}
       >
-        {label}
+        {info && !hidden ? <Term def={info}>{label}</Term> : label}
       </label>
-      {info && !hidden && <InfoTip {...info} />}
-    </span>
+      {info && describedBy && (
+        <span id={describedBy} hidden>
+          {info.tip}
+        </span>
+      )}
+    </>
   );
 }
 
-/** `compact` is 32px and hides the label visually, for a select that sits in a row beside buttons. `info` adds a definition beside the label. */
+const describedBy = (...ids: (string | false | undefined)[]) =>
+  ids.filter(Boolean).join(" ") || undefined;
+
+/** A labelled select. `info` makes the label a `Term` with the definition. */
 function SelectField({
   label,
   info,
-  compact = false,
   className,
   children,
   ...props
 }: React.ComponentProps<"select"> & {
   label: string;
   info?: Definition;
-  compact?: boolean;
 }) {
   const id = useId();
+  const infoId = useId();
   return (
-    <div className={cn("grid gap-1.5", className)}>
+    <div className={cn("grid gap-2", className)}>
       <FieldLabel
         htmlFor={props.id ?? id}
         label={label}
         info={info}
-        hidden={compact}
+        describedBy={infoId}
       />
       <span className="relative">
         <select
           id={id}
           {...props}
-          className={cn(
-            compact ? compactControlStyles : controlStyles,
-            "w-full appearance-none pr-9",
+          aria-describedby={describedBy(
+            info && infoId,
+            props["aria-describedby"],
           )}
+          className={cn(controlStyles, "w-full appearance-none pr-9")}
         >
           {children}
         </select>
         <ChevronDown
           aria-hidden
-          className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-muted-foreground"
+          className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-fg-muted"
         />
       </span>
     </div>
   );
 }
 
-/** `hint` is a line of help under the input. `info` adds a definition beside the label. */
+/** A labelled text input. `hint` is a line of help under it, `info` makes the label a `Term` with the definition. */
 function TextField({
   label,
   hint,
@@ -93,20 +101,27 @@ function TextField({
 }) {
   const id = useId();
   const hintId = useId();
+  const infoId = useId();
   return (
-    <div className={cn("grid gap-1.5", className)}>
-      <FieldLabel htmlFor={props.id ?? id} label={label} info={info} />
+    <div className={cn("grid gap-2", className)}>
+      <FieldLabel
+        htmlFor={props.id ?? id}
+        label={label}
+        info={info}
+        describedBy={infoId}
+      />
       <input
         id={id}
         {...props}
-        aria-describedby={hint ? hintId : props["aria-describedby"]}
+        aria-describedby={describedBy(
+          hint && hintId,
+          info && infoId,
+          props["aria-describedby"],
+        )}
         className={cn(controlStyles, "w-full")}
       />
       {hint && (
-        <span
-          id={hintId}
-          className="text-[13px] text-muted-foreground leading-[18px]"
-        >
+        <span id={hintId} className="text-fg-muted">
           {hint}
         </span>
       )}

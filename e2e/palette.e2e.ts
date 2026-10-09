@@ -28,6 +28,52 @@ test("the palette puts a named page first and keeps focus where the student is",
   await expect(page.getByRole("main")).toBeFocused();
 });
 
+test("the palette finds What's next by its old name and names each course glyph", async ({
+  page,
+}) => {
+  await page.addInitScript(
+    ([key, record]) =>
+      localStorage.setItem(
+        key as string,
+        JSON.stringify({ state: { records: [record] }, version: 4 }),
+      ),
+    [
+      "plan-your-degree:profile",
+      {
+        code: "COMP 250",
+        term: { season: "Fall", year: 2025 },
+        credits: 3,
+        grade: "A",
+        status: "completed",
+        source: "manual",
+      },
+    ],
+  );
+  await page.goto("/", { waitUntil: "networkidle" });
+  await page.keyboard.press("Control+k");
+  const input = page.getByRole("combobox");
+
+  await input.fill("requirements");
+  await expect(page.getByRole("option").first()).toHaveAccessibleName(
+    "What's next",
+  );
+
+  await input.fill("comp 250");
+  await expect(
+    page.getByRole("option").getByRole("img", { name: "Completed" }),
+  ).toBeVisible();
+});
+
+test("the course list has no header search, and the shortcut focuses its own field", async ({
+  page,
+}) => {
+  await page.goto("/courses", { waitUntil: "networkidle" });
+  await expect(page.locator("header kbd")).toHaveCount(0);
+  await page.keyboard.press("Control+k");
+  await expect(page.getByRole("searchbox")).toBeFocused();
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+});
+
 test("the palette says when courses fail to load, outside the listbox", async ({
   page,
 }) => {

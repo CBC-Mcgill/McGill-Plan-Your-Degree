@@ -2,33 +2,25 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 import type * as React from "react";
 
-/** Tints come from the status tokens, written out in full so Tailwind sees every class. */
 const badgeVariants = cva(
-  "inline-flex items-center whitespace-nowrap rounded-sm font-medium tabular-nums",
+  "inline-flex items-center gap-1 whitespace-nowrap text-sm tabular-nums [&_svg]:size-3.5",
   {
     variants: {
       tone: {
-        neutral: "bg-muted text-muted-foreground",
-        completed:
-          "bg-completed-surface text-[color-mix(in_oklab,var(--completed)_85%,black)]",
-        "in-progress":
-          "bg-in-progress-surface text-[color-mix(in_oklab,var(--in-progress)_85%,black)]",
-        planned:
-          "bg-planned-surface text-[color-mix(in_oklab,var(--planned)_85%,black)]",
-        warn: "bg-warn-surface text-[color-mix(in_oklab,var(--warn)_85%,black)]",
-        danger:
-          "bg-failed-surface text-[color-mix(in_oklab,var(--danger)_85%,black)]",
+        neutral: "text-fg-muted",
+        completed: "text-fg-muted",
+        "in-progress": "text-fg-muted",
+        planned: "text-fg-muted",
+        warn: "text-warn",
+        danger: "text-danger",
       },
-      size: {
-        sm: "h-5 gap-1 px-1.5 text-xs [&_svg]:size-3",
-        md: "h-7 gap-1.5 px-2.5 text-[13px] [&_svg]:size-3.5",
-      },
+      size: { sm: "", md: "" },
     },
     defaultVariants: { tone: "neutral", size: "sm" },
   },
 );
 
-/** Display-only status or count. 6px radius, never interactive. */
+/** @deprecated Every badge was a box. Write the word in --fg-muted, or use `StatusLabel`. */
 function Badge({
   tone,
   size,

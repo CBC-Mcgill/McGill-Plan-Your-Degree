@@ -1,8 +1,8 @@
 import { cn } from "cn";
 import { CircleAlert } from "lucide-react";
 import type * as React from "react";
-import { Badge } from "@/components/ui/badge";
 import { Tooltip } from "@/components/ui/tooltip";
+import { COPY } from "@/lib/copy";
 import type { BrowseStatus } from "@/lib/engine/status";
 import { GLOSSARY, STATUS_TIPS } from "@/lib/glossary";
 import type { CourseStatus as RecordStatus } from "@/lib/profile/types";
@@ -10,79 +10,19 @@ import type { CourseStatus as RecordStatus } from "@/lib/profile/types";
 /** A course's state for this student, or the outcome a transcript recorded. */
 export type Status = BrowseStatus | Exclude<RecordStatus, BrowseStatus>;
 
-type Tone = React.ComponentProps<typeof Badge>["tone"];
-
-/** Words, colors and badge tones for the status system. Glyphs grow with commitment, from a lock to a filled check. */
-export const STATUS: Record<
-  Status,
-  { label: string; color: string; text: string; tone: Tone }
-> = {
-  locked: {
-    label: "Locked",
-    color: "var(--locked)",
-    text: "text-muted-foreground",
-    tone: "neutral",
-  },
-  available: {
-    label: "Can take",
-    color: "var(--available)",
-    text: "text-muted-foreground",
-    tone: "neutral",
-  },
-  planned: {
-    label: "Planned",
-    color: "var(--planned)",
-    text: "text-planned",
-    tone: "planned",
-  },
-  "in-progress": {
-    label: "In progress",
-    color: "var(--in-progress)",
-    text: "text-in-progress",
-    tone: "in-progress",
-  },
-  completed: {
-    label: "Completed",
-    color: "var(--completed)",
-    text: "text-completed",
-    tone: "completed",
-  },
-  covered: {
-    label: "Covered",
-    color: "var(--covered)",
-    text: "text-covered",
-    tone: "completed",
-  },
-  transfer: {
-    label: "Transfer credit",
-    color: "var(--completed)",
-    text: "text-completed",
-    tone: "completed",
-  },
-  exemption: {
-    label: "Exemption",
-    color: "var(--completed)",
-    text: "text-completed",
-    tone: "completed",
-  },
-  failed: {
-    label: "Failed",
-    color: "var(--failed)",
-    text: "text-failed",
-    tone: "danger",
-  },
-  withdrawn: {
-    label: "Withdrawn",
-    color: "var(--locked)",
-    text: "text-muted-foreground",
-    tone: "neutral",
-  },
-  deferred: {
-    label: "Deferred",
-    color: "var(--warn)",
-    text: "text-warn",
-    tone: "warn",
-  },
+/** Words and glyph colors. The glyph shape tells statuses apart, so color stays to --fg, --fg-subtle, --danger and --warn (D9). */
+export const STATUS: Record<Status, { label: string; color: string }> = {
+  locked: { label: "Locked", color: "var(--fg-subtle)" },
+  available: { label: "Can take", color: "var(--fg-subtle)" },
+  planned: { label: "Planned", color: "var(--fg)" },
+  "in-progress": { label: "In progress", color: "var(--fg)" },
+  completed: { label: "Completed", color: "var(--fg)" },
+  covered: { label: "Covered", color: "var(--fg)" },
+  transfer: { label: "Transfer credit", color: "var(--fg)" },
+  exemption: { label: "Exemption", color: "var(--fg)" },
+  failed: { label: "Failed", color: "var(--danger)" },
+  withdrawn: { label: "Withdrawn", color: "var(--fg-subtle)" },
+  deferred: { label: "Deferred", color: "var(--warn)" },
 };
 
 const ring = {
@@ -101,7 +41,7 @@ const mark = {
   strokeLinejoin: "round",
 } as const;
 
-/** The status glyph. Decorative by default, so pair it with a word or pass a label. */
+/** The status glyph, 14px in rows and 16px on the landing. Decorative by default, so pair it with a word or pass a label. */
 export function StatusIcon({
   status,
   size = 14,
@@ -111,6 +51,7 @@ export function StatusIcon({
   status: Status;
   size?: number;
   label?: string;
+  /** @deprecated Wrap the glyph instead. */
   className?: string;
 }) {
   return (
@@ -212,9 +153,7 @@ export function StatusTip({
       content={
         <>
           <span className="font-semibold">{word}</span>
-          <span className="block text-white/80">
-            {reason ?? STATUS_TIPS[status]}
-          </span>
+          <span className="block">{reason ?? STATUS_TIPS[status]}</span>
         </>
       }
     >
@@ -223,32 +162,35 @@ export function StatusTip({
   );
 }
 
-/** Icon plus word, with no fill. The word is muted for quiet states and colored for committed ones. */
+/** Glyph, 8px, then the word in --fg-muted and the reason after " · ". */
 export function StatusLabel({
   status,
+  reason,
   uncertain = false,
-  className,
 }: {
   status: Status;
+  reason?: string;
   uncertain?: boolean;
-  className?: string;
 }) {
   return (
-    <span
-      className={cn(
-        "inline-flex items-center gap-1.5 whitespace-nowrap font-medium text-[13px] leading-[18px]",
-        STATUS[status].text,
-        className,
-      )}
-    >
-      <StatusIcon status={status} />
-      {STATUS[status].label}
-      {uncertain && <UncertainFlag />}
+    <span className="inline-flex items-start gap-2 text-fg-muted">
+      <span className="flex h-5 shrink-0 items-center">
+        <StatusIcon status={status} />
+      </span>
+      <span>
+        {STATUS[status].label}
+        {reason && ` · ${reason}`}
+        {uncertain && (
+          <span className="ml-2 inline-flex align-top">
+            <UncertainFlag />
+          </span>
+        )}
+      </span>
     </span>
   );
 }
 
-/** A tinted badge, for the one place a single status headlines a page. */
+/** @deprecated Use `StatusLabel`. */
 export function StatusBadge({
   status,
   label = STATUS[status].label,
@@ -259,24 +201,24 @@ export function StatusBadge({
   className?: string;
 }) {
   return (
-    <Badge tone={STATUS[status].tone} size="md" className={className}>
+    <span
+      className={cn("inline-flex items-center gap-2 text-fg-muted", className)}
+    >
       <StatusIcon status={status} />
       {label}
-    </Badge>
+    </span>
   );
 }
 
-/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. */
+/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. In rows the word is for screen readers only (D21). */
 export function UncertainFlag({ withLabel = false }: { withLabel?: boolean }) {
   return (
     <Tooltip content={GLOSSARY.hasConditions.tip}>
-      <span className="inline-flex items-center gap-1 text-warn">
+      <span className="inline-flex h-5 items-center gap-2 text-warn">
         <CircleAlert aria-hidden className="size-3.5" strokeWidth={2} />
-        {withLabel ? (
-          <span className="font-medium text-[13px]">Has conditions</span>
-        ) : (
-          <span className="sr-only">Has conditions</span>
-        )}
+        <span className={cn(!withLabel && "sr-only")}>
+          {COPY.hasConditions}
+        </span>
       </span>
     </Tooltip>
   );

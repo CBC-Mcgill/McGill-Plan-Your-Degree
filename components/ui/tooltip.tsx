@@ -4,6 +4,7 @@ import { cn } from "cn";
 import { Info } from "lucide-react";
 import { Tooltip as Primitive } from "radix-ui";
 import { type FocusEvent, type ReactNode, useRef, useState } from "react";
+import type { Definition } from "@/lib/glossary";
 
 /** One provider for the app, so every tooltip shares the same delay and moves between triggers without waiting again. */
 function TooltipProvider({ children }: { children: ReactNode }) {
@@ -58,16 +59,16 @@ function Bubble({
         sideOffset={8}
         collisionPadding={16}
         arrowPadding={10}
-        className="z-[100] max-w-[280px] rounded-md bg-foreground px-3 py-2 text-[13px] text-white leading-[18px] shadow-float transition-opacity duration-100 starting:opacity-0 motion-reduce:transition-none"
+        className="z-[100] max-w-80 rounded-md bg-fg px-3 py-2 text-sm text-white shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
       >
         {children}
-        <Primitive.Arrow width={12} height={6} className="fill-foreground" />
+        <Primitive.Arrow width={12} height={6} className="fill-fg" />
       </Primitive.Content>
     </Primitive.Portal>
   );
 }
 
-/** A navy label for the one element inside, shown on hover and keyboard focus. The child must pass a ref and props on to a DOM element. */
+/** A dark label for the one element inside, shown on hover and keyboard focus. The child must pass a ref and props on to a DOM element. */
 function Tooltip({
   content,
   side,
@@ -92,7 +93,29 @@ function Tooltip({
   );
 }
 
-/** A 16px "i" button beside a label that defines it. Unlike a plain trigger, a click keeps the definition open. */
+/** A term with a dotted underline that shows its definition on hover and focus. A click keeps it open. Never put one inside a link or a button. */
+function Term({ def, children }: { def: Definition; children?: ReactNode }) {
+  const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
+  return (
+    <Primitive.Root open={open} onOpenChange={onOpenChange}>
+      <Primitive.Trigger asChild onFocus={onFocus}>
+        <button
+          type="button"
+          onClick={(event) => {
+            event.preventDefault();
+            onOpenChange(true);
+          }}
+          className="cursor-help text-left underline decoration-1 decoration-dotted decoration-fg-subtle underline-offset-3"
+        >
+          {children ?? def.label}
+        </button>
+      </Primitive.Trigger>
+      <Bubble onEscapeKeyDown={onEscapeKeyDown}>{def.tip}</Bubble>
+    </Primitive.Root>
+  );
+}
+
+/** @deprecated Use `Term` on the word itself. */
 function InfoTip({
   label,
   tip,
@@ -114,7 +137,7 @@ function InfoTip({
             onOpenChange(true);
           }}
           className={cn(
-            "relative inline-flex size-4 shrink-0 items-center justify-center rounded-full text-faint transition-colors after:absolute after:-inset-1 hover:text-foreground data-[state=delayed-open]:text-foreground data-[state=instant-open]:text-foreground",
+            "relative inline-flex size-4 shrink-0 items-center justify-center rounded-full text-fg-muted after:absolute after:-inset-1 hover:text-fg data-[state=delayed-open]:text-fg data-[state=instant-open]:text-fg",
             className,
           )}
         >
@@ -126,4 +149,4 @@ function InfoTip({
   );
 }
 
-export { InfoTip, Tooltip, TooltipProvider };
+export { InfoTip, Term, Tooltip, TooltipProvider };

@@ -16,19 +16,11 @@ const bothTip =
 const termsTip = `Terms the course runs in the ${meta.catalogueYear} catalogue.`;
 
 export const GLOSSARY = {
-  program: {
-    label: "Program",
-    tip: "The degree program you are in. It decides which courses are required.",
-  },
   minor: {
-    label: "Minor (optional)",
+    label: "Minor",
     tip: `A second subject you study alongside your program. ${bothTip}`,
   },
   countsForBoth: { label: "Counts for both", tip: bothTip },
-  startTerm: {
-    label: "Start term",
-    tip: "Your first term at McGill. The planner starts here.",
-  },
   graduation: {
     label: "Expected graduation",
     tip: "The last term you take courses. Finishing in April? Pick Winter, even if the ceremony is in May or June.",
@@ -53,6 +45,75 @@ export const GLOSSARY = {
     label: "Credits earned",
     tip: "Credits from courses you completed, plus advanced standing and transfer credits. Courses in progress count once they are done.",
   },
+  earnedOrInProgress: {
+    label: "earned or in progress",
+    tip: "Credits earned, plus the courses you are taking now, counted as if you pass them.",
+  },
+  withPlan: {
+    label: "with your plan",
+    tip: "Credits earned or in progress, plus the courses in your plan.",
+  },
+  pending: {
+    label: "pending",
+    tip: "Credit for a multi-term course arrives when its last part is done.",
+  },
+  fullTime: {
+    label: "12 credits",
+    tip: "Full time is 12 credits or more.",
+  },
+  notCounted: {
+    label: "Not counted toward your program",
+    tip: "No requirement of your program took these courses. A course counts toward one requirement only. They still count toward your degree's total credits as electives.",
+  },
+  checkRequirement: { label: "Check this requirement", tip: checkTip },
+  generated: {
+    label: "Read automatically from the catalogue",
+    tip: "We read these requirements from the catalogue automatically, so some may be wrong.",
+    checks: "Rules we could not read say Check this requirement.",
+  },
+  warnings: {
+    label: "Warnings",
+    tip: "Problems the planner found, like a missing prerequisite or a course not offered that term. They do not block your plan.",
+  },
+  offered: { label: "Offered", tip: termsTip },
+  credits: {
+    label: "Credits",
+    tip: "Credits you earn by passing the course. A course taken over two terms gives its credits once the last part is done.",
+  },
+  offeredBy: {
+    label: "Offered by",
+    tip: "The department or school that teaches the course.",
+  },
+  multiTerm: {
+    label: "Multi-term courses",
+    tip: "Taken over two consecutive terms, for example ECSE 458D1 in Fall and ECSE 458D2 in Winter.",
+  },
+  termsLeft: {
+    label: "Terms left",
+    tip: "Fall and Winter terms you have left, up to and including your expected graduation term.",
+  },
+  stillMissing: {
+    label: "Still missing",
+    tip: "What the plan does not cover yet, such as required courses and credits left in complementary lists.",
+  },
+  planGraduation: {
+    label: "Graduation",
+    tip: "The last term on your path. It follows the expected graduation on your profile.",
+  },
+  hasConditions: {
+    label: "Has conditions",
+    tip: "The catalogue lists a condition we can't check, like instructor permission.",
+  },
+
+  // @deprecated Delete each one with its last caller.
+  program: {
+    label: "Program",
+    tip: "The degree program you are in. It decides which courses are required.",
+  },
+  startTerm: {
+    label: "Start term",
+    tip: "Your first term at McGill. The planner starts here.",
+  },
   programCredits: {
     label: "Program credits",
     tip: "Credits that count toward your program's requirements, including courses you are taking now.",
@@ -69,30 +130,8 @@ export const GLOSSARY = {
     label: "Credits counted",
     tip: "Credits from your completed, current and planned courses, up to what each requirement needs.",
   },
-  notCounted: {
-    label: "Not counted toward your program",
-    tip: "No requirement of your program took these courses. They still count toward your degree's total credits as electives.",
-  },
-  checkRequirement: { label: "Check this requirement", tip: checkTip },
   checkRules: { label: "Rules to check", tip: checkTip },
-  warnings: {
-    label: "Warnings",
-    tip: "Problems the planner found, like a missing prerequisite or a course not offered that term. They do not block your plan.",
-  },
   termsOffered: { label: "Terms offered", tip: termsTip },
-  offered: { label: "Offered", tip: termsTip },
-  credits: {
-    label: "Credits",
-    tip: "Credits you earn by passing the course. A course taken over two terms gives its credits once the last part is done.",
-  },
-  offeredBy: {
-    label: "Offered by",
-    tip: "The department or school that teaches the course.",
-  },
-  multiTerm: {
-    label: "Multi-term courses",
-    tip: "Taken over two consecutive terms, for example ECSE 458D1 in Fall and ECSE 458D2 in Winter.",
-  },
   notOpen: {
     label: "Not open in this term",
     tip: "Required courses you cannot take that term yet, with what is missing.",
@@ -105,27 +144,11 @@ export const GLOSSARY = {
     label: "Planned next term",
     tip: "Credits you added to your plan for next term.",
   },
-  termsLeft: {
-    label: "Terms left",
-    tip: "Fall and Winter terms you have left, up to and including your expected graduation term.",
-  },
   planCovers: {
     label: "Your plan covers",
     tip: "Program credits that your completed, current and planned courses add up to.",
   },
-  stillMissing: {
-    label: "Still missing",
-    tip: "What the plan does not cover yet, such as required courses and credits left in complementary lists.",
-  },
-  planGraduation: {
-    label: "Graduation",
-    tip: "The last term on your path. It follows the expected graduation on your profile.",
-  },
-  hasConditions: {
-    label: "Has conditions",
-    tip: "The catalogue lists a condition we can't check, like instructor permission.",
-  },
-} satisfies Record<string, Definition>;
+} satisfies Record<string, Definition & { checks?: string }>;
 
 /** One sentence for each status word. A reason, such as "Needs COMP 250 first", replaces it where the app has one. */
 export const STATUS_TIPS: Record<BrowseStatus | CourseStatus, string> = {
@@ -144,13 +167,8 @@ export const STATUS_TIPS: Record<BrowseStatus | CourseStatus, string> = {
   deferred: "The final grade is not in yet. The course counts once it is.",
 };
 
-/** What each saved view of the course table holds. */
-export const VIEW_TIPS: Record<View, string> = {
-  all: "Every course in the catalogue.",
+/** What a saved view of the course table holds, where its label does not say it. */
+export const VIEW_TIPS: Partial<Record<View, string>> = {
   "can-take":
     "Courses you can take now: you have the prerequisites, it runs this year and it is an undergraduate course.",
-  program: "Courses your program requires, or lets you choose from.",
-  planned: "Courses you added to your plan.",
-  completed:
-    "Courses you have finished, including transfer credits and exemptions.",
 };

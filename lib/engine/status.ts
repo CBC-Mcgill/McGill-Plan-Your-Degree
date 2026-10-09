@@ -97,14 +97,15 @@ export function isUncertain(course: StatusInput): boolean {
   );
 }
 
+/** A multi-term course can start only in the term its first part (D1, N1) runs. */
+function startTerms(course: Pick<CourseSummary, "terms" | "parts">) {
+  const starts = course.parts?.filter((part) => part.code.endsWith("1"));
+  return starts?.length ? starts.flatMap((part) => part.terms) : course.terms;
+}
+
 /** Seasons are matched because the catalogue lists only the current year's terms. */
 export function isOffered(course: CourseSummary, season: Season): boolean {
-  // A multi-term course can start only in the term its first part (D1, N1) runs.
-  const starts = course.parts?.filter((part) => part.code.endsWith("1"));
-  const terms = starts?.length
-    ? starts.flatMap((part) => part.terms)
-    : course.terms;
-  return terms.some((term) => term.startsWith(season));
+  return startTerms(course).some((term) => term.startsWith(season));
 }
 
 /** The student's status for one course now, for the browse and course pages. */
@@ -133,4 +134,18 @@ export function courseStatus(
     uncertain,
     blockedBy: blocked,
   };
+}
+
+/** "Can take" in the browse view and on the course page (D33): open to the student, offered in the catalogue year such as "2026-2027", and undergraduate. */
+export function canTakeNow(
+  course: StatusInput & Pick<CourseSummary, "terms" | "parts" | "number">,
+  snapshot: Snapshot,
+  year: string,
+): boolean {
+  const years = year.split("-");
+  return (
+    courseStatus(course, snapshot).status === "available" &&
+    startTerms(course).some((term) => years.includes(term.slice(-4))) &&
+    /^[1-4]/.test(course.number)
+  );
 }

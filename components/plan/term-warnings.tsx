@@ -130,7 +130,7 @@ export function TermWarnings({
       tone="warn"
       role="group"
       aria-labelledby="warnings-heading"
-      className="block text-[color-mix(in_oklab,var(--warn)_85%,black)]"
+      className="block text-warn"
     >
       <div className="flex items-center gap-1.5 text-[13px] leading-[18px]">
         <h3 id="warnings-heading" className="flex items-center gap-1.5">

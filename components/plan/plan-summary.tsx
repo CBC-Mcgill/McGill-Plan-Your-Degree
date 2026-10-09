@@ -264,7 +264,7 @@ export function PlanSummary({
                   </span>
                 ) : (
                   <>
-                    <span className="flex items-center gap-1.5 font-semibold text-[color-mix(in_oklab,var(--warn)_85%,black)]">
+                    <span className="flex items-center gap-1.5 font-semibold text-warn">
                       <TriangleAlert
                         aria-hidden
                         className="size-4"

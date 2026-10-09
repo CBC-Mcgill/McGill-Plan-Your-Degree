@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "cn";
-import { ArrowUpDown, Check, ChevronDown, Plus, Search, X } from "lucide-react";
+import { ArrowUpDown, Check, Plus, Search, X } from "lucide-react";
 import { Checkbox, DropdownMenu, Popover } from "radix-ui";
 import type * as React from "react";
 import { Fragment, useState } from "react";
@@ -87,34 +87,21 @@ export function SearchField({
   );
 }
 
-/** Chip that opens a popover: the label and a chevron while empty, the value only once set. */
+/** Chip that opens a popover. `chipText` still starts Level and Credits values with the label, which the chip now shows itself. */
 function FilterChip({
   label,
   value,
-  onClear,
   ...props
-}: Omit<
-  React.ComponentProps<typeof Chip>,
-  "active" | "onRemove" | "children"
-> & {
-  label: string;
-  value?: string;
-  onClear?: () => void;
-}) {
+}: React.ComponentProps<typeof Chip>) {
+  const text = value?.replace(`${label} `, "");
   return (
     <Chip
-      active={Boolean(value)}
-      onRemove={onClear}
-      // biome-ignore lint/a11y/useValidAriaValues: a popover trigger is not a toggle
-      aria-pressed={undefined}
-      aria-label={value ? `${label}: ${value}` : undefined}
-      title={value}
+      label={label}
+      value={text}
+      title={text}
       className="max-w-64"
       {...props}
-    >
-      <span className="truncate">{value ?? label}</span>
-      {!value && <ChevronDown aria-hidden strokeWidth={2} />}
-    </Chip>
+    />
   );
 }
 
