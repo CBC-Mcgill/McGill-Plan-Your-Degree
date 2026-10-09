@@ -129,7 +129,7 @@ export function TermPath({
     <div
       className={cn(
         CARD,
-        "sticky top-6 max-h-[calc(100vh-3rem)] overflow-y-auto",
+        "sticky top-22 max-h-[calc(100vh-7rem)] overflow-y-auto",
       )}
     >
       <div className={BAND}>
