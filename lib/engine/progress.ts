@@ -25,6 +25,8 @@ export interface RuleProgress {
   coursesDone: number;
   minCredits?: number;
   minCourses?: number;
+  /** The crawler could not read this rule, so nothing counts toward it and it is never satisfied. */
+  unparsed?: true;
   satisfied: boolean;
 }
 
@@ -45,6 +47,8 @@ export interface GroupProgress {
   remaining: RequiredItem[];
   /** Complementary groups: one entry per rule. */
   rules: RuleProgress[];
+  /** Rules in the group that need a manual check. Such a group is never satisfied. */
+  unparsed: number;
 }
 
 export interface ProgramProgress {
@@ -129,6 +133,7 @@ function creditedProgress(group: Group): GroupProgress {
     courses: [],
     remaining: [],
     rules: [],
+    unparsed: 0,
   };
 }
 
@@ -164,6 +169,7 @@ function requiredProgress(
     courses,
     remaining,
     rules: [],
+    unparsed: 0,
   };
 }
 
@@ -227,7 +233,9 @@ function complementaryProgress(
     coursesDone,
     minCredits: rule.minCredits,
     minCourses: rule.minCourses,
+    unparsed: rule.unparsed,
     satisfied:
+      !rule.unparsed &&
       creditsDone >= (rule.minCredits ?? 0) &&
       coursesDone >= (rule.minCourses ?? 0),
   }));
@@ -246,6 +254,7 @@ function complementaryProgress(
     courses: [...chosen.keys()],
     remaining: [],
     rules,
+    unparsed: rules.filter((rule) => rule.unparsed).length,
   };
 }
 

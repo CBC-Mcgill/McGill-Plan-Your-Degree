@@ -43,6 +43,8 @@ export interface OpenGroup {
   creditsDone: number;
   credits: number;
   buckets: Bucket[];
+  /** The catalogue text of each rule that needs a manual check. */
+  checks: string[];
 }
 
 export interface NextView {
@@ -172,9 +174,9 @@ export function nextView(
       ? program.groups.flatMap((group, i) => {
           const done = progress.groups[i];
           return group.kind === "complementary" &&
-            namesCourses(group) &&
             done &&
-            !done.satisfied
+            !done.satisfied &&
+            (namesCourses(group) || done.unparsed > 0)
             ? [{ group, done }]
             : [];
         })
@@ -185,6 +187,7 @@ export function nextView(
     const { code, credits } = s.course;
     const at = openGroups.findIndex(
       ({ group, done }) =>
+        namesCourses(group) &&
         groupAllows(group, code) &&
         fitsCaps(group, done.rules, code, credits ?? 0),
     );
@@ -214,7 +217,10 @@ export function nextView(
     if (rest.length > 0) {
       listed.push({ title: "Other options", progress: null, entries: rest });
     }
-    return listed.length > 0
+    const checks = group.rules.flatMap((rule) =>
+      rule.unparsed ? [rule.title] : [],
+    );
+    return listed.length + checks.length > 0
       ? [
           {
             title: group.title,
@@ -222,6 +228,7 @@ export function nextView(
             creditsDone: Math.min(done.creditsDone, group.credits),
             credits: group.credits,
             buckets: listed,
+            checks,
           },
         ]
       : [];
