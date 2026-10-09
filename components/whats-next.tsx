@@ -56,6 +56,9 @@ import type { Program } from "@/lib/programs/types";
 
 const TERMS_SHOWN = 4;
 const BUCKET_LIMIT = 5;
+
+// The catalogue opens a program page on its overview tab, and this hash opens the course lists instead.
+const coursesTab = (source: string) => `${source}#coursestext`;
 const OTHER_STEP = 20;
 const OTHER = "other";
 const NO_COURSES: ReadonlySet<string> = new Set();
@@ -495,6 +498,7 @@ function Group({
   fraction,
   checks = 0,
   trailing,
+  source,
   collapsed,
   onToggle,
   children,
@@ -505,6 +509,8 @@ function Group({
   /** Rules in the group that need a manual check. */
   checks?: number;
   trailing?: string;
+  /** The program page on the McGill catalogue, linked from the header. */
+  source?: string;
   collapsed: boolean;
   onToggle: () => void;
   children: ReactNode;
@@ -539,6 +545,21 @@ function Group({
         </h2>
         {info && <InfoTip {...info} />}
         <div className="ml-auto flex shrink-0 items-center gap-2">
+          {source && (
+            <a
+              href={coursesTab(source)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative mr-2 inline-flex items-center gap-1 rounded-sm text-[13px] text-muted-foreground hover:text-foreground hover:underline"
+            >
+              Catalogue
+              <ExternalLink aria-hidden className="size-3" />
+              <span className="sr-only">
+                {" "}
+                page for {sentence(title)} (opens in a new tab)
+              </span>
+            </a>
+          )}
           {checks > 0 && (
             <>
               <Badge tone="warn">
@@ -728,7 +749,11 @@ function CheckRow({
       </div>
       {source && (
         <Button asChild variant="ghost" size="sm" className="shrink-0">
-          <a href={source} target="_blank" rel="noopener noreferrer">
+          <a
+            href={coursesTab(source)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Program page
             <ExternalLink aria-hidden />
             <span className="sr-only"> (opens in a new tab)</span>
@@ -780,6 +805,7 @@ function ComplementaryGroup({
           : undefined
       }
       checks={group.checks.length}
+      source={source}
       collapsed={collapsed}
       onToggle={onToggle}
     >

@@ -5,6 +5,7 @@ import type { Program } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
+import { nextView } from "./next-view.ts";
 import { planLoads, planWarnings, schoolTerms, termChoices } from "./plan.ts";
 import { fitsCaps, programProgress, ruleMatches } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
@@ -156,6 +157,37 @@ test("what's next splits by program and matches the term's season", () => {
   expect(codes(next.canTake.complementary)).toEqual(["COMP 424"]);
   // ECSE 458 starts in Fall, COMP 302 is locked, COMP 350 runs in Fall only.
   expect(codes(next.canTake.other)).toEqual(["ECSE 526"]);
+});
+
+test("what's next shows a whole course list, with why a course is not open", () => {
+  const pick: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Pick one",
+        kind: "complementary",
+        credits: 3,
+        rules: [
+          {
+            title: "Pick one",
+            minCredits: 3,
+            courses: ["COMP 350", "COMP 424"],
+          },
+        ],
+      },
+    ],
+  };
+  const winter = { season: "Winter", year: 2027 } as const;
+  const [group] = nextView(catalogue, snapshot, winter, pick).complementary;
+  expect(
+    group?.buckets[0]?.entries.map(({ course, reason }) => [
+      course.code,
+      reason,
+    ]),
+  ).toEqual([
+    ["COMP 424", undefined],
+    ["COMP 350", "Not offered in Winter"],
+  ]);
 });
 
 test("program progress counts exemptions as satisfied but not as credit", () => {
