@@ -5,8 +5,7 @@ export const metadata: Metadata = { title: "Planner" };
 
 export default function PlanPage() {
   return (
-    <div className="mx-auto flex w-full max-w-page flex-col gap-5 px-8 pt-8 pb-12">
-      <h1>Planner</h1>
+    <div className="mx-auto w-full max-w-page px-8 pt-12">
       <Planner />
     </div>
   );

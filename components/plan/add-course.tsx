@@ -16,7 +16,7 @@ import { type Plan, type Term, termKey } from "@/lib/profile/types";
 
 const MAX_RESULTS = 6;
 
-/** Search combobox that puts a course in the term. Arrow keys move, Enter adds, Escape clears or closes. A course planned elsewhere moves here. */
+/** Search combobox that puts a course in the term. The first course that can be added is highlighted, arrow keys skip the rest, Enter adds and Escape clears. A course planned elsewhere moves here. */
 export function AddCourse({
   term,
   index,
@@ -32,10 +32,9 @@ export function AddCourse({
   const wrap = useRef<HTMLDivElement>(null);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
   const [notice, setNotice] = useState("");
   const text = query.trim();
-  const results = text ? searchCourses(index, text).slice(0, MAX_RESULTS) : [];
   const label = termLabel(term);
 
   const stateOf = (course: CourseSummary) => {
@@ -62,6 +61,15 @@ export function AddCourse({
     };
   };
 
+  const results = (text ? searchCourses(index, text) : [])
+    .slice(0, MAX_RESULTS)
+    .map((course) => ({ course, ...stateOf(course) }));
+  const enabled = results.flatMap((result, i) => (result.disabled ? [] : i));
+  const chosen = results.findIndex(
+    (result) => result.course.code === picked && !result.disabled,
+  );
+  const active = chosen >= 0 ? chosen : (enabled[0] ?? -1);
+
   function commit(course: CourseSummary | undefined) {
     if (!course) return;
     const state = stateOf(course);
@@ -71,7 +79,7 @@ export function AddCourse({
     }
     addWithUndo(term, course.code);
     setQuery("");
-    setActive(0);
+    setPicked(null);
     setOpen(false);
   }
 
@@ -80,65 +88,57 @@ export function AddCourse({
 
   return (
     <div ref={wrap} className="relative">
-      <div className="relative">
-        <Search
-          aria-hidden
-          className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground"
-          strokeWidth={1.75}
-        />
-        <input
-          type="text"
-          role="combobox"
-          aria-label={`Add a course to ${label}`}
-          aria-expanded={showResults}
-          aria-controls={showResults ? listId : undefined}
-          aria-activedescendant={
-            showResults ? `${listId}-${active}` : undefined
-          }
-          aria-autocomplete="list"
-          autoComplete="off"
-          spellCheck={false}
-          placeholder="Search by code or title, like COMP 251"
-          value={query}
-          onFocus={() => setOpen(true)}
-          onBlur={(event) => {
-            if (!wrap.current?.contains(event.relatedTarget)) setOpen(false);
-          }}
-          onChange={(event) => {
-            setQuery(event.target.value);
-            setActive(0);
-            setNotice("");
+      <Search
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-fg-muted"
+      />
+      <input
+        type="text"
+        role="combobox"
+        aria-label={`Add a course to ${label}`}
+        aria-expanded={showResults}
+        aria-controls={showResults ? listId : undefined}
+        aria-activedescendant={
+          showResults && active >= 0 ? `${listId}-${active}` : undefined
+        }
+        aria-autocomplete="list"
+        autoComplete="off"
+        spellCheck={false}
+        placeholder={`Add a course to ${label}, like COMP 251`}
+        value={query}
+        onFocus={() => setOpen(true)}
+        onBlur={(event) => {
+          if (!wrap.current?.contains(event.relatedTarget)) setOpen(false);
+        }}
+        onChange={(event) => {
+          setQuery(event.target.value);
+          setPicked(null);
+          setNotice("");
+          setOpen(true);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault();
             setOpen(true);
-          }}
-          onKeyDown={(event) => {
-            if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-              event.preventDefault();
-              setOpen(true);
-              const step = event.key === "ArrowDown" ? 1 : -1;
-              setNotice("");
-              setActive((value) => {
-                for (let i = 1; i <= results.length; i++) {
-                  const next =
-                    (((value + step * i) % results.length) + results.length) %
-                    results.length;
-                  const course = results[next];
-                  if (course && !stateOf(course).disabled) return next;
-                }
-                return value;
-              });
-            } else if (event.key === "Enter") {
-              event.preventDefault();
-              commit(results[active]);
-            } else if (event.key === "Escape") {
-              setQuery("");
-              setOpen(false);
-            }
-          }}
-          className={cn(controlStyles, "w-full pr-3 pl-8")}
-        />
-      </div>
+            setNotice("");
+            const at = enabled.indexOf(active);
+            const step = event.key === "ArrowDown" ? 1 : -1;
+            const next = enabled[(at + step + enabled.length) % enabled.length];
+            if (next !== undefined)
+              setPicked(results[next]?.course.code ?? null);
+          } else if (event.key === "Enter") {
+            event.preventDefault();
+            // With nothing to add, Enter says why the first match cannot be added.
+            commit((results[active] ?? results[0])?.course);
+          } else if (event.key === "Escape") {
+            setQuery("");
+            setOpen(false);
+          }
+        }}
+        className={cn(controlStyles, "w-full pl-9")}
+      />
       {showList && (
-        <div className="absolute inset-x-0 top-full z-20 mt-1 rounded-lg bg-card p-1 shadow-float">
+        <div className="absolute inset-x-0 top-full z-20 mt-1 rounded-lg bg-bg p-1 shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none">
           {showResults && (
             <div
               id={listId}
@@ -146,46 +146,39 @@ export function AddCourse({
               aria-label="Search results"
               onMouseDown={(event) => event.preventDefault()}
             >
-              {results.map((course, i) => {
-                const state = stateOf(course);
-                return (
-                  <button
-                    key={course.code}
-                    type="button"
-                    role="option"
-                    id={`${listId}-${i}`}
-                    aria-selected={i === active}
-                    aria-disabled={state.disabled}
-                    onMouseMove={() => setActive(i)}
-                    onClick={() => commit(course)}
-                    className={cn(
-                      "flex h-10 w-full items-center gap-2.5 rounded-md px-2 text-left",
-                      i === active && "option-active",
-                      state.disabled && "cursor-default text-muted-foreground",
-                    )}
-                  >
-                    <StatusIcon status={state.status} />
-                    <span className="w-[76px] shrink-0 whitespace-nowrap font-semibold tabular-nums">
+              {results.map(({ course, status, disabled, note }, i) => (
+                <button
+                  key={course.code}
+                  type="button"
+                  role="option"
+                  id={`${listId}-${i}`}
+                  aria-selected={i === active}
+                  aria-disabled={disabled}
+                  onMouseMove={() => !disabled && setPicked(course.code)}
+                  onClick={() => commit(course)}
+                  className={cn(
+                    "flex h-10 w-full items-center gap-4 rounded-md px-3 text-left",
+                    i === active && "selected",
+                    disabled && "cursor-default text-fg-muted",
+                  )}
+                >
+                  <span className="flex min-w-0 flex-1 items-center gap-2">
+                    <StatusIcon status={status} label={STATUS[status].label} />
+                    <span className="w-24 shrink-0 font-semibold tabular-nums">
                       {course.code}
                     </span>
-                    <span
-                      className="min-w-0 flex-1 truncate"
-                      title={course.title}
-                    >
+                    <span className="min-w-0 flex-1 truncate font-normal">
                       {course.title}
                     </span>
-                    <span className="shrink-0 text-muted-foreground text-xs tabular-nums">
-                      {state.note || creditsLabel(course)}
-                    </span>
-                  </button>
-                );
-              })}
+                  </span>
+                  <span className="shrink-0 font-normal text-fg-muted tabular-nums">
+                    {note || creditsLabel(course)}
+                  </span>
+                </button>
+              ))}
             </div>
           )}
-          <p
-            role="status"
-            className="px-2 py-2.5 text-[13px] text-muted-foreground empty:hidden"
-          >
+          <p role="status" className="px-3 py-2 text-fg-muted empty:hidden">
             {showResults ? notice : `No courses match "${text}"`}
           </p>
         </div>
