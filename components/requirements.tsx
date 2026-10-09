@@ -1,7 +1,13 @@
 "use client";
 
 import { cn } from "cn";
-import { ArrowRight, ExternalLink, FileUp, ListChecks } from "lucide-react";
+import {
+  ArrowRight,
+  ExternalLink,
+  FileUp,
+  Info,
+  ListChecks,
+} from "lucide-react";
 import Link from "next/link";
 import { Fragment, type ReactNode, useMemo, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
@@ -48,12 +54,14 @@ import {
 } from "@/lib/profile/term-options";
 import {
   type CourseRecord,
+  type EntryRoute,
   isDone,
   type Plan,
   type Term,
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
+import { minorName } from "@/lib/programs/minor";
 import type {
   ComplementaryGroup,
   Group as GroupDefinition,
@@ -72,8 +80,14 @@ interface Context {
   facts: ReadonlyMap<string, Fact>;
   /** The term "Needs MATH 262 first" is judged for: the next one to plan, as on What's next. */
   term: Term;
-  source: string;
 }
+
+/** Done, in-progress and planned courses all count here. */
+const count = (entry: EntryRoute | null) => ({
+  inProgress: true,
+  planned: true,
+  entry,
+});
 
 const DONE_ORDER = ["completed", "transfer", "exemption"];
 
@@ -149,11 +163,14 @@ function Header() {
 // Split out so a visitor without a profile does not download the catalogue.
 function RequirementsReady({ snapshot }: { snapshot: Snapshot }) {
   const programId = useProfileStore((state) => state.programId);
+  const minorId = useProfileStore((state) => state.minorId);
   const entry = useProfileStore((state) => state.entry);
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
   const catalogue = useCatalogue();
   const loaded = useProgram(programId);
+  const loadedMinor = useProgram(minorId);
+  const minor = loadedMinor ?? null;
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
   const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
   const facts = useMemo(
@@ -163,13 +180,16 @@ function RequirementsReady({ snapshot }: { snapshot: Snapshot }) {
   const progress = useMemo(
     () =>
       loaded && courses
-        ? programProgress(loaded, snapshot, courses, {
-            inProgress: true,
-            planned: true,
-            entry,
-          })
+        ? programProgress(loaded, snapshot, courses, count(entry))
         : null,
     [loaded, courses, snapshot, entry],
+  );
+  const minorProgress = useMemo(
+    () =>
+      minor && courses
+        ? programProgress(minor, snapshot, courses, count(entry))
+        : null,
+    [minor, courses, snapshot, entry],
   );
 
   return (
@@ -189,17 +209,16 @@ function RequirementsReady({ snapshot }: { snapshot: Snapshot }) {
         <div className="mt-6">
           <CatalogueError />
         </div>
-      ) : loaded && courses && progress ? (
+      ) : loaded && courses && progress && loadedMinor !== undefined ? (
         <Content
           program={loaded}
           progress={progress}
-          context={{
-            catalogue: courses,
-            snapshot,
-            facts,
-            term,
-            source: loaded.source,
-          }}
+          minor={
+            minor && minorProgress
+              ? { program: minor, progress: minorProgress }
+              : null
+          }
+          context={{ catalogue: courses, snapshot, facts, term }}
         />
       ) : (
         <PageSkeleton />
@@ -208,15 +227,18 @@ function RequirementsReady({ snapshot }: { snapshot: Snapshot }) {
   );
 }
 
+/** A program or minor with the student's progress through it. */
+interface Loaded {
+  program: Program;
+  progress: ProgramProgress;
+}
+
 function Content({
   program,
   progress,
+  minor,
   context,
-}: {
-  program: Program;
-  progress: ProgramProgress;
-  context: Context;
-}) {
+}: Loaded & { minor: Loaded | null; context: Context }) {
   const [collapsed, setCollapsed] = useState<ReadonlySet<string>>(
     () => new Set(),
   );
@@ -228,30 +250,17 @@ function Content({
     });
   const { unclaimed } = progress;
   const unclaimedCredits = unclaimed.reduce((sum, c) => sum + c.credits, 0);
+  const shared = { context, collapsed, toggle };
 
   return (
     <div className="mt-6 flex flex-col gap-6">
-      <div className="flex flex-col gap-3">
-        <GeneratedBanner program={program} />
-        <Card className="overflow-hidden">
-          <ProgramHeader program={program} progress={progress} />
-          {program.groups.map((definition, i) => {
-            const group = progress.groups[i];
-            return group ? (
-              <GroupSection
-                // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
-                key={i}
-                group={group}
-                definition={definition}
-                collapsed={collapsed.has(String(i))}
-                onToggle={() => toggle(String(i))}
-                context={context}
-              />
-            ) : null;
-          })}
-        </Card>
-      </div>
-
+      <ProgramCard
+        id="program"
+        kind="Program"
+        program={program}
+        progress={progress}
+        {...shared}
+      />
       <Card className="overflow-hidden">
         <Group
           title="Not counted toward your program"
@@ -280,6 +289,55 @@ function Content({
           )}
         </Group>
       </Card>
+      {minor && <ProgramCard id="minor" kind="Minor" {...minor} {...shared} />}
+    </div>
+  );
+}
+
+/** One card per program or minor: the strip, then a section per group in program order. */
+function ProgramCard({
+  id,
+  kind,
+  program,
+  progress,
+  context,
+  collapsed,
+  toggle,
+}: Loaded & {
+  id: string;
+  kind: "Program" | "Minor";
+  context: Context;
+  collapsed: ReadonlySet<string>;
+  toggle: (key: string) => void;
+}) {
+  return (
+    <div className="flex flex-col gap-3">
+      <GeneratedBanner program={program} />
+      <Card className="overflow-hidden">
+        <ProgramHeader kind={kind} program={program} progress={progress} />
+        {kind === "Minor" && (
+          <p className="flex items-start gap-2 border-border border-b px-5 py-3 text-[13px] text-muted-foreground leading-[18px]">
+            <Info aria-hidden className="mt-px size-4 shrink-0" />
+            {GLOSSARY.countsForBoth.tip}
+          </p>
+        )}
+        {program.groups.map((definition, i) => {
+          const group = progress.groups[i];
+          const key = `${id}:${i}`;
+          return group ? (
+            <GroupSection
+              // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
+              key={i}
+              group={group}
+              definition={definition}
+              source={program.source}
+              collapsed={collapsed.has(key)}
+              onToggle={() => toggle(key)}
+              context={context}
+            />
+          ) : null;
+        })}
+      </Card>
     </div>
   );
 }
@@ -287,11 +345,13 @@ function Content({
 const byCode = (a: Claimed, b: Claimed) => (a.code < b.code ? -1 : 1);
 const sorted = (courses: Claimed[]) => [...courses].sort(byCode);
 
-/** The program strip: name, credits counted, and a link to the course lists on the catalogue. */
+/** The strip: name, credits counted, and a link to the course lists on the catalogue. */
 function ProgramHeader({
+  kind,
   program,
   progress,
 }: {
+  kind: string;
   program: Program;
   progress: ProgramProgress;
 }) {
@@ -300,9 +360,9 @@ function ProgramHeader({
     <div className="flex h-[72px] items-center gap-6 border-border border-b px-5">
       <div className="min-w-0 max-w-72 shrink-0">
         <h2 className="truncate text-sm leading-5" title={program.name}>
-          {program.name}
+          {kind === "Minor" ? minorName(program.name) : program.name}
         </h2>
-        <p className="text-muted-foreground text-xs leading-4">Program</p>
+        <p className="text-muted-foreground text-xs leading-4">{kind}</p>
       </div>
       <ProgressBar
         value={creditsDone}
@@ -367,12 +427,14 @@ function sections(
 function GroupSection({
   group,
   definition,
+  source,
   collapsed,
   onToggle,
   context,
 }: {
   group: GroupProgress;
   definition: GroupDefinition;
+  source: string;
   collapsed: boolean;
   onToggle: () => void;
   context: Context;
@@ -420,6 +482,7 @@ function GroupSection({
         <ComplementaryRows
           group={group}
           definition={definition}
+          source={source}
           context={context}
         />
       )}
@@ -460,10 +523,12 @@ function RequiredRows({
 function ComplementaryRows({
   group,
   definition,
+  source,
   context,
 }: {
   group: GroupProgress;
   definition: ComplementaryGroup;
+  source: string;
   context: Context;
 }) {
   const titled = definition.rules.length > 1;
@@ -515,7 +580,7 @@ function ComplementaryRows({
         .filter((rule) => rule.unparsed)
         .map((rule, i) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share the same text and the list never reorders
-          <CheckRow key={i} text={rule.title} source={context.source} />
+          <CheckRow key={i} text={rule.title} source={source} />
         ))}
     </>
   );

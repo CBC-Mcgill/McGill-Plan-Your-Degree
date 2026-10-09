@@ -38,12 +38,18 @@ export function Planner() {
 function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
   const catalogue = useCatalogue();
   const programId = useProfileStore((state) => state.programId);
+  const minorId = useProfileStore((state) => state.minorId);
   const program = useProgram(programId);
+  const minor = useProgram(minorId);
 
   if (catalogue.status === "error") {
     return <CatalogueError />;
   }
-  if (catalogue.status !== "ready" || program === undefined) {
+  if (
+    catalogue.status !== "ready" ||
+    program === undefined ||
+    minor === undefined
+  ) {
     return <PlannerSkeleton />;
   }
   return (
@@ -51,6 +57,7 @@ function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
       snapshot={snapshot}
       catalogue={catalogue.catalogue}
       program={program}
+      minor={minor}
     />
   );
 }
@@ -59,10 +66,12 @@ function PlannerReady({
   snapshot,
   catalogue,
   program,
+  minor,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
+  minor: Program | null;
 }) {
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
@@ -104,6 +113,17 @@ function PlannerReady({
         : null,
     [program, snapshot, catalogue, entry],
   );
+  const minorProgress = useMemo(
+    () =>
+      minor
+        ? programProgress(minor, snapshot, catalogue, {
+            inProgress: true,
+            planned: true,
+            entry,
+          })
+        : null,
+    [minor, snapshot, catalogue, entry],
+  );
   const moveOptions = useMemo(() => {
     const first = stages[0]?.term ?? now;
     const terms = new Map<number, Term>();
@@ -141,6 +161,11 @@ function PlannerReady({
       <PlanSummary
         program={program}
         progress={progress}
+        minor={
+          minor && minorProgress
+            ? { program: minor, progress: minorProgress }
+            : null
+        }
         warningCount={warnings.length}
         onShowWarnings={() => firstWarned && setPicked(firstWarned.key)}
         graduation={termLabel(end)}

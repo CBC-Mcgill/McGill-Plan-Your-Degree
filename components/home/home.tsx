@@ -5,6 +5,7 @@ import {
   ArrowRight,
   CalendarDays,
   GraduationCap,
+  Layers,
   ListChecks,
 } from "lucide-react";
 import Link from "next/link";
@@ -47,6 +48,7 @@ import {
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
+import { minorName } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
 const NEXT_UP_LIMIT = 5;
@@ -102,14 +104,16 @@ function Ready({
   catalogue: Catalogue;
 }) {
   const programId = useProfileStore((state) => state.programId);
+  const minorId = useProfileStore((state) => state.minorId);
   const entry = useProfileStore((state) => state.entry);
   const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
   const loaded = useProgram(programId);
+  const loadedMinor = useProgram(minorId);
   const program = loaded ?? null;
   // Planned courses stay in the list, so adding one shows "Planned" and the row does not vanish.
   const view = useMemo(
     () =>
-      loaded === undefined
+      loaded === undefined || loadedMinor === undefined
         ? null
         : nextView(
             catalogue,
@@ -118,7 +122,7 @@ function Ready({
             program,
             entry,
           ),
-    [catalogue, snapshot, term, loaded, program, entry],
+    [catalogue, snapshot, term, loaded, loadedMinor, program, entry],
   );
   if (!view) return <Skeleton />;
 
@@ -128,6 +132,7 @@ function Ready({
         snapshot={snapshot}
         catalogue={catalogue}
         program={program}
+        minor={loadedMinor ?? null}
         term={term}
       />
       <SetupGuide
@@ -192,11 +197,13 @@ function Metrics({
   snapshot,
   catalogue,
   program,
+  minor,
   term,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
+  minor: Program | null;
   term: Term;
 }) {
   const records = useProfileStore((state) => state.records);
@@ -243,12 +250,22 @@ function Metrics({
       toGo: missingNow,
     };
   }, [program, snapshot, catalogue, entry]);
+  const minorProgress = useMemo(
+    () =>
+      minor
+        ? programProgress(minor, snapshot, catalogue, {
+            entry,
+            inProgress: true,
+          })
+        : null,
+    [minor, snapshot, catalogue, entry],
+  );
   const nextTermCredits = (
     plan.find((item) => termKey(item.term) === termKey(term))?.courses ?? []
   ).reduce((sum, code) => sum + (catalogue.get(code)?.credits ?? 0), 0);
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className={cn("grid gap-4", minor ? "grid-cols-4" : "grid-cols-3")}>
       <Metric label="Credits earned" info={GLOSSARY.creditsEarned}>
         <div className="flex items-end justify-between gap-3">
           <Value>{earned}</Value>
@@ -340,6 +357,28 @@ function Metrics({
             : "Set your graduation term"}
         </Caption>
       </Metric>
+
+      {minor && minorProgress && (
+        <Metric label="Minor" info={GLOSSARY.minor}>
+          <div className="flex items-center justify-between gap-3">
+            <Value>
+              {minorProgress.creditsDone}
+              <span className="font-normal text-muted-foreground">
+                {" "}
+                of {minorProgress.credits}
+              </span>
+            </Value>
+            <IconTile>
+              <Layers className="size-5" strokeWidth={1.75} />
+            </IconTile>
+          </div>
+          <Caption>
+            <span className="line-clamp-2" title={minor.name}>
+              credits in {minorName(minor.name)}
+            </span>
+          </Caption>
+        </Metric>
+      )}
     </div>
   );
 }

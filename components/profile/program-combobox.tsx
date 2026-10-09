@@ -12,12 +12,42 @@ import {
   useState,
 } from "react";
 import { controlStyles, FieldLabel } from "@/components/ui/field";
-import { GLOSSARY } from "@/lib/glossary";
+import { type Definition, GLOSSARY } from "@/lib/glossary";
 import { useProgramIndex } from "@/lib/programs/client";
+import { isMinor } from "@/lib/programs/minor";
 import type { ProgramSummary } from "@/lib/programs/types";
 
-const NOT_LISTED = "My program isn't listed";
 const NO_PROGRAMS: ProgramSummary[] = [];
+
+/** The words around the list: programs and minors share the field and differ only here. */
+const COPY: Record<
+  "program" | "minor",
+  {
+    label: string;
+    info: Definition;
+    placeholder: string;
+    none: string;
+    list: string;
+    noun: string;
+  }
+> = {
+  program: {
+    label: "Program",
+    info: GLOSSARY.program,
+    placeholder: "Choose a program",
+    none: "My program isn't listed",
+    list: "Programs",
+    noun: "program",
+  },
+  minor: {
+    label: GLOSSARY.minor.label,
+    info: GLOSSARY.minor,
+    placeholder: "No minor",
+    none: "No minor",
+    list: "Minors",
+    noun: "minor",
+  },
+};
 
 /** Lowercase letters and digits only, so "bsc" finds B.Sc. and "coop" finds Co-op. */
 const plain = (text: string) =>
@@ -50,18 +80,29 @@ function search(programs: ProgramSummary[], query: string) {
     }));
 }
 
-/** A searchable list of every program. The empty choice is "My program isn't listed", for a program the catalogue does not have. */
+/** A searchable list of every program, or of every minor. The empty choice is "My program isn't listed" for a program the catalogue does not have, and "No minor" for a minor. */
 export function ProgramCombobox({
   value,
   onChange,
   className,
+  kind = "program",
 }: {
   value: string | null;
   onChange: (programId: string | null) => void;
   className?: string;
+  kind?: "program" | "minor";
 }) {
+  const copy = COPY[kind];
   const index = useProgramIndex();
-  const programs = index.status === "ready" ? index.programs : NO_PROGRAMS;
+  const programs = useMemo(
+    () =>
+      index.status === "ready"
+        ? index.programs.filter(
+            (program) => isMinor(program) === (kind === "minor"),
+          )
+        : NO_PROGRAMS,
+    [index, kind],
+  );
   const chosen = programs.find((program) => program.id === value);
   const listId = useId();
   const inputId = useId();
@@ -75,7 +116,7 @@ export function ProgramCombobox({
     () => search(programs, query ?? ""),
     [programs, query],
   );
-  // The last choice is always "My program isn't listed".
+  // The last choice is always the empty one.
   const options = [...groups.flatMap((group) => group.programs), null];
   const optionId = (position: number) => `${listId}-${position}`;
 
@@ -106,17 +147,17 @@ export function ProgramCombobox({
 
   const message =
     index.status === "loading"
-      ? "Loading programs"
+      ? `Loading ${copy.noun}s`
       : index.status === "error"
-        ? "Could not load the programs"
+        ? `Could not load the ${copy.noun}s`
         : groups.length === 0
-          ? "No program matches"
+          ? `No ${copy.noun} matches`
           : null;
 
   return (
     <Popover.Root open={open} onOpenChange={(next) => !next && close()}>
       <div className={cn("grid gap-1.5", className)}>
-        <FieldLabel htmlFor={inputId} label="Program" info={GLOSSARY.program} />
+        <FieldLabel htmlFor={inputId} label={copy.label} info={copy.info} />
         <Popover.Anchor asChild>
           <span ref={field} className="relative">
             <input
@@ -128,7 +169,7 @@ export function ProgramCombobox({
               aria-activedescendant={open ? optionId(active) : undefined}
               autoComplete="off"
               spellCheck={false}
-              placeholder="Choose a program"
+              placeholder={copy.placeholder}
               value={query ?? (chosen ? labelOf(chosen) : "")}
               onFocus={(event) => {
                 event.currentTarget.select();
@@ -180,7 +221,7 @@ export function ProgramCombobox({
           onMouseDown={(event) => event.preventDefault()}
           className="z-[85] max-h-[min(22rem,var(--radix-popover-content-available-height))] w-(--radix-popover-trigger-width) overflow-y-auto rounded-lg bg-card p-1 shadow-float outline-none"
         >
-          <div id={listId} role="listbox" aria-label="Programs">
+          <div id={listId} role="listbox" aria-label={copy.list}>
             {message && (
               <p className="px-2.5 py-2 text-[13px] text-muted-foreground">
                 {message}
@@ -222,7 +263,7 @@ export function ProgramCombobox({
                 onActivate={() => setActive(options.length - 1)}
                 onChoose={() => choose(null)}
               >
-                {NOT_LISTED}
+                {copy.none}
               </Option>
             </div>
           </div>

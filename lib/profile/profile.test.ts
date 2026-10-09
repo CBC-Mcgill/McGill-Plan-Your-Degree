@@ -117,6 +117,37 @@ test("parseProfileFile migrates a version 1 file to version 2", () => {
   });
 });
 
+test("a version 3 file loads without a minor, and a minor survives an export", () => {
+  const file = {
+    format: "plan-your-degree-profile",
+    version: 3,
+    profile: {
+      records: [],
+      programId: null,
+      entry: null,
+      advancedStanding: 0,
+      creditsRequired: null,
+      startTerm: null,
+      graduationTerm: null,
+      plan: [],
+      creditLimit: 17,
+      importedAt: null,
+    },
+  };
+  expect(parseProfileFile(JSON.stringify(file))).toMatchObject({
+    ok: true,
+    profile: { minorId: null },
+  });
+  const exported = exportProfile({
+    ...store.getState(),
+    minorId: "statistics-minor-bsc",
+  });
+  expect(parseProfileFile(exported)).toMatchObject({
+    ok: true,
+    profile: { minorId: "statistics-minor-bsc" },
+  });
+});
+
 test("parseProfileFile drops a credits required that only repeats the default", () => {
   const file = (programId: string, creditsRequired: number) => ({
     format: "plan-your-degree-profile",

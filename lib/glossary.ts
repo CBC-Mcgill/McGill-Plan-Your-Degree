@@ -11,6 +11,8 @@ export interface Definition {
 
 const checkTip =
   "We could not read this rule from the catalogue. Check it on the program page.";
+const bothTip =
+  "A course can count for both your program and your minor, up to a limit set by your faculty. Check with your advisor.";
 const termsTip = `Terms the course runs in the ${meta.catalogueYear} catalogue.`;
 
 export const GLOSSARY = {
@@ -18,6 +20,11 @@ export const GLOSSARY = {
     label: "Program",
     tip: "The degree program you are in. It decides which courses are required.",
   },
+  minor: {
+    label: "Minor (optional)",
+    tip: `A second subject you study alongside your program. ${bothTip}`,
+  },
+  countsForBoth: { label: "Counts for both", tip: bothTip },
   startTerm: {
     label: "Start term",
     tip: "Your first term at McGill. The planner starts here.",

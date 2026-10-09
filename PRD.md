@@ -196,7 +196,7 @@ Sources: McGill's CEGEP transfer credit page, the Faculty of Engineering transfe
 | Transfer from another university | Per-course transfer credit, and at least 60 credits (or half of a B.Eng.) must be taken at McGill. | Partly handled: transfer credits count, the residency rule is not checked |
 | Mature student | Usually starts in U0. | Partly handled through the Foundation entry |
 | Entered under an older catalogue year | Follows the requirements of the year they entered. | Not handled: every student uses the current catalogue |
-| Double major, joint honours, minor or concentration | Two or more sets of requirements. | Not handled: one program per profile |
+| Double major, joint honours, minor or concentration | Two or more sets of requirements. | Partly handled: one program plus an optional minor, counted on its own. Double majors, joint honours and concentrations are not handled |
 | Changed program or faculty | Some earlier credits may not count toward the new program. | Not handled |
 | Co-op work terms | Work terms sit between study terms. | Not handled in the planner |
 | Second bachelor's degree | Reduced requirements and residency rules. | Not handled |
@@ -204,7 +204,7 @@ Sources: McGill's CEGEP transfer credit page, the Faculty of Engineering transfe
 ### P2 - Design for, do not build
 
 - **AI advisor answers.** Keep catalogue and profile data in clean typed shapes that an LLM can read later. The P1-8 chat is the shell it plugs into.
-- **Minors, double majors, and multiple catalogue years.** A profile holds one program for now, and program files carry their catalogue year from day one.
+- **Double majors and multiple catalogue years.** A profile holds one program and an optional minor for now, and program files carry their catalogue year from day one.
 - **French UI.**
 - **Degree audit PDF import.**
 - **Workload data.** Difficulty comes from mcgill.courses (P1-7).
