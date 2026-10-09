@@ -391,7 +391,10 @@ function ProgramSummary({
           caption="program credits"
         />
         <span aria-hidden className="h-8 w-px bg-border" />
-        <Stat value={String(mustTake)} caption={`must take in ${label}`} />
+        <Stat
+          value={String(mustTake)}
+          caption={`required courses open in ${label}`}
+        />
       </Card>
       {(degree || inProgress) && (
         <div className="flex flex-col gap-1 text-[13px]">

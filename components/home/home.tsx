@@ -261,7 +261,9 @@ function Metrics({
         </div>
         <Caption>
           {graduationTerm
-            ? `Until ${termLabel(graduationTerm)}`
+            ? compareTerms(graduationTerm, currentTerm()) < 0
+              ? "Graduation date has passed"
+              : `Until ${termLabel(graduationTerm)}`
             : "Set your graduation term"}
         </Caption>
       </Metric>

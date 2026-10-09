@@ -10,7 +10,7 @@ import { FileButton } from "@/components/ui/file-button";
 import { exportProfile } from "@/lib/profile/file";
 import { useProfileStore } from "@/lib/profile/store";
 
-function downloadBackup() {
+export function downloadBackup() {
   const url = URL.createObjectURL(
     new Blob([exportProfile(useProfileStore.getState())], {
       type: "application/json",

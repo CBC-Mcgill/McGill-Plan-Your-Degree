@@ -88,11 +88,12 @@ function PlannerReady({
         plan,
         startTerm,
         graduationTerm,
+        entry,
         catalogue,
         warnings,
         now,
       }),
-    [records, plan, startTerm, graduationTerm, catalogue, warnings, now],
+    [records, plan, startTerm, graduationTerm, entry, catalogue, warnings, now],
   );
   const progress = useMemo(
     () =>

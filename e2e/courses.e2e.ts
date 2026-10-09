@@ -94,6 +94,15 @@ test("a course page shows the mcgill.courses rating and links to the reviews", a
   ).toHaveAttribute("href", "https://mcgill.courses/course/comp-251");
 });
 
+test("administrative and non-degree subjects stay off the list but keep their page", async ({
+  page,
+}) => {
+  await page.goto("/courses?q=regn");
+  await expect(page.getByText("No courses match")).toBeVisible();
+  const response = await page.goto("/courses/fmt4-001");
+  expect(response?.status()).toBe(200);
+});
+
 test("an unknown course is a 404", async ({ page }) => {
   const response = await page.goto("/courses/nope-999");
   expect(response?.status()).toBe(404);

@@ -4,6 +4,7 @@ import { Archivo, Inter } from "next/font/google";
 import { Celebration } from "@/components/celebration";
 import { CommandPalette } from "@/components/command-palette";
 import { SiteHeader } from "@/components/site-header";
+import { StorageBanner } from "@/components/storage-banner";
 import { Toaster } from "@/components/toast";
 import "./globals.css";
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             Skip to main content
           </a>
           <SiteHeader />
+          <StorageBanner />
           <main
             id="main"
             tabIndex={-1}

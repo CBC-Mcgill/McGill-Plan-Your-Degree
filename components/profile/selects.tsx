@@ -69,15 +69,17 @@ export function EntrySelect({
   );
 }
 
-/** Terms from ten years back to eight years ahead, plus the current value. */
+/** Terms from ten years back to eight years ahead, plus the current value. `notBefore` leaves out earlier terms. */
 export function TermSelect({
   label,
   value,
+  notBefore,
   onChange,
   ...props
 }: {
   label: string;
   value: Term | null;
+  notBefore?: Term;
   onChange: (term: Term | null) => void;
 } & SelectProps) {
   const year = currentTerm().year;
@@ -93,11 +95,18 @@ export function TermSelect({
       }
     >
       <option value="">Not set</option>
-      {termRange(year - 10, year + 8, [value]).map((term) => (
-        <option key={termKey(term)} value={termKey(term)}>
-          {formatTerm(term)}
-        </option>
-      ))}
+      {termRange(year - 10, year + 8, [value])
+        .filter(
+          (term) =>
+            !notBefore ||
+            termKey(term) >= termKey(notBefore) ||
+            termKey(term) === (value && termKey(value)),
+        )
+        .map((term) => (
+          <option key={termKey(term)} value={termKey(term)}>
+            {formatTerm(term)}
+          </option>
+        ))}
     </SelectField>
   );
 }

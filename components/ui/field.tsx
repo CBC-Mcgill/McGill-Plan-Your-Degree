@@ -1,6 +1,7 @@
 import { cn } from "cn";
 import { ChevronDown } from "lucide-react";
 import type * as React from "react";
+import { useId } from "react";
 
 const control =
   "rounded-md bg-card px-3 text-foreground shadow-[inset_0_0_0_1px_var(--border-strong)] placeholder:text-faint disabled:opacity-50";
@@ -46,15 +47,30 @@ function SelectField({
   );
 }
 
+/** `hint` is a line of help under the input. */
 function TextField({
   label,
+  hint,
   className,
   ...props
-}: React.ComponentProps<"input"> & { label: string }) {
+}: React.ComponentProps<"input"> & { label: string; hint?: string }) {
+  const hintId = useId();
   return (
     <label className={cn("grid gap-1.5", className)}>
       <span className="font-medium text-[13px] leading-[18px]">{label}</span>
-      <input {...props} className={cn(controlStyles, "w-full")} />
+      <input
+        {...props}
+        aria-describedby={hint ? hintId : props["aria-describedby"]}
+        className={cn(controlStyles, "w-full")}
+      />
+      {hint && (
+        <span
+          id={hintId}
+          className="text-[13px] text-muted-foreground leading-[18px]"
+        >
+          {hint}
+        </span>
+      )}
     </label>
   );
 }

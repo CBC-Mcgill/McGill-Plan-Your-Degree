@@ -2,7 +2,11 @@
 
 import { useSyncExternalStore } from "react";
 import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
+import {
+  createJSONStorage,
+  persist,
+  type StateStorage,
+} from "zustand/middleware";
 import type { Transcript } from "../transcript/parse.ts";
 import { migrateProfile, PROFILE_VERSION } from "./file.ts";
 import {
@@ -17,6 +21,37 @@ import {
 } from "./types.ts";
 
 export const PROFILE_STORAGE_KEY = "plan-your-degree:profile";
+
+/** True while the last save to the browser's storage failed, so the profile only lives in memory. */
+export const useSaveStatus = create<{ failed: boolean }>(() => ({
+  failed: false,
+}));
+
+/** localStorage that survives being blocked or full: the profile stays in memory and the failure shows in `useSaveStatus`. */
+const storage: StateStorage = {
+  getItem: (key) => {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  },
+  setItem: (key, value) => {
+    try {
+      localStorage.setItem(key, value);
+      useSaveStatus.setState({ failed: false });
+    } catch {
+      useSaveStatus.setState({ failed: true });
+    }
+  },
+  removeItem: (key) => {
+    try {
+      localStorage.removeItem(key);
+    } catch {
+      // Nothing is stored, so there is nothing to remove.
+    }
+  },
+};
 
 export interface ProfileActions {
   /** Replaces the earlier transcript records, keeps manual ones, and starts the profile at the earliest term. A CEGEP transcript sets the entry, any other leaves it as it is. */
@@ -155,7 +190,7 @@ export const useProfileStore = create<ProfileState>()(
     {
       name: PROFILE_STORAGE_KEY,
       version: PROFILE_VERSION,
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => storage),
       migrate: (persisted, version) =>
         migrateProfile(persisted, version) as ProfileState,
       merge: (persisted, current) => ({

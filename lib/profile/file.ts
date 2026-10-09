@@ -1,3 +1,5 @@
+import { degreeCredits } from "../engine/credits.ts";
+import { getProgram } from "../programs/index.ts";
 import {
   COURSE_STATUSES,
   type CourseRecord,
@@ -8,7 +10,7 @@ import {
   termKey,
 } from "./types.ts";
 
-export const PROFILE_VERSION = 2;
+export const PROFILE_VERSION = 3;
 
 const FORMAT = "plan-your-degree-profile";
 const MAX_FILE_CHARS = 1_000_000;
@@ -184,12 +186,32 @@ function profile(value: unknown): Profile {
   };
 }
 
+/** Version 3 keeps credits required only when the student typed one, so a number that repeats the program's default becomes null. */
+function dropDefaultCredits(data: Obj): Obj {
+  const program =
+    typeof data.programId === "string" ? getProgram(data.programId) : undefined;
+  const entry =
+    data.entry === "cegep" || data.entry === "foundation" ? data.entry : null;
+  return data.creditsRequired === degreeCredits(null, entry, program ?? null)
+    ? { ...data, creditsRequired: null }
+    : data;
+}
+
 /** Brings saved data from an older version up to the current shape. Add one step per version bump. */
 export function migrateProfile(data: unknown, version: number): unknown {
-  if (version < 2 && typeof data === "object" && data !== null) {
-    return { entry: null, advancedStanding: 0, creditsRequired: null, ...data };
+  let migrated = data;
+  if (version < 2 && typeof migrated === "object" && migrated !== null) {
+    migrated = {
+      entry: null,
+      advancedStanding: 0,
+      creditsRequired: null,
+      ...migrated,
+    };
   }
-  return data;
+  if (version < 3 && typeof migrated === "object" && migrated !== null) {
+    migrated = dropDefaultCredits(migrated as Obj);
+  }
+  return migrated;
 }
 
 export function exportProfile(state: Profile): string {

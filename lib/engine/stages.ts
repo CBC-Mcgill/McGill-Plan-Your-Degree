@@ -1,5 +1,6 @@
 import type { CourseSummary, RequirementTree } from "../catalogue/types.ts";
 import { defaultGraduation } from "../profile/term-options.ts";
+import { lastTerm } from "../profile/terms.ts";
 import {
   type CourseRecord,
   compareTerms,
@@ -59,6 +60,7 @@ export interface StageInput {
   plan: Plan;
   startTerm: Term | null;
   graduationTerm: Term | null;
+  entry: EntryRoute | null;
   catalogue: Catalogue;
   warnings: readonly PlanWarning[];
   now: Term;
@@ -77,7 +79,9 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
     ...plan.map((entry) => entry.term),
   ].sort(compareTerms);
   const start = input.startTerm ?? saved[0] ?? now;
-  const end = input.graduationTerm ?? defaultGraduation(start);
+  const end =
+    input.graduationTerm ??
+    defaultGraduation(start, input.entry, lastTerm(records), now);
 
   const loads = planLoads(plan, catalogue);
   const terms = new Map<number, Term>();

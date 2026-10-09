@@ -157,12 +157,7 @@ export function planWarnings(
         });
       }
       const last = ends.get(code);
-      if (
-        graduation &&
-        last &&
-        last.part > 1 &&
-        compareTerms(last.term, graduation) > 0
-      ) {
+      if (graduation && last && compareTerms(last.term, graduation) > 0) {
         warnings.push({
           kind: "after-graduation",
           term,

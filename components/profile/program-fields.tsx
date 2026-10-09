@@ -4,7 +4,10 @@ import {
   TermSelect,
 } from "@/components/profile/selects";
 import { TextField } from "@/components/ui/field";
+import { degreeCredits } from "@/lib/engine/credits";
+import { currentTerm } from "@/lib/profile/terms";
 import type { EntryRoute, Term } from "@/lib/profile/types";
+import { getProgram } from "@/lib/programs";
 
 export interface ProgramValues {
   programId: string | null;
@@ -23,12 +26,26 @@ export function ProgramFields({
   value: ProgramValues;
   onChange: (patch: Partial<ProgramValues>) => void;
 }) {
+  // Null credits mean "use the default", so the field only holds what the student typed.
+  const defaultCredits = degreeCredits(
+    null,
+    value.entry,
+    (value.programId && getProgram(value.programId)) || null,
+  );
+  // A number that only repeats the old default would be wrong for the new program or entry.
+  const changeProgramOrEntry = (patch: Partial<ProgramValues>) =>
+    onChange(
+      value.creditsRequired === defaultCredits
+        ? { creditsRequired: null, ...patch }
+        : patch,
+    );
+
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 items-start gap-4">
       <ProgramSelect
         className="col-span-2"
         value={value.programId}
-        onChange={(programId) => onChange({ programId })}
+        onChange={(programId) => changeProgramOrEntry({ programId })}
       />
       <TermSelect
         label="Start term"
@@ -37,13 +54,14 @@ export function ProgramFields({
       />
       <TermSelect
         label="Expected graduation"
+        notBefore={currentTerm()}
         value={value.graduationTerm}
         onChange={(graduationTerm) => onChange({ graduationTerm })}
       />
       <EntrySelect
         className="col-span-2"
         value={value.entry}
-        onChange={(entry) => onChange({ entry })}
+        onChange={(entry) => changeProgramOrEntry({ entry })}
       />
       <TextField
         label="Advanced standing credits"
@@ -66,7 +84,14 @@ export function ProgramFields({
         type="number"
         min={1}
         max={200}
-        placeholder="Optional"
+        placeholder={
+          defaultCredits === null ? "Optional" : String(defaultCredits)
+        }
+        hint={
+          value.creditsRequired === null && defaultCredits !== null
+            ? "From your program"
+            : undefined
+        }
         value={value.creditsRequired ?? ""}
         onChange={(event) => {
           const credits = Number(event.target.value);

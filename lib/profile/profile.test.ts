@@ -1,6 +1,7 @@
 import { expect, test, vi } from "vitest";
 import type { Transcript, TranscriptCourse } from "../transcript/parse.ts";
 import { exportProfile, parseProfileFile } from "./file.ts";
+import { defaultGraduation } from "./term-options.ts";
 import type { Term } from "./types.ts";
 
 const data = new Map<string, string>();
@@ -112,4 +113,46 @@ test("parseProfileFile migrates a version 1 file to version 2", () => {
     ok: true,
     profile: { entry: null, advancedStanding: 0, creditsRequired: null },
   });
+});
+
+test("parseProfileFile drops a credits required that only repeats the default", () => {
+  const file = (programId: string, creditsRequired: number) => ({
+    format: "plan-your-degree-profile",
+    version: 2,
+    profile: {
+      records: [],
+      programId,
+      entry: "cegep",
+      advancedStanding: 0,
+      creditsRequired,
+      startTerm: null,
+      graduationTerm: null,
+      plan: [],
+      creditLimit: 17,
+      importedAt: null,
+    },
+  });
+  const credits = (programId: string, typed: number) => {
+    const result = parseProfileFile(JSON.stringify(file(programId, typed)));
+    return result.ok && result.profile.creditsRequired;
+  };
+  expect(credits("computer-science-major-bsc", 90)).toBeNull();
+  expect(credits("computer-science-major-bsc", 100)).toBe(100);
+  expect(credits("computer-engineering-beng", 90)).toBe(90);
+});
+
+test("defaultGraduation follows entry and never lands in the past", () => {
+  const start: Term = { season: "Fall", year: 2025 };
+  const now: Term = { season: "Fall", year: 2026 };
+  expect(defaultGraduation(start, "cegep", null, now)).toEqual({
+    season: "Winter",
+    year: 2028,
+  });
+  expect(defaultGraduation(start, "foundation", null, now)).toEqual({
+    season: "Winter",
+    year: 2029,
+  });
+  expect(
+    defaultGraduation({ season: "Fall", year: 2020 }, null, null, now),
+  ).toEqual(now);
 });

@@ -8,6 +8,10 @@ export type CatalogueState =
   | { status: "ready"; catalogue: ReadonlyMap<string, CourseSummary> };
 
 const LOADING: CatalogueState = { status: "loading" };
+
+/** Administrative records (REGN) and subjects with a digit, such as FMT4 and CPL2, are not degree courses, so no list shows them. Their course pages still exist. */
+const isListed = ({ subject }: CourseSummary) =>
+  subject !== "REGN" && !/\d/.test(subject);
 let state: CatalogueState = LOADING;
 let loading = false;
 const listeners = new Set<() => void>();
@@ -29,7 +33,9 @@ function load() {
     .then((courses) =>
       publish({
         status: "ready",
-        catalogue: new Map(courses.map((course) => [course.code, course])),
+        catalogue: new Map(
+          courses.filter(isListed).map((course) => [course.code, course]),
+        ),
       }),
     )
     .catch(() => publish({ status: "error" }))
