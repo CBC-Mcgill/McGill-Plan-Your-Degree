@@ -74,6 +74,7 @@ Catalogue data reaches production only by merging that PR.
 Fixes and new programs are welcome.
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for the code rules, how to fix crawler bugs, and how to add a program.
 The product spec is in [PRD.md](PRD.md).
+For how the crawler, the data, the app and the transcript import fit together, read [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## License
 
