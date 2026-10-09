@@ -1,0 +1,190 @@
+{
+  "id": "environment-major-environmetrics-bscagenvsc-bsc",
+  "name": "Environment Major - Environmetrics",
+  "degree": "B.Sc.(Ag.Env.Sc.) or B.Sc.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/environment-bscagenvsc-bsc/environment-major-environmetrics-bscagenvsc-bsc/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Core: Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400"
+      ]
+    },
+    {
+      "title": "Core: Complementary Course - Senior Research Project",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Core: Complementary Course - Senior Research Project",
+          "courses": [
+            "ENVR 401",
+            "ENVR 451",
+            "FSCI 444"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Domain: Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "AEMA 403",
+        "AEMA 414"
+      ]
+    },
+    {
+      "title": "Domain - Complementary Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "Ecology",
+          "courses": [
+            "BIOL 308",
+            "ENVB 305"
+          ]
+        },
+        {
+          "title": "Impact",
+          "courses": [
+            "ENVB 437",
+            "GEOG 340",
+            "MIME 308"
+          ]
+        },
+        {
+          "title": "Modelling",
+          "courses": [
+            "BIOL 309",
+            "ENVB 506"
+          ]
+        },
+        {
+          "title": "GIS Techniques",
+          "courses": [
+            "ENVB 529",
+            "GEOG 201"
+          ]
+        },
+        {
+          "title": "Basic Environmental Science: One of",
+          "courses": [
+            "BREE 217",
+            "CIVE 323",
+            "ENVB 210",
+            "GEOG 305",
+            "GEOG 322",
+            "GEOG 350"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Option 1",
+          "courses": [
+            "MATH 323",
+            "MATH 324"
+          ]
+        },
+        {
+          "title": "Option 2: One of",
+          "courses": [
+            "AEMA 310",
+            "BIOL 373",
+            "AEMA 411",
+            "CIVE 555",
+            "GEOG 351",
+            "SOCI 461"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "List 1",
+          "courses": [
+            "BREE 252",
+            "BREE 319",
+            "GEOG 401",
+            "MATH 223",
+            "MATH 326",
+            "MATH 423",
+            "MATH 447",
+            "MATH 525",
+            "SOCI 504",
+            "SOCI 580"
+          ]
+        },
+        {
+          "title": "List 2",
+          "courses": [
+            "AGRI 550",
+            "ATOC 341",
+            "BIOL 331",
+            "BIOL 343",
+            "BIOL 553",
+            "ENVB 313",
+            "ENVB 500",
+            "ENVR 421",
+            "ENVR 422",
+            "GEOG 300",
+            "GEOG 302",
+            "GEOG 404",
+            "GEOG 494",
+            "NRSC 333",
+            "PLNT 460",
+            "WILD 401"
+          ]
+        },
+        {
+          "title": "12 credits - Fundamentals",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits - Basic Environmental Science",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits - Statistics, one of two options",
+          "unparsed": true
+        },
+        {
+          "title": "15 credits - List 1 and List 2",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits of Fundamentals, 3 credits from each category",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Statistics are selected from one of the following two options",
+          "unparsed": true
+        },
+        {
+          "title": "A total of 15 credits are chosen from the following two lists",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits minimum of statistics and mathematics chosen from",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits minimum of environmental sciences chosen from",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,84 @@
+{
+  "id": "mathematics-major-concentration-ba",
+  "name": "Mathematics Major Concentration",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/mathematics-statistics/mathematics-major-concentration-ba/",
+  "credits": 46,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 28,
+      "courses": [
+        "MATH 133",
+        "MATH 140",
+        "MATH 141",
+        "MATH 222",
+        "MATH 235",
+        "MATH 236",
+        "MATH 242",
+        "MATH 243",
+        "MATH 323"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "9-18 credits from",
+          "courses": [
+            "MATH 249",
+            "MATH 314",
+            "MATH 315",
+            "MATH 316",
+            "MATH 317",
+            "MATH 318",
+            "MATH 324",
+            "MATH 340",
+            "MATH 346",
+            "MATH 378",
+            "MATH 417",
+            "MATH 451"
+          ],
+          "minCredits": 9,
+          "maxCredits": 18
+        },
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "MATH 329",
+            "MATH 338"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "0-9 credits from",
+          "courses": [
+            "MATH 208",
+            "MATH 308",
+            "MATH 319",
+            "MATH 326",
+            "MATH 327",
+            "MATH 335",
+            "MATH 348",
+            "MATH 352",
+            "MATH 410",
+            "MATH 420",
+            "MATH 423",
+            "MATH 427",
+            "MATH 430",
+            "MATH 447",
+            "MATH 463",
+            "MATH 478"
+          ],
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

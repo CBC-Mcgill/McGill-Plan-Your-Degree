@@ -1,0 +1,114 @@
+{
+  "id": "physiology-liberal-program-core-science-component-bsc",
+  "name": "Physiology Liberal Program - Core Science Component",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physiology/physiology-liberal-program-core-science-component-bsc/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "BIOL 200",
+        "BIOL 202",
+        "BIOL 301",
+        "CHEM 212",
+        "CHEM 222",
+        "PHGY 200",
+        "PHGY 209",
+        "PHGY 210",
+        "PHGY 212",
+        "PHGY 213",
+        "PHGY 312",
+        "PHGY 313"
+      ],
+      "note": "Students who have taken CHEM 212 and/or CHEM 222 in CEGEP are exempt and must replace these credits with elective credits."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOC 212",
+            "BIOL 201"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHGY 311",
+            "PHGY 314"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 309",
+            "BIOL 373",
+            "COMP 204",
+            "COMP 250",
+            "PSYC 305"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Upper-Level Physiology (ULP) Courses",
+          "courses": [
+            "BIOL 532",
+            "BMDE 505",
+            "BMDE 519",
+            "EXMD 502",
+            "EXMD 503",
+            "EXMD 506",
+            "EXMD 507",
+            "EXMD 508",
+            "MIMM 414",
+            "MIMM 509",
+            "PHGY 425",
+            "PHGY 451",
+            "PHGY 459",
+            "PHGY 461",
+            "PHGY 488",
+            "PHGY 502",
+            "PHGY 513",
+            "PHGY 515",
+            "PHGY 516",
+            "PHGY 518",
+            "PHGY 524",
+            "PHGY 525",
+            "PHGY 531",
+            "PHGY 550",
+            "PHGY 556",
+            "PHGY 560",
+            "PSYC 470",
+            "PSYT 500"
+          ]
+        },
+        {
+          "title": "The 6-credit course PHGY 459D1/PHGY 459D2 equals 3 credits of ULP and 3 credits of electives",
+          "unparsed": true
+        },
+        {
+          "title": "The 9-credit course PHGY 461D1/PHGY 461D2 equals 3 credits of ULP and 6 credits of electives",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits selected from the Upper-Level Physiology (ULP) course list as follows",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

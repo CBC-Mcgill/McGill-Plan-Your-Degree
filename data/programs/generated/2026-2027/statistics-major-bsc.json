@@ -1,0 +1,111 @@
+{
+  "id": "statistics-major-bsc",
+  "name": "Statistics Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/statistics-major-bsc/",
+  "credits": 54,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 34,
+      "courses": [
+        "MATH 204",
+        "MATH 208",
+        "MATH 222",
+        "MATH 235",
+        "MATH 236",
+        "MATH 242",
+        "MATH 243",
+        "MATH 323",
+        "MATH 324",
+        "MATH 423",
+        "MATH 523"
+      ],
+      "note": "Students must take MATH 204 before taking MATH 324 Students who have successfully completed a course equivalent to MATH 222 with a grade of C or better may omit MATH 222, but must replace it with MATH 314. MATH 236 is an equivalent prerequisite to MATH 223 for required and complementary Computer Science courses listed below."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 20,
+      "rules": [
+        {
+          "title": "0-3 credits selected from",
+          "courses": [
+            "MATH 203",
+            "COMP 208",
+            "COMP 250",
+            "COMP 251",
+            "COMP 350",
+            "MATH 209",
+            "MATH 314",
+            "MATH 315",
+            "MATH 316",
+            "MATH 317",
+            "MATH 326",
+            "MATH 327",
+            "MATH 329",
+            "MATH 340",
+            "MATH 350",
+            "MATH 378",
+            "MATH 417",
+            "MATH 430",
+            "MATH 463",
+            "COMP 451",
+            "COMP 551",
+            "MATH 308",
+            "MATH 410",
+            "MATH 420",
+            "MATH 427",
+            "MATH 447",
+            "MATH 462",
+            "MATH 510",
+            "MATH 524",
+            "MATH 525",
+            "MATH 526",
+            "MATH 527",
+            "MATH 545",
+            "MATH 556",
+            "MATH 557",
+            "MATH 558",
+            "MATH 559",
+            "MATH 598",
+            "WCOM 314"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "If chosen, students take either MATH 317 or COMP 350, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 317",
+            "COMP 350"
+          ]
+        },
+        {
+          "title": "If chosen, students can take either COMP 451 or COMP 551, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "COMP 451",
+            "COMP 551"
+          ]
+        },
+        {
+          "title": "If chosen, students can at most one of MATH 410, MATH 420, MATH 527D1/MATH 527D2, and WCOM 314",
+          "unparsed": true
+        },
+        {
+          "title": "Part I: 6 credits selected from",
+          "unparsed": true
+        },
+        {
+          "title": "Part II: 14 credits selected from",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

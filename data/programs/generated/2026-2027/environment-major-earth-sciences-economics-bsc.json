@@ -1,0 +1,138 @@
+{
+  "id": "environment-major-earth-sciences-economics-bsc",
+  "name": "Environment Major - Earth Sciences and Economics",
+  "degree": "B.Sc.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/major-environment-bsc/environment-major-earth-sciences-economics-bsc/",
+  "credits": 66,
+  "groups": [
+    {
+      "title": "Core: Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400"
+      ]
+    },
+    {
+      "title": "Core: Complementary Course - Senior Research Project",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Core: Complementary Course - Senior Research Project",
+          "courses": [
+            "ENVR 401",
+            "ENVR 451",
+            "FSCI 444"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Domain: Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "ECON 230",
+        "ECON 405",
+        "EPSC 210",
+        "EPSC 212",
+        "EPSC 220",
+        "EPSC 240"
+      ]
+    },
+    {
+      "title": "Domain: Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Statistics: One of the following Statistics courses or equivalent",
+          "courses": [
+            "AEMA 310",
+            "GEOG 202",
+            "MATH 203"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Economic Resources: 12 credits from",
+          "courses": [
+            "AGEC 333",
+            "ECON 209",
+            "ECON 305",
+            "ECON 313",
+            "ECON 314",
+            "ECON 326",
+            "ECON 347",
+            "ECON 408",
+            "ECON 409",
+            "ECON 416",
+            "ECON 511",
+            "ECON 525",
+            "ENVB 437",
+            "ENVR 422"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "Natural Resources: 9 credits from",
+          "courses": [
+            "AGRI 550",
+            "ANTH 451",
+            "BIOL 343",
+            "BIOL 451",
+            "BIOL 553",
+            "ENVB 500",
+            "ENVB 529",
+            "ENVR 421",
+            "EPSC 325",
+            "EPSC 331",
+            "EPSC 341",
+            "EPSC 355",
+            "EPSC 425",
+            "EPSC 452",
+            "EPSC 519",
+            "EPSC 549",
+            "EPSC 590",
+            "GEOG 201",
+            "GEOG 302",
+            "GEOG 305",
+            "GEOG 322",
+            "GEOG 451",
+            "MIME 320",
+            "NRSC 451",
+            "SOIL 300",
+            "SOIL 315",
+            "SOIL 326",
+            "SOIL 535"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "3 credits - Statistics courses",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits - Economic Resources",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits - Natural Resources",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

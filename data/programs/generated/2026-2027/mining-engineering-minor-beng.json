@@ -1,0 +1,109 @@
+{
+  "id": "mining-engineering-minor-beng",
+  "name": "Mining Engineering Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/mining-engineering-minor-beng/",
+  "credits": 23,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 17,
+      "courses": [
+        "MIME 200",
+        "MIME 291",
+        "MIME 322",
+        "MIME 325",
+        "MIME 333",
+        "MIME 341"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "List A: Mining Engineering: 0-6 credits from the following",
+          "courses": [
+            "MIME 320",
+            "MIME 323",
+            "MIME 413",
+            "MIME 419",
+            "MIME 421",
+            "MIME 422",
+            "MIME 424",
+            "MIME 425",
+            "MIME 428",
+            "MIME 442",
+            "MIME 511",
+            "MIME 514",
+            "MIME 520",
+            "MIME 544",
+            "MIME 545",
+            "MIME 588"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "List B: Mechanical Engineering: 0-6 credits from the following",
+          "courses": [
+            "MECH 497",
+            "MECH 513",
+            "MECH 559",
+            "MECH 560",
+            "MECH 572",
+            "MECH 573"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "List C: Civil Engineering: 0-6 credits from the following",
+          "courses": [
+            "CIVE 416",
+            "CIVE 462",
+            "CIVE 463",
+            "CIVE 527"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "List D: Chemical Engineering: 0-6 credits from the following",
+          "courses": [
+            "CHEE 384",
+            "CHEE 453",
+            "CHEE 455"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "List E: Electrical Engineering: 0-6 credits from the following",
+          "courses": [
+            "ECSE 403",
+            "ECSE 422",
+            "ECSE 428",
+            "ECSE 429",
+            "ECSE 444",
+            "ECSE 464",
+            "ECSE 507"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "List F: Bioengineering: 0-3 credits from the following",
+          "courses": [
+            "BIEN 560"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "6-8 credits from one or more of the following groups",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

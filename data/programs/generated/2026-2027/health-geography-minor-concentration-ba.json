@@ -1,0 +1,57 @@
+{
+  "id": "health-geography-minor-concentration-ba",
+  "name": "Health Geography Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/geography/health-geography-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "GEOG 201",
+        "GEOG 221",
+        "GEOG 303",
+        "GEOG 403"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "ENVR 200",
+            "ENVR 201",
+            "GEOG 203",
+            "GEOG 210",
+            "GEOG 217"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "GEOG 503",
+            "GPHL 500",
+            "PPHS 501",
+            "PPHS 525",
+            "PPHS 529",
+            "SOCI 309",
+            "SOCI 365",
+            "SOCI 525"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

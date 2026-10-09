@@ -1,0 +1,53 @@
+{
+  "id": "chemistry-general-liberal-program-core-science-component-bsc",
+  "name": "Chemistry - General Liberal Program - Core Science Component",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/chemistry/chemistry-general-liberal-program-core-science-component-bsc/",
+  "credits": 49,
+  "groups": [
+    {
+      "title": "Required Basic Core Courses",
+      "kind": "required",
+      "credits": 43,
+      "courses": [
+        "CHEM 213",
+        "CHEM 242",
+        "CHEM 252",
+        "CHEM 267",
+        "CHEM 273",
+        "CHEM 281",
+        "CHEM 381",
+        "MATH 222",
+        "CHEM 302",
+        "CHEM 345",
+        "CHEM 367",
+        "CHEM 377",
+        "CHEM 392",
+        "PHYS 242"
+      ],
+      "note": "Denotes courses with CEGEP equivalents. The courses are omitted from the program of students who have successfully completed them at the CEGEP level. Students from outside Quebec or transfer students should consult the Academic Adviser. See http://www.mcgill.ca/chemistry/current-undergraduate-students/advising/. Students who have successfully completed MATH 150 and MATH 151 are not required to take MATH 222."
+    },
+    {
+      "title": "Complementary Course",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "CHEM 355",
+            "MATH 315"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "3-6 credits of Chemistry courses at the 300+ level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

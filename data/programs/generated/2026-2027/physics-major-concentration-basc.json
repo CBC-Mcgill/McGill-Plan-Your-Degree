@@ -1,0 +1,55 @@
+{
+  "id": "physics-major-concentration-basc",
+  "name": "Physics Major Concentration",
+  "degree": "B.A. & Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts-science/programs/physics/physics-major-concentration-basc/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 30,
+      "courses": [
+        "MATH 222",
+        "MATH 223",
+        "MATH 314",
+        "MATH 315",
+        "PHYS 230",
+        "PHYS 232",
+        "PHYS 257",
+        "PHYS 333",
+        "PHYS 340",
+        "PHYS 346"
+      ],
+      "note": "Required courses taken at CEGEP or elsewhere that are not credited toward the B.A. & Sc. or B.Sc./B.Ed. must be replaced by courses from the Complementary Course List."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "PHYS 224",
+            "PHYS 228",
+            "PHYS 241",
+            "PHYS 258",
+            "PHYS 260",
+            "PHYS 320",
+            "PHYS 534"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "or any 300- or 400-level course approved by an adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

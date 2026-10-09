@@ -1,0 +1,56 @@
+{
+  "id": "economics-honours-ba",
+  "name": "Economics Honours",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/economics/economics-honours-ba/",
+  "credits": 42,
+  "groups": [
+    {
+      "title": "Required (core) Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Required (core) Courses",
+          "courses": [
+            "ECON 250",
+            "ECON 257",
+            "ECON 353",
+            "ECON 354",
+            "ECON 450",
+            "ECON 452",
+            "ECON 468"
+          ]
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "ECON 460",
+            "ECON 461",
+            "ECON 469"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits of Economics courses at the 300, 400, or 500 level, approved by an Honours adviser",
+          "unparsed": true
+        },
+        {
+          "title": "Unless explicitly approved by the Honours advisor, at least 9 of the 12 credits have to be at the 400 or 500 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

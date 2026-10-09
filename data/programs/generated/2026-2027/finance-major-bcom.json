@@ -1,0 +1,67 @@
+{
+  "id": "finance-major-bcom",
+  "name": "Finance Major",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/majors/finance-major-bcom/",
+  "credits": 72,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 60,
+      "courses": [
+        "MGCR 211",
+        "MGCR 222",
+        "MGCR 233",
+        "MGCR 250",
+        "MGCR 271",
+        "MGCR 293",
+        "MGCR 294",
+        "MGCR 331",
+        "MGCR 341",
+        "MGCR 352",
+        "MGCR 372",
+        "MGCR 382",
+        "MGCR 423",
+        "MGCR 460",
+        "FINE 342",
+        "FINE 441",
+        "FINE 443",
+        "FINE 448",
+        "FINE 482",
+        "MGSC 372"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "ACCT 351",
+            "ACCT 352",
+            "ACCT 354",
+            "ACCT 385",
+            "ACCT 452"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "9-12 credits from any undergraduate FINE courses",
+          "match": {
+            "subjects": [
+              "FINE"
+            ]
+          },
+          "minCredits": 9,
+          "maxCredits": 12
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

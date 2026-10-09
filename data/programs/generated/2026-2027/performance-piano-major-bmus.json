@@ -1,0 +1,143 @@
+{
+  "id": "performance-piano-major-bmus",
+  "name": "Performance Piano Major",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/performance-piano-major-bmus/",
+  "credits": 125,
+  "groups": [
+    {
+      "title": "Program Prerequisites — Foundation Program",
+      "kind": "complementary",
+      "credits": 34,
+      "rules": [
+        {
+          "title": "22 credits of Prerequisite Courses",
+          "unparsed": true
+        },
+        {
+          "title": "2 credits of Assigned Small Ensemble",
+          "unparsed": true
+        },
+        {
+          "title": "4 credits of Large Ensemble",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Non-Music Electives",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 45,
+      "courses": [
+        "MUIN 280",
+        "MUIN 281",
+        "MUIN 282",
+        "MUIN 333",
+        "MUIN 369",
+        "MUIN 380",
+        "MUIN 381",
+        "MUIN 382",
+        "MUIN 433",
+        "MUIN 480",
+        "MUIN 481",
+        "MUIN 482",
+        "MUPG 350",
+        "MUPG 356",
+        "MUPG 357",
+        "MUPG 541",
+        "MUPG 542",
+        "MUTH 250",
+        "MUTH 251",
+        "MUTH 350",
+        "MUSP 240",
+        "MUSP 241",
+        "MUHL 286",
+        "MUPD 235"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 20,
+      "rules": [
+        {
+          "title": "Performance: 8 credits from",
+          "courses": [
+            "MUEN 563",
+            "MUEN 572",
+            "MUEN 587",
+            "MUEN 590",
+            "MUEN 592",
+            "MUEN 593",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597"
+          ],
+          "minCredits": 8,
+          "maxCredits": 8
+        },
+        {
+          "title": "Performance: 4 credits from",
+          "courses": [
+            "MUEN 540",
+            "MUEN 541",
+            "MUEN 556",
+            "MUEN 557",
+            "MUEN 560",
+            "MUEN 569",
+            "MUEN 578",
+            "MUEN 579",
+            "MUEN 581",
+            "MUEN 582",
+            "MUEN 584",
+            "MUEN 585"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "Musicianship: 2 credits from",
+          "courses": [
+            "MUSP 346",
+            "MUSP 355",
+            "MUSP 361",
+            "MUSP 363"
+          ],
+          "minCredits": 2,
+          "maxCredits": 2
+        },
+        {
+          "title": "Large Ensemble during the first four terms (2 credits x 4 semesters)",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from courses with a MUHL or MUPP prefix",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 26,
+      "rules": [
+        {
+          "title": "3 credits of Non-Music Electives",
+          "unparsed": true
+        },
+        {
+          "title": "23 credits of Free Electives (may include 2 credits of courses with a MUEN prefix)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

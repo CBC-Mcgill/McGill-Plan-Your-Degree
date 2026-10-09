@@ -1,0 +1,265 @@
+{
+  "id": "environment-major-environments-ecosystems-bscagenvsc-bsc",
+  "name": "Environment Major - Water Environments and Ecosystems",
+  "degree": "B.Sc.(Ag.Env.Sc.) or B.Sc.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/environment-bscagenvsc-bsc/environment-major-environments-ecosystems-bscagenvsc-bsc/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "ATOC 215",
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 42,
+      "rules": [
+        {
+          "title": "Senior Research Project: 3 credits from",
+          "courses": [
+            "AEBI 427",
+            "ENVR 401",
+            "ENVR 451",
+            "FSCI 444",
+            "GEOG 451"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits will be applied to the program; extra credits will count as electives",
+          "unparsed": true
+        },
+        {
+          "title": "Hydrology and Ecology: 3 credits from",
+          "courses": [
+            "BREE 217",
+            "GEOG 322"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Hydrology and Ecology: 3 credits from",
+          "courses": [
+            "BIOL 308",
+            "ENVB 305"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Statistics: 3 credits from",
+          "courses": [
+            "AEMA 310",
+            "GEOG 202",
+            "MATH 203"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Field Course: 3 credits from",
+          "courses": [
+            "BIOL 331",
+            "BIOL 334",
+            "BIOL 335",
+            "BIOL 343",
+            "GEOG 495",
+            "WILD 401"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "27 credits from one of the following two streams",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Biological Stream",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Social Sciences and Policy: 3-6 credits from",
+          "courses": [
+            "AGEC 333",
+            "ANSC 555",
+            "ANTH 339",
+            "ANTH 418",
+            "COMS 360",
+            "ECON 225",
+            "ECON 326",
+            "ENVR 421",
+            "ENVB 437",
+            "ENVR 422",
+            "GEOG 302",
+            "GEOG 340",
+            "GEOG 404",
+            "GEOG 498",
+            "GEOG 530",
+            "HIST 510",
+            "POLI 345",
+            "POLI 350",
+            "WCOM 314",
+            "WILD 421"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "Water Environments and Habitats: 12-15 credits from",
+          "courses": [
+            "BIOL 310",
+            "BIOL 342",
+            "BIOL 432",
+            "BIOL 441",
+            "BIOL 465",
+            "BIOL 540",
+            "BIOL 553",
+            "BREE 533",
+            "ENVB 210",
+            "ENVB 410",
+            "ENVB 500",
+            "ENVR 540",
+            "GEOG 470",
+            "GEOG 305",
+            "MICR 331",
+            "NRSC 333",
+            "PARA 410",
+            "SOIL 535",
+            "WILD 302"
+          ],
+          "minCredits": 12,
+          "maxCredits": 15
+        },
+        {
+          "title": "Surface and Atmospheric Processes: 6-9 credits from",
+          "courses": [
+            "ATOC 214",
+            "ATOC 219",
+            "ATOC 341",
+            "BIOL 515",
+            "BREE 509",
+            "CHEM 219",
+            "CHEM 267",
+            "ENVB 529",
+            "ENVB 530",
+            "EPSC 220",
+            "EPSC 325",
+            "EPSC 519",
+            "EPSC 522",
+            "GEOG 201",
+            "GEOG 308",
+            "GEOG 505",
+            "GEOG 506",
+            "GEOG 522",
+            "GEOG 550"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        }
+      ]
+    },
+    {
+      "title": "Physical Stream",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Atmosphere and Thermodynamics: 6 credits from",
+          "courses": [
+            "ATOC 214",
+            "ATOC 315"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Advanced Hydrology: 3 credits from",
+          "courses": [
+            "BREE 509",
+            "BREE 533",
+            "EPSC 522",
+            "EPSC 549",
+            "GEOG 522"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Intermediate Calculus: 3 credits from",
+          "courses": [
+            "AEMA 202",
+            "MATH 222"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Engineering/Mathematics/Hydrology: 6-9 credits from",
+          "courses": [
+            "AEMA 305",
+            "ATOC 309",
+            "BREE 420",
+            "BREE 502",
+            "BREE 506",
+            "BREE 509",
+            "BREE 510",
+            "BREE 533",
+            "CIVE 323",
+            "ENVB 210",
+            "ENVB 529",
+            "ENVB 530",
+            "EPSC 522",
+            "EPSC 549",
+            "GEOG 201",
+            "GEOG 305",
+            "GEOG 308",
+            "GEOG 314",
+            "GEOG 506",
+            "GEOG 522",
+            "MATH 315",
+            "SOIL 315"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        },
+        {
+          "title": "Marine and Freshwater Biology: 6-9 credits from",
+          "courses": [
+            "BIOL 310",
+            "BIOL 342",
+            "BIOL 432",
+            "BIOL 441",
+            "BIOL 465",
+            "BIOL 553",
+            "ENVB 410",
+            "GEOG 470",
+            "GEOG 505",
+            "GEOG 530",
+            "WILD 302",
+            "WILD 421"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

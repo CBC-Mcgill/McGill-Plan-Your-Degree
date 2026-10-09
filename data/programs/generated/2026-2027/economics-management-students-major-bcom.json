@@ -1,0 +1,54 @@
+{
+  "id": "economics-management-students-major-bcom",
+  "name": "Economics for Management Students Major",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/majors/economics-management-students-major-bcom/",
+  "credits": 69,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 51,
+      "courses": [
+        "MGCR 211",
+        "MGCR 222",
+        "MGCR 233",
+        "MGCR 250",
+        "MGCR 331",
+        "MGCR 341",
+        "MGCR 352",
+        "MGCR 372",
+        "MGCR 382",
+        "MGCR 423",
+        "MGCR 460",
+        "ECON 230",
+        "ECON 332",
+        "ECON 333",
+        "MGCR 271",
+        "MGSC 372"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Selected from other 200-, 300-, and 400-level courses in Economics (ECON), excluding courses with numbers below 210",
+          "unparsed": true
+        },
+        {
+          "title": "At least 6 of these 18 credits should be taken from courses with 400-level numbers",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 6 of the 18 credits may be taken at the 200 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

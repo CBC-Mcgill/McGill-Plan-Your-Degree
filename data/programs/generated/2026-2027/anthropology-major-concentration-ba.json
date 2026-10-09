@@ -1,0 +1,64 @@
+{
+  "id": "anthropology-major-concentration-ba",
+  "name": "Anthropology Major Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/anthropology/anthropology-major-concentration-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Complementary Courses 200 Level",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from 200-level courses in Anthropology (ANTH)",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Core (350 Level)",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from",
+          "courses": [
+            "ANTH 352",
+            "ANTH 355",
+            "ANTH 357",
+            "ANTH 358",
+            "ANTH 359"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses 400 Level",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits, two 400-level Anthropology (ANTH) courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Undergraduate Level",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits of additional undergraduate-level Anthropology courses of which no more than 6 credits may be at the 200 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,151 @@
+{
+  "id": "performance-jazz-major-bmus",
+  "name": "Performance Jazz Major",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/performance-jazz-major-bmus/",
+  "credits": 126,
+  "groups": [
+    {
+      "title": "Program Prerequisites — Foundation Program",
+      "kind": "complementary",
+      "credits": 34,
+      "rules": [
+        {
+          "title": "22 credits of Prerequisite Courses",
+          "unparsed": true
+        },
+        {
+          "title": "2 credits of MUEN 570",
+          "unparsed": true
+        },
+        {
+          "title": "4 credits of Large Ensemble",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Non-Music Electives",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 53,
+      "courses": [
+        "MUIN 280",
+        "MUIN 281",
+        "MUIN 282",
+        "MUIN 380",
+        "MUIN 381",
+        "MUIN 382",
+        "MUIN 480",
+        "MUIN 481",
+        "MUIN 482",
+        "MUEN 570",
+        "MUJZ 223",
+        "MUJZ 224",
+        "MUJZ 423",
+        "MUJZ 424",
+        "MUJZ 225",
+        "MUJZ 226",
+        "MUJZ 325",
+        "MUJZ 326",
+        "MUJZ 260",
+        "MUJZ 261",
+        "MUJZ 340",
+        "MUJZ 341",
+        "MUHL 286",
+        "MUJZ 493",
+        "MUPD 235"
+      ],
+      "note": "This course is taken in four semesters for 4 credits."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 14,
+      "rules": [
+        {
+          "title": "Small Ensemble",
+          "courses": [
+            "MUEN 570"
+          ]
+        },
+        {
+          "title": "Taken in two semesters for 2 credits",
+          "unparsed": true
+        },
+        {
+          "title": "Small Ensemble",
+          "courses": [
+            "MUEN 574"
+          ]
+        },
+        {
+          "title": "Taken in two semesters for 2 credits",
+          "unparsed": true
+        },
+        {
+          "title": "Large Ensemble: 8-12 credits from",
+          "courses": [
+            "MUEN 563",
+            "MUEN 572",
+            "MUEN 573",
+            "MUEN 587",
+            "MUEN 590",
+            "MUEN 592",
+            "MUEN 593",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597"
+          ],
+          "minCredits": 8,
+          "maxCredits": 12
+        },
+        {
+          "title": "Instrumental Majors",
+          "courses": [
+            "MUJZ 440",
+            "MUJZ 441",
+            "MUJZ 461"
+          ]
+        },
+        {
+          "title": "Vocal Majors",
+          "courses": [
+            "MUJZ 425",
+            "MUJZ 426"
+          ]
+        },
+        {
+          "title": "Note: students playing Rhythm Section instruments (piano,guitar, bass, drums, vibraphone) can substitute 4 credits of large ensemble with free electives)",
+          "unparsed": true
+        },
+        {
+          "title": "4 credits from either 4 credits from either MUJZ 440 and MUJZ 441, or MUJZ 461D1/MUJZ 461D2",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "3 credits of non-Music Electives",
+          "unparsed": true
+        },
+        {
+          "title": "18-22 credits of Free Electives (may not include courses with a MUEN prefix); students playing Rhythm Section instruments may take up to 22 Free Electives",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

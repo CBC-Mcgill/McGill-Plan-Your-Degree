@@ -1,0 +1,80 @@
+{
+  "id": "chemistry-minor-beng",
+  "name": "Chemistry Minor",
+  "degree": "B.Eng.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/chemistry-minor-beng/",
+  "credits": 25,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 10,
+      "courses": [
+        "CHEM 212",
+        {
+          "oneOf": [
+            "CHEM 233",
+            "CHEE 310"
+          ]
+        },
+        "CHEM 234"
+      ],
+      "note": "or CEGEP equivalent"
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Inorganic Chemistry",
+          "courses": [
+            "CHEM 281",
+            "CHEM 381",
+            "CHEM 591"
+          ]
+        },
+        {
+          "title": "Analytical Chemistry",
+          "courses": [
+            "CHEM 267",
+            "CHEM 367",
+            "CHEM 377"
+          ]
+        },
+        {
+          "title": "Organic Chemistry",
+          "courses": [
+            "CHEM 302",
+            "CHEM 362",
+            "CHEM 482"
+          ]
+        },
+        {
+          "title": "Physical Chemistry",
+          "courses": [
+            "CHEM 345",
+            "CHEM 355",
+            "CHEM 493",
+            "CHEM 574"
+          ]
+        },
+        {
+          "title": "15 credits from the following lists, two courses of which must be laboratory courses",
+          "unparsed": true
+        },
+        {
+          "title": "Note that CHEM 212 is a prerequisite for most of the courses listed below, and CHEM 213 and CHEM 273 or their equivalents are prerequisites for the Physical Chemistry courses",
+          "unparsed": true
+        },
+        {
+          "title": "If students take CHEM 222, which includes a lab, instead of CHEM 234, they will receive credit for one of the two required laboratory courses, but they must complete a total of 25 credits in chemistry for the Minor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,79 @@
+{
+  "id": "physics-minor-bsc",
+  "name": "Physics Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/physics-minor-bsc/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "PHYS 257"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "One of",
+          "courses": [
+            "PHYS 230",
+            "PHYS 251"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "PHYS 232",
+            "PHYS 253"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "PHYS 241",
+            "PHYS 258"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "PHYS 224",
+            "PHYS 228",
+            "PHYS 260",
+            "PHYS 320",
+            "PHYS 346"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "PHYS 340",
+            "PHYS 350"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "15 credits to be selected as follows",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

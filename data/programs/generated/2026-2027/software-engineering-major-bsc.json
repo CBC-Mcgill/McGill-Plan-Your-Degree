@@ -1,0 +1,103 @@
+{
+  "id": "software-engineering-major-bsc",
+  "name": "Software Engineering Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/computer-science/software-engineering-major-bsc/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 39,
+      "courses": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 250",
+        "COMP 251",
+        "COMP 273",
+        "COMP 302",
+        "COMP 303",
+        "COMP 310",
+        "COMP 361",
+        "ECSE 429",
+        "MATH 223",
+        "MATH 240"
+      ],
+      "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Group A",
+          "courses": [
+            "MATH 222",
+            "MATH 323",
+            "MATH 324"
+          ]
+        },
+        {
+          "title": "Group B",
+          "courses": [
+            "COMP 330",
+            "COMP 360"
+          ]
+        },
+        {
+          "title": "9 credits selected from Groups A and B, with at least 3 credits selected from each",
+          "unparsed": true
+        },
+        {
+          "title": "15 credits selected from Groups C and D, with at least 9 credits selected from Group C, and at least 3 credits selected from Group D",
+          "unparsed": true
+        },
+        {
+          "title": "Group C: Software Engineering Specialization",
+          "courses": [
+            "COMP 409",
+            "COMP 523",
+            "COMP 525",
+            "COMP 529",
+            "COMP 533",
+            "COMP 555",
+            "ECSE 326",
+            "ECSE 420",
+            "ECSE 424",
+            "ECSE 437",
+            "ECSE 539"
+          ]
+        },
+        {
+          "title": "Students may select either COMP 409 or ECSE 420, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "COMP 409",
+            "ECSE 420"
+          ]
+        },
+        {
+          "title": "Group D: Applications",
+          "courses": [
+            "COMP 350",
+            "COMP 417",
+            "COMP 421",
+            "COMP 424",
+            "COMP 512",
+            "COMP 520",
+            "COMP 521",
+            "COMP 535",
+            "COMP 551",
+            "COMP 557",
+            "COMP 558",
+            "COMP 585"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "animal-health-biology-concentration-beng",
+  "name": "Animal Biology and Health Specialization",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/bioresource-engineering/animal-health-biology-concentration-beng/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses (15 courses)",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "ANSC 312",
+        "ANSC 323",
+        "ANSC 324",
+        "ANSC 350",
+        "ANSC 424"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits selected from",
+          "courses": [
+            "ANSC 234",
+            "ANSC 251",
+            "ANSC 303",
+            "ANSC 304",
+            "ANSC 326",
+            "ANSC 420",
+            "ANSC 433",
+            "ANSC 458",
+            "ANSC 514",
+            "ANSC 555",
+            "ANSC 560",
+            "MICR 341",
+            "PARA 424",
+            "PLNT 302",
+            "WILD 350",
+            "WILD 421"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "anthropology-honours-ba",
+  "name": "Anthropology Honours",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/anthropology/anthropology-honours-ba/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "ANTH 490"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 54,
+      "rules": [
+        {
+          "title": "Core (350 Level)",
+          "courses": [
+            "ANTH 352",
+            "ANTH 355",
+            "ANTH 357",
+            "ANTH 358",
+            "ANTH 359"
+          ]
+        },
+        {
+          "title": "Students may take a maximum of 9 credits at the 300 and 400 level offered by other departments if they are directly related to their focus of study within Anthropology and are approved by their departmental program adviser",
+          "unparsed": true
+        },
+        {
+          "title": "A maximum of 36 credits of 200- and 300-level courses (of which a maximum of 21 credits may be at the 200 level and a maximum of 6 credits may be Special Topic courses.)",
+          "unparsed": true
+        },
+        {
+          "title": "Select a minimum of 9 credits of core courses at the 350 level selected from",
+          "unparsed": true
+        },
+        {
+          "title": "A minimum of 9 credits of Anthropology (ANTH) courses at the 400- or 500-level, and a maximum of 3 credits can be a Special Topic course",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

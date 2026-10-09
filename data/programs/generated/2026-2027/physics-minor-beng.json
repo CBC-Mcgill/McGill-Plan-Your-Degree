@@ -1,0 +1,46 @@
+{
+  "id": "physics-minor-beng",
+  "name": "Physics Minor",
+  "degree": "B.Eng.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/physics-minor-beng/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "PHYS 253",
+        "PHYS 357",
+        "PHYS 457"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "PHYS 351",
+            "PHYS 362",
+            "PHYS 432",
+            "PHYS 514",
+            "PHYS 551",
+            "PHYS 557",
+            "PHYS 558",
+            "PHYS 559",
+            "PHYS 562",
+            "PHYS 567"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

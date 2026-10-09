@@ -1,0 +1,194 @@
+{
+  "id": "sustainability-science-society-interfaculty-program-basc",
+  "name": "Sustainability, Science and Society Interfaculty Program",
+  "degree": "B.A. & Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts-science/programs/sustainability-science-society/sustainability-science-society-interfaculty-program-basc/",
+  "credits": 54,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "ENVR 201",
+        "GEOG 360",
+        "GEOG 401",
+        "GEOG 460",
+        "ENVR 200",
+        "ENVR 202",
+        "ENVR 203",
+        "GEOG 203",
+        "GEOG 408"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Statistics: 3 credits of Statistics from the following",
+          "courses": [
+            "AEMA 310",
+            "BIOL 373",
+            "GEOG 202",
+            "MATH 203",
+            "PSYC 204"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Economics: 3 credits of Economics from the following",
+          "courses": [
+            "AGEC 200",
+            "AGEC 201",
+            "ECON 208",
+            "ECON 209",
+            "ECON 225",
+            "ECON 230"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Sustainability in Business: 3 credits of Management from the following",
+          "courses": [
+            "INSY 455",
+            "MGCR 460",
+            "MGPO 440",
+            "MGPO 475"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Area 1: Methods: Observation, Analysis, Modelling, and Management",
+          "courses": [
+            "ENVB 437",
+            "ENVB 529",
+            "ESYS 301",
+            "ESYS 500",
+            "GEOG 201",
+            "GEOG 302",
+            "GEOG 308",
+            "GEOG 314",
+            "GEOG 333",
+            "GEOG 351",
+            "GEOG 398",
+            "GEOG 404",
+            "GEOG 414",
+            "GEOG 495",
+            "GEOG 509",
+            "GEOG 512",
+            "URBP 506"
+          ]
+        },
+        {
+          "title": "Students may select either GEOG 201 or ENVB 529, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "GEOG 201",
+            "ENVB 529"
+          ]
+        },
+        {
+          "title": "2A: Society, Economics, and Policy: 3 credits from the following",
+          "courses": [
+            "AGEC 333",
+            "AGEC 430",
+            "AGEC 442",
+            "ANTH 206",
+            "ANTH 212",
+            "ANTH 339",
+            "ECON 313",
+            "ECON 314",
+            "ECON 326",
+            "ECON 347",
+            "ECON 405",
+            "GEOG 210",
+            "GEOG 216",
+            "GEOG 303",
+            "GEOG 310",
+            "GEOG 316",
+            "GEOG 409",
+            "HIST 292",
+            "INDG 200",
+            "INTD 364",
+            "POLI 350",
+            "URBP 530",
+            "URBP 553"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "2B: Ethics and Equity: 3 credits from the following",
+          "courses": [
+            "ENVR 400",
+            "INTD 362",
+            "MGPO 450",
+            "PHIL 349",
+            "RELG 270",
+            "SOCI 325"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Area 3: Sustainability and Biophysical Processes",
+          "courses": [
+            "ATOC 214",
+            "ATOC 215",
+            "BIOL 308",
+            "BIOL 310",
+            "BIOL 465",
+            "BIOL 540",
+            "BREE 217",
+            "CHEM 462",
+            "ENVB 305",
+            "ENVB 410",
+            "ENVR 540",
+            "ESYS 200",
+            "ESYS 300",
+            "GEOG 221",
+            "GEOG 272",
+            "GEOG 305",
+            "GEOG 321",
+            "GEOG 322",
+            "GEOG 372",
+            "GEOG 403",
+            "GEOG 438",
+            "GEOG 470",
+            "GEOG 530",
+            "GEOG 555",
+            "NRSC 333"
+          ]
+        },
+        {
+          "title": "Students may select either BIOL 540 or ENVR 540, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 540",
+            "ENVR 540"
+          ]
+        },
+        {
+          "title": "Students may select either BREE 217 or GEOG 322, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BREE 217",
+            "GEOG 322"
+          ]
+        },
+        {
+          "title": "18 additional credits chosen from three areas listed below, of which at least 9 credits must be at the 300 level or higher, students must choose at least 6 credits from each area (1, 2, and 3)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

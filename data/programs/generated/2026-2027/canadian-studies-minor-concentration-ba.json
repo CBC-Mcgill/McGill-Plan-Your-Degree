@@ -1,0 +1,98 @@
+{
+  "id": "canadian-studies-minor-concentration-ba",
+  "name": "Canadian Studies Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/institute-study/canadian-studies-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "CANS 200",
+        "CANS 420"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits chosen from",
+          "courses": [
+            "CANS 203",
+            "ECON 219",
+            "ENGL 228",
+            "ENGL 229",
+            "FREN 252",
+            "HIST 202",
+            "HIST 203",
+            "INDG 200",
+            "POLI 221",
+            "POLI 222",
+            "QCST 200",
+            "SOCI 230",
+            "CANS 300",
+            "CANS 301",
+            "CANS 306",
+            "CANS 307",
+            "CANS 308",
+            "CANS 310",
+            "CANS 311",
+            "CANS 312",
+            "CANS 315",
+            "CANS 401",
+            "CANS 402",
+            "CANS 404",
+            "CANS 405",
+            "CANS 406",
+            "CANS 413",
+            "CANS 499"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "0-6 credits chosen from",
+          "courses": [
+            "ANTH 338",
+            "ARTH 302",
+            "ECON 303",
+            "ECON 305",
+            "ECON 308",
+            "ENGL 313",
+            "ENGL 393",
+            "FREN 315",
+            "HIST 303",
+            "HIST 342",
+            "HIST 343",
+            "HIST 357",
+            "HIST 363",
+            "HIST 364",
+            "HIST 367",
+            "ISLA 395",
+            "LING 325",
+            "POLI 336",
+            "POLI 372",
+            "POLI 417",
+            "POLI 426",
+            "QCST 300",
+            "QCST 440",
+            "SOCI 375",
+            "SOCI 475"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "3-9 credits in interdisciplinary Canadian Studies (CANS) courses from",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

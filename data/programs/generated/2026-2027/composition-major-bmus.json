@@ -1,0 +1,147 @@
+{
+  "id": "composition-major-bmus",
+  "name": "Composition Major",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/composition-major-bmus/",
+  "credits": 124,
+  "groups": [
+    {
+      "title": "Program Prerequisites - Foundation Program",
+      "kind": "complementary",
+      "credits": 32,
+      "rules": [
+        {
+          "title": "22 credits of Prerequisite Courses",
+          "unparsed": true
+        },
+        {
+          "title": "4 credits of Large Ensemble",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Non-Music Electives",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 61,
+      "courses": [
+        "MUCO 241",
+        "MUCO 242",
+        "MUCO 245",
+        "MUCO 246",
+        "MUCO 261",
+        "MUCO 340",
+        "MUCO 341",
+        "MUCO 342",
+        "MUCO 360",
+        "MUCO 440",
+        "MUCO 460",
+        "MUCO 541",
+        "MUCO 575",
+        "MUTH 251",
+        "MUTH 350",
+        "MUSP 240",
+        "MUSP 241",
+        "MUSP 346",
+        "MUHL 286",
+        "MUIN 280",
+        "MUIN 281",
+        "MUIN 283",
+        "MUPD 235"
+      ]
+    },
+    {
+      "title": "Complementary Courses Music Theory",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "MUTH 202",
+            "MUTH 204"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Music History",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "MUHL 385",
+            "MUHL 391",
+            "MUHL 392"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Performance/ensemble",
+      "kind": "complementary",
+      "credits": 4,
+      "rules": [
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "MUEN 563",
+            "MUEN 572",
+            "MUEN 573",
+            "MUEN 587",
+            "MUEN 590",
+            "MUEN 592",
+            "MUEN 593",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Recommended But Not Required Courses",
+          "courses": [
+            "MUCO 542",
+            "MUHL 388",
+            "MUTH 302",
+            "MUTH 304",
+            "MUTH 322",
+            "MUTH 528",
+            "MUTH 538",
+            "MUTH 539"
+          ]
+        },
+        {
+          "title": "3 credits of non-Music Electives",
+          "unparsed": true
+        },
+        {
+          "title": "15 credits of Free Electives",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

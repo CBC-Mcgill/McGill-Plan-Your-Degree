@@ -1,0 +1,158 @@
+{
+  "id": "bioresource-engineering-honours-beng",
+  "name": "Bioresource Engineering Honours",
+  "degree": "B.Eng.(Bioresource)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/bioresource-engineering/bioresource-engineering-honours-beng/",
+  "credits": 113,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 68,
+      "courses": [
+        "AEMA 202",
+        "AEMA 305",
+        "BREE 205",
+        "BREE 210",
+        "BREE 216",
+        "BREE 252",
+        "BREE 301",
+        "BREE 305",
+        "BREE 312",
+        "BREE 319",
+        "BREE 327",
+        "BREE 341",
+        "BREE 415",
+        "BREE 420",
+        "BREE 451",
+        "BREE 452",
+        "BREE 453",
+        "BREE 485",
+        "BREE 490",
+        "BREE 495",
+        "BREE 504",
+        "FACC 250",
+        "FACC 300",
+        "FACC 400",
+        "FAES 405",
+        "FAES 406",
+        "MECH 390"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 45,
+      "rules": [
+        {
+          "title": "Set A: 3 credits selected from",
+          "courses": [
+            "AEMA 310",
+            "CIVE 302"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Set A: 3 credits selected from",
+          "courses": [
+            "CHEE 315",
+            "MECH 346"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Set B - Natural Sciences and Mathematics: 3-9 credits selected from",
+          "courses": [
+            "AEBI 210",
+            "AEBI 211",
+            "ENVB 210",
+            "ENVB 305",
+            "LSCI 202",
+            "LSCI 211",
+            "LSCI 230",
+            "MICR 331",
+            "PLNT 200"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        },
+        {
+          "title": "Set C - Social Sciences: 3-9 credits selected from",
+          "courses": [
+            "BREE 503",
+            "ENVR 201",
+            "ENVR 203",
+            "SEAD 530",
+            "SOCI 235"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        },
+        {
+          "title": "Set D - Engineering: 6-9 credits selected from",
+          "courses": [
+            "BREE 217",
+            "BREE 314",
+            "BREE 322"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        },
+        {
+          "title": "Set D - Engineering: 3-9 credits selected from",
+          "courses": [
+            "BREE 325",
+            "BREE 412",
+            "BREE 502"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        },
+        {
+          "title": "Set D - Engineering: 0-12 credits selected from",
+          "courses": [
+            "BREE 204",
+            "BREE 214",
+            "BREE 300",
+            "BREE 329",
+            "BREE 403",
+            "BREE 419",
+            "BREE 501",
+            "BREE 505",
+            "BREE 507",
+            "BREE 509",
+            "BREE 510",
+            "BREE 518",
+            "BREE 519",
+            "BREE 520",
+            "BREE 522",
+            "BREE 529",
+            "BREE 530",
+            "BREE 531",
+            "BREE 532",
+            "BREE 533",
+            "BREE 535"
+          ],
+          "maxCredits": 12
+        },
+        {
+          "title": "0-6 credits of courses in natural sciences or mathematics at the 200 level or higher with approval of the Academic Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "0-6 credits of courses in arts, social sciences, management, humanities, or law at the 200 level or higher, which may include 3 credits in a language other than the student's primary spoken language(s), with approval of the Academic Adviser",
+          "unparsed": true
+        },
+        {
+          "title": "0-6 credits of courses offered by the Faculty of Engineering with approval of the Academic Adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

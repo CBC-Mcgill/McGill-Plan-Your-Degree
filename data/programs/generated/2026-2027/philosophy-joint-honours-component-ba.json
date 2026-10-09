@@ -1,0 +1,114 @@
+{
+  "id": "philosophy-joint-honours-component-ba",
+  "name": "Philosophy Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/philosophy/philosophy-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "PHIL 210",
+        "PHIL 301",
+        "PHIL 334"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHIL 306",
+            "PHIL 310",
+            "PHIL 411",
+            "PHIL 415",
+            "PHIL 419",
+            "PHIL 421",
+            "PHIL 470"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHIL 230",
+            "PHIL 237",
+            "PHIL 240",
+            "PHIL 242"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group A",
+          "courses": [
+            "PHIL 345",
+            "PHIL 350",
+            "PHIL 353",
+            "PHIL 354",
+            "PHIL 355",
+            "PHIL 452",
+            "PHIL 453",
+            "PHIL 454"
+          ]
+        },
+        {
+          "title": "Group B",
+          "courses": [
+            "PHIL 360",
+            "PHIL 361",
+            "PHIL 366",
+            "PHIL 367",
+            "PHIL 444",
+            "PHIL 445"
+          ]
+        },
+        {
+          "title": "Group B: 3 credits from",
+          "courses": [
+            "PHIL 375",
+            "PHIL 474",
+            "PHIL 475"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Joint Honours Tutorial with Thesis",
+          "courses": [
+            "PHIL 498"
+          ]
+        },
+        {
+          "title": "27 credits distributed as follows",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits from Group A or Group B",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits from Group A or Group B",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits of Philosophy (PHIL) at the 400 and 500 level (not including the Joint Honours tutorial), at least 3 credits of which must be at the 500 level",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits of Joint Honours tutorial with thesis, which can take either of two forms: a 6-credit interdisciplinary thesis, or a 3-credit thesis in Philosophy, i.e., PHIL 498 below",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

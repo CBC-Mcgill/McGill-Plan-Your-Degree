@@ -1,0 +1,36 @@
+{
+  "id": "chemical-engineering-minor-bsc",
+  "name": "Chemical Engineering Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/chemistry/chemical-engineering-minor-bsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "CHEE 200",
+        "CHEE 204",
+        "CHEE 220",
+        "CHEE 314",
+        "CHEE 315",
+        "CHEE 351"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from any undergraduate courses offered by Chemical Engineering, excluding the following courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

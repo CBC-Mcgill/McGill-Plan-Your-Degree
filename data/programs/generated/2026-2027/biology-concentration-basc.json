@@ -1,0 +1,84 @@
+{
+  "id": "biology-concentration-basc",
+  "name": "Biology Major Concentration",
+  "degree": "B.A. & Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts-science/programs/biology/biology-concentration-basc/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "BIOL 200",
+        "BIOL 201",
+        "BIOL 205",
+        "BIOL 206",
+        "BIOL 215",
+        "BIOL 216"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "CHEM 204",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "*Students who have already taken CHEM 212 or its equivalent as advance credits may choose to substitute CHEM 204, or CHEM 222, or a 300-500 levels complementary Biology course, to be approved by the Biology Advisor",
+          "unparsed": true
+        },
+        {
+          "title": "3-4 credits from",
+          "courses": [
+            "BIOL 301",
+            "BIOL 311"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 202",
+            "BIOL 302"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 304",
+            "BIOL 305",
+            "BIOL 306",
+            "BIOL 307",
+            "BIOL 308",
+            "BIOL 313"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3-4 credits from CHEM block",
+          "unparsed": true
+        },
+        {
+          "title": "4-6 credits from Biology courses at the 300-500 levels",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,77 @@
+{
+  "id": "early-music-performance-minor-bmus",
+  "name": "Early Music Performance Minor",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/early-music-performance-minor-bmus/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "MUIN 272",
+        "MUPP 381"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "MUEN 572",
+            "MUEN 573",
+            "MUEN 580",
+            "MUPD 560",
+            "MUPG 272"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "MUHL 366",
+            "MUHL 377",
+            "MUHL 380",
+            "MUHL 381",
+            "MUHL 382",
+            "MUHL 383",
+            "MUHL 591",
+            "MUTH 202",
+            "MUTH 204",
+            "MUTH 302",
+            "MUTH 304",
+            "MUTH 426",
+            "MUIN 302",
+            "MUIN 303",
+            "MUIN 304",
+            "MUIN 305",
+            "MUIN 270",
+            "MUIN 271",
+            "MUIN 273",
+            "MUIN 274",
+            "MUIN 275",
+            "MUIN 276"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from the following (for Voice students only)",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits from the following (for Instrumental students only)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

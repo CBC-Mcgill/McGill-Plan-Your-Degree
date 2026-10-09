@@ -1,0 +1,135 @@
+{
+  "id": "theory-major-bmus",
+  "name": "Theory Major",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/music-research/theory-major-bmus/",
+  "credits": 124,
+  "groups": [
+    {
+      "title": "Program Prerequisites - Foundation Program",
+      "kind": "complementary",
+      "credits": 32,
+      "rules": [
+        {
+          "title": "22 credits of Prerequisite Courses",
+          "unparsed": true
+        },
+        {
+          "title": "4 credits of Large Ensembles",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Non-Music Electives",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 25,
+      "courses": [
+        "MUTH 250",
+        "MUTH 251",
+        "MUTH 350",
+        "MUSP 240",
+        "MUSP 241",
+        "MUSP 346",
+        "MUHL 286",
+        "MUIN 280",
+        "MUIN 281",
+        "MUIN 283",
+        "MUPD 235"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 40,
+      "rules": [
+        {
+          "title": "Theory: 6 credits selected from",
+          "courses": [
+            "MUTH 202",
+            "MUTH 204",
+            "MUTH 302",
+            "MUTH 304"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Theory: 6 credits selected from",
+          "courses": [
+            "MUTH 321",
+            "MUTH 322",
+            "MUTH 426",
+            "MUTH 541"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Theory: 6 credits selected from",
+          "courses": [
+            "MUTH 526",
+            "MUTH 528",
+            "MUTH 529",
+            "MUTH 538"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Theory: 12 credits selected from courses not taken above and the following",
+          "courses": [
+            "MUCO 575",
+            "MUTH 539"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "Performance: 4 credits selected from",
+          "courses": [
+            "MUEN 563",
+            "MUEN 572",
+            "MUEN 573",
+            "MUEN 587",
+            "MUEN 590",
+            "MUEN 592",
+            "MUEN 593",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "6 credits from courses with a prefix of MUHL or MUPP",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "9 credits of non-Music Electives",
+          "unparsed": true
+        },
+        {
+          "title": "18 credits of free Electives",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

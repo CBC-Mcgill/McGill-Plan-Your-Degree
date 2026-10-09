@@ -1,0 +1,246 @@
+{
+  "id": "honours-biology-quantitative-bsc",
+  "name": "Biology - Quantitative Biology Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biology/honours-biology-quantitative-bsc/",
+  "credits": 79,
+  "groups": [
+    {
+      "title": "Bio-Physical Sciences Core",
+      "kind": "complementary",
+      "credits": 31,
+      "rules": [
+        {
+          "title": "Bio-Physical Sciences Core",
+          "courses": [
+            "BIOL 219",
+            "BIOL 301",
+            "BIOL 395",
+            "CHEM 212",
+            "COMP 202",
+            "MATH 222",
+            "MATH 223",
+            "MATH 247",
+            "MATH 315",
+            "MATH 323",
+            "MATH 324",
+            "MATH 325",
+            "MATH 356",
+            "MATH 357"
+          ]
+        },
+        {
+          "title": "Students who have taken the equivalent of CHEM 212 or MATH 222 can make up the credits with complementary 3 or 4 credit courses in consultation with a stream adviser",
+          "unparsed": true
+        },
+        {
+          "title": "Note: 6 credits of either MATH or PHYS courses to be taken at the honours level",
+          "unparsed": true
+        },
+        {
+          "title": "All 500-level Math courses are considered as honours courses and can be applied to the 6 credit requirement",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Biology",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Biology",
+          "courses": [
+            "BIOL 202",
+            "BIOL 215"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Research Component",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Research Component",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Physics",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from",
+          "courses": [
+            "PHYS 230",
+            "PHYS 232",
+            "PHYS 251",
+            "PHYS 253"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Stream 1: Theoretical Ecology and Evolutionary Biology",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Biology: 12 credits from the following",
+          "courses": [
+            "BIOL 205",
+            "BIOL 206",
+            "BIOL 304",
+            "BIOL 308"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "Field Courses",
+          "courses": [
+            "BIOL 240",
+            "BIOL 331",
+            "BIOL 432"
+          ]
+        },
+        {
+          "title": "Field Courses",
+          "courses": [
+            "BIOL 432",
+            "BIOL 435",
+            "BIOL 465",
+            "BIOL 510",
+            "BIOL 515",
+            "BIOL 540",
+            "BIOL 594"
+          ]
+        },
+        {
+          "title": "3 credits from the following list or any other field course with permission",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits chosen from the following list of courses at the 400 level or above",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Stream 2: Physical Biology",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "21 credits: 9 credits from",
+          "courses": [
+            "BIOL 319",
+            "PHYS 319",
+            "PHYS 329",
+            "PHYS 346"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "Students choose either BIOL 319 or PHYS 319",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 319",
+            "PHYS 319"
+          ]
+        },
+        {
+          "title": "300-level complementary courses: 6 credits from the following",
+          "courses": [
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 306",
+            "BIOL 309",
+            "BIOL 313"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "500-level complementary courses: 6 credits from the following",
+          "courses": [
+            "BIOL 518",
+            "BIOL 520",
+            "BIOL 524",
+            "BIOL 530",
+            "BIOL 551",
+            "BIOL 588"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "COMP 206",
+            "COMP 250",
+            "COMP 251",
+            "COMP 350",
+            "MATH 235",
+            "MATH 240",
+            "MATH 314",
+            "MATH 317",
+            "MATH 319",
+            "MATH 326",
+            "MATH 327",
+            "MATH 348",
+            "MATH 437",
+            "MATH 447"
+          ]
+        },
+        {
+          "title": "Recommendations for Physical Biology stream",
+          "courses": [
+            "BIEN 310",
+            "BIEN 320",
+            "BIEN 340",
+            "BIEN 510",
+            "BIEN 530",
+            "CHEM 222",
+            "PHYS 242",
+            "PHYS 257",
+            "PHYS 342",
+            "PHYS 434",
+            "PHYS 519",
+            "PHYS 534"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BIOL 310",
+            "BIOL 324",
+            "MATH 242",
+            "MATH 340",
+            "MATH 423",
+            "MATH 524",
+            "MATH 525",
+            "PHYS 329"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

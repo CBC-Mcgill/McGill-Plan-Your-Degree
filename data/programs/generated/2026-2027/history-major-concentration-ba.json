@@ -1,0 +1,127 @@
+{
+  "id": "history-major-concentration-ba",
+  "name": "History Major Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/history-classical-studies/history-major-concentration-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "Group A: 3 credits from Group A",
+          "courses": [
+            "HIST 202",
+            "HIST 203",
+            "HIST 211",
+            "HIST 212",
+            "HIST 214",
+            "HIST 215",
+            "HIST 216",
+            "HIST 221",
+            "HIST 226",
+            "HIST 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group B: 3 credits from Group B",
+          "courses": [
+            "HIST 200",
+            "HIST 201",
+            "HIST 205",
+            "HIST 206",
+            "HIST 208",
+            "HIST 209",
+            "HIST 210",
+            "HIST 218",
+            "HIST 275"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group C: 3 credits from Group C",
+          "courses": [
+            "HIST 207",
+            "HIST 213",
+            "HIST 219",
+            "HIST 222",
+            "HIST 223",
+            "HIST 224",
+            "HIST 238",
+            "HIST 240",
+            "HIST 249",
+            "HIST 262",
+            "HIST 292",
+            "HIST 298",
+            "HIST 299"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Cognate Courses (max. 6 credits)",
+          "courses": [
+            "CLAS 303",
+            "CLAS 304",
+            "CLAS 305",
+            "CLAS 406",
+            "ISLA 305",
+            "ISLA 311",
+            "ISLA 315",
+            "ISLA 355",
+            "ISLA 375",
+            "ISLA 410",
+            "ISLA 411",
+            "ISLA 421",
+            "ISLA 511",
+            "ISLA 516",
+            "ISLA 530",
+            "ISLA 580",
+            "JWST 240",
+            "JWST 245",
+            "JWST 303",
+            "JWST 311",
+            "JWST 312",
+            "JWST 334",
+            "JWST 348",
+            "JWST 365",
+            "JWST 366",
+            "JWST 371"
+          ]
+        },
+        {
+          "title": "36 credits of HIST or cognate courses (see list below) according to the following requirements",
+          "unparsed": true
+        },
+        {
+          "title": "At least 3 credits focused on the period before 1800",
+          "unparsed": true
+        },
+        {
+          "title": "At least 3 credits focused on the period after 1800",
+          "unparsed": true
+        },
+        {
+          "title": "Maximum 15 credits of complementary courses at the 200-level",
+          "unparsed": true
+        },
+        {
+          "title": "Minimum 6 credits of 400- or 500- level courses",
+          "unparsed": true
+        },
+        {
+          "title": "Note: student may use at most 3 credits of HIST 498 or HIST 499 to fulfill this requirement",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

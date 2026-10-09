@@ -1,0 +1,49 @@
+{
+  "id": "software-engineering-major-concentration-basc",
+  "name": "Software Engineering Major Concentration",
+  "degree": "B.A. & Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts-science/programs/computer-science/software-engineering-major-concentration-basc/",
+  "credits": 37,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 30,
+      "courses": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 250",
+        "COMP 251",
+        "COMP 273",
+        "COMP 302",
+        "COMP 303",
+        "COMP 421",
+        "MATH 223",
+        "MATH 240"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 7,
+      "rules": [
+        {
+          "title": "At least 7 credits from",
+          "courses": [
+            "COMP 322",
+            "COMP 361",
+            "COMP 529",
+            "COMP 533",
+            "ECSE 326",
+            "ECSE 437",
+            "ECSE 539"
+          ],
+          "minCredits": 7
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

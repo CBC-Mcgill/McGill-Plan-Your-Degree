@@ -1,0 +1,118 @@
+{
+  "id": "russian-joint-honours-component-ba",
+  "name": "Russian Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/languages-literatures-cultures/russian-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "RUSS 490"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Group A: Russian Language: 18 credits selected from the following courses or their equivalent",
+          "courses": [
+            "RUSS 210",
+            "RUSS 211",
+            "RUSS 215",
+            "RUSS 301",
+            "RUSS 310",
+            "RUSS 311",
+            "RUSS 316",
+            "RUSS 327",
+            "RUSS 328",
+            "RUSS 410",
+            "RUSS 411",
+            "RUSS 415",
+            "RUSS 453"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        },
+        {
+          "title": "Group B: 6-9 credits selected from the following courses or their equivalent",
+          "courses": [
+            "RUSS 217",
+            "RUSS 218",
+            "RUSS 223",
+            "RUSS 224",
+            "RUSS 229",
+            "RUSS 250"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        },
+        {
+          "title": "Group C: 6-9 credits selected from the following courses or their equivalent",
+          "courses": [
+            "RUSS 213",
+            "RUSS 330",
+            "RUSS 333",
+            "RUSS 337",
+            "RUSS 340",
+            "RUSS 347",
+            "RUSS 350",
+            "RUSS 357",
+            "RUSS 358",
+            "RUSS 365",
+            "RUSS 369",
+            "RUSS 381",
+            "RUSS 382",
+            "RUSS 385",
+            "RUSS 390",
+            "RUSS 395",
+            "RUSS 397",
+            "RUSS 398",
+            "RUSS 427",
+            "RUSS 428",
+            "RUSS 430",
+            "RUSS 440",
+            "RUSS 475",
+            "RUSS 500",
+            "RUSS 501"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        },
+        {
+          "title": "Group D: Languages, Literatures, and Cultures and Faculty of Arts",
+          "courses": [
+            "ANTH 303",
+            "HIST 216",
+            "HIST 226",
+            "HIST 306",
+            "HIST 313",
+            "HIST 316",
+            "HIST 326",
+            "HIST 406",
+            "HIST 576",
+            "JWST 303",
+            "POLI 329",
+            "POLI 331",
+            "SOCI 455"
+          ]
+        },
+        {
+          "title": "33 credits selected from the following specifications",
+          "unparsed": true
+        },
+        {
+          "title": "0-3 credits to be chosen from the following or their equivalent",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,167 @@
+{
+  "id": "atmospheric-major-environment-air-quality-bsc",
+  "name": "Environment Major - Atmospheric Environment and Air Quality",
+  "degree": "B.Sc.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/major-environment-bsc/atmospheric-major-environment-air-quality-bsc/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Core: Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400"
+      ]
+    },
+    {
+      "title": "Core: Complementary Course - Senior Research Project",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Core: Complementary Course - Senior Research Project",
+          "courses": [
+            "ENVR 401",
+            "ENVR 451",
+            "FSCI 444"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Domain: Required Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits from",
+          "courses": [
+            "ATOC 214",
+            "ATOC 215",
+            "ATOC 219",
+            "ATOC 315",
+            "CHEM 219",
+            "GEOG 308"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        },
+        {
+          "title": "Note: You may take ATOC 219 or CHEM 219, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 219",
+            "CHEM 219"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Domain: Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Analytical Chemistry/Calculus",
+          "courses": [
+            "AEMA 202",
+            "MATH 222"
+          ]
+        },
+        {
+          "title": "Analytical Chemistry/Calculus",
+          "courses": [
+            "CHEM 267",
+            "FDSC 213"
+          ]
+        },
+        {
+          "title": "Note: Students take either CHEM 267 or FDSC 213",
+          "maxCourses": 1,
+          "courses": [
+            "CHEM 267",
+            "FDSC 213"
+          ]
+        },
+        {
+          "title": "Statistics",
+          "courses": [
+            "AEMA 310",
+            "MATH 203"
+          ]
+        },
+        {
+          "title": "Math or Physical Science",
+          "courses": [
+            "AEMA 305",
+            "ATOC 309",
+            "ATOC 519",
+            "ATOC 540",
+            "CHEM 273",
+            "CHEM 377",
+            "CHEM 519",
+            "CIVE 225",
+            "CIVE 561",
+            "COMP 208",
+            "GEOG 505",
+            "MATH 223",
+            "MATH 315",
+            "NRSC 333"
+          ]
+        },
+        {
+          "title": "Social Science: 6 credits from",
+          "courses": [
+            "ANTH 206",
+            "ANTH 418",
+            "ECON 225",
+            "ECON 347",
+            "ENVR 422",
+            "GEOG 221",
+            "GEOG 302",
+            "GEOG 303",
+            "GEOG 340",
+            "GEOG 403",
+            "GEOG 404",
+            "GEOG 498",
+            "RELG 270"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "6 credits - Analytical Chemistry/Calculus courses",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits - Statistics",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits - Math or Physical Science",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits - Social Science",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits of Statistics courses or equivalent from",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits of Math or Physical Science (at least 6 credits of which are at the 300 level or above)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

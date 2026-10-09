@@ -1,0 +1,79 @@
+{
+  "id": "software-engineering-minor-beng",
+  "name": "Software Engineering Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/software-engineering-minor-beng/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "ECSE 223",
+        "ECSE 321",
+        "ECSE 428"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "COMP 250",
+            "ECSE 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Students may choose only one course in each of the following sets: COMP 250 and ECSE 250 COMP 424 and ECSE 526 ECSE 439 and ECSE 539 ECSE 446 and ECSE 546",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "COMP 302",
+            "COMP 307",
+            "COMP 370",
+            "COMP 409",
+            "COMP 421",
+            "COMP 424",
+            "COMP 512",
+            "COMP 527",
+            "ECSE 326",
+            "ECSE 420",
+            "ECSE 421",
+            "ECSE 422",
+            "ECSE 424",
+            "ECSE 425",
+            "ECSE 427",
+            "ECSE 429",
+            "ECSE 437",
+            "ECSE 439",
+            "ECSE 446",
+            "ECSE 526",
+            "ECSE 539",
+            "ECSE 546"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Students may choose only one course in each of the following sets: COMP 250 and ECSE 250 COMP 424 and ECSE 526 ECSE 439 and ECSE 539 ECSE 446 and ECSE 546",
+          "unparsed": true
+        },
+        {
+          "title": "Restricted to Honours students or Computer Engineering or Electrical Engineering students with CGPA of at least 3.0 and B+ or better in prerequisites",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

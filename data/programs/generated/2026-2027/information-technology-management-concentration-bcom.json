@@ -1,0 +1,56 @@
+{
+  "id": "information-technology-management-concentration-bcom",
+  "name": "Information Technology Management Concentration",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/concentrations/information-technology-management-concentration-bcom/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "INSY 333"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "6-12 credits selected from",
+          "courses": [
+            "INSY 331",
+            "INSY 334",
+            "INSY 339",
+            "INSY 341",
+            "INSY 431",
+            "INSY 432",
+            "INSY 434",
+            "INSY 437",
+            "INSY 440",
+            "INSY 442",
+            "INSY 450",
+            "INSY 455"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        },
+        {
+          "title": "0-6 credits selected from",
+          "courses": [
+            "INSY 336",
+            "INSY 446",
+            "INSY 448",
+            "INSY 463"
+          ],
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

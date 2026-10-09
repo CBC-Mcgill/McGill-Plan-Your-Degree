@@ -1,0 +1,102 @@
+{
+  "id": "performance-jazz-major-lmus",
+  "name": "Performance Jazz Major",
+  "degree": "L.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/performance-jazz-major-lmus/",
+  "credits": 100,
+  "groups": [
+    {
+      "title": "Required Performance",
+      "kind": "required",
+      "credits": 48,
+      "courses": [
+        "MUIN 250",
+        "MUIN 251",
+        "MUIN 252",
+        "MUIN 350",
+        "MUIN 351",
+        "MUIN 352",
+        "MUIN 450",
+        "MUIN 451",
+        "MUIN 452"
+      ]
+    },
+    {
+      "title": "Complementary Performance",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "12 credits from",
+          "courses": [
+            "MUEN 563",
+            "MUEN 572",
+            "MUEN 573",
+            "MUEN 587",
+            "MUEN 590",
+            "MUEN 592",
+            "MUEN 593",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597",
+            "MUEN 570",
+            "MUEN 574"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "4 credits, select MUEN 570 (1 x 4 semesters) and 2 credits (1 credit x 2 semesters), select either MUEN 570 (1 credit) or MUEN 574 (1 credit)",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 30,
+      "courses": [
+        "MUJZ 260",
+        "MUJZ 261",
+        "MUJZ 340",
+        "MUJZ 341",
+        "MUJZ 223",
+        "MUJZ 224",
+        "MUJZ 423",
+        "MUJZ 424",
+        "MUJZ 187",
+        "MUJZ 493"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 4,
+      "rules": [
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "MUJZ 440",
+            "MUJZ 441",
+            "MUJZ 461"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "Students select either MUJZ 440 and MUJZ 441 or MUJZ 461D1 and MUJZ 461D2",
+          "maxCourses": 1,
+          "courses": [
+            "MUJZ 440",
+            "MUJZ 441",
+            "MUJZ 461",
+            "MUJZ 461"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

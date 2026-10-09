@@ -1,0 +1,59 @@
+{
+  "id": "applied-ecology-major-bsc-agenvsc",
+  "name": "Applied Ecology Specialization",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/natural-resource-sciences/applied-ecology-major-bsc-agenvsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "ENVB 305",
+        "ENVB 437",
+        "ENVB 529"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits selected from the following",
+          "courses": [
+            "AGRI 340",
+            "BREE 327",
+            "ENTO 330",
+            "ENTO 340",
+            "ENVB 301",
+            "ENVB 313",
+            "ENVB 415",
+            "ENVB 500",
+            "ENVB 506",
+            "ENVB 530",
+            "MICR 331",
+            "MICR 450",
+            "PLNT 304",
+            "PLNT 426",
+            "PLNT 460",
+            "SOIL 300",
+            "SOIL 326",
+            "SOIL 535",
+            "WILD 302",
+            "WILD 307",
+            "WILD 350",
+            "WILD 420",
+            "WILD 421"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,134 @@
+{
+  "id": "biomedical-engineering-minor-beng",
+  "name": "Biomedical Engineering Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/biomedical-engineering-minor-beng/",
+  "credits": 21,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Introductory Life Sciences: Minimum of 3 credits from the courses below",
+          "courses": [
+            "ANAT 212",
+            "BIEN 219",
+            "BIOC 212",
+            "BIOL 200",
+            "BIOL 201",
+            "BIOL 219",
+            "CHEM 212",
+            "PHGY 209",
+            "PHGY 210"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "Specialization Courses: Minimum of 12 credits from courses below",
+          "courses": [
+            "BIEN 340",
+            "BIEN 360",
+            "BIEN 462",
+            "BIEN 540",
+            "BMDE 505",
+            "PHGY 311",
+            "PHGY 312",
+            "PHGY 313",
+            "PHGY 518",
+            "ANAT 365",
+            "ANAT 458",
+            "BIEN 310",
+            "BIEN 410",
+            "BIEN 420",
+            "BIEN 590",
+            "BIOC 311",
+            "BIOC 312",
+            "BIOC 458",
+            "BMDE 508",
+            "COMP 424",
+            "COMP 462",
+            "BIEN 330",
+            "BIEN 510",
+            "BIEN 550",
+            "BIEN 560",
+            "BMDE 504",
+            "CHEE 380",
+            "ECSE 424",
+            "MECH 553",
+            "MIME 360",
+            "MIME 362",
+            "MIME 470",
+            "PHYS 534",
+            "BIEN 320",
+            "BIEN 570",
+            "BMDE 512",
+            "CHEE 563",
+            "MECH 315",
+            "MECH 321",
+            "MECH 530",
+            "MECH 561",
+            "MECH 563",
+            "BIEN 350",
+            "BIEN 530",
+            "BMDE 519",
+            "COMP 558",
+            "ECSE 206",
+            "ECSE 412",
+            "PHYS 557",
+            "BMDE 501",
+            "BMDE 502",
+            "BMDE 503",
+            "ECSE 517",
+            "ECSE 526"
+          ],
+          "minCredits": 12
+        },
+        {
+          "title": "Students select either ANAT 458 or BIOC 458",
+          "maxCourses": 1,
+          "courses": [
+            "ANAT 458",
+            "BIOC 458"
+          ]
+        },
+        {
+          "title": "Students choose either CHEE 563 or MECH 563",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 563",
+            "MECH 563"
+          ]
+        },
+        {
+          "title": "Students choose either BIEN 350 or ECSE 206",
+          "maxCourses": 1,
+          "courses": [
+            "BIEN 350",
+            "ECSE 206"
+          ]
+        },
+        {
+          "title": "Students choose either BIEN 350 or ECSE 206",
+          "maxCourses": 1,
+          "courses": [
+            "BIEN 350",
+            "ECSE 206"
+          ]
+        },
+        {
+          "title": "Students must select 6 credits from courses outside their department and at least one BMDE course",
+          "unparsed": true
+        },
+        {
+          "title": "0-6 credits can be taken by permission of the Departmental Adviser and approval of the Minor Adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

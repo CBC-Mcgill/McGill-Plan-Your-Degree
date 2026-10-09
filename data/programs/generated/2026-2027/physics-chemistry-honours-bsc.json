@@ -1,0 +1,94 @@
+{
+  "id": "physics-chemistry-honours-bsc",
+  "name": "Physics and Chemistry Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/physics-chemistry-honours-bsc/",
+  "credits": 80,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 68,
+      "courses": [
+        "CHEM 212",
+        "CHEM 213",
+        "CHEM 273",
+        "CHEM 281",
+        "CHEM 355",
+        "CHEM 365",
+        "CHEM 493",
+        "CHEM 556",
+        "CHEM 574",
+        "COMP 208",
+        "MATH 247",
+        "MATH 248",
+        "MATH 249",
+        "MATH 325",
+        "PHYS 241",
+        "PHYS 251",
+        "PHYS 257",
+        "PHYS 258",
+        "PHYS 350",
+        "PHYS 352",
+        "PHYS 357",
+        "PHYS 457",
+        "PHYS 558"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "MATH 222"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "Note: A student who has not taken MATH 222 (or equivalent) prior to entering the program must take it in their first semester, increasing the program credits from 80 to 83. The student must then take MATH 314 in their second semester instead of MATH 248, if scheduling requires it",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "CHEM 593",
+            "PHYS 559"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "9 credits selected from the list below",
+          "courses": [
+            "CHEM 480",
+            "CHEM 505",
+            "CHEM 531",
+            "CHEM 575",
+            "CHEM 585",
+            "PHYS 351",
+            "PHYS 359",
+            "PHYS 404",
+            "PHYS 434",
+            "PHYS 459",
+            "PHYS 469",
+            "PHYS 479",
+            "PHYS 512",
+            "PHYS 562"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "(with at least 3 credits in Chemistry and 3 credits in Physics)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

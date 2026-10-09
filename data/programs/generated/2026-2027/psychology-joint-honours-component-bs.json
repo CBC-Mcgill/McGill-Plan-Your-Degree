@@ -1,0 +1,40 @@
+{
+  "id": "psychology-joint-honours-component-bs",
+  "name": "Psychology Joint Honours Component",
+  "degree": "B.A. & Sc.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts-science/programs/psychology/psychology-joint-honours-component-bs/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "PSYC 204",
+        "PSYC 211",
+        "PSYC 212",
+        "PSYC 213",
+        "PSYC 215",
+        "PSYC 305",
+        "PSYC 306",
+        "PSYC 380",
+        "PSYC 439"
+      ],
+      "note": "Advising note for PSYC 204: CEGEP students are exempt from PSYC 204 if they have completed, with a minimum grade of 75%, the following two courses: 1) Quantitative Methods and either 2a) Advanced Quantitative Methods or 2b) Statistics for Social Science. CEGEP students are also exempt from PSYC 204 if they have completed Probability & Statistics or Statistics with a minimum grade of 75%. Bachelor of Arts students exempt from PSYC 204 replace this course with 3 credits at the 300 level or above in Psychology (PSYC), Anthropology (ANTH), Linguistics (LING), or Sociology (SOCI). Note: Students who wish to apply to the Joint Honours program in Psychology must complete the required courses above, including PSYC 305 in their U1 year to be eligible for admission. Also, all students must complete a minimum of 27 graded credits in the academic year prior to applying (fall and winter terms only). For additional information about applying to Joint Honours, please refer to the Joint Honours program description."
+    },
+    {
+      "title": "Complementary Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits in Psychology at the 400 or 500 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

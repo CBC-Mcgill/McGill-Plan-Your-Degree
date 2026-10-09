@@ -1,0 +1,68 @@
+{
+  "id": "professional-agrology-major-bsc-agenvsc",
+  "name": "Professional Agrology Specialization",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/natural-resource-sciences/professional-agrology-major-bsc-agenvsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "AGRI 330",
+        "AGRI 410",
+        "AGRI 430",
+        "AGRI 490",
+        "PLNT 430"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Field Crops and Horticulture",
+          "courses": [
+            "PLNT 302",
+            "PLNT 305",
+            "PLNT 307",
+            "PLNT 353",
+            "PLNT 434",
+            "PLNT 435"
+          ]
+        },
+        {
+          "title": "Global Food Security",
+          "courses": [
+            "AEIS 230",
+            "AGEC 430",
+            "AGEC 442",
+            "AGRI 411",
+            "AGRI 493",
+            "NUTR 341"
+          ]
+        },
+        {
+          "title": "Livestock",
+          "courses": [
+            "ANSC 301",
+            "ANSC 303",
+            "ANSC 324",
+            "ANSC 433",
+            "ANSC 458",
+            "ANSC 555"
+          ]
+        },
+        {
+          "title": "18 credits from one of the following specializations; students must be enrolled in the Major in Sustainable Agricultural Systems",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "international-agriculture-minor-bsc-agenvsc",
+  "name": "International Agriculture Minor",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/minor-programs/international-agriculture-minor-bsc-agenvsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "AGEC 442",
+        "AGRI 411"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Option A: 18 credits selected from",
+          "courses": [
+            "AGEC 333",
+            "AGEC 430",
+            "AGRI 215",
+            "AGRI 325",
+            "AGRI 499",
+            "BREE 510",
+            "ENVB 437",
+            "FDSC 525",
+            "NRSC 515",
+            "NUTR 501",
+            "PARA 410",
+            "PLNT 200"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        },
+        {
+          "title": "Students select 18 credits from either Option A or Option B",
+          "unparsed": true
+        },
+        {
+          "title": "15 credits from any of the McGill Field Study Semesters",
+          "unparsed": true
+        },
+        {
+          "title": "Plus 3 credits from the list in Option A",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

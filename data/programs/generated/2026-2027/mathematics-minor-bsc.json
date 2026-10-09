@@ -1,0 +1,34 @@
+{
+  "id": "mathematics-minor-bsc",
+  "name": "Mathematics Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/mathematics-minor-bsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "MATH 222",
+        "MATH 223",
+        "MATH 315"
+      ],
+      "note": "MATH 223 may be replaced by MATH 235 and MATH 236. In this case, the complementary credit requirement is reduced by 3 credits."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits selected from the required and complementary courses for majors and honours students in Mathematics, with MATH 323 strongly recommended; alternatively, up to 6 credits may be allowed for appropriate courses from other departments",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

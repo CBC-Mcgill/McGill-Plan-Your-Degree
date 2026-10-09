@@ -1,0 +1,31 @@
+{
+  "id": "general-science-minor-bsc",
+  "name": "General Science Minor",
+  "degree": "B.Sc.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/general-science/general-science-minor-bsc/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "9 credits at the 300 level or above and at least 9 credits outside the student's core science component subject. or",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits at the 300 level or above and at least 6 credits outside the student's core science component subject",
+          "unparsed": true
+        },
+        {
+          "title": "All Undergraduate research project courses with the 396 or 397 course number cannot be used toward the Minor General Science",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,172 @@
+{
+  "id": "civil-engineering-beng",
+  "name": "Civil Engineering",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/civil-engineering/civil-engineering-beng/",
+  "credits": 139,
+  "groups": [
+    {
+      "title": "Required Year 0 Courses",
+      "kind": "required",
+      "credits": 26,
+      "courses": [
+        "CHEM 110",
+        "CHEM 120",
+        "MATH 133",
+        "MATH 140",
+        "MATH 141",
+        "PHYS 131",
+        "PHYS 142"
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Non-Departmental Courses",
+      "kind": "required",
+      "credits": 22,
+      "courses": [
+        "COMP 208",
+        "EPSC 221",
+        "FACC 150",
+        "FACC 250",
+        "FACC 300",
+        "FACC 400",
+        "MATH 262",
+        "MATH 263",
+        "MATH 264"
+      ]
+    },
+    {
+      "title": "Required Civil Engineering Courses",
+      "kind": "required",
+      "credits": 70,
+      "courses": [
+        "CIVE 202",
+        "CIVE 205",
+        "CIVE 206",
+        "CIVE 207",
+        "CIVE 208",
+        "CIVE 210",
+        "CIVE 219",
+        "CIVE 224",
+        "CIVE 225",
+        "CIVE 289",
+        "CIVE 290",
+        "CIVE 302",
+        "CIVE 311",
+        "CIVE 317",
+        "CIVE 318",
+        "CIVE 319",
+        "CIVE 320",
+        "CIVE 323",
+        "CIVE 324",
+        "CIVE 327",
+        "CIVE 419"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "List A - Design Technical Complementaries: 6-15 credits from the following",
+          "courses": [
+            "CIVE 416",
+            "CIVE 421",
+            "CIVE 428",
+            "CIVE 430",
+            "CIVE 440",
+            "CIVE 462",
+            "CIVE 463"
+          ],
+          "minCredits": 6,
+          "maxCredits": 15
+        },
+        {
+          "title": "List B - General Technical Complementaries",
+          "courses": [
+            "CHEE 521",
+            "CIVE 446",
+            "CIVE 460",
+            "CIVE 470",
+            "CIVE 480",
+            "CIVE 507",
+            "CIVE 512",
+            "CIVE 520",
+            "CIVE 521",
+            "CIVE 527",
+            "CIVE 528",
+            "CIVE 529",
+            "CIVE 540",
+            "CIVE 542",
+            "CIVE 543",
+            "CIVE 545",
+            "CIVE 546",
+            "CIVE 550",
+            "CIVE 555",
+            "CIVE 557",
+            "CIVE 560",
+            "CIVE 561",
+            "CIVE 570",
+            "CIVE 572",
+            "CIVE 573",
+            "CIVE 574",
+            "CIVE 577",
+            "CIVE 584",
+            "URBP 551"
+          ]
+        },
+        {
+          "title": "0-9 credits from the following, or from other suitable undergraduate or 500-level courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Studies - Humanities and Social Sciences, Management and Law",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Desautels Faculty of Management",
+          "courses": [
+            "BUSA 465",
+            "INDR 294",
+            "INTG 215",
+            "MGCR 222",
+            "MGCR 352",
+            "ORGB 321",
+            "ORGB 420",
+            "ORGB 423"
+          ]
+        },
+        {
+          "title": "Faculty of Science",
+          "courses": [
+            "ENVR 203",
+            "ENVR 400",
+            "MATH 338",
+            "PSYC 100"
+          ]
+        },
+        {
+          "title": "Faculty of Engineering",
+          "courses": [
+            "ARCH 528",
+            "FACC 220",
+            "FACC 500",
+            "FACC 501"
+          ]
+        },
+        {
+          "title": "200 or 300 level courses in the following departments excluding seminars, field courses, surveys, special/selected topics courses, courses with physical, natural or medical sciences, mathematics, and statistic contents, and courses reserved for major or Honours in the relative programs:; Anthropology (ANTH); Art History and Communications (ARTH and COMS); East Asian Studies (EAST); Economics (ECON) (any 200- or 300-level course excluding ECON 227D1/D2 and ECON 337)*; French Language and Literature (FREN)* (excluding FREN 222 and FREN 333); French Language Center (FRSL courses 200 level or higher); History and Classical Studies (HIST and CLAS—excluding HIST 339); Institute for Gender, Sex, and Femenist Studies (GSFS); Institute for Study of Canada (CANS and INDG); Islamic Studies (AFRI and ISLA); Jewish Studies (JWST); Languages, Literatures, and Cultures (GERM, HISP, ITAL, LLCU, and RUSS); Philosophy (PHIL) (excluding PHIL 210 and PHIL 310); Political Science (POLI) (excluding POLI 311); Religious Studies (CATH and RELG); Sociology (SOCI) (excluding SOCI 211, SOCI 331, SOCI 342, SOCI 343, and SOCI 350)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

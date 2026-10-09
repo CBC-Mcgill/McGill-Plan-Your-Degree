@@ -1,0 +1,58 @@
+{
+  "id": "environmental-biology-major-bsc-agenvsc",
+  "name": "Environmental Biology Major",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/natural-resource-sciences/environmental-biology-major-bsc-agenvsc/",
+  "credits": 42,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 36,
+      "courses": [
+        "AEBI 210",
+        "AEBI 211",
+        "AEBI 212",
+        "AEMA 310",
+        "ENVB 210",
+        "ENVB 222",
+        "ENVB 305",
+        "ENVB 410",
+        "LSCI 204",
+        "LSCI 211",
+        "LSCI 230",
+        "NRSC 221"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ENTO 330",
+            "ENVB 301",
+            "ENVB 313",
+            "ENVB 437",
+            "ENVB 497",
+            "ENVB 498",
+            "FAES 300",
+            "MICR 331",
+            "PLNT 304",
+            "PLNT 358",
+            "PLNT 460",
+            "SOIL 300",
+            "WILD 302",
+            "WILD 307",
+            "WOOD 441"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

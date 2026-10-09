@@ -1,0 +1,188 @@
+{
+  "id": "environment-development-ba",
+  "name": "Faculty Program Environment - Environment and Development",
+  "degree": "B.A.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/ba-faculty-program-environment/environment-development-ba/",
+  "credits": 54,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 30,
+      "courses": [
+        "ANTH 339",
+        "ECON 313",
+        "ECON 314",
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400",
+        "GEOG 302"
+      ]
+    },
+    {
+      "title": "Complementary Courses Senior Research Project",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "AEBI 427",
+            "ENVR 401",
+            "ENVR 451",
+            "FSCI 444",
+            "GEOG 451"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Statistics",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "AEMA 310",
+            "GEOG 202",
+            "MATH 203",
+            "PSYC 204"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Economics",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credit from",
+          "courses": [
+            "AGEC 200",
+            "ECON 208"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Advanced Development Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from",
+          "courses": [
+            "AGEC 442",
+            "AGRI 411",
+            "GEOG 408",
+            "GEOG 409",
+            "GEOG 423",
+            "GEOG 514",
+            "GEOG 525",
+            "INTD 360",
+            "INTD 362"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Natural Sciences",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "AEBI 421",
+            "AGRI 550",
+            "ATOC 341",
+            "BIOL 308",
+            "BIOL 343",
+            "BIOL 451",
+            "BIOL 465",
+            "BIOL 553",
+            "BREE 217",
+            "ENVB 210",
+            "ENVB 305",
+            "GEOG 305",
+            "GEOG 322",
+            "NRSC 451",
+            "NUTR 501",
+            "NUTR 505",
+            "PARA 410",
+            "WILD 421"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "If chosen, you may take only one of the following courses: BIOL 308 or ENVB 301; BIOL 465 or WILD 421; ENVB 210 or GEOG 305; BREE 217 or GEOG 322",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Social Sciences",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from",
+          "courses": [
+            "AEBI 423",
+            "AEBI 425",
+            "AGEC 333",
+            "ANTH 322",
+            "ANTH 451",
+            "ANTH 512",
+            "ECON 326",
+            "ECON 347",
+            "ECON 405",
+            "ECON 511",
+            "ENVR 421",
+            "ENVR 422",
+            "GEOG 201",
+            "GEOG 311",
+            "GEOG 331",
+            "GEOG 340",
+            "GEOG 404",
+            "GEOG 496",
+            "GEOG 498",
+            "GEOG 510",
+            "GEOG 514",
+            "GEOG 530",
+            "HIST 292",
+            "HIST 510",
+            "INTD 360",
+            "INTD 362",
+            "INTD 364",
+            "POLI 345",
+            "POLI 350",
+            "POLI 445",
+            "SOCI 254",
+            "SOCI 331",
+            "WCOM 314"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,89 @@
+{
+  "id": "mathematics-computer-science-major-bsc",
+  "name": "Mathematics and Computer Science Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/mathematics-statistics/mathematics-computer-science-major-bsc/",
+  "credits": 72,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 54,
+      "courses": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 250",
+        "COMP 251",
+        "COMP 273",
+        "COMP 302",
+        "COMP 310",
+        "COMP 330",
+        "COMP 360",
+        "MATH 222",
+        "MATH 235",
+        "MATH 236",
+        "MATH 242",
+        "MATH 315",
+        "MATH 317",
+        "MATH 318",
+        "MATH 323",
+        "MATH 340"
+      ],
+      "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202 but can replace it with an additional Computer Science complementary course. Student cannot replace MATH 317 with COMP 350."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "MATH 204",
+            "MATH 208",
+            "MATH 308",
+            "MATH 319",
+            "MATH 324",
+            "MATH 326",
+            "MATH 327",
+            "MATH 329",
+            "MATH 338",
+            "MATH 346",
+            "MATH 348",
+            "MATH 378",
+            "MATH 410",
+            "MATH 417",
+            "MATH 423",
+            "MATH 427",
+            "MATH 430",
+            "MATH 447",
+            "MATH 463",
+            "MATH 478"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "9 credits selected from Computer Science courses at the 300 level or above (except COMP 396) and ECSE 508",
+          "match": {
+            "subjects": [
+              "COMP"
+            ],
+            "minLevel": 300,
+            "exclude": [
+              "COMP 396"
+            ]
+          },
+          "courses": [
+            "ECSE 508"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

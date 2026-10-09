@@ -1,0 +1,41 @@
+{
+  "id": "electrical-engineering-minor-bsc",
+  "name": "Electrical Engineering Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/electrical-engineering-minor-bsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "ECSE 200",
+        "ECSE 210",
+        "ECSE 303",
+        "ECSE 330"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ECSE 305",
+            "ECSE 334"
+          ]
+        },
+        {
+          "title": "3 credits from the following and 9 credits of ECSE courses at the 200, 300, or 400 level subject to approval by the Department of Electrical and Computer Engineering",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

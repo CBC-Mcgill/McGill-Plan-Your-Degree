@@ -1,0 +1,99 @@
+{
+  "id": "physics-biological-honours-bsc",
+  "name": "Physics: Biological Physics Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/physics-biological-honours-bsc/",
+  "credits": 82,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 63,
+      "courses": [
+        "BIOL 219",
+        "BIOL 395",
+        "CHEM 212",
+        "MATH 247",
+        "MATH 315",
+        "MATH 323",
+        "PHYS 319",
+        "PHYS 329",
+        "BIOL 202",
+        "MATH 248",
+        "PHYS 241",
+        "PHYS 251",
+        "PHYS 253",
+        "PHYS 257",
+        "PHYS 258",
+        "PHYS 346",
+        "PHYS 350",
+        "PHYS 352",
+        "PHYS 459",
+        "PHYS 519"
+      ],
+      "note": "Students who have taken the equivalent of CHEM 212 can make up the credits with complementary 3 or 4 credit courses in consultation with the program adviser."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "COMP 202",
+            "COMP 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "PHYS 328",
+            "PHYS 351"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "PHYS 339",
+            "PHYS 359",
+            "PHYS 469"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "CHEM 514",
+            "MATH 437",
+            "PHGY 425",
+            "PHYS 432",
+            "PHYS 434",
+            "PHYS 447",
+            "BIOL 300",
+            "BIOL 301",
+            "BIOL 303",
+            "BIOL 306",
+            "BIOL 313",
+            "BIOL 316",
+            "BIOL 551"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 to 7 credits selected from",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

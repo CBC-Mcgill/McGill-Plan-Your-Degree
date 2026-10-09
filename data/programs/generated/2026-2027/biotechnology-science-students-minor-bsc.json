@@ -1,0 +1,143 @@
+{
+  "id": "biotechnology-science-students-minor-bsc",
+  "name": "Biotechnology (for Science Students) Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/biotechnology/biotechnology-science-students-minor-bsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "BIOL 200",
+        {
+          "oneOf": [
+            "BIOL 201",
+            "BIOC 212"
+          ]
+        },
+        "BIOL 202",
+        "BIOT 505",
+        "MIMM 211"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Biomedicine",
+          "courses": [
+            "ANAT 541",
+            "EXMD 504",
+            "PATH 300"
+          ]
+        },
+        {
+          "title": "Chemical Engineering",
+          "courses": [
+            "CHEE 200",
+            "CHEE 204",
+            "CHEE 374"
+          ]
+        },
+        {
+          "title": "Chemistry",
+          "courses": [
+            "CHEM 482",
+            "CHEM 502",
+            "CHEM 552"
+          ]
+        },
+        {
+          "title": "General",
+          "courses": [
+            "FACC 300"
+          ]
+        },
+        {
+          "title": "Immunology",
+          "courses": [
+            "ANAT 261",
+            "BIOC 503",
+            "MIMM 214",
+            "MIMM 414",
+            "PHGY 513"
+          ]
+        },
+        {
+          "title": "Management",
+          "courses": [
+            "ECON 208",
+            "MGCR 211",
+            "MGCR 341",
+            "MGCR 352",
+            "MGCR 372"
+          ]
+        },
+        {
+          "title": "Microbiology",
+          "courses": [
+            "MIMM 323",
+            "MIMM 324",
+            "MIMM 413",
+            "MIMM 465",
+            "MIMM 466"
+          ]
+        },
+        {
+          "title": "Molecular Biology (Biology)",
+          "courses": [
+            "BIOL 300",
+            "BIOL 314",
+            "BIOL 520",
+            "BIOL 524",
+            "BIOL 551"
+          ]
+        },
+        {
+          "title": "Molecular Biology (Biochemistry)",
+          "courses": [
+            "BIOC 311",
+            "BIOC 312",
+            "BIOC 450",
+            "BIOC 454"
+          ]
+        },
+        {
+          "title": "Physiology",
+          "courses": [
+            "EXMD 401",
+            "EXMD 502",
+            "EXMD 503",
+            "PHAR 562",
+            "PHAR 563",
+            "PHGY 518"
+          ]
+        },
+        {
+          "title": "Pollution",
+          "courses": [
+            "CHEE 593",
+            "CIVE 225",
+            "CIVE 430",
+            "CIVE 557"
+          ]
+        },
+        {
+          "title": "9 credits selected from courses outside the department of the student's main program",
+          "unparsed": true
+        },
+        {
+          "title": "Students may select three courses from one of the lists below, or may choose three alternate courses with adviser approval",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

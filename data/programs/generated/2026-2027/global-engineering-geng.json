@@ -1,0 +1,535 @@
+{
+  "id": "global-engineering-geng",
+  "name": "Global Engineering",
+  "degree": "B.G.E.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/global-engineering/global-engineering-geng/",
+  "credits": 127,
+  "groups": [
+    {
+      "title": "Required Year 0 and Year 1 Courses",
+      "kind": "required",
+      "credits": 60,
+      "courses": [
+        "GEAC 211",
+        "GEAC 212",
+        "GEBI 122",
+        "GEBI 211",
+        "GEBI 221",
+        "GECH 113",
+        "GECH 122",
+        "GECS 112",
+        "GECS 113",
+        "GECS 123",
+        "GEEC 221",
+        "GEEC 222",
+        "GEEC 223",
+        "GEEE 221",
+        "GEHS 111",
+        "GEHS 121",
+        "GEHS 221",
+        "GEIN 121",
+        "GEIN 221",
+        "GEMA 113",
+        "GEMA 123",
+        "GEMA 213",
+        "GEMA 223",
+        "GEML 111",
+        "GEML 121",
+        "GEML 211",
+        "GEML 221",
+        "GEMO 111",
+        "GEMO 211",
+        "GEPH 113",
+        "GEPH 123",
+        "GEPH 213",
+        "GEPH 221",
+        "GEPR 121",
+        "GEPR 221",
+        "GESP 111",
+        "GESP 121",
+        "GESP 211",
+        "GESP 221"
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Non-Departmental Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "INTG 215",
+        "WCOM 206"
+      ]
+    },
+    {
+      "title": "Required Faculty of Engineering Courses",
+      "kind": "required",
+      "credits": 4,
+      "courses": [
+        "FACC 200",
+        "FACC 250",
+        "FACC 300",
+        "FACC 400"
+      ]
+    },
+    {
+      "title": "Global Engineering Technical Complementary Courses",
+      "kind": "complementary",
+      "credits": 41,
+      "rules": [
+        {
+          "title": "30 credits",
+          "courses": [
+            "BIEN 219",
+            "CHEE 231",
+            "CIVE 207",
+            "ECSE 206",
+            "FACC 463",
+            "MATH 266",
+            "MATH 317",
+            "MECH 220",
+            "MECH 309",
+            "MIME 260",
+            "MIME 261"
+          ]
+        },
+        {
+          "title": "If chosen, students select either MIME 260 or MIME 261",
+          "maxCourses": 1,
+          "courses": [
+            "MIME 260",
+            "MIME 261"
+          ]
+        },
+        {
+          "title": "Students select one of MATH 266 or MATH 317 or MECH 309",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 266",
+            "MATH 317",
+            "MECH 309"
+          ]
+        },
+        {
+          "title": "9-11 credits",
+          "courses": [
+            "BIEN 320",
+            "CHEE 370",
+            "ECSE 308",
+            "ECSE 353",
+            "MECH 331",
+            "MECH 332",
+            "MIME 356"
+          ]
+        },
+        {
+          "title": "Students select one of MECH 331 or MECH 332 or MIME 356",
+          "maxCourses": 1,
+          "courses": [
+            "MECH 331",
+            "MECH 332",
+            "MIME 356"
+          ]
+        },
+        {
+          "title": "6-7 credits",
+          "courses": [
+            "SEAD 500",
+            "SEAD 510",
+            "SEAD 515",
+            "SEAD 550"
+          ]
+        },
+        {
+          "title": "41 credits",
+          "courses": [
+            "BIEN 210",
+            "BIEN 219",
+            "BIEN 267",
+            "BIEN 280",
+            "BIEN 290",
+            "BIEN 314",
+            "BIEN 340",
+            "BIEN 350",
+            "BIEN 360",
+            "BIEN 390",
+            "BIEN 420",
+            "BIEN 470"
+          ]
+        },
+        {
+          "title": "44 credits",
+          "courses": [
+            "CHEE 200",
+            "CHEE 204",
+            "CHEE 220",
+            "CHEE 291",
+            "CHEE 314",
+            "CHEE 315",
+            "CHEE 351",
+            "CHEE 380",
+            "CHEE 390",
+            "CHEE 423",
+            "CHEE 453",
+            "CHEM 234",
+            "FACC 463"
+          ]
+        },
+        {
+          "title": "47 credits",
+          "courses": [
+            "CIVE 202",
+            "CIVE 207",
+            "CIVE 225",
+            "CIVE 311",
+            "CIVE 317",
+            "CIVE 318",
+            "CIVE 319",
+            "CIVE 323",
+            "CIVE 324",
+            "CIVE 327",
+            "EPSC 221",
+            "FACC 463",
+            "MECH 289"
+          ]
+        },
+        {
+          "title": "46-47 credits",
+          "courses": [
+            "COMP 206",
+            "COMP 251",
+            "COMP 360",
+            "COMP 421",
+            "ECSE 223",
+            "ECSE 321",
+            "ECSE 343",
+            "ECSE 428",
+            "ECSE 458",
+            "ECSE 507",
+            "ECSE 509",
+            "ECSE 526",
+            "ECSE 551",
+            "ECSE 552",
+            "MATH 240",
+            "MECH 559",
+            "MECH 579"
+          ]
+        },
+        {
+          "title": "If chosen, students select one of ECSE 507, MECH 559 or MECH 579",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 507",
+            "MECH 559",
+            "MECH 579"
+          ]
+        },
+        {
+          "title": "44 credits",
+          "courses": [
+            "ECSE 206",
+            "ECSE 210",
+            "ECSE 222",
+            "ECSE 307",
+            "ECSE 308",
+            "ECSE 324",
+            "ECSE 331",
+            "ECSE 343",
+            "ECSE 353",
+            "ECSE 362",
+            "ECSE 412",
+            "ECSE 458"
+          ]
+        },
+        {
+          "title": "3-4 credits",
+          "courses": [
+            "COMP 417",
+            "ECSE 335",
+            "ECSE 403",
+            "ECSE 408",
+            "ECSE 416",
+            "ECSE 433",
+            "ECSE 444",
+            "ECSE 470",
+            "MECH 412",
+            "MECH 572",
+            "MECH 573",
+            "MIME 262"
+          ]
+        },
+        {
+          "title": "If chosen, students select one of ECSE 403 or MECH 412",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 403",
+            "MECH 412"
+          ]
+        },
+        {
+          "title": "50 credits",
+          "courses": [
+            "BIEN 310",
+            "CHEE 231",
+            "CIVE 207",
+            "ECSE 206",
+            "ECSE 308",
+            "FACC 463",
+            "FACC 500",
+            "FACC 501",
+            "MATH 266",
+            "MATH 317",
+            "MECH 220",
+            "MECH 289",
+            "MGPO 362",
+            "MIME 260",
+            "MIME 261",
+            "MIME 356",
+            "MECH 309"
+          ]
+        },
+        {
+          "title": "If chosen, students select either MIME 260 or MIME 261",
+          "maxCourses": 1,
+          "courses": [
+            "MIME 260",
+            "MIME 261"
+          ]
+        },
+        {
+          "title": "Students select one of MATH 266 or MATH 317 or MECH 309",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 266",
+            "MATH 317",
+            "MECH 309"
+          ]
+        },
+        {
+          "title": "3 credits",
+          "courses": [
+            "BUSA 465",
+            "LAWG 570",
+            "MGPO 364",
+            "MGPO 438",
+            "ORGB 321"
+          ]
+        },
+        {
+          "title": "40 credits",
+          "courses": [
+            "FACC 463",
+            "MECH 390",
+            "MIME 212",
+            "MIME 250",
+            "MIME 261",
+            "MIME 311",
+            "MIME 317",
+            "MIME 341",
+            "MIME 352",
+            "MIME 356",
+            "MIME 360",
+            "MIME 455"
+          ]
+        },
+        {
+          "title": "6 credits",
+          "courses": [
+            "MIME 345",
+            "MIME 350",
+            "MIME 362",
+            "MIME 465",
+            "MIME 467",
+            "MIME 470",
+            "MIME 473"
+          ]
+        },
+        {
+          "title": "38-41 credits",
+          "courses": [
+            "CIVE 207",
+            "ECSE 206",
+            "ECSE 209",
+            "MATH 266",
+            "MATH 317",
+            "MECH 220",
+            "MECH 301",
+            "MECH 309",
+            "MECH 331",
+            "MECH 332",
+            "MECH 360",
+            "MECH 390",
+            "MECH 393",
+            "MECH 463",
+            "MECH 493",
+            "MIME 260"
+          ]
+        },
+        {
+          "title": "Students select one of ECSE 209 or MECH 301",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 209",
+            "MECH 301"
+          ]
+        },
+        {
+          "title": "Students select one of MATH 266 or MATH 317 or MECH 309",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 266",
+            "MATH 317",
+            "MECH 309"
+          ]
+        },
+        {
+          "title": "Students select one of MECH 331 or MECH 332",
+          "maxCourses": 1,
+          "courses": [
+            "MECH 331",
+            "MECH 332"
+          ]
+        },
+        {
+          "title": "Students select one of MECH 393 or MECH 493",
+          "maxCourses": 1,
+          "courses": [
+            "MECH 393",
+            "MECH 493"
+          ]
+        },
+        {
+          "title": "6-7 credits",
+          "courses": [
+            "COMP 417",
+            "ECSE 307",
+            "ECSE 461",
+            "MECH 292",
+            "MECH 314",
+            "MECH 315",
+            "MECH 321",
+            "MECH 341",
+            "MECH 346",
+            "MECH 383",
+            "MECH 412",
+            "MECH 572",
+            "MECH 573"
+          ]
+        },
+        {
+          "title": "Students select one of ECSE 307 or MECH 315",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 307",
+            "MECH 315"
+          ]
+        },
+        {
+          "title": "Upon their arrival at McGill in the third year, each student will take 41-53 credits in one of nine streams",
+          "unparsed": true
+        },
+        {
+          "title": "45-48 credits (14 courses) must be taken, chosen as follows: 30 credits (9 courses) from List A 9-11 credits (3 courses) from List B 6-7 credits (2 courses) from List C",
+          "unparsed": true
+        },
+        {
+          "title": "44 credits (13 courses) from List A 3-4 credits (1 course) from List B",
+          "unparsed": true
+        },
+        {
+          "title": "53 credits (16 courses) must be taken, chosen as follows: 50 credits (15 courses) from List A 3 credits (1 course) from List B",
+          "unparsed": true
+        },
+        {
+          "title": "40 credits (13 courses) from List A 6 credits (2 courses) from List B",
+          "unparsed": true
+        },
+        {
+          "title": "38-41 credits (12 courses) from List A 6-7 credits (2 courses) from List B",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Studies",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Group A – Impact of Technology on Society (All streams): 3 credits from the following",
+          "courses": [
+            "ANTH 212",
+            "ARCH 515",
+            "BTEC 502",
+            "COMS 200",
+            "COMS 411",
+            "ECON 225",
+            "ECON 347",
+            "ENVR 201",
+            "GEOG 203",
+            "GEOG 205",
+            "GEOG 302",
+            "INSY 331",
+            "INSY 334",
+            "INSY 455",
+            "LLCU 212",
+            "MGCR 331",
+            "MGPO 440",
+            "MGPO 460",
+            "MGPO 485",
+            "PHIL 343",
+            "SEAD 500",
+            "SEAD 530",
+            "SOCI 235",
+            "SOCI 312",
+            "SOCI 325"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Desautels Faculty of Management",
+          "courses": [
+            "BUSA 465",
+            "INDR 294",
+            "INTG 215",
+            "MGCR 222",
+            "MGCR 352",
+            "ORGB 321",
+            "ORGB 420",
+            "ORGB 423"
+          ]
+        },
+        {
+          "title": "Faculty of Science",
+          "courses": [
+            "ENVR 203",
+            "ENVR 400",
+            "MATH 338",
+            "PSYC 100"
+          ]
+        },
+        {
+          "title": "Faculty of Engineering",
+          "courses": [
+            "ARCH 528",
+            "FACC 220",
+            "FACC 500",
+            "FACC 501"
+          ]
+        },
+        {
+          "title": "0-6 credits at the 200 or 300 level from the following",
+          "unparsed": true
+        },
+        {
+          "title": "200 or 300 level courses in the following departments excluding seminars, field courses, surveys, special/selected topics courses, courses with physical, natural or medical sciences, mathematics, and statistic contents, and courses reserved for major or Honours in the relative programs:; Anthropology (ANTH); Art History & Communications (ARTH and COMS); East Asian Studies (EAST); Economics (ECON) (any 200- or 300-level course excluding ECON 227D1/D2 and ECON 337)*; French Language & Literature (FREN)* (excluding FREN 222 and FREN 333); French Language Center (FRSL courses 200 level or higher); History and Classical Studies (HIST and CLAS) excluding HIST 339; Inst for Gender, Sex & Fem St (GSFS); Institute for Study of Canada (CANS, and INDG); Islamic Studies (AFRI, and ISLA); Jewish Studies (JWST); Languages, Literatures, Cultures (GERM, HISP, ITAL, LLCU and RUSS); Philosophy (PHIL) (excluding PHIL 210 and PHIL 310); Political Science (POLI) (excluding POLI 311); Religious Studies (CATH and RELG); Sociology (SOCI) (excluding SOCI 211, SOCI 331, SOCI 342, SOCI 343 and SOCI 350)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

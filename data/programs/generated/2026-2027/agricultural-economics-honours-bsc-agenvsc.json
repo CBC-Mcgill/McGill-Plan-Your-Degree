@@ -1,0 +1,60 @@
+{
+  "id": "agricultural-economics-honours-bsc-agenvsc",
+  "name": "Agricultural Economics Honours",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/natural-resource-sciences/agricultural-economics-honours-bsc-agenvsc/",
+  "credits": 42,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "AGEC 200",
+        "AGEC 201",
+        "AGEC 231",
+        "AGEC 320",
+        "AGEC 330",
+        "AGEC 333",
+        "AGEC 425",
+        "AGEC 430",
+        "AGEC 442",
+        "AGEC 491",
+        "ENVB 210"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "With the approval of the Academic Adviser, one introductory course in each of the following areas",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Specialization",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Agribusiness Specialization (24 credits)",
+          "unparsed": true
+        },
+        {
+          "title": "Environmental Economics Specialization (24 credits)",
+          "unparsed": true
+        },
+        {
+          "title": "Professional Agrology Specialization (24 credits)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

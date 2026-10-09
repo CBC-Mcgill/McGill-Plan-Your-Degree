@@ -1,0 +1,72 @@
+{
+  "id": "education-arts-students-minor-concentration-ba",
+  "name": "Education for Arts Students Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/education-arts-students/education-arts-students-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "EDEC 260",
+        "EDPE 300"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Group A: 3 credits from",
+          "courses": [
+            "EDEC 233",
+            "EDEC 248",
+            "EDEC 249"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group A: 3 credits from",
+          "courses": [
+            "EDEC 247",
+            "EDEM 220",
+            "EDER 461"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group B",
+          "courses": [
+            "EDEC 221",
+            "EDGC 201",
+            "EDGC 301",
+            "EDGC 400",
+            "EDPE 304",
+            "EDES 304",
+            "EDPI 341"
+          ]
+        },
+        {
+          "title": "Note: If chosen, you may take EDPE 304 or EDES 304 but not both",
+          "maxCourses": 1,
+          "courses": [
+            "EDPE 304",
+            "EDES 304"
+          ]
+        },
+        {
+          "title": "6 credits to be chosen from the following list",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,184 @@
+{
+  "id": "physiology-major-bsc",
+  "name": "Physiology Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physiology/physiology-major-bsc/",
+  "credits": 67,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 36,
+      "courses": [
+        "BIOC 311",
+        "BIOL 200",
+        "BIOL 202",
+        "BIOL 301",
+        "CHEM 212",
+        "CHEM 222",
+        "PHGY 200",
+        "PHGY 209",
+        "PHGY 210",
+        "PHGY 212",
+        "PHGY 213",
+        "PHGY 312",
+        "PHGY 313"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOC 212",
+            "BIOL 201"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PHGY 311",
+            "PHGY 314"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 309",
+            "BIOL 373",
+            "COMP 204",
+            "COMP 250",
+            "PSYC 305",
+            "ANAT 214",
+            "ANAT 261",
+            "ANAT 316",
+            "BIOL 532",
+            "BMDE 505",
+            "BMDE 519",
+            "EXMD 502",
+            "EXMD 503",
+            "EXMD 506",
+            "EXMD 507",
+            "EXMD 508",
+            "MIMM 414",
+            "MIMM 509",
+            "PHGY 425",
+            "PHGY 451",
+            "PHGY 459",
+            "PHGY 461",
+            "PHGY 488",
+            "PHGY 502",
+            "PHGY 513",
+            "PHGY 515",
+            "PHGY 516",
+            "PHGY 518",
+            "PHGY 524",
+            "PHGY 525",
+            "PHGY 531",
+            "PHGY 550",
+            "PHGY 556",
+            "PHGY 560",
+            "PSYC 470",
+            "PSYT 500",
+            "ANAT 321",
+            "ANAT 322",
+            "ANAT 365",
+            "ANAT 381",
+            "ANAT 416",
+            "ANAT 458",
+            "ANAT 541",
+            "ANAT 542",
+            "ANAT 565",
+            "BIOC 458",
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 313",
+            "BIOL 314",
+            "BIOL 324",
+            "BIOL 389",
+            "BIOL 416",
+            "BIOL 468",
+            "BIOL 518",
+            "BIOL 520",
+            "BIOL 524",
+            "BIOL 544",
+            "BIOL 546",
+            "BIOL 551",
+            "BIOL 588",
+            "CHEM 214",
+            "EXMD 401",
+            "EXMD 504",
+            "EXMD 510",
+            "HGEN 575",
+            "NEUR 310",
+            "PHAR 503",
+            "PHAR 504",
+            "PHAR 562",
+            "PHAR 563",
+            "PPHS 501",
+            "PSYC 302",
+            "PSYC 311",
+            "PSYC 317",
+            "PSYC 318",
+            "PSYC 342",
+            "PSYC 410",
+            "PSYC 427",
+            "PSYC 522",
+            "PSYC 526",
+            "PHIL 341",
+            "PHIL 343",
+            "REDM 410"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "the 6-credit course equals 3 credits of ULP and 6 credits of electives",
+          "unparsed": true
+        },
+        {
+          "title": "the 9-credit course equals 3 credits of ULP and 6 credits of electives",
+          "unparsed": true
+        },
+        {
+          "title": "Students may take ANAT 458 or BIOC 458 but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ANAT 458",
+            "BIOC 458"
+          ]
+        },
+        {
+          "title": "3-4 credits, one of",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits selected from the Upper-Level Physiology (ULP) course list as follows",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits selected from the Upper-Level Science (ULS)",
+          "unparsed": true
+        },
+        {
+          "title": "For Chemistry, Neurology, and Neurosurgery: select from all courses 300 level and above and the ULS courses listed below",
+          "unparsed": true
+        },
+        {
+          "title": "Students may opt to replace 3 credits of the 6 credits of Upper Level Science with 3 credits selected from the following list",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

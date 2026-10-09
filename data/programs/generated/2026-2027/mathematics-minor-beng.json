@@ -1,0 +1,79 @@
+{
+  "id": "mathematics-minor-beng",
+  "name": "Mathematics Minor",
+  "degree": "B.Eng.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/mathematics-minor-beng/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "MATH 242"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "MATH 223",
+            "MATH 247"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6-12 credits selected from",
+          "courses": [
+            "ECSE 205",
+            "MATH 204",
+            "MATH 240",
+            "MATH 243",
+            "MATH 264",
+            "MATH 271",
+            "MATH 316",
+            "MATH 319",
+            "MATH 323",
+            "MATH 324",
+            "MATH 326",
+            "MATH 340",
+            "MATH 378",
+            "MATH 417",
+            "MATH 427",
+            "MATH 447",
+            "MATH 463",
+            "MATH 475",
+            "MATH 478",
+            "MATH 563"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        },
+        {
+          "title": "Students may take MATH 271 or MATH 319 but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 271",
+            "MATH 319"
+          ]
+        },
+        {
+          "title": "0-6 credits chosen from (200- to 500-level) Mathematics and Statistics courses approved for the B.Sc",
+          "unparsed": true
+        },
+        {
+          "title": "MATH 262, MATH 263 (or any course with substantial overlap in content with these two courses) and/or MATH 338 cannot be credited towards this minor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

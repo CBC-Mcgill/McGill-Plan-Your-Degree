@@ -1,0 +1,230 @@
+{
+  "id": "bioengineering-beng",
+  "name": "Bioengineering",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/bioengineering/bioengineering-beng/",
+  "credits": 142,
+  "groups": [
+    {
+      "title": "Required Year 0 Courses",
+      "kind": "required",
+      "credits": 29,
+      "courses": [
+        "BIOL 112",
+        "CHEM 110",
+        "CHEM 120",
+        "MATH 133",
+        "MATH 140",
+        "MATH 141",
+        "PHYS 131",
+        "PHYS 142"
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Non-Departmental Courses",
+      "kind": "required",
+      "credits": 23,
+      "courses": [
+        "CHEM 212",
+        "COMP 208",
+        "FACC 150",
+        "FACC 250",
+        "FACC 300",
+        "FACC 400",
+        "MATH 262",
+        "MATH 263",
+        "MATH 264"
+      ],
+      "note": "Students from a CEGEP background who have completed a CEGEP course equivalent to CHEM 212 may obtain transfer credits for this course by passing the McGill Placement Exam before the start of their first term. For information on Science Placement Exams, see www.mcgill.ca/exams/dates/science. CEGEP students who do not successfully complete the CHEM 212 Placement Exam must take CHEM 212 at McGill, as outlined in the program requirements."
+    },
+    {
+      "title": "Required Bioengineering Courses",
+      "kind": "required",
+      "credits": 63,
+      "courses": [
+        "BIEN 201",
+        "BIEN 203",
+        "BIEN 210",
+        "BIEN 219",
+        "BIEN 221",
+        "BIEN 267",
+        "BIEN 280",
+        "BIEN 290",
+        "BIEN 310",
+        "BIEN 314",
+        "BIEN 320",
+        "BIEN 340",
+        "BIEN 350",
+        "BIEN 380",
+        "BIEN 390",
+        "BIEN 420",
+        "BIEN 440",
+        "BIEN 471",
+        "BIEN 472"
+      ]
+    },
+    {
+      "title": "Bioengineering Technical Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18-19 credits",
+          "courses": [
+            "BIEN 330",
+            "BIEN 361",
+            "BIEN 410",
+            "BIEN 462",
+            "BIEN 500",
+            "BIEN 505",
+            "BIEN 510",
+            "BIEN 514",
+            "BIEN 515",
+            "BIEN 524",
+            "BIEN 525",
+            "BIEN 530",
+            "BIEN 535",
+            "BIEN 540",
+            "BIEN 545",
+            "BIEN 550",
+            "BIEN 560",
+            "BIEN 570",
+            "BIEN 580",
+            "BIEN 585",
+            "BIEN 590",
+            "BIEN 595",
+            "BMDE 502",
+            "BMDE 503",
+            "BMDE 504",
+            "BMDE 505",
+            "BMDE 508",
+            "BMDE 512",
+            "BMDE 519",
+            "CHEE 563",
+            "CIVE 281",
+            "CIVE 557",
+            "COMP 250",
+            "COMP 251",
+            "COMP 462",
+            "COMP 551",
+            "MECH 321",
+            "MECH 513",
+            "MECH 547",
+            "MECH 561",
+            "MECH 563",
+            "MECH 572",
+            "MIME 470",
+            "MIME 473",
+            "PHYS 534",
+            "SEAD 510",
+            "SEAD 515",
+            "SEAD 520",
+            "SEAD 540",
+            "SEAD 550"
+          ]
+        },
+        {
+          "title": "Note: Students may only take one of the two 4-credit technical courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students will need to take 6 courses to upgrade their general knowledge of Bioengineering",
+          "unparsed": true
+        },
+        {
+          "title": "At least 4 courses must be selected from the BIEN courses listed below",
+          "unparsed": true
+        },
+        {
+          "title": "Maximum 6 credits of SEAD courses are allowed",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Studies Group A - Impact of Technology on Society",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "ANTH 212",
+            "ARCH 515",
+            "BTEC 502",
+            "COMS 200",
+            "COMS 411",
+            "ECON 225",
+            "ECON 347",
+            "ENVR 201",
+            "GEOG 203",
+            "GEOG 205",
+            "GEOG 302",
+            "INSY 331",
+            "INSY 334",
+            "INSY 455",
+            "LLCU 212",
+            "MGCR 331",
+            "MGPO 440",
+            "MGPO 460",
+            "MGPO 485",
+            "PHIL 343",
+            "SEAD 500",
+            "SEAD 530",
+            "SOCI 235",
+            "SOCI 312",
+            "SOCI 325"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Studies Group B - Humanities and Social Science, Management Studies and Law",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Desautels Faculty of Management",
+          "courses": [
+            "BUSA 465",
+            "INDR 294",
+            "INTG 215",
+            "MGCR 222",
+            "MGCR 352",
+            "ORGB 321",
+            "ORGB 420",
+            "ORGB 423"
+          ]
+        },
+        {
+          "title": "Faculty of Science",
+          "courses": [
+            "ENVR 203",
+            "ENVR 400",
+            "MATH 338",
+            "PSYC 100"
+          ]
+        },
+        {
+          "title": "Faculty of Engineering",
+          "courses": [
+            "ARCH 528",
+            "FACC 220",
+            "FACC 500",
+            "FACC 501"
+          ]
+        },
+        {
+          "title": "Faculty of Arts 200 or 300 level courses in the following departments excluding seminars, field courses, surveys, special/selected topics courses, courses with physical, natural or medical sciences, mathematics, and statistic contents, and courses reserved for major or Honours in the relative programs:; Anthropology (ANTH) Art History & Communications (ARTH, and COMS) East Asian Studies (EAST) Economics (excluding ECON 227D1/ECON 227D2 and ECON 337)* French Language & Literature (FREN)* (excluding FREN 222, and FREN 333) French Language Center (FRSL courses 200 level or higher) History and Classical Studies (CLAS, and HIST excluding HIST 399) Inst for Gender, Sex & Fem St (GSFS) Institute for Study of Canada (CANS, and INDG) Islamic Studies (AFRI, and ISLA) Jewish Studies (JWST) Languages, Literatures, Cultures (GERM, HISP, ITAL, LLCU and RUSS) Philosophy (excluding PHIL 210 and PHIL 310) Political Science (excluding POLI 311) Religious Studies (CATH, RELG) Sociology (excluding SOCI 211, SOCI 330, SOCI 342, SOCI 343, SOCI 350)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

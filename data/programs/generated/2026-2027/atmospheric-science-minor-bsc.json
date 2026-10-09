@@ -1,0 +1,70 @@
+{
+  "id": "atmospheric-science-minor-bsc",
+  "name": "Atmospheric Science Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/atmospheric-oceanic-sciences/atmospheric-science-minor-bsc/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ATOC 214",
+            "ATOC 215",
+            "ATOC 219",
+            "ATOC 309",
+            "ATOC 312",
+            "ATOC 315",
+            "ATOC 357",
+            "ATOC 404",
+            "CHEM 219",
+            "PHYS 404"
+          ]
+        },
+        {
+          "title": "Note: Students may select ATOC 219 or CHEM 219 but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 219",
+            "CHEM 219"
+          ]
+        },
+        {
+          "title": "Note: Students may select ATOC 404 or PHYS 404 but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 404",
+            "PHYS 404"
+          ]
+        },
+        {
+          "title": "3-9 credits selected from",
+          "courses": [
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 517",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 548",
+            "ATOC 557",
+            "ATOC 558",
+            "ATOC 568"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

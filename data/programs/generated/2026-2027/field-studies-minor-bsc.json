@@ -1,0 +1,132 @@
+{
+  "id": "field-studies-minor-bsc",
+  "name": "Field Studies Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/field-study/field-studies-minor-bsc/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Africa Field Study Semester Africa Field Study Semester - Required Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits",
+          "courses": [
+            "ANTH 451",
+            "BIOL 451",
+            "GEOG 451"
+          ]
+        },
+        {
+          "title": "Students select one course titled \"Research in Society and Development in Africa\" and one course titled \"Research in Ecology and Development in Africa\" from the courses below",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Africa Field Study Semester Africa Field Study Semester - Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from",
+          "courses": [
+            "ANTH 416",
+            "BIOL 405",
+            "BIOL 428",
+            "BIOL 429",
+            "GEOG 404",
+            "GEOG 408",
+            "GEOG 423",
+            "HIST 498",
+            "WILD 420"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "Courses are offered on a rotational basis, at least 3 credits annually",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Barbados Field Study Semester - Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "ATOC 341",
+        "BIOL 343",
+        "FSCI 444",
+        "GEOG 340"
+      ]
+    },
+    {
+      "title": "Barbados Interdisciplinary Tropical Studies Field Semester - Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "AEBI 421",
+        "AEBI 423",
+        "AEBI 425",
+        "AEBI 427"
+      ]
+    },
+    {
+      "title": "Panama Field Study Semester Panama Field Study Semester - Required Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits",
+          "courses": [
+            "BIOL 553",
+            "ENVR 451"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Panama Field Study Semester Panama Field Study Semester - Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits",
+          "courses": [
+            "AGRI 550",
+            "GEOG 498"
+          ]
+        },
+        {
+          "title": "Panama Field Study Semester Panama Field Study Semester - Complementary Courses",
+          "courses": [
+            "GEOG 404",
+            "HIST 510"
+          ]
+        },
+        {
+          "title": "Students will register for the 6 credits offered the Winter of their participation in the field study semester",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "ATOC 373",
+        "EPSC 373",
+        "GEOG 373",
+        "ATOC 473",
+        "EPSC 473",
+        "GEOG 473"
+      ]
+    }
+  ],
+  "generated": true
+}

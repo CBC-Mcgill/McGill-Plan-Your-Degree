@@ -1,0 +1,62 @@
+{
+  "id": "one-health-minor-bsc-agenvsc",
+  "name": "One Health Minor",
+  "degree": "B.Sc.(Ag.Env.Sc.)",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/agri-env-sci/programs/minor-programs/one-health-minor-bsc-agenvsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "ANSC 350",
+        "LSCI 207",
+        "NRSC 515"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "GEOG 403",
+            "MIMM 413",
+            "PARA 410",
+            "PARA 424"
+          ]
+        },
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "AEIS 230",
+            "ANSC 312",
+            "ANSC 514",
+            "BREE 505",
+            "BREE 533",
+            "ENVR 201",
+            "MICR 331",
+            "MICR 341",
+            "MIMM 324",
+            "NRSC 221",
+            "NUTR 501",
+            "NUTR 505",
+            "SOCI 331"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "6 credits from the following: *",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

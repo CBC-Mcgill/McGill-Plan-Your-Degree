@@ -1,0 +1,65 @@
+{
+  "id": "mathematics-minor-concentration-ba",
+  "name": "Mathematics Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/mathematics-statistics/mathematics-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Expandable Version: Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "MATH 222",
+        "MATH 235",
+        "MATH 236",
+        "MATH 315"
+      ],
+      "note": "Note: Credit cannot be received for both MATH 236 and MATH 223 (listed as a required course in the non-expandable version of this Minor concentration)."
+    },
+    {
+      "title": "Expandable Version: Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Students selecting the expandable version of this program complete 6 credits of complementary courses from the Complementary Course List",
+          "unparsed": true
+        },
+        {
+          "title": "It is strongly recommended that students take MATH 323 as a complementary course",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Non-Expandable Version: Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "MATH 222",
+        "MATH 223",
+        "MATH 315"
+      ],
+      "note": "Note: Credit cannot be received for both MATH 223 and MATH 236 (listed as a required course in the expandable version of this Minor concentration)."
+    },
+    {
+      "title": "Non-Expandable Version: Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Students selecting the non-expandable version of this program complete 9 credits of complementary courses from the Complementary Course List",
+          "unparsed": true
+        },
+        {
+          "title": "It is strongly recommended that students take MATH 323 as a complementary course",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

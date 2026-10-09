@@ -1,0 +1,35 @@
+{
+  "id": "psychology-minor-bsc",
+  "name": "Psychology Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/psychology/psychology-minor-bsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "PSYC 211",
+            "PSYC 213",
+            "PSYC 215"
+          ]
+        },
+        {
+          "title": "3 or 6 credits selected from the following",
+          "unparsed": true
+        },
+        {
+          "title": "18 or 21 credits selected from Psychology courses at the 300 level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,31 @@
+{
+  "id": "persian-language-minor-concentration-ba",
+  "name": "Persian Language Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/islamic-studies/persian-language-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits of Persian language (3 levels) from the list below",
+          "courses": [
+            "ISLA 241",
+            "ISLA 342",
+            "ISLA 443",
+            "ISLA 545",
+            "ISLA 546"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

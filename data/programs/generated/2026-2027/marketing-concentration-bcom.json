@@ -1,0 +1,47 @@
+{
+  "id": "marketing-concentration-bcom",
+  "name": "Marketing Concentration",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/concentrations/marketing-concentration-bcom/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "MRKT 354",
+        "MRKT 451",
+        "MRKT 452"
+      ]
+    },
+    {
+      "title": "Complementary Course",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from",
+          "courses": [
+            "MRKT 351",
+            "MRKT 355",
+            "MRKT 357",
+            "MRKT 365",
+            "MRKT 434",
+            "MRKT 438",
+            "MRKT 440",
+            "MRKT 453",
+            "MRKT 455",
+            "MRKT 459",
+            "MRKT 483"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,153 @@
+{
+  "id": "honours-law-bcl-jd",
+  "name": "Honours Law",
+  "degree": "B.C.L./J.D.",
+  "faculty": "Law",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/law/programs/honours-law-bcl-jd/",
+  "credits": 120,
+  "groups": [
+    {
+      "title": "Required - Honours Thesis Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "WRIT 450",
+        "WRIT 451",
+        "WRIT 452"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 47,
+      "courses": [
+        "LAWG 100",
+        "LAWG 101",
+        "LAWG 102",
+        "LAWG 103",
+        "LAWG 110",
+        "PUB2 101",
+        "PUB3 116",
+        "LAWG 210",
+        "LAWG 220",
+        "PROC 124",
+        "PRAC 200"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Civil Law Immersion Courses",
+          "courses": [
+            "BUS2 561",
+            "LAWG 506",
+            "PROC 200",
+            "PRV1 549",
+            "PRV2 270",
+            "PRV4 548"
+          ]
+        },
+        {
+          "title": "Common Law Immersion Courses",
+          "courses": [
+            "PRV3 200",
+            "PRV3 534",
+            "PRV4 500",
+            "PRV4 549",
+            "PRV5 582"
+          ]
+        },
+        {
+          "title": "Social Diversity, Human Rights and Indigenous Law Courses",
+          "courses": [
+            "CMPL 500",
+            "CMPL 504",
+            "CMPL 511",
+            "CMPL 516",
+            "CMPL 565",
+            "CMPL 571",
+            "CMPL 573",
+            "CMPL 575",
+            "IDFC 500",
+            "LAWG 503",
+            "LAWG 505",
+            "LAWG 507",
+            "LAWG 508",
+            "LAWG 509",
+            "LAWG 562",
+            "LAWG 580",
+            "LAWG 582",
+            "LEEL 369",
+            "LEEL 582",
+            "PUB2 105",
+            "PUB2 500",
+            "PUB2 502",
+            "PUB2 503",
+            "PUB2 507",
+            "PUB2 551"
+          ]
+        },
+        {
+          "title": "Principles of Canadian Administrative Law: 3 credits from the following courses",
+          "courses": [
+            "BUS1 532",
+            "BUS2 504",
+            "BUS2 506",
+            "CMPL 518",
+            "CMPL 539",
+            "CMPL 543",
+            "CMPL 574",
+            "CMPL 575",
+            "CMPL 577",
+            "CMPL 580",
+            "LAWG 523",
+            "LAWG 561",
+            "LAWG 581",
+            "LAWG 583",
+            "LEEL 369",
+            "LEEL 570",
+            "LEEL 582",
+            "PRV4 545",
+            "PRV5 483",
+            "PUB2 400",
+            "PUB2 401",
+            "PUB2 500",
+            "PUB2 507",
+            "PUB2 515",
+            "PUB2 551"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following list of civil law courses",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from the following list of common law courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students must take at least 3 credits from the following courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 46,
+      "rules": [
+        {
+          "title": "Students must take 46 other elective courses offered within the Faculty or approved as credit equivalences in order to complete the 120-credit degree requirement",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

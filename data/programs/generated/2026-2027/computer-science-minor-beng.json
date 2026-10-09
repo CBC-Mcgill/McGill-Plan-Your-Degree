@@ -1,0 +1,80 @@
+{
+  "id": "computer-science-minor-beng",
+  "name": "Computer Science Minor",
+  "degree": "B.Eng.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/computer-science-minor-beng/",
+  "credits": 26,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "COMP 206"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "COMP 250",
+            "ECSE 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "COMP 302",
+            "COMP 303"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3-4 credits from the following",
+          "courses": [
+            "COMP 273",
+            "ECSE 324"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "3-4 credits from the following",
+          "courses": [
+            "CHEE 390",
+            "CIVE 320",
+            "COMP 350",
+            "ECSE 343",
+            "MATH 317",
+            "MECH 309"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "9 credits from",
+          "courses": [
+            "COMP 251",
+            "MATH 240"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "It is strongly recommended that students take COMP 251, as it is a prerequisite of many later computer science courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

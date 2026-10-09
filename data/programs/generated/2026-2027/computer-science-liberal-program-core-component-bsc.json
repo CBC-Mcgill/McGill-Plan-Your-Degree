@@ -1,0 +1,72 @@
+{
+  "id": "computer-science-liberal-program-core-component-bsc",
+  "name": "Computer Science Liberal Program - Core Science Component",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/computer-science/computer-science-liberal-program-core-component-bsc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "COMP 202",
+        "COMP 206",
+        "COMP 250",
+        "COMP 251",
+        "COMP 273",
+        "MATH 240"
+      ],
+      "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202, but it must be replaced with an additional computer science complementary course."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Group A",
+          "courses": [
+            "MATH 222",
+            "MATH 323",
+            "MATH 324"
+          ]
+        },
+        {
+          "title": "Group B",
+          "courses": [
+            "MATH 223",
+            "MATH 318",
+            "MATH 340"
+          ]
+        },
+        {
+          "title": "Group C",
+          "courses": [
+            "COMP 330",
+            "COMP 350",
+            "COMP 360"
+          ]
+        },
+        {
+          "title": "Group D",
+          "courses": [
+            "COMP 302",
+            "COMP 303"
+          ]
+        },
+        {
+          "title": "3 credits from each of the groups A, B, C, and D",
+          "unparsed": true
+        },
+        {
+          "title": "An additional 3 credits may be selected from Group A or B",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,36 @@
+{
+  "id": "arabic-language-minor-concentration-ba",
+  "name": "Arabic Language Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/islamic-studies/arabic-language-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits of Arabic language (3 levels) from the list below",
+          "courses": [
+            "ISLA 221",
+            "ISLA 322",
+            "ISLA 423",
+            "ISLA 524",
+            "ISLA 525",
+            "ISLA 526"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        },
+        {
+          "title": "In the case of Introductory Arabic (9 credits), the extra 3 credits will be counted as electives",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

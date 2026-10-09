@@ -1,0 +1,64 @@
+{
+  "id": "mathematics-joint-honours-component-ba",
+  "name": "Mathematics Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/mathematics-statistics/mathematics-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "MATH 235",
+        "MATH 251",
+        "MATH 255"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "MATH 242",
+            "MATH 254"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "MATH 248",
+            "MATH 358",
+            "MATH 325",
+            "MATH 356",
+            "MATH 357",
+            "MATH 454",
+            "MATH 455",
+            "MATH 456",
+            "MATH 457",
+            "MATH 458",
+            "MATH 466"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "15 credits selected from the list below",
+          "unparsed": true
+        },
+        {
+          "title": "The remaining credits are to be chosen from the full list of available Honours courses in Mathematics and Statistics",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

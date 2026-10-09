@@ -45,8 +45,8 @@ pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm test:e2e
 - Game elements show real progress only, and each screen has one obvious primary action.
 - Banned styles are cream or off-white backgrounds, italic accent words in headings, numbered "01 / 02" section labels, monospace labels, and pill-shaped buttons.
 
-Never hand-edit files in `data/catalogue/`.
-The crawler generates them, and they land through a reviewed PR.
+Never hand-edit files in `data/catalogue/` or `data/programs/generated/`.
+The crawlers generate them, and they land through a reviewed PR.
 
 ## Fix a crawler or prerequisite parsing bug
 

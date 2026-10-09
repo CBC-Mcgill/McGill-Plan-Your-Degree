@@ -1,0 +1,311 @@
+{
+  "id": "science-arts-students-minor-concentration-ba",
+  "name": "Science for Arts Students Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/science-arts-students/science-arts-students-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "BIOL 210"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Atmospheric and Oceanic Sciences",
+          "courses": [
+            "ATOC 214",
+            "ATOC 215",
+            "ATOC 219",
+            "ATOC 309",
+            "ATOC 315",
+            "ATOC 357",
+            "MATH 222"
+          ]
+        },
+        {
+          "title": "Biochemistry",
+          "courses": [
+            "ANAT 262",
+            "BIOC 212",
+            "BIOL 200",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "Biochemistry",
+          "courses": [
+            "BIOC 311",
+            "BIOC 312"
+          ]
+        },
+        {
+          "title": "Biology - Cell and Molecular Stream",
+          "courses": [
+            "BIOL 200",
+            "BIOL 201",
+            "BIOL 202",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "Biology - Cell and Molecular Stream",
+          "courses": [
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 313",
+            "BIOL 314"
+          ]
+        },
+        {
+          "title": "Biology - Organismal Stream",
+          "courses": [
+            "BIOL 200",
+            "BIOL 201",
+            "BIOL 205",
+            "BIOL 215",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "Biology - Organismal Stream",
+          "courses": [
+            "BIOL 304",
+            "BIOL 305",
+            "BIOL 306",
+            "BIOL 307",
+            "BIOL 308",
+            "BIOL 310",
+            "BIOL 465"
+          ]
+        },
+        {
+          "title": "Chemistry",
+          "courses": [
+            "CHEM 212",
+            "CHEM 222",
+            "CHEM 267",
+            "CHEM 281",
+            "CHEM 302",
+            "CHEM 334",
+            "CHEM 381"
+          ]
+        },
+        {
+          "title": "Chemistry: One of",
+          "courses": [
+            "CHEM 203",
+            "CHEM 204"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Earth and Planetary Sciences",
+          "courses": [
+            "EPSC 201",
+            "EPSC 210",
+            "EPSC 212",
+            "EPSC 220",
+            "EPSC 231",
+            "EPSC 233",
+            "EPSC 240",
+            "EPSC 303",
+            "EPSC 320",
+            "EPSC 334",
+            "EPSC 355",
+            "EPSC 549"
+          ]
+        },
+        {
+          "title": "Students select either EPSC 201 or EPSC 233",
+          "maxCourses": 1,
+          "courses": [
+            "EPSC 201",
+            "EPSC 233"
+          ]
+        },
+        {
+          "title": "Geography",
+          "courses": [
+            "GEOG 203",
+            "GEOG 205",
+            "GEOG 272",
+            "GEOG 305",
+            "GEOG 321",
+            "GEOG 322",
+            "GEOG 372",
+            "GEOG 470"
+          ]
+        },
+        {
+          "title": "Mathematics and Statistics",
+          "courses": [
+            "MATH 203",
+            "MATH 204",
+            "MATH 222",
+            "MATH 223",
+            "MATH 338"
+          ]
+        },
+        {
+          "title": "Microbiology and Immunology",
+          "courses": [
+            "BIOL 200",
+            "BIOL 201",
+            "CHEM 212",
+            "MIMM 211",
+            "MIMM 314",
+            "MIMM 323",
+            "MIMM 324"
+          ]
+        },
+        {
+          "title": "Pathology",
+          "courses": [
+            "BIOL 200",
+            "BIOL 201",
+            "CHEM 212",
+            "PATH 300",
+            "PHGY 209",
+            "PHGY 210"
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYS 224",
+            "PHYS 230",
+            "PHYS 232",
+            "PHYS 241",
+            "PHYS 242",
+            "PHYS 257",
+            "PHYS 258",
+            "PHYS 320"
+          ]
+        },
+        {
+          "title": "Physiology",
+          "courses": [
+            "BIOL 200",
+            "BIOL 201",
+            "CHEM 212"
+          ]
+        },
+        {
+          "title": "Physiology",
+          "courses": [
+            "PHGY 209",
+            "PHGY 210"
+          ]
+        },
+        {
+          "title": "Physiology",
+          "courses": [
+            "PHGY 311",
+            "PHGY 312",
+            "PHGY 313",
+            "PHGY 314"
+          ]
+        },
+        {
+          "title": "Psychology",
+          "courses": [
+            "PSYC 204"
+          ]
+        },
+        {
+          "title": "Psychology",
+          "courses": [
+            "PSYC 211",
+            "PSYC 212",
+            "PSYC 213",
+            "PSYC 215"
+          ]
+        },
+        {
+          "title": "15 credits taken in one of the disciplinary areas given below",
+          "unparsed": true
+        },
+        {
+          "title": "Where suggested courses have prerequisites at the 200 or 300 level associated with them, credit for the associated prerequisites may also be counted as part of the 15 credits",
+          "unparsed": true
+        },
+        {
+          "title": "Plus one or more of these or related upper-level courses",
+          "unparsed": true
+        },
+        {
+          "title": "The Department also strongly encourages students to take one or more courses involving a laboratory because the science of chemistry is rooted in laboratory experience",
+          "unparsed": true
+        },
+        {
+          "title": "Students select 15 credits from the following courses and their associated prerequisites",
+          "unparsed": true
+        },
+        {
+          "title": "CHEM 212 or its equivalent is prerequisite to all 200-level or higher courses",
+          "unparsed": true
+        },
+        {
+          "title": "A combination of EPSC 201 or EPSC 233, together with EPSC 210 and EPSC 212 provides a grounding in Earth and Planetary Sciences and preparation for more specialized courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students should meet with an EPSC departmental adviser prior to selecting their courses, as some 200-level courses have specific prerequisites",
+          "unparsed": true
+        },
+        {
+          "title": "Students select 15 credits from the following courses and their associated prerequisites",
+          "unparsed": true
+        },
+        {
+          "title": "Students select 15 credits from the following courses and their associated prerequisites",
+          "unparsed": true
+        },
+        {
+          "title": "CHEM 212 or its equivalent is prerequisite, or corequisite, to these courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students select 15 credits from the following courses and their associated prerequisites",
+          "unparsed": true
+        },
+        {
+          "title": "Students select 15 credits from the following courses and their associated prerequisites",
+          "unparsed": true
+        },
+        {
+          "title": "Students select 15 credits from the following courses and their associated prerequisites",
+          "unparsed": true
+        },
+        {
+          "title": "And, if credits permit, one or more of these intermediate-level Physiology courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students in the Minor concentration take 15 credits of Psychology selected as follows",
+          "unparsed": true
+        },
+        {
+          "title": "Plus 6 credits from the following core courses",
+          "unparsed": true
+        },
+        {
+          "title": "Plus 6 credits Psychology courses at the 300 level or higher (excluding PSYC 305)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

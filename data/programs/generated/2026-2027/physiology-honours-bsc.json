@@ -1,0 +1,96 @@
+{
+  "id": "physiology-honours-bsc",
+  "name": "Physiology Honours",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physiology/physiology-honours-bsc/",
+  "credits": 77,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 65,
+      "courses": [
+        "ANAT 261",
+        "BIOC 311",
+        "BIOL 200",
+        "BIOL 202",
+        "BIOL 301",
+        "CHEM 212",
+        "CHEM 222",
+        "PHGY 200",
+        "PHGY 209",
+        "PHGY 210",
+        "PHGY 212",
+        "PHGY 213",
+        "PHGY 311",
+        "PHGY 312",
+        "PHGY 313",
+        "PHGY 314",
+        "PHGY 351",
+        "PHGY 359",
+        "PHGY 459",
+        "PHGY 461"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOC 212",
+            "BIOL 201"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "BIOL 309",
+            "BIOL 373",
+            "COMP 204",
+            "COMP 250",
+            "PSYC 305",
+            "BIOL 532",
+            "BMDE 519",
+            "EXMD 502",
+            "EXMD 503",
+            "EXMD 506",
+            "EXMD 507",
+            "EXMD 508",
+            "MIMM 414",
+            "MIMM 509",
+            "PHGY 425",
+            "PHGY 451",
+            "PHGY 488",
+            "PHGY 502",
+            "PHGY 513",
+            "PHGY 515",
+            "PHGY 516",
+            "PHGY 518",
+            "PHGY 524",
+            "PHGY 525",
+            "PHGY 531",
+            "PHGY 550",
+            "PHGY 556",
+            "PHGY 560",
+            "PSYC 470",
+            "PSYT 500"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits selected from the Upper-Level Physiology (ULP) course list as follows",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

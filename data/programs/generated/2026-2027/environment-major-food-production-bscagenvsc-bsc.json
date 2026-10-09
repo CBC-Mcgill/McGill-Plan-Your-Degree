@@ -1,0 +1,241 @@
+{
+  "id": "environment-major-food-production-bscagenvsc-bsc",
+  "name": "Environment Major - Food Production and Environment",
+  "degree": "B.Sc.(Ag.Env.Sc.) or B.Sc.",
+  "faculty": "Environment",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/environment/programs/environment-bscagenvsc-bsc/environment-major-food-production-bscagenvsc-bsc/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Core: Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "ENVR 200",
+        "ENVR 201",
+        "ENVR 202",
+        "ENVR 203",
+        "ENVR 301",
+        "ENVR 400"
+      ]
+    },
+    {
+      "title": "Core: Complementary Course - Senior Research Project",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Core: Complementary Course - Senior Research Project",
+          "courses": [
+            "AEBI 427",
+            "ENVR 401",
+            "ENVR 451",
+            "FSCI 444"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Domain: Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "AEBI 210",
+        "AGRI 340"
+      ]
+    },
+    {
+      "title": "Fundamentals",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "One of the following Statistics courses or equivalent",
+          "courses": [
+            "AEMA 310",
+            "MATH 203"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "ANSC 250",
+            "PLNT 200"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "BIOL 202",
+            "LSCI 204"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "ENVB 210",
+            "GEOG 305"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "BIOL 308",
+            "ENVB 305"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of",
+          "courses": [
+            "AGEC 200",
+            "ECON 208"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        }
+      ]
+    },
+    {
+      "title": "Applied Sciences",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Food and Human Health",
+          "courses": [
+            "AGRI 411",
+            "FDSC 200",
+            "MICR 331",
+            "NUTR 207",
+            "NUTR 501",
+            "NUTR 505",
+            "PARA 410",
+            "PHAR 303"
+          ]
+        },
+        {
+          "title": "Note: Students take FDSC 200 or NUTR 207, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "FDSC 200",
+            "NUTR 207"
+          ]
+        },
+        {
+          "title": "Food Production",
+          "courses": [
+            "AEBI 421",
+            "AEBI 425",
+            "AGRI 215",
+            "AGRI 325",
+            "AGRI 550",
+            "ENTO 352",
+            "PLNT 302",
+            "PLNT 307",
+            "PLNT 353",
+            "PLNT 430",
+            "PLNT 434",
+            "SOIL 315"
+          ]
+        },
+        {
+          "title": "Natural Resources and Natural Resource Impacts",
+          "courses": [
+            "BIOL 343",
+            "BIOL 465",
+            "BIOL 553",
+            "BREE 217",
+            "BREE 322",
+            "BREE 518",
+            "ENVB 500",
+            "GEOG 322",
+            "NRSC 333",
+            "WILD 401",
+            "WILD 421"
+          ]
+        },
+        {
+          "title": "Note: Students take BIOL 465 or WILD 421, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 465",
+            "WILD 421"
+          ]
+        },
+        {
+          "title": "Note: Students take BREE 217 or GEOG 322, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BREE 217",
+            "GEOG 322"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Social Science",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Economic and Resource Policy",
+          "courses": [
+            "AGEC 320",
+            "AGEC 333",
+            "AGEC 430",
+            "AGEC 442",
+            "ECON 225",
+            "ECON 405"
+          ]
+        },
+        {
+          "title": "Note: Students take AGEC 333 or ECON 405, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "AGEC 333",
+            "ECON 405"
+          ]
+        },
+        {
+          "title": "Social Change and Human Impacts",
+          "courses": [
+            "ENVR 421",
+            "GEOG 340",
+            "GEOG 498",
+            "GEOG 510",
+            "HIST 510",
+            "SOCI 254"
+          ]
+        },
+        {
+          "title": "Environment Management",
+          "courses": [
+            "AEBI 423",
+            "ANTH 418",
+            "BREE 529",
+            "ENVB 437",
+            "ENVB 529",
+            "GEOG 201",
+            "ENVR 422",
+            "GEOG 302",
+            "GEOG 404",
+            "GEOG 530",
+            "MGPO 440"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

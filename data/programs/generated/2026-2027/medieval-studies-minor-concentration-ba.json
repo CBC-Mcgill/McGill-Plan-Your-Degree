@@ -1,0 +1,137 @@
+{
+  "id": "medieval-studies-minor-concentration-ba",
+  "name": "Medieval Studies Minor Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/english/medieval-studies-minor-concentration-ba/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "MDST 400"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Art History and Communication Studies",
+          "courses": [
+            "ARTH 204",
+            "ARTH 314",
+            "ARTH 425"
+          ]
+        },
+        {
+          "title": "English",
+          "courses": [
+            "ENGL 306",
+            "ENGL 337",
+            "ENGL 342",
+            "ENGL 348",
+            "ENGL 349",
+            "ENGL 356",
+            "ENGL 357",
+            "ENGL 452",
+            "ENGL 456",
+            "ENGL 500",
+            "ENGL 553"
+          ]
+        },
+        {
+          "title": "History and Classical Studies",
+          "courses": [
+            "HIST 319",
+            "HIST 323",
+            "HIST 356",
+            "HIST 358",
+            "HIST 380",
+            "HIST 401",
+            "HIST 567"
+          ]
+        },
+        {
+          "title": "Islamic Studies",
+          "courses": [
+            "ISLA 325",
+            "ISLA 420",
+            "ISLA 430",
+            "ISLA 516"
+          ]
+        },
+        {
+          "title": "Jewish Studies",
+          "courses": [
+            "JWST 261",
+            "JWST 337"
+          ]
+        },
+        {
+          "title": "Languages, Literatures, and Cultures",
+          "courses": [
+            "ITAL 355",
+            "ITAL 356"
+          ]
+        },
+        {
+          "title": "Langue et Littérature Françaises",
+          "courses": [
+            "FREN 455",
+            "FREN 456"
+          ]
+        },
+        {
+          "title": "Philosophy",
+          "courses": [
+            "PHIL 344",
+            "PHIL 356"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either PHIL 344 or POLI 334",
+          "maxCourses": 1,
+          "courses": [
+            "PHIL 344",
+            "POLI 334"
+          ]
+        },
+        {
+          "title": "Political Science",
+          "courses": [
+            "POLI 334"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either POLI 334 or PHIL 344",
+          "maxCourses": 1,
+          "courses": [
+            "POLI 334",
+            "PHIL 344"
+          ]
+        },
+        {
+          "title": "Religious Studies",
+          "courses": [
+            "RELG 322",
+            "RELG 532"
+          ]
+        },
+        {
+          "title": "15 credits from the following list, of which only 9 credits may be taken in any one department",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 6 credits may be taken below the 300 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

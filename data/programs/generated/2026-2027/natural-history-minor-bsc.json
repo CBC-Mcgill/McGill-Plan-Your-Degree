@@ -1,0 +1,114 @@
+{
+  "id": "natural-history-minor-bsc",
+  "name": "Natural History Minor",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/redpath-museum/natural-history-minor-bsc/",
+  "credits": 24,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "REDM 400"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "List A: Zoology",
+          "courses": [
+            "AEBI 211",
+            "ANTH 312",
+            "BIOL 205",
+            "BIOL 215",
+            "BIOL 305",
+            "BIOL 350",
+            "BIOL 352",
+            "BIOL 418",
+            "BIOL 427",
+            "ENTO 330",
+            "EPSC 334",
+            "WILD 307",
+            "WILD 350",
+            "WILD 420"
+          ]
+        },
+        {
+          "title": "If chosen, students may take either ENTO 330 or BIOL 350",
+          "maxCourses": 1,
+          "courses": [
+            "ENTO 330",
+            "BIOL 350"
+          ]
+        },
+        {
+          "title": "List B: Botany",
+          "courses": [
+            "AEBI 210",
+            "BIOL 205",
+            "BIOL 215",
+            "BIOL 240",
+            "PLNT 304",
+            "PLNT 353",
+            "PLNT 358",
+            "PLNT 460"
+          ]
+        },
+        {
+          "title": "List C: Earth and Environmental Sciences",
+          "courses": [
+            "BIOL 540",
+            "ENVR 200",
+            "ENVR 202",
+            "EPSC 210",
+            "EPSC 233",
+            "ESYS 200",
+            "ESYS 300",
+            "GEOG 203",
+            "GEOG 272",
+            "GEOG 470",
+            "GEOG 550"
+          ]
+        },
+        {
+          "title": "List D: Field Studies",
+          "courses": [
+            "BIOL 331",
+            "BIOL 335",
+            "BIOL 573",
+            "ENTO 340",
+            "EPSC 231",
+            "WILD 475"
+          ]
+        },
+        {
+          "title": "Students select 21 credits from among four course lists (A (Zoology), B (Botany), C (Earth and Environmental Sciences), and D (Field Courses)) with the following specifications",
+          "unparsed": true
+        },
+        {
+          "title": "At least 3 credits and no more than 9 credits from each of Lists A, B, and C",
+          "unparsed": true
+        },
+        {
+          "title": "At least 3 credits from List D",
+          "unparsed": true
+        },
+        {
+          "title": "No more than 3 credits from any one list may be at the 200 level",
+          "unparsed": true
+        },
+        {
+          "title": "Students may take up to a maximum of 9 credits of courses outside the Faculties of Arts and of Science",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

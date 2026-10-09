@@ -1,0 +1,68 @@
+{
+  "id": "organizational-behaviour-human-resources-mgmt-major-bcom",
+  "name": "Organizational Behaviour and Human Resources Management Major",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/majors/organizational-behaviour-human-resources-mgmt-major-bcom/",
+  "credits": 72,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 57,
+      "courses": [
+        "MGCR 211",
+        "MGCR 222",
+        "MGCR 233",
+        "MGCR 250",
+        "MGCR 271",
+        "MGCR 293",
+        "MGCR 294",
+        "MGCR 331",
+        "MGCR 341",
+        "MGCR 352",
+        "MGCR 372",
+        "MGCR 382",
+        "MGCR 423",
+        "MGCR 460",
+        "INDR 294",
+        "ORGB 321",
+        "ORGB 325",
+        "ORGB 380",
+        "ORGB 423"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "INDR 459",
+            "INDR 492",
+            "INDR 494",
+            "INDR 496",
+            "ORGB 330",
+            "ORGB 401",
+            "ORGB 420",
+            "ORGB 421",
+            "ORGB 434",
+            "ORGB 440",
+            "ORGB 509",
+            "ORGB 525"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "9 credits at the 300 or 400 level of courses in PSYC, SOCI or ANTH",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

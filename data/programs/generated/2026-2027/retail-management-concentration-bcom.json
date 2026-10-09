@@ -1,0 +1,47 @@
+{
+  "id": "retail-management-concentration-bcom",
+  "name": "Retail Management Concentration",
+  "degree": "B.Com.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/concentrations/retail-management-concentration-bcom/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "MRKT 459",
+        "RETL 402",
+        "RETL 407"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "INDR 294",
+            "INSY 440",
+            "INSY 442",
+            "MGSC 403",
+            "MGSC 431",
+            "MRKT 355",
+            "MRKT 451",
+            "MRKT 452",
+            "MRKT 455",
+            "RETL 408",
+            "RETL 409",
+            "RETL 410",
+            "RETL 434"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

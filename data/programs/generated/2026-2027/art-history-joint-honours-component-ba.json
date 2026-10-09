@@ -1,0 +1,114 @@
+{
+  "id": "art-history-joint-honours-component-ba",
+  "name": "Art History Joint Honours Component",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/art-history-communication-studies/art-history-joint-honours-component-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "ARTH 400",
+        "ARTH 401"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ARTH 302",
+            "ARTH 305",
+            "ARTH 315",
+            "ARTH 339",
+            "ARTH 357"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ARTH 200",
+            "ARTH 202",
+            "ARTH 204",
+            "ARTH 205",
+            "ARTH 207",
+            "ARTH 209",
+            "ARTH 215",
+            "ARTH 223",
+            "ARTH 225",
+            "ARTH 226",
+            "ARTH 300",
+            "ARTH 302",
+            "ARTH 305",
+            "ARTH 310",
+            "ARTH 314",
+            "ARTH 315",
+            "ARTH 321",
+            "ARTH 323",
+            "ARTH 325",
+            "ARTH 326",
+            "ARTH 336",
+            "ARTH 339",
+            "ARTH 352",
+            "ARTH 353",
+            "ARTH 354",
+            "ARTH 357",
+            "ARTH 360",
+            "ARTH 368",
+            "ARTH 411",
+            "ARTH 420",
+            "ARTH 421",
+            "ARTH 422",
+            "ARTH 425",
+            "ARTH 430",
+            "ARTH 435",
+            "ARTH 440",
+            "ARTH 447",
+            "ARTH 473",
+            "ARTH 474",
+            "ARTH 490",
+            "ARTH 501",
+            "ARTH 502"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ARCH 250",
+            "ARCH 251",
+            "PHIL 336",
+            "PHIL 436"
+          ]
+        },
+        {
+          "title": "3-15 credits from the following list, as an introduction to methods, theories, and practices in diverse fields of the discipline",
+          "unparsed": true
+        },
+        {
+          "title": "15-27 credits chosen from among departmental course offerings as follows",
+          "unparsed": true
+        },
+        {
+          "title": "A maximum of 12 credits may be at the 200 level",
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
+        },
+        {
+          "title": "A minimum of 3 credits must be at the 400 level or above (other than ARTH 490 Museum Internship)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

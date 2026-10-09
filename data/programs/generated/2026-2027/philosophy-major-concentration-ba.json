@@ -1,0 +1,144 @@
+{
+  "id": "philosophy-major-concentration-ba",
+  "name": "Philosophy Major Concentration",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/philosophy/philosophy-major-concentration-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "PHIL 210"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Group A: 3 credits from",
+          "courses": [
+            "PHIL 306",
+            "PHIL 310",
+            "PHIL 311",
+            "PHIL 341",
+            "PHIL 411",
+            "PHIL 415",
+            "PHIL 419",
+            "PHIL 421",
+            "PHIL 441",
+            "PHIL 470"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group B: 3 credits from",
+          "courses": [
+            "PHIL 375",
+            "PHIL 474",
+            "PHIL 475"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group C",
+          "courses": [
+            "PHIL 344",
+            "PHIL 345",
+            "PHIL 350",
+            "PHIL 353",
+            "PHIL 354",
+            "PHIL 355",
+            "PHIL 356",
+            "PHIL 452",
+            "PHIL 453",
+            "PHIL 454"
+          ]
+        },
+        {
+          "title": "Group D",
+          "courses": [
+            "PHIL 360",
+            "PHIL 361",
+            "PHIL 366",
+            "PHIL 367",
+            "PHIL 444",
+            "PHIL 445"
+          ]
+        },
+        {
+          "title": "Group E: 3 credits from",
+          "courses": [
+            "PHIL 230",
+            "PHIL 237",
+            "PHIL 240",
+            "PHIL 242"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Group F: 3 credits from",
+          "courses": [
+            "PHIL 334",
+            "PHIL 343",
+            "PHIL 348",
+            "PHIL 427",
+            "PHIL 434",
+            "PHIL 442"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "33 credits, of which no more than 9 may be at the 200 level and at least 9 must be at the 400 or 500 level, distributed as follows",
+          "unparsed": true
+        },
+        {
+          "title": "18 credits from Groups A, B, C, D, E, and F",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from Group A",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from Group B",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits, two courses from either Group C or Group D",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from Group E",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from Group F",
+          "unparsed": true
+        },
+        {
+          "title": "15 additional credits from Groups A, B, C, D, E or F or from other Philosophy (PHIL) courses",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits (two courses) from Group C OR Group D",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits (two courses) from Group C OR Group D",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

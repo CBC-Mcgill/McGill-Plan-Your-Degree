@@ -1,0 +1,161 @@
+{
+  "id": "early-music-performance-major-bmus",
+  "name": "Early Music Performance Major (Baroque Violin, Viola, Cello, Viola da Gamba, Flute, Recorder, Oboe, Organ, Harpsichord and Early Brass Instruments)",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/early-music-performance-major-bmus/",
+  "credits": 125,
+  "groups": [
+    {
+      "title": "Program Prerequisites — Foundation Program",
+      "kind": "complementary",
+      "credits": 34,
+      "rules": [
+        {
+          "title": "22 credits of Prerequisite Courses",
+          "unparsed": true
+        },
+        {
+          "title": "2 credits of Assigned Small Ensemble",
+          "unparsed": true
+        },
+        {
+          "title": "4 credits of Large Ensemble",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Non-Music Electives",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 41,
+      "courses": [
+        "MUIN 280",
+        "MUIN 281",
+        "MUIN 282",
+        "MUIN 380",
+        "MUIN 381",
+        "MUIN 382",
+        "MUIN 480",
+        "MUIN 481",
+        "MUIN 482",
+        "MUTH 250",
+        "MUTH 251",
+        "MUTH 350",
+        "MUTH 426",
+        "MUSP 240",
+        "MUSP 241",
+        "MUHL 286",
+        "MUPP 381",
+        "MUPD 235"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Performance",
+          "courses": [
+            "MUEN 563",
+            "MUEN 572",
+            "MUEN 573",
+            "MUEN 587",
+            "MUEN 590",
+            "MUEN 592",
+            "MUEN 593",
+            "MUEN 594",
+            "MUEN 595",
+            "MUEN 597"
+          ]
+        },
+        {
+          "title": "4 credits (1 credit per term)",
+          "courses": [
+            "MUEN 569",
+            "MUEN 580"
+          ]
+        },
+        {
+          "title": "MUEN prefix - maximum 4 credits",
+          "courses": [
+            "MUPG 473",
+            "MUPG 474",
+            "MUPG 475"
+          ]
+        },
+        {
+          "title": "Harpsichord",
+          "courses": [
+            "MUPG 272",
+            "MUPG 372"
+          ]
+        },
+        {
+          "title": "MUEN prefix - maximum 2 credits",
+          "courses": [
+            "MUPG 272",
+            "MUPG 473",
+            "MUPG 474"
+          ]
+        },
+        {
+          "title": "Musicianship: 2 credits from",
+          "courses": [
+            "MUSP 346",
+            "MUSP 354",
+            "MUSP 361",
+            "MUSP 363",
+            "MUSP 381"
+          ],
+          "minCredits": 2,
+          "maxCredits": 2
+        },
+        {
+          "title": "History/Literature/Performance Practice: 3 credits from",
+          "courses": [
+            "MUHL 377",
+            "MUHL 380",
+            "MUHL 381",
+            "MUHL 382",
+            "MUHL 383",
+            "MUHL 591"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "12 credits (2 credits per term; as assigned by audition) from large ensembles",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits from",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 23,
+      "rules": [
+        {
+          "title": "3 credits of non-Music Electives",
+          "unparsed": true
+        },
+        {
+          "title": "20 credits of Free Electives (may include 2 credits of courses with a MUEN prefix)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

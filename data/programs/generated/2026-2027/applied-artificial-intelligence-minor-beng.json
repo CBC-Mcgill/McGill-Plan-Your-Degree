@@ -1,0 +1,157 @@
+{
+  "id": "applied-artificial-intelligence-minor-beng",
+  "name": "Applied Artificial Intelligence Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/applied-artificial-intelligence-minor-beng/",
+  "credits": 25,
+  "groups": [
+    {
+      "title": "Complementary Courses Group A",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "COMP 250",
+            "ECSE 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "COMP 250 and ECSE 250 cannot both be taken",
+          "maxCourses": 1,
+          "courses": [
+            "COMP 250",
+            "ECSE 250"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group B",
+      "kind": "complementary",
+      "credits": 4,
+      "rules": [
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "COMP 551",
+            "ECSE 551"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "ECSE 551 and COMP 551 cannot both be taken",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 551",
+            "COMP 551"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group C",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "ECSE 343",
+            "MATH 223",
+            "MATH 247",
+            "MATH 271",
+            "MECH 265"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group D",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "AEMA 310",
+            "BIEN 203",
+            "CIVE 302",
+            "ECSE 205",
+            "MATH 203",
+            "MATH 323",
+            "MECH 262",
+            "MIME 209"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group E",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9-12 credits from the following",
+          "courses": [
+            "COMP 370",
+            "COMP 417",
+            "COMP 424",
+            "COMP 445",
+            "COMP 521",
+            "COMP 549",
+            "COMP 550",
+            "COMP 562",
+            "COMP 565",
+            "COMP 579",
+            "COMP 588",
+            "ECSE 415",
+            "ECSE 446",
+            "ECSE 507",
+            "ECSE 526",
+            "ECSE 544",
+            "ECSE 552",
+            "ECSE 554",
+            "ECSE 556",
+            "ECSE 557",
+            "MECH 559",
+            "MECH 579"
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
+        },
+        {
+          "title": "COMP 424 and ECSE 526 cannot both be taken",
+          "maxCourses": 1,
+          "courses": [
+            "COMP 424",
+            "ECSE 526"
+          ]
+        },
+        {
+          "title": "ECSE 507 and MECH 579 cannot both be taken",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 507",
+            "MECH 579"
+          ]
+        },
+        {
+          "title": "Or any 400 or 500 level special topics courses in the area of artificial intelligence with the approval of the Electrical and Computer Engineering department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

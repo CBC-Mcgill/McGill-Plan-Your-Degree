@@ -1,0 +1,119 @@
+{
+  "id": "performance-voice-major-bmus",
+  "name": "Performance Voice Major",
+  "degree": "B.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/music/programs/performance/performance-voice-major-bmus/",
+  "credits": 123,
+  "groups": [
+    {
+      "title": "Program Prerequisites - Foundation Program",
+      "kind": "complementary",
+      "credits": 32,
+      "rules": [
+        {
+          "title": "22 credits of Prerequisite Courses",
+          "unparsed": true
+        },
+        {
+          "title": "4 credits of Large Ensemble",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of Non-Music Electives",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Performance",
+          "courses": [
+            "MUEN 454",
+            "MUEN 496",
+            "MUEN 563",
+            "MUEN 569",
+            "MUEN 572",
+            "MUEN 578",
+            "MUEN 579",
+            "MUEN 580",
+            "MUEN 587",
+            "MUEN 593",
+            "MUEN 594"
+          ]
+        },
+        {
+          "title": "Performance",
+          "courses": [
+            "MUIN 300",
+            "MUIN 301",
+            "MUPG 296",
+            "MUPG 297",
+            "MUPG 300",
+            "MUPG 309",
+            "MUPG 353",
+            "MUPG 380",
+            "MUPG 453"
+          ]
+        },
+        {
+          "title": "Musicianship: 2 credits from",
+          "courses": [
+            "MUSP 346",
+            "MUSP 353",
+            "MUSP 354",
+            "MUSP 361",
+            "MUSP 381"
+          ],
+          "minCredits": 2,
+          "maxCredits": 2
+        },
+        {
+          "title": "Music History/Literature/Performance Practice: 6 credits from",
+          "courses": [
+            "MUHL 377",
+            "MUHL 387",
+            "MUHL 388",
+            "MUHL 390"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "10 credits of complementary performance selected from",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits of complementary performance selected from",
+          "unparsed": true
+        },
+        {
+          "title": "MUEN courses at the 400 or 500 level (maximum 4 credits)",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 20,
+      "rules": [
+        {
+          "title": "3 credits of non-Music Electives",
+          "unparsed": true
+        },
+        {
+          "title": "17 credits of Free Electives (may include 2 credits of courses with a MUEN prefix)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

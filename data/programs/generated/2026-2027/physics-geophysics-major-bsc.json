@@ -1,0 +1,74 @@
+{
+  "id": "physics-geophysics-major-bsc",
+  "name": "Physics and Geophysics Major",
+  "degree": "B.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/science/programs/physics/physics-geophysics-major-bsc/",
+  "credits": 69,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 57,
+      "courses": [
+        "EPSC 231",
+        "EPSC 240",
+        "EPSC 303",
+        "EPSC 320",
+        "MATH 222",
+        "MATH 223",
+        "MATH 314",
+        "MATH 315",
+        "PHYS 230",
+        "PHYS 232",
+        "PHYS 241",
+        "PHYS 257",
+        "PHYS 258",
+        "PHYS 331",
+        "PHYS 333",
+        "PHYS 340",
+        "PHYS 342",
+        "PHYS 346",
+        "PHYS 432"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "6-12 credits from the following",
+          "courses": [
+            "EPSC 350",
+            "EPSC 425",
+            "EPSC 482",
+            "EPSC 510",
+            "EPSC 520",
+            "EPSC 549",
+            "MATH 319",
+            "PHYS 320",
+            "PHYS 321",
+            "PHYS 339",
+            "PHYS 404"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        },
+        {
+          "title": "0-6 credits from the following",
+          "courses": [
+            "EPSC 482",
+            "PHYS 449",
+            "PHYS 459",
+            "PHYS 512",
+            "PHYS 521"
+          ],
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

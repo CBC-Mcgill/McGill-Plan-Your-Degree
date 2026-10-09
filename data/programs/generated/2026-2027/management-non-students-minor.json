@@ -1,0 +1,51 @@
+{
+  "id": "management-non-students-minor",
+  "name": "Management (for Non-Management Students)",
+  "degree": "Minor",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/management/programs/minors-management-non-management-students/management-non-students-minor/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "9 credits selected from",
+          "courses": [
+            "MGCR 211",
+            "MGCR 222",
+            "MGCR 271",
+            "MGCR 293",
+            "MGCR 331",
+            "MGCR 341",
+            "MGCR 352",
+            "MGCR 372",
+            "MGCR 382"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "3 credits of statistics: Students who have taken an equivalent Statistics course in another faculty may not count those credits towards the Minor; an additional 3-credit complementary course must be chosen from the course list above",
+          "unparsed": true
+        },
+        {
+          "title": "Students who have taken an equivalent Economics course in another faculty may not count those credits toward the Minor; an additional 3-credit complementary course must be chosen from the course list above",
+          "unparsed": true
+        },
+        {
+          "title": "Prerequisite: MGCR 271, Business Statistics, or another equivalent Statistics course approved by the Program Advisor",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits selected from any Management courses not already chosen from the first list or any 300- or 400-level Management courses for which prerequisites have been met",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}
