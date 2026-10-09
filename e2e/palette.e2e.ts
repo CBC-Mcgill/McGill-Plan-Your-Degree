@@ -28,7 +28,7 @@ test("the palette puts a named page first and keeps focus where the student is",
   await expect(page.getByRole("main")).toBeFocused();
 });
 
-test("the palette finds What's next by its old name and names each course glyph", async ({
+test("the palette finds What's next by its old name and says each course's status", async ({
   page,
 }) => {
   await page.addInitScript(
@@ -59,9 +59,51 @@ test("the palette finds What's next by its old name and names each course glyph"
   );
 
   await input.fill("comp 250");
+  await expect(page.getByRole("option").first()).toContainText("Completed");
+});
+
+test("the palette opens on recent courses, newest first, then required courses for next term", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
+  await page.addInitScript(
+    ([key, records]) =>
+      localStorage.setItem(
+        key as string,
+        JSON.stringify({
+          state: { records, programId: "computer-science-major-bsc" },
+          version: 4,
+        }),
+      ),
+    [
+      "plan-your-degree:profile",
+      ["COMP 202", "COMP 206", "COMP 250"].map((code) => ({
+        code,
+        term: { season: "Fall", year: 2025 },
+        credits: 3,
+        grade: "A",
+        status: "completed",
+        source: "manual",
+      })),
+    ],
+  );
+  await page.goto("/courses/comp-302", { waitUntil: "networkidle" });
+  await page.goto("/courses/math-240", { waitUntil: "networkidle" });
+  await page.keyboard.press("Control+k");
+
+  const recent = page
+    .getByRole("group", { name: "Recent" })
+    .getByRole("option");
+  await expect(recent).toHaveCount(2);
+  await expect(recent.first()).toContainText("MATH 240");
+  await expect(recent.first()).toHaveAttribute("aria-selected", "true");
   await expect(
-    page.getByRole("option").getByRole("img", { name: "Completed" }),
-  ).toBeVisible();
+    page
+      .getByRole("group", { name: "Suggested for Winter 2027" })
+      .getByRole("option")
+      .first(),
+  ).toContainText("Can take");
+  await expect(page.getByRole("group", { name: "Pages" })).toBeVisible();
 });
 
 test("the course list keeps the header search, the shortcut opens the palette and / focuses the list's field", async ({

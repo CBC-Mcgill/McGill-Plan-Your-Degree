@@ -1,8 +1,18 @@
 "use client";
 
 import { cn } from "cn";
-import { Search } from "lucide-react";
-import { useRouter } from "next/navigation";
+import {
+  CalendarPlus,
+  CalendarRange,
+  Compass,
+  FileUp,
+  Library,
+  type LucideIcon,
+  Search,
+  Sparkles,
+  UserRound,
+} from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 import { Dialog } from "radix-ui";
 import {
   useEffect,
@@ -12,18 +22,26 @@ import {
   useState,
   useSyncExternalStore,
 } from "react";
+import { CourseCode } from "@/components/course-code";
 import { addWithUndo } from "@/components/plan/add-with-undo";
 import { STATUS, StatusIcon } from "@/components/status";
 import { Kbd } from "@/components/ui/kbd";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses, searchCourses } from "@/lib/catalogue/search";
-import { courseSlug } from "@/lib/catalogue/slug";
+import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
+import { nextView } from "@/lib/engine/next-view";
 import { courseStatus } from "@/lib/engine/status";
 import { useProfileStore } from "@/lib/profile/store";
-import { planTermOptions, termLabel } from "@/lib/profile/term-options";
+import {
+  currentTerm,
+  planTermOptions,
+  termLabel,
+} from "@/lib/profile/term-options";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
+import { useProgram } from "@/lib/programs/client";
+import { recentCourses, rememberCourse } from "@/lib/recent-courses";
 
 let open = false;
 let opener: HTMLElement | null = null;
@@ -66,28 +84,53 @@ const matches = (text: string, ...names: string[]) =>
   );
 
 const MAX_COURSES = 8;
+const MAX_SUGGESTED = 3;
 const FADE =
   "transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none";
-const TAKEN = new Set(["completed", "covered", "in-progress"]);
+const NOTHING_TO_ADD = new Set([
+  "completed",
+  "covered",
+  "in-progress",
+  "planned",
+]);
 
-type Page = { label: string; href: string; aliases?: string };
+type Page = {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+  aliases?: string;
+  soon?: true;
+};
 
-const BROWSE: Page = { label: "Browse courses", href: "/courses" };
+const BROWSE: Page = {
+  label: "Browse courses",
+  href: "/courses",
+  icon: Library,
+};
 const NEXT: Page = {
   label: "What's next",
   href: "/next",
+  icon: Compass,
   aliases: "requirements where courses count degree audit",
 };
-const PLANNER: Page = { label: "Planner", href: "/plan" };
+const PLANNER: Page = { label: "Planner", href: "/plan", icon: CalendarRange };
 const PROFILE: Page = {
   label: "Profile",
   href: "/profile",
+  icon: UserRound,
   aliases: "import transcript",
 };
-const ADVISOR: Page = { label: COPY.advisor, href: "/advisor" };
+const ADVISOR: Page = {
+  label: "Advisor",
+  href: "/advisor",
+  icon: Sparkles,
+  aliases: "preview",
+  soon: true,
+};
 const IMPORT: Page = {
   label: COPY.importTranscript,
   href: "/profile",
+  icon: FileUp,
   aliases: "profile",
 };
 
@@ -95,6 +138,8 @@ type Item =
   | ({ kind: "page" } & Page)
   | { kind: "course"; course: CourseSummary }
   | { kind: "action"; label: string; run: () => void };
+
+const asItem = (course: CourseSummary): Item => ({ kind: "course", course });
 
 /** The header's search bar. It is a button, so the catalogue stays unloaded until the palette opens. */
 export function SearchBar() {
@@ -112,9 +157,16 @@ export function SearchBar() {
   );
 }
 
-/** Command palette: pages, live course search and actions in one keyboard-first dialog. Press ⌘K or Ctrl+K anywhere. */
+/** Command palette: recent and suggested courses, pages, live course search and actions in one keyboard-first dialog. Press ⌘K or Ctrl+K anywhere. */
 export function CommandPalette() {
   const isOpen = useIsOpen();
+  const pathname = usePathname();
+
+  // The layout keeps the palette on every page, so it notes each course page for the Recent group.
+  useEffect(() => {
+    const slug = /^\/courses\/([^/]+)$/.exec(pathname)?.[1];
+    if (slug) rememberCourse(codeFromSlug(slug));
+  }, [pathname]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -143,6 +195,10 @@ function PaletteDialog() {
   const catalogue = useCatalogue();
   const snapshot = useSnapshot();
   const imported = useProfileStore((state) => state.records.length > 0);
+  const programId = useProfileStore((state) => state.programId);
+  const entry = useProfileStore((state) => state.entry);
+  const program = useProgram(programId);
+  const [recent] = useState(recentCourses);
   const list = useRef<HTMLDivElement>(null);
   const navigated = useRef(false);
   const index = useMemo(
@@ -154,12 +210,33 @@ function PaletteDialog() {
   );
 
   const text = query.trim().toLowerCase();
+  const [nextTerm] = useState(() => planTermOptions([])[0] ?? currentTerm());
+
+  // Required courses open next term that the plan does not hold yet, as What's next lists them.
+  const suggested = useMemo(() => {
+    if (catalogue.status !== "ready" || !program || !snapshot) return [];
+    return nextView(catalogue.catalogue, snapshot, nextTerm, program, entry)
+      .mustTake.flatMap((item) => ("oneOf" in item ? item.oneOf : [item]))
+      .filter(
+        ({ course, reason }) =>
+          !reason &&
+          !snapshot.planned.has(course.code) &&
+          !recent.includes(course.code),
+      )
+      .slice(0, MAX_SUGGESTED)
+      .map(({ course }) => asItem(course));
+  }, [catalogue, program, snapshot, nextTerm, entry, recent]);
+
+  // Hold the first list until recent and suggested courses are in, so rows never shift under the highlight.
+  const settling =
+    !text &&
+    (recent.length > 0 || programId !== null) &&
+    (catalogue.status === "loading" || program === undefined);
 
   const groups = useMemo(() => {
+    if (settling) return [];
     const courses = text
-      ? searchCourses(index, text)
-          .slice(0, MAX_COURSES)
-          .map((course): Item => ({ kind: "course", course }))
+      ? searchCourses(index, text).slice(0, MAX_COURSES).map(asItem)
       : [];
     const pages = (
       imported
@@ -169,17 +246,16 @@ function PaletteDialog() {
       .filter((page) => !text || matches(text, page.label, page.aliases ?? ""))
       .map((page): Item => ({ kind: "page", ...page }));
     const top = courses[0]?.kind === "course" ? courses[0].course : null;
-    // A course the student has taken or is taking has nothing to add, and a query that names a page is not a course search.
+    // A course the student has taken, is taking or planned has nothing to add, and a query that names a page is not a course search.
     const first =
       top &&
       snapshot &&
       pages.length === 0 &&
-      !TAKEN.has(courseStatus(top, snapshot).status)
+      !NOTHING_TO_ADD.has(courseStatus(top, snapshot).status)
         ? top
         : null;
-    const nextTerm = planTermOptions([])[0];
     const actions: Item[] =
-      first && nextTerm && snapshot
+      first && snapshot
         ? [
             {
               kind: "action",
@@ -191,13 +267,39 @@ function PaletteDialog() {
     const pagesGroup = { title: "Pages", items: pages };
     const actionsGroup = { title: "Actions", items: actions };
     const coursesGroup = { title: "Courses", items: courses };
-    // A page the query names comes first, otherwise the best course does.
+    const recentGroup = {
+      title: "Recent",
+      items:
+        catalogue.status === "ready"
+          ? recent.flatMap((code) => {
+              const course = catalogue.catalogue.get(code);
+              return course ? [asItem(course)] : [];
+            })
+          : [],
+    };
+    const suggestedGroup = {
+      title: `Suggested for ${termLabel(nextTerm)}`,
+      items: suggested,
+    };
+    // Before typing: recent and suggested courses, then pages. After, a page the query names comes first, otherwise the best course does.
     return (
-      pages.length > 0
-        ? [pagesGroup, actionsGroup, coursesGroup]
-        : [coursesGroup, actionsGroup]
+      !text
+        ? [recentGroup, suggestedGroup, pagesGroup]
+        : pages.length > 0
+          ? [pagesGroup, actionsGroup, coursesGroup]
+          : [coursesGroup, actionsGroup]
     ).filter((group) => group.items.length > 0);
-  }, [text, index, snapshot, imported]);
+  }, [
+    settling,
+    text,
+    index,
+    snapshot,
+    imported,
+    catalogue,
+    recent,
+    suggested,
+    nextTerm,
+  ]);
 
   const flat = groups.flatMap((group) => group.items);
   const optionId = (position: number) => `${listId}-${position}`;
@@ -262,7 +364,7 @@ function PaletteDialog() {
           }}
         >
           <Dialog.Title className="sr-only">Command palette</Dialog.Title>
-          <div className="flex h-14 items-center gap-3 px-4">
+          <div className="flex h-14 items-center gap-3 border-line border-b px-4">
             <Search aria-hidden className="size-4 shrink-0 text-fg-muted" />
             <input
               role="combobox"
@@ -279,8 +381,9 @@ function PaletteDialog() {
               }}
               placeholder="Search courses or jump to a page"
               aria-label="Search courses or jump to a page"
-              className="h-full flex-1 bg-transparent text-fg text-xl outline-none placeholder:text-fg-muted"
+              className="h-full min-w-0 flex-1 bg-transparent text-fg text-lg outline-none placeholder:text-fg-muted"
             />
+            <Kbd aria-hidden>esc</Kbd>
           </div>
           {flat.length > 0 && (
             <div
@@ -288,7 +391,7 @@ function PaletteDialog() {
               id={listId}
               role="listbox"
               aria-label="Results"
-              className="max-h-[400px] overflow-y-auto px-2 pt-2 pb-2"
+              className="max-h-[min(520px,calc(100dvh-240px))] overflow-y-auto p-2"
             >
               {groups.map((group, i) => (
                 // biome-ignore lint/a11y/useSemanticElements: a fieldset cannot sit inside a listbox
@@ -297,7 +400,7 @@ function PaletteDialog() {
                     aria-hidden
                     className={cn(
                       "px-3 pb-1 text-fg-muted",
-                      i === 0 ? "pt-0" : "pt-4",
+                      i === 0 ? "pt-1" : "pt-3",
                     )}
                   >
                     {group.title}
@@ -309,6 +412,8 @@ function PaletteDialog() {
                       item.kind === "course" &&
                       snapshot &&
                       courseStatus(item.course, snapshot).status;
+                    const Icon =
+                      item.kind === "page" ? item.icon : CalendarPlus;
                     return (
                       // biome-ignore lint/a11y/useFocusableInteractive: focus stays in the input and aria-activedescendant points here
                       // biome-ignore lint/a11y/useKeyWithClickEvents: the input handles the keys
@@ -322,36 +427,49 @@ function PaletteDialog() {
                         onMouseMove={() => setActive(position)}
                         onClick={() => run(item)}
                         className={cn(
-                          "flex h-10 w-full cursor-pointer items-center gap-4 rounded-md px-3 text-left",
+                          "flex h-10 w-full cursor-pointer items-center gap-3 rounded-md px-3 text-left",
                           selected && "selected",
                         )}
                       >
                         {item.kind === "course" ? (
                           <>
-                            <span className="flex min-w-0 flex-1 items-center gap-2">
-                              {status && (
-                                <StatusIcon
-                                  status={status}
-                                  label={STATUS[status].label}
-                                />
-                              )}
-                              <span className="w-24 shrink-0 font-semibold tabular-nums">
-                                {item.course.code}
-                              </span>
-                              <span className="min-w-0 flex-1 truncate font-normal">
-                                {item.course.title}
-                              </span>
+                            <span className="flex w-4 shrink-0 justify-center">
+                              {status && <StatusIcon status={status} />}
                             </span>
-                            <span className="shrink-0 font-normal text-fg-muted tabular-nums">
+                            <span className="w-24 shrink-0 font-semibold tabular-nums">
+                              <CourseCode code={item.course.code} />
+                            </span>
+                            <span className="min-w-0 flex-1 truncate font-normal">
+                              {item.course.title}
+                            </span>
+                            {status && (
+                              <span
+                                className="shrink-0 font-normal"
+                                style={{ color: STATUS[status].text }}
+                              >
+                                {STATUS[status].label}
+                              </span>
+                            )}
+                            <span className="min-w-9 shrink-0 text-right font-normal text-fg-muted tabular-nums">
                               {COPY.rowCredits(item.course)}
                             </span>
                           </>
                         ) : (
                           <>
+                            <Icon
+                              aria-hidden
+                              className="size-4 shrink-0 text-fg-muted"
+                              strokeWidth={1.75}
+                            />
                             <span className="flex-1">{item.label}</span>
-                            {selected && (
-                              <span aria-hidden className="text-fg-muted">
-                                ↵
+                            {item.kind === "page" && item.soon && (
+                              <span
+                                className={cn(
+                                  "rounded-[5px] px-1.5 font-normal text-[11px] text-fg-muted leading-[18px]",
+                                  selected ? "bg-bg" : "bg-tint",
+                                )}
+                              >
+                                Soon
                               </span>
                             )}
                           </>
@@ -367,11 +485,29 @@ function PaletteDialog() {
             role="status"
             className={cn(
               "px-4 text-center text-fg-muted empty:hidden",
-              flat.length > 0 ? "pb-4" : "pt-4 pb-8",
+              flat.length > 0 ? "pb-3" : "py-6",
             )}
           >
             {message}
           </p>
+          <div
+            aria-hidden
+            className="flex h-10 items-center gap-5 border-line border-t px-4 text-fg-muted"
+          >
+            <span className="flex items-center gap-1.5">
+              <Kbd>↑</Kbd>
+              <Kbd>↓</Kbd>
+              Move
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Kbd>↵</Kbd>
+              Open
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Kbd>esc</Kbd>
+              Close
+            </span>
+          </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
