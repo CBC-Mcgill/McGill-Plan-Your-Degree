@@ -13,6 +13,31 @@
   --danger: #b42318;
   --warn: #925708;
   --scrim: rgb(23 32 54 / 0.3);
+  --line: #e9ecf0;
+
+  /* Status colors, each its own hue so statuses read apart at a glance. Shape and word still carry the meaning. */
+  --completed: #18794e;
+  --in-progress: #0b68b8;
+  --planned: #6550b9;
+  --locked: #80838d;
+
+  /* Subject colors: text on a soft fill of the same hue. Green, blue and violet stay with the statuses. */
+  --subject-1: #3a5bc7;
+  --subject-1-bg: #edf2fe;
+  --subject-2: #b34500;
+  --subject-2-bg: #ffefd6;
+  --subject-3: #953ea3;
+  --subject-3-bg: #fbebfb;
+  --subject-4: #007a69;
+  --subject-4-bg: #e0f8f3;
+  --subject-5: #0a7390;
+  --subject-5-bg: #def7f9;
+  --subject-6: #815e46;
+  --subject-6-bg: #f6eee7;
+  --subject-7: #c2298a;
+  --subject-7-bg: #fee9f5;
+  --subject-8: #71624b;
+  --subject-8-bg: #f2f0e7;
 }
 
 @theme inline {
@@ -27,6 +52,11 @@
   --color-danger: var(--danger);
   --color-warn: var(--warn);
   --color-scrim: var(--scrim);
+  --color-line: var(--line);
+  --color-completed: var(--completed);
+  --color-in-progress: var(--in-progress);
+  --color-planned: var(--planned);
+  --color-locked: var(--locked);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;

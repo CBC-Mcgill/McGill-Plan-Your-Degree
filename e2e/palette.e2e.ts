@@ -64,14 +64,16 @@ test("the palette finds What's next by its old name and names each course glyph"
   ).toBeVisible();
 });
 
-test("the course list has no header search, and the shortcut focuses its own field", async ({
+test("the course list keeps the header search, the shortcut opens the palette and / focuses the list's field", async ({
   page,
 }) => {
   await page.goto("/courses", { waitUntil: "networkidle" });
-  await expect(page.locator("header kbd")).toHaveCount(0);
+  await expect(page.locator("header kbd")).toHaveCount(1);
   await page.keyboard.press("Control+k");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await page.keyboard.press("/");
   await expect(page.getByRole("searchbox")).toBeFocused();
-  await expect(page.getByRole("dialog")).toHaveCount(0);
 });
 
 test("the palette says when courses fail to load, outside the listbox", async ({

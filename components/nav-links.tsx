@@ -10,31 +10,50 @@ const PAGES = [
   { href: "/courses", label: "Browse courses" },
   { href: "/next", label: "What's next" },
   { href: "/plan", label: "Planner" },
+  { href: "/advisor", label: "Advisor", soon: true },
 ];
 
-function NavLink({ href, label }: { href: string; label: string }) {
+function NavLink({
+  href,
+  label,
+  soon = false,
+}: {
+  href: string;
+  label: string;
+  soon?: boolean;
+}) {
   const pathname = usePathname();
   const active = pathname === href || pathname.startsWith(`${href}/`);
   return (
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
-      data-label={label}
       className={cn(
-        "steady-width h-9 whitespace-nowrap rounded-md px-3",
+        "inline-flex h-9 items-center gap-1.5 whitespace-nowrap rounded-md px-3",
         active ? "selected" : "text-fg-muted hover:text-fg",
       )}
     >
-      {label}
+      <span className="steady-width" data-label={label}>
+        {label}
+      </span>{" "}
+      {soon && (
+        <span
+          className={cn(
+            "rounded-[5px] px-1.5 font-normal text-[11px] text-fg-muted leading-[18px]",
+            active ? "bg-bg" : "bg-tint",
+          )}
+        >
+          Soon
+        </span>
+      )}
     </Link>
   );
 }
 
-/** Browse courses, What's next and Planner, then search centered in the space before Profile, which sits on the right. /courses has its own search field, so the header one hides there (D22). */
+/** Browse courses, What's next, Planner and Advisor, then search centered in the space before Profile, which sits on the right. */
 export function NavLinks() {
   const pathname = usePathname();
   const previous = useRef(pathname);
-  const search = !(pathname === "/courses");
 
   // A client navigation leaves keyboard focus on the header link, so the next Tab would walk the header again.
   useEffect(() => {
@@ -53,11 +72,9 @@ export function NavLinks() {
           <NavLink {...page} />
         </li>
       ))}
-      {search && (
-        <li className="ml-auto w-110 min-w-70 shrink">
-          <SearchBar />
-        </li>
-      )}
+      <li className="ml-auto w-110 min-w-70 shrink">
+        <SearchBar />
+      </li>
       <li className="-mr-3 ml-auto">
         <NavLink href="/profile" label="Profile" />
       </li>
