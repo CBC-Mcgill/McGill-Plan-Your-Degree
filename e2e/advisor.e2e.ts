@@ -18,3 +18,11 @@ test("a student sends a suggestion and the advisor says it is coming soon", asyn
     "/plan",
   );
 });
+
+test("a goal suggestion asks which classes to take", async ({ page }) => {
+  await page.goto("/advisor");
+  await page.getByRole("button", { name: /Break into big tech/ }).click();
+  await expect(
+    page.getByRole("textbox", { name: "Message the advisor" }),
+  ).toHaveValue("I want to break into big tech. What classes should I take?");
+});

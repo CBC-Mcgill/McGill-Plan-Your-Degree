@@ -2,11 +2,13 @@
 
 import { cn } from "cn";
 import {
+  Building2,
   CalendarRange,
-  Compass,
-  GitFork,
+  ChartCandlestick,
+  Cpu,
   GraduationCap,
   type LucideIcon,
+  PenTool,
 } from "lucide-react";
 import { motion } from "motion/react";
 import { useRef, useState, useSyncExternalStore } from "react";
@@ -20,7 +22,13 @@ import { Sidebar } from "@/components/advisor/sidebar";
 import { Spark } from "@/components/advisor/spark";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
-const SUGGESTIONS: { title: string; line: string; icon: LucideIcon }[] = [
+/** The card shows `title`, a click puts `prompt` (or the title) in the composer. */
+const SUGGESTIONS: {
+  title: string;
+  line: string;
+  icon: LucideIcon;
+  prompt?: string;
+}[] = [
   {
     title: "Plan my next term",
     line: "Pick courses that fit your program.",
@@ -32,14 +40,29 @@ const SUGGESTIONS: { title: string; line: string; icon: LucideIcon }[] = [
     icon: GraduationCap,
   },
   {
-    title: "Find electives I'd enjoy",
-    line: "Ideas that still count for your degree.",
-    icon: Compass,
+    title: "Become a cracked quant dev",
+    line: "Probability, statistics and fast code.",
+    icon: ChartCandlestick,
+    prompt: "I want to become a cracked quant dev. What classes should I take?",
   },
   {
-    title: "Explain a prerequisite chain",
-    line: "See which courses lead to the one you want.",
-    icon: GitFork,
+    title: "Get into GPU programming",
+    line: "Parallel computing and systems.",
+    icon: Cpu,
+    prompt: "I want to do GPU programming. What classes should I take?",
+  },
+  {
+    title: "Break into big tech",
+    line: "Courses that set you up for internships.",
+    icon: Building2,
+    prompt: "I want to break into big tech. What classes should I take?",
+  },
+  {
+    title: "Learn UI/UX design",
+    line: "Design, people and interfaces.",
+    icon: PenTool,
+    prompt:
+      "I want to learn more about UI/UX design. What classes should I take?",
   },
 ];
 
@@ -93,8 +116,8 @@ export function AdvisorChat() {
     textareaRef.current?.focus();
   }
 
-  function suggest(title: string) {
-    setDraft(title);
+  function suggest(prompt: string) {
+    setDraft(prompt);
     textareaRef.current?.focus();
   }
 
@@ -170,11 +193,11 @@ export function AdvisorChat() {
 
         {empty && (
           <ul className="mx-auto mt-6 grid w-full max-w-3xl grid-cols-2 gap-3 px-6">
-            {SUGGESTIONS.map(({ title, line, icon: Icon }) => (
+            {SUGGESTIONS.map(({ title, line, icon: Icon, prompt }) => (
               <li key={title}>
                 <button
                   type="button"
-                  onClick={() => suggest(title)}
+                  onClick={() => suggest(prompt ?? title)}
                   className="flex h-full w-full items-start gap-3 rounded-lg bg-bg p-4 text-left shadow-[0_1px_0_rgb(23_32_54/0.05),inset_0_0_0_1px_var(--border)] transition-colors hover:bg-subtle"
                 >
                   <Icon
