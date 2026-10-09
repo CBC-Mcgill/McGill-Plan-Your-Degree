@@ -1,506 +1,333 @@
 "use client";
 
 import { cn } from "cn";
-import {
-  ArrowRight,
-  CalendarDays,
-  GraduationCap,
-  Layers,
-  ListChecks,
-} from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useMemo } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
-import { CreditsLabel } from "@/components/credits-label";
+import { CourseRow } from "@/components/course-row";
 import { Landing } from "@/components/home/landing";
-import { SetupGuide } from "@/components/home/setup-guide";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { StatusIcon, StatusTip, UncertainFlag } from "@/components/status";
+import { Sentence as WarningSentence } from "@/components/plan/term-warnings";
+import { STATUS, UncertainFlag } from "@/components/status";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { InfoTip, Tooltip } from "@/components/ui/tooltip";
+import { Section } from "@/components/ui/section";
+import { Term } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
-import { courseSlug } from "@/lib/catalogue/slug";
-import {
-  degreeCredits,
-  earnedCredits,
-  pendingCredits,
-} from "@/lib/engine/credits";
-import { type Entry, nextView } from "@/lib/engine/next-view";
-import { termRange } from "@/lib/engine/plan";
-import { programProgress } from "@/lib/engine/progress";
+import { COPY } from "@/lib/copy";
+import { degreeStanding } from "@/lib/engine/credits";
+import { nextView } from "@/lib/engine/next-view";
+import { planWarnings, termLoad, termRange } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
-import { recordCredits } from "@/lib/engine/stages";
-import { creditsText } from "@/lib/format";
-import { type Definition, GLOSSARY } from "@/lib/glossary";
+import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
+import { currentTerm, planTermOptions } from "@/lib/profile/term-options";
 import {
-  currentTerm,
-  planTermOptions,
-  termLabel,
-} from "@/lib/profile/term-options";
-import {
-  type CourseRecord,
+  type Term as AcademicTerm,
   compareTerms,
-  earnsCredit,
-  type Term,
   termKey,
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
-import { minorName } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
 const NEXT_UP_LIMIT = 5;
-const BAR_TERMS = 6;
+/** Full time at McGill, the "12 credits" of `GLOSSARY.fullTime`. */
+const FULL_TIME_CREDITS = 12;
 const NO_COURSES: ReadonlySet<string> = new Set();
 
-/** The marketing page for visitors. A student with a profile gets their own home, and nobody sees either until the profile has loaded. */
+/** The landing page for visitors and the dashboard for students. Nobody sees either until the profile has loaded. */
 export function Home() {
   const snapshot = useSnapshot();
-  if (snapshot === undefined) return <HomeSkeleton />;
-  return snapshot ? <Dashboard snapshot={snapshot} /> : <Landing />;
+  if (snapshot === null) return <Landing />;
+  return (
+    <div className="mx-auto w-full max-w-page px-8 pt-12">
+      <div className="max-w-reading">
+        {snapshot ? <Dashboard snapshot={snapshot} /> : <Skeleton />}
+      </div>
+    </div>
+  );
 }
 
-function HomeSkeleton() {
+const bone = "rounded-md bg-tint motion-safe:animate-pulse";
+
+function Skeleton() {
   return (
-    <div className="mx-auto w-full max-w-[59rem] px-8 py-10">
+    <>
+      <p role="status" className="sr-only">
+        Loading your courses
+      </p>
       <div aria-hidden>
-        <div className="h-[34px] w-56 rounded-sm bg-muted motion-safe:animate-pulse" />
-        <div className="mt-1 h-5 w-72 rounded-sm bg-muted motion-safe:animate-pulse" />
+        <div className={cn(bone, "h-11 w-[400px]")} />
+        <div className={cn(bone, "mt-2 h-5 w-[560px]")} />
+        <div className="mt-12">
+          {[0, 1, 2, 3, 4].map((row) => (
+            <div key={row} className="flex h-11 items-center gap-4">
+              <div className={cn(bone, "h-5 w-24")} />
+              <div className={cn(bone, "h-5 w-1/3")} />
+            </div>
+          ))}
+        </div>
       </div>
-      <Skeleton />
-    </div>
+    </>
   );
 }
 
 // Split out so a visitor without a profile does not download the catalogue.
 function Dashboard({ snapshot }: { snapshot: Snapshot }) {
   const catalogue = useCatalogue();
+  const program = useProgram(useProfileStore((state) => state.programId));
+  // Without the catalogue some credits are unknown, so no figure rather than a wrong one.
+  if (catalogue.status === "error") {
+    return (
+      <>
+        <h1 className="sr-only">Your degree</h1>
+        <CatalogueError />
+      </>
+    );
+  }
+  if (catalogue.status !== "ready" || program === undefined) {
+    return <Skeleton />;
+  }
   return (
-    <div className="mx-auto w-full max-w-[59rem] px-8 py-10">
-      <h1>Welcome back</h1>
-      <p className="mt-1 text-muted-foreground">
-        Here is where your degree stands today.
-      </p>
-      {catalogue.status === "ready" ? (
-        <Ready snapshot={snapshot} catalogue={catalogue.catalogue} />
-      ) : catalogue.status === "error" ? (
-        <div className="mt-6">
-          <CatalogueError />
-        </div>
-      ) : (
-        <Skeleton />
-      )}
-    </div>
+    <Ready
+      snapshot={snapshot}
+      catalogue={catalogue.catalogue}
+      program={program}
+    />
   );
 }
 
 function Ready({
   snapshot,
   catalogue,
-}: {
-  snapshot: Snapshot;
-  catalogue: Catalogue;
-}) {
-  const programId = useProfileStore((state) => state.programId);
-  const minorId = useProfileStore((state) => state.minorId);
-  const entry = useProfileStore((state) => state.entry);
-  const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
-  const loaded = useProgram(programId);
-  const loadedMinor = useProgram(minorId);
-  const program = loaded ?? null;
-  // Planned courses stay in the list, so adding one shows "Planned" and the row does not vanish.
-  const view = useMemo(
-    () =>
-      loaded === undefined || loadedMinor === undefined
-        ? null
-        : nextView(
-            catalogue,
-            { ...snapshot, planned: NO_COURSES },
-            term,
-            program,
-            entry,
-          ),
-    [catalogue, snapshot, term, loaded, loadedMinor, program, entry],
-  );
-  if (!view) return <Skeleton />;
-
-  return (
-    <div className="mt-6 flex flex-col gap-6">
-      <Metrics
-        snapshot={snapshot}
-        catalogue={catalogue}
-        program={program}
-        minor={loadedMinor ?? null}
-        term={term}
-      />
-      <SetupGuide
-        snapshot={snapshot}
-        catalogue={catalogue}
-        program={program}
-        term={term}
-      />
-      <NextUp
-        mustTake={view.mustTake.flatMap((item) =>
-          "oneOf" in item ? item.oneOf : [item],
-        )}
-        hasProgram={program !== null}
-        term={term}
-      />
-    </div>
-  );
-}
-
-function Skeleton() {
-  return (
-    <div className="mt-6 flex flex-col gap-6">
-      <p role="status" className="sr-only">
-        Loading your courses
-      </p>
-      <div aria-hidden className="grid grid-cols-3 gap-4">
-        {[0, 1, 2].map((i) => (
-          <Card key={i} className="h-[104px] motion-safe:animate-pulse" />
-        ))}
-      </div>
-      <Card aria-hidden className="h-72 motion-safe:animate-pulse" />
-    </div>
-  );
-}
-
-/** Credits per term, oldest first, with the term in progress last. */
-function termBars(records: CourseRecord[], catalogue: Catalogue) {
-  const byTerm = new Map<
-    number,
-    { term: Term; credits: number; current: boolean }
-  >();
-  for (const record of records) {
-    const counts =
-      earnsCredit(record.status) || record.status === "in-progress";
-    if (!record.term || !counts) continue;
-    const key = termKey(record.term);
-    const row = byTerm.get(key) ?? {
-      term: record.term,
-      credits: 0,
-      current: false,
-    };
-    row.credits += recordCredits(record, catalogue);
-    row.current ||= record.status === "in-progress";
-    byTerm.set(key, row);
-  }
-  return [...byTerm.values()]
-    .sort((a, b) => compareTerms(a.term, b.term))
-    .slice(-BAR_TERMS);
-}
-
-function Metrics({
-  snapshot,
-  catalogue,
   program,
-  minor,
-  term,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
-  minor: Program | null;
-  term: Term;
 }) {
   const records = useProfileStore((state) => state.records);
-  const entry = useProfileStore((state) => state.entry);
-  const creditsRequired = useProfileStore((state) => state.creditsRequired);
-  const advancedStanding = useProfileStore((state) => state.advancedStanding);
-  const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const plan = useProfileStore((state) => state.plan);
+  const entry = useProfileStore((state) => state.entry);
+  const advancedStanding = useProfileStore((state) => state.advancedStanding);
+  const creditsRequired = useProfileStore((state) => state.creditsRequired);
+  const graduation = useProfileStore((state) => state.graduationTerm);
+  const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
 
-  const earned = earnedCredits(snapshot, catalogue) + advancedStanding;
-  const pending = pendingCredits(snapshot);
-  const required = degreeCredits(creditsRequired, entry, program);
-  const bars = useMemo(
-    () => termBars(records, catalogue),
-    [records, catalogue],
+  const { earned, inProgress, pending, required } = degreeStanding(
+    snapshot,
+    catalogue,
+    { records, plan, advancedStanding, creditsRequired, entry },
+    program,
   );
-  const peak = Math.max(1, ...bars.map((bar) => bar.credits));
-  const termsLeft = graduationTerm
-    ? termRange(term, graduationTerm).length
-    : null;
-  // Required courses, not whole groups, so the number moves as a student makes progress.
-  const requiredCourses = useMemo(() => {
-    if (!program) return null;
-    const done = programProgress(program, snapshot, catalogue, { entry });
-    const taking = programProgress(program, snapshot, catalogue, {
-      entry,
-      inProgress: true,
-    });
-    let total = 0;
-    let missing = 0;
-    let missingNow = 0;
-    done.groups.forEach((group, i) => {
-      const definition = program.groups[i];
-      if (definition?.kind !== "required" || group.credited) return;
-      total += definition.courses.length;
-      missing += group.remaining.length;
-      missingNow +=
-        taking.groups[i]?.remaining.length ?? group.remaining.length;
-    });
-    return {
-      total,
-      done: total - missing,
-      inProgress: missing - missingNow,
-      toGo: missingNow,
-    };
-  }, [program, snapshot, catalogue, entry]);
-  const minorProgress = useMemo(
-    () =>
-      minor
-        ? programProgress(minor, snapshot, catalogue, {
-            entry,
-            inProgress: true,
-          })
-        : null,
-    [minor, snapshot, catalogue, entry],
-  );
-  const nextTermCredits = (
-    plan.find((item) => termKey(item.term) === termKey(term))?.courses ?? []
-  ).reduce((sum, code) => sum + (catalogue.get(code)?.credits ?? 0), 0);
+  const passed =
+    graduation !== null && compareTerms(graduation, currentTerm()) < 0;
+  const termsLeft =
+    graduation && !passed ? termRange(term, graduation).length : 0;
+  const figure = COPY.degreeFigure(earned, required);
+  const pendingText = COPY.pending(pending);
 
   return (
-    <div className={cn("grid gap-4", minor ? "grid-cols-4" : "grid-cols-3")}>
-      <Metric label="Credits earned" info={GLOSSARY.creditsEarned}>
-        <div className="flex items-end justify-between gap-3">
-          <Value>{earned}</Value>
-          <div
-            role="img"
-            aria-label={`Credits per term: ${bars.map((bar) => bar.credits).join(", ")}`}
-            className="flex h-8 items-end gap-1"
-          >
-            {bars.map((bar) => (
-              <Tooltip
-                key={termKey(bar.term)}
-                content={`${termLabel(bar.term)}: ${bar.credits} credits${bar.current ? ", in progress" : ""}`}
-              >
-                <span
-                  className={cn(
-                    "w-2 rounded-[2px]",
-                    bar.current ? "bg-in-progress/40" : "bg-completed",
-                  )}
-                  style={{
-                    height: `${Math.max(12, (bar.credits / peak) * 100)}%`,
-                  }}
-                />
-              </Tooltip>
-            ))}
-          </div>
-        </div>
-        <Caption>
-          {pending > 0 ? (
-            <Tooltip content="Credit for a multi-term course arrives when its last part is done.">
-              <span className="underline decoration-dotted underline-offset-2">
-                {required && `of ${required} · `}
-                {creditsText(pending)} pending
-              </span>
-            </Tooltip>
-          ) : required ? (
-            `of ${required} toward your degree`
-          ) : (
-            "toward your degree"
+    <>
+      <h1>
+        {figure.slice(0, -COPY.basis.earned.length)}
+        <Term def={GLOSSARY.creditsEarned}>{COPY.basis.earned}</Term>
+      </h1>
+      {(inProgress > 0 || pending > 0 || termsLeft > 0) && (
+        <p className="mt-2 text-fg-muted tabular-nums">
+          {inProgress > 0 && `${COPY.credits(inProgress)} in progress. `}
+          {pending > 0 && (
+            <>
+              {pendingText.slice(0, -GLOSSARY.pending.label.length)}
+              <Term def={GLOSSARY.pending} />.{" "}
+            </>
           )}
-        </Caption>
-      </Metric>
-
-      {requiredCourses && requiredCourses.total > 0 ? (
-        <Metric label="Required courses" info={GLOSSARY.required}>
-          <div className="flex items-center justify-between gap-3">
-            <Value>
-              {requiredCourses.done}
-              <span className="font-normal text-muted-foreground">
-                {" "}
-                of {requiredCourses.total}
-              </span>
-            </Value>
-            <IconTile>
-              <ListChecks className="size-5" strokeWidth={1.75} />
-            </IconTile>
-          </div>
-          <Caption>
-            {requiredCourses.toGo === 0 && requiredCourses.inProgress === 0
-              ? "All required courses done"
-              : requiredCourses.inProgress > 0
-                ? `${requiredCourses.inProgress} in progress, ${requiredCourses.toGo} to go`
-                : `${requiredCourses.toGo} to go`}
-          </Caption>
-        </Metric>
-      ) : (
-        <Metric label="Planned next term" info={GLOSSARY.plannedNext}>
-          <div className="flex items-center justify-between gap-3">
-            <Value>{nextTermCredits}</Value>
-            <IconTile>
-              <CalendarDays className="size-5" strokeWidth={1.75} />
-            </IconTile>
-          </div>
-          <Caption>{`credits in ${termLabel(term)}`}</Caption>
-        </Metric>
+          {graduation && termsLeft > 0 && (
+            <>
+              <Term def={GLOSSARY.termsLeft}>
+                {COPY.termsLeft(termsLeft, graduation)}
+              </Term>
+              .
+            </>
+          )}
+        </p>
       )}
-
-      <Metric label="Terms left" info={GLOSSARY.termsLeft}>
-        <div className="flex items-center justify-between gap-3">
-          <Value>{termsLeft ?? "-"}</Value>
-          <IconTile>
-            <GraduationCap className="size-5" strokeWidth={1.75} />
-          </IconTile>
-        </div>
-        <Caption>
-          {graduationTerm
-            ? compareTerms(graduationTerm, currentTerm()) < 0
-              ? "Graduation date has passed"
-              : `Until ${termLabel(graduationTerm)}`
-            : "Set your graduation term"}
-        </Caption>
-      </Metric>
-
-      {minor && minorProgress && (
-        <Metric label="Minor" info={GLOSSARY.minor}>
-          <div className="flex items-center justify-between gap-3">
-            <Value>
-              {minorProgress.creditsDone}
-              <span className="font-normal text-muted-foreground">
-                {" "}
-                of {minorProgress.credits}
-              </span>
-            </Value>
-            <IconTile>
-              <Layers className="size-5" strokeWidth={1.75} />
-            </IconTile>
-          </div>
-          <Caption>
-            <span className="line-clamp-2" title={minor.name}>
-              credits in {minorName(minor.name)}
-            </span>
-          </Caption>
-        </Metric>
+      <NextStep
+        snapshot={snapshot}
+        catalogue={catalogue}
+        program={program}
+        term={term}
+        passed={passed}
+      />
+      {program && (
+        <RequiredCourses
+          snapshot={snapshot}
+          catalogue={catalogue}
+          program={program}
+          term={term}
+        />
       )}
+    </>
+  );
+}
+
+/** The first thing left to set up or fix, with the screen's one red button. Nothing when all is done. */
+function NextStep({
+  snapshot,
+  catalogue,
+  program,
+  term,
+  passed,
+}: {
+  snapshot: Snapshot;
+  catalogue: Catalogue;
+  program: Program | null;
+  term: AcademicTerm;
+  passed: boolean;
+}) {
+  const records = useProfileStore((state) => state.records);
+  const plan = useProfileStore((state) => state.plan);
+  const graduation = useProfileStore((state) => state.graduationTerm);
+  const creditLimit = useProfileStore((state) => state.creditLimit);
+  const warnings = useMemo(
+    () => planWarnings(plan, snapshot, catalogue, creditLimit, graduation),
+    [plan, snapshot, catalogue, creditLimit, graduation],
+  );
+  const planned = termLoad(plan, catalogue, term);
+  const [warning] = warnings;
+
+  if (records.length === 0) {
+    return (
+      <Step href="/profile" label={COPY.importTranscript}>
+        Import your transcript to fill in your courses.
+      </Step>
+    );
+  }
+  if (!program) {
+    return (
+      <Step href="/profile#program" label={COPY.pickProgram}>
+        Pick your program to see what you still need.
+      </Step>
+    );
+  }
+  if (!graduation) {
+    return (
+      <Step href="/profile#graduation" label="Set graduation term">
+        Set your expected graduation term to see how many terms are left.
+      </Step>
+    );
+  }
+  if (passed) {
+    return (
+      <Step href="/profile#graduation" label="Update graduation term">
+        Your expected graduation, {COPY.term(graduation)}, has passed.
+      </Step>
+    );
+  }
+  if (warning) {
+    return (
+      <Step href="/plan" label="Open planner">
+        {COPY.warnings(warnings.length)} in your plan:{" "}
+        <WarningSentence
+          warning={warning}
+          snapshot={snapshot}
+          catalogue={catalogue}
+          plan={plan}
+        />
+      </Step>
+    );
+  }
+  if (planned < FULL_TIME_CREDITS) {
+    return (
+      <Step href="/next" label="See courses">
+        Plan at least <Term def={GLOSSARY.fullTime} /> for {COPY.term(term)}.{" "}
+        {planned} so far.
+      </Step>
+    );
+  }
+  return null;
+}
+
+function Step({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="mt-8 flex items-center justify-between gap-4">
+      <p>{children}</p>
+      <Button asChild>
+        <Link href={href}>{label}</Link>
+      </Button>
     </div>
   );
 }
 
-function Metric({
-  label,
-  info,
-  children,
-}: {
-  label: string;
-  info: Definition;
-  children: ReactNode;
-}) {
-  return (
-    <Card className="flex flex-col gap-1 p-4">
-      <p className="flex items-center gap-1.5 font-medium text-[13px] text-muted-foreground leading-[18px]">
-        {label}
-        <InfoTip {...info} />
-      </p>
-      {children}
-    </Card>
-  );
-}
-
-const IconTile = ({ children }: { children: ReactNode }) => (
-  <span
-    aria-hidden
-    className="flex size-10 items-center justify-center rounded-md bg-subtle text-muted-foreground shadow-[inset_0_0_0_1px_var(--border)]"
-  >
-    {children}
-  </span>
-);
-
-const Value = ({ children }: { children: ReactNode }) => (
-  <p className="font-semibold text-[28px] leading-10 tracking-tight tabular-nums">
-    {children}
-  </p>
-);
-
-const Caption = ({ children }: { children: ReactNode }) => (
-  <p className="text-muted-foreground text-xs leading-4">{children}</p>
-);
-
-function NextUp({
-  mustTake,
-  hasProgram,
+function RequiredCourses({
+  snapshot,
+  catalogue,
+  program,
   term,
 }: {
-  mustTake: Entry[];
-  hasProgram: boolean;
-  term: Term;
+  snapshot: Snapshot;
+  catalogue: Catalogue;
+  program: Program;
+  term: AcademicTerm;
 }) {
   const plan = useProfileStore((state) => state.plan);
-  const label = termLabel(term);
+  const entry = useProfileStore((state) => state.entry);
+  // Planned courses stay in the list, so adding one shows "Planned" and the row does not vanish.
+  const view = useMemo(
+    () =>
+      nextView(
+        catalogue,
+        { ...snapshot, planned: NO_COURSES },
+        term,
+        program,
+        entry,
+      ),
+    [catalogue, snapshot, term, program, entry],
+  );
+  // An alternative with a reason is not open, so it stays on What's next.
+  const open = view.mustTake
+    .flatMap((item) => ("oneOf" in item ? item.oneOf : [item]))
+    .filter((item) => !item.reason);
+  const label = COPY.term(term);
   const plannedIn = (code: string) =>
-    plan.find((entry) => entry.courses.includes(code))?.term;
-  const shown = mustTake.slice(0, NEXT_UP_LIMIT);
+    plan.find((item) => item.courses.includes(code))?.term;
+
   return (
-    <Card asChild className="overflow-hidden">
-      <section aria-labelledby="next-up-title">
-        <div className="flex items-center justify-between gap-4 px-5 pt-4 pb-3">
-          <div>
-            <h2 id="next-up-title" className="text-base leading-6">
-              Next up for {label}
-            </h2>
-            <p className="text-[13px] text-muted-foreground leading-[18px]">
-              Required courses you can take now.
-            </p>
-          </div>
-          <Link
-            href="/next"
-            className="inline-flex items-center gap-1 rounded-sm font-medium text-in-progress hover:underline"
-          >
-            See all options
-            <ArrowRight aria-hidden className="size-4" />
-          </Link>
-        </div>
-        {shown.length > 0 ? (
+    <div className="mt-12">
+      <Section title={`Required courses open in ${label}`}>
+        {open.length > 0 ? (
           <ul>
-            {shown.map(({ course, uncertain }) => {
+            {open.slice(0, NEXT_UP_LIMIT).map(({ course, uncertain }) => {
               const at = plannedIn(course.code);
               return (
-                <li
+                <CourseRow
                   key={course.code}
-                  className="flex h-11 items-center gap-3 border-border border-t px-5"
-                >
-                  <StatusTip
-                    status={at ? "planned" : "available"}
-                    reason={at && `Planned for ${termLabel(at)}.`}
-                    className="flex shrink-0 items-center gap-3"
-                  >
-                    <StatusIcon
-                      status={at ? "planned" : "available"}
-                      label={at ? `Planned for ${termLabel(at)}` : undefined}
-                    />
-                    <Link
-                      href={`/courses/${courseSlug(course.code)}`}
-                      prefetch={false}
-                      className="w-[84px] shrink-0 whitespace-nowrap font-semibold tabular-nums hover:underline"
-                    >
-                      {course.code}
-                    </Link>
-                  </StatusTip>
-                  <span className="flex min-w-0 flex-1 items-center gap-1.5">
-                    <span className="truncate" title={course.title}>
-                      {course.title}
-                    </span>
-                    {uncertain && <UncertainFlag />}
-                  </span>
-                  {at && (
-                    <span className="shrink-0 text-[13px] text-muted-foreground">
-                      Planned for {termLabel(at)}
-                    </span>
-                  )}
-                  <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
-                    <CreditsLabel course={course} />
-                  </span>
-                  <span className="flex w-[84px] shrink-0 justify-end">
-                    {at ? (
+                  course={course}
+                  status={at ? "planned" : "available"}
+                  showGlyph
+                  meta={
+                    (at || uncertain) && (
+                      <>
+                        {at &&
+                          (termKey(at) === termKey(term)
+                            ? STATUS.planned.label
+                            : COPY.plannedFor(at))}
+                        {uncertain && <UncertainFlag />}
+                      </>
+                    )
+                  }
+                  action={
+                    at ? (
                       <Button
-                        variant="ghost"
-                        size="sm"
+                        variant="text"
                         onClick={() => removeWithUndo(at, course.code)}
                       >
                         Remove
@@ -508,9 +335,7 @@ function NextUp({
                       </Button>
                     ) : (
                       <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-foreground"
+                        variant="text"
                         onClick={() => addWithUndo(term, course.code)}
                       >
                         Add
@@ -519,31 +344,27 @@ function NextUp({
                           {course.code} to {label}
                         </span>
                       </Button>
-                    )}
-                  </span>
-                </li>
+                    )
+                  }
+                />
               );
             })}
-            {mustTake.length > shown.length && (
-              <li className="flex h-11 items-center gap-3 border-border border-t px-5 text-[13px] text-muted-foreground">
-                Showing {shown.length} of {mustTake.length}
-                <Link
-                  href="/next"
-                  className="rounded-sm font-medium text-in-progress hover:underline"
-                >
-                  See all {mustTake.length}
-                </Link>
-              </li>
-            )}
           </ul>
         ) : (
-          <p className="border-border border-t px-5 py-4 text-muted-foreground">
-            {hasProgram
-              ? `No required course is open in ${label}. See all options for other courses you can take.`
-              : "Pick your program to see which required courses you can take next."}
+          <p className="text-fg-muted">
+            {view.later.length > 0
+              ? `No required course is open in ${label}.`
+              : "Every required course is done or in progress."}
           </p>
         )}
-      </section>
-    </Card>
+        {open.length > NEXT_UP_LIMIT && (
+          <p className="mt-4">
+            <Link href="/next" className="link font-semibold">
+              See all {open.length} in What's next
+            </Link>
+          </p>
+        )}
+      </Section>
+    </div>
   );
 }

@@ -11,15 +11,24 @@ const expectNoHorizontalScroll = async (page: Page) => {
 
 test("landing renders its primary action", async ({ page }) => {
   await page.goto("/");
+  const main = page.getByRole("main");
   await expect(
-    page.getByRole("heading", { level: 1, name: "Your McGill degree" }),
+    main.getByRole("heading", { level: 1, name: "Your McGill degree" }),
   ).toBeVisible();
   await expect(
-    page
-      .getByRole("main")
-      .getByRole("link", { name: "Import your transcript" }),
+    main.getByRole("link", { name: "Import your transcript" }),
   ).toHaveAttribute("href", "/profile");
   await expectNoHorizontalScroll(page);
+
+  await main
+    .getByRole("button", { name: "Start without a transcript" })
+    .click();
+  await expect(
+    main.getByRole("heading", { level: 1, name: "0 credits earned" }),
+  ).toBeVisible();
+  await expect(
+    main.getByText("Import your transcript to fill in your courses."),
+  ).toBeVisible();
 });
 
 test("nav links reach their pages", async ({ page }) => {
@@ -80,18 +89,19 @@ test("a returning student sees their home and can add a required course", async 
   await page.goto("/");
   const main = page.getByRole("main");
   await expect(
-    main.getByRole("heading", { level: 1, name: "Welcome back" }),
+    main.getByRole("heading", { level: 1, name: "9 credits earned" }),
   ).toBeVisible();
-  await expect(main.getByText("of 5 steps done")).toBeVisible();
-
-  const nextUp = main.getByRole("region", { name: "Next up for Winter 2027" });
-  await nextUp.getByRole("button", { name: /^Add / }).first().click();
-  await expect(nextUp.getByRole("button", { name: /^Remove / })).toHaveCount(1);
-
-  await main.getByRole("button", { name: "Dismiss setup guide" }).click();
-  await page.reload();
   await expect(
-    main.getByRole("button", { name: "Show setup guide" }),
-  ).toBeVisible();
+    main.getByRole("link", { name: "Set graduation term" }),
+  ).toHaveAttribute("href", "/profile#graduation");
+
+  const required = main.getByRole("region", {
+    name: "Required courses open in Winter 2027",
+  });
+  await required.getByRole("button", { name: /^Add / }).first().click();
+  await expect(required.getByRole("button", { name: /^Remove / })).toHaveCount(
+    1,
+  );
+  await expect(required.getByText("Planned", { exact: true })).toBeVisible();
   await expectNoHorizontalScroll(page);
 });
