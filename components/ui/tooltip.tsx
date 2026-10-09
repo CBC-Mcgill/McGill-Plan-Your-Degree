@@ -3,7 +3,7 @@
 import { cn } from "cn";
 import { Info } from "lucide-react";
 import { Tooltip as Primitive } from "radix-ui";
-import { type FocusEvent, type ReactNode, useState } from "react";
+import { type FocusEvent, type ReactNode, useRef, useState } from "react";
 
 /** One provider for the app, so every tooltip shares the same delay and moves between triggers without waiting again. */
 function TooltipProvider({ children }: { children: ReactNode }) {
@@ -14,12 +14,15 @@ function TooltipProvider({ children }: { children: ReactNode }) {
   );
 }
 
-/** Radix closes a tooltip on scroll, which tabbing to a trigger below the fold causes, so open again once the scroll has passed. */
+/** Radix closes a tooltip on scroll, which tabbing to a trigger below the fold causes, so open again once the scroll has passed, unless Escape closed it. */
 function useOpen() {
   const [open, onOpenChange] = useState(false);
+  const escaped = useRef(false);
   function onFocus({ target }: FocusEvent) {
+    escaped.current = false;
     const settle = () => {
       if (
+        !escaped.current &&
         target instanceof HTMLElement &&
         document.activeElement === target &&
         target.matches(":focus-visible")
@@ -29,16 +32,21 @@ function useOpen() {
     };
     requestAnimationFrame(() => requestAnimationFrame(settle));
   }
-  return { open, onOpenChange, onFocus };
+  const onEscapeKeyDown = () => {
+    escaped.current = true;
+  };
+  return { open, onOpenChange, onFocus, onEscapeKeyDown };
 }
 
 function Bubble({
   side = "top",
   align = "center",
+  onEscapeKeyDown,
   children,
 }: {
   side?: "top" | "bottom" | "left" | "right";
   align?: "start" | "center" | "end";
+  onEscapeKeyDown: () => void;
   children: ReactNode;
 }) {
   return (
@@ -46,6 +54,7 @@ function Bubble({
       <Primitive.Content
         side={side}
         align={align}
+        onEscapeKeyDown={onEscapeKeyDown}
         sideOffset={8}
         collisionPadding={16}
         arrowPadding={10}
@@ -70,13 +79,13 @@ function Tooltip({
   align?: "start" | "center" | "end";
   children: ReactNode;
 }) {
-  const { open, onOpenChange, onFocus } = useOpen();
+  const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
   return (
     <Primitive.Root open={open} onOpenChange={onOpenChange}>
       <Primitive.Trigger asChild onFocus={onFocus}>
         {children}
       </Primitive.Trigger>
-      <Bubble side={side} align={align}>
+      <Bubble side={side} align={align} onEscapeKeyDown={onEscapeKeyDown}>
         {content}
       </Bubble>
     </Primitive.Root>
@@ -93,7 +102,7 @@ function InfoTip({
   tip: ReactNode;
   className?: string;
 }) {
-  const { open, onOpenChange, onFocus } = useOpen();
+  const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
   return (
     <Primitive.Root open={open} onOpenChange={onOpenChange}>
       <Primitive.Trigger asChild onFocus={onFocus}>
@@ -112,7 +121,7 @@ function InfoTip({
           <Info aria-hidden className="size-4" strokeWidth={1.75} />
         </button>
       </Primitive.Trigger>
-      <Bubble>{tip}</Bubble>
+      <Bubble onEscapeKeyDown={onEscapeKeyDown}>{tip}</Bubble>
     </Primitive.Root>
   );
 }
