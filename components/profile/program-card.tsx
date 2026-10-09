@@ -19,7 +19,7 @@ export function ProgramCard() {
   );
 
   return (
-    <Section id="program" title="Program">
+    <Section id="program" title="Degree">
       <ProgramFields
         value={value}
         onChange={(patch) => useProfileStore.setState(patch)}
