@@ -52,3 +52,7 @@ next-env.d.ts
 
 # browser tool logs
 /.playwright-mcp/
+
+# local agent worktrees and dev launch config
+/.claude/worktrees/
+/.claude/launch.json
