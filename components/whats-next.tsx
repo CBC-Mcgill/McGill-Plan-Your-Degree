@@ -4,7 +4,7 @@ import { cn } from "cn";
 import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { type ReactNode, useId, useMemo, useRef, useState } from "react";
+import { type ReactNode, useId, useMemo, useRef } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
 import {
@@ -28,7 +28,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { CARD, Card } from "@/components/ui/card";
 import { Disclosure, ShowMore } from "@/components/ui/disclosure";
-import { ViewTabs } from "@/components/ui/tabs";
 import { Term as Defined } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { courseSlug } from "@/lib/catalogue/slug";
@@ -72,7 +71,6 @@ import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
 import type { Program } from "@/lib/programs/types";
 
-const TERMS_SHOWN = 2;
 const BUCKET_LIMIT = 5;
 const OTHER_LIMIT = 20;
 
@@ -177,16 +175,10 @@ function Page({
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
   const creditLimit = useProfileStore((state) => state.creditLimit);
-  const panelId = useId();
   const paneId = useId();
   const panes = useRef<HTMLDivElement>(null);
   const asked = useSearchParams().get("req");
-  const terms = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
-  const [picked, setPicked] = useState<string>();
-  const term =
-    terms.find((t) => String(termKey(t)) === picked) ??
-    terms[0] ??
-    currentTerm();
+  const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
 
   const planned = useMemo(
     () =>
@@ -371,16 +363,14 @@ function Page({
         </div>
       )}
       <div className="mt-6 flex items-center justify-between gap-4">
-        <ViewTabs
-          label="Term"
-          tabs={terms.map((t) => ({
-            id: String(termKey(t)),
-            label: termLabel(t),
-          }))}
-          value={String(termKey(term))}
-          onChange={setPicked}
-          panelId={panelId}
-        />
+        <p>
+          What you can take in{" "}
+          <span className="font-semibold">{termLabel(term)}</span>, your next
+          term ·{" "}
+          <Link href="/plan" className="link">
+            Plan later terms
+          </Link>
+        </p>
         <TermLoad
           credits={termLoad(plan, catalogue, term)}
           limit={creditLimit}
@@ -402,9 +392,6 @@ function Page({
 
       <div
         ref={panes}
-        role="tabpanel"
-        id={panelId}
-        aria-labelledby={`${panelId}-${termKey(term)}`}
         className="mt-6 grid scroll-mt-6 grid-cols-[15rem_minmax(0,1fr)] items-start gap-6"
       >
         {pane && (
