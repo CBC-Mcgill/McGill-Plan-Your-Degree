@@ -2,6 +2,7 @@
 
 import { cn } from "cn";
 import {
+  ArrowRight,
   ChevronDown,
   CircleAlert,
   Compass,
@@ -58,7 +59,7 @@ const TERMS_SHOWN = 4;
 const BUCKET_LIMIT = 5;
 
 // The catalogue opens a program page on its overview tab, and this hash opens the course lists instead.
-const coursesTab = (source: string) => `${source}#coursestext`;
+export const coursesTab = (source: string) => `${source}#coursestext`;
 const OTHER_STEP = 20;
 const OTHER = "other";
 const NO_COURSES: ReadonlySet<string> = new Set();
@@ -417,35 +418,38 @@ function ProgramSummary({
           info={GLOSSARY.required}
         />
       </Card>
-      {(degree || inProgress) && (
-        <div className="flex flex-col gap-1 text-[13px]">
-          {inProgress && (
-            <p className="text-muted-foreground">
-              Program credits include the courses you are taking now.
-            </p>
-          )}
-          {degree && (
-            <p>
-              <span className="font-medium">Earned so far:</span>{" "}
-              <span className="tabular-nums">
-                {degree.done}
-                {degree.required !== credits && ` of ${degree.required}`}{" "}
-                credits
+      <div className="flex flex-col gap-1 text-[13px]">
+        {inProgress && (
+          <p className="text-muted-foreground">
+            Program credits include the courses you are taking now.
+          </p>
+        )}
+        {degree && (
+          <p>
+            <span className="font-medium">Earned so far:</span>{" "}
+            <span className="tabular-nums">
+              {degree.done}
+              {degree.required !== credits && ` of ${degree.required}`} credits
+            </span>
+            {degree.advancedStanding > 0 && (
+              <span className="text-muted-foreground">
+                , including {degree.advancedStanding} advanced standing credits
               </span>
-              {degree.advancedStanding > 0 && (
-                <span className="text-muted-foreground">
-                  , including {degree.advancedStanding} advanced standing
-                  credits
-                </span>
-              )}{" "}
-              <InfoTip
-                {...GLOSSARY.creditsEarned}
-                className="align-text-bottom"
-              />
-            </p>
-          )}
-        </div>
-      )}
+            )}{" "}
+            <InfoTip
+              {...GLOSSARY.creditsEarned}
+              className="align-text-bottom"
+            />
+          </p>
+        )}
+        <Link
+          href="/requirements"
+          className="inline-flex items-center gap-1 self-start rounded-sm text-muted-foreground hover:text-foreground hover:underline"
+        >
+          See where your courses count
+          <ArrowRight aria-hidden className="size-3.5" />
+        </Link>
+      </div>
       {exemptions.length > 0 && (
         <ul className="flex flex-col gap-2">
           {exemptions.map(({ code, credits }) => (
@@ -469,7 +473,7 @@ function ProgramSummary({
   );
 }
 
-function Stat({
+export function Stat({
   value,
   caption,
   info,
@@ -492,10 +496,11 @@ function Stat({
 }
 
 /** Group header band: chevron, name, fraction and ring. The toggle stretches over the whole band, and the info buttons sit above it. */
-function Group({
+export function Group({
   title,
   info,
   fraction,
+  met = false,
   checks = 0,
   trailing,
   source,
@@ -505,7 +510,9 @@ function Group({
 }: {
   title: string;
   info?: Definition;
-  fraction?: { done: number; of: number };
+  fraction?: { done: number; of: number; unit?: "credits" | "courses" };
+  /** Swaps the ring for a check once every requirement of the group is met. */
+  met?: boolean;
   /** Rules in the group that need a manual check. */
   checks?: number;
   trailing?: string;
@@ -572,13 +579,17 @@ function Group({
           {fraction && (
             <>
               <span className="text-[13px] text-muted-foreground tabular-nums">
-                {fraction.done} of {fraction.of} credits
+                {fraction.done} of {fraction.of} {fraction.unit ?? "credits"}
               </span>
-              <ProgressRing
-                value={fraction.done}
-                max={fraction.of}
-                label={`${fraction.done} of ${fraction.of} credits`}
-              />
+              {met ? (
+                <StatusIcon status="completed" label="Done" />
+              ) : (
+                <ProgressRing
+                  value={fraction.done}
+                  max={fraction.of}
+                  label={`${fraction.done} of ${fraction.of} ${fraction.unit ?? "credits"}`}
+                />
+              )}
             </>
           )}
           {trailing && (
@@ -593,23 +604,39 @@ function Group({
   );
 }
 
-function SubLabel({
+export function SubLabel({
   left,
   right,
   info,
+  className,
 }: {
   left: string;
   right?: string | null;
   info?: Definition;
+  className?: string;
 }) {
   return (
-    <li className="flex h-8 items-center justify-between gap-4 border-border border-t pr-[108px] pl-[42px] font-medium text-muted-foreground text-xs leading-4">
+    <li
+      className={cn(
+        "flex h-8 items-center justify-between gap-4 border-border border-t pr-[108px] pl-[42px] font-medium text-muted-foreground text-xs leading-4",
+        className,
+      )}
+    >
       <span className="flex min-w-0 items-center gap-1.5">
         <span className="truncate">{left}</span>
         {info && <InfoTip {...info} />}
       </span>
       {right && <span className="tabular-nums">{right}</span>}
     </li>
+  );
+}
+
+/** The band above a list of courses of which the student takes one. */
+export function OneOfLabel() {
+  return (
+    <p className="flex h-7 items-center bg-subtle pl-[42px] font-medium text-in-progress text-xs leading-4">
+      Take one of these
+    </p>
   );
 }
 
@@ -620,9 +647,7 @@ function ItemRows({ items, context }: { items: Item[]; context: Context }) {
         key={item.oneOf.map(({ course }) => course.code).join()}
         className="border-border border-t"
       >
-        <p className="flex h-7 items-center bg-subtle pl-[42px] font-medium text-in-progress text-xs leading-4">
-          Take one of these
-        </p>
+        <OneOfLabel />
         <ul>
           {item.oneOf.map((entry) => (
             <Row key={entry.course.code} entry={entry} context={context} />
@@ -676,7 +701,7 @@ function Row({
         prefetch={false}
         className="-mx-2 flex h-full min-w-0 flex-1 items-center gap-3 rounded-sm px-2 -outline-offset-2"
       >
-        <span className="w-[76px] shrink-0 font-semibold tabular-nums">
+        <span className="w-[84px] shrink-0 whitespace-nowrap font-semibold tabular-nums">
           {course.code}
         </span>
         <span className="flex min-w-0 flex-1 items-center gap-1.5">
@@ -724,7 +749,7 @@ function Row({
 }
 
 /** A rule the crawler could not read. It shows the catalogue text and links to the program page, and never counts as done. */
-function CheckRow({
+export function CheckRow({
   text,
   source,
 }: {
@@ -922,7 +947,7 @@ function EmptyState() {
   );
 }
 
-function PageSkeleton() {
+export function PageSkeleton() {
   return (
     <div className="mt-6 flex flex-col gap-6">
       <p role="status" className="sr-only">

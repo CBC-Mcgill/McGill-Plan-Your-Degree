@@ -58,6 +58,14 @@ export const GLOSSARY = {
     label: "Complementary courses",
     tip: "Courses you choose from lists in your program, up to the credits it asks for.",
   },
+  requirementCredits: {
+    label: "Credits counted",
+    tip: "Credits from your completed, current and planned courses, up to what each requirement needs.",
+  },
+  notCounted: {
+    label: "Not counted toward your program",
+    tip: "No requirement of your program took these courses. They still count toward your degree's total credits as electives.",
+  },
   checkRequirement: { label: "Check this requirement", tip: checkTip },
   checkRules: { label: "Rules to check", tip: checkTip },
   warnings: {

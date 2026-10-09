@@ -62,7 +62,8 @@ const asEntry = ({ course, uncertain }: Suggestion): Entry => ({
   uncertain,
 });
 
-function reasonFor(
+/** Why the student cannot take the course in the term, or undefined when it is open. */
+export function reasonFor(
   course: CourseSummary,
   term: Term,
   snapshot: Snapshot,
@@ -116,13 +117,13 @@ const hasMinimum = (rule: Rule) =>
   rule.minCredits !== undefined || rule.minCourses !== undefined;
 
 /** A rule that lists courses and can host them: one with a minimum still to meet, or a plain list. "Cannot both be taken" rules only cap. */
-const hostsCourses = (rule: Rule, done: RuleProgress | undefined) =>
+export const hostsCourses = (rule: Rule, done: RuleProgress | undefined) =>
   hasMinimum(rule)
     ? !done?.satisfied
     : rule.maxCourses === undefined &&
       Boolean(rule.courses || rule.match?.subjects);
 
-function minimumText(rule: Rule, done: RuleProgress | undefined) {
+export function minimumText(rule: Rule, done: RuleProgress | undefined) {
   if (rule.minCredits !== undefined) {
     return `${Math.min(done?.creditsDone ?? 0, rule.minCredits)} of ${rule.minCredits} credits`;
   }

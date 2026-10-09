@@ -8,8 +8,8 @@ import { Banner } from "@/components/ui/banner";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
 import { InfoTip, Tooltip } from "@/components/ui/tooltip";
-import type { GroupProgress, ProgramProgress } from "@/lib/engine/progress";
-import { creditsText, sentence } from "@/lib/format";
+import { lacking, type ProgramProgress } from "@/lib/engine/progress";
+import { sentence } from "@/lib/format";
 import { GLOSSARY } from "@/lib/glossary";
 import type { Program, RequiredItem } from "@/lib/programs/types";
 
@@ -19,26 +19,6 @@ const requiredText = (items: RequiredItem[]) =>
   items
     .map((item) => (typeof item === "string" ? item : item.oneOf.join(" or ")))
     .join(", ");
-
-/** What a complementary group lacks: credits first, then the first rule it fails. Null when only rules to check are left. */
-function lacking(group: GroupProgress): string | null {
-  if (group.creditsDone < group.credits) {
-    return `${creditsText(group.credits - group.creditsDone)} to go`;
-  }
-  const open = group.rules.filter((rule) => !rule.satisfied && !rule.unparsed);
-  const [rule] = open;
-  if (!rule) {
-    return group.minCourses !== undefined &&
-      group.coursesDone < group.minCourses
-      ? `${group.coursesDone} of ${group.minCourses} courses`
-      : null;
-  }
-  const need =
-    rule.minCredits === undefined
-      ? `${rule.coursesDone} of ${rule.minCourses} courses`
-      : `${creditsText(rule.minCredits - rule.creditsDone)} to go`;
-  return `${rule.title} (${need})${open.length > 1 ? ` and ${open.length - 1} more` : ""}`;
-}
 
 /** Rule text can run to a paragraph, which has no place in a one-line summary. */
 const brief = (text: string) =>

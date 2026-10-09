@@ -1,3 +1,4 @@
+import { creditsText } from "../format.ts";
 import type { EntryRoute } from "../profile/types.ts";
 import type {
   ComplementaryGroup,
@@ -19,10 +20,18 @@ export interface CountOptions {
   entry?: EntryRoute | null;
 }
 
+/** A course a group or rule counted, with the credits it brought. */
+export interface Claimed {
+  code: string;
+  credits: number;
+}
+
 export interface RuleProgress {
   title: string;
   creditsDone: number;
   coursesDone: number;
+  /** The counted courses that match the rule. A course can match several rules of one group. */
+  courses: Claimed[];
   minCredits?: number;
   minCourses?: number;
   /** The crawler could not read this rule, so nothing counts toward it and it is never satisfied. */
@@ -42,7 +51,7 @@ export interface GroupProgress {
   /** A foundation group the student is credited for from CEGEP, so it needs no courses. */
   credited: boolean;
   /** The counted courses this group claimed. */
-  courses: string[];
+  courses: Claimed[];
   /** Required groups: the items still missing. */
   remaining: RequiredItem[];
   /** Complementary groups: one entry per rule. */
@@ -60,6 +69,8 @@ export interface ProgramProgress {
   groups: GroupProgress[];
   /** Every required item still missing, across required groups. */
   remaining: RequiredItem[];
+  /** Counted courses that no group claimed. They still count toward the degree's total credits. */
+  unclaimed: Claimed[];
 }
 
 function matchesMatch(match: Match, code: string): boolean {
@@ -144,7 +155,7 @@ function requiredProgress(
   used: Set<string>,
 ): GroupProgress {
   const remaining: RequiredItem[] = [];
-  const courses: string[] = [];
+  const courses: Claimed[] = [];
   let creditsDone = 0;
   for (const item of group.courses) {
     const code = (typeof item === "string" ? [item] : item.oneOf).find((c) =>
@@ -153,9 +164,10 @@ function requiredProgress(
     if (code === undefined) {
       remaining.push(item);
     } else {
+      const credits = counted.get(code) ?? 0;
       used.add(code);
-      courses.push(code);
-      creditsDone += counted.get(code) ?? 0;
+      courses.push({ code, credits });
+      creditsDone += credits;
     }
   }
   return {
@@ -186,6 +198,7 @@ function complementaryProgress(
     rule,
     creditsDone: 0,
     coursesDone: 0,
+    courses: [] as Claimed[],
   }));
   const chosen = new Map<string, number>();
   let total = 0;
@@ -199,6 +212,7 @@ function complementaryProgress(
       if (ruleMatches(s.rule, code)) {
         s.creditsDone += credits;
         s.coursesDone++;
+        s.courses.push({ code, credits });
       }
     }
   };
@@ -227,10 +241,11 @@ function complementaryProgress(
   }
 
   for (const code of chosen.keys()) used.add(code);
-  const rules = state.map(({ rule, creditsDone, coursesDone }) => ({
+  const rules = state.map(({ rule, creditsDone, coursesDone, courses }) => ({
     title: rule.title,
     creditsDone,
     coursesDone,
+    courses,
     minCredits: rule.minCredits,
     minCourses: rule.minCourses,
     unparsed: rule.unparsed,
@@ -251,7 +266,7 @@ function complementaryProgress(
       chosen.size >= (group.minCourses ?? 0) &&
       rules.every((rule) => rule.satisfied),
     credited: false,
-    courses: [...chosen.keys()],
+    courses: [...chosen].map(([code, credits]) => ({ code, credits })),
     remaining: [],
     rules,
     unparsed: rules.filter((rule) => rule.unparsed).length,
@@ -308,5 +323,28 @@ export function programProgress(
     satisfied: groups.every((group) => group.satisfied),
     groups,
     remaining: groups.flatMap((group) => group.remaining),
+    unclaimed: [...counted]
+      .filter(([code]) => !used.has(code))
+      .map(([code, credits]) => ({ code, credits })),
   };
+}
+
+/** What a complementary group lacks: credits first, then the first rule it fails. Null when only rules to check are left. */
+export function lacking(group: GroupProgress): string | null {
+  if (group.creditsDone < group.credits) {
+    return `${creditsText(group.credits - group.creditsDone)} to go`;
+  }
+  const open = group.rules.filter((rule) => !rule.satisfied && !rule.unparsed);
+  const [rule] = open;
+  if (!rule) {
+    return group.minCourses !== undefined &&
+      group.coursesDone < group.minCourses
+      ? `${group.coursesDone} of ${group.minCourses} courses`
+      : null;
+  }
+  const need =
+    rule.minCredits === undefined
+      ? `${rule.coursesDone} of ${rule.minCourses} courses`
+      : `${creditsText(rule.minCredits - rule.creditsDone)} to go`;
+  return `${rule.title} (${need})${open.length > 1 ? ` and ${open.length - 1} more` : ""}`;
 }
