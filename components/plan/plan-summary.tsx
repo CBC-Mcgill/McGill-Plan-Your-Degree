@@ -6,6 +6,7 @@ import { Fragment, type ReactNode } from "react";
 import { CourseCode } from "@/components/course-code";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
+import { StatusBar } from "@/components/status";
 import { ShowMore } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
 import { Section } from "@/components/ui/section";
@@ -17,6 +18,7 @@ import {
   type GroupProgress,
   lacking,
   type ProgramProgress,
+  programSplit,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { creditsText, sentence } from "@/lib/format";
@@ -64,7 +66,7 @@ function CourseTag({
 }
 
 /** A group's credits split by the status of the courses it claimed, with what is left in grey. */
-function StatusBar({
+function GroupBar({
   group,
   snapshot,
 }: {
@@ -103,7 +105,7 @@ function StatusBar({
 }
 
 const ROW =
-  "grid min-h-11 grid-cols-[17rem_minmax(0,1fr)_9rem] items-center gap-6 border-line border-b py-2";
+  "-mx-5 grid min-h-11 grid-cols-[17rem_minmax(0,1fr)_9rem] items-center gap-6 border-line border-t px-5 py-2 first:border-t-0";
 
 /** "Minor" before a minor group's name, so it reads apart from the program's. */
 const MinorPrefix = ({ minor }: { minor: boolean }) =>
@@ -199,7 +201,7 @@ function missingRows(
           </span>
           {what}
           <span className="flex items-center justify-end gap-3 tabular-nums">
-            <StatusBar group={group} snapshot={snapshot} />
+            <GroupBar group={group} snapshot={snapshot} />
             <span className="w-16 text-right">
               {gap > 0 && (
                 <>
@@ -290,6 +292,16 @@ export function PlanSummary({
         )}
         {warnings}
       </div>
+      {standing && (
+        <div className="mt-4">
+          <StatusBar
+            {...programSplit(standing.progress, snapshot)}
+            total={standing.progress.credits}
+            legend
+            className="w-80"
+          />
+        </div>
+      )}
 
       <div className="mt-2 flex flex-col gap-1 empty:hidden">
         {graduationPassed && (
@@ -349,10 +361,12 @@ export function PlanSummary({
             }
             meta={`${rows.length} ${rows.length === 1 ? "requirement" : "requirements"} still open`}
           >
-            <ul className="border-line border-t">{rows.slice(0, VISIBLE)}</ul>
+            <ul>{rows.slice(0, VISIBLE)}</ul>
             {rows.length > VISIBLE && (
               <ShowMore count={rows.length - VISIBLE}>
-                <ul>{rows.slice(VISIBLE)}</ul>
+                <ul className="[&>li:first-child]:border-t">
+                  {rows.slice(VISIBLE)}
+                </ul>
               </ShowMore>
             )}
           </Section>

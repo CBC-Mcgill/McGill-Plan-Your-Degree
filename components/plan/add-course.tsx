@@ -22,11 +22,13 @@ export function AddCourse({
   index,
   snapshot,
   plan,
+  placeholder,
 }: {
   term: Term;
   index: readonly IndexedCourse[];
   snapshot: Snapshot;
   plan: Plan;
+  placeholder?: string;
 }) {
   const listId = useId();
   const wrap = useRef<HTMLDivElement>(null);
@@ -104,7 +106,7 @@ export function AddCourse({
         aria-autocomplete="list"
         autoComplete="off"
         spellCheck={false}
-        placeholder={`Add a course to ${label}, like COMP 251`}
+        placeholder={placeholder ?? `Add a course to ${label}, like COMP 251`}
         value={query}
         onFocus={() => setOpen(true)}
         onBlur={(event) => {

@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import type { Course, Requirement } from "../catalogue/types.ts";
-import type { CourseRecord, Term } from "../profile/types.ts";
+import type { CourseRecord, Plan, Term } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { earnedCredits, pendingCredits } from "./credits.ts";
@@ -16,6 +16,7 @@ import {
   ruleMatches,
 } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
+import { fillForTerm } from "./stages.ts";
 import { courseStatus } from "./status.ts";
 
 const req = (tree: Requirement["tree"], unparsed = false): Requirement => ({
@@ -194,6 +195,27 @@ test("what's next shows a whole course list, with why a course is not open", () 
   ).toEqual([
     ["COMP 424", undefined],
     ["COMP 350", "Not offered in Winter"],
+  ]);
+});
+
+test("a term fills with required courses first, then what open complementary groups take", () => {
+  const winter = { season: "Winter", year: 2027 } as const;
+  const fill = (plan: Plan) =>
+    fillForTerm(
+      tiny,
+      buildSnapshot(records, plan),
+      catalogue,
+      plan,
+      winter,
+    ).map(({ course, group, kind }) => [course.code, group, kind]);
+  expect(fill([])).toEqual([
+    ["COMP 251", 0, "required"],
+    ["COMP 424", 1, "complementary"],
+  ]);
+  // Planned in an earlier term, COMP 251 leaves the list and opens COMP 302.
+  expect(fill([{ term: fall2026, courses: ["COMP 251"] }])).toEqual([
+    ["COMP 302", 1, "complementary"],
+    ["COMP 424", 1, "complementary"],
   ]);
 });
 

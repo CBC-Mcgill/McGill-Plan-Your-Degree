@@ -18,7 +18,12 @@ import {
   planLoads,
   termRange,
 } from "./plan.ts";
-import { programStanding } from "./progress.ts";
+import {
+  fitsCaps,
+  groupAllows,
+  namesCourses,
+  programStanding,
+} from "./progress.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 import { blockedBy, isOffered, meets } from "./status.ts";
 
@@ -188,37 +193,73 @@ export function unmet(
   return options.length > 1 ? { or: options } : (options[0] ?? null);
 }
 
-/** Required courses the plan still lacks that run in the term's season and whose prerequisites earlier terms meet, in program order. */
-export function suggestForTerm(
+/** A course that could fill a term, with the program group it counts toward. */
+export interface FillOption {
+  course: CourseSummary;
+  /** Position of the group in the program. */
+  group: number;
+  kind: "required" | "complementary";
+}
+
+/**
+ * What the plan still lacks that could go in the term: courses that run in its season, whose prerequisites earlier terms meet, and that nothing taken or planned blocks.
+ * Required courses come first in program order, then undergraduate courses for each open complementary group that names courses, each under the first group whose caps it fits.
+ */
+export function fillForTerm(
   program: Program,
   snapshot: Snapshot,
   catalogue: Catalogue,
   plan: Plan,
   term: Term,
   entry: EntryRoute | null = null,
-): CourseSummary[] {
-  const { remaining } = programStanding(
-    program,
-    snapshot,
-    catalogue,
-    entry,
-    "plan",
-  );
+): FillOption[] {
+  const progress = programStanding(program, snapshot, catalogue, entry, "plan");
   const { before } = termContext(snapshot, plan, term);
   const taken = new Set([...snapshot.taken, ...snapshot.planned]);
-  const suggestions = new Map<string, CourseSummary>();
-  for (const item of remaining) {
-    for (const code of typeof item === "string" ? [item] : item.oneOf) {
-      const course = catalogue.get(code);
-      if (
-        course &&
-        isOffered(course, term.season) &&
-        meets(course.prerequisites?.tree, before) &&
-        blockedBy(course, taken).length === 0
-      ) {
-        suggestions.set(code, course);
+  const fits = (course: CourseSummary) =>
+    isOffered(course, term.season) &&
+    meets(course.prerequisites?.tree, before) &&
+    blockedBy(course, taken).length === 0;
+
+  const options = new Map<string, FillOption>();
+  for (const [group, { remaining }] of progress.groups.entries()) {
+    for (const item of remaining) {
+      for (const code of typeof item === "string" ? [item] : item.oneOf) {
+        const course = catalogue.get(code);
+        if (course && !options.has(code) && fits(course)) {
+          options.set(code, { course, group, kind: "required" });
+        }
       }
     }
   }
-  return [...suggestions.values()];
+
+  const open = program.groups.flatMap((group, index) => {
+    const done = progress.groups[index];
+    return group.kind === "complementary" &&
+      done &&
+      !done.satisfied &&
+      namesCourses(group)
+      ? [{ group, done, index, options: [] as FillOption[] }]
+      : [];
+  });
+  if (open.length > 0) {
+    for (const course of catalogue.values()) {
+      const { code } = course;
+      if (
+        options.has(code) ||
+        taken.has(code) ||
+        Number.parseInt(course.number, 10) >= 600 ||
+        !fits(course)
+      ) {
+        continue;
+      }
+      const host = open.find(
+        ({ group, done }) =>
+          groupAllows(group, code) &&
+          fitsCaps(group, done.rules, code, course.credits ?? 0),
+      );
+      host?.options.push({ course, group: host.index, kind: "complementary" });
+    }
+  }
+  return [...options.values(), ...open.flatMap((host) => host.options)];
 }
