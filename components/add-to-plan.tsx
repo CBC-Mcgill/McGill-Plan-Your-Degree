@@ -4,8 +4,6 @@ import { Check, ChevronDown, TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import { flushSync } from "react-dom";
-import { CourseRatings } from "@/components/course-ratings";
-import { CatalogueLink } from "@/components/external-link";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import {
   STATUS,
@@ -19,7 +17,7 @@ import { Term } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
-import { list, partRoutes, routesText } from "@/lib/engine/parts";
+import { list } from "@/lib/engine/parts";
 import {
   courseLoads,
   loadsTerms,
@@ -30,15 +28,18 @@ import type { Snapshot } from "@/lib/engine/snapshot";
 import {
   courseStatus,
   isOffered,
+  leaves,
   meets,
   missingText,
+  requirementItems,
 } from "@/lib/engine/status";
-import { GLOSSARY, STATUS_TIPS } from "@/lib/glossary";
+import { STATUS_TIPS } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions } from "@/lib/profile/term-options";
 import { currentTerm } from "@/lib/profile/terms";
 import {
   type CourseRecord,
+  type Plan,
   type Term as PlanTerm,
   termKey,
 } from "@/lib/profile/types";
@@ -48,68 +49,34 @@ const SEASONS = ["Fall", "Winter", "Summer"] as const;
 const runsThisYear = (course: CourseSummary) =>
   SEASONS.some((season) => isOffered(course, season));
 
-/** The status line and the facts line under the course title. The status line is for students only, and states the status once (D33). */
-export function CourseFacts({
-  course,
-  catalogueUrl,
-  noPrerequisites,
-}: {
-  course: CourseSummary;
-  catalogueUrl: string;
-  noPrerequisites: boolean;
-}) {
+/** The status line under the course title, in the status color, with why after it. For students only (D33). */
+export function CourseStatusLine({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
   const records = useProfileStore((state) => state.records);
-  const line = snapshot ? statusLine(course, snapshot, records) : null;
-  const terms = partRoutes(course)[0]?.length ?? 0;
-  const routes = routesText(course);
+  const plan = useProfileStore((state) => state.plan);
+  if (snapshot === undefined) return <div aria-hidden className="mt-4 h-5" />;
+  const line = snapshot && statusLine(course, snapshot, records, plan);
+  if (!line) return null;
   return (
-    <div className="mt-4 flex flex-col gap-2">
-      {snapshot === undefined && <div aria-hidden className="h-5" />}
-      {line && (
-        <p className="flex items-start gap-2">
-          <span className="flex h-5 shrink-0 items-center">
-            <StatusIcon status={line.glyph} />
-          </span>
-          <span>
-            <span className="font-semibold">
-              <Term def={{ label: line.word, tip: line.tip }} />
-            </span>
-            {line.reason && (
-              <span className="text-fg-muted"> · {line.reason}</span>
-            )}
-            {line.uncertain && (
-              <span className="ml-2 inline-flex align-top">
-                <UncertainFlag />
-              </span>
-            )}
-          </span>
-        </p>
-      )}
-      <p className="flex flex-wrap gap-x-6 gap-y-2 text-fg-muted tabular-nums">
-        {course.credits !== null && (
-          <span>
-            {COPY.credits(course.credits)}
-            {terms > 1 && (
-              <>
-                , <Term def={GLOSSARY.multiTerm}>{terms} terms</Term>
-              </>
-            )}
+    <p className="mt-4 flex items-start gap-2">
+      <span className="flex h-5 shrink-0 items-center">
+        <StatusIcon status={line.glyph} />
+      </span>
+      <span>
+        <span
+          className="font-semibold"
+          style={{ color: STATUS[line.glyph].text }}
+        >
+          <Term def={{ label: line.word, tip: line.tip }} />
+        </span>
+        {line.reason && <span className="text-fg-muted"> · {line.reason}</span>}
+        {line.uncertain && (
+          <span className="ml-2 inline-flex align-top">
+            <UncertainFlag />
           </span>
         )}
-        {line?.word !== COPY.notOfferedYear && (
-          <span>
-            {runsThisYear(course)
-              ? course.terms.join(", ")
-              : COPY.notOfferedYear}
-          </span>
-        )}
-        {noPrerequisites && <span>No prerequisites</span>}
-        <CourseRatings code={course.parts?.[0]?.code ?? course.code} />
-        <CatalogueLink href={catalogueUrl} />
-      </p>
-      {routes && <p className="text-fg-muted">{routes}</p>}
-    </div>
+      </span>
+    </p>
   );
 }
 
@@ -121,53 +88,72 @@ interface Line {
   uncertain?: boolean;
 }
 
-/** Glyph, word and reason for the status line. A planned course needs none, since its button says "Planned for", unless something blocks it. */
+/** Glyph, word and reason for the status line. A planned course says when, and why it can go there. */
 function statusLine(
   course: CourseSummary,
   snapshot: Snapshot,
   records: readonly CourseRecord[],
-): Line | null {
+  plan: Plan,
+): Line {
   const { status, uncertain, blockedBy } = courseStatus(course, snapshot);
-  const tree = course.prerequisites?.tree;
+  const prerequisites = course.prerequisites;
+  const tree = prerequisites?.tree;
+  const unmet = tree
+    ? requirementItems(tree).filter((item) => !meets(item, snapshot.taken))
+    : [];
   const blockers = [
     blockedBy.length > 0 && COPY.notOpen(blockedBy),
     tree &&
-      !meets(tree, snapshot.taken) &&
-      COPY.needs(missingText(tree, snapshot.taken)),
+      unmet.length > 0 &&
+      // The checklist below names each one, unless the catalogue text could not be read.
+      (unmet.length > 1 && !prerequisites?.unparsed
+        ? `Needs ${unmet.length} more prerequisites`
+        : COPY.needs(missingText(tree, snapshot.taken))),
   ].filter((reason) => typeof reason === "string");
   const pending = snapshot.pending.get(course.code);
-  const locked: Line = {
-    glyph: "locked",
-    word: STATUS.locked.label,
-    tip: STATUS_TIPS.locked,
-    reason: blockers.join(" · "),
+  const line = (glyph: Status, reason?: string): Line => ({
+    glyph,
+    word: STATUS[glyph].label,
+    tip: STATUS_TIPS[glyph],
+    reason,
     uncertain,
-  };
+  });
   switch (status) {
     case "locked":
-      return locked;
-    case "planned":
-      return blockers.length > 0 ? locked : null;
+      return line("locked", blockers.join(" · "));
+    case "planned": {
+      const term = plan.find((entry) =>
+        entry.courses.includes(course.code),
+      )?.term;
+      const running =
+        tree && !meets(tree, snapshot.done)
+          ? leaves(tree).filter((code) => snapshot.inProgress.has(code))
+          : [];
+      return {
+        ...line(
+          "planned",
+          blockers.length > 0
+            ? blockers.join(" · ")
+            : running.length > 0
+              ? `${list.format(running)} ${running.length > 1 ? "are" : "is"} in progress, so you will have ${running.length > 1 ? "them" : "it"} by then`
+              : undefined,
+        ),
+        word: term
+          ? `Planned for ${loadsTerms(courseLoads(course.code, course, term))}`
+          : STATUS.planned.label,
+      };
+    }
     case "available": {
       // Say why the red "Add to" button is missing when the next term does not run the course.
       const next = planTermOptions([])[0];
       return runsThisYear(course)
-        ? {
-            ...locked,
-            glyph: status,
-            word: STATUS[status].label,
-            tip: STATUS_TIPS[status],
-            reason:
-              next && !isOffered(course, next.season)
-                ? COPY.notOfferedIn(next.season)
-                : undefined,
-          }
-        : {
-            ...locked,
-            glyph: status,
-            word: COPY.notOfferedYear,
-            tip: STATUS_TIPS[status],
-          };
+        ? line(
+            status,
+            next && !isOffered(course, next.season)
+              ? COPY.notOfferedIn(next.season)
+              : undefined,
+          )
+        : { ...line(status), word: COPY.notOfferedYear };
     }
     default: {
       const record = records.find(
@@ -280,9 +266,7 @@ function PlanActions({
             </Button>
           ) : (
             <Button variant="secondary">
-              {planned
-                ? `Planned for ${loadsTerms(courseLoads(course.code, course, planned))}`
-                : "Add to a term"}
+              {planned ? "Change term" : "Add to a term"}
               <ChevronDown aria-hidden className="text-fg-muted" />
             </Button>
           )

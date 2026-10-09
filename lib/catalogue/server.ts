@@ -1,7 +1,8 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { leaves } from "../engine/status.ts";
 import { logicalCode } from "../profile/types.ts";
-import type { Course, RequirementTree } from "./types.ts";
+import type { Course } from "./types.ts";
 
 const COURSES_DIR = join(process.cwd(), "data/catalogue/courses");
 
@@ -39,11 +40,6 @@ export function loadCatalogue(): Promise<ReadonlyMap<string, Course>> {
 
 export async function getCourse(code: string): Promise<Course | undefined> {
   return (await loadCatalogue()).get(code);
-}
-
-export function leaves(tree: RequirementTree): string[] {
-  if (typeof tree === "string") return [tree];
-  return ("and" in tree ? tree.and : tree.or).flatMap(leaves);
 }
 
 /** Each required course code mapped to the codes of the courses that require it, read once per process. */
