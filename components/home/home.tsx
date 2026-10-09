@@ -7,6 +7,7 @@ import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
 import { ROW, ROW_LINK, ROW_TITLE } from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
+import { VsbLink } from "@/components/external-link";
 import { Landing } from "@/components/home/landing";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { Sentence as WarningSentence } from "@/components/plan/term-warnings";
@@ -654,6 +655,11 @@ function NextTerm({
         </ul>
       ) : (
         <p className="text-fg-muted">Nothing planned yet.</p>
+      )}
+      {loads.length > 0 && (
+        <p className="mt-3 text-fg-muted">
+          Pick sections and times in <VsbLink />.
+        </p>
       )}
       {open.length > 0 && (
         <>

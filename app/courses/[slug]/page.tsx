@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { AddToPlan, CourseStatusLine } from "@/components/add-to-plan";
 import { CourseCode } from "@/components/course-code";
 import { CourseFactsBar } from "@/components/course-facts";
-import { CatalogueLink } from "@/components/external-link";
+import { CatalogueLink, VsbLink } from "@/components/external-link";
 import {
   LinkedCode,
   RequirementChecklist,
@@ -148,6 +148,10 @@ export default async function CoursePage({
                 <CatalogueLink
                   href={`https://coursecatalogue.mcgill.ca/courses/${catalogueSlug}/`}
                 />
+                {" · "}
+                <span className="whitespace-nowrap">
+                  Class times in <VsbLink />
+                </span>
               </p>
             </div>
           </Section>

@@ -23,3 +23,15 @@ export function ExternalLink({
 export function CatalogueLink({ href }: { href: string }) {
   return <ExternalLink href={href}>{COPY.catalogueLink}</ExternalLink>;
 }
+
+/** McGill's Visual Schedule Builder, where students pick sections and times once this app has settled their courses. */
+export const VSB_URL = "https://vsb.mcgill.ca/criteria.jsp";
+
+/** "Visual Schedule Builder", the one wording for every link to McGill's timetable tool. */
+export function VsbLink() {
+  return (
+    <span className="whitespace-nowrap">
+      <ExternalLink href={VSB_URL}>{COPY.vsbLink}</ExternalLink>
+    </span>
+  );
+}

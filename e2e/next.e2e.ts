@@ -71,6 +71,9 @@ test("a required course can be added to the next term, and the planner opens the
     "What you can take in Winter 2027, your next term",
   );
   await expect(page.getByRole("tablist", { name: "Term" })).toHaveCount(0);
+  await expect(
+    page.getByRole("link", { name: /Visual Schedule Builder/ }),
+  ).toHaveAttribute("href", "https://vsb.mcgill.ca/criteria.jsp");
   await expect(row(page, "Required courses", "COMP 310")).toContainText(
     "Needs COMP 273 first",
   );
