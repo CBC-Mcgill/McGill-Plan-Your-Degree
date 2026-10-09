@@ -83,7 +83,7 @@ export function routesText(
   return `Taken over ${counts.join(" or ")} consecutive terms: ${text.join(", or ")}.`;
 }
 
-/** The next part a done part needs and has not got. */
+/** The next part a done or registered part needs and has not got. */
 export interface OwedPart {
   /** The missing part, such as "D2". */
   part: string;
@@ -176,9 +176,14 @@ export function settleParts(
     );
     let next = 1;
     while (next <= length && (done.has(next) || running.has(next))) next++;
-    const anchor = done.get(next - 1);
+    // A registered part needs its next part as much as a finished one does, such as N2 after N1.
+    const anchor =
+      done.get(next - 1) ??
+      parts.find(
+        (r) => r.status === "in-progress" && r.part === `${letter}${next - 1}`,
+      );
     const pending: PendingCourse | null =
-      done.size === 0
+      done.size === 0 && running.size === 0
         ? null
         : {
             credits: [...done.values()].reduce(

@@ -372,6 +372,19 @@ test("a done first part is pending, not earned, until the next part is done", ()
   expect(earnedCredits(both, catalogue)).toBe(6);
   expect(planWarnings([], both, catalogue)).toEqual([]);
 
+  // A registered N1 already needs its N2 in the following Fall.
+  const n1 = buildSnapshot([part("N1", winter2027, "in-progress")]);
+  expect(planWarnings([], n1, catalogue)).toEqual([
+    {
+      kind: "missing-part",
+      term: { season: "Fall", year: 2027 },
+      course: "ECSE 458",
+      part: "N2",
+      after: "N1",
+      afterTerm: winter2027,
+    },
+  ]);
+
   const j = (n: string, status: CourseRecord["status"]) => ({
     ...part(`J${n}`, fall2026, status),
     code: "MATH 470",
