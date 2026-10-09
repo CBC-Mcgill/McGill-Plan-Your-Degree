@@ -9,11 +9,11 @@ import { StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
-import { planLoads, planWarnings } from "@/lib/engine/plan";
+import { planWarnings, termLoad } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
 import { defaultGraduation, termLabel } from "@/lib/profile/term-options";
-import { type Term, termKey } from "@/lib/profile/types";
+import type { Term } from "@/lib/profile/types";
 import type { Program } from "@/lib/programs/types";
 
 const DISMISSED_KEY = "plan-your-degree:setup-guide-dismissed";
@@ -77,9 +77,7 @@ export function SetupGuide({
     [plan, snapshot, catalogue, creditLimit, graduationTerm],
   );
   const label = termLabel(term);
-  const plannedNext = planLoads(plan, catalogue)
-    .filter((load) => termKey(load.term) === termKey(term))
-    .reduce((sum, load) => sum + load.credits, 0);
+  const plannedNext = termLoad(plan, catalogue, term);
   const graduationGuess = defaultGraduation(startTerm ?? term);
 
   const steps: Step[] = [
@@ -117,15 +115,8 @@ export function SetupGuide({
       title: `Fill ${label}`,
       done: plannedNext >= FULL_TIME_CREDITS,
       detail: `${plannedNext} credits planned`,
-      sentence: `Full time is ${FULL_TIME_CREDITS} credits or more, and ${label} has ${plannedNext} so far. Your must-take courses are listed below.`,
-      action: {
-        label: "See courses",
-        run: () => {
-          const target = document.getElementById("next-up");
-          target?.scrollIntoView({ block: "center" });
-          target?.querySelector("button")?.focus({ preventScroll: true });
-        },
-      },
+      sentence: `Full time is ${FULL_TIME_CREDITS} credits or more, and ${label} has ${plannedNext} so far.`,
+      action: { label: "See courses", href: "/next" },
     },
     {
       id: "warnings",

@@ -306,7 +306,7 @@ function NextUp({
   const shown = mustTake.slice(0, NEXT_UP_LIMIT);
   return (
     <Card asChild className="overflow-hidden">
-      <section id="next-up" aria-labelledby="next-up-title">
+      <section aria-labelledby="next-up-title">
         <div className="flex items-center justify-between gap-4 px-5 pt-4 pb-3">
           <div>
             <h2 id="next-up-title" className="text-base leading-6">
@@ -350,6 +350,11 @@ function NextUp({
                     </span>
                     {uncertain && <UncertainFlag />}
                   </span>
+                  {at && (
+                    <span className="shrink-0 text-[13px] text-muted-foreground">
+                      Planned for {termLabel(at)}
+                    </span>
+                  )}
                   <span className="w-10 shrink-0 text-right text-[13px] text-muted-foreground tabular-nums">
                     {course.credits === null ? "-" : `${course.credits} cr`}
                   </span>
@@ -381,6 +386,17 @@ function NextUp({
                 </li>
               );
             })}
+            {mustTake.length > shown.length && (
+              <li className="flex h-11 items-center gap-3 border-border border-t px-5 text-[13px] text-muted-foreground">
+                Showing {shown.length} of {mustTake.length}
+                <Link
+                  href="/next"
+                  className="rounded-sm font-medium text-in-progress hover:underline"
+                >
+                  See all {mustTake.length}
+                </Link>
+              </li>
+            )}
           </ul>
         ) : (
           <p className="border-border border-t px-5 py-4 text-muted-foreground">

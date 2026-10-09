@@ -7,12 +7,13 @@ import { StatusIcon } from "@/components/status";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import type { Stage } from "@/lib/engine/stages";
+import { creditsText } from "@/lib/format";
 import { termLabel } from "@/lib/profile/term-options";
 import type { Term } from "@/lib/profile/types";
 import { isDone } from "@/lib/profile/types";
 
 function detail(stage: Stage, nowKey: number): string {
-  const credits = `${stage.credits} credits`;
+  const credits = creditsText(stage.credits);
   const courses = `${stage.count} ${stage.count === 1 ? "course" : "courses"}`;
   switch (stage.state) {
     case "completed":
@@ -145,22 +146,24 @@ export function QuestPath({
                 <Node stage={stage} />
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block truncate font-semibold leading-5">
-                  {termLabel(stage.term)}
+                <span className="flex items-center justify-between gap-2">
+                  <span className="truncate font-semibold leading-5">
+                    {termLabel(stage.term)}
+                  </span>
+                  {stage.warnings.length > 0 && (
+                    <Badge tone="warn" title="Has warnings">
+                      <TriangleAlert aria-hidden />
+                      {stage.warnings.length}
+                      <span className="sr-only">
+                        {stage.warnings.length === 1 ? "warning" : "warnings"}
+                      </span>
+                    </Badge>
+                  )}
                 </span>
                 <span className="block truncate text-[13px] text-muted-foreground leading-[18px]">
                   {detail(stage, nowKey)}
                 </span>
               </span>
-              {stage.warnings.length > 0 && (
-                <Badge tone="warn" title="Has warnings">
-                  <TriangleAlert aria-hidden />
-                  {stage.warnings.length}
-                  <span className="sr-only">
-                    {stage.warnings.length === 1 ? "warning" : "warnings"}
-                  </span>
-                </Badge>
-              )}
             </button>
           );
         })}

@@ -1,27 +1,14 @@
 import { TriangleAlert } from "lucide-react";
 import { Fragment } from "react";
 import { CourseLink } from "@/components/course-link";
+import { RequirementText } from "@/components/requirement-text";
 import { Banner } from "@/components/ui/banner";
-import type { RequirementTree } from "@/lib/catalogue/types";
 import type { PlanWarning } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { termContext, unmet } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
 import type { Plan } from "@/lib/profile/types";
-
-function Need({ tree, nested }: { tree: RequirementTree; nested?: boolean }) {
-  if (typeof tree === "string") return <CourseLink code={tree} />;
-  const [word, children] =
-    "and" in tree ? (["and", tree.and] as const) : (["or", tree.or] as const);
-  const parts = children.map((child, i) => (
-    <Fragment key={JSON.stringify(child)}>
-      {i === 0 ? "" : i === children.length - 1 ? ` ${word} ` : ", "}
-      <Need tree={child} nested />
-    </Fragment>
-  ));
-  return nested ? <>({parts})</> : parts;
-}
 
 function Others({ codes }: { codes: string[] }) {
   return codes.map((code, i) => (
@@ -84,7 +71,15 @@ export function Sentence({
   );
   return (
     <>
-      {course} needs {need ? <Need tree={need} /> : "its requirements"}{" "}
+      {course} needs{" "}
+      {need ? (
+        <RequirementText
+          tree={need}
+          leaf={(code) => <CourseLink code={code} />}
+        />
+      ) : (
+        "its requirements"
+      )}{" "}
       {warning.kind === "prerequisite"
         ? "in an earlier term."
         : "in the same term or earlier."}

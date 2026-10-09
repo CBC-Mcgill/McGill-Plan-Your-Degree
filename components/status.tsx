@@ -214,15 +214,17 @@ export function StatusLabel({
 /** A tinted badge, for the one place a single status headlines a page. */
 export function StatusBadge({
   status,
+  label = STATUS[status].label,
   className,
 }: {
   status: Status;
+  label?: string;
   className?: string;
 }) {
   return (
     <Badge tone={STATUS[status].tone} size="md" className={className}>
       <StatusIcon status={status} />
-      {STATUS[status].label}
+      {label}
     </Badge>
   );
 }

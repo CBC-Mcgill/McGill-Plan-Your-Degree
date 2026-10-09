@@ -102,5 +102,8 @@ test("a course placed before its prerequisite warns until it is moved later", as
   await page
     .getByRole("menuitem", { name: new RegExp(`^Winter ${year + 1}`) })
     .click();
+  await expect(
+    page.getByRole("heading", { name: `Winter ${year + 1}` }),
+  ).toBeFocused();
   await expect(warnings).toHaveCount(0);
 });

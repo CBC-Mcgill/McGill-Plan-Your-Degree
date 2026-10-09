@@ -6,6 +6,7 @@ import { AddToPlan } from "@/components/add-to-plan";
 import { CourseRatings } from "@/components/course-ratings";
 import { CourseStatusPanel } from "@/components/course-status-panel";
 import { LinkedCourseText } from "@/components/linked-course-text";
+import { RequirementText } from "@/components/requirement-text";
 import { SectionCard } from "@/components/section-card";
 import { UncertainFlag } from "@/components/status";
 import { UnlockRows } from "@/components/unlock-rows";
@@ -46,6 +47,7 @@ export default async function CoursePage({
           {
             title,
             text: item.text,
+            tree: "tree" in item ? item.tree : null,
             unparsed: "unparsed" in item && item.unparsed,
           },
         ]
@@ -109,17 +111,24 @@ export default async function CoursePage({
           <SectionCard id="requirements" title="Requirements">
             {requirements.length > 0 ? (
               <dl className="divide-y divide-border">
-                {requirements.map(({ title, text, unparsed }) => (
+                {requirements.map(({ title, text, tree, unparsed }) => (
                   <div key={title} className="py-3 first:pt-0 last:pb-0">
                     <dt className="flex items-center gap-3 font-medium text-[13px] text-muted-foreground">
                       {title}
                       {unparsed && <UncertainFlag withLabel />}
                     </dt>
                     <dd className="mt-1 leading-7">
-                      <LinkedCourseText
-                        text={text}
-                        onlyTaken={title === "Restrictions"}
-                      />
+                      {tree && !unparsed ? (
+                        <RequirementText
+                          tree={tree}
+                          leaf={(code) => <LinkedCourseText text={code} />}
+                        />
+                      ) : (
+                        <LinkedCourseText
+                          text={text}
+                          onlyTaken={title === "Restrictions"}
+                        />
+                      )}
                     </dd>
                   </div>
                 ))}

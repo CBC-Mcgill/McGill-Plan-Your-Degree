@@ -83,6 +83,13 @@ export function planLoads(plan: Plan, catalogue: Catalogue): PlannedLoad[] {
   );
 }
 
+/** The credits the plan holds in a term, counting any part of a multi-term course that falls in it. */
+export function termLoad(plan: Plan, catalogue: Catalogue, term: Term): number {
+  return planLoads(plan, catalogue)
+    .filter((load) => termKey(load.term) === termKey(term))
+    .reduce((sum, load) => sum + load.credits, 0);
+}
+
 /** Non-blocking plan problems. Prerequisites count done courses, earlier in-progress courses, and plan courses that finished in an earlier term, corequisites also the same term. */
 export function planWarnings(
   plan: Plan,

@@ -1,13 +1,22 @@
 "use client";
 
 import { cn } from "cn";
-import { ChevronDown, Compass, FileUp, Info, Plus, X } from "lucide-react";
+import {
+  ChevronDown,
+  Compass,
+  FileUp,
+  Info,
+  Plus,
+  TriangleAlert,
+  X,
+} from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { type ReactNode, useId, useMemo, useState } from "react";
 import { seasonsOffered } from "@/components/course-row";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon, UncertainFlag } from "@/components/status";
+import { Badge } from "@/components/ui/badge";
 import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -28,7 +37,9 @@ import {
   nextView,
   type OpenGroup,
 } from "@/lib/engine/next-view";
+import { termLoad } from "@/lib/engine/plan";
 import type { Snapshot } from "@/lib/engine/snapshot";
+import { creditsText, sentence } from "@/lib/format";
 import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
@@ -100,6 +111,18 @@ function Header({ term, children }: { term?: Term; children?: ReactNode }) {
   );
 }
 
+/** What the plan holds in the chosen term against the credit limit, amber once it goes over. */
+function TermLoad({ credits, limit }: { credits: number; limit: number }) {
+  const over = credits > limit;
+  return (
+    <Badge tone={over ? "warn" : "neutral"} size="md">
+      {over && <TriangleAlert aria-hidden />}
+      {credits} of {limit} credits planned
+      {over && <span className="sr-only">, over your credit limit</span>}
+    </Badge>
+  );
+}
+
 // Split out so a visitor without a profile does not download the catalogue.
 function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const programId = useProfileStore((state) => state.programId);
@@ -108,6 +131,7 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   const creditsRequired = useProfileStore((state) => state.creditsRequired);
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
+  const creditLimit = useProfileStore((state) => state.creditLimit);
   const catalogue = useCatalogue();
   const options = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
   const [picked, setPicked] = useState<number | null>(null);
@@ -163,19 +187,25 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
   return (
     <>
       <Header term={view ? selected : undefined}>
-        {view && selected && (
-          <SelectField
-            label="Term"
-            value={termKey(selected)}
-            onChange={(event) => setPicked(Number(event.target.value))}
-            className="shrink-0 grid-cols-[auto_10rem] items-center gap-2.5"
-          >
-            {options.map((option) => (
-              <option key={termKey(option)} value={termKey(option)}>
-                {termLabel(option)}
-              </option>
-            ))}
-          </SelectField>
+        {view && courses && selected && (
+          <div className="flex shrink-0 items-center gap-4">
+            <TermLoad
+              credits={termLoad(plan, courses, selected)}
+              limit={creditLimit}
+            />
+            <SelectField
+              label="Term"
+              value={termKey(selected)}
+              onChange={(event) => setPicked(Number(event.target.value))}
+              className="grid-cols-[auto_10rem] items-center gap-2.5"
+            >
+              {options.map((option) => (
+                <option key={termKey(option)} value={termKey(option)}>
+                  {termLabel(option)}
+                </option>
+              ))}
+            </SelectField>
+          </div>
         )}
       </Header>
 
@@ -255,8 +285,6 @@ function Content({
             fraction={{ done: block.creditsDone, of: block.credits }}
             collapsed={collapsed.has(block.title)}
             onToggle={() => toggle(block.title)}
-            context={context}
-            candidates={flatten(block.ready)}
           >
             <ItemRows items={block.ready} context={context} />
             {block.later.length > 0 && (
@@ -320,15 +348,6 @@ function requiredBlocks(view: NextView): RequiredBlock[] {
         ]
       : [];
   });
-}
-
-/** "Required Courses" becomes "Required courses", and acronyms such as COMP stay. */
-function sentence(title: string): string {
-  return title.replace(
-    /\b([A-Z])([a-z]+)/g,
-    (word, first: string, rest: string, at: number) =>
-      at === 0 ? word : first.toLowerCase() + rest,
-  );
 }
 
 /** One strip for the program, then the degree credits and any exemption notes under it. */
@@ -409,7 +428,7 @@ function ProgramSummary({
                   {code} was exempted without credit. Replace{" "}
                   {credits === null
                     ? "its credits"
-                    : `its ${credits} ${credits === 1 ? "credit" : "credits"}`}{" "}
+                    : `its ${creditsText(credits)}`}{" "}
                   with another course.
                 </span>
               </Banner>
@@ -432,15 +451,13 @@ function Stat({ value, caption }: { value: string; caption: string }) {
   );
 }
 
-/** Group header band: chevron, name, fraction, ring, and a plus that adds the first open course not yet planned. */
+/** Group header band: chevron, name, fraction and ring. */
 function Group({
   title,
   fraction,
   trailing,
   collapsed,
   onToggle,
-  context: { term, planned },
-  candidates = [],
   children,
 }: {
   title: string;
@@ -448,21 +465,15 @@ function Group({
   trailing?: string;
   collapsed: boolean;
   onToggle: () => void;
-  context: Context;
-  candidates?: Entry[];
   children: ReactNode;
 }) {
   const id = useId();
-  const next = candidates.find(
-    ({ course, reason }) => !reason && !planned.has(course.code),
-  )?.course;
-  const addLabel = next && `Add ${next.code} to ${termLabel(term)}`;
   return (
     <section
       aria-labelledby={`${id}-title`}
       className="border-border border-t first:border-t-0"
     >
-      <div className="flex h-9 items-center gap-2 bg-subtle pr-2 pl-4">
+      <div className="flex h-9 items-center gap-2 bg-subtle px-4">
         <h2
           id={`${id}-title`}
           className="min-w-0 flex-1 text-[13px] leading-[18px]"
@@ -503,19 +514,6 @@ function Group({
           <span className="text-[13px] text-muted-foreground tabular-nums">
             {trailing}
           </span>
-        )}
-        {next ? (
-          <Button
-            variant="ghost"
-            size="icon"
-            title={addLabel}
-            aria-label={addLabel}
-            onClick={() => addWithUndo(term, next.code)}
-          >
-            <Plus aria-hidden />
-          </Button>
-        ) : (
-          <span aria-hidden className="size-7" />
         )}
       </div>
       {!collapsed && <ul id={`${id}-list`}>{children}</ul>}
@@ -602,7 +600,7 @@ function Row({
           {uncertain && <UncertainFlag />}
         </span>
         <span
-          className="w-64 shrink-0 truncate text-[13px] text-muted-foreground"
+          className="line-clamp-2 w-64 shrink-0 text-[13px] text-muted-foreground leading-4"
           title={caption}
         >
           {caption}
@@ -674,8 +672,6 @@ function ComplementaryGroup({
       fraction={{ done: group.creditsDone, of: group.credits }}
       collapsed={collapsed}
       onToggle={onToggle}
-      context={context}
-      candidates={group.buckets.flatMap((bucket) => bucket.entries)}
     >
       {group.buckets.map((bucket) => (
         <Bucket
@@ -737,7 +733,6 @@ function OtherGroup({
       trailing={`${entries.length.toLocaleString()} courses`}
       collapsed={collapsed}
       onToggle={onToggle}
-      context={context}
     >
       {shown.map((entry) => (
         <Row key={entry.course.code} entry={entry} context={context} />

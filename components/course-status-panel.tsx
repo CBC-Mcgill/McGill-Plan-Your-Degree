@@ -13,13 +13,13 @@ import {
   missingText,
   type StatusInput,
 } from "@/lib/engine/status";
-import { useProfileStore } from "@/lib/profile/store";
-import { termLabel } from "@/lib/profile/term-options";
 import { logicalCode } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 const SENTENCE = {
   completed: "You have completed this course.",
+  exempt:
+    "You are exempt from this course. It meets prerequisites but earns no credit.",
   covered:
     "Your Science DEC covers this course, so you do not need to take it.",
   "in-progress": "You are taking this course now.",
@@ -35,15 +35,16 @@ export function CourseStatusPanel({
   prerequisites: Record<string, StatusInput>;
 }) {
   const snapshot = useSnapshot();
-  const plan = useProfileStore((state) => state.plan);
 
   const state = snapshot ? courseStatus(course, snapshot) : null;
-  const plannedTerm = plan.find((entry) =>
-    entry.courses.includes(course.code),
-  )?.term;
+  const exempt =
+    state?.status === "completed" && !snapshot?.earned.has(course.code);
   const tree = course.prerequisites?.tree;
   const missing =
-    snapshot && tree && !meets(tree, snapshot.taken)
+    snapshot &&
+    tree &&
+    (state?.status === "locked" || state?.status === "planned") &&
+    !meets(tree, snapshot.taken)
       ? missingText(tree, snapshot.taken)
       : null;
 
@@ -64,17 +65,17 @@ export function CourseStatusPanel({
         {snapshot && state && (
           <>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              <StatusBadge status={state.status} />
+              <StatusBadge
+                status={exempt ? "exemption" : state.status}
+                label={exempt ? "Exempt, no credit" : undefined}
+              />
               {state.uncertain && <UncertainFlag withLabel />}
             </div>
-            {state.status === "planned" && plannedTerm && (
-              <p>This course is in your plan for {termLabel(plannedTerm)}.</p>
-            )}
             {state.status === "available" && <p>{SENTENCE.available}</p>}
             {(state.status === "completed" ||
               state.status === "covered" ||
               state.status === "in-progress") && (
-              <p>{SENTENCE[state.status]}</p>
+              <p>{SENTENCE[exempt ? "exempt" : state.status]}</p>
             )}
             {missing && (
               <div>

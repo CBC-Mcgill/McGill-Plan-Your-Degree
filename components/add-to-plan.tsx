@@ -27,7 +27,7 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
       </Button>
     );
   }
-  const { status } = courseStatus(course, snapshot);
+  const { status, blockedBy } = courseStatus(course, snapshot);
   if (
     status === "completed" ||
     status === "covered" ||
@@ -42,31 +42,45 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
     isOffered(course, term.season),
   );
 
+  const locked = status === "locked";
+  const reason =
+    blockedBy.length > 0
+      ? "Blocked by a course you took"
+      : "Missing prerequisites";
+
   return (
-    <div className="flex items-center gap-3">
-      {planned && (
-        <span className="inline-flex items-center gap-1.5 font-medium text-planned">
-          <StatusIcon status="planned" />
-          Planned for {termLabel(planned)}
-        </span>
-      )}
-      {planned ? (
-        <Button
-          variant="secondary"
-          size="lg"
-          onClick={() => removeWithUndo(planned, course.code)}
-        >
-          <X aria-hidden />
-          Remove
-          <span className="sr-only"> from {termLabel(planned)}</span>
-        </Button>
-      ) : next ? (
-        <Button size="lg" onClick={() => addWithUndo(next, course.code)}>
-          <Plus aria-hidden />
-          Add to {termLabel(next)}
-        </Button>
-      ) : (
-        <span className="text-muted-foreground">Not offered this year</span>
+    <div className="flex flex-col items-end gap-1.5">
+      <div className="flex items-center gap-3">
+        {planned && (
+          <span className="inline-flex items-center gap-1.5 font-medium text-planned">
+            <StatusIcon status="planned" />
+            Planned for {termLabel(planned)}
+          </span>
+        )}
+        {planned ? (
+          <Button
+            variant="secondary"
+            size="lg"
+            onClick={() => removeWithUndo(planned, course.code)}
+          >
+            <X aria-hidden />
+            Remove
+            <span className="sr-only"> from {termLabel(planned)}</span>
+          </Button>
+        ) : next ? (
+          <Button size="lg" onClick={() => addWithUndo(next, course.code)}>
+            <Plus aria-hidden />
+            Add to {termLabel(next)}
+            {locked && " anyway"}
+          </Button>
+        ) : (
+          <span className="text-muted-foreground">Not offered this year</span>
+        )}
+      </div>
+      {locked && next && (
+        <p className="text-[13px] text-muted-foreground leading-[18px]">
+          {reason}
+        </p>
       )}
     </div>
   );
