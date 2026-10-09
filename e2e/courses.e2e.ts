@@ -9,9 +9,13 @@ const done = (code: string) => ({
   source: "manual",
 });
 
-const seedProfile = (page: Page, records: unknown[]) =>
+const seedProfile = (
+  page: Page,
+  records: unknown[],
+  graduationTerm: unknown = null,
+) =>
   page.addInitScript(
-    ([key, records]) =>
+    ([key, records, graduationTerm]) =>
       localStorage.setItem(
         key as string,
         JSON.stringify({
@@ -19,7 +23,7 @@ const seedProfile = (page: Page, records: unknown[]) =>
             records,
             programId: null,
             startTerm: null,
-            graduationTerm: null,
+            graduationTerm,
             plan: [],
             creditLimit: 17,
             importedAt: null,
@@ -27,7 +31,7 @@ const seedProfile = (page: Page, records: unknown[]) =>
           version: 1,
         }),
       ),
-    ["plan-your-degree:profile", records],
+    ["plan-your-degree:profile", records, graduationTerm],
   );
 
 // Course pages ask mcgill.courses for ratings, and tests never reach the real site.
@@ -134,6 +138,40 @@ test("with a profile, Can take now is the default tab and a course can be planne
   await expect(page.getByRole("region", { name: "Your status" })).toContainText(
     "Planned",
   );
+});
+
+test("a course page adds the course to any term before graduation and moves it", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
+  await seedProfile(page, [done("COMP 250"), done("MATH 240")], {
+    season: "Winter",
+    year: 2028,
+  });
+  await page.goto("/courses/comp-251");
+  await expect(
+    page.getByRole("button", { name: "Add to Winter 2027" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Choose a term" }).click();
+  const items = page.getByRole("menu").getByRole("menuitem");
+  await expect(items).toHaveCount(4);
+  await expect(items.nth(1)).toContainText("Summer 2027");
+  await expect(items.nth(1)).toContainText("Not offered");
+  await items.filter({ hasText: "Fall 2027" }).click();
+  await expect(page.getByText("Planned for Fall 2027")).toBeVisible();
+  await expect(page.getByRole("button", { name: /^Add to / })).toHaveCount(0);
+
+  await page.getByRole("button", { name: "Move", exact: true }).click();
+  await expect(
+    page.getByRole("menuitem", { name: /^Fall 2027.*current term/ }),
+  ).toBeVisible();
+  await page.getByRole("menuitem", { name: /^Winter 2028/ }).click();
+  await expect(page.getByText("Planned for Winter 2028")).toBeVisible();
+
+  await page.getByRole("link", { name: "Planner" }).click();
+  await page.getByRole("tab", { name: /^Winter 2028/ }).click();
+  await expect(page.getByRole("tabpanel")).toContainText("COMP 251");
 });
 
 test("view tabs move with the arrow keys", async ({ page }) => {

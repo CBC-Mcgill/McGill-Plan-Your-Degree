@@ -254,6 +254,7 @@ The page reads the full course from the server loader and draws the description,
 Prerequisites come from the tree with each code as a link, unless the requirement is `unparsed`, in which case the raw text shows.
 The server passes only the fields a status needs (`toStatusInput`) to client components such as `CourseStatusPanel`, which compute the student's status in the browser.
 `AddToPlan` and `CourseRatings` are client components too.
+`AddToPlan` is a split button: the main part plans the course for the next term it runs, and its menu lists every term from the next term to plan through graduation, with the credits each already holds.
 
 ### Program data
 
@@ -340,6 +341,7 @@ Functions take the catalogue, a snapshot and a program as arguments and return d
   `nextView` shapes that for the page: "must take now", "required later" with the reason each is blocked, complementary groups with progress such as "3 of 6 credits" and the rules to check, and a short list of electives.
 - **[plan.ts](lib/engine/plan.ts)** works on the plan.
   `planLoads` turns each planned course into loads, one per term it occupies.
+  `schoolTerms` and `termChoices` list the terms a course can start in, from the next term to plan through graduation, for the course page menu.
   `planWarnings` returns non-blocking warnings for a missing prerequisite or corequisite, a term the course is not offered, a restriction, a credit overload, a course that ends after graduation and a missing second part.
 - **[stages.ts](lib/engine/stages.ts)** builds the planner's term path.
   `buildStages` returns one stage per Fall and Winter term from the start term to graduation, plus any other term that holds saved data.
