@@ -9,12 +9,14 @@ import { LinkedCourseText } from "@/components/linked-course-text";
 import { RequirementText } from "@/components/requirement-text";
 import { SectionCard } from "@/components/section-card";
 import { UncertainFlag } from "@/components/status";
+import { InfoTip } from "@/components/ui/tooltip";
 import { UnlockRows } from "@/components/unlock-rows";
 import meta from "@/data/catalogue/meta.json";
 import { getUnlocks, leaves, loadCatalogue } from "@/lib/catalogue/server";
 import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
 import { creditsLabel, routesText } from "@/lib/engine/parts";
 import { toStatusInput } from "@/lib/engine/status";
+import { type Definition, GLOSSARY } from "@/lib/glossary";
 import { logicalCode } from "@/lib/profile/types";
 
 // Nothing is built ahead, so each course renders on its first visit and is then served from the static cache.
@@ -165,12 +167,21 @@ export default async function CoursePage({
 
           <SectionCard id="details" title="Details" bodyClassName="">
             <dl className="divide-y divide-border border-border border-t text-[13px]">
-              <Fact label="Credits" value={creditsText(course.credits)} />
+              <Fact
+                label="Credits"
+                info={GLOSSARY.credits}
+                value={creditsText(course.credits)}
+              />
               <Fact
                 label="Terms offered"
+                info={GLOSSARY.termsOffered}
                 value={course.terms.join(", ") || "Not offered this year"}
               />
-              <Fact label="Offered by" value={course.offeredBy} />
+              <Fact
+                label="Offered by"
+                info={GLOSSARY.offeredBy}
+                value={course.offeredBy}
+              />
               <Fact label="Faculty" value={course.faculty} />
             </dl>
             <a
@@ -195,10 +206,21 @@ function creditsText(credits: number | null) {
   return credits === null ? null : String(credits);
 }
 
-function Fact({ label, value }: { label: string; value: string | null }) {
+function Fact({
+  label,
+  info,
+  value,
+}: {
+  label: string;
+  info?: Definition;
+  value: string | null;
+}) {
   return (
     <div className="flex items-baseline justify-between gap-4 px-5 py-2.5">
-      <dt className="shrink-0 text-muted-foreground">{label}</dt>
+      <dt className="flex shrink-0 items-center gap-1.5 text-muted-foreground">
+        {label}
+        {info && <InfoTip {...info} />}
+      </dt>
       <dd className="text-right font-medium">{value ?? "Not listed"}</dd>
     </div>
   );

@@ -17,15 +17,17 @@ import Link from "next/link";
 import { type ReactNode, useId, useMemo, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { seasonsOffered } from "@/components/course-row";
+import { CreditsLabel } from "@/components/credits-label";
 import { GeneratedBanner } from "@/components/generated-banner";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { StatusIcon, UncertainFlag } from "@/components/status";
+import { StatusIcon, StatusTip, UncertainFlag } from "@/components/status";
 import { Badge } from "@/components/ui/badge";
 import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SelectField } from "@/components/ui/field";
 import { ProgressBar, ProgressRing } from "@/components/ui/progress";
+import { InfoTip } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { courseSlug } from "@/lib/catalogue/slug";
 import {
@@ -41,10 +43,10 @@ import {
   nextView,
   type OpenGroup,
 } from "@/lib/engine/next-view";
-import { creditsLabel } from "@/lib/engine/parts";
 import { termLoad } from "@/lib/engine/plan";
 import type { Snapshot } from "@/lib/engine/snapshot";
 import { creditsText, sentence } from "@/lib/format";
+import { type Definition, GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
@@ -120,11 +122,14 @@ function Header({ term, children }: { term?: Term; children?: ReactNode }) {
 function TermLoad({ credits, limit }: { credits: number; limit: number }) {
   const over = credits > limit;
   return (
-    <Badge tone={over ? "warn" : "neutral"} size="md">
-      {over && <TriangleAlert aria-hidden />}
-      {credits} of {limit} credits planned
-      {over && <span className="sr-only">, over your credit limit</span>}
-    </Badge>
+    <div className="flex items-center gap-1.5">
+      <Badge tone={over ? "warn" : "neutral"} size="md">
+        {over && <TriangleAlert aria-hidden />}
+        {credits} of {limit} credits planned
+        {over && <span className="sr-only">, over your credit limit</span>}
+      </Badge>
+      <InfoTip {...GLOSSARY.termLoad} />
+    </div>
   );
 }
 
@@ -288,6 +293,7 @@ function Content({
           <Group
             key={block.title}
             title={block.title}
+            info={GLOSSARY.required}
             fraction={{ done: block.creditsDone, of: block.credits }}
             collapsed={collapsed.has(block.title)}
             onToggle={() => toggle(block.title)}
@@ -295,7 +301,10 @@ function Content({
             <ItemRows items={block.ready} context={context} />
             {block.later.length > 0 && (
               <>
-                <SubLabel left={`Not open in ${label}`} />
+                <SubLabel
+                  left={`Not open in ${label}`}
+                  info={GLOSSARY.notOpen}
+                />
                 <ItemRows items={block.later} context={context} />
               </>
             )}
@@ -396,11 +405,13 @@ function ProgramSummary({
         <Stat
           value={`${creditsDone} of ${credits}`}
           caption="program credits"
+          info={GLOSSARY.programCredits}
         />
         <span aria-hidden className="h-8 w-px bg-border" />
         <Stat
           value={String(mustTake)}
           caption={`required courses open in ${label}`}
+          info={GLOSSARY.required}
         />
       </Card>
       {(degree || inProgress) && (
@@ -423,7 +434,11 @@ function ProgramSummary({
                   , including {degree.advancedStanding} advanced standing
                   credits
                 </span>
-              )}
+              )}{" "}
+              <InfoTip
+                {...GLOSSARY.creditsEarned}
+                className="align-text-bottom"
+              />
             </p>
           )}
         </div>
@@ -451,20 +466,32 @@ function ProgramSummary({
   );
 }
 
-function Stat({ value, caption }: { value: string; caption: string }) {
+function Stat({
+  value,
+  caption,
+  info,
+}: {
+  value: string;
+  caption: string;
+  info: Definition;
+}) {
   return (
     <div className="shrink-0 text-right">
       <p className="font-semibold text-[15px] leading-5 tabular-nums">
         {value}
       </p>
-      <p className="text-muted-foreground text-xs leading-4">{caption}</p>
+      <p className="flex items-center justify-end gap-1.5 text-muted-foreground text-xs leading-4">
+        {caption}
+        <InfoTip {...info} />
+      </p>
     </div>
   );
 }
 
-/** Group header band: chevron, name, fraction and ring. */
+/** Group header band: chevron, name, fraction and ring. The toggle stretches over the whole band, and the info buttons sit above it. */
 function Group({
   title,
+  info,
   fraction,
   checks = 0,
   trailing,
@@ -473,6 +500,7 @@ function Group({
   children,
 }: {
   title: string;
+  info?: Definition;
   fraction?: { done: number; of: number };
   /** Rules in the group that need a manual check. */
   checks?: number;
@@ -487,17 +515,14 @@ function Group({
       aria-labelledby={`${id}-title`}
       className="border-border border-t first:border-t-0"
     >
-      <div className="flex h-9 items-center gap-2 bg-subtle px-4">
-        <h2
-          id={`${id}-title`}
-          className="min-w-0 flex-1 text-[13px] leading-[18px]"
-        >
+      <div className="relative flex h-9 items-center gap-2 bg-subtle px-4">
+        <h2 id={`${id}-title`} className="min-w-0 text-[13px] leading-[18px]">
           <button
             type="button"
             onClick={onToggle}
             aria-expanded={!collapsed}
             aria-controls={collapsed ? undefined : `${id}-list`}
-            className="flex h-9 w-full items-center gap-3 rounded-sm text-left -outline-offset-2"
+            className="flex h-9 w-full items-center gap-3 rounded-sm text-left -outline-offset-2 after:absolute after:inset-0"
           >
             <ChevronDown
               aria-hidden
@@ -512,39 +537,56 @@ function Group({
             </span>
           </button>
         </h2>
-        {checks > 0 && (
-          <Badge tone="warn">
-            <CircleAlert aria-hidden />
-            {checks === 1 ? "1 rule to check" : `${checks} rules to check`}
-          </Badge>
-        )}
-        {fraction && (
-          <>
+        {info && <InfoTip {...info} />}
+        <div className="ml-auto flex shrink-0 items-center gap-2">
+          {checks > 0 && (
+            <>
+              <Badge tone="warn">
+                <CircleAlert aria-hidden />
+                {checks === 1 ? "1 rule to check" : `${checks} rules to check`}
+              </Badge>
+              <InfoTip {...GLOSSARY.checkRules} />
+            </>
+          )}
+          {fraction && (
+            <>
+              <span className="text-[13px] text-muted-foreground tabular-nums">
+                {fraction.done} of {fraction.of} credits
+              </span>
+              <ProgressRing
+                value={fraction.done}
+                max={fraction.of}
+                label={`${fraction.done} of ${fraction.of} credits`}
+              />
+            </>
+          )}
+          {trailing && (
             <span className="text-[13px] text-muted-foreground tabular-nums">
-              {fraction.done} of {fraction.of} credits
+              {trailing}
             </span>
-            <ProgressRing
-              value={fraction.done}
-              max={fraction.of}
-              label={`${fraction.done} of ${fraction.of} credits`}
-            />
-          </>
-        )}
-        {trailing && (
-          <span className="text-[13px] text-muted-foreground tabular-nums">
-            {trailing}
-          </span>
-        )}
+          )}
+        </div>
       </div>
       {!collapsed && <ul id={`${id}-list`}>{children}</ul>}
     </section>
   );
 }
 
-function SubLabel({ left, right }: { left: string; right?: string | null }) {
+function SubLabel({
+  left,
+  right,
+  info,
+}: {
+  left: string;
+  right?: string | null;
+  info?: Definition;
+}) {
   return (
     <li className="flex h-8 items-center justify-between gap-4 border-border border-t pr-[108px] pl-[42px] font-medium text-muted-foreground text-xs leading-4">
-      <span className="truncate">{left}</span>
+      <span className="flex min-w-0 items-center gap-1.5">
+        <span className="truncate">{left}</span>
+        {info && <InfoTip {...info} />}
+      </span>
       {right && <span className="tabular-nums">{right}</span>}
     </li>
   );
@@ -585,6 +627,7 @@ function Row({
   const [pops, setPops] = useState(0);
   const status = plannedIn ? "planned" : reason ? "locked" : "available";
   const plannedText = plannedIn && `Planned for ${termLabel(plannedIn)}`;
+  const tipReason = plannedText ? `${plannedText}.` : reason && `${reason}.`;
   const caption =
     plannedIn && !here ? plannedText : (reason ?? seasonsOffered(course));
   const showAction = here || (!plannedIn && !reason);
@@ -603,7 +646,9 @@ function Row({
         transition={{ type: "spring", duration: 0.15, bounce: 0.5 }}
         className="flex shrink-0"
       >
-        <StatusIcon status={status} label={plannedText} />
+        <StatusTip status={status} reason={tipReason}>
+          <StatusIcon status={status} label={plannedText} />
+        </StatusTip>
       </motion.span>
       <Link
         href={`/courses/${courseSlug(course.code)}`}
@@ -626,7 +671,7 @@ function Row({
           {caption}
         </span>
         <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
-          {creditsLabel(course)}
+          <CreditsLabel course={course} />
         </span>
       </Link>
       <span className="flex w-[84px] shrink-0 justify-end">
@@ -728,6 +773,7 @@ function ComplementaryGroup({
   return (
     <Group
       title={group.title}
+      info={GLOSSARY.complementary}
       fraction={
         group.counted
           ? { done: group.creditsDone, of: group.credits }

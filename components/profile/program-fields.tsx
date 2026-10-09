@@ -3,6 +3,7 @@ import { ProgramCombobox } from "@/components/profile/program-combobox";
 import { EntrySelect, TermSelect } from "@/components/profile/selects";
 import { TextField } from "@/components/ui/field";
 import { degreeCredits } from "@/lib/engine/credits";
+import { GLOSSARY } from "@/lib/glossary";
 import { currentTerm } from "@/lib/profile/terms";
 import type { EntryRoute, Term } from "@/lib/profile/types";
 import { useProgram } from "@/lib/programs/client";
@@ -45,22 +46,26 @@ export function ProgramFields({
       {program && <GeneratedBanner program={program} className="col-span-2" />}
       <TermSelect
         label="Start term"
+        info={GLOSSARY.startTerm}
         value={value.startTerm}
         onChange={(startTerm) => onChange({ startTerm })}
       />
       <TermSelect
         label="Expected graduation"
+        info={GLOSSARY.graduation}
         notBefore={currentTerm()}
         value={value.graduationTerm}
         onChange={(graduationTerm) => onChange({ graduationTerm })}
       />
       <EntrySelect
+        info={GLOSSARY.entry}
         className="col-span-2"
         value={value.entry}
         onChange={(entry) => changeProgramOrEntry({ entry })}
       />
       <TextField
         label="Advanced standing credits"
+        info={GLOSSARY.advancedStanding}
         type="number"
         min={0}
         max={60}
@@ -77,6 +82,7 @@ export function ProgramFields({
       />
       <TextField
         label="Credits required for your degree"
+        info={GLOSSARY.creditsRequired}
         type="number"
         min={1}
         max={200}

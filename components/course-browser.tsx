@@ -4,7 +4,6 @@ import { cn } from "cn";
 import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Tooltip } from "radix-ui";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import {
@@ -14,10 +13,16 @@ import {
   SortMenu,
 } from "@/components/course-filters";
 import { BrowseSkeleton, seasonsOffered } from "@/components/course-row";
-import { STATUS, StatusIcon, UncertainFlag } from "@/components/status";
+import {
+  STATUS,
+  StatusIcon,
+  StatusTip,
+  UncertainFlag,
+} from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ViewTabs } from "@/components/ui/tabs";
+import { InfoTip } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { searchCourses } from "@/lib/catalogue/search";
 import { courseSlug } from "@/lib/catalogue/slug";
@@ -45,6 +50,7 @@ import {
 } from "@/lib/engine/browse";
 import { buildSnapshot, type Snapshot } from "@/lib/engine/snapshot";
 import { courseStatus } from "@/lib/engine/status";
+import { GLOSSARY, VIEW_TIPS } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import type { CourseRecord, Plan } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
@@ -255,137 +261,146 @@ function CourseTable({ b }: { b: Browse }) {
   const left = EXTRA.filter((prop) => !added.includes(prop));
 
   return (
-    <Tooltip.Provider delayDuration={350} skipDelayDuration={150}>
-      <Card ref={card} className="scroll-mt-6 overflow-hidden">
-        <div className="flex h-12 items-center border-border border-b px-3">
-          <ViewTabs
-            label="Saved views"
-            panelId={PANEL}
-            value={query.view}
-            onChange={(view) => update({ view })}
-            tabs={(b.hasProfile ? VIEWS : VIEWS.slice(0, 1)).map((tab) => ({
-              ...tab,
-              count: counts[tab.value],
-            }))}
-          />
-          <div className="ml-auto flex items-center gap-4">
-            {!b.hasProfile && (
-              <p className="text-[13px] text-muted-foreground">
-                <Link
-                  href="/profile"
-                  className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
-                >
-                  Import your transcript
-                </Link>{" "}
-                to see which courses you can take.
-              </p>
-            )}
-            <SortMenu sort={query.sort} onChange={(sort) => update({ sort })} />
-          </div>
+    <Card ref={card} className="scroll-mt-6 overflow-hidden">
+      <div className="flex h-12 items-center border-border border-b px-3">
+        <ViewTabs
+          label="Saved views"
+          panelId={PANEL}
+          value={query.view}
+          onChange={(view) => update({ view })}
+          tabs={(b.hasProfile ? VIEWS : VIEWS.slice(0, 1)).map((tab) => ({
+            ...tab,
+            tip: VIEW_TIPS[tab.value],
+            count: counts[tab.value],
+          }))}
+        />
+        <div className="ml-auto flex items-center gap-4">
+          {!b.hasProfile && (
+            <p className="text-[13px] text-muted-foreground">
+              <Link
+                href="/profile"
+                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
+              >
+                Import your transcript
+              </Link>{" "}
+              to see which courses you can take.
+            </p>
+          )}
+          <SortMenu sort={query.sort} onChange={(sort) => update({ sort })} />
         </div>
+      </div>
 
-        <div className="flex items-center gap-2 border-border border-b px-3 py-2.5">
-          <SearchField
-            ref={input}
-            className="min-w-40 max-w-[280px] flex-1"
-            value={query.q}
-            onChange={(q) => update({ q })}
-            placeholder="Search courses"
-            shortcut="/"
-          />
-          <div className="flex min-w-0 items-center gap-2">
-            {PROMOTED.map(chip)}
-            {added.map(chip)}
-            {left.length > 0 && (
-              <AddFilterMenu
-                props={left}
-                onPick={(prop) => {
-                  setAdded((list) => [...list, prop]);
-                  setOpen(prop);
-                }}
-              />
-            )}
-          </div>
-        </div>
-
-        <div
-          role="tabpanel"
-          id={PANEL}
-          aria-labelledby={`${PANEL}-${query.view}`}
-        >
-          {rows.length === 0 ? (
-            <EmptyState
-              onClear={() => {
-                setAdded([]);
-                update({
-                  q: "",
-                  filters: NO_FILTERS,
-                  view: counts[query.view] === 0 ? "all" : query.view,
-                });
+      <div className="flex items-center gap-2 border-border border-b px-3 py-2.5">
+        <SearchField
+          ref={input}
+          className="min-w-40 max-w-[280px] flex-1"
+          value={query.q}
+          onChange={(q) => update({ q })}
+          placeholder="Search courses"
+          shortcut="/"
+        />
+        <div className="flex min-w-0 items-center gap-2">
+          {PROMOTED.map(chip)}
+          {added.map(chip)}
+          {left.length > 0 && (
+            <AddFilterMenu
+              props={left}
+              onPick={(prop) => {
+                setAdded((list) => [...list, prop]);
+                setOpen(prop);
               }}
             />
-          ) : (
-            <>
-              <table className="w-full table-fixed border-collapse">
-                <caption className="sr-only">Courses</caption>
-                <colgroup>
-                  <col className="w-[148px]" />
-                  <col />
-                  <col className="w-20" />
-                  <col className="w-40" />
-                  <col className="w-[152px]" />
-                </colgroup>
-                <thead>
-                  <tr className="h-9 border-border border-b bg-subtle text-left font-medium text-[12px] text-muted-foreground">
-                    <th className={cn(TH, "pl-4")}>Course</th>
-                    <th className={TH}>Title</th>
-                    <th className={cn(TH, "text-right")}>Credits</th>
-                    <th className={TH}>Offered</th>
-                    <th className={cn(TH, "pr-4")}>
-                      <span className="sr-only">Conditions</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border">
-                  {shown.map((course) => (
-                    <CourseTableRow key={course.code} course={course} b={b} />
-                  ))}
-                </tbody>
-              </table>
-              <div className="flex h-12 items-center justify-between border-border border-t px-4">
-                <p
-                  aria-live="polite"
-                  className="text-[13px] text-muted-foreground tabular-nums"
-                >
-                  {first + 1}-{first + shown.length} of{" "}
-                  {rows.length.toLocaleString()}
-                </p>
-                <div className="flex items-center gap-1.5">
-                  <Button
-                    variant="secondary"
-                    className="size-8 px-0"
-                    aria-label="Previous page"
-                    disabled={current === 1}
-                    onClick={() => goTo(current - 1)}
-                  >
-                    <ChevronLeft aria-hidden strokeWidth={1.75} />
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    className="size-8 px-0"
-                    aria-label="Next page"
-                    disabled={current >= pages}
-                    onClick={() => goTo(current + 1)}
-                  >
-                    <ChevronRight aria-hidden strokeWidth={1.75} />
-                  </Button>
-                </div>
-              </div>
-            </>
           )}
         </div>
-      </Card>
-    </Tooltip.Provider>
+      </div>
+
+      <div
+        role="tabpanel"
+        id={PANEL}
+        aria-labelledby={`${PANEL}-${query.view}`}
+      >
+        {rows.length === 0 ? (
+          <EmptyState
+            onClear={() => {
+              setAdded([]);
+              update({
+                q: "",
+                filters: NO_FILTERS,
+                view: counts[query.view] === 0 ? "all" : query.view,
+              });
+            }}
+          />
+        ) : (
+          <>
+            <table className="w-full table-fixed border-collapse">
+              <caption className="sr-only">Courses</caption>
+              <colgroup>
+                <col className="w-[148px]" />
+                <col />
+                <col className="w-20" />
+                <col className="w-40" />
+                <col className="w-[152px]" />
+              </colgroup>
+              <thead>
+                <tr className="h-9 border-border border-b bg-subtle text-left font-medium text-[12px] text-muted-foreground">
+                  <th className={cn(TH, "pl-4")}>Course</th>
+                  <th className={TH}>Title</th>
+                  <th className={TH}>
+                    <span className="flex items-center justify-end gap-1.5">
+                      <InfoTip {...GLOSSARY.credits} />
+                      Credits
+                    </span>
+                  </th>
+                  <th className={TH}>
+                    <span className="flex items-center gap-1.5">
+                      Offered
+                      <InfoTip {...GLOSSARY.offered} />
+                    </span>
+                  </th>
+                  <th className={cn(TH, "pr-4")}>
+                    <span className="sr-only">Conditions</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {shown.map((course) => (
+                  <CourseTableRow key={course.code} course={course} b={b} />
+                ))}
+              </tbody>
+            </table>
+            <div className="flex h-12 items-center justify-between border-border border-t px-4">
+              <p
+                aria-live="polite"
+                className="text-[13px] text-muted-foreground tabular-nums"
+              >
+                {first + 1}-{first + shown.length} of{" "}
+                {rows.length.toLocaleString()}
+              </p>
+              <div className="flex items-center gap-1.5">
+                <Button
+                  variant="secondary"
+                  className="size-8 px-0"
+                  aria-label="Previous page"
+                  disabled={current === 1}
+                  onClick={() => goTo(current - 1)}
+                >
+                  <ChevronLeft aria-hidden strokeWidth={1.75} />
+                </Button>
+                <Button
+                  variant="secondary"
+                  className="size-8 px-0"
+                  aria-label="Next page"
+                  disabled={current >= pages}
+                  onClick={() => goTo(current + 1)}
+                >
+                  <ChevronRight aria-hidden strokeWidth={1.75} />
+                </Button>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </Card>
   );
 }
 
@@ -399,6 +414,15 @@ function CourseTableRow({ course, b }: { course: CourseSummary; b: Browse }) {
   const href = `/courses/${courseSlug(course.code)}`;
   const state = b.states.get(course.code);
   const status = statusOf(b.states, course.code);
+  const link = (
+    <Link
+      href={href}
+      prefetch={false}
+      className="truncate rounded-sm font-semibold tabular-nums"
+    >
+      {course.code}
+    </Link>
+  );
   return (
     <tr
       onClick={(event) => {
@@ -410,36 +434,20 @@ function CourseTableRow({ course, b }: { course: CourseSummary; b: Browse }) {
       )}
     >
       <td className="py-0 pr-2 pl-4">
-        <div className="flex min-w-0 items-center gap-2">
-          {b.hasProfile && (
-            <Tooltip.Root>
-              <Tooltip.Trigger asChild>
-                <span className="inline-flex size-5 shrink-0 items-center justify-center">
-                  <StatusIcon status={status} label={STATUS[status].label} />
-                </span>
-              </Tooltip.Trigger>
-              <Tooltip.Portal>
-                <Tooltip.Content
-                  side="top"
-                  sideOffset={6}
-                  className="z-[85] max-w-[260px] rounded-md bg-foreground px-2.5 py-1.5 text-[12px] text-white leading-4 shadow-float"
-                >
-                  <span className="font-semibold">{STATUS[status].label}</span>
-                  <span className="block text-white/80">
-                    {statusDetail(course, state, b)}
-                  </span>
-                </Tooltip.Content>
-              </Tooltip.Portal>
-            </Tooltip.Root>
-          )}
-          <Link
-            href={href}
-            prefetch={false}
-            className="truncate rounded-sm font-semibold tabular-nums"
+        {b.hasProfile ? (
+          <StatusTip
+            status={status}
+            reason={statusDetail(course, state, b)}
+            className="flex min-w-0 items-center gap-2"
           >
-            {course.code}
-          </Link>
-        </div>
+            <span className="inline-flex size-5 shrink-0 items-center justify-center">
+              <StatusIcon status={status} label={STATUS[status].label} />
+            </span>
+            {link}
+          </StatusTip>
+        ) : (
+          <div className="flex min-w-0 items-center gap-2">{link}</div>
+        )}
       </td>
       <td className="truncate px-2" title={course.title}>
         {course.title}

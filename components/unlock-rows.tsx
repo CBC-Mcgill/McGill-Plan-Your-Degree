@@ -1,10 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { STATUS, StatusIcon } from "@/components/status";
+import { STATUS, StatusIcon, StatusTip } from "@/components/status";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { Snapshot } from "@/lib/engine/snapshot";
-import { courseStatus, type StatusInput } from "@/lib/engine/status";
+import {
+  courseStatus,
+  meets,
+  missingText,
+  type StatusInput,
+} from "@/lib/engine/status";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 export interface Unlock {
@@ -45,13 +50,23 @@ function Rows({
     <ul>
       {courses.map(({ course, title, credits }) => {
         const status = snapshot ? courseStatus(course, snapshot).status : null;
+        const tree = course.prerequisites?.tree;
+        const reason =
+          status === "locked" &&
+          snapshot &&
+          tree &&
+          !meets(tree, snapshot.taken)
+            ? `Needs ${missingText(tree, snapshot.taken)} first.`
+            : undefined;
         return (
           <li
             key={course.code}
             className="flex h-11 items-center gap-3 border-border border-t pr-5 pl-5 focus-within:bg-subtle hover:bg-subtle"
           >
             {status && (
-              <StatusIcon status={status} label={STATUS[status].label} />
+              <StatusTip status={status} reason={reason}>
+                <StatusIcon status={status} label={STATUS[status].label} />
+              </StatusTip>
             )}
             <Link
               href={`/courses/${courseSlug(course.code)}`}

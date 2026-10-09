@@ -6,8 +6,10 @@ import { useRef } from "react";
 import { StatusIcon } from "@/components/status";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { Tooltip } from "@/components/ui/tooltip";
 import type { Stage } from "@/lib/engine/stages";
 import { creditsText } from "@/lib/format";
+import { GLOSSARY } from "@/lib/glossary";
 import { termLabel } from "@/lib/profile/term-options";
 import type { Term } from "@/lib/profile/types";
 import { isDone } from "@/lib/profile/types";
@@ -153,13 +155,15 @@ export function TermPath({
                     {termLabel(stage.term)}
                   </span>
                   {stage.warnings.length > 0 && (
-                    <Badge tone="warn" title="Has warnings">
-                      <TriangleAlert aria-hidden />
-                      {stage.warnings.length}
-                      <span className="sr-only">
-                        {stage.warnings.length === 1 ? "warning" : "warnings"}
-                      </span>
-                    </Badge>
+                    <Tooltip content={GLOSSARY.warnings.tip}>
+                      <Badge tone="warn">
+                        <TriangleAlert aria-hidden />
+                        {stage.warnings.length}
+                        <span className="sr-only">
+                          {stage.warnings.length === 1 ? "warning" : "warnings"}
+                        </span>
+                      </Badge>
+                    </Tooltip>
                   )}
                 </span>
                 <span className="block truncate text-[13px] text-muted-foreground leading-[18px]">

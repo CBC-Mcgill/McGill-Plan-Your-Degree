@@ -20,7 +20,9 @@ test("importing a transcript saves its courses", async ({ page }) => {
   await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue(
     "Computer Science Major (B.Sc.)",
   );
-  await expect(page.getByLabel("Start term")).toHaveValue(/.+/);
+  await expect(page.getByLabel("Start term", { exact: true })).toHaveValue(
+    /.+/,
+  );
   await page.getByRole("button", { name: "Save to my profile" }).click();
   await expect(page).toHaveURL("/next");
 
@@ -117,4 +119,20 @@ test("starting without a transcript counts as a profile everywhere", async ({
   await page.getByRole("link", { name: "Pick your program" }).click();
   await expect(page).toHaveURL("/profile#program");
   await expect(page.locator("#program")).toBeInViewport();
+});
+
+test("the expected graduation info button defines the term on focus", async ({
+  page,
+}) => {
+  await page.goto("/profile");
+  await page
+    .getByRole("button", { name: "Start without a transcript" })
+    .click();
+
+  await page.getByRole("button", { name: "About Expected graduation" }).focus();
+  await expect(page.getByRole("tooltip")).toContainText(
+    "The last term you take courses.",
+  );
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("tooltip")).toHaveCount(0);
 });

@@ -10,12 +10,14 @@ import {
 import Link from "next/link";
 import { type ReactNode, useMemo } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
+import { CreditsLabel } from "@/components/credits-label";
 import { Landing } from "@/components/home/landing";
 import { SetupGuide } from "@/components/home/setup-guide";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { StatusIcon, UncertainFlag } from "@/components/status";
+import { StatusIcon, StatusTip, UncertainFlag } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { InfoTip, Tooltip } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { courseSlug } from "@/lib/catalogue/slug";
 import {
@@ -24,12 +26,12 @@ import {
   pendingCredits,
 } from "@/lib/engine/credits";
 import { type Entry, nextView } from "@/lib/engine/next-view";
-import { creditsLabel } from "@/lib/engine/parts";
 import { termRange } from "@/lib/engine/plan";
 import { programProgress } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { recordCredits } from "@/lib/engine/stages";
 import { creditsText } from "@/lib/format";
+import { type Definition, GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import {
   currentTerm,
@@ -247,7 +249,7 @@ function Metrics({
 
   return (
     <div className="grid grid-cols-3 gap-4">
-      <Metric label="Credits earned">
+      <Metric label="Credits earned" info={GLOSSARY.creditsEarned}>
         <div className="flex items-end justify-between gap-3">
           <Value>{earned}</Value>
           <div
@@ -256,26 +258,31 @@ function Metrics({
             className="flex h-8 items-end gap-1"
           >
             {bars.map((bar) => (
-              <span
+              <Tooltip
                 key={termKey(bar.term)}
-                title={`${termLabel(bar.term)}: ${bar.credits} credits${bar.current ? ", in progress" : ""}`}
-                className={cn(
-                  "w-2 rounded-[2px]",
-                  bar.current ? "bg-in-progress/40" : "bg-completed",
-                )}
-                style={{
-                  height: `${Math.max(12, (bar.credits / peak) * 100)}%`,
-                }}
-              />
+                content={`${termLabel(bar.term)}: ${bar.credits} credits${bar.current ? ", in progress" : ""}`}
+              >
+                <span
+                  className={cn(
+                    "w-2 rounded-[2px]",
+                    bar.current ? "bg-in-progress/40" : "bg-completed",
+                  )}
+                  style={{
+                    height: `${Math.max(12, (bar.credits / peak) * 100)}%`,
+                  }}
+                />
+              </Tooltip>
             ))}
           </div>
         </div>
         <Caption>
           {pending > 0 ? (
-            <span title="Credit for a multi-term course arrives when its last part is done">
-              {required && `of ${required} · `}
-              {creditsText(pending)} pending
-            </span>
+            <Tooltip content="Credit for a multi-term course arrives when its last part is done.">
+              <span className="underline decoration-dotted underline-offset-2">
+                {required && `of ${required} · `}
+                {creditsText(pending)} pending
+              </span>
+            </Tooltip>
           ) : required ? (
             `of ${required} toward your degree`
           ) : (
@@ -285,7 +292,7 @@ function Metrics({
       </Metric>
 
       {requiredCourses && requiredCourses.total > 0 ? (
-        <Metric label="Required courses">
+        <Metric label="Required courses" info={GLOSSARY.required}>
           <div className="flex items-center justify-between gap-3">
             <Value>
               {requiredCourses.done}
@@ -307,7 +314,7 @@ function Metrics({
           </Caption>
         </Metric>
       ) : (
-        <Metric label="Planned next term">
+        <Metric label="Planned next term" info={GLOSSARY.plannedNext}>
           <div className="flex items-center justify-between gap-3">
             <Value>{nextTermCredits}</Value>
             <IconTile>
@@ -318,7 +325,7 @@ function Metrics({
         </Metric>
       )}
 
-      <Metric label="Terms left">
+      <Metric label="Terms left" info={GLOSSARY.termsLeft}>
         <div className="flex items-center justify-between gap-3">
           <Value>{termsLeft ?? "-"}</Value>
           <IconTile>
@@ -337,11 +344,20 @@ function Metrics({
   );
 }
 
-function Metric({ label, children }: { label: string; children: ReactNode }) {
+function Metric({
+  label,
+  info,
+  children,
+}: {
+  label: string;
+  info: Definition;
+  children: ReactNode;
+}) {
   return (
     <Card className="flex flex-col gap-1 p-4">
-      <p className="font-medium text-[13px] text-muted-foreground leading-[18px]">
+      <p className="flex items-center gap-1.5 font-medium text-[13px] text-muted-foreground leading-[18px]">
         {label}
+        <InfoTip {...info} />
       </p>
       {children}
     </Card>
@@ -410,17 +426,23 @@ function NextUp({
                   key={course.code}
                   className="flex h-11 items-center gap-3 border-border border-t px-5"
                 >
-                  <StatusIcon
+                  <StatusTip
                     status={at ? "planned" : "available"}
-                    label={at ? `Planned for ${termLabel(at)}` : undefined}
-                  />
-                  <Link
-                    href={`/courses/${courseSlug(course.code)}`}
-                    prefetch={false}
-                    className="w-[76px] shrink-0 font-semibold tabular-nums hover:underline"
+                    reason={at && `Planned for ${termLabel(at)}.`}
+                    className="flex shrink-0 items-center gap-3"
                   >
-                    {course.code}
-                  </Link>
+                    <StatusIcon
+                      status={at ? "planned" : "available"}
+                      label={at ? `Planned for ${termLabel(at)}` : undefined}
+                    />
+                    <Link
+                      href={`/courses/${courseSlug(course.code)}`}
+                      prefetch={false}
+                      className="w-[76px] shrink-0 font-semibold tabular-nums hover:underline"
+                    >
+                      {course.code}
+                    </Link>
+                  </StatusTip>
                   <span className="flex min-w-0 flex-1 items-center gap-1.5">
                     <span className="truncate" title={course.title}>
                       {course.title}
@@ -433,7 +455,7 @@ function NextUp({
                     </span>
                   )}
                   <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
-                    {creditsLabel(course)}
+                    <CreditsLabel course={course} />
                   </span>
                   <span className="flex w-[84px] shrink-0 justify-end">
                     {at ? (

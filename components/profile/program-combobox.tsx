@@ -11,7 +11,8 @@ import {
   useRef,
   useState,
 } from "react";
-import { controlStyles } from "@/components/ui/field";
+import { controlStyles, FieldLabel } from "@/components/ui/field";
+import { GLOSSARY } from "@/lib/glossary";
 import { useProgramIndex } from "@/lib/programs/client";
 import type { ProgramSummary } from "@/lib/programs/types";
 
@@ -63,6 +64,7 @@ export function ProgramCombobox({
   const programs = index.status === "ready" ? index.programs : NO_PROGRAMS;
   const chosen = programs.find((program) => program.id === value);
   const listId = useId();
+  const inputId = useId();
   const field = useRef<HTMLSpanElement>(null);
   const [open, setOpen] = useState(false);
   // Null shows the chosen program, so the field only holds what the student typed.
@@ -113,11 +115,12 @@ export function ProgramCombobox({
 
   return (
     <Popover.Root open={open} onOpenChange={(next) => !next && close()}>
-      <label className={cn("grid gap-1.5", className)}>
-        <span className="font-medium text-[13px] leading-[18px]">Program</span>
+      <div className={cn("grid gap-1.5", className)}>
+        <FieldLabel htmlFor={inputId} label="Program" info={GLOSSARY.program} />
         <Popover.Anchor asChild>
           <span ref={field} className="relative">
             <input
+              id={inputId}
               role="combobox"
               aria-expanded={open}
               aria-controls={open ? listId : undefined}
@@ -159,7 +162,7 @@ export function ProgramCombobox({
             />
           </span>
         </Popover.Anchor>
-      </label>
+      </div>
       <Popover.Portal>
         <Popover.Content
           role="presentation"
