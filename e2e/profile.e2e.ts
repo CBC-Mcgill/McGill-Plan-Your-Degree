@@ -144,6 +144,53 @@ test("a course added by hand lands in its term", async ({ page }) => {
   await expect(toggle).toBeFocused();
 });
 
+test("the course record lists the newest term first, and a removed course comes back with Undo", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    const key = "plan-your-degree:profile";
+    if (localStorage.getItem(key)) return;
+    const record = (
+      code: string,
+      season: string,
+      grade: string,
+      status: string,
+    ) => ({
+      code,
+      term: { season, year: 2026 },
+      credits: 3,
+      grade,
+      status,
+      source: "manual",
+    });
+    localStorage.setItem(
+      key,
+      JSON.stringify({
+        state: {
+          records: [
+            record("COMP 202", "Winter", "A", "completed"),
+            record("MATH 133", "Fall", "W", "withdrawn"),
+          ],
+        },
+        version: 4,
+      }),
+    );
+  });
+  await page.goto("/profile");
+  const rows = page
+    .getByRole("table", { name: /Your courses/ })
+    .getByRole("row");
+  await expect(rows.nth(1)).toContainText("MATH 133");
+  await expect(rows.nth(1)).toContainText("Withdrawn");
+  await expect(rows.nth(2)).toContainText("COMP 202");
+  await expect(page.getByText("1 withdrawn")).toBeVisible();
+
+  await rows.nth(1).getByRole("button", { name: "Remove MATH 133" }).click();
+  await expect(page.getByText("MATH 133", { exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "Undo" }).click();
+  await expect(page.getByText("MATH 133", { exact: true })).toBeVisible();
+});
+
 test("deleting all data clears the profile", async ({ page }) => {
   await importAndSave(page);
   await page.goto("/profile");

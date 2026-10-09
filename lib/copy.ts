@@ -59,7 +59,6 @@ export const COPY = {
   importTranscript: "Import your transcript",
   startWithout: "Start without a transcript",
   restore: "Restore a backup",
-  restoreWarning: "Replaces your current profile.",
   exportBackup: "Export a backup",
   reimport: "Re-import a transcript",
   deleteAll: "Delete all my data",

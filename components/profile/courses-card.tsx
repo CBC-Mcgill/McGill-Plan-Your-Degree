@@ -1,17 +1,21 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { CourseRow, TermGroup } from "@/components/profile/course-row";
+import { RecordTable, StatusCounts } from "@/components/profile/record-table";
 import { TermSelect } from "@/components/profile/selects";
 import { toast } from "@/components/toast";
 import { Button } from "@/components/ui/button";
 import { SelectField, TextField } from "@/components/ui/field";
 import { Section } from "@/components/ui/section";
+import { Term as Definition } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { COPY } from "@/lib/copy";
+import { degreeStanding } from "@/lib/engine/credits";
 import { creditNote } from "@/lib/engine/parts";
+import type { Catalogue } from "@/lib/engine/snapshot";
+import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
-import { currentTerm, groupByTerm } from "@/lib/profile/terms";
+import { currentTerm } from "@/lib/profile/terms";
 import {
   type CourseRecord,
   logicalCode,
@@ -23,6 +27,7 @@ import {
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 const MAX_SUGGESTIONS = 8;
+const NO_CATALOGUE: Catalogue = new Map();
 const CODE = /^[A-Z0-9]{4} [A-Z0-9]{3,6}$/;
 
 /** "comp250" and "comp  250" both become "COMP 250". */
@@ -49,6 +54,8 @@ function removeWithUndo(record: CourseRecord) {
 
 export function CoursesCard() {
   const records = useProfileStore((s) => s.records);
+  const plan = useProfileStore((s) => s.plan);
+  const advancedStanding = useProfileStore((s) => s.advancedStanding);
   const addCourse = useProfileStore((s) => s.addCourse);
   const catalogue = useCatalogue();
   const snapshot = useSnapshot();
@@ -131,12 +138,35 @@ export function CoursesCard() {
     }
   }
 
-  const groups = groupByTerm(records);
+  const standing =
+    snapshot &&
+    degreeStanding(
+      snapshot,
+      ready ?? NO_CATALOGUE,
+      {
+        records,
+        plan,
+        advancedStanding,
+        creditsRequired: null,
+        entry: null,
+      },
+      null,
+    );
 
   return (
     <Section
       id="courses"
       title="Courses"
+      meta={
+        standing &&
+        (standing.earned > 0 || standing.inProgress > 0) && (
+          <>
+            {standing.earned}{" "}
+            <Definition def={GLOSSARY.creditsEarned}>credits earned</Definition>
+            , {standing.inProgress} in progress
+          </>
+        )
+      }
       action={
         <Button
           ref={toggle}
@@ -149,6 +179,9 @@ export function CoursesCard() {
         </Button>
       }
     >
+      {records.length > 0 && (
+        <StatusCounts statuses={records.map((record) => record.status)} />
+      )}
       <form
         id={formId}
         hidden={!adding}
@@ -156,7 +189,7 @@ export function CoursesCard() {
         onKeyDown={(event) => {
           if (event.key === "Escape") close();
         }}
-        className="mb-6 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4"
+        className="mt-4 mb-2 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 first:mt-0"
       >
         <TextField
           ref={codeField}
@@ -199,30 +232,27 @@ export function CoursesCard() {
         )}
       </form>
 
-      {groups.length === 0 ? (
-        <p className="text-fg-muted">No courses yet.</p>
+      {records.length === 0 ? (
+        <p className="text-fg-muted">
+          No courses yet. Add the ones you have taken, or import your transcript
+          under Your data.
+        </p>
       ) : (
-        <div>
-          {groups.map(({ term: groupTerm, items }) => (
-            <TermGroup
-              key={groupTerm ? termKey(groupTerm) : "before"}
-              term={groupTerm}
-            >
-              {items.map((record) => (
-                <CourseRow
-                  key={`${recordLabel(record)}-${record.term ? termKey(record.term) : "none"}`}
-                  code={recordLabel(record)}
-                  title={ready?.get(record.code)?.title ?? null}
-                  credits={record.credits}
-                  grade={record.grade}
-                  status={record.status}
-                  note={creditNote(record, snapshot?.pending)}
-                  missing={ready !== null && !ready.has(record.code)}
-                  onRemove={() => removeWithUndo(record)}
-                />
-              ))}
-            </TermGroup>
-          ))}
+        <div className="mt-3">
+          <RecordTable
+            rows={records.map((record) => ({
+              key: `${recordLabel(record)}-${record.term ? termKey(record.term) : "none"}`,
+              code: recordLabel(record),
+              title: ready?.get(record.code)?.title ?? null,
+              term: record.term,
+              credits: record.credits,
+              grade: record.grade,
+              status: record.status,
+              note: creditNote(record, snapshot?.pending),
+              missing: ready !== null && !ready.has(record.code),
+              onRemove: () => removeWithUndo(record),
+            }))}
+          />
         </div>
       )}
     </Section>

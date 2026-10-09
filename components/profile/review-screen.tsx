@@ -2,11 +2,16 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { CourseRow, TermGroup } from "@/components/profile/course-row";
+import {
+  PAGE_GRID,
+  PageSkeleton,
+  SIDE_PANEL,
+} from "@/components/profile/layout";
 import {
   ProgramFields,
   type ProgramValues,
 } from "@/components/profile/program-fields";
+import { RecordTable, StatusCounts } from "@/components/profile/record-table";
 import { toast } from "@/components/toast";
 import { Button } from "@/components/ui/button";
 import { Notice } from "@/components/ui/notice";
@@ -17,13 +22,12 @@ import { creditNote } from "@/lib/engine/parts";
 import { buildSnapshot } from "@/lib/engine/snapshot";
 import { recordFromLine, useProfileStore } from "@/lib/profile/store";
 import { defaultGraduation } from "@/lib/profile/term-options";
-import { groupByTerm, lastTerm } from "@/lib/profile/terms";
+import { lastTerm } from "@/lib/profile/terms";
 import {
   compareTerms,
   isCegep,
   logicalCode,
   type Term,
-  termKey,
 } from "@/lib/profile/types";
 import { guessMinor, guessProgram } from "@/lib/programs";
 import { useProgramIndex } from "@/lib/programs/client";
@@ -32,39 +36,20 @@ import type { Transcript } from "@/lib/transcript/parse";
 
 type ReviewProps = { transcript: Transcript; onCancel: () => void };
 
-const bone = "rounded-md bg-tint motion-safe:animate-pulse";
 const plural = (n: number, one: string, many: string) =>
   `${n} ${n === 1 ? one : many}`;
 
 /** Waits for the program list, so the guess can search all programs. A list that fails to load leaves only the five exact guesses. */
 export function ReviewScreen(props: ReviewProps) {
   const index = useProgramIndex();
-  if (index.status === "loading") return <ReviewSkeleton />;
+  if (index.status === "loading") {
+    return <PageSkeleton status="Reading your transcript" />;
+  }
   return (
     <Review
       {...props}
       programs={index.status === "ready" ? index.programs : []}
     />
-  );
-}
-
-function ReviewSkeleton() {
-  return (
-    <div className="mx-auto w-full max-w-page px-8 py-12">
-      <p role="status" className="sr-only">
-        Reading your transcript
-      </p>
-      <div aria-hidden className="max-w-reading">
-        <div className={`${bone} h-11 w-96`} />
-        <div className={`${bone} mt-8 h-9`} />
-        <div className={`${bone} mt-4 h-9`} />
-        <div className={`${bone} mt-12 h-7 w-28`} />
-        {Array.from({ length: 5 }, (_, row) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-          <div key={row} className={`${bone} mt-4 h-7`} />
-        ))}
-      </div>
-    </div>
   );
 }
 
@@ -103,9 +88,8 @@ function Review({
   });
 
   const kept = transcript.courses.flatMap((course, index) =>
-    removed.has(index) ? [] : [{ course, index, term: course.term }],
+    removed.has(index) ? [] : [{ course, index }],
   );
-  const groups = groupByTerm(kept);
   const pending = buildSnapshot(
     kept.map(({ course }) => recordFromLine(course)),
   ).pending;
@@ -190,8 +174,54 @@ function Review({
               )}
             </div>
           )}
+        </div>
 
-          <div className="mt-8 flex flex-col gap-6">
+        <div className={PAGE_GRID}>
+          <Section title="Courses">
+            {kept.length === 0 ? (
+              <p className="text-fg-muted">
+                No courses left. You can add them by hand on your profile.
+              </p>
+            ) : (
+              <>
+                <StatusCounts
+                  statuses={kept.map(({ course }) => course.status)}
+                />
+                <div className="mt-3">
+                  <RecordTable
+                    rows={kept.map(({ course, index }) => {
+                      const { known, missing } = titleOf(course.code);
+                      return {
+                        key: String(index),
+                        code: course.code,
+                        title: known?.title ?? course.title,
+                        term: course.term,
+                        credits: course.credits,
+                        grade: course.grade,
+                        status: course.status,
+                        note: creditNote(recordFromLine(course), pending),
+                        missing,
+                        onRemove: () => {
+                          setRemoved((current) => new Set(current).add(index));
+                          toast(`${course.code} removed`, {
+                            label: COPY.undo,
+                            run: () =>
+                              setRemoved((current) => {
+                                const next = new Set(current);
+                                next.delete(index);
+                                return next;
+                              }),
+                          });
+                        },
+                      };
+                    })}
+                  />
+                </div>
+              </>
+            )}
+          </Section>
+
+          <div className={SIDE_PANEL}>
             <Section title="Degree">
               <ProgramFields
                 value={values}
@@ -203,53 +233,6 @@ function Review({
                   Your courses are still saved. Requirements can't be tracked
                   for this program yet.
                 </p>
-              )}
-            </Section>
-
-            <Section title="Courses">
-              {kept.length === 0 ? (
-                <p className="text-fg-muted">
-                  No courses left. You can add them by hand on your profile.
-                </p>
-              ) : (
-                <div>
-                  {groups.map(({ term, items }) => (
-                    <TermGroup
-                      key={term ? termKey(term) : "before"}
-                      term={term}
-                    >
-                      {items.map(({ course, index }) => {
-                        const { known, missing } = titleOf(course.code);
-                        return (
-                          <CourseRow
-                            key={index}
-                            code={course.code}
-                            title={known?.title ?? course.title}
-                            credits={course.credits}
-                            grade={course.grade}
-                            status={course.status}
-                            note={creditNote(recordFromLine(course), pending)}
-                            missing={missing}
-                            onRemove={() => {
-                              setRemoved((current) =>
-                                new Set(current).add(index),
-                              );
-                              toast(`${course.code} removed`, {
-                                label: COPY.undo,
-                                run: () =>
-                                  setRemoved((current) => {
-                                    const next = new Set(current);
-                                    next.delete(index);
-                                    return next;
-                                  }),
-                              });
-                            }}
-                          />
-                        );
-                      })}
-                    </TermGroup>
-                  ))}
-                </div>
               )}
             </Section>
           </div>
