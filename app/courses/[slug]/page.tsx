@@ -82,13 +82,25 @@ export default async function CoursePage({
 
   return (
     <div className="mx-auto w-full max-w-page px-8 py-8">
-      <Link
-        href="/courses"
-        className="-ml-2 inline-flex h-8 items-center gap-1.5 rounded-md px-2 font-medium text-[13px] text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft aria-hidden className="size-4" />
-        Browse courses
-      </Link>
+      <div className="flex items-center justify-between gap-6">
+        <Link
+          href="/courses"
+          className="-ml-2 inline-flex h-8 items-center gap-1.5 rounded-md px-2 font-medium text-[13px] text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft aria-hidden className="size-4" />
+          Browse courses
+        </Link>
+        <a
+          href={`https://coursecatalogue.mcgill.ca/courses/${catalogueSlug}/`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="-mr-2 inline-flex h-8 items-center gap-1.5 rounded-md px-2 font-medium text-[13px] text-muted-foreground hover:text-foreground"
+        >
+          Official page on the McGill catalogue
+          <ExternalLink aria-hidden className="size-3.5" />
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
 
       <div className="mt-3 flex items-end justify-between gap-6">
         <div className="min-w-0">
@@ -184,15 +196,6 @@ export default async function CoursePage({
               />
               <Fact label="Faculty" value={course.faculty} />
             </dl>
-            <a
-              href={`https://coursecatalogue.mcgill.ca/courses/${catalogueSlug}/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 items-center justify-between gap-2 border-border border-t px-5 font-medium text-[13px] hover:bg-subtle"
-            >
-              View on the McGill course catalogue
-              <ExternalLink aria-hidden className="size-3.5 shrink-0" />
-            </a>
           </SectionCard>
 
           <CourseRatings code={course.parts?.[0]?.code ?? course.code} />
