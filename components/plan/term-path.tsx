@@ -32,11 +32,13 @@ export function describe(
         detail: `Current term · ${credits}`,
       };
     case "planned": {
-      const courses = stage.planned.length + stage.owed.length;
+      // A future term can already hold courses the student registered for, which the transcript lists as in progress.
+      const registered = stage.records.some((r) => r.status === "in-progress");
+      const word = registered ? "Registered" : "Planned";
       return {
-        status: "planned",
-        word: "Planned",
-        detail: `Planned · ${courses} ${courses === 1 ? "course" : "courses"} · ${credits}`,
+        status: registered ? "in-progress" : "planned",
+        word,
+        detail: `${word} · ${stage.count} ${stage.count === 1 ? "course" : "courses"} · ${credits}`,
       };
     }
     case "past": {
