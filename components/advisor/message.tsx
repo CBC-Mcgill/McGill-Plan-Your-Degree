@@ -20,6 +20,10 @@ type Piece = string | { href: string; label: string };
 /** What the advisor will help with, matched to the student's message. */
 const TOPICS: [RegExp, string][] = [
   [
+    /become|break into|career|job|internship|quant|gpu|big tech|ui\/ux|design/i,
+    "suggest courses that build toward that goal and still count toward your program",
+  ],
+  [
     /prereq|unlock|chain/i,
     "trace the prerequisite chain behind a course and show what it unlocks",
   ],
