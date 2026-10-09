@@ -68,6 +68,7 @@ test("a program read from the catalogue can be found and used", async ({
       level: 1,
     }),
   ).toBeVisible();
+  await page.getByRole("tab", { name: /^Complementary courses/ }).click();
   await expect(page.getByText("Check this requirement").first()).toBeVisible();
 });
 

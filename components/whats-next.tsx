@@ -3,9 +3,17 @@
 import { cn } from "cn";
 import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
-import { type ReactNode, useId, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { type ReactNode, useId, useMemo, useRef, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
-import { CourseRow, seasonsOffered } from "@/components/course-row";
+import { CourseCode } from "@/components/course-code";
+import {
+  ROW,
+  ROW_LINK,
+  ROW_TITLE,
+  seasonsOffered,
+} from "@/components/course-row";
+import { CreditsLabel } from "@/components/credits-label";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
@@ -15,13 +23,15 @@ import {
   StatusBadge,
   StatusBar,
   StatusIcon,
+  UncertainFlag,
 } from "@/components/status";
 import { Button } from "@/components/ui/button";
+import { CARD, Card } from "@/components/ui/card";
 import { Disclosure, ShowMore } from "@/components/ui/disclosure";
-import { Section } from "@/components/ui/section";
 import { ViewTabs } from "@/components/ui/tabs";
 import { Term as Defined } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
+import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
 import { exemptionsToReplace } from "@/lib/engine/credits";
@@ -35,6 +45,7 @@ import {
 import { termLoad } from "@/lib/engine/plan";
 import {
   type Claimed,
+  type CreditSplit,
   creditSplit,
   type GroupProgress,
   type ProgramProgress,
@@ -86,6 +97,22 @@ interface Context {
   facts: ReadonlyMap<string, Fact>;
   /** Courses the program lists or counts, so the minor's rows for them say they count for both. */
   both?: ReadonlySet<string>;
+}
+
+type Heading = "h3" | "h4";
+
+/** One entry of the requirement list and the pane it opens. */
+interface Pane {
+  /** The `req` search param that opens it. */
+  key: string;
+  label: string;
+  /** A met requirement, ticked in the list. */
+  done?: boolean;
+  /** The fraction beside the bar, or the line under the label. */
+  side: string;
+  split?: CreditSplit & { total: number };
+  checks?: number;
+  body: ReactNode;
 }
 
 export function WhatsNext() {
@@ -150,6 +177,9 @@ function Page({
   const plan = useProfileStore((state) => state.plan);
   const creditLimit = useProfileStore((state) => state.creditLimit);
   const panelId = useId();
+  const paneId = useId();
+  const panes = useRef<HTMLDivElement>(null);
+  const asked = useSearchParams().get("req");
   const terms = useMemo(() => planTermOptions([]).slice(0, TERMS_SHOWN), []);
   const [picked, setPicked] = useState<string>();
   const term =
@@ -220,13 +250,97 @@ function Page({
   }
 
   const { creditsDone, credits, groups } = view.progress;
-  const met = groups.filter((group) => group.satisfied);
-  const required = groups.filter(
-    (group) => group.kind === "required" && !group.credited,
-  );
-  const requiredDone =
-    required.length > 0 &&
-    required.every((group) => group.remaining.length === 0);
+  const keys = groupKeys(groups);
+  const when = termLabel(term);
+  const requirements: Pane[] = groups.map((group, index) => {
+    const split = withPlan?.groups[index];
+    const counts = countsCredits(group);
+    return {
+      key: keys[index] ?? String(index),
+      label: sentence(group.title),
+      done: group.satisfied,
+      side: group.credited
+        ? "Credited from CEGEP"
+        : counts
+          ? `${Math.min(group.creditsDone, group.credits)} of ${group.credits}`
+          : checksText(group.unparsed),
+      split:
+        !group.satisfied && counts && split
+          ? { ...creditSplit(split, snapshot), total: group.credits }
+          : undefined,
+      checks: group.unparsed,
+      body: (
+        <GroupPane
+          group={group}
+          index={index}
+          split={split}
+          program={program}
+          view={view}
+          snapshot={snapshot}
+          context={context}
+        />
+      ),
+    };
+  });
+  if (minor && minorView?.progress) {
+    const { progress } = minorView;
+    requirements.push({
+      key: "minor",
+      label: COPY.minorTitle(minor.name),
+      done: progress.satisfied,
+      side: `${progress.creditsDone} of ${progress.credits}`,
+      split:
+        !progress.satisfied && minorWithPlan
+          ? {
+              ...programSplit(minorWithPlan, snapshot),
+              total: minorWithPlan.credits,
+            }
+          : undefined,
+      checks: progress.groups.reduce((sum, group) => sum + group.unparsed, 0),
+      body: (
+        <MinorPane
+          minor={minor}
+          view={minorView}
+          withPlan={minorWithPlan}
+          snapshot={snapshot}
+          context={{ ...context, both: programCodes(view) }}
+        />
+      ),
+    });
+  }
+  const extras: Pane[] = [
+    ...(unclaimed.length > 0
+      ? [
+          {
+            key: "not-counted",
+            label: "Not counted",
+            side: courseCount(unclaimed.length),
+            body: <NotCounted courses={unclaimed} context={context} />,
+          },
+        ]
+      : []),
+    {
+      key: "other",
+      label: `Other courses in ${when}`,
+      side: courseCount(view.other.length),
+      body: <OtherPane entries={view.other} context={context} />,
+    },
+  ];
+  const all = [...requirements, ...extras];
+  const pane =
+    all.find((p) => p.key === asked) ??
+    requirements.find((p) => !p.done) ??
+    all[0];
+
+  function select(key: string, replace: boolean) {
+    const url = `?req=${key}`;
+    if (replace) window.history.replaceState(null, "", url);
+    else window.history.pushState(null, "", url);
+    // From deep in a long pane, a short one would open above the fold.
+    if ((panes.current?.getBoundingClientRect().top ?? 0) < 0) {
+      panes.current?.scrollIntoView();
+    }
+  }
 
   return (
     <>
@@ -286,57 +400,170 @@ function Page({
       )}
 
       <div
+        ref={panes}
         role="tabpanel"
         id={panelId}
         aria-labelledby={`${panelId}-${termKey(term)}`}
-        className="mt-6 [&>*+*]:mt-6"
+        className="mt-6 grid scroll-mt-6 grid-cols-[15rem_minmax(0,1fr)] items-start gap-6"
       >
-        {requiredDone && <p>Every required course is done or in progress.</p>}
-        {groups.map((group, index) =>
-          group.satisfied ? null : (
-            <Section
-              // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
-              key={index}
-              title={sentence(group.title)}
-              meta={
-                <GroupMeta
-                  group={group}
-                  split={withPlan?.groups[index]}
-                  snapshot={snapshot}
-                />
-              }
+        {pane && (
+          <>
+            <PaneList
+              requirements={requirements}
+              extras={extras}
+              selected={pane.key}
+              onSelect={select}
+              paneId={paneId}
+            />
+            <div
+              role="tabpanel"
+              id={paneId}
+              aria-labelledby={`${paneId}-${pane.key}`}
             >
-              <GroupBody
-                group={group}
-                index={index}
-                program={program}
-                view={view}
-                context={context}
-                label="h3"
-              />
-            </Section>
-          ),
+              {pane.body}
+            </div>
+          </>
         )}
-        {minor && minorView && (
-          <MinorSection
-            minor={minor}
-            view={minorView}
-            withPlan={minorWithPlan}
-            snapshot={snapshot}
-            context={{ ...context, both: programCodes(view) }}
-          />
-        )}
-        {met.length > 0 && (
-          <Section title="Completed requirements">
-            <MetLines groups={met} context={context} />
-          </Section>
-        )}
-        {unclaimed.length > 0 && (
-          <NotCounted courses={unclaimed} context={context} />
-        )}
-        <OtherCourses entries={view.other} context={context} />
       </div>
     </>
+  );
+}
+
+const slug = (title: string) =>
+  title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+/** One URL key per group from its title, numbered when two groups share one. */
+function groupKeys(groups: GroupProgress[]): string[] {
+  const seen = new Set<string>();
+  return groups.map((group, index) => {
+    const base = slug(group.title);
+    const key = seen.has(base) ? `${base}-${index + 1}` : base;
+    seen.add(key);
+    return key;
+  });
+}
+
+const countsCredits = (group: GroupProgress) =>
+  group.kind === "required" || group.unparsed < group.rules.length;
+
+const checksText = (checks: number) =>
+  checks === 1 ? "1 rule to check" : `${checks} rules to check`;
+
+/** Every requirement with its bar, then Not counted and Other courses. Arrow keys, Home and End move between them. */
+function PaneList({
+  requirements,
+  extras,
+  selected,
+  onSelect,
+  paneId,
+}: {
+  requirements: Pane[];
+  extras: Pane[];
+  selected: string;
+  onSelect: (key: string, replace: boolean) => void;
+  paneId: string;
+}) {
+  const all = [...requirements, ...extras];
+  const tabs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  function move(event: React.KeyboardEvent) {
+    const at = all.findIndex((pane) => pane.key === selected);
+    const to = (
+      {
+        ArrowDown: Math.min(all.length - 1, at + 1),
+        ArrowUp: Math.max(0, at - 1),
+        Home: 0,
+        End: all.length - 1,
+      } as Record<string, number>
+    )[event.key];
+    const pane = to === undefined ? undefined : all[to];
+    if (to === undefined || !pane || to === at) return;
+    event.preventDefault();
+    onSelect(pane.key, true);
+    tabs.current[to]?.focus();
+  }
+
+  const tab = (pane: Pane, i: number) => {
+    const isSelected = pane.key === selected;
+    return (
+      <button
+        key={pane.key}
+        ref={(element) => {
+          tabs.current[i] = element;
+        }}
+        type="button"
+        role="tab"
+        id={`${paneId}-${pane.key}`}
+        aria-selected={isSelected}
+        aria-controls={paneId}
+        tabIndex={isSelected ? 0 : -1}
+        onClick={() => !isSelected && onSelect(pane.key, false)}
+        className={cn(
+          "-mx-2 flex w-[calc(100%+1rem)] flex-col gap-1.5 rounded-md px-2 py-2 text-left hover:bg-tint focus-visible:-outline-offset-2",
+          isSelected && "selected",
+        )}
+      >
+        <span className="flex items-start gap-2 font-semibold">
+          {pane.done && (
+            <span className="flex h-5 items-center">
+              <StatusIcon status="completed" />
+            </span>
+          )}
+          <span className="min-w-0 flex-1">
+            {/* Keeps a short last word, as in "group B", off a line of its own. */}
+            {pane.label.replace(/ (\S{1,2})$/, "\u00a0$1")}
+          </span>
+          {pane.checks ? (
+            <span className="flex h-5 items-center">
+              <TriangleAlert aria-hidden className="size-3.5 text-warn" />
+              <span className="sr-only">, {checksText(pane.checks)}</span>
+            </span>
+          ) : null}
+        </span>
+        {pane.split ? (
+          <span className="flex items-center gap-3 font-normal">
+            <span aria-hidden className="min-w-0 flex-1">
+              <StatusBar {...pane.split} />
+            </span>
+            <span className="shrink-0 text-fg-muted tabular-nums">
+              {pane.side}
+            </span>
+          </span>
+        ) : (
+          <span
+            className={cn(
+              "font-normal text-fg-muted tabular-nums",
+              pane.done && "pl-6",
+            )}
+          >
+            {pane.side}
+          </span>
+        )}
+      </button>
+    );
+  };
+
+  return (
+    <div
+      className={cn(
+        CARD,
+        "sticky top-6 max-h-[calc(100vh-3rem)] overflow-y-auto px-3 py-2",
+      )}
+    >
+      <div
+        role="tablist"
+        aria-label="Requirements"
+        aria-orientation="vertical"
+        onKeyDown={move}
+      >
+        {requirements.map(tab)}
+        <div aria-hidden className="-mx-3 my-2 border-line border-t" />
+        {extras.map((pane, i) => tab(pane, requirements.length + i))}
+      </div>
+    </div>
   );
 }
 
@@ -424,28 +651,28 @@ function TermLoad({ credits, limit }: { credits: number; limit: number }) {
 const fraction = (group: GroupProgress) =>
   COPY.fraction(Math.min(group.creditsDone, group.credits), group.credits);
 
-/** Rules to check, then credits and their bar, unless every rule needs a check and nothing can count. `split` is the same group counted with the plan. */
+/** Rules to check, then credits, unless every rule needs a check and nothing can count. `split`, the same group counted with the plan, adds a small bar. */
 function GroupMeta({
   group,
   split,
   snapshot,
 }: {
   group: GroupProgress;
-  split: GroupProgress | undefined;
-  snapshot: Snapshot;
+  split?: GroupProgress;
+  snapshot?: Snapshot;
 }) {
   const checks = group.unparsed;
-  const counts = group.kind === "required" || checks < group.rules.length;
+  const counts = countsCredits(group);
   return (
     <span className="inline-flex items-center gap-4">
       {checks > 0 && (
         <span className="inline-flex items-center gap-2">
           <TriangleAlert aria-hidden className="size-4 text-warn" />
-          {checks === 1 ? "1 rule to check" : `${checks} rules to check`}
+          {checksText(checks)}
         </span>
       )}
       {counts && fraction(group)}
-      {counts && split && (
+      {counts && split && snapshot && (
         <StatusBar
           {...creditSplit(split, snapshot)}
           total={group.credits}
@@ -456,89 +683,204 @@ function GroupMeta({
   );
 }
 
-/** A label above a list inside a section: a rule of a program group, or a group of the minor. */
-function Label({
-  as: Heading,
-  title,
-  meta,
+/** The bar of a pane: credits earned, in progress and planned, with their words. */
+function Progress(split: CreditSplit & { total: number }) {
+  return <StatusBar {...split} legend className="flex-1" />;
+}
+
+/** A program group's pane: its bar, then its courses by status. */
+function GroupPane({
+  group,
+  index,
+  split,
+  program,
+  view,
+  snapshot,
+  context,
 }: {
-  as: "h3" | "h4";
-  title: string;
-  meta?: ReactNode;
+  group: GroupProgress;
+  index: number;
+  split: GroupProgress | undefined;
+  program: Program;
+  view: NextView;
+  snapshot: Snapshot;
+  context: Context;
 }) {
   return (
-    <div className="mb-2 flex items-baseline gap-4">
-      <Heading className={cn(Heading === "h4" && "font-normal text-fg-muted")}>
-        {title}
-      </Heading>
-      {meta && <p className="ml-auto shrink-0 text-fg-muted">{meta}</p>}
+    <Card title={sentence(group.title)} meta={<GroupMeta group={group} />}>
+      <div className="flex flex-col gap-6">
+        {!group.credited && countsCredits(group) && split && (
+          <Progress {...creditSplit(split, snapshot)} total={group.credits} />
+        )}
+        <GroupBody
+          group={group}
+          index={index}
+          program={program}
+          view={view}
+          context={context}
+          heading="h3"
+        />
+      </div>
+    </Card>
+  );
+}
+
+/** A heading over a list in a pane, with a hairline under it to the card's edges. */
+function ListHeading({
+  as: Tag,
+  meta,
+  children,
+}: {
+  as: Heading;
+  meta?: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <Tag className="-mx-5 flex items-center gap-2 border-line border-b px-5 pb-2 font-semibold">
+      {children}
+      {meta && (
+        <span className="ml-auto shrink-0 font-normal text-fg-muted tabular-nums">
+          {meta}
+        </span>
+      )}
+    </Tag>
+  );
+}
+
+/** The courses of one status under its glyph, word and count. Nothing when it is empty. */
+function Block({
+  status,
+  title,
+  count,
+  heading,
+  children,
+}: {
+  status: Status;
+  title: string;
+  count: number;
+  heading: Heading;
+  children: ReactNode;
+}) {
+  if (count === 0) return null;
+  return (
+    <div>
+      <ListHeading as={heading}>
+        <StatusIcon status={status} />
+        {title}{" "}
+        <span className="font-normal text-fg-muted tabular-nums">
+          {count.toLocaleString("en-CA")}
+        </span>
+      </ListHeading>
+      {children}
     </div>
   );
 }
 
-/** What a group still needs: its rows, rules to check and the courses it already counts. */
+/** What a group needs and counts: blocks by status for a required group, one list per rule for a complementary one. */
 function GroupBody({
   group,
   index,
   program,
   view,
   context,
-  label,
+  heading,
 }: {
   group: GroupProgress;
   index: number;
   program: Program;
   view: NextView;
   context: Context;
-  label: "h3" | "h4";
+  heading: Heading;
 }) {
+  const definition = program.groups[index];
+  if (group.credited) {
+    const codes =
+      definition?.kind === "required"
+        ? definition.courses.flatMap((item) =>
+            typeof item === "string" ? [item] : item.oneOf,
+          )
+        : [];
+    return (
+      <>
+        <p className="text-fg-muted">
+          Your Quebec CEGEP diploma credits this group, so you do not take these
+          courses.
+        </p>
+        <Block
+          status="covered"
+          title="Covered"
+          count={codes.length}
+          heading={heading}
+        >
+          <ul>
+            {codes.map((code) => (
+              <PaneRow
+                key={code}
+                course={context.catalogue.get(code) ?? stub(code)}
+                note="Credited from CEGEP"
+              />
+            ))}
+          </ul>
+        </Block>
+      </>
+    );
+  }
   if (group.kind === "required") {
-    return <RequiredBody group={group} view={view} context={context} />;
+    return (
+      <RequiredBlocks
+        group={group}
+        view={view}
+        context={context}
+        heading={heading}
+      />
+    );
   }
   const open = view.complementary.find((g) => g.index === index);
-  const definition = program.groups[index];
   return (
-    <div>
-      {open
-        ? open.buckets.map((bucket) => (
-            <Bucket
-              key={bucket.title}
-              title={open.titled ? bucket.title : null}
-              progress={bucket.progress}
-              entries={bucket.entries}
-              context={context}
-              label={label}
-            />
-          ))
-        : definition?.kind === "complementary" &&
-          definition.rules.map((rule, i) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
-            <p key={i} className="text-fg-muted">
-              {rule.title}
-            </p>
-          ))}
+    <>
+      {open?.buckets.map((bucket) => (
+        <Bucket
+          key={bucket.title}
+          title={bucket.title}
+          progress={bucket.progress}
+          entries={bucket.entries}
+          context={context}
+          heading={heading}
+        />
+      ))}
       {open && open.checks.length > 0 && (
-        <ul className="mt-2 first:mt-0">
+        <ul>
           {open.checks.map((text, i) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share the same text and the list never reorders
             <CheckRow key={i} text={text} source={program.source} />
           ))}
         </ul>
       )}
-      <Counted courses={group.courses} context={context} />
-    </div>
+      {!open &&
+        !group.satisfied &&
+        definition?.kind === "complementary" &&
+        definition.rules.map((rule, i) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
+          <p key={i} className="text-fg-muted">
+            {rule.title}
+          </p>
+        ))}
+      <Counted courses={group.courses} context={context} heading={heading} />
+    </>
   );
 }
 
-/** Open rows, then planned rows, then the rows not open in the term with why. */
-function RequiredBody({
+/** Can take, planned and not open in the term, then the courses it counts. */
+function RequiredBlocks({
   group,
   view,
   context,
+  heading,
 }: {
   group: GroupProgress;
   view: NextView;
   context: Context;
+  heading: Heading;
 }) {
   const mine = new Set(
     group.remaining.flatMap((item) =>
@@ -551,82 +893,191 @@ function RequiredBody({
     flatten([item]).some(({ course }) => context.planned.has(course.code));
   const ready = view.mustTake.filter(owns);
   const later = view.later.filter(owns);
-  const first = [
-    ...ready.filter((item) => !isPlanned(item)),
-    ...[...ready, ...later].filter(isPlanned),
-  ];
+  const open = ready.filter((item) => !isPlanned(item));
+  const planned = [...ready, ...later].filter(isPlanned);
   const blocked = later.filter((item) => !isPlanned(item));
+  const when = termLabel(context.term);
   return (
-    <div>
-      {first.length + blocked.length > 0 && (
+    <>
+      <Block
+        status="available"
+        title={`Can take in ${when}`}
+        count={open.length}
+        heading={heading}
+      >
         <ul>
-          <ItemRows items={[...first, ...blocked]} context={context} />
+          <ItemRows items={open} context={context} />
         </ul>
-      )}
-      <Counted courses={group.courses} context={context} />
-    </div>
+      </Block>
+      <Block
+        status="planned"
+        title="Planned"
+        count={planned.length}
+        heading={heading}
+      >
+        <ul>
+          <ItemRows items={planned} context={context} plannedBlock />
+        </ul>
+      </Block>
+      <Block
+        status="locked"
+        title={`Not open in ${when}`}
+        count={blocked.length}
+        heading={heading}
+      >
+        <ul>
+          <ItemRows items={blocked} context={context} />
+        </ul>
+      </Block>
+      <Counted courses={group.courses} context={context} heading={heading} />
+    </>
   );
 }
 
-function ItemRows({ items, context }: { items: Item[]; context: Context }) {
+function ItemRows({
+  items,
+  context,
+  plannedBlock,
+}: {
+  items: Item[];
+  context: Context;
+  plannedBlock?: boolean;
+}) {
   return items.map((item) =>
     "oneOf" in item ? (
       <li
         key={item.oneOf.map(({ course }) => course.code).join()}
-        className="-mx-5 border-line border-t px-5 pt-3 first:border-t-0 first:pt-0"
+        className="-mx-5 border-line border-t px-5 pt-3 first:border-t-0"
       >
         <p className="pb-1 text-fg-muted">Take one of these</p>
         <ul>
           {item.oneOf.map((entry) => (
-            <Row key={entry.course.code} entry={entry} context={context} />
+            <Row
+              key={entry.course.code}
+              entry={entry}
+              context={context}
+              plannedBlock={plannedBlock}
+            />
           ))}
         </ul>
       </li>
     ) : (
-      <Row key={item.course.code} entry={item} context={context} />
+      <Row
+        key={item.course.code}
+        entry={item}
+        context={context}
+        plannedBlock={plannedBlock}
+      />
     ),
   );
 }
 
-/** A course still to take: open with Add, planned with Remove in its own term, or locked with the reason. */
+/** A course still to take: open with Add, planned with Remove in its own term, or not open with why. Under the Planned heading the term alone says it. */
 function Row({
   entry: { course, uncertain, reason },
   context: { term, planned, both },
+  plannedBlock = false,
 }: {
   entry: Entry;
   context: Context;
+  plannedBlock?: boolean;
 }) {
   const plannedIn = planned.get(course.code);
   const here = plannedIn !== undefined && termKey(plannedIn) === termKey(term);
-  const status = plannedIn ? "planned" : reason ? "locked" : "available";
-  const label = `${here ? "Remove" : "Add"} ${course.code} ${here ? "from" : "to"} ${termLabel(term)}`;
+  const when = termLabel(term);
+  const label = (add: boolean) =>
+    `${add ? "Add" : "Remove"} ${course.code} ${add ? "to" : "from"} ${when}`;
+
+  function toggle() {
+    if (here) removeWithUndo(term, course.code);
+    else addWithUndo(term, course.code);
+    // The row moves to another block, so focus follows it there.
+    requestAnimationFrame(() =>
+      document
+        .querySelector<HTMLElement>(`[aria-label="${CSS.escape(label(here))}"]`)
+        ?.focus(),
+    );
+  }
+
   return (
-    <CourseRow
+    <PaneRow
       course={course}
-      status={status}
-      showGlyph
       uncertain={uncertain}
-      reason={plannedIn ? COPY.plannedFor(plannedIn) : reason}
-      tip={
-        status === "available" ? `Offered ${seasonsOffered(course)}` : undefined
+      both={both?.has(course.code)}
+      note={
+        plannedIn
+          ? plannedBlock
+            ? termLabel(plannedIn)
+            : COPY.plannedFor(plannedIn)
+          : (reason ?? `Offered ${seasonsOffered(course)}`)
       }
-      meta={both?.has(course.code) && <Defined def={GLOSSARY.countsForBoth} />}
       action={
-        here || status === "available" ? (
+        here || (!plannedIn && !reason) ? (
           <Button
             variant="secondary"
-            aria-label={label}
-            onClick={() =>
-              here
-                ? removeWithUndo(term, course.code)
-                : addWithUndo(term, course.code)
-            }
+            aria-label={label(!here)}
+            onClick={toggle}
           >
             {here ? "Remove" : "Add"}
           </Button>
         ) : null
       }
     />
+  );
+}
+
+/** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action on hover. */
+function PaneRow({
+  course,
+  uncertain = false,
+  both = false,
+  note,
+  action,
+}: {
+  course: CourseSummary;
+  uncertain?: boolean;
+  both?: boolean;
+  note: ReactNode;
+  action?: ReactNode;
+}) {
+  return (
+    <li className={ROW}>
+      <span className={ROW_TITLE}>
+        <Link
+          href={`/courses/${courseSlug(course.code)}`}
+          prefetch={false}
+          className={ROW_LINK}
+        >
+          <span className="w-24 shrink-0 font-semibold">
+            <CourseCode code={course.code} />
+          </span>
+          <span className="min-w-0 truncate" title={course.title}>
+            {course.title}
+          </span>
+        </Link>
+        {uncertain && <UncertainFlag />}
+        {both && (
+          <span className="hidden shrink-0 text-fg-muted @3xl:inline">
+            <Defined def={GLOSSARY.countsForBoth} />
+          </span>
+        )}
+      </span>
+      <span className="flex w-50 shrink-0 flex-wrap items-start gap-x-2 gap-y-1 text-fg-muted @3xl:w-64">
+        {note}
+        {/* Too wide beside a title in a narrow row, so it moves under the note there. */}
+        {both && (
+          <span className="@3xl:hidden">
+            <Defined def={GLOSSARY.countsForBoth} />
+          </span>
+        )}
+      </span>
+      <span className="w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums">
+        <CreditsLabel course={course} />
+      </span>
+      <span className="-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100">
+        {action}
+      </span>
+    </li>
   );
 }
 
@@ -659,39 +1110,42 @@ function CountedRow({
     term: null,
   };
   return (
-    <CourseRow
+    <PaneRow
       course={{ ...(catalogue.get(code) ?? stub(code)), credits }}
-      status={status}
-      showGlyph
-      meta={
+      both={both?.has(code)}
+      note={
         <>
           <StatusBadge status={status} />
           {term && <span>{termLabel(term)}</span>}
-          {both?.has(code) && <Defined def={GLOSSARY.countsForBoth} />}
         </>
       }
-      action={null}
     />
   );
 }
 
-/** The courses a group counts, one click away. */
+/** The courses a group counts, each with its status and term. */
 function Counted({
   courses: counted,
   context,
+  heading,
 }: {
   courses: Claimed[];
   context: Context;
+  heading: Heading;
 }) {
-  if (counted.length === 0) return null;
   return (
-    <Disclosure summary={`${courseCount(counted.length)} counted`}>
+    <Block
+      status="completed"
+      title="Counted"
+      count={counted.length}
+      heading={heading}
+    >
       <ul>
         {[...counted].sort(byCode).map((claimed) => (
           <CountedRow key={claimed.code} claimed={claimed} context={context} />
         ))}
       </ul>
-    </Disclosure>
+    </Block>
   );
 }
 
@@ -701,13 +1155,13 @@ function Bucket({
   progress,
   entries,
   context,
-  label,
+  heading,
 }: {
-  title: string | null;
+  title: string;
   progress: string | null;
   entries: Entry[];
   context: Context;
-  label: "h3" | "h4";
+  heading: Heading;
 }) {
   const isPlanned = (entry: Entry) => context.planned.has(entry.course.code);
   const ordered = [
@@ -715,8 +1169,10 @@ function Bucket({
     ...entries.filter((entry) => !isPlanned(entry)),
   ];
   return (
-    <div className="mt-6 first:mt-0">
-      {title && <Label as={label} title={title} meta={progress} />}
+    <div>
+      <ListHeading as={heading} meta={progress}>
+        {title}
+      </ListHeading>
       <Rows entries={ordered} context={context} limit={BUCKET_LIMIT} />
     </div>
   );
@@ -770,8 +1226,8 @@ function CheckRow({ text, source }: { text: string; source: string }) {
   );
 }
 
-/** The minor under its own heading, built by the same engine as the program. */
-function MinorSection({
+/** The minor's pane: its bar, then each of its groups the way a program group's pane shows it. */
+function MinorPane({
   minor,
   view,
   withPlan,
@@ -785,9 +1241,8 @@ function MinorSection({
   context: Context;
 }) {
   const groups = view.progress?.groups ?? [];
-  const met = groups.filter((group) => group.satisfied);
   return (
-    <Section
+    <Card
       title={
         <Defined
           def={{ label: COPY.minorTitle(minor.name), tip: GLOSSARY.minor.tip }}
@@ -805,111 +1260,44 @@ function MinorSection({
             view.progress?.creditsDone ?? 0,
             view.progress?.credits ?? minor.credits,
           )}
-          {withPlan && (
-            <StatusBar
-              {...programSplit(withPlan, snapshot)}
-              total={withPlan.credits}
-              className="ml-4 inline-flex w-20 align-middle"
-            />
-          )}
         </>
       }
     >
-      <div>
-        {groups.map((group, index) =>
-          group.satisfied ? null : (
-            // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
-            <div key={index} className="mt-8 first:mt-0">
-              <Label
-                as="h3"
-                title={sentence(group.title)}
-                meta={
-                  <GroupMeta
-                    group={group}
-                    split={withPlan?.groups[index]}
-                    snapshot={snapshot}
-                  />
-                }
-              />
-              <GroupBody
-                group={group}
-                index={index}
-                program={minor}
-                view={view}
-                context={context}
-                label="h4"
-              />
+      <div className="flex flex-col gap-8">
+        {withPlan && (
+          <Progress
+            {...programSplit(withPlan, snapshot)}
+            total={withPlan.credits}
+          />
+        )}
+        {groups.map((group, index) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
+          <section key={index} className="flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <h3 className="flex items-center gap-2 text-base">
+                {group.satisfied && <StatusIcon status="completed" />}
+                {sentence(group.title)}
+              </h3>
+              <p className="ml-auto shrink-0 text-fg-muted tabular-nums">
+                <GroupMeta
+                  group={group}
+                  split={withPlan?.groups[index]}
+                  snapshot={snapshot}
+                />
+              </p>
             </div>
-          ),
-        )}
-        {met.length > 0 && (
-          <div className="mt-8 first:mt-0">
-            <MetLines groups={met} context={context} />
-          </div>
-        )}
-      </div>
-    </Section>
-  );
-}
-
-/** One line per met group: its credits, and its courses one click away. A CEGEP-credited group says so instead. */
-function MetLines({
-  groups,
-  context,
-}: {
-  groups: GroupProgress[];
-  context: Context;
-}) {
-  return groups.map((group, i) => (
-    // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
-    <MetLine key={i} group={group} context={context} />
-  ));
-}
-
-function MetLine({
-  group,
-  context,
-}: {
-  group: GroupProgress;
-  context: Context;
-}) {
-  const title = sentence(group.title);
-  if (group.courses.length === 0) {
-    return (
-      <div className="-mx-5 flex min-h-11 items-center gap-2 border-line border-t pr-5 pl-11 first:border-t-0">
-        <StatusIcon status="completed" />
-        <h3>{title}</h3>
-        <p className="ml-auto text-fg-muted">
-          {group.credited
-            ? "Credited from your Quebec CEGEP diploma"
-            : fraction(group)}
-        </p>
-      </div>
-    );
-  }
-  return (
-    <Disclosure
-      as="h3"
-      summary={
-        <span className="inline-flex items-center gap-2">
-          <StatusIcon status="completed" />
-          {title}
-        </span>
-      }
-      meta={
-        <>
-          {fraction(group)}
-          {dot}
-          {courseCount(group.courses.length)} counted
-        </>
-      }
-    >
-      <ul>
-        {[...group.courses].sort(byCode).map((claimed) => (
-          <CountedRow key={claimed.code} claimed={claimed} context={context} />
+            <GroupBody
+              group={group}
+              index={index}
+              program={minor}
+              view={view}
+              context={context}
+              heading="h4"
+            />
+          </section>
         ))}
-      </ul>
-    </Disclosure>
+      </div>
+    </Card>
   );
 }
 
@@ -923,21 +1311,54 @@ function NotCounted({
 }) {
   const credits = unclaimed.reduce((sum, claimed) => sum + claimed.credits, 0);
   return (
-    <Disclosure
-      as="h2"
-      summary={GLOSSARY.notCounted.label}
-      def={GLOSSARY.notCounted}
+    <Card
+      title={GLOSSARY.notCounted.label}
       meta={`${courseCount(unclaimed.length)}, ${COPY.credits(credits)}`}
     >
-      <ul>
+      <p className="text-fg-muted">{GLOSSARY.notCounted.tip}</p>
+      <ul className="-mx-5 mt-4 border-line border-t px-5">
         {[...unclaimed].sort(byCode).map((claimed) => (
           <CountedRow key={claimed.code} claimed={claimed} context={context} />
         ))}
       </ul>
-    </Disclosure>
+    </Card>
   );
 }
 
+/** Courses open in the term that the program does not ask for, as a pane. */
+function OtherPane({
+  entries,
+  context,
+}: {
+  entries: Entry[];
+  context: Context;
+}) {
+  const when = termLabel(context.term);
+  return (
+    <Card
+      title={`Other courses you can take in ${when}`}
+      meta={courseCount(entries.length)}
+    >
+      <div className="flex flex-col gap-6">
+        <p className="text-fg-muted">
+          {entries.length === 0
+            ? `Nothing else is open to you in ${when}.`
+            : `Courses open to you in ${when} that your program does not ask for. They count toward your degree as electives.`}
+        </p>
+        <Block
+          status="available"
+          title={`Can take in ${when}`}
+          count={entries.length}
+          heading="h3"
+        >
+          <Rows entries={entries} context={context} limit={OTHER_LIMIT} />
+        </Block>
+      </div>
+    </Card>
+  );
+}
+
+/** Other courses behind a click, for a student with no program yet. */
 function OtherCourses({
   entries,
   context,
@@ -973,15 +1394,25 @@ function PageSkeleton() {
         <div className={cn(bone, "h-11 w-[400px]")} />
         <div className={cn(bone, "mt-2 h-5 w-[480px]")} />
         <div className={cn(bone, "mt-6 h-9 w-56")} />
-        <div className={cn(bone, "mt-12 h-7 w-48")} />
-        <div className="mt-4">
-          {Array.from({ length: 6 }, (_, row) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-            <div key={row} className="flex h-11 items-center gap-4">
-              <div className={cn(bone, "h-5 w-24")} />
-              <div className={cn(bone, "h-5 flex-1")} />
+        <div className="mt-6 grid grid-cols-[15rem_minmax(0,1fr)] gap-6">
+          <div className="flex flex-col gap-1">
+            {Array.from({ length: 6 }, (_, row) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+              <div key={row} className={cn(bone, "h-14")} />
+            ))}
+          </div>
+          <div>
+            <div className={cn(bone, "h-7 w-64")} />
+            <div className="mt-4">
+              {Array.from({ length: 6 }, (_, row) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+                <div key={row} className="flex h-11 items-center gap-4">
+                  <div className={cn(bone, "h-5 w-24")} />
+                  <div className={cn(bone, "h-5 flex-1")} />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>
