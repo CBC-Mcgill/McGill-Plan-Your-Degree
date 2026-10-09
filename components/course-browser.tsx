@@ -1,18 +1,18 @@
 "use client";
 
 import { cn } from "cn";
-import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import {
-  AddFilterMenu,
   FilterPopover,
   SearchField,
   SortMenu,
 } from "@/components/course-filters";
 import { BrowseSkeleton, seasonsOffered } from "@/components/course-row";
+import { CreditsLabel } from "@/components/credits-label";
 import {
   STATUS,
   StatusIcon,
@@ -20,19 +20,21 @@ import {
   UncertainFlag,
 } from "@/components/status";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { ViewTabs } from "@/components/ui/tabs";
-import { InfoTip } from "@/components/ui/tooltip";
+import { Term } from "@/components/ui/tooltip";
+import meta from "@/data/catalogue/meta.json";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { searchCourses } from "@/lib/catalogue/search";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
+import { COPY } from "@/lib/copy";
 import {
   buildBase,
   type CatalogueBase,
   inView,
   NO_FILTERS,
   optionsOf,
+  PROPS,
   type Prop,
   passes,
   pinSubjects,
@@ -45,11 +47,11 @@ import {
   statusDetail,
   statusOf,
   subjectOf,
-  VIEWS,
-  viewCounts,
+  type View,
+  viewsFor,
 } from "@/lib/engine/browse";
 import { buildSnapshot, type Snapshot } from "@/lib/engine/snapshot";
-import { courseStatus } from "@/lib/engine/status";
+import { canTakeNow, courseStatus } from "@/lib/engine/status";
 import { GLOSSARY, VIEW_TIPS } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import type { CourseRecord, Plan } from "@/lib/profile/types";
@@ -59,14 +61,15 @@ import { replaceUrl, useScrollMemory } from "@/lib/use-scroll-memory";
 
 const PAGE_SIZE = 50;
 const PANEL = "course-panel";
-const PROMOTED: Prop[] = ["subject", "level", "term"];
-const EXTRA: Prop[] = ["faculty", "credits"];
-const TH = "px-2 font-medium";
 const EMPTY = buildSnapshot([], [], null);
+const NO_CODES: ReadonlySet<string> = new Set();
+/** Cells share the row's hover and focus tint, so the row reads as one 44px line. */
+const CELL = "pr-4 group-focus-within:bg-tint group-hover:bg-tint";
 
 interface Browse extends CatalogueBase, Student {
   /** False for a visitor with no transcript or plan, who sees no statuses. */
   hasProfile: boolean;
+  views: { value: View; label: string }[];
   programSubjects: ReadonlySet<string>;
   snapshot: Snapshot;
   records: CourseRecord[];
@@ -81,8 +84,8 @@ type BrowseData =
 function useBrowse(): BrowseData {
   const catalogue = useCatalogue();
   const snapshot = useSnapshot();
-  const programId = useProfileStore((state) => state.programId);
-  const program = useProgram(programId);
+  const program = useProgram(useProfileStore((state) => state.programId));
+  const minor = useProgram(useProfileStore((state) => state.minorId));
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
@@ -92,10 +95,10 @@ function useBrowse(): BrowseData {
   );
   const inProgram = useMemo(
     () =>
-      base && program !== undefined
-        ? programCodes(program ?? undefined, base.index)
+      base && program !== undefined && minor !== undefined
+        ? programCodes(program, minor, base.index)
         : null,
-    [base, program],
+    [base, program, minor],
   );
   const states = useMemo(
     () =>
@@ -107,6 +110,19 @@ function useBrowse(): BrowseData {
             ]),
           )
         : null,
+    [base, snapshot],
+  );
+  const canTake = useMemo(
+    () =>
+      base && snapshot
+        ? new Set(
+            base.index
+              .filter(({ course }) =>
+                canTakeNow(course, snapshot, meta.catalogueYear),
+              )
+              .map(({ course }) => course.code),
+          )
+        : NO_CODES,
     [base, snapshot],
   );
   const programSubjects = useMemo(
@@ -127,8 +143,10 @@ function useBrowse(): BrowseData {
     subjects,
     states,
     inProgram,
+    canTake,
     programSubjects,
     hasProfile: snapshot !== null,
+    views: viewsFor(snapshot !== null, inProgram.size > 0),
     snapshot: snapshot ?? EMPTY,
     records,
     plan,
@@ -142,24 +160,21 @@ export function CourseBrowser() {
   return <CatalogueError />;
 }
 
-/** Table with saved views: tabs with counts, promoted filter chips, a sort menu and 50 rows a page. The URL holds the whole query. */
+/** Views, filter chips, a sort menu and 50 rows a page. The URL holds the whole query. */
 function CourseTable({ b }: { b: Browse }) {
   const params = useSearchParams();
   const urlQuery = params.toString();
-  const [query, setQuery] = useState(() => readQuery(params, b.hasProfile));
+  const [query, setQuery] = useState(() => readQuery(params, b.views));
   const [seenUrl, setSeenUrl] = useState(urlQuery);
-  const [added, setAdded] = useState(() => withValues(query));
   const [open, setOpen] = useState<Prop | null>(null);
   const input = useRef<HTMLInputElement>(null);
-  const card = useRef<HTMLDivElement>(null);
+  const top = useRef<HTMLDivElement>(null);
 
   // A link back to /courses clears the URL from outside, so follow it. Our own writes already match the query.
   if (urlQuery !== seenUrl) {
     setSeenUrl(urlQuery);
-    if (urlQuery !== queryString(query, b.hasProfile)) {
-      const next = readQuery(params, b.hasProfile);
-      setQuery(next);
-      setAdded(withValues(next));
+    if (urlQuery !== queryString(query, b.views)) {
+      setQuery(readQuery(params, b.views));
     }
   }
 
@@ -184,7 +199,6 @@ function CourseTable({ b }: { b: Browse }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const counts = useMemo(() => viewCounts(b.index, b), [b]);
   const searched = useMemo(
     () => searchCourses(b.index, query.q),
     [b.index, query.q],
@@ -209,216 +223,221 @@ function CourseTable({ b }: { b: Browse }) {
   const first = (current - 1) * PAGE_SIZE;
   const shown = rows.slice(first, first + PAGE_SIZE);
 
-  // A URL the page cannot honor, such as page=999 or view=nope, is rewritten to what is shown.
+  // A URL the page cannot honor, such as page=999 or view=planned, is rewritten to what is shown.
   useEffect(() => {
-    const canonical = queryString({ ...query, page: current }, b.hasProfile);
+    const canonical = queryString({ ...query, page: current }, b.views);
     if (canonical !== window.location.search.slice(1)) {
       replaceUrl(canonical ? `?${canonical}` : window.location.pathname);
     }
-  }, [query, current, b.hasProfile]);
+  }, [query, current, b.views]);
 
   /** Any change but the page number starts again from page 1. */
   function update(patch: Partial<Query>) {
     const next = { ...query, page: 1, ...patch };
     setQuery(next);
-    const string = queryString(next, b.hasProfile);
+    const string = queryString(next, b.views);
     replaceUrl(string ? `?${string}` : window.location.pathname);
   }
-  const setProp = (prop: Prop, values: string[]) =>
-    update({ filters: { ...query.filters, [prop]: values } });
   const goTo = (page: number) => {
     update({ page });
-    card.current?.scrollIntoView({ block: "start" });
+    top.current?.scrollIntoView({ block: "start" });
   };
 
-  const chip = (prop: Prop) => {
-    const selected = query.filters[prop];
-    const extra = EXTRA.includes(prop);
-    return (
-      <FilterPopover
-        key={prop}
-        prop={prop}
-        options={optionsOf(prop, b)}
-        selected={selected}
-        onChange={(values) => setProp(prop, values)}
-        onClear={
-          extra
-            ? () => {
-                setProp(prop, []);
-                setAdded((list) => list.filter((p) => p !== prop));
-              }
-            : selected.length
-              ? () => setProp(prop, [])
-              : undefined
-        }
-        open={open === prop}
-        onOpenChange={(next) =>
-          setOpen((now) => (next ? prop : now === prop ? null : now))
-        }
-      />
-    );
-  };
-  const left = EXTRA.filter((prop) => !added.includes(prop));
+  const searching = query.q !== "";
+  const filtering = PROPS.some((prop) => query.filters[prop].length > 0);
+  const glyphs = b.hasProfile && query.view !== "can-take";
 
   return (
-    <Card ref={card} className="scroll-mt-6 overflow-hidden">
-      <div className="flex h-12 items-center border-border border-b px-3">
+    <div ref={top} className="scroll-mt-6">
+      {b.hasProfile ? (
         <ViewTabs
-          label="Saved views"
+          label="Views"
           panelId={PANEL}
           value={query.view}
           onChange={(view) => update({ view })}
-          tabs={(b.hasProfile ? VIEWS : VIEWS.slice(0, 1)).map((tab) => ({
+          tabs={b.views.map((tab) => ({
             id: tab.value,
             label: tab.label,
             tip: VIEW_TIPS[tab.value],
           }))}
         />
-        <div className="ml-auto flex items-center gap-4">
-          {!b.hasProfile && (
-            <p className="text-[13px] text-muted-foreground">
-              <Link
-                href="/profile"
-                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
-              >
-                Import your transcript
-              </Link>{" "}
-              to see which courses you can take.
-            </p>
-          )}
-          <SortMenu sort={query.sort} onChange={(sort) => update({ sort })} />
-        </div>
-      </div>
+      ) : (
+        <p className="text-fg-muted">
+          <Link href="/profile" className="link">
+            {COPY.importTranscript}
+          </Link>{" "}
+          to see which courses you can take.
+        </p>
+      )}
 
-      <div className="flex items-center gap-2 border-border border-b px-3 py-2.5">
+      <div className="mt-4 flex items-center gap-4">
         <SearchField
           ref={input}
-          className="min-w-40 max-w-[280px] flex-1"
+          className="w-80 shrink-0"
           value={query.q}
           onChange={(q) => update({ q })}
           placeholder="Search courses"
           shortcut="/"
         />
-        <div className="flex min-w-0 items-center gap-2">
-          {PROMOTED.map(chip)}
-          {added.map(chip)}
-          {left.length > 0 && (
-            <AddFilterMenu
-              props={left}
-              onPick={(prop) => {
-                setAdded((list) => [...list, prop]);
-                setOpen(prop);
-              }}
+        <div className="flex min-w-0 flex-wrap items-center gap-2">
+          {PROPS.map((prop) => (
+            <FilterPopover
+              key={prop}
+              prop={prop}
+              options={optionsOf(prop, b)}
+              selected={query.filters[prop]}
+              onChange={(values) =>
+                update({ filters: { ...query.filters, [prop]: values } })
+              }
+              open={open === prop}
+              onOpenChange={(next) =>
+                setOpen((now) => (next ? prop : now === prop ? null : now))
+              }
             />
-          )}
+          ))}
         </div>
+        {b.views.some((view) => view.value === "program") && (
+          <div className="ml-auto">
+            <SortMenu sort={query.sort} onChange={(sort) => update({ sort })} />
+          </div>
+        )}
       </div>
 
       <div
-        role="tabpanel"
-        id={PANEL}
-        aria-labelledby={`${PANEL}-${query.view}`}
+        className="mt-6"
+        {...(b.hasProfile && {
+          role: "tabpanel",
+          id: PANEL,
+          "aria-labelledby": `${PANEL}-${query.view}`,
+        })}
       >
         {rows.length === 0 ? (
-          <EmptyState
-            onClear={() => {
-              setAdded([]);
-              update({
-                q: "",
-                filters: NO_FILTERS,
-                view: counts[query.view] === 0 ? "all" : query.view,
-              });
-            }}
-          />
+          <div>
+            <h2>No courses match</h2>
+            {(searching || filtering) && (
+              <Button
+                variant="text"
+                className="mt-4 -ml-3"
+                onClick={() => update({ q: "", filters: NO_FILTERS })}
+              >
+                {searching && filtering
+                  ? "Clear search and filters"
+                  : searching
+                    ? "Clear search"
+                    : "Clear filters"}
+              </Button>
+            )}
+          </div>
         ) : (
           <>
-            <table className="w-full table-fixed border-collapse">
+            <table className="-mx-2 w-[calc(100%+1rem)] table-fixed border-separate border-spacing-0">
               <caption className="sr-only">Courses</caption>
               <colgroup>
-                <col className="w-[148px]" />
+                <col className={glyphs ? "w-36" : "w-30"} />
                 <col />
-                <col className="w-20" />
-                <col className="w-40" />
-                <col className="w-[152px]" />
+                <col className="w-28" />
+                <col className="w-48" />
+                <col className="w-[22px]" />
               </colgroup>
               <thead>
-                <tr className="h-9 border-border border-b bg-subtle text-left font-medium text-[12px] text-muted-foreground">
-                  <th className={cn(TH, "pl-4")}>Course</th>
-                  <th className={TH}>Title</th>
-                  <th className={TH}>
-                    <span className="flex items-center justify-end gap-1.5">
-                      <InfoTip {...GLOSSARY.credits} />
-                      Credits
-                    </span>
+                <tr className="h-9 text-left text-fg-muted">
+                  <th className="pr-4 pl-2 font-normal">Course</th>
+                  <th className="pr-4 font-normal">
+                    <span className="sr-only">Title</span>
                   </th>
-                  <th className={TH}>
-                    <span className="flex items-center gap-1.5">
-                      Offered
-                      <InfoTip {...GLOSSARY.offered} />
-                    </span>
+                  <th className="pr-4 text-right font-normal">
+                    <Term def={GLOSSARY.credits} />
                   </th>
-                  <th className={cn(TH, "pr-4")}>
+                  <th className="pr-4 font-normal">
+                    <Term def={GLOSSARY.offered} />
+                  </th>
+                  <th className="pr-2 font-normal">
                     <span className="sr-only">Conditions</span>
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border">
+              <tbody>
                 {shown.map((course) => (
-                  <CourseTableRow key={course.code} course={course} b={b} />
+                  <CourseTableRow
+                    key={course.code}
+                    course={course}
+                    b={b}
+                    glyph={glyphs}
+                  />
                 ))}
               </tbody>
             </table>
-            <div className="flex h-12 items-center justify-between border-border border-t px-4">
+            <div
+              className={cn(
+                "flex items-center justify-between",
+                pages > 1 && "mt-6",
+              )}
+            >
               <p
                 aria-live="polite"
-                className="text-[13px] text-muted-foreground tabular-nums"
+                className={cn(
+                  "text-fg-muted tabular-nums",
+                  pages === 1 && "sr-only",
+                )}
               >
                 {first + 1}-{first + shown.length} of{" "}
-                {rows.length.toLocaleString()}
+                {rows.length.toLocaleString("en-CA")}
               </p>
-              <div className="flex items-center gap-1.5">
-                <Button
-                  variant="secondary"
-                  className="size-8 px-0"
-                  aria-label="Previous page"
-                  disabled={current === 1}
-                  onClick={() => goTo(current - 1)}
-                >
-                  <ChevronLeft aria-hidden strokeWidth={1.75} />
-                </Button>
-                <Button
-                  variant="secondary"
-                  className="size-8 px-0"
-                  aria-label="Next page"
-                  disabled={current >= pages}
-                  onClick={() => goTo(current + 1)}
-                >
-                  <ChevronRight aria-hidden strokeWidth={1.75} />
-                </Button>
-              </div>
+              {pages > 1 && (
+                <div className="flex items-center gap-1">
+                  <Button
+                    variant="text"
+                    icon
+                    aria-label="Previous page"
+                    disabled={current === 1}
+                    onClick={() => goTo(current - 1)}
+                  >
+                    <ChevronLeft aria-hidden />
+                  </Button>
+                  <Button
+                    variant="text"
+                    icon
+                    aria-label="Next page"
+                    disabled={current >= pages}
+                    onClick={() => goTo(current + 1)}
+                  >
+                    <ChevronRight aria-hidden />
+                  </Button>
+                </div>
+              )}
             </div>
           </>
         )}
       </div>
-    </Card>
+    </div>
   );
 }
 
-/** Extra filters that already hold values, so their chips show on load. */
-const withValues = (query: Query) =>
-  EXTRA.filter((prop) => query.filters[prop].length > 0);
-
 /** A click anywhere on the row opens the course. The code is a real link for the keyboard and for middle-click. */
-function CourseTableRow({ course, b }: { course: CourseSummary; b: Browse }) {
+function CourseTableRow({
+  course,
+  b,
+  glyph,
+}: {
+  course: CourseSummary;
+  b: Browse;
+  glyph: boolean;
+}) {
   const router = useRouter();
   const href = `/courses/${courseSlug(course.code)}`;
   const state = b.states.get(course.code);
   const status = statusOf(b.states, course.code);
+  const offered = seasonsOffered(course);
+  // A course that does not run this year never reads "Can take" (D33).
+  const word =
+    status === "available" && offered === COPY.notOfferedYear
+      ? COPY.notOfferedYear
+      : undefined;
   const link = (
     <Link
       href={href}
       prefetch={false}
-      className="truncate rounded-sm font-semibold tabular-nums"
+      className="-my-3 truncate rounded-md py-3 font-semibold tabular-nums focus-visible:-outline-offset-2"
     >
       {course.code}
     </Link>
@@ -426,58 +445,47 @@ function CourseTableRow({ course, b }: { course: CourseSummary; b: Browse }) {
   return (
     <tr
       onClick={(event) => {
-        if (!(event.target as Element).closest("a")) router.push(href);
+        if (!(event.target as Element).closest("a, button")) router.push(href);
       }}
-      className={cn(
-        "h-10 cursor-pointer hover:bg-subtle",
-        b.hasProfile && status === "locked" && "text-muted-foreground",
-      )}
+      className="group h-11 cursor-pointer"
     >
-      <td className="py-0 pr-2 pl-4">
-        {b.hasProfile ? (
+      <td className={cn(CELL, "rounded-l-md pl-2")}>
+        {glyph ? (
           <StatusTip
             status={status}
+            word={word}
             reason={statusDetail(course, state, b)}
             className="flex min-w-0 items-center gap-2"
           >
-            <span className="inline-flex size-5 shrink-0 items-center justify-center">
-              <StatusIcon status={status} label={STATUS[status].label} />
+            <span className="flex w-4 shrink-0 items-center">
+              <StatusIcon
+                status={status}
+                label={word ?? STATUS[status].label}
+              />
             </span>
             {link}
           </StatusTip>
         ) : (
-          <div className="flex min-w-0 items-center gap-2">{link}</div>
+          <div className="flex min-w-0">{link}</div>
         )}
       </td>
-      <td className="truncate px-2" title={course.title}>
+      <td className={cn(CELL, "truncate")} title={course.title}>
         {course.title}
       </td>
-      <td className="px-2 text-right text-[13px] text-muted-foreground tabular-nums">
-        {course.credits ?? "-"}
+      <td
+        className={cn(
+          CELL,
+          "whitespace-nowrap text-right text-fg-muted tabular-nums",
+        )}
+      >
+        <CreditsLabel course={course} />
       </td>
-      <td className="truncate px-2 text-[13px] text-muted-foreground">
-        {seasonsOffered(course)}
+      <td className={cn(CELL, "truncate text-fg-muted")} title={offered}>
+        {offered}
       </td>
-      <td className="pr-4 pl-2">
-        {state?.uncertain && <UncertainFlag withLabel />}
+      <td className={cn(CELL, "rounded-r-md pr-2")}>
+        {state?.uncertain && <UncertainFlag />}
       </td>
     </tr>
-  );
-}
-
-function EmptyState({ onClear }: { onClear: () => void }) {
-  return (
-    <div className="flex flex-col items-center px-6 py-16 text-center">
-      <div className="mb-3 flex size-10 items-center justify-center rounded-lg bg-subtle text-muted-foreground shadow-[inset_0_0_0_1px_var(--border)]">
-        <SearchX aria-hidden className="size-5" strokeWidth={1.75} />
-      </div>
-      <h2 className="text-base/6">No courses match</h2>
-      <p className="mt-1 max-w-[280px] text-balance text-muted-foreground">
-        Try fewer filters or a different search.
-      </p>
-      <Button variant="secondary" className="mt-4" onClick={onClear}>
-        Clear filters
-      </Button>
-    </div>
   );
 }

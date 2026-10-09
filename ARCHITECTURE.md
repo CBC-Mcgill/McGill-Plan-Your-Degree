@@ -87,7 +87,7 @@ Course pages show student ratings from `https://mcgill.courses/api/courses/<CODE
 The fetch runs in the browser from [components/course-ratings.tsx](components/course-ratings.tsx).
 It sends no cookies and no referrer, and times out after 5 seconds.
 The response also carries the reviews, but the app reads only `avgRating`, `avgDifficulty` and `reviewCount`, so review text is never kept or shown.
-The card links to mcgill.courses to read the reviews, and if the request fails it shows only that link.
+The course page shows them as one link to the reviews on mcgill.courses, and if the request fails the link stays without the numbers.
 
 ### Student transcripts
 
@@ -252,9 +252,10 @@ Search runs in the browser, and [lib/catalogue/search.ts](lib/catalogue/search.t
 Each course renders on its first visit and is then served from the static cache.
 The page reads the full course from the server loader and draws the description, notes, requirements and unlocks.
 Prerequisites come from the tree with each code as a link, unless the requirement is `unparsed`, in which case the raw text shows.
-The server passes only the fields a status needs (`toStatusInput`) to client components such as `CourseStatusPanel`, which compute the student's status in the browser.
+The server passes only the fields a status needs (`toStatusInput`) to client components such as `CourseFacts` and `LinkedCode`, which compute the student's status in the browser.
 `AddToPlan` and `CourseRatings` are client components too.
-`AddToPlan` is a split button: the main part plans the course for the next term it runs, and its menu lists every term from the next term to plan through graduation, with the credits each already holds.
+`AddToPlan` is a red split button only when the student can take the course and it runs next term, and a text menu button otherwise.
+Its menu lists every term from the next term to plan through graduation, with the credits each already holds.
 
 ### Program data
 
@@ -358,7 +359,7 @@ Functions take the catalogue, a snapshot and a program as arguments and return d
   A stage is `completed`, `current`, `past`, `planned` or `empty`, and carries its records, loads, credits and warnings.
   `suggestForTerm` proposes required courses for a term.
 - **[credits.ts](lib/engine/credits.ts)** counts earned and pending credits, decides how many credits the degree needs (a stated number, else the program's credits for a B.Eng., else 90 or 120 for a B.Sc. by entry route) and lists exemptions whose credits must be replaced.
-- **[browse.ts](lib/engine/browse.ts)** powers the course table: filters, the views "All", "Can take now", "In my program", "Planned" and "Completed", sorting, the URL query format and the one-line explanation of a status.
+- **[browse.ts](lib/engine/browse.ts)** powers the course table: filters, the views "Can take now", "In my program" and "All", the "Program first" sort, the URL query format and the one-line explanation of a status.
 
 **How pages call it.**
 [lib/profile/use-snapshot.ts](lib/profile/use-snapshot.ts) builds the snapshot once per change to the records, the plan or the entry.

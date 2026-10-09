@@ -1,89 +1,42 @@
 "use client";
 
-import Link from "next/link";
-import { STATUS, StatusIcon, StatusTip } from "@/components/status";
-import { courseSlug } from "@/lib/catalogue/slug";
-import type { Snapshot } from "@/lib/engine/snapshot";
-import {
-  courseStatus,
-  meets,
-  missingText,
-  type StatusInput,
-} from "@/lib/engine/status";
+import { CourseRow } from "@/components/course-row";
+import { Disclosure } from "@/components/ui/disclosure";
+import type { CourseSummary } from "@/lib/catalogue/types";
+import { courseStatus } from "@/lib/engine/status";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-
-export interface Unlock {
-  course: StatusInput;
-  title: string;
-  /** "3 cr", or "6 cr, 2 terms" for a multi-term course. */
-  credits: string;
-}
 
 const SHOWN = 12;
 
-/** The courses a course unlocks, as rows with the student's status for each. The rest sit behind "Show more", which works without JavaScript. */
-export function UnlockRows({ courses }: { courses: Unlock[] }) {
-  const snapshot = useSnapshot();
+/** The courses a course unlocks, with the student's status glyph on each. Past 12 the rest open behind "Show N more", unless only 3 or fewer are left. */
+export function UnlockRows({ courses }: { courses: CourseSummary[] }) {
+  const split = courses.length > SHOWN + 3 ? SHOWN : courses.length;
+  const rest = courses.slice(split);
   return (
     <>
-      <Rows courses={courses.slice(0, SHOWN)} snapshot={snapshot} />
-      {courses.length > SHOWN && (
-        <details className="group">
-          <summary className="flex h-11 cursor-pointer list-none items-center border-border border-t px-5 font-medium text-[13px] text-muted-foreground hover:bg-subtle hover:text-foreground group-open:hidden [&::-webkit-details-marker]:hidden">
-            Show {courses.length - SHOWN} more
-          </summary>
-          <Rows courses={courses.slice(SHOWN)} snapshot={snapshot} />
-        </details>
+      <Rows courses={courses.slice(0, split)} />
+      {rest.length > 0 && (
+        <Disclosure summary={`Show ${rest.length} more`}>
+          <Rows courses={rest} />
+        </Disclosure>
       )}
     </>
   );
 }
 
-function Rows({
-  courses,
-  snapshot,
-}: {
-  courses: Unlock[];
-  snapshot: Snapshot | null | undefined;
-}) {
+function Rows({ courses }: { courses: CourseSummary[] }) {
+  const snapshot = useSnapshot();
   return (
     <ul>
-      {courses.map(({ course, title, credits }) => {
+      {courses.map((course) => {
         const status = snapshot ? courseStatus(course, snapshot).status : null;
-        const tree = course.prerequisites?.tree;
-        const reason =
-          status === "locked" &&
-          snapshot &&
-          tree &&
-          !meets(tree, snapshot.taken)
-            ? `Needs ${missingText(tree, snapshot.taken)} first.`
-            : undefined;
         return (
-          <li
+          <CourseRow
             key={course.code}
-            className="flex h-11 items-center gap-3 border-border border-t pr-5 pl-5 focus-within:bg-subtle hover:bg-subtle"
-          >
-            {status && (
-              <StatusTip status={status} reason={reason}>
-                <StatusIcon status={status} label={STATUS[status].label} />
-              </StatusTip>
-            )}
-            <Link
-              href={`/courses/${courseSlug(course.code)}`}
-              prefetch={false}
-              className="-mx-2 flex h-full min-w-0 flex-1 items-center gap-3 rounded-sm px-2 -outline-offset-2"
-            >
-              <span className="w-[76px] shrink-0 font-semibold tabular-nums">
-                {course.code}
-              </span>
-              <span className="min-w-0 flex-1 truncate" title={title}>
-                {title}
-              </span>
-              <span className="w-24 shrink-0 whitespace-nowrap text-right text-[13px] text-muted-foreground tabular-nums">
-                {credits}
-              </span>
-            </Link>
-          </li>
+            course={course}
+            status={status ?? undefined}
+            showGlyph={status !== null}
+          />
         );
       })}
     </ul>
