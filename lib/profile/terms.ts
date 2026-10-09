@@ -30,27 +30,14 @@ export function termRange(
   return [...keys].sort((a, b) => a - b).map(termFromKey);
 }
 
-const CREDITS_PER_TERM = 15;
-const DEGREE_TERMS = 8;
-
-/** A starting guess for graduation: a four-year degree, or the credits left at 15 per Fall or Winter term. Never before next term. */
-export function guessGraduation(
-  start: Term | null,
-  last: Term | null,
-  creditsLeft: number | null,
-  now = new Date(),
-): Term | null {
-  const guess =
-    last && creditsLeft !== null
-      ? advanceTerms(
-          last,
-          Math.ceil(Math.max(0, creditsLeft) / CREDITS_PER_TERM),
-        )
-      : start
-        ? advanceTerms(start, DEGREE_TERMS - 1)
-        : null;
-  const next = advanceTerms(currentTerm(now), 1);
-  return guess && compareTerms(guess, next) < 0 ? next : guess;
+/** The latest term any of the items sits in. */
+export function lastTerm(items: readonly { term: Term | null }[]): Term | null {
+  return (
+    items
+      .flatMap((item) => item.term ?? [])
+      .sort(compareTerms)
+      .at(-1) ?? null
+  );
 }
 
 /** Groups by term from oldest to newest, with the entries that have no term first. */

@@ -63,3 +63,19 @@ test("deleting all data clears the profile", async ({ page }) => {
     page.getByRole("button", { name: "Choose your transcript PDF" }),
   ).toBeVisible();
 });
+
+test("a browser that cannot save the profile says so and offers a backup", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    Storage.prototype.setItem = () => {
+      throw new DOMException("full", "QuotaExceededError");
+    };
+  });
+  await importAndSave(page);
+  const banner = page.getByRole("alert").filter({ hasText: "could not save" });
+  await expect(banner).toBeVisible();
+  await expect(
+    banner.getByRole("button", { name: "Export a backup" }),
+  ).toBeVisible();
+});

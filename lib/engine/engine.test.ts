@@ -284,6 +284,15 @@ test("a multi-term course loads each part in its own term", () => {
   ).toEqual([
     { kind: "after-graduation", term: fall, course: "ECSE 458", ends: winter },
   ]);
+  expect(
+    planWarnings(
+      [{ term: winter, courses: ["COMP 250"] }],
+      buildSnapshot([]),
+      catalogue,
+      17,
+      fall,
+    ).map((w) => w.kind),
+  ).toContain("after-graduation");
 });
 
 test("status for 10,000 courses takes under 100 ms", () => {

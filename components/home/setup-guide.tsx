@@ -13,6 +13,7 @@ import { planWarnings, termLoad } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
 import { defaultGraduation, termLabel } from "@/lib/profile/term-options";
+import { lastTerm } from "@/lib/profile/terms";
 import type { Term } from "@/lib/profile/types";
 import type { Program } from "@/lib/programs/types";
 
@@ -60,10 +61,11 @@ export function SetupGuide({
   program: Program | null;
   term: Term;
 }) {
-  const recordCount = useProfileStore((state) => state.records.length);
   const plan = useProfileStore((state) => state.plan);
   const importedAt = useProfileStore((state) => state.importedAt);
   const startTerm = useProfileStore((state) => state.startTerm);
+  const entry = useProfileStore((state) => state.entry);
+  const records = useProfileStore((state) => state.records);
   const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const creditLimit = useProfileStore((state) => state.creditLimit);
   const setTerms = useProfileStore((state) => state.setTerms);
@@ -78,14 +80,18 @@ export function SetupGuide({
   );
   const label = termLabel(term);
   const plannedNext = termLoad(plan, catalogue, term);
-  const graduationGuess = defaultGraduation(startTerm ?? term);
+  const graduationGuess = defaultGraduation(
+    startTerm ?? term,
+    entry,
+    lastTerm(records),
+  );
 
   const steps: Step[] = [
     {
       id: "transcript",
       title: "Import your transcript",
       done: importedAt !== null,
-      detail: `${recordCount} ${recordCount === 1 ? "course" : "courses"} found`,
+      detail: `${records.length} ${records.length === 1 ? "course" : "courses"} found`,
       sentence:
         "Import your unofficial transcript from Minerva to see what you can take next. The PDF never leaves this browser.",
       action: { label: "Import transcript", href: "/profile" },
@@ -104,7 +110,7 @@ export function SetupGuide({
       title: "Set your graduation term",
       done: graduationTerm !== null,
       detail: graduationTerm ? termLabel(graduationTerm) : "",
-      sentence: `Most degrees take eight terms, which would end in ${termLabel(graduationGuess)}. You can change it later.`,
+      sentence: `From your start term and how you started, we guess ${termLabel(graduationGuess)}. You can change it later.`,
       action: {
         label: `Use ${termLabel(graduationGuess)}`,
         run: () => setTerms({ graduationTerm: graduationGuess }),

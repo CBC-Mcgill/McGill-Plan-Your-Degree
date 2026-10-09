@@ -79,7 +79,7 @@ const level = (course: CourseSummary) => Number.parseInt(course.number, 10);
 // Suggestions stay undergraduate: graduate courses (600+) are left to the course browser.
 const undergraduate = (s: Suggestion) => level(s.course) < 600;
 
-/** Electives worth a look: 100 to 400 level courses with credits, the student's own subjects first. */
+/** Electives worth a look: 100 to 400 level courses with credits, the student's own subjects first and diploma or continuing studies subjects (FMT4, CPL2) last. */
 function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
   // Only courses actually taken at McGill, so CEGEP-credited courses don't steer the ranking.
   const subjects = new Set(
@@ -88,11 +88,18 @@ function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
     ),
   );
   return suggestions
-    .filter((s) => level(s.course) < 500 && (s.course.credits ?? 0) > 0)
+    .filter(
+      (s) =>
+        level(s.course) >= 100 &&
+        level(s.course) < 500 &&
+        (s.course.credits ?? 0) > 0,
+    )
     .sort(
       (a, b) =>
         Number(!subjects.has(a.course.subject)) -
           Number(!subjects.has(b.course.subject)) ||
+        Number(/\d/.test(a.course.subject)) -
+          Number(/\d/.test(b.course.subject)) ||
         level(a.course) - level(b.course) ||
         (a.course.code < b.course.code ? -1 : 1),
     )

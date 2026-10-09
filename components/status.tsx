@@ -155,8 +155,13 @@ export function StatusIcon({
           <path d="M7 3.25a3.75 3.75 0 0 1 0 7.5z" fill="currentColor" />
         </>
       )}
+      {status === "covered" && (
+        <>
+          <circle {...ring} />
+          <path d="m4.4 7.2 1.8 1.8 3.5-3.7" stroke="currentColor" {...mark} />
+        </>
+      )}
       {(status === "completed" ||
-        status === "covered" ||
         status === "transfer" ||
         status === "exemption") && (
         <>

@@ -5,7 +5,11 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { forgetSeen, type Gains, takeGains } from "@/lib/game/seen";
 import { useGameProgress, useHasCourses } from "@/lib/game/use-game-progress";
-import { useProfileHydrated, useProfileStore } from "@/lib/profile/store";
+import {
+  useProfileHydrated,
+  useProfileStore,
+  useSaveStatus,
+} from "@/lib/profile/store";
 
 const DISMISS_MS = 6000;
 
@@ -32,6 +36,7 @@ function describe({ xp, level, badges, bonus }: Gains): string[] {
 export function Celebration() {
   const hydrated = useProfileHydrated();
   const hasCourses = useHasCourses();
+  const saveFailed = useSaveStatus((state) => state.failed);
 
   // An emptied profile starts over, so the next import celebrates again.
   useEffect(() => {
@@ -43,7 +48,7 @@ export function Celebration() {
       role="status"
       className="pointer-events-none fixed right-8 bottom-8 z-40 w-80"
     >
-      {hasCourses && <GainToast />}
+      {hasCourses && !saveFailed && <GainToast />}
     </div>
   );
 }

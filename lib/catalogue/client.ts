@@ -8,6 +8,9 @@ export type CatalogueState =
   | { status: "ready"; catalogue: ReadonlyMap<string, CourseSummary> };
 
 const LOADING: CatalogueState = { status: "loading" };
+
+/** Administrative records such as REGN WDAG are not courses, so no list shows them. Their pages still exist. */
+const isListed = ({ subject }: CourseSummary) => subject !== "REGN";
 let state: CatalogueState = LOADING;
 let loading = false;
 const listeners = new Set<() => void>();
@@ -29,7 +32,9 @@ function load() {
     .then((courses) =>
       publish({
         status: "ready",
-        catalogue: new Map(courses.map((course) => [course.code, course])),
+        catalogue: new Map(
+          courses.filter(isListed).map((course) => [course.code, course]),
+        ),
       }),
     )
     .catch(() => publish({ status: "error" }))

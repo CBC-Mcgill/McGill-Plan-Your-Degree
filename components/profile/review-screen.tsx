@@ -14,7 +14,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { useProfileStore } from "@/lib/profile/store";
-import { groupByTerm, guessGraduation } from "@/lib/profile/terms";
+import { defaultGraduation } from "@/lib/profile/term-options";
+import { groupByTerm, lastTerm } from "@/lib/profile/terms";
 import {
   compareTerms,
   isCegep,
@@ -24,8 +25,6 @@ import {
 } from "@/lib/profile/types";
 import { guessProgram } from "@/lib/programs";
 import type { Transcript } from "@/lib/transcript/parse";
-
-const COUNTS_TOWARD_CREDITS = ["completed", "transfer", "in-progress"];
 
 export function ReviewScreen({
   transcript,
@@ -39,14 +38,19 @@ export function ReviewScreen({
   const [removed, setRemoved] = useState<ReadonlySet<number>>(new Set());
   const [values, setValues] = useState<ProgramValues>(() => {
     const store = useProfileStore.getState();
+    const entry = isCegep(transcript.previousEducation) ? "cegep" : store.entry;
+    const start = earliest(transcript);
     return {
       programId:
         guessProgram(transcript.degree, transcript.programs) ?? store.programId,
-      entry: isCegep(transcript.previousEducation) ? "cegep" : store.entry,
+      entry,
       advancedStanding: transcript.advancedStanding,
       creditsRequired: transcript.creditsRequired ?? store.creditsRequired,
-      startTerm: earliest(transcript) ?? store.startTerm,
-      graduationTerm: store.graduationTerm ?? guessGraduationTerm(transcript),
+      startTerm: start ?? store.startTerm,
+      graduationTerm:
+        store.graduationTerm ??
+        (start &&
+          defaultGraduation(start, entry, lastTerm(transcript.courses))),
     };
   });
 
@@ -231,23 +235,4 @@ export function ReviewScreen({
 function earliest(transcript: Transcript): Term | null {
   const terms = transcript.courses.flatMap((c) => c.term ?? []);
   return terms.sort(compareTerms)[0] ?? null;
-}
-
-/** Credits left come from the transcript's own requirement. Without one, assume a four-year degree. */
-function guessGraduationTerm(transcript: Transcript): Term | null {
-  const terms = transcript.courses
-    .flatMap((c) => c.term ?? [])
-    .sort(compareTerms);
-  const done = transcript.courses.reduce(
-    (sum, c) =>
-      COUNTS_TOWARD_CREDITS.includes(c.status) ? sum + (c.credits ?? 0) : sum,
-    transcript.advancedStanding,
-  );
-  return guessGraduation(
-    terms[0] ?? null,
-    terms.at(-1) ?? null,
-    transcript.creditsRequired === null
-      ? null
-      : transcript.creditsRequired - done,
-  );
 }

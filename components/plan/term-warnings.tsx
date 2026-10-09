@@ -8,7 +8,7 @@ import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { termContext, unmet } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
-import type { Plan } from "@/lib/profile/types";
+import { compareTerms, type Plan } from "@/lib/profile/types";
 
 function Others({ codes }: { codes: string[] }) {
   return codes.map((code, i) => (
@@ -40,10 +40,15 @@ export function Sentence({
   }
   const course = <CourseLink code={warning.course} />;
   if (warning.kind === "after-graduation") {
+    const starts = graduation && compareTerms(warning.term, graduation) > 0;
     return (
       <>
-        {course} continues into {termLabel(warning.ends)}, after your expected
-        graduation{graduation && ` in ${termLabel(graduation)}`}.
+        {course}{" "}
+        {starts
+          ? `is planned for ${termLabel(warning.term)}`
+          : `continues into ${termLabel(warning.ends)}`}
+        , after your expected graduation
+        {graduation && ` in ${termLabel(graduation)}`}.
       </>
     );
   }

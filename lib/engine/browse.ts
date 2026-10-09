@@ -306,7 +306,7 @@ export function inView(
     case "planned":
       return status === "planned";
     case "completed":
-      return status === "completed" || status === "covered";
+      return status === "completed";
   }
 }
 
