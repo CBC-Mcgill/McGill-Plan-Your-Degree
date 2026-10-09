@@ -31,8 +31,6 @@ export const COPY = {
     total === null
       ? `${n} credits earned`
       : `${n} of ${total} degree credits earned`,
-  minorFigure: (name: string, n: number, total: number, basis: Basis) =>
-    `${minorTitle(name)}: ${n} of ${total} credits ${BASIS[basis]}`,
   basis: BASIS,
   pending: (n: number) => `${creditsText(n)} pending`,
   termsLeft: (n: number, term: Term) =>

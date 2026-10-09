@@ -18,6 +18,7 @@ import { CatalogueLink, VsbLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
+import { ProgramBars } from "@/components/program-bars";
 import {
   type Status,
   StatusBadge,
@@ -331,14 +332,31 @@ function Page({
     }
   }
 
+  const minorBar =
+    minor && minorView?.progress && minorWithPlan
+      ? {
+          label: COPY.minorTitle(minor.name),
+          done: minorView.progress.creditsDone,
+          split: programSplit(minorWithPlan, snapshot),
+          total: minorView.progress.credits,
+        }
+      : null;
+
   return (
     <>
       <h1>{program.name}</h1>
       <p className="mt-2 text-fg-muted">
-        <span className="tabular-nums">
-          {creditsDone} of {credits}
-        </span>{" "}
-        program credits <Defined def={GLOSSARY.earnedOrInProgress} />
+        {minorBar ? (
+          "Program and minor credits"
+        ) : (
+          <>
+            <span className="tabular-nums">
+              {creditsDone} of {credits}
+            </span>{" "}
+            program credits
+          </>
+        )}{" "}
+        <Defined def={GLOSSARY.earnedOrInProgress} />
         {dot}
         <CatalogueLink href={coursesTab(program.source)} />
         {program.generated && (
@@ -350,11 +368,14 @@ function Page({
       </p>
       {withPlan && (
         <div className="mt-4">
-          <StatusBar
-            {...programSplit(withPlan, snapshot)}
-            total={credits}
-            legend
-            className="w-80"
+          <ProgramBars
+            program={{
+              label: "Program",
+              done: creditsDone,
+              split: programSplit(withPlan, snapshot),
+              total: credits,
+            }}
+            minor={minorBar}
           />
         </div>
       )}

@@ -268,7 +268,8 @@ export function StatusBar({
   inProgress: number;
   planned?: number;
   total: number;
-  legend?: boolean;
+  /** The three parts worded beside the bar, or under it with "below". */
+  legend?: boolean | "below";
   className?: string;
 }) {
   const values = { completed, inProgress, planned };
@@ -300,11 +301,15 @@ export function StatusBar({
   );
   if (!legend) return bar;
   return (
-    <div className="flex items-center gap-6">
+    <div
+      className={
+        legend === "below" ? "flex flex-col gap-2" : "flex items-center gap-6"
+      }
+    >
       {bar}
       <p
         aria-hidden
-        className="flex items-center gap-4 text-fg-muted tabular-nums"
+        className="flex flex-wrap items-center gap-x-4 gap-y-1 text-fg-muted tabular-nums"
       >
         {BAR_PARTS.map(([key, status, word]) => (
           <span key={key} className="inline-flex items-center gap-1.5">
