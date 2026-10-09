@@ -9,15 +9,12 @@ import { Button } from "@/components/ui/button";
 import { COPY } from "@/lib/copy";
 import { REPO_URL } from "@/lib/github";
 import { startProfile } from "@/lib/profile/started";
-import { Mark, useReduce } from "./landing/parts";
+import { useReduce } from "./landing/parts";
 import { Story } from "./landing/story";
 import { PlannerWindow } from "./landing/window";
 import { useDarkNav } from "./use-dark-nav";
 
 const INK = "bg-[#121a2d] text-white";
-
-/** The brand red brightened just enough for 3:1 on the ink and its red glow, for "McGill" in the h1. */
-const RED_ON_INK = "text-[#e8283d]";
 
 /** The calls to action as glass on the ink, see `.glass` and `.glass-red` in globals.css. */
 const GLASS_BUTTON =
@@ -53,15 +50,19 @@ function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
 
   return (
     <div ref={stage} className={`relative -mt-16 overflow-hidden pt-16 ${INK}`}>
-      <LogoLight className="-top-24 size-[46rem]" />
+      <Glow />
       <section
         ref={hero}
         className="relative z-10 px-8 pt-10 pb-10 text-center"
       >
         <motion.div style={{ opacity: titleOpacity }}>
-          <h1 className="mx-auto mt-6 max-w-[15ch] text-[clamp(3.5rem,6vw,5rem)] leading-[0.98] tracking-[-0.03em]">
-            Your <span className={RED_ON_INK}>McGill</span> degree, mapped out
+          <h1 className="mx-auto mt-6 max-w-[19ch] text-[clamp(3.25rem,5.6vw,4.75rem)] leading-[0.98] tracking-[-0.03em]">
+            Plan your whole <span className="mcgill-flow">McGill</span> degree
+            in one tab
           </h1>
+          <p className="mt-5 text-lg text-white/72">
+            No spreadsheet, no notes doc, no dozen open tabs.
+          </p>
         </motion.div>
         <motion.div style={{ opacity: actionsOpacity }}>
           <div className="mt-7 flex justify-center gap-3">
@@ -194,15 +195,13 @@ function GitHubMark() {
   );
 }
 
-/** The logo, large and blurred, as the light behind a headline. */
-function LogoLight({ className }: { className: string }) {
+/** Soft red light on the ink above the headline. */
+function Glow() {
   return (
     <div
       aria-hidden
-      className={`pointer-events-none absolute left-1/2 -translate-x-1/2 ${className}`}
-    >
-      <Mark className="size-full opacity-[0.16] blur-[12px]" />
-    </div>
+      className="pointer-events-none absolute top-0 left-1/2 h-[30rem] w-[60rem] -translate-x-1/2 bg-[radial-gradient(closest-side,rgb(218_26_46/0.2),transparent)]"
+    />
   );
 }
 
@@ -215,7 +214,6 @@ function FinalCall({ stars }: { stars: number | null }) {
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 h-[28rem] w-[64rem] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side_at_40%_50%,rgb(218_26_46/0.22),transparent),radial-gradient(closest-side_at_62%_50%,rgb(139_124_235/0.22),transparent)]"
       />
-      <LogoLight className="top-1/2 size-[36rem] -translate-y-1/2" />
       <div className="relative">
         <h2 className="font-display font-extrabold text-[44px] leading-[50px] tracking-[-0.025em] [font-stretch:112.5%]">
           Start mapping your degree

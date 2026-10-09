@@ -13,7 +13,10 @@ test("landing renders its primary action", async ({ page }) => {
   await page.goto("/");
   const main = page.getByRole("main");
   await expect(
-    main.getByRole("heading", { level: 1, name: "Your McGill degree" }),
+    main.getByRole("heading", {
+      level: 1,
+      name: "Plan your whole McGill degree in one tab",
+    }),
   ).toBeVisible();
   await expect(
     main.getByRole("link", { name: "Import your transcript" }).first(),
