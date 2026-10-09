@@ -13,6 +13,7 @@ import {
   fitsCaps,
   programProgress,
   programSplit,
+  REPLACE_TITLE,
   ruleMatches,
 } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
@@ -219,23 +220,33 @@ test("a term fills with required courses first, then what open complementary gro
   ]);
 });
 
-test("program progress counts exemptions as satisfied but not as credit", () => {
+test("an exemption meets its course, and its credits move to a group any course fills", () => {
   const progress = programProgress(tiny, snapshot, catalogue);
   expect(progress.satisfied).toBe(false);
   expect(progress.remaining).toEqual(["COMP 251"]);
-  expect(progress.groups.map((g) => [g.creditsDone, g.credits])).toEqual([
-    [3, 9],
-    [3, 6],
-  ]);
-  const planned = buildSnapshot(records, [
-    {
-      term: { season: "Winter", year: 2027 },
-      courses: ["COMP 251", "COMP 424"],
-    },
-  ]);
   expect(
-    programProgress(tiny, planned, catalogue, { planned: true }).satisfied,
-  ).toBe(true);
+    progress.groups.map((g) => [g.title, g.creditsDone, g.credits]),
+  ).toEqual([
+    ["Required Courses", 3, 6],
+    ["Complementary Courses", 3, 6],
+    [REPLACE_TITLE, 0, 3],
+  ]);
+  expect(progress.groups[2]?.replaces).toEqual([
+    { code: "MATH 240", credits: 3 },
+  ]);
+  const withPlan = (courses: string[]) =>
+    programProgress(
+      tiny,
+      buildSnapshot(records, [
+        { term: { season: "Winter", year: 2027 }, courses },
+      ]),
+      catalogue,
+      { planned: true },
+    );
+  // Every catalogue group is met, but MATH 240's 3 credits are still to make up.
+  expect(withPlan(["COMP 251", "COMP 424"]).satisfied).toBe(false);
+  const met = withPlan(["COMP 251", "COMP 424", "COMP 302"]);
+  expect([met.satisfied, met.creditsDone, met.credits]).toEqual([true, 15, 15]);
 });
 
 test("credit splits count earned, then in progress, then planned, up to what a group needs", () => {
@@ -262,14 +273,15 @@ test("credit splits count earned, then in progress, then planned, up to what a g
     inProgress: 0,
     planned: 3,
   });
+  // COMP 202 in progress makes up the exempt MATH 240's credits.
   expect(programSplit(progress, planned)).toEqual({
     completed: 6,
-    inProgress: 0,
+    inProgress: 3,
     planned: 6,
   });
 });
 
-test("program progress lists the courses each group and rule claimed, and the ones nobody did", () => {
+test("program progress lists the courses each group and rule claimed, and the replace group takes what nobody did", () => {
   const [required] = tiny.groups;
   const program: Program = {
     ...tiny,
@@ -302,7 +314,10 @@ test("program progress lists the courses each group and rule claimed, and the on
     [{ code: "COMP 330", credits: 3 }],
     [{ code: "COMP 330", credits: 3 }],
   ]);
-  expect(progress.unclaimed).toEqual([{ code: "COMP 202", credits: 3 }]);
+  expect(progress.groups[2]?.courses).toEqual([
+    { code: "COMP 202", credits: 3 },
+  ]);
+  expect(progress.unclaimed).toEqual([]);
 });
 
 test("an unparsed rule matches no course and caps nothing", () => {

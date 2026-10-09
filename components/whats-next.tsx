@@ -33,7 +33,6 @@ import { useCatalogue } from "@/lib/catalogue/client";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
-import { exemptionsToReplace } from "@/lib/engine/credits";
 import {
   type Entry,
   type Item,
@@ -50,6 +49,7 @@ import {
   type ProgramProgress,
   programSplit,
   programStanding,
+  STANDING,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { sentence } from "@/lib/format";
@@ -219,10 +219,6 @@ function Page({
     [minor, snapshot, catalogue, entry],
   );
   const unclaimed = withPlan?.unclaimed ?? [];
-  const exemptions = useMemo(
-    () => exemptionsToReplace(records, catalogue),
-    [records, catalogue],
-  );
   const context: Context = { catalogue, term, planned, facts };
 
   if (!program || !view.progress) {
@@ -376,19 +372,6 @@ function Page({
           limit={creditLimit}
         />
       </div>
-      {exemptions.length > 0 && (
-        <ul className="mt-4">
-          {exemptions.map(({ code, credits }) => (
-            <li key={code}>
-              {code} was exempted without credit. Replace{" "}
-              {credits === null
-                ? "its credits"
-                : `its ${COPY.credits(credits)}`}{" "}
-              with another course.
-            </li>
-          ))}
-        </ul>
-      )}
 
       <div
         ref={panes}
@@ -826,6 +809,9 @@ function GroupBody({
   const open = view.complementary.find((g) => g.index === index);
   return (
     <>
+      {group.replaces && (
+        <p className="text-fg-muted">{COPY.replaces(group.replaces)}</p>
+      )}
       {open?.buckets.map((bucket) => (
         <Bucket
           key={bucket.title}
@@ -1017,12 +1003,15 @@ function Row({
 /** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action on hover. */
 function PaneRow({
   course,
+  title,
   uncertain = false,
   both = false,
   note,
   action,
 }: {
   course: CourseSummary;
+  /** Stands in for the course link, for a row with no course behind it. */
+  title?: ReactNode;
   uncertain?: boolean;
   both?: boolean;
   note: ReactNode;
@@ -1031,18 +1020,20 @@ function PaneRow({
   return (
     <li className={ROW}>
       <span className={ROW_TITLE}>
-        <Link
-          href={`/courses/${courseSlug(course.code)}`}
-          prefetch={false}
-          className={ROW_LINK}
-        >
-          <span className="w-24 shrink-0 font-semibold">
-            <CourseCode code={course.code} />
-          </span>
-          <span className="min-w-0 truncate" title={course.title}>
-            {course.title}
-          </span>
-        </Link>
+        {title ?? (
+          <Link
+            href={`/courses/${courseSlug(course.code)}`}
+            prefetch={false}
+            className={ROW_LINK}
+          >
+            <span className="w-24 shrink-0 font-semibold">
+              <CourseCode code={course.code} />
+            </span>
+            <span className="min-w-0 truncate" title={course.title}>
+              {course.title}
+            </span>
+          </Link>
+        )}
         {uncertain && <UncertainFlag />}
         {both && (
           <span className="hidden shrink-0 text-fg-muted @3xl:inline">
@@ -1093,18 +1084,34 @@ function CountedRow({
   claimed: Claimed;
   context: Context;
 }) {
+  if (code === STANDING) {
+    return (
+      <PaneRow
+        course={{ ...stub(code), credits }}
+        title={<span className="font-semibold">Advanced standing</span>}
+        note="Credit from before McGill"
+      />
+    );
+  }
   const { status, term } = facts.get(code) ?? {
     status: "completed",
     term: null,
   };
+  const course = catalogue.get(code) ?? stub(code);
+  // An exemption or a DEC equivalent meets the requirement, but its credits go to the replace group.
+  const toReplace =
+    (status === "exemption" || status === "covered") && course.credits
+      ? `${COPY.credits(course.credits)} to replace`
+      : null;
   return (
     <PaneRow
-      course={{ ...(catalogue.get(code) ?? stub(code)), credits }}
+      course={{ ...course, credits }}
       both={both?.has(code)}
       note={
         <>
           <StatusBadge status={status} />
           {term && <span>{termLabel(term)}</span>}
+          {toReplace && <span>{toReplace}</span>}
         </>
       }
     />

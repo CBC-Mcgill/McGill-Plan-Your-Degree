@@ -4,7 +4,7 @@ import meta from "../../data/catalogue/meta.json";
 import type { Course } from "../catalogue/types.ts";
 import type { CourseRecord, Profile, Season } from "../profile/types.ts";
 import { getProgram } from "../programs/index.ts";
-import { degreeStanding } from "./credits.ts";
+import { degreeStanding, earnedCredits } from "./credits.ts";
 import { programStanding } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { canTakeNow } from "./status.ts";
@@ -93,6 +93,45 @@ test("one student's progress reads 21, 30 and 33 program credits on the three ba
     pending: 0,
     required: 90,
   });
+});
+
+test("a CEGEP engineering student's degree and program credits agree, Year 0 counted once", () => {
+  const program = getProgram("computer-engineering-beng");
+  if (!program) throw new Error("missing program");
+  const records = ["ECSE 200", "ECSE 250", "MATH 262", "COMP 206"].map((code) =>
+    record(code, "Fall", 2025),
+  );
+  const earned = (advancedStanding: number) => {
+    const snapshot = buildSnapshot(records, [], "cegep", advancedStanding);
+    return [
+      degreeStanding(
+        snapshot,
+        catalogue,
+        {
+          records,
+          plan: [],
+          advancedStanding,
+          creditsRequired: null,
+          entry: "cegep",
+        },
+        program,
+      ).earned,
+      programStanding(program, snapshot, catalogue, "cegep", "earned")
+        .creditsDone,
+    ];
+  };
+
+  // 12 course credits plus the 22 credited Year 0 credits. A 25-credit CEGEP lump sum leaves 3 for the elective.
+  expect(earned(0)).toEqual([34, 34]);
+  expect(earned(25)).toEqual([37, 37]);
+});
+
+test("a course passed twice counts its credits once", () => {
+  const snapshot = buildSnapshot([
+    record("COMP 206", "Fall", 2025),
+    record("COMP 206", "Winter", 2026),
+  ]);
+  expect(earnedCredits(snapshot, catalogue)).toBe(3);
 });
 
 test("a course not offered in the catalogue year is never Can take now", () => {

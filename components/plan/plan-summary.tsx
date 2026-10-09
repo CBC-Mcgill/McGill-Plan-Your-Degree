@@ -15,6 +15,7 @@ import { courseSlug } from "@/lib/catalogue/slug";
 import { COPY } from "@/lib/copy";
 import {
   creditSources,
+  creditSplit,
   type GroupProgress,
   lacking,
   type ProgramProgress,
@@ -73,15 +74,7 @@ function GroupBar({
   group: GroupProgress;
   snapshot: Snapshot;
 }) {
-  let completed = 0;
-  let inProgress = 0;
-  let planned = 0;
-  for (const { code, credits } of group.courses) {
-    if (snapshot.done.has(code)) completed += credits;
-    else if (snapshot.inProgress.has(code)) inProgress += credits;
-    else planned += credits;
-  }
-  const whole = Math.max(group.credits, completed + inProgress + planned);
+  const { completed, inProgress, planned } = creditSplit(group, snapshot);
   const parts = [
     { key: "completed", value: completed, fill: "bg-completed" },
     { key: "in-progress", value: inProgress, fill: "bg-in-progress" },
@@ -97,7 +90,7 @@ function GroupBar({
         <span
           key={part.key}
           className={part.fill}
-          style={{ width: `${(part.value / whole) * 100}%` }}
+          style={{ width: `${(part.value / group.credits) * 100}%` }}
         />
       ))}
     </span>
@@ -139,10 +132,12 @@ function lacks(
   const gap = group.credits - group.creditsDone;
   const from =
     definition?.kind === "complementary" ? creditSources(definition) : null;
-  const what =
-    gap > 0
-      ? `Any ${creditsText(gap)}${from ? ` from ${from}` : ""}`
-      : lacking(group);
+  const where = from
+    ? ` from ${from}`
+    : group.replaces
+      ? ", check with your advisor"
+      : "";
+  const what = gap > 0 ? `Any ${creditsText(gap)}${where}` : lacking(group);
   return (
     what && (
       <span className="text-fg-muted">

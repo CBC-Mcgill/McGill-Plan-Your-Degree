@@ -32,7 +32,7 @@ export const GLOSSARY = {
   },
   advancedStanding: {
     label: "Advanced standing credits",
-    tip: "Credits McGill gave you for studies before you arrived, such as CEGEP, AP or IB. They count toward your degree but are not tied to one course.",
+    tip: "Credits McGill gave you for studies before you arrived, such as CEGEP, AP or IB. They count toward your degree but are not tied to one course. In Engineering, CEGEP credit covers Year 0, so we count your Year 0 credits or this number, whichever is larger.",
   },
   creditsRequired: {
     label: "Credits required for your degree",
@@ -44,7 +44,7 @@ export const GLOSSARY = {
   },
   creditsEarned: {
     label: "Credits earned",
-    tip: "Credits from courses you completed, plus advanced standing and transfer credits. Courses in progress count once they are done.",
+    tip: "Credits from courses you completed, plus advanced standing and transfer credits. Year 0 credited from CEGEP counts as advanced standing. Courses in progress count once they are done.",
   },
   earnedOrInProgress: {
     label: "earned or in progress",
@@ -102,7 +102,7 @@ export const STATUS_TIPS: Record<BrowseStatus | CourseStatus, string> = {
     "Your Science DEC covers this course, so you do not need to take it. It gives no McGill credit.",
   transfer: "McGill gave you credit for this course from earlier studies.",
   exemption:
-    "You are exempt from this course. It meets prerequisites but earns no credit.",
+    "You are exempt from this course. It meets prerequisites and requirements but earns no credit, so another course must make up its credits.",
   failed: "You did not pass this course, so it earns no credit.",
   withdrawn: "You withdrew from this course, so it earns no credit.",
   deferred: "The final grade is not in yet. The course counts once it is.",

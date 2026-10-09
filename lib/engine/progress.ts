@@ -42,7 +42,7 @@ export interface RuleProgress {
 export interface GroupProgress {
   title: string;
   kind: "required" | "complementary";
-  /** Credits the group needs. */
+  /** Credits the group needs, less those of required courses met without credit, which move to the replace group. */
   credits: number;
   creditsDone: number;
   minCourses?: number;
@@ -58,6 +58,8 @@ export interface GroupProgress {
   rules: RuleProgress[];
   /** Rules in the group that need a manual check. Such a group is never satisfied. */
   unparsed: number;
+  /** Only on the replace group: the required courses met without credit, with the catalogue credits it makes up for. */
+  replaces?: Claimed[];
 }
 
 export interface ProgramProgress {
@@ -71,7 +73,15 @@ export interface ProgramProgress {
   remaining: RequiredItem[];
   /** Counted courses that no group claimed. They still count toward the degree's total credits. */
   unclaimed: Claimed[];
+  /** Advanced standing credits that no group claimed, beyond the credited Year 0. */
+  standing: number;
 }
+
+/** The code advanced standing claims under: earned credit with no course behind it. Only a group open to any course takes it. */
+export const STANDING = "";
+
+/** Title of the group that makes up the credits of required courses met without credit. */
+export const REPLACE_TITLE = "Replace exempted credits";
 
 function matchesMatch(match: Match, code: string): boolean {
   const space = code.indexOf(" ");
@@ -87,6 +97,8 @@ function matchesMatch(match: Match, code: string): boolean {
 }
 
 export function ruleMatches(rule: Rule, code: string): boolean {
+  // ponytail: advanced standing has no subject or level, so it fits any rule that only filters, such as a 200-level elective.
+  if (code === STANDING) return !rule.unparsed && isFilter(rule);
   return (
     !rule.unparsed &&
     Boolean(
@@ -158,6 +170,22 @@ export function fitsCaps(
   });
 }
 
+/** A Year 0 or Foundation group a Quebec CEGEP student is credited for, so it counts as done without courses. */
+export const isCredited = (
+  group: Group,
+  entry: EntryRoute | null | undefined,
+) => entry === "cegep" && group.foundation === true;
+
+/** Credits of the Year 0 groups a Quebec CEGEP student is credited for. */
+export function creditedCredits(
+  entry: EntryRoute | null | undefined,
+  program: Program | null,
+): number {
+  return (program?.groups ?? [])
+    .filter((group) => isCredited(group, entry))
+    .reduce((sum, group) => sum + group.credits, 0);
+}
+
 /** Full credits with nothing remaining. The group claims no courses, so a course the student did take can count elsewhere. */
 function creditedProgress(group: Group): GroupProgress {
   return {
@@ -175,33 +203,43 @@ function creditedProgress(group: Group): GroupProgress {
   };
 }
 
+/** An exemption or a Science DEC equivalent meets its item without credit, so its catalogue credits move to `replaces`. */
 function requiredProgress(
   group: RequiredGroup,
   have: ReadonlySet<string>,
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
+  creditsOf: (code: string) => number,
+  replaces: Claimed[],
 ): GroupProgress {
   const remaining: RequiredItem[] = [];
   const courses: Claimed[] = [];
   let creditsDone = 0;
+  let moved = 0;
   for (const item of group.courses) {
-    const code = (typeof item === "string" ? [item] : item.oneOf).find((c) =>
-      have.has(c),
-    );
+    const codes = typeof item === "string" ? [item] : item.oneOf;
+    const code =
+      codes.find((c) => counted.has(c)) ?? codes.find((c) => have.has(c));
     if (code === undefined) {
       remaining.push(item);
-    } else {
+    } else if (counted.has(code)) {
       const credits = counted.get(code) ?? 0;
       used.add(code);
       courses.push({ code, credits });
       creditsDone += credits;
+    } else {
+      courses.push({ code, credits: 0 });
+      replaces.push({ code, credits: creditsOf(code) });
+      moved += creditsOf(code);
     }
   }
+  const credits = Math.max(0, group.credits - moved);
   return {
     title: group.title,
     kind: "required",
-    credits: group.credits,
-    creditsDone,
+    credits,
+    // A oneOf course with more credits than the catalogue heading assumed must not read 27 of 26.
+    creditsDone: Math.min(creditsDone, credits),
     coursesDone: courses.length,
     satisfied: remaining.length === 0,
     credited: false,
@@ -314,6 +352,12 @@ export function programProgress(
   for (const [code, credits] of snapshot.earned) {
     counted.set(code, credits ?? creditsOf(code));
   }
+  // A CEGEP lump sum is the credit for the credited Year 0 groups, so only what is left over can fill an elective.
+  const standing = Math.max(
+    0,
+    snapshot.standing - creditedCredits(count.entry, program),
+  );
+  if (standing > 0) counted.set(STANDING, standing);
   const extra: Iterable<string>[] = [];
   if (count.inProgress) extra.push(snapshot.inProgress.keys());
   if (count.planned) extra.push(snapshot.planned);
@@ -325,14 +369,17 @@ export function programProgress(
   }
 
   const used = new Set<string>();
+  const replaces: Claimed[] = [];
   const results = new Map<Group, GroupProgress>();
-  const credited = (group: Group) =>
-    count.entry === "cegep" && group.foundation;
+  const credited = (group: Group) => isCredited(group, count.entry);
   for (const group of program.groups) {
     if (credited(group)) {
       results.set(group, creditedProgress(group));
     } else if (group.kind === "required") {
-      results.set(group, requiredProgress(group, have, counted, used));
+      results.set(
+        group,
+        requiredProgress(group, have, counted, used, creditsOf, replaces),
+      );
     }
   }
   for (const group of program.groups) {
@@ -341,6 +388,20 @@ export function programProgress(
     }
   }
   const groups = program.groups.flatMap((group) => results.get(group) ?? []);
+  const moved = replaces.reduce((sum, claimed) => sum + claimed.credits, 0);
+  if (moved > 0) {
+    // Last, so it takes only what no group of the program wanted. It stays after the program's groups, so their indexes still line up.
+    const replace: ComplementaryGroup = {
+      title: REPLACE_TITLE,
+      kind: "complementary",
+      credits: moved,
+      rules: [{ title: "Any course", match: {} }],
+    };
+    groups.push({
+      ...complementaryProgress(replace, counted, used),
+      replaces,
+    });
+  }
   return {
     credits: program.credits,
     creditsDone: groups.reduce(
@@ -351,8 +412,9 @@ export function programProgress(
     groups,
     remaining: groups.flatMap((group) => group.remaining),
     unclaimed: [...counted]
-      .filter(([code]) => !used.has(code))
+      .filter(([code]) => !used.has(code) && code !== STANDING)
       .map(([code, credits]) => ({ code, credits })),
+    standing: used.has(STANDING) ? 0 : standing,
   };
 }
 

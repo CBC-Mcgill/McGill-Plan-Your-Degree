@@ -17,7 +17,7 @@ import { DropdownMenu } from "radix-ui";
 import { type RefObject, useLayoutEffect } from "react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
-import { earnedCredits } from "@/lib/engine/credits";
+import { earnedCredits, standingCredits } from "@/lib/engine/credits";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { useProfileStore } from "@/lib/profile/store";
 import { useProgram } from "@/lib/programs/client";
@@ -47,6 +47,7 @@ function ProfileDetail({
 }) {
   const programId = useProfileStore((state) => state.programId);
   const advancedStanding = useProfileStore((state) => state.advancedStanding);
+  const entry = useProfileStore((state) => state.entry);
   const catalogue = useCatalogue();
 
   const parts: string[] = [];
@@ -58,7 +59,7 @@ function ProfileDetail({
           snapshot,
           catalogue.status === "ready" ? catalogue.catalogue : NO_COURSES,
         )
-      : 0) + advancedStanding;
+      : 0) + standingCredits(advancedStanding, entry, program ?? null);
   if (credits > 0) parts.push(`${credits} credits`);
 
   return parts.length > 0 ? (

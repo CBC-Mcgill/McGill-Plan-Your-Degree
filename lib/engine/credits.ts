@@ -1,5 +1,6 @@
-import type { CourseRecord, EntryRoute, Profile } from "../profile/types.ts";
+import type { EntryRoute, Profile } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
+import { creditedCredits } from "./progress.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 
 /** Credits earned from completed and transfer courses, using the catalogue for records that do not state them. Advanced standing is not included. */
@@ -35,28 +36,17 @@ export function degreeCredits(
   return null;
 }
 
-export interface Exemption {
-  code: string;
-  /** The catalogue credits the student must make up with another course. Null when unknown. */
-  credits: number | null;
-}
-
-/** Exemptions give no credit, so each one leaves credits to make up with another course. */
-export function exemptionsToReplace(
-  records: readonly CourseRecord[],
-  catalogue: Catalogue,
-): Exemption[] {
-  const codes = new Set(
-    records.filter((r) => r.status === "exemption").map((r) => r.code),
-  );
-  return [...codes].map((code) => ({
-    code,
-    credits: catalogue.get(code)?.credits ?? null,
-  }));
+/** Credits from studies before McGill. A CEGEP lump sum on the transcript is the credit for the Year 0 groups, so the larger of the two counts, never both. */
+export function standingCredits(
+  advancedStanding: number,
+  entry: EntryRoute | null,
+  program: Program | null,
+): number {
+  return Math.max(advancedStanding, creditedCredits(entry, program));
 }
 
 export interface DegreeStanding {
-  /** Completed and transfer credits plus advanced standing. */
+  /** Completed and transfer credits plus `standingCredits`. */
   earned: number;
   inProgress: number;
   planned: number;
@@ -64,7 +54,7 @@ export interface DegreeStanding {
   required: number | null;
 }
 
-/** Degree credits on every basis, for the one place that shows them (Home). */
+/** Degree credits on every basis, for Home and the Profile. */
 export function degreeStanding(
   snapshot: Snapshot,
   catalogue: Catalogue,
@@ -76,7 +66,9 @@ export function degreeStanding(
 ): DegreeStanding {
   const credits = (code: string) => catalogue.get(code)?.credits ?? 0;
   return {
-    earned: earnedCredits(snapshot, catalogue) + profile.advancedStanding,
+    earned:
+      earnedCredits(snapshot, catalogue) +
+      standingCredits(profile.advancedStanding, profile.entry, program),
     inProgress: profile.records
       .filter((record) => record.status === "in-progress")
       .reduce((sum, r) => sum + (r.credits ?? credits(r.code)), 0),
