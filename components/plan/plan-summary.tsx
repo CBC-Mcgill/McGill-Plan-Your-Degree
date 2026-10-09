@@ -105,7 +105,7 @@ function GroupBar({
 }
 
 const ROW =
-  "grid min-h-11 grid-cols-[17rem_minmax(0,1fr)_9rem] items-center gap-6 border-line border-b py-2";
+  "-mx-5 grid min-h-11 grid-cols-[17rem_minmax(0,1fr)_9rem] items-center gap-6 border-line border-t px-5 py-2 first:border-t-0";
 
 /** "Minor" before a minor group's name, so it reads apart from the program's. */
 const MinorPrefix = ({ minor }: { minor: boolean }) =>
@@ -361,10 +361,12 @@ export function PlanSummary({
             }
             meta={`${rows.length} ${rows.length === 1 ? "requirement" : "requirements"} still open`}
           >
-            <ul className="border-line border-t">{rows.slice(0, VISIBLE)}</ul>
+            <ul>{rows.slice(0, VISIBLE)}</ul>
             {rows.length > VISIBLE && (
               <ShowMore count={rows.length - VISIBLE}>
-                <ul>{rows.slice(VISIBLE)}</ul>
+                <ul className="[&>li:first-child]:border-t">
+                  {rows.slice(VISIBLE)}
+                </ul>
               </ShowMore>
             )}
           </Section>
