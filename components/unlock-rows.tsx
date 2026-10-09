@@ -1,7 +1,7 @@
 "use client";
 
 import { CourseRow } from "@/components/course-row";
-import { Disclosure } from "@/components/ui/disclosure";
+import { ShowMore } from "@/components/ui/disclosure";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { courseStatus } from "@/lib/engine/status";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
@@ -16,9 +16,9 @@ export function UnlockRows({ courses }: { courses: CourseSummary[] }) {
     <>
       <Rows courses={courses.slice(0, split)} />
       {rest.length > 0 && (
-        <Disclosure summary={`Show ${rest.length} more`}>
+        <ShowMore count={rest.length}>
           <Rows courses={rest} />
-        </Disclosure>
+        </ShowMore>
       )}
     </>
   );

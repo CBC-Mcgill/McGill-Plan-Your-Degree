@@ -126,6 +126,15 @@ test("it shows where each course counts, one click away", async ({ page }) => {
     row(page, "Required courses", "MATH 240").filter({ hasText: "Completed" }),
   ).toContainText("Fall 2025");
 
+  await page
+    .getByRole("region", { name: "Complementary courses" })
+    .getByRole("button", { name: /^Show \d+ more$/ })
+    .first()
+    .click();
+  const fewer = page.getByRole("button", { name: "Show fewer" });
+  await expect(fewer).toBeFocused();
+  await expect(fewer).toHaveAttribute("aria-expanded", "true");
+
   const notCounted = page.getByRole("button", {
     name: /^Not counted toward your program/,
   });

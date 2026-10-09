@@ -3,7 +3,6 @@ import { catalogueNow } from "@/lib/catalogue/client";
 import { COPY } from "@/lib/copy";
 import { courseLoads, loadsName, startTerm } from "@/lib/engine/plan";
 import { useProfileStore } from "@/lib/profile/store";
-import { termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
 
 const termOf = (code: string) =>
@@ -17,10 +16,14 @@ function courseOf(code: string) {
     : undefined;
 }
 
-/** How a toast names the course: "ECSE 458D1 and D2" for a multi-term course, the plain code otherwise. */
-function nameOf(code: string, start: Term) {
+/** How a toast names the course and its terms: "ECSE 458N1 and N2" in Winter 2027 and Fall 2027 for a multi-term course, the plain code and term otherwise. */
+function placement(code: string, start: Term): [string, Term[]] {
   const course = courseOf(code);
-  return (course && loadsName(courseLoads(code, course, start))) || code;
+  const loads = course ? courseLoads(code, course, start) : [];
+  return [
+    loadsName(loads) || code,
+    loads.length > 0 ? loads.map((load) => load.term) : [start],
+  ];
 }
 
 /** Where focus was before the action, so an Undo can hand it back after the toast is gone. */
@@ -37,12 +40,13 @@ function rememberFocus() {
     });
 }
 
-/** An Undo that only runs while the course is still where the action left it. */
+/** An Undo that only runs while the course is still where the action left it. `after` replaces handing focus back. */
 function undo(
   code: string,
   left: Term | undefined,
   restore: () => void,
   message: string,
+  after?: () => void,
 ) {
   const refocus = rememberFocus();
   return {
@@ -56,29 +60,39 @@ function undo(
       }
       restore();
       toast(message);
-      refocus();
+      (after ?? refocus)();
     },
   };
 }
 
-/** Puts the course in the term, or moves it there, and shows a toast that can take it back. A multi-term course starts in the first term from there that runs its first part. */
-export function addWithUndo(requested: Term, code: string) {
+/** Puts the course in the term, or moves it there, and shows a toast that can take it back. A multi-term course starts in the first term from there that runs its first part. `onUndo` gets the term an undone move returns to. */
+export function addWithUndo(
+  requested: Term,
+  code: string,
+  onUndo?: (term: Term) => void,
+) {
   const { addToPlan, removeFromPlan } = useProfileStore.getState();
   const course = courseOf(code);
   const term = course ? startTerm(course, requested) : requested;
-  const name = nameOf(code, term);
+  const [name, terms] = placement(code, term);
   const from = termOf(code);
-  const action = undo(
-    code,
-    term,
-    () => (from ? addToPlan(from, code) : removeFromPlan(term, code)),
-    from
-      ? `${name} moved back to ${termLabel(from)}`
-      : COPY.toast.removed(name, term),
-  );
+  const action = from
+    ? undo(
+        code,
+        term,
+        () => addToPlan(from, code),
+        `${name} moved back to ${COPY.termPair(...placement(code, from)[1])}`,
+        onUndo && (() => onUndo(from)),
+      )
+    : undo(
+        code,
+        term,
+        () => removeFromPlan(term, code),
+        COPY.toast.removed(name, ...terms),
+      );
   addToPlan(term, code);
   toast(
-    from ? COPY.toast.moved(name, term) : COPY.toast.added(name, term),
+    from ? COPY.toast.moved(name, ...terms) : COPY.toast.added(name, ...terms),
     action,
   );
 }
@@ -86,13 +100,13 @@ export function addWithUndo(requested: Term, code: string) {
 /** Takes the course out of the term it starts in, with a toast that can put it back. */
 export function removeWithUndo(term: Term, code: string) {
   const { addToPlan, removeFromPlan } = useProfileStore.getState();
-  const name = nameOf(code, term);
+  const [name, terms] = placement(code, term);
   const action = undo(
     code,
     undefined,
     () => addToPlan(term, code),
-    `${name} added back to ${termLabel(term)}`,
+    `${name} added back to ${COPY.termPair(...terms)}`,
   );
   removeFromPlan(term, code);
-  toast(COPY.toast.removed(name, term), action);
+  toast(COPY.toast.removed(name, ...terms), action);
 }

@@ -1,4 +1,5 @@
 import meta from "../data/catalogue/meta.json";
+import { COPY } from "./copy.ts";
 import type { View } from "./engine/browse.ts";
 import type { BrowseStatus } from "./engine/status.ts";
 import type { CourseStatus } from "./profile/types.ts";
@@ -20,7 +21,7 @@ export const GLOSSARY = {
     label: "Minor",
     tip: `A second subject you study alongside your program. ${bothTip}`,
   },
-  countsForBoth: { label: "Counts for both", tip: bothTip },
+  countsForBoth: { label: COPY.countsForBoth, tip: bothTip },
   graduation: {
     label: "Expected graduation",
     tip: "The last term you take courses. Finishing in April? Pick Winter, even if the ceremony is in May or June.",
@@ -65,11 +66,11 @@ export const GLOSSARY = {
     label: "Not counted toward your program",
     tip: "No requirement of your program took these courses. A course counts toward one requirement only. They still count toward your degree's total credits as electives.",
   },
-  checkRequirement: { label: "Check this requirement", tip: checkTip },
+  checkRequirement: { label: COPY.checkRequirement, tip: checkTip },
   generated: {
-    label: "Read automatically from the catalogue",
+    label: COPY.generated,
     tip: "We read these requirements from the catalogue automatically, so some may be wrong.",
-    checks: "Rules we could not read say Check this requirement.",
+    checks: `Rules we could not read say ${COPY.checkRequirement}.`,
   },
   warnings: {
     label: "Warnings",
@@ -84,12 +85,8 @@ export const GLOSSARY = {
     label: "Multi-term courses",
     tip: "Taken over two consecutive terms, for example ECSE 458D1 in Fall and ECSE 458D2 in Winter.",
   },
-  termsLeft: {
-    label: "Terms left",
-    tip: "Fall and Winter terms you have left, up to and including your expected graduation term.",
-  },
   hasConditions: {
-    label: "Has conditions",
+    label: COPY.hasConditions,
     tip: "The catalogue lists a condition we can't check, like instructor permission.",
   },
 } satisfies Record<string, Definition & { checks?: string }>;

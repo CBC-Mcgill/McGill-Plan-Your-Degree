@@ -76,14 +76,8 @@ function Skeleton() {
 function Dashboard({ snapshot }: { snapshot: Snapshot }) {
   const catalogue = useCatalogue();
   const program = useProgram(useProfileStore((state) => state.programId));
-  // Without the catalogue some credits are unknown, so no figure rather than a wrong one.
-  if (catalogue.status === "error") {
-    return (
-      <>
-        <h1 className="sr-only">Your degree</h1>
-        <CatalogueError />
-      </>
-    );
+  if (catalogue.status === "error" && program !== undefined) {
+    return <Ready snapshot={snapshot} catalogue={null} program={program} />;
   }
   if (catalogue.status !== "ready" || program === undefined) {
     return <Skeleton />;
@@ -97,13 +91,16 @@ function Dashboard({ snapshot }: { snapshot: Snapshot }) {
   );
 }
 
+const NO_CATALOGUE: Catalogue = new Map();
+
 function Ready({
   snapshot,
   catalogue,
   program,
 }: {
   snapshot: Snapshot;
-  catalogue: Catalogue;
+  /** Null when the catalogue failed to load: the figures that need only records stay, the rest gives way to the notice. */
+  catalogue: Catalogue | null;
   program: Program | null;
 }) {
   const records = useProfileStore((state) => state.records);
@@ -116,7 +113,7 @@ function Ready({
 
   const { earned, inProgress, pending, required } = degreeStanding(
     snapshot,
-    catalogue,
+    catalogue ?? NO_CATALOGUE,
     { records, plan, advancedStanding, creditsRequired, entry },
     program,
   );
@@ -127,13 +124,23 @@ function Ready({
   const figure = COPY.degreeFigure(earned, required);
   const pendingText = COPY.pending(pending);
 
+  // Without the catalogue a credit no record states is unknown, so no figure rather than a wrong one.
+  const known =
+    catalogue !== null || records.every((record) => record.credits !== null);
+
   return (
     <>
-      <h1>
-        {figure.slice(0, -COPY.basis.earned.length)}
-        <Term def={GLOSSARY.creditsEarned}>{COPY.basis.earned}</Term>
+      <h1 className={cn(!known && "sr-only")}>
+        {known ? (
+          <>
+            {figure.slice(0, -COPY.basis.earned.length)}
+            <Term def={GLOSSARY.creditsEarned}>{COPY.basis.earned}</Term>
+          </>
+        ) : (
+          "Your degree"
+        )}
       </h1>
-      {(inProgress > 0 || pending > 0 || termsLeft > 0) && (
+      {known && (inProgress > 0 || pending > 0 || termsLeft > 0) && (
         <p className="mt-2 text-fg-muted tabular-nums">
           {inProgress > 0 && `${COPY.credits(inProgress)} in progress. `}
           {pending > 0 && (
@@ -142,24 +149,25 @@ function Ready({
               <Term def={GLOSSARY.pending} />.{" "}
             </>
           )}
-          {graduation && termsLeft > 0 && (
-            <>
-              <Term def={GLOSSARY.termsLeft}>
-                {COPY.termsLeft(termsLeft, graduation)}
-              </Term>
-              .
-            </>
-          )}
+          {graduation &&
+            termsLeft > 0 &&
+            `${COPY.termsLeft(termsLeft, graduation)}.`}
         </p>
       )}
-      <NextStep
-        snapshot={snapshot}
-        catalogue={catalogue}
-        program={program}
-        term={term}
-        passed={passed}
-      />
-      {program && (
+      {catalogue === null ? (
+        <div className={cn(known && "mt-8")}>
+          <CatalogueError />
+        </div>
+      ) : (
+        <NextStep
+          snapshot={snapshot}
+          catalogue={catalogue}
+          program={program}
+          term={term}
+          passed={passed}
+        />
+      )}
+      {catalogue && program && (
         <RequiredCourses
           snapshot={snapshot}
           catalogue={catalogue}

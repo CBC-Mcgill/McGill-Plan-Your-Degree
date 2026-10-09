@@ -316,9 +316,9 @@ export function TermPanel({
       : [];
   const empty = records.length + stage.planned.length + stage.owed.length === 0;
 
-  // The row a move or remove acted on is gone, so keep keyboard focus inside the panel.
+  // The row a move or remove acted on is gone, so keep keyboard focus inside the panel, and follow the course back on Undo.
   function move(value: string, to: Term) {
-    addWithUndo(to, value);
+    addWithUndo(to, value, (from) => onSelect(termKey(from)));
     onSelect(termKey(to));
   }
 

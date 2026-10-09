@@ -19,6 +19,9 @@ const minorTitle = (name: string) =>
       ? name
       : `${name} minor`;
 
+/** "Winter 2027 and Fall 2027", the terms a multi-term course spans. One term reads as itself. */
+const termPair = (...terms: Term[]) => list.format(terms.map(termLabel));
+
 /** Every string the app repeats across screens, worded once. A string used on one screen stays in its component. */
 export const COPY = {
   credits: creditsText,
@@ -38,6 +41,7 @@ export const COPY = {
     `${n} of ${limit} credits planned${n > limit ? ", over your limit" : ""}`,
   termCredits: creditsText,
   term: termLabel,
+  termPair,
   now: "Now",
   plannedFor: (term: Term) => `Planned for ${termLabel(term)}`,
   notOfferedYear: `Not offered in ${meta.catalogueYear}`,
@@ -47,6 +51,7 @@ export const COPY = {
   notOpen: (codes: readonly string[]) =>
     `Not open to students who have taken ${list.format(codes)}`,
   hasConditions: "Has conditions",
+  countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",
   catalogueLink: "McGill catalogue",
   generated: "Read automatically from the catalogue",
@@ -62,10 +67,12 @@ export const COPY = {
   privacy: "Your transcript is read in this browser and never uploaded.",
   warnings: (n: number) => `${n} ${n === 1 ? "warning" : "warnings"}`,
   toast: {
-    added: (code: string, term: Term) => `${code} added to ${termLabel(term)}`,
-    moved: (code: string, term: Term) => `${code} moved to ${termLabel(term)}`,
-    removed: (code: string, term: Term) =>
-      `${code} removed from ${termLabel(term)}`,
+    added: (code: string, ...terms: Term[]) =>
+      `${code} added to ${termPair(...terms)}`,
+    moved: (code: string, ...terms: Term[]) =>
+      `${code} moved to ${termPair(...terms)}`,
+    removed: (code: string, ...terms: Term[]) =>
+      `${code} removed from ${termPair(...terms)}`,
   },
   undo: "Undo",
   advisor: "Advisor preview",

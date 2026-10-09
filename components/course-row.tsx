@@ -25,7 +25,7 @@ export function seasonsOffered(course: CourseSummary): string {
 /**
  * The one course row (44px, grows when the reason wraps): glyph, code, title, reason or meta, credits, action.
  * Code and title link to the course page, and `uncertain` puts the "Has conditions" icon right after the title. The glyph shows only with `showGlyph` (D10), and its tooltip gives the word and `reason`, or `tip`, a reason for the tooltip alone.
- * `reason` and then `meta` sit in one muted column up to 320px wide. `note` is a muted line under the title.
+ * `reason` and then `meta` sit in one muted column up to 320px wide, exactly 320 in a full-width list so every reason starts on one line. `note` is a muted line under the title.
  * `action` appears on row hover and focus (pattern A). Pass `action={null}` to keep its column so rows line up.
  */
 export function CourseRow({
@@ -86,7 +86,7 @@ export function CourseRow({
         {uncertain && <UncertainFlag />}
       </span>
       {(reason || meta) && (
-        <span className="flex max-w-80 flex-none items-start gap-2 text-fg-muted">
+        <span className="flex max-w-80 flex-none items-start gap-2 text-fg-muted @3xl:w-80">
           {reason && <span>{reason}</span>}
           {meta}
         </span>
@@ -105,7 +105,7 @@ export function CourseRow({
 
 /** A course row's box: 44px, the hover and focus tint bleeding 8px past the text. */
 export const ROW =
-  "group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint";
+  "@container group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint";
 /** The glyph, code and title column. The link ends at the title so the "Has conditions" icon can follow it, and its ::after, under the text, keeps the whole column clickable. */
 export const ROW_TITLE =
   "relative isolate flex min-w-0 flex-1 items-start gap-2";

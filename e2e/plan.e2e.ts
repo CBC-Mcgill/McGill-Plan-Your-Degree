@@ -116,6 +116,11 @@ test("a course placed before its prerequisite warns until it is moved later", as
     page.getByRole("heading", { name: `Winter ${year + 1}` }),
   ).toBeFocused();
   await expect(warnings).toHaveCount(0);
+
+  // Undo brings the course back, and the panel follows it.
+  await page.getByRole("button", { name: "Undo" }).click();
+  await expect(page.getByRole("heading", { name: fall })).toBeFocused();
+  await expect(warnings).toContainText("COMP 251 needs COMP 250");
 });
 
 test("the add box highlights the first course it can add and explains the rest", async ({
