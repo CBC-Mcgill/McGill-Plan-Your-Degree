@@ -47,7 +47,7 @@ export function PlannerWindow({ reduce }: { reduce: boolean }) {
 
   return (
     <div ref={ref} className="relative">
-      <div className="relative overflow-hidden rounded-xl bg-page text-[13px] text-fg leading-[18px] shadow-[0_50px_100px_-30px_rgb(3_6_20/0.7),0_0_0_1px_rgb(255_255_255/0.1)]">
+      <div className="relative overflow-hidden rounded-xl bg-page text-[13px] text-fg leading-[18px] shadow-[0_40px_80px_-30px_rgb(23_32_54/0.35),0_0_0_1px_rgb(23_32_54/0.08)]">
         <Chrome />
         <motion.div
           initial={false}
