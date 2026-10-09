@@ -10,6 +10,7 @@ import {
 import { forgetRecentCourses } from "../recent-courses.ts";
 import type { Transcript, TranscriptCourse } from "../transcript/parse.ts";
 import { migrateProfile, PROFILE_VERSION } from "./file.ts";
+import { PROFILE_STORAGE_KEY } from "./first-paint.ts";
 import {
   type CourseRecord,
   compareTerms,
@@ -21,8 +22,6 @@ import {
   type Term,
   termKey,
 } from "./types.ts";
-
-export const PROFILE_STORAGE_KEY = "plan-your-degree:profile";
 
 // An earlier version stored its own state under this key, so clear it once.
 try {

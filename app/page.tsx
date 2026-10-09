@@ -1,5 +1,6 @@
 import { Home } from "@/components/home/home";
+import { githubStars } from "@/lib/github";
 
-export default function HomePage() {
-  return <Home />;
+export default async function HomePage() {
+  return <Home stars={await githubStars()} />;
 }
