@@ -32,6 +32,7 @@ export function AddCourse({
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
+  const [notice, setNotice] = useState("");
   const text = query.trim();
   const results = text ? searchCourses(index, text).slice(0, MAX_RESULTS) : [];
   const label = termLabel(term);
@@ -47,6 +48,9 @@ export function AddCourse({
     return {
       status,
       disabled: done || here,
+      reason: here
+        ? `is already planned in ${label}`
+        : `is already ${STATUS[status].label.toLowerCase()}`,
       note: done
         ? STATUS[status].label
         : here
@@ -58,7 +62,12 @@ export function AddCourse({
   };
 
   function commit(course: CourseSummary | undefined) {
-    if (!course || stateOf(course).disabled) return;
+    if (!course) return;
+    const state = stateOf(course);
+    if (state.disabled) {
+      setNotice(`${course.code} ${state.reason}`);
+      return;
+    }
     addWithUndo(term, course.code);
     setQuery("");
     setActive(0);
@@ -66,6 +75,7 @@ export function AddCourse({
   }
 
   const showList = open && text.length > 0;
+  const showResults = showList && results.length > 0;
 
   return (
     <div ref={wrap} className="relative">
@@ -79,10 +89,10 @@ export function AddCourse({
           type="text"
           role="combobox"
           aria-label={`Add a course to ${label}`}
-          aria-expanded={showList}
-          aria-controls={showList ? listId : undefined}
+          aria-expanded={showResults}
+          aria-controls={showResults ? listId : undefined}
           aria-activedescendant={
-            showList && results.length > 0 ? `${listId}-${active}` : undefined
+            showResults ? `${listId}-${active}` : undefined
           }
           aria-autocomplete="list"
           autoComplete="off"
@@ -96,6 +106,7 @@ export function AddCourse({
           onChange={(event) => {
             setQuery(event.target.value);
             setActive(0);
+            setNotice("");
             setOpen(true);
           }}
           onKeyDown={(event) => {
@@ -103,11 +114,17 @@ export function AddCourse({
               event.preventDefault();
               setOpen(true);
               const step = event.key === "ArrowDown" ? 1 : -1;
-              setActive((value) =>
-                results.length
-                  ? (value + step + results.length) % results.length
-                  : 0,
-              );
+              setNotice("");
+              setActive((value) => {
+                for (let i = 1; i <= results.length; i++) {
+                  const next =
+                    (((value + step * i) % results.length) + results.length) %
+                    results.length;
+                  const course = results[next];
+                  if (course && !stateOf(course).disabled) return next;
+                }
+                return value;
+              });
             } else if (event.key === "Enter") {
               event.preventDefault();
               commit(results[active]);
@@ -120,49 +137,56 @@ export function AddCourse({
         />
       </div>
       {showList && (
-        <div
-          id={listId}
-          role="listbox"
-          aria-label="Search results"
-          onMouseDown={(event) => event.preventDefault()}
-          className="absolute inset-x-0 top-full z-20 mt-1 rounded-lg bg-card p-1 shadow-float"
-        >
-          {results.length === 0 && (
-            <p className="px-2 py-2.5 text-[13px] text-muted-foreground">
-              No courses match "{text}"
-            </p>
+        <div className="absolute inset-x-0 top-full z-20 mt-1 rounded-lg bg-card p-1 shadow-float">
+          {showResults && (
+            <div
+              id={listId}
+              role="listbox"
+              aria-label="Search results"
+              onMouseDown={(event) => event.preventDefault()}
+            >
+              {results.map((course, i) => {
+                const state = stateOf(course);
+                return (
+                  <button
+                    key={course.code}
+                    type="button"
+                    role="option"
+                    id={`${listId}-${i}`}
+                    aria-selected={i === active}
+                    aria-disabled={state.disabled}
+                    onMouseMove={() => setActive(i)}
+                    onClick={() => commit(course)}
+                    className={cn(
+                      "flex h-10 w-full items-center gap-2.5 rounded-md px-2 text-left",
+                      i === active && "bg-subtle",
+                      state.disabled && "cursor-default text-muted-foreground",
+                    )}
+                  >
+                    <StatusIcon status={state.status} />
+                    <span className="w-[76px] shrink-0 whitespace-nowrap font-semibold tabular-nums">
+                      {course.code}
+                    </span>
+                    <span
+                      className="min-w-0 flex-1 truncate"
+                      title={course.title}
+                    >
+                      {course.title}
+                    </span>
+                    <span className="shrink-0 text-muted-foreground text-xs tabular-nums">
+                      {state.note || `${course.credits ?? "?"} cr`}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           )}
-          {results.map((course, i) => {
-            const state = stateOf(course);
-            return (
-              <button
-                key={course.code}
-                type="button"
-                role="option"
-                id={`${listId}-${i}`}
-                aria-selected={i === active}
-                aria-disabled={state.disabled}
-                onMouseMove={() => setActive(i)}
-                onClick={() => commit(course)}
-                className={cn(
-                  "flex h-10 w-full items-center gap-2.5 rounded-md px-2 text-left",
-                  i === active && "bg-subtle",
-                  state.disabled && "cursor-default text-muted-foreground",
-                )}
-              >
-                <StatusIcon status={state.status} />
-                <span className="w-[76px] shrink-0 whitespace-nowrap font-semibold tabular-nums">
-                  {course.code}
-                </span>
-                <span className="min-w-0 flex-1 truncate" title={course.title}>
-                  {course.title}
-                </span>
-                <span className="shrink-0 text-muted-foreground text-xs tabular-nums">
-                  {state.note || `${course.credits ?? "?"} cr`}
-                </span>
-              </button>
-            );
-          })}
+          <p
+            role="status"
+            className="px-2 py-2.5 text-[13px] text-muted-foreground empty:hidden"
+          >
+            {showResults ? notice : `No courses match "${text}"`}
+          </p>
         </div>
       )}
     </div>
