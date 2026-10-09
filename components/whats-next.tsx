@@ -122,6 +122,7 @@ export function WhatsNext() {
       <NoProfile
         title="See what you can take next"
         lede="Import your unofficial transcript to see the courses you can take next term and what you still need to graduate."
+        sample="next"
       />
     );
   }

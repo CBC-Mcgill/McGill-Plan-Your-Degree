@@ -97,13 +97,15 @@ test("a returning student sees their home and can add a required course", async 
     main.getByRole("link", { name: "Set graduation term" }),
   ).toHaveAttribute("href", "/profile#graduation");
 
-  const required = main.getByRole("region", {
-    name: "Required courses open in Winter 2027",
-  });
-  await required.getByRole("button", { name: /^Add / }).first().click();
-  await expect(required.getByRole("button", { name: /^Remove / })).toHaveCount(
-    1,
-  );
-  await expect(required.getByText("Planned", { exact: true })).toBeVisible();
+  await expect(
+    main
+      .getByRole("region", { name: "Requirements" })
+      .getByRole("heading", { name: "Required courses" }),
+  ).toBeVisible();
+
+  const next = main.getByRole("region", { name: "Winter 2027" });
+  await next.getByRole("button", { name: /^Add / }).first().click();
+  await expect(next.getByRole("button", { name: /^Remove / })).toHaveCount(1);
+  await expect(next.getByRole("img", { name: "Planned" })).toHaveCount(1);
   await expectNoHorizontalScroll(page);
 });
