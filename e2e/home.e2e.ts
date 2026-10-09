@@ -28,6 +28,7 @@ test("nav links reach their pages", async ({ page }) => {
   for (const [name, path] of [
     ["Browse courses", "/courses"],
     ["What's next", "/next"],
+    ["Requirements", "/requirements"],
     ["Planner", "/plan"],
     ["Profile", "/profile"],
   ] as const) {

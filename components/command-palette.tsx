@@ -6,6 +6,7 @@ import {
   Compass,
   FileUp,
   Library,
+  ListChecks,
   type LucideIcon,
   Plus,
   Search,
@@ -87,6 +88,12 @@ const PAGES: {
 }[] = [
   { label: "Browse courses", href: "/courses", icon: Library },
   { label: "What's next", href: "/next", icon: Compass },
+  {
+    label: "Requirements",
+    href: "/requirements",
+    icon: ListChecks,
+    aliases: "where courses count degree audit",
+  },
   { label: "Planner", href: "/plan", icon: CalendarRange },
   {
     label: "Profile",

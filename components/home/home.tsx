@@ -438,7 +438,7 @@ function NextUp({
                     <Link
                       href={`/courses/${courseSlug(course.code)}`}
                       prefetch={false}
-                      className="w-[76px] shrink-0 font-semibold tabular-nums hover:underline"
+                      className="w-[84px] shrink-0 whitespace-nowrap font-semibold tabular-nums hover:underline"
                     >
                       {course.code}
                     </Link>

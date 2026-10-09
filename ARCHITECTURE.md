@@ -230,7 +230,7 @@ Styling is Tailwind CSS v4, loaded through the Turbopack rule in the same file.
 | `/` | [app/page.tsx](app/page.tsx) | A server page holding the client `Home`: a landing page for visitors and a dashboard for students with a profile. |
 | `/courses` | [app/courses/page.tsx](app/courses/page.tsx) | A server page holding the client `CourseBrowser`, which keeps its whole query in the URL. |
 | `/courses/[slug]` | [app/courses/[slug]/page.tsx](app/courses/[slug]/page.tsx) | A server component. The text, requirements and unlock list are the same for everyone, and the student-specific parts are client components. |
-| `/next`, `/plan`, `/profile` | [app/next/](app/next/page.tsx), [app/plan/](app/plan/page.tsx), [app/profile/](app/profile/page.tsx) | Server pages holding the client `WhatsNext`, `Planner` and `ProfileView` (which hosts the import flow). |
+| `/next`, `/requirements`, `/plan`, `/profile` | [app/next/](app/next/page.tsx), [app/requirements/](app/requirements/page.tsx), [app/plan/](app/plan/page.tsx), [app/profile/](app/profile/page.tsx) | Server pages holding the client `WhatsNext`, `Requirements`, `Planner` and `ProfileView` (which hosts the import flow). |
 | `/advisor` | [app/advisor/page.tsx](app/advisor/page.tsx) | A preview of the future AI advisor. It calls no AI. |
 | `/catalogue.json`, `/programs.json`, `/programs/[id]` | [app/catalogue.json/](app/catalogue.json/route.ts), [app/programs.json/](app/programs.json/route.ts), [app/programs/[id]/](app/programs/[id]/route.ts) | Static route handlers, described below. |
 
@@ -267,7 +267,7 @@ Program data reaches the browser one program at a time.
 - [lib/programs/client.ts](lib/programs/client.ts) holds a module cache.
   `useProgramIndex` fetches `/programs.json` the first time a component asks, and `useProgram(id)` fetches `/programs/<id>` once.
   `useProgram` returns `undefined` while loading and `null` for an empty id, an unknown id or a failed fetch.
-- The course browser, What's next, the home dashboard, the planner and the profile call `useProgram`.
+- The course browser, What's next, Requirements, the home dashboard, the planner and the profile call `useProgram`.
   The program picker and the import review call `useProgramIndex`.
 - [lib/programs/index.ts](lib/programs/index.ts) still covers only the five hand-written programs, in `PROGRAMS` and `getProgram`.
   Code that cannot wait for a fetch uses it, such as the profile migration in [lib/profile/file.ts](lib/profile/file.ts) and the schema test.
@@ -338,6 +338,7 @@ Functions take the catalogue, a snapshot and a program as arguments and return d
 - **[progress.ts](lib/engine/progress.ts)** allocates the student's courses to program requirements.
   `programProgress` fills required groups first, credits foundation groups for a CEGEP entry, then fills complementary groups in file order.
   A course counts toward one group only and rule caps are respected.
+  Each group and rule lists the courses it claimed with their credits, and `unclaimed` holds the counted courses no group took.
   An exemption satisfies a required course but adds no credit, and an `unparsed` rule is never satisfied, so its group never is either.
 - **[next.ts](lib/engine/next.ts) and [next-view.ts](lib/engine/next-view.ts)** build What's next for one term.
   `whatsNext` lists the courses the student can take that term as required, on an open complementary list, or other.
@@ -357,7 +358,7 @@ Functions take the catalogue, a snapshot and a program as arguments and return d
 [lib/profile/use-snapshot.ts](lib/profile/use-snapshot.ts) builds the snapshot once per change to the records, the plan or the entry.
 It returns `undefined` while the profile loads and `null` when the student has not started one.
 Pages combine it with `useCatalogue` and `useProgram`.
-The course browser and command palette call `courseStatus`, What's next calls `nextView`, and the planner calls `planWarnings`, `buildStages` and `programProgress`.
+The course browser and command palette call `courseStatus`, What's next calls `nextView`, Requirements and the planner call `programProgress`, and the planner also calls `planWarnings` and `buildStages`.
 The client runtime diagram in [docs/architecture-diagrams.md](docs/architecture-diagrams.md) shows which screen calls what.
 
 **An example: ECSE 458.**

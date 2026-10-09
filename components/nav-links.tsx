@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 const links: { href: string; label: string; soon?: boolean }[] = [
   { href: "/courses", label: "Browse courses" },
   { href: "/next", label: "What's next" },
+  { href: "/requirements", label: "Requirements" },
   { href: "/plan", label: "Planner" },
   { href: "/profile", label: "Profile" },
   { href: "/advisor", label: "Advisor", soon: true },

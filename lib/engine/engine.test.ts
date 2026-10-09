@@ -209,6 +209,42 @@ test("program progress counts exemptions as satisfied but not as credit", () => 
   ).toBe(true);
 });
 
+test("program progress lists the courses each group and rule claimed, and the ones nobody did", () => {
+  const [required] = tiny.groups;
+  const program: Program = {
+    ...tiny,
+    groups: [
+      ...(required ? [required] : []),
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "Theory", courses: ["COMP 250", "COMP 330"] },
+          {
+            title: "COMP 300 and up",
+            match: { subjects: ["COMP"], minLevel: 300 },
+          },
+        ],
+      },
+    ],
+  };
+  const progress = programProgress(program, snapshot, catalogue, {
+    inProgress: true,
+  });
+  const [first, second] = progress.groups;
+  expect(first?.courses).toEqual([
+    { code: "COMP 250", credits: 3 },
+    { code: "MATH 240", credits: 0 },
+  ]);
+  expect(second?.courses).toEqual([{ code: "COMP 330", credits: 3 }]);
+  expect(second?.rules.map((rule) => rule.courses)).toEqual([
+    [{ code: "COMP 330", credits: 3 }],
+    [{ code: "COMP 330", credits: 3 }],
+  ]);
+  expect(progress.unclaimed).toEqual([{ code: "COMP 202", credits: 3 }]);
+});
+
 test("an unparsed rule matches no course and caps nothing", () => {
   const rule = {
     title: "9 credits from Groups A and B",
