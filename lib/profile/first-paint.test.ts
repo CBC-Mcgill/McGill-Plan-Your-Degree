@@ -2,17 +2,15 @@ import { expect, test } from "vitest";
 import { FIRST_PAINT, PROFILE_STORAGE_KEY } from "./first-paint.ts";
 import { isStarted } from "./started.ts";
 
-const run = (stored: unknown, pathname = "/") => {
+const run = (stored: unknown) => {
   const dataset: Record<string, string> = {};
   const localStorage = {
     getItem: (key: string) =>
       key === PROFILE_STORAGE_KEY && stored ? JSON.stringify(stored) : null,
   };
-  new Function("localStorage", "document", "location", FIRST_PAINT)(
-    localStorage,
-    { documentElement: { dataset } },
-    { pathname },
-  );
+  new Function("localStorage", "document", FIRST_PAINT)(localStorage, {
+    documentElement: { dataset },
+  });
   return dataset;
 };
 
@@ -35,6 +33,5 @@ test("the first-paint script agrees with isStarted", () => {
   for (const state of states) {
     expect("returning" in run({ state, version: 4 })).toBe(isStarted(state));
   }
-  expect(run(null)).toEqual({ nav: "dark" });
-  expect(run(null, "/courses")).toEqual({});
+  expect(run(null)).toEqual({});
 });

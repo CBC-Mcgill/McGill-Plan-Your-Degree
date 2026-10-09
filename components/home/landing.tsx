@@ -12,30 +12,25 @@ import { startProfile } from "@/lib/profile/started";
 import { useReduce } from "./landing/parts";
 import { Story } from "./landing/story";
 import { PlannerWindow } from "./landing/window";
-import { useDarkNav } from "./use-dark-nav";
 
-const INK = "bg-[#121a2d] text-white";
-
-/** The calls to action as glass on the ink, see `.glass` and `.glass-red` in globals.css. */
-const GLASS_BUTTON =
-  "glass h-12 rounded-[10px] px-6 text-[15px] text-white focus-visible:outline-white";
+/** The calls to action as glass on the paper, see `.glass` and `.glass-red` in globals.css. */
+const GLASS_BUTTON = "glass h-12 rounded-[10px] px-6 text-[15px] text-fg";
 
 /** The landing for first-time visitors: a centered headline over the planner in 3D that flattens as you scroll, a pinned scroll story, then one last call to action. */
 export function Landing({ stars }: { stars: number | null }) {
   const reduce = useReduce();
   return (
-    <>
+    <div className="paper">
       <Hero reduce={reduce} stars={stars} />
       <Story reduce={reduce} />
       <FinalCall stars={stars} />
-    </>
+    </div>
   );
 }
 
 function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
   const hero = useRef<HTMLElement>(null);
   const stage = useRef<HTMLDivElement>(null);
-  useDarkNav(hero);
   const { scrollYProgress } = useScroll({
     target: stage,
     offset: ["start start", "end start"],
@@ -49,8 +44,7 @@ function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
   const actionsOpacity = useTransform(scrollY, [180, 340], [1, 0]);
 
   return (
-    <div ref={stage} className={`relative -mt-16 overflow-hidden pt-16 ${INK}`}>
-      <Glow />
+    <div ref={stage} className="relative overflow-hidden">
       <section
         ref={hero}
         className="relative z-10 px-8 pt-10 pb-10 text-center"
@@ -60,13 +54,13 @@ function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
             Plan your whole <span className="mcgill-flow">McGill</span> degree
             in one tab
           </h1>
-          <p className="mt-5 text-lg text-white/72">
+          <p className="mt-5 text-fg-muted text-lg">
             No spreadsheet, no notes doc, no dozen open tabs.
           </p>
         </motion.div>
         <motion.div style={{ opacity: actionsOpacity }}>
           <div className="mt-7 flex justify-center gap-3">
-            <Button asChild className={`glass-red ${GLASS_BUTTON}`}>
+            <Button asChild className={`glass-red ${GLASS_BUTTON} text-white`}>
               <Link href="/profile">{COPY.importTranscript}</Link>
             </Button>
             <Button
@@ -88,7 +82,7 @@ function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
         </p>
         <div
           aria-hidden
-          className="absolute inset-x-0 top-[30%] bottom-0 bg-[radial-gradient(closest-side_at_36%_62%,rgb(218_26_46/0.5),transparent),radial-gradient(closest-side_at_64%_56%,rgb(139_124_235/0.55),transparent)]"
+          className="absolute inset-x-0 top-[30%] bottom-0 bg-[radial-gradient(closest-side_at_36%_62%,rgb(218_26_46/0.14),transparent),radial-gradient(closest-side_at_64%_56%,rgb(139_124_235/0.16),transparent)]"
         />
         <motion.div
           aria-hidden
@@ -104,7 +98,7 @@ function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
 
 /** The GitHub link as a glass button: the repo's mark and name, then its stars and an arrow. */
 const GITHUB_LINK =
-  "glass flex h-14 items-center gap-3 rounded-[12px] pr-3.5 pl-4 focus-visible:outline-white";
+  "glass flex h-14 items-center gap-3 rounded-[12px] pr-3.5 pl-4";
 
 /** Three facts under the calls to action: free and private as plain lines, open source as a link to the repo with its stars. */
 function Facts({
@@ -148,14 +142,14 @@ function Facts({
             title="Open source"
             note="Code on GitHub"
           />
-          <span className="h-8 w-px bg-white/15" />
+          <span className="h-8 w-px bg-line" />
           {count !== null && (
             <span className="flex items-center gap-1.5 font-semibold tabular-nums">
               <Star className="size-4" strokeWidth={2} />
               {count}
             </span>
           )}
-          <ArrowUpRight className="size-4 text-white/72" strokeWidth={2} />
+          <ArrowUpRight className="size-4 text-fg-muted" strokeWidth={2} />
         </a>
       </li>
     </ul>
@@ -173,12 +167,12 @@ function FactText({
 }) {
   return (
     <>
-      <span className="shrink-0 text-white/85 [&_svg]:size-5">{icon}</span>
+      <span className="shrink-0 text-fg-muted [&_svg]:size-5">{icon}</span>
       <span>
         <span className="block font-semibold text-[14px] leading-[18px]">
           {title}
         </span>
-        <span className="block text-[12px] text-white/68 leading-4">
+        <span className="block text-[12px] text-fg-muted leading-4">
           {note}
         </span>
       </span>
@@ -195,31 +189,19 @@ function GitHubMark() {
   );
 }
 
-/** Soft red light on the ink above the headline. */
-function Glow() {
-  return (
-    <div
-      aria-hidden
-      className="pointer-events-none absolute top-0 left-1/2 h-[30rem] w-[60rem] -translate-x-1/2 bg-[radial-gradient(closest-side,rgb(218_26_46/0.2),transparent)]"
-    />
-  );
-}
-
 function FinalCall({ stars }: { stars: number | null }) {
   return (
-    <section
-      className={`relative overflow-hidden px-8 py-28 text-center ${INK}`}
-    >
+    <section className="relative overflow-hidden px-8 py-28 text-center">
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[28rem] w-[64rem] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side_at_40%_50%,rgb(218_26_46/0.22),transparent),radial-gradient(closest-side_at_62%_50%,rgb(139_124_235/0.22),transparent)]"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[28rem] w-[64rem] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side_at_40%_50%,rgb(218_26_46/0.08),transparent),radial-gradient(closest-side_at_62%_50%,rgb(139_124_235/0.1),transparent)]"
       />
       <div className="relative">
         <h2 className="font-display font-extrabold text-[44px] leading-[50px] tracking-[-0.025em] [font-stretch:112.5%]">
           Start mapping your degree
         </h2>
         <div className="mt-8 flex justify-center">
-          <Button asChild className={`glass-red ${GLASS_BUTTON}`}>
+          <Button asChild className={`glass-red ${GLASS_BUTTON} text-white`}>
             <Link href="/profile">{COPY.importTranscript}</Link>
           </Button>
         </div>

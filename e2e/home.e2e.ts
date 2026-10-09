@@ -22,13 +22,11 @@ test("landing renders its primary action", async ({ page }) => {
     main.getByRole("link", { name: "Import your transcript" }).first(),
   ).toHaveAttribute("href", "/profile");
   await expectNoHorizontalScroll(page);
-  await expect(page.locator("html")).toHaveAttribute("data-nav", "dark");
 
   await main
     .getByRole("button", { name: "Start without a transcript" })
     .first()
     .click();
-  await expect(page.locator("html")).not.toHaveAttribute("data-nav");
   await expect(
     main.getByRole("heading", { level: 1, name: "0 credits earned" }),
   ).toBeVisible();

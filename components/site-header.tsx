@@ -4,7 +4,7 @@ import { NavLinks } from "@/components/nav-links";
 /** The sticky top bar: the logo and the planning pages, search centered between them and Profile on the right. */
 export function SiteHeader() {
   return (
-    <header className="site-header sticky top-0 z-40 bg-bg shadow-[0_1px_0_var(--color-line)]">
+    <header className="sticky top-0 z-40 bg-bg shadow-[0_1px_0_var(--color-line)]">
       <div className="mx-auto flex h-16 max-w-page items-center gap-8 px-8">
         <Link
           href="/"
