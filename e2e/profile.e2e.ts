@@ -17,8 +17,8 @@ test("importing a transcript saves its courses", async ({ page }) => {
   await page.locator('input[accept*="pdf"]').setInputFiles(fixture);
 
   await expect(page.getByRole("heading", { name: "9 courses" })).toBeVisible();
-  await expect(page.getByLabel("Program")).toHaveValue(
-    "computer-science-major-bsc",
+  await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue(
+    "Computer Science Major (B.Sc.)",
   );
   await expect(page.getByLabel("Start term")).toHaveValue(/.+/);
   await page.getByRole("button", { name: "Save to my profile" }).click();
@@ -30,8 +30,29 @@ test("importing a transcript saves its courses", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByText("COMP 250", { exact: true })).toBeVisible();
   await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue(
-    "computer-science-major-bsc",
+    "Computer Science Major (B.Sc.)",
   );
+});
+
+test("a program read from the catalogue can be found and used", async ({
+  page,
+}) => {
+  await page.goto("/profile");
+  await page
+    .getByRole("button", { name: "Start without a transcript" })
+    .click();
+  const program = page.getByRole("combobox", { name: "Program" });
+  await program.fill("psychology major bsc");
+  await expect(page.getByRole("group", { name: "Science" })).toBeVisible();
+  await program.press("Enter");
+  await expect(program).toHaveValue("Psychology Major (B.Sc.)");
+  await expect(page.getByText("read automatically")).toBeVisible();
+
+  await page.getByRole("link", { name: "See what's next" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Psychology Major", level: 2 }),
+  ).toBeVisible();
+  await expect(page.getByText("Check this requirement").first()).toBeVisible();
 });
 
 test("a file that is not a PDF shows an error", async ({ page }) => {

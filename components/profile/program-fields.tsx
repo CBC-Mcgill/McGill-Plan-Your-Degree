@@ -1,13 +1,11 @@
-import {
-  EntrySelect,
-  ProgramSelect,
-  TermSelect,
-} from "@/components/profile/selects";
+import { GeneratedBanner } from "@/components/generated-banner";
+import { ProgramCombobox } from "@/components/profile/program-combobox";
+import { EntrySelect, TermSelect } from "@/components/profile/selects";
 import { TextField } from "@/components/ui/field";
 import { degreeCredits } from "@/lib/engine/credits";
 import { currentTerm } from "@/lib/profile/terms";
 import type { EntryRoute, Term } from "@/lib/profile/types";
-import { getProgram } from "@/lib/programs";
+import { useProgram } from "@/lib/programs/client";
 
 export interface ProgramValues {
   programId: string | null;
@@ -27,11 +25,8 @@ export function ProgramFields({
   onChange: (patch: Partial<ProgramValues>) => void;
 }) {
   // Null credits mean "use the default", so the field only holds what the student typed.
-  const defaultCredits = degreeCredits(
-    null,
-    value.entry,
-    (value.programId && getProgram(value.programId)) || null,
-  );
+  const program = useProgram(value.programId);
+  const defaultCredits = degreeCredits(null, value.entry, program ?? null);
   // A number that only repeats the old default would be wrong for the new program or entry.
   const changeProgramOrEntry = (patch: Partial<ProgramValues>) =>
     onChange(
@@ -42,11 +37,12 @@ export function ProgramFields({
 
   return (
     <div className="grid grid-cols-2 items-start gap-4">
-      <ProgramSelect
+      <ProgramCombobox
         className="col-span-2"
         value={value.programId}
         onChange={(programId) => changeProgramOrEntry({ programId })}
       />
+      {program && <GeneratedBanner program={program} className="col-span-2" />}
       <TermSelect
         label="Start term"
         value={value.startTerm}
@@ -85,7 +81,11 @@ export function ProgramFields({
         min={1}
         max={200}
         placeholder={
-          defaultCredits === null ? "Optional" : String(defaultCredits)
+          program === undefined
+            ? ""
+            : defaultCredits === null
+              ? "Optional"
+              : String(defaultCredits)
         }
         hint={
           value.creditsRequired === null && defaultCredits !== null

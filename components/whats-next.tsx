@@ -3,7 +3,9 @@
 import { cn } from "cn";
 import {
   ChevronDown,
+  CircleAlert,
   Compass,
+  ExternalLink,
   FileUp,
   Info,
   Plus,
@@ -15,6 +17,7 @@ import Link from "next/link";
 import { type ReactNode, useId, useMemo, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { seasonsOffered } from "@/components/course-row";
+import { GeneratedBanner } from "@/components/generated-banner";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon, UncertainFlag } from "@/components/status";
 import { Badge } from "@/components/ui/badge";
@@ -46,7 +49,7 @@ import { useProfileStore } from "@/lib/profile/store";
 import { planTermOptions, termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { getProgram } from "@/lib/programs";
+import { useProgram } from "@/lib/programs/client";
 import type { Program } from "@/lib/programs/types";
 
 const TERMS_SHOWN = 4;
@@ -155,13 +158,14 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
     [plan],
   );
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
-  const program = programId ? (getProgram(programId) ?? null) : null;
+  const loaded = useProgram(programId);
+  const program = loaded ?? null;
   const view = useMemo(
     () =>
-      courses && selected
+      courses && selected && loaded !== undefined
         ? nextView(courses, unplanned, selected, program, entry)
         : null,
-    [unplanned, courses, selected, program, entry],
+    [unplanned, courses, selected, loaded, program, entry],
   );
   const background = useMemo((): Background => {
     const required = degreeCredits(creditsRequired, entry, program);
@@ -306,6 +310,7 @@ function Content({
           <ComplementaryGroup
             key={group.title}
             group={group}
+            source={program?.source}
             collapsed={collapsed.has(group.title)}
             onToggle={() => toggle(group.title)}
             context={context}
@@ -441,6 +446,7 @@ function ProgramSummary({
           ))}
         </ul>
       )}
+      <GeneratedBanner program={program} />
     </section>
   );
 }
@@ -460,6 +466,7 @@ function Stat({ value, caption }: { value: string; caption: string }) {
 function Group({
   title,
   fraction,
+  checks = 0,
   trailing,
   collapsed,
   onToggle,
@@ -467,6 +474,8 @@ function Group({
 }: {
   title: string;
   fraction?: { done: number; of: number };
+  /** Rules in the group that need a manual check. */
+  checks?: number;
   trailing?: string;
   collapsed: boolean;
   onToggle: () => void;
@@ -503,6 +512,12 @@ function Group({
             </span>
           </button>
         </h2>
+        {checks > 0 && (
+          <Badge tone="warn">
+            <CircleAlert aria-hidden />
+            {checks === 1 ? "1 rule to check" : `${checks} rules to check`}
+          </Badge>
+        )}
         {fraction && (
           <>
             <span className="text-[13px] text-muted-foreground tabular-nums">
@@ -642,6 +657,43 @@ function Row({
   );
 }
 
+/** A rule the crawler could not read. It shows the catalogue text and links to the program page, and never counts as done. */
+function CheckRow({
+  text,
+  source,
+}: {
+  text: string;
+  source: string | undefined;
+}) {
+  return (
+    <li className="flex min-h-11 items-center gap-3 border-border border-t py-2 pr-3 pl-4">
+      <CircleAlert
+        aria-hidden
+        strokeWidth={2}
+        className="size-4 shrink-0 text-warn"
+      />
+      <div className="min-w-0 flex-1">
+        <p className="font-semibold">Check this requirement</p>
+        <p
+          className="line-clamp-2 text-[13px] text-muted-foreground leading-4"
+          title={text}
+        >
+          {text}
+        </p>
+      </div>
+      {source && (
+        <Button asChild variant="ghost" size="sm" className="shrink-0">
+          <a href={source} target="_blank" rel="noopener noreferrer">
+            Program page
+            <ExternalLink aria-hidden />
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </Button>
+      )}
+    </li>
+  );
+}
+
 function ShowMore({
   hidden,
   step,
@@ -662,11 +714,13 @@ function ShowMore({
 
 function ComplementaryGroup({
   group,
+  source,
   collapsed,
   onToggle,
   context,
 }: {
   group: OpenGroup;
+  source: string | undefined;
   collapsed: boolean;
   onToggle: () => void;
   context: Context;
@@ -674,10 +728,19 @@ function ComplementaryGroup({
   return (
     <Group
       title={group.title}
-      fraction={{ done: group.creditsDone, of: group.credits }}
+      fraction={
+        group.counted
+          ? { done: group.creditsDone, of: group.credits }
+          : undefined
+      }
+      checks={group.checks.length}
       collapsed={collapsed}
       onToggle={onToggle}
     >
+      {group.checks.map((text, i) => (
+        // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share the same text and the list never reorders
+        <CheckRow key={i} text={text} source={source} />
+      ))}
       {group.buckets.map((bucket) => (
         <Bucket
           key={bucket.title}

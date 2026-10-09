@@ -74,3 +74,9 @@ export interface Program {
   /** Written by the program crawler rather than by hand. */
   generated?: true;
 }
+
+/** One line of the program list: enough to search and to show, without the requirements. */
+export type ProgramSummary = Pick<
+  Program,
+  "id" | "name" | "degree" | "faculty"
+>;

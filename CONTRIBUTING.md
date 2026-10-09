@@ -62,7 +62,10 @@ Prerequisite text is parsed into AND/OR trees by `crawler/prereq.ts`.
 
 If the text has conditions the tree cannot express, such as instructor permission, the course stays `unparsed` and the UI shows the raw text.
 
-## Add a program
+## Add or fix a program
+
+The crawler already writes every undergraduate program, so each one is in the app.
+A file in `data/programs/` replaces the crawled file with the same id, which is how to fix a rule the crawler got wrong or could not read.
 
 1. Copy a file in `data/programs/` and rename it to the new program id, like `computer-science-major-bsc.json`.
 2. Fill it in from the program page in the course catalogue, following `lib/programs/types.ts`.

@@ -3,7 +3,7 @@ import computerEngineering from "../../data/programs/computer-engineering-beng.j
 import computerScienceHonours from "../../data/programs/computer-science-honours-bsc.json";
 import computerScienceMajor from "../../data/programs/computer-science-major-bsc.json";
 import softwareEngineeringMajor from "../../data/programs/software-engineering-major-bsc.json";
-import type { Program } from "./types.ts";
+import type { Program, ProgramSummary } from "./types.ts";
 
 export const PROGRAMS = [
   computerScienceMajor,
@@ -13,6 +13,7 @@ export const PROGRAMS = [
   computerEngineering,
 ] as Program[];
 
+/** Only the hand-written programs, for code that cannot wait on a fetch. Components load any program with `useProgram`. */
 export function getProgram(id: string): Program | undefined {
   return PROGRAMS.find((program) => program.id === id);
 }
@@ -29,17 +30,70 @@ const GUESSES: [degree: string, line: RegExp, program: Program][] = [
   [BENG, /^computer engineering$/, computerEngineering as Program],
 ];
 
-/** Maps the degree and program lines of a transcript to a program id, or null when none or several fit. */
+/** The transcript's degree mapped to the letters of the catalogue's degree, such as "bsc" for B.Sc. */
+const DEGREE_LETTERS: Record<string, string> = {
+  "bachelor of arts": "ba",
+  "bachelor of arts and science": "basc",
+  "bachelor of commerce": "bcom",
+  "bachelor of engineering": "beng",
+  "bachelor of music": "bmus",
+  "bachelor of science": "bsc",
+  "bachelor of social work": "bsw",
+  "bachelor of theology": "bth",
+};
+
+const KINDS = /\b(major|minor|honours|concentration|joint|component)\b/g;
+
+/** "Major Computer Science" and "Computer Science Major" both become the kind "major" and the name "computer science". */
+function kindAndName(text: string): [kind: string, name: string] {
+  const lower = text.toLowerCase().replace(/&/g, " and ");
+  const kind = [...new Set(lower.match(KINDS))].sort().join(" ");
+  const name = lower
+    .replace(KINDS, " ")
+    .replace(/[^a-z0-9 ]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .join(" ");
+  return [kind, name];
+}
+
+function guessFromIndex(
+  degree: string,
+  lines: string[],
+  index: readonly ProgramSummary[],
+): string | null {
+  const letters = DEGREE_LETTERS[degree];
+  if (!letters) return null;
+  const wanted = lines.map(kindAndName);
+  const fits = index.filter(
+    (program) =>
+      program.degree
+        .toLowerCase()
+        .split(/\s+or\s+/)
+        .some((d) => d.replace(/[^a-z]/g, "") === letters) &&
+      wanted.some(([kind, name]) => {
+        const [programKind, programName] = kindAndName(program.name);
+        return kind === programKind && name === programName;
+      }),
+  );
+  return fits.length === 1 ? (fits[0]?.id ?? null) : null;
+}
+
+/** Maps the degree and program lines of a transcript to a program id, or null when none or several fit. The five hand-written programs match by exact line, then `index` is searched by degree and name. */
 export function guessProgram(
   degree: string | null,
   programs: string[],
+  index: readonly ProgramSummary[] = [],
 ): string | null {
   const lines = programs.map((line) => line.trim().toLowerCase());
+  const wantedDegree = degree?.trim().toLowerCase() ?? "";
   const ids = new Set(
     GUESSES.filter(
-      ([d, line]) =>
-        d === degree?.trim().toLowerCase() && lines.some((l) => line.test(l)),
+      ([d, line]) => d === wantedDegree && lines.some((l) => line.test(l)),
     ).map(([, , program]) => program.id),
   );
-  return ids.size === 1 ? ([...ids][0] ?? null) : null;
+  const [exact] = ids;
+  return ids.size === 1 && exact
+    ? exact
+    : guessFromIndex(wantedDegree, lines, index);
 }

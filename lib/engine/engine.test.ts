@@ -197,6 +197,32 @@ test("an unparsed rule matches no course and caps nothing", () => {
   ).toBe(true);
 });
 
+test("a group with an unparsed rule is never satisfied and counts the rules to check", () => {
+  const check = {
+    title: "No more than 9 credits per discipline",
+    unparsed: true as const,
+  };
+  const checked: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 3,
+        rules: [{ title: "Theory", courses: ["COMP 330"] }, check],
+      },
+    ],
+  };
+  const [group] = programProgress(checked, snapshot, catalogue).groups;
+  expect(group).toMatchObject({
+    creditsDone: 3,
+    unparsed: 1,
+    satisfied: false,
+  });
+  expect(group?.rules.map((rule) => rule.satisfied)).toEqual([true, false]);
+  expect(programProgress(checked, snapshot, catalogue).satisfied).toBe(false);
+});
+
 test("a CEGEP entry credits foundation groups and drops their courses from what's next", () => {
   const foundation: Program = {
     ...tiny,

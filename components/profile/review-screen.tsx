@@ -27,15 +27,47 @@ import {
   termKey,
 } from "@/lib/profile/types";
 import { guessProgram } from "@/lib/programs";
+import { useProgramIndex } from "@/lib/programs/client";
+import type { ProgramSummary } from "@/lib/programs/types";
 import type { Transcript } from "@/lib/transcript/parse";
 
-export function ReviewScreen({
+type ReviewProps = { transcript: Transcript; onCancel: () => void };
+
+/** Waits for the program list, so the guess can search all programs. A list that fails to load leaves only the five exact guesses. */
+export function ReviewScreen(props: ReviewProps) {
+  const index = useProgramIndex();
+  if (index.status === "loading") return <ReviewSkeleton />;
+  return (
+    <Review
+      {...props}
+      programs={index.status === "ready" ? index.programs : []}
+    />
+  );
+}
+
+function ReviewSkeleton() {
+  return (
+    <div className="mx-auto w-full max-w-page flex-1 px-8 pt-10 pb-8">
+      <p role="status" className="sr-only">
+        Reading your transcript
+      </p>
+      <div aria-hidden className="flex flex-col gap-1">
+        <div className="h-[34px] w-64 rounded-sm bg-muted motion-safe:animate-pulse" />
+        <div className="h-5 w-80 rounded-sm bg-muted motion-safe:animate-pulse" />
+      </div>
+      <div aria-hidden className="mt-6 flex flex-col gap-6">
+        <Card className="h-60" />
+        <Card className="h-96" />
+      </div>
+    </div>
+  );
+}
+
+function Review({
   transcript,
   onCancel,
-}: {
-  transcript: Transcript;
-  onCancel: () => void;
-}) {
+  programs,
+}: ReviewProps & { programs: ProgramSummary[] }) {
   const router = useRouter();
   const catalogue = useCatalogue();
   const [removed, setRemoved] = useState<ReadonlySet<number>>(new Set());
@@ -45,7 +77,8 @@ export function ReviewScreen({
     const start = earliest(transcript);
     return {
       programId:
-        guessProgram(transcript.degree, transcript.programs) ?? store.programId,
+        guessProgram(transcript.degree, transcript.programs, programs) ??
+        store.programId,
       entry,
       advancedStanding: transcript.advancedStanding,
       creditsRequired: transcript.creditsRequired ?? store.creditsRequired,

@@ -22,7 +22,8 @@ import { useProfileStore } from "@/lib/profile/store";
 import { currentTerm, termLabel } from "@/lib/profile/term-options";
 import { compareTerms, type Term, termKey } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { getProgram } from "@/lib/programs";
+import { useProgram } from "@/lib/programs/client";
+import type { Program } from "@/lib/programs/types";
 
 /** The planner. Without a profile it offers to import a transcript or to plan from scratch. */
 export function Planner() {
@@ -36,24 +37,35 @@ export function Planner() {
 // Split out so a first-time visitor on the empty state does not download the catalogue.
 function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
   const catalogue = useCatalogue();
+  const programId = useProfileStore((state) => state.programId);
+  const program = useProgram(programId);
 
   if (catalogue.status === "error") {
     return <CatalogueError />;
   }
-  if (catalogue.status !== "ready") return <PlannerSkeleton />;
-  return <PlannerReady snapshot={snapshot} catalogue={catalogue.catalogue} />;
+  if (catalogue.status !== "ready" || program === undefined) {
+    return <PlannerSkeleton />;
+  }
+  return (
+    <PlannerReady
+      snapshot={snapshot}
+      catalogue={catalogue.catalogue}
+      program={program}
+    />
+  );
 }
 
 function PlannerReady({
   snapshot,
   catalogue,
+  program,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
+  program: Program | null;
 }) {
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
-  const programId = useProfileStore((state) => state.programId);
   const startTerm = useProfileStore((state) => state.startTerm);
   const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const creditLimit = useProfileStore((state) => state.creditLimit);
@@ -62,7 +74,6 @@ function PlannerReady({
 
   const now = useMemo(() => currentTerm(), []);
   const nowKey = termKey(now);
-  const program = programId ? (getProgram(programId) ?? null) : null;
   const index = useMemo(() => indexCourses(catalogue.values()), [catalogue]);
   const warnings = useMemo(
     () => planWarnings(plan, snapshot, catalogue, creditLimit, graduationTerm),

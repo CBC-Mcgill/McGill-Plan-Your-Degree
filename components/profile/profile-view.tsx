@@ -14,11 +14,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { isStarted, startProfile } from "@/lib/profile/started";
 import { useProfileHydrated, useProfileStore } from "@/lib/profile/store";
+import { useProgramIndex } from "@/lib/programs/client";
 
 export function ProfileView() {
   const hydrated = useProfileHydrated();
   const flow = useImportFlow();
   const started = useProfileStore(isStarted);
+  // Starts the program list download, so the picker and the transcript guess have it when they render.
+  useProgramIndex();
 
   // The page renders after hydration, so the browser has already missed a #program anchor on a full page load.
   useEffect(() => {
