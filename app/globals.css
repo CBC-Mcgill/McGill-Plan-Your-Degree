@@ -13,36 +13,6 @@
   --danger: #b42318;
   --warn: #925708;
   --scrim: rgb(23 32 54 / 0.3);
-
-  /* @deprecated Old names that point at the tokens above until the last page stops using them. */
-  --background: var(--bg);
-  --foreground: var(--fg);
-  --card: var(--bg);
-  --subtle: var(--tint);
-  --muted: var(--tint);
-  --muted-foreground: var(--fg-muted);
-  --faint: var(--fg-muted);
-  --border: var(--tint);
-  --border-strong: var(--fg-subtle);
-  --input: var(--fg-subtle);
-  --track: var(--tint);
-  --primary-foreground: var(--bg);
-  --brand: var(--primary);
-  --warn-surface: var(--tint);
-  --completed: var(--fg);
-  --completed-surface: var(--tint);
-  --covered: var(--fg);
-  --covered-surface: var(--tint);
-  --in-progress: var(--fg);
-  --in-progress-surface: var(--tint);
-  --planned: var(--fg);
-  --planned-surface: var(--tint);
-  --available: var(--fg-subtle);
-  --available-surface: var(--tint);
-  --locked: var(--fg-subtle);
-  --locked-surface: var(--tint);
-  --failed: var(--danger);
-  --failed-surface: var(--tint);
 }
 
 @theme inline {
@@ -58,46 +28,11 @@
   --color-warn: var(--warn);
   --color-scrim: var(--scrim);
 
-  /* @deprecated Old names, see :root. */
-  --color-background: var(--bg);
-  --color-foreground: var(--fg);
-  --color-card: var(--bg);
-  --color-subtle: var(--tint);
-  --color-muted: var(--tint);
-  --color-muted-foreground: var(--fg-muted);
-  --color-faint: var(--fg-muted);
-  --color-border: var(--tint);
-  --color-border-strong: var(--fg-subtle);
-  --color-input: var(--fg-subtle);
-  --color-track: var(--tint);
-  --color-primary-foreground: var(--bg);
-  --color-brand: var(--primary);
-  --color-warn-surface: var(--tint);
-  --color-completed: var(--fg);
-  --color-completed-surface: var(--tint);
-  --color-covered: var(--fg);
-  --color-covered-surface: var(--tint);
-  --color-in-progress: var(--fg);
-  --color-in-progress-surface: var(--tint);
-  --color-planned: var(--fg);
-  --color-planned-surface: var(--tint);
-  --color-available: var(--fg-subtle);
-  --color-available-surface: var(--tint);
-  --color-locked: var(--fg-subtle);
-  --color-locked-surface: var(--tint);
-  --color-failed: var(--danger);
-  --color-failed-surface: var(--tint);
-
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
-  /* @deprecated Only the Advisor page still uses it. */
-  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
 
   --radius-md: 8px;
   --radius-lg: 12px;
-  /* @deprecated Merged into 8 and 12. */
-  --radius-sm: 8px;
-  --radius-xl: 12px;
 
   /* Page content is 1200px wide inside 32px side padding, and prose stays in a 720px column. */
   --container-page: 79rem;
@@ -153,14 +88,6 @@
 
 /* The one selected look (D13): the current nav item, the selected tab, the highlighted option and the selected term. */
 @utility selected {
-  border-radius: 8px;
-  background-color: var(--tint);
-  color: var(--fg);
-  font-weight: 600;
-}
-
-/* @deprecated Use `selected`. */
-@utility option-active {
   border-radius: 8px;
   background-color: var(--tint);
   color: var(--fg);

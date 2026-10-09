@@ -7,6 +7,7 @@ import {
   type Status,
   StatusIcon,
   StatusTip,
+  UncertainFlag,
 } from "@/components/status";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
@@ -23,7 +24,7 @@ export function seasonsOffered(course: CourseSummary): string {
 
 /**
  * The one course row (44px, grows when the reason wraps): glyph, code, title, reason or meta, credits, action.
- * Code and title link to the course page. The glyph shows only with `showGlyph`, for lists that mix statuses (D10), and its tooltip gives the word and `reason`.
+ * Code and title link to the course page, and `uncertain` puts the "Has conditions" icon right after the title. The glyph shows only with `showGlyph` (D10), and its tooltip gives the word and `reason`, or `tip`, a reason for the tooltip alone.
  * `reason` and then `meta` sit in one muted column up to 320px wide. `note` is a muted line under the title.
  * `action` appears on row hover and focus (pattern A). Pass `action={null}` to keep its column so rows line up.
  */
@@ -31,7 +32,9 @@ export function CourseRow({
   course,
   status,
   showGlyph = false,
+  uncertain = false,
   reason,
+  tip,
   note,
   meta,
   action,
@@ -39,7 +42,9 @@ export function CourseRow({
   course: CourseSummary;
   status?: Status;
   showGlyph?: boolean;
+  uncertain?: boolean;
   reason?: string;
+  tip?: string;
   note?: ReactNode;
   meta?: ReactNode;
   action?: ReactNode;
@@ -48,12 +53,12 @@ export function CourseRow({
     <Link
       href={`/courses/${courseSlug(course.code)}`}
       prefetch={false}
-      className="-my-3 flex min-w-0 flex-1 gap-4 rounded-md py-3 focus-visible:-outline-offset-2"
+      className={ROW_LINK}
     >
       <span className="w-24 shrink-0 font-semibold tabular-nums">
         {course.code}
       </span>
-      <span className="min-w-0 flex-1">
+      <span className="min-w-0">
         <span className="block truncate" title={course.title}>
           {course.title}
         </span>
@@ -62,21 +67,24 @@ export function CourseRow({
     </Link>
   );
   return (
-    <li className="group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint">
-      {showGlyph && status ? (
-        <StatusTip
-          status={status}
-          reason={reason}
-          className="flex min-w-0 flex-1 gap-2"
-        >
-          <span className="flex h-5 w-4 shrink-0 items-center">
-            <StatusIcon status={status} label={STATUS[status].label} />
-          </span>
-          {link}
-        </StatusTip>
-      ) : (
-        link
-      )}
+    <li className={ROW}>
+      <span className={ROW_TITLE}>
+        {showGlyph && status ? (
+          <StatusTip
+            status={status}
+            reason={reason ?? tip}
+            className="flex min-w-0 gap-2"
+          >
+            <span className="flex h-5 w-4 shrink-0 items-center">
+              <StatusIcon status={status} label={STATUS[status].label} />
+            </span>
+            {link}
+          </StatusTip>
+        ) : (
+          link
+        )}
+        {uncertain && <UncertainFlag />}
+      </span>
       {(reason || meta) && (
         <span className="flex max-w-80 flex-none items-start gap-2 text-fg-muted">
           {reason && <span>{reason}</span>}
@@ -94,6 +102,15 @@ export function CourseRow({
     </li>
   );
 }
+
+/** A course row's box: 44px, the hover and focus tint bleeding 8px past the text. */
+export const ROW =
+  "group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint";
+/** The glyph, code and title column. The link ends at the title so the "Has conditions" icon can follow it, and its ::after, under the text, keeps the whole column clickable. */
+export const ROW_TITLE =
+  "relative isolate flex min-w-0 flex-1 items-start gap-2";
+export const ROW_LINK =
+  "-my-3 flex min-w-0 gap-4 rounded-md py-3 after:absolute after:inset-x-0 after:-inset-y-3 after:-z-10 focus-visible:-outline-offset-2";
 
 const bone = "rounded-md bg-tint motion-safe:animate-pulse";
 

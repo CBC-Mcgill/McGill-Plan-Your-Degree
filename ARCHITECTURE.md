@@ -283,7 +283,6 @@ Program data reaches the browser one program at a time.
 - **Primitives:** [components/ui/](components/ui/) holds `Button`, `Section`, `Disclosure`, `Notice`, `Menu`, `Chip`, `TextField`, `SelectField`, `ViewTabs`, `Kbd`, `FileButton`, `Tooltip` and `Term`.
   They are shadcn-style, built on Radix and `class-variance-authority`.
   `CourseRow` in [components/course-row.tsx](components/course-row.tsx) is the one course row, and `NoProfile` in [components/no-profile.tsx](components/no-profile.tsx) is the visitor state of a page that needs a profile.
-  `Card`, `Badge`, `Banner`, `ProgressBar`, `SectionCard`, `InfoTip` and `StatusBadge` are deprecated and go once no page uses them.
 - **Tokens:** ten colors are CSS variables in [app/globals.css](app/globals.css), and `lib/tokens.test.ts` checks their contrast.
   Red (`--primary`) marks at most one primary button per screen, and status lives in the glyph's shape, so status colors stay to `--fg`, `--fg-subtle`, `--danger` and `--warn`.
   Space separates sections, and only overlays get a box.
@@ -291,7 +290,8 @@ Program data reaches the browser one program at a time.
 - **Tooltips:** one `TooltipProvider` in [app/layout.tsx](app/layout.tsx) sets the delay.
   `Term` gives a word a dotted underline and shows its definition on hover and focus, and every definition lives in [lib/glossary.ts](lib/glossary.ts) so the wording stays consistent.
   Anything a student must know to act stays visible on the page, and a tooltip only adds to it.
-- **Status glyphs:** [components/status.tsx](components/status.tsx) holds the `STATUS` table of labels and glyph colors, with `StatusIcon`, `StatusLabel` and `UncertainFlag` for requirements with conditions.
+- **Status glyphs:** [components/status.tsx](components/status.tsx) holds the `STATUS` table of labels and glyph colors, with `StatusIcon`, `StatusTip` and `UncertainFlag`.
+  `UncertainFlag` is the focusable "Has conditions" icon that follows a course title in every row.
 - **Toasts with undo:** [components/toast.tsx](components/toast.tsx) shows one toast at a time at the bottom left for five seconds.
   A toast can carry an Undo action, and Cmd+Z or Ctrl+Z runs it unless the student is typing in a field.
   [components/plan/add-with-undo.ts](components/plan/add-with-undo.ts) uses it for plan changes.

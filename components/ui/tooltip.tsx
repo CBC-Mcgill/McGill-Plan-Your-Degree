@@ -1,7 +1,5 @@
 "use client";
 
-import { cn } from "cn";
-import { Info } from "lucide-react";
 import { Tooltip as Primitive } from "radix-ui";
 import { type FocusEvent, type ReactNode, useRef, useState } from "react";
 import type { Definition } from "@/lib/glossary";
@@ -115,38 +113,4 @@ function Term({ def, children }: { def: Definition; children?: ReactNode }) {
   );
 }
 
-/** @deprecated Use `Term` on the word itself. */
-function InfoTip({
-  label,
-  tip,
-  className,
-}: {
-  label: string;
-  tip: ReactNode;
-  className?: string;
-}) {
-  const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
-  return (
-    <Primitive.Root open={open} onOpenChange={onOpenChange}>
-      <Primitive.Trigger asChild onFocus={onFocus}>
-        <button
-          type="button"
-          aria-label={`About ${label}`}
-          onClick={(event) => {
-            event.preventDefault();
-            onOpenChange(true);
-          }}
-          className={cn(
-            "relative inline-flex size-4 shrink-0 items-center justify-center rounded-full text-fg-muted after:absolute after:-inset-1 hover:text-fg data-[state=delayed-open]:text-fg data-[state=instant-open]:text-fg",
-            className,
-          )}
-        >
-          <Info aria-hidden className="size-4" strokeWidth={1.75} />
-        </button>
-      </Primitive.Trigger>
-      <Bubble onEscapeKeyDown={onEscapeKeyDown}>{tip}</Bubble>
-    </Primitive.Root>
-  );
-}
-
-export { InfoTip, Term, Tooltip, TooltipProvider };
+export { Term, Tooltip, TooltipProvider };

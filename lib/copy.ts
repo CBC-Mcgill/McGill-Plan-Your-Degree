@@ -28,8 +28,6 @@ export const COPY = {
     total === null
       ? `${n} credits earned`
       : `${n} of ${total} degree credits earned`,
-  programFigure: (n: number, total: number, basis: Basis) =>
-    `${n} of ${total} program credits ${BASIS[basis]}`,
   minorFigure: (name: string, n: number, total: number, basis: Basis) =>
     `${minorTitle(name)}: ${n} of ${total} credits ${BASIS[basis]}`,
   basis: BASIS,
@@ -40,7 +38,6 @@ export const COPY = {
     `${n} of ${limit} credits planned${n > limit ? ", over your limit" : ""}`,
   termCredits: creditsText,
   term: termLabel,
-  termPair: (a: Term, b: Term) => `${termLabel(a)} and ${termLabel(b)}`,
   now: "Now",
   plannedFor: (term: Term) => `Planned for ${termLabel(term)}`,
   notOfferedYear: `Not offered in ${meta.catalogueYear}`,
@@ -50,7 +47,6 @@ export const COPY = {
   notOpen: (codes: readonly string[]) =>
     `Not open to students who have taken ${list.format(codes)}`,
   hasConditions: "Has conditions",
-  countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",
   catalogueLink: "McGill catalogue",
   generated: "Read automatically from the catalogue",

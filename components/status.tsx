@@ -1,7 +1,6 @@
-import { cn } from "cn";
 import { CircleAlert } from "lucide-react";
 import type * as React from "react";
-import { Tooltip } from "@/components/ui/tooltip";
+import { Term, Tooltip } from "@/components/ui/tooltip";
 import { COPY } from "@/lib/copy";
 import type { BrowseStatus } from "@/lib/engine/status";
 import { GLOSSARY, STATUS_TIPS } from "@/lib/glossary";
@@ -46,13 +45,10 @@ export function StatusIcon({
   status,
   size = 14,
   label,
-  className,
 }: {
   status: Status;
   size?: number;
   label?: string;
-  /** @deprecated Wrap the glyph instead. */
-  className?: string;
 }) {
   return (
     <svg
@@ -62,7 +58,7 @@ export function StatusIcon({
       role={label ? "img" : undefined}
       aria-label={label}
       aria-hidden={label ? undefined : true}
-      className={cn("shrink-0", className)}
+      className="shrink-0"
       style={{ color: STATUS[status].color }}
     >
       {status === "locked" && (
@@ -162,64 +158,14 @@ export function StatusTip({
   );
 }
 
-/** Glyph, 8px, then the word in --fg-muted and the reason after " · ". */
-export function StatusLabel({
-  status,
-  reason,
-  uncertain = false,
-}: {
-  status: Status;
-  reason?: string;
-  uncertain?: boolean;
-}) {
+/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. A focusable icon with the word for screen readers and the definition on hover and focus (D21). Never put it inside a link or a button. */
+export function UncertainFlag() {
   return (
-    <span className="inline-flex items-start gap-2 text-fg-muted">
-      <span className="flex h-5 shrink-0 items-center">
-        <StatusIcon status={status} />
-      </span>
-      <span>
-        {STATUS[status].label}
-        {reason && ` · ${reason}`}
-        {uncertain && (
-          <span className="ml-2 inline-flex align-top">
-            <UncertainFlag />
-          </span>
-        )}
-      </span>
-    </span>
-  );
-}
-
-/** @deprecated Use `StatusLabel`. */
-export function StatusBadge({
-  status,
-  label = STATUS[status].label,
-  className,
-}: {
-  status: Status;
-  label?: string;
-  className?: string;
-}) {
-  return (
-    <span
-      className={cn("inline-flex items-center gap-2 text-fg-muted", className)}
-    >
-      <StatusIcon status={status} />
-      {label}
-    </span>
-  );
-}
-
-/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. In rows the word is for screen readers only (D21). */
-export function UncertainFlag({ withLabel = false }: { withLabel?: boolean }) {
-  return (
-    <Tooltip content={GLOSSARY.hasConditions.tip}>
-      <span className="inline-flex h-5 items-center gap-2 text-warn">
+    <span className="inline-flex h-5 shrink-0 items-center text-warn">
+      <Term def={GLOSSARY.hasConditions}>
         <CircleAlert aria-hidden className="size-3.5" strokeWidth={2} />
-        <span className={cn(!withLabel && "sr-only")}>
-          {COPY.hasConditions}
-        </span>
-      </span>
-    </Tooltip>
+        <span className="sr-only">{COPY.hasConditions}</span>
+      </Term>
+    </span>
   );
 }

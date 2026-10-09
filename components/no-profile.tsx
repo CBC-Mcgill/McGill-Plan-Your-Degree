@@ -10,7 +10,7 @@ export function NoProfile({ title, lede }: { title: string; lede: string }) {
   return (
     <div>
       <h1>{title}</h1>
-      <p className="mt-2 max-w-[560px] text-fg-muted">{lede}</p>
+      <p className="mt-2 max-w-[560px] text-pretty text-fg-muted">{lede}</p>
       <div className="mt-6">
         <StartActions />
       </div>

@@ -8,8 +8,6 @@ import type { Definition } from "@/lib/glossary";
 /** The shared look of a text input or select: 36px tall, 8px radius, a 1px --fg-subtle edge. Add `w-full` or a width. */
 const controlStyles =
   "h-9 rounded-md border border-fg-subtle bg-bg px-3 text-fg text-sm placeholder:text-fg-muted disabled:opacity-50";
-/** @deprecated Every control is 36px. Use `controlStyles`. */
-const compactControlStyles = controlStyles;
 
 /** The label, Body 600. With `info`, its words are a `Term` and `describedBy` holds the definition for the control. */
 function FieldLabel({
@@ -129,10 +127,4 @@ function TextField({
   );
 }
 
-export {
-  compactControlStyles,
-  controlStyles,
-  FieldLabel,
-  SelectField,
-  TextField,
-};
+export { controlStyles, FieldLabel, SelectField, TextField };

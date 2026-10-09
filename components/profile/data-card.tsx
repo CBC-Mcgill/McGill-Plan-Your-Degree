@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertDialog } from "radix-ui";
+import { useId } from "react";
 import { ImportNotice } from "@/components/profile/import-notice";
 import type { ImportFlow } from "@/components/profile/use-import-flow";
 import { toast } from "@/components/toast";
@@ -28,25 +29,34 @@ export function downloadBackup() {
 
 export function DataCard({ flow }: { flow: ImportFlow }) {
   const reset = useProfileStore((s) => s.reset);
+  const warning = useId();
 
   return (
     <Section id="data" title="Your data">
       <p className="text-fg-muted">
         It all lives in this browser, and nothing is sent anywhere.
       </p>
-      {/* Wider than the 720 column on purpose, so the four data actions stay one row. */}
-      <div className="-ml-3 mt-4 flex w-max items-center whitespace-nowrap">
+      <div className="-ml-3 mt-4 flex items-start">
         <Button variant="text" onClick={downloadBackup}>
           {COPY.exportBackup}
         </Button>
-        <FileButton
-          variant="text"
-          accept="application/json,.json"
-          onFile={flow.restoreFile}
-        >
-          {COPY.restore}
-        </FileButton>
-        <span className="mr-3 text-fg-muted">{COPY.restoreWarning}</span>
+        <div className="flex flex-col">
+          <FileButton
+            variant="text"
+            accept="application/json,.json"
+            onFile={flow.restoreFile}
+            aria-describedby={warning}
+          >
+            {COPY.restore}
+          </FileButton>
+          {/* Sized to the button, so the next action keeps the usual gap. */}
+          <span
+            id={warning}
+            className="whitespace-nowrap px-3 text-fg-muted contain-inline-size"
+          >
+            {COPY.restoreWarning}
+          </span>
+        </div>
         <FileButton
           data-import
           variant="text"

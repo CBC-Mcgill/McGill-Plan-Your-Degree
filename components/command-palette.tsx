@@ -103,7 +103,7 @@ export function SearchBar() {
     <button
       type="button"
       onClick={openCommandPalette}
-      className="flex h-9 w-60 items-center gap-2 rounded-md bg-tint pr-1 pl-3 text-left text-fg-muted hover:text-fg"
+      className="flex h-10 w-full items-center gap-2 rounded-md bg-tint pr-1.5 pl-3 text-left text-fg-muted hover:text-fg"
     >
       <Search aria-hidden className="size-4 shrink-0" strokeWidth={1.75} />
       <span className="flex-1 truncate">Search courses</span>

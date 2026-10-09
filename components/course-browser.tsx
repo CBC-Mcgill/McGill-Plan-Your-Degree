@@ -337,7 +337,6 @@ function CourseTable({ b }: { b: Browse }) {
                 <col />
                 <col className="w-28" />
                 <col className="w-48" />
-                <col className="w-[22px]" />
               </colgroup>
               <thead>
                 <tr className="h-9 text-left text-fg-muted">
@@ -348,11 +347,8 @@ function CourseTable({ b }: { b: Browse }) {
                   <th className="pr-4 text-right font-normal">
                     <Term def={GLOSSARY.credits} />
                   </th>
-                  <th className="pr-4 font-normal">
-                    <Term def={GLOSSARY.offered} />
-                  </th>
                   <th className="pr-2 font-normal">
-                    <span className="sr-only">Conditions</span>
+                    <Term def={GLOSSARY.offered} />
                   </th>
                 </tr>
               </thead>
@@ -469,8 +465,13 @@ function CourseTableRow({
           <div className="flex min-w-0">{link}</div>
         )}
       </td>
-      <td className={cn(CELL, "truncate")} title={course.title}>
-        {course.title}
+      <td className={CELL}>
+        <span className="flex min-w-0 items-start gap-2">
+          <span className="truncate" title={course.title}>
+            {course.title}
+          </span>
+          {state?.uncertain && <UncertainFlag />}
+        </span>
       </td>
       <td
         className={cn(
@@ -480,11 +481,11 @@ function CourseTableRow({
       >
         <CreditsLabel course={course} />
       </td>
-      <td className={cn(CELL, "truncate text-fg-muted")} title={offered}>
+      <td
+        className={cn(CELL, "truncate rounded-r-md pr-2 text-fg-muted")}
+        title={offered}
+      >
         {offered}
-      </td>
-      <td className={cn(CELL, "rounded-r-md pr-2")}>
-        {state?.uncertain && <UncertainFlag />}
       </td>
     </tr>
   );

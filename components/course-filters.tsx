@@ -243,7 +243,7 @@ export function SortMenu({
     <Menu
       align="end"
       trigger={
-        <Button variant="text">
+        <Button variant="text" className="-mr-3">
           <span className="sr-only">Sort: </span>
           {SORTS.find((s) => s.key === sort)?.label}
           <ChevronDown aria-hidden className="text-fg-muted" />

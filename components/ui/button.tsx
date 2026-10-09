@@ -3,34 +3,19 @@ import { cn } from "cn";
 import { Slot } from "radix-ui";
 import type * as React from "react";
 
-const text = "px-3 text-fg hover:bg-tint";
-const danger = "px-3 text-danger hover:bg-tint";
-
-/** One red primary per screen at most, a text button for everything else. 36px tall, never a pill. */
+/** One red primary per screen at most, a text button for everything else. 36px tall, never a pill. A disabled primary turns neutral, since red means "do this". */
 const buttonVariants = cva(
-  "inline-flex h-9 shrink-0 select-none items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex h-9 shrink-0 select-none items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold text-sm disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        primary: "bg-primary px-4 text-white hover:bg-primary-hover",
-        text,
-        danger,
-        /** @deprecated Use `text`. */
-        secondary: text,
-        /** @deprecated Use `text`. */
-        ghost: text,
-        /** @deprecated Use `danger`. */
-        destructive: danger,
+        primary:
+          "bg-primary px-4 text-white hover:bg-primary-hover disabled:bg-tint disabled:text-fg-muted",
+        text: "px-3 text-fg hover:bg-tint disabled:opacity-50",
+        danger: "px-3 text-danger hover:bg-tint disabled:opacity-50",
       },
       /** A 36px square for an icon with an aria-label. */
       icon: { true: "w-9 px-0" },
-      /** @deprecated Every button is 36px. Use `icon` for a square one. */
-      size: {
-        sm: "gap-1.5 px-2 [&_svg]:size-3.5",
-        md: "",
-        lg: "",
-        icon: "w-9 px-0",
-      },
     },
     defaultVariants: { variant: "primary" },
   },
@@ -40,7 +25,6 @@ function Button({
   className,
   variant,
   icon,
-  size,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -52,7 +36,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, icon, size }), className)}
+      className={cn(buttonVariants({ variant, icon }), className)}
       {...props}
     />
   );
