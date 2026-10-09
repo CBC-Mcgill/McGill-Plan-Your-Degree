@@ -272,7 +272,7 @@ function PlanActions({
               <ChevronDown aria-hidden />
             </Button>
           ) : (
-            <Button variant="text">
+            <Button variant="text" className="-mr-3">
               {planned
                 ? `Planned for ${loadsTerms(courseLoads(course.code, course, planned))}`
                 : "Add to a term"}

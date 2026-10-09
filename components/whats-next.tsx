@@ -5,17 +5,12 @@ import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useId, useMemo, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
-import { CourseRow } from "@/components/course-row";
+import { CourseRow, seasonsOffered } from "@/components/course-row";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import {
-  STATUS,
-  type Status,
-  StatusIcon,
-  UncertainFlag,
-} from "@/components/status";
+import { STATUS, type Status, StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Disclosure } from "@/components/ui/disclosure";
 import { Section } from "@/components/ui/section";
@@ -65,7 +60,8 @@ const OTHER_STEP = 20;
 // The catalogue opens a program page on its overview tab, and this hash opens the course lists instead.
 const coursesTab = (source: string) => `${source}#coursestext`;
 
-const courseCount = (n: number) => `${n} ${n === 1 ? "course" : "courses"}`;
+const courseCount = (n: number) =>
+  `${n.toLocaleString("en-CA")} ${n === 1 ? "course" : "courses"}`;
 const dot = <span aria-hidden> · </span>;
 
 /** How a course stands for this student, and the term it was taken or is planned in. */
@@ -567,10 +563,12 @@ function Row({
       course={course}
       status={status}
       showGlyph
+      uncertain={uncertain}
       reason={plannedIn ? COPY.plannedFor(plannedIn) : reason}
-      meta={
-        <RowMeta uncertain={uncertain} both={both?.has(course.code) ?? false} />
+      tip={
+        status === "available" ? `Offered ${seasonsOffered(course)}` : undefined
       }
+      meta={both?.has(course.code) && <Defined def={GLOSSARY.countsForBoth} />}
       action={
         here || status === "available" ? (
           <Button
@@ -587,16 +585,6 @@ function Row({
         ) : null
       }
     />
-  );
-}
-
-function RowMeta({ uncertain, both }: { uncertain: boolean; both: boolean }) {
-  if (!uncertain && !both) return null;
-  return (
-    <>
-      {uncertain && <UncertainFlag />}
-      {both && <Defined def={GLOSSARY.countsForBoth} />}
-    </>
   );
 }
 
@@ -898,7 +886,7 @@ function OtherCourses({
     <Disclosure
       as="h2"
       summary={`Other courses you can take in ${term}`}
-      meta={entries.length.toLocaleString()}
+      meta={courseCount(entries.length)}
     >
       {entries.length === 0 ? (
         <p className="text-fg-muted">Nothing else is open to you in {term}.</p>

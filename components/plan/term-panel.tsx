@@ -4,12 +4,22 @@ import { ChevronDown, TriangleAlert, X } from "lucide-react";
 import Link from "next/link";
 import { Popover } from "radix-ui";
 import { type ReactNode, useRef, useState } from "react";
-import { seasonsOffered } from "@/components/course-row";
+import {
+  ROW,
+  ROW_LINK,
+  ROW_TITLE,
+  seasonsOffered,
+} from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
 import { AddCourse } from "@/components/plan/add-course";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { TermWarnings } from "@/components/plan/term-warnings";
-import { STATUS, type Status, StatusIcon } from "@/components/status";
+import {
+  STATUS,
+  type Status,
+  StatusIcon,
+  UncertainFlag,
+} from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { TextField } from "@/components/ui/field";
 import { Menu, MenuItem } from "@/components/ui/menu";
@@ -32,7 +42,7 @@ import {
   type Stage,
   suggestForTerm,
 } from "@/lib/engine/stages";
-import { isOffered } from "@/lib/engine/status";
+import { isOffered, isUncertain } from "@/lib/engine/status";
 import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
@@ -58,6 +68,7 @@ function Row({
   label = code,
   title,
   status,
+  uncertain = false,
   note,
   meta,
   credits,
@@ -69,6 +80,7 @@ function Row({
   /** Missing when the catalogue has no such course, so the row does not link. */
   title: string | undefined;
   status?: Status;
+  uncertain?: boolean;
   note?: string;
   meta?: ReactNode;
   credits: ReactNode;
@@ -78,7 +90,7 @@ function Row({
   const body = (
     <>
       <span className="w-24 shrink-0 font-semibold tabular-nums">{label}</span>
-      <span className="min-w-0 flex-1">
+      <span className="min-w-0">
         <span
           className={title ? "block truncate" : "block text-fg-muted"}
           title={title}
@@ -93,22 +105,23 @@ function Row({
     <Link
       href={`/courses/${courseSlug(code)}`}
       prefetch={false}
-      className="-my-3 flex min-w-0 flex-1 gap-4 rounded-md py-3 focus-visible:-outline-offset-2"
+      className={ROW_LINK}
     >
       {body}
     </Link>
   ) : (
-    <span className="flex min-w-0 flex-1 gap-4">{body}</span>
+    <span className="flex min-w-0 gap-4">{body}</span>
   );
   return (
-    <li className="group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint">
-      <span className="flex min-w-0 flex-1 gap-2">
+    <li className={ROW}>
+      <span className={ROW_TITLE}>
         {status && (
           <span className="flex h-5 w-4 shrink-0 items-center">
             <StatusIcon status={status} />
           </span>
         )}
         {tip ? <Tooltip content={tip}>{link}</Tooltip> : link}
+        {uncertain && <UncertainFlag />}
       </span>
       {meta && <span className="max-w-80 flex-none text-fg-muted">{meta}</span>}
       <span className="w-24 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums">
@@ -417,6 +430,7 @@ export function TermPanel({
                   code={load.code}
                   label={load.label}
                   title={course?.title}
+                  uncertain={course ? isUncertain(course) : false}
                   note={partCaption(load)}
                   credits={`${load.credits} cr`}
                   action={
@@ -469,6 +483,7 @@ export function TermPanel({
                 code={course.code}
                 title={course.title}
                 tip={`Offered ${seasonsOffered(course)}`}
+                uncertain={isUncertain(course)}
                 credits={<CreditsLabel course={course} />}
                 action={
                   <Button

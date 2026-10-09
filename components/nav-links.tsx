@@ -30,7 +30,7 @@ function NavLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-/** Browse courses, What's next and Planner, then search and Profile on the right. /courses has its own search field, so the header one hides there (D22). */
+/** Browse courses, What's next and Planner, then search at the center and Profile on the right. /courses has its own search field, so the header one hides there (D22). */
 export function NavLinks() {
   const pathname = usePathname();
   const previous = useRef(pathname);
@@ -54,11 +54,12 @@ export function NavLinks() {
         </li>
       ))}
       {search && (
-        <li className="ml-auto">
+        // 382px is the widest the bar can be and still sit at the page's center, 32px clear of the logo and nav (377px) on a 1200px page.
+        <li className="ml-7 min-w-70 max-w-[382px] flex-1">
           <SearchBar />
         </li>
       )}
-      <li className={search ? "ml-3" : "ml-auto"}>
+      <li className="ml-auto pl-7">
         <NavLink href="/profile" label="Profile" />
       </li>
     </ul>

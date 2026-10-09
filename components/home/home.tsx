@@ -8,7 +8,7 @@ import { CourseRow } from "@/components/course-row";
 import { Landing } from "@/components/home/landing";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { Sentence as WarningSentence } from "@/components/plan/term-warnings";
-import { STATUS, UncertainFlag } from "@/components/status";
+import { STATUS } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
 import { Term } from "@/components/ui/tooltip";
@@ -313,16 +313,12 @@ function RequiredCourses({
                   course={course}
                   status={at ? "planned" : "available"}
                   showGlyph
+                  uncertain={uncertain}
                   meta={
-                    (at || uncertain) && (
-                      <>
-                        {at &&
-                          (termKey(at) === termKey(term)
-                            ? STATUS.planned.label
-                            : COPY.plannedFor(at))}
-                        {uncertain && <UncertainFlag />}
-                      </>
-                    )
+                    at &&
+                    (termKey(at) === termKey(term)
+                      ? STATUS.planned.label
+                      : COPY.plannedFor(at))
                   }
                   action={
                     at ? (

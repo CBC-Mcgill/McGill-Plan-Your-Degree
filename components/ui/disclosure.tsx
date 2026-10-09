@@ -8,7 +8,7 @@ import type { Definition } from "@/lib/glossary";
 
 /**
  * Click to expand (pattern B): a 44px button with a chevron that opens its content right below. `as="h2"` keeps a collapsed section's heading.
- * A `Term` cannot sit inside the button, so pass `def` when the summary is a defined term: it gets the dotted underline and the toggle shows the definition on hover and focus.
+ * A `Term` cannot sit inside the button, so pass `def` to show a definition on the toggle's hover and focus. The dotted underline goes on `meta`, so a heading never carries one.
  */
 export function Disclosure({
   summary,
@@ -37,18 +37,15 @@ export function Disclosure({
       className="-mx-2 flex min-h-11 w-[calc(100%+1rem)] items-center gap-2 rounded-md px-2 text-left hover:bg-tint focus-visible:bg-tint focus-visible:-outline-offset-2"
     >
       <Chevron aria-hidden className="size-4 shrink-0 text-fg-muted" />
-      <span className="min-w-0 flex-1">
+      <span className="min-w-0 flex-1">{summary}</span>
+      {meta && (
         <span
           className={cn(
+            "shrink-0 font-normal text-fg-muted text-sm tabular-nums",
             def &&
               "underline decoration-1 decoration-dotted decoration-fg-subtle underline-offset-3",
           )}
         >
-          {summary}
-        </span>
-      </span>
-      {meta && (
-        <span className="shrink-0 font-normal text-fg-muted text-sm tabular-nums">
           {meta}
         </span>
       )}

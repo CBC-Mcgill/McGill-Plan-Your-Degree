@@ -53,12 +53,9 @@ export function ProfileView() {
     <div className="mx-auto w-full max-w-page px-8 pt-12">
       <div className="max-w-reading">
         <h1 className="sr-only">Profile</h1>
-        <p className="text-fg-muted">Changes save as you make them.</p>
-        <div className="mt-12">
-          <ProgramCard />
-          <CoursesCard />
-          <DataCard flow={flow} />
-        </div>
+        <ProgramCard />
+        <CoursesCard />
+        <DataCard flow={flow} />
       </div>
     </div>
   );
@@ -72,8 +69,8 @@ function ProfileSkeleton() {
         Loading your profile
       </p>
       <div aria-hidden className="max-w-reading">
-        <div className={`${bone} h-5 w-56`} />
-        <div className={`${bone} mt-12 h-7 w-28`} />
+        <div className={`${bone} h-7 w-28`} />
+        <div className={`${bone} mt-2 h-5 w-56`} />
         <div className={`${bone} mt-4 h-9`} />
         <div className={`${bone} mt-4 h-9`} />
         <div className="mt-4 grid grid-cols-2 gap-4">

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NavLinks } from "@/components/nav-links";
 
-/** The top bar: the logo, the three planning pages, search and Profile. No line and no red. */
+/** The top bar: the logo mark and the three planning pages, search at the center, Profile on the right. No line and no red. */
 export function SiteHeader() {
   return (
     <header className="bg-bg">
@@ -11,7 +11,8 @@ export function SiteHeader() {
           className="flex shrink-0 items-center gap-2 rounded-md font-semibold"
         >
           <LogoMark />
-          <span className="max-[1260px]:sr-only">Plan Your Degree</span>
+          {/* The wordmark would push the search off center, so it is for screen readers only. */}
+          <span className="sr-only">Plan Your Degree</span>
         </Link>
         <nav aria-label="Main" className="min-w-0 flex-1">
           <NavLinks />

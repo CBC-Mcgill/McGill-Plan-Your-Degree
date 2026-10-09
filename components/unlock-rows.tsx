@@ -29,13 +29,14 @@ function Rows({ courses }: { courses: CourseSummary[] }) {
   return (
     <ul>
       {courses.map((course) => {
-        const status = snapshot ? courseStatus(course, snapshot).status : null;
+        const state = snapshot ? courseStatus(course, snapshot) : null;
         return (
           <CourseRow
             key={course.code}
             course={course}
-            status={status ?? undefined}
-            showGlyph={status !== null}
+            status={state?.status}
+            showGlyph={state !== null}
+            uncertain={state?.uncertain}
           />
         );
       })}
