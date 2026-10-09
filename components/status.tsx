@@ -9,19 +9,50 @@ import type { CourseStatus as RecordStatus } from "@/lib/profile/types";
 /** A course's state for this student, or the outcome a transcript recorded. */
 export type Status = BrowseStatus | Exclude<RecordStatus, BrowseStatus>;
 
-/** Words and glyph colors. The glyph shape tells statuses apart, so color stays to --fg, --fg-subtle, --danger and --warn (D9). */
-export const STATUS: Record<Status, { label: string; color: string }> = {
-  locked: { label: "Locked", color: "var(--fg-subtle)" },
-  available: { label: "Can take", color: "var(--fg-subtle)" },
-  planned: { label: "Planned", color: "var(--fg)" },
-  "in-progress": { label: "In progress", color: "var(--fg)" },
-  completed: { label: "Completed", color: "var(--fg)" },
-  covered: { label: "Covered", color: "var(--fg)" },
-  transfer: { label: "Transfer credit", color: "var(--fg)" },
-  exemption: { label: "Exemption", color: "var(--fg)" },
-  failed: { label: "Failed", color: "var(--danger)" },
-  withdrawn: { label: "Withdrawn", color: "var(--fg-subtle)" },
-  deferred: { label: "Deferred", color: "var(--warn)" },
+/** Words and colors. Each status has its own hue, so a list reads at a glance, and the glyph shape and word still carry the meaning without color. `text` is the word's color, which meets 4.5:1 where the glyph color only needs 3:1. */
+export const STATUS: Record<
+  Status,
+  { label: string; color: string; text: string }
+> = {
+  locked: { label: "Locked", color: "var(--locked)", text: "var(--fg-muted)" },
+  available: { label: "Can take", color: "var(--fg)", text: "var(--fg)" },
+  planned: {
+    label: "Planned",
+    color: "var(--planned)",
+    text: "var(--planned)",
+  },
+  "in-progress": {
+    label: "In progress",
+    color: "var(--in-progress)",
+    text: "var(--in-progress)",
+  },
+  completed: {
+    label: "Completed",
+    color: "var(--completed)",
+    text: "var(--completed)",
+  },
+  covered: {
+    label: "Covered",
+    color: "var(--completed)",
+    text: "var(--completed)",
+  },
+  transfer: {
+    label: "Transfer credit",
+    color: "var(--completed)",
+    text: "var(--completed)",
+  },
+  exemption: {
+    label: "Exemption",
+    color: "var(--completed)",
+    text: "var(--completed)",
+  },
+  failed: { label: "Failed", color: "var(--danger)", text: "var(--danger)" },
+  withdrawn: {
+    label: "Withdrawn",
+    color: "var(--locked)",
+    text: "var(--fg-muted)",
+  },
+  deferred: { label: "Deferred", color: "var(--warn)", text: "var(--warn)" },
 };
 
 const ring = {

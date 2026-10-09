@@ -6,12 +6,13 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
+import { CourseCode } from "@/components/course-code";
+import { FilterPopover, SearchField } from "@/components/course-filters";
 import {
-  FilterPopover,
-  SearchField,
-  SortMenu,
-} from "@/components/course-filters";
-import { BrowseSkeleton, seasonsOffered } from "@/components/course-row";
+  BrowseSkeleton,
+  SeasonLetters,
+  seasonsOffered,
+} from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
 import {
   STATUS,
@@ -63,8 +64,9 @@ const PAGE_SIZE = 50;
 const PANEL = "course-panel";
 const EMPTY = buildSnapshot([], [], null);
 const NO_CODES: ReadonlySet<string> = new Set();
-/** Cells share the row's hover and focus tint, so the row reads as one 44px line. */
-const CELL = "pr-4 group-focus-within:bg-tint group-hover:bg-tint";
+/** Cells share the row's hover and focus tint and a hairline below, so each row reads as one 44px line. */
+const CELL =
+  "border-line border-b pr-4 group-focus-within:bg-tint group-hover:bg-tint";
 
 interface Browse extends CatalogueBase, Student {
   /** False for a visitor with no transcript or plan, who sees no statuses. */
@@ -160,7 +162,7 @@ export function CourseBrowser() {
   return <CatalogueError />;
 }
 
-/** Views, filter chips, a sort menu and 50 rows a page. The URL holds the whole query. */
+/** Views, filter chips and 50 rows a page. The URL holds the whole query. */
 function CourseTable({ b }: { b: Browse }) {
   const params = useSearchParams();
   const urlQuery = params.toString();
@@ -245,7 +247,8 @@ function CourseTable({ b }: { b: Browse }) {
 
   const searching = query.q !== "";
   const filtering = PROPS.some((prop) => query.filters[prop].length > 0);
-  const glyphs = b.hasProfile && query.view !== "can-take";
+  // Every row in "Can take now" has the same status, so the column only shows in mixed views.
+  const statuses = b.hasProfile && query.view !== "can-take";
 
   return (
     <div ref={top} className="scroll-mt-6">
@@ -296,11 +299,6 @@ function CourseTable({ b }: { b: Browse }) {
             />
           ))}
         </div>
-        {b.views.some((view) => view.value === "program") && (
-          <div className="ml-auto">
-            <SortMenu sort={query.sort} onChange={(sort) => update({ sort })} />
-          </div>
-        )}
       </div>
 
       <div
@@ -333,17 +331,19 @@ function CourseTable({ b }: { b: Browse }) {
             <table className="-mx-2 w-[calc(100%+1rem)] table-fixed border-separate border-spacing-0">
               <caption className="sr-only">Courses</caption>
               <colgroup>
-                <col className={glyphs ? "w-36" : "w-30"} />
+                <col className="w-34" />
                 <col />
-                <col className="w-28" />
-                <col className="w-48" />
+                {statuses && <col className="w-36" />}
+                <col className="w-24" />
+                <col className="w-24" />
               </colgroup>
               <thead>
-                <tr className="h-9 text-left text-fg-muted">
+                <tr className="h-9 text-left text-fg-muted [&>th]:border-line [&>th]:border-b">
                   <th className="pr-4 pl-2 font-normal">Course</th>
                   <th className="pr-4 font-normal">
                     <span className="sr-only">Title</span>
                   </th>
+                  {statuses && <th className="pr-4 font-normal">Status</th>}
                   <th className="pr-4 text-right font-normal">
                     <Term def={GLOSSARY.credits} />
                   </th>
@@ -358,7 +358,7 @@ function CourseTable({ b }: { b: Browse }) {
                     key={course.code}
                     course={course}
                     b={b}
-                    glyph={glyphs}
+                    status={statuses}
                   />
                 ))}
               </tbody>
@@ -413,31 +413,21 @@ function CourseTable({ b }: { b: Browse }) {
 function CourseTableRow({
   course,
   b,
-  glyph,
+  status: showStatus,
 }: {
   course: CourseSummary;
   b: Browse;
-  glyph: boolean;
+  status: boolean;
 }) {
   const router = useRouter();
   const href = `/courses/${courseSlug(course.code)}`;
   const state = b.states.get(course.code);
   const status = statusOf(b.states, course.code);
-  const offered = seasonsOffered(course);
   // A course that does not run this year never reads "Can take" (D33).
   const word =
-    status === "available" && offered === COPY.notOfferedYear
+    status === "available" && seasonsOffered(course) === COPY.notOfferedYear
       ? COPY.notOfferedYear
       : undefined;
-  const link = (
-    <Link
-      href={href}
-      prefetch={false}
-      className="-my-3 truncate rounded-md py-3 font-semibold tabular-nums focus-visible:-outline-offset-2"
-    >
-      {course.code}
-    </Link>
-  );
   return (
     <tr
       onClick={(event) => {
@@ -445,25 +435,14 @@ function CourseTableRow({
       }}
       className="group h-11 cursor-pointer"
     >
-      <td className={cn(CELL, "rounded-l-md pl-2")}>
-        {glyph ? (
-          <StatusTip
-            status={status}
-            word={word}
-            reason={statusDetail(course, state, b)}
-            className="flex min-w-0 items-center gap-2"
-          >
-            <span className="flex w-4 shrink-0 items-center">
-              <StatusIcon
-                status={status}
-                label={word ?? STATUS[status].label}
-              />
-            </span>
-            {link}
-          </StatusTip>
-        ) : (
-          <div className="flex min-w-0">{link}</div>
-        )}
+      <td className={cn(CELL, "pl-2")}>
+        <Link
+          href={href}
+          prefetch={false}
+          className="-my-3 flex rounded-md py-3 font-semibold tabular-nums focus-visible:-outline-offset-2"
+        >
+          <CourseCode code={course.code} />
+        </Link>
       </td>
       <td className={CELL}>
         <span className="flex min-w-0 items-start gap-2">
@@ -473,19 +452,29 @@ function CourseTableRow({
           {state?.uncertain && <UncertainFlag />}
         </span>
       </td>
-      <td
-        className={cn(
-          CELL,
-          "whitespace-nowrap text-right text-fg-muted tabular-nums",
-        )}
-      >
-        <CreditsLabel course={course} />
+      {showStatus && (
+        <td className={CELL}>
+          <StatusTip
+            status={status}
+            word={word}
+            reason={statusDetail(course, state, b)}
+            className="flex w-fit items-center gap-2"
+          >
+            <StatusIcon status={status} />
+            <span
+              className="whitespace-nowrap"
+              style={{ color: word ? undefined : STATUS[status].text }}
+            >
+              {word ? "Not offered" : STATUS[status].label}
+            </span>
+          </StatusTip>
+        </td>
+      )}
+      <td className={cn(CELL, "whitespace-nowrap text-right tabular-nums")}>
+        <CreditsLabel course={course} bare />
       </td>
-      <td
-        className={cn(CELL, "truncate rounded-r-md pr-2 text-fg-muted")}
-        title={offered}
-      >
-        {offered}
+      <td className={cn(CELL, "pr-2")}>
+        <SeasonLetters course={course} quiet={showStatus} />
       </td>
     </tr>
   );

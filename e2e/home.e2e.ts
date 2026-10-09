@@ -38,12 +38,14 @@ test("nav links reach their pages", async ({ page }) => {
     "Browse courses",
     "What's next",
     "Planner",
+    "Advisor Soon",
     "Profile",
   ]);
   for (const [name, path] of [
     ["Browse courses", "/courses"],
     ["What's next", "/next"],
     ["Planner", "/plan"],
+    ["Advisor", "/advisor"],
     ["Profile", "/profile"],
   ] as const) {
     await nav.getByRole("link", { name }).click();

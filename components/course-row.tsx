@@ -22,6 +22,44 @@ export function seasonsOffered(course: CourseSummary): string {
   return seasons.length > 0 ? seasons.join(", ") : COPY.notOfferedYear;
 }
 
+/** "F W S" with each letter in its own slot, so the seasons line up down a table. Screen readers hear "Fall, Winter". `quiet` shows a dash for a course not offered this year, when a status column next to it already says so. */
+export function SeasonLetters({
+  course,
+  quiet = false,
+}: {
+  course: CourseSummary;
+  quiet?: boolean;
+}) {
+  const offered = SEASONS.filter((season) => isOffered(course, season));
+  if (offered.length === 0) {
+    return quiet ? (
+      <span className="text-fg-muted">
+        <span aria-hidden>–</span>
+        <span className="sr-only">{COPY.notOfferedYear}</span>
+      </span>
+    ) : (
+      <span className="text-fg-muted">Not offered</span>
+    );
+  }
+  return (
+    <span className="inline-flex gap-1 font-semibold">
+      {SEASONS.map((season) => (
+        <span
+          key={season}
+          aria-hidden
+          className={cn(
+            "w-3.5 text-center",
+            !offered.includes(season) && "invisible",
+          )}
+        >
+          {season[0]}
+        </span>
+      ))}
+      <span className="sr-only">{offered.join(", ")}</span>
+    </span>
+  );
+}
+
 /**
  * The one course row (44px, grows when the reason wraps): glyph, code, title, reason or meta, credits, action.
  * Code and title link to the course page, and `uncertain` puts the "Has conditions" icon right after the title. The glyph shows only with `showGlyph` (D10), and its tooltip gives the word and `reason`, or `tip`, a reason for the tooltip alone.

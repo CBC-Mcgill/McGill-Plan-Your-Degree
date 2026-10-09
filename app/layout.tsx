@@ -1,13 +1,11 @@
 import { MotionConfig } from "motion/react";
 import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
-import Link from "next/link";
 import { CommandPalette } from "@/components/command-palette";
 import { SiteHeader } from "@/components/site-header";
 import { StorageBanner } from "@/components/storage-banner";
 import { Toaster } from "@/components/toast";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { COPY } from "@/lib/copy";
 import "./globals.css";
 
 const inter = Inter({
@@ -65,9 +63,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 </a>
                 . Not affiliated with McGill University.
               </p>
-              <Link href="/advisor" className="link">
-                {COPY.advisor}
-              </Link>
             </footer>
             <CommandPalette />
             <Toaster />

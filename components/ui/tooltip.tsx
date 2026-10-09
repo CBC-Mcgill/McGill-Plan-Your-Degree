@@ -4,10 +4,10 @@ import { Tooltip as Primitive } from "radix-ui";
 import { type FocusEvent, type ReactNode, useRef, useState } from "react";
 import type { Definition } from "@/lib/glossary";
 
-/** One provider for the app, so every tooltip shares the same delay and moves between triggers without waiting again. */
+/** One provider for the app, so every tooltip shares one short delay. No skip window, so sliding the pointer down a list does not open a tooltip on every row. */
 function TooltipProvider({ children }: { children: ReactNode }) {
   return (
-    <Primitive.Provider delayDuration={300} skipDelayDuration={150}>
+    <Primitive.Provider delayDuration={150} skipDelayDuration={0}>
       {children}
     </Primitive.Provider>
   );
@@ -91,17 +91,31 @@ function Tooltip({
   );
 }
 
-/** A term with a dotted underline that shows its definition on hover and focus. A click keeps it open. On an h2 it drops the underline, which is too heavy at that size. Never put one inside a link or a button. */
+/** A term with a dotted underline that shows its definition on hover and focus. A click toggles it. On an h2 it drops the underline, which is too heavy at that size. Never put one inside a link or a button. */
 function Term({ def, children }: { def: Definition; children?: ReactNode }) {
   const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
+  // A click that closes it should keep it closed until the pointer leaves, not reopen on the next hover tick.
+  const closedByClick = useRef(false);
   return (
-    <Primitive.Root open={open} onOpenChange={onOpenChange}>
-      <Primitive.Trigger asChild onFocus={onFocus}>
+    <Primitive.Root
+      open={open}
+      onOpenChange={(next) => {
+        if (!(next && closedByClick.current)) onOpenChange(next);
+      }}
+    >
+      <Primitive.Trigger
+        asChild
+        onFocus={onFocus}
+        onPointerLeave={() => {
+          closedByClick.current = false;
+        }}
+      >
         <button
           type="button"
           onClick={(event) => {
             event.preventDefault();
-            onOpenChange(true);
+            closedByClick.current = open;
+            onOpenChange(!open);
           }}
           className="cursor-help text-left underline decoration-1 decoration-dotted decoration-fg-subtle underline-offset-3 [h2_&]:no-underline"
         >

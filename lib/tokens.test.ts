@@ -34,6 +34,16 @@ test("every text token meets 4.5:1 on its surfaces and --fg-subtle meets 3:1", (
     ["danger", "bg"],
     ["warn", "bg"],
     ["warn", "tint"],
+    ["completed", "bg"],
+    ["in-progress", "bg"],
+    ["planned", "bg"],
+    ["completed", "tint"],
+    ["in-progress", "tint"],
+    ["planned", "tint"],
+    ...[1, 2, 3, 4, 5, 6, 7, 8].flatMap((i): [string, string][] => [
+      [`subject-${i}`, "bg"],
+      [`subject-${i}`, `subject-${i}-bg`],
+    ]),
   ];
   for (const [fg, bg] of text) {
     expect(contrast(hex(fg), hex(bg)), `${fg} on ${bg}`).toBeGreaterThan(4.5);
@@ -41,7 +51,7 @@ test("every text token meets 4.5:1 on its surfaces and --fg-subtle meets 3:1", (
   for (const fill of ["primary", "primary-hover", "fg"]) {
     expect(contrast(white, hex(fill)), `white on ${fill}`).toBeGreaterThan(4.5);
   }
-  for (const line of ["fg-subtle", "ring"]) {
+  for (const line of ["fg-subtle", "ring", "locked"]) {
     expect(contrast(hex(line), hex("bg")), `${line} on bg`).toBeGreaterThan(3);
   }
 });
