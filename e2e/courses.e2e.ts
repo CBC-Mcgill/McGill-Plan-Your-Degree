@@ -287,3 +287,15 @@ test("a column's info icon shows its definition on click and hides it on the nex
   await info.click();
   await expect(page.getByRole("tooltip")).toHaveCount(0);
 });
+
+test("the header stays in view while the course list scrolls", async ({
+  page,
+}) => {
+  await page.goto("/courses");
+  await expect(page.locator("tbody a").first()).toBeVisible();
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await expect
+    .poll(() => page.evaluate(() => window.scrollY))
+    .toBeGreaterThan(500);
+  await expect(page.getByRole("navigation", { name: "Main" })).toBeInViewport();
+});

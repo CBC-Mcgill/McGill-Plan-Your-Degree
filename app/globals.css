@@ -96,6 +96,11 @@
 }
 
 @layer base {
+  /* Anchor jumps, scrollIntoView and keyboard focus stop below the sticky header. */
+  html {
+    scroll-padding-top: 4rem;
+  }
+
   body {
     @apply bg-bg text-fg;
     font-size: 14px;
