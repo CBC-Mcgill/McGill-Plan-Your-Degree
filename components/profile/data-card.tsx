@@ -1,5 +1,6 @@
 "use client";
 
+import { ArchiveRestore, Download, FileUp, Trash2 } from "lucide-react";
 import { AlertDialog } from "radix-ui";
 import { useId } from "react";
 import { ImportNotice } from "@/components/profile/import-notice";
@@ -34,29 +35,25 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
   return (
     <Section id="data" title="Your data">
       <p className="text-fg-muted">
-        It all lives in this browser, and nothing is sent anywhere.
+        It all lives in this browser, and nothing is sent anywhere.{" "}
+        <span id={warning}>
+          Restoring a backup replaces your current profile.
+        </span>
       </p>
-      <div className="mt-4 flex items-start gap-2">
+      <div className="mt-4 grid gap-2 [&>button]:justify-start">
         <Button variant="secondary" onClick={downloadBackup}>
+          <Download aria-hidden />
           {COPY.exportBackup}
         </Button>
-        <div className="flex flex-col">
-          <FileButton
-            variant="secondary"
-            accept="application/json,.json"
-            onFile={flow.restoreFile}
-            aria-describedby={warning}
-          >
-            {COPY.restore}
-          </FileButton>
-          {/* Sized to the button, so the next action keeps the usual gap. */}
-          <span
-            id={warning}
-            className="whitespace-nowrap px-3 text-fg-muted contain-inline-size"
-          >
-            {COPY.restoreWarning}
-          </span>
-        </div>
+        <FileButton
+          variant="secondary"
+          accept="application/json,.json"
+          onFile={flow.restoreFile}
+          aria-describedby={warning}
+        >
+          <ArchiveRestore aria-hidden />
+          {COPY.restore}
+        </FileButton>
         <FileButton
           data-import
           variant="secondary"
@@ -64,11 +61,15 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
           onFile={flow.importFile}
           disabled={flow.reading}
         >
+          <FileUp aria-hidden />
           {COPY.reimport}
         </FileButton>
         <AlertDialog.Root>
           <AlertDialog.Trigger asChild>
-            <Button variant="danger">{COPY.deleteAll}</Button>
+            <Button variant="danger" className="justify-start">
+              <Trash2 aria-hidden />
+              {COPY.deleteAll}
+            </Button>
           </AlertDialog.Trigger>
           <AlertDialog.Portal>
             <AlertDialog.Overlay className="fixed inset-0 z-50 bg-scrim transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none" />

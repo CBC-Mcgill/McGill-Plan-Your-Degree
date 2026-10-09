@@ -105,8 +105,10 @@ function GeneratedLine({ program }: { program: Program }) {
   );
   return (
     <p className="mt-2 text-fg-muted">
-      <GeneratedNote hasChecks={hasChecks} /> ·{" "}
-      <CatalogueLink href={program.source} />
+      <GeneratedNote hasChecks={hasChecks} />{" "}
+      <span className="whitespace-nowrap">
+        · <CatalogueLink href={program.source} />
+      </span>
     </p>
   );
 }

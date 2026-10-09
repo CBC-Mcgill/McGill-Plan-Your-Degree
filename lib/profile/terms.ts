@@ -39,19 +39,3 @@ export function lastTerm(items: readonly { term: Term | null }[]): Term | null {
       .at(-1) ?? null
   );
 }
-
-/** Groups by term from oldest to newest, like the Planner path, with the entries that have no term first. */
-export function groupByTerm<T extends { term: Term | null }>(
-  items: T[],
-): { term: Term | null; items: T[] }[] {
-  const groups = new Map<number, { term: Term | null; items: T[] }>();
-  for (const item of items) {
-    const id = item.term ? termKey(item.term) : -1;
-    const group = groups.get(id) ?? { term: item.term, items: [] };
-    group.items.push(item);
-    groups.set(id, group);
-  }
-  return [...groups.values()].sort((a, b) =>
-    a.term && b.term ? compareTerms(a.term, b.term) : a.term ? 1 : -1,
-  );
-}

@@ -4,14 +4,19 @@ import { useEffect, useRef } from "react";
 import { CoursesCard } from "@/components/profile/courses-card";
 import { DataCard } from "@/components/profile/data-card";
 import { ImportScreen } from "@/components/profile/import-screen";
+import {
+  PAGE_GRID,
+  PageSkeleton,
+  SIDE_PANEL,
+} from "@/components/profile/layout";
 import { ProgramCard } from "@/components/profile/program-card";
 import { ReviewScreen } from "@/components/profile/review-screen";
 import { useImportFlow } from "@/components/profile/use-import-flow";
+import { COPY } from "@/lib/copy";
 import { isStarted, startProfile } from "@/lib/profile/started";
 import { useProfileHydrated, useProfileStore } from "@/lib/profile/store";
-import { useProgramIndex } from "@/lib/programs/client";
-
-const bone = "rounded-md bg-tint motion-safe:animate-pulse";
+import { formatTerm } from "@/lib/profile/terms";
+import { useProgram, useProgramIndex } from "@/lib/programs/client";
 
 export function ProfileView() {
   const hydrated = useProfileHydrated();
@@ -38,7 +43,10 @@ export function ProfileView() {
     }
   }, [flow.transcript]);
 
-  if (!hydrated) return <ProfileSkeleton />;
+  if (!hydrated) {
+    // Stands in until the saved profile has loaded, so a returning student never sees the import screen first.
+    return <PageSkeleton status="Loading your profile" summary />;
+  }
   if (flow.transcript) {
     return (
       <ReviewScreen
@@ -51,38 +59,44 @@ export function ProfileView() {
 
   return (
     <div className="mx-auto w-full max-w-page px-8 py-12">
-      <div className="flex max-w-reading flex-col gap-6">
-        <h1 className="sr-only">Profile</h1>
-        <ProgramCard />
+      <h1>Profile</h1>
+      <Summary />
+      <div className={PAGE_GRID}>
         <CoursesCard />
-        <DataCard flow={flow} />
+        <div className={SIDE_PANEL}>
+          <ProgramCard />
+          <DataCard flow={flow} />
+        </div>
       </div>
     </div>
   );
 }
 
-/** Stands in until the saved profile has loaded, so a returning student never sees the import screen first. */
-function ProfileSkeleton() {
+/** "Computer Engineering (B.Eng.) with the Applied Artificial Intelligence minor, Fall 2025 to Winter 2029." */
+function Summary() {
+  const program = useProgram(useProfileStore((s) => s.programId));
+  const minor = useProgram(useProfileStore((s) => s.minorId));
+  const start = useProfileStore((s) => s.startTerm);
+  const end = useProfileStore((s) => s.graduationTerm);
+  const degree = program && `${program.name} (${program.degree})`;
+  const terms =
+    start && end
+      ? `${formatTerm(start)} to ${formatTerm(end)}`
+      : start
+        ? `from ${formatTerm(start)}`
+        : end && `until ${formatTerm(end)}`;
+  const first = [
+    [degree, minor && `with the ${COPY.minorTitle(minor.name)}`]
+      .filter(Boolean)
+      .join(" "),
+    terms,
+  ]
+    .filter(Boolean)
+    .join(", ");
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-12">
-      <p role="status" className="sr-only">
-        Loading your profile
-      </p>
-      <div aria-hidden className="max-w-reading">
-        <div className={`${bone} h-7 w-28`} />
-        <div className={`${bone} mt-2 h-5 w-56`} />
-        <div className={`${bone} mt-4 h-9`} />
-        <div className={`${bone} mt-4 h-9`} />
-        <div className="mt-4 grid grid-cols-2 gap-4">
-          <div className={`${bone} h-9`} />
-          <div className={`${bone} h-9`} />
-        </div>
-        <div className={`${bone} mt-12 h-7 w-28`} />
-        {Array.from({ length: 5 }, (_, row) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-          <div key={row} className={`${bone} mt-4 h-7`} />
-        ))}
-      </div>
-    </div>
+    <p className="mt-2 text-fg-muted">
+      {first && `${first[0]?.toUpperCase()}${first.slice(1)}. `}Kept in this
+      browser only.
+    </p>
   );
 }
