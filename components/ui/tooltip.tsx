@@ -91,7 +91,7 @@ function Tooltip({
   );
 }
 
-/** A term with a dotted underline that shows its definition on hover and focus. A click keeps it open. Never put one inside a link or a button. */
+/** A term with a dotted underline that shows its definition on hover and focus. A click keeps it open. On an h2 it drops the underline, which is too heavy at that size. Never put one inside a link or a button. */
 function Term({ def, children }: { def: Definition; children?: ReactNode }) {
   const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
   return (
@@ -103,7 +103,7 @@ function Term({ def, children }: { def: Definition; children?: ReactNode }) {
             event.preventDefault();
             onOpenChange(true);
           }}
-          className="cursor-help text-left underline decoration-1 decoration-dotted decoration-fg-subtle underline-offset-3"
+          className="cursor-help text-left underline decoration-1 decoration-dotted decoration-fg-subtle underline-offset-3 [h2_&]:no-underline"
         >
           {children ?? def.label}
         </button>

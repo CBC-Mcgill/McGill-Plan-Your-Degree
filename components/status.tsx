@@ -158,10 +158,10 @@ export function StatusTip({
   );
 }
 
-/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. A focusable icon with the word for screen readers and the definition on hover and focus (D21). Never put it inside a link or a button. */
+/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. A focusable icon with the word for screen readers and the definition on hover and focus (D21), its target padded to 26px without moving the layout. Never put it inside a link or a button. */
 export function UncertainFlag() {
   return (
-    <span className="inline-flex h-5 shrink-0 items-center text-warn">
+    <span className="inline-flex h-5 shrink-0 items-center text-warn [&>button]:relative [&>button]:after:absolute [&>button]:after:-inset-1.5">
       <Term def={GLOSSARY.hasConditions}>
         <CircleAlert aria-hidden className="size-3.5" strokeWidth={2} />
         <span className="sr-only">{COPY.hasConditions}</span>

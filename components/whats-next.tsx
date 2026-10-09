@@ -12,7 +12,7 @@ import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { STATUS, type Status, StatusIcon } from "@/components/status";
 import { Button } from "@/components/ui/button";
-import { Disclosure } from "@/components/ui/disclosure";
+import { Disclosure, ShowMore } from "@/components/ui/disclosure";
 import { Section } from "@/components/ui/section";
 import { ViewTabs } from "@/components/ui/tabs";
 import { Term as Defined } from "@/components/ui/tooltip";
@@ -55,7 +55,7 @@ import type { Program } from "@/lib/programs/types";
 
 const TERMS_SHOWN = 2;
 const BUCKET_LIMIT = 5;
-const OTHER_STEP = 20;
+const OTHER_LIMIT = 20;
 
 // The catalogue opens a program page on its overview tab, and this hash opens the course lists instead.
 const coursesTab = (source: string) => `${source}#coursestext`;
@@ -669,32 +669,42 @@ function Bucket({
   context: Context;
   label: "h3" | "h4";
 }) {
-  const [all, setAll] = useState(false);
   const isPlanned = (entry: Entry) => context.planned.has(entry.course.code);
   const ordered = [
     ...entries.filter(isPlanned),
     ...entries.filter((entry) => !isPlanned(entry)),
   ];
-  const shown = all ? ordered : ordered.slice(0, BUCKET_LIMIT);
-  const hidden = ordered.length - shown.length;
   return (
     <div className="mt-6 first:mt-0">
       {title && <Label as={label} title={title} meta={progress} />}
-      <ul>
-        {shown.map((entry) => (
-          <Row key={entry.course.code} entry={entry} context={context} />
-        ))}
-      </ul>
-      {hidden > 0 && <ShowMore count={hidden} onClick={() => setAll(true)} />}
+      <Rows entries={ordered} context={context} limit={BUCKET_LIMIT} />
     </div>
   );
 }
 
-function ShowMore({ count, onClick }: { count: number; onClick: () => void }) {
+/** Rows up to `limit`, the rest behind "Show N more". */
+function Rows({
+  entries,
+  context,
+  limit,
+}: {
+  entries: Entry[];
+  context: Context;
+  limit: number;
+}) {
+  const rows = (part: Entry[]) => (
+    <ul>
+      {part.map((entry) => (
+        <Row key={entry.course.code} entry={entry} context={context} />
+      ))}
+    </ul>
+  );
+  const rest = entries.slice(limit);
   return (
-    <Button variant="text" className="-ml-3" onClick={onClick}>
-      Show {count} more
-    </Button>
+    <>
+      {rows(entries.slice(0, limit))}
+      {rest.length > 0 && <ShowMore count={rest.length}>{rows(rest)}</ShowMore>}
+    </>
   );
 }
 
@@ -878,9 +888,6 @@ function OtherCourses({
   entries: Entry[];
   context: Context;
 }) {
-  const [limit, setLimit] = useState(OTHER_STEP);
-  const shown = entries.slice(0, limit);
-  const hidden = entries.length - shown.length;
   const term = termLabel(context.term);
   return (
     <Disclosure
@@ -891,17 +898,7 @@ function OtherCourses({
       {entries.length === 0 ? (
         <p className="text-fg-muted">Nothing else is open to you in {term}.</p>
       ) : (
-        <ul>
-          {shown.map((entry) => (
-            <Row key={entry.course.code} entry={entry} context={context} />
-          ))}
-        </ul>
-      )}
-      {hidden > 0 && (
-        <ShowMore
-          count={Math.min(hidden, OTHER_STEP)}
-          onClick={() => setLimit((n) => n + OTHER_STEP)}
-        />
+        <Rows entries={entries} context={context} limit={OTHER_LIMIT} />
       )}
     </Disclosure>
   );

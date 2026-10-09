@@ -43,19 +43,18 @@ export function CourseRow({
   ].filter(Boolean);
   return (
     <li className="group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint">
-      {showWord ? (
-        <span className="flex h-5 w-4 shrink-0 items-center">
-          <StatusIcon status={status} />
-        </span>
-      ) : (
-        <StatusTip
-          status={status}
-          className="flex h-5 w-4 shrink-0 items-center"
-        >
-          <StatusIcon status={status} label={word} />
-        </StatusTip>
-      )}
-      <span className="w-24 shrink-0 font-semibold tabular-nums">{code}</span>
+      <span className="flex shrink-0 gap-2">
+        {showWord ? (
+          <span className="flex h-5 w-4 items-center">
+            <StatusIcon status={status} />
+          </span>
+        ) : (
+          <StatusTip status={status} className="flex h-5 w-4 items-center">
+            <StatusIcon status={status} label={word} />
+          </StatusTip>
+        )}
+        <span className="w-24 font-semibold tabular-nums">{code}</span>
+      </span>
       <span className="min-w-0 flex-1 truncate" title={title ?? undefined}>
         {title}
       </span>

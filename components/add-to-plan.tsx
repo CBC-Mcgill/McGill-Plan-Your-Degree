@@ -148,13 +148,19 @@ function statusLine(
       return locked;
     case "planned":
       return blockers.length > 0 ? locked : null;
-    case "available":
+    case "available": {
+      // Say why the red "Add to" button is missing when the next term does not run the course.
+      const next = planTermOptions([])[0];
       return runsThisYear(course)
         ? {
             ...locked,
             glyph: status,
             word: STATUS[status].label,
             tip: STATUS_TIPS[status],
+            reason:
+              next && !isOffered(course, next.season)
+                ? COPY.notOfferedIn(next.season)
+                : undefined,
           }
         : {
             ...locked,
@@ -162,6 +168,7 @@ function statusLine(
             word: COPY.notOfferedYear,
             tip: STATUS_TIPS[status],
           };
+    }
     default: {
       const record = records.find(
         (r) =>

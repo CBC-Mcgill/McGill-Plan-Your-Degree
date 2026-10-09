@@ -1,5 +1,5 @@
 import type { CoursePart, CourseSummary } from "../catalogue/types.ts";
-import { termLabel } from "../profile/term-options.ts";
+import { COPY } from "../copy.ts";
 import { advanceTerms } from "../profile/terms.ts";
 import {
   compareTerms,
@@ -110,7 +110,7 @@ export function loadsName(loads: readonly PlannedLoad[]): string {
 
 /** The terms the loads fall in, such as "Fall 2027 and Winter 2028". */
 export function loadsTerms(loads: readonly PlannedLoad[]): string {
-  return list.format(loads.map((load) => termLabel(load.term)));
+  return COPY.termPair(...loads.map((load) => load.term));
 }
 
 /** The term a request to start the course in `term` lands in. A multi-term course starts only where its first part runs, so it takes the first such term from there. */

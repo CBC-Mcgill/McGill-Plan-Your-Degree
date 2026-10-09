@@ -55,7 +55,8 @@ function Missing({
   checks,
 }: {
   text: string;
-  checks: { titles: string[]; source: string }[];
+  /** `source` is null when the program's own line already links the catalogue. */
+  checks: { titles: string[]; source: string | null }[];
 }) {
   const lines = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
@@ -104,7 +105,8 @@ function Missing({
         </>
       )}
       {checks.map(({ titles, source }, i) => (
-        <Fragment key={source}>
+        // biome-ignore lint/suspicious/noArrayIndexKey: one line per program, in a fixed order
+        <Fragment key={i}>
           <p className="flex items-baseline gap-1">
             <TriangleAlert
               aria-hidden
@@ -114,9 +116,11 @@ function Missing({
             <span data-line className={line}>
               {titles.map(brief).join(" · ")}
             </span>
-            <span className="shrink-0">
-              · <CatalogueLink href={source} />
-            </span>
+            {source && (
+              <span className="shrink-0">
+                · <CatalogueLink href={source} />
+              </span>
+            )}
           </p>
           <span>{!text && i === 0 && showAll}</span>
         </Fragment>
@@ -163,7 +167,9 @@ export function PlanSummary({
   ];
   const missing = rows.flatMap((row) => row.missing).join(" · ");
   const checks = rows.flatMap(({ program, checks }) =>
-    checks.length > 0 ? [{ titles: checks, source: program.source }] : [],
+    checks.length > 0
+      ? [{ titles: checks, source: program.generated ? null : program.source }]
+      : [],
   );
   const hasChecks = (program: Program) =>
     rows.some((row) => row.program === program && row.checks.length > 0);
