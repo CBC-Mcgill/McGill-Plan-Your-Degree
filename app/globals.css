@@ -310,3 +310,33 @@ html[data-nav="dark-solid"] .site-header {
     translate: none;
   }
 }
+
+/* "McGill" in the landing h1: reds that flow slowly through the word. Every stop keeps at least 3:1 on the ink. */
+.mcgill-flow {
+  background:
+    linear-gradient(
+      90deg,
+      #e8283d,
+      #ff6f7e 25%,
+      #e8283d 50%,
+      #ff4a5c 75%,
+      #e8283d
+    )
+    0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: mcgill-flow 6s linear infinite;
+}
+
+@keyframes mcgill-flow {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mcgill-flow {
+    animation: none;
+  }
+}
