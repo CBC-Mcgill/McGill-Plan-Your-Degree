@@ -13,6 +13,7 @@ import {
 import { motion } from "motion/react";
 import Link from "next/link";
 import { type ReactNode, useId, useMemo, useState } from "react";
+import { CatalogueError } from "@/components/catalogue-error";
 import { seasonsOffered } from "@/components/course-row";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon, UncertainFlag } from "@/components/status";
@@ -210,9 +211,9 @@ function WhatsNextReady({ snapshot }: { snapshot: Snapshot }) {
       </Header>
 
       {catalogue.status === "error" ? (
-        <p role="alert" className="mt-6">
-          Could not load the course list. Reload the page to try again.
-        </p>
+        <div className="mt-6">
+          <CatalogueError />
+        </div>
       ) : view && selected ? (
         <Content
           view={view}
@@ -268,7 +269,7 @@ function Content({
       ) : (
         <Card className="px-5 py-4">
           <Link
-            href="/profile"
+            href="/profile#program"
             className="font-medium underline underline-offset-2 hover:text-primary"
           >
             Pick your program

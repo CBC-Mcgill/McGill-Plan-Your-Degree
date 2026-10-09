@@ -159,7 +159,7 @@ export function AddCourse({
                     onClick={() => commit(course)}
                     className={cn(
                       "flex h-10 w-full items-center gap-2.5 rounded-md px-2 text-left",
-                      i === active && "bg-subtle",
+                      i === active && "option-active",
                       state.disabled && "cursor-default text-muted-foreground",
                     )}
                   >

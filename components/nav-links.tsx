@@ -3,6 +3,7 @@
 import { cn } from "cn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 
 const links: { href: string; label: string; soon?: boolean }[] = [
@@ -15,6 +16,17 @@ const links: { href: string; label: string; soon?: boolean }[] = [
 
 export function NavLinks() {
   const pathname = usePathname();
+  const previous = useRef(pathname);
+
+  // A client navigation leaves keyboard focus on the header link, so the next Tab would walk the header again.
+  useEffect(() => {
+    if (previous.current === pathname) return;
+    previous.current = pathname;
+    const active = document.activeElement;
+    if (!active || active === document.body || active.closest("header")) {
+      document.getElementById("main")?.focus({ preventScroll: true });
+    }
+  }, [pathname]);
 
   return (
     <ul className="flex h-full items-center gap-1">

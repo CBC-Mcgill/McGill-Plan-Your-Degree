@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 import { BadgesCard } from "@/components/profile/badges-card";
 import { CoursesCard } from "@/components/profile/courses-card";
 import { DataCard } from "@/components/profile/data-card";
@@ -12,18 +12,34 @@ import { ProgramCard } from "@/components/profile/program-card";
 import { ReviewScreen } from "@/components/profile/review-screen";
 import { useImportFlow } from "@/components/profile/use-import-flow";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { isStarted, startProfile } from "@/lib/profile/started";
 import { useProfileHydrated, useProfileStore } from "@/lib/profile/store";
 
 export function ProfileView() {
   const hydrated = useProfileHydrated();
   const flow = useImportFlow();
-  const hasProfile = useProfileStore(
-    (s) => s.records.length > 0 || s.programId !== null,
-  );
-  // "Start without a transcript" shows the empty profile, so the program can be set first.
-  const [started, setStarted] = useState(false);
+  const started = useProfileStore(isStarted);
 
-  if (!hydrated) return <div className="flex-1" />;
+  // The page renders after hydration, so the browser has already missed a #program or #badges anchor on a full page load.
+  useEffect(() => {
+    if (hydrated) {
+      document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
+    }
+  }, [hydrated]);
+
+  // Cancelling a review drops the review screen, so keyboard focus goes back to the button that started it.
+  const reviewed = useRef(false);
+  useEffect(() => {
+    if (flow.transcript) {
+      reviewed.current = true;
+    } else if (reviewed.current) {
+      reviewed.current = false;
+      document.querySelector<HTMLElement>("[data-import]")?.focus();
+    }
+  }, [flow.transcript]);
+
+  if (!hydrated) return <ProfileSkeleton />;
   if (flow.transcript) {
     return (
       <ReviewScreen
@@ -32,9 +48,7 @@ export function ProfileView() {
       />
     );
   }
-  if (!hasProfile && !started) {
-    return <ImportScreen flow={flow} onStartEmpty={() => setStarted(true)} />;
-  }
+  if (!started) return <ImportScreen flow={flow} onStartEmpty={startProfile} />;
 
   return (
     <div className="mx-auto w-full max-w-page px-8 py-10">
@@ -59,9 +73,28 @@ export function ProfileView() {
 
       <div className="mt-6 flex flex-col gap-8">
         <ProgramCard />
-        <BadgesCard />
         <CoursesCard />
-        <DataCard flow={flow} onReset={() => setStarted(false)} />
+        <BadgesCard />
+        <DataCard flow={flow} />
+      </div>
+    </div>
+  );
+}
+
+/** Stands in until the saved profile has loaded, so a returning student never sees the import screen first. */
+function ProfileSkeleton() {
+  return (
+    <div className="mx-auto w-full max-w-page px-8 py-10">
+      <div aria-hidden className="flex flex-col gap-1">
+        <div className="h-[34px] w-44 rounded-sm bg-muted motion-safe:animate-pulse" />
+        <div className="h-5 w-80 rounded-sm bg-muted motion-safe:animate-pulse" />
+      </div>
+      <p role="status" className="sr-only">
+        Loading your profile
+      </p>
+      <div aria-hidden className="mt-6 flex flex-col gap-8">
+        <Card className="h-60" />
+        <Card className="h-96" />
       </div>
     </div>
   );

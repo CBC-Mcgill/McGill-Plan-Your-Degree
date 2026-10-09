@@ -16,7 +16,7 @@ type SelectProps = Omit<
   "label" | "value" | "onChange" | "children"
 >;
 
-/** The empty value is the choice for a program that is not in the list. */
+/** The empty value reads "Choose a program" until one is picked, then it is the choice for a program that is not in the list. */
 export function ProgramSelect({
   value,
   onChange,
@@ -37,7 +37,9 @@ export function ProgramSelect({
           {program.name} ({program.degree})
         </option>
       ))}
-      <option value="">My program isn't listed yet</option>
+      <option value="">
+        {value === null ? "Choose a program" : "My program isn't listed yet"}
+      </option>
     </SelectField>
   );
 }

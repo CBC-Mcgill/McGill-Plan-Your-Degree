@@ -42,7 +42,7 @@ const MODES = [
 const menuContent =
   "z-50 min-w-60 rounded-lg bg-card p-1 shadow-float outline-none";
 const menuItem =
-  "flex cursor-pointer select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none data-[highlighted]:bg-subtle";
+  "flex cursor-pointer select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none data-[highlighted]:option-active";
 const toolButton =
   "flex h-8 items-center gap-1.5 rounded-md px-2.5 font-medium text-muted-foreground text-sm transition-[background-color,color] hover:bg-subtle hover:text-foreground data-[state=open]:bg-subtle data-[state=open]:text-foreground";
 

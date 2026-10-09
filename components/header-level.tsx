@@ -1,9 +1,15 @@
 "use client";
 
+import { cn } from "cn";
 import Link from "next/link";
 import { XpBar } from "@/components/xp-bar";
+import { useCatalogue } from "@/lib/catalogue/client";
 import { XP_PER_LEVEL } from "@/lib/game/progress";
 import { useGameProgress, useHasCourses } from "@/lib/game/use-game-progress";
+
+// A fixed width, so the search bar stays put while the chip waits for the catalogue.
+const CHIP =
+  "flex h-8 w-[13.5rem] shrink-0 items-center gap-2.5 rounded-md px-2 max-[1200px]:w-[7.5rem]";
 
 /** The student's level and XP in the header. Nothing shows until the profile has courses. */
 export function HeaderLevel() {
@@ -13,13 +19,21 @@ export function HeaderLevel() {
 
 function LevelLink() {
   const game = useGameProgress();
-  if (!game) return null;
+  const catalogue = useCatalogue();
+  if (!game) {
+    return catalogue.status === "error" ? null : (
+      <div aria-hidden className={CHIP}>
+        <span className="h-4 w-8 rounded-sm bg-muted motion-safe:animate-pulse" />
+        <span className="h-1.5 flex-1 rounded-full bg-muted motion-safe:animate-pulse" />
+      </div>
+    );
+  }
 
   return (
     <Link
       href="/profile#badges"
       title={`${game.xpToNextLevel} XP to level ${game.level + 1}`}
-      className="flex h-8 shrink-0 items-center gap-2.5 rounded-md px-2 transition-colors hover:bg-subtle"
+      className={cn(CHIP, "transition-colors hover:bg-subtle")}
     >
       <span className="font-display font-extrabold text-[13px] font-stretch-semi-expanded">
         Lv {game.level}
@@ -28,7 +42,8 @@ function LevelLink() {
         xp={game.xpIntoLevel}
         max={XP_PER_LEVEL}
         label={`${game.xp.toLocaleString("en-US")} XP`}
-        barClassName="max-[1200px]:w-16"
+        className="min-w-0 flex-1"
+        barClassName="min-w-0 flex-1"
         captionClassName="max-[1200px]:sr-only"
       />
     </Link>

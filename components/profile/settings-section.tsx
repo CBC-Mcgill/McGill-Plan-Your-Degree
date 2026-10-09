@@ -18,8 +18,9 @@ export function SettingsSection({
 }) {
   return (
     <section
+      id={id}
       aria-labelledby={`${id}-title`}
-      className="grid grid-cols-[16rem_minmax(0,1fr)] items-start gap-8"
+      className="grid scroll-mt-6 grid-cols-[16rem_minmax(0,1fr)] items-start gap-8"
     >
       <div>
         <h2 id={`${id}-title`} className="text-sm leading-5">

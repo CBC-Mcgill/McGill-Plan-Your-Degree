@@ -40,7 +40,7 @@ export function lastTerm(items: readonly { term: Term | null }[]): Term | null {
   );
 }
 
-/** Groups by term from oldest to newest, with the entries that have no term first. */
+/** Groups by term from newest to oldest, with the entries that have no term last. */
 export function groupByTerm<T extends { term: Term | null }>(
   items: T[],
 ): { term: Term | null; items: T[] }[] {
@@ -52,6 +52,6 @@ export function groupByTerm<T extends { term: Term | null }>(
     groups.set(id, group);
   }
   return [...groups.values()].sort((a, b) =>
-    a.term && b.term ? compareTerms(a.term, b.term) : a.term ? 1 : -1,
+    a.term && b.term ? compareTerms(b.term, a.term) : a.term ? -1 : 1,
   );
 }

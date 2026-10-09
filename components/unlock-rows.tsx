@@ -49,11 +49,9 @@ function Rows({
             key={course.code}
             className="flex h-11 items-center gap-3 border-border border-t pr-5 pl-5 focus-within:bg-subtle hover:bg-subtle"
           >
-            <span className="flex size-3.5 shrink-0">
-              {status && (
-                <StatusIcon status={status} label={STATUS[status].label} />
-              )}
-            </span>
+            {status && (
+              <StatusIcon status={status} label={STATUS[status].label} />
+            )}
             <Link
               href={`/courses/${courseSlug(course.code)}`}
               prefetch={false}

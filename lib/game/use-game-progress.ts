@@ -2,12 +2,9 @@
 
 import { useMemo } from "react";
 import { useCatalogue } from "../catalogue/client.ts";
-import type { Catalogue } from "../engine/snapshot.ts";
 import { useProfileHydrated, useProfileStore } from "../profile/store.ts";
 import { getProgram } from "../programs/index.ts";
 import { type GameProgress, gameProgress } from "./progress.ts";
-
-const NO_COURSES: Catalogue = new Map();
 
 /** True once the profile has loaded and holds courses. Game UI waits for it, so nobody without a profile sees fake XP. */
 export function useHasCourses(): boolean {
@@ -16,7 +13,7 @@ export function useHasCourses(): boolean {
   return hydrated && any;
 }
 
-/** XP, level and badges for the saved profile. Undefined until the profile and the catalogue have loaded. */
+/** XP, level and badges for the saved profile. Undefined until the profile and the catalogue have loaded, and when the catalogue fails, since XP would be wrong without it. */
 export function useGameProgress(): GameProgress | undefined {
   const hydrated = useProfileHydrated();
   const catalogue = useCatalogue();
@@ -29,11 +26,10 @@ export function useGameProgress(): GameProgress | undefined {
   const advancedStanding = useProfileStore((state) => state.advancedStanding);
 
   return useMemo(() => {
-    if (!hydrated || catalogue.status === "loading") return undefined;
+    if (!hydrated || catalogue.status !== "ready") return undefined;
     return gameProgress(
       { records, plan, graduationTerm, creditLimit, entry, advancedStanding },
-      // Without the catalogue, only the credits a record states count.
-      catalogue.status === "ready" ? catalogue.catalogue : NO_COURSES,
+      catalogue.catalogue,
       (programId && getProgram(programId)) || null,
     );
   }, [

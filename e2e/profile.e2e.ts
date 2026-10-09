@@ -79,3 +79,21 @@ test("a browser that cannot save the profile says so and offers a backup", async
     banner.getByRole("button", { name: "Export a backup" }),
   ).toBeVisible();
 });
+
+test("starting without a transcript counts as a profile everywhere", async ({
+  page,
+}) => {
+  await page.goto("/profile");
+  await page
+    .getByRole("button", { name: "Start without a transcript" })
+    .click();
+  await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue("");
+
+  await page.getByRole("link", { name: "What's next", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: /Other courses you can take/ }),
+  ).toBeVisible();
+  await page.getByRole("link", { name: "Pick your program" }).click();
+  await expect(page).toHaveURL("/profile#program");
+  await expect(page.locator("#program")).toBeInViewport();
+});

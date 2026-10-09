@@ -54,7 +54,7 @@ export function ImportScreen({
               if (file) flow.importFile(file);
             }}
             data-dragging={dragging}
-            className="flex min-w-0 flex-col items-center gap-3 rounded-lg border border-border-strong border-dashed bg-card px-8 py-10 text-center transition-colors data-[dragging=true]:border-primary data-[dragging=true]:bg-subtle"
+            className="flex min-w-0 flex-col items-center gap-3 rounded-lg border border-input border-dashed bg-card px-8 py-10 text-center transition-colors data-[dragging=true]:border-primary data-[dragging=true]:bg-subtle"
           >
             <legend className="sr-only">Transcript PDF</legend>
             <FileUp
@@ -63,6 +63,7 @@ export function ImportScreen({
               strokeWidth={1.5}
             />
             <FileButton
+              data-import
               size="lg"
               accept="application/pdf,.pdf"
               onFile={flow.importFile}

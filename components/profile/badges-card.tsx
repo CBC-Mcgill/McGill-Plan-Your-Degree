@@ -16,9 +16,10 @@ import {
   Medal,
   Trophy,
 } from "lucide-react";
-import { useEffect } from "react";
 import { BadgeTile } from "@/components/badge-tile";
+import { CatalogueError } from "@/components/catalogue-error";
 import { SectionCard } from "@/components/section-card";
+import { useCatalogue } from "@/lib/catalogue/client";
 import type { Badge } from "@/lib/game/badges";
 import { XP_PER_CREDIT } from "@/lib/game/progress";
 import { useGameProgress } from "@/lib/game/use-game-progress";
@@ -41,13 +42,7 @@ const ICONS: Record<Badge["icon"], LucideIcon> = {
 
 export function BadgesCard() {
   const game = useGameProgress();
-
-  // The profile renders after hydration, so the browser has already missed the #badges anchor on a full page load.
-  useEffect(() => {
-    if (window.location.hash === "#badges") {
-      document.getElementById("badges")?.scrollIntoView();
-    }
-  }, []);
+  const catalogue = useCatalogue();
 
   return (
     <SectionCard
@@ -58,6 +53,8 @@ export function BadgesCard() {
         `${game.earned.length} of ${game.earned.length + game.locked.length} earned`
       }
     >
+      {!game && catalogue.status === "error" && <CatalogueError />}
+      {!game && catalogue.status === "loading" && <BadgesSkeleton />}
       {game && (
         <>
           <p className="text-[13px] text-muted-foreground">
@@ -82,5 +79,23 @@ export function BadgesCard() {
         </>
       )}
     </SectionCard>
+  );
+}
+
+/** The caption and a grid of tiles at their usual size, so the page does not jump when the badges arrive. */
+function BadgesSkeleton() {
+  return (
+    <div aria-hidden>
+      <div className="h-5 w-3/4 rounded-sm bg-muted motion-safe:animate-pulse" />
+      <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-3">
+        {Array.from({ length: 13 }, (_, tile) => (
+          <div
+            // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+            key={tile}
+            className="h-[11.75rem] rounded-lg bg-muted motion-safe:animate-pulse"
+          />
+        ))}
+      </div>
+    </div>
   );
 }

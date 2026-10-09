@@ -8,9 +8,11 @@
   --subtle: #f7f8fa;
   --muted: #e9ecf0;
   --muted-foreground: #5b6478;
-  --faint: #8a93a6;
+  --faint: #616a7e;
   --border: #e4e7ec;
   --border-strong: #cdd3dc;
+  --input: #848da1;
+  --track: #d3d8e0;
   --ring: #2f5fc4;
 
   --primary: #c8102e;
@@ -30,9 +32,9 @@
   --in-progress-surface: color-mix(in oklab, var(--in-progress) 12%, white);
   --planned: #5157a8;
   --planned-surface: color-mix(in oklab, var(--planned) 12%, white);
-  --available: #8a93a6;
+  --available: #7c8597;
   --available-surface: color-mix(in oklab, var(--available) 12%, white);
-  --locked: #a3abbb;
+  --locked: #7c8597;
   --locked-surface: color-mix(in oklab, var(--locked) 12%, white);
   --failed: var(--danger);
   --failed-surface: color-mix(in oklab, var(--failed) 12%, white);
@@ -53,6 +55,8 @@
   --color-faint: var(--faint);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-track: var(--track);
   --color-ring: var(--ring);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
@@ -131,4 +135,15 @@
     outline: 2px solid var(--ring);
     outline-offset: 2px;
   }
+}
+
+/* Tailwind's transition-colors includes outline-color, which would fade the focus ring in. */
+:focus-visible {
+  transition-property: none;
+}
+
+/* The highlighted option of a list or menu: a ring-colored tint and bar, clear against white. */
+@utility option-active {
+  background-color: color-mix(in oklab, var(--ring) 10%, white);
+  box-shadow: inset 2px 0 0 var(--ring);
 }

@@ -335,8 +335,7 @@ function PaletteDialog() {
                         onClick={() => run(item)}
                         className={cn(
                           "flex h-10 w-full cursor-pointer items-center gap-3 rounded-md px-3 text-left",
-                          selected &&
-                            "bg-subtle shadow-[inset_0_0_0_1px_var(--border)]",
+                          selected && "option-active",
                         )}
                       >
                         {item.kind === "course" ? (

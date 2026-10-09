@@ -101,7 +101,8 @@ export function AdvisorChat() {
 
   return (
     <Tooltip.Provider delayDuration={150}>
-      <div className="flex h-[calc(100dvh-3.5rem)] min-h-[36rem]">
+      {/* The viewport less the header (3.5rem) and the footer (4.1875rem), so the page never scrolls. */}
+      <div className="flex h-[calc(100dvh-7.6875rem)] min-h-[36rem]">
         <Sidebar onNewChat={newChat} />
         <section
           aria-label="Advisor chat"

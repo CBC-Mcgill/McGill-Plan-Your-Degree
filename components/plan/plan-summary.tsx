@@ -141,7 +141,7 @@ export function PlanSummary({
               <>
                 <h2 className="text-base leading-6">Choose your program</h2>
                 <p className="text-[13px] text-muted-foreground leading-[18px]">
-                  <Link href="/profile" className={linkClass}>
+                  <Link href="/profile#program" className={linkClass}>
                     Pick your program on your profile
                   </Link>{" "}
                   to see what your plan still needs to graduate.
@@ -208,7 +208,7 @@ export function PlanSummary({
           <span>
             Your expected graduation, {graduationPassed}, has already passed, so
             there are no terms left to plan.{" "}
-            <Link href="/profile" className={linkClass}>
+            <Link href="/profile#program" className={linkClass}>
               Update it on your profile
             </Link>
             .
@@ -222,7 +222,7 @@ export function PlanSummary({
           <span>
             You have not set your graduation term, so the path shows four years
             from your start.{" "}
-            <Link href="/profile" className={linkClass}>
+            <Link href="/profile#program" className={linkClass}>
               Set it on your profile
             </Link>
             .

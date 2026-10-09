@@ -21,8 +21,8 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title: {
-    default: "McGill Plan Your Degree",
-    template: "%s | McGill Plan Your Degree",
+    default: "Plan Your Degree",
+    template: "%s | Plan Your Degree",
   },
   description:
     "Browse McGill courses, import your transcript, and plan your degree.",
