@@ -1,20 +1,14 @@
 import { TriangleAlert, X } from "lucide-react";
-import { StatusLabel } from "@/components/status";
+import { Fragment, type ReactNode } from "react";
+import { STATUS, StatusIcon, StatusTip } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { formatTerm } from "@/lib/profile/terms";
 import type { CourseStatus, Term } from "@/lib/profile/types";
 
-interface Row {
-  code: string;
-  title: string | null;
-  credits: number | null;
-  grade: string | null;
-  status: CourseStatus;
-  /** A line under the title, such as when a part's credit arrives. */
-  note?: string;
-}
-
-/** One course of a term, 44px tall like the rows on What's next. */
+/**
+ * One record of the profile or the review, 44px like every row: glyph, code, title, meta, credits, grade, then × on hover and focus (pattern A).
+ * The word "Completed" shows only without a grade (D41), since the glyph and the grade already say it.
+ */
 export function CourseRow({
   code,
   title,
@@ -24,36 +18,59 @@ export function CourseRow({
   note,
   missing = false,
   onRemove,
-}: Row & { missing?: boolean; onRemove: () => void }) {
+}: {
+  code: string;
+  title: string | null;
+  credits: number | null;
+  grade: string | null;
+  status: CourseStatus;
+  /** Such as when a part's credit arrives. */
+  note?: string;
+  missing?: boolean;
+  onRemove: () => void;
+}) {
+  const word = STATUS[status].label;
+  const showWord = !(status === "completed" && grade);
+  const meta = [
+    showWord && word,
+    note,
+    missing && (
+      <span className="inline-flex items-center gap-2">
+        <TriangleAlert aria-hidden className="size-3.5 text-warn" />
+        Not in the catalogue
+      </span>
+    ),
+  ].filter(Boolean);
   return (
-    <li className="flex h-11 items-center gap-4 border-border border-t pr-3 pl-5">
-      <span className="w-24 shrink-0 whitespace-nowrap font-semibold tabular-nums">
-        {code}
-      </span>
-      <span className="flex min-w-0 flex-1 items-center gap-3">
-        <span className="min-w-0">
-          {title && (
-            <span title={title} className="block truncate">
-              {title}
-            </span>
-          )}
-          {note && (
-            <span
-              title={note}
-              className="block truncate text-muted-foreground text-xs leading-4"
-            >
-              {note}
-            </span>
-          )}
+    <li className="group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint">
+      {showWord ? (
+        <span className="flex h-5 w-4 shrink-0 items-center">
+          <StatusIcon status={status} />
         </span>
-        {missing && (
-          <span className="flex shrink-0 items-center gap-1 font-medium text-warn text-xs">
-            <TriangleAlert aria-hidden className="size-3.5" strokeWidth={2} />
-            Not in the catalogue
-          </span>
-        )}
+      ) : (
+        <StatusTip
+          status={status}
+          className="flex h-5 w-4 shrink-0 items-center"
+        >
+          <StatusIcon status={status} label={word} />
+        </StatusTip>
+      )}
+      <span className="w-24 shrink-0 font-semibold tabular-nums">{code}</span>
+      <span className="min-w-0 flex-1 truncate" title={title ?? undefined}>
+        {title}
       </span>
-      <span className="w-12 shrink-0 text-right text-[13px] text-muted-foreground tabular-nums">
+      {meta.length > 0 && (
+        <span className="max-w-80 flex-none text-fg-muted">
+          {meta.map((item, i) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: at most three fixed items
+            <Fragment key={i}>
+              {i > 0 && " · "}
+              {item}
+            </Fragment>
+          ))}
+        </span>
+      )}
+      <span className="w-12 shrink-0 text-right text-fg-muted tabular-nums">
         {credits !== null && (
           <>
             {credits}
@@ -62,7 +79,7 @@ export function CourseRow({
           </>
         )}
       </span>
-      <span className="w-9 shrink-0 text-center font-semibold">
+      <span className="w-8 shrink-0 font-semibold">
         {grade && (
           <>
             <span className="sr-only">Grade </span>
@@ -70,41 +87,33 @@ export function CourseRow({
           </>
         )}
       </span>
-      <span className="flex w-32 shrink-0">
-        <StatusLabel status={status} />
+      <span className="-my-2 flex shrink-0 opacity-0 group-focus-within:opacity-100 group-hover:opacity-100">
+        <Button
+          variant="text"
+          icon
+          aria-label={`Remove ${code}`}
+          onClick={onRemove}
+        >
+          <X aria-hidden />
+        </Button>
       </span>
-      <Button
-        variant="ghost"
-        size="icon"
-        aria-label={`Remove ${code}`}
-        onClick={onRemove}
-      >
-        <X aria-hidden />
-      </Button>
     </li>
   );
 }
 
-/** A term heading band over a list of CourseRows. Put it inside a Card, which clips the band to its corners. */
+/** An h3 term name over its rows, 24px above every group but the first. */
 export function TermGroup({
   term,
-  count,
   children,
 }: {
   term: Term | null;
-  count: number;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
-    <section className="border-border border-t first:border-t-0">
-      <div className="flex h-9 items-center justify-between gap-4 bg-subtle px-5">
-        <h3 className="text-[13px] leading-[18px]">
-          {term ? formatTerm(term) : "Credits before your first term"}
-        </h3>
-        <p className="text-[13px] text-muted-foreground">
-          {count} {count === 1 ? "course" : "courses"}
-        </p>
-      </div>
+    <section className="mt-6 first:mt-0">
+      <h3 className="mb-2">
+        {term ? formatTerm(term) : "Credits before your first term"}
+      </h3>
       <ul>{children}</ul>
     </section>
   );

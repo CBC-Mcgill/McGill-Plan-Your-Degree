@@ -2,7 +2,7 @@
 
 import { useShallow } from "zustand/react/shallow";
 import { ProgramFields } from "@/components/profile/program-fields";
-import { SettingsSection } from "@/components/profile/settings-section";
+import { Section } from "@/components/ui/section";
 import { useProfileStore } from "@/lib/profile/store";
 
 export function ProgramCard() {
@@ -19,15 +19,11 @@ export function ProgramCard() {
   );
 
   return (
-    <SettingsSection
-      id="program"
-      title="Your program"
-      description="Your program and dates set what you still need, and changes save as you make them."
-    >
+    <Section id="program" title="Program">
       <ProgramFields
         value={value}
         onChange={(patch) => useProfileStore.setState(patch)}
       />
-    </SettingsSection>
+    </Section>
   );
 }

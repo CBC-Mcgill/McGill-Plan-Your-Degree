@@ -20,8 +20,7 @@ export const IMPORT_ERROR_MESSAGES: Record<ImportError, string> = {
     "This PDF could not be read. It may be damaged or password protected. Print your transcript to PDF again and retry.",
   timeout:
     "Reading this PDF took too long, so we stopped. Check that you picked your unofficial transcript, or print it to PDF again and retry.",
-  "not-transcript":
-    "This PDF is not a McGill unofficial transcript. In Minerva, open Student Records, then View Your Unofficial Transcript, and print that page to PDF.",
+  "not-transcript": "This PDF is not a McGill unofficial transcript.",
 };
 
 export type ReadResult =

@@ -1,13 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { parseProfileFile } from "@/lib/profile/file";
+import { toast } from "@/components/toast";
+import { COPY } from "@/lib/copy";
+import { parseProfileFile, profileOf } from "@/lib/profile/file";
 import { useProfileStore } from "@/lib/profile/store";
 import { readTranscriptFile } from "@/lib/transcript/client";
 import type { Transcript } from "@/lib/transcript/parse";
+import type { ImportError } from "@/lib/transcript/result";
 
-export interface Notice {
-  kind: "error" | "success";
+export interface ImportFailure {
+  /** Null when a backup could not be restored. */
+  code: ImportError | null;
   text: string;
 }
 
@@ -18,32 +22,37 @@ const MAX_BACKUP_BYTES = 5_000_000;
 export function useImportFlow() {
   const [reading, setReading] = useState(false);
   const [transcript, setTranscript] = useState<Transcript | null>(null);
-  const [notice, setNotice] = useState<Notice | null>(null);
+  const [error, setError] = useState<ImportFailure | null>(null);
 
   async function importFile(file: File) {
     if (reading) return;
-    setNotice(null);
+    setError(null);
     setReading(true);
     const result = await readTranscriptFile(file);
     setReading(false);
     if (result.ok) setTranscript(result.transcript);
-    else setNotice({ kind: "error", text: result.message });
+    else setError({ code: result.error, text: result.message });
   }
 
   async function restoreFile(file: File) {
-    setNotice(null);
+    setError(null);
     const result = parseProfileFile(
       await file.slice(0, MAX_BACKUP_BYTES).text(),
     );
-    if (result.ok) {
-      useProfileStore.getState().loadProfile(result.profile);
-      setNotice({ kind: "success", text: "Backup restored." });
-    } else {
-      setNotice({
-        kind: "error",
+    if (!result.ok) {
+      setError({
+        code: null,
         text: `This backup could not be restored. ${result.error}`,
       });
+      return;
     }
+    const store = useProfileStore.getState();
+    const previous = profileOf(store);
+    store.loadProfile(result.profile);
+    toast("Profile restored", {
+      label: COPY.undo,
+      run: () => store.loadProfile(previous),
+    });
   }
 
   return {
@@ -51,7 +60,7 @@ export function useImportFlow() {
     transcript,
     discardTranscript: () => setTranscript(null),
     importFile,
-    notice,
+    error,
     restoreFile,
   };
 }
