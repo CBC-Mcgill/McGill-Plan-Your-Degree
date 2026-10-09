@@ -269,9 +269,9 @@ function CourseTable({ b }: { b: Browse }) {
           value={query.view}
           onChange={(view) => update({ view })}
           tabs={(b.hasProfile ? VIEWS : VIEWS.slice(0, 1)).map((tab) => ({
-            ...tab,
+            id: tab.value,
+            label: tab.label,
             tip: VIEW_TIPS[tab.value],
-            count: counts[tab.value],
           }))}
         />
         <div className="ml-auto flex items-center gap-4">

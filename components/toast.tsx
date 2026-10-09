@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState, useSyncExternalStore } from "react";
 
 interface Toast {
@@ -29,7 +28,7 @@ function act(item: Toast) {
   dismiss(item.id);
 }
 
-/** A short success message at the bottom center, gone after 5 seconds. A new toast replaces the old one. Errors never use a toast. */
+/** A short success message at the bottom left, gone after 5 seconds. A new toast replaces the old one. Errors never use a toast. */
 export function toast(message: string, action?: Toast["action"]) {
   current = { id: nextId++, message, action };
   emit();
@@ -79,13 +78,8 @@ export function Toaster() {
   }, []);
 
   return (
-    <div
-      aria-live="polite"
-      className="pointer-events-none fixed inset-x-0 bottom-6 z-[70] flex justify-center"
-    >
-      <AnimatePresence initial={false} mode="wait">
-        {item && <ToastCard key={item.id} item={item} />}
-      </AnimatePresence>
+    <div aria-live="polite" className="fixed bottom-6 left-6 z-[70]">
+      {item && <ToastCard key={item.id} item={item} />}
     </div>
   );
 }
@@ -102,16 +96,13 @@ function ToastCard({ item }: { item: Toast }) {
   const shortcut = isMac() ? "⌘Z" : "Ctrl+Z";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12, scale: 0.98 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: 6, transition: { duration: 0.12 } }}
-      transition={{ type: "spring", duration: 0.3, bounce: 0.15 }}
+    // biome-ignore lint/a11y/noStaticElementInteractions: pausing on hover only delays the dismissal
+    <div
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
-      className="pointer-events-auto flex h-10 items-center gap-3 rounded-lg bg-foreground pr-1.5 pl-4 font-medium text-[13px] text-white shadow-float"
+      className="flex h-10 items-center gap-4 rounded-md bg-fg pr-1 pl-4 text-white shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
     >
       {item.message}
       {item.action ? (
@@ -120,13 +111,13 @@ function ToastCard({ item }: { item: Toast }) {
           title={`${item.action.label} (${shortcut})`}
           aria-keyshortcuts={isMac() ? "Meta+Z" : "Control+Z"}
           onClick={() => act(item)}
-          className="h-7 rounded-md px-2.5 font-semibold text-[#9ec0ff] hover:bg-white/10 focus-visible:outline-white"
+          className="h-8 rounded-md px-3 font-semibold underline-offset-3 hover:underline focus-visible:outline-white"
         >
           {item.action.label}
         </button>
       ) : (
-        <span className="w-1.5" />
+        <span className="w-3" />
       )}
-    </motion.div>
+    </div>
   );
 }

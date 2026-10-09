@@ -119,15 +119,12 @@ test("a minor picked on the profile shows on the requirements page", async ({
     .fill("technological entrepreneurship");
   await expect(page.getByText("No program matches")).toBeVisible();
 
-  const minor = page.getByRole("combobox", { name: "Minor (optional)" });
+  const minor = page.getByRole("combobox", { name: "Minor" });
   await minor.fill("technological entrepreneurship");
   await minor.press("Enter");
   await expect(minor).toHaveValue(`${minorName} (B.Eng.)`);
 
-  await page
-    .getByRole("navigation", { name: "Main" })
-    .getByRole("link", { name: "Requirements" })
-    .click();
+  await page.goto("/requirements");
   await expect(
     page.getByRole("heading", {
       level: 2,

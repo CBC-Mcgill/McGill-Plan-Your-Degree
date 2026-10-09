@@ -1,8 +1,8 @@
 "use client";
 
-import { TriangleAlert } from "lucide-react";
-import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
+import { Notice } from "@/components/ui/notice";
+import { COPY } from "@/lib/copy";
 import {
   useProfileHydrated,
   useProfileStore,
@@ -22,23 +22,24 @@ export function StorageBanner() {
   if (!hydrated || !failed || !hasProfile) return null;
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-4">
-      <Banner tone="warn" role="alert" className="items-center">
-        <TriangleAlert aria-hidden className="mt-0 text-warn" />
-        <p className="flex-1">
-          This browser could not save your profile. Export a backup before you
-          leave.
-        </p>
-        <Button
-          variant="secondary"
-          size="sm"
-          onClick={async () =>
-            (await import("@/components/profile/data-card")).downloadBackup()
-          }
-        >
-          Export a backup
-        </Button>
-      </Banner>
+    <div className="mx-auto w-full max-w-page px-8 pt-6">
+      <Notice
+        tone="warn"
+        role="alert"
+        action={
+          <Button
+            variant="text"
+            onClick={async () =>
+              (await import("@/components/profile/data-card")).downloadBackup()
+            }
+          >
+            {COPY.exportBackup}
+          </Button>
+        }
+      >
+        This browser could not save your profile. Export a backup before you
+        leave.
+      </Notice>
     </div>
   );
 }

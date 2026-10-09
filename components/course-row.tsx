@@ -1,126 +1,133 @@
 import { cn } from "cn";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { StatusLabel } from "@/components/status";
-import { Card } from "@/components/ui/card";
+import { CreditsLabel } from "@/components/credits-label";
+import {
+  STATUS,
+  type Status,
+  StatusIcon,
+  StatusTip,
+} from "@/components/status";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
-import { type CourseState, isOffered } from "@/lib/engine/status";
+import { COPY } from "@/lib/copy";
+import { isOffered } from "@/lib/engine/status";
 import type { Season } from "@/lib/profile/types";
 
 const SEASONS: Season[] = ["Fall", "Winter", "Summer"];
 
 export function seasonsOffered(course: CourseSummary): string {
   const seasons = SEASONS.filter((season) => isOffered(course, season));
-  return seasons.length > 0 ? seasons.join(", ") : "Not offered this year";
+  return seasons.length > 0 ? seasons.join(", ") : COPY.notOfferedYear;
 }
 
-const grid = (withStatus: boolean) =>
-  cn(
-    "grid items-center gap-4 px-4",
-    withStatus
-      ? "grid-cols-[6rem_minmax(0,1fr)_5rem_9rem_10rem]"
-      : "grid-cols-[6rem_minmax(0,1fr)_5rem_9rem]",
-  );
-
 /**
- * One list item that links to the course page. Pass `state` to show the student's status, and leave it out when there is no profile.
- * `note` adds a line under the title. `action` sits beside the link, since a button cannot live inside it: pass null to keep the column empty so rows line up.
+ * The one course row (44px, grows when the reason wraps): glyph, code, title, reason or meta, credits, action.
+ * Code and title link to the course page. The glyph shows only with `showGlyph`, for lists that mix statuses (D10), and its tooltip gives the word and `reason`.
+ * `reason` and then `meta` sit in one muted column up to 320px wide. `note` is a muted line under the title.
+ * `action` appears on row hover and focus (pattern A). Pass `action={null}` to keep its column so rows line up.
  */
 export function CourseRow({
   course,
-  state,
+  status,
+  showGlyph = false,
+  reason,
   note,
+  meta,
   action,
 }: {
   course: CourseSummary;
-  state?: CourseState;
+  status?: Status;
+  showGlyph?: boolean;
+  reason?: string;
   note?: ReactNode;
+  meta?: ReactNode;
   action?: ReactNode;
 }) {
-  return (
-    <li
-      className={cn(
-        "transition-[background-color] hover:bg-subtle",
-        action !== undefined && "flex items-center",
-      )}
+  const link = (
+    <Link
+      href={`/courses/${courseSlug(course.code)}`}
+      prefetch={false}
+      className="-my-3 flex min-w-0 flex-1 gap-4 rounded-md py-3 focus-visible:-outline-offset-2"
     >
-      <Link
-        href={`/courses/${courseSlug(course.code)}`}
-        prefetch={false}
-        className={cn(
-          grid(Boolean(state)),
-          "min-h-11 py-2 -outline-offset-3",
-          action !== undefined && "min-w-0 flex-1",
-        )}
-      >
-        <span className="font-semibold tabular-nums">{course.code}</span>
-        <span>
-          <span className="line-clamp-2">{course.title}</span>
-          {note}
+      <span className="w-24 shrink-0 font-semibold tabular-nums">
+        {course.code}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block truncate" title={course.title}>
+          {course.title}
         </span>
-        <span className="text-[13px] text-muted-foreground">
-          {course.credits === null
-            ? "-"
-            : `${course.credits} ${course.credits === 1 ? "credit" : "credits"}`}
+        {note && <span className="block text-fg-muted">{note}</span>}
+      </span>
+    </Link>
+  );
+  return (
+    <li className="group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint">
+      {showGlyph && status ? (
+        <StatusTip
+          status={status}
+          reason={reason}
+          className="flex min-w-0 flex-1 gap-2"
+        >
+          <span className="flex h-5 w-4 shrink-0 items-center">
+            <StatusIcon status={status} label={STATUS[status].label} />
+          </span>
+          {link}
+        </StatusTip>
+      ) : (
+        link
+      )}
+      {(reason || meta) && (
+        <span className="flex max-w-80 flex-none items-start gap-2 text-fg-muted">
+          {reason && <span>{reason}</span>}
+          {meta}
         </span>
-        <span className="text-[13px] text-muted-foreground">
-          {seasonsOffered(course)}
-        </span>
-        {state && (
-          <StatusLabel
-            status={state.status}
-            uncertain={state.uncertain}
-            className="justify-self-start"
-          />
-        )}
-      </Link>
+      )}
+      <span className="w-24 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums">
+        <CreditsLabel course={course} />
+      </span>
       {action !== undefined && (
-        <div className="flex w-48 shrink-0 justify-end pr-4">{action}</div>
+        <span className="-my-2 flex w-24 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100">
+          {action}
+        </span>
       )}
     </li>
   );
 }
 
-const bone = "rounded-sm bg-muted motion-safe:animate-pulse";
+const bone = "rounded-md bg-tint motion-safe:animate-pulse";
 
-/** The browse card before the catalogue arrives: tabs, toolbar, table header and rows at their final heights. */
+/** The course table before the catalogue arrives: views, filters and rows at their final heights. */
 export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
   return (
-    <Card className="overflow-hidden">
+    <div>
       <p role="status" className="sr-only">
         Loading courses
       </p>
       <div aria-hidden>
-        <div className="flex h-12 items-center gap-1 border-border border-b px-3">
-          {["w-20", "w-36", "w-32", "w-24", "w-28"].map((width) => (
-            <div key={width} className="px-3">
-              <div className={cn(bone, "h-4", width)} />
-            </div>
-          ))}
-          <div className={cn(bone, "ml-auto h-8 w-40 rounded-md")} />
-        </div>
-        <div className="flex items-center gap-2 border-border border-b px-3 py-2.5">
-          <div className={cn(bone, "h-8 w-[280px] rounded-md")} />
-          {["w-24", "w-20", "w-20"].map((width, i) => (
+        <div className="flex h-9 items-center gap-1">
+          {["w-28", "w-28", "w-12"].map((width, i) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-            <div key={i} className={cn(bone, "h-8 rounded-md", width)} />
+            <div key={i} className={cn(bone, "h-9", width)} />
           ))}
         </div>
-        <div className="h-9 border-border border-b bg-subtle" />
-        <div className="divide-y divide-border">
+        <div className="mt-4 flex items-center gap-2">
+          <div className={cn(bone, "h-9 w-80")} />
+          {["w-24", "w-20", "w-20", "w-24"].map((width, i) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+            <div key={i} className={cn(bone, "h-9", width)} />
+          ))}
+        </div>
+        <div className="mt-6">
           {Array.from({ length: rows }, (_, row) => (
-            <div
-              // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-              key={row}
-              className="flex h-10 items-center gap-6 px-4"
-            >
-              <div className={cn(bone, "h-4 w-24")} />
-              <div className={cn(bone, "h-4 w-1/3")} />
+            // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+            <div key={row} className="flex h-11 items-center gap-4">
+              <div className={cn(bone, "h-5 w-24")} />
+              <div className={cn(bone, "h-5 w-1/3")} />
             </div>
           ))}
         </div>
       </div>
-    </Card>
+    </div>
   );
 }

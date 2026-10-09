@@ -1,11 +1,20 @@
-import { Info } from "lucide-react";
-import { Banner } from "@/components/ui/banner";
+import { Notice } from "@/components/ui/notice";
+import { Term } from "@/components/ui/tooltip";
+import { COPY } from "@/lib/copy";
+import { GLOSSARY } from "@/lib/glossary";
 import type { Program } from "@/lib/programs/types";
 
-export const externalLink =
-  "font-medium underline underline-offset-2 hover:text-primary";
+/** "Read automatically from the catalogue" for a crawled program or minor (D39). The caller puts a `CatalogueLink` beside it. `hasChecks` adds the rule-to-check sentence only when such a rule exists. */
+export function GeneratedNote({ hasChecks }: { hasChecks: boolean }) {
+  const { tip, checks } = GLOSSARY.generated;
+  return (
+    <Term
+      def={{ label: COPY.generated, tip: hasChecks ? `${tip} ${checks}` : tip }}
+    />
+  );
+}
 
-/** Says that the crawler wrote a program's requirements and where to check them. A hand-written program shows nothing. */
+/** @deprecated Use `GeneratedNote` beside a `CatalogueLink`. */
 export function GeneratedBanner({
   program,
   className,
@@ -15,21 +24,20 @@ export function GeneratedBanner({
 }) {
   if (!program.generated) return null;
   return (
-    <Banner className={className}>
-      <Info aria-hidden />
-      <span>
+    <div className={className}>
+      <Notice tone="info">
         These requirements were read automatically from the course catalogue.
         Check the rules marked Check this requirement on the{" "}
         <a
           href={program.source}
           target="_blank"
           rel="noopener noreferrer"
-          className={externalLink}
+          className="link"
         >
           program page
         </a>
         .
-      </span>
-    </Banner>
+      </Notice>
+    </div>
   );
 }

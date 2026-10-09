@@ -25,16 +25,20 @@ test("landing renders its primary action", async ({ page }) => {
 test("nav links reach their pages", async ({ page }) => {
   await page.goto("/");
   const nav = page.getByRole("navigation", { name: "Main" });
+  await expect(nav.getByRole("link")).toHaveText([
+    "Browse courses",
+    "What's next",
+    "Planner",
+    "Profile",
+  ]);
   for (const [name, path] of [
     ["Browse courses", "/courses"],
     ["What's next", "/next"],
-    ["Requirements", "/requirements"],
     ["Planner", "/plan"],
     ["Profile", "/profile"],
   ] as const) {
     await nav.getByRole("link", { name }).click();
     await expect(page).toHaveURL(path);
-    await expect(page.getByRole("heading", { level: 1, name })).toBeVisible();
     await expect(nav.getByRole("link", { name })).toHaveAttribute(
       "aria-current",
       "page",

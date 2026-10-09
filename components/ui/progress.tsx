@@ -1,16 +1,16 @@
 import { cn } from "cn";
 
 const fills = {
-  completed: "bg-completed",
-  "in-progress": "bg-in-progress",
-  planned: "bg-planned",
-  primary: "bg-primary",
+  completed: "bg-fg",
+  "in-progress": "bg-fg-muted",
+  planned: "bg-fg-subtle",
+  primary: "bg-fg",
   warn: "bg-warn",
 } as const;
 
 export type ProgressFill = keyof typeof fills;
 
-/** A 6px bar. Pass `valueText` when "12 of 40" reads better than the raw number. */
+/** @deprecated The fraction beside it already says the number (D7). */
 function ProgressBar({
   value,
   max,
@@ -36,15 +36,12 @@ function ProgressBar({
       aria-valuenow={value}
       aria-valuetext={valueText}
       className={cn(
-        "h-1.5 w-full overflow-hidden rounded-full bg-track",
+        "h-1.5 w-full overflow-hidden rounded-full bg-tint",
         className,
       )}
     >
       <div
-        className={cn(
-          "h-full rounded-full transition-[width] duration-500 motion-reduce:transition-none",
-          fills[fill],
-        )}
+        className={cn("h-full rounded-full", fills[fill])}
         style={{ width: `${pct}%` }}
       />
     </div>
@@ -52,17 +49,17 @@ function ProgressBar({
 }
 
 const ringStroke = {
-  completed: "stroke-completed",
-  "in-progress": "stroke-in-progress",
-  planned: "stroke-planned",
-  primary: "stroke-primary",
+  completed: "stroke-fg",
+  "in-progress": "stroke-fg-muted",
+  planned: "stroke-fg-subtle",
+  primary: "stroke-fg",
   warn: "stroke-warn",
 } as const;
 
 const RADIUS = 5;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-/** A ring for fractions in dense headers, drawn on the same 14px grid as the status icons. */
+/** @deprecated The fraction beside it already says the number (D7). */
 function ProgressRing({
   value,
   max,
@@ -93,7 +90,7 @@ function ProgressRing({
         r={RADIUS}
         fill="none"
         strokeWidth="2"
-        className="stroke-track"
+        className="stroke-tint"
       />
       <circle
         cx="7"

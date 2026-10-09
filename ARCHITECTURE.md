@@ -279,19 +279,24 @@ Program data reaches the browser one program at a time.
 
 ### The design system
 
-- **Primitives:** [components/ui/](components/ui/) holds `Button`, `Card`, `Badge`, `Banner`, `Chip`, `TextField`, `SelectField`, `ViewTabs`, `SegmentedControl`, `ProgressBar`, `Kbd`, `FileButton`, `Tooltip` and `InfoTip`.
+- **Primitives:** [components/ui/](components/ui/) holds `Button`, `Section`, `Disclosure`, `Notice`, `Menu`, `Chip`, `TextField`, `SelectField`, `ViewTabs`, `Kbd`, `FileButton`, `Tooltip` and `Term`.
   They are shadcn-style, built on Radix and `class-variance-authority`.
-- **Tokens:** colors are CSS variables in [app/globals.css](app/globals.css).
-  Status colors stay in the navy and blue family, so red keeps meaning "act here".
+  `CourseRow` in [components/course-row.tsx](components/course-row.tsx) is the one course row, and `NoProfile` in [components/no-profile.tsx](components/no-profile.tsx) is the visitor state of a page that needs a profile.
+  `Card`, `Badge`, `Banner`, `ProgressBar`, `SectionCard`, `InfoTip` and `StatusBadge` are deprecated and go once no page uses them.
+- **Tokens:** ten colors are CSS variables in [app/globals.css](app/globals.css), and `lib/tokens.test.ts` checks their contrast.
+  Red (`--primary`) marks at most one primary button per screen, and status lives in the glyph's shape, so status colors stay to `--fg`, `--fg-subtle`, `--danger` and `--warn`.
+  Space separates sections, and only overlays get a box.
+- **Copy:** strings shown on more than one screen live once in [lib/copy.ts](lib/copy.ts).
 - **Tooltips:** one `TooltipProvider` in [app/layout.tsx](app/layout.tsx) sets the delay.
-  `InfoTip` is the "i" button beside a label that defines a term, and every definition lives in [lib/glossary.ts](lib/glossary.ts) so the wording stays consistent.
+  `Term` gives a word a dotted underline and shows its definition on hover and focus, and every definition lives in [lib/glossary.ts](lib/glossary.ts) so the wording stays consistent.
   Anything a student must know to act stays visible on the page, and a tooltip only adds to it.
-- **Status glyphs:** [components/status.tsx](components/status.tsx) holds the `STATUS` table of labels, colors and tones, with `StatusIcon`, `StatusLabel`, `StatusBadge` and `UncertainFlag` for requirements with conditions.
-- **Toasts with undo:** [components/toast.tsx](components/toast.tsx) shows one toast at a time for five seconds.
+- **Status glyphs:** [components/status.tsx](components/status.tsx) holds the `STATUS` table of labels and glyph colors, with `StatusIcon`, `StatusLabel` and `UncertainFlag` for requirements with conditions.
+- **Toasts with undo:** [components/toast.tsx](components/toast.tsx) shows one toast at a time at the bottom left for five seconds.
   A toast can carry an Undo action, and Cmd+Z or Ctrl+Z runs it unless the student is typing in a field.
   [components/plan/add-with-undo.ts](components/plan/add-with-undo.ts) uses it for plan changes.
 - **Command palette:** [components/command-palette.tsx](components/command-palette.tsx) opens with Cmd+K or Ctrl+K, searches pages and courses, and can add a course to a term.
-- **Motion:** animations sit under `MotionConfig reducedMotion="user"` in the layout, so reduced-motion settings are respected.
+- **Motion:** overlays, tooltips and the toast fade in over 120 ms and skeletons pulse, all off under reduced motion.
+  `MotionConfig reducedMotion="user"` in the layout covers any Motion animation.
 
 ## Client state
 

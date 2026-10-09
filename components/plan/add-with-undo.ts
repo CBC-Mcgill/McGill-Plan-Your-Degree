@@ -1,12 +1,7 @@
 import { toast } from "@/components/toast";
 import { catalogueNow } from "@/lib/catalogue/client";
-import {
-  courseLoads,
-  loadsName,
-  planWarnings,
-  startTerm,
-} from "@/lib/engine/plan";
-import { buildSnapshot } from "@/lib/engine/snapshot";
+import { COPY } from "@/lib/copy";
+import { courseLoads, loadsName, startTerm } from "@/lib/engine/plan";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
@@ -26,27 +21,6 @@ function courseOf(code: string) {
 function nameOf(code: string, start: Term) {
   const course = courseOf(code);
   return (course && loadsName(courseLoads(code, course, start))) || code;
-}
-
-/** The plan warnings as keys, so a change shows which ones it created. Empty until the catalogue has loaded. */
-function warningKeys(): Set<string> {
-  const catalogue = catalogueNow();
-  if (catalogue.status !== "ready") return new Set();
-  const { records, plan, entry, creditLimit, graduationTerm } =
-    useProfileStore.getState();
-  const warnings = planWarnings(
-    plan,
-    buildSnapshot(records, plan, entry),
-    catalogue.catalogue,
-    creditLimit,
-    graduationTerm,
-  );
-  return new Set(
-    warnings.map(
-      (w) =>
-        `${w.kind}|${termKey(w.term)}|${"course" in w ? w.course : w.credits}`,
-    ),
-  );
 }
 
 /** Where focus was before the action, so an Undo can hand it back after the toast is gone. */
@@ -72,7 +46,7 @@ function undo(
 ) {
   const refocus = rememberFocus();
   return {
-    label: "Undo",
+    label: COPY.undo,
     run: () => {
       const now = termOf(code);
       const same = left && now ? termKey(left) === termKey(now) : left === now;
@@ -94,19 +68,17 @@ export function addWithUndo(requested: Term, code: string) {
   const term = course ? startTerm(course, requested) : requested;
   const name = nameOf(code, term);
   const from = termOf(code);
-  const before = warningKeys();
   const action = undo(
     code,
     term,
     () => (from ? addToPlan(from, code) : removeFromPlan(term, code)),
     from
       ? `${name} moved back to ${termLabel(from)}`
-      : `${name} removed from ${termLabel(term)}`,
+      : COPY.toast.removed(name, term),
   );
   addToPlan(term, code);
-  const warned = [...warningKeys()].filter((key) => !before.has(key)).length;
   toast(
-    `${name} ${from ? "moved" : "added"} to ${termLabel(term)}${warned ? `. ${warned} ${warned === 1 ? "warning" : "warnings"}` : ""}`,
+    from ? COPY.toast.moved(name, term) : COPY.toast.added(name, term),
     action,
   );
 }
@@ -122,5 +94,5 @@ export function removeWithUndo(term: Term, code: string) {
     `${name} added back to ${termLabel(term)}`,
   );
   removeFromPlan(term, code);
-  toast(`${name} removed from ${termLabel(term)}`, action);
+  toast(COPY.toast.removed(name, term), action);
 }

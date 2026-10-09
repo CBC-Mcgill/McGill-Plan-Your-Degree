@@ -607,9 +607,7 @@ function ClaimedRow({
       tip={planned ? `Planned for ${termLabel(term)}.` : undefined}
       caption={
         <span className="flex items-baseline gap-2">
-          <span className={cn("font-medium", STATUS[status].text)}>
-            {STATUS[status].label}
-          </span>
+          <span className="text-muted-foreground">{STATUS[status].label}</span>
           {term && (
             <span className="text-muted-foreground">{termLabel(term)}</span>
           )}

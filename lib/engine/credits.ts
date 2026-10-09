@@ -1,4 +1,4 @@
-import type { CourseRecord, EntryRoute } from "../profile/types.ts";
+import type { CourseRecord, EntryRoute, Profile } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 
@@ -53,4 +53,37 @@ export function exemptionsToReplace(
     code,
     credits: catalogue.get(code)?.credits ?? null,
   }));
+}
+
+export interface DegreeStanding {
+  /** Completed and transfer credits plus advanced standing. */
+  earned: number;
+  inProgress: number;
+  planned: number;
+  pending: number;
+  required: number | null;
+}
+
+/** Degree credits on every basis, for the one place that shows them (Home). */
+export function degreeStanding(
+  snapshot: Snapshot,
+  catalogue: Catalogue,
+  profile: Pick<
+    Profile,
+    "records" | "plan" | "advancedStanding" | "creditsRequired" | "entry"
+  >,
+  program: Program | null,
+): DegreeStanding {
+  const credits = (code: string) => catalogue.get(code)?.credits ?? 0;
+  return {
+    earned: earnedCredits(snapshot, catalogue) + profile.advancedStanding,
+    inProgress: profile.records
+      .filter((record) => record.status === "in-progress")
+      .reduce((sum, r) => sum + (r.credits ?? credits(r.code)), 0),
+    planned: profile.plan
+      .flatMap((entry) => entry.courses)
+      .reduce((sum, code) => sum + credits(code), 0),
+    pending: pendingCredits(snapshot),
+    required: degreeCredits(profile.creditsRequired, profile.entry, program),
+  };
 }
