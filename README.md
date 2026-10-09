@@ -45,6 +45,7 @@ Open http://localhost:3000.
 | `pnpm test` | Unit tests (Vitest) |
 | `pnpm test:e2e` | End-to-end tests (Playwright, desktop) |
 | `pnpm crawl` | Crawl the course catalogue into `data/catalogue/` |
+| `pnpm crawl:programs` | Crawl program requirements into `data/programs/generated/` |
 
 Run `pnpm exec playwright install chromium` once before the first E2E run.
 
@@ -58,8 +59,14 @@ Prerequisites are parsed into AND/OR trees of course codes, and the raw text is 
 Text with conditions the tree cannot express, such as instructor permission, is marked `unparsed`.
 Never edit files in `data/catalogue/` by hand.
 
-The `Crawl catalogue` GitHub Actions workflow runs the crawler on demand and before each registration period.
-When the data changed, it pushes a `data/catalogue-*` branch and opens a PR with a summary of added, removed, and changed courses.
+`pnpm crawl:programs` reads every undergraduate program page and writes one file per program to `data/programs/generated/<catalogue year>/`, with an `index.json` listing them.
+Each yearly crawl adds a folder and leaves earlier years alone.
+Rules it cannot express safely, such as "9 credits selected from Groups A and B, with at least 3 from each", are kept as raw text and marked `unparsed`.
+The summary lists the most common unparsed phrasings and compares the generated version of each hand-written program in `data/programs/` with the hand-written one.
+Never edit files in `data/programs/generated/` by hand.
+
+The `Crawl catalogue` GitHub Actions workflow runs both crawlers on demand and before each registration period.
+When the data changed, it pushes a `data/crawl-*` branch and opens a PR with a summary of added, removed, and changed courses and the program crawl summary.
 The CBC-Mcgill organization blocks Actions from opening PRs, so the run summary shows a one-click link to open it instead.
 Catalogue data reaches production only by merging that PR.
 

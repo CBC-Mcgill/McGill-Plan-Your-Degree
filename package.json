@@ -12,7 +12,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run --passWithNoTests",
     "test:e2e": "playwright test",
-    "crawl": "node crawler/crawl.ts"
+    "crawl": "node crawler/crawl.ts",
+    "crawl:programs": "node crawler/crawl-programs.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
