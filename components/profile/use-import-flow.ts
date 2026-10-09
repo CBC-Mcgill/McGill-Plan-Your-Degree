@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { stayQuiet } from "@/lib/game/seen";
 import { parseProfileFile } from "@/lib/profile/file";
 import { useProfileStore } from "@/lib/profile/store";
 import { readTranscriptFile } from "@/lib/transcript/client";
@@ -36,6 +37,7 @@ export function useImportFlow() {
       await file.slice(0, MAX_BACKUP_BYTES).text(),
     );
     if (result.ok) {
+      if (result.profile.records.length > 0) stayQuiet();
       useProfileStore.getState().loadProfile(result.profile);
       setNotice({ kind: "success", text: "Backup restored." });
     } else {

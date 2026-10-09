@@ -62,7 +62,8 @@ export function BadgesCard() {
         <>
           <p className="text-[13px] text-muted-foreground">
             You are level {game.level} with {game.xp.toLocaleString("en-US")}{" "}
-            XP. Every credit you earn is worth {XP_PER_CREDIT} XP.
+            XP. Every credit you earn is worth {XP_PER_CREDIT} XP, and advanced
+            standing and transfer credits count too.
             {game.plannedXp > 0 &&
               ` Your planned courses add ${game.plannedXp.toLocaleString("en-US")} XP once you complete them.`}
           </p>
