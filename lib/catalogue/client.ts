@@ -9,9 +9,8 @@ export type CatalogueState =
 
 const LOADING: CatalogueState = { status: "loading" };
 
-/** Administrative records (REGN) and subjects with a digit, such as FMT4 and CPL2, are not degree courses, so no list shows them. Their course pages still exist. */
-const isListed = ({ subject }: CourseSummary) =>
-  subject !== "REGN" && !/\d/.test(subject);
+/** Administrative records such as REGN WDAG are not courses, so no list shows them. Their pages still exist. */
+const isListed = ({ subject }: CourseSummary) => subject !== "REGN";
 let state: CatalogueState = LOADING;
 let loading = false;
 const listeners = new Set<() => void>();
