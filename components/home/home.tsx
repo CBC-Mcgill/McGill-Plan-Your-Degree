@@ -48,6 +48,7 @@ import {
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
+import { minorName } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
 const NEXT_UP_LIMIT = 5;
@@ -373,7 +374,7 @@ function Metrics({
           </div>
           <Caption>
             <span className="line-clamp-2" title={minor.name}>
-              credits in {minor.name}
+              credits in {minorName(minor.name)}
             </span>
           </Caption>
         </Metric>

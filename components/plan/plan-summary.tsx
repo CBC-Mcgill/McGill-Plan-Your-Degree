@@ -11,6 +11,7 @@ import { InfoTip, Tooltip } from "@/components/ui/tooltip";
 import { lacking, type ProgramProgress } from "@/lib/engine/progress";
 import { sentence } from "@/lib/format";
 import { GLOSSARY } from "@/lib/glossary";
+import { minorName } from "@/lib/programs/minor";
 import type { Program, RequiredItem } from "@/lib/programs/types";
 
 const linkClass = "font-medium underline underline-offset-2 hover:text-primary";
@@ -199,7 +200,7 @@ export function PlanSummary({
                     >
                       <span className="font-medium">Minor</span>{" "}
                       <span className="text-muted-foreground">
-                        {minor.program.name}
+                        {minorName(minor.program.name)}
                       </span>
                     </span>
                     <span className="shrink-0 text-muted-foreground tabular-nums">

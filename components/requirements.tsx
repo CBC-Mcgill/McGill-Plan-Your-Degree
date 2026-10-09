@@ -61,6 +61,7 @@ import {
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
+import { minorName } from "@/lib/programs/minor";
 import type {
   ComplementaryGroup,
   Group as GroupDefinition,
@@ -260,8 +261,6 @@ function Content({
         progress={progress}
         {...shared}
       />
-      {minor && <ProgramCard id="minor" kind="Minor" {...minor} {...shared} />}
-
       <Card className="overflow-hidden">
         <Group
           title="Not counted toward your program"
@@ -290,6 +289,7 @@ function Content({
           )}
         </Group>
       </Card>
+      {minor && <ProgramCard id="minor" kind="Minor" {...minor} {...shared} />}
     </div>
   );
 }
@@ -360,7 +360,7 @@ function ProgramHeader({
     <div className="flex h-[72px] items-center gap-6 border-border border-b px-5">
       <div className="min-w-0 max-w-72 shrink-0">
         <h2 className="truncate text-sm leading-5" title={program.name}>
-          {program.name}
+          {kind === "Minor" ? minorName(program.name) : program.name}
         </h2>
         <p className="text-muted-foreground text-xs leading-4">{kind}</p>
       </div>

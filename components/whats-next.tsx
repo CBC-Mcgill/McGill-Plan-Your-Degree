@@ -53,6 +53,7 @@ import { planTermOptions, termLabel } from "@/lib/profile/term-options";
 import { type Term, termKey } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
+import { minorName } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
 const TERMS_SHOWN = 4;
@@ -437,7 +438,7 @@ function MinorSection({
           className="min-w-0 truncate text-sm leading-5"
           title={program.name}
         >
-          Minor: {program.name}
+          Minor: {minorName(program.name)}
         </h2>
         <InfoTip {...GLOSSARY.minor} />
         <span className="ml-auto text-[13px] text-muted-foreground tabular-nums">

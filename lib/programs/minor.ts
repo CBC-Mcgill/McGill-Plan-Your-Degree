@@ -6,3 +6,6 @@ export const isMinor = ({
   degree,
 }: Pick<ProgramSummary, "id" | "degree">) =>
   /(^|-)minor(-|$)/.test(id) || /minor/i.test(degree);
+
+/** "Technological Entrepreneurship Minor" without its trailing "Minor", for places that already say "Minor". */
+export const minorName = (name: string) => name.replace(/\s+minor$/i, "");

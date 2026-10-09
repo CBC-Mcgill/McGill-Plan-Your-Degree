@@ -129,7 +129,11 @@ test("a minor picked on the profile shows on the requirements page", async ({
     .getByRole("link", { name: "Requirements" })
     .click();
   await expect(
-    page.getByRole("heading", { level: 2, name: minorName }),
+    page.getByRole("heading", {
+      level: 2,
+      name: "Technological Entrepreneurship",
+      exact: true,
+    }),
   ).toBeVisible();
   await expect(
     page.getByText("up to a limit set by your faculty"),
