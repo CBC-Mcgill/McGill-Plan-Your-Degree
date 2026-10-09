@@ -1,12 +1,6 @@
-import type { Metadata } from "next";
-import { Requirements } from "@/components/requirements";
+import { permanentRedirect } from "next/navigation";
 
-export const metadata: Metadata = { title: "Requirements" };
-
+// Requirements merged into What's next.
 export default function RequirementsPage() {
-  return (
-    <div className="mx-auto w-full max-w-page px-8 py-10">
-      <Requirements />
-    </div>
-  );
+  permanentRedirect("/next");
 }

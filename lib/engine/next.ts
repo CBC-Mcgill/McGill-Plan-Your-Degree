@@ -6,7 +6,7 @@ import {
   type GroupProgress,
   groupAllows,
   namesCourses,
-  programProgress,
+  programStanding,
 } from "./progress.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 import { blockedBy, isOffered, isUncertain, meets } from "./status.ts";
@@ -39,11 +39,13 @@ export function whatsNext(
   const openGroups: { group: ComplementaryGroup; progress: GroupProgress }[] =
     [];
   if (program) {
-    const progress = programProgress(program, snapshot, catalogue, {
-      inProgress: true,
-      planned: true,
+    const progress = programStanding(
+      program,
+      snapshot,
+      catalogue,
       entry,
-    });
+      "plan",
+    );
     for (const item of progress.remaining) {
       for (const code of typeof item === "string" ? [item] : item.oneOf) {
         required.add(code);
