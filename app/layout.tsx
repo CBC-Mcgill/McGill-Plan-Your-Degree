@@ -1,7 +1,6 @@
 import { MotionConfig } from "motion/react";
 import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
-import { Celebration } from "@/components/celebration";
 import { CommandPalette } from "@/components/command-palette";
 import { SiteHeader } from "@/components/site-header";
 import { StorageBanner } from "@/components/storage-banner";
@@ -65,7 +64,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </footer>
           <CommandPalette />
           <Toaster />
-          <Celebration />
         </MotionConfig>
       </body>
     </html>

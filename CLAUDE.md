@@ -27,6 +27,6 @@ Planned: Supabase for P1 login and sync only.
 
 - Desktop-only MVP: design for a 1280 px window, keep it usable down to 1024 px, no horizontal scroll. No mobile layouts yet.
 - Click and keyboard must work everywhere. Drag and drop is an extra, never the only way.
-- Game animations respect `prefers-reduced-motion`.
-- Fun but never confusing: one obvious primary action per screen, plain labels, game elements only for real progress.
+- Animations respect `prefers-reduced-motion`.
+- Clean and never confusing: one obvious primary action per screen, plain labels, no gamification.
 - Banned styles: cream or off-white backgrounds, italic accent words in headings, numbered "01 / 02" section labels, monospace labels, pill-shaped buttons.

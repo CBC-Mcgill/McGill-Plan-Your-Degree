@@ -72,7 +72,7 @@ function Node({ stage }: { stage: Stage }) {
 }
 
 /** One stage per term on a vertical path, with the Graduation stage at the end. Arrow keys move between terms. */
-export function QuestPath({
+export function TermPath({
   stages,
   selected,
   onSelect,

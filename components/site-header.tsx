@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { SearchBar } from "@/components/command-palette";
-import { HeaderLevel } from "@/components/header-level";
 import { NavLinks } from "@/components/nav-links";
 
-/** The top navigation bar: logo, pages, a search bar that opens the command palette, and the level chip. */
+/** The top navigation bar: logo, pages, and a search bar that opens the command palette. */
 export function SiteHeader() {
   return (
     <header className="bg-card shadow-[inset_0_-1px_0_var(--border)]">
@@ -21,7 +20,6 @@ export function SiteHeader() {
           <NavLinks />
         </nav>
         <SearchBar className="ml-auto" />
-        <HeaderLevel />
       </div>
     </header>
   );

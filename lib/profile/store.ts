@@ -23,6 +23,13 @@ import {
 
 export const PROFILE_STORAGE_KEY = "plan-your-degree:profile";
 
+// An earlier version stored its own state under this key, so clear it once.
+try {
+  localStorage.removeItem("plan-your-degree:seen");
+} catch {
+  // Blocked storage, or running on the server.
+}
+
 /** True while the last save to the browser's storage failed, so the profile only lives in memory. */
 export const useSaveStatus = create<{ failed: boolean }>(() => ({
   failed: false,

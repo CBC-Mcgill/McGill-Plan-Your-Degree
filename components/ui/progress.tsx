@@ -4,7 +4,6 @@ const fills = {
   completed: "bg-completed",
   "in-progress": "bg-in-progress",
   planned: "bg-planned",
-  xp: "bg-xp",
   primary: "bg-primary",
   warn: "bg-warn",
 } as const;
@@ -56,7 +55,6 @@ const ringStroke = {
   completed: "stroke-completed",
   "in-progress": "stroke-in-progress",
   planned: "stroke-planned",
-  xp: "stroke-xp",
   primary: "stroke-primary",
   warn: "stroke-warn",
 } as const;

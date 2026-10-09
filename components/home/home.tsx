@@ -1,7 +1,12 @@
 "use client";
 
 import { cn } from "cn";
-import { ArrowRight, GraduationCap, Star } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarDays,
+  GraduationCap,
+  ListChecks,
+} from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useMemo } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
@@ -11,7 +16,6 @@ import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { StatusIcon, UncertainFlag } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ProgressRing } from "@/components/ui/progress";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { courseSlug } from "@/lib/catalogue/slug";
 import {
@@ -22,11 +26,10 @@ import {
 import { type Entry, nextView } from "@/lib/engine/next-view";
 import { creditsLabel } from "@/lib/engine/parts";
 import { termRange } from "@/lib/engine/plan";
+import { programProgress } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { recordCredits } from "@/lib/engine/stages";
 import { creditsText } from "@/lib/format";
-import { XP_PER_LEVEL } from "@/lib/game/progress";
-import { useGameProgress } from "@/lib/game/use-game-progress";
 import { useProfileStore } from "@/lib/profile/store";
 import {
   currentTerm,
@@ -195,7 +198,7 @@ function Metrics({
   const creditsRequired = useProfileStore((state) => state.creditsRequired);
   const advancedStanding = useProfileStore((state) => state.advancedStanding);
   const graduationTerm = useProfileStore((state) => state.graduationTerm);
-  const game = useGameProgress();
+  const plan = useProfileStore((state) => state.plan);
 
   const earned = earnedCredits(snapshot, catalogue) + advancedStanding;
   const pending = pendingCredits(snapshot);
@@ -208,6 +211,17 @@ function Metrics({
   const termsLeft = graduationTerm
     ? termRange(term, graduationTerm).length
     : null;
+  const groups = useMemo(() => {
+    if (!program) return null;
+    const { groups } = programProgress(program, snapshot, catalogue, { entry });
+    return {
+      done: groups.filter((group) => group.satisfied).length,
+      total: groups.length,
+    };
+  }, [program, snapshot, catalogue, entry]);
+  const nextTermCredits = (
+    plan.find((item) => termKey(item.term) === termKey(term))?.courses ?? []
+  ).reduce((sum, code) => sum + (catalogue.get(code)?.credits ?? 0), 0);
 
   return (
     <div className="grid grid-cols-3 gap-4">
@@ -248,44 +262,44 @@ function Metrics({
         </Caption>
       </Metric>
 
-      <Metric label="Level">
-        <div className="flex items-center justify-between gap-3">
-          <Value>{game ? game.level : "-"}</Value>
-          <span className="relative flex size-10 items-center justify-center">
-            <ProgressRing
-              value={game?.xpIntoLevel ?? 0}
-              max={XP_PER_LEVEL}
-              size={40}
-              fill="xp"
-              label={
-                game
-                  ? `${game.xpToNextLevel} XP to level ${game.level + 1}`
-                  : undefined
-              }
-            />
-            <Star
-              aria-hidden
-              className="absolute size-4 fill-xp text-xp"
-              strokeWidth={1.75}
-            />
-          </span>
-        </div>
-        <Caption>
-          {game
-            ? `${game.xpToNextLevel.toLocaleString("en-US")} XP to level ${game.level + 1}`
-            : "Loading"}
-        </Caption>
-      </Metric>
+      {groups ? (
+        <Metric label="Requirements done">
+          <div className="flex items-center justify-between gap-3">
+            <Value>
+              {groups.done}
+              <span className="font-normal text-muted-foreground">
+                {" "}
+                of {groups.total}
+              </span>
+            </Value>
+            <IconTile>
+              <ListChecks className="size-5" strokeWidth={1.75} />
+            </IconTile>
+          </div>
+          <Caption>
+            {groups.done === groups.total
+              ? "Everything in your program is done"
+              : `${groups.total - groups.done} still to go`}
+          </Caption>
+        </Metric>
+      ) : (
+        <Metric label="Planned next term">
+          <div className="flex items-center justify-between gap-3">
+            <Value>{nextTermCredits}</Value>
+            <IconTile>
+              <CalendarDays className="size-5" strokeWidth={1.75} />
+            </IconTile>
+          </div>
+          <Caption>{`credits in ${termLabel(term)}`}</Caption>
+        </Metric>
+      )}
 
       <Metric label="Terms left">
         <div className="flex items-center justify-between gap-3">
           <Value>{termsLeft ?? "-"}</Value>
-          <span
-            aria-hidden
-            className="flex size-10 items-center justify-center rounded-md bg-subtle text-muted-foreground shadow-[inset_0_0_0_1px_var(--border)]"
-          >
+          <IconTile>
             <GraduationCap className="size-5" strokeWidth={1.75} />
-          </span>
+          </IconTile>
         </div>
         <Caption>
           {graduationTerm
@@ -309,6 +323,15 @@ function Metric({ label, children }: { label: string; children: ReactNode }) {
     </Card>
   );
 }
+
+const IconTile = ({ children }: { children: ReactNode }) => (
+  <span
+    aria-hidden
+    className="flex size-10 items-center justify-center rounded-md bg-subtle text-muted-foreground shadow-[inset_0_0_0_1px_var(--border)]"
+  >
+    {children}
+  </span>
+);
 
 const Value = ({ children }: { children: ReactNode }) => (
   <p className="font-semibold text-[28px] leading-10 tracking-tight tabular-nums">

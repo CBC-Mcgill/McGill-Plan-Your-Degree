@@ -3,7 +3,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import { BadgesCard } from "@/components/profile/badges-card";
 import { CoursesCard } from "@/components/profile/courses-card";
 import { DataCard } from "@/components/profile/data-card";
 import { ImportNotice } from "@/components/profile/import-notice";
@@ -21,7 +20,7 @@ export function ProfileView() {
   const flow = useImportFlow();
   const started = useProfileStore(isStarted);
 
-  // The page renders after hydration, so the browser has already missed a #program or #badges anchor on a full page load.
+  // The page renders after hydration, so the browser has already missed a #program anchor on a full page load.
   useEffect(() => {
     if (hydrated) {
       document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
@@ -74,7 +73,6 @@ export function ProfileView() {
       <div className="mt-6 flex flex-col gap-8">
         <ProgramCard />
         <CoursesCard />
-        <BadgesCard />
         <DataCard flow={flow} />
       </div>
     </div>
