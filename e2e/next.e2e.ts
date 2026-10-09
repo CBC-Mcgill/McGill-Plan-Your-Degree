@@ -27,6 +27,11 @@ const row = (page: Page, region: string, code: string) =>
     .getByRole("listitem")
     .filter({ hasText: code });
 
+const requirement = (page: Page, name: string) =>
+  page
+    .getByRole("tablist", { name: "Requirements" })
+    .getByRole("tab", { name });
+
 test("without a profile it asks the student to import a transcript", async ({
   page,
 }) => {
@@ -65,7 +70,9 @@ test("a required course can be added, and it opens the course after it in the fo
   await expect(
     page.getByRole("tab", { name: "Winter 2027", selected: true }),
   ).toBeVisible();
-  await expect(page.getByRole("tab")).toHaveCount(2);
+  await expect(
+    page.getByRole("tablist", { name: "Term" }).getByRole("tab"),
+  ).toHaveCount(2);
   await expect(row(page, "Required courses", "COMP 310")).toContainText(
     "Needs COMP 273 first",
   );
@@ -80,7 +87,7 @@ test("a required course can be added, and it opens the course after it in the fo
 
   await page.getByRole("tab", { name: "Fall 2027" }).click();
   await expect(row(page, "Required courses", "COMP 273")).toContainText(
-    "Planned for Winter 2027",
+    "Winter 2027",
   );
   await expect(
     row(page, "Required courses", "COMP 310").getByRole("button", {
@@ -95,7 +102,7 @@ test("a required course can be added, and it opens the course after it in the fo
   ).toBeAttached();
 });
 
-test("it shows where each course counts, one click away", async ({ page }) => {
+test("each requirement shows the courses it counts", async ({ page }) => {
   await openWith(page, {
     records: [
       done("COMP 202"),
@@ -114,18 +121,19 @@ test("it shows where each course counts, one click away", async ({ page }) => {
     "12 of 63 program credits earned or in progress",
   );
   await expect(row(page, "Required courses", "COMP 303")).toContainText(
-    "Planned for Winter 2027",
+    "Winter 2027",
   );
 
-  const counted = page
-    .getByRole("region", { name: "Required courses" })
-    .getByRole("button", { name: "4 courses counted" });
-  await expect(counted).toHaveAttribute("aria-expanded", "false");
-  await counted.click();
+  await expect(
+    page
+      .getByRole("region", { name: "Required courses" })
+      .getByRole("heading", { name: "Counted 4" }),
+  ).toBeVisible();
   await expect(
     row(page, "Required courses", "MATH 240").filter({ hasText: "Completed" }),
   ).toContainText("Fall 2025");
 
+  await requirement(page, "Complementary courses").click();
   await page
     .getByRole("region", { name: "Complementary courses" })
     .getByRole("button", { name: /^Show \d+ more$/ })
@@ -135,17 +143,17 @@ test("it shows where each course counts, one click away", async ({ page }) => {
   await expect(fewer).toBeFocused();
   await expect(fewer).toHaveAttribute("aria-expanded", "true");
 
-  const notCounted = page.getByRole("button", {
-    name: /^Not counted toward your program/,
+  await requirement(page, "Not counted").click();
+  const notCounted = page.getByRole("region", {
+    name: "Not counted toward your program",
   });
   await expect(notCounted).toContainText("1 course, 3 credits");
-  await notCounted.click();
-  const anth = page.getByRole("listitem").filter({ hasText: "ANTH 202" });
+  const anth = notCounted.getByRole("listitem").filter({ hasText: "ANTH 202" });
   await expect(anth).toContainText("Completed");
   await expect(anth).toContainText("Fall 2025");
 });
 
-test("met and CEGEP-credited groups, the restriction note and the minor show on one page", async ({
+test("met and CEGEP-credited groups, the restriction note and the minor open from the list", async ({
   page,
 }) => {
   await openWith(page, {
@@ -161,30 +169,27 @@ test("met and CEGEP-credited groups, the restriction note and the minor show on 
     plan: [],
   });
 
-  const completed = page.getByRole("region", {
-    name: "Completed requirements",
-  });
-  await expect(completed).toContainText(
-    "Credited from your Quebec CEGEP diploma",
-  );
-  await completed
-    .getByRole("button", { name: "Complementary studies group A" })
-    .click();
+  await requirement(page, "Required year 0 courses").click();
   await expect(
-    completed.getByRole("listitem").filter({ hasText: "MGPO 440" }),
-  ).toBeVisible();
+    page.getByRole("region", { name: "Required year 0 courses" }),
+  ).toContainText("Your Quebec CEGEP diploma credits this group");
+  await requirement(page, "Complementary studies group A").click();
+  await expect(
+    row(page, "Complementary studies group A", "MGPO 440"),
+  ).toContainText("Completed");
 
+  await requirement(page, "Required non-departmental courses").click();
   await expect(
     row(page, "Required non-departmental courses", "MATH 262"),
   ).toContainText(
     "Not open to students who have taken MATH 222. Ask your advisor whether MATH 222 counts instead.",
   );
 
+  await requirement(page, "Technological Entrepreneurship minor").click();
   const minor = page.getByRole("region", {
     name: "Technological Entrepreneurship minor",
   });
   await expect(minor).toContainText("Read automatically from the catalogue");
-  await minor.getByRole("button", { name: "1 course counted" }).click();
   await expect(
     minor.getByRole("listitem").filter({ hasText: "INTG 215" }),
   ).toContainText("Counts for both");
@@ -247,9 +252,42 @@ test("a minor picked on the profile shows on What's next", async ({ page }) => {
 
   await page.goto("/next");
   await expect(
-    page.getByRole("heading", {
-      level: 2,
-      name: "Technological Entrepreneurship minor",
+    requirement(page, "Technological Entrepreneurship minor"),
+  ).toBeVisible();
+});
+
+test("the picked requirement lives in the URL, so Back and links reopen it", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [done("COMP 202"), done("ANTH 202")],
+    programId: "computer-science-major-bsc",
+    plan: [],
+  });
+  await expect(requirement(page, "Required courses")).toHaveAttribute(
+    "aria-selected",
+    "true",
+  );
+
+  await requirement(page, "Complementary courses").click();
+  await expect(page).toHaveURL("/next?req=complementary-courses");
+  await requirement(page, "Not counted").click();
+  await expect(
+    page.getByRole("region", { name: "Not counted toward your program" }),
+  ).toBeVisible();
+  await page.goBack();
+  await expect(
+    page.getByRole("region", { name: "Complementary courses" }),
+  ).toBeVisible();
+
+  await requirement(page, "Complementary courses").press("ArrowUp");
+  await expect(requirement(page, "Required courses")).toBeFocused();
+  await expect(page).toHaveURL("/next?req=required-courses");
+
+  await page.goto("/next?req=other");
+  await expect(
+    page.getByRole("region", {
+      name: "Other courses you can take in Winter 2027",
     }),
   ).toBeVisible();
 });
