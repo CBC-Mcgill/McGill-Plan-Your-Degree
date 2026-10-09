@@ -1,27 +1,27 @@
+"use client";
+
+import { cn } from "cn";
 import { Check, GraduationCap, Info, TriangleAlert } from "lucide-react";
 import Link from "next/link";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Banner } from "@/components/ui/banner";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
 import type { GroupProgress, ProgramProgress } from "@/lib/engine/progress";
+import { creditsText, sentence } from "@/lib/format";
 import type { Program, RequiredItem } from "@/lib/programs/types";
-
-const MAX_ITEMS = 3;
 
 const linkClass = "font-medium underline underline-offset-2 hover:text-primary";
 
-function requiredText(items: RequiredItem[]): string {
-  const shown = items
-    .slice(0, MAX_ITEMS)
-    .map((item) => (typeof item === "string" ? item : item.oneOf.join(" or ")));
-  const more = items.length - shown.length;
-  return `${shown.join(", ")}${more > 0 ? ` and ${more} more` : ""}`;
-}
+const requiredText = (items: RequiredItem[]) =>
+  items
+    .map((item) => (typeof item === "string" ? item : item.oneOf.join(" or ")))
+    .join(", ");
 
 /** What a complementary group lacks: credits first, then the first rule it fails. */
 function lacking(group: GroupProgress): string {
   if (group.creditsDone < group.credits) {
-    return `${group.creditsDone} of ${group.credits} credits`;
+    return `${creditsText(group.credits - group.creditsDone)} to go`;
   }
   const open = group.rules.filter((rule) => !rule.satisfied);
   const [rule] = open;
@@ -29,8 +29,50 @@ function lacking(group: GroupProgress): string {
   const need =
     rule.minCredits === undefined
       ? `${rule.coursesDone} of ${rule.minCourses} courses`
-      : `${rule.creditsDone} of ${rule.minCredits} credits`;
+      : `${creditsText(rule.minCredits - rule.creditsDone)} to go`;
   return `${rule.title} (${need})${open.length > 1 ? ` and ${open.length - 1} more` : ""}`;
+}
+
+/** One line of what the plan lacks. When the line does not fit, Show all opens the rest. */
+function Missing({ text }: { text: string }) {
+  const line = useRef<HTMLParagraphElement>(null);
+  const [open, setOpen] = useState(false);
+  const [clipped, setClipped] = useState(false);
+
+  useLayoutEffect(() => {
+    const element = line.current;
+    if (!element) return;
+    const measure = () => setClipped(element.scrollWidth > element.clientWidth);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="flex items-baseline gap-3 text-[13px] leading-[18px]">
+      <p
+        ref={line}
+        className={cn(
+          "min-w-0 flex-1 text-muted-foreground",
+          !open && "truncate",
+        )}
+      >
+        <span className="font-medium text-foreground">Still missing</span>{" "}
+        {text}
+      </p>
+      {(clipped || open) && (
+        <button
+          type="button"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          className={`${linkClass} shrink-0 rounded-sm`}
+        >
+          {open ? "Show less" : "Show all"}
+        </button>
+      )}
+    </div>
+  );
 }
 
 /** The slim strip on top: what the plan covers of the program, what is missing, when you graduate and how many warnings it has. */
@@ -57,7 +99,7 @@ export function PlanSummary({
     .filter((group) => !group.satisfied)
     .map(
       (group) =>
-        `${group.title}: ${group.kind === "required" ? requiredText(group.remaining) : lacking(group)}`,
+        `${sentence(group.title)}: ${group.kind === "required" ? requiredText(group.remaining) : lacking(group)}`,
     )
     .join(" · ");
   return (
@@ -87,23 +129,13 @@ export function PlanSummary({
                   label={`Credits of ${program.name} your plan covers`}
                   valueText={`${progress.creditsDone} of ${progress.credits} credits`}
                 />
-                <p
-                  className="truncate text-[13px] text-muted-foreground leading-[18px]"
-                  title={missing}
-                >
-                  {progress.satisfied ? (
-                    <span className="font-medium text-completed">
-                      Your plan satisfies {program.name}.
-                    </span>
-                  ) : (
-                    <>
-                      <span className="font-medium text-foreground">
-                        Still missing
-                      </span>{" "}
-                      {missing}
-                    </>
-                  )}
-                </p>
+                {progress.satisfied ? (
+                  <p className="font-medium text-[13px] text-completed leading-[18px]">
+                    Your plan satisfies {program.name}.
+                  </p>
+                ) : (
+                  <Missing key={missing} text={missing} />
+                )}
               </>
             ) : (
               <>
@@ -119,7 +151,7 @@ export function PlanSummary({
           </div>
           <div className="w-px bg-border" />
           <dl className="flex shrink-0 items-center gap-8">
-            <div>
+            <div className="w-32">
               <dt className="text-muted-foreground text-xs leading-4">
                 Graduation
               </dt>

@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
 import type { IndexedCourse } from "@/lib/catalogue/search";
+import type { CourseSummary } from "@/lib/catalogue/types";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import {
   plannedCredits,
@@ -27,6 +28,8 @@ import {
   type Stage,
   suggestForTerm,
 } from "@/lib/engine/stages";
+import { isOffered } from "@/lib/engine/status";
+import { creditsText } from "@/lib/format";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
 import type { CourseStatus, Plan, Term } from "@/lib/profile/types";
@@ -115,17 +118,17 @@ function Title({
 const menuItem =
   "flex h-8 cursor-default select-none items-center gap-3 rounded-md px-2 text-[13px] outline-none data-[highlighted]:bg-subtle";
 
-/** The terms a planned course can move to, with the credits each already holds. */
+/** The terms a planned course can move to, with the credits each already holds and a note when the course does not run in that season. */
 function MoveMenu({
   code,
+  course,
   options,
   onMove,
-  onCloseAutoFocus,
 }: {
   code: string;
+  course: CourseSummary | undefined;
   options: MoveOption[];
   onMove: (to: Term) => void;
-  onCloseAutoFocus: (event: Event) => void;
 }) {
   return (
     <DropdownMenu.Root>
@@ -144,7 +147,6 @@ function MoveMenu({
           align="end"
           sideOffset={4}
           collisionPadding={16}
-          onCloseAutoFocus={onCloseAutoFocus}
           className="z-50 max-h-[min(360px,var(--radix-dropdown-menu-content-available-height))] min-w-56 overflow-y-auto rounded-lg bg-card p-1 text-foreground antialiased shadow-float"
         >
           <DropdownMenu.Label className="px-2 pt-1.5 pb-1 font-medium text-muted-foreground text-xs leading-4">
@@ -157,7 +159,14 @@ function MoveMenu({
               onSelect={() => onMove(option.term)}
             >
               <span className="flex-1">{termLabel(option.term)}</span>
-              <span className="text-muted-foreground text-xs tabular-nums">
+              {course &&
+                !course.parts?.length &&
+                !isOffered(course, option.term.season) && (
+                  <span className="text-[color-mix(in_oklab,var(--warn)_85%,black)] text-xs">
+                    Not offered
+                  </span>
+                )}
+              <span className="w-9 text-right text-muted-foreground text-xs tabular-nums">
                 {option.credits} cr
               </span>
             </DropdownMenu.Item>
@@ -179,6 +188,7 @@ export function TermPanel({
   plan,
   creditLimit,
   moveOptions,
+  onSelect,
 }: {
   stage: Stage;
   now: Term;
@@ -190,10 +200,11 @@ export function TermPanel({
   creditLimit: number;
   /** Every term a planned course can move to. */
   moveOptions: MoveOption[];
+  /** Opens another term's panel and moves focus into it. */
+  onSelect: (key: number) => void;
 }) {
   const entry = useProfileStore((state) => state.entry);
   const heading = useRef<HTMLHeadingElement>(null);
-  const moved = useRef(false);
 
   const label = termLabel(stage.term);
   const past = stage.key < termKey(now);
@@ -222,6 +233,9 @@ export function TermPanel({
     (sum, load) => sum + load.credits,
     0,
   );
+  const showPlanned =
+    stage.planned.length > 0 ||
+    (!past && records.length === 0 && stage.continued.length === 0);
   const targets = moveOptions.filter(
     (option) => termKey(option.term) !== stage.key,
   );
@@ -239,15 +253,8 @@ export function TermPanel({
 
   // The row a move or remove acted on is gone, so keep keyboard focus inside the panel.
   function move(value: string, to: Term) {
-    moved.current = true;
     addWithUndo(to, value);
-  }
-
-  function afterMenu(event: Event) {
-    if (!moved.current) return;
-    moved.current = false;
-    event.preventDefault();
-    heading.current?.focus();
+    onSelect(termKey(to));
   }
 
   function remove(value: string) {
@@ -265,6 +272,7 @@ export function TermPanel({
         <header className="flex h-16 items-center gap-4 px-5">
           <h2
             ref={heading}
+            id="term-heading"
             tabIndex={-1}
             className="rounded-sm text-base leading-6"
           >
@@ -275,7 +283,7 @@ export function TermPanel({
             {past ? (
               <>
                 <span className="text-[13px] text-muted-foreground tabular-nums">
-                  {stage.credits} credits
+                  {creditsText(stage.credits)}
                 </span>
                 <Badge title="This term has passed, so your record is read-only">
                   Read only
@@ -329,7 +337,7 @@ export function TermPanel({
                 {records.length}
               </span>
               <span className="ml-auto font-normal text-muted-foreground tabular-nums">
-                {recordTotal} credits
+                {creditsText(recordTotal)}
               </span>
             </div>
             <ul className={list}>
@@ -362,7 +370,7 @@ export function TermPanel({
                 {stage.continued.length}
               </span>
               <span className="ml-auto font-normal text-muted-foreground tabular-nums">
-                {continuedTotal} credits
+                {creditsText(continuedTotal)}
               </span>
             </div>
             <ul className={list}>
@@ -383,7 +391,7 @@ export function TermPanel({
           </section>
         )}
 
-        {(stage.planned.length > 0 || !past) && (
+        {showPlanned && (
           <section aria-label="Planned courses">
             <div className={band}>
               Planned
@@ -392,7 +400,7 @@ export function TermPanel({
               </span>
               {stage.planned.length > 0 && (
                 <span className="ml-auto font-normal text-muted-foreground tabular-nums">
-                  {plannedTotal} credits
+                  {creditsText(plannedTotal)}
                 </span>
               )}
             </div>
@@ -419,9 +427,9 @@ export function TermPanel({
                     <div className="flex items-center gap-0.5 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100 motion-reduce:transition-none">
                       <MoveMenu
                         code={value}
+                        course={catalogue.get(value)}
                         options={targets}
                         onMove={(to) => move(value, to)}
-                        onCloseAutoFocus={afterMenu}
                       />
                       <Button
                         variant="ghost"

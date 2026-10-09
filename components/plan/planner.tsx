@@ -3,6 +3,7 @@
 import { GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { flushSync } from "react-dom";
 import { PlanSummary } from "@/components/plan/plan-summary";
 import { QuestPath } from "@/components/plan/quest-path";
 import { TermPanel } from "@/components/plan/term-panel";
@@ -109,15 +110,18 @@ function PlannerReady({
     const terms = new Map<number, Term>();
     for (const term of [
       ...termRange(compareTerms(first, now) > 0 ? first : now, end, true),
-      ...stages.filter((stage) => stage.key >= nowKey).map((s) => s.term),
+      ...stages.map((stage) => stage.term),
     ]) {
       terms.set(termKey(term), term);
     }
-    return [...terms.values()].sort(compareTerms).map((term) => ({
-      term,
-      credits:
-        stages.find((stage) => stage.key === termKey(term))?.credits ?? 0,
-    }));
+    return [...terms.values()]
+      .filter((term) => termKey(term) > nowKey)
+      .sort(compareTerms)
+      .map((term) => ({
+        term,
+        credits:
+          stages.find((stage) => stage.key === termKey(term))?.credits ?? 0,
+      }));
   }, [stages, now, nowKey, end]);
 
   // Open on the next term to plan, not the one already in progress.
@@ -126,6 +130,12 @@ function PlannerReady({
     stages.find((stage) => stage.key > nowKey) ??
     stages.at(-1);
   const firstWarned = stages.find((stage) => stage.warnings.length > 0);
+
+  // The panel of the old term is gone after a move, so land on the new one.
+  function follow(key: number) {
+    flushSync(() => setPicked(key));
+    document.getElementById("term-heading")?.focus();
+  }
 
   return (
     <>
@@ -162,6 +172,7 @@ function PlannerReady({
             plan={plan}
             creditLimit={creditLimit}
             moveOptions={moveOptions}
+            onSelect={follow}
           />
         </div>
       ) : (
