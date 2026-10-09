@@ -253,3 +253,16 @@ test("Back to the course list restores the scroll position", async ({
   await expect(rows.first()).toBeVisible();
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(300);
 });
+
+test("a column's info icon shows its definition on click and hides it on the next", async ({
+  page,
+}) => {
+  await page.goto("/courses");
+  const info = page.getByRole("button", { name: "About Credits" });
+  await info.click();
+  await expect(page.getByRole("tooltip")).toContainText(
+    "Credits you earn by passing the course.",
+  );
+  await info.click();
+  await expect(page.getByRole("tooltip")).toHaveCount(0);
+});

@@ -9,8 +9,10 @@ import { nextView } from "./next-view.ts";
 import { planLoads, planWarnings, schoolTerms, termChoices } from "./plan.ts";
 import {
   creditSources,
+  creditSplit,
   fitsCaps,
   programProgress,
+  programSplit,
   ruleMatches,
 } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
@@ -212,6 +214,37 @@ test("program progress counts exemptions as satisfied but not as credit", () => 
   expect(
     programProgress(tiny, planned, catalogue, { planned: true }).satisfied,
   ).toBe(true);
+});
+
+test("credit splits count earned, then in progress, then planned, up to what a group needs", () => {
+  const planned = buildSnapshot(records, [
+    {
+      term: { season: "Winter", year: 2027 },
+      courses: ["COMP 251", "COMP 424", "COMP 302"],
+    },
+  ]);
+  const progress = programProgress(tiny, planned, catalogue, {
+    inProgress: true,
+    planned: true,
+  });
+  const [required, complementary] = progress.groups;
+  // COMP 250 earned, COMP 251 planned, MATH 240 exempt with no credit.
+  expect(required && creditSplit(required, planned)).toEqual({
+    completed: 3,
+    inProgress: 0,
+    planned: 3,
+  });
+  // COMP 330 earned, then COMP 424 fills the last 3 credits and COMP 302 has no room.
+  expect(complementary && creditSplit(complementary, planned)).toEqual({
+    completed: 3,
+    inProgress: 0,
+    planned: 3,
+  });
+  expect(programSplit(progress, planned)).toEqual({
+    completed: 6,
+    inProgress: 0,
+    planned: 6,
+  });
 });
 
 test("program progress lists the courses each group and rule claimed, and the ones nobody did", () => {

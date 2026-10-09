@@ -8,7 +8,7 @@ import { CourseRow } from "@/components/course-row";
 import { Landing } from "@/components/home/landing";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { Sentence as WarningSentence } from "@/components/plan/term-warnings";
-import { STATUS } from "@/components/status";
+import { StatusBadge, StatusBar } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
 import { Term } from "@/components/ui/tooltip";
@@ -40,7 +40,7 @@ export function Home() {
   const snapshot = useSnapshot();
   if (snapshot === null) return <Landing />;
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
       <div className="max-w-reading">
         {snapshot ? <Dashboard snapshot={snapshot} /> : <Skeleton />}
       </div>
@@ -111,7 +111,7 @@ function Ready({
   const graduation = useProfileStore((state) => state.graduationTerm);
   const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
 
-  const { earned, inProgress, pending, required } = degreeStanding(
+  const { earned, inProgress, planned, pending, required } = degreeStanding(
     snapshot,
     catalogue ?? NO_CATALOGUE,
     { records, plan, advancedStanding, creditsRequired, entry },
@@ -153,6 +153,18 @@ function Ready({
             termsLeft > 0 &&
             `${COPY.termsLeft(termsLeft, graduation)}.`}
         </p>
+      )}
+      {known && required !== null && (
+        <div className="mt-4">
+          <StatusBar
+            completed={earned}
+            inProgress={inProgress}
+            planned={planned}
+            total={required}
+            legend
+            className="w-80"
+          />
+        </div>
       )}
       {catalogue === null ? (
         <div className={cn(known && "mt-8")}>
@@ -309,7 +321,7 @@ function RequiredCourses({
     plan.find((item) => item.courses.includes(code))?.term;
 
   return (
-    <div className="mt-12">
+    <div className="mt-8">
       <Section title={`Required courses open in ${label}`}>
         {open.length > 0 ? (
           <ul>
@@ -324,14 +336,16 @@ function RequiredCourses({
                   uncertain={uncertain}
                   meta={
                     at &&
-                    (termKey(at) === termKey(term)
-                      ? STATUS.planned.label
-                      : COPY.plannedFor(at))
+                    (termKey(at) === termKey(term) ? (
+                      <StatusBadge status="planned" />
+                    ) : (
+                      COPY.plannedFor(at)
+                    ))
                   }
                   action={
                     at ? (
                       <Button
-                        variant="text"
+                        variant="secondary"
                         onClick={() => removeWithUndo(at, course.code)}
                       >
                         Remove
@@ -339,7 +353,7 @@ function RequiredCourses({
                       </Button>
                     ) : (
                       <Button
-                        variant="text"
+                        variant="secondary"
                         onClick={() => addWithUndo(term, course.code)}
                       >
                         Add

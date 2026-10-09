@@ -1,6 +1,7 @@
+import { cn } from "cn";
 import { CircleAlert } from "lucide-react";
 import type * as React from "react";
-import { Term, Tooltip } from "@/components/ui/tooltip";
+import { DefinitionButton, Tooltip } from "@/components/ui/tooltip";
 import { COPY } from "@/lib/copy";
 import type { BrowseStatus } from "@/lib/engine/status";
 import { GLOSSARY, STATUS_TIPS } from "@/lib/glossary";
@@ -189,14 +190,129 @@ export function StatusTip({
   );
 }
 
-/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. A focusable icon with the word for screen readers and the definition on hover and focus (D21), its target padded to 26px without moving the layout. Never put it inside a link or a button. */
+/** "Has conditions": the catalogue lists something we can't check, such as instructor permission. A focusable icon named "Has conditions" with the definition on hover, focus and click (D21), its target padded to 26px without moving the layout. Never put it inside a link or a button. */
 export function UncertainFlag() {
   return (
-    <span className="inline-flex h-5 shrink-0 items-center text-warn [&>button]:relative [&>button]:after:absolute [&>button]:after:-inset-1.5">
-      <Term def={GLOSSARY.hasConditions}>
+    <span className="inline-flex h-5 shrink-0 items-center text-warn">
+      <DefinitionButton
+        def={GLOSSARY.hasConditions}
+        label={COPY.hasConditions}
+        className="after:-inset-1.5"
+      >
         <CircleAlert aria-hidden className="size-3.5" strokeWidth={2} />
-        <span className="sr-only">{COPY.hasConditions}</span>
-      </Term>
+      </DefinitionButton>
     </span>
+  );
+}
+
+const TINTED: ReadonlySet<Status> = new Set([
+  "completed",
+  "covered",
+  "transfer",
+  "exemption",
+  "in-progress",
+  "planned",
+  "failed",
+  "deferred",
+]);
+
+/** The glyph and word on a soft tint of the status hue, 6px corners, never a pill. Can take is outlined and locked or withdrawn is grey, all at AA contrast. `word` replaces the status word, as "Not offered" does on Browse. */
+export function StatusBadge({
+  status,
+  word = STATUS[status].label,
+}: {
+  status: Status;
+  word?: string;
+}) {
+  const { color, text } = STATUS[status];
+  return (
+    <span
+      className={cn(
+        "-my-0.5 inline-flex h-6 items-center gap-1.5 whitespace-nowrap rounded-[6px] px-2 font-medium text-[13px]",
+        status === "available" &&
+          "bg-bg shadow-[inset_0_0_0_1px_color-mix(in_oklab,var(--fg-subtle)_32%,white)]",
+        !TINTED.has(status) && status !== "available" && "bg-tint",
+      )}
+      style={{
+        color: text,
+        background: TINTED.has(status)
+          ? `color-mix(in oklab, ${color} 11%, white)`
+          : undefined,
+      }}
+    >
+      <StatusIcon status={status} />
+      {word}
+    </span>
+  );
+}
+
+const BAR_PARTS = [
+  ["completed", "completed", "earned"],
+  ["inProgress", "in-progress", "in progress"],
+  ["planned", "planned", "planned"],
+] as const;
+
+/**
+ * Credits as one 6px bar: earned, in progress and planned in their status colors, what is left in grey. Screen readers hear it as one sentence.
+ * `legend` adds a glyph and count for each part beside it. Give it a width with `className`.
+ */
+export function StatusBar({
+  completed,
+  inProgress,
+  planned = 0,
+  total,
+  legend = false,
+  className,
+}: {
+  completed: number;
+  inProgress: number;
+  planned?: number;
+  total: number;
+  legend?: boolean;
+  className?: string;
+}) {
+  const values = { completed, inProgress, planned };
+  const whole = Math.max(total, completed + inProgress + planned);
+  const parts = BAR_PARTS.filter(([key]) => values[key] > 0);
+  const sentence = parts.length
+    ? parts.map(([key, , word]) => `${values[key]} ${word}`).join(", ")
+    : "0 earned";
+  const bar = (
+    <span
+      role="img"
+      aria-label={`${sentence} of ${total} credits`}
+      className={cn(
+        "flex h-1.5 overflow-hidden rounded-full bg-line",
+        className,
+      )}
+    >
+      {parts.map(([key, status]) => (
+        <span
+          key={key}
+          className="h-full border-bg border-l first:border-l-0"
+          style={{
+            width: `${(values[key] / whole) * 100}%`,
+            background: STATUS[status].color,
+          }}
+        />
+      ))}
+    </span>
+  );
+  if (!legend) return bar;
+  return (
+    <div className="flex items-center gap-6">
+      {bar}
+      <p
+        aria-hidden
+        className="flex items-center gap-4 text-fg-muted tabular-nums"
+      >
+        {BAR_PARTS.map(([key, status, word]) => (
+          <span key={key} className="inline-flex items-center gap-1.5">
+            <StatusIcon status={status} />
+            {values[key]} {word}
+          </span>
+        ))}
+      </p>
+    </div>
   );
 }

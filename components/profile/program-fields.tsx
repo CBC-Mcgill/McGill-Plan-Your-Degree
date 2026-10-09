@@ -147,11 +147,11 @@ function Credits({
             .join(", ")}
         </p>
         <Button
-          variant="text"
+          variant="secondary"
           aria-expanded={open}
           aria-controls={fieldsId}
           onClick={() => setOpen(!open)}
-          className="-my-2 -mr-3"
+          className="-my-2"
         >
           Edit
         </Button>

@@ -9,6 +9,7 @@ import {
   StatusTip,
   UncertainFlag,
 } from "@/components/status";
+import { Card } from "@/components/ui/card";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
@@ -141,9 +142,9 @@ export function CourseRow({
   );
 }
 
-/** A course row's box: 44px, the hover and focus tint bleeding 8px past the text. */
+/** A course row's box inside a card: 44px, a hairline above every row but the first, and the hover and focus tint reaching the card's edges. */
 export const ROW =
-  "@container group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint";
+  "@container group -mx-5 flex min-h-11 items-start gap-4 border-line border-t px-5 py-3 first:border-t-0 focus-within:bg-tint hover:bg-tint";
 /** The glyph, code and title column. The link ends at the title so the "Has conditions" icon can follow it, and its ::after, under the text, keeps the whole column clickable. */
 export const ROW_TITLE =
   "relative isolate flex min-w-0 flex-1 items-start gap-2";
@@ -160,12 +161,7 @@ export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
         Loading courses
       </p>
       <div aria-hidden>
-        <div className="flex h-9 items-center gap-1">
-          {["w-28", "w-28", "w-12"].map((width, i) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-            <div key={i} className={cn(bone, "h-9", width)} />
-          ))}
-        </div>
+        <div className={cn(bone, "h-9 w-64")} />
         <div className="mt-4 flex items-center gap-2">
           <div className={cn(bone, "h-9 w-80")} />
           {["w-24", "w-20", "w-20", "w-24"].map((width, i) => (
@@ -173,7 +169,7 @@ export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
             <div key={i} className={cn(bone, "h-9", width)} />
           ))}
         </div>
-        <div className="mt-6">
+        <Card className="mt-6 px-5 pt-9">
           {Array.from({ length: rows }, (_, row) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
             <div key={row} className="flex h-11 items-center gap-4">
@@ -181,7 +177,7 @@ export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
               <div className={cn(bone, "h-5 w-1/3")} />
             </div>
           ))}
-        </div>
+        </Card>
       </div>
     </div>
   );

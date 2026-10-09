@@ -25,7 +25,7 @@ export function StartActions() {
       <Button asChild>
         <Link href="/profile">{COPY.importTranscript}</Link>
       </Button>
-      <Button variant="text" onClick={startProfile}>
+      <Button variant="secondary" onClick={startProfile}>
         {COPY.startWithout}
       </Button>
     </div>

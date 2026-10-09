@@ -10,7 +10,12 @@ import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { STATUS, type Status, StatusIcon } from "@/components/status";
+import {
+  type Status,
+  StatusBadge,
+  StatusBar,
+  StatusIcon,
+} from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Disclosure, ShowMore } from "@/components/ui/disclosure";
 import { Section } from "@/components/ui/section";
@@ -30,7 +35,10 @@ import {
 import { termLoad } from "@/lib/engine/plan";
 import {
   type Claimed,
+  creditSplit,
   type GroupProgress,
+  type ProgramProgress,
+  programSplit,
   programStanding,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
@@ -174,14 +182,20 @@ function Page({
     () => minor && nextView(catalogue, judged, term, minor, entry),
     [catalogue, judged, term, minor, entry],
   );
-  // Not counted reads the plan too, so a planned course that counts nowhere shows before the student takes it.
-  const unclaimed = useMemo(
+  // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
+  const withPlan = useMemo(
     () =>
       program
-        ? programStanding(program, snapshot, catalogue, entry, "plan").unclaimed
-        : [],
+        ? programStanding(program, snapshot, catalogue, entry, "plan")
+        : null,
     [program, snapshot, catalogue, entry],
   );
+  const minorWithPlan = useMemo(
+    () =>
+      minor ? programStanding(minor, snapshot, catalogue, entry, "plan") : null,
+    [minor, snapshot, catalogue, entry],
+  );
+  const unclaimed = withPlan?.unclaimed ?? [];
   const exemptions = useMemo(
     () => exemptionsToReplace(records, catalogue),
     [records, catalogue],
@@ -198,7 +212,7 @@ function Page({
           </Link>{" "}
           to see what you still need.
         </p>
-        <div className="mt-12">
+        <div className="mt-6">
           <OtherCourses entries={view.other} context={context} />
         </div>
       </>
@@ -231,6 +245,16 @@ function Page({
           </>
         )}
       </p>
+      {withPlan && (
+        <div className="mt-4">
+          <StatusBar
+            {...programSplit(withPlan, snapshot)}
+            total={credits}
+            legend
+            className="w-80"
+          />
+        </div>
+      )}
       <div className="mt-6 flex items-center justify-between gap-4">
         <ViewTabs
           label="Term"
@@ -265,7 +289,7 @@ function Page({
         role="tabpanel"
         id={panelId}
         aria-labelledby={`${panelId}-${termKey(term)}`}
-        className="mt-12 [&>*+*]:mt-12"
+        className="mt-6 [&>*+*]:mt-6"
       >
         {requiredDone && <p>Every required course is done or in progress.</p>}
         {groups.map((group, index) =>
@@ -274,7 +298,13 @@ function Page({
               // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
               key={index}
               title={sentence(group.title)}
-              meta={<GroupMeta group={group} />}
+              meta={
+                <GroupMeta
+                  group={group}
+                  split={withPlan?.groups[index]}
+                  snapshot={snapshot}
+                />
+              }
             >
               <GroupBody
                 group={group}
@@ -291,6 +321,8 @@ function Page({
           <MinorSection
             minor={minor}
             view={minorView}
+            withPlan={minorWithPlan}
+            snapshot={snapshot}
             context={{ ...context, both: programCodes(view) }}
           />
         )}
@@ -392,9 +424,18 @@ function TermLoad({ credits, limit }: { credits: number; limit: number }) {
 const fraction = (group: GroupProgress) =>
   COPY.fraction(Math.min(group.creditsDone, group.credits), group.credits);
 
-/** Rules to check, then credits, unless every rule needs a check and nothing can count. */
-function GroupMeta({ group }: { group: GroupProgress }) {
+/** Rules to check, then credits and their bar, unless every rule needs a check and nothing can count. `split` is the same group counted with the plan. */
+function GroupMeta({
+  group,
+  split,
+  snapshot,
+}: {
+  group: GroupProgress;
+  split: GroupProgress | undefined;
+  snapshot: Snapshot;
+}) {
   const checks = group.unparsed;
+  const counts = group.kind === "required" || checks < group.rules.length;
   return (
     <span className="inline-flex items-center gap-4">
       {checks > 0 && (
@@ -403,8 +444,14 @@ function GroupMeta({ group }: { group: GroupProgress }) {
           {checks === 1 ? "1 rule to check" : `${checks} rules to check`}
         </span>
       )}
-      {(group.kind === "required" || checks < group.rules.length) &&
-        fraction(group)}
+      {counts && fraction(group)}
+      {counts && split && (
+        <StatusBar
+          {...creditSplit(split, snapshot)}
+          total={group.credits}
+          className="w-20"
+        />
+      )}
     </span>
   );
 }
@@ -511,14 +558,9 @@ function RequiredBody({
   const blocked = later.filter((item) => !isPlanned(item));
   return (
     <div>
-      {first.length > 0 && (
+      {first.length + blocked.length > 0 && (
         <ul>
-          <ItemRows items={first} context={context} />
-        </ul>
-      )}
-      {blocked.length > 0 && (
-        <ul className="mt-4 first:mt-0">
-          <ItemRows items={blocked} context={context} />
+          <ItemRows items={[...first, ...blocked]} context={context} />
         </ul>
       )}
       <Counted courses={group.courses} context={context} />
@@ -531,7 +573,7 @@ function ItemRows({ items, context }: { items: Item[]; context: Context }) {
     "oneOf" in item ? (
       <li
         key={item.oneOf.map(({ course }) => course.code).join()}
-        className="my-4 first:mt-0 last:mb-0"
+        className="-mx-5 border-line border-t px-5 pt-3 first:border-t-0 first:pt-0"
       >
         <p className="pb-1 text-fg-muted">Take one of these</p>
         <ul>
@@ -572,7 +614,7 @@ function Row({
       action={
         here || status === "available" ? (
           <Button
-            variant="text"
+            variant="secondary"
             aria-label={label}
             onClick={() =>
               here
@@ -623,10 +665,8 @@ function CountedRow({
       showGlyph
       meta={
         <>
-          <span>
-            {STATUS[status].label}
-            {term && ` · ${termLabel(term)}`}
-          </span>
+          <StatusBadge status={status} />
+          {term && <span>{termLabel(term)}</span>}
           {both?.has(code) && <Defined def={GLOSSARY.countsForBoth} />}
         </>
       }
@@ -734,10 +774,14 @@ function CheckRow({ text, source }: { text: string; source: string }) {
 function MinorSection({
   minor,
   view,
+  withPlan,
+  snapshot,
   context,
 }: {
   minor: Program;
   view: NextView;
+  withPlan: ProgramProgress | null;
+  snapshot: Snapshot;
   context: Context;
 }) {
   const groups = view.progress?.groups ?? [];
@@ -761,6 +805,13 @@ function MinorSection({
             view.progress?.creditsDone ?? 0,
             view.progress?.credits ?? minor.credits,
           )}
+          {withPlan && (
+            <StatusBar
+              {...programSplit(withPlan, snapshot)}
+              total={withPlan.credits}
+              className="ml-4 inline-flex w-20 align-middle"
+            />
+          )}
         </>
       }
     >
@@ -772,7 +823,13 @@ function MinorSection({
               <Label
                 as="h3"
                 title={sentence(group.title)}
-                meta={<GroupMeta group={group} />}
+                meta={
+                  <GroupMeta
+                    group={group}
+                    split={withPlan?.groups[index]}
+                    snapshot={snapshot}
+                  />
+                }
               />
               <GroupBody
                 group={group}
@@ -819,7 +876,7 @@ function MetLine({
   const title = sentence(group.title);
   if (group.courses.length === 0) {
     return (
-      <div className="flex min-h-11 items-center gap-2 pl-6">
+      <div className="-mx-5 flex min-h-11 items-center gap-2 border-line border-t pr-5 pl-11 first:border-t-0">
         <StatusIcon status="completed" />
         <h3>{title}</h3>
         <p className="ml-auto text-fg-muted">

@@ -50,8 +50,8 @@ export function ProfileView() {
   if (!started) return <ImportScreen flow={flow} onStartEmpty={startProfile} />;
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
-      <div className="max-w-reading">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
+      <div className="flex max-w-reading flex-col gap-6">
         <h1 className="sr-only">Profile</h1>
         <ProgramCard />
         <CoursesCard />
@@ -64,7 +64,7 @@ export function ProfileView() {
 /** Stands in until the saved profile has loaded, so a returning student never sees the import screen first. */
 function ProfileSkeleton() {
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
       <p role="status" className="sr-only">
         Loading your profile
       </p>

@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Browse courses" };
 
 export default function CoursesPage() {
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
       <h1 className="sr-only">Browse courses</h1>
       <Suspense fallback={<BrowseSkeleton />}>
         <CourseBrowser />

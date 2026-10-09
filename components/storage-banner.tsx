@@ -28,7 +28,7 @@ export function StorageBanner() {
         role="alert"
         action={
           <Button
-            variant="text"
+            variant="secondary"
             onClick={async () =>
               (await import("@/components/profile/data-card")).downloadBackup()
             }

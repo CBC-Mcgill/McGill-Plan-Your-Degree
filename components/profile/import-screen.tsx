@@ -52,7 +52,7 @@ export function ImportScreen({
   const dragging = usePageDrop(flow.importFile);
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
       <h1>{COPY.importTranscript}</h1>
       <p className="mt-2 text-fg-muted">Your courses fill in on their own.</p>
 
@@ -70,12 +70,12 @@ export function ImportScreen({
           <div className="mt-4 empty:hidden">
             <ImportNotice reading={flow.reading} error={flow.error} steps />
           </div>
-          <div className="-ml-3 mt-6 flex items-center">
-            <Button variant="text" onClick={onStartEmpty}>
+          <div className="mt-6 flex items-center gap-2">
+            <Button variant="secondary" onClick={onStartEmpty}>
               {COPY.startWithout}
             </Button>
             <FileButton
-              variant="text"
+              variant="secondary"
               accept="application/json,.json"
               onFile={flow.restoreFile}
             >

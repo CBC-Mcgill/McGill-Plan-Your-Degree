@@ -48,11 +48,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <main
               id="main"
               tabIndex={-1}
-              className="flex flex-1 flex-col focus:outline-none"
+              className="flex flex-1 flex-col bg-page focus:outline-none"
             >
               {children}
             </main>
-            <footer className="mx-auto flex w-full max-w-page items-baseline justify-between gap-8 px-8 pt-24 pb-8 text-fg-muted">
+            <footer className="mx-auto flex w-full max-w-page items-baseline justify-between gap-8 px-8 py-8 text-fg-muted">
               <p>
                 Open source on{" "}
                 <a

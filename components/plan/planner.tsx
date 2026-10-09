@@ -174,7 +174,7 @@ function PlannerReady({
         }
       />
       {selected ? (
-        <div className="mt-12 grid grid-cols-[15rem_minmax(0,1fr)] items-start gap-12">
+        <div className="mt-8 grid grid-cols-[15rem_minmax(0,1fr)] items-start gap-6">
           <TermPath
             stages={stages}
             selected={selected.key}
@@ -221,7 +221,7 @@ function PlannerSkeleton() {
       <div aria-hidden>
         <div className={`${bone} h-11 w-[560px]`} />
         <div className={`${bone} mt-2 h-5 w-[480px]`} />
-        <div className="mt-12 grid grid-cols-[15rem_minmax(0,1fr)] gap-12">
+        <div className="mt-8 grid grid-cols-[15rem_minmax(0,1fr)] gap-6">
           <div className="flex flex-col gap-1">
             {Array.from({ length: 6 }, (_, row) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
