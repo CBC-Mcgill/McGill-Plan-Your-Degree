@@ -6,7 +6,7 @@ import { Fragment, type ReactNode } from "react";
 import { CourseCode } from "@/components/course-code";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
-import { StatusBar } from "@/components/status";
+import { ProgramBars } from "@/components/program-bars";
 import { ShowMore } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
 import { Section } from "@/components/ui/section";
@@ -289,11 +289,28 @@ export function PlanSummary({
       </div>
       {standing && (
         <div className="mt-4">
-          <StatusBar
-            {...programSplit(standing.progress, snapshot)}
-            total={standing.progress.credits}
-            legend
-            className="w-80"
+          <ProgramBars
+            program={{
+              label: "Program",
+              done: standing.progress.creditsDone,
+              split: programSplit(standing.progress, snapshot),
+              total: standing.progress.credits,
+            }}
+            minor={
+              minor && {
+                label: COPY.minorTitle(minor.program.name),
+                done: minor.progress.creditsDone,
+                split: programSplit(minor.progress, snapshot),
+                total: minor.progress.credits,
+                note: minor.program.generated && (
+                  <>
+                    <GeneratedNote hasChecks={hasChecks(minor.program)} />
+                    {" · "}
+                    <CatalogueLink href={minor.program.source} />
+                  </>
+                ),
+              }
+            }
           />
         </div>
       )}
@@ -317,24 +334,6 @@ export function PlanSummary({
               )
               .join(" and ")}
             .
-          </p>
-        )}
-        {minor && (
-          <p>
-            {COPY.minorFigure(
-              minor.program.name,
-              minor.progress.creditsDone,
-              minor.progress.credits,
-              "plan",
-            )}
-            {minor.program.generated && (
-              <>
-                {" · "}
-                <GeneratedNote hasChecks={hasChecks(minor.program)} />
-                {" · "}
-                <CatalogueLink href={minor.program.source} />
-              </>
-            )}
           </p>
         )}
         {standing?.program.generated && (

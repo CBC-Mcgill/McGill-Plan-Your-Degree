@@ -168,6 +168,11 @@ test("met and CEGEP-credited groups, the restriction note and the minor open fro
     plan: [],
   });
 
+  const bars = page.getByRole("region", { name: "Credit progress" });
+  await expect(bars).toContainText("Program");
+  await expect(bars).toContainText("Technological Entrepreneurship minor");
+  await expect(bars.getByRole("img")).toHaveCount(2);
+
   await requirement(page, "Required year 0 courses").click();
   await expect(
     page.getByRole("region", { name: "Required year 0 courses" }),
