@@ -1,5 +1,6 @@
 import { cn } from "cn";
 import type * as React from "react";
+import { Tooltip } from "@/components/ui/tooltip";
 
 /** Saved views of one list, switching the one panel below them. Arrow keys, Home and End move between tabs. */
 function ViewTabs<T extends string>({
@@ -10,7 +11,7 @@ function ViewTabs<T extends string>({
   panelId,
 }: {
   value: T;
-  tabs: { value: T; label: string; count?: number }[];
+  tabs: { value: T; label: string; count?: number; tip?: string }[];
   onChange: (value: T) => void;
   label: string;
   /** The id of the tabpanel the selected tab controls. */
@@ -45,7 +46,7 @@ function ViewTabs<T extends string>({
     >
       {tabs.map((tab) => {
         const selected = tab.value === value;
-        return (
+        const button = (
           <button
             key={tab.value}
             type="button"
@@ -69,6 +70,13 @@ function ViewTabs<T extends string>({
               </span>
             )}
           </button>
+        );
+        return tab.tip ? (
+          <Tooltip key={tab.value} content={tab.tip}>
+            {button}
+          </Tooltip>
+        ) : (
+          button
         );
       })}
     </div>

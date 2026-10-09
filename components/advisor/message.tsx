@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
-import { Tooltip } from "radix-ui";
 import { type ReactNode, useId, useState } from "react";
 import { Spark } from "@/components/advisor/spark";
+import { Tooltip } from "@/components/ui/tooltip";
 
 type Piece = string | { href: string; label: string };
 
@@ -164,27 +164,17 @@ function Action({
   children: ReactNode;
 }) {
   return (
-    <Tooltip.Root>
-      <Tooltip.Trigger asChild>
-        <button
-          type="button"
-          aria-label={label}
-          aria-disabled={onClick ? undefined : true}
-          onClick={onClick}
-          className="grid size-7 place-items-center rounded-md text-muted-foreground transition-[background-color,color] hover:bg-subtle hover:text-foreground aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:hover:bg-transparent aria-disabled:hover:text-muted-foreground [&_svg]:size-4"
-        >
-          {children}
-        </button>
-      </Tooltip.Trigger>
-      <Tooltip.Portal>
-        <Tooltip.Content
-          sideOffset={6}
-          className="z-50 rounded-md bg-foreground px-2.5 py-1.5 font-medium text-background text-xs"
-        >
-          {tip}
-        </Tooltip.Content>
-      </Tooltip.Portal>
-    </Tooltip.Root>
+    <Tooltip content={tip}>
+      <button
+        type="button"
+        aria-label={label}
+        aria-disabled={onClick ? undefined : true}
+        onClick={onClick}
+        className="grid size-7 place-items-center rounded-md text-muted-foreground transition-[background-color,color] hover:bg-subtle hover:text-foreground aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:hover:bg-transparent aria-disabled:hover:text-muted-foreground [&_svg]:size-4"
+      >
+        {children}
+      </button>
+    </Tooltip>
   );
 }
 

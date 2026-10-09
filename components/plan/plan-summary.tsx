@@ -7,8 +7,10 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { Banner } from "@/components/ui/banner";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
+import { InfoTip, Tooltip } from "@/components/ui/tooltip";
 import type { GroupProgress, ProgramProgress } from "@/lib/engine/progress";
 import { creditsText, sentence } from "@/lib/format";
+import { GLOSSARY } from "@/lib/glossary";
 import type { Program, RequiredItem } from "@/lib/programs/types";
 
 const linkClass = "font-medium underline underline-offset-2 hover:text-primary";
@@ -61,7 +63,7 @@ function Missing({
     if (!element) return;
     const measure = () =>
       setClipped(
-        [...element.querySelectorAll("p")].some(
+        [...element.querySelectorAll("[data-line]")].some(
           (line) => line.scrollWidth > line.clientWidth,
         ),
       );
@@ -71,7 +73,10 @@ function Missing({
     return () => observer.disconnect();
   }, []);
 
-  const line = cn("min-w-0 text-muted-foreground", !open && "truncate");
+  const line = cn("min-w-0 flex-1", !open && "truncate");
+  const label =
+    "flex shrink-0 items-center gap-1.5 font-medium text-foreground";
+  const row = "flex items-baseline gap-1.5 text-muted-foreground";
   const showAll = (clipped || open) && (
     <button
       type="button"
@@ -88,19 +93,27 @@ function Missing({
       className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-x-3 gap-y-0.5 text-[13px] leading-[18px]"
     >
       {text && (
-        <p className={line}>
-          <span className="font-medium text-foreground">Still missing</span>{" "}
-          {text}
+        <p className={row}>
+          <span className={label}>
+            Still missing
+            <InfoTip {...GLOSSARY.stillMissing} />
+          </span>
+          <span data-line className={line}>
+            {text}
+          </span>
         </p>
       )}
       {text && <span>{showAll}</span>}
       {checks.length > 0 && (
         <>
-          <p className={line}>
-            <span className="font-medium text-foreground">
+          <p className={row}>
+            <span className={label}>
               Check this requirement
-            </span>{" "}
-            {checks.map(brief).join(" · ")}
+              <InfoTip {...GLOSSARY.checkRequirement} />
+            </span>
+            <span data-line className={line}>
+              {checks.map(brief).join(" · ")}
+            </span>
           </p>
           <span className="flex gap-3">
             {!text && showAll}
@@ -161,12 +174,15 @@ export function PlanSummary({
             {program && progress ? (
               <>
                 <div className="flex items-baseline justify-between gap-4">
-                  <h2 className="text-base leading-6">
-                    Your plan covers{" "}
-                    <span className="tabular-nums">
-                      {progress.creditsDone} of {progress.credits} credits
-                    </span>
-                  </h2>
+                  <div className="flex items-center gap-1.5">
+                    <h2 className="text-base leading-6">
+                      Your plan covers{" "}
+                      <span className="tabular-nums">
+                        {progress.creditsDone} of {progress.credits} credits
+                      </span>
+                    </h2>
+                    <InfoTip {...GLOSSARY.planCovers} />
+                  </div>
                   <span
                     className="truncate text-[13px] text-muted-foreground"
                     title={program.name}
@@ -208,8 +224,9 @@ export function PlanSummary({
           <div className="w-px bg-border" />
           <dl className="flex shrink-0 items-center gap-8">
             <div className="w-32">
-              <dt className="text-muted-foreground text-xs leading-4">
+              <dt className="flex items-center gap-1.5 text-muted-foreground text-xs leading-4">
                 Graduation
+                <InfoTip {...GLOSSARY.planGraduation} />
               </dt>
               <dd className="mt-1 flex items-center gap-1.5 font-semibold leading-5">
                 <GraduationCap
@@ -221,8 +238,9 @@ export function PlanSummary({
               </dd>
             </div>
             <div className="w-36">
-              <dt className="text-muted-foreground text-xs leading-4">
+              <dt className="flex items-center gap-1.5 text-muted-foreground text-xs leading-4">
                 Warnings
+                <InfoTip {...GLOSSARY.warnings} />
               </dt>
               <dd className="mt-1 flex h-5 items-center gap-2">
                 {warningCount === 0 ? (
@@ -242,14 +260,15 @@ export function PlanSummary({
                         ? "1 warning"
                         : `${warningCount} warnings`}
                     </span>
-                    <button
-                      type="button"
-                      onClick={onShowWarnings}
-                      title="Show the first term with a warning"
-                      className={`${linkClass} rounded-sm text-[13px]`}
-                    >
-                      Show
-                    </button>
+                    <Tooltip content="Show the first term with a warning">
+                      <button
+                        type="button"
+                        onClick={onShowWarnings}
+                        className={`${linkClass} rounded-sm text-[13px]`}
+                      >
+                        Show
+                      </button>
+                    </Tooltip>
                   </>
                 )}
               </dd>

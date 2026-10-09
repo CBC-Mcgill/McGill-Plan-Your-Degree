@@ -3,8 +3,9 @@
 import { Info } from "lucide-react";
 import { CourseChip } from "@/components/course-chip";
 import { SectionCard } from "@/components/section-card";
-import { StatusBadge, UncertainFlag } from "@/components/status";
+import { STATUS, StatusBadge, UncertainFlag } from "@/components/status";
 import { Banner } from "@/components/ui/banner";
+import { InfoTip } from "@/components/ui/tooltip";
 import { codeRuns } from "@/lib/catalogue/codes";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import {
@@ -13,6 +14,7 @@ import {
   missingText,
   type StatusInput,
 } from "@/lib/engine/status";
+import { STATUS_TIPS } from "@/lib/glossary";
 import { logicalCode } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
@@ -40,6 +42,7 @@ export function CourseStatusPanel({
   const pending = snapshot?.pending.get(course.code);
   const exempt =
     state?.status === "completed" && !snapshot?.earned.has(course.code);
+  const shown = exempt ? "exemption" : (state?.status ?? "available");
   const tree = course.prerequisites?.tree;
   const missing =
     snapshot &&
@@ -66,10 +69,16 @@ export function CourseStatusPanel({
         {snapshot && state && (
           <>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              <StatusBadge
-                status={exempt ? "exemption" : state.status}
-                label={exempt ? "Exempt, no credit" : undefined}
-              />
+              <span className="flex items-center gap-1.5">
+                <StatusBadge
+                  status={shown}
+                  label={exempt ? "Exempt, no credit" : undefined}
+                />
+                <InfoTip
+                  label={exempt ? "Exempt, no credit" : STATUS[shown].label}
+                  tip={STATUS_TIPS[shown]}
+                />
+              </span>
               {state.uncertain && <UncertainFlag withLabel />}
             </div>
             {state.status === "available" && <p>{SENTENCE.available}</p>}

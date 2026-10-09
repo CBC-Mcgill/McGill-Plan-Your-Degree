@@ -3,9 +3,10 @@
 import { cn } from "cn";
 import { ChevronDown, Plus, TriangleAlert, X } from "lucide-react";
 import { DropdownMenu } from "radix-ui";
-import { useRef } from "react";
+import { type ReactNode, useRef } from "react";
 import { CourseLink } from "@/components/course-link";
 import { seasonsOffered } from "@/components/course-row";
+import { CreditsLabel } from "@/components/credits-label";
 import { AddCourse } from "@/components/plan/add-course";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { TermWarnings } from "@/components/plan/term-warnings";
@@ -14,14 +15,16 @@ import {
   type Status,
   StatusIcon,
   StatusLabel,
+  StatusTip,
 } from "@/components/status";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress";
+import { InfoTip, Tooltip } from "@/components/ui/tooltip";
 import type { IndexedCourse } from "@/lib/catalogue/search";
 import type { CourseSummary } from "@/lib/catalogue/types";
-import { creditNote, creditsLabel } from "@/lib/engine/parts";
+import { creditNote } from "@/lib/engine/parts";
 import {
   courseLoads,
   loadsName,
@@ -37,6 +40,7 @@ import {
 } from "@/lib/engine/stages";
 import { isOffered } from "@/lib/engine/status";
 import { creditsText } from "@/lib/format";
+import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
 import type { CourseStatus, Plan, Term } from "@/lib/profile/types";
@@ -69,13 +73,28 @@ export interface MoveOption {
   label?: string;
 }
 
-/** The status glyph of a dense row. The word sits in a tooltip and in the accessible name. */
-function RowStatus({ status, word }: { status: Status; word?: string }) {
-  const label = word ?? STATUS[status].label;
+/** The status glyph of a dense row, with the course link beside it. The word and why sit in a tooltip, and the word is in the accessible name. */
+function RowStatus({
+  status,
+  word,
+  reason,
+  children,
+}: {
+  status: Status;
+  word?: string;
+  reason?: string;
+  children: ReactNode;
+}) {
   return (
-    <span title={label} className="flex">
-      <StatusIcon status={status} label={label} />
-    </span>
+    <StatusTip
+      status={status}
+      word={word}
+      reason={reason}
+      className="flex shrink-0 items-center gap-3"
+    >
+      <StatusIcon status={status} label={word ?? STATUS[status].label} />
+      {children}
+    </StatusTip>
   );
 }
 
@@ -328,9 +347,9 @@ export function TermPanel({
                 <span className="text-[13px] text-muted-foreground tabular-nums">
                   {creditsText(stage.credits)}
                 </span>
-                <Badge title="This term has passed, so your record is read-only">
-                  Read only
-                </Badge>
+                <Tooltip content="This term has passed, so your record is read-only.">
+                  <Badge>Read only</Badge>
+                </Tooltip>
               </>
             ) : (
               <>
@@ -356,6 +375,7 @@ export function TermPanel({
                 >
                   {stage.credits} of {creditLimit} credits
                 </span>
+                <InfoTip {...GLOSSARY.creditLimit} />
               </>
             )}
           </div>
@@ -389,8 +409,12 @@ export function TermPanel({
                   key={`${recordLabel(record)}-${record.status}`}
                   className={row}
                 >
-                  <RowStatus status={record.status} />
-                  <CourseCode value={record.code} label={recordLabel(record)} />
+                  <RowStatus status={record.status}>
+                    <CourseCode
+                      value={record.code}
+                      label={recordLabel(record)}
+                    />
+                  </RowStatus>
                   <Title
                     catalogue={catalogue}
                     value={record.code}
@@ -423,11 +447,16 @@ export function TermPanel({
             <ul className={list}>
               {stage.owed.map((owed) => (
                 <li key={owed.course + owed.part} className={row}>
-                  <RowStatus status="available" word="Required" />
-                  <CourseCode
-                    value={owed.course}
-                    label={owed.course + owed.part}
-                  />
+                  <RowStatus
+                    status="available"
+                    word="Required"
+                    reason={`Required after ${owed.course + owed.after} in ${termLabel(owed.afterTerm)}.`}
+                  >
+                    <CourseCode
+                      value={owed.course}
+                      label={owed.course + owed.part}
+                    />
+                  </RowStatus>
                   <Title
                     catalogue={catalogue}
                     value={owed.course}
@@ -478,8 +507,9 @@ export function TermPanel({
                       key={load.label}
                       className={cn(row, "group hover:bg-subtle")}
                     >
-                      <RowStatus status="planned" />
-                      <CourseCode value={load.code} label={load.label} />
+                      <RowStatus status="planned">
+                        <CourseCode value={load.code} label={load.label} />
+                      </RowStatus>
                       <Title
                         catalogue={catalogue}
                         value={load.code}
@@ -550,8 +580,12 @@ export function TermPanel({
               <ul className={list}>
                 {suggestions.map((course) => (
                   <li key={course.code} className={cn(row, "pr-3")}>
-                    <RowStatus status="available" />
-                    <CourseCode value={course.code} />
+                    <RowStatus
+                      status="available"
+                      reason={`Needed by your program, offered in ${stage.term.season}.`}
+                    >
+                      <CourseCode value={course.code} />
+                    </RowStatus>
                     <span
                       className="min-w-0 flex-1 truncate"
                       title={course.title}
@@ -562,7 +596,7 @@ export function TermPanel({
                       {seasonsOffered(course)}
                     </span>
                     <span className={cn(credits, "w-24 whitespace-nowrap")}>
-                      {creditsLabel(course)}
+                      <CreditsLabel course={course} />
                     </span>
                     <Button
                       variant="ghost"

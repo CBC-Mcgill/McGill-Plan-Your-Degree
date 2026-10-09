@@ -2,7 +2,9 @@ import { cn } from "cn";
 import { CircleAlert } from "lucide-react";
 import type * as React from "react";
 import { Badge } from "@/components/ui/badge";
+import { Tooltip } from "@/components/ui/tooltip";
 import type { BrowseStatus } from "@/lib/engine/status";
+import { GLOSSARY, STATUS_TIPS } from "@/lib/glossary";
 import type { CourseStatus as RecordStatus } from "@/lib/profile/types";
 
 /** A course's state for this student, or the outcome a transcript recorded. */
@@ -191,6 +193,36 @@ export function StatusIcon({
   );
 }
 
+/** Shows the status word and why on hover and focus. It wraps the glyph, and may wrap the course link beside it so keyboard focus on the link opens it too. `reason` replaces the general definition. */
+export function StatusTip({
+  status,
+  word = STATUS[status].label,
+  reason,
+  className = "flex shrink-0",
+  children,
+}: {
+  status: Status;
+  word?: string;
+  reason?: string;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Tooltip
+      content={
+        <>
+          <span className="font-semibold">{word}</span>
+          <span className="block text-white/80">
+            {reason ?? STATUS_TIPS[status]}
+          </span>
+        </>
+      }
+    >
+      <span className={className}>{children}</span>
+    </Tooltip>
+  );
+}
+
 /** Icon plus word, with no fill. The word is muted for quiet states and colored for committed ones. */
 export function StatusLabel({
   status,
@@ -237,16 +269,15 @@ export function StatusBadge({
 /** "Has conditions": the catalogue lists something we can't check, such as instructor permission. */
 export function UncertainFlag({ withLabel = false }: { withLabel?: boolean }) {
   return (
-    <span
-      title="The catalogue lists a condition we can't check, like instructor permission."
-      className="inline-flex items-center gap-1 text-warn"
-    >
-      <CircleAlert aria-hidden className="size-3.5" strokeWidth={2} />
-      {withLabel ? (
-        <span className="font-medium text-[13px]">Has conditions</span>
-      ) : (
-        <span className="sr-only">Has conditions</span>
-      )}
-    </span>
+    <Tooltip content={GLOSSARY.hasConditions.tip}>
+      <span className="inline-flex items-center gap-1 text-warn">
+        <CircleAlert aria-hidden className="size-3.5" strokeWidth={2} />
+        {withLabel ? (
+          <span className="font-medium text-[13px]">Has conditions</span>
+        ) : (
+          <span className="sr-only">Has conditions</span>
+        )}
+      </span>
+    </Tooltip>
   );
 }

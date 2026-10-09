@@ -279,10 +279,13 @@ Program data reaches the browser one program at a time.
 
 ### The design system
 
-- **Primitives:** [components/ui/](components/ui/) holds `Button`, `Card`, `Badge`, `Banner`, `Chip`, `TextField`, `SelectField`, `ViewTabs`, `SegmentedControl`, `ProgressBar`, `Kbd` and `FileButton`.
+- **Primitives:** [components/ui/](components/ui/) holds `Button`, `Card`, `Badge`, `Banner`, `Chip`, `TextField`, `SelectField`, `ViewTabs`, `SegmentedControl`, `ProgressBar`, `Kbd`, `FileButton`, `Tooltip` and `InfoTip`.
   They are shadcn-style, built on Radix and `class-variance-authority`.
 - **Tokens:** colors are CSS variables in [app/globals.css](app/globals.css).
   Status colors stay in the navy and blue family, so red keeps meaning "act here".
+- **Tooltips:** one `TooltipProvider` in [app/layout.tsx](app/layout.tsx) sets the delay.
+  `InfoTip` is the "i" button beside a label that defines a term, and every definition lives in [lib/glossary.ts](lib/glossary.ts) so the wording stays consistent.
+  Anything a student must know to act stays visible on the page, and a tooltip only adds to it.
 - **Status glyphs:** [components/status.tsx](components/status.tsx) holds the `STATUS` table of labels, colors and tones, with `StatusIcon`, `StatusLabel`, `StatusBadge` and `UncertainFlag` for requirements with conditions.
 - **Toasts with undo:** [components/toast.tsx](components/toast.tsx) shows one toast at a time for five seconds.
   A toast can carry an Undo action, and Cmd+Z or Ctrl+Z runs it unless the student is typing in a field.
@@ -476,6 +479,7 @@ If the live stylesheet still looks stale after a few minutes, redeploy with `--f
 | Change crawl rate, cache or User-Agent | [crawler/fetch.ts](crawler/fetch.ts). |
 | Change the crawl guardrails | [crawler/compare.ts](crawler/compare.ts) and [crawler/compare-programs.ts](crawler/compare-programs.ts). |
 | Change the crawl schedule | The `cron` lines in [.github/workflows/crawl.yml](.github/workflows/crawl.yml). |
+| Change the wording of a tooltip definition | [lib/glossary.ts](lib/glossary.ts). |
 | Change a status label or color | `STATUS` in [components/status.tsx](components/status.tsx) and the color tokens in [app/globals.css](app/globals.css). |
 | Change when a course is available, or how requirements count | [lib/engine/status.ts](lib/engine/status.ts) and [lib/engine/progress.ts](lib/engine/progress.ts). |
 | Change a plan warning | [lib/engine/plan.ts](lib/engine/plan.ts), shown by [components/plan/term-warnings.tsx](components/plan/term-warnings.tsx). |

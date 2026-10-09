@@ -3,9 +3,11 @@ import { Fragment } from "react";
 import { CourseLink } from "@/components/course-link";
 import { RequirementText } from "@/components/requirement-text";
 import { Banner } from "@/components/ui/banner";
+import { InfoTip } from "@/components/ui/tooltip";
 import type { PlanWarning } from "@/lib/engine/plan";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { termContext, unmet } from "@/lib/engine/stages";
+import { GLOSSARY } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import { termLabel } from "@/lib/profile/term-options";
 import { currentTerm } from "@/lib/profile/terms";
@@ -130,13 +132,13 @@ export function TermWarnings({
       aria-labelledby="warnings-heading"
       className="block text-[color-mix(in_oklab,var(--warn)_85%,black)]"
     >
-      <h3
-        id="warnings-heading"
-        className="flex items-center gap-1.5 text-[13px] leading-[18px]"
-      >
-        <TriangleAlert aria-hidden className="mt-0" strokeWidth={2} />
-        {warnings.length === 1 ? "1 warning" : `${warnings.length} warnings`}
-      </h3>
+      <div className="flex items-center gap-1.5 text-[13px] leading-[18px]">
+        <h3 id="warnings-heading" className="flex items-center gap-1.5">
+          <TriangleAlert aria-hidden className="mt-0" strokeWidth={2} />
+          {warnings.length === 1 ? "1 warning" : `${warnings.length} warnings`}
+        </h3>
+        <InfoTip {...GLOSSARY.warnings} />
+      </div>
       <ul aria-label="Warnings" className="mt-1.5 flex flex-col gap-1">
         {warnings.map((warning) => (
           <li

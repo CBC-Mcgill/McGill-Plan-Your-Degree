@@ -5,6 +5,7 @@ import { CommandPalette } from "@/components/command-palette";
 import { SiteHeader } from "@/components/site-header";
 import { StorageBanner } from "@/components/storage-banner";
 import { Toaster } from "@/components/toast";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
 const inter = Inter({
@@ -35,35 +36,37 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col">
         <MotionConfig reducedMotion="user">
-          <a
-            href="#main"
-            className="fixed top-3 left-3 z-50 -translate-y-24 rounded-md bg-card px-4 py-2 font-semibold shadow-float focus:translate-y-0"
-          >
-            Skip to main content
-          </a>
-          <SiteHeader />
-          <StorageBanner />
-          <main
-            id="main"
-            tabIndex={-1}
-            className="flex flex-1 flex-col focus:outline-none"
-          >
-            {children}
-          </main>
-          <footer className="border-border border-t">
-            <p className="mx-auto max-w-page px-8 py-6 text-[13px] text-muted-foreground leading-[18px]">
-              Plan Your Degree is open source on{" "}
-              <a
-                href="https://github.com/CBC-Mcgill/McGill-Plan-Your-Degree"
-                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
-              >
-                GitHub
-              </a>
-              . Not affiliated with McGill University.
-            </p>
-          </footer>
-          <CommandPalette />
-          <Toaster />
+          <TooltipProvider>
+            <a
+              href="#main"
+              className="fixed top-3 left-3 z-50 -translate-y-24 rounded-md bg-card px-4 py-2 font-semibold shadow-float focus:translate-y-0"
+            >
+              Skip to main content
+            </a>
+            <SiteHeader />
+            <StorageBanner />
+            <main
+              id="main"
+              tabIndex={-1}
+              className="flex flex-1 flex-col focus:outline-none"
+            >
+              {children}
+            </main>
+            <footer className="border-border border-t">
+              <p className="mx-auto max-w-page px-8 py-6 text-[13px] text-muted-foreground leading-[18px]">
+                Plan Your Degree is open source on{" "}
+                <a
+                  href="https://github.com/CBC-Mcgill/McGill-Plan-Your-Degree"
+                  className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
+                >
+                  GitHub
+                </a>
+                . Not affiliated with McGill University.
+              </p>
+            </footer>
+            <CommandPalette />
+            <Toaster />
+          </TooltipProvider>
         </MotionConfig>
       </body>
     </html>
