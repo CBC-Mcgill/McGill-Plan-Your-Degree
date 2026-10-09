@@ -211,12 +211,30 @@ function Metrics({
   const termsLeft = graduationTerm
     ? termRange(term, graduationTerm).length
     : null;
-  const groups = useMemo(() => {
+  // Required courses, not whole groups, so the number moves as a student makes progress.
+  const requiredCourses = useMemo(() => {
     if (!program) return null;
-    const { groups } = programProgress(program, snapshot, catalogue, { entry });
+    const done = programProgress(program, snapshot, catalogue, { entry });
+    const taking = programProgress(program, snapshot, catalogue, {
+      entry,
+      inProgress: true,
+    });
+    let total = 0;
+    let missing = 0;
+    let missingNow = 0;
+    done.groups.forEach((group, i) => {
+      const definition = program.groups[i];
+      if (definition?.kind !== "required" || group.credited) return;
+      total += definition.courses.length;
+      missing += group.remaining.length;
+      missingNow +=
+        taking.groups[i]?.remaining.length ?? group.remaining.length;
+    });
     return {
-      done: groups.filter((group) => group.satisfied).length,
-      total: groups.length,
+      total,
+      done: total - missing,
+      inProgress: missing - missingNow,
+      toGo: missingNow,
     };
   }, [program, snapshot, catalogue, entry]);
   const nextTermCredits = (
@@ -262,14 +280,14 @@ function Metrics({
         </Caption>
       </Metric>
 
-      {groups ? (
-        <Metric label="Requirements done">
+      {requiredCourses && requiredCourses.total > 0 ? (
+        <Metric label="Required courses">
           <div className="flex items-center justify-between gap-3">
             <Value>
-              {groups.done}
+              {requiredCourses.done}
               <span className="font-normal text-muted-foreground">
                 {" "}
-                of {groups.total}
+                of {requiredCourses.total}
               </span>
             </Value>
             <IconTile>
@@ -277,9 +295,11 @@ function Metrics({
             </IconTile>
           </div>
           <Caption>
-            {groups.done === groups.total
-              ? "Everything in your program is done"
-              : `${groups.total - groups.done} still to go`}
+            {requiredCourses.toGo === 0 && requiredCourses.inProgress === 0
+              ? "All required courses done"
+              : requiredCourses.inProgress > 0
+                ? `${requiredCourses.inProgress} in progress, ${requiredCourses.toGo} to go`
+                : `${requiredCourses.toGo} to go`}
           </Caption>
         </Metric>
       ) : (
