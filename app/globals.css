@@ -38,6 +38,11 @@
   --subject-7-bg: #fee9f5;
   --subject-8: #71624b;
   --subject-8-bg: #f2f0e7;
+
+  /* Only the Advisor's classic look uses these. */
+  --subtle: #f7f8fa;
+  --muted: #e9ecf0;
+  --border: #e4e7ec;
 }
 
 @theme inline {
@@ -57,6 +62,9 @@
   --color-in-progress: var(--in-progress);
   --color-planned: var(--planned);
   --color-locked: var(--locked);
+  --color-subtle: var(--subtle);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;

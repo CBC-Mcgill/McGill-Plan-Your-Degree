@@ -4,12 +4,12 @@ test("a student sends a suggestion and the advisor says it is coming soon", asyn
   page,
 }) => {
   await page.goto("/advisor");
-  await page.getByRole("button", { name: "Plan my next term" }).click();
+  await page.getByRole("button", { name: /Plan my next term/ }).click();
   await expect(
     page.getByRole("textbox", { name: "Message the advisor" }),
   ).toHaveValue("Plan my next term");
 
-  await page.getByRole("button", { name: "Send" }).click();
+  await page.getByRole("button", { name: "Send message" }).click();
   const log = page.getByRole("log", { name: "Conversation" });
   await expect(log.getByText("Plan my next term")).toBeVisible();
   await expect(log.getByText(/coming soon/i)).toBeVisible();
