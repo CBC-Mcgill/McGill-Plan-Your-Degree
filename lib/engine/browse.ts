@@ -45,7 +45,26 @@ export interface Option {
   value: string;
   label: string;
   hint?: string;
+  /** Options with the same group sit under one heading. */
+  group?: string;
 }
+
+/** The catalogue abbreviates faculty names. These are the readable ones. */
+const FACULTY_LABEL: Record<string, string> = {
+  "Desautels Faculty Management": "Desautels Faculty of Management",
+  "Fac Dental Medicine & Oral HS":
+    "Faculty of Dental Medicine and Oral Health Sciences",
+  "Faculty of Agric Environ Sci":
+    "Faculty of Agricultural and Environmental Sciences",
+  "Faculty of Medicine & Hlth Sci": "Faculty of Medicine and Health Sciences",
+  "Interfaculty, B.A. & Sc.": "Interfaculty, B.A. and Sc.",
+  "Post Graduate Dentistry": "Postgraduate Dentistry",
+  "Post Graduate Medicine": "Postgraduate Medicine",
+  "School of Phys & Occ Therapy": "School of Physical and Occupational Therapy",
+};
+/** Catalogue placeholders that name no faculty. */
+const NO_FACULTY = new Set(["No College Designated", "Not used in standing"]);
+const facultyLabel = (name: string) => FACULTY_LABEL[name] ?? name;
 
 /** Everything that depends only on the catalogue, so a status change never rebuilds it. */
 export interface CatalogueBase {
@@ -68,7 +87,9 @@ export function buildBase(courses: Iterable<CourseSummary>): CatalogueBase {
       );
     }
     departments.set(course.subject, byDepartment);
-    if (course.faculty) faculties.add(course.faculty);
+    if (course.faculty && !NO_FACULTY.has(course.faculty)) {
+      faculties.add(course.faculty);
+    }
   }
   const subjects = [...departments]
     .map(([subject, byDepartment]): Option => {
@@ -76,25 +97,51 @@ export function buildBase(courses: Iterable<CourseSummary>): CatalogueBase {
       return { value: subject, label: subject, hint: name };
     })
     .sort((a, b) => (a.value < b.value ? -1 : 1));
-  return { index, subjects, faculties: [...faculties].sort() };
+  return {
+    index,
+    subjects,
+    faculties: [...faculties].sort((a, b) =>
+      facultyLabel(a).localeCompare(facultyLabel(b)),
+    ),
+  };
 }
 
-/** The program's required courses plus every course a complementary group names. */
+/** The student's own subjects first, each group still in code order. */
+export function pinSubjects(
+  subjects: Option[],
+  pinned: ReadonlySet<string>,
+): Option[] {
+  if (pinned.size === 0) return subjects;
+  const group = (own: boolean) =>
+    subjects
+      .filter((option) => pinned.has(option.value) === own)
+      .map((option) => ({
+        ...option,
+        group: own ? "Your program" : "Other subjects",
+      }));
+  return [...group(true), ...group(false)];
+}
+
+export type ProgramRole = "required" | "complementary";
+
+/** The program's required courses plus every course a complementary group names. A course in both counts as required. */
 export function programCodes(
   program: Program | undefined,
   index: readonly IndexedCourse[],
-): Set<string> {
-  const codes = new Set<string>();
+): Map<string, ProgramRole> {
+  const codes = new Map<string, ProgramRole>();
   for (const group of program?.groups ?? []) {
     if (group.kind === "required") {
       for (const item of group.courses) {
         for (const code of typeof item === "string" ? [item] : item.oneOf) {
-          codes.add(code);
+          codes.set(code, "required");
         }
       }
     } else if (namesCourses(group)) {
       for (const { course } of index) {
-        if (groupAllows(group, course.code)) codes.add(course.code);
+        if (groupAllows(group, course.code) && !codes.has(course.code)) {
+          codes.set(course.code, "complementary");
+        }
       }
     }
   }
@@ -145,7 +192,10 @@ export function optionsOf(prop: Prop, base: CatalogueBase): Option[] {
     case "term":
       return SEASONS.map((value) => ({ value, label: value }));
     case "faculty":
-      return base.faculties.map((value) => ({ value, label: value }));
+      return base.faculties.map((value) => ({
+        value,
+        label: facultyLabel(value),
+      }));
     case "credits":
       return Object.entries(CREDIT_LABELS).map(([value, label]) => ({
         value,
@@ -154,42 +204,66 @@ export function optionsOf(prop: Prop, base: CatalogueBase): Option[] {
   }
 }
 
-/** "COMP", "COMP, MATH" or "COMP, MATH +2": the value only, for a set chip. */
+/** "COMP, MATH", "Level 100, 200 and 2 more": the value only, for a set chip. */
 export function chipText(prop: Prop, values: string[]): string {
-  if (prop === "faculty" && values.length > 1) {
-    return `${values.length} faculties`;
+  if (prop === "faculty") {
+    return values.length > 1
+      ? `${values.length} faculties`
+      : facultyLabel(values[0] ?? "");
   }
   const labels = values.map((value) =>
     prop === "credits" ? (CREDIT_LABELS[value] ?? value) : value,
   );
-  const shown = labels.slice(0, 2).join(", ");
-  const text = labels.length > 2 ? `${shown} +${labels.length - 2}` : shown;
-  if (prop === "level") return `${text} level`;
-  if (prop === "credits") return `${text} credits`;
+  const text =
+    labels.length > 3
+      ? `${labels.slice(0, 2).join(", ")} and ${labels.length - 2} more`
+      : labels.join(", ");
+  if (prop === "level") return `Level ${text}`;
+  if (prop === "credits") return `Credits ${text}`;
   return text;
 }
 
 export type SortKey = "recommended" | "code" | "level" | "credits";
 
-/** Recommended lists the student's program subjects first, then level, then code. A search keeps its relevance order. */
+const DONE: ReadonlySet<BrowseStatus> = new Set(["completed", "covered"]);
+
+/**
+ * Recommended lists program courses the student can take now (required before complementary),
+ * then the program's subjects, then the rest, each by level then code.
+ * In "In my program" finished courses go last. A search keeps its relevance order.
+ */
 export function sortCourses(
   list: readonly CourseSummary[],
   key: SortKey,
-  programSubjects: ReadonlySet<string>,
+  student: Student & { programSubjects: ReadonlySet<string> },
+  view: View,
   searched: boolean,
 ): CourseSummary[] {
   if (key === "recommended" && searched) return [...list];
   const byCode = (a: CourseSummary, b: CourseSummary) =>
     a.code < b.code ? -1 : 1;
-  const mine = (c: CourseSummary) =>
-    key === "recommended" && programSubjects.has(c.subject) ? 0 : 1;
-  return [...list].sort((a, b) => {
-    if (key === "code") return byCode(a, b);
-    if (key === "credits") {
-      return (b.credits ?? 0) - (a.credits ?? 0) || byCode(a, b);
+  const byLevel = (a: CourseSummary, b: CourseSummary) =>
+    levelRank(a) - levelRank(b) || byCode(a, b);
+  if (key === "code") return [...list].sort(byCode);
+  if (key === "level") return [...list].sort(byLevel);
+  if (key === "credits") {
+    return [...list].sort(
+      (a, b) => (b.credits ?? 0) - (a.credits ?? 0) || byCode(a, b),
+    );
+  }
+  const tier = (course: CourseSummary) => {
+    const status = statusOf(student.states, course.code);
+    if (view === "program" && DONE.has(status)) return 4;
+    const role = student.inProgram.get(course.code);
+    if (role && status === "available" && offeredIn(course).length > 0) {
+      return role === "required" ? 0 : 1;
     }
-    return mine(a) - mine(b) || levelRank(a) - levelRank(b) || byCode(a, b);
-  });
+    return student.programSubjects.has(course.subject) ? 2 : 3;
+  };
+  return list
+    .map((course) => ({ course, tier: tier(course) }))
+    .sort((a, b) => a.tier - b.tier || byLevel(a.course, b.course))
+    .map(({ course }) => course);
 }
 
 export type View = "all" | "can-take" | "program" | "planned" | "completed";
@@ -203,7 +277,7 @@ export const VIEWS: { value: View; label: string }[] = [
 
 export interface Student {
   states: ReadonlyMap<string, CourseState>;
-  inProgram: ReadonlySet<string>;
+  inProgram: ReadonlyMap<string, ProgramRole>;
 }
 
 export const statusOf = (

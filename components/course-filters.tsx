@@ -4,10 +4,11 @@ import { cn } from "cn";
 import { ArrowUpDown, Check, ChevronDown, Plus, Search, X } from "lucide-react";
 import { Checkbox, DropdownMenu, Popover } from "radix-ui";
 import type * as React from "react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/ui/chip";
 import { compactControlStyles } from "@/components/ui/field";
+import { Kbd } from "@/components/ui/kbd";
 import {
   chipText,
   type Option,
@@ -25,19 +26,22 @@ const PLURAL: Partial<Record<Prop, string>> = {
 };
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "recommended", label: "Recommended" },
-  { key: "code", label: "Code" },
-  { key: "level", label: "Level" },
-  { key: "credits", label: "Credits" },
+  { key: "code", label: "Code, A to Z" },
+  { key: "level", label: "Level, low to high" },
+  { key: "credits", label: "Credits, high to low" },
 ];
 
+/** `shortcut` is the key that focuses the field, shown while it is empty. */
 export function SearchField({
   value,
   onChange,
   placeholder,
   className,
+  shortcut,
   ...props
 }: Omit<React.ComponentProps<"input">, "onChange"> & {
   onChange: (value: string) => void;
+  shortcut?: string;
 }) {
   return (
     <div className={cn("relative", className)}>
@@ -54,12 +58,21 @@ export function SearchField({
         aria-label={placeholder}
         autoComplete="off"
         spellCheck={false}
+        aria-keyshortcuts={shortcut}
         className={cn(
           compactControlStyles,
           "w-full pr-8 pl-9 text-sm hover:shadow-[inset_0_0_0_1px_var(--faint)] [&::-webkit-search-cancel-button]:hidden",
         )}
         {...props}
       />
+      {shortcut && !value && (
+        <Kbd
+          aria-hidden
+          className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2"
+        >
+          {shortcut}
+        </Kbd>
+      )}
       {value && (
         <button
           type="button"
@@ -95,14 +108,12 @@ function FilterChip({
       // biome-ignore lint/a11y/useValidAriaValues: a popover trigger is not a toggle
       aria-pressed={undefined}
       aria-label={value ? `${label}: ${value}` : undefined}
+      title={value}
+      className="max-w-64"
       {...props}
     >
-      {value ?? (
-        <>
-          {label}
-          <ChevronDown aria-hidden strokeWidth={2} />
-        </>
-      )}
+      <span className="truncate">{value ?? label}</span>
+      {!value && <ChevronDown aria-hidden strokeWidth={2} />}
     </Chip>
   );
 }
@@ -199,7 +210,7 @@ export function FilterPopover({
           align="start"
           sideOffset={6}
           onKeyDown={navKeys}
-          className={cn(FLOAT, "w-[264px]")}
+          className={cn(FLOAT, prop === "faculty" ? "w-[380px]" : "w-[264px]")}
         >
           {searchable && (
             <div className="flex h-10 items-center gap-2 border-border border-b px-3 focus-within:border-ring">
@@ -224,32 +235,40 @@ export function FilterPopover({
                 {prop === "term" ? "Offered in" : PROP_LABEL[prop]}
               </p>
             )}
-            {visible.map((option) => (
-              <CheckRow
-                key={option.value}
-                checked={selected.includes(option.value)}
-                onChange={(on) =>
-                  onChange(
-                    on
-                      ? [...selected, option.value]
-                      : selected.filter((value) => value !== option.value),
-                  )
-                }
-              >
-                <span
-                  className={cn(prop === "subject" && "font-medium")}
-                  title={
-                    option.hint ? `${option.label} - ${option.hint}` : undefined
+            {visible.map((option, i) => (
+              <Fragment key={option.value}>
+                {option.group && option.group !== visible[i - 1]?.group && (
+                  <p className="px-2 pt-2 pb-1 font-medium text-[12px] text-muted-foreground first:pt-1">
+                    {option.group}
+                  </p>
+                )}
+                <CheckRow
+                  checked={selected.includes(option.value)}
+                  onChange={(on) =>
+                    onChange(
+                      on
+                        ? [...selected, option.value]
+                        : selected.filter((value) => value !== option.value),
+                    )
                   }
                 >
-                  {option.label}
-                  {option.hint && (
-                    <span className="ml-2 font-normal text-muted-foreground">
-                      {option.hint}
-                    </span>
-                  )}
-                </span>
-              </CheckRow>
+                  <span
+                    className={cn(prop === "subject" && "font-medium")}
+                    title={
+                      option.hint
+                        ? `${option.label} - ${option.hint}`
+                        : undefined
+                    }
+                  >
+                    {option.label}
+                    {option.hint && (
+                      <span className="ml-2 font-normal text-muted-foreground">
+                        {option.hint}
+                      </span>
+                    )}
+                  </span>
+                </CheckRow>
+              </Fragment>
             ))}
             {visible.length === 0 && (
               <p className="px-2 py-6 text-center text-[13px] text-muted-foreground">
@@ -289,7 +308,7 @@ export function AddFilterMenu({
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <Button variant="ghost">
+        <Button variant="ghost" className="shrink-0">
           <Plus aria-hidden strokeWidth={1.75} />
           Add filter
         </Button>
@@ -323,22 +342,21 @@ export function SortMenu({
   sort: SortKey;
   onChange: (sort: SortKey) => void;
 }) {
+  const current = SORTS.find((s) => s.key === sort)?.label;
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <Button variant="secondary" className="ml-auto">
+        <Button variant="secondary">
           <ArrowUpDown aria-hidden strokeWidth={1.75} />
           Sort
-          <span className="text-muted-foreground">
-            {SORTS.find((s) => s.key === sort)?.label}
-          </span>
+          <span className="text-muted-foreground">{current}</span>
         </Button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         <DropdownMenu.Content
           align="end"
           sideOffset={6}
-          className={cn(FLOAT, "w-[208px] p-1")}
+          className={cn(FLOAT, "w-[220px] p-1")}
         >
           <DropdownMenu.Label className="px-2 pt-1.5 pb-1 font-medium text-[12px] text-muted-foreground">
             Sort by

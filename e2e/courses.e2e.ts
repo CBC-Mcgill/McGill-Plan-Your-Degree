@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 
 const done = (code: string) => ({
   code,
@@ -8,6 +8,27 @@ const done = (code: string) => ({
   status: "completed",
   source: "manual",
 });
+
+const seedProfile = (page: Page, records: unknown[]) =>
+  page.addInitScript(
+    ([key, records]) =>
+      localStorage.setItem(
+        key as string,
+        JSON.stringify({
+          state: {
+            records,
+            programId: null,
+            startTerm: null,
+            graduationTerm: null,
+            plan: [],
+            creditLimit: 17,
+            importedAt: null,
+          },
+          version: 1,
+        }),
+      ),
+    ["plan-your-degree:profile", records],
+  );
 
 // Course pages ask mcgill.courses for ratings, and tests never reach the real site.
 test.beforeEach(({ page }) =>
@@ -19,6 +40,8 @@ test("search finds COMP 251 and its page links the prerequisites", async ({
 }) => {
   await page.goto("/courses");
   const search = page.getByRole("searchbox");
+  await expect(search).not.toBeFocused();
+  await page.keyboard.press("/");
   await expect(search).toBeFocused();
   for (const query of ["comp251", "COMP 251", "comp 251"]) {
     await search.fill(query);
@@ -79,25 +102,7 @@ test("an unknown course is a 404", async ({ page }) => {
 test("with a profile, Can take now is the default tab and a course can be planned", async ({
   page,
 }) => {
-  await page.addInitScript(
-    ([key, records]) =>
-      localStorage.setItem(
-        key as string,
-        JSON.stringify({
-          state: {
-            records,
-            programId: null,
-            startTerm: null,
-            graduationTerm: null,
-            plan: [],
-            creditLimit: 17,
-            importedAt: null,
-          },
-          version: 1,
-        }),
-      ),
-    ["plan-your-degree:profile", [done("COMP 250"), done("MATH 240")]],
-  );
+  await seedProfile(page, [done("COMP 250"), done("MATH 240")]);
   await page.goto("/courses?q=comp+25");
   await expect(page.getByRole("searchbox")).toHaveValue("comp 25");
   const rows = page.locator("tbody tr");
@@ -120,4 +125,54 @@ test("with a profile, Can take now is the default tab and a course can be planne
   await expect(page.getByRole("region", { name: "Your status" })).toContainText(
     "Planned",
   );
+});
+
+test("view tabs move with the arrow keys", async ({ page }) => {
+  await seedProfile(page, [done("COMP 250")]);
+  await page.goto("/courses");
+  const tabs = page.getByRole("tab");
+  await expect(tabs.nth(1)).toHaveAttribute("tabindex", "0");
+  await tabs.nth(1).focus();
+  await page.keyboard.press("ArrowRight");
+  await expect(tabs.nth(2)).toBeFocused();
+  await expect(tabs.nth(2)).toHaveAttribute("aria-selected", "true");
+  await expect(page).toHaveURL(/view=program/);
+  await page.keyboard.press("Home");
+  await expect(tabs.first()).toBeFocused();
+  await expect(page).toHaveURL(/view=all/);
+  await expect(page.getByRole("tabpanel")).toBeVisible();
+});
+
+test("a URL the page cannot honor is rewritten to what it shows", async ({
+  page,
+}) => {
+  await page.goto("/courses?view=nope");
+  await expect(page.getByRole("tab", { name: /^All/ })).toBeVisible();
+  await expect(page).toHaveURL(/\/courses$/);
+
+  await page.goto("/courses?sort=credits&page=999");
+  await expect(page.getByRole("tab", { name: /^All/ })).toBeVisible();
+  await expect(page).toHaveURL(/sort=credits&page=\d+$/);
+  await expect(page).not.toHaveURL(/page=999/);
+});
+
+test("Back to the course list restores the scroll position", async ({
+  page,
+}) => {
+  await page.goto("/courses");
+  const rows = page.locator("tbody tr");
+  await expect(rows.first()).toBeVisible();
+  await page.evaluate(() => window.scrollTo(0, 300));
+  await expect
+    .poll(() =>
+      page.evaluate(() =>
+        sessionStorage.getItem(`scroll:${history.state.scrollId}`),
+      ),
+    )
+    .toBe("300");
+  await rows.nth(12).click();
+  await expect(page).toHaveURL(/\/courses\/.+/);
+  await page.goBack();
+  await expect(rows.first()).toBeVisible();
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(300);
 });
