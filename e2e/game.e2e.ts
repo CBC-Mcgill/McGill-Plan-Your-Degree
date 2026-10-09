@@ -67,4 +67,10 @@ test("progress shows as a level, badges, and a one-time celebration", async ({
   await page.reload();
   await expect(level).toBeVisible();
   await expect(toast).toHaveCount(0);
+
+  await page.getByLabel("Advanced standing credits").fill("25");
+  await expect(
+    page.getByRole("banner").getByRole("link", { name: /Lv 4/ }),
+  ).toContainText("5,700 XP");
+  await expect(toast).toHaveCount(0);
 });

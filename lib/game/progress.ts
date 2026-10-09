@@ -30,6 +30,9 @@ export interface Level {
 
 export interface GameProgress extends Level {
   xp: number;
+  /** Credits that count toward XP, and toward credit badges, without a course the student took here. */
+  advancedStanding: number;
+  transferCredits: number;
   /** XP the planned courses would add once completed. They award nothing yet. */
   plannedXp: number;
   earned: Badge[];
@@ -57,6 +60,11 @@ export function gameProgress(
 
   const credits = earnedCredits(snapshot, catalogue) + profile.advancedStanding;
   const xp = Math.round(credits * XP_PER_CREDIT);
+  const transferCredits = records.reduce(
+    (sum, r) =>
+      r.status === "transfer" ? sum + (r.credits ?? creditsOf(r.code)) : sum,
+    0,
+  );
 
   let plannedCredits = 0;
   for (const code of snapshot.planned) {
@@ -102,6 +110,8 @@ export function gameProgress(
   const earned = BADGES.filter((badge) => badge.earned(context));
   return {
     xp,
+    advancedStanding: profile.advancedStanding,
+    transferCredits,
     ...levelOf(xp),
     plannedXp: Math.round(plannedCredits * XP_PER_CREDIT),
     earned,

@@ -1,8 +1,9 @@
-import { expect, test } from "vitest";
+import { afterEach, expect, test, vi } from "vitest";
 import type { CourseSummary } from "../catalogue/types.ts";
 import type { CourseRecord, Term } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import { gameProgress, levelOf } from "./progress.ts";
+import { forgetSeen, stayQuiet, takeGains } from "./seen.ts";
 
 const fall2026: Term = { season: "Fall", year: 2026 };
 const codes = ["COMP 250", "COMP 251", "MATH 240", "MATH 133", "PHYS 101"];
@@ -112,4 +113,55 @@ test("finishing the required courses earns the block and graduation badges", () 
   );
   expect(done).toContain("required-block");
   expect(done).toContain("graduation-ready");
+});
+
+function fakeStorage(full = false) {
+  const data = new Map<string, string>();
+  vi.stubGlobal("localStorage", {
+    getItem: (key: string) => data.get(key) ?? null,
+    setItem: (key: string, value: string) => {
+      if (full) throw new Error("QuotaExceededError");
+      data.set(key, value);
+    },
+    removeItem: (key: string) => data.delete(key),
+  });
+}
+
+afterEach(() => {
+  forgetSeen();
+  vi.unstubAllGlobals();
+});
+
+test("a gain celebrates once and names the credits no course earned", () => {
+  fakeStorage();
+  const first = takeGains({
+    ...play([record("COMP 250", "completed")]),
+    advancedStanding: 25,
+  });
+  expect(first?.xp).toBe(300);
+  expect(first?.bonus).toEqual({ advancedStanding: 25, transfer: 0 });
+  expect(takeGains(play([record("COMP 250", "completed")]))).toBeNull();
+  const more = takeGains(
+    play([record("COMP 250", "completed"), record("COMP 251", "completed")]),
+  );
+  expect(more).toMatchObject({ xp: 300, bonus: null });
+});
+
+test("profile edits and restored backups take the progress as seen without celebrating", () => {
+  fakeStorage();
+  takeGains(play([record("COMP 250", "completed")]));
+  const big = play([
+    record("COMP 250", "completed"),
+    record("MATH 240", "completed"),
+  ]);
+  expect(takeGains(big, true)).toBeNull();
+  stayQuiet();
+  expect(takeGains({ ...big, xp: big.xp + 900 })).toBeNull();
+  expect(takeGains({ ...big, xp: big.xp + 900 })).toBeNull();
+  expect(takeGains({ ...big, xp: big.xp + 1200 })).toMatchObject({ xp: 300 });
+});
+
+test("storage that cannot save celebrates nothing, since it would repeat", () => {
+  fakeStorage(true);
+  expect(takeGains(play([record("COMP 250", "completed")]))).toBeNull();
 });

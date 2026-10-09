@@ -46,6 +46,9 @@ function subscribe(listener: () => void) {
   };
 }
 
+/** The catalogue as it is now, for code outside React. It is "loading" until a component asks for it. */
+export const catalogueNow = () => state;
+
 /** The compact catalogue, fetched once per page load. It is "loading" on the server and during hydration. */
 export function useCatalogue(): CatalogueState {
   return useSyncExternalStore(
