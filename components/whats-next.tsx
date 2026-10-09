@@ -737,8 +737,9 @@ function ComplementaryGroup({
       collapsed={collapsed}
       onToggle={onToggle}
     >
-      {group.checks.map((text) => (
-        <CheckRow key={text} text={text} source={source} />
+      {group.checks.map((text, i) => (
+        // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share the same text and the list never reorders
+        <CheckRow key={i} text={text} source={source} />
       ))}
       {group.buckets.map((bucket) => (
         <Bucket
