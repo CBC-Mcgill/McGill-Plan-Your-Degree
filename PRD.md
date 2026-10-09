@@ -24,12 +24,12 @@ Validating with real students is open question 5.
 **User goals**
 
 1. A student goes from transcript PDF to a correct "what's next" view in under 3 minutes, with no manual course entry.
-2. A student in one of the 5 MVP programs builds a plan to graduation where every prerequisite and program requirement is satisfied, in one session.
+2. A student in any undergraduate program builds a plan to graduation where every prerequisite and program requirement is satisfied, in one session.
 
 **Project goals**
 
 3. The catalogue stays correct every term through one reviewed data PR per crawl, with no hand-entered course data.
-4. A student in an unsupported program can add their program in a PR without help from the maintainer.
+4. A student whose program has a rule the crawler could not read can fix it in a PR without help from the maintainer.
 
 ---
 
@@ -40,7 +40,7 @@ Validating with real students is open question 5.
 | AI course advisor answers | Needs trustworthy course data first. The chat ships as a preview (P1-8), and real answers come later (P2). |
 | Timetables and section times | Visual Schedule Builder already does this. We link to it instead (P1). |
 | Registering for courses or touching Minerva | No public API, and acting on a student's account is a liability. |
-| Requirement tracking beyond the 5 MVP programs | Each program needs hand verification. More programs come from contributors. |
+| Hand-checked requirements for every program | The crawler reads every undergraduate program, and only 5 programs are checked by hand. Rules it cannot read show as "Check this requirement". |
 | Degree audit PDF import | The transcript already gives completed courses. A second parser adds little for the MVP. |
 | Mobile layouts, native apps, and French UI | Students plan at a desk during registration, so the MVP is desktop-only. Mobile and French come after launch. |
 
@@ -69,7 +69,7 @@ Validating with real students is open question 5.
 
 ### Contributor
 
-- As a student developer in an unsupported program, I want a documented requirement file format and a validator, so that I can add my program in a PR.
+- As a student developer whose program has rules the crawler could not read, I want a documented requirement file format and a validator, so that I can fix my program in a PR.
 - As a contributor, I want each catalogue refresh to arrive as a readable diff, so that I can catch crawler mistakes before they ship.
 
 ---
@@ -132,16 +132,22 @@ Crawls every course page on coursecatalogue.mcgill.ca and writes the full catalo
 #### P0-6 What's next
 
 - [ ] Lists courses the student can take next term: prerequisites met by completed and in-progress courses, offered that term, and not blocked by a restriction.
-- [ ] For the 5 MVP programs, shows remaining required courses and progress on each complementary list, for example "6 of 12 credits".
+- [ ] For every undergraduate program, shows remaining required courses and progress on each complementary list, for example "6 of 12 credits".
+- [ ] Shows a rule the crawler could not read as "Check this requirement" with the catalogue text and a link to the program page, and never counts it as satisfied.
 - [ ] Separates "must take" (remaining required courses) from "can take" (available complementaries and electives).
 
-#### P0-7 Program requirements for 5 programs
+#### P0-7 Program requirements
 
-Programs: Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Software Engineering Major (B.Sc.), Co-op Software Engineering (B.Eng.), Computer Engineering (B.Eng.).
+All undergraduate programs come from the crawler, 449 in the 2026-2027 catalogue.
+Five programs are also written and checked by hand, and their files override the crawled ones for their ids.
+The hand-written programs are Computer Science Major (B.Sc.), Computer Science Honours (B.Sc.), Software Engineering Major (B.Sc.), Co-op Software Engineering (B.Eng.), and Computer Engineering (B.Eng.).
 
 - [ ] Each program is a data file in a documented schema with required courses, complementary lists with credit or course counts, and total credits.
-- [ ] Each file is seeded from the program page's course list tables, then checked by hand against that page, and records its catalogue year and source URL.
+- [ ] Each crawled file is seeded from the program page's course list tables and records its catalogue year and source URL, and each hand-written file is also checked by hand against that page.
+- [ ] A rule the parser cannot express keeps its catalogue text, counts no course, and is never shown as satisfied.
 - [ ] A validator runs in CI and fails if any course code in a program file is missing from the catalogue.
+- [ ] Programs read by the crawler show a notice that their requirements were read automatically, with a link to the program page.
+- [ ] The program picker searches by name, degree, and faculty, and a transcript import picks a program only when exactly one program fits its degree and program lines.
 
 #### P0-8 Semester planner
 
@@ -198,7 +204,7 @@ Sources: McGill's CEGEP transfer credit page, the Faculty of Engineering transfe
 ### P2 - Design for, do not build
 
 - **AI advisor answers.** Keep catalogue and profile data in clean typed shapes that an LLM can read later. The P1-8 chat is the shell it plugs into.
-- **All programs, minors, and multiple catalogue years.** Program files carry their catalogue year from day one.
+- **Minors, double majors, and multiple catalogue years.** A profile holds one program for now, and program files carry their catalogue year from day one.
 - **French UI.**
 - **Degree audit PDF import.**
 - **Workload data.** Difficulty comes from mcgill.courses (P1-7).
@@ -273,8 +279,12 @@ Checked on 2026-10-08 with direct requests.
 
 - **Course pages:** `https://coursecatalogue.mcgill.ca/courses/<subject>-<number>`, 10,118 linked from `/courses/`. Server-rendered HTML. The COMP 251 page shows credits, offering unit, terms offered (Fall 2026, Winter 2027), description, prerequisites, and restrictions.
 - **Program pages:** listed in `/sitemap.xml` (2,040 URLs). Requirement tables use the `sc_courselist` class with code, title, and credit columns.
+  All undergraduate programs come from the crawler, which wrote 449 programs for the 2026-2027 catalogue.
+  The 5 hand-written programs override the crawled files for their ids.
+  Only the current catalogue year can be crawled because robots.txt disallows `/archive/`.
+  Each yearly crawl is therefore kept in the repo.
 - **Crawler identity:** an AWS WAF challenges generic User-Agents with HTTP 202. A bot User-Agent in the standard `Mozilla/5.0 (compatible; Name/version; +repo-url)` format gets HTTP 200.
-- **robots.txt:** allows `/courses/` and program pages. Disallows `/course-search/api/`, `/ribbit/`, `/search/`, and `/pdf/`.
+- **robots.txt:** allows `/courses/` and program pages. Disallows `/archive/`, `/course-search/api/`, `/ribbit/`, `/search/`, and `/pdf/`.
 - **Old eCalendar (`mcgill.ca/study`):** returned HTTP 403 to a script. Not used.
 - **Unofficial transcript** (one real sample, read 2026-10-08): a browser print to PDF of Minerva's HTML page, so the text layout depends on the browser that printed it. Markers: the title `UNOFFICIAL Transcript`, form name `SWFTRAN`, and the footer URL `horizon.mcgill.ca/pban1/bzsktran.P_Display_Form`. Each term block lists degree, year, program, and minor, then rows of subject, number, section, abbreviated title, credits, grade, remarks, earned credits, and class average. Registered future courses start with `RW` and have no grade. A legend defines remarks I, E, and A, `*` for credits not counted, and `²` for multi-term courses.
 - **mcgill.courses API** (checked 2026-10-08): public read endpoints with no login, OpenAPI docs at `https://mcgill.courses/api/docs`, and CORS open to any origin. `GET /api/courses/COMP251` returns about 6 KB, including `avgRating`, `avgDifficulty`, and `reviewCount`. The code is CC0, but the reviews are written by students on that site, so we show aggregates and link out instead of copying text.
