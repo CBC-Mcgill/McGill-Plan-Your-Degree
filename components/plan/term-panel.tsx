@@ -116,7 +116,7 @@ function Title({
 }
 
 const menuItem =
-  "flex h-8 cursor-default select-none items-center gap-3 rounded-md px-2 text-[13px] outline-none data-[highlighted]:bg-subtle";
+  "flex h-8 cursor-default select-none items-center gap-3 rounded-md px-2 text-[13px] outline-none data-[highlighted]:option-active";
 
 /** The terms a planned course can move to, with the credits each already holds and a note when the course does not run in that season. */
 function MoveMenu({

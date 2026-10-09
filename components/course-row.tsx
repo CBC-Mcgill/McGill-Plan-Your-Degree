@@ -2,6 +2,7 @@ import { cn } from "cn";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { StatusLabel } from "@/components/status";
+import { Card } from "@/components/ui/card";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { type CourseState, isOffered } from "@/lib/engine/status";
@@ -81,19 +82,45 @@ export function CourseRow({
   );
 }
 
-export function CourseRowSkeleton({ rows = 8 }: { rows?: number }) {
+const bone = "rounded-sm bg-muted motion-safe:animate-pulse";
+
+/** The browse card before the catalogue arrives: tabs, toolbar, table header and rows at their final heights. */
+export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
   return (
-    <div
-      aria-hidden
-      className="divide-y divide-border rounded-lg bg-card shadow-card"
-    >
-      {Array.from({ length: rows }, (_, row) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-        <div key={row} className="flex h-11 items-center gap-4 px-4">
-          <div className="h-4 w-20 rounded-sm bg-muted motion-safe:animate-pulse" />
-          <div className="h-4 flex-1 rounded-sm bg-muted motion-safe:animate-pulse" />
+    <Card className="overflow-hidden">
+      <p role="status" className="sr-only">
+        Loading courses
+      </p>
+      <div aria-hidden>
+        <div className="flex h-12 items-center gap-1 border-border border-b px-3">
+          {["w-20", "w-36", "w-32", "w-24", "w-28"].map((width) => (
+            <div key={width} className="px-3">
+              <div className={cn(bone, "h-4", width)} />
+            </div>
+          ))}
+          <div className={cn(bone, "ml-auto h-8 w-40 rounded-md")} />
         </div>
-      ))}
-    </div>
+        <div className="flex items-center gap-2 border-border border-b px-3 py-2.5">
+          <div className={cn(bone, "h-8 w-[280px] rounded-md")} />
+          {["w-24", "w-20", "w-20"].map((width, i) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+            <div key={i} className={cn(bone, "h-8 rounded-md", width)} />
+          ))}
+        </div>
+        <div className="h-9 border-border border-b bg-subtle" />
+        <div className="divide-y divide-border">
+          {Array.from({ length: rows }, (_, row) => (
+            <div
+              // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+              key={row}
+              className="flex h-10 items-center gap-6 px-4"
+            >
+              <div className={cn(bone, "h-4 w-24")} />
+              <div className={cn(bone, "h-4 w-1/3")} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Card>
   );
 }

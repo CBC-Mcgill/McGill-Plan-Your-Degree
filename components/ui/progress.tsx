@@ -37,7 +37,7 @@ function ProgressBar({
       aria-valuenow={value}
       aria-valuetext={valueText}
       className={cn(
-        "h-1.5 w-full overflow-hidden rounded-full bg-muted",
+        "h-1.5 w-full overflow-hidden rounded-full bg-track",
         className,
       )}
     >
@@ -95,7 +95,7 @@ function ProgressRing({
         r={RADIUS}
         fill="none"
         strokeWidth="2"
-        className="stroke-muted"
+        className="stroke-track"
       />
       <circle
         cx="7"

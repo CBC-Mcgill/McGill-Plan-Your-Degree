@@ -19,7 +19,7 @@ import {
 
 const FLOAT = "z-[85] rounded-lg bg-card shadow-float outline-none";
 const MENU_ITEM =
-  "relative flex h-8 cursor-default select-none items-center gap-2 rounded-sm px-2 text-[13px] outline-none data-[disabled]:text-faint data-[highlighted]:bg-subtle";
+  "relative flex h-8 cursor-default select-none items-center gap-2 rounded-sm px-2 text-[13px] outline-none data-[disabled]:text-faint data-[highlighted]:option-active";
 const PLURAL: Partial<Record<Prop, string>> = {
   subject: "subjects",
   faculty: "faculties",

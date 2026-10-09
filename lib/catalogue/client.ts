@@ -43,6 +43,13 @@ function load() {
     });
 }
 
+/** Asks again after a failed load. */
+export function retryCatalogue() {
+  if (state.status !== "error") return;
+  publish(LOADING);
+  load();
+}
+
 function subscribe(listener: () => void) {
   listeners.add(listener);
   load();

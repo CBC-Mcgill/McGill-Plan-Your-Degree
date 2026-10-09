@@ -4,7 +4,7 @@ import type * as React from "react";
 import { useId } from "react";
 
 const control =
-  "rounded-md bg-card px-3 text-foreground shadow-[inset_0_0_0_1px_var(--border-strong)] placeholder:text-faint disabled:opacity-50";
+  "rounded-md bg-card px-3 text-foreground shadow-[inset_0_0_0_1px_var(--input)] placeholder:text-faint disabled:opacity-50";
 
 /** The shared look of a text input or select: 36px tall, 8px radius, one hairline. Add `w-full` or a width. */
 const controlStyles = `h-9 text-sm ${control}`;

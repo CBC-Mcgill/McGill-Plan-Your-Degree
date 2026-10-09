@@ -6,13 +6,14 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Tooltip } from "radix-ui";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { CatalogueError } from "@/components/catalogue-error";
 import {
   AddFilterMenu,
   FilterPopover,
   SearchField,
   SortMenu,
 } from "@/components/course-filters";
-import { CourseRowSkeleton, seasonsOffered } from "@/components/course-row";
+import { BrowseSkeleton, seasonsOffered } from "@/components/course-row";
 import { STATUS, StatusIcon, UncertainFlag } from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -133,12 +134,8 @@ function useBrowse(): BrowseData {
 export function CourseBrowser() {
   const b = useBrowse();
   if (b.status === "ready") return <CourseTable b={b} />;
-  if (b.status === "loading") return <CourseRowSkeleton rows={12} />;
-  return (
-    <p role="alert">
-      Could not load the course list. Reload the page to try again.
-    </p>
-  );
+  if (b.status === "loading") return <BrowseSkeleton />;
+  return <CatalogueError />;
 }
 
 /** Table with saved views: tabs with counts, promoted filter chips, a sort menu and 50 rows a page. The URL holds the whole query. */

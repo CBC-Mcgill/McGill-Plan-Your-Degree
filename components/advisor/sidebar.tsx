@@ -41,12 +41,12 @@ export function Sidebar({ onNewChat }: { onNewChat: () => void }) {
       </div>
 
       <section aria-labelledby="recents" className="grid gap-2">
-        <h2
+        <p
           id="recents"
           className="px-2 font-medium text-muted-foreground text-xs"
         >
           Recents
-        </h2>
+        </p>
         <p className="px-2 text-[13px] text-muted-foreground">
           {query.trim()
             ? "No chats match your search"

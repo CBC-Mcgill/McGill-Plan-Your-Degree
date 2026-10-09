@@ -84,7 +84,7 @@ export function CoursesCard() {
     }
   }
 
-  const groups = groupByTerm(records).reverse();
+  const groups = groupByTerm(records);
 
   return (
     <SectionCard

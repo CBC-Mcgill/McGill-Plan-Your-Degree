@@ -103,7 +103,7 @@ export function SetupGuide({
       detail: program?.name ?? "",
       sentence:
         "Choose your program so we can list the required courses you still need.",
-      action: { label: "Pick program", href: "/profile" },
+      action: { label: "Pick program", href: "/profile#program" },
     },
     {
       id: "graduation",

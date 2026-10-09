@@ -9,6 +9,7 @@ import {
   type ProgramValues,
 } from "@/components/profile/program-fields";
 import { SectionCard } from "@/components/section-card";
+import { toast } from "@/components/toast";
 import { Banner } from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -175,9 +176,18 @@ export function ReviewScreen({
                       grade={course.grade}
                       status={course.status}
                       missing={missing}
-                      onRemove={() =>
-                        setRemoved((current) => new Set(current).add(index))
-                      }
+                      onRemove={() => {
+                        setRemoved((current) => new Set(current).add(index));
+                        toast(`${course.code} removed`, {
+                          label: "Undo",
+                          run: () =>
+                            setRemoved((current) => {
+                              const next = new Set(current);
+                              next.delete(index);
+                              return next;
+                            }),
+                        });
+                      }}
                     />
                   );
                 })}

@@ -5,6 +5,7 @@ import { AlertDialog } from "radix-ui";
 import type { ReactNode } from "react";
 import { SettingsSection } from "@/components/profile/settings-section";
 import type { ImportFlow } from "@/components/profile/use-import-flow";
+import { toast } from "@/components/toast";
 import { Button } from "@/components/ui/button";
 import { FileButton } from "@/components/ui/file-button";
 import { exportProfile } from "@/lib/profile/file";
@@ -18,9 +19,11 @@ export function downloadBackup() {
   );
   const link = document.createElement("a");
   link.href = url;
-  link.download = `plan-your-degree-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  // The en-CA format is year-month-day in local time.
+  link.download = `plan-your-degree-backup-${new Date().toLocaleDateString("en-CA")}.json`;
   link.click();
   URL.revokeObjectURL(url);
+  toast("Backup downloaded");
 }
 
 function Row({
@@ -45,13 +48,7 @@ function Row({
   );
 }
 
-export function DataCard({
-  flow,
-  onReset,
-}: {
-  flow: ImportFlow;
-  onReset: () => void;
-}) {
+export function DataCard({ flow }: { flow: ImportFlow }) {
   const reset = useProfileStore((s) => s.reset);
 
   return (
@@ -89,6 +86,7 @@ export function DataCard({
           description="Read a newer transcript PDF. You check it before anything is saved."
         >
           <FileButton
+            data-import
             variant="secondary"
             accept="application/pdf,.pdf"
             onFile={flow.importFile}
@@ -125,14 +123,7 @@ export function DataCard({
                     <Button variant="secondary">Cancel</Button>
                   </AlertDialog.Cancel>
                   <AlertDialog.Action asChild>
-                    <Button
-                      onClick={() => {
-                        reset();
-                        onReset();
-                      }}
-                    >
-                      Delete everything
-                    </Button>
+                    <Button onClick={reset}>Delete everything</Button>
                   </AlertDialog.Action>
                 </div>
               </AlertDialog.Content>

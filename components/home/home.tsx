@@ -4,6 +4,7 @@ import { cn } from "cn";
 import { ArrowRight, GraduationCap, Star } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useMemo } from "react";
+import { CatalogueError } from "@/components/catalogue-error";
 import { Landing } from "@/components/home/landing";
 import { SetupGuide } from "@/components/home/setup-guide";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
@@ -41,10 +42,23 @@ const NEXT_UP_LIMIT = 5;
 const BAR_TERMS = 6;
 const NO_COURSES: ReadonlySet<string> = new Set();
 
-/** The marketing page for visitors, and while the profile loads. A student with courses or a plan gets their own home. */
+/** The marketing page for visitors. A student with a profile gets their own home, and nobody sees either until the profile has loaded. */
 export function Home() {
   const snapshot = useSnapshot();
+  if (snapshot === undefined) return <HomeSkeleton />;
   return snapshot ? <Dashboard snapshot={snapshot} /> : <Landing />;
+}
+
+function HomeSkeleton() {
+  return (
+    <div className="mx-auto w-full max-w-[59rem] px-8 py-10">
+      <div aria-hidden>
+        <div className="h-[34px] w-56 rounded-sm bg-muted motion-safe:animate-pulse" />
+        <div className="mt-1 h-5 w-72 rounded-sm bg-muted motion-safe:animate-pulse" />
+      </div>
+      <Skeleton />
+    </div>
+  );
 }
 
 // Split out so a visitor without a profile does not download the catalogue.
@@ -59,9 +73,9 @@ function Dashboard({ snapshot }: { snapshot: Snapshot }) {
       {catalogue.status === "ready" ? (
         <Ready snapshot={snapshot} catalogue={catalogue.catalogue} />
       ) : catalogue.status === "error" ? (
-        <p role="alert" className="mt-6">
-          Could not load the course list. Reload the page to try again.
-        </p>
+        <div className="mt-6">
+          <CatalogueError />
+        </div>
       ) : (
         <Skeleton />
       )}
