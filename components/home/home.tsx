@@ -37,6 +37,7 @@ import {
   type GroupProgress,
   lacking,
   programStanding,
+  STANDING,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { creditsText, sentence } from "@/lib/format";
@@ -357,6 +358,7 @@ const either = new Intl.ListFormat("en-GB", { type: "disjunction" });
 /** What a requirement still lacks once the plan is done, in one sentence. */
 function partNote(group: GroupProgress, definition: Group | undefined) {
   if (group.credited) return "Credited from CEGEP.";
+  if (group.replaces) return COPY.replaces(group.replaces);
   if (group.kind === "required") {
     const left = group.remaining.map((item) =>
       typeof item === "string" ? item : either.format(item.oneOf),
@@ -375,8 +377,9 @@ function partNote(group: GroupProgress, definition: Group | undefined) {
   }
   const lacks = lacking(group);
   if (lacks) return `${lacks}.`;
-  return group.unparsed > 0
-    ? "Check its rules on What's next."
+  if (group.unparsed > 0) return "Check its rules on What's next.";
+  return group.courses.some((claimed) => claimed.code === STANDING)
+    ? "Your advanced standing counts here."
     : "Every credit is done, in progress or planned.";
 }
 
@@ -421,7 +424,6 @@ function Requirements({
   step: Step | null;
 }) {
   const entry = useProfileStore((state) => state.entry);
-  const advancedStanding = useProfileStore((state) => state.advancedStanding);
   const progress = useMemo(
     () =>
       program && programStanding(program, snapshot, catalogue, entry, "plan"),
@@ -438,8 +440,7 @@ function Requirements({
               credits: required - program.credits,
               courses: [
                 ...progress.unclaimed,
-                // Advanced standing is earned credit with no course behind it.
-                { code: "", credits: advancedStanding },
+                { code: STANDING, credits: progress.standing },
               ],
             },
             snapshot,

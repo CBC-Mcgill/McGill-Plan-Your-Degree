@@ -7,7 +7,7 @@ import { ProgramCombobox } from "@/components/profile/program-combobox";
 import { EntrySelect, TermSelect } from "@/components/profile/selects";
 import { Button } from "@/components/ui/button";
 import { TextField } from "@/components/ui/field";
-import { degreeCredits } from "@/lib/engine/credits";
+import { degreeCredits, standingCredits } from "@/lib/engine/credits";
 import { GLOSSARY } from "@/lib/glossary";
 import { currentTerm } from "@/lib/profile/terms";
 import type { EntryRoute, Term } from "@/lib/profile/types";
@@ -91,6 +91,11 @@ export function ProgramFields({
         value={value}
         onChange={onChange}
         defaultCredits={program === undefined ? undefined : defaultCredits}
+        standing={standingCredits(
+          value.advancedStanding,
+          value.entry,
+          program ?? null,
+        )}
       />
     </div>
   );
@@ -118,10 +123,13 @@ function Credits({
   value,
   onChange,
   defaultCredits,
+  standing,
 }: {
   value: ProgramValues;
   onChange: (patch: Partial<ProgramValues>) => void;
   defaultCredits: number | null | undefined;
+  /** The advanced standing the degree counts, at least the credited Year 0. */
+  standing: number;
 }) {
   const [open, setOpen] = useState(false);
   const fieldsId = useId();
@@ -144,7 +152,12 @@ function Credits({
       <div className="flex items-center justify-between gap-4">
         <p className="tabular-nums">
           Credits:{" "}
-          {[required, `${value.advancedStanding} advanced standing`]
+          {[
+            required,
+            standing > value.advancedStanding
+              ? `${standing} advanced standing (Year 0 from CEGEP)`
+              : `${standing} advanced standing`,
+          ]
             .filter(Boolean)
             .join(", ")}
         </p>

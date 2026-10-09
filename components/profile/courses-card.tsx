@@ -25,6 +25,7 @@ import {
   termKey,
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
+import { useProgram } from "@/lib/programs/client";
 
 const MAX_SUGGESTIONS = 8;
 const NO_CATALOGUE: Catalogue = new Map();
@@ -56,6 +57,8 @@ export function CoursesCard() {
   const records = useProfileStore((s) => s.records);
   const plan = useProfileStore((s) => s.plan);
   const advancedStanding = useProfileStore((s) => s.advancedStanding);
+  const entry = useProfileStore((s) => s.entry);
+  const program = useProgram(useProfileStore((s) => s.programId));
   const addCourse = useProfileStore((s) => s.addCourse);
   const catalogue = useCatalogue();
   const snapshot = useSnapshot();
@@ -148,9 +151,9 @@ export function CoursesCard() {
         plan,
         advancedStanding,
         creditsRequired: null,
-        entry: null,
+        entry,
       },
-      null,
+      program ?? null,
     );
 
   return (

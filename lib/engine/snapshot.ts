@@ -16,7 +16,7 @@ export type Catalogue = ReadonlyMap<string, CourseSummary>;
 export interface Snapshot {
   /** Completed, transfer, exemption, or covered by a Science DEC. */
   done: ReadonlySet<string>;
-  /** Credit-bearing done courses with the credits the record states. Null means use the catalogue. */
+  /** Credit-bearing done courses with the credits the record states, once each even when passed twice. Null means use the catalogue. */
   earned: ReadonlyMap<string, number | null>;
   /** Registered now, with the term when known. A multi-term course with a part done and the rest missing counts as in progress. */
   inProgress: ReadonlyMap<string, Term | null>;
@@ -27,6 +27,8 @@ export interface Snapshot {
   taken: ReadonlySet<string>;
   /** Science DEC equivalents in `done` that the student did not take at McGill. */
   covered: ReadonlySet<string>;
+  /** Lump-sum advanced standing credits, earned with no course behind them. */
+  standing: number;
 }
 
 /** Courses a Quebec Science DEC covers at every CEGEP, from mcgill.ca/transfercredit/prospective/cegep. They meet prerequisites but carry no McGill credit. */
@@ -46,6 +48,7 @@ export function buildSnapshot(
   records: readonly CourseRecord[],
   plan: Plan = [],
   entry: EntryRoute | null = null,
+  advancedStanding = 0,
 ): Snapshot {
   const done = new Set<string>();
   const earned = new Map<string, number | null>();
@@ -57,16 +60,9 @@ export function buildSnapshot(
       inProgress.set(record.code, record.term);
     } else if (isDone(record.status)) {
       done.add(record.code);
-      if (earnsCredit(record.status)) {
-        const before = earned.get(record.code);
-        earned.set(
-          record.code,
-          before === undefined
-            ? record.credits
-            : before === null || record.credits === null
-              ? null
-              : before + record.credits,
-        );
+      // ponytail: a course passed twice counts once. The catalogue has no structured "may be repeated for credit" flag yet.
+      if (earnsCredit(record.status) && !earned.has(record.code)) {
+        earned.set(record.code, record.credits);
       }
     }
   }
@@ -100,5 +96,6 @@ export function buildSnapshot(
     planned: new Set(plan.flatMap((entry) => entry.courses)),
     taken: new Set([...done, ...inProgress.keys()]),
     covered,
+    standing: advancedStanding,
   };
 }
