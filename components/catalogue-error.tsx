@@ -11,7 +11,7 @@ export function CatalogueError() {
       tone="danger"
       role="alert"
       action={
-        <Button variant="text" onClick={retryCatalogue}>
+        <Button variant="secondary" onClick={retryCatalogue}>
           Retry
         </Button>
       }

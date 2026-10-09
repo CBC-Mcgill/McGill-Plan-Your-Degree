@@ -2,14 +2,14 @@ import { cn } from "cn";
 import { ChevronDown } from "lucide-react";
 import type * as React from "react";
 import { useId } from "react";
-import { Term } from "@/components/ui/tooltip";
+import { InfoButton } from "@/components/ui/tooltip";
 import type { Definition } from "@/lib/glossary";
 
 /** The shared look of a text input or select: 36px tall, 8px radius, a 1px --fg-subtle edge. Add `w-full` or a width. */
 const controlStyles =
   "h-9 rounded-md border border-fg-subtle bg-bg px-3 text-fg text-sm placeholder:text-fg-muted disabled:opacity-50";
 
-/** The label, Body 600. With `info`, its words are a `Term` and `describedBy` holds the definition for the control. */
+/** The label, Body 600. With `info`, an info icon after it shows the definition and `describedBy` holds it for the control. The icon sits outside the label so the control's name stays the label alone. */
 function FieldLabel({
   htmlFor,
   label,
@@ -25,12 +25,15 @@ function FieldLabel({
 }) {
   return (
     <>
-      <label
-        htmlFor={htmlFor}
-        className={cn("justify-self-start font-semibold", hidden && "sr-only")}
+      <span
+        className={cn(
+          "justify-self-start whitespace-nowrap font-semibold",
+          hidden && "sr-only",
+        )}
       >
-        {info && !hidden ? <Term def={info}>{label}</Term> : label}
-      </label>
+        <label htmlFor={htmlFor}>{label}</label>
+        {info && !hidden && <InfoButton def={info} />}
+      </span>
       {info && describedBy && (
         <span id={describedBy} hidden>
           {info.tip}

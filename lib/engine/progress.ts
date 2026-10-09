@@ -379,6 +379,57 @@ export function programStanding(
   });
 }
 
+/** Credits by the status of the courses that earned them, for a `StatusBar`. */
+export interface CreditSplit {
+  completed: number;
+  inProgress: number;
+  planned: number;
+}
+
+/** A group's credits by the status of the courses it claimed, capped at what it needs: earned first, then in progress, then planned. Pass a group counted with the plan. */
+export function creditSplit(
+  group: GroupProgress,
+  snapshot: Snapshot,
+): CreditSplit {
+  if (group.credited) {
+    return { completed: group.credits, inProgress: 0, planned: 0 };
+  }
+  let completed = 0;
+  let inProgress = 0;
+  let planned = 0;
+  for (const { code, credits } of group.courses) {
+    if (snapshot.inProgress.has(code)) inProgress += credits;
+    else if (snapshot.planned.has(code)) planned += credits;
+    else completed += credits;
+  }
+  let left = group.credits;
+  const take = (credits: number) => {
+    const taken = Math.min(credits, left);
+    left -= taken;
+    return taken;
+  };
+  return {
+    completed: take(completed),
+    inProgress: take(inProgress),
+    planned: take(planned),
+  };
+}
+
+/** A program's credits by status, the sum of its groups' splits. */
+export function programSplit(
+  progress: ProgramProgress,
+  snapshot: Snapshot,
+): CreditSplit {
+  const total = { completed: 0, inProgress: 0, planned: 0 };
+  for (const group of progress.groups) {
+    const split = creditSplit(group, snapshot);
+    total.completed += split.completed;
+    total.inProgress += split.inProgress;
+    total.planned += split.planned;
+  }
+  return total;
+}
+
 /** What a complementary group lacks: credits first, then the first rule it fails. Null when only rules to check are left. */
 export function lacking(group: GroupProgress): string | null {
   if (group.creditsDone < group.credits) {

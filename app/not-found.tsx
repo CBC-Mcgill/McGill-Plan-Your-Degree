@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Page not found" };
 
 export default function NotFound() {
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
       <div className="max-w-reading">
         <h1>Page not found</h1>
         <p className="mt-2 text-fg-muted">

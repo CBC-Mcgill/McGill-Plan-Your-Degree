@@ -14,13 +14,9 @@ import {
   seasonsOffered,
 } from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
-import {
-  STATUS,
-  StatusIcon,
-  StatusTip,
-  UncertainFlag,
-} from "@/components/status";
+import { StatusBadge, StatusTip, UncertainFlag } from "@/components/status";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { ViewTabs } from "@/components/ui/tabs";
 import { Term } from "@/components/ui/tooltip";
 import meta from "@/data/catalogue/meta.json";
@@ -64,9 +60,10 @@ const PAGE_SIZE = 50;
 const PANEL = "course-panel";
 const EMPTY = buildSnapshot([], [], null);
 const NO_CODES: ReadonlySet<string> = new Set();
-/** Cells share the row's hover and focus tint and a hairline below, so each row reads as one 44px line. */
+/** Cells share the row's hover and focus tint and a hairline above, so each row reads as one 44px line across the card. */
 const CELL =
-  "border-line border-b pr-4 group-focus-within:bg-tint group-hover:bg-tint";
+  "border-line border-t pr-4 first:pl-5 last:pr-5 group-focus-within:bg-tint group-hover:bg-tint";
+const HEAD = "pr-4 font-normal first:pl-5 last:pr-5";
 
 interface Browse extends CatalogueBase, Student {
   /** False for a visitor with no transcript or plan, who sees no statuses. */
@@ -314,8 +311,8 @@ function CourseTable({ b }: { b: Browse }) {
             <h2>No courses match</h2>
             {(searching || filtering) && (
               <Button
-                variant="text"
-                className="mt-4 -ml-3"
+                variant="secondary"
+                className="mt-4"
                 onClick={() => update({ q: "", filters: NO_FILTERS })}
               >
                 {searching && filtering
@@ -328,45 +325,47 @@ function CourseTable({ b }: { b: Browse }) {
           </div>
         ) : (
           <>
-            <table className="-mx-2 w-[calc(100%+1rem)] table-fixed border-separate border-spacing-0">
-              <caption className="sr-only">Courses</caption>
-              <colgroup>
-                <col className="w-34" />
-                <col />
-                {statuses && <col className="w-36" />}
-                <col className="w-24" />
-                <col className="w-24" />
-              </colgroup>
-              <thead>
-                <tr className="h-9 text-left text-fg-muted [&>th]:border-line [&>th]:border-b">
-                  <th className="pr-4 pl-2 font-normal">Course</th>
-                  <th className="pr-4 font-normal">
-                    <span className="sr-only">Title</span>
-                  </th>
-                  {statuses && <th className="pr-4 font-normal">Status</th>}
-                  <th className="pr-4 text-right font-normal">
-                    <Term def={GLOSSARY.credits} />
-                  </th>
-                  <th className="pr-2 font-normal">
-                    <Term def={GLOSSARY.offered} />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {shown.map((course) => (
-                  <CourseTableRow
-                    key={course.code}
-                    course={course}
-                    b={b}
-                    status={statuses}
-                  />
-                ))}
-              </tbody>
-            </table>
+            <Card className="overflow-hidden">
+              <table className="w-full table-fixed border-separate border-spacing-0">
+                <caption className="sr-only">Courses</caption>
+                <colgroup>
+                  <col className="w-37" />
+                  <col />
+                  {statuses && <col className="w-40" />}
+                  <col className="w-24" />
+                  <col className="w-27" />
+                </colgroup>
+                <thead>
+                  <tr className="h-9 text-left text-fg-muted">
+                    <th className={HEAD}>Course</th>
+                    <th className={HEAD}>
+                      <span className="sr-only">Title</span>
+                    </th>
+                    {statuses && <th className={HEAD}>Status</th>}
+                    <th className={cn(HEAD, "text-right")}>
+                      <Term def={GLOSSARY.credits} />
+                    </th>
+                    <th className={HEAD}>
+                      <Term def={GLOSSARY.offered} />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {shown.map((course) => (
+                    <CourseTableRow
+                      key={course.code}
+                      course={course}
+                      b={b}
+                      status={statuses}
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </Card>
             <div
               className={cn(
                 "flex items-center justify-between",
-                pages > 1 && "mt-6",
+                pages > 1 && "mt-4",
               )}
             >
               <p
@@ -380,9 +379,9 @@ function CourseTable({ b }: { b: Browse }) {
                 {rows.length.toLocaleString("en-CA")}
               </p>
               {pages > 1 && (
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                   <Button
-                    variant="text"
+                    variant="secondary"
                     icon
                     aria-label="Previous page"
                     disabled={current === 1}
@@ -391,7 +390,7 @@ function CourseTable({ b }: { b: Browse }) {
                     <ChevronLeft aria-hidden />
                   </Button>
                   <Button
-                    variant="text"
+                    variant="secondary"
                     icon
                     aria-label="Next page"
                     disabled={current >= pages}
@@ -435,7 +434,7 @@ function CourseTableRow({
       }}
       className="group h-11 cursor-pointer"
     >
-      <td className={cn(CELL, "pl-2")}>
+      <td className={CELL}>
         <Link
           href={href}
           prefetch={false}
@@ -458,22 +457,16 @@ function CourseTableRow({
             status={status}
             word={word}
             reason={statusDetail(course, state, b)}
-            className="flex w-fit items-center gap-2"
+            className="flex w-fit"
           >
-            <StatusIcon status={status} />
-            <span
-              className="whitespace-nowrap"
-              style={{ color: word ? undefined : STATUS[status].text }}
-            >
-              {word ? "Not offered" : STATUS[status].label}
-            </span>
+            <StatusBadge status={status} word={word && "Not offered"} />
           </StatusTip>
         </td>
       )}
       <td className={cn(CELL, "whitespace-nowrap text-right tabular-nums")}>
         <CreditsLabel course={course} bare />
       </td>
-      <td className={cn(CELL, "pr-2")}>
+      <td className={CELL}>
         <SeasonLetters course={course} quiet={showStatus} />
       </td>
     </tr>

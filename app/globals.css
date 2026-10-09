@@ -3,17 +3,20 @@
 /* Light theme. Dark mode (P1) redefines these variables only. */
 :root {
   --bg: #ffffff;
+  /* The grey page that cards sit on. */
+  --page: #f3f4f6;
   --fg: #172036;
   --fg-muted: #5b6478;
   --fg-subtle: #7c8597;
-  --tint: #f3f4f6;
+  /* Hover, selected and placeholder fills. See-through, so it reads on white, on a card's band and on the grey page alike. */
+  --tint: rgb(23 32 54 / 0.05);
   --primary: #c8102e;
   --primary-hover: #a90d26;
   --ring: #2f5fc4;
   --danger: #b42318;
   --warn: #925708;
   --scrim: rgb(23 32 54 / 0.3);
-  --line: #e9ecf0;
+  --line: #e4e7ec;
 
   /* Status colors, each its own hue so statuses read apart at a glance. Shape and word still carry the meaning. */
   --completed: #18794e;
@@ -39,7 +42,7 @@
   --subject-8: #71624b;
   --subject-8-bg: #f2f0e7;
 
-  /* Only the Advisor's classic look uses these. */
+  /* The card look: --subtle is a card's header band and --muted the track of a segmented control. The Advisor also uses --border. */
   --subtle: #f7f8fa;
   --muted: #e9ecf0;
   --border: #e4e7ec;
@@ -47,6 +50,7 @@
 
 @theme inline {
   --color-bg: var(--bg);
+  --color-page: var(--page);
   --color-fg: var(--fg);
   --color-fg-muted: var(--fg-muted);
   --color-fg-subtle: var(--fg-subtle);
@@ -76,6 +80,15 @@
   --container-page: 79rem;
   --container-reading: 45rem;
 
+  /* A card's soft bottom edge, and the bevels of a white button and the red one. */
+  --shadow-card: 0 1px 0 rgb(23 32 54 / 0.05);
+  --shadow-button:
+    inset 0 -1px 0 #cdd3dc, inset 0 0 0 1px var(--line),
+    0 1px 0 rgb(23 32 54 / 0.04);
+  --shadow-primary:
+    inset 0 -2px 0 rgb(0 0 0 / 0.22), inset 0 1px 0 rgb(255 255 255 / 0.22);
+  --shadow-pressed: inset 0 1px 2px rgb(23 32 54 / 0.18);
+
   --shadow-float:
     0 8px 24px -6px rgb(23 32 54 / 0.22), 0 0 0 1px rgb(23 32 54 / 0.08);
 
@@ -94,15 +107,15 @@
     font-family: var(--font-display);
     font-weight: 800;
     font-stretch: 112.5%;
-    font-size: 40px;
-    line-height: 44px;
+    font-size: 32px;
+    line-height: 38px;
     letter-spacing: -0.015em;
     text-wrap: balance;
   }
 
   h2 {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 26px;
     font-weight: 600;
     text-wrap: balance;
   }
@@ -124,7 +137,7 @@
   transition-property: none;
 }
 
-/* The one selected look (D13): the current nav item, the selected tab, the highlighted option and the selected term. */
+/* The one selected look (D13): the current nav item, the highlighted option and the selected term. Tabs on the grey page use the white segmented look instead. */
 @utility selected {
   border-radius: 8px;
   background-color: var(--tint);

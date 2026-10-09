@@ -3,7 +3,7 @@ import type * as React from "react";
 import { Tooltip } from "@/components/ui/tooltip";
 
 /**
- * Views of one panel, such as Browse views or What's next terms. Arrow keys, Home and End move between tabs.
+ * Views of one panel, such as Browse views or What's next terms, as a segmented control: the selected tab is white on a grey track, so it reads on the grey page. Arrow keys, Home and End move between tabs.
  * Each tab's id is `${panelId}-${tab.id}`, so the panel can take `id={panelId}` and `aria-labelledby` the selected tab.
  */
 function ViewTabs<T extends string>({
@@ -44,7 +44,7 @@ function ViewTabs<T extends string>({
       role="tablist"
       aria-label={label}
       onKeyDown={move}
-      className="flex items-center gap-1"
+      className="flex h-9 w-fit items-center gap-0.5 rounded-md bg-muted p-0.5"
     >
       {tabs.map((tab) => {
         const selected = tab.id === value;
@@ -60,8 +60,10 @@ function ViewTabs<T extends string>({
             onClick={() => onChange(tab.id)}
             data-label={tab.label}
             className={cn(
-              "steady-width h-9 rounded-md px-3",
-              selected ? "selected" : "text-fg-muted hover:text-fg",
+              "steady-width h-8 rounded-[6px] px-3",
+              selected
+                ? "bg-bg font-semibold shadow-[0_1px_0_rgb(23_32_54/0.05),inset_0_0_0_1px_var(--line)]"
+                : "text-fg-muted hover:text-fg",
             )}
           >
             {tab.label}

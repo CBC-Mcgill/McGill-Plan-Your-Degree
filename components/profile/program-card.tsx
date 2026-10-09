@@ -20,7 +20,7 @@ export function ProgramCard() {
 
   return (
     <Section id="program" title="Degree">
-      <p className="-mt-2 mb-4 text-fg-muted">Changes save as you make them.</p>
+      <p className="mb-4 text-fg-muted">Changes save as you make them.</p>
       <ProgramFields
         value={value}
         onChange={(patch) => useProfileStore.setState(patch)}

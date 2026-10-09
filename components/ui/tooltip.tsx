@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "cn";
+import { Info } from "lucide-react";
 import { Tooltip as Primitive } from "radix-ui";
 import { type FocusEvent, type ReactNode, useRef, useState } from "react";
 import type { Definition } from "@/lib/glossary";
@@ -91,11 +93,24 @@ function Tooltip({
   );
 }
 
-/** A term with a dotted underline that shows its definition on hover and focus. A click toggles it. On an h2 it drops the underline, which is too heavy at that size. Never put one inside a link or a button. */
-function Term({ def, children }: { def: Definition; children?: ReactNode }) {
+/** A small button that shows a definition on hover and focus. A click toggles it and Escape closes it. Never put one inside a link or a button. */
+function DefinitionButton({
+  def,
+  label,
+  className,
+  children,
+}: {
+  def: Definition;
+  /** The button's name for screen readers. */
+  label: string;
+  className?: string;
+  children: ReactNode;
+}) {
   const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
   // A click that closes it should keep it closed until the pointer leaves, not reopen on the next hover tick.
   const closedByClick = useRef(false);
+  // Radix closes an open tooltip on pointer down, so a click toggles from how it stood before the press.
+  const openAtPress = useRef<boolean | null>(null);
   return (
     <Primitive.Root
       open={open}
@@ -108,18 +123,28 @@ function Term({ def, children }: { def: Definition; children?: ReactNode }) {
         onFocus={onFocus}
         onPointerLeave={() => {
           closedByClick.current = false;
+          openAtPress.current = null;
+        }}
+        onPointerDown={() => {
+          openAtPress.current = open;
         }}
       >
         <button
           type="button"
+          aria-label={label}
           onClick={(event) => {
             event.preventDefault();
-            closedByClick.current = open;
-            onOpenChange(!open);
+            const wasOpen = openAtPress.current ?? open;
+            openAtPress.current = null;
+            closedByClick.current = wasOpen;
+            onOpenChange(!wasOpen);
           }}
-          className="cursor-help text-left underline decoration-1 decoration-dotted decoration-fg-subtle underline-offset-3 [h2_&]:no-underline"
+          className={cn(
+            "relative inline-flex cursor-help items-center justify-center rounded-full after:absolute after:-inset-1",
+            className,
+          )}
         >
-          {children ?? def.label}
+          {children}
         </button>
       </Primitive.Trigger>
       <Bubble onEscapeKeyDown={onEscapeKeyDown}>{def.tip}</Bubble>
@@ -127,4 +152,27 @@ function Term({ def, children }: { def: Definition; children?: ReactNode }) {
   );
 }
 
-export { Term, Tooltip, TooltipProvider };
+/** The small info icon that shows a definition, named "About" the term for screen readers. */
+function InfoButton({ def }: { def: Definition }) {
+  return (
+    <DefinitionButton
+      def={def}
+      label={`About ${def.label}`}
+      className="ml-1 size-4 align-middle text-fg-muted hover:text-fg data-[state=delayed-open]:text-fg data-[state=instant-open]:text-fg"
+    >
+      <Info aria-hidden className="size-4" strokeWidth={1.75} />
+    </DefinitionButton>
+  );
+}
+
+/** A term in plain text with the info icon after it, which shows the definition. The two never wrap apart. Never put one inside a link or a button. */
+function Term({ def, children }: { def: Definition; children?: ReactNode }) {
+  return (
+    <span className="whitespace-nowrap">
+      {children ?? def.label}
+      <InfoButton def={def} />
+    </span>
+  );
+}
+
+export { DefinitionButton, InfoButton, Term, Tooltip, TooltipProvider };

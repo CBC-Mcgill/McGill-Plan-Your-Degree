@@ -36,13 +36,13 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
       <p className="text-fg-muted">
         It all lives in this browser, and nothing is sent anywhere.
       </p>
-      <div className="-ml-3 mt-4 flex items-start">
-        <Button variant="text" onClick={downloadBackup}>
+      <div className="mt-4 flex items-start gap-2">
+        <Button variant="secondary" onClick={downloadBackup}>
           {COPY.exportBackup}
         </Button>
         <div className="flex flex-col">
           <FileButton
-            variant="text"
+            variant="secondary"
             accept="application/json,.json"
             onFile={flow.restoreFile}
             aria-describedby={warning}
@@ -59,7 +59,7 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
         </div>
         <FileButton
           data-import
-          variant="text"
+          variant="secondary"
           accept="application/pdf,.pdf"
           onFile={flow.importFile}
           disabled={flow.reading}
@@ -77,9 +77,9 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
               <AlertDialog.Description className="mt-2">
                 This removes your courses, program and plan from this browser.
               </AlertDialog.Description>
-              <div className="mt-6 -mr-3 flex justify-end gap-2">
+              <div className="mt-6 flex justify-end gap-2">
                 <AlertDialog.Cancel asChild>
-                  <Button variant="text">Cancel</Button>
+                  <Button variant="secondary">Cancel</Button>
                 </AlertDialog.Cancel>
                 <AlertDialog.Action asChild>
                   <Button variant="danger" onClick={reset}>

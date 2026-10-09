@@ -100,7 +100,7 @@ export function AdvisorChat() {
 
   // The viewport less the header (4rem), so the chat fills the screen and the footer waits below it.
   return (
-    <div className="flex h-[calc(100dvh-4rem)] min-h-[36rem] border-border border-y bg-tint">
+    <div className="flex h-[calc(100dvh-4rem)] min-h-[36rem] border-border border-y bg-page">
       <Sidebar onNewChat={newChat} />
       <section
         aria-label="Advisor chat"

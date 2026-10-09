@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "cn";
 import { ChevronDown, TriangleAlert, X } from "lucide-react";
 import Link from "next/link";
 import { Popover } from "radix-ui";
@@ -14,13 +15,9 @@ import { CreditsLabel } from "@/components/credits-label";
 import { AddCourse } from "@/components/plan/add-course";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import { TermWarnings } from "@/components/plan/term-warnings";
-import {
-  STATUS,
-  type Status,
-  StatusIcon,
-  UncertainFlag,
-} from "@/components/status";
+import { StatusBadge, UncertainFlag } from "@/components/status";
 import { Button } from "@/components/ui/button";
+import { BAND, CARD } from "@/components/ui/card";
 import { TextField } from "@/components/ui/field";
 import { Menu, MenuItem } from "@/components/ui/menu";
 import { Tooltip } from "@/components/ui/tooltip";
@@ -67,7 +64,6 @@ function Row({
   code,
   label = code,
   title,
-  status,
   uncertain = false,
   note,
   meta,
@@ -79,7 +75,6 @@ function Row({
   label?: string;
   /** Missing when the catalogue has no such course, so the row does not link. */
   title: string | undefined;
-  status?: Status;
   uncertain?: boolean;
   note?: string;
   meta?: ReactNode;
@@ -115,11 +110,6 @@ function Row({
   return (
     <li className={ROW}>
       <span className={ROW_TITLE}>
-        {status && (
-          <span className="flex h-5 w-4 shrink-0 items-center">
-            <StatusIcon status={status} />
-          </span>
-        )}
         {tip ? <Tooltip content={tip}>{link}</Tooltip> : link}
         {uncertain && <UncertainFlag />}
       </span>
@@ -164,7 +154,7 @@ function MoveMenu({
     <Menu
       align="end"
       trigger={
-        <Button variant="text" aria-label={`Move ${name} to another term`}>
+        <Button variant="secondary" aria-label={`Move ${name} to another term`}>
           Move
           <ChevronDown aria-hidden />
         </Button>
@@ -236,7 +226,7 @@ function CreditLimit({ limit }: { limit: number }) {
               defaultValue={limit}
               onFocus={(event) => event.currentTarget.select()}
             />
-            <Button type="submit" variant="text" className="-mr-3 self-end">
+            <Button type="submit" variant="secondary" className="self-end">
               Save
             </Button>
           </form>
@@ -332,8 +322,9 @@ export function TermPanel({
       role="tabpanel"
       id="term-panel"
       aria-labelledby={`stage-${stage.key}`}
+      className={CARD}
     >
-      <header className="flex items-baseline justify-between gap-4">
+      <header className={cn(BAND, "justify-between")}>
         <h2
           ref={heading}
           id="term-heading"
@@ -360,7 +351,7 @@ export function TermPanel({
         )}
       </header>
 
-      <div className="mt-4 flex flex-col gap-6">
+      <div className="flex flex-col gap-6 px-5 py-4">
         {stage.warnings.length > 0 && (
           <TermWarnings
             warnings={stage.warnings}
@@ -397,11 +388,10 @@ export function TermPanel({
                 code={record.code}
                 label={recordLabel(record)}
                 title={catalogue.get(record.code)?.title}
-                status={record.status}
                 note={creditNote(record, snapshot.pending)}
                 meta={
-                  <span className="flex gap-2">
-                    {STATUS[record.status].label}
+                  <span className="flex items-center gap-2">
+                    <StatusBadge status={record.status} />
                     {graded && (
                       <span className="w-6 font-semibold text-fg">
                         {record.grade}
@@ -442,7 +432,7 @@ export function TermPanel({
                         onMove={(to) => move(load.code, to)}
                       />
                       <Button
-                        variant="text"
+                        variant="secondary"
                         icon
                         aria-label={`Remove ${name} from ${loadsTerms(whole)}`}
                         onClick={() => remove(load)}
@@ -472,7 +462,10 @@ export function TermPanel({
       </div>
 
       {suggestions.length > 0 && (
-        <section aria-labelledby="suggestions-heading" className="mt-8">
+        <section
+          aria-labelledby="suggestions-heading"
+          className="px-5 pt-4 pb-4"
+        >
           <h3 id="suggestions-heading" className="mb-2 text-fg-muted">
             Needed by your program
           </h3>
@@ -487,7 +480,7 @@ export function TermPanel({
                 credits={<CreditsLabel course={course} />}
                 action={
                   <Button
-                    variant="text"
+                    variant="secondary"
                     aria-label={`Add ${course.code} to ${label}`}
                     onClick={() => addWithUndo(stage.term, course.code)}
                   >

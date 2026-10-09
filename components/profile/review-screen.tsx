@@ -50,7 +50,7 @@ export function ReviewScreen(props: ReviewProps) {
 
 function ReviewSkeleton() {
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
       <p role="status" className="sr-only">
         Reading your transcript
       </p>
@@ -191,21 +191,21 @@ function Review({
             </div>
           )}
 
-          <div className="mt-8">
-            <ProgramFields
-              value={values}
-              onChange={(patch) => setValues((v) => ({ ...v, ...patch }))}
-              detected={detected || undefined}
-            />
-            {values.programId === null && detected && (
-              <p className="mt-4 text-fg-muted">
-                Your courses are still saved. Requirements can't be tracked for
-                this program yet.
-              </p>
-            )}
-          </div>
+          <div className="mt-8 flex flex-col gap-6">
+            <Section title="Degree">
+              <ProgramFields
+                value={values}
+                onChange={(patch) => setValues((v) => ({ ...v, ...patch }))}
+                detected={detected || undefined}
+              />
+              {values.programId === null && detected && (
+                <p className="mt-4 text-fg-muted">
+                  Your courses are still saved. Requirements can't be tracked
+                  for this program yet.
+                </p>
+              )}
+            </Section>
 
-          <div className="mt-12">
             <Section title="Courses">
               {kept.length === 0 ? (
                 <p className="text-fg-muted">
@@ -264,7 +264,7 @@ function Review({
               " Saving replaces your imported courses and keeps the ones you added by hand."}
           </p>
           <div className="flex shrink-0 items-center gap-2">
-            <Button variant="text" onClick={onCancel}>
+            <Button variant="secondary" onClick={onCancel}>
               Cancel
             </Button>
             <Button onClick={save}>Save to my profile</Button>

@@ -140,9 +140,9 @@ test("it shows where each course counts, one click away", async ({ page }) => {
   });
   await expect(notCounted).toContainText("1 course, 3 credits");
   await notCounted.click();
-  await expect(
-    page.getByRole("listitem").filter({ hasText: "ANTH 202" }),
-  ).toContainText("Completed · Fall 2025");
+  const anth = page.getByRole("listitem").filter({ hasText: "ANTH 202" });
+  await expect(anth).toContainText("Completed");
+  await expect(anth).toContainText("Fall 2025");
 });
 
 test("met and CEGEP-credited groups, the restriction note and the minor show on one page", async ({

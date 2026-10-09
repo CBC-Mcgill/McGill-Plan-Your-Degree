@@ -140,11 +140,10 @@ export function CoursesCard() {
       action={
         <Button
           ref={toggle}
-          variant="text"
+          variant="secondary"
           aria-expanded={adding}
           aria-controls={formId}
           onClick={() => (adding ? close() : setAdding(true))}
-          className="-mr-3"
         >
           Add a course
         </Button>
@@ -190,7 +189,7 @@ export function CoursesCard() {
           <option value="completed">Completed</option>
           <option value="in-progress">In progress</option>
         </SelectField>
-        <Button type="submit" variant="text" className="-mr-3">
+        <Button type="submit" variant="secondary">
           Add
         </Button>
         {error && (

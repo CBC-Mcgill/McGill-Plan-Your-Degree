@@ -6,6 +6,7 @@ import {
   RequirementSection,
 } from "@/components/linked-course-text";
 import { RequirementText } from "@/components/requirement-text";
+import { Card } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { Term } from "@/components/ui/tooltip";
 import { UnlockRows } from "@/components/unlock-rows";
@@ -92,7 +93,7 @@ export default async function CoursePage({
   ];
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-12">
+    <div className="mx-auto w-full max-w-page px-8 py-12">
       <p className="font-semibold text-fg-muted">{course.code}</p>
       <div className="mt-2 flex items-start justify-between gap-8">
         <h1 className="min-w-0 max-w-reading">{course.title}</h1>
@@ -108,18 +109,18 @@ export default async function CoursePage({
           noPrerequisites={!course.prerequisites?.text}
         />
 
-        {(course.description || notes.length > 0) && (
-          <div className="mt-12 flex max-w-[68ch] flex-col gap-2">
-            {course.description && <p>{course.description}</p>}
-            {notes.map((note) => (
-              <p key={note} className="text-fg-muted">
-                {note}
-              </p>
-            ))}
-          </div>
-        )}
+        <div className="mt-8 flex flex-col gap-6">
+          {(course.description || notes.length > 0) && (
+            <Card className="flex flex-col gap-2 p-5">
+              {course.description && <p>{course.description}</p>}
+              {notes.map((note) => (
+                <p key={note} className="text-fg-muted">
+                  {note}
+                </p>
+              ))}
+            </Card>
+          )}
 
-        <div className="mt-12 space-y-12">
           {requirements.map(({ title, item }) => {
             if (!item?.text) return null;
             const tree = "tree" in item ? item.tree : null;

@@ -1,6 +1,12 @@
 import { TriangleAlert, X } from "lucide-react";
 import { Fragment, type ReactNode } from "react";
-import { STATUS, StatusIcon, StatusTip } from "@/components/status";
+import { ROW } from "@/components/course-row";
+import {
+  STATUS,
+  StatusBadge,
+  StatusIcon,
+  StatusTip,
+} from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { formatTerm } from "@/lib/profile/terms";
 import type { CourseStatus, Term } from "@/lib/profile/types";
@@ -31,8 +37,7 @@ export function CourseRow({
 }) {
   const word = STATUS[status].label;
   const showWord = !(status === "completed" && grade);
-  const meta = [
-    showWord && word,
+  const notes = [
     note,
     missing && (
       <span className="inline-flex items-center gap-2">
@@ -42,7 +47,7 @@ export function CourseRow({
     ),
   ].filter(Boolean);
   return (
-    <li className="group -mx-2 flex min-h-11 items-start gap-4 rounded-md px-2 py-3 focus-within:bg-tint hover:bg-tint">
+    <li className={ROW}>
       <span className="flex shrink-0 gap-2">
         {showWord ? (
           <span className="flex h-5 w-4 items-center">
@@ -58,15 +63,20 @@ export function CourseRow({
       <span className="min-w-0 flex-1 truncate" title={title ?? undefined}>
         {title}
       </span>
-      {meta.length > 0 && (
-        <span className="max-w-80 flex-none text-fg-muted">
-          {meta.map((item, i) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: at most three fixed items
-            <Fragment key={i}>
-              {i > 0 && " · "}
-              {item}
-            </Fragment>
-          ))}
+      {(showWord || notes.length > 0) && (
+        <span className="flex max-w-80 flex-none items-center gap-2 text-fg-muted">
+          {showWord && <StatusBadge status={status} />}
+          {notes.length > 0 && (
+            <span>
+              {notes.map((item, i) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: at most two fixed items
+                <Fragment key={i}>
+                  {i > 0 && " · "}
+                  {item}
+                </Fragment>
+              ))}
+            </span>
+          )}
         </span>
       )}
       <span className="w-12 shrink-0 text-right text-fg-muted tabular-nums">
@@ -88,7 +98,7 @@ export function CourseRow({
       </span>
       <span className="-my-2 flex shrink-0 opacity-0 group-focus-within:opacity-100 group-hover:opacity-100">
         <Button
-          variant="text"
+          variant="secondary"
           icon
           aria-label={`Remove ${code}`}
           onClick={onRemove}

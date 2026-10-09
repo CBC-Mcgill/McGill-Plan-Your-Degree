@@ -1,5 +1,6 @@
 import { StartActions } from "@/components/no-profile";
-import { STATUS, type Status, StatusIcon } from "@/components/status";
+import { type Status, StatusBadge } from "@/components/status";
+import { Card } from "@/components/ui/card";
 import { COPY } from "@/lib/copy";
 
 const EXAMPLE: { code: string; title: string; status: Status }[] = [
@@ -24,7 +25,7 @@ const EXAMPLE: { code: string; title: string; status: Status }[] = [
 
 export function Landing() {
   return (
-    <div className="mx-auto grid w-full max-w-page grid-cols-12 items-start px-8 pt-12">
+    <div className="mx-auto grid w-full max-w-page grid-cols-12 items-start px-8 py-12">
       <div className="col-span-6">
         <h1 className="text-[56px] leading-[60px]">
           Your McGill degree, mapped out
@@ -38,25 +39,23 @@ export function Landing() {
         </div>
       </div>
 
-      <figure className="col-span-5 col-start-8">
-        <figcaption className="text-fg-muted">Example</figcaption>
-        <ul className="mt-4">
-          {EXAMPLE.map(({ code, title, status }) => (
-            <li key={code} className="flex h-11 items-center gap-4">
-              <span className="flex shrink-0 items-center gap-2">
-                <StatusIcon status={status} size={16} />
-                <span className="w-20 font-semibold">{code}</span>
-              </span>
-              <span className="min-w-0 flex-1 truncate text-fg-muted">
-                {title}
-              </span>
-              <span className="shrink-0 text-fg-muted">
-                {STATUS[status].label}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </figure>
+      <Card className="col-span-5 col-start-8 px-5 py-2">
+        <figure>
+          <figcaption className="py-3 text-fg-muted">Example</figcaption>
+          <ul>
+            {EXAMPLE.map(({ code, title, status }) => (
+              <li
+                key={code}
+                className="-mx-5 flex h-11 items-center gap-4 border-line border-t px-5"
+              >
+                <span className="w-20 shrink-0 font-semibold">{code}</span>
+                <span className="min-w-0 flex-1 truncate">{title}</span>
+                <StatusBadge status={status} />
+              </li>
+            ))}
+          </ul>
+        </figure>
+      </Card>
     </div>
   );
 }
