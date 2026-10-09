@@ -40,3 +40,47 @@ test("guessProgram maps transcript fields to a program", () => {
     guessProgram("Bachelor of Arts", ["Major Computer Science"]),
   ).toBeNull();
 });
+
+test("guessProgram falls back to the program list by degree and name", () => {
+  const program = (id: string, name: string, degree: string) => ({
+    id,
+    name,
+    degree,
+    faculty: "Any",
+  });
+  const index = [
+    program("psychology-major-bsc", "Psychology Major", "B.Sc."),
+    program("psychology-major-ba", "Psychology Major Concentration", "B.A."),
+    program("accounting-major-bcom", "Accounting Major", "B.Com."),
+    program(
+      "accounting-concentration-bcom",
+      "Accounting Concentration",
+      "B.Com.",
+    ),
+    program("mechanical-engineering-beng", "Mechanical Engineering", "B.Eng."),
+    program("physics-major-bsc", "Physics Major", "B.Sc."),
+    program(
+      "physics-major-bsc-again",
+      "Physics Major",
+      "B.Sc.(Ag.Env.Sc.) or B.Sc.",
+    ),
+  ];
+  const guess = (degree: string, line: string) =>
+    guessProgram(degree, [line], index);
+
+  expect(guess("Bachelor of Science", "Major Psychology")).toBe(
+    "psychology-major-bsc",
+  );
+  expect(guess("Bachelor of Arts", "Major Concentration Psychology")).toBe(
+    "psychology-major-ba",
+  );
+  expect(guess("Bachelor of Commerce", "Major Accounting")).toBe(
+    "accounting-major-bcom",
+  );
+  expect(guess("Bachelor of Engineering", "Mechanical Engineering")).toBe(
+    "mechanical-engineering-beng",
+  );
+  expect(guess("Bachelor of Arts", "Major Accounting")).toBeNull();
+  expect(guess("Bachelor of Science", "Major Physics")).toBeNull();
+  expect(guessProgram(null, ["Major Psychology"], index)).toBeNull();
+});
