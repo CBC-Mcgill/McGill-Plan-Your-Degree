@@ -61,6 +61,16 @@ export function meets(
   return tree.or.some((child) => meets(child, codes));
 }
 
+/** Every course code a tree names. */
+export function leaves(tree: RequirementTree): string[] {
+  if (typeof tree === "string") return [tree];
+  return ("and" in tree ? tree.and : tree.or).flatMap(leaves);
+}
+
+/** The separate things a requirement asks for: each part of a top-level "and", or else the whole tree. */
+export const requirementItems = (tree: RequirementTree): RequirementTree[] =>
+  typeof tree !== "string" && "and" in tree ? tree.and : [tree];
+
 /** What a tree still needs, in plain words: "COMP 250 or COMP 251", "MATH 222 and (COMP 250 or COMP 251)". */
 export function missingText(
   tree: RequirementTree,

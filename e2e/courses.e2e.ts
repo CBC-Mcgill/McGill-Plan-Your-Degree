@@ -91,11 +91,29 @@ test("a course page shows the mcgill.courses rating and links to the reviews", a
     }),
   );
   await page.goto("/courses/comp-251");
+  await expect(page.getByText("3.1 of 5")).toBeVisible();
+  await expect(page.getByText("4.2 of 5")).toBeVisible();
   await expect(
-    page.getByRole("link", {
-      name: "Rating 3.1, difficulty 4.2, 2,609 reviews on mcgill.courses",
-    }),
+    page.getByRole("link", { name: "2,609 reviews on mcgill.courses" }),
   ).toHaveAttribute("href", "https://mcgill.courses/course/comp-251");
+});
+
+test("a course page checks each prerequisite and says which One of is met", async ({
+  page,
+}) => {
+  await seedProfile(page, [done("COMP 202"), done("COMP 302")]);
+  await page.goto("/courses/ecse-458");
+  await expect(page.getByText("Needs 3 more prerequisites")).toBeVisible();
+  const prerequisites = page.getByRole("region", { name: "Prerequisites" });
+  await expect(prerequisites).toContainText("1 of 4 met");
+  await expect(
+    prerequisites.getByRole("listitem").filter({ hasText: "ECSE 324" }),
+  ).toContainText("Locked");
+  await expect(prerequisites).toContainText("Met by COMP 302");
+  await expect(
+    // The last match is the row inside its One of group.
+    prerequisites.getByRole("listitem").filter({ hasText: "CCOM 206" }).last(),
+  ).toContainText("Not in this year's catalogue");
 });
 
 test("administrative and non-degree subjects stay off the list but keep their page", async ({
@@ -134,11 +152,14 @@ test("with a profile, Can take now is the default tab and a course can be planne
   await expect(page).not.toHaveURL(/level=200/);
 
   await rows.filter({ hasText: "COMP 251" }).click();
-  await expect(page.getByText("Can take", { exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "About Can take" }),
+  ).toBeVisible();
   const add = page.getByRole("button", { name: /^Add to / });
   const name = await add.textContent();
   await add.click();
-  const planned = page.getByRole("button", { name: /^Planned for / });
+  await expect(page.getByText(/^Planned for /)).toBeVisible();
+  const planned = page.getByRole("button", { name: "Change term" });
   await expect(planned).toBeFocused();
   await planned.click();
   await expect(page.getByRole("menuitem").last()).toHaveText(
@@ -185,7 +206,7 @@ test("a course page adds the course to any term before graduation and moves it",
   await expect(page.getByText("Planned for Fall 2027")).toBeVisible();
   await expect(page.getByRole("button", { name: /^Add to / })).toHaveCount(0);
 
-  await page.getByRole("button", { name: "Planned for Fall 2027" }).click();
+  await page.getByRole("button", { name: "Change term" }).click();
   await expect(
     page.getByRole("menuitem", { name: /^Fall 2027.*planned here/ }),
   ).toBeVisible();
