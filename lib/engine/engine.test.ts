@@ -5,7 +5,7 @@ import type { Program } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
-import { planLoads, planWarnings } from "./plan.ts";
+import { planLoads, planWarnings, schoolTerms, termChoices } from "./plan.ts";
 import { fitsCaps, programProgress, ruleMatches } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { courseStatus } from "./status.ts";
@@ -340,6 +340,47 @@ test("a multi-term course loads each part in its own term", () => {
       fall,
     ).map((w) => w.kind),
   ).toContain("after-graduation");
+});
+
+test("the school period runs from the next term to graduation, and multi-term courses start where part 1 runs", () => {
+  const label = (term: Term) => `${term.season} ${term.year}`;
+  const winter2028: Term = { season: "Winter", year: 2028 };
+  expect(schoolTerms(winter2028, fall2026).map(label)).toEqual([
+    "Winter 2027",
+    "Summer 2027",
+    "Fall 2027",
+    "Winter 2028",
+  ]);
+  const open = schoolTerms(null, fall2026);
+  expect(open).toHaveLength(12);
+  expect(open.at(-1)).toEqual({ season: "Fall", year: 2030 });
+  expect(schoolTerms(fall2026, fall2026)).toHaveLength(12);
+
+  const plan = [{ term: winter2028, courses: ["COMP 330"] }];
+  const comp424 = termChoices(
+    catalogue.get("COMP 424") as Course,
+    plan,
+    catalogue,
+    winter2028,
+    fall2026,
+  );
+  expect(comp424.map((c) => [label(c.term), c.offered, c.planned])).toEqual([
+    ["Winter 2027", true, [0]],
+    ["Summer 2027", false, [0]],
+    ["Fall 2027", false, [0]],
+    ["Winter 2028", true, [3]],
+  ]);
+
+  const capstone = catalogue.get("ECSE 458") as Course;
+  const starts = (end: Term) =>
+    termChoices(capstone, plan, catalogue, end, fall2026).map((c) => [
+      c.label,
+      c.endsAfter,
+    ]);
+  expect(starts(winter2028)).toEqual([["Fall 2027 and Winter 2028", false]]);
+  expect(starts({ season: "Fall", year: 2027 })).toEqual([
+    ["Fall 2027 and Winter 2028", true],
+  ]);
 });
 
 test("a done first part is pending, not earned, until the next part is done", () => {

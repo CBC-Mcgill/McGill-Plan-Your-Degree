@@ -10,6 +10,7 @@ import { RequirementText } from "@/components/requirement-text";
 import { SectionCard } from "@/components/section-card";
 import { UncertainFlag } from "@/components/status";
 import { UnlockRows } from "@/components/unlock-rows";
+import meta from "@/data/catalogue/meta.json";
 import { getUnlocks, leaves, loadCatalogue } from "@/lib/catalogue/server";
 import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
 import { creditsLabel, routesText } from "@/lib/engine/parts";
@@ -99,7 +100,7 @@ export default async function CoursePage({
             <p className="mt-2 max-w-prose text-muted-foreground">{routes}</p>
           )}
         </div>
-        <AddToPlan course={summary} />
+        <AddToPlan course={summary} year={meta.catalogueYear} />
       </div>
 
       <div className="mt-6 grid grid-cols-[minmax(0,2fr)_minmax(0,1fr)] items-start gap-6">

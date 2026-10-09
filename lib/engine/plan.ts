@@ -1,5 +1,6 @@
 import type { CoursePart, CourseSummary } from "../catalogue/types.ts";
 import { termLabel } from "../profile/term-options.ts";
+import { advanceTerms } from "../profile/terms.ts";
 import {
   compareTerms,
   type Plan,
@@ -256,4 +257,58 @@ export function termRange(start: Term, end: Term, summer = false): Term[] {
     if (summer || term.season !== "Summer") terms.push(term);
   }
   return terms;
+}
+
+/** The terms a student can still plan: the one after `now` through graduation, Summers included. Without a graduation term it is the next eight Fall and Winter terms and the Summers between them. */
+export function schoolTerms(graduation: Term | null, now: Term): Term[] {
+  const first = termFromKey(termKey(now) + 1);
+  const end =
+    graduation && compareTerms(graduation, first) >= 0
+      ? graduation
+      : advanceTerms(now, 8);
+  return termRange(first, end, true);
+}
+
+/** One term a course can start in, for the menu that adds or moves it. */
+export interface TermChoice {
+  term: Term;
+  /** "Winter 2027", or "Fall 2027 and Winter 2028" for a multi-term course. */
+  label: string;
+  /** Credits the plan already holds in each term the course would occupy. */
+  planned: number[];
+  offered: boolean;
+  /** A multi-term course whose last part falls after the school period. */
+  endsAfter: boolean;
+}
+
+/** Where a course can start in the school period. A multi-term course lists only the terms its first part runs in, unless the catalogue gives it no terms at all. */
+export function termChoices(
+  course: CourseSummary,
+  plan: Plan,
+  catalogue: Catalogue,
+  graduation: Term | null,
+  now: Term,
+): TermChoice[] {
+  const terms = schoolTerms(graduation, now);
+  const last = terms.at(-1);
+  const held = new Map<number, number>();
+  for (const { term, credits } of planLoads(plan, catalogue)) {
+    held.set(termKey(term), (held.get(termKey(term)) ?? 0) + credits);
+  }
+  const runs = (["Fall", "Winter", "Summer"] as const).some((season) =>
+    isOffered(course, season),
+  );
+  return terms.flatMap((term) => {
+    const offered = isOffered(course, term.season);
+    if (course.parts?.length && runs && !offered) return [];
+    const loads = courseLoads(course.code, course, term);
+    const end = loads.at(-1)?.term;
+    return {
+      term,
+      label: loadsTerms(loads),
+      planned: loads.map((load) => held.get(termKey(load.term)) ?? 0),
+      offered,
+      endsAfter: Boolean(last && end && termKey(end) > termKey(last)),
+    };
+  });
 }
