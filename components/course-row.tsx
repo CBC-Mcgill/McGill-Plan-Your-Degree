@@ -98,6 +98,7 @@ export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
               <div className={cn(bone, "h-4", width)} />
             </div>
           ))}
+          <div className={cn(bone, "ml-auto h-8 w-40 rounded-md")} />
         </div>
         <div className="flex items-center gap-2 border-border border-b px-3 py-2.5">
           <div className={cn(bone, "h-8 w-[280px] rounded-md")} />
@@ -105,7 +106,6 @@ export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
             // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
             <div key={i} className={cn(bone, "h-8 rounded-md", width)} />
           ))}
-          <div className={cn(bone, "ml-auto h-8 w-40 rounded-md")} />
         </div>
         <div className="h-9 border-border border-b bg-subtle" />
         <div className="divide-y divide-border">
