@@ -11,11 +11,12 @@ const done = (code: string) => ({
   source: "manual",
 });
 
-/** A program-less profile with `records` done, starting two years ago and graduating in three. */
+/** A profile with `records` done, starting two years ago and graduating in three. No program unless `programId` names one. */
 async function seedProfile(
   page: Page,
   records: ReturnType<typeof done>[],
   plan: { term: { season: string; year: number }; courses: string[] }[] = [],
+  programId: string | null = null,
 ) {
   await page.addInitScript(
     ([key, state]) => {
@@ -30,7 +31,7 @@ async function seedProfile(
       "plan-your-degree:profile",
       {
         records,
-        programId: null,
+        programId,
         startTerm: { season: "Fall", year: year - 2 },
         graduationTerm: { season: "Winter", year: year + 3 },
         plan,
@@ -80,6 +81,38 @@ test("starting without a transcript opens the path on the next term to plan", as
       document.documentElement.clientWidth,
   );
   expect(overflow).toBeLessThanOrEqual(0);
+});
+
+test("the headline lists one row per open requirement, with missing courses linking to their pages", async ({
+  page,
+}) => {
+  await seedProfile(page, [done("COMP 202")], [], "computer-engineering-beng");
+  await page.goto("/plan");
+
+  const missing = page.getByRole("region", {
+    name: /^Your plan is \d+ credits short$/,
+  });
+  await expect(missing).toContainText("7 requirements still open");
+  const rows = missing.getByRole("listitem");
+  await expect(rows).toHaveCount(6);
+  await expect(
+    rows.filter({ hasText: "Technical complementaries" }),
+  ).toContainText("Any 9 credits from List A or List B · See choices");
+  await missing.getByRole("button", { name: "Show 1 more" }).click();
+  await expect(rows).toHaveCount(7);
+  await expect(rows.last()).toContainText("Elective course");
+
+  const course = rows
+    .filter({ hasText: "Required computer engineering courses" })
+    .getByRole("link", { name: "ECSE 250" });
+  await expect(course).toHaveAttribute("href", "/courses/ecse-250");
+  await course.click();
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Fundamentals of Software Development",
+    }),
+  ).toBeVisible();
 });
 
 test("a course placed before its prerequisite warns until it is moved later", async ({
