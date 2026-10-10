@@ -12,7 +12,7 @@ import { Notice } from "@/components/ui/notice";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses } from "@/lib/catalogue/search";
 import { planWarnings, termRange } from "@/lib/engine/plan";
-import { programStanding } from "@/lib/engine/progress";
+import { minorOverlap, programStanding } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { buildStages } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
@@ -121,8 +121,18 @@ function PlannerReady({
   );
   const minorProgress = useMemo(
     () =>
-      minor ? programStanding(minor, snapshot, catalogue, entry, "plan") : null,
-    [minor, snapshot, catalogue, entry],
+      minor
+        ? programStanding(
+            minor,
+            snapshot,
+            catalogue,
+            entry,
+            "plan",
+            minorOverlap(minor, program, snapshot, catalogue, entry, "plan")
+              .programOnly,
+          )
+        : null,
+    [minor, program, snapshot, catalogue, entry],
   );
   const moveOptions = useMemo(() => {
     const first = stages[0]?.term ?? now;

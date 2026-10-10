@@ -18,6 +18,8 @@ export interface CountOptions {
   planned?: boolean;
   /** How the student started. A Quebec CEGEP student is credited for the foundation groups. */
   entry?: EntryRoute | null;
+  /** Courses this program may not count, such as a minor's share of the program's courses past its overlap cap. */
+  exclude?: ReadonlySet<string>;
 }
 
 /** A course a group or rule counted, with the credits it brought. */
@@ -347,10 +349,11 @@ export function programProgress(
 ): ProgramProgress {
   const creditsOf = (code: string) => catalogue.get(code)?.credits ?? 0;
   // An exemption satisfies a required course but is never in `counted`, so it adds no credit.
-  const have = new Set(snapshot.done);
+  const allowed = (code: string) => !count.exclude?.has(code);
+  const have = new Set([...snapshot.done].filter(allowed));
   const counted = new Map<string, number>();
   for (const [code, credits] of snapshot.earned) {
-    counted.set(code, credits ?? creditsOf(code));
+    if (allowed(code)) counted.set(code, credits ?? creditsOf(code));
   }
   // A CEGEP lump sum is the credit for the credited Year 0 groups, so only what is left over can fill an elective.
   const standing = Math.max(
@@ -363,6 +366,7 @@ export function programProgress(
   if (count.planned) extra.push(snapshot.planned);
   for (const codes of extra) {
     for (const code of codes) {
+      if (!allowed(code)) continue;
       have.add(code);
       if (!counted.has(code)) counted.set(code, creditsOf(code));
     }
@@ -434,11 +438,71 @@ export function programStanding(
   catalogue: Catalogue,
   entry: EntryRoute | null,
   basis: Basis,
+  exclude?: ReadonlySet<string>,
 ): ProgramProgress {
   return programProgress(program, snapshot, catalogue, {
     ...BASIS[basis],
     entry,
+    exclude,
   });
+}
+
+/** The most credits a minor may share with the program: what its page says, else 0 in Arts, where no course may fulfill more than one program (mcgill.ca/oasis degree planning guide). Undefined when nobody says. */
+export const overlapCap = (minor: Program): number | undefined =>
+  minor.overlap ?? (minor.faculty === "Arts" ? 0 : undefined);
+
+/** How a minor shares the program's courses: `shared` counts for both, `programOnly` went past the cap and counts for the program alone. */
+export interface MinorOverlap {
+  cap: number | undefined;
+  shared: ReadonlySet<string>;
+  programOnly: ReadonlySet<string>;
+  /** Credits still free to share, Infinity without a cap. */
+  left: number;
+}
+
+/** Lets the minor count the program's courses up to its cap, in the minor's group order, and leaves the rest to the program. */
+export function minorOverlap(
+  minor: Program,
+  program: Program | null,
+  snapshot: Snapshot,
+  catalogue: Catalogue,
+  entry: EntryRoute | null,
+  basis: Basis,
+): MinorOverlap {
+  const cap = overlapCap(minor);
+  const programCodes = new Set(
+    program
+      ? programStanding(program, snapshot, catalogue, entry, basis)
+          .groups.flatMap((group) => group.courses)
+          .map((course) => course.code)
+      : [],
+  );
+  const programOnly = new Set<string>();
+  // ponytail: greedy passes keep the minor's earliest shared courses, a search could pick the ones that help it most.
+  for (;;) {
+    const claimed = programStanding(
+      minor,
+      snapshot,
+      catalogue,
+      entry,
+      basis,
+      programOnly,
+    ).groups.flatMap((group) => group.courses);
+    const shared = new Set<string>();
+    let left = cap ?? Number.POSITIVE_INFINITY;
+    let over = false;
+    for (const { code, credits } of claimed) {
+      if (!programCodes.has(code)) continue;
+      if (credits <= left) {
+        left -= credits;
+        shared.add(code);
+      } else {
+        programOnly.add(code);
+        over = true;
+      }
+    }
+    if (!over) return { cap, shared, programOnly, left };
+  }
 }
 
 /** Credits by the status of the courses that earned them, for a `StatusBar`. */

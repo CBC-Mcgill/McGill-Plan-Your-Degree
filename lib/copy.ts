@@ -55,6 +55,7 @@ export const COPY = {
       : `${list.format(courses.map((c) => c.code))} were exempted without credit. Make up their credits with any course and check with your advisor.`,
   hasConditions: "Has conditions",
   countsForBoth: "Counts for both",
+  programOnly: "Program only",
   checkRequirement: "Check this requirement",
   catalogueLink: "McGill catalogue",
   vsbLink: "Visual Schedule Builder",

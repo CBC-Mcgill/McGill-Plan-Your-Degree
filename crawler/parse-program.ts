@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import { logicalCode } from "../lib/profile/types.ts";
+import { isMinor } from "../lib/programs/minor.ts";
 import type {
   ComplementaryGroup,
   Group,
@@ -751,6 +752,60 @@ function facultyOf(offered: string, path: string): string {
   return FACULTY_BY_PATH[path.split("/")[3] ?? ""] ?? "";
 }
 
+const WORDS: Record<string, number> = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+};
+const OVERLAP_AMOUNT = String.raw`(\d+|${Object.keys(WORDS).join("|")})`;
+const amount = (word: string) => WORDS[word.toLowerCase()] ?? Number(word);
+
+/** How many credits a minor's page lets count toward the student's program too, the smallest it states, or undefined when it says nothing. Courses count as 3 credits. */
+export function overlapOf(text: string): number | undefined {
+  const found: number[] = [];
+  for (const sentence of text.split(/(?<=\.)\s+/)) {
+    if (
+      /\bno (?:course )?overlap\b[^.]*\b(?:permitted|allowed)\b|\bpermits no overlap\b|\bmay be no overlap\b/i.test(
+        sentence,
+      )
+    ) {
+      found.push(0);
+      continue;
+    }
+    const remainder =
+      /(\d+) credits[^.]*?of which at least (\d+)[^.]*?must not overlap/i.exec(
+        sentence,
+      );
+    if (remainder?.[1] && remainder[2]) {
+      found.push(Number(remainder[1]) - Number(remainder[2]));
+      continue;
+    }
+    const cap = new RegExp(
+      String.raw`(?:maximum of|no more than|not more than|up to)\s+${OVERLAP_AMOUNT}(?:\s*-\s*\d+)?\s*(credits?|courses?)?(?:\s*\([^)]*\))?[^.]{0,80}?(?:double[- ]count|overlap|counted for both|count(?:ed)? (?:toward|for) both)`,
+      "i",
+    ).exec(sentence);
+    const allowed = new RegExp(
+      `${OVERLAP_AMOUNT} credits of overlap (?:are|is) (?:allowed|permitted)`,
+      "i",
+    ).exec(sentence);
+    const match = cap ?? allowed;
+    if (match?.[1]) {
+      const n = amount(match[1]);
+      found.push(/^course/i.test(cap?.[2] ?? "") ? n * 3 : n);
+    }
+  }
+  return found.length > 0 ? Math.min(...found) : undefined;
+}
+
 /** Reads one program page. Returns null for pages with no requirements, such as department indexes. */
 export function parseProgramPage(
   html: string,
@@ -790,6 +845,9 @@ export function parseProgramPage(
   if (groups.length === 0) return null;
 
   const { name, degree } = degreeAndName(heading);
+  const overlap = overlapOf(
+    clean($("#programoverviewtextcontainer, #coursestextcontainer").text()),
+  );
   const offered =
     /Offered by:\s*(.*?)\s*(?:Degree:|$)/.exec(overview)?.[1] ?? "";
   return {
@@ -804,6 +862,7 @@ export function parseProgramPage(
     source: BASE_URL + path,
     credits,
     groups,
+    ...(isMinor({ id: slug, degree }) && overlap !== undefined && { overlap }),
     generated: true,
   };
 }
