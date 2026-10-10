@@ -61,6 +61,7 @@ import type { Plan, Term } from "@/lib/profile/types";
 import { recordLabel, termKey } from "@/lib/profile/types";
 import type { Program } from "@/lib/programs/types";
 import { describe } from "./term-path";
+import { PHONE, useMedia } from "./use-media";
 
 /** Checklist rows shown before Show N more. */
 const VISIBLE = 8;
@@ -72,9 +73,16 @@ export interface MoveOption {
   label?: string;
 }
 
+/** Below 1024px, and on touch screens wider than that, the actions sit in the row, always visible, 44px tall. On phones they take a line of their own under the title. */
+const ACTIONS =
+  "max-lg:relative max-lg:top-auto max-lg:right-auto max-lg:-my-2.5 max-lg:translate-y-0 max-lg:gap-2 max-lg:bg-transparent max-lg:pl-0 max-lg:opacity-100 lg:pointer-coarse:relative lg:pointer-coarse:top-auto lg:pointer-coarse:right-auto lg:pointer-coarse:-my-2.5 lg:pointer-coarse:translate-y-0 lg:pointer-coarse:gap-2 lg:pointer-coarse:bg-transparent lg:pointer-coarse:pl-0 lg:pointer-coarse:opacity-100 max-md:order-last max-md:my-0 max-md:w-full max-md:pl-7";
+/** A 44px tap target where the actions always show. */
+const TAP = "max-lg:h-11 pointer-coarse:h-11";
+const TAP_ICON = "max-lg:size-11 pointer-coarse:size-11";
+
 /**
  * A row of what a term holds: the status glyph, a code like ECSE 458D1, the title, and the credits at the right edge, which line up with the checklist's.
- * `action` shows over the end of the row on hover and focus within it.
+ * `action` shows over the end of the row on hover and focus within it. On phones the code sits over the title.
  */
 function Row({
   code,
@@ -100,7 +108,7 @@ function Row({
 }) {
   const body = (
     <>
-      <span className="w-24 shrink-0 font-semibold tabular-nums">
+      <span className="w-24 shrink-0 font-semibold tabular-nums max-md:w-auto">
         <CourseCode code={label} />
       </span>
       <span className="min-w-0">
@@ -112,7 +120,12 @@ function Row({
     </>
   );
   return (
-    <li className={cn(ROW, "relative has-[[data-state=open]]:bg-tint")}>
+    <li
+      className={cn(
+        ROW,
+        "relative has-[[data-state=open]]:bg-tint max-md:flex-wrap max-md:gap-y-2",
+      )}
+    >
       <span className={ROW_TITLE}>
         <StatusTip status={status} className="flex min-w-0 gap-3">
           <span className="flex h-5 w-4 shrink-0 items-center">
@@ -122,19 +135,26 @@ function Row({
             <Link
               href={`/courses/${courseSlug(code)}`}
               prefetch={false}
-              className={ROW_LINK}
+              className={cn(ROW_LINK, "max-md:flex-col max-md:gap-0")}
             >
               {body}
             </Link>
           ) : (
-            <span className="flex min-w-0 gap-4">{body}</span>
+            <span className="flex min-w-0 gap-4 max-md:flex-col max-md:gap-0">
+              {body}
+            </span>
           )}
         </StatusTip>
         {uncertain && <UncertainFlag />}
       </span>
       {action && (
         // Over the title's end on hover, on the grey a hovered row shows, so a long title keeps the full width.
-        <span className="absolute top-1/2 right-[5.75rem] flex -translate-y-1/2 gap-1 bg-page pl-2 opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100">
+        <span
+          className={cn(
+            "absolute top-1/2 right-[5.75rem] flex -translate-y-1/2 gap-1 bg-page pl-2 opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100",
+            ACTIONS,
+          )}
+        >
           {action}
         </span>
       )}
@@ -188,7 +208,11 @@ function MoveMenu({
     <Menu
       align="end"
       trigger={
-        <Button variant="secondary" aria-label={`Move ${name} to another term`}>
+        <Button
+          variant="secondary"
+          aria-label={`Move ${name} to another term`}
+          className={TAP}
+        >
           Move
           <ChevronDown aria-hidden />
         </Button>
@@ -226,7 +250,7 @@ function CreditLimit({ limit }: { limit: number }) {
         <button
           type="button"
           aria-label={`${GLOSSARY.creditLimit.label}, ${limit}`}
-          className="rounded-md underline decoration-1 decoration-fg-subtle underline-offset-3 hover:decoration-current"
+          className="rounded-md underline decoration-1 decoration-fg-subtle underline-offset-3 hover:decoration-current max-lg:relative max-lg:after:absolute max-lg:after:-inset-x-2 max-lg:after:-inset-y-3"
         >
           {limit}
         </button>
@@ -259,8 +283,13 @@ function CreditLimit({ limit }: { limit: number }) {
               required
               defaultValue={limit}
               onFocus={(event) => event.currentTarget.select()}
+              className="max-lg:[&_input]:h-11 max-lg:[&_input]:text-base"
             />
-            <Button type="submit" variant="secondary" className="self-end">
+            <Button
+              type="submit"
+              variant="secondary"
+              className="self-end max-lg:h-11"
+            >
               Save
             </Button>
           </form>
@@ -334,7 +363,7 @@ function Fill({
           <li key={course.code} className="-mx-5 border-line border-b">
             <label
               className={cn(
-                "flex min-h-11 cursor-pointer items-center gap-4 px-5 py-2 hover:bg-tint",
+                "flex min-h-11 cursor-pointer items-center gap-4 px-5 py-2 hover:bg-tint max-md:items-start",
                 checked && "bg-tint",
               )}
             >
@@ -342,17 +371,22 @@ function Fill({
                 type="checkbox"
                 checked={checked}
                 onChange={() => toggle(course.code)}
-                className="size-4 shrink-0 accent-[var(--fg)]"
+                className="size-4 shrink-0 accent-[var(--fg)] max-md:mt-0.5"
               />
-              <span className="w-24 shrink-0 font-semibold tabular-nums">
-                <CourseCode code={course.code} />
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block truncate" title={course.title}>
-                  {course.title}
+              <span className="flex min-w-0 flex-1 items-center gap-4 max-md:flex-col max-md:items-start max-md:gap-0">
+                <span className="w-24 shrink-0 font-semibold tabular-nums max-md:w-auto">
+                  <CourseCode code={course.code} />
                 </span>
-                <span className="block truncate text-fg-muted xl:hidden">
-                  {counts}
+                <span className="min-w-0 flex-1">
+                  <span
+                    className="block truncate max-md:whitespace-normal"
+                    title={course.title}
+                  >
+                    {course.title}
+                  </span>
+                  <span className="block truncate text-fg-muted max-md:whitespace-normal xl:hidden">
+                    {counts}
+                  </span>
                 </span>
               </span>
               <span
@@ -384,12 +418,12 @@ function Fill({
 
   return (
     <section aria-labelledby={`${panelId}-heading`}>
-      <div className="flex min-h-12 items-center gap-4 border-line border-b bg-subtle px-5 py-1.5">
+      <div className="flex min-h-12 items-center gap-4 border-line border-b bg-subtle px-5 py-1.5 max-md:flex-wrap max-md:gap-y-2 max-md:py-2.5">
         <h3 id={`${panelId}-heading`} className="text-[13px] leading-[18px]">
           Fill {label}
         </h3>
         {filtered && (
-          <div className="ml-auto">
+          <div className="ml-auto max-md:ml-0 max-md:w-full max-lg:[&_[role=tab]]:h-10 max-lg:[&_[role=tablist]]:h-11 max-md:[&_[role=tab]]:flex-auto max-md:[&_[role=tablist]]:w-full">
             <ViewTabs
               label="Counts toward"
               tabs={FILTERS}
@@ -412,7 +446,13 @@ function Fill({
       ) : (
         <div className="px-5">{list}</div>
       )}
-      <div className="flex min-h-15 items-center gap-4 px-5 py-3">
+      <div
+        className={cn(
+          "flex min-h-15 items-center gap-4 px-5 py-3 max-md:flex-col max-md:items-stretch max-md:gap-3",
+          codes.length > 0 &&
+            "max-md:sticky max-md:bottom-0 max-md:z-10 max-md:bg-bg max-md:shadow-[0_-1px_0_var(--line)]",
+        )}
+      >
         <p
           aria-live="polite"
           className={cn("min-w-0 tabular-nums", over && "text-warn")}
@@ -434,7 +474,7 @@ function Fill({
           )}
         </p>
         <Button
-          className="ml-auto"
+          className="ml-auto max-md:ml-0 max-lg:h-11"
           disabled={codes.length === 0}
           onClick={() => {
             addAllWithUndo(stage.term, codes);
@@ -478,6 +518,7 @@ export function TermPanel({
 }) {
   const entry = useProfileStore((state) => state.entry);
   const heading = useRef<HTMLHeadingElement>(null);
+  const phone = useMedia(PHONE);
 
   const nowKey = termKey(now);
   const label = termLabel(stage.term);
@@ -533,7 +574,7 @@ export function TermPanel({
       aria-labelledby={`stage-${stage.key}`}
       className={cn(CARD, "divide-y divide-line")}
     >
-      <header className={BAND}>
+      <header className={cn(BAND, "max-md:flex-wrap max-md:gap-y-2")}>
         <h2
           ref={heading}
           id="term-heading"
@@ -544,13 +585,13 @@ export function TermPanel({
         </h2>
         <StatusBadge status={status} word={word} />
         {open || stage.state === "current" ? (
-          <div className="ml-auto flex items-center gap-3">
+          <div className="ml-auto flex items-center gap-3 max-md:ml-0 max-md:w-full">
             <StatusBar
               completed={0}
               inProgress={registered}
               planned={stage.credits - registered}
               total={creditLimit}
-              className="w-24 xl:w-32"
+              className="w-24 max-md:w-auto max-md:flex-1 xl:w-32"
             />
             <p
               className={cn(
@@ -654,6 +695,7 @@ export function TermPanel({
                       <Button
                         variant="secondary"
                         icon
+                        className={TAP_ICON}
                         aria-label={`Remove ${name} from ${loadsTerms(whole)}`}
                         onClick={() => remove(load)}
                       >
@@ -694,8 +736,12 @@ export function TermPanel({
             plan={plan}
             placeholder={
               options.length > 0
-                ? "Not listed? Search all courses, like COMP 251"
-                : undefined
+                ? phone
+                  ? "Not listed? Search all courses"
+                  : "Not listed? Search all courses, like COMP 251"
+                : phone
+                  ? "Add a course, like COMP 251"
+                  : undefined
             }
           />
         </div>

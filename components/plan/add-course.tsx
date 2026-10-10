@@ -2,8 +2,9 @@
 
 import { cn } from "cn";
 import { Search } from "lucide-react";
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { addWithUndo } from "@/components/plan/add-with-undo";
+import { PHONE } from "@/components/plan/use-media";
 import { STATUS, StatusIcon } from "@/components/status";
 import { controlStyles } from "@/components/ui/field";
 import { type IndexedCourse, searchCourses } from "@/lib/catalogue/search";
@@ -88,59 +89,74 @@ export function AddCourse({
   const showList = open && text.length > 0;
   const showResults = showList && results.length > 0;
 
+  // On a phone the keyboard covers the lower half, so the box moves to the top and the results show under it.
+  useEffect(() => {
+    if (showList && matchMedia(PHONE).matches) {
+      wrap.current?.scrollIntoView({ block: "start" });
+    }
+  }, [showList]);
+
   return (
-    <div ref={wrap} className="relative">
-      <Search
-        aria-hidden
-        className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-fg-muted"
-      />
-      <input
-        type="text"
-        role="combobox"
-        aria-label={`Add a course to ${label}`}
-        aria-expanded={showResults}
-        aria-controls={showResults ? listId : undefined}
-        aria-activedescendant={
-          showResults && active >= 0 ? `${listId}-${active}` : undefined
-        }
-        aria-autocomplete="list"
-        autoComplete="off"
-        spellCheck={false}
-        placeholder={placeholder ?? `Add a course to ${label}, like COMP 251`}
-        value={query}
-        onFocus={() => setOpen(true)}
-        onBlur={(event) => {
-          if (!wrap.current?.contains(event.relatedTarget)) setOpen(false);
-        }}
-        onChange={(event) => {
-          setQuery(event.target.value);
-          setPicked(null);
-          setNotice("");
-          setOpen(true);
-        }}
-        onKeyDown={(event) => {
-          if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-            event.preventDefault();
-            setOpen(true);
-            setNotice("");
-            const at = enabled.indexOf(active);
-            const step = event.key === "ArrowDown" ? 1 : -1;
-            const next = enabled[(at + step + enabled.length) % enabled.length];
-            if (next !== undefined)
-              setPicked(results[next]?.course.code ?? null);
-          } else if (event.key === "Enter") {
-            event.preventDefault();
-            // With nothing to add, Enter says why the first match cannot be added.
-            commit((results[active] ?? results[0])?.course);
-          } else if (event.key === "Escape") {
-            setQuery("");
-            setOpen(false);
+    <div ref={wrap} className="relative scroll-mt-4">
+      {/* Its own box, so the icon stays centered on the input when phone results push the box taller. */}
+      <div className="relative">
+        <Search
+          aria-hidden
+          className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-fg-muted"
+        />
+        <input
+          type="text"
+          role="combobox"
+          aria-label={`Add a course to ${label}`}
+          aria-expanded={showResults}
+          aria-controls={showResults ? listId : undefined}
+          aria-activedescendant={
+            showResults && active >= 0 ? `${listId}-${active}` : undefined
           }
-        }}
-        className={cn(controlStyles, "w-full pl-9")}
-      />
+          aria-autocomplete="list"
+          autoComplete="off"
+          autoCorrect="off"
+          spellCheck={false}
+          placeholder={placeholder ?? `Add a course to ${label}, like COMP 251`}
+          value={query}
+          onFocus={() => setOpen(true)}
+          onBlur={(event) => {
+            if (!wrap.current?.contains(event.relatedTarget)) setOpen(false);
+          }}
+          onChange={(event) => {
+            setQuery(event.target.value);
+            setPicked(null);
+            setNotice("");
+            setOpen(true);
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+              event.preventDefault();
+              setOpen(true);
+              setNotice("");
+              const at = enabled.indexOf(active);
+              const step = event.key === "ArrowDown" ? 1 : -1;
+              const next =
+                enabled[(at + step + enabled.length) % enabled.length];
+              if (next !== undefined)
+                setPicked(results[next]?.course.code ?? null);
+            } else if (event.key === "Enter") {
+              event.preventDefault();
+              // With nothing to add, Enter says why the first match cannot be added.
+              commit((results[active] ?? results[0])?.course);
+            } else if (event.key === "Escape") {
+              setQuery("");
+              setOpen(false);
+            }
+          }}
+          className={cn(
+            controlStyles,
+            "w-full pl-9 max-lg:h-11 max-lg:text-base",
+          )}
+        />
+      </div>
       {showList && (
-        <div className="absolute inset-x-0 top-full z-20 mt-1 rounded-lg bg-bg p-1 shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none">
+        <div className="absolute inset-x-0 top-full z-20 mt-1 rounded-lg bg-bg p-1 shadow-float max-md:static max-md:mt-2 transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none">
           {showResults && (
             <div
               id={listId}
@@ -159,17 +175,17 @@ export function AddCourse({
                   onMouseMove={() => !disabled && setPicked(course.code)}
                   onClick={() => commit(course)}
                   className={cn(
-                    "flex h-10 w-full items-center gap-4 rounded-md px-3 text-left",
+                    "flex h-10 w-full items-center gap-4 rounded-md px-3 text-left max-lg:h-11 max-md:h-auto max-md:min-h-12 max-md:items-start max-md:py-2",
                     i === active && "selected",
                     disabled && "cursor-default text-fg-muted",
                   )}
                 >
-                  <span className="flex min-w-0 flex-1 items-center gap-2">
+                  <span className="flex min-w-0 flex-1 items-center gap-2 max-md:flex-wrap max-md:gap-y-0">
                     <StatusIcon status={status} label={STATUS[status].label} />
-                    <span className="w-24 shrink-0 font-semibold tabular-nums">
+                    <span className="w-24 shrink-0 font-semibold tabular-nums max-md:w-auto">
                       {course.code}
                     </span>
-                    <span className="min-w-0 flex-1 truncate font-normal">
+                    <span className="min-w-0 flex-1 truncate font-normal max-md:basis-full max-md:whitespace-normal max-md:pl-[22px]">
                       {course.title}
                     </span>
                   </span>

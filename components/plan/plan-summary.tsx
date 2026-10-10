@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "cn";
 import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
@@ -98,8 +99,11 @@ function GroupBar({
   );
 }
 
+/** Name, what is missing and the bar in three columns. On phones the name and the bar share a line and what is missing goes under them. */
 const ROW =
-  "-mx-5 grid min-h-11 grid-cols-[17rem_minmax(0,1fr)_9rem] items-center gap-6 border-line border-t px-5 py-2 first:border-t-0";
+  "-mx-5 grid min-h-11 grid-cols-[17rem_minmax(0,1fr)_9rem] items-center gap-6 border-line border-t px-5 py-2 first:border-t-0 max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-4 max-md:gap-y-1 max-md:py-3";
+/** The middle column, on a line of its own on phones. */
+const UNDER = "max-md:col-span-2 max-md:row-start-2";
 
 /** "Minor" before a minor group's name, so it reads apart from the program's. */
 const MinorPrefix = ({ minor }: { minor: boolean }) =>
@@ -113,7 +117,7 @@ function lacks(
 ): ReactNode {
   if (group.kind === "required") {
     return (
-      <span className="flex flex-wrap gap-x-3 gap-y-1">
+      <span className={cn("flex flex-wrap gap-x-3 gap-y-1", UNDER)}>
         {group.remaining.map((item) => {
           const codes = typeof item === "string" ? [item] : item.oneOf;
           return (
@@ -141,7 +145,7 @@ function lacks(
   const what = gap > 0 ? `Any ${creditsText(gap)}${where}` : lacking(group);
   return (
     what && (
-      <span className="text-fg-muted">
+      <span className={cn("text-fg-muted", UNDER)}>
         {what} ·{" "}
         <Link href="/next" prefetch={false} className="link">
           See choices
@@ -178,7 +182,7 @@ function missingRows(
                     {COPY.checkRequirement}
                   </span>
                 </span>
-                <span className="text-fg-muted">
+                <span className={cn("text-fg-muted", UNDER)}>
                   {brief(rule.title)}{" "}
                   <span className="whitespace-nowrap">
                     · <CatalogueLink href={program.source} />
@@ -196,7 +200,7 @@ function missingRows(
             {sentence(group.title)}
           </span>
           {what}
-          <span className="flex items-center justify-end gap-3 tabular-nums">
+          <span className="flex items-center justify-end gap-3 tabular-nums max-md:col-start-2 max-md:row-start-1">
             <GroupBar group={group} snapshot={snapshot} />
             <span className="w-16 text-right">
               {gap > 0 && (
@@ -244,7 +248,7 @@ export function PlanSummary({
       <button
         type="button"
         onClick={onShowWarnings}
-        className="rounded-md underline decoration-1 underline-offset-3"
+        className="rounded-md underline decoration-1 underline-offset-3 max-lg:relative max-lg:after:absolute max-lg:after:-inset-x-2 max-lg:after:-inset-y-3"
       >
         Show
       </button>
@@ -269,9 +273,9 @@ export function PlanSummary({
 
   return (
     <div>
-      <div className="flex items-baseline justify-between gap-8">
+      <div className="flex items-baseline justify-between gap-8 max-md:flex-col max-md:gap-2">
         {standing ? (
-          <h1 className="tabular-nums">
+          <h1 className="tabular-nums max-md:text-2xl">
             {standing.progress.creditsDone} of {standing.progress.credits}{" "}
             program credits <Term def={GLOSSARY.withPlan} />
           </h1>
@@ -356,7 +360,16 @@ export function PlanSummary({
                 ? `Your plan is ${creditsText(short)} short`
                 : "What your plan still misses"
             }
-            meta={`${rows.length} ${rows.length === 1 ? "requirement" : "requirements"} still open`}
+            meta={
+              <>
+                <span className="max-md:hidden">
+                  {rows.length}{" "}
+                  {rows.length === 1 ? "requirement" : "requirements"} still
+                  open
+                </span>
+                <span className="md:hidden">{rows.length} open</span>
+              </>
+            }
           >
             <ul>{rows.slice(0, VISIBLE)}</ul>
             {rows.length > VISIBLE && (
