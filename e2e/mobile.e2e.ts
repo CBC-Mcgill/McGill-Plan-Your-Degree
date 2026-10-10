@@ -38,3 +38,14 @@ test("on a phone the header fits, search fills the screen and the menu reaches e
   await expect(page).toHaveURL("/next");
   await expect(menu).toBeHidden();
 });
+
+test("on a phone one tap opens a tooltip and the next closes it", async ({
+  page,
+}) => {
+  await page.goto("/courses/comp-251");
+  const info = page.getByRole("button", { name: /^About / }).first();
+  await info.tap();
+  await expect(page.getByRole("tooltip")).toBeVisible();
+  await info.tap();
+  await expect(page.getByRole("tooltip")).toBeHidden();
+});

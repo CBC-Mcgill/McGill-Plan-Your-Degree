@@ -91,8 +91,10 @@ function Tooltip({
         onPointerDown={(event) => {
           touchOpen.current = event.pointerType === "touch" ? open : null;
         }}
-        onClick={() => {
+        onClick={(event) => {
           if (touchOpen.current === null) return;
+          // Radix closes on click after this handler, which would undo the tap.
+          event.preventDefault();
           onOpenChange(!touchOpen.current);
           touchOpen.current = null;
         }}
@@ -134,9 +136,10 @@ function DefinitionButton({
       <Primitive.Trigger
         asChild
         onFocus={onFocus}
-        onPointerLeave={() => {
+        onPointerLeave={(event) => {
           closedByClick.current = false;
-          openAtPress.current = null;
+          // A finger leaves right after lifting, before the click, so keep the state from the press.
+          if (event.pointerType !== "touch") openAtPress.current = null;
         }}
         onPointerDown={() => {
           openAtPress.current = open;
@@ -153,7 +156,7 @@ function DefinitionButton({
             onOpenChange(!wasOpen);
           }}
           className={cn(
-            "relative inline-flex cursor-help items-center justify-center rounded-full after:absolute after:-inset-1",
+            "relative inline-flex cursor-help items-center justify-center rounded-full after:absolute after:-inset-1 pointer-coarse:after:-inset-3",
             className,
           )}
         >

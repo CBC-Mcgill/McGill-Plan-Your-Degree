@@ -46,7 +46,7 @@ export function MenuItem({
     <DropdownMenu.Item
       onSelect={onSelect}
       disabled={disabled}
-      className="flex h-10 cursor-default select-none items-center gap-4 rounded-md px-3 outline-none data-[disabled]:text-fg-muted data-[highlighted]:selected"
+      className="flex h-10 cursor-default select-none items-center gap-4 rounded-md px-3 outline-none data-[disabled]:text-fg-muted data-[highlighted]:selected pointer-coarse:h-11"
     >
       <span className="flex min-w-0 flex-1 items-center gap-2 whitespace-nowrap">
         {children}
