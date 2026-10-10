@@ -52,7 +52,7 @@ export function SearchField({
         aria-keyshortcuts={shortcut}
         className={cn(
           controlStyles,
-          "w-full pr-9 pl-9 [&::-webkit-search-cancel-button]:hidden",
+          "w-full pr-9 pl-9 max-md:h-11 max-md:pr-11 max-md:text-base [&::-webkit-search-cancel-button]:hidden",
         )}
         {...props}
       />
@@ -61,7 +61,7 @@ export function SearchField({
           type="button"
           onClick={() => onChange("")}
           aria-label="Clear search"
-          className="absolute top-1/2 right-1.5 flex size-6 -translate-y-1/2 items-center justify-center rounded-md text-fg-muted hover:text-fg"
+          className="absolute top-1/2 right-1.5 flex size-6 -translate-y-1/2 items-center justify-center rounded-md text-fg-muted hover:text-fg max-md:right-0 max-md:size-11"
         >
           <X aria-hidden className="size-4" />
         </button>
@@ -81,7 +81,7 @@ function CheckRow({
 }) {
   return (
     // biome-ignore lint/a11y/noLabelWithoutControl: the Radix checkbox inside is the control
-    <label className="flex h-10 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-tint has-focus-visible:bg-tint">
+    <label className="flex h-10 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-tint has-focus-visible:bg-tint max-md:h-11">
       <Checkbox.Root
         data-nav
         checked={checked}
@@ -155,7 +155,8 @@ export function FilterPopover({
           value={value}
           title={value}
           onClear={() => onChange([])}
-          className="max-w-64"
+          // 44px on a phone, the clear button too.
+          className="max-w-64 max-md:h-11 max-md:shrink-0 max-md:[&>button+button]:mr-0 max-md:[&>button+button]:h-11 max-md:[&>button+button]:w-10"
         />
       </Popover.Trigger>
       <Popover.Portal>
@@ -164,9 +165,16 @@ export function FilterPopover({
           sideOffset={4}
           collisionPadding={16}
           onKeyDown={navKeys}
+          // A touch screen keeps its keyboard down until the student taps the search field, so the list stays in view.
+          onOpenAutoFocus={(event) => {
+            if (!matchMedia("(pointer: coarse)").matches) return;
+            event.preventDefault();
+            (event.currentTarget as HTMLElement).focus();
+          }}
           className={cn(
             "z-[85] rounded-lg bg-bg p-1 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none",
             prop === "faculty" ? "w-96" : "w-64",
+            "max-md:w-[calc(100vw-2rem)]",
           )}
         >
           {searchable && (
@@ -181,11 +189,11 @@ export function FilterPopover({
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={`Search ${noun}`}
                 aria-label={`Search ${noun}`}
-                className="h-10 w-full rounded-md bg-transparent pr-3 pl-9 placeholder:text-fg-muted focus-visible:-outline-offset-2"
+                className="h-10 w-full rounded-md bg-transparent pr-3 pl-9 placeholder:text-fg-muted focus-visible:-outline-offset-2 max-md:h-11 max-md:text-base"
               />
             </div>
           )}
-          <div className="max-h-[280px] overflow-y-auto">
+          <div className="max-h-[280px] overflow-y-auto max-md:max-h-[min(352px,50dvh)]">
             {visible.map((option, i) => (
               <Fragment key={option.value}>
                 {option.group && option.group !== visible[i - 1]?.group && (

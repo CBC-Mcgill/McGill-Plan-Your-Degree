@@ -114,8 +114,8 @@ export default async function CoursePage({
   const routes = routesText(course);
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-12">
-      <div className="flex items-start justify-between gap-8">
+    <div className="mx-auto w-full max-w-page px-8 py-12 max-md:px-4 max-md:py-6">
+      <div className="flex items-start justify-between gap-8 max-md:flex-col max-md:gap-4">
         <div className="min-w-0">
           <p className="font-semibold">
             <CourseCode code={course.code} />
@@ -123,15 +123,15 @@ export default async function CoursePage({
           <h1 className="mt-2 max-w-reading">{course.title}</h1>
           <CourseStatusLine course={summary} />
         </div>
-        <div className="mt-8 shrink-0">
+        <div className="mt-8 shrink-0 max-md:mt-0 max-md:empty:hidden">
           <AddToPlan course={summary} />
         </div>
       </div>
 
       <CourseFactsBar course={summary} />
 
-      <div className="mt-6 grid grid-cols-12 items-start gap-6">
-        <div className="col-span-7 flex flex-col gap-6">
+      <div className="mt-6 grid grid-cols-12 items-start gap-6 max-lg:grid-cols-1">
+        <div className="col-span-7 flex flex-col gap-6 max-lg:col-span-1">
           <Section title="About">
             <div className="flex max-w-[68ch] flex-col gap-2">
               {course.description && <p>{course.description}</p>}
@@ -198,7 +198,7 @@ export default async function CoursePage({
         </div>
 
         <Section
-          className="col-span-5"
+          className="col-span-5 max-lg:col-span-1"
           title={
             <Term
               def={{

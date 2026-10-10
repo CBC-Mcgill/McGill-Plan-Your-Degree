@@ -161,9 +161,9 @@ export function BrowseSkeleton({ rows = 12 }: { rows?: number }) {
         Loading courses
       </p>
       <div aria-hidden>
-        <div className={cn(bone, "h-9 w-64")} />
-        <div className="mt-4 flex items-center gap-2">
-          <div className={cn(bone, "h-9 w-80")} />
+        <div className={cn(bone, "h-9 w-64 max-md:h-11 max-md:w-full")} />
+        <div className="mt-4 flex items-center gap-2 max-md:flex-wrap">
+          <div className={cn(bone, "h-9 w-80 max-md:h-11 max-md:w-full")} />
           {["w-24", "w-20", "w-20", "w-24"].map((width, i) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
             <div key={i} className={cn(bone, "h-9", width)} />
