@@ -1,23 +1,24 @@
 import Link from "next/link";
-import { NavLinks } from "@/components/nav-links";
+import { MobileNav, NavLinks } from "@/components/nav-links";
 
-/** The sticky top bar: the logo and the planning pages, search centered between them and Profile on the right. */
+/** The sticky top bar: the logo and the planning pages, search centered between them and Profile on the right. Below 1024px, search and a menu instead. */
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-bg shadow-[0_1px_0_var(--color-line)]">
-      <div className="mx-auto flex h-16 max-w-page items-center gap-8 px-8">
+      <div className="mx-auto flex h-16 max-w-page items-center gap-8 px-8 max-lg:gap-4 max-md:px-4">
         <Link
           href="/"
           className="flex shrink-0 items-center gap-2.5 rounded-md"
         >
           <LogoMark />
-          <span className="font-display font-semibold text-base [font-stretch:112.5%] max-[1259px]:sr-only">
+          <span className="sr-only font-display font-semibold text-base [font-stretch:112.5%] max-lg:not-sr-only min-[1260px]:not-sr-only">
             Plan Your Degree
           </span>
         </Link>
-        <nav aria-label="Main" className="min-w-0 flex-1">
+        <nav aria-label="Main" className="min-w-0 flex-1 max-lg:hidden">
           <NavLinks />
         </nav>
+        <MobileNav />
       </div>
     </header>
   );
