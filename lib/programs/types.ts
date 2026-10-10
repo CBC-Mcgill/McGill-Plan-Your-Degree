@@ -71,6 +71,8 @@ export interface Program {
   /** Total program credits, the lower bound when the page gives a range. */
   credits: number;
   groups: Group[];
+  /** Minors: the most credits that may also count toward the student's program, as the minor's page states. 0 when none may. */
+  overlap?: number;
   /** Written by the program crawler rather than by hand. */
   generated?: true;
 }

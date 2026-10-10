@@ -113,3 +113,23 @@ export const VIEW_TIPS: Partial<Record<View, string>> = {
   "can-take":
     "Courses you can take now: you have the prerequisites, it runs this year and it is an undergraduate course.",
 };
+
+/** "Counts for both" or "Program only" on a minor's course, with the minor's overlap cap when its page or faculty states one. */
+export function shareDefinition(
+  programOnly: boolean,
+  cap: number | undefined,
+): Definition {
+  if (programOnly) {
+    return {
+      label: COPY.programOnly,
+      tip: `This minor lets at most ${COPY.credits(cap ?? 0)} count for your program too, and they are used, so this course counts for your program only.`,
+    };
+  }
+  return {
+    label: COPY.countsForBoth,
+    tip:
+      cap === undefined
+        ? bothTip
+        : `Up to ${COPY.credits(cap)} can count for both your program and this minor.`,
+  };
+}

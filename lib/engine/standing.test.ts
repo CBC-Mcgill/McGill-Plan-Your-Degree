@@ -4,8 +4,9 @@ import meta from "../../data/catalogue/meta.json";
 import type { Course } from "../catalogue/types.ts";
 import type { CourseRecord, Profile, Season } from "../profile/types.ts";
 import { getProgram } from "../programs/index.ts";
+import type { Program } from "../programs/types.ts";
 import { degreeStanding, earnedCredits } from "./credits.ts";
-import { programStanding } from "./progress.ts";
+import { minorOverlap, programStanding } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { canTakeNow } from "./status.ts";
 
@@ -147,4 +148,95 @@ test("a course not offered in the catalogue year is never Can take now", () => {
   expect(canTakeNow(course("COMP 330"), snapshot, meta.catalogueYear)).toBe(
     true,
   );
+});
+
+test("a minor shares the program's courses only up to its overlap cap", () => {
+  const base = {
+    degree: "B.Sc.",
+    catalogueYear: "2026-2027",
+    source: "https://example.com",
+  };
+  const program: Program = {
+    ...base,
+    id: "p-major",
+    name: "P",
+    faculty: "Science",
+    credits: 9,
+    groups: [
+      {
+        title: "Required",
+        kind: "required",
+        credits: 9,
+        courses: ["COMP 202", "COMP 250", "COMP 251"],
+      },
+    ],
+  };
+  const minor = (overlap?: number, faculty = "Science"): Program => ({
+    ...base,
+    id: "m-minor",
+    name: "M",
+    faculty,
+    credits: 12,
+    ...(overlap !== undefined && { overlap }),
+    groups: [
+      {
+        title: "Complementary",
+        kind: "complementary",
+        credits: 12,
+        rules: [
+          {
+            title: "Any",
+            courses: [
+              "COMP 202",
+              "COMP 250",
+              "COMP 251",
+              "COMP 302",
+              "COMP 303",
+            ],
+          },
+        ],
+      },
+    ],
+  });
+  const snapshot = buildSnapshot(
+    ["COMP 202", "COMP 250", "COMP 251", "COMP 302"].map((code) =>
+      record(code, "Fall", 2025),
+    ),
+    [],
+    null,
+    0,
+  );
+  const capped = minorOverlap(
+    minor(3),
+    program,
+    snapshot,
+    catalogue,
+    null,
+    "earned",
+  );
+  expect([capped.shared.size, capped.programOnly.size]).toEqual([1, 2]);
+  expect(
+    programStanding(
+      minor(3),
+      snapshot,
+      catalogue,
+      null,
+      "earned",
+      capped.programOnly,
+    ).creditsDone,
+  ).toBe(6);
+  expect(
+    minorOverlap(minor(), program, snapshot, catalogue, null, "earned")
+      .programOnly.size,
+  ).toBe(0);
+  expect(
+    minorOverlap(
+      minor(undefined, "Arts"),
+      program,
+      snapshot,
+      catalogue,
+      null,
+      "earned",
+    ).shared.size,
+  ).toBe(0);
 });

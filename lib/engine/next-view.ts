@@ -178,10 +178,12 @@ export function nextView(
   term: Term,
   program: Program | null,
   entry: EntryRoute | null = null,
+  /** Courses the program may not count, such as a minor's share past its overlap cap. */
+  exclude?: ReadonlySet<string>,
 ): NextView {
   const next = whatsNext(catalogue, snapshot, term, program, entry);
   const progress = program
-    ? programStanding(program, snapshot, catalogue, entry, "counting")
+    ? programStanding(program, snapshot, catalogue, entry, "counting", exclude)
     : null;
 
   const takeable = new Map(next.mustTake.map((s) => [s.course.code, s]));
@@ -203,6 +205,8 @@ export function nextView(
   const later: Item[] = [];
   for (const item of progress?.remaining ?? []) {
     const codes = typeof item === "string" ? [item] : item.oneOf;
+    // A course the program counts for itself past the minor's cap is taken, so the minor shows it apart.
+    if (codes.every((code) => exclude?.has(code))) continue;
     const entries = codes.flatMap(entryFor);
     const [first] = entries;
     if (!first) continue;

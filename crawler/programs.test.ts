@@ -7,7 +7,7 @@ import {
   validateProgram,
 } from "../lib/programs/validate.ts";
 import { programPaths } from "./discover-programs.ts";
-import { parseProgramPage } from "./parse-program.ts";
+import { overlapOf, parseProgramPage } from "./parse-program.ts";
 
 const BASE = "/en/undergraduate";
 const page = (name: string, path: string) =>
@@ -230,4 +230,65 @@ test("every course in the generated versions of the hand-written programs is in 
       id,
     ).toEqual([]);
   }
+});
+
+test("reads how many credits a minor shares with the program from its page", () => {
+  const cases: [string, number | undefined][] = [
+    [
+      "A maximum of 9 credits of coursework in the student's Major may be double counted with this Minor.",
+      9,
+    ],
+    [
+      "of which not more than 6 credits may be counted for both the Major and the Minor programs.",
+      6,
+    ],
+    ["Up to three courses can be double counted with the major.", 9],
+    [
+      "6 credits of overlap are allowed between the Minor and the primary program.",
+      6,
+    ],
+    [
+      "the Minor can be satisfied with 9 additional credits in the student's major program or a maximum of 12 credits overlap with the major program.",
+      12,
+    ],
+    [
+      "Students may use up to six credits of overlap between the Minor and their primary program.",
+      6,
+    ],
+    ["This Minor permits no overlap with any other programs.", 0],
+    [
+      "The completion of 24 credits is required, of which at least 18 must not overlap with the primary program.",
+      6,
+    ],
+    [
+      "No course overlap between the Major Concentration Mathematics and the Supplementary Minor Concentration in Mathematics is permitted.",
+      0,
+    ],
+    [
+      "Generally, no more than 6 credits of overlap are permitted between the Minor and the primary program. However, the overlap restriction may be relaxed to 9 credits.",
+      6,
+    ],
+    [
+      "Note 1: A maximum of 6-7 credits can be counted for both the student's primary program and for the Minor in Neuroscience.",
+      6,
+    ],
+    [
+      "The Minor program for Science students requires the completion of 24 credits in Psychology, of which no more than 6 may overlap with the primary program.",
+      6,
+    ],
+    [
+      "Up to 6 credits (two courses) may be double-counted towards a degree program.",
+      6,
+    ],
+    [
+      "Students will find courses they may not take for credit because of a substantial overlap of material with a course in their program.",
+      undefined,
+    ],
+    [
+      "Students should consult the Course Overlap information in the Course Requirements section.",
+      undefined,
+    ],
+  ];
+  for (const [text, credits] of cases)
+    expect(overlapOf(text), text).toBe(credits);
 });

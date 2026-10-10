@@ -252,10 +252,12 @@ export function validateProgram(value: unknown): ValidationResult {
     "source",
     "credits",
     "groups",
+    "overlap",
     "generated",
   ]);
   if (program) {
     optionalTrue(program, "generated", "program");
+    optionalNum(program, "overlap", "program", "credits");
     text(
       program,
       "id",

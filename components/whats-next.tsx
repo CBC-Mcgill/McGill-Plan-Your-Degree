@@ -47,6 +47,7 @@ import {
   type CreditSplit,
   creditSplit,
   type GroupProgress,
+  minorOverlap,
   type ProgramProgress,
   programSplit,
   programStanding,
@@ -54,7 +55,7 @@ import {
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { sentence } from "@/lib/format";
-import { GLOSSARY } from "@/lib/glossary";
+import { type Definition, GLOSSARY, shareDefinition } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import {
   currentTerm,
@@ -96,6 +97,10 @@ interface Context {
   facts: ReadonlyMap<string, Fact>;
   /** Courses the program lists or counts, so the minor's rows for them say they count for both. */
   both?: ReadonlySet<string>;
+  /** The program's courses past the minor's overlap cap, which count for the program only. */
+  programOnly?: ReadonlySet<string>;
+  /** The minor's overlap cap, for the tooltips. */
+  cap?: number;
 }
 
 type Heading = "h3" | "h4";
@@ -202,9 +207,22 @@ function Page({
     () => nextView(catalogue, judged, term, program, entry),
     [catalogue, judged, term, program, entry],
   );
+  const overlap = useMemo(
+    () =>
+      minor &&
+      minorOverlap(minor, program, judged, catalogue, entry, "counting"),
+    [minor, program, judged, catalogue, entry],
+  );
+  const overlapWithPlan = useMemo(
+    () =>
+      minor && minorOverlap(minor, program, snapshot, catalogue, entry, "plan"),
+    [minor, program, snapshot, catalogue, entry],
+  );
   const minorView = useMemo(
-    () => minor && nextView(catalogue, judged, term, minor, entry),
-    [catalogue, judged, term, minor, entry],
+    () =>
+      minor &&
+      nextView(catalogue, judged, term, minor, entry, overlap?.programOnly),
+    [catalogue, judged, term, minor, entry, overlap],
   );
   // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
   const withPlan = useMemo(
@@ -216,8 +234,17 @@ function Page({
   );
   const minorWithPlan = useMemo(
     () =>
-      minor ? programStanding(minor, snapshot, catalogue, entry, "plan") : null,
-    [minor, snapshot, catalogue, entry],
+      minor
+        ? programStanding(
+            minor,
+            snapshot,
+            catalogue,
+            entry,
+            "plan",
+            overlapWithPlan?.programOnly,
+          )
+        : null,
+    [minor, snapshot, catalogue, entry, overlapWithPlan],
   );
   const unclaimed = withPlan?.unclaimed ?? [];
   const context: Context = { catalogue, term, planned, facts };
@@ -293,7 +320,16 @@ function Page({
           view={minorView}
           withPlan={minorWithPlan}
           snapshot={snapshot}
-          context={{ ...context, both: programCodes(view) }}
+          context={{
+            ...context,
+            // Once the cap is used, a course still to take would count for the program only.
+            both:
+              overlap && overlap.left <= 0
+                ? overlap.shared
+                : without(programCodes(view), overlap?.programOnly),
+            programOnly: overlap?.programOnly,
+            cap: overlap?.cap,
+          }}
         />
       ),
     });
@@ -600,6 +636,18 @@ function courseFacts(
 
 const flatten = (items: Item[]) =>
   items.flatMap((item) => ("oneOf" in item ? item.oneOf : [item]));
+
+const without = (codes: ReadonlySet<string>, drop?: ReadonlySet<string>) =>
+  drop ? new Set([...codes].filter((code) => !drop.has(code))) : codes;
+
+/** The share label on a minor's row: counts for both, or for the program only past the minor's cap. */
+function shareFor(
+  code: string,
+  { both, programOnly, cap }: Context,
+): Definition | undefined {
+  if (programOnly?.has(code)) return shareDefinition(true, cap);
+  if (both?.has(code)) return shareDefinition(false, cap);
+}
 
 /** Every course the program still lists or already counts, so a minor row for one of them counts for both. */
 function programCodes(view: NextView): ReadonlySet<string> {
@@ -971,13 +1019,14 @@ function ItemRows({
 /** A course still to take: open with Add, planned with Remove in its own term, or not open with why. Under the Planned heading the term alone says it. */
 function Row({
   entry: { course, uncertain, reason },
-  context: { term, planned, both },
+  context,
   plannedBlock = false,
 }: {
   entry: Entry;
   context: Context;
   plannedBlock?: boolean;
 }) {
+  const { term, planned } = context;
   const plannedIn = planned.get(course.code);
   const here = plannedIn !== undefined && termKey(plannedIn) === termKey(term);
   const when = termLabel(term);
@@ -999,7 +1048,7 @@ function Row({
     <PaneRow
       course={course}
       uncertain={uncertain}
-      both={both?.has(course.code)}
+      share={shareFor(course.code, context)}
       note={
         plannedIn
           ? plannedBlock
@@ -1027,7 +1076,7 @@ function PaneRow({
   course,
   title,
   uncertain = false,
-  both = false,
+  share,
   note,
   action,
 }: {
@@ -1035,7 +1084,8 @@ function PaneRow({
   /** Stands in for the course link, for a row with no course behind it. */
   title?: ReactNode;
   uncertain?: boolean;
-  both?: boolean;
+  /** On a minor's row: counts for both, or for the program only. */
+  share?: Definition;
   note: ReactNode;
   action?: ReactNode;
 }) {
@@ -1057,18 +1107,18 @@ function PaneRow({
           </Link>
         )}
         {uncertain && <UncertainFlag />}
-        {both && (
+        {share && (
           <span className="hidden shrink-0 text-fg-muted @3xl:inline">
-            <Defined def={GLOSSARY.countsForBoth} />
+            <Defined def={share} />
           </span>
         )}
       </span>
       <span className="flex w-50 shrink-0 flex-wrap items-start gap-x-2 gap-y-1 text-fg-muted @3xl:w-64">
         {note}
         {/* Too wide beside a title in a narrow row, so it moves under the note there. */}
-        {both && (
+        {share && (
           <span className="@3xl:hidden">
-            <Defined def={GLOSSARY.countsForBoth} />
+            <Defined def={share} />
           </span>
         )}
       </span>
@@ -1101,11 +1151,12 @@ const byCode = (a: Claimed, b: Claimed) => (a.code < b.code ? -1 : 1);
 /** A course a requirement counts, or one no requirement counts, with the student's status and term for it. */
 function CountedRow({
   claimed: { code, credits },
-  context: { catalogue, facts, both },
+  context,
 }: {
   claimed: Claimed;
   context: Context;
 }) {
+  const { catalogue, facts } = context;
   if (code === STANDING) {
     return (
       <PaneRow
@@ -1128,7 +1179,7 @@ function CountedRow({
   return (
     <PaneRow
       course={{ ...course, credits }}
-      both={both?.has(code)}
+      share={shareFor(code, context)}
       note={
         <>
           <StatusBadge status={status} />
@@ -1313,6 +1364,34 @@ function MinorPane({
             />
           </section>
         ))}
+        {context.programOnly && context.programOnly.size > 0 && (
+          <section className="flex flex-col gap-4">
+            <h3 className="text-base">Counts for your program only</h3>
+            <p className="text-fg-muted">
+              This minor shares{" "}
+              {context.cap
+                ? `at most ${COPY.credits(context.cap)}`
+                : "no credits"}{" "}
+              with your program, so these count for your program alone.
+            </p>
+            <ul className="-mx-5 border-line border-t px-5">
+              {[...context.programOnly].sort().map((code) => (
+                <CountedRow
+                  key={code}
+                  claimed={{
+                    code,
+                    credits: context.catalogue.get(code)?.credits ?? 0,
+                  }}
+                  context={{
+                    ...context,
+                    both: undefined,
+                    programOnly: undefined,
+                  }}
+                />
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
     </Card>
   );
