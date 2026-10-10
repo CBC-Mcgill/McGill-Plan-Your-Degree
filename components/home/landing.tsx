@@ -13,7 +13,7 @@ import { REPO_URL } from "@/lib/github";
 import { startProfile } from "@/lib/profile/started";
 import { useReduce } from "./landing/parts";
 import { Story } from "./landing/story";
-import { PlannerWindow } from "./landing/window";
+import { PlanCards, PlannerWindow } from "./landing/window";
 
 /** The calls to action as glass on the paper, see `.glass` and `.glass-red` in globals.css. */
 const GLASS_BUTTON = "glass h-12 rounded-[10px] px-6 text-[15px] text-fg";
@@ -71,22 +71,29 @@ function Hero({
     <div ref={stage} className="relative overflow-hidden">
       <section
         ref={hero}
-        className="relative z-10 px-8 pt-10 pb-10 text-center"
+        className="relative z-10 px-8 pt-10 pb-10 text-center max-md:px-4 max-md:pt-8 max-md:pb-8"
       >
-        <motion.div style={{ opacity: titleOpacity }}>
-          <h1 className="mx-auto mt-6 max-w-[19ch] text-[clamp(3.25rem,5.6vw,4.75rem)] leading-[0.98] tracking-[-0.03em]">
+        {/* A phone's taller hero is still on screen when the fades run, so they stay off there. */}
+        <motion.div
+          style={{ opacity: titleOpacity }}
+          className="max-md:opacity-100!"
+        >
+          <h1 className="mx-auto mt-6 max-w-[19ch] text-[clamp(3.25rem,5.6vw,4.75rem)] leading-[0.98] tracking-[-0.03em] max-md:mt-0 max-md:text-[clamp(2.25rem,10.6vw,3rem)]">
             Plan your whole <span className="mcgill-flow">McGill</span> degree
             in one tab
           </h1>
-          <p className="mt-5 text-fg-muted text-lg">
-            No spreadsheet, no notes doc, no dozen open tabs.
+          <p className="mt-5 text-fg-muted text-lg max-md:text-balance">
+            No spreadsheet, no notes&nbsp;doc, no dozen open tabs.
           </p>
         </motion.div>
-        <motion.div style={{ opacity: actionsOpacity }}>
+        <motion.div
+          style={{ opacity: actionsOpacity }}
+          className="max-md:opacity-100!"
+        >
           {started !== true && (
             <div
               className={cn(
-                "mt-7 flex justify-center gap-3",
+                "mt-7 flex justify-center gap-3 max-md:flex-col",
                 untilLoaded(started),
               )}
             >
@@ -111,7 +118,7 @@ function Hero({
           <Facts stars={stars} className="mt-6" />
         </motion.div>
       </section>
-      <div className="relative mx-auto max-w-page px-8 pb-28 [perspective:1600px]">
+      <div className="relative mx-auto max-w-page px-8 pb-28 [perspective:1600px] max-md:px-4 max-md:pb-16">
         <p className="sr-only">
           A sample planner: a transcript drops in, past terms fill with
           completed courses, the next terms fill with planned courses whose
@@ -123,11 +130,12 @@ function Hero({
         />
         <motion.div
           aria-hidden
-          className="mx-auto max-w-[68rem] will-change-transform"
+          className="mx-auto max-w-[68rem] will-change-transform max-md:hidden"
           style={reduce ? undefined : { rotateX, scale, y }}
         >
           <PlannerWindow reduce={reduce} />
         </motion.div>
+        <PlanCards className="md:hidden" />
       </div>
     </div>
   );
@@ -148,16 +156,16 @@ function Facts({
   const count = stars === null ? null : stars.toLocaleString("en-US");
   return (
     <ul
-      className={`flex flex-wrap items-center justify-center gap-x-9 gap-y-3 text-left ${className}`}
+      className={`flex flex-wrap items-center justify-center gap-x-9 gap-y-3 text-left max-md:flex-col max-md:items-stretch max-md:gap-y-4 ${className}`}
     >
-      <li className="flex items-center gap-3">
+      <li className="flex items-center gap-3 max-md:px-4">
         <FactText
           icon={<Gift />}
           title="100% free"
           note="No account, no fees"
         />
       </li>
-      <li className="flex items-center gap-3">
+      <li className="flex items-center gap-3 max-md:px-4">
         <FactText
           icon={<ShieldCheck />}
           title="Your data stays in your browser"
@@ -179,7 +187,7 @@ function Facts({
             title="Open source"
             note="Code on GitHub"
           />
-          <span className="h-8 w-px bg-line" />
+          <span className="h-8 w-px bg-line max-md:ml-auto" />
           {count !== null && (
             <span className="flex items-center gap-1.5 font-semibold tabular-nums">
               <Star className="size-4" strokeWidth={2} />
@@ -236,7 +244,7 @@ function FinalCall({
   return (
     <section
       className={cn(
-        "relative overflow-hidden px-8 py-28 text-center",
+        "relative overflow-hidden px-8 py-28 text-center max-md:px-4 max-md:pt-12 max-md:pb-16",
         className,
       )}
     >
@@ -245,10 +253,10 @@ function FinalCall({
         className="pointer-events-none absolute top-1/2 left-1/2 h-[28rem] w-[64rem] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side_at_40%_50%,rgb(218_26_46/0.08),transparent),radial-gradient(closest-side_at_62%_50%,rgb(139_124_235/0.1),transparent)]"
       />
       <div className="relative">
-        <h2 className="font-display font-extrabold text-[44px] leading-[50px] tracking-[-0.025em] [font-stretch:112.5%]">
+        <h2 className="font-display font-extrabold text-[44px] leading-[50px] tracking-[-0.025em] [font-stretch:112.5%] max-md:text-[32px] max-md:leading-[38px]">
           Start mapping your degree
         </h2>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex justify-center max-md:flex-col">
           <Button asChild className={`glass-red ${GLASS_BUTTON} text-white`}>
             <Link href="/profile">{COPY.importTranscript}</Link>
           </Button>

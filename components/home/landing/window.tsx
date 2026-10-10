@@ -99,6 +99,24 @@ export function PlannerWindow({ reduce }: { reduce: boolean }) {
   );
 }
 
+/** The phone's stand-in for the window: the finished plan as flat cards, with no loop. */
+export function PlanCards({ className }: { className?: string }) {
+  return (
+    <div
+      aria-hidden
+      className={cn(
+        "relative rounded-xl bg-page p-3 text-[13px] text-fg leading-[18px] shadow-[0_24px_48px_-20px_rgb(23_32_54/0.3),0_0_0_1px_rgb(23_32_54/0.08)]",
+        className,
+      )}
+    >
+      <Summary filled={PATH.length} />
+      <div className="mt-3">
+        <Path filled={PATH.length} />
+      </div>
+    </div>
+  );
+}
+
 /** The window's title bar and the app's page tabs with the Planner selected. No logo, since the real header sits right above. */
 function Chrome() {
   return (
@@ -139,7 +157,12 @@ function Page({ filled }: { filled: number }) {
 /** "Your plan covers N of 90 credits" over a bar split in the status colors, one slice per term, and the graduation term. */
 function Summary({ filled }: { filled: number }) {
   return (
-    <div className={cn(CARD, "flex items-center gap-6 px-5 py-3.5")}>
+    <div
+      className={cn(
+        CARD,
+        "flex items-center gap-6 px-5 py-3.5 max-md:flex-col max-md:items-stretch max-md:gap-3",
+      )}
+    >
       <div className="min-w-0 flex-1">
         <p className="font-semibold text-[14px] leading-5">
           Your plan covers{" "}
@@ -172,9 +195,9 @@ function Summary({ filled }: { filled: number }) {
           ))}
         </div>
       </div>
-      <div className="w-36 shrink-0 border-line border-l pl-6">
+      <div className="w-36 shrink-0 border-line border-l pl-6 max-md:flex max-md:w-auto max-md:items-center max-md:justify-between max-md:border-t max-md:border-l-0 max-md:pt-3 max-md:pl-0">
         <p className="text-[12px] text-fg-muted leading-4">Graduation</p>
-        <p className="mt-0.5 flex items-center gap-1.5 font-semibold">
+        <p className="mt-0.5 flex items-center gap-1.5 font-semibold max-md:mt-0">
           <GraduationCap className="size-4" strokeWidth={2} />
           {termName(GRADUATION)}
         </p>
@@ -355,6 +378,7 @@ function TermCard({ filled }: { filled: number }) {
                       key={code}
                       code={code}
                       on
+                      className={k > 1 ? "max-lg:hidden" : undefined}
                       delay={0.35 + 0.05 * j + 0.1 * k}
                     />
                   ))}
