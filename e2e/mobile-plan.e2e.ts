@@ -93,6 +93,7 @@ test("on a phone a visitor can start a plan and gets the term strip", async ({
   page,
 }) => {
   await page.goto("/plan");
+  await expectNoSideScroll(page);
   await page.getByRole("button", { name: "Start without a transcript" }).tap();
 
   const terms = page.getByRole("tablist", { name: "Terms" });
