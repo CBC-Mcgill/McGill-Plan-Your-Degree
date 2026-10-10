@@ -48,11 +48,18 @@ const STEPS: { title: string; description: string; Visual: Visual }[] = [
 ];
 
 const HEADLINE =
-  "font-display font-bold text-[40px] leading-[46px] tracking-[-0.02em] [font-stretch:112.5%] max-[1180px]:text-[31px] max-[1180px]:leading-9";
+  "font-display font-bold text-[40px] leading-[46px] tracking-[-0.02em] [font-stretch:112.5%] max-[1180px]:text-[31px] max-[1180px]:leading-9 max-md:text-[26px] max-md:leading-8";
 
-/** The three sections as one pinned scroll story: the headlines on the left light up in turn while the visual on the right morphs. With reduced motion, three plain sections. */
+/** The three sections as one pinned scroll story: the headlines on the left light up in turn while the visual on the right morphs. With reduced motion, and on phones, three plain sections. */
 export function Story({ reduce }: { reduce: boolean }) {
-  return reduce ? <Stacked /> : <Pinned />;
+  return reduce ? (
+    <Stacked />
+  ) : (
+    <>
+      <Pinned />
+      <Stacked className="md:hidden" />
+    </>
+  );
 }
 
 function Pinned() {
@@ -89,7 +96,7 @@ function Pinned() {
   }, [progress]);
 
   return (
-    <section ref={ref} className="relative h-[240vh] pt-16 pb-16">
+    <section ref={ref} className="relative h-[240vh] pt-16 pb-16 max-md:hidden">
       {/* A 31rem pane centered in the space under the header. */}
       <div
         ref={pinned}
@@ -144,24 +151,30 @@ function Pinned() {
   );
 }
 
-function Stacked() {
+function Stacked({ className }: { className?: string }) {
   return (
     // initial={false} renders every visual straight in its finished frame.
     <AnimatePresence initial={false}>
       <div
         key="still"
-        className="mx-auto flex w-full max-w-page flex-col gap-24 px-8 py-24"
+        className={cn(
+          "mx-auto flex w-full max-w-page flex-col gap-24 px-8 py-24 max-md:gap-16 max-md:px-4 max-md:pt-0 max-md:pb-8",
+          className,
+        )}
       >
         {STEPS.map(({ title, description, Visual }) => (
           <section
             key={title}
-            className="grid grid-cols-[minmax(0,5fr)_minmax(0,7fr)] items-center gap-16 max-[1180px]:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] max-[1180px]:gap-12"
+            className="grid grid-cols-[minmax(0,5fr)_minmax(0,7fr)] items-center gap-16 max-[1180px]:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] max-[1180px]:gap-12 max-md:grid-cols-1 max-md:gap-5"
           >
             <div>
               <h2 className={HEADLINE}>{title}</h2>
               <p className="sr-only">{description}</p>
             </div>
-            <div aria-hidden className="relative flex h-[29rem] items-center">
+            <div
+              aria-hidden
+              className="relative flex h-[29rem] items-center max-md:h-auto"
+            >
               <Visual on />
             </div>
           </section>
@@ -185,7 +198,7 @@ function Transcript({ on }: { on: boolean }) {
   return (
     <div className="relative h-full w-full">
       <motion.div
-        className="absolute top-1/2 left-0 w-[12.5rem] -translate-y-1/2"
+        className="absolute top-1/2 left-0 w-[12.5rem] -translate-y-1/2 max-md:hidden"
         initial={false}
         animate={{ rotate: on ? -6 : -2, x: on ? 0 : 40 }}
         transition={{ duration: 0.6, ease: EASE }}
@@ -198,7 +211,7 @@ function Transcript({ on }: { on: boolean }) {
       <div
         className={cn(
           CARD,
-          "absolute top-1/2 right-0 flex h-[27rem] w-[calc(100%-10.5rem)] -translate-y-1/2 flex-col overflow-hidden max-[1180px]:w-[calc(100%-7.5rem)]",
+          "absolute top-1/2 right-0 flex h-[27rem] w-[calc(100%-10.5rem)] -translate-y-1/2 flex-col overflow-hidden max-[1180px]:w-[calc(100%-7.5rem)] max-md:static max-md:h-[22rem] max-md:w-full max-md:translate-y-0",
         )}
       >
         <div className={BAND}>
@@ -283,7 +296,9 @@ function Next({ on }: { on: boolean }) {
     <div className={cn(CARD, "w-full overflow-hidden")}>
       <div className={BAND}>
         <span className="font-semibold">What's next for {termName(1)}</span>
-        <span className="ml-auto text-fg-muted">Prerequisites checked</span>
+        <span className="ml-auto text-fg-muted max-md:hidden">
+          Prerequisites checked
+        </span>
       </div>
       {NEXT.map((course, i) => {
         const status = course.missing ? "locked" : "available";
@@ -378,7 +393,7 @@ function Path({ on }: { on: boolean }) {
         {PATH.map((term, i) => (
           <motion.div
             key={term.offset}
-            className="flex min-h-11 items-center gap-2.5 px-2 py-1 max-[1180px]:gap-2"
+            className="flex min-h-11 items-center gap-2.5 px-2 py-1 max-[1180px]:gap-2 max-md:grid max-md:grid-cols-[1rem_minmax(0,1fr)] max-md:gap-y-1.5 max-md:py-2"
             initial={{ opacity: 0, x: -16 }}
             animate={on ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
             transition={{
@@ -387,7 +402,7 @@ function Path({ on }: { on: boolean }) {
               ease: EASE,
             }}
           >
-            <span className="relative -my-1 flex w-4 shrink-0 items-center justify-center self-stretch">
+            <span className="relative -my-1 flex w-4 shrink-0 items-center justify-center self-stretch max-md:row-span-2 max-md:-my-2 max-md:items-start max-md:pt-2.5">
               {i > 0 && <Line top done={term.offset <= 0} />}
               <Line top={false} done={(PATH[i + 1]?.offset ?? 1) <= 0} />
               <StatusIcon status={term.status} size={16} />
@@ -407,8 +422,8 @@ function Path({ on }: { on: boolean }) {
             </span>
           </motion.div>
         ))}
-        <div className="flex h-11 items-center gap-2.5 px-2 max-[1180px]:gap-2">
-          <span className="relative flex h-full w-4 shrink-0 items-center justify-center">
+        <div className="flex h-11 items-center gap-2.5 px-2 max-[1180px]:gap-2 max-md:h-auto max-md:items-start max-md:py-2">
+          <span className="relative flex h-full w-4 shrink-0 items-center justify-center max-md:-my-2 max-md:h-auto max-md:items-start max-md:self-stretch max-md:pt-2.5">
             <Line top done={false} />
             <motion.span
               className="relative grid size-4 place-items-center rounded-full bg-completed text-white"
@@ -447,7 +462,8 @@ function Line({ top, done }: { top: boolean; done: boolean }) {
     <span
       className={cn(
         "absolute left-1/2 h-[calc(50%-0.5rem)] w-0.5 -translate-x-1/2",
-        top ? "top-0" : "bottom-0",
+        // On phones the icon sits 10px down, beside the term's name.
+        top ? "top-0 max-md:h-2.5" : "bottom-0 max-md:top-6.5 max-md:h-auto",
         done ? "bg-completed" : "bg-fg-subtle/35",
       )}
     />

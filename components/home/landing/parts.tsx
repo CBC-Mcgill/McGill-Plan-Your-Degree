@@ -183,10 +183,12 @@ export function Check({
   code,
   on,
   delay = 0,
+  className,
 }: {
   code: string;
   on: boolean;
   delay?: number;
+  className?: string;
 }) {
   const ease = { delay, duration: 0.3, ease: [0.2, 0.7, 0.2, 1] } as const;
   return (
@@ -194,7 +196,10 @@ export function Check({
       initial={{ opacity: 0, scale: 0.8 }}
       animate={on ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
       transition={ease}
-      className="inline-flex h-5 shrink-0 items-center gap-1 rounded-[5px] pr-1.5 pl-1 font-medium text-[12px] text-completed leading-none"
+      className={cn(
+        "inline-flex h-5 shrink-0 items-center gap-1 rounded-[5px] pr-1.5 pl-1 font-medium text-[12px] text-completed leading-none",
+        className,
+      )}
       style={{ background: "color-mix(in oklab, var(--completed) 11%, white)" }}
     >
       <svg viewBox="0 0 14 14" className="size-3" aria-hidden>
