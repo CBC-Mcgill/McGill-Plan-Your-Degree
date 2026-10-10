@@ -35,9 +35,10 @@ export const CONTEXT: Record<ContextKind, { label: string; icon: LucideIcon }> =
   };
 
 const menuItem =
-  "flex cursor-pointer select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none data-[highlighted]:bg-[color-mix(in_oklab,var(--ring)_10%,white)] data-[highlighted]:shadow-[inset_2px_0_0_var(--ring)]";
+  "flex cursor-pointer select-none items-center gap-2.5 rounded-md px-2.5 py-2 text-sm outline-none data-[highlighted]:bg-[color-mix(in_oklab,var(--ring)_10%,white)] data-[highlighted]:shadow-[inset_2px_0_0_var(--ring)] max-md:py-3";
+/** On a phone the 32px buttons take taps across 44px, without growing. */
 const iconButton =
-  "grid size-8 place-items-center rounded-md transition-[background-color,box-shadow,translate] duration-100 motion-reduce:transition-none [&_svg]:size-4";
+  "grid size-8 place-items-center rounded-md transition-[background-color,box-shadow,translate] duration-100 motion-reduce:transition-none max-md:relative max-md:after:absolute max-md:after:-inset-1.5 [&_svg]:size-4";
 
 /** Credits earned, advanced standing included, using the catalogue for records that do not state them. */
 function ProfileDetail({
@@ -126,7 +127,7 @@ export function Composer({
                     type="button"
                     aria-label={`Remove ${label}`}
                     onClick={() => onToggle(kind)}
-                    className="grid size-6 shrink-0 place-items-center rounded-[6px] text-fg-muted transition-[background-color,color] hover:bg-muted hover:text-fg"
+                    className="grid size-6 shrink-0 place-items-center rounded-[6px] text-fg-muted transition-[background-color,color] hover:bg-muted hover:text-fg max-md:relative max-md:after:absolute max-md:after:-inset-2.5"
                   >
                     <X aria-hidden className="size-3.5" />
                   </button>
@@ -199,12 +200,13 @@ export function Composer({
           </DropdownMenu.Root>
 
           <div className="ml-auto flex items-center gap-1.5">
+            {/* A phone drops the mode picker, which does nothing yet. */}
             <Tooltip content="Coming soon">
               <button
                 type="button"
                 aria-label="Mode, Balanced"
                 aria-disabled
-                className="flex h-8 cursor-not-allowed items-center gap-1.5 rounded-md px-2.5 font-medium text-fg-muted text-sm opacity-50"
+                className="flex h-8 cursor-not-allowed items-center gap-1.5 rounded-md px-2.5 font-medium text-fg-muted text-sm opacity-50 max-md:hidden"
               >
                 Balanced
                 <ChevronDown aria-hidden className="size-4" />

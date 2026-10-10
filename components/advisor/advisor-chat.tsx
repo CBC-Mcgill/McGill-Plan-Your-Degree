@@ -18,7 +18,7 @@ import {
   type ContextKind,
 } from "@/components/advisor/composer";
 import { AssistantMessage, UserMessage } from "@/components/advisor/message";
-import { Sidebar } from "@/components/advisor/sidebar";
+import { PhoneChatBar, Sidebar } from "@/components/advisor/sidebar";
 import { Spark } from "@/components/advisor/spark";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
@@ -121,26 +121,32 @@ export function AdvisorChat() {
     textareaRef.current?.focus();
   }
 
-  // The viewport less the header (4rem), so the chat fills the screen and the footer waits below it.
+  // The viewport less the header (4rem), so the chat fills the screen and the footer waits below it. On a phone the six suggestions need more, so the empty chat grows with the page.
   return (
-    <div className="flex h-[calc(100dvh-4rem)] min-h-[36rem] border-border border-y bg-page">
-      <Sidebar onNewChat={newChat} />
+    <div
+      className={cn(
+        "flex h-[calc(100dvh-4rem)] min-h-[36rem] border-border border-y bg-page max-md:min-h-0 max-md:flex-col",
+        empty && "max-md:h-auto max-md:min-h-[calc(100dvh-4rem)]",
+      )}
+    >
+      <Sidebar onNewChat={newChat} className="max-md:hidden" />
+      <PhoneChatBar onNewChat={newChat} />
       <section
         aria-label="Advisor chat"
         className={cn(
-          "flex min-w-0 flex-1 flex-col",
-          empty && "justify-center pb-12",
+          "flex min-w-0 flex-1 flex-col max-md:min-h-0",
+          empty && "justify-center pb-12 max-md:pt-4 max-md:pb-8",
         )}
       >
         {empty ? (
-          <div className="mx-auto w-full max-w-3xl px-6 pb-8">
+          <div className="mx-auto w-full max-w-3xl px-6 pb-8 max-md:px-4 max-md:pb-6">
             <h1
               className={cn(
-                "flex items-center justify-center gap-3.5 font-normal font-(family-name:--font-newsreader) font-stretch-normal text-5xl tracking-normal transition-opacity duration-300 motion-reduce:transition-none",
+                "flex items-center justify-center gap-3.5 font-normal font-(family-name:--font-newsreader) font-stretch-normal text-5xl tracking-normal transition-opacity duration-300 motion-reduce:transition-none max-md:gap-2.5 max-md:text-4xl",
                 greeting ? "opacity-100" : "opacity-0",
               )}
             >
-              <Spark className="size-9 text-primary" />
+              <Spark className="size-9 text-primary max-md:size-7" />
               {greeting ?? "Hello"}
             </h1>
             <p className="mt-3 text-center text-base text-fg-muted">
@@ -161,7 +167,7 @@ export function AdvisorChat() {
               : "min-h-0 flex-1 overflow-y-auto overscroll-contain",
           )}
         >
-          <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-6 py-8">
+          <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-6 py-8 max-md:px-4 max-md:py-4">
             {turns.map(({ id, prompt }) => (
               <div key={id} className="flex flex-col gap-6">
                 <UserMessage text={prompt} />
@@ -175,7 +181,11 @@ export function AdvisorChat() {
         <motion.div
           layout="position"
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className={cn("mx-auto w-full max-w-3xl px-6", !empty && "pt-2 pb-4")}
+          className={cn(
+            "mx-auto w-full max-w-3xl px-6 max-md:px-4",
+            !empty &&
+              "pt-2 pb-4 max-md:pb-[max(1rem,env(safe-area-inset-bottom))]",
+          )}
         >
           <Composer
             value={draft}
@@ -192,7 +202,7 @@ export function AdvisorChat() {
         </motion.div>
 
         {empty && (
-          <ul className="mx-auto mt-6 grid w-full max-w-3xl grid-cols-2 gap-3 px-6">
+          <ul className="mx-auto mt-6 grid w-full max-w-3xl grid-cols-2 gap-3 px-6 max-md:grid-cols-1 max-md:gap-2 max-md:px-4">
             {SUGGESTIONS.map(({ title, line, icon: Icon, prompt }) => (
               <li key={title}>
                 <button
