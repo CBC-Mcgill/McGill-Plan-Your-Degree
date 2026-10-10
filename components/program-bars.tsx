@@ -13,7 +13,14 @@ export interface CreditBar {
   courses?: Record<keyof CreditSplit, string[]>;
 }
 
-/** The program's credits bar, and the minor's beside it at the same level when the student has one. */
+/** Gives each legend item of the StatusBars inside a 44px tap target below 1024px. */
+const LEGEND_TAPS =
+  "max-lg:[&_button]:relative max-lg:[&_button]:after:absolute max-lg:[&_button]:after:inset-x-0 max-lg:[&_button]:after:-inset-y-3";
+
+/** Wraps a StatusBar whose legend sits beside it, and moves the legend under the bar below 768px. */
+export const BAR_WITH_LEGEND = `${LEGEND_TAPS} max-md:[&>div]:flex-col max-md:[&>div]:items-stretch max-md:[&>div]:gap-2`;
+
+/** The program's credits bar, and the minor's beside it at the same level when the student has one. They stack below 768px. */
 export function ProgramBars({
   program,
   minor,
@@ -23,19 +30,21 @@ export function ProgramBars({
 }) {
   if (!minor) {
     return (
-      <StatusBar
-        {...program.split}
-        total={program.total}
-        legend
-        courses={program.courses}
-        className="w-80"
-      />
+      <div className={BAR_WITH_LEGEND}>
+        <StatusBar
+          {...program.split}
+          total={program.total}
+          legend
+          courses={program.courses}
+          className="w-80 max-md:w-full"
+        />
+      </div>
     );
   }
   return (
     <section
       aria-label="Credit progress"
-      className="grid max-w-[60rem] grid-cols-2 gap-x-12"
+      className={`grid max-w-[60rem] grid-cols-2 gap-x-12 max-md:grid-cols-1 max-md:gap-y-5 ${LEGEND_TAPS}`}
     >
       {[program, minor].map((bar, index) => (
         <div key={index === 0 ? "program" : "minor"}>
