@@ -3,6 +3,7 @@
 import { ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ImportNotice } from "@/components/profile/import-notice";
+import { PAGE } from "@/components/profile/layout";
 import type { ImportFlow } from "@/components/profile/use-import-flow";
 import { Button } from "@/components/ui/button";
 import { FileButton } from "@/components/ui/file-button";
@@ -52,25 +53,29 @@ export function ImportScreen({
   const dragging = usePageDrop(flow.importFile);
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-12">
+    <div className={PAGE}>
       <h1>{COPY.importTranscript}</h1>
       <p className="mt-2 text-fg-muted">Your courses fill in on their own.</p>
 
-      <div className="mt-8 grid grid-cols-2 items-start gap-12">
+      <div className="mt-8 grid grid-cols-2 items-start gap-12 max-md:mt-6 max-md:grid-cols-1 max-md:gap-10">
         <div>
           <FileButton
             data-import
             accept="application/pdf,.pdf"
             onFile={flow.importFile}
             disabled={flow.reading}
+            className="max-md:h-11 max-md:w-full"
           >
             Choose your transcript PDF
           </FileButton>
-          <p className="mt-2 text-fg-muted">or drop it anywhere on this page</p>
+          {/* A phone has nothing to drag a file from. */}
+          <p className="mt-2 text-fg-muted max-md:hidden">
+            or drop it anywhere on this page
+          </p>
           <div className="mt-4 empty:hidden">
             <ImportNotice reading={flow.reading} error={flow.error} steps />
           </div>
-          <div className="mt-6 flex items-center gap-2">
+          <div className="mt-6 flex items-center gap-2 max-md:flex-col max-md:items-stretch max-md:gap-3 max-md:[&>button]:h-11">
             <Button variant="secondary" onClick={onStartEmpty}>
               {COPY.startWithout}
             </Button>

@@ -78,9 +78,10 @@ export function Toaster() {
   }, []);
 
   return (
+    // On a phone a toast sits above the transcript review's save bar instead of over Save.
     <div
       aria-live="polite"
-      className="fixed bottom-6 left-6 z-[70] max-md:inset-x-4 max-md:bottom-4"
+      className="fixed bottom-6 left-6 z-[70] max-md:inset-x-4 max-md:bottom-4 max-md:[body:has([data-save-bar])_&]:bottom-[calc(7rem+env(safe-area-inset-bottom))]"
     >
       {item && <ToastCard key={item.id} item={item} />}
     </div>
@@ -105,7 +106,7 @@ function ToastCard({ item }: { item: Toast }) {
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
-      className="flex h-10 items-center gap-4 rounded-md bg-fg pr-1 pl-4 text-white shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
+      className="flex h-10 items-center gap-4 rounded-md bg-fg pr-1 pl-4 text-white shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none max-md:h-12 max-md:justify-between"
     >
       {item.message}
       {item.action ? (
@@ -114,7 +115,7 @@ function ToastCard({ item }: { item: Toast }) {
           title={`${item.action.label} (${shortcut})`}
           aria-keyshortcuts={isMac() ? "Meta+Z" : "Control+Z"}
           onClick={() => act(item)}
-          className="h-8 rounded-md px-3 font-semibold underline-offset-3 hover:underline focus-visible:outline-white"
+          className="h-8 rounded-md px-3 font-semibold underline-offset-3 hover:underline focus-visible:outline-white max-md:h-11 max-md:px-4"
         >
           {item.action.label}
         </button>

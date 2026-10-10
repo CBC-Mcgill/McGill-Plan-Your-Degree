@@ -11,7 +11,11 @@ export function CatalogueError() {
       tone="danger"
       role="alert"
       action={
-        <Button variant="secondary" onClick={retryCatalogue}>
+        <Button
+          variant="secondary"
+          onClick={retryCatalogue}
+          className="max-md:h-11"
+        >
           Retry
         </Button>
       }

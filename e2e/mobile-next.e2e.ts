@@ -56,10 +56,11 @@ test("a visitor sees the import screen", async ({ page }) => {
   const main = page.getByRole("main");
   await expect(
     main.getByRole("heading", { level: 1, name: "See what you can take next" }),
-  ).toBeAttached();
+  ).toBeVisible();
   await expect(
     main.getByRole("link", { name: "Import your transcript" }),
   ).toBeVisible();
+  await expectNoSideScroll(page);
 });
 
 test("on a phone the requirements are a list that opens one pane at a time", async ({

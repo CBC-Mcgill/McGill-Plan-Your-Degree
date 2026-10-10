@@ -24,8 +24,8 @@ export function NoProfile({
 }) {
   const next = sampleTerm(1);
   return (
-    <div className="grid grid-cols-[minmax(0,1fr)_33rem] items-start gap-10 xl:gap-14">
-      <div className="pt-4">
+    <div className="grid grid-cols-[minmax(0,1fr)_33rem] items-start gap-10 max-lg:grid-cols-1 max-md:gap-8 xl:gap-14">
+      <div className="pt-4 max-md:pt-0">
         <h1>{title}</h1>
         <p className="mt-3 max-w-[30rem] text-pretty text-fg-muted">{lede}</p>
         <div className="mt-6">
@@ -53,7 +53,7 @@ export function NoProfile({
 function StartActions() {
   return (
     <>
-      <div className="flex flex-wrap items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4 max-md:flex-col max-md:items-stretch max-md:gap-3 max-md:[&>*]:h-11">
         <Button asChild>
           <Link href="/profile">{COPY.importTranscript}</Link>
         </Button>
@@ -118,8 +118,12 @@ function SampleRow({
         <CourseCode code={code} />
       </span>
       <span className="min-w-0 flex-1 truncate">{title}</span>
+      {/* A phone keeps the glyph and drops the word, so the title still fits. */}
       {word && (
-        <span className="shrink-0" style={{ color: STATUS[status].text }}>
+        <span
+          className="shrink-0 max-md:hidden"
+          style={{ color: STATUS[status].text }}
+        >
           {word}
         </span>
       )}
@@ -202,7 +206,7 @@ const PATH: { offset: number; status: Status; detail: string }[] = [
 function PlanSample() {
   const next = termLabel(sampleTerm(1));
   return (
-    <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] gap-5">
+    <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] gap-5 max-md:grid-cols-1">
       <ol>
         {PATH.map(({ offset, status, detail }) => (
           <li
@@ -237,7 +241,8 @@ function PlanSample() {
           </span>
         </li>
       </ol>
-      <div className="pt-1">
+      {/* A phone shows the path alone. */}
+      <div className="pt-1 max-md:hidden">
         <Label title={next} meta="3 of 17 credits" />
         <ul>
           <SampleRow

@@ -110,7 +110,7 @@ function Thinking() {
         aria-expanded={open}
         aria-controls={id}
         onClick={() => setOpen(!open)}
-        className="-ml-1.5 flex items-center gap-1 rounded-md px-1.5 py-1 text-[13px] text-fg-muted transition-[color] hover:text-fg"
+        className="-ml-1.5 flex items-center gap-1 rounded-md px-1.5 py-1 text-[13px] text-fg-muted transition-[color] hover:text-fg max-md:-my-2.5 max-md:py-3.5"
       >
         <ChevronRight
           aria-hidden
@@ -174,7 +174,7 @@ function Action({
         aria-label={label}
         aria-disabled={onClick ? undefined : true}
         onClick={onClick}
-        className="grid size-7 place-items-center rounded-md text-fg-muted transition-[background-color,color] hover:bg-subtle hover:text-fg aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:hover:bg-transparent aria-disabled:hover:text-fg-muted [&_svg]:size-4"
+        className="grid size-7 place-items-center rounded-md text-fg-muted transition-[background-color,color] hover:bg-subtle hover:text-fg aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:hover:bg-transparent aria-disabled:hover:text-fg-muted max-md:size-11 [&_svg]:size-4"
       >
         {children}
       </button>
@@ -249,7 +249,7 @@ export function AssistantMessage({ prompt }: { prompt: string }) {
             </p>
           ))}
         </motion.div>
-        <div className="mt-2 -ml-2 flex items-center gap-0.5 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+        <div className="mt-2 -ml-2 flex items-center gap-0.5 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 pointer-coarse:opacity-100 max-md:mt-1 max-md:-ml-3.5 max-md:gap-0">
           <CopyAction text={plainText(paragraphs)} />
           <Action label="Retry">
             <RotateCcw aria-hidden />

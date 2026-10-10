@@ -1,3 +1,4 @@
+import { usePhone } from "@/components/profile/layout";
 import type { ImportFailure } from "@/components/profile/use-import-flow";
 import { Notice } from "@/components/ui/notice";
 
@@ -11,6 +12,8 @@ export function ImportNotice({
   error: ImportFailure | null;
   steps?: boolean;
 }) {
+  // The steps sit beside the notice, or under it on a phone.
+  const where = usePhone() ? "below" : "on the right";
   if (reading) {
     return (
       <Notice tone="info" role="status">
@@ -24,7 +27,7 @@ export function ImportNotice({
       {error.text}
       {steps &&
         error.code === "not-transcript" &&
-        " Follow the steps on the right to save the right page."}
+        ` Follow the steps ${where} to save the right page.`}
     </Notice>
   );
 }

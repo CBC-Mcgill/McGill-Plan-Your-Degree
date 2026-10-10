@@ -323,3 +323,12 @@
     animation: none;
   }
 }
+
+/* iOS zooms into any field under 16px when it takes focus, so phones get 16px text in every field. */
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}

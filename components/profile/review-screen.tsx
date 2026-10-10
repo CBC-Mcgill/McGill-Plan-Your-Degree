@@ -6,6 +6,7 @@ import {
   PAGE_GRID,
   PageSkeleton,
   SIDE_PANEL,
+  usePhone,
 } from "@/components/profile/layout";
 import {
   ProgramFields,
@@ -60,6 +61,7 @@ function Review({
 }: ReviewProps & { programs: ProgramSummary[] }) {
   const router = useRouter();
   const catalogue = useCatalogue();
+  const phone = usePhone();
   // Saving keeps manual records and replaces transcript ones, so a re-import says so.
   const [reimport] = useState(() =>
     useProfileStore.getState().records.some((r) => r.source === "transcript"),
@@ -111,6 +113,10 @@ function Review({
     .filter(Boolean)
     .join(", ");
   const unread = transcript.unrecognized;
+  const replaces =
+    "Saving replaces your imported courses and keeps the ones you added by hand.";
+  // A phone's save bar has room for one short line, so the re-import note moves up with the others.
+  const reimportNotice = reimport && phone;
 
   function save() {
     const store = useProfileStore.getState();
@@ -133,8 +139,8 @@ function Review({
   }
 
   return (
-    <div className="flex flex-1 flex-col">
-      <div className="mx-auto w-full max-w-page flex-1 px-8 pt-12 pb-12">
+    <div className="group/review flex flex-1 flex-col">
+      <div className="mx-auto w-full max-w-page flex-1 px-8 pt-12 pb-12 max-md:px-4 max-md:pt-8 max-md:pb-8">
         <div className="max-w-reading">
           <h1
             ref={(element) => element?.focus()}
@@ -144,8 +150,12 @@ function Review({
             Check your transcript
           </h1>
 
-          {(unread.length > 0 || missingCount > 0 || !detected) && (
+          {(unread.length > 0 ||
+            missingCount > 0 ||
+            !detected ||
+            reimportNotice) && (
             <div className="mt-6 flex flex-col gap-4">
+              {reimportNotice && <Notice tone="info">{replaces}</Notice>}
               {unread.length > 0 && (
                 <div>
                   <Notice tone="warn">
@@ -239,18 +249,23 @@ function Review({
         </div>
       </div>
 
-      <div className="sticky bottom-0 bg-bg shadow-float">
-        <div className="mx-auto flex h-16 max-w-page items-center justify-between gap-6 px-8">
+      {/* On a phone the bar clears the home indicator, and steps aside while the keyboard is up for a text field. */}
+      <div
+        data-save-bar
+        className="sticky bottom-0 bg-bg shadow-float max-md:pb-[env(safe-area-inset-bottom)] max-md:group-has-[input:focus]/review:hidden"
+      >
+        <div className="mx-auto flex h-16 max-w-page items-center justify-between gap-6 px-8 max-md:h-auto max-md:flex-col max-md:items-stretch max-md:gap-2 max-md:px-4 max-md:py-3">
           <p className="text-fg-muted">
             {plural(kept.length, "course", "courses")}, not saved yet.
-            {reimport &&
-              " Saving replaces your imported courses and keeps the ones you added by hand."}
+            {reimport && !phone && ` ${replaces}`}
           </p>
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2 max-md:gap-3 max-md:[&>button]:h-11">
             <Button variant="secondary" onClick={onCancel}>
               Cancel
             </Button>
-            <Button onClick={save}>Save to my profile</Button>
+            <Button onClick={save} className="max-md:flex-1">
+              Save to my profile
+            </Button>
           </div>
         </div>
       </div>

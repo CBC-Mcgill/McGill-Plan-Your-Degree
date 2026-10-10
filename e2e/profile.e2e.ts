@@ -263,3 +263,19 @@ test("the expected graduation label defines the term on focus", async ({
   ).toHaveAttribute("id", "graduation");
   await expect(page.locator("#graduation")).toBeInViewport();
 });
+
+test("the credit fields fit the degree card", async ({ page }) => {
+  await page.goto("/profile");
+  await page
+    .getByRole("button", { name: "Start without a transcript" })
+    .click();
+  await page.getByRole("button", { name: "Edit", exact: true }).click();
+
+  const card = await page.locator("#program").boundingBox();
+  const field = await page
+    .getByRole("spinbutton", { name: "Credits required for your degree" })
+    .boundingBox();
+  expect((field?.x ?? 0) + (field?.width ?? 0)).toBeLessThanOrEqual(
+    (card?.x ?? 0) + (card?.width ?? 0),
+  );
+});

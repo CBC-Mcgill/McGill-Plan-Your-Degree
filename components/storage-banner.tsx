@@ -22,13 +22,14 @@ export function StorageBanner() {
   if (!hydrated || !failed || !hasProfile) return null;
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 pt-6">
+    <div className="mx-auto w-full max-w-page px-8 pt-6 max-md:px-4">
       <Notice
         tone="warn"
         role="alert"
         action={
           <Button
             variant="secondary"
+            className="max-md:mt-3 max-md:h-11"
             onClick={async () =>
               (await import("@/components/profile/data-card")).downloadBackup()
             }
