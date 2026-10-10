@@ -1,4 +1,4 @@
-import { creditsText } from "../format.ts";
+import { creditsText, sentence } from "../format.ts";
 import type { EntryRoute } from "../profile/types.ts";
 import type {
   ComplementaryGroup,
@@ -538,6 +538,35 @@ export function creditSplit(
     completed: take(completed),
     inProgress: take(inProgress),
     planned: take(planned),
+  };
+}
+
+/** The courses behind each part of a split, for the legend's tooltips: a CEGEP-credited group by its title, lump-sum credit as advanced standing. */
+export function splitCourses(
+  groups: readonly Pick<GroupProgress, "credited" | "title" | "courses">[],
+  snapshot: Snapshot,
+): Record<keyof CreditSplit, string[]> {
+  const parts = {
+    completed: new Set<string>(),
+    inProgress: new Set<string>(),
+    planned: new Set<string>(),
+  };
+  for (const group of groups) {
+    if (group.credited) {
+      parts.completed.add(`${sentence(group.title)} (CEGEP)`);
+      continue;
+    }
+    for (const { code } of group.courses) {
+      const label = code === STANDING ? "Advanced standing" : code;
+      if (snapshot.inProgress.has(code)) parts.inProgress.add(label);
+      else if (snapshot.planned.has(code)) parts.planned.add(label);
+      else parts.completed.add(label);
+    }
+  }
+  return {
+    completed: [...parts.completed].sort(),
+    inProgress: [...parts.inProgress].sort(),
+    planned: [...parts.planned].sort(),
   };
 }
 

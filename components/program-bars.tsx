@@ -9,6 +9,8 @@ export interface CreditBar {
   total: number;
   /** A line under the bar, such as where a generated program came from. */
   note?: ReactNode;
+  /** The courses behind each part, for the legend's tooltips. */
+  courses?: Record<keyof CreditSplit, string[]>;
 }
 
 /** The program's credits bar, and the minor's beside it at the same level when the student has one. */
@@ -25,6 +27,7 @@ export function ProgramBars({
         {...program.split}
         total={program.total}
         legend
+        courses={program.courses}
         className="w-80"
       />
     );
@@ -46,6 +49,7 @@ export function ProgramBars({
             {...bar.split}
             total={bar.total}
             legend="below"
+            courses={bar.courses}
             className="mt-2 w-full"
           />
           {bar.note && <p className="mt-1 text-fg-muted">{bar.note}</p>}
