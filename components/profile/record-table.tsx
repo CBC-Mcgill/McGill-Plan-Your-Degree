@@ -1,6 +1,7 @@
 import { cn } from "cn";
 import { ArrowDown, TriangleAlert, X } from "lucide-react";
 import { CourseCode } from "@/components/course-code";
+import { usePhone } from "@/components/profile/layout";
 import {
   STATUS,
   StatusBadge,
@@ -72,8 +73,11 @@ export function StatusCounts({
   );
 }
 
-/** The course record as a Browse-style table, newest term first. It bleeds to the edges of the card it sits in, and × on row hover and focus removes a record. */
+/** The course record as a Browse-style table, newest term first. It bleeds to the edges of the card it sits in, and × on row hover and focus removes a record. On a phone it is a list of stacked rows instead. */
 export function RecordTable({ rows }: { rows: RecordRow[] }) {
+  const phone = usePhone();
+  const sorted = [...rows].sort((a, b) => sortKey(b) - sortKey(a));
+  if (phone) return <RecordList rows={sorted} />;
   return (
     <table className="-mx-5 w-[calc(100%+2.5rem)] border-separate border-spacing-0">
       <caption className="sr-only">Your courses, newest term first</caption>
@@ -98,67 +102,140 @@ export function RecordTable({ rows }: { rows: RecordRow[] }) {
         </tr>
       </thead>
       <tbody>
-        {[...rows]
-          .sort((a, b) => sortKey(b) - sortKey(a))
-          .map((row) => (
-            <tr key={row.key} className="group h-11">
-              <td className={cn(CELL, "font-semibold tabular-nums")}>
-                <CourseCode code={row.code} />
-              </td>
-              <td className={cn(CELL, "max-w-0")}>
-                {row.title && (
-                  <span className="block truncate" title={row.title}>
-                    {row.title}
-                  </span>
-                )}
-                {row.missing && (
-                  <span className="flex items-center gap-2 text-fg-muted">
-                    <TriangleAlert
-                      aria-hidden
-                      className="size-3.5 shrink-0 text-warn"
-                    />
-                    Not in the catalogue
-                  </span>
-                )}
-                {row.note && (
-                  <span className="block truncate text-fg-muted">
-                    {row.note}
-                  </span>
-                )}
-              </td>
-              <td className={CELL}>
-                {row.term ? (
-                  formatTerm(row.term)
-                ) : (
-                  <span className="text-fg-muted">Before your first term</span>
-                )}
-              </td>
-              <td className={CELL}>
-                <StatusTip status={row.status} className="flex w-fit">
-                  <StatusBadge status={row.status} />
-                </StatusTip>
-              </td>
-              <td className={cn(CELL, "text-right tabular-nums")}>
-                {row.credits ?? <Dash label="No credits" />}
-              </td>
-              <td className={cn(CELL, "font-semibold")}>
-                {row.grade ?? <Dash label="No grade" />}
-              </td>
-              <td className={CELL}>
-                <span className="-my-2 flex opacity-0 group-focus-within:opacity-100 group-hover:opacity-100">
-                  <Button
-                    variant="secondary"
-                    icon
-                    aria-label={`Remove ${row.code}`}
-                    onClick={row.onRemove}
-                  >
-                    <X aria-hidden />
-                  </Button>
+        {sorted.map((row) => (
+          <tr key={row.key} className="group h-11">
+            <td className={cn(CELL, "font-semibold tabular-nums")}>
+              <CourseCode code={row.code} />
+            </td>
+            <td className={cn(CELL, "max-w-0")}>
+              {row.title && (
+                <span className="block truncate" title={row.title}>
+                  {row.title}
                 </span>
-              </td>
-            </tr>
-          ))}
+              )}
+              {row.missing && (
+                <span className="flex items-center gap-2 text-fg-muted">
+                  <TriangleAlert
+                    aria-hidden
+                    className="size-3.5 shrink-0 text-warn"
+                  />
+                  Not in the catalogue
+                </span>
+              )}
+              {row.note && (
+                <span className="block truncate text-fg-muted">{row.note}</span>
+              )}
+            </td>
+            <td className={CELL}>
+              {row.term ? (
+                formatTerm(row.term)
+              ) : (
+                <span className="text-fg-muted">Before your first term</span>
+              )}
+            </td>
+            <td className={CELL}>
+              <StatusTip status={row.status} className="flex w-fit">
+                <StatusBadge status={row.status} />
+              </StatusTip>
+            </td>
+            <td className={cn(CELL, "text-right tabular-nums")}>
+              {row.credits ?? <Dash label="No credits" />}
+            </td>
+            <td className={cn(CELL, "font-semibold")}>
+              {row.grade ?? <Dash label="No grade" />}
+            </td>
+            <td className={CELL}>
+              <span className="-my-2 flex opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 pointer-coarse:opacity-100">
+                <Button
+                  variant="secondary"
+                  icon
+                  aria-label={`Remove ${row.code}`}
+                  onClick={row.onRemove}
+                >
+                  <X aria-hidden />
+                </Button>
+              </span>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
+  );
+}
+
+/** A record's term, status and credits, the second line of a phone row. */
+function details(row: RecordRow) {
+  return [
+    row.term ? formatTerm(row.term) : "Before your first term",
+    <span
+      key="status"
+      className="inline-flex items-center gap-1.5"
+      style={{ color: STATUS[row.status].text }}
+    >
+      <StatusIcon status={row.status} />
+      {STATUS[row.status].label}
+    </span>,
+    row.credits !== null &&
+      `${row.credits} ${row.credits === 1 ? "credit" : "credits"}`,
+  ].filter(Boolean);
+}
+
+/** The phone record: the code, title and grade on the first line, the rest on a smaller second line, and × always showing. */
+function RecordList({ rows }: { rows: RecordRow[] }) {
+  return (
+    <ul aria-label="Your courses, newest term first" className="-mx-5">
+      {rows.map((row) => (
+        <li
+          key={row.key}
+          className="flex items-center gap-2 border-line border-t py-2 pr-1 pl-5"
+        >
+          <div className="min-w-0 flex-1">
+            <p className="flex items-baseline gap-2">
+              <span className="shrink-0 font-semibold tabular-nums">
+                <CourseCode code={row.code} />
+              </span>
+              <span className="min-w-0 flex-1 truncate">{row.title}</span>
+              {row.grade && (
+                <span className="shrink-0 font-semibold">
+                  <span className="sr-only">Grade </span>
+                  {row.grade}
+                </span>
+              )}
+            </p>
+            <p className="mt-1 flex flex-wrap items-center gap-x-1.5 text-[13px] text-fg-muted leading-[18px] tabular-nums">
+              {details(row).map((detail, i) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: the details keep their order
+                <span key={i} className="inline-flex items-center gap-1.5">
+                  {i > 0 && <span aria-hidden>·</span>}
+                  {detail}
+                </span>
+              ))}
+            </p>
+            {row.missing && (
+              <p className="mt-1 flex items-center gap-2 text-[13px] text-fg-muted leading-[18px]">
+                <TriangleAlert
+                  aria-hidden
+                  className="size-3.5 shrink-0 text-warn"
+                />
+                Not in the catalogue
+              </p>
+            )}
+            {row.note && (
+              <p className="mt-1 text-[13px] text-fg-muted leading-[18px]">
+                {row.note}
+              </p>
+            )}
+          </div>
+          <button
+            type="button"
+            aria-label={`Remove ${row.code}`}
+            onClick={row.onRemove}
+            className="grid size-11 shrink-0 place-items-center rounded-md text-fg-muted hover:bg-tint hover:text-fg"
+          >
+            <X aria-hidden className="size-4" />
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }

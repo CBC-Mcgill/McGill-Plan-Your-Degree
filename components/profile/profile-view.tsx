@@ -5,6 +5,7 @@ import { CoursesCard } from "@/components/profile/courses-card";
 import { DataCard } from "@/components/profile/data-card";
 import { ImportScreen } from "@/components/profile/import-screen";
 import {
+  PAGE,
   PAGE_GRID,
   PageSkeleton,
   SIDE_PANEL,
@@ -12,6 +13,7 @@ import {
 import { ProgramCard } from "@/components/profile/program-card";
 import { ReviewScreen } from "@/components/profile/review-screen";
 import { useImportFlow } from "@/components/profile/use-import-flow";
+import { Button } from "@/components/ui/button";
 import { COPY } from "@/lib/copy";
 import { isStarted, startProfile } from "@/lib/profile/started";
 import { useProfileHydrated, useProfileStore } from "@/lib/profile/store";
@@ -58,9 +60,18 @@ export function ProfileView() {
   if (!started) return <ImportScreen flow={flow} onStartEmpty={startProfile} />;
 
   return (
-    <div className="mx-auto w-full max-w-page px-8 py-12">
+    <div className={PAGE}>
       <h1>Profile</h1>
       <Summary />
+      {/* On a phone the degree and data cards sit under a long course list, so these jump to them. */}
+      <nav aria-label="Profile sections" className="mt-4 flex gap-3 md:hidden">
+        <Button asChild variant="secondary" className="h-11 flex-1">
+          <a href="#program">Degree</a>
+        </Button>
+        <Button asChild variant="secondary" className="h-11 flex-1">
+          <a href="#data">Your data</a>
+        </Button>
+      </nav>
       <div className={PAGE_GRID}>
         <CoursesCard />
         <div className={SIDE_PANEL}>

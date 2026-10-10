@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { PHONE_FIELDS, usePhone } from "@/components/profile/layout";
 import { RecordTable, StatusCounts } from "@/components/profile/record-table";
 import { TermSelect } from "@/components/profile/selects";
 import { toast } from "@/components/toast";
@@ -64,6 +65,7 @@ export function CoursesCard() {
   const snapshot = useSnapshot();
   const listId = useId();
   const formId = useId();
+  const phone = usePhone();
 
   const [adding, setAdding] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -156,20 +158,21 @@ export function CoursesCard() {
       program ?? null,
     );
 
+  const credits = standing &&
+    (standing.earned > 0 || standing.inProgress > 0) && (
+      <>
+        {standing.earned}{" "}
+        <Definition def={GLOSSARY.creditsEarned}>credits earned</Definition>,{" "}
+        {standing.inProgress} in progress
+      </>
+    );
+
   return (
     <Section
       id="courses"
       title="Courses"
-      meta={
-        standing &&
-        (standing.earned > 0 || standing.inProgress > 0) && (
-          <>
-            {standing.earned}{" "}
-            <Definition def={GLOSSARY.creditsEarned}>credits earned</Definition>
-            , {standing.inProgress} in progress
-          </>
-        )
-      }
+      // A phone has no room beside the button, so the credits open the card instead.
+      meta={!phone && credits}
       action={
         <Button
           ref={toggle}
@@ -177,11 +180,15 @@ export function CoursesCard() {
           aria-expanded={adding}
           aria-controls={formId}
           onClick={() => (adding ? close() : setAdding(true))}
+          className="max-md:h-11"
         >
           Add a course
         </Button>
       }
     >
+      {phone && credits && (
+        <p className="mb-2 text-fg-muted tabular-nums">{credits}</p>
+      )}
       {records.length > 0 && (
         <StatusCounts statuses={records.map((record) => record.status)} />
       )}
@@ -192,10 +199,11 @@ export function CoursesCard() {
         onKeyDown={(event) => {
           if (event.key === "Escape") close();
         }}
-        className="mt-4 mb-2 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 first:mt-0"
+        className={`mt-4 mb-2 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_auto] items-end gap-4 first:mt-0 max-md:grid-cols-2 ${PHONE_FIELDS}`}
       >
         <TextField
           ref={codeField}
+          className="max-md:col-span-2"
           label="Code"
           value={text}
           list={listId}
@@ -225,11 +233,15 @@ export function CoursesCard() {
           <option value="completed">Completed</option>
           <option value="in-progress">In progress</option>
         </SelectField>
-        <Button type="submit" variant="secondary">
+        <Button
+          type="submit"
+          variant="secondary"
+          className="max-md:col-span-2 max-md:h-11"
+        >
           Add
         </Button>
         {error && (
-          <p role="alert" className="col-span-4 text-danger">
+          <p role="alert" className="col-span-4 text-danger max-md:col-span-2">
             {error}
           </p>
         )}

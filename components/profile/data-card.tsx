@@ -40,7 +40,7 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
           Restoring a backup replaces your current profile.
         </span>
       </p>
-      <div className="mt-4 grid gap-2 [&>button]:justify-start">
+      <div className="mt-4 grid gap-2 max-md:[&>button]:h-11 [&>button]:justify-start">
         <Button variant="secondary" onClick={downloadBackup}>
           <Download aria-hidden />
           {COPY.exportBackup}
@@ -78,7 +78,7 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
               <AlertDialog.Description className="mt-2">
                 This removes your courses, program and plan from this browser.
               </AlertDialog.Description>
-              <div className="mt-6 flex justify-end gap-2">
+              <div className="mt-6 flex justify-end gap-2 max-md:flex-col-reverse max-md:gap-3 max-md:[&>button]:h-11">
                 <AlertDialog.Cancel asChild>
                   <Button variant="secondary">Cancel</Button>
                 </AlertDialog.Cancel>

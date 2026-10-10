@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
+import { PHONE_FIELDS } from "@/components/profile/layout";
 import { ProgramCombobox } from "@/components/profile/program-combobox";
 import { EntrySelect, TermSelect } from "@/components/profile/selects";
 import { Button } from "@/components/ui/button";
@@ -47,7 +48,7 @@ export function ProgramFields({
     );
 
   return (
-    <div className="grid grid-cols-2 items-start gap-4">
+    <div className={`grid grid-cols-2 items-start gap-4 ${PHONE_FIELDS}`}>
       <div className="col-span-2">
         <ProgramCombobox
           value={value.programId}
@@ -70,11 +71,13 @@ export function ProgramFields({
       </div>
       <TermSelect
         label="Start term"
+        className="max-md:col-span-2"
         value={value.startTerm}
         onChange={(startTerm) => onChange({ startTerm })}
       />
       <TermSelect
         id="graduation"
+        className="max-md:col-span-2"
         label="Expected graduation"
         info={GLOSSARY.graduation}
         notBefore={currentTerm()}
@@ -166,7 +169,7 @@ function Credits({
           aria-expanded={open}
           aria-controls={fieldsId}
           onClick={() => setOpen(!open)}
-          className="-my-2"
+          className="-my-2 max-md:h-11"
         >
           Edit
         </Button>
@@ -174,7 +177,7 @@ function Credits({
       <div
         id={fieldsId}
         hidden={!open}
-        className="mt-4 grid grid-cols-2 items-start gap-4"
+        className="mt-4 grid grid-cols-2 items-start gap-4 max-md:grid-cols-1"
       >
         <TextField
           ref={first}

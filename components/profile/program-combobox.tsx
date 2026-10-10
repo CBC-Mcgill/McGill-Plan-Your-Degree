@@ -11,6 +11,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { usePhone } from "@/components/profile/layout";
 import { controlStyles, FieldLabel } from "@/components/ui/field";
 import type { Definition } from "@/lib/glossary";
 import { useProgramIndex } from "@/lib/programs/client";
@@ -105,6 +106,7 @@ export function ProgramCombobox({
   const inputId = useId();
   const infoId = useId();
   const field = useRef<HTMLSpanElement>(null);
+  const phone = usePhone();
   const [open, setOpen] = useState(false);
   // Null shows the chosen program, so the field only holds what the student typed.
   const [query, setQuery] = useState<string | null>(null);
@@ -131,6 +133,8 @@ export function ProgramCombobox({
     const at = options.findIndex((program) => program?.id === value);
     setActive(at < 0 ? 0 : at);
     setOpen(true);
+    // On a phone the keyboard takes the bottom half, so the field moves up to leave the list room.
+    if (phone) field.current?.scrollIntoView({ block: "start" });
   }
 
   function close() {
@@ -162,7 +166,7 @@ export function ProgramCombobox({
           describedBy={infoId}
         />
         <Popover.Anchor asChild>
-          <span ref={field} className="relative">
+          <span ref={field} className="relative max-md:scroll-mt-12">
             <input
               id={inputId}
               role="combobox"
@@ -199,7 +203,7 @@ export function ProgramCombobox({
                   choose(options[active] ?? null);
                 }
               }}
-              className={cn(controlStyles, "w-full pr-9")}
+              className={cn(controlStyles, "w-full pr-9 max-md:text-ellipsis")}
             />
             <ChevronDown
               aria-hidden
@@ -223,7 +227,7 @@ export function ProgramCombobox({
           }}
           // Keeps focus in the field while a click or a scrollbar drag lands on the list.
           onMouseDown={(event) => event.preventDefault()}
-          className="z-[85] max-h-[min(400px,var(--radix-popover-content-available-height))] w-(--radix-popover-trigger-width) overflow-y-auto rounded-lg bg-bg p-1 shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
+          className="z-[85] max-h-[min(400px,var(--radix-popover-content-available-height))] w-(--radix-popover-trigger-width) overflow-y-auto rounded-lg bg-bg p-1 shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none max-md:max-h-[min(45svh,var(--radix-popover-content-available-height))] max-md:w-[calc(100vw-2rem)]"
         >
           <div id={listId} role="listbox" aria-label={copy.list}>
             {message && <p className="px-3 py-2.5 text-fg-muted">{message}</p>}
@@ -245,7 +249,8 @@ export function ProgramCombobox({
                     onActivate={() => setActive(options.indexOf(program))}
                     onChoose={() => choose(program)}
                   >
-                    <span className="min-w-0 flex-1 truncate">
+                    {/* A phone wraps the name, since two programs can share their first words. */}
+                    <span className="min-w-0 flex-1 truncate max-md:whitespace-normal">
                       {program.name}
                     </span>
                     <span className="shrink-0 font-normal text-fg-muted">
@@ -298,7 +303,7 @@ function Option({
       onMouseMove={onActivate}
       onClick={onChoose}
       className={cn(
-        "flex h-10 scroll-mt-8 cursor-pointer items-center gap-2 rounded-md px-3",
+        "flex h-10 scroll-mt-8 cursor-pointer items-center gap-2 rounded-md px-3 max-md:h-auto max-md:min-h-11 max-md:py-2.5",
         active && "selected",
       )}
     >
