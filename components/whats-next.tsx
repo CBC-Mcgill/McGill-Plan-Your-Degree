@@ -52,6 +52,7 @@ import {
   programSplit,
   programStanding,
   STANDING,
+  splitCourses,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { sentence } from "@/lib/format";
@@ -375,6 +376,7 @@ function Page({
           done: minorView.progress.creditsDone,
           split: programSplit(minorWithPlan, snapshot),
           total: minorView.progress.credits,
+          courses: splitCourses(minorWithPlan.groups, snapshot),
         }
       : null;
 
@@ -410,6 +412,7 @@ function Page({
               done: creditsDone,
               split: programSplit(withPlan, snapshot),
               total: credits,
+              courses: splitCourses(withPlan.groups, snapshot),
             }}
             minor={minorBar}
           />
@@ -725,8 +728,14 @@ function GroupMeta({
 }
 
 /** The bar of a pane: credits earned, in progress and planned, with their words. */
-function Progress(split: CreditSplit & { total: number }) {
-  return <StatusBar {...split} legend className="flex-1" />;
+function Progress({
+  courses,
+  ...split
+}: CreditSplit & {
+  total: number;
+  courses: Record<keyof CreditSplit, string[]>;
+}) {
+  return <StatusBar {...split} legend courses={courses} className="flex-1" />;
 }
 
 /** A program group's pane: its bar, then its courses by status. */
@@ -751,7 +760,11 @@ function GroupPane({
     <Card title={sentence(group.title)} meta={<GroupMeta group={group} />}>
       <div className="flex flex-col gap-6">
         {!group.credited && countsCredits(group) && split && (
-          <Progress {...creditSplit(split, snapshot)} total={group.credits} />
+          <Progress
+            {...creditSplit(split, snapshot)}
+            total={group.credits}
+            courses={splitCourses([split], snapshot)}
+          />
         )}
         <GroupBody
           group={group}
@@ -1336,6 +1349,7 @@ function MinorPane({
           <Progress
             {...programSplit(withPlan, snapshot)}
             total={withPlan.credits}
+            courses={splitCourses(withPlan.groups, snapshot)}
           />
         )}
         {groups.map((group, index) => (

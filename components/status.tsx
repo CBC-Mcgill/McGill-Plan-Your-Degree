@@ -262,6 +262,7 @@ export function StatusBar({
   planned = 0,
   total,
   legend = false,
+  courses,
   className,
 }: {
   completed: number;
@@ -270,6 +271,8 @@ export function StatusBar({
   total: number;
   /** The three parts worded beside the bar, or under it with "below". */
   legend?: boolean | "below";
+  /** The courses behind each part, shown when the student hovers or focuses its legend item. */
+  courses?: Record<"completed" | "inProgress" | "planned", string[]>;
   className?: string;
 }) {
   const values = { completed, inProgress, planned };
@@ -308,15 +311,49 @@ export function StatusBar({
     >
       {bar}
       <p
-        aria-hidden
+        aria-hidden={courses ? undefined : true}
         className="flex flex-wrap items-center gap-x-4 gap-y-1 text-fg-muted tabular-nums"
       >
-        {BAR_PARTS.map(([key, status, word]) => (
-          <span key={key} className="inline-flex items-center gap-1.5">
-            <StatusIcon status={status} />
-            {values[key]} {word}
-          </span>
-        ))}
+        {BAR_PARTS.map(([key, status, word]) => {
+          const item = (
+            <>
+              <StatusIcon status={status} />
+              {values[key]} {word}
+            </>
+          );
+          if (!courses) {
+            return (
+              <span key={key} className="inline-flex items-center gap-1.5">
+                {item}
+              </span>
+            );
+          }
+          const list = courses[key];
+          return (
+            <Tooltip
+              key={key}
+              content={
+                list.length > 0 ? (
+                  <>
+                    <span className="block font-semibold">
+                      {values[key]} {word}
+                    </span>
+                    <span className="mt-1 block">{list.join(", ")}</span>
+                  </>
+                ) : (
+                  `No courses ${word}`
+                )
+              }
+            >
+              <button
+                type="button"
+                className="inline-flex cursor-default items-center gap-1.5 rounded-md hover:text-fg"
+              >
+                {item}
+              </button>
+            </Tooltip>
+          );
+        })}
       </p>
     </div>
   );

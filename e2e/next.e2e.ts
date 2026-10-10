@@ -172,6 +172,11 @@ test("met and CEGEP-credited groups, the restriction note and the minor open fro
   await expect(bars).toContainText("Major");
   await expect(bars).toContainText("Technological Entrepreneurship minor");
   await expect(bars.getByRole("img")).toHaveCount(2);
+  await bars
+    .getByRole("button", { name: /earned/ })
+    .nth(1)
+    .hover();
+  await expect(page.getByRole("tooltip")).toContainText("INTG 215");
 
   await requirement(page, "Required year 0 courses").click();
   await expect(

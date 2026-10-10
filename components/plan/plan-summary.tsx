@@ -20,6 +20,7 @@ import {
   lacking,
   type ProgramProgress,
   programSplit,
+  splitCourses,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { creditsText, sentence } from "@/lib/format";
@@ -295,6 +296,7 @@ export function PlanSummary({
               done: standing.progress.creditsDone,
               split: programSplit(standing.progress, snapshot),
               total: standing.progress.credits,
+              courses: splitCourses(standing.progress.groups, snapshot),
             }}
             minor={
               minor && {
@@ -302,6 +304,7 @@ export function PlanSummary({
                 done: minor.progress.creditsDone,
                 split: programSplit(minor.progress, snapshot),
                 total: minor.progress.credits,
+                courses: splitCourses(minor.progress.groups, snapshot),
                 note: minor.program.generated && (
                   <>
                     <GeneratedNote hasChecks={hasChecks(minor.program)} />
