@@ -174,11 +174,7 @@ function Credits({
           Edit
         </Button>
       </div>
-      <div
-        id={fieldsId}
-        hidden={!open}
-        className="mt-4 grid grid-cols-2 items-start gap-4 max-md:grid-cols-1"
-      >
+      <div id={fieldsId} hidden={!open} className="mt-4 grid items-start gap-4">
         <TextField
           ref={first}
           label="Advanced standing credits"
