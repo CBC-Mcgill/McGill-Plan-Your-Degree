@@ -4,13 +4,68 @@ Open-source degree planner for McGill students.
 Import your unofficial transcript, see which courses you can take next, and plan every term up to graduation.
 Plan Your Degree is not affiliated with McGill University.
 
+Try it at [mcgill-plan-your-degree.vercel.app](https://mcgill-plan-your-degree.vercel.app).
+
+![The landing page, "Plan your whole McGill degree in one tab", with the import button, the three facts and the planner window](docs/screenshots/landing.webp)
+
 ## Features
 
-- Browse every McGill course, with search, filters, and a shareable page for each course.
-- Import your unofficial transcript privately, and review it before anything is saved.
-- See what's next: the courses you can take next term and the required ones you still need.
-- Start from a Quebec CEGEP diploma: Year 0 is credited, Science DEC courses meet prerequisites, and advanced standing counts toward your degree.
-- Plan each term on a path to graduation, with warnings for missing prerequisites, terms a course is not offered, and credit overloads.
+The screenshots show a made-up student.
+
+### Import your transcript
+
+Drop in the unofficial transcript PDF from Minerva.
+It is read in your browser, and you check every course, your program and your terms before anything is saved.
+Quebec CEGEP students get Year 0 credited, Science DEC courses meet prerequisites, and advanced standing counts toward the degree.
+
+![The transcript review screen with each course, its term, status, credits and grade, and the degree details beside it](docs/screenshots/import.webp)
+
+### See what's next
+
+See the courses you can take next term and the required ones you still need, requirement by requirement.
+With a minor, its progress bar sits beside the major's.
+
+![What's next with the major and minor bars, the requirement list and the courses for one requirement](docs/screenshots/whats-next.webp)
+
+Hover or tab to earned, in progress or planned on any bar to see the courses behind the number.
+
+![A tooltip listing the 53 earned credits course by course](docs/screenshots/breakdown.webp)
+
+### Plan every term
+
+Lay out each term until graduation, with warnings for missing prerequisites, terms a course is not offered, and credit overloads.
+The plan lists what is still missing, and a minor counts the courses it shares with your major only up to the limit on its catalogue page.
+Once a term's courses are set, pick their sections and times in McGill's [Visual Schedule Builder](https://vsb.mcgill.ca/criteria.jsp).
+
+![The planner with credits for the major and minor, the requirements still open and the path of terms](docs/screenshots/planner.webp)
+
+### Browse every course
+
+Search and filter every McGill course by what you can take now, your program, subject, level, term and faculty.
+Each course has a page with ratings from mcgill.courses, its prerequisites checked against your record, and what it unlocks.
+
+![The course browser filtered to the courses the student can take now](docs/screenshots/browse.webp)
+
+![The COMP 251 page with credits, terms, rating, difficulty, reviews and the courses it unlocks](docs/screenshots/course.webp)
+
+### Search from anywhere
+
+Press ⌘K, or Ctrl K, on any page to find a course or a page.
+
+![The search palette listing courses that match "algorithms" with each one's status](docs/screenshots/search.webp)
+
+### Your profile
+
+Keep your courses, program, minor and terms up to date, export a backup, or delete everything.
+It all stays in this browser.
+
+![The profile with the course record and the degree details](docs/screenshots/profile.webp)
+
+### Advisor, coming soon
+
+A preview of the chat advisor, with starters for what students actually ask.
+
+![The advisor with six starters, from planning the next term to breaking into big tech](docs/screenshots/advisor.webp)
 
 ## Privacy
 
