@@ -291,7 +291,7 @@ export function PlanSummary({
         <div className="mt-4">
           <ProgramBars
             program={{
-              label: "Program",
+              label: "Major",
               done: standing.progress.creditsDone,
               split: programSplit(standing.progress, snapshot),
               total: standing.progress.credits,

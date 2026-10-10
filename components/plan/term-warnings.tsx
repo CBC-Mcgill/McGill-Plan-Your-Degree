@@ -20,7 +20,7 @@ function Others({ codes }: { codes: string[] }) {
   ));
 }
 
-export function Sentence({
+function Sentence({
   warning,
   snapshot,
   catalogue,

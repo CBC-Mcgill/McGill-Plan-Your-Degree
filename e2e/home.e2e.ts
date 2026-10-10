@@ -25,14 +25,8 @@ test("landing renders its primary action", async ({ page }) => {
 
   await main
     .getByRole("button", { name: "Start without a transcript" })
-    .first()
     .click();
-  await expect(
-    main.getByRole("heading", { level: 1, name: "0 credits earned" }),
-  ).toBeVisible();
-  await expect(
-    main.getByText("Import your transcript to fill in your courses."),
-  ).toBeVisible();
+  await expect(page).toHaveURL(/\/profile#program$/);
 });
 
 test("nav links reach their pages", async ({ page }) => {
@@ -62,54 +56,33 @@ test("nav links reach their pages", async ({ page }) => {
   }
 });
 
-test("a returning student sees their home and can add a required course", async ({
+test("a returning student keeps the landing without the calls to start", async ({
   page,
 }) => {
-  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
   await page.addInitScript(
-    ([key, records]) =>
+    ([key]) =>
       localStorage.setItem(
         key as string,
         JSON.stringify({
           state: {
-            records,
+            records: [],
             programId: "computer-science-major-bsc",
             plan: [],
-            creditLimit: 17,
           },
-          version: 2,
+          version: 4,
         }),
       ),
-    [
-      "plan-your-degree:profile",
-      ["COMP 202", "COMP 206", "COMP 250"].map((code) => ({
-        code,
-        term: { season: "Fall", year: 2025 },
-        credits: 3,
-        grade: "A",
-        status: "completed",
-        source: "manual",
-      })),
-    ],
+    ["plan-your-degree:profile"],
   );
   await page.goto("/");
   const main = page.getByRole("main");
+  await expect(main.getByRole("heading", { level: 1 })).toContainText(
+    "Plan your whole McGill degree",
+  );
   await expect(
-    main.getByRole("heading", { level: 1, name: "9 credits earned" }),
-  ).toBeVisible();
+    main.getByRole("link", { name: "Import your transcript" }),
+  ).toHaveCount(0);
   await expect(
-    main.getByRole("link", { name: "Set graduation term" }),
-  ).toHaveAttribute("href", "/profile#graduation");
-
-  await expect(
-    main
-      .getByRole("region", { name: "Requirements" })
-      .getByRole("heading", { name: "Required courses" }),
-  ).toBeVisible();
-
-  const next = main.getByRole("region", { name: "Winter 2027" });
-  await next.getByRole("button", { name: /^Add / }).first().click();
-  await expect(next.getByRole("button", { name: /^Remove / })).toHaveCount(1);
-  await expect(next.getByRole("img", { name: "Planned" })).toHaveCount(1);
-  await expectNoHorizontalScroll(page);
+    main.getByRole("button", { name: "Start without a transcript" }),
+  ).toHaveCount(0);
 });

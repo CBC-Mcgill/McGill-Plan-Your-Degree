@@ -1,8 +1,10 @@
 "use client";
 
+import { cn } from "cn";
 import { ArrowUpRight, Gift, ShieldCheck, Star } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -17,18 +19,40 @@ import { PlannerWindow } from "./landing/window";
 const GLASS_BUTTON = "glass h-12 rounded-[10px] px-6 text-[15px] text-fg";
 
 /** The landing for first-time visitors: a centered headline over the planner in 3D that flattens as you scroll, a pinned scroll story, then one last call to action. */
-export function Landing({ stars }: { stars: number | null }) {
+export function Landing({
+  stars,
+  started,
+}: {
+  stars: number | null;
+  /** True hides the calls to start, undefined leaves it to `data-returning` until the profile loads. */
+  started: boolean | undefined;
+}) {
   const reduce = useReduce();
   return (
     <div className="paper">
-      <Hero reduce={reduce} stars={stars} />
+      <Hero reduce={reduce} stars={stars} started={started} />
       <Story reduce={reduce} />
-      <FinalCall stars={stars} />
+      {started !== true && (
+        <FinalCall stars={stars} className={untilLoaded(started)} />
+      )}
     </div>
   );
 }
 
-function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
+/** Hides a call to start from a returning student before the profile has loaded. */
+const untilLoaded = (started: boolean | undefined) =>
+  started === undefined ? "[[data-returning]_&]:hidden" : undefined;
+
+function Hero({
+  reduce,
+  stars,
+  started,
+}: {
+  reduce: boolean;
+  stars: number | null;
+  started: boolean | undefined;
+}) {
+  const router = useRouter();
   const hero = useRef<HTMLElement>(null);
   const stage = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -59,18 +83,31 @@ function Hero({ reduce, stars }: { reduce: boolean; stars: number | null }) {
           </p>
         </motion.div>
         <motion.div style={{ opacity: actionsOpacity }}>
-          <div className="mt-7 flex justify-center gap-3">
-            <Button asChild className={`glass-red ${GLASS_BUTTON} text-white`}>
-              <Link href="/profile">{COPY.importTranscript}</Link>
-            </Button>
-            <Button
-              variant="secondary"
-              onClick={startProfile}
-              className={GLASS_BUTTON}
+          {started !== true && (
+            <div
+              className={cn(
+                "mt-7 flex justify-center gap-3",
+                untilLoaded(started),
+              )}
             >
-              {COPY.startWithout}
-            </Button>
-          </div>
+              <Button
+                asChild
+                className={`glass-red ${GLASS_BUTTON} text-white`}
+              >
+                <Link href="/profile">{COPY.importTranscript}</Link>
+              </Button>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  startProfile();
+                  router.push("/profile#program");
+                }}
+                className={GLASS_BUTTON}
+              >
+                {COPY.startWithout}
+              </Button>
+            </div>
+          )}
           <Facts stars={stars} className="mt-6" />
         </motion.div>
       </section>
@@ -189,9 +226,20 @@ function GitHubMark() {
   );
 }
 
-function FinalCall({ stars }: { stars: number | null }) {
+function FinalCall({
+  stars,
+  className,
+}: {
+  stars: number | null;
+  className?: string;
+}) {
   return (
-    <section className="relative overflow-hidden px-8 py-28 text-center">
+    <section
+      className={cn(
+        "relative overflow-hidden px-8 py-28 text-center",
+        className,
+      )}
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 h-[28rem] w-[64rem] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side_at_40%_50%,rgb(218_26_46/0.08),transparent),radial-gradient(closest-side_at_62%_50%,rgb(139_124_235/0.1),transparent)]"

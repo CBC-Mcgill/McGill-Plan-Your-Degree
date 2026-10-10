@@ -169,7 +169,7 @@ test("met and CEGEP-credited groups, the restriction note and the minor open fro
   });
 
   const bars = page.getByRole("region", { name: "Credit progress" });
-  await expect(bars).toContainText("Program");
+  await expect(bars).toContainText("Major");
   await expect(bars).toContainText("Technological Entrepreneurship minor");
   await expect(bars.getByRole("img")).toHaveCount(2);
 
