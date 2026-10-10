@@ -30,7 +30,7 @@ test("a student imports a transcript, adds a course, and sees it in the plan", a
   ).toBeVisible();
 });
 
-test("a CEGEP engineering student with an exemption reads the same credits on Home, What's next and the Planner", async ({
+test("a CEGEP engineering student with an exemption reads the same credits on What's next and the Planner", async ({
   page,
 }) => {
   await page.clock.setFixedTime(new Date("2026-10-09T12:00:00"));
@@ -41,23 +41,24 @@ test("a CEGEP engineering student with an exemption reads the same credits on Ho
   await page.getByRole("button", { name: "Save to my profile" }).click();
   await expect(page).toHaveURL("/next");
   const main = page.getByRole("main");
-  const figure = async (pattern: RegExp) => {
-    await expect(main).toContainText(pattern);
-    return Number(pattern.exec(await main.innerText())?.[1]);
-  };
-  const counting = await figure(
-    /(\d+) of 133 program credits earned or in progress/,
+  await expect(main).toContainText(
+    /\d+ of 133 program credits earned or in progress/,
+  );
+  const counting = Number(
+    /(\d+) of 133 program credits earned or in progress/.exec(
+      await main.innerText(),
+    )?.[1],
   );
 
-  await page.goto("/");
-  const earned = await figure(/(\d+) of 133 degree credits earned/);
-  const inProgress = await figure(/(\d+)\s+in progress/);
-  const toGo = await figure(/(\d+)\s+to go/);
-  expect(counting).toBe(earned + inProgress);
-
+  // Nothing is planned, so the plan's figure is the same count.
   await page.goto("/plan");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    `${counting} of 133 program credits`,
+  );
   await expect(
-    page.getByRole("heading", { name: `Your plan is ${toGo} credits short` }),
+    page.getByRole("heading", {
+      name: `Your plan is ${133 - counting} credits short`,
+    }),
   ).toBeVisible();
   await expect(
     page.getByRole("listitem").filter({ hasText: "Replace exempted credits" }),

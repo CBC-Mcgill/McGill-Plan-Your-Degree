@@ -383,7 +383,7 @@ function Page({
       <h1>{program.name}</h1>
       <p className="mt-2 text-fg-muted">
         {minorBar ? (
-          "Program and minor credits"
+          "Major and minor credits"
         ) : (
           <>
             <span className="tabular-nums">
@@ -406,7 +406,7 @@ function Page({
         <div className="mt-4">
           <ProgramBars
             program={{
-              label: "Program",
+              label: "Major",
               done: creditsDone,
               split: programSplit(withPlan, snapshot),
               total: credits,
