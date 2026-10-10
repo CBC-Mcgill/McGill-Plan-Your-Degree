@@ -1,10 +1,10 @@
 "use client";
 
 import { cn } from "cn";
-import { TriangleAlert } from "lucide-react";
+import { ChevronLeft, ChevronRight, TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { type ReactNode, useId, useMemo, useRef } from "react";
+import { type ReactNode, useEffect, useId, useMemo, useRef } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
 import {
@@ -18,7 +18,7 @@ import { CatalogueLink, VsbLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { ProgramBars } from "@/components/program-bars";
+import { BAR_WITH_LEGEND, ProgramBars } from "@/components/program-bars";
 import {
   type Status,
   StatusBadge,
@@ -185,6 +185,17 @@ function Page({
   const paneId = useId();
   const panes = useRef<HTMLDivElement>(null);
   const asked = useSearchParams().get("req");
+  // Opening a pane or going back to the list removes what had focus, so focus moves to the new view once it renders.
+  const focusNext = useRef<string | null>(null);
+  useEffect(() => {
+    const target =
+      focusNext.current && document.getElementById(focusNext.current);
+    if (target) {
+      target.focus();
+      focusNext.current = null;
+    }
+  });
+
   const term = useMemo(() => planTermOptions([])[0] ?? currentTerm(), []);
 
   const planned = useMemo(
@@ -260,7 +271,7 @@ function Page({
           </Link>{" "}
           to see what you still need.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 max-md:[&_h2]:text-base">
           <OtherCourses entries={view.other} context={context} />
         </div>
       </>
@@ -354,10 +365,9 @@ function Page({
     },
   ];
   const all = [...requirements, ...extras];
-  const pane =
-    all.find((p) => p.key === asked) ??
-    requirements.find((p) => !p.done) ??
-    all[0];
+  // Below 1024px the list is the page until `?req=` opens one pane.
+  const open = all.find((p) => p.key === asked);
+  const pane = open ?? requirements.find((p) => !p.done) ?? all[0];
 
   function select(key: string, replace: boolean) {
     const url = `?req=${key}`;
@@ -367,6 +377,12 @@ function Page({
     if ((panes.current?.getBoundingClientRect().top ?? 0) < 0) {
       panes.current?.scrollIntoView();
     }
+  }
+
+  function go(url: string, focus: string) {
+    window.history.pushState(null, "", url);
+    focusNext.current = focus;
+    panes.current?.scrollIntoView();
   }
 
   const minorBar =
@@ -418,7 +434,7 @@ function Page({
           />
         </div>
       )}
-      <div className="mt-6 flex items-center justify-between gap-4">
+      <div className="mt-6 flex items-center justify-between gap-4 max-md:flex-col max-md:items-start max-md:gap-2">
         <p>
           What you can take in{" "}
           <span className="font-semibold">{termLabel(term)}</span>, your next
@@ -436,7 +452,7 @@ function Page({
 
       <div
         ref={panes}
-        className="mt-6 grid scroll-mt-6 grid-cols-[15rem_minmax(0,1fr)] items-start gap-6"
+        className="mt-6 grid scroll-mt-6 grid-cols-[15rem_minmax(0,1fr)] items-start gap-6 max-lg:block"
       >
         {pane && (
           <>
@@ -447,11 +463,34 @@ function Page({
               onSelect={select}
               paneId={paneId}
             />
+            {!open && (
+              <LinkList
+                requirements={requirements}
+                extras={extras}
+                paneId={paneId}
+                onOpen={(key) => go(`?req=${key}`, `${paneId}-back`)}
+              />
+            )}
             <div
               role="tabpanel"
               id={paneId}
               aria-labelledby={`${paneId}-${pane.key}`}
+              className={cn(!open && "max-lg:hidden")}
             >
+              {open && (
+                <a
+                  id={`${paneId}-back`}
+                  href="/next"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    go("/next", `${paneId}-open-${open.key}`);
+                  }}
+                  className="-ml-1 mb-2 inline-flex min-h-11 items-center gap-1 rounded-md pr-2 font-semibold lg:hidden"
+                >
+                  <ChevronLeft aria-hidden className="size-4" />
+                  All requirements
+                </a>
+              )}
               {pane.body}
             </div>
           </>
@@ -538,42 +577,7 @@ function PaneList({
           isSelected && "selected",
         )}
       >
-        <span className="flex items-start gap-2 font-semibold">
-          {pane.done && (
-            <span className="flex h-5 items-center">
-              <StatusIcon status="completed" />
-            </span>
-          )}
-          <span className="min-w-0 flex-1">
-            {/* Keeps a short last word, as in "group B", off a line of its own. */}
-            {pane.label.replace(/ (\S{1,2})$/, "\u00a0$1")}
-          </span>
-          {pane.checks ? (
-            <span className="flex h-5 items-center">
-              <TriangleAlert aria-hidden className="size-3.5 text-warn" />
-              <span className="sr-only">, {checksText(pane.checks)}</span>
-            </span>
-          ) : null}
-        </span>
-        {pane.split ? (
-          <span className="flex items-center gap-3 font-normal">
-            <span aria-hidden className="min-w-0 flex-1">
-              <StatusBar {...pane.split} />
-            </span>
-            <span className="shrink-0 text-fg-muted tabular-nums">
-              {pane.side}
-            </span>
-          </span>
-        ) : (
-          <span
-            className={cn(
-              "font-normal text-fg-muted tabular-nums",
-              pane.done && "pl-6",
-            )}
-          >
-            {pane.side}
-          </span>
-        )}
+        <PaneSummary pane={pane} />
       </button>
     );
   };
@@ -582,7 +586,7 @@ function PaneList({
     <div
       className={cn(
         CARD,
-        "sticky top-22 max-h-[calc(100vh-7rem)] overflow-y-auto px-3 py-2",
+        "sticky top-22 max-h-[calc(100vh-7rem)] overflow-y-auto px-3 py-2 max-lg:hidden",
       )}
     >
       <div
@@ -595,6 +599,92 @@ function PaneList({
         <div aria-hidden className="-mx-3 my-2 border-line border-t" />
         {extras.map((pane, i) => tab(pane, requirements.length + i))}
       </div>
+    </div>
+  );
+}
+
+/** A requirement's label with its tick and warn icon, then its bar and fraction or a line of text. */
+function PaneSummary({ pane }: { pane: Pane }) {
+  return (
+    <>
+      <span className="flex items-start gap-2 font-semibold">
+        {pane.done && (
+          <span className="flex h-5 items-center">
+            <StatusIcon status="completed" />
+          </span>
+        )}
+        <span className="min-w-0 flex-1">
+          {/* Keeps a short last word, as in "group B", off a line of its own. */}
+          {pane.label.replace(/ (\S{1,2})$/, "\u00a0$1")}
+        </span>
+        {pane.checks ? (
+          <span className="flex h-5 items-center">
+            <TriangleAlert aria-hidden className="size-3.5 text-warn" />
+            <span className="sr-only">, {checksText(pane.checks)}</span>
+          </span>
+        ) : null}
+      </span>
+      {pane.split ? (
+        <span className="flex items-center gap-3 font-normal">
+          <span aria-hidden className="min-w-0 flex-1">
+            <StatusBar {...pane.split} />
+          </span>
+          <span className="shrink-0 text-fg-muted tabular-nums">
+            {pane.side}
+          </span>
+        </span>
+      ) : (
+        <span
+          className={cn(
+            "font-normal text-fg-muted tabular-nums",
+            pane.done && "pl-6",
+          )}
+        >
+          {pane.side}
+        </span>
+      )}
+    </>
+  );
+}
+
+/** Below 1024px the requirement list is the page, and each row opens its pane. */
+function LinkList({
+  requirements,
+  extras,
+  paneId,
+  onOpen,
+}: {
+  requirements: Pane[];
+  extras: Pane[];
+  paneId: string;
+  onOpen: (key: string) => void;
+}) {
+  const item = (pane: Pane) => (
+    <li key={pane.key} className="border-line border-t first:border-t-0">
+      <a
+        id={`${paneId}-open-${pane.key}`}
+        href={`?req=${pane.key}`}
+        onClick={(event) => {
+          event.preventDefault();
+          onOpen(pane.key);
+        }}
+        className="flex min-h-11 items-center gap-3 px-4 py-3 hover:bg-tint focus-visible:-outline-offset-2"
+      >
+        <span className="flex min-w-0 flex-1 flex-col gap-1.5">
+          <PaneSummary pane={pane} />
+        </span>
+        <ChevronRight aria-hidden className="size-4 shrink-0 text-fg-muted" />
+      </a>
+    </li>
+  );
+  return (
+    <div className="flex flex-col gap-4 lg:hidden">
+      <ul aria-label="Requirements" className={cn(CARD, "overflow-hidden")}>
+        {requirements.map(item)}
+      </ul>
+      <ul aria-label="More courses" className={cn(CARD, "overflow-hidden")}>
+        {extras.map(item)}
+      </ul>
     </div>
   );
 }
@@ -682,7 +772,7 @@ function TermLoad({ credits, limit }: { credits: number; limit: number }) {
   return (
     <p
       className={cn(
-        "flex items-center gap-2 tabular-nums",
+        "flex items-center gap-2 tabular-nums max-lg:shrink-0",
         over ? "text-warn" : "text-fg-muted",
       )}
     >
@@ -735,8 +825,16 @@ function Progress({
   total: number;
   courses: Record<keyof CreditSplit, string[]>;
 }) {
-  return <StatusBar {...split} legend courses={courses} className="flex-1" />;
+  return (
+    <div className={BAR_WITH_LEGEND}>
+      <StatusBar {...split} legend courses={courses} className="flex-1" />
+    </div>
+  );
 }
+
+/** Puts a pane card's meta under its title below 768px. */
+const BAND_WRAPS =
+  "max-md:[&>div:first-child]:flex-col max-md:[&>div:first-child]:items-start max-md:[&>div:first-child]:gap-1 max-md:[&>div:first-child>div]:ml-0";
 
 /** A program group's pane: its bar, then its courses by status. */
 function GroupPane({
@@ -757,7 +855,11 @@ function GroupPane({
   context: Context;
 }) {
   return (
-    <Card title={sentence(group.title)} meta={<GroupMeta group={group} />}>
+    <Card
+      title={sentence(group.title)}
+      meta={<GroupMeta group={group} />}
+      className={BAND_WRAPS}
+    >
       <div className="flex flex-col gap-6">
         {!group.credited && countsCredits(group) && split && (
           <Progress
@@ -1075,6 +1177,7 @@ function Row({
             variant="secondary"
             aria-label={label(!here)}
             onClick={toggle}
+            className="max-lg:relative max-lg:after:absolute max-lg:after:-inset-y-1 max-lg:after:inset-x-0"
           >
             {here ? "Remove" : "Add"}
           </Button>
@@ -1084,7 +1187,7 @@ function Row({
   );
 }
 
-/** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action on hover. */
+/** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action on hover. Below 1024px the title wraps and the action always shows, and below 768px the code, title and note stack with credits and the action on the right. */
 function PaneRow({
   course,
   title,
@@ -1103,18 +1206,31 @@ function PaneRow({
   action?: ReactNode;
 }) {
   return (
-    <li className={ROW}>
-      <span className={ROW_TITLE}>
+    <li
+      className={cn(
+        ROW,
+        "max-md:grid max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-3 max-md:gap-y-1",
+      )}
+    >
+      <span
+        className={cn(
+          ROW_TITLE,
+          "max-md:col-start-1 max-md:row-start-1 max-md:items-end",
+        )}
+      >
         {title ?? (
           <Link
             href={`/courses/${courseSlug(course.code)}`}
             prefetch={false}
-            className={ROW_LINK}
+            className={cn(ROW_LINK, "max-md:flex-col max-md:gap-0.5")}
           >
             <span className="w-24 shrink-0 font-semibold">
               <CourseCode code={course.code} />
             </span>
-            <span className="min-w-0 truncate" title={course.title}>
+            <span
+              className="min-w-0 truncate max-lg:whitespace-normal"
+              title={course.title}
+            >
               {course.title}
             </span>
           </Link>
@@ -1126,7 +1242,7 @@ function PaneRow({
           </span>
         )}
       </span>
-      <span className="flex w-50 shrink-0 flex-wrap items-start gap-x-2 gap-y-1 text-fg-muted @3xl:w-64">
+      <span className="flex w-50 shrink-0 flex-wrap items-start gap-x-2 gap-y-1 text-fg-muted @3xl:w-64 max-md:col-start-1 max-md:row-start-2 max-md:w-auto max-md:self-center">
         {note}
         {/* Too wide beside a title in a narrow row, so it moves under the note there. */}
         {share && (
@@ -1135,10 +1251,10 @@ function PaneRow({
           </span>
         )}
       </span>
-      <span className="w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums">
+      <span className="w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums max-md:col-start-2 max-md:row-start-1 max-md:w-auto">
         <CreditsLabel course={course} />
       </span>
-      <span className="-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100">
+      <span className="-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 max-lg:opacity-100 max-md:col-start-2 max-md:row-start-2 max-md:w-auto max-md:self-center pointer-coarse:opacity-100">
         {action}
       </span>
     </li>
@@ -1322,26 +1438,35 @@ function MinorPane({
   context: Context;
 }) {
   const groups = view.progress?.groups ?? [];
+  const title = COPY.minorTitle(minor.name);
+  const cut = title.lastIndexOf(" ") + 1;
   return (
     <Card
+      className={BAND_WRAPS}
       title={
-        <Defined
-          def={{ label: COPY.minorTitle(minor.name), tip: GLOSSARY.minor.tip }}
-        />
+        <>
+          {/* Only the last word stays with the info icon, so a long name wraps on a phone. */}
+          {title.slice(0, cut)}
+          <Defined def={{ label: title, tip: GLOSSARY.minor.tip }}>
+            {title.slice(cut)}
+          </Defined>
+        </>
       }
       meta={
-        <>
+        <span className="max-md:flex max-md:flex-col max-md:gap-1">
           {minor.generated && (
-            <>
+            <span>
               <GeneratedNote hasChecks={hasChecks(minor)} />
-              {dot}
-            </>
+              <span className="max-md:hidden">{dot}</span>
+            </span>
           )}
-          {COPY.fraction(
-            view.progress?.creditsDone ?? 0,
-            view.progress?.credits ?? minor.credits,
-          )}
-        </>
+          <span>
+            {COPY.fraction(
+              view.progress?.creditsDone ?? 0,
+              view.progress?.credits ?? minor.credits,
+            )}
+          </span>
+        </span>
       }
     >
       <div className="flex flex-col gap-8">
@@ -1355,12 +1480,12 @@ function MinorPane({
         {groups.map((group, index) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: two groups can share a title and the list never reorders
           <section key={index} className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 max-md:flex-col max-md:items-start max-md:gap-1">
               <h3 className="flex items-center gap-2 text-base">
                 {group.satisfied && <StatusIcon status="completed" />}
                 {sentence(group.title)}
               </h3>
-              <p className="ml-auto shrink-0 text-fg-muted tabular-nums">
+              <p className="ml-auto shrink-0 text-fg-muted tabular-nums max-md:ml-0">
                 <GroupMeta
                   group={group}
                   split={withPlan?.groups[index]}
@@ -1422,6 +1547,7 @@ function NotCounted({
   const credits = unclaimed.reduce((sum, claimed) => sum + claimed.credits, 0);
   return (
     <Card
+      className={BAND_WRAPS}
       title={GLOSSARY.notCounted.label}
       meta={`${courseCount(unclaimed.length)}, ${COPY.credits(credits)}`}
     >
@@ -1446,6 +1572,7 @@ function OtherPane({
   const when = termLabel(context.term);
   return (
     <Card
+      className={BAND_WRAPS}
       title={`Other courses you can take in ${when}`}
       meta={courseCount(entries.length)}
     >
@@ -1501,17 +1628,17 @@ function PageSkeleton() {
         Loading your courses
       </p>
       <div aria-hidden>
-        <div className={cn(bone, "h-11 w-[400px]")} />
-        <div className={cn(bone, "mt-2 h-5 w-[480px]")} />
+        <div className={cn(bone, "h-11 w-[400px] max-md:max-w-full")} />
+        <div className={cn(bone, "mt-2 h-5 w-[480px] max-md:max-w-full")} />
         <div className={cn(bone, "mt-6 h-9 w-56")} />
-        <div className="mt-6 grid grid-cols-[15rem_minmax(0,1fr)] gap-6">
+        <div className="mt-6 grid grid-cols-[15rem_minmax(0,1fr)] gap-6 max-lg:block">
           <div className="flex flex-col gap-1">
             {Array.from({ length: 6 }, (_, row) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
               <div key={row} className={cn(bone, "h-14")} />
             ))}
           </div>
-          <div>
+          <div className="max-lg:hidden">
             <div className={cn(bone, "h-7 w-64")} />
             <div className="mt-4">
               {Array.from({ length: 6 }, (_, row) => (
