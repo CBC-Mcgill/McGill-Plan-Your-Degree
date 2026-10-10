@@ -283,12 +283,12 @@ function CreditLimit({ limit }: { limit: number }) {
               required
               defaultValue={limit}
               onFocus={(event) => event.currentTarget.select()}
-              className="max-md:[&_input]:h-11 max-md:[&_input]:text-base"
+              className="max-lg:[&_input]:h-11 max-lg:[&_input]:text-base"
             />
             <Button
               type="submit"
               variant="secondary"
-              className="self-end max-md:h-11"
+              className="self-end max-lg:h-11"
             >
               Save
             </Button>
@@ -423,7 +423,7 @@ function Fill({
           Fill {label}
         </h3>
         {filtered && (
-          <div className="ml-auto max-md:ml-0 max-md:w-full max-md:[&_[role=tab]]:h-10 max-md:[&_[role=tab]]:flex-auto max-md:[&_[role=tablist]]:h-11 max-md:[&_[role=tablist]]:w-full">
+          <div className="ml-auto max-md:ml-0 max-md:w-full max-lg:[&_[role=tab]]:h-10 max-lg:[&_[role=tablist]]:h-11 max-md:[&_[role=tab]]:flex-auto max-md:[&_[role=tablist]]:w-full">
             <ViewTabs
               label="Counts toward"
               tabs={FILTERS}
@@ -474,7 +474,7 @@ function Fill({
           )}
         </p>
         <Button
-          className="ml-auto max-md:ml-0 max-md:h-11"
+          className="ml-auto max-md:ml-0 max-lg:h-11"
           disabled={codes.length === 0}
           onClick={() => {
             addAllWithUndo(stage.term, codes);

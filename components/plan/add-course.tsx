@@ -151,7 +151,7 @@ export function AddCourse({
           }}
           className={cn(
             controlStyles,
-            "w-full pl-9 max-md:h-11 max-md:text-base",
+            "w-full pl-9 max-lg:h-11 max-lg:text-base",
           )}
         />
       </div>
@@ -175,7 +175,7 @@ export function AddCourse({
                   onMouseMove={() => !disabled && setPicked(course.code)}
                   onClick={() => commit(course)}
                   className={cn(
-                    "flex h-10 w-full items-center gap-4 rounded-md px-3 text-left max-md:h-auto max-md:min-h-12 max-md:items-start max-md:py-2",
+                    "flex h-10 w-full items-center gap-4 rounded-md px-3 text-left max-lg:h-11 max-md:h-auto max-md:min-h-12 max-md:items-start max-md:py-2",
                     i === active && "selected",
                     disabled && "cursor-default text-fg-muted",
                   )}
