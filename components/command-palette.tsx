@@ -53,7 +53,7 @@ const setOpen = (value: boolean) => {
   open = value;
   for (const listener of listeners) listener();
 };
-const openCommandPalette = () => setOpen(true);
+export const openCommandPalette = () => setOpen(true);
 
 const subscribe = (listener: () => void) => {
   listeners.add(listener);
@@ -348,6 +348,8 @@ function PaletteDialog() {
           }}
           className={cn(
             "fixed top-[120px] left-1/2 z-[90] w-[640px] max-w-[calc(100vw-2rem)] -translate-x-1/2 overflow-hidden rounded-lg bg-bg text-fg shadow-float",
+            // A phone gets the whole screen, like its own search.
+            "max-md:inset-0 max-md:flex max-md:w-full max-md:max-w-none max-md:translate-x-0 max-md:flex-col max-md:rounded-none",
             FADE,
           )}
           onKeyDown={(event) => {
@@ -383,7 +385,12 @@ function PaletteDialog() {
               aria-label="Search courses or jump to a page"
               className="h-full min-w-0 flex-1 bg-transparent text-fg text-lg outline-none placeholder:text-fg-muted"
             />
-            <Kbd aria-hidden>esc</Kbd>
+            <Kbd aria-hidden className="max-md:hidden">
+              esc
+            </Kbd>
+            <Dialog.Close className="-mr-2 h-11 rounded-md px-2 font-semibold text-fg-muted md:hidden">
+              Cancel
+            </Dialog.Close>
           </div>
           {flat.length > 0 && (
             <div
@@ -391,7 +398,7 @@ function PaletteDialog() {
               id={listId}
               role="listbox"
               aria-label="Results"
-              className="max-h-[min(520px,calc(100dvh-240px))] overflow-y-auto p-2"
+              className="max-h-[min(520px,calc(100dvh-240px))] overflow-y-auto p-2 max-md:max-h-none max-md:flex-1"
             >
               {groups.map((group, i) => (
                 // biome-ignore lint/a11y/useSemanticElements: a fieldset cannot sit inside a listbox
@@ -427,7 +434,7 @@ function PaletteDialog() {
                         onMouseMove={() => setActive(position)}
                         onClick={() => run(item)}
                         className={cn(
-                          "flex h-10 w-full cursor-pointer items-center gap-3 rounded-md px-3 text-left",
+                          "flex h-10 w-full cursor-pointer items-center gap-3 rounded-md px-3 text-left max-md:h-12",
                           selected && "selected",
                         )}
                       >
@@ -492,7 +499,7 @@ function PaletteDialog() {
           </p>
           <div
             aria-hidden
-            className="flex h-10 items-center gap-5 border-line border-t px-4 text-fg-muted"
+            className="flex h-10 items-center gap-5 border-line border-t px-4 text-fg-muted max-md:hidden"
           >
             <span className="flex items-center gap-1.5">
               <Kbd>↑</Kbd>

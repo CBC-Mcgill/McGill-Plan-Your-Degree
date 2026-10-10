@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             >
               {children}
             </main>
-            <footer className="mx-auto flex w-full max-w-page items-baseline justify-between gap-8 px-8 py-8 text-fg-muted">
+            <footer className="mx-auto flex w-full max-w-page items-baseline justify-between gap-8 px-8 py-8 text-fg-muted max-md:px-4">
               <p>
                 Open source on{" "}
                 <a

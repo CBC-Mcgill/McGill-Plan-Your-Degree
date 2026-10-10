@@ -78,7 +78,10 @@ export function Toaster() {
   }, []);
 
   return (
-    <div aria-live="polite" className="fixed bottom-6 left-6 z-[70]">
+    <div
+      aria-live="polite"
+      className="fixed bottom-6 left-6 z-[70] max-md:inset-x-4 max-md:bottom-4"
+    >
       {item && <ToastCard key={item.id} item={item} />}
     </div>
   );

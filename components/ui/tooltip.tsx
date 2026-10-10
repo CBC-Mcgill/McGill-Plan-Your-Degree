@@ -81,9 +81,22 @@ function Tooltip({
   children: ReactNode;
 }) {
   const { open, onOpenChange, onFocus, onEscapeKeyDown } = useOpen();
+  // A touch screen has no hover, so a tap toggles the tooltip, from how it stood before the press.
+  const touchOpen = useRef<boolean | null>(null);
   return (
     <Primitive.Root open={open} onOpenChange={onOpenChange}>
-      <Primitive.Trigger asChild onFocus={onFocus}>
+      <Primitive.Trigger
+        asChild
+        onFocus={onFocus}
+        onPointerDown={(event) => {
+          touchOpen.current = event.pointerType === "touch" ? open : null;
+        }}
+        onClick={() => {
+          if (touchOpen.current === null) return;
+          onOpenChange(!touchOpen.current);
+          touchOpen.current = null;
+        }}
+      >
         {children}
       </Primitive.Trigger>
       <Bubble side={side} align={align} onEscapeKeyDown={onEscapeKeyDown}>
