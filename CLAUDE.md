@@ -25,7 +25,8 @@ Planned: Supabase for P1 login and sync only.
 
 ## UI rules
 
-- Desktop-only MVP: design for a 1280 px window, keep it usable down to 1024 px, no horizontal scroll. No mobile layouts yet.
+- Desktop design at 1280 px, usable down to 1024 px, with phone and tablet layouts from 360 px. No horizontal scroll at any width.
+- Phone and tablet layouts use `max-lg:` and `max-md:` variants so desktop stays unchanged. Phone tests are `e2e/mobile*.e2e.ts`.
 - Click and keyboard must work everywhere. Drag and drop is an extra, never the only way.
 - Animations respect `prefers-reduced-motion`.
 - Clean and never confusing: one obvious primary action per screen, plain labels, no gamification.
