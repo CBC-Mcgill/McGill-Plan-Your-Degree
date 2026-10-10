@@ -20,6 +20,10 @@ import { courseStatus } from "@/lib/engine/status";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 const SHOWN = 12;
+const STACK = "max-md:flex-1 max-md:flex-col max-md:gap-0.5";
+/** On a phone `end` sits beside the code, so the title below it gets the row's full width. A row with the "Has conditions" flag keeps `end` in line, so the flag never runs under it. */
+const PHONE_END =
+  "max-md:relative max-md:[&>:nth-child(2)]:absolute max-md:[&>:nth-child(2)]:top-3 max-md:[&>:nth-child(2)]:right-5";
 
 /** The courses a course unlocks, with the student's status glyph on each. Past 12 the rest open behind "Show N more", unless only 3 or fewer are left. */
 export function UnlockRows({ courses }: { courses: CourseSummary[] }) {
@@ -65,6 +69,7 @@ function Rows({ courses }: { courses: CourseSummary[] }) {
 
 /**
  * A course page row (44px, grows when the note wraps): the code in its subject color and the title as one link, `note` muted under the title, `end` on the right.
+ * On a phone the title moves under the code and wraps, and the flag sits at the right.
  * `page` is the code of the course page it links to, such as ECON 352 for ECON 352D1, and none when the catalogue has no such course. `glyph` leads with the status glyph, its word on hover.
  */
 export function CodeRow({
@@ -92,7 +97,7 @@ export function CodeRow({
         <CourseCode code={code} />
       </span>
       <span className="min-w-0">
-        <span className="block truncate" title={title}>
+        <span className="block truncate max-md:whitespace-normal" title={title}>
           {title}
         </span>
         {note && <span className="block text-fg-muted">{note}</span>}
@@ -103,18 +108,21 @@ export function CodeRow({
     <Link
       href={`/courses/${courseSlug(page)}`}
       prefetch={false}
-      className={ROW_LINK}
+      className={cn(ROW_LINK, STACK)}
     >
       {body}
     </Link>
   ) : (
-    <span className="flex min-w-0 gap-4">{body}</span>
+    <span className={cn("flex min-w-0 gap-4", STACK)}>{body}</span>
   );
   return (
-    <li className={cn(ROW, className)}>
+    <li className={cn(ROW, !uncertain && PHONE_END, className)}>
       <span className={ROW_TITLE}>
         {glyph ? (
-          <StatusTip status={glyph} className="flex min-w-0 gap-2">
+          <StatusTip
+            status={glyph}
+            className="flex min-w-0 gap-2 max-md:flex-1"
+          >
             <span className="flex h-5 w-4 shrink-0 items-center">
               <StatusIcon status={glyph} label={STATUS[glyph].label} />
             </span>

@@ -14,7 +14,13 @@ import {
   seasonsOffered,
 } from "@/components/course-row";
 import { CreditsLabel } from "@/components/credits-label";
-import { StatusBadge, StatusTip, UncertainFlag } from "@/components/status";
+import {
+  STATUS,
+  StatusBadge,
+  StatusIcon,
+  StatusTip,
+  UncertainFlag,
+} from "@/components/status";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ViewTabs } from "@/components/ui/tabs";
@@ -250,17 +256,20 @@ function CourseTable({ b }: { b: Browse }) {
   return (
     <div ref={top} className="scroll-mt-6">
       {b.hasProfile ? (
-        <ViewTabs
-          label="Views"
-          panelId={PANEL}
-          value={query.view}
-          onChange={(view) => update({ view })}
-          tabs={b.views.map((tab) => ({
-            id: tab.value,
-            label: tab.label,
-            tip: VIEW_TIPS[tab.value],
-          }))}
-        />
+        // On a phone the tabs fill the width and grow to 44px for the thumb.
+        <div className="max-md:[&>[role=tablist]]:h-11 max-md:[&>[role=tablist]]:w-full max-md:[&_[role=tab]]:h-10 max-md:[&_[role=tab]]:grow">
+          <ViewTabs
+            label="Views"
+            panelId={PANEL}
+            value={query.view}
+            onChange={(view) => update({ view })}
+            tabs={b.views.map((tab) => ({
+              id: tab.value,
+              label: tab.label,
+              tip: VIEW_TIPS[tab.value],
+            }))}
+          />
+        </div>
       ) : (
         <p className="text-fg-muted">
           <Link href="/profile" className="link">
@@ -270,16 +279,17 @@ function CourseTable({ b }: { b: Browse }) {
         </p>
       )}
 
-      <div className="mt-4 flex items-center gap-4">
+      <div className="mt-4 flex items-center gap-4 max-md:flex-col max-md:items-stretch max-md:gap-2">
         <SearchField
           ref={input}
-          className="w-80 shrink-0"
+          className="w-80 shrink-0 max-md:w-full"
           value={query.q}
           onChange={(q) => update({ q })}
           placeholder="Search courses"
           shortcut="/"
         />
-        <div className="flex min-w-0 flex-wrap items-center gap-2">
+        {/* On a phone the chips scroll sideways inside their own row, edge to edge, fading out at the edges. */}
+        <div className="flex min-w-0 flex-wrap items-center gap-2 max-md:-mx-4 max-md:-my-1 max-md:flex-nowrap max-md:overflow-x-auto max-md:px-4 max-md:py-1 max-md:[mask-image:linear-gradient(to_right,transparent,#000_1rem,#000_calc(100%-1rem),transparent)]">
           {PROPS.map((prop) => (
             <FilterPopover
               key={prop}
@@ -325,13 +335,26 @@ function CourseTable({ b }: { b: Browse }) {
           </div>
         ) : (
           <>
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden md:hidden">
+              <ul aria-label="Courses">
+                {shown.map((course) => (
+                  <CourseListRow
+                    key={course.code}
+                    course={course}
+                    b={b}
+                    status={statuses}
+                  />
+                ))}
+              </ul>
+            </Card>
+            <Card className="overflow-hidden max-md:hidden">
               <table className="w-full table-fixed border-separate border-spacing-0">
                 <caption className="sr-only">Courses</caption>
                 <colgroup>
-                  <col className="w-37" />
+                  {/* A tablet narrows the code and status columns to give titles room. */}
+                  <col className="w-37 max-lg:w-28" />
                   <col />
-                  {statuses && <col className="w-40" />}
+                  {statuses && <col className="w-40 max-lg:w-32" />}
                   <col className="w-24" />
                   <col className="w-27" />
                 </colgroup>
@@ -384,6 +407,7 @@ function CourseTable({ b }: { b: Browse }) {
                     variant="secondary"
                     icon
                     aria-label="Previous page"
+                    className="max-md:size-11"
                     disabled={current === 1}
                     onClick={() => goTo(current - 1)}
                   >
@@ -393,6 +417,7 @@ function CourseTable({ b }: { b: Browse }) {
                     variant="secondary"
                     icon
                     aria-label="Next page"
+                    className="max-md:size-11"
                     disabled={current >= pages}
                     onClick={() => goTo(current + 1)}
                   >
@@ -420,13 +445,7 @@ function CourseTableRow({
 }) {
   const router = useRouter();
   const href = `/courses/${courseSlug(course.code)}`;
-  const state = b.states.get(course.code);
-  const status = statusOf(b.states, course.code);
-  // A course that does not run this year never reads "Can take" (D33).
-  const word =
-    status === "available" && seasonsOffered(course) === COPY.notOfferedYear
-      ? COPY.notOfferedYear
-      : undefined;
+  const { state, status, word } = rowStatus(course, b);
   return (
     <tr
       onClick={(event) => {
@@ -470,5 +489,72 @@ function CourseTableRow({
         <SeasonLetters course={course} quiet={showStatus} />
       </td>
     </tr>
+  );
+}
+
+/** The row's catalogue state, status and word. A course that does not run this year never reads "Can take" (D33). */
+function rowStatus(course: CourseSummary, b: Browse) {
+  const status = statusOf(b.states, course.code);
+  const word =
+    status === "available" && seasonsOffered(course) === COPY.notOfferedYear
+      ? COPY.notOfferedYear
+      : undefined;
+  return { state: b.states.get(course.code), status, word };
+}
+
+/** The phone's course row: code and title, then status, credits and seasons on a muted line. The whole row opens the course. */
+function CourseListRow({
+  course,
+  b,
+  status: showStatus,
+}: {
+  course: CourseSummary;
+  b: Browse;
+  status: boolean;
+}) {
+  const { state, status, word } = rowStatus(course, b);
+  const offered = seasonsOffered(course);
+  const seasons =
+    offered !== COPY.notOfferedYear
+      ? offered
+      : !(showStatus && word) && "Not offered";
+  return (
+    <li className="relative border-line border-t px-4 py-3 first:border-t-0 focus-within:bg-tint hover:bg-tint active:bg-tint">
+      <span className="flex items-start gap-2">
+        <Link
+          href={`/courses/${courseSlug(course.code)}`}
+          prefetch={false}
+          className="flex min-w-0 flex-1 gap-3 rounded-md after:absolute after:inset-0"
+        >
+          <span className="shrink-0 font-semibold tabular-nums">
+            <CourseCode code={course.code} />
+          </span>
+          <span className="min-w-0">{course.title}</span>
+        </Link>
+        {state?.uncertain && (
+          <span className="relative flex">
+            <UncertainFlag />
+          </span>
+        )}
+      </span>
+      <span className="mt-1 flex flex-wrap items-center gap-x-1.5 text-fg-muted tabular-nums">
+        {showStatus && (
+          <>
+            <StatusIcon status={status} />
+            <span style={{ color: STATUS[status].text }}>
+              {word ? "Not offered" : STATUS[status].label}
+            </span>
+            <span aria-hidden>·</span>
+          </>
+        )}
+        <CreditsLabel course={course} />
+        {seasons && (
+          <>
+            <span aria-hidden>·</span>
+            {seasons}
+          </>
+        )}
+      </span>
+    </li>
   );
 }

@@ -48,6 +48,7 @@ async function fetchRatings(code: string) {
 /**
  * The full-width bar of what students compare: credits, terms, and the rating, difficulty and review count from mcgill.courses (D32).
  * Only the course code leaves the browser, and review text is never shown, only linked. Without reviews the three ratings become one fact.
+ * Below 1024px it is a grid of 3 columns, 2 on a phone, with 1px gaps over the line color as the hairlines. The reviews fact, always last, fills its row.
  */
 export function CourseFactsBar({ course }: { course: CourseSummary }) {
   const terms = partRoutes(course)[0]?.length ?? 0;
@@ -57,6 +58,7 @@ export function CourseFactsBar({ course }: { course: CourseSummary }) {
       className={cn(
         CARD,
         "mt-8 grid grid-cols-[repeat(4,minmax(max-content,1fr))_minmax(max-content,1.4fr)]",
+        "max-lg:grid-cols-3 max-lg:gap-px max-lg:overflow-hidden max-lg:bg-line max-md:mt-6 max-md:grid-cols-2",
       )}
     >
       <Fact label="Credits">
@@ -93,12 +95,12 @@ function Fact({
   return (
     <div
       className={cn(
-        "border-line border-l px-5 py-4 first:border-l-0",
+        "border-line border-l px-5 py-4 first:border-l-0 max-lg:border-l-0 max-lg:bg-bg",
         className,
       )}
     >
       <dt className="text-fg-muted">{label}</dt>
-      <dd className="mt-1 whitespace-nowrap font-semibold text-xl leading-7">
+      <dd className="mt-1 whitespace-nowrap font-semibold text-xl leading-7 max-md:whitespace-normal">
         {children}
       </dd>
     </div>
@@ -137,7 +139,11 @@ function RatingFacts({ code }: { code: string }) {
   const label = "Reviews on mcgill.courses";
   if (ratings === null) {
     return ["Rating", "Difficulty", label].map((name) => (
-      <Fact key={name} label={name}>
+      <Fact
+        key={name}
+        label={name}
+        className={name === label ? "max-lg:col-span-2" : undefined}
+      >
         <span
           aria-hidden
           className="inline-block h-5 w-12 rounded-md bg-tint align-middle motion-safe:animate-pulse"
@@ -148,7 +154,10 @@ function RatingFacts({ code }: { code: string }) {
   }
   if (ratings === "unavailable" || ratings.reviews === 0) {
     return (
-      <Fact label={label} className="col-span-3">
+      <Fact
+        label={label}
+        className="col-span-3 max-lg:col-span-1 max-md:col-span-2"
+      >
         <ExternalLink href={href}>
           {ratings === "unavailable" ? "See the site" : "None yet"}
         </ExternalLink>
@@ -164,7 +173,7 @@ function RatingFacts({ code }: { code: string }) {
       <Fact label="Difficulty">
         {difficulty.toFixed(1)} <Unit>of 5</Unit>
       </Fact>
-      <Fact label={label}>
+      <Fact label={label} className="max-lg:col-span-2">
         <ExternalLink href={href}>
           {reviews.toLocaleString("en-CA")}
           <span className="sr-only"> reviews on mcgill.courses</span>

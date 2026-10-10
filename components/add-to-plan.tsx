@@ -182,7 +182,7 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
   if (snapshot === undefined) return null;
   if (snapshot === null) {
     return (
-      <Button asChild>
+      <Button asChild className="max-md:h-11">
         <Link href="/profile">{COPY.importTranscript}</Link>
       </Button>
     );
@@ -247,7 +247,7 @@ function PlanActions({
     <div ref={root} className="flex gap-px">
       {next && (
         <Button
-          className="rounded-r-none focus-visible:z-10"
+          className="rounded-r-none focus-visible:z-10 max-md:h-11"
           onClick={() => add(next.term)}
         >
           Add to {next.label}
@@ -260,12 +260,12 @@ function PlanActions({
             <Button
               icon
               aria-label="Choose a term"
-              className="rounded-l-none focus-visible:z-10"
+              className="rounded-l-none focus-visible:z-10 max-md:size-11"
             >
               <ChevronDown aria-hidden />
             </Button>
           ) : (
-            <Button variant="secondary">
+            <Button variant="secondary" className="max-md:h-11">
               {planned ? "Change term" : "Add to a term"}
               <ChevronDown aria-hidden className="text-fg-muted" />
             </Button>
