@@ -224,9 +224,9 @@ function PlannerReady({
   );
 }
 
-/** The path beside the term card. */
+/** The path beside the term card, and above it below 1024px. */
 const GRID =
-  "grid grid-cols-[16.5rem_minmax(0,1fr)] items-start gap-6 xl:grid-cols-[18.75rem_minmax(0,1fr)]";
+  "grid grid-cols-[16.5rem_minmax(0,1fr)] items-start gap-6 max-lg:grid-cols-[minmax(0,1fr)] max-lg:gap-4 xl:grid-cols-[18.75rem_minmax(0,1fr)]";
 
 const bone = "rounded-md bg-tint motion-safe:animate-pulse";
 
@@ -235,13 +235,16 @@ function PlannerSkeleton() {
     <div role="status">
       <span className="sr-only">Loading your plan</span>
       <div aria-hidden>
-        <div className={`${bone} h-11 w-[560px]`} />
-        <div className={`${bone} mt-2 h-5 w-[480px]`} />
+        <div className={`${bone} h-11 w-[560px] max-md:w-full`} />
+        <div className={`${bone} mt-2 h-5 w-[480px] max-md:w-2/3`} />
         <div className={cn(GRID, "mt-8")}>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 max-lg:flex-row max-lg:overflow-hidden">
             {Array.from({ length: 6 }, (_, row) => (
-              // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-              <div key={row} className={`${bone} h-11`} />
+              <div
+                // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+                key={row}
+                className={`${bone} h-11 max-lg:h-17 max-lg:w-36 max-lg:shrink-0`}
+              />
             ))}
           </div>
           <div>
