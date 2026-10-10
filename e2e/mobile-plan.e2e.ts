@@ -33,6 +33,7 @@ async function seed(page: Page) {
           record("ECSE 206", "Fall", 2026, "in-progress"),
         ],
         programId: "computer-engineering-beng",
+        minorId: "technological-entrepreneurship-minor-beng",
         startTerm: { season: "Fall", year: 2025 },
         graduationTerm: { season: "Winter", year: 2028 },
         plan: [
