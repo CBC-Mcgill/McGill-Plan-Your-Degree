@@ -29,6 +29,8 @@ export interface Snapshot {
   covered: ReadonlySet<string>;
   /** Lump-sum advanced standing credits, earned with no course behind them. */
   standing: number;
+  /** Rules the crawler could not read that the student marked as checked, by `checkKey`. */
+  checked: ReadonlySet<string>;
 }
 
 /** Courses a Quebec Science DEC covers at every CEGEP, from mcgill.ca/transfercredit/prospective/cegep. They meet prerequisites but carry no McGill credit. */
@@ -49,6 +51,7 @@ export function buildSnapshot(
   plan: Plan = [],
   entry: EntryRoute | null = null,
   advancedStanding = 0,
+  checked: readonly string[] = [],
 ): Snapshot {
   const done = new Set<string>();
   const earned = new Map<string, number | null>();
@@ -97,5 +100,6 @@ export function buildSnapshot(
     taken: new Set([...done, ...inProgress.keys()]),
     covered,
     standing: advancedStanding,
+    checked: new Set(checked),
   };
 }

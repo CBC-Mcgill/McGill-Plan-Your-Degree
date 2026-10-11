@@ -82,11 +82,17 @@ test("applyTranscript maps lines to records and keeps manual ones", () => {
 });
 
 test("parseProfileFile rejects a malformed file and round-trips an export", () => {
+  store
+    .getState()
+    .setChecked("economics-major-concentration-ba\u0000Rule", true);
   const exported = exportProfile(store.getState());
   expect(parseProfileFile(exported)).toEqual({
     ok: true,
     profile: JSON.parse(exported).profile,
   });
+  expect(JSON.parse(exported).profile.checked).toEqual([
+    "economics-major-concentration-ba\u0000Rule",
+  ]);
 
   const file = JSON.parse(exported);
   file.profile.records[0].status = "graduated";
@@ -136,7 +142,7 @@ test("a version 3 file loads without a minor, and a minor survives an export", (
   };
   expect(parseProfileFile(JSON.stringify(file))).toMatchObject({
     ok: true,
-    profile: { minorId: null },
+    profile: { minorId: null, checked: [] },
   });
   const exported = exportProfile({
     ...store.getState(),
