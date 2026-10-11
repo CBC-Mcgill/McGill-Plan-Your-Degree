@@ -5,7 +5,7 @@ export type RequiredItem = string | { oneOf: string[] };
 export interface RequiredGroup {
   title: string;
   kind: "required";
-  /** Credits when every item is taken, as the catalogue heading states. */
+  /** Credits when every item is taken, as the catalogue heading states. For a range, the bound the program total counts. */
   credits: number;
   courses: RequiredItem[];
   note?: string;

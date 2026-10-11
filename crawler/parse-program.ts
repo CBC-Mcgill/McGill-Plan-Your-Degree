@@ -1891,8 +1891,14 @@ function requiredGroup(section: Section): RequiredGroup | null {
   };
   if (FOUNDATION.test(section.title)) group.foundation = true;
   if (notes.length > 0) group.note = notes.join(" ");
+  if (section.min !== undefined && section.min < group.credits) {
+    LOWER.set(group, section.min);
+  }
   return group;
 }
+
+/** The lower bound of a required heading's range, as "U1 Required Courses (20-24 credits)", for pages whose total counts it. A complementary range keeps its lower bound, since that is when the group is done. */
+const LOWER = new WeakMap<RequiredGroup, number>();
 
 /** "AND 3 credits Natural Science complementary courses" after a required list, with subject lines such as "Physics (PHYS)", or "must also successfully complete 18 credits as follows:" with lines the sentence parser reads. */
 function additionalCredits(
@@ -2467,6 +2473,32 @@ export function parseProgramPage(
     }
   }
   if (groups.length === 0) return null;
+  // Some pages count a required range at its top and others at its bottom: take the bottom when only that adds up to the program total. Required groups are done when their courses are, so this changes no satisfaction.
+  const ranged = groups.flatMap((g) =>
+    g.kind === "required" && LOWER.has(g) ? [g] : [],
+  );
+  const sum = groups.reduce((n, g) => n + g.credits, 0);
+  const slack = ranged.reduce(
+    (n, g) => n + g.credits - (LOWER.get(g) ?? g.credits),
+    0,
+  );
+  if (slack > 0 && sum !== credits && sum - slack === credits) {
+    for (const g of ranged) g.credits = LOWER.get(g) ?? g.credits;
+  }
+  // An Honours page that lists only the Honours courses: the rest of its credits are the program it builds on, which has its own page.
+  const base =
+    /This program is open only to students in the (.+?)\. (To be eligible for Honours, students must satisfy the requirements set by their .+? degree)\./.exec(
+      overview,
+    );
+  const counted = groups.reduce((n, g) => n + g.credits, 0);
+  if (base && counted < credits) {
+    groups.push({
+      title: base[1] ?? "",
+      kind: "complementary",
+      credits: credits - counted,
+      rules: [unparsed(base[0])],
+    });
+  }
 
   const { name, degree } = degreeAndName(heading);
   const overlap = overlapOf(

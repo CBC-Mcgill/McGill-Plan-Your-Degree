@@ -1198,3 +1198,27 @@ test("a statement naming its own heading, and any of the lists, take in the list
     ]),
   );
 });
+
+test("a required range takes the bound the program total counts, and an Honours add-on page asks for its base program", () => {
+  const ranged = programOf(
+    "Test Major (B.Sc.) (26 credits)",
+    `<h2>U1 Required Courses (20-24 credits)</h2>${table("BIOC 212", "BIOC 220", "CHEM 212:4", "BIOL 200", "BIOL 201", "MATH 203", "PHGY 209", "PHGY 210")}` +
+      `<h2>Complementary Courses (6 credits)</h2><p>6 credits from:</p>${table("BIOL 205", "MIMM 211")}`,
+  );
+  expect(ranged.groups.map((g) => g.credits)).toEqual([20, 6]);
+  const honours = parseProgramPage(
+    `<h1 class="page-title">Test Honours (B.A.) (60 credits)</h1><p>2026-2027 Undergraduate Catalogue</p>` +
+      `<div id="programoverviewtextcontainer">This program is open only to students in the B.A. Faculty Program Environment. To be eligible for Honours, students must satisfy the requirements set by their B.A. degree. In addition, students must apply.</div>` +
+      `<div id="coursestextcontainer"><h2>Honours Required Courses (6 credits)</h2>${table("ENVR 495D1", "ENVR 495D2")}</div>`,
+    `${BASE}/environment/programs/test/test-honours-ba/`,
+  ) as Program;
+  expect(validateProgram(honours)).toMatchObject({ ok: true });
+  expect(honours.groups).toMatchObject([
+    { kind: "required", credits: 6 },
+    {
+      title: "B.A. Faculty Program Environment",
+      credits: 54,
+      rules: [{ unparsed: true }],
+    },
+  ]);
+});
