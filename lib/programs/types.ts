@@ -57,6 +57,8 @@ export interface ComplementaryGroup {
   credits: number;
   /** For "9-12 credits (3 courses)" style lines. */
   minCourses?: number;
+  /** "12 credits from one of the following streams": the student completes exactly one of the rules, so the group counts the rule that is furthest along and is satisfied when that rule alone meets the group's credits. */
+  pickOne?: true;
   rules: Rule[];
   note?: string;
   /** Year 0 or Foundation courses that Quebec CEGEP students are credited for. */

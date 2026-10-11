@@ -724,3 +724,45 @@ test("reads Music electives and a Foundation year listed under Prerequisite Cour
     ],
   });
 });
+
+test("reads streams as a group that counts one of them, and leaves streams of several lists as text", () => {
+  const streams = (second: string) =>
+    programOf(
+      "Test Minor (B.Eng.) (18 credits)",
+      `<h2>Complementary Courses (18 credits)</h2><p>12 credits from one of the following streams.</p>` +
+        `<h3>Aerodynamics Stream</h3>${table("MECH 447", "MECH 516", "MECH 532", "MECH 533")}` +
+        `<h3>Avionics Stream</h3>${second}` +
+        `<h3>Technical Complementaries (6 credits)</h3><p>6 credits from:</p>${table("MIME 320", "MIME 442")}`,
+    );
+  const read = streams(
+    table("ECSE 403:4", "ECSE 408:4", "ECSE 412", "ECSE 420"),
+  );
+  expect(validateProgram(read)).toMatchObject({ ok: true });
+  expect(read.groups).toEqual([
+    expect.objectContaining({
+      credits: 12,
+      pickOne: true,
+      rules: [
+        expect.objectContaining({
+          title: "Aerodynamics Stream",
+          minCredits: 12,
+        }),
+        expect.objectContaining({ title: "Avionics Stream", minCredits: 12 }),
+      ],
+    }),
+    expect.objectContaining({ title: "Technical Complementaries", credits: 6 }),
+  ]);
+  const unread = streams(
+    `<p>6 credits from:</p>${table("ECSE 403", "ECSE 408")}<p>6 credits from:</p>${table("ECSE 412", "ECSE 420")}`,
+  );
+  expect(unread.groups).toHaveLength(1);
+  expect(unread.groups[0]).not.toHaveProperty("pickOne");
+  expect(unread.groups[0]).toMatchObject({
+    rules: expect.arrayContaining([
+      expect.objectContaining({
+        unparsed: true,
+        title: "12 credits from one of the following streams",
+      }),
+    ]),
+  });
+});

@@ -318,6 +318,24 @@ function complementaryProgress(
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
 ): GroupProgress {
+  if (group.pickOne) {
+    // Each rule is counted on its own, as if it were the whole group, and the one furthest along stands for the group.
+    const options = group.rules.map((rule) =>
+      complementaryProgress(
+        { ...group, pickOne: undefined, rules: [rule] },
+        counted,
+        new Set(used),
+      ),
+    );
+    const best = options.reduce((a, b) =>
+      b.satisfied > a.satisfied ||
+      (b.satisfied === a.satisfied && b.creditsDone > a.creditsDone)
+        ? b
+        : a,
+    );
+    for (const { code } of best.courses) used.add(code);
+    return { ...best, rules: options.flatMap((option) => option.rules) };
+  }
   const pool = new Map<string, number>();
   for (const [code, credits] of counted) {
     if (!used.has(code) && counts(group, code)) pool.set(code, credits);

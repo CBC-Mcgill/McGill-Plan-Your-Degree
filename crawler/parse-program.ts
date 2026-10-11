@@ -1376,9 +1376,128 @@ const hasOwnCredits = (section: Section) => {
   const first = section.items.find((i) => i.kind === "text");
   return (
     section.min !== undefined ||
-    (first?.kind === "text" && bareTotal(first.text) !== null)
+    (first?.kind === "text" &&
+      (bareTotal(first.text) !== null || STREAMS.test(first.text)))
   );
 };
+
+const STREAMS = new RegExp(
+  String.raw`^(?:(?:honours )?students must complete )?${RANGE}\s*credits? (?:from|in) one of (?:the )?(?:following )?(?:(${COUNT_WORD}) )?(?:(?:specialized )?(streams|lists|specializations|options)(?: set out below| listed below)?(?::\s*([^.;:]+?))?|((?:Stream|List|Option) [A-Z\d](?: or (?:Stream|List|Option) [A-Z\d])+))\s*[:.]?$`,
+  "i",
+);
+
+/** The headings a statement such as "15-17 credits from one of the following streams:" chooses between, or null when they are not clear. */
+function streamsOf(section: Section) {
+  const statement = section.items.find(
+    (item): item is Text => item.kind === "text" && STREAMS.test(item.text),
+  );
+  const m = statement && STREAMS.exec(statement.text);
+  const at = statement ? section.items.indexOf(statement) : -1;
+  const first = section.items.findIndex((item) => item.kind === "section");
+  if (!statement || !m || first < at) return null;
+  const [, low, , count, kind = "", named, ids] = m;
+  const children = section.items.filter((i) => i.kind === "section");
+  const titled = (name: string) =>
+    children.filter((c) =>
+      c.title.toLowerCase().startsWith(name.toLowerCase()),
+    );
+  const names = named?.split(/, or |, | or /) ?? ids?.split(" or ");
+  const singular = kind.toLowerCase().replace(/s$/, "");
+  const kindOf = children.filter((c) =>
+    c.title.toLowerCase().includes(singular),
+  );
+  const options = names
+    ? names.flatMap((name) => (titled(name).length === 1 ? titled(name) : []))
+    : kindOf.length > 1
+      ? kindOf
+      : children;
+  const wanted = names?.length ?? COUNTS[(count ?? "").toLowerCase()];
+  if (
+    options.length < 2 ||
+    (wanted !== undefined && options.length !== wanted)
+  ) {
+    return null;
+  }
+  return { statement, credits: Number(low), options };
+}
+
+/** A stream as one rule, when it is one list with at most one amount of its own. */
+function streamRule(stream: Section, credits: number): Rule | null {
+  const tables = tablesIn(stream);
+  const courses = coursesOf(tables);
+  const statements = textsIn(stream).filter(
+    (t) => CONSTRAINT.test(t) || listAmount(t),
+  );
+  const [statement] = statements;
+  const found = statement === undefined ? {} : listAmount(statement, true);
+  if (
+    courses.length === 0 ||
+    statements.length > 1 ||
+    !found ||
+    found.parts ||
+    found.union ||
+    tables.some((t) => noteRules(t.notes).length > 0)
+  ) {
+    return null;
+  }
+  return {
+    title: stream.title,
+    courses,
+    ...(statement === undefined
+      ? { minCredits: stream.min ?? credits }
+      : found),
+  };
+}
+
+/** "12 credits from one of the following streams" as a group that counts one stream, and whatever else the section asks as groups of its own. */
+function streamGroups(section: Section, ctx: Context): Group[] | null {
+  const streams = streamsOf(section);
+  if (!streams) return null;
+  const rules = streams.options.map((o) => streamRule(o, streams.credits));
+  const rest = section.items.filter(
+    (item) =>
+      item !== streams.statement &&
+      !(item.kind === "section" && streams.options.includes(item)),
+  );
+  // Lines beside the streams go with the lists they introduce, else they are notes, and a note that asks for more would be lost.
+  const tables = rest.some((item) => item.kind === "table");
+  const notes = tables
+    ? []
+    : rest.flatMap((item) =>
+        item.kind === "text" && CONSTRAINT.test(item.text) ? [item.text] : [],
+      );
+  const widening = notes.every((t) => /approv|permission/i.test(t));
+  if (!rules.every((rule) => rule !== null) || !widening) return null;
+  const group: ComplementaryGroup = {
+    title: section.title,
+    kind: "complementary",
+    credits: streams.credits,
+    pickOne: true,
+    rules,
+  };
+  if (notes.length > 0) group.note = notes.join(" ");
+  if (FOUNDATION.test(section.title)) group.foundation = true;
+  const left =
+    section.min === undefined ? undefined : section.min - streams.credits;
+  const others = rest.some((item) => item.kind !== "text")
+    ? complementaryGroups(
+        {
+          ...section,
+          items: tables ? rest : rest.filter((item) => item.kind !== "text"),
+          min: left && left > 0 ? left : undefined,
+          max: left && left > 0 ? left : undefined,
+        },
+        ctx,
+      )
+    : [];
+  const before = section.items.findIndex(
+    (item) => item.kind === "section" && !streams.options.includes(item),
+  );
+  const after = section.items.indexOf(streams.options[0] as Section);
+  return before >= 0 && before < after
+    ? [...others, group]
+    : [group, ...others];
+}
 
 const leadingCredits = (section: Section) => {
   const first = section.items.find((i) => i.kind === "text");
@@ -1387,7 +1506,15 @@ const leadingCredits = (section: Section) => {
 };
 
 function complementaryGroups(section: Section, ctx: Context): Group[] {
-  const children = section.items.filter((i) => i.kind === "section");
+  const streams = streamGroups(section, ctx);
+  if (streams) return streams;
+  // Streams it could not read stay one group, since splitting them would ask for every stream.
+  const choosing = section.items.some(
+    (i) => i.kind === "text" && STREAMS.test(i.text),
+  );
+  const children = choosing
+    ? []
+    : section.items.filter((i) => i.kind === "section");
   const own = section.items.filter((i) => i.kind !== "section");
   const firstText = own.find((i) => i.kind === "text");
   const whole =

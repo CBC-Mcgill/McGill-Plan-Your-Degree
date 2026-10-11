@@ -251,6 +251,7 @@ export function validateProgram(value: unknown): ValidationResult {
         "kind",
         "credits",
         "minCourses",
+        "pickOne",
         "rules",
         "note",
         "foundation",
@@ -261,7 +262,15 @@ export function validateProgram(value: unknown): ValidationResult {
       optionalNum(g, "minCourses", path, "count");
       optionalText(g, "note", path);
       optionalTrue(g, "foundation", path);
-      list(g.rules, `${path}.rules`, 1, rule);
+      optionalTrue(g, "pickOne", path);
+      list(g.rules, `${path}.rules`, g.pickOne ? 2 : 1, rule);
+      if (
+        g.pickOne &&
+        Array.isArray(g.rules) &&
+        g.rules.some((r) => isObj(r) && r.unparsed)
+      ) {
+        fail(`${path}.rules`, "a pickOne group needs every rule parsed");
+      }
     } else {
       fail(`${path}.kind`, 'expected "required" or "complementary"');
     }
