@@ -155,7 +155,9 @@ test("parses an Engineering page: Year 0, extra credits, named lists and footnot
       courses: ["COMP 350", "ECSE 343"],
     }),
   );
-  expect(rules.filter((rule) => rule.unparsed)).toHaveLength(2);
+  expect(rules.filter((rule) => rule.unparsed)).toEqual([
+    expect.objectContaining({ title: expect.stringContaining("A or List B") }),
+  ]);
 });
 
 test("parses an Arts minor: lists without a stated amount and notes it cannot read", () => {
@@ -505,4 +507,220 @@ test("reads a level range, a minimum above the lists, and subjects listed after 
       match: { minLevel: 300, subjects: ["ANTH", "LING", "PSYC", "SOCI"] },
     },
   ]);
+});
+// Structure
+
+const programOf = (heading: string, body: string) =>
+  parseProgramPage(
+    `<h1 class="page-title">${heading}</h1><p>2026-2027 Undergraduate Catalogue</p><div id="coursestextcontainer">${body}</div>`,
+    `${BASE}/science/programs/test/test-program/`,
+  ) as Program;
+const table = (...rows: string[]) =>
+  `<table>${rows
+    .map((row) => {
+      const [code, credits = "3"] = row.split(":");
+      return `<tr><td class="codecol">${code}</td><td class="hourscol">${credits}</td></tr>`;
+    })
+    .join("")}</table>`;
+const complementary = (body: string) => {
+  const [group] = programOf(
+    "Test Major (B.Sc.) (30 credits)",
+    `<h2>Complementary Courses (30 credits)</h2>${body}`,
+  ).groups;
+  return group?.kind === "complementary" ? group.rules : [];
+};
+
+test("reads the amount of a list statement in front of its table", () => {
+  const list = table("ATOC 214", "ATOC 315:4", "PHYS 230", "GEOG 421");
+  const cases: [string, object][] = [
+    [
+      "18 credits of advanced anatomy courses (AAC) selected from:",
+      { minCredits: 18, maxCredits: 18 },
+    ],
+    ["3 or 4 credits selected from:", { minCredits: 3, maxCredits: 4 }],
+    ["6 to 7 credits selected from:", { minCredits: 6, maxCredits: 7 }],
+    [
+      "3 credits from the following neuroscience courses:",
+      { minCredits: 3, maxCredits: 3 },
+    ],
+    [
+      "21-24 credits of courses in East Asian Literature, Culture and Society selected from the list below.",
+      { minCredits: 21, maxCredits: 24 },
+    ],
+    [
+      "All students must take (or have taken) five courses from the following:",
+      { minCourses: 5, maxCourses: 5 },
+    ],
+    [
+      "Students must take at least 3 credits from the following courses:",
+      { minCredits: 3 },
+    ],
+    [
+      "6 credits of social processes selected as follows:",
+      { minCredits: 6, maxCredits: 6 },
+    ],
+    [
+      "3 credits minimum of statistics and mathematics chosen from:",
+      { minCredits: 3 },
+    ],
+    [
+      "3 credits, one of (usually in Year 2):",
+      { minCredits: 3, maxCredits: 3, minCourses: 1, maxCourses: 1 },
+    ],
+    [
+      "3 credits in Biochemistry, one of:",
+      { minCredits: 3, maxCredits: 3, minCourses: 1, maxCourses: 1 },
+    ],
+    [
+      "9 credits of systematic physical geography",
+      { minCredits: 9, maxCredits: 9 },
+    ],
+  ];
+  for (const [statement, amount] of cases) {
+    const rules = complementary(`<p>${statement}</p>${list}`);
+    expect(rules, statement).toEqual([
+      expect.objectContaining({ ...amount, courses: expect.any(Array) }),
+    ]);
+    expect(rules[0], statement).not.toHaveProperty("unparsed");
+  }
+});
+
+test("turns the condition of a list statement into a rule over the courses it names", () => {
+  const list = table(
+    "ATOC 214",
+    "ATOC 315",
+    "EPSC 210",
+    "GEOG 421",
+    "PHYS 230",
+  );
+  const cases: [string, object[]][] = [
+    [
+      "12-15 credits selected from (at least 6 of which must be ATOC):",
+      [{ minCredits: 6, courses: ["ATOC 214", "ATOC 315"] }],
+    ],
+    [
+      "15 credits from the following course list, with at least 3 credits from each of subject codes ATOC, EPSC, and GEOG.",
+      [
+        { minCredits: 3, courses: ["ATOC 214", "ATOC 315"] },
+        { minCredits: 3, courses: ["EPSC 210"] },
+        { minCredits: 3, courses: ["GEOG 421"] },
+      ],
+    ],
+    [
+      "9-12 credits from the following, with 3-6 credits at the 400 level or above:",
+      [{ minCredits: 3, maxCredits: 6, courses: ["GEOG 421"] }],
+    ],
+    [
+      "15 credits selected from the list below. At least 3 credits must be taken at the 300 or 400 level.",
+      [{ minCredits: 3, courses: ["ATOC 315", "GEOG 421"] }],
+    ],
+  ];
+  for (const [statement, parts] of cases) {
+    const rules = complementary(`<p>${statement}</p>${list}`);
+    expect(rules, statement).toEqual([
+      ...parts.map((part) => expect.objectContaining(part)),
+      expect.objectContaining({
+        courses: expect.arrayContaining(["PHYS 230"]),
+      }),
+    ]);
+  }
+});
+
+test("keeps a list statement with a condition it cannot read as text to check", () => {
+  for (const statement of [
+    "9 credits from List A (with a maximum of 3 credits from any category)",
+    "6 credits from the following (for Voice students only):",
+    "Students select 15 credits from the following courses and their associated prerequisites:",
+  ]) {
+    const rules = complementary(`<p>${statement}</p>${table("PHYS 230")}`);
+    expect(rules, statement).toContainEqual(
+      expect.objectContaining({ unparsed: true, title: expect.any(String) }),
+    );
+    expect(
+      rules.find((rule) => rule.courses),
+      statement,
+    ).not.toHaveProperty("minCredits");
+  }
+});
+
+test("reads statements that name lists by their headings", () => {
+  const rules = complementary(
+    `<p>At least 9 credits must be from Groups A and B, with at least 3 credits from each:</p><ul><li>At least 3 credits and no more than 9 credits from each of Lists C and D.</li></ul>` +
+      `<h3>Group A</h3>${table("MATH 222", "MATH 323")}<h3>Group B</h3>${table("COMP 330")}` +
+      `<h3>List C: Zoology</h3>${table("BIOL 205")}<h3>List D: Botany</h3>${table("PLNT 304")}`,
+  );
+  expect(rules).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        minCredits: 3,
+        courses: ["MATH 222", "MATH 323"],
+      }),
+      expect.objectContaining({ minCredits: 3, courses: ["COMP 330"] }),
+      expect.objectContaining({
+        minCredits: 9,
+        courses: ["MATH 222", "MATH 323", "COMP 330"],
+      }),
+      expect.objectContaining({
+        minCredits: 3,
+        maxCredits: 9,
+        courses: ["BIOL 205"],
+      }),
+      expect.objectContaining({
+        minCredits: 3,
+        maxCredits: 9,
+        courses: ["PLNT 304"],
+      }),
+    ]),
+  );
+  expect(rules.filter((rule) => rule.unparsed)).toEqual([]);
+});
+
+test("a choice of one course under a Required heading stays in the required group", () => {
+  const program = programOf(
+    "Test Major (B.Sc.) (9 credits)",
+    `<h2>Required Courses (9 credits)</h2>${table("ANAT 212", "BIOL 200")}<p>Select 3 credits of the following:</p>${table("BIOL 373", "MATH 203")}`,
+  );
+  expect(program.groups).toEqual([
+    expect.objectContaining({
+      kind: "required",
+      courses: ["ANAT 212", "BIOL 200", { oneOf: ["BIOL 373", "MATH 203"] }],
+    }),
+  ]);
+});
+
+test("reads Music electives and a Foundation year listed under Prerequisite Courses", () => {
+  const program = programOf(
+    "Test Major (B.Mus.) (40 credits)",
+    `<h2>Program Prerequisites — Foundation Program (14 credits)</h2><p>14 credits selected as described below:</p><p>6 credits of Prerequisite Courses</p><p>2 credits of Large Ensemble</p><p>6 credits of Non-Music Electives</p>` +
+      `<h2>Prerequisite Courses</h2><p>6 credits, all of the courses below:</p>${table("MUTH 150", "MUHL 186")}` +
+      `<h2>Elective Courses (26 credits)</h2><p>3 credits of Non-Music Electives</p><p>23 credits of Free Electives (may include 2 credits of courses with a MUEN prefix)</p>`,
+  );
+  expect(validateProgram(program)).toMatchObject({ ok: true });
+  const [foundation, prerequisites, electives] = program.groups;
+  expect(foundation).toMatchObject({
+    kind: "complementary",
+    foundation: true,
+    credits: 8,
+    rules: [
+      { unparsed: true, title: "2 credits of Large Ensemble" },
+      {
+        minCredits: 6,
+        match: { excludeSubjects: expect.arrayContaining(["MUTH", "MUEN"]) },
+      },
+    ],
+  });
+  expect(prerequisites).toMatchObject({
+    kind: "required",
+    foundation: true,
+    credits: 6,
+    courses: ["MUTH 150", "MUHL 186"],
+  });
+  expect(electives).toMatchObject({
+    credits: 26,
+    rules: [
+      { minCredits: 3, match: { excludeSubjects: expect.any(Array) } },
+      { minCredits: 23, match: {} },
+      { maxCredits: 2, match: { subjects: ["MUEN"] } },
+    ],
+  });
 });

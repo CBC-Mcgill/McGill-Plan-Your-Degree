@@ -11,6 +11,7 @@ import {
   creditSources,
   creditSplit,
   fitsCaps,
+  namesCourses,
   programProgress,
   programSplit,
   REPLACE_TITLE,
@@ -701,4 +702,49 @@ test("status for 10,000 courses takes under 100 ms", () => {
   const start = performance.now();
   for (const c of many) courseStatus(c, snapshot);
   expect(performance.now() - start).toBeLessThan(100);
+});
+
+test("a free elective group takes any course, caps MUEN and keeps music out of the non-music rule", () => {
+  const electives: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Elective Courses",
+        kind: "complementary",
+        credits: 9,
+        rules: [
+          {
+            title: "3 credits of Non-Music Electives",
+            minCredits: 3,
+            match: { excludeSubjects: ["MUEN", "MUTH"] },
+          },
+          { title: "6 credits of Free Electives", minCredits: 6, match: {} },
+          {
+            title: "At most 2 credits of MUEN courses",
+            maxCredits: 2,
+            match: { subjects: ["MUEN"] },
+          },
+        ],
+      },
+    ],
+  };
+  expect(validateProgram(electives)).toMatchObject({ ok: true });
+  const [group] = electives.groups;
+  expect(group?.kind === "complementary" && namesCourses(group)).toBe(false);
+  const done = buildSnapshot([
+    record("MUEN 563", "completed", 2),
+    record("MUEN 572", "completed", 2),
+    record("MUTH 150", "completed"),
+    record("COMP 250", "completed"),
+  ]);
+  const [progress] = programProgress(electives, done, catalogue).groups;
+  expect(progress?.rules[0]?.courses).toEqual([
+    { code: "COMP 250", credits: 3 },
+  ]);
+  expect(progress?.courses.map((c) => c.code).sort()).toEqual([
+    "COMP 250",
+    "MUEN 563",
+    "MUTH 150",
+  ]);
+  expect(progress).toMatchObject({ creditsDone: 8, satisfied: false });
 });
