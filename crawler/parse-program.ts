@@ -1070,6 +1070,16 @@ function referenceRules(
   ) {
     return null;
   }
+  // "8-11 credits (3 courses) from List A or List B" beside "3-4 credits (1 course) from List A": the List A course counts toward both, so the union's caps would refuse the courses it asks for, and the group's own total bounds them.
+  const shared = rules.some(
+    (rule) =>
+      (rule.minCredits !== undefined || rule.minCourses !== undefined) &&
+      rule.courses?.some((code) => union.includes(code)),
+  );
+  if (shared) {
+    delete amount.maxCredits;
+    delete amount.maxCourses;
+  }
   return [...parts, { title, courses: union, ...amount }];
 }
 
