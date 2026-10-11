@@ -257,14 +257,29 @@ function bareTotal(text: string) {
 const SUBJECT_LIST = String.raw`[A-Z]{3}[A-Z\d](?:(?:, | or | and |, or |, and )[A-Z]{3}[A-Z\d])*`;
 const subjectsIn = (text: string) => text.split(/, or |, and |, | or | and /);
 
-function levelOf(text: string): Match | null {
-  const m = /^(\d{3})[- ]level(?: or (above|higher))?$/i.exec(text);
-  if (!m) return null;
-  const level = Number(m[1]);
-  // Nothing above the 500 level is an undergraduate course.
-  return m[2] || level === 500
-    ? { minLevel: level }
-    : { minLevel: level, maxLevel: level };
+const HUNDRED = "[1-6]00";
+// "400 level or higher", "400- or 500-level", "300, 400, or 500 levels", "400/500 level", "300-500 levels", "300+ level", "below the 300 level".
+const LEVEL_PHRASE = new RegExp(
+  String.raw`\b(below )?(?:the )?${HUNDRED}(?:-level|-)?(?:(?:,? (?:or|and|to) |, |\s?[-–/]\s?)${HUNDRED}(?:-level|-)?)*\+?(?: ?levels?)?(?: (?:or|and) (?:above|higher))?`,
+  "gi",
+);
+
+/** The first level phrase of a text and the levels it allows. Nothing above the 500 level is an undergraduate course, so 500 leaves the top open. */
+function levelIn(text: string): { match: Match; phrase: string } | null {
+  for (const m of text.matchAll(LEVEL_PHRASE)) {
+    const phrase = m[0];
+    if (!/level/i.test(phrase)) continue;
+    const levels = (phrase.match(/\d00/g) ?? []).map(Number);
+    const low = Math.min(...levels);
+    const high = Math.max(...levels);
+    const match: Match = m[1]
+      ? { maxLevel: low - 100 }
+      : /\+|above|higher/i.test(phrase) || high >= 500
+        ? { minLevel: low }
+        : { minLevel: low, maxLevel: high };
+    return { match, phrase };
+  }
+  return null;
 }
 
 const EXCEPT = String.raw`(?:\s*\((?:except|excluding) (${CODE}(?:(?:, | and |, and )${CODE})*)\))?`;
@@ -315,14 +330,204 @@ function parseAnyCourse(text: string): Rule | null {
   };
 }
 
-/** "At least 6 credits at the 400-level or above" with no list to choose from. */
-function parseLevelOnly(text: string): Rule | null {
-  const m = AMOUNT.exec(text);
-  const rest = m && text.slice(m[0].length);
-  const at =
-    rest && /^,?\s*(?:must be |selected |may be )?at the (.*?)\.?$/i.exec(rest);
-  const match = at && levelOf(at[1] ?? "");
-  return m && match ? { title: trimEnd(text), ...amountOf(m), match } : null;
+const MIN_LEAD = "at least|a minimum of|minimum of|minimum";
+const MAX_LEAD =
+  "up to|at most|a maximum of|maximum of|maximum|no more than|only";
+const CLAUSE_AMOUNT = new RegExp(
+  String.raw`^(?:(${MIN_LEAD}|${MAX_LEAD}|any) )?(\d+(?:\.\d+)?)(?:-(\d+(?:\.\d+)?))?(?: (credits?|courses?))?(?: (minimum|maximum))?(?: (\d+) courses?)?(?: |$)`,
+);
+const NUMBER_WORD = new RegExp(
+  String.raw`\b(?:${COUNT_WORD}|nine|twelve)\b`,
+  "g",
+);
+const NUMBERS: Record<string, number> = { ...COUNTS, nine: 9, twelve: 12 };
+// Words that add nothing to a level or subject constraint. Any other word leaves the clause for a person to read.
+const FILLER = new Set(
+  "a additional all allowed an any are at be can chosen come complementary completed count course courses credit credits from have honours in is may must number of program selected should taken the to toward towards undergraduate used which".split(
+    " ",
+  ),
+);
+const EXCLUDING = new RegExp(
+  String.raw`\s*\((?:except|excluding|other than|not including) ([^)]*)\)|,?\s+(?:except|excluding) (${CODE}(?:(?:,? and |, |,? or )${CODE})*)`,
+  "gi",
+);
+
+/** One constraint: a filter such as "at least 9 of the 15 credits must be at the 400 level or higher", or a source such as "9 credits from Geography (GEOG) courses at the 300 level or above". `scoped` when the sentence narrows courses named elsewhere, so it cannot add a subject. Null when a word in it is not understood. */
+function readClause(
+  clause: string,
+  subjectsOf: (department: string) => string[],
+  scoped: boolean,
+): Rule | null {
+  const exclude: string[] = [];
+  let unknown = false;
+  let text = clause
+    .replace(/\bNOTE\b:?/g, "")
+    .replace(/\s*\(\d+(?: or \d+)? credits?(?: each)?\)/gi, "")
+    .replace(EXCLUDING, (_, inner = "", list = "") => {
+      const codes = codesIn(inner || list);
+      if (codes.length === 0) unknown = true;
+      exclude.push(...codes);
+      return " ";
+    });
+  const level = levelIn(text);
+  if (unknown) return null;
+  if (level) text = text.replace(level.phrase, " _level_ ");
+  const subjects: string[] = [];
+  const subject = (list: string) => {
+    subjects.push(...subjectsIn(list));
+    return " _subj_ ";
+  };
+  text = text
+    .replace(/\s+/g, " ")
+    .replace(
+      new RegExp(
+        String.raw`(?:\b[A-Z][a-z]+(?:,? (?:and |& )?[A-Z][a-z]+)* )?\((?:subject code )?(${SUBJECT_LIST})\)`,
+        "g",
+      ),
+      (_, list) => subject(list),
+    )
+    .replace(
+      new RegExp(
+        String.raw`\bwith an? (?:prefix of )?(${SUBJECT_LIST})(?: prefix)?|\b(${SUBJECT_LIST}) prefix\b|\b(${SUBJECT_LIST})\b(?! ?\d{3})`,
+        "g",
+      ),
+      (_, a, b, c) => subject(a ?? b ?? c),
+    )
+    .replace(
+      /\b(of|in|from|credits) (?:(?:additional|other|complementary) )?((?:(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+ ){0,2}(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+)(?= courses?\b| (?:at )?_level_|\s*$)/g,
+      (all, before, name) => {
+        const found = subjectsOf(name.toLowerCase());
+        if (found.length === 0) return all;
+        subjects.push(...found);
+        return `${before} _subj_`;
+      },
+    );
+  let s = text
+    .toLowerCase()
+    .replace(NUMBER_WORD, (word) => String(NUMBERS[word]))
+    .replace(/[,.;:()]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(
+      /^(?:plus |and |also |must include |select |students (?:must|should|can|may|will) (?:take|complete|select|choose) )/,
+      "",
+    )
+    .replace(/^(?:the remaining|all other) (?=\d)/, "");
+  const of =
+    /\bof which\b|\bof (?:the|these) (?:\d+(?:-\d+)? )?(?:(?:complementary|course|credits?) )*credits\b/g;
+  const within = scoped || of.test(s);
+  // "must be from COMP courses" narrows the list, and so does "a maximum of 6 credits of SEAD courses".
+  const narrows = within || /\b(?:must|should|have to|has to) be\b/.test(s);
+  s = s.replace(of, " ").replace(/\s+/g, " ").trim();
+  const m = CLAUSE_AMOUNT.exec(s);
+  const all = m ? null : /^(?:all|any number of|any) /.exec(s);
+  const rest = s
+    .slice((m ?? all)?.[0].length ?? 0)
+    .split(" ")
+    .filter(Boolean);
+  if (
+    !(m || all) ||
+    !rest.every((t) => FILLER.has(t) || t === "_subj_" || t === "_level_") ||
+    // "6 credits at the 300 level in EAST courses selected from" names a list that follows.
+    /^(?:from|of|in|at)$/.test(rest.at(-1) ?? "")
+  ) {
+    return null;
+  }
+  const match: Match = { ...level?.match };
+  const amount: Amount = {};
+  if (m) {
+    // "two 400-level ANTH courses" counts courses, "3 complementary course credits" counts credits.
+    const named = rest.findIndex((t) => /^c(?:redit|ourse)s?$/.test(t));
+    const [, lead = "", low = "", high, stated, after, count] = m;
+    const unit =
+      stated ??
+      (!within &&
+      rest[named]?.startsWith("course") &&
+      !/^credit/.test(rest[named + 1] ?? "")
+        ? "courses"
+        : "credits");
+    const max =
+      after === "maximum" ||
+      (after !== "minimum" && new RegExp(`^(?:${MAX_LEAD})$`).test(lead));
+    if (max && subjects.length > 0) return null;
+    const [least, most] = unit.startsWith("course")
+      ? (["minCourses", "maxCourses"] as const)
+      : (["minCredits", "maxCredits"] as const);
+    const top = Number(high ?? low);
+    if (max) amount[most] = top;
+    else {
+      if (Number(low) > 0) amount[least] = Number(low);
+      // A bare amount from a subject is exact, as in "9 credits from GEOG courses", but on a level it is a floor.
+      const bare = !after && !new RegExp(`^(?:${MIN_LEAD})$`).test(lead);
+      if (bare && subjects.length > 0) amount[most] = top;
+    }
+    // "6-8 credits (2 courses) from 500-level ECSE courses".
+    if (count && !max) {
+      amount.minCourses = Number(count);
+      amount.maxCourses = Number(count);
+    }
+  }
+  if (subjects.length > 0) {
+    // A subject rule adds courses to the group, so it cannot narrow the list.
+    if (narrows) return null;
+    match.subjects = unique(subjects);
+  } else if (!level || !m) return null;
+  if (exclude.length > 0) match.exclude = exclude;
+  return {
+    title: trimEnd(clause).replace(/^\w/, (c) => c.toUpperCase()),
+    ...amount,
+    match,
+  };
+}
+
+// Splits "Three credits minimum must be at the 400 or 500 level and 9 credits maximum may be at the 200 level" into its constraints.
+const CLAUSE_BREAK = new RegExp(
+  String.raw`\s*;\s*|(?:,\s*(?:and |with |of which |while )?|\s+(?:and|with|of which|while)\s+)(?=(?:${MIN_LEAD}|${MAX_LEAD}|\d{1,2}|${COUNT_WORD}|nine|twelve)\b)|,\s*(?=(?:preferably|none in)\b)`,
+  "i",
+);
+const AS_FOLLOWS =
+  /,?\s*(?:selected |chosen |distributed )?as (?:follows|described below)\s*[:.]?$/i;
+// "Preferably courses at the 300 level or above" and "none in the final year of the program" advise, they do not restrict.
+const ADVICE = /\b(?:preferably|normally)\b|^none in the final year/i;
+const INTRO =
+  /^(?:the )?(?:complementary )?courses (?:are|must be) (?:selected|chosen)$/i;
+
+/** The rules of a sentence, one per constraint, or null when any part of it cannot be read. `credits` is the group's, to tell a sentence about the group from one about a list inside it. */
+function readStatement(
+  text: string,
+  subjectsOf: (department: string) => string[],
+  credits?: number,
+): Rule[] | null {
+  const whole = parseSource(text, subjectsOf) ?? parseAnyCourse(text);
+  if (whole) return [whole];
+  // A sentence ending in a colon introduces the list under it, unless an "as follows" in it does.
+  if (/:\s*$/.test(text) && !/\bas (?:follows|described below)\b/i.test(text)) {
+    return null;
+  }
+  // "At least 3 of these 9-12 credits" in a 24-credit group is about one list of it.
+  const other = (n: number | undefined) =>
+    credits !== undefined && n !== undefined && n !== credits;
+  const totals = text.matchAll(
+    /\bof (?:the|these) (\d+)(?:-\d+)? (?:[a-z]+ ){0,3}?credits\b/gi,
+  );
+  if ([...totals].some((t) => other(Number(t[1])))) return null;
+  // "Of these 21 credits, at least 15 credits must be at the 300-level or above".
+  const scope = /^of (?:these|the) (?!remaining)[^,]*,\s*/i.exec(text);
+  // "9 credits in Computer Science selected as follows" leaves the courses to the lists below.
+  const listed = /\bas (?:follows|described below)\b/i.test(text);
+  const rules: Rule[] = [];
+  for (const part of text.slice(scope?.[0].length ?? 0).split(CLAUSE_BREAK)) {
+    const clause = trimEnd(part.replace(AS_FOLLOWS, ""));
+    if (!clause || ADVICE.test(clause) || INTRO.test(clause)) continue;
+    const total = bareTotal(clause);
+    if (total && other(total.credits)) return null;
+    if (total) continue;
+    const rule = readClause(clause, subjectsOf, scope !== null || listed);
+    if (!rule) return null;
+    rules.push(rule);
+  }
+  if (rules.length === 1 && rules[0]) rules[0].title = trimEnd(text);
+  return rules.length > 0 ? rules : null;
 }
 
 /** "N credits from Group A" or "from List B", naming a table by its heading. */
@@ -369,6 +574,16 @@ const unparsed = (text: string): Rule => ({
   title: trimEnd(text),
   unparsed: true,
 });
+
+/** The rules one sentence of a complementary group states: none for a notice, its text as an unparsed rule when it cannot be read. */
+export function statementRules(
+  text: string,
+  subjectsOf: (department: string) => string[] = () => [],
+  credits?: number,
+): Rule[] {
+  if (NOISE.test(text) || !CONSTRAINT.test(text)) return [];
+  return readStatement(text, subjectsOf, credits) ?? [unparsed(text)];
+}
 
 interface Context {
   subjectsOf: (department: string) => string[];
@@ -490,12 +705,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       target.title = `${target.title}: ${trimEnd(text)}`;
       continue;
     }
-    rules.push(
-      parseSource(text, ctx.subjectsOf) ??
-        parseLevelOnly(text) ??
-        parseAnyCourse(text) ??
-        unparsed(text),
-    );
+    rules.push(...statementRules(text, ctx.subjectsOf, section.min));
   }
   return rules;
 }

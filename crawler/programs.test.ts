@@ -7,7 +7,11 @@ import {
   validateProgram,
 } from "../lib/programs/validate.ts";
 import { programPaths } from "./discover-programs.ts";
-import { overlapOf, parseProgramPage } from "./parse-program.ts";
+import {
+  overlapOf,
+  parseProgramPage,
+  statementRules,
+} from "./parse-program.ts";
 
 const BASE = "/en/undergraduate";
 const page = (name: string, path: string) =>
@@ -291,4 +295,87 @@ test("reads how many credits a minor shares with the program from its page", () 
   ];
   for (const [text, credits] of cases)
     expect(overlapOf(text), text).toBe(credits);
+});
+
+const read = (text: string, credits?: number) =>
+  statementRules(
+    text,
+    (name) => (name === "chemistry" ? ["CHEM"] : []),
+    credits,
+  ).map(({ title: _, ...rule }) => rule);
+
+test("reads level minimums and caps, and subjects at a level, from sentences", () => {
+  const cases: [string, number | undefined, object[]][] = [
+    [
+      "At least 9 of the 15 credits must be at the 400 level or higher.",
+      15,
+      [{ minCredits: 9, match: { minLevel: 400 } }],
+    ],
+    [
+      "Three credits minimum must be at the 400 or 500 level and 9 credits maximum may be at the 200 level.",
+      undefined,
+      [
+        { minCredits: 3, match: { minLevel: 400 } },
+        { maxCredits: 9, match: { minLevel: 200, maxLevel: 200 } },
+      ],
+    ],
+    [
+      "No more than 6 credits may be taken below the 300 level.",
+      undefined,
+      [{ maxCredits: 6, match: { maxLevel: 200 } }],
+    ],
+    [
+      "9 credits from Geography (GEOG) courses at the 300 level or above.",
+      15,
+      [
+        {
+          minCredits: 9,
+          maxCredits: 9,
+          match: { minLevel: 300, subjects: ["GEOG"] },
+        },
+      ],
+    ],
+    [
+      "6 credits of Chemistry courses at the 400 level or higher",
+      undefined,
+      [
+        {
+          minCredits: 6,
+          maxCredits: 6,
+          match: { minLevel: 400, subjects: ["CHEM"] },
+        },
+      ],
+    ],
+    [
+      "6 additional credits of English (ENGL) courses, preferably courses at the 300 level or above.",
+      undefined,
+      [{ minCredits: 6, maxCredits: 6, match: { subjects: ["ENGL"] } }],
+    ],
+    [
+      "6 credits, two 400-level Anthropology (ANTH) courses.",
+      6,
+      [
+        {
+          minCourses: 2,
+          maxCourses: 2,
+          match: { minLevel: 400, maxLevel: 400, subjects: ["ANTH"] },
+        },
+      ],
+    ],
+    // About one list of a 24-credit group, a list that follows, and a narrowing a subject rule cannot express.
+    [
+      "At least 3 of these 9-12 credits must be at the 400 level or above.",
+      24,
+      [{ unparsed: true }],
+    ],
+    ["12-15 credits of 400/500 level courses:", 42, [{ unparsed: true }]],
+    [
+      "At least 12 credits must be from COMP courses at the 500 level or above.",
+      33,
+      [{ unparsed: true }],
+    ],
+  ];
+  for (const [text, credits, rules] of cases) {
+    expect(read(text, credits), text).toEqual(rules);
+  }
 });
