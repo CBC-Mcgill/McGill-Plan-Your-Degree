@@ -1012,6 +1012,9 @@ function GroupBody({
       {group.replaces && (
         <p className="text-fg-muted">{COPY.replaces(group.replaces)}</p>
       )}
+      {definition?.kind === "complementary" && definition.pickOne && (
+        <p className="text-fg-muted">{COPY.pickOne}</p>
+      )}
       {open?.buckets.map((bucket) => (
         <Bucket
           key={bucket.title}

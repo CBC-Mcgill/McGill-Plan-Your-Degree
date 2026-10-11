@@ -102,8 +102,13 @@ test("isMinor reads the id or the degree, and guessMinor matches a transcript mi
       "Minor",
     ),
     program("computer-science-major-bsc", "Computer Science Major", "B.Sc."),
+    program(
+      "langue-litterature-francaises-concentration-mineure",
+      "Concentration mineure Langue et littérature françaises",
+      "B.A.",
+    ),
   ];
-  expect(index.map(isMinor)).toEqual([true, true, true, false]);
+  expect(index.map(isMinor)).toEqual([true, true, true, false, true]);
   expect(
     guessMinor("Bachelor of Engineering", ["Minor Management"], index),
   ).toBe("management-minor-beng");
