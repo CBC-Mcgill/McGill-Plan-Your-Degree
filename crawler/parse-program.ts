@@ -270,7 +270,7 @@ const AMOUNT = new RegExp(
 );
 // Who takes the list, in front of the amount: "Students must take at least 3 credits from the following courses".
 const LIST_LEAD =
-  /^(?:(?:all )?students (?:must |should |will )?(?:take|complete|select|choose)(?: \(or have taken\))? |select |plus |and |part [ivx]+: |de )/i;
+  /^(?:(?:all )?students (?:in this stream )?(?:must |should |will |may also )?(?:take|complete|select|choose)(?: \(or have taken\))? |select |plus |and |part [ivx]+: |de )/i;
 const FROM_UNION =
   /^,?\s*(?:selected |chosen )?from the following list or the previous(?: list)?\s*[:.]?$/i;
 // Advice in parentheses that does not change which courses count.
@@ -593,7 +593,7 @@ function statementAmount(
 
 /** A total with nothing to choose from, such as "9-12 credits (3 courses) must be taken, chosen as follows:". */
 const BARE_TOTAL = new RegExp(
-  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${SPAN}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*(?:must be taken|(?:are )?selected|distributed|chosen|of complementary courses (?:are )?selected|all of the courses below|from one or more of the following (?:groups|lists))(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
+  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${SPAN}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*as follows|,?\s*(?:must be taken|(?:are )?selected|distributed|chosen|of complementary courses (?:are )?selected|all of the courses below|from one or more of the following (?:groups|lists))(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
   "i",
 );
 
@@ -1390,7 +1390,7 @@ const ONLY_ONE = new RegExp(
 );
 // "only one course in each of the following sets: A or B C or D".
 const EACH = new RegExp(
-  String.raw`^${WHO}(?:take|select|choose) only one course (?:in each of the following sets|from each set of the following courses)\s*:?\s*((?:CODE (?:or|and) CODE\s*)+)$`,
+  String.raw`^${WHO}(?:take|select|choose) only one course (?:in each of the following sets|from each set of the following courses)\s*:?\s*((?:CODE(?:, CODE)* (?:or|and) CODE\s*)+)$`,
   "i",
 );
 // "A or B, but not both", "Either A or B may be taken but not both", "Only one of A or B can count toward the program".
@@ -1438,7 +1438,7 @@ function exclusiveSets(text: string): Rule[] | null {
   const chunks = one
     ? (one[1] ?? "").split(/;\s*/)
     : each
-      ? ((each[1] ?? "").match(/CODE (?:or|and) CODE/g) ?? [])
+      ? ((each[1] ?? "").match(/CODE(?:, CODE)* (?:or|and) CODE/g) ?? [])
       : s.split(/;\s*/).map((chunk) => {
           const m = NOT_BOTH.exec(chunk);
           return m ? (m[1] ?? m[2] ?? "") : null;
@@ -1661,7 +1661,15 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
           run = null;
         }
         const last = pending.at(-1);
-        const adjacent = last !== undefined && listAmount(last, true);
+        // "3 credits of Theory courses from the complementary list or with the permission of your department adviser" over its table: the list's amount, with a reminder.
+        const approved =
+          last !== undefined && last.replace(APPROVAL, "") !== last
+            ? trimEnd(last.replace(APPROVAL, ""))
+            : undefined;
+        const own = last !== undefined && listAmount(last, true);
+        const adjacent =
+          own || (approved !== undefined && listAmount(approved, true));
+        const reminds = !own && Boolean(adjacent);
         let bound = adjacent ? last : pending.findLast((p) => listAmount(p));
         let found = adjacent || (bound ? listAmount(bound) : null);
         const parts = found && partRules(found, courses, label, lists);
@@ -1708,6 +1716,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
           ]),
           ...amount,
           ...(widen && { match: widen }),
+          ...(reminds && bound === last && { adviser: true as const }),
         };
         listed = { table: item, rule };
         rules.push(...(parts ?? []), rule, ...notes);
@@ -1778,6 +1787,13 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       ),
     );
   }
+  // A footnote repeated under each table says the same thing once.
+  const seen = new Set<string>();
+  const distinct = rules.filter((rule) => {
+    const key = JSON.stringify(rule);
+    return !seen.has(key) && Boolean(seen.add(key));
+  });
+  rules.splice(0, rules.length, ...distinct);
   // A filter with no list to narrow would stand for the whole group.
   const listed = rules.some(
     (rule) =>

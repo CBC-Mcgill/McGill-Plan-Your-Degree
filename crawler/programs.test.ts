@@ -662,6 +662,14 @@ test("reads the amount of a list statement in front of its table", () => {
       "0-10 credits from the following list of 200- and 300-level courses:",
       { maxCredits: 10 },
     ],
+    [
+      "Students in this stream may also choose a maximum of 12 credits from the following list:",
+      { maxCredits: 12 },
+    ],
+    [
+      "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser.",
+      { minCredits: 3, maxCredits: 3, adviser: true },
+    ],
   ];
   for (const [statement, amount] of cases) {
     const rules = complementary(`<p>${statement}</p>${list}`);
@@ -1058,7 +1066,9 @@ test("reads which courses cannot both count, from footnotes and from sentences",
     `<p>15 credits from:</p>${table("BREE 529", "ENVB 529", "GEOG 201", "BIOL 540", "ENVR 540", "ENVB 210", "GEOG 305", "MUJZ 440:2", "MUJZ 441:2", "MUJZ 461D1:2", "MUJZ 461D2:2")}` +
       "<dl><dd>Note: Students may take only one of BREE 529, ENVB 529, or GEOG 201.</dd></dl>" +
       "<p>You may take only one of: BIOL 540 or ENVR 540; ENVB 210 or GEOG 305.</p>" +
-      "<p>Students select either MUJZ 440 and MUJZ 441 or MUJZ 461D1 and MUJZ 461D2.</p>",
+      "<p>Students select either MUJZ 440 and MUJZ 441 or MUJZ 461D1 and MUJZ 461D2.</p>" +
+      "<p>Students can take only one course from each set of the following courses: MIME 260, MIME 261 or CHEE 380 CHEE 515 or MIME 515</p>" +
+      "<p>Students can take only one course from each set of the following courses: MIME 260, MIME 261 or CHEE 380 CHEE 515 or MIME 515</p>",
   );
   expect(
     rules.filter((rule) => rule.maxCourses === 1).map((rule) => rule.courses),
@@ -1068,6 +1078,8 @@ test("reads which courses cannot both count, from footnotes and from sentences",
     ["ENVB 210", "GEOG 305"],
     ["MUJZ 440", "MUJZ 461"],
     ["MUJZ 441", "MUJZ 461"],
+    ["MIME 260", "MIME 261", "CHEE 380"],
+    ["CHEE 515", "MIME 515"],
   ]);
 });
 
