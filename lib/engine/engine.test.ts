@@ -804,3 +804,51 @@ test("a pick-one group counts the stream furthest along and leaves the other str
   ]);
   expect(progress.unclaimed).toEqual([{ code: "COMP 330", credits: 3 }]);
 });
+
+test("a stated amount is a target, so a course may overshoot it and other rules keep counting", () => {
+  const targets: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 22,
+        rules: [
+          {
+            title: "9 credits selected from",
+            courses: ["ANAT 361", "ANAT 362", "ANAT 365"],
+            minCredits: 9,
+            maxCredits: 9,
+          },
+          {
+            title: "6 credits in Psychology",
+            match: { subjects: ["PSYC"] },
+            minCredits: 6,
+            maxCredits: 6,
+          },
+          {
+            title: "At most 3 credits at the 200 level",
+            match: { minLevel: 200, maxLevel: 200 },
+            maxCredits: 3,
+          },
+        ],
+      },
+    ],
+  };
+  const done = buildSnapshot([
+    record("ANAT 361", "completed"),
+    record("ANAT 362", "completed"),
+    record("ANAT 365", "completed", 4),
+    record("PSYC 301", "completed"),
+    record("PSYC 302", "completed"),
+    record("PSYC 303", "completed"),
+    record("PSYC 204", "completed"),
+    record("PSYC 205", "completed"),
+  ]);
+  const [group] = programProgress(targets, done, catalogue).groups;
+  expect(group?.rules[0]).toMatchObject({ creditsDone: 10, satisfied: true });
+  expect(group?.rules[1]).toMatchObject({ creditsDone: 12, satisfied: true });
+  // A real cap still holds: only one 200-level course counts.
+  expect(group?.rules[2]?.creditsDone).toBe(3);
+  expect(group).toMatchObject({ creditsDone: 22, satisfied: true });
+});
