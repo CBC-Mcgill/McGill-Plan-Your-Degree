@@ -155,9 +155,14 @@ test("parses an Engineering page: Year 0, extra credits, named lists and footnot
       courses: ["COMP 350", "ECSE 343"],
     }),
   );
-  expect(rules.filter((rule) => rule.unparsed)).toEqual([
-    expect.objectContaining({ title: expect.stringContaining("A or List B") }),
-  ]);
+  expect(rules.filter((rule) => rule.unparsed)).toEqual([]);
+  expect(rules).toContainEqual(
+    expect.objectContaining({
+      title: expect.stringContaining("A or List B"),
+      minCredits: 8,
+      minCourses: 3,
+    }),
+  );
 });
 
 test("parses an Arts minor: lists without a stated amount and notes it cannot read", () => {
@@ -302,7 +307,10 @@ test("reads how many credits a minor shares with the program from its page", () 
 const read = (text: string, credits?: number) =>
   statementRules(
     text,
-    (name) => ({ chemistry: ["CHEM"], biology: ["BIOL"] })[name] ?? [],
+    (name) =>
+      ({ chemistry: ["CHEM"], biology: ["BIOL"], architecture: ["ARCH"] })[
+        name
+      ] ?? [],
     credits,
   ).map(({ title: _, ...rule }) => rule);
 
@@ -364,7 +372,7 @@ test("reads level minimums and caps, and subjects at a level, from sentences", (
         },
       ],
     ],
-    // About one list of a 24-credit group, a list that follows, and a narrowing a subject rule cannot express.
+    // About one list of a 24-credit group, and a list that follows.
     [
       "At least 3 of these 9-12 credits must be at the 400 level or above.",
       24,
@@ -374,7 +382,66 @@ test("reads level minimums and caps, and subjects at a level, from sentences", (
     [
       "At least 12 credits must be from COMP courses at the 500 level or above.",
       33,
-      [{ unparsed: true }],
+      [
+        {
+          minCredits: 12,
+          match: { minLevel: 500, subjects: ["COMP"] },
+          filter: true,
+        },
+      ],
+    ],
+    // Qualifiers in parentheses or after "of which" and "including" are clauses, and a Special Topics part stays for a person beside what reads.
+    [
+      "A maximum of 36 credits of 200- and 300-level courses (of which a maximum of 21 credits may be at the 200 level and a maximum of 6 credits may be Special Topic courses.)",
+      undefined,
+      [
+        { maxCredits: 36, match: { minLevel: 200, maxLevel: 300 } },
+        { maxCredits: 21, match: { minLevel: 200, maxLevel: 200 } },
+        { unparsed: true },
+      ],
+    ],
+    [
+      "12 credits selected from any undergraduate-level courses with a prefix of MUCT, MUGT, MUIT, of which 6 credits must be at the 300-level or above",
+      12,
+      [
+        {
+          minCredits: 12,
+          maxCredits: 12,
+          match: { subjects: ["MUCT", "MUGT", "MUIT"] },
+        },
+        {
+          minCredits: 6,
+          match: { minLevel: 300, subjects: ["MUCT", "MUGT", "MUIT"] },
+          filter: true,
+        },
+      ],
+    ],
+    [
+      "15 credits of Biology complementary courses at the 300-500 levels, including at least 3 credits at the 400-500 levels",
+      undefined,
+      [
+        {
+          minCredits: 15,
+          maxCredits: 15,
+          match: { minLevel: 300, subjects: ["BIOL"] },
+        },
+        {
+          minCredits: 3,
+          match: { minLevel: 400, subjects: ["BIOL"] },
+          filter: true,
+        },
+      ],
+    ],
+    [
+      "6 or 9 POLI credits at the 200 level.",
+      18,
+      [
+        {
+          minCredits: 6,
+          maxCredits: 9,
+          match: { minLevel: 200, maxLevel: 200, subjects: ["POLI"] },
+        },
+      ],
     ],
   ];
   for (const [text, credits, rules] of cases) {
@@ -397,15 +464,31 @@ test("reads what an adviser must approve, and leaves optional extras out", () =>
     ],
     [
       "9 credits of elective courses outside the School of Architecture must be completed, subject to approval by the Student Advisor.",
-      [{ minCredits: 9, maxCredits: 9, match: {}, adviser: true }],
+      [
+        {
+          minCredits: 9,
+          maxCredits: 9,
+          match: { excludeSubjects: ["ARCH"] },
+          adviser: true,
+        },
+      ],
     ],
     [
       "or any 300- or 400-level course approved by an adviser.",
       [{ match: { minLevel: 300, maxLevel: 400 }, adviser: true }],
     ],
+    // An optional extra and an approval with no amount only remind, and a set the app cannot tell apart stays text.
     [
       "A maximum of 9 credits may be from another department with the signed permission of the program adviser.",
-      [],
+      [{ match: {}, adviser: true }],
+    ],
+    [
+      "Other Education courses may be included with the permission of the Program Adviser.",
+      [{ match: {}, adviser: true }],
+    ],
+    [
+      "6 credits at the 400 level or higher, chosen from the Faculty of Engineering or Faculty of Science (in consultation with the program coordinator).",
+      [{ unparsed: true }],
     ],
     [
       "12 credits chosen from the following list in consultation with the Academic Adviser for the Minor:",
@@ -575,6 +658,18 @@ test("reads the amount of a list statement in front of its table", () => {
       "9 credits of systematic physical geography",
       { minCredits: 9, maxCredits: 9 },
     ],
+    [
+      "0-10 credits from the following list of 200- and 300-level courses:",
+      { maxCredits: 10 },
+    ],
+    [
+      "Students in this stream may also choose a maximum of 12 credits from the following list:",
+      { maxCredits: 12 },
+    ],
+    [
+      "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser.",
+      { minCredits: 3, maxCredits: 3, adviser: true },
+    ],
   ];
   for (const [statement, amount] of cases) {
     const rules = complementary(`<p>${statement}</p>${list}`);
@@ -725,7 +820,7 @@ test("reads Music electives and a Foundation year listed under Prerequisite Cour
   });
 });
 
-test("reads streams as a group that counts one of them, and leaves streams of several lists as text", () => {
+test("reads streams as a group that counts one of them, each stream's lists under its name", () => {
   const streams = (second: string) =>
     programOf(
       "Test Minor (B.Eng.) (18 credits)",
@@ -741,29 +836,75 @@ test("reads streams as a group that counts one of them, and leaves streams of se
   expect(read.groups).toEqual([
     expect.objectContaining({
       credits: 12,
-      pickOne: true,
       rules: [
         expect.objectContaining({
           title: "Aerodynamics Stream",
           minCredits: 12,
+          option: "Aerodynamics Stream",
         }),
-        expect.objectContaining({ title: "Avionics Stream", minCredits: 12 }),
+        expect.objectContaining({
+          title: "Avionics Stream",
+          minCredits: 12,
+          option: "Avionics Stream",
+        }),
       ],
     }),
     expect.objectContaining({ title: "Technical Complementaries", credits: 6 }),
   ]);
-  const unread = streams(
+  const lists = streams(
     `<p>6 credits from:</p>${table("ECSE 403", "ECSE 408")}<p>6 credits from:</p>${table("ECSE 412", "ECSE 420")}`,
   );
-  expect(unread.groups).toHaveLength(1);
-  expect(unread.groups[0]).not.toHaveProperty("pickOne");
-  expect(unread.groups[0]).toMatchObject({
-    rules: expect.arrayContaining([
-      expect.objectContaining({
-        unparsed: true,
-        title: "12 credits from one of the following streams",
-      }),
-    ]),
+  expect(validateProgram(lists)).toMatchObject({ ok: true });
+  expect(lists.groups[0]).toMatchObject({
+    credits: 12,
+    rules: [
+      { option: "Aerodynamics Stream" },
+      {
+        minCredits: 6,
+        courses: ["ECSE 403", "ECSE 408"],
+        option: "Avionics Stream",
+      },
+      {
+        minCredits: 6,
+        courses: ["ECSE 412", "ECSE 420"],
+        option: "Avionics Stream",
+      },
+    ],
+  });
+});
+
+test("streams beside other lists, and stream headings that slipped out after them, join the group as options", () => {
+  const program = programOf(
+    "Test Major (B.Sc.) (12 credits)",
+    `<h2>Complementary Courses (12 credits)</h2><h3>Statistics</h3><p>3 credits from:</p>${table("MATH 203", "GEOG 202")}` +
+      `<p>9 credits from one of the following two streams:</p>` +
+      `<h2>Biological Stream</h2><p>9 credits from:</p>${table("BIOL 310", "BIOL 342", "BIOL 432")}` +
+      `<h2>Physical Stream</h2><h3>Atmosphere</h3><p>6 credits from:</p>${table("ATOC 214", "ATOC 315")}<h3>Calculus</h3><p>3 credits from:</p>${table("MATH 222")}`,
+  );
+  expect(validateProgram(program)).toMatchObject({ ok: true });
+  expect(program.groups).toHaveLength(1);
+  expect(program.groups[0]).toMatchObject({
+    credits: 12,
+    rules: [
+      { title: "Statistics: 3 credits from" },
+      { option: "Biological Stream", minCredits: 9 },
+      { option: "Physical Stream", title: "Atmosphere: 6 credits from" },
+      { option: "Physical Stream", title: "Calculus: 3 credits from" },
+    ],
+  });
+  const nested = programOf(
+    "Test Major (B.Mus.) (19 credits)",
+    `<h2>Foundation Program (19 credits)</h2><h3>Ensembles</h3><p>4 credits from courses with a MUEN prefix.</p><p>15 credits from one of the following two streams:</p>` +
+      `<h3>Classical Stream</h3>${table("MUHL 186", "MUSP 140", "MUSP 141", "MUTH 150", "MUTH 151")}` +
+      `<h3>Jazz Stream</h3>${table("MUJZ 160", "MUJZ 161", "MUJZ 170", "MUJZ 171", "MUJZ 187")}`,
+  );
+  expect(nested.groups[0]).toMatchObject({
+    credits: 19,
+    rules: [
+      { option: "Classical Stream", minCredits: 15 },
+      { option: "Jazz Stream", minCredits: 15 },
+      { minCredits: 4, match: { subjects: ["MUEN"] } },
+    ],
   });
 });
 
@@ -885,6 +1026,30 @@ test("a Foundation heading with only its total takes the courses listed under Pr
   ]);
 });
 
+test("a subject sentence beside lists narrows them, adds its courses alone under a heading, and stays text with no list", () => {
+  const rules = complementary(
+    `<p>At least 12 credits must be from COMP courses at the 500 level or above.</p>` +
+      `<h3>Group C</h3>${table("COMP 409", "COMP 523", "ECSE 420")}` +
+      `<h3>200 Level</h3><p>A maximum of 12 credits of Anthropology (ANTH) courses at the 200 level.</p>`,
+  );
+  expect(rules).toContainEqual(
+    expect.objectContaining({ minCredits: 12, filter: true }),
+  );
+  expect(rules).toContainEqual({
+    title:
+      "A maximum of 12 credits of Anthropology (ANTH) courses at the 200 level",
+    maxCredits: 12,
+    match: { minLevel: 200, maxLevel: 200, subjects: ["ANTH"] },
+  });
+  expect(
+    complementary(
+      "<p>Note: Maximum 6 credits of SEAD courses are allowed.</p>",
+    ),
+  ).toEqual([
+    { title: "Maximum 6 credits of SEAD courses are allowed", unparsed: true },
+  ]);
+});
+
 test("a level sentence under a nested heading with its own credits counts that heading's courses only", () => {
   const rules = complementary(
     `<p>6 credits from:</p>${table("ENVR 400", "ENVR 201")}` +
@@ -894,4 +1059,178 @@ test("a level sentence under a nested heading with its own credits counts that h
     expect.objectContaining({ minCredits: 3, courses: ["GEOG 408"] }),
   );
   expect(rules.some((rule) => rule.match?.minLevel !== undefined)).toBe(false);
+});
+
+test("reads which courses cannot both count, from footnotes and from sentences", () => {
+  const rules = complementary(
+    `<p>15 credits from:</p>${table("BREE 529", "ENVB 529", "GEOG 201", "BIOL 540", "ENVR 540", "ENVB 210", "GEOG 305", "MUJZ 440:2", "MUJZ 441:2", "MUJZ 461D1:2", "MUJZ 461D2:2")}` +
+      "<dl><dd>Note: Students may take only one of BREE 529, ENVB 529, or GEOG 201.</dd></dl>" +
+      "<p>You may take only one of: BIOL 540 or ENVR 540; ENVB 210 or GEOG 305.</p>" +
+      "<p>Students select either MUJZ 440 and MUJZ 441 or MUJZ 461D1 and MUJZ 461D2.</p>" +
+      "<p>Students can take only one course from each set of the following courses: MIME 260, MIME 261 or CHEE 380 CHEE 515 or MIME 515</p>" +
+      "<p>Students can take only one course from each set of the following courses: MIME 260, MIME 261 or CHEE 380 CHEE 515 or MIME 515</p>",
+  );
+  expect(
+    rules.filter((rule) => rule.maxCourses === 1).map((rule) => rule.courses),
+  ).toEqual([
+    ["BREE 529", "ENVB 529", "GEOG 201"],
+    ["BIOL 540", "ENVR 540"],
+    ["ENVB 210", "GEOG 305"],
+    ["MUJZ 440", "MUJZ 461"],
+    ["MUJZ 441", "MUJZ 461"],
+    ["MIME 260", "MIME 261", "CHEE 380"],
+    ["CHEE 515", "MIME 515"],
+  ]);
+});
+
+test("a line beside a list opens it to a subject, and courses not taken above join the lists before", () => {
+  const rules = complementary(
+    `<p>9 credits from:</p>${table("COMP 251", "MATH 240")}<p>COMP courses at the 300 level or above except COMP 396, COMP 400.</p>` +
+      `<p>6 credits selected from:</p>${table("MUTH 202", "MUTH 204")}<p>6 credits selected from courses not taken above and the following:</p>${table("MUCO 575")}`,
+  );
+  expect(rules).toEqual([
+    {
+      title: "9 credits from",
+      courses: ["COMP 251", "MATH 240"],
+      minCredits: 9,
+      maxCredits: 9,
+      match: {
+        subjects: ["COMP"],
+        minLevel: 300,
+        exclude: ["COMP 396", "COMP 400"],
+      },
+    },
+    expect.objectContaining({ courses: ["MUTH 202", "MUTH 204"] }),
+    expect.objectContaining({
+      courses: ["COMP 251", "MATH 240", "MUTH 202", "MUTH 204", "MUCO 575"],
+      minCredits: 6,
+    }),
+  ]);
+});
+
+test("a Required heading over one course stays required, and a choice it cannot read stays complementary", () => {
+  const program = programOf(
+    "Test Minor (B.Sc.) (19 credits)",
+    `<h2>Required Course (4 credits)</h2>${table("MUIN 384:1")}<p>3 credits from the following:</p>${table("MUPG 580:1.5")}` +
+      `<h2>Africa Semester (15 credits)</h2><h3>Africa Semester - Required Courses</h3><p>6 credits</p>` +
+      `<p>Students select one course titled "Research in Society" and one course titled "Research in Ecology" from the courses below.</p>${table("ANTH 451", "BIOL 451", "GEOG 451")}` +
+      `<h3>Africa Semester - Complementary Courses</h3><p>9 credits from:</p>${table("ANTH 416", "BIOL 405", "BIOL 428")}`,
+  );
+  expect(program.groups.map((g) => [g.title, g.kind, g.credits])).toEqual([
+    ["Required Course", "required", 4],
+    ["Africa Semester - Required Courses", "complementary", 6],
+    ["Africa Semester - Complementary Courses", "complementary", 9],
+  ]);
+});
+
+test("credits a Year 0 heading asks for after its list join a group of their own, and a condition over the whole program is a check", () => {
+  const program = programOf(
+    "Test (B.Sc.) (31 credits)",
+    `<h2>Required Year 0 Courses (28 credits)</h2><p>All Year 0 students must successfully complete 10 credits from the following:</p>${table("MATH 133", "MATH 140", "PHYS 131:4")}` +
+      "<p>All Year 0 students must also successfully complete 18 credits as follows:</p>" +
+      "<p>3 credits from among any 100- or 200-level courses with the subject codes of ATOC (Atmospheric and Oceanic Sciences), COMP (Computer Science), and EPSC (Earth and Planetary Sciences).</p>" +
+      "<p>15 credits from among any 100- or 200-level courses with the subject codes of AFRI (African Studies), GSFS (Gender, Sexuality, Feminist, and Social Justice), and SOCI (Sociology).</p>" +
+      "<h2>Program Requirements</h2><p>Note: Students are required to take a maximum of 30 credits at the 200 level and a minimum of 12 credits at the 400 level or higher in this program.</p>" +
+      `<h2>Complementary Courses (3 credits)</h2><p>3 credits from:</p>${table("ENVR 400")}`,
+  );
+  expect(validateProgram(program)).toMatchObject({ ok: true });
+  expect(program.groups).toMatchObject([
+    { kind: "required", credits: 10 },
+    {
+      kind: "complementary",
+      credits: 18,
+      foundation: true,
+      rules: [
+        {
+          minCredits: 3,
+          match: {
+            minLevel: 100,
+            maxLevel: 200,
+            subjects: ["ATOC", "COMP", "EPSC"],
+          },
+        },
+        {
+          minCredits: 15,
+          match: {
+            minLevel: 100,
+            maxLevel: 200,
+            subjects: ["AFRI", "GSFS", "SOCI"],
+          },
+        },
+      ],
+    },
+    { title: "Program Requirements", credits: 0, rules: [{ unparsed: true }] },
+    { title: "Complementary Courses", credits: 3 },
+  ]);
+});
+
+test("reads statements that name a list by its letter and description, its amount, or its heading", () => {
+  const rules = complementary(
+    "<p>3 credits in Psychology from List A - (Behavioural Neuroscience, Cognition and Quantitative Methods)</p>" +
+      "<p>6 credits (two courses) from Group C OR Group D:</p>" +
+      "<p>9 credits selected from the GSFS Course List, 3 credits of which must be at the 400 or 500 level.</p>" +
+      "<p>at least 6 credits must be taken from the Basic Life Sciences List,</p>" +
+      `<h3>List A - (Behavioural Neuroscience, Cognition and Quantitative Methods)</h3>${table("PSYC 301", "NSCI 201")}` +
+      `<h3>Group C</h3>${table("PHIL 344", "PHIL 345")}<h3>Group D</h3>${table("PHIL 360")}` +
+      `<h3>GSFS</h3><p>9 credits from the following:</p>${table("GSFS 301", "GSFS 401")}` +
+      `<h3>Basic Life Science</h3><p>At least 6 credits from:</p>${table("ANAT 212", "BIOL 200")}`,
+  );
+  expect(rules.filter((rule) => rule.unparsed)).toEqual([]);
+  expect(rules).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        minCredits: 3,
+        courses: ["PSYC 301", "NSCI 201"],
+      }),
+      expect.objectContaining({
+        minCredits: 6,
+        courses: ["PHIL 344", "PHIL 345", "PHIL 360"],
+      }),
+      expect.objectContaining({ minCredits: 3, courses: ["GSFS 401"] }),
+    ]),
+  );
+});
+
+test("a statement naming its own heading, and any of the lists, take in the lists it covers", () => {
+  const rules = complementary(
+    "<p>9 credits from any of the two lists.</p>" +
+      `<h3>Literature and Society</h3><p>6 credits of courses in Literature and Society.</p><h4>History (HIST)</h4>${table("HIST 208")}<h4>Religion (RELG)</h4>${table("RELG 253")}` +
+      `<h3>Language</h3><p>3 credits from:</p>${table("EAST 220")}`,
+  );
+  expect(rules).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        minCredits: 6,
+        courses: ["HIST 208", "RELG 253"],
+      }),
+      expect.objectContaining({
+        minCredits: 9,
+        courses: ["HIST 208", "RELG 253", "EAST 220"],
+      }),
+    ]),
+  );
+});
+
+test("a required range takes the bound the program total counts, and an Honours add-on page asks for its base program", () => {
+  const ranged = programOf(
+    "Test Major (B.Sc.) (26 credits)",
+    `<h2>U1 Required Courses (20-24 credits)</h2>${table("BIOC 212", "BIOC 220", "CHEM 212:4", "BIOL 200", "BIOL 201", "MATH 203", "PHGY 209", "PHGY 210")}` +
+      `<h2>Complementary Courses (6 credits)</h2><p>6 credits from:</p>${table("BIOL 205", "MIMM 211")}`,
+  );
+  expect(ranged.groups.map((g) => g.credits)).toEqual([20, 6]);
+  const honours = parseProgramPage(
+    `<h1 class="page-title">Test Honours (B.A.) (60 credits)</h1><p>2026-2027 Undergraduate Catalogue</p>` +
+      `<div id="programoverviewtextcontainer">This program is open only to students in the B.A. Faculty Program Environment. To be eligible for Honours, students must satisfy the requirements set by their B.A. degree. In addition, students must apply.</div>` +
+      `<div id="coursestextcontainer"><h2>Honours Required Courses (6 credits)</h2>${table("ENVR 495D1", "ENVR 495D2")}</div>`,
+    `${BASE}/environment/programs/test/test-honours-ba/`,
+  ) as Program;
+  expect(validateProgram(honours)).toMatchObject({ ok: true });
+  expect(honours.groups).toMatchObject([
+    { kind: "required", credits: 6 },
+    {
+      title: "B.A. Faculty Program Environment",
+      credits: 54,
+      rules: [{ unparsed: true }],
+    },
+  ]);
 });

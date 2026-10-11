@@ -185,11 +185,18 @@ export function validateProgram(value: unknown): ValidationResult {
       "adviser",
       "maxCreditsPerSubject",
       "minSubjects",
+      "filter",
+      "option",
     ]);
     if (!r) return;
     text(r, "title", path);
+    optionalText(r, "option", path);
     optionalTrue(r, "unparsed", path);
     optionalTrue(r, "adviser", path);
+    optionalTrue(r, "filter", path);
+    if (r.filter && (r.match === undefined || r.courses !== undefined)) {
+      fail(path, "a filter narrows by match, so it needs match and no courses");
+    }
     if (
       r.unparsed !== true &&
       r.courses === undefined &&
@@ -258,18 +265,27 @@ export function validateProgram(value: unknown): ValidationResult {
       ]);
       if (!g) return;
       text(g, "title", path);
-      num(g, "credits", path, "positive");
+      const checks =
+        Array.isArray(g.rules) &&
+        g.rules.length > 0 &&
+        g.rules.every((r) => isObj(r) && r.unparsed === true);
+      // A group that only asks a person to check a condition over the whole program needs no credits.
+      num(g, "credits", path, checks ? "credits" : "positive");
       optionalNum(g, "minCourses", path, "count");
       optionalText(g, "note", path);
       optionalTrue(g, "foundation", path);
       optionalTrue(g, "pickOne", path);
       list(g.rules, `${path}.rules`, g.pickOne ? 2 : 1, rule);
-      if (
-        g.pickOne &&
-        Array.isArray(g.rules) &&
-        g.rules.some((r) => isObj(r) && r.unparsed)
-      ) {
+      const rules = Array.isArray(g.rules) ? g.rules.filter(isObj) : [];
+      if (g.pickOne && rules.some((r) => r.unparsed)) {
         fail(`${path}.rules`, "a pickOne group needs every rule parsed");
+      }
+      const options = new Set(rules.flatMap((r) => r.option ?? []));
+      if (options.size > 0 && (g.pickOne || options.size < 2)) {
+        fail(
+          `${path}.rules`,
+          "rules that name an option need at least two options and no pickOne",
+        );
       }
     } else {
       fail(`${path}.kind`, 'expected "required" or "complementary"');

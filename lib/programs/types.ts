@@ -5,7 +5,7 @@ export type RequiredItem = string | { oneOf: string[] };
 export interface RequiredGroup {
   title: string;
   kind: "required";
-  /** Credits when every item is taken, as the catalogue heading states. */
+  /** Credits when every item is taken, as the catalogue heading states. For a range, the bound the program total counts. */
   credits: number;
   courses: RequiredItem[];
   note?: string;
@@ -27,12 +27,12 @@ export interface Match {
   exclude?: string[];
 }
 
-/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` just filters, as in "at least 6 credits at the 400 level", and a spread rule without `courses` only filters too. A plain `match` with no subjects or level, on a rule that is neither an adviser nor a spread rule, opens the group to any course, as in "42 credits of Free Electives". */
+/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` or a `filter` rule just filters, as in "at least 6 credits at the 400 level", and a spread rule without `courses` only filters too. A plain `match` with no subjects or level, on a rule that is neither an adviser nor a spread rule, opens the group to any course, as in "42 credits of Free Electives". */
 export interface Rule {
   title: string;
   /** At least this many credits must come from the rule. */
   minCredits?: number;
-  /** Credits beyond this do not count toward the group. Equal to `minCredits` it only records the catalogue's amount, as in "9 credits from", and does not cap, so a 4-credit course may overshoot. */
+  /** Credits beyond this do not count toward the group. Equal to `minCredits`, or above it by less than the course being counted, it only records the catalogue's amount, as in "9 credits from" or "3-4 credits of", and does not cap, so a 4-credit course may overshoot. */
   maxCredits?: number;
   minCourses?: number;
   /** Courses beyond this do not count toward the group, which expresses "A and B cannot both be taken". */
@@ -47,17 +47,21 @@ export interface Rule {
   maxCreditsPerSubject?: number;
   /** The rule's courses must span at least this many subjects, as in "drawn from at least 3 disciplines". */
   minSubjects?: number;
+  /** The rule narrows the group's courses by subject and level and adds none, like a level-only filter, as in "at least 12 credits must be from COMP courses at the 500 level" over a group's lists. */
+  filter?: true;
+  /** The stream the rule belongs to, in a group where the student completes one of several streams, as in "27 credits from one of the following two streams". A rule without one applies to every stream. */
+  option?: string;
 }
 
-/** A course counts once toward the group total but can satisfy several rules in the group. */
+/** A course counts once toward the group total but can satisfy several rules in the group. When rules name an `option`, each option is counted with the shared rules as if it were the whole group, and the option furthest along stands for the group. */
 export interface ComplementaryGroup {
   title: string;
   kind: "complementary";
-  /** Credits needed from the group. A range in the catalogue takes its lower bound. */
+  /** Credits needed from the group. A range in the catalogue takes its lower bound. 0 for a group whose rules are all unparsed and hold a condition over the whole program, such as "a maximum of 34 credits at the 200 level", so a person checks it and no credits move. */
   credits: number;
   /** For "9-12 credits (3 courses)" style lines. */
   minCourses?: number;
-  /** "12 credits from one of the following streams": the student completes exactly one of the rules, so the group counts the rule that is furthest along and is satisfied when that rule alone meets the group's credits. */
+  /** The older form of one rule per stream, the same as giving each rule an `option` of its own. Files written before `option` still use it. */
   pickOne?: true;
   rules: Rule[];
   note?: string;

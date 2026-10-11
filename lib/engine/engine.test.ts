@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 import type { Course, Requirement } from "../catalogue/types.ts";
 import type { CourseRecord, Plan, Term } from "../profile/types.ts";
-import type { Program, Rule } from "../programs/types.ts";
+import type { ComplementaryGroup, Program, Rule } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
@@ -749,6 +749,97 @@ test("a free elective group takes any course, caps MUEN and keeps music out of t
   expect(progress).toMatchObject({ creditsDone: 8, satisfied: false });
 });
 
+test("a subject filter caps the group's lists and adds no course of its own", () => {
+  const capped: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "List", courses: ["COMP 250", "COMP 330", "MATH 240"] },
+          {
+            title: "At most 3 credits of COMP courses",
+            maxCredits: 3,
+            match: { subjects: ["COMP"] },
+            filter: true,
+          },
+        ],
+      },
+    ],
+  };
+  expect(validateProgram(capped)).toMatchObject({ ok: true });
+  const done = buildSnapshot([
+    record("COMP 250", "completed"),
+    record("COMP 330", "completed"),
+    record("COMP 350", "completed"),
+    record("MATH 240", "completed"),
+  ]);
+  const [group] = programProgress(capped, done, catalogue).groups;
+  expect(group).toMatchObject({ creditsDone: 6, satisfied: true });
+  expect(group?.courses.map((c) => c.code)).toEqual(["COMP 250", "MATH 240"]);
+});
+
+test("an option group counts each stream of several lists with the shared rules, and the best one stands for the group", () => {
+  const streams: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 9,
+        rules: [
+          { title: "Shared", minCredits: 3, courses: ["COMP 202"] },
+          {
+            title: "3 credits from",
+            minCredits: 3,
+            courses: ["COMP 330"],
+            option: "Theory",
+          },
+          {
+            title: "3 credits from",
+            minCredits: 3,
+            courses: ["COMP 360"],
+            option: "Theory",
+          },
+          {
+            title: "6 credits from",
+            minCredits: 6,
+            courses: ["COMP 250", "COMP 251"],
+            option: "Systems",
+          },
+        ],
+      },
+    ],
+  };
+  expect(validateProgram(streams)).toMatchObject({ ok: true });
+  const [group] = streams.groups;
+  expect(
+    group?.kind === "complementary" &&
+      validateProgram({
+        ...streams,
+        groups: [{ ...group, rules: group.rules.slice(0, 3) }],
+      }),
+  ).toMatchObject({ ok: false });
+  const done = buildSnapshot([
+    record("COMP 202", "completed"),
+    record("COMP 330", "completed"),
+    record("COMP 250", "completed"),
+    record("COMP 251", "completed"),
+  ]);
+  const progress = programProgress(streams, done, catalogue);
+  expect(progress.groups[0]).toMatchObject({
+    creditsDone: 9,
+    satisfied: true,
+    option: "Systems",
+  });
+  expect(progress.groups[0]?.rules.map((rule) => rule.creditsDone)).toEqual([
+    3, 3, 0, 6,
+  ]);
+  expect(progress.unclaimed).toEqual([{ code: "COMP 330", credits: 3 }]);
+});
+
 test("a pick-one group counts the stream furthest along and leaves the other stream's courses free", () => {
   const streams: Program = {
     ...tiny,
@@ -851,4 +942,58 @@ test("a stated amount is a target, so a course may overshoot it and other rules 
   // A real cap still holds: only one 200-level course counts.
   expect(group?.rules[2]?.creditsDone).toBe(3);
   expect(group).toMatchObject({ creditsDone: 22, satisfied: true });
+});
+
+test("a range narrower than a course is a target, so lists that share courses can both fill", () => {
+  const shared: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          {
+            title: "3 credits of",
+            courses: ["COMP 330", "COMP 350"],
+            minCredits: 3,
+            maxCredits: 3,
+          },
+          {
+            title: "3-4 credits of",
+            courses: ["COMP 250", "COMP 330", "COMP 350"],
+            minCredits: 3,
+            maxCredits: 4,
+          },
+          {
+            title: "0-3 credits of",
+            courses: ["COMP 250", "MATH 240"],
+            maxCredits: 3,
+          },
+        ],
+      },
+    ],
+  };
+  const done = buildSnapshot([
+    record("COMP 330", "completed"),
+    record("COMP 350", "completed"),
+    record("COMP 250", "completed"),
+    record("MATH 240", "completed"),
+  ]);
+  const [group] = programProgress(shared, done, catalogue).groups;
+  expect(group).toMatchObject({ creditsDone: 6, satisfied: true });
+  expect(group?.courses.map((c) => c.code)).toEqual(["COMP 330", "COMP 350"]);
+  // A cap with no floor still caps.
+  expect(
+    fitsCaps(
+      shared.groups[0] as ComplementaryGroup,
+      [
+        { courses: [] },
+        { courses: [] },
+        { courses: [{ code: "COMP 250", credits: 3 }] },
+      ],
+      "MATH 240",
+      3,
+    ),
+  ).toBe(false);
 });

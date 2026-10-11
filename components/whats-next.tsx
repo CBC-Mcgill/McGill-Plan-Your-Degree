@@ -9,7 +9,14 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { type ReactNode, useEffect, useId, useMemo, useRef } from "react";
+import {
+  Fragment,
+  type ReactNode,
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+} from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
 import {
@@ -44,6 +51,7 @@ import {
   type Item,
   type NextView,
   nextView,
+  ruleTitle,
   termSnapshot,
 } from "@/lib/engine/next-view";
 import { termLoad } from "@/lib/engine/plan";
@@ -54,6 +62,7 @@ import {
   type GroupProgress,
   minorOverlap,
   type ProgramProgress,
+  picksOne,
   programSplit,
   programStanding,
   STANDING,
@@ -1012,18 +1021,25 @@ function GroupBody({
       {group.replaces && (
         <p className="text-fg-muted">{COPY.replaces(group.replaces)}</p>
       )}
-      {definition?.kind === "complementary" && definition.pickOne && (
-        <p className="text-fg-muted">{COPY.pickOne}</p>
-      )}
-      {open?.buckets.map((bucket) => (
-        <Bucket
-          key={bucket.title}
-          title={bucket.title}
-          progress={bucket.progress}
-          entries={bucket.entries}
-          context={context}
-          heading={heading}
-        />
+      {definition?.kind === "complementary" &&
+        picksOne(definition) &&
+        !open?.buckets.some((bucket) => bucket.stream) && (
+          <p className="text-fg-muted">{COPY.pickOne}</p>
+        )}
+      {open?.buckets.map((bucket, i) => (
+        <Fragment key={bucket.title}>
+          {/* Before the first stream's list, so lists every stream shares do not read as streams. */}
+          {bucket.stream && !open.buckets[i - 1]?.stream && (
+            <p className="text-fg-muted">{COPY.pickOne}</p>
+          )}
+          <Bucket
+            title={bucket.title}
+            progress={bucket.progress}
+            entries={bucket.entries}
+            context={context}
+            heading={heading}
+          />
+        </Fragment>
       ))}
       {open && open.checks.length > 0 && (
         <ul>
@@ -1041,7 +1057,7 @@ function GroupBody({
             !rule.adviser && (
               // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
               <p key={i} className="text-fg-muted">
-                {rule.title}
+                {ruleTitle(rule)}
               </p>
             ),
         )}
@@ -1049,7 +1065,8 @@ function GroupBody({
         <ul>
           {group.rules.map(
             (rule, i) =>
-              rule.adviser && (
+              rule.adviser &&
+              (rule.option === undefined || rule.option === group.option) && (
                 // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
                 <AdviserRow key={i} text={rule.title} />
               ),
