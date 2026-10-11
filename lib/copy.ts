@@ -98,6 +98,8 @@ export const COPY = {
   countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",
   adviserApproval: "Your advisor must approve these courses",
+  pickOne:
+    "Complete one of these streams. The one you are furthest along in counts.",
   catalogueLink: "McGill catalogue",
   vsbLink: "Visual Schedule Builder",
   generated: "Read automatically from the catalogue",
