@@ -300,7 +300,7 @@ test("reads how many credits a minor shares with the program from its page", () 
 const read = (text: string, credits?: number) =>
   statementRules(
     text,
-    (name) => (name === "chemistry" ? ["CHEM"] : []),
+    (name) => ({ chemistry: ["CHEM"], biology: ["BIOL"] })[name] ?? [],
     credits,
   ).map(({ title: _, ...rule }) => rule);
 
@@ -479,4 +479,30 @@ test("drops notices that restrict nothing the app counts, and keeps a sentence t
       "Credits for the introductory sequence MGCR 293 and ECON 295 that are prerequisites for 300-level courses in economics do not count as part of this Minor concentration.",
     ),
   ).toEqual([{ unparsed: true }]);
+});
+
+test("reads a level range, a minimum above the lists, and subjects listed after a colon", () => {
+  expect(
+    read("4-6 credits from Biology courses at the 300-500 levels"),
+  ).toEqual([
+    {
+      minCredits: 4,
+      maxCredits: 6,
+      match: { minLevel: 300, subjects: ["BIOL"] },
+    },
+  ]);
+  expect(
+    read("At least 9 credits must be completed at the 300-level or above:", 15),
+  ).toEqual([{ minCredits: 9, match: { minLevel: 300 } }]);
+  expect(
+    read(
+      "6 credits at the 300 level or above selected from the following disciplines:; Anthropology (ANTH), Linguistics (LING), Psychology (PSYC), or Sociology (SOCI).",
+    ),
+  ).toEqual([
+    {
+      minCredits: 6,
+      maxCredits: 6,
+      match: { minLevel: 300, subjects: ["ANTH", "LING", "PSYC", "SOCI"] },
+    },
+  ]);
 });

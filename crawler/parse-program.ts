@@ -260,7 +260,7 @@ const subjectsIn = (text: string) => text.split(/, or |, and |, | or | and /);
 const HUNDRED = "[1-6]00";
 // "400 level or higher", "400- or 500-level", "300, 400, or 500 levels", "400/500 level", "300-500 levels", "300+ level", "below the 300 level".
 const LEVEL_PHRASE = new RegExp(
-  String.raw`\b(below )?(?:the )?${HUNDRED}(?:-level|-)?(?:(?:,? (?:or|and|to) |, |\s?[-–/]\s?)${HUNDRED}(?:-level|-)?)*\+?(?: ?levels?)?(?: (?:or|and) (?:above|higher))?`,
+  String.raw`\b(below )?(?:the )?${HUNDRED}(?:-level|-(?!${HUNDRED}))?(?:(?:,? (?:or|and|to) |, |\s?[-–/]\s?)${HUNDRED}(?:-level|-(?!${HUNDRED}))?)*\+?(?: ?levels?)?(?: (?:or|and) (?:above|higher))?`,
   "gi",
 );
 
@@ -398,7 +398,7 @@ function readClause(
     )
     .replace(/\s+/g, " ")
     .replace(
-      /\b(of|in|from|credits) (?:(?:additional|other|complementary) )?((?:(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+ ){0,2}(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+)(?= courses?\b| (?:at )?_level_| _subj_|\s*$)/g,
+      /\b(of|in|from|credits) (?:(?:additional|other|complementary) )?((?:(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+ ){0,2}(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+)(?= courses?\b| (?:at )?_level_| _subj_|,|\s*$)/g,
       (all, before, name) => {
         const found = subjectsOf(name.toLowerCase());
         if (found.length === 0) return all;
@@ -504,7 +504,7 @@ const AS_FOLLOWS =
 // "Preferably courses at the 300 level or above" and "none in the final year of the program" advise, they do not restrict.
 const ADVICE = /\b(?:preferably|normally)\b|^none in the final year/i;
 const INTRO =
-  /^(?:the )?(?:complementary )?courses (?:are|must be) (?:selected|chosen)$/i;
+  /^(?:the )?(?:complementary )?courses (?:are|must be)(?: selected| chosen)?$/i;
 
 /** The rules of a sentence, one per constraint, or null when any part of it cannot be read. `credits` is the group's, to tell a sentence about the group from one about a list inside it. */
 function readStatement(
@@ -514,8 +514,34 @@ function readStatement(
 ): Rule[] | null {
   const whole = parseSource(text, subjectsOf) ?? parseAnyCourse(text);
   if (whole) return [whole];
-  // A sentence ending in a colon introduces the list under it, unless an "as follows" in it does.
-  if (/:\s*$/.test(text) && !/\bas (?:follows|described below)\b/i.test(text)) {
+  // "9 credits at the 300 level or above in any of the following disciplines:; Psychology (PSYC), Biology (BIOL)" names its subjects after the colon.
+  const listing =
+    /^(.+?)\s+(?:selected from|(?:selected )?from the following disciplines|in any of the following disciplines):;\s*(.+)$/i.exec(
+      text,
+    );
+  const named = listing?.[2]
+    ?.split(/,\s*(?:or\s+|and\s+)?/)
+    .map(
+      (item) =>
+        /^[A-Za-z][A-Za-z&' ]*\(([A-Z]{3}[A-Z\d])\)$/.exec(
+          trimEnd(item.trim()),
+        )?.[1],
+    );
+  if (listing && named?.every(Boolean)) {
+    const rules = readStatement(
+      `${listing[1]} in ${named.join(", ")}`,
+      subjectsOf,
+      credits,
+    );
+    return rules?.map((rule) => ({ ...rule, title: trimEnd(text) })) ?? null;
+  }
+  // A bare amount ending in a colon, such as "12-15 credits of 400/500 level courses:", belongs to the list under it.
+  if (
+    /:\s*$/.test(text) &&
+    !/\b(?:as follows|as described below|at least|minimum|maximum|no more than|must|may|should)\b/i.test(
+      text,
+    )
+  ) {
     return null;
   }
   // "At least 3 of these 9-12 credits" in a 24-credit group is about one list of it.
