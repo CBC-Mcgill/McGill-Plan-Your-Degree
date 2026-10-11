@@ -79,6 +79,10 @@ export const GLOSSARY = {
     tip: "No requirement of your program took these courses. A course counts toward one requirement only. They still count toward your degree's total credits as electives.",
   },
   checkRequirement: { label: COPY.checkRequirement, tip: checkTip },
+  adviserApproval: {
+    label: COPY.adviserApproval,
+    tip: "The catalogue asks your advisor to approve the courses for this rule. We count them as if approved, so confirm your choice with your advisor.",
+  },
   generated: {
     label: COPY.generated,
     tip: "We read these requirements from the catalogue automatically, so some may be wrong.",

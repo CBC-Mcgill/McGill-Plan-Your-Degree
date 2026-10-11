@@ -137,10 +137,12 @@ export function validateProgram(value: unknown): ValidationResult {
     }
   }
 
-  function match(v: unknown, path: string) {
+  /** `any` lets an empty match through, for a rule over any course: one an adviser approves, or a spread over the whole group. */
+  function match(v: unknown, path: string, any: boolean) {
     const m = object(v, path, ["subjects", "minLevel", "maxLevel", "exclude"]);
     if (!m) return;
     if (
+      !any &&
       m.subjects === undefined &&
       m.minLevel === undefined &&
       m.maxLevel === undefined
@@ -169,10 +171,14 @@ export function validateProgram(value: unknown): ValidationResult {
       "courses",
       "match",
       "unparsed",
+      "adviser",
+      "maxCreditsPerSubject",
+      "minSubjects",
     ]);
     if (!r) return;
     text(r, "title", path);
     optionalTrue(r, "unparsed", path);
+    optionalTrue(r, "adviser", path);
     if (
       r.unparsed !== true &&
       r.courses === undefined &&
@@ -181,7 +187,12 @@ export function validateProgram(value: unknown): ValidationResult {
       fail(path, "expected courses or match");
     }
     if (r.courses !== undefined) list(r.courses, `${path}.courses`, 1, code);
-    if (r.match !== undefined) match(r.match, `${path}.match`);
+    const perSubject = optionalNum(r, "maxCreditsPerSubject", path, "credits");
+    const subjects = optionalNum(r, "minSubjects", path, "count");
+    const spread = perSubject !== null || subjects !== null;
+    if (r.match !== undefined) {
+      match(r.match, `${path}.match`, r.adviser === true || spread);
+    }
     atMost(
       optionalNum(r, "minCredits", path, "credits"),
       optionalNum(r, "maxCredits", path, "credits"),

@@ -97,6 +97,7 @@ export const COPY = {
   hasConditions: "Has conditions",
   countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",
+  adviserApproval: "Your advisor must approve these courses",
   catalogueLink: "McGill catalogue",
   vsbLink: "Visual Schedule Builder",
   generated: "Read automatically from the catalogue",

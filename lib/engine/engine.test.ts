@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 import type { Course, Requirement } from "../catalogue/types.ts";
 import type { CourseRecord, Plan, Term } from "../profile/types.ts";
-import type { Program } from "../programs/types.ts";
+import type { Program, Rule } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
@@ -336,7 +336,12 @@ test("an unparsed rule matches no course and caps nothing", () => {
     rules: [{ ...rule, maxCredits: 3 }],
   };
   expect(
-    fitsCaps(group, [{ creditsDone: 3, coursesDone: 1 }], "COMP 202", 3),
+    fitsCaps(
+      group,
+      [{ courses: [{ code: "COMP 250", credits: 3 }] }],
+      "COMP 202",
+      3,
+    ),
   ).toBe(true);
 });
 
@@ -364,6 +369,86 @@ test("a group with an unparsed rule is never satisfied and counts the rules to c
   });
   expect(group?.rules.map((rule) => rule.satisfied)).toEqual([true, false]);
   expect(programProgress(checked, snapshot, catalogue).satisfied).toBe(false);
+});
+
+test("an adviser rule next to a list adds approved courses up to its credits and never caps the list", () => {
+  const approved = {
+    title: "3 credits, chosen in consultation with the academic adviser",
+    minCredits: 3,
+    maxCredits: 3,
+    match: {},
+    adviser: true as const,
+  };
+  const withAdviser: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 9,
+        rules: [
+          { title: "Theory", courses: ["COMP 330", "COMP 350"] },
+          approved,
+        ],
+      },
+    ],
+  };
+  const [group] = programProgress(withAdviser, snapshot, catalogue, {
+    inProgress: true,
+  }).groups;
+  // COMP 330 is on the list, COMP 250 is the one approved extra, and COMP 202 is past the adviser's 3 credits.
+  expect(group?.courses.map((c) => c.code)).toEqual(["COMP 250", "COMP 330"]);
+  expect(group?.rules[1]).toMatchObject({ adviser: true, satisfied: true });
+});
+
+const spread = (rule: Rule, ...codes: string[]) => {
+  const program: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "List", courses: ["COMP 250", "COMP 330", "MATH 240"] },
+          rule,
+        ],
+      },
+    ],
+  };
+  const done = buildSnapshot(codes.map((code) => record(code, "completed")));
+  return programProgress(program, done, catalogue).groups[0];
+};
+
+test("a cap per subject leaves out a second course of the same subject", () => {
+  const group = spread(
+    {
+      title: "No more than 3 credits from any one discipline",
+      maxCreditsPerSubject: 3,
+      match: {},
+    },
+    "COMP 250",
+    "COMP 330",
+    "MATH 240",
+  );
+  expect(group?.courses.map((c) => c.code)).toEqual(["COMP 250", "MATH 240"]);
+});
+
+test("a rule over several subjects is met only once its courses span them", () => {
+  const rule = {
+    title: "Drawn from at least 2 disciplines",
+    minCredits: 6,
+    minSubjects: 2,
+    match: {},
+  };
+  expect(spread(rule, "COMP 250", "COMP 330", "MATH 240")).toMatchObject({
+    satisfied: true,
+    rules: [{}, { satisfied: true }],
+  });
+  expect(spread(rule, "COMP 250", "COMP 330")).toMatchObject({
+    satisfied: false,
+    rules: [{}, { satisfied: false }],
+  });
 });
 
 test("credit sources name plain rule titles and give up on sentences", () => {

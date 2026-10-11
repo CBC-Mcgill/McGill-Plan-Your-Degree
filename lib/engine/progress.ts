@@ -39,6 +39,10 @@ export interface RuleProgress {
   minCourses?: number;
   /** The crawler could not read this rule, so nothing counts toward it and it is never satisfied. */
   unparsed?: true;
+  /** The student's adviser must approve the courses, so the page shows a reminder. */
+  adviser?: true;
+  /** The counted courses must span this many subjects. */
+  minSubjects?: number;
   satisfied: boolean;
 }
 
@@ -101,7 +105,9 @@ function matchesMatch(match: Match, code: string): boolean {
 
 export function ruleMatches(rule: Rule, code: string): boolean {
   // ponytail: advanced standing has no subject or level, so it fits any rule that only filters, such as a 200-level elective.
-  if (code === STANDING) return !rule.unparsed && isFilter(rule);
+  if (code === STANDING) {
+    return !rule.unparsed && !rule.courses && !rule.match?.subjects;
+  }
   return (
     !rule.unparsed &&
     Boolean(
@@ -111,8 +117,20 @@ export function ruleMatches(rule: Rule, code: string): boolean {
   );
 }
 
-/** A rule that only filters, such as "at least 6 credits at the 400 level", and names no courses of its own. */
-const isFilter = (rule: Rule) => !rule.courses && !rule.match?.subjects;
+/** A rule that only filters, such as "at least 6 credits at the 400 level" or a spread over the group, and names no courses of its own. */
+const isFilter = (rule: Rule) =>
+  !rule.courses &&
+  (!rule.match?.subjects ||
+    rule.maxCreditsPerSubject !== undefined ||
+    rule.minSubjects !== undefined);
+
+const subjectOf = (code: string) => code.slice(0, code.indexOf(" "));
+
+/** How many subjects some courses span. Advanced standing has none. */
+const subjectsIn = (courses: readonly Claimed[]) =>
+  new Set(
+    courses.flatMap((c) => (c.code === STANDING ? [] : subjectOf(c.code))),
+  ).size;
 
 /** True when the group lists courses or subjects, false for "any department" groups like a free elective. */
 export function namesCourses(group: ComplementaryGroup): boolean {
@@ -154,21 +172,46 @@ export function groupAllows(group: ComplementaryGroup, code: string): boolean {
   return rules.some((rule) => ruleMatches(rule, code));
 }
 
+/** "9 credits chosen in consultation with an adviser" next to course lists: it adds any course it matches to the group, up to its credits. */
+const addsApproved = (group: ComplementaryGroup, rule: Rule) =>
+  rule.adviser === true &&
+  isFilter(rule) &&
+  rule.maxCredits !== undefined &&
+  namesCourses(group);
+
+/** What the group counts: what its lists allow, plus the courses an adviser approves on top of them. */
+const counts = (group: ComplementaryGroup, code: string) =>
+  groupAllows(group, code) ||
+  (code !== STANDING &&
+    group.rules.some(
+      (rule) => addsApproved(group, rule) && ruleMatches(rule, code),
+    ));
+
 /** True when one more course stays within the caps of every rule it matches, given what each rule already holds, in rule order. */
 export function fitsCaps(
   group: ComplementaryGroup,
-  held: readonly Pick<RuleProgress, "creditsDone" | "coursesDone">[],
+  held: readonly Pick<RuleProgress, "courses">[],
   code: string,
   credits: number,
 ): boolean {
   return group.rules.every((rule, i) => {
-    const creditsDone = held[i]?.creditsDone ?? 0;
-    const coursesDone = held[i]?.coursesDone ?? 0;
+    if (!ruleMatches(rule, code)) return true;
+    // An adviser's extra caps only the courses it adds, never those the lists name.
+    const extra = addsApproved(group, rule);
+    if (extra && groupAllows(group, code)) return true;
+    const mine = (held[i]?.courses ?? []).filter(
+      (c) => !extra || !groupAllows(group, c.code),
+    );
+    const creditsDone = mine.reduce((sum, c) => sum + c.credits, 0);
+    const sameSubject = mine
+      .filter((c) => subjectOf(c.code) === subjectOf(code))
+      .reduce((sum, c) => sum + c.credits, 0);
     return (
-      !ruleMatches(rule, code) ||
-      ((rule.maxCredits === undefined ||
+      (rule.maxCredits === undefined ||
         creditsDone + credits <= rule.maxCredits) &&
-        (rule.maxCourses === undefined || coursesDone < rule.maxCourses))
+      (rule.maxCourses === undefined || mine.length < rule.maxCourses) &&
+      (rule.maxCreditsPerSubject === undefined ||
+        sameSubject + credits <= rule.maxCreditsPerSubject)
     );
   });
 }
@@ -260,7 +303,7 @@ function complementaryProgress(
 ): GroupProgress {
   const pool = new Map<string, number>();
   for (const [code, credits] of counted) {
-    if (!used.has(code) && groupAllows(group, code)) pool.set(code, credits);
+    if (!used.has(code) && counts(group, code)) pool.set(code, credits);
   }
   const state = group.rules.map((rule) => ({
     rule,
@@ -288,12 +331,16 @@ function complementaryProgress(
   // ponytail: greedy per group in file order with no backtracking, so a course two groups could use goes to the first. Upgrade to matching if real transcripts hit it.
   for (const s of state) {
     for (const [code, credits] of pool) {
-      if (
-        s.creditsDone >= (s.rule.minCredits ?? 0) &&
-        s.coursesDone >= (s.rule.minCourses ?? 0)
-      ) {
-        break;
-      }
+      const short =
+        s.creditsDone < (s.rule.minCredits ?? 0) ||
+        s.coursesDone < (s.rule.minCourses ?? 0);
+      const narrow = subjectsIn(s.courses) < (s.rule.minSubjects ?? 0);
+      if (!short && !narrow) break;
+      // Once the credits are there, only a course of a new subject helps.
+      const known = s.courses.some(
+        (c) => subjectOf(c.code) === subjectOf(code),
+      );
+      if (!short && known) continue;
       if (
         !chosen.has(code) &&
         ruleMatches(s.rule, code) &&
@@ -317,10 +364,13 @@ function complementaryProgress(
     minCredits: rule.minCredits,
     minCourses: rule.minCourses,
     unparsed: rule.unparsed,
+    adviser: rule.adviser,
+    minSubjects: rule.minSubjects,
     satisfied:
       !rule.unparsed &&
       creditsDone >= (rule.minCredits ?? 0) &&
-      coursesDone >= (rule.minCourses ?? 0),
+      coursesDone >= (rule.minCourses ?? 0) &&
+      subjectsIn(courses) >= (rule.minSubjects ?? 0),
   }));
   return {
     title: group.title,
@@ -614,8 +664,10 @@ export function lacking(group: GroupProgress): string | null {
       : null;
   }
   const need =
-    rule.minCredits === undefined
-      ? `${rule.coursesDone} of ${rule.minCourses} courses`
-      : `${creditsText(rule.minCredits - rule.creditsDone)} to go`;
+    rule.minCredits !== undefined && rule.creditsDone < rule.minCredits
+      ? `${creditsText(rule.minCredits - rule.creditsDone)} to go`
+      : rule.minCourses !== undefined && rule.coursesDone < rule.minCourses
+        ? `${rule.coursesDone} of ${rule.minCourses} courses`
+        : `${subjectsIn(rule.courses)} of ${rule.minSubjects} subjects`;
   return `${rule.title} (${need})${open.length > 1 ? ` and ${open.length - 1} more` : ""}`;
 }

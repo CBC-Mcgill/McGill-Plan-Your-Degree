@@ -7,7 +7,11 @@ import {
   validateProgram,
 } from "../lib/programs/validate.ts";
 import { programPaths } from "./discover-programs.ts";
-import { overlapOf, parseProgramPage } from "./parse-program.ts";
+import {
+  overlapOf,
+  parseProgramPage,
+  statementRules,
+} from "./parse-program.ts";
 
 const BASE = "/en/undergraduate";
 const page = (name: string, path: string) =>
@@ -291,4 +295,214 @@ test("reads how many credits a minor shares with the program from its page", () 
   ];
   for (const [text, credits] of cases)
     expect(overlapOf(text), text).toBe(credits);
+});
+
+const read = (text: string, credits?: number) =>
+  statementRules(
+    text,
+    (name) => ({ chemistry: ["CHEM"], biology: ["BIOL"] })[name] ?? [],
+    credits,
+  ).map(({ title: _, ...rule }) => rule);
+
+test("reads level minimums and caps, and subjects at a level, from sentences", () => {
+  const cases: [string, number | undefined, object[]][] = [
+    [
+      "At least 9 of the 15 credits must be at the 400 level or higher.",
+      15,
+      [{ minCredits: 9, match: { minLevel: 400 } }],
+    ],
+    [
+      "Three credits minimum must be at the 400 or 500 level and 9 credits maximum may be at the 200 level.",
+      undefined,
+      [
+        { minCredits: 3, match: { minLevel: 400 } },
+        { maxCredits: 9, match: { minLevel: 200, maxLevel: 200 } },
+      ],
+    ],
+    [
+      "No more than 6 credits may be taken below the 300 level.",
+      undefined,
+      [{ maxCredits: 6, match: { maxLevel: 200 } }],
+    ],
+    [
+      "9 credits from Geography (GEOG) courses at the 300 level or above.",
+      15,
+      [
+        {
+          minCredits: 9,
+          maxCredits: 9,
+          match: { minLevel: 300, subjects: ["GEOG"] },
+        },
+      ],
+    ],
+    [
+      "6 credits of Chemistry courses at the 400 level or higher",
+      undefined,
+      [
+        {
+          minCredits: 6,
+          maxCredits: 6,
+          match: { minLevel: 400, subjects: ["CHEM"] },
+        },
+      ],
+    ],
+    [
+      "6 additional credits of English (ENGL) courses, preferably courses at the 300 level or above.",
+      undefined,
+      [{ minCredits: 6, maxCredits: 6, match: { subjects: ["ENGL"] } }],
+    ],
+    [
+      "6 credits, two 400-level Anthropology (ANTH) courses.",
+      6,
+      [
+        {
+          minCourses: 2,
+          maxCourses: 2,
+          match: { minLevel: 400, maxLevel: 400, subjects: ["ANTH"] },
+        },
+      ],
+    ],
+    // About one list of a 24-credit group, a list that follows, and a narrowing a subject rule cannot express.
+    [
+      "At least 3 of these 9-12 credits must be at the 400 level or above.",
+      24,
+      [{ unparsed: true }],
+    ],
+    ["12-15 credits of 400/500 level courses:", 42, [{ unparsed: true }]],
+    [
+      "At least 12 credits must be from COMP courses at the 500 level or above.",
+      33,
+      [{ unparsed: true }],
+    ],
+  ];
+  for (const [text, credits, rules] of cases) {
+    expect(read(text, credits), text).toEqual(rules);
+  }
+});
+
+test("reads what an adviser must approve, and leaves optional extras out", () => {
+  const cases: [string, object[]][] = [
+    [
+      "24 credits of Geography (GEOG) courses excluding GEOG 200 and GEOG 205, selected in consultation with the Program Adviser.",
+      [
+        {
+          minCredits: 24,
+          maxCredits: 24,
+          match: { subjects: ["GEOG"], exclude: ["GEOG 200", "GEOG 205"] },
+          adviser: true,
+        },
+      ],
+    ],
+    [
+      "9 credits of elective courses outside the School of Architecture must be completed, subject to approval by the Student Advisor.",
+      [{ minCredits: 9, maxCredits: 9, match: {}, adviser: true }],
+    ],
+    [
+      "or any 300- or 400-level course approved by an adviser.",
+      [{ match: { minLevel: 300, maxLevel: 400 }, adviser: true }],
+    ],
+    [
+      "A maximum of 9 credits may be from another department with the signed permission of the program adviser.",
+      [],
+    ],
+    [
+      "12 credits chosen from the following list in consultation with the Academic Adviser for the Minor:",
+      [{ unparsed: true }],
+    ],
+  ];
+  for (const [text, rules] of cases) expect(read(text), text).toEqual(rules);
+  const [rule] = statementRules(
+    "3 credits, chosen in consultation with the academic adviser.",
+  );
+  expect(
+    validateProgram({
+      id: "x-minor",
+      name: "X",
+      degree: "B.A.",
+      faculty: "Arts",
+      catalogueYear: "2026-2027",
+      source: "https://coursecatalogue.mcgill.ca/x/",
+      credits: 3,
+      groups: [
+        {
+          title: "Electives",
+          kind: "complementary",
+          credits: 3,
+          rules: [rule],
+        },
+      ],
+    }),
+  ).toMatchObject({ ok: true });
+});
+
+test("reads how many subjects a group must span and how much one subject may give", () => {
+  expect(
+    read(
+      "21 credits from the Group B course lists below drawn from at least 3 disciplines with no more than 9 credits from any one discipline.",
+    ),
+  ).toEqual([
+    { match: {}, minSubjects: 3, maxCreditsPerSubject: 9, minCredits: 21 },
+  ]);
+  expect(
+    read(
+      "No more than 6 credits in any given area (LLCU, GERM, HISP, ITAL, and RUSS) shall count toward the Minor Concentration (not including LLCU 210).",
+    ),
+  ).toEqual([
+    {
+      match: {
+        subjects: ["LLCU", "GERM", "HISP", "ITAL", "RUSS"],
+        exclude: ["LLCU 210"],
+      },
+      maxCreditsPerSubject: 6,
+    },
+  ]);
+  expect(
+    read(
+      "A maximum of 6 credits from any given discipline with the exception of Indigenous Studies (INDG) courses.",
+    ),
+  ).toEqual([{ unparsed: true }]);
+});
+
+test("drops notices that restrict nothing the app counts, and keeps a sentence that does", () => {
+  for (const text of [
+    "Maximum of 6 relevant transfer credits may be accepted from approved exchange programs subject to adviser and University approval.",
+    "No more than 12 POLI transfer credits can be used toward the program requirements.",
+    "It is strongly recommended that students take COMP 251, as it is a prerequisite of many later computer science courses.",
+    "To take a 300- or 400-level POLI course, students must have taken a 200-level POLI course in the same field.",
+    "Students will register for the 6 credits offered the Winter of their participation in the field study semester.",
+    "Students who have successfully completed an equivalent to MATH 222 at CEGEP or elsewhere, must replace these credits with a 3-credit elective course to satisfy the total credit requirement for the Neuroscience Major.",
+  ]) {
+    expect(read(text), text).toEqual([]);
+  }
+  expect(
+    read(
+      "Credits for the introductory sequence MGCR 293 and ECON 295 that are prerequisites for 300-level courses in economics do not count as part of this Minor concentration.",
+    ),
+  ).toEqual([{ unparsed: true }]);
+});
+
+test("reads a level range, a minimum above the lists, and subjects listed after a colon", () => {
+  expect(
+    read("4-6 credits from Biology courses at the 300-500 levels"),
+  ).toEqual([
+    {
+      minCredits: 4,
+      maxCredits: 6,
+      match: { minLevel: 300, subjects: ["BIOL"] },
+    },
+  ]);
+  expect(
+    read("At least 9 credits must be completed at the 300-level or above:", 15),
+  ).toEqual([{ minCredits: 9, match: { minLevel: 300 } }]);
+  expect(
+    read(
+      "6 credits at the 300 level or above selected from the following disciplines:; Anthropology (ANTH), Linguistics (LING), Psychology (PSYC), or Sociology (SOCI).",
+    ),
+  ).toEqual([
+    {
+      minCredits: 6,
+      maxCredits: 6,
+      match: { minLevel: 300, subjects: ["ANTH", "LING", "PSYC", "SOCI"] },
+    },
+  ]);
 });

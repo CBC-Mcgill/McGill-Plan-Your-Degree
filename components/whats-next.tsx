@@ -1,7 +1,12 @@
 "use client";
 
 import { cn } from "cn";
-import { ChevronLeft, ChevronRight, TriangleAlert } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  TriangleAlert,
+  UserCheck,
+} from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { type ReactNode, useEffect, useId, useMemo, useRef } from "react";
@@ -1028,12 +1033,26 @@ function GroupBody({
       {!open &&
         !group.satisfied &&
         definition?.kind === "complementary" &&
-        definition.rules.map((rule, i) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
-          <p key={i} className="text-fg-muted">
-            {rule.title}
-          </p>
-        ))}
+        definition.rules.map(
+          (rule, i) =>
+            !rule.adviser && (
+              // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
+              <p key={i} className="text-fg-muted">
+                {rule.title}
+              </p>
+            ),
+        )}
+      {group.rules.some((rule) => rule.adviser) && (
+        <ul>
+          {group.rules.map(
+            (rule, i) =>
+              rule.adviser && (
+                // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
+                <AdviserRow key={i} text={rule.title} />
+              ),
+          )}
+        </ul>
+      )}
       <Counted courses={group.courses} context={context} heading={heading} />
     </>
   );
@@ -1428,6 +1447,26 @@ function CheckRow({ text, source }: { text: string; source: string }) {
           {dot}
         </span>
         <CatalogueLink href={coursesTab(source)} />
+      </p>
+    </li>
+  );
+}
+
+/** A rule whose courses the student's adviser must approve. It counts like any rule and shows the catalogue text with a reminder. */
+function AdviserRow({ text }: { text: string }) {
+  return (
+    <li className="flex min-h-11 items-start gap-2 py-3">
+      <span className="flex h-5 w-4 shrink-0 items-center">
+        <UserCheck aria-hidden className="size-4 text-fg-muted" />
+      </span>
+      <p className="min-w-0">
+        <span className="font-semibold">
+          <Defined def={GLOSSARY.adviserApproval} />
+        </span>
+        <span className="text-fg-muted">
+          {dot}
+          {text}
+        </span>
       </p>
     </li>
   );
