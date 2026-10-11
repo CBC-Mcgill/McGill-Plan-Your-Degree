@@ -224,13 +224,15 @@
           ]
         },
         {
-          "title": "Psychology",
+          "title": "Psychology: Plus 6 credits from the following core courses",
           "courses": [
             "PSYC 211",
             "PSYC 212",
             "PSYC 213",
             "PSYC 215"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "15 credits taken in one of the disciplinary areas given below",
@@ -278,10 +280,6 @@
         },
         {
           "title": "Students in the Minor concentration take 15 credits of Psychology selected as follows",
-          "unparsed": true
-        },
-        {
-          "title": "Plus 6 credits from the following core courses",
           "unparsed": true
         },
         {

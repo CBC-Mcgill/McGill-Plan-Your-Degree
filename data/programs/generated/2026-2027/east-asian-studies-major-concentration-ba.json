@@ -57,7 +57,53 @@
           "maxCredits": 9
         },
         {
-          "title": "East Asian Studies (EAST)",
+          "title": "East Asian Literature, Culture and Society: At least 6 credits must be taken at the 400 or 500 level",
+          "courses": [
+            "EAST 410",
+            "EAST 453",
+            "EAST 445",
+            "EAST 454",
+            "EAST 461",
+            "EAST 462",
+            "EAST 464",
+            "EAST 467",
+            "EAST 468",
+            "EAST 477",
+            "EAST 478",
+            "EAST 491",
+            "EAST 492",
+            "EAST 493",
+            "EAST 494",
+            "EAST 501",
+            "EAST 502",
+            "EAST 503",
+            "EAST 504",
+            "EAST 505",
+            "EAST 515",
+            "EAST 525",
+            "EAST 550",
+            "EAST 551",
+            "EAST 559",
+            "EAST 564",
+            "EAST 569",
+            "ANTH 500",
+            "GEOG 408",
+            "HIST 439",
+            "HIST 441",
+            "HIST 442",
+            "HIST 443",
+            "HIST 445",
+            "HIST 508",
+            "HIST 568",
+            "HIST 578",
+            "RELG 451",
+            "RELG 464",
+            "RELG 465"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "East Asian Literature, Culture and Society: 21-24 credits of courses in East Asian Literature, Culture and Society selected from the list below. At least 6 credits must be taken at the 400 or 500 level",
           "courses": [
             "EAST 215",
             "EAST 250",
@@ -112,25 +158,10 @@
             "EAST 559",
             "EAST 564",
             "EAST 569",
-            "LLCU 279"
-          ]
-        },
-        {
-          "title": "Anthropology (ANTH)",
-          "courses": [
+            "LLCU 279",
             "ANTH 331",
-            "ANTH 500"
-          ]
-        },
-        {
-          "title": "Geography (GEOG)",
-          "courses": [
-            "GEOG 408"
-          ]
-        },
-        {
-          "title": "History (HIST)",
-          "courses": [
+            "ANTH 500",
+            "GEOG 408",
             "HIST 208",
             "HIST 218",
             "HIST 308",
@@ -143,24 +174,9 @@
             "HIST 445",
             "HIST 508",
             "HIST 568",
-            "HIST 578"
-          ]
-        },
-        {
-          "title": "Management (ORGB)",
-          "courses": [
-            "ORGB 380"
-          ]
-        },
-        {
-          "title": "Political Science (POLI)",
-          "courses": [
-            "POLI 349"
-          ]
-        },
-        {
-          "title": "Religious Studies (RELG)",
-          "courses": [
+            "HIST 578",
+            "ORGB 380",
+            "POLI 349",
             "RELG 253",
             "RELG 264",
             "RELG 265",
@@ -172,18 +188,9 @@
             "RELG 451",
             "RELG 464",
             "RELG 465"
-          ]
-        },
-        {
-          "title": "21-24 credits of courses in East Asian Literature, Culture and Society selected from the list below",
-          "unparsed": true
-        },
-        {
-          "title": "At least 6 credits must be taken at the 400 or 500 level",
-          "minCredits": 6,
-          "match": {
-            "minLevel": 400
-          }
+          ],
+          "minCredits": 21,
+          "maxCredits": 24
         }
       ]
     }

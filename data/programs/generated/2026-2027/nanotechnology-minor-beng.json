@@ -13,7 +13,7 @@
       "credits": 21,
       "rules": [
         {
-          "title": "Group A",
+          "title": "Group A: Students must complete a minimum of 3 credits from the following list of courses",
           "courses": [
             "BIEN 510",
             "BMDE 508",
@@ -23,7 +23,8 @@
             "ECSE 535",
             "MIME 570",
             "PHYS 534"
-          ]
+          ],
+          "minCredits": 3
         },
         {
           "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
@@ -121,10 +122,6 @@
         },
         {
           "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
-          "unparsed": true
-        },
-        {
-          "title": "Students must complete a minimum of 3 credits from the following list of courses",
           "unparsed": true
         },
         {

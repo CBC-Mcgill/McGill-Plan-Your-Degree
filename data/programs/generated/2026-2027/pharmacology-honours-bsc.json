@@ -37,30 +37,42 @@
       "credits": 30,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits, one of (highly recommended in Year 1)",
           "courses": [
             "ANAT 212",
             "BIOC 212",
             "BIOL 201"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
-          "title": "Complementary Courses",
+          "title": "3 credits, one of (usually in Year 2)",
           "courses": [
             "CHEM 203",
             "CHEM 204"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
-          "title": "Complementary Courses",
+          "title": "3 credits, one of (usually in Year 2)",
           "courses": [
             "BIOL 373",
             "MATH 203",
             "PSYC 204"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
-          "title": "Complementary Courses",
+          "title": "12 credits selected from the following Pharmacology courses",
           "courses": [
             "PHAR 390",
             "PHAR 503",
@@ -72,7 +84,9 @@
             "PHAR 562",
             "PHAR 563",
             "PHAR 565"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         },
         {
           "title": "Students may take either PHAR 503 or PHAR 505",
@@ -83,7 +97,7 @@
           ]
         },
         {
-          "title": "Complementary Courses",
+          "title": "9 credits selected for the following science courses",
           "courses": [
             "ANAT 321",
             "ANAT 322",
@@ -146,7 +160,9 @@
             "PSYT 301",
             "PSYT 500",
             "REDM 410"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "Students may take either ANAT 458 or BIOC 458",
@@ -163,26 +179,6 @@
             "PHAR 503",
             "PHAR 505"
           ]
-        },
-        {
-          "title": "3 credits, one of (highly recommended in Year 1)",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits, one of (usually in Year 2)",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits, one of (usually in Year 2)",
-          "unparsed": true
-        },
-        {
-          "title": "12 credits selected from the following Pharmacology courses",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits selected for the following science courses",
-          "unparsed": true
         }
       ]
     }

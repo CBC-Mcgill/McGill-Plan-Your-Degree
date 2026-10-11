@@ -23,12 +23,12 @@
       ]
     },
     {
-      "title": "Complementary Courses",
+      "title": "Core",
       "kind": "complementary",
-      "credits": 36,
+      "credits": 21,
       "rules": [
         {
-          "title": "Core: 3-6 credits selected from",
+          "title": "3-6 credits selected from",
           "courses": [
             "ATOC 215",
             "ATOC 219",
@@ -38,7 +38,7 @@
           "maxCredits": 6
         },
         {
-          "title": "Core: 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "ATOC 357",
             "PHYS 257"
@@ -47,7 +47,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Core: 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "PHYS 230",
             "PHYS 251"
@@ -56,7 +56,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Core: 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "PHYS 232",
             "PHYS 253"
@@ -65,7 +65,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Core: 6-10 credits selected from",
+          "title": "6-10 credits selected from",
           "courses": [
             "CHEM 213",
             "CHEM 273",
@@ -109,7 +109,14 @@
             "PHYS 342",
             "PHYS 352"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "Streams",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
         {
           "title": "Weather Analysis and Forecasting Stream: 13 credits from",
           "courses": [
@@ -166,7 +173,36 @@
           "courses": [
             "ATOC 404",
             "ATOC 531",
-            "PHYS 404",
+            "PHYS 404"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "If chosen, students may take either ATOC 404 or PHYS 404",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 404",
+            "PHYS 404"
+          ]
+        },
+        {
+          "title": "Climate Science Stream: At least 6 credits must be ATOC courses",
+          "courses": [
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 540",
+            "ATOC 558",
+            "ATOC 568"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "Climate Science Stream: 9 credits (at least 6 credits must be ATOC courses) selected from",
+          "courses": [
             "ATOC 512",
             "ATOC 513",
             "ATOC 519",
@@ -182,16 +218,8 @@
             "MATH 323",
             "PHYS 512"
           ],
-          "minCredits": 6,
-          "maxCredits": 6
-        },
-        {
-          "title": "If chosen, students may take either ATOC 404 or PHYS 404",
-          "maxCourses": 1,
-          "courses": [
-            "ATOC 404",
-            "PHYS 404"
-          ]
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "Atmospheric Chemistry and Physics Stream",
@@ -216,7 +244,28 @@
           ]
         },
         {
-          "title": "General Stream",
+          "title": "General Stream: At least 12 credits must be ATOC courses",
+          "courses": [
+            "ATOC 309",
+            "ATOC 404",
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 517",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 541",
+            "ATOC 546",
+            "ATOC 548",
+            "ATOC 558",
+            "ATOC 568"
+          ],
+          "minCredits": 12
+        },
+        {
+          "title": "General Stream: 15-17 credits (at least 12 credits must be ATOC courses) selected from",
           "courses": [
             "ATOC 309",
             "ATOC 404",
@@ -243,7 +292,9 @@
             "PHYS 404",
             "PHYS 432",
             "PHYS 512"
-          ]
+          ],
+          "minCredits": 15,
+          "maxCredits": 17
         },
         {
           "title": "If chosen, students may take either ATOC 404 or PHYS 404",
@@ -263,14 +314,6 @@
         },
         {
           "title": "15-17 credits from one of the following streams",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits (at least 6 credits must be ATOC courses) selected from",
-          "unparsed": true
-        },
-        {
-          "title": "15-17 credits (at least 12 credits must be ATOC courses) selected from",
           "unparsed": true
         }
       ]

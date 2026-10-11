@@ -10,12 +10,8 @@
     {
       "title": "Program Prerequisites — Foundation Program",
       "kind": "complementary",
-      "credits": 34,
+      "credits": 12,
       "rules": [
-        {
-          "title": "22 credits of Prerequisite Courses",
-          "unparsed": true
-        },
         {
           "title": "2 credits of Assigned Small Ensemble",
           "unparsed": true
@@ -26,8 +22,47 @@
         },
         {
           "title": "6 credits of Non-Music Electives",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Prerequisite Courses",
+      "kind": "required",
+      "credits": 22,
+      "courses": [
+        "MUHL 186",
+        "MUIN 180",
+        "MUIN 181",
+        "MUPD 135",
+        "MUSP 140",
+        "MUSP 141",
+        "MUSP 170",
+        "MUSP 171",
+        "MUTH 150",
+        "MUTH 151"
       ],
       "foundation": true
     },
@@ -86,7 +121,7 @@
           ]
         },
         {
-          "title": "MUEN courses at the 400 or 500 level (maximum of 4 credits): 9 credits chosen from",
+          "title": "Performance: 9 credits chosen from",
           "courses": [
             "MUIN 269",
             "MUPG 229",
@@ -129,7 +164,7 @@
           "maxCredits": 2
         },
         {
-          "title": "6 credits of courses with a MUHL or MUPP prefix",
+          "title": "Music History/Literature/Performance Practice",
           "courses": [
             "MUHL 392"
           ]
@@ -141,6 +176,21 @@
         {
           "title": "4 credits (1 credit per term; as assigned by audition) from small ensembles",
           "unparsed": true
+        },
+        {
+          "title": "MUEN courses at the 400 or 500 level (maximum of 4 credits)",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of courses with a MUHL or MUPP prefix",
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "subjects": [
+              "MUHL",
+              "MUPP"
+            ]
+          }
         }
       ]
     },
@@ -151,11 +201,42 @@
       "rules": [
         {
           "title": "3 credits of non-Music Electives",
-          "unparsed": true
+          "minCredits": 3,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         },
         {
           "title": "20 credits of Free Electives (may include 2 credits of courses with a MUEN prefix)",
-          "unparsed": true
+          "minCredits": 20,
+          "match": {}
+        },
+        {
+          "title": "At most 2 credits of MUEN courses",
+          "maxCredits": 2,
+          "match": {
+            "subjects": [
+              "MUEN"
+            ]
+          }
         }
       ]
     }

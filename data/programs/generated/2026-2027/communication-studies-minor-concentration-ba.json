@@ -21,7 +21,7 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "Five courses in Communication Studies selected from",
           "courses": [
             "COMS 200",
             "COMS 230",
@@ -47,11 +47,9 @@
             "COMS 495",
             "COMS 497",
             "COMS 510"
-          ]
-        },
-        {
-          "title": "Five courses in Communication Studies selected from",
-          "unparsed": true
+          ],
+          "minCourses": 5,
+          "maxCourses": 5
         }
       ]
     }

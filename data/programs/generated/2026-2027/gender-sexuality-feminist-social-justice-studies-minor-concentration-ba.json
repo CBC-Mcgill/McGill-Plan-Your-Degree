@@ -16,7 +16,14 @@
           "title": "3 credits from the following",
           "courses": [
             "GSFS 200",
-            "GSFS 250",
+            "GSFS 250"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
             "GSFS 301",
             "GSFS 302",
             "GSFS 303",
@@ -32,9 +39,7 @@
             "GSFS 405",
             "GSFS 406",
             "GSFS 407"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
+          ]
         },
         {
           "title": "12 credits from the following",

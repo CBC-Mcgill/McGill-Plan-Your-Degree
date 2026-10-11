@@ -27,12 +27,14 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Statistics",
+          "title": "Statistics: 3 credits of statistics from the following (or equivalent)",
           "courses": [
             "GEOG 202",
             "MATH 203",
             "PSYC 204"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Honours Research: 0-6 credits from the following",
@@ -41,10 +43,6 @@
             "ENVR 495"
           ],
           "maxCredits": 6
-        },
-        {
-          "title": "3 credits of statistics from the following (or equivalent)",
-          "unparsed": true
         },
         {
           "title": "Students must complete 6 credits of Honours research between their two Joint Honours components",

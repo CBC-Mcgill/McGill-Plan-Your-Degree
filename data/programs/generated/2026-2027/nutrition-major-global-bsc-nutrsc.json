@@ -91,7 +91,8 @@
       "rules": [
         {
           "title": "15 credits of Electives are taken to meet the minimum credit requirement for the degree",
-          "unparsed": true
+          "minCredits": 15,
+          "match": {}
         }
       ]
     }

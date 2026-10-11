@@ -48,7 +48,14 @@
           "title": "3 credits selected from",
           "courses": [
             "MATH 235",
-            "MATH 245",
+            "MATH 245"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
             "MATH 204",
             "MATH 208",
             "MATH 308",
@@ -58,9 +65,7 @@
             "MATH 430",
             "MATH 462",
             "MATH 463"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
+          ]
         },
         {
           "title": "6-12 credits selected from",

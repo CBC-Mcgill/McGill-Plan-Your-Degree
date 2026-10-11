@@ -22,17 +22,19 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Major Figures",
+          "title": "Major Figures: 3 credits from a list of courses on Major Figures in Cultural Studies",
           "courses": [
             "ENGL 315",
             "ENGL 381",
             "ENGL 418",
             "ENGL 444",
             "ENGL 481"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Historical Dimension",
+          "title": "Historical Dimension: 3 credits from a list of courses in Cultural Studies with an historical dimension",
           "courses": [
             "ENGL 350",
             "ENGL 351",
@@ -41,7 +43,9 @@
             "ENGL 444",
             "ENGL 451",
             "ENGL 480"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Additional Cultural Studies",
@@ -63,14 +67,6 @@
             "ENGL 476",
             "ENGL 482"
           ]
-        },
-        {
-          "title": "3 credits from a list of courses on Major Figures in Cultural Studies",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from a list of courses in Cultural Studies with an historical dimension",
-          "unparsed": true
         },
         {
           "title": "6 additional credits from the option's offerings which includes all the courses specifically listed in the Cultural Studies categories above and the courses listed below",

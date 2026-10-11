@@ -23,22 +23,26 @@
       "credits": 27,
       "rules": [
         {
-          "title": "Major Figures",
+          "title": "Major Figures: 3 credits from a list of courses on Major Figures in Cultural Studies",
           "courses": [
             "ENGL 315",
             "ENGL 381",
             "ENGL 418",
             "ENGL 444",
             "ENGL 481"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Canadian Component",
+          "title": "Canadian Component: 3 credits from a list of courses in Cultural Studies with a Canadian component",
           "courses": [
             "ENGL 393",
             "ENGL 440",
             "ENGL 441"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Theory, Criticism and Methods",
@@ -64,7 +68,7 @@
           ]
         },
         {
-          "title": "Historical Dimension",
+          "title": "Historical Dimension: 6 credits from a list of courses in Cultural Studies with an historical dimension",
           "courses": [
             "ENGL 350",
             "ENGL 351",
@@ -73,15 +77,9 @@
             "ENGL 444",
             "ENGL 451",
             "ENGL 480"
-          ]
-        },
-        {
-          "title": "3 credits from a list of courses on Major Figures in Cultural Studies",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from a list of courses in Cultural Studies with a Canadian component",
-          "unparsed": true
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
@@ -92,10 +90,6 @@
         },
         {
           "title": "3 credits from a list of 400-level courses in Cultural Studies with a theoretical component",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits from a list of courses in Cultural Studies with an historical dimension",
           "unparsed": true
         },
         {

@@ -23,7 +23,7 @@
       "credits": 27,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "6 credits from core courses",
           "courses": [
             "CATH 220",
             "RELG 201",
@@ -37,10 +37,12 @@
             "RELG 254",
             "RELG 270",
             "RELG 271"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
-          "title": "Complementary Courses",
+          "title": "0-6 credits of Classical language courses",
           "courses": [
             "CLAS 210",
             "CLAS 212",
@@ -68,10 +70,11 @@
             "RELG 465",
             "RELG 491",
             "RELG 492"
-          ]
+          ],
+          "maxCredits": 6
         },
         {
-          "title": "Complementary Courses",
+          "title": "15-21 credits from advanced courses at the 300 level or higher",
           "courses": [
             "CATH 335",
             "CATH 375",
@@ -149,19 +152,9 @@
             "RELG 570",
             "RELG 571",
             "RELG 572"
-          ]
-        },
-        {
-          "title": "6 credits from core courses",
-          "unparsed": true
-        },
-        {
-          "title": "0-6 credits of Classical language courses",
-          "unparsed": true
-        },
-        {
-          "title": "15-21 credits from advanced courses at the 300 level or higher",
-          "unparsed": true
+          ],
+          "minCredits": 15,
+          "maxCredits": 21
         }
       ]
     }

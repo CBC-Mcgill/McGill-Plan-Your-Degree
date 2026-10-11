@@ -23,7 +23,7 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "15 credits of complementary courses selected from",
           "courses": [
             "ANSC 326",
             "BINF 511",
@@ -33,11 +33,9 @@
             "PLNT 310",
             "PLNT 435",
             "PLNT 460"
-          ]
-        },
-        {
-          "title": "15 credits of complementary courses selected from",
-          "unparsed": true
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
         }
       ]
     }

@@ -1,0 +1,71 @@
+{
+  "id": "langue-litterature-francaises-concentration-mineure",
+  "name": "Concentration mineure Langue & littérature françaises - Langue française",
+  "degree": "B.A. et B.Sc.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts-science/programs/french-language-literature/langue-litterature-francaises-concentration-mineure-/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Cours Complémentaires",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "De 0 à 6 crédits choisis parmi les cours ci-dessous",
+          "courses": [
+            "FRSL 321",
+            "FRSL 325",
+            "FRSL 332",
+            "FRSL 333",
+            "FRSL 407",
+            "FRSL 408"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "De 0 à 6 crédits choisis parmi les cours ci-dessous",
+          "courses": [
+            "FRSL 431"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "De 3 à 12 crédits choisis parmi les cours ci-dessous",
+          "courses": [
+            "FRSL 445",
+            "FRSL 446",
+            "FRSL 449",
+            "FRSL 455"
+          ],
+          "minCredits": 3,
+          "maxCredits": 12
+        },
+        {
+          "title": "De 3 à 15 crédits choisis parmi les cours FREN suivants",
+          "courses": [
+            "FREN 201",
+            "FREN 203",
+            "FREN 231",
+            "FREN 239",
+            "FREN 244",
+            "FREN 245",
+            "FREN 250",
+            "FREN 251",
+            "FREN 252",
+            "FREN 346",
+            "FREN 441"
+          ],
+          "minCredits": 3,
+          "maxCredits": 15
+        },
+        {
+          "title": "De 3 à 15 crédits de cours FRSL (Centre d’enseignement du français) répartis de la façon suivante",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

@@ -10,20 +10,55 @@
     {
       "title": "Program Prerequisites - Foundation Program",
       "kind": "complementary",
-      "credits": 32,
+      "credits": 10,
       "rules": [
-        {
-          "title": "22 credits of Prerequisite Courses",
-          "unparsed": true
-        },
         {
           "title": "4 credits of Large Ensemble",
           "unparsed": true
         },
         {
           "title": "6 credits of Non-Music Electives",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Prerequisite Courses",
+      "kind": "required",
+      "credits": 22,
+      "courses": [
+        "MUHL 186",
+        "MUIN 180",
+        "MUIN 181",
+        "MUPD 135",
+        "MUSP 140",
+        "MUSP 141",
+        "MUSP 170",
+        "MUSP 171",
+        "MUTH 150",
+        "MUTH 151"
       ],
       "foundation": true
     },
@@ -134,11 +169,33 @@
         },
         {
           "title": "3 credits of non-Music Electives",
-          "unparsed": true
+          "minCredits": 3,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         },
         {
           "title": "15 credits of Free Electives",
-          "unparsed": true
+          "minCredits": 15,
+          "match": {}
         }
       ]
     }

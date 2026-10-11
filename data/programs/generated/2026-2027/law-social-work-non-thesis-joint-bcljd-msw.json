@@ -62,7 +62,7 @@
       "credits": 3,
       "rules": [
         {
-          "title": "Complementary Courses Civil Law Immersion Courses",
+          "title": "3 credits from the following list of civil law courses",
           "courses": [
             "BUS2 561",
             "LAWG 506",
@@ -70,11 +70,9 @@
             "PRV1 549",
             "PRV2 270",
             "PRV4 548"
-          ]
-        },
-        {
-          "title": "3 credits from the following list of civil law courses",
-          "unparsed": true
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         }
       ]
     },
@@ -84,18 +82,16 @@
       "credits": 3,
       "rules": [
         {
-          "title": "Complementary Courses Common Law Immersion Courses",
+          "title": "3 credits from the following list of common law courses",
           "courses": [
             "PRV3 200",
             "PRV3 534",
             "PRV4 500",
             "PRV4 549",
             "PRV5 582"
-          ]
-        },
-        {
-          "title": "3 credits from the following list of common law courses",
-          "unparsed": true
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         }
       ]
     },

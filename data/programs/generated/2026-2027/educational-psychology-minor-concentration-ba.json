@@ -21,11 +21,13 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "15 credits to be selected as follows",
           "courses": [
             "EDPE 355",
             "EDPE 555"
-          ]
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
         },
         {
           "title": "12 credits selected from the following list",
@@ -44,10 +46,6 @@
           ],
           "minCredits": 12,
           "maxCredits": 12
-        },
-        {
-          "title": "15 credits to be selected as follows",
-          "unparsed": true
         },
         {
           "title": "3 credits to be taken near the end of program completion, one of",

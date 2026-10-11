@@ -44,7 +44,14 @@
           "title": "3 credits from",
           "courses": [
             "PHYS 230",
-            "PHYS 251",
+            "PHYS 251"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "plus 9 credits (three courses) chosen from the following",
+          "courses": [
             "EPSC 334",
             "EPSC 425",
             "EPSC 445",
@@ -62,12 +69,10 @@
             "EPSC 567",
             "EPSC 590"
           ],
-          "minCredits": 3,
-          "maxCredits": 3
-        },
-        {
-          "title": "plus 9 credits (three courses) chosen from the following",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "minCourses": 3,
+          "maxCourses": 3
         }
       ]
     }

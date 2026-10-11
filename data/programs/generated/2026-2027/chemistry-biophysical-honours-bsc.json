@@ -39,17 +39,19 @@
     {
       "title": "Complementary Courses",
       "kind": "complementary",
-      "credits": 3,
+      "credits": 9,
       "rules": [
         {
-          "title": "(9-10 credits)",
+          "title": "3 credits of",
           "courses": [
             "CHEM 302",
             "CHEM 381"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Complementary Courses",
+          "title": "6-7 credits of",
           "courses": [
             "BIOL 300",
             "BIOL 301",
@@ -63,15 +65,9 @@
             "CHEM 555",
             "CHEM 575",
             "COMP 208"
-          ]
-        },
-        {
-          "title": "3 credits of",
-          "unparsed": true
-        },
-        {
-          "title": "6-7 credits of",
-          "unparsed": true
+          ],
+          "minCredits": 6,
+          "maxCredits": 7
         }
       ]
     }

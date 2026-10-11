@@ -13,10 +13,20 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Philosophy of Science: 6-12 credits of courses focused on the Philosophy of Science with no more than 6 credits at the 200 level chosen from the following",
+          "title": "Communication Studies (COMS)",
           "courses": [
-            "COMS 210",
-            "HPSC 300",
+            "COMS 210"
+          ]
+        },
+        {
+          "title": "History and Philosophy of Science (HPSC)",
+          "courses": [
+            "HPSC 300"
+          ]
+        },
+        {
+          "title": "Philosophy (PHIL)",
+          "courses": [
             "PHIL 210",
             "PHIL 221",
             "PHIL 306",
@@ -27,15 +37,23 @@
             "PHIL 411",
             "PHIL 441",
             "PHIL 453"
-          ],
-          "minCredits": 6,
-          "maxCredits": 12
+          ]
         },
         {
-          "title": "History of Science: 6-12 credits of courses focused on the History of Science with no more than 6 credits at the 200 level chosen from the following",
+          "title": "Anthropology (ANTH)",
           "courses": [
-            "ANTH 359",
-            "BIOL 210",
+            "ANTH 359"
+          ]
+        },
+        {
+          "title": "Biology (BIOL)",
+          "courses": [
+            "BIOL 210"
+          ]
+        },
+        {
+          "title": "History (HIST)",
+          "courses": [
             "HIST 249",
             "HIST 319",
             "HIST 335",
@@ -46,14 +64,27 @@
             "HIST 410",
             "HIST 558",
             "HIST 559",
-            "HIST 567",
+            "HIST 567"
+          ]
+        },
+        {
+          "title": "History and Philosophy of Science (HPSC)",
+          "courses": [
             "HPSC 300",
-            "HPSC 500",
-            "MATH 338",
+            "HPSC 500"
+          ]
+        },
+        {
+          "title": "Mathematics (MATH)",
+          "courses": [
+            "MATH 338"
+          ]
+        },
+        {
+          "title": "Psychology (PSYC)",
+          "courses": [
             "PSYC 403"
-          ],
-          "minCredits": 6,
-          "maxCredits": 12
+          ]
         },
         {
           "title": "18 credits with a maximum of 9 credits at the 200 level selected as follows",
@@ -62,6 +93,14 @@
             "minLevel": 200,
             "maxLevel": 200
           }
+        },
+        {
+          "title": "6-12 credits of courses focused on the Philosophy of Science with no more than 6 credits at the 200 level chosen from the following",
+          "unparsed": true
+        },
+        {
+          "title": "6-12 credits of courses focused on the History of Science with no more than 6 credits at the 200 level chosen from the following",
+          "unparsed": true
         }
       ]
     }

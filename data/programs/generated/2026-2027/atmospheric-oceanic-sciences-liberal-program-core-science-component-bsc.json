@@ -57,7 +57,36 @@
           "title": "3 credits selected from",
           "courses": [
             "PHYS 232",
-            "PHYS 253",
+            "PHYS 253"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "At least 6 of which must be ATOC",
+          "courses": [
+            "ATOC 309",
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 517",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 541",
+            "ATOC 546",
+            "ATOC 548",
+            "ATOC 557",
+            "ATOC 558",
+            "ATOC 568"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "12-15 credits selected from (at least 6 of which must be ATOC)",
+          "courses": [
             "ATOC 309",
             "ATOC 512",
             "ATOC 513",
@@ -80,12 +109,8 @@
             "PHYS 333",
             "PHYS 340"
           ],
-          "minCredits": 3,
-          "maxCredits": 3
-        },
-        {
-          "title": "12-15 credits selected from (at least 6 of which must be ATOC)",
-          "unparsed": true
+          "minCredits": 12,
+          "maxCredits": 15
         }
       ]
     }

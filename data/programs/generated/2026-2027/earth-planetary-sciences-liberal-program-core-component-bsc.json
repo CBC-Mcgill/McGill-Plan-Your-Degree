@@ -27,14 +27,18 @@
       "credits": 24,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits, one of",
           "courses": [
             "EPSC 331",
             "EPSC 341"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
-          "title": "Complementary Courses",
+          "title": "plus 21 credits chosen from the following",
           "courses": [
             "EPSC 334",
             "EPSC 340",
@@ -60,15 +64,9 @@
             "ESYS 300",
             "ESYS 301",
             "ESYS 500"
-          ]
-        },
-        {
-          "title": "3 credits, one of",
-          "unparsed": true
-        },
-        {
-          "title": "plus 21 credits chosen from the following",
-          "unparsed": true
+          ],
+          "minCredits": 21,
+          "maxCredits": 21
         }
       ]
     }

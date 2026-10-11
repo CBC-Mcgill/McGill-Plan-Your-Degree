@@ -21,7 +21,7 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3-6 credits to be chosen from",
           "courses": [
             "HISP 210",
             "HISP 218",
@@ -29,16 +29,20 @@
             "HISP 220",
             "HISP 243",
             "HISP 244"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
         },
         {
-          "title": "Complementary Courses",
+          "title": "3-6 credits to be chosen from",
           "courses": [
             "HIST 210",
             "LACS 480",
             "LACS 499",
             "POLI 319"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
         },
         {
           "title": "Anthropology",
@@ -112,14 +116,6 @@
           "courses": [
             "POLI 227"
           ]
-        },
-        {
-          "title": "3-6 credits to be chosen from",
-          "unparsed": true
-        },
-        {
-          "title": "3-6 credits to be chosen from",
-          "unparsed": true
         },
         {
           "title": "3-9 credits to be selected from the following course list in consultation with the Program Adviser",

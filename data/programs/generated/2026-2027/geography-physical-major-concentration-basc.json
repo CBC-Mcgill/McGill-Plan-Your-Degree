@@ -24,23 +24,27 @@
       "credits": 24,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "6 credits of analytical techniques are selected from",
           "courses": [
             "GEOG 308",
             "GEOG 314",
             "GEOG 351",
             "GEOG 414"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
-          "title": "Complementary Courses",
+          "title": "3 credits of field courses selected from",
           "courses": [
             "GEOG 495",
             "GEOG 496"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Complementary Courses",
+          "title": "9-15 credits in systematic physical geography selected from",
           "courses": [
             "GEOG 305",
             "GEOG 321",
@@ -48,10 +52,12 @@
             "GEOG 372",
             "GEOG 470",
             "GEOG 471"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
         },
         {
-          "title": "Complementary Courses",
+          "title": "0-6 credits in integrative and advanced topics selected from",
           "courses": [
             "GEOG 302",
             "GEOG 401",
@@ -61,23 +67,8 @@
             "GEOG 536",
             "GEOG 550",
             "GEOG 555"
-          ]
-        },
-        {
-          "title": "6 credits of analytical techniques are selected from",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits of field courses selected from",
-          "unparsed": true
-        },
-        {
-          "title": "9-15 credits in systematic physical geography selected from",
-          "unparsed": true
-        },
-        {
-          "title": "0-6 credits in integrative and advanced topics selected from",
-          "unparsed": true
+          ],
+          "maxCredits": 6
         }
       ]
     }

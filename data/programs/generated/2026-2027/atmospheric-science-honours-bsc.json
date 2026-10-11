@@ -24,12 +24,12 @@
       ]
     },
     {
-      "title": "Complementary Courses",
+      "title": "Core (24-25 credits)",
       "kind": "complementary",
-      "credits": 45,
+      "credits": 24,
       "rules": [
         {
-          "title": "Core (24-25 credits): 3-6 credits selected from",
+          "title": "3-6 credits selected from",
           "courses": [
             "ATOC 215",
             "ATOC 219",
@@ -47,7 +47,7 @@
           ]
         },
         {
-          "title": "Core (24-25 credits): 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "ATOC 357",
             "PHYS 257"
@@ -56,7 +56,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Core (24-25 credits): 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "PHYS 230",
             "PHYS 251"
@@ -65,7 +65,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Core (24-25 credits): 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "PHYS 232",
             "PHYS 253"
@@ -74,7 +74,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Core (24-25 credits): 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "CHEM 213",
             "MATH 319"
@@ -83,7 +83,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Core (24-25 credits): 6-10 credits selected from",
+          "title": "6-10 credits selected from",
           "courses": [
             "CHEM 273",
             "CHEM 367",
@@ -126,7 +126,14 @@
             "PHYS 342",
             "PHYS 352"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "Streams",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
         {
           "title": "Weather Analysis and Forecasting Stream: 16 credits from",
           "courses": [
@@ -179,7 +186,36 @@
             "ATOC 531",
             "MATH 323",
             "MATH 324",
-            "PHYS 404",
+            "PHYS 404"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        },
+        {
+          "title": "If chosen, students may take either ATOC 404 or PHYS 404",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 404",
+            "PHYS 404"
+          ]
+        },
+        {
+          "title": "Climate Science Stream: 3 credits must be an ATOC course",
+          "courses": [
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 540",
+            "ATOC 557",
+            "ATOC 558",
+            "ATOC 568"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "Climate Science Stream: 6-7 credits (3 credits must be an ATOC course) selected from",
+          "courses": [
             "ATOC 513",
             "ATOC 515",
             "ATOC 521",
@@ -195,16 +231,8 @@
             "PHYS 432",
             "PHYS 512"
           ],
-          "minCredits": 15,
-          "maxCredits": 15
-        },
-        {
-          "title": "If chosen, students may take either ATOC 404 or PHYS 404",
-          "maxCourses": 1,
-          "courses": [
-            "ATOC 404",
-            "PHYS 404"
-          ]
+          "minCredits": 6,
+          "maxCredits": 7
         },
         {
           "title": "If chosen, students may take either PHYS 432 or MATH 555",
@@ -284,10 +312,6 @@
         },
         {
           "title": "21-23 credits from one of the following four streams",
-          "unparsed": true
-        },
-        {
-          "title": "6-7 credits (3 credits must be an ATOC course) selected from",
           "unparsed": true
         }
       ]

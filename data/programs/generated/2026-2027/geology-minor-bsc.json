@@ -22,11 +22,15 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits, one of",
           "courses": [
             "EPSC 201",
             "EPSC 233"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
           "title": "Complementary Courses",
@@ -38,10 +42,6 @@
             "EPSC 452",
             "EPSC 561"
           ]
-        },
-        {
-          "title": "3 credits, one of",
-          "unparsed": true
         },
         {
           "title": "9 credits selected from the list below and other 300-level and higher courses in Earth and Planetary Sciences may be substituted with permission",

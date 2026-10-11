@@ -21,17 +21,15 @@
       "credits": 30,
       "rules": [
         {
-          "title": "Introductory Courses",
+          "title": "Introductory Courses: 6-12 credits in Introductory courses from",
           "courses": [
             "HISP 245",
             "HISP 246",
             "HISP 247",
             "HISP 248"
-          ]
-        },
-        {
-          "title": "6-12 credits in Introductory courses from",
-          "unparsed": true
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
         },
         {
           "title": "18-24 credits taken form undergraduate courses in Hispanic Studies at the 300 level or higher, of which 9 credits should be at the 400 level or higher {excluding HISP 490D1 and HISP 490D2}",

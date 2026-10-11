@@ -30,7 +30,7 @@
       "note": "Students who have taken the equivalent of CHEM 212 or MATH 222 can make up the credits with a complementary 3 or 4 credit course in consultation with a stream adviser. Students who have sufficient knowledge of programming should take COMP 250 rather than COMP 202."
     },
     {
-      "title": "Stream 1: Theoretical Ecology and Evolutionary Biology",
+      "title": "Course Requirements for Quantitative Biology Streams",
       "kind": "complementary",
       "credits": 21,
       "rules": [
@@ -52,7 +52,7 @@
           ]
         },
         {
-          "title": "Field Courses",
+          "title": "Field Courses: 6 credits chosen from the following list of courses at the 400 level or above",
           "courses": [
             "BIOL 432",
             "BIOL 435",
@@ -62,23 +62,10 @@
             "BIOL 540",
             "BIOL 594",
             "BIOL 596"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
-        {
-          "title": "3 credits from the following list or any other field course with permission",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits chosen from the following list of courses at the 400 level or above",
-          "unparsed": true
-        }
-      ]
-    },
-    {
-      "title": "Stream 2: Physical Biology",
-      "kind": "complementary",
-      "credits": 21,
-      "rules": [
         {
           "title": "Stream 2: Physical Biology",
           "courses": [
@@ -107,6 +94,14 @@
             "BIOL 551",
             "BIOL 588"
           ]
+        },
+        {
+          "title": "21 credits from one of the following two streams",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from the following list or any other field course with permission",
+          "unparsed": true
         },
         {
           "title": "300-level complementary courses: 6 credits from the following",

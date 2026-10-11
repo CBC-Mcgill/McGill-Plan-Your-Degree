@@ -32,7 +32,9 @@
             "MATH 203",
             "PSYC 204",
             "SOCI 350"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "9 credits of systematic physical geography",
@@ -44,7 +46,9 @@
             "GEOG 373",
             "GEOG 470",
             "GEOG 471"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "3 or 6 credits of environmental analysis/techniques",
@@ -53,7 +57,9 @@
             "GEOG 314",
             "GEOG 384",
             "GEOG 414"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
         },
         {
           "title": "Complementary Courses",
@@ -80,15 +86,19 @@
             "GEOG 310",
             "GEOG 311",
             "GEOG 315"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
-          "title": "Complementary Courses",
+          "title": "3 credits of field courses",
           "courses": [
             "GEOG 398",
             "GEOG 495",
             "GEOG 496"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Geography Approved Course List - Major, Honours and Liberal Programs",
@@ -110,10 +120,6 @@
         },
         {
           "title": "3 or 6 credits (In Environment, Earth System and Sustainability Sciences)",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits of field courses",
           "unparsed": true
         },
         {

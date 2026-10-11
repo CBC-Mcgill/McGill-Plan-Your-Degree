@@ -53,14 +53,21 @@
           "title": "3-4 credits from",
           "courses": [
             "COMP 400",
-            "PHYS 479",
+            "PHYS 479"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "6 or 7 credits selected from",
+          "courses": [
             "COMP 303",
             "COMP 310",
             "COMP 330",
             "COMP 362"
           ],
-          "minCredits": 3,
-          "maxCredits": 4
+          "minCredits": 6,
+          "maxCredits": 7
         },
         {
           "title": "3-4 credits from",
@@ -79,10 +86,6 @@
         },
         {
           "title": "At least 6 of the 15 complementary credits must come from a course at the 400- or 500-level (excluding COMP 400 and PHYS 479), and of these at least 3 must be from a COMP course",
-          "unparsed": true
-        },
-        {
-          "title": "6 or 7 credits selected from",
           "unparsed": true
         },
         {

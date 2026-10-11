@@ -10,7 +10,7 @@
     {
       "title": "Required Courses",
       "kind": "required",
-      "credits": 84,
+      "credits": 63,
       "courses": [
         "BIOL 200",
         "BIOL 202",
@@ -65,9 +65,16 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
-        },
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
         {
-          "title": "Complementary Courses: 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "ANAT 261",
             "ANAT 262",

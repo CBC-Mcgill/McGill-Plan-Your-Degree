@@ -9,44 +9,31 @@
   "groups": [
     {
       "title": "Required Courses",
-      "kind": "complementary",
+      "kind": "required",
       "credits": 54,
-      "rules": [
+      "courses": [
+        "MGCR 211",
+        "MGCR 222",
+        "MGCR 233",
+        "MGCR 250",
+        "MGCR 271",
+        "MGCR 293",
+        "MGCR 294",
+        "MGCR 331",
+        "MGCR 341",
+        "MGCR 352",
+        "MGCR 372",
+        "MGCR 382",
+        "MGCR 423",
+        "MGCR 460",
+        "INSY 336",
+        "INSY 446",
+        "MGSC 404",
         {
-          "title": "Management Core",
-          "courses": [
-            "MGCR 211",
-            "MGCR 222",
-            "MGCR 233",
-            "MGCR 250",
-            "MGCR 271",
-            "MGCR 293",
-            "MGCR 294",
-            "MGCR 331",
-            "MGCR 341",
-            "MGCR 352",
-            "MGCR 372",
-            "MGCR 382",
-            "MGCR 423",
-            "MGCR 460"
-          ]
-        },
-        {
-          "title": "Major",
-          "courses": [
-            "INSY 336",
-            "INSY 446",
-            "MGSC 404"
-          ]
-        },
-        {
-          "title": "Major: 3 credits of experiential learning from the following",
-          "courses": [
+          "oneOf": [
             "MGSC 483",
             "RETL 407"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
+          ]
         }
       ]
     },

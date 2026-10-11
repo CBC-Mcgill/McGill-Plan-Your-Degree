@@ -91,11 +91,13 @@
           ]
         },
         {
-          "title": "Statistics",
+          "title": "Statistics: 3 credits of Statistics courses or equivalent from",
           "courses": [
             "AEMA 310",
             "MATH 203"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Math or Physical Science",
@@ -150,10 +152,6 @@
         },
         {
           "title": "6 credits - Social Science",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits of Statistics courses or equivalent from",
           "unparsed": true
         },
         {

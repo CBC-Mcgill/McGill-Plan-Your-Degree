@@ -13,14 +13,16 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "12 credits of core courses selected from",
           "courses": [
             "ENVR 200",
             "ENVR 201",
             "ENVR 202",
             "ENVR 203",
             "ENVR 400"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         },
         {
           "title": "Social Sciences and Policy: 3-6 credits from",
@@ -158,10 +160,6 @@
         },
         {
           "title": "18 credits of complementary courses, all of which must fall outside the discipline or field of the student's major program or concentration, and which must be 200-level or above, selected as follows",
-          "unparsed": true
-        },
-        {
-          "title": "12 credits of core courses selected from",
           "unparsed": true
         }
       ]

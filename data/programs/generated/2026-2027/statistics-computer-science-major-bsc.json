@@ -44,7 +44,7 @@
       "credits": 21,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "12 credits in Mathematics selected from",
           "courses": [
             "MATH 204",
             "MATH 208",
@@ -66,7 +66,9 @@
             "MATH 559",
             "MATH 578",
             "MATH 598"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         },
         {
           "title": "If chosen, students take either MATH 340 or MATH 350, but not both",
@@ -104,10 +106,6 @@
             "MATH 578",
             "COMP 540"
           ]
-        },
-        {
-          "title": "12 credits in Mathematics selected from",
-          "unparsed": true
         },
         {
           "title": "9 credits in Computer Science selected as follows",

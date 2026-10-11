@@ -28,7 +28,7 @@
           ]
         },
         {
-          "title": "Advanced Study",
+          "title": "Advanced Study: 3 credits from the following practice-based courses",
           "courses": [
             "ENGL 269",
             "ENGL 365",
@@ -37,7 +37,9 @@
             "ENGL 377",
             "ENGL 396",
             "ENGL 397"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Theory, Criticism and Methods",
@@ -51,7 +53,7 @@
           ]
         },
         {
-          "title": "History of the Theatre",
+          "title": "History of the Theatre: 3 credits in History of the Theatre",
           "courses": [
             "ENGL 306",
             "ENGL 308",
@@ -67,10 +69,12 @@
             "ENGL 486",
             "ENGL 516",
             "ENGL 566"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Performance-Oriented Courses",
+          "title": "Performance-Oriented Courses: 3 credits from the list of Performance-Oriented courses",
           "courses": [
             "ENGL 365",
             "ENGL 367",
@@ -84,7 +88,9 @@
             "ENGL 466",
             "ENGL 469",
             "ENGL 565"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "The amount over 3 credits can be attributed to Departmental Offerings credits",
@@ -123,10 +129,6 @@
           "unparsed": true
         },
         {
-          "title": "3 credits from the following practice-based courses",
-          "unparsed": true
-        },
-        {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "minCredits": 3,
           "maxCredits": 3,
@@ -135,14 +137,6 @@
         },
         {
           "title": "3 credits in Dramatic Literature",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits in History of the Theatre",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the list of Performance-Oriented courses",
           "unparsed": true
         },
         {

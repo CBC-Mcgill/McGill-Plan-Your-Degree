@@ -30,57 +30,40 @@
           "courses": [
             "COMP 230",
             "MATH 318",
-            "PHIL 210",
-            "INLG 411"
+            "PHIL 210"
           ],
           "minCredits": 3,
           "maxCredits": 3
         },
         {
-          "title": "Computer Science",
+          "title": "Complementary Courses",
+          "courses": [
+            "INLG 411"
+          ]
+        },
+        {
+          "title": "Other Fields: 12 credits in related fields selected from the following list",
           "courses": [
             "COMP 202",
             "COMP 230",
-            "COMP 250"
-          ]
-        },
-        {
-          "title": "French Language and Literature",
-          "courses": [
+            "COMP 250",
             "FREN 231",
             "FREN 336",
-            "FREN 434"
-          ]
-        },
-        {
-          "title": "Mathematics",
-          "courses": [
-            "MATH 240"
-          ]
-        },
-        {
-          "title": "Philosophy",
-          "courses": [
+            "FREN 434",
+            "MATH 240",
             "PHIL 306",
-            "PHIL 415"
-          ]
-        },
-        {
-          "title": "Psychology",
-          "courses": [
+            "PHIL 415",
             "PSYC 311",
             "PSYC 340",
             "PSYC 341",
             "PSYC 433",
             "PSYC 530"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         },
         {
           "title": "24 credits of Linguistics (LING) courses, 15 of the credits in Linguistics must be at the 400/500 level and only 3 credits in Linguistics can be at the 200 level; this requirement may include",
-          "unparsed": true
-        },
-        {
-          "title": "12 credits in related fields selected from the following list",
           "unparsed": true
         }
       ]

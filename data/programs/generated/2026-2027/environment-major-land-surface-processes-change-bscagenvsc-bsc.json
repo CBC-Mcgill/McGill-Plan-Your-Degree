@@ -51,12 +51,16 @@
       "credits": 39,
       "rules": [
         {
-          "title": "Statistics",
+          "title": "Statistics: 3 credits from one of the following Statistics courses or equivalent",
           "courses": [
             "AEMA 310",
             "GEOG 202",
             "MATH 203"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
           "title": "Geographic Information Systems: 3 credits from",
@@ -175,7 +179,7 @@
           "maxCredits": 3
         },
         {
-          "title": "List A - Particular Environments",
+          "title": "List A - Particular Environments: 3-9 credits of advanced study of Particular Environments",
           "courses": [
             "BIOL 432",
             "ENVB 410",
@@ -184,10 +188,12 @@
             "GEOG 550",
             "PLNT 358",
             "PLNT 460"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
         },
         {
-          "title": "List B - Surface Processes",
+          "title": "List B - Surface Processes: 3-9 credits of advanced study of Surface Processes",
           "courses": [
             "ATOC 315",
             "BREE 509",
@@ -198,7 +204,9 @@
             "MICR 331",
             "NRSC 333",
             "SOIL 535"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
         },
         {
           "title": "9 credits - 3 credits from each category of Statistics, Geographic Information Systems, Weather and Climate",
@@ -225,23 +233,11 @@
           "unparsed": true
         },
         {
-          "title": "3 credits from one of the following Statistics courses or equivalent",
-          "unparsed": true
-        },
-        {
           "title": "9 credits total of fundamental land surface processes chosen as follows",
           "unparsed": true
         },
         {
           "title": "12 credits total of advanced studies chosen from the following two lists",
-          "unparsed": true
-        },
-        {
-          "title": "3-9 credits of advanced study of Particular Environments",
-          "unparsed": true
-        },
-        {
-          "title": "3-9 credits of advanced study of Surface Processes",
           "unparsed": true
         }
       ]

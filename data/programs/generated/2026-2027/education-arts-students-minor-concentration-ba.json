@@ -42,7 +42,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Group B",
+          "title": "Group B: 6 credits to be chosen from the following list",
           "courses": [
             "EDEC 221",
             "EDGC 201",
@@ -51,7 +51,9 @@
             "EDPE 304",
             "EDES 304",
             "EDPI 341"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "Note: If chosen, you may take EDPE 304 or EDES 304 but not both",
@@ -60,10 +62,6 @@
             "EDPE 304",
             "EDES 304"
           ]
-        },
-        {
-          "title": "6 credits to be chosen from the following list",
-          "unparsed": true
         }
       ]
     }

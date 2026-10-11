@@ -26,11 +26,13 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3-4 credits from CHEM block",
           "courses": [
             "CHEM 204",
             "CHEM 212"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
         },
         {
           "title": "3-4 credits from",
@@ -64,10 +66,6 @@
           ],
           "minCredits": 3,
           "maxCredits": 3
-        },
-        {
-          "title": "3-4 credits from CHEM block",
-          "unparsed": true
         },
         {
           "title": "4-6 credits from Biology courses at the 300-500 levels",

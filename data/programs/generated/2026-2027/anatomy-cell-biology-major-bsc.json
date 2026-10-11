@@ -24,9 +24,13 @@
         "MIMM 214",
         "PHGY 209",
         "PHGY 210",
-        "BIOL 373",
-        "MATH 203",
-        "PSYC 204"
+        {
+          "oneOf": [
+            "BIOL 373",
+            "MATH 203",
+            "PSYC 204"
+          ]
+        }
       ],
       "note": "Students who have taken the equivalent of CHEM 212, CHEM 222, and/or MATH 203 in CEGEP and receive a course exemption upon admission are exempt from the program requirement(s) and must replace these credits with elective course credits to satisfy the total credit requirement for their degree. Students who have taken the equivalent of CHEM 212, CHEM 222, and/or MATH 203 in CEGEP and receive a course exemption upon admission are exempt from the program requirement(s) and must replace these credits with elective course credits to satisfy the total credit requirement for their degree."
     },
@@ -36,7 +40,7 @@
       "credits": 24,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "12 credits of advanced anatomy courses (AAC) selected from",
           "courses": [
             "ANAT 314",
             "ANAT 321",
@@ -49,10 +53,12 @@
             "ANAT 541",
             "ANAT 565",
             "NEUR 310"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         },
         {
-          "title": "Complementary Courses",
+          "title": "12 credits of biologically oriented courses (BOC) selected from",
           "courses": [
             "ANAT 314",
             "ANAT 321",
@@ -120,7 +126,9 @@
             "PHGY 518",
             "PHGY 556",
             "PSYT 500"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         },
         {
           "title": "Complementary courses are selected as follows with a minimum of 6 credits at the 400 level or higher",
@@ -128,14 +136,6 @@
           "match": {
             "minLevel": 400
           }
-        },
-        {
-          "title": "12 credits of advanced anatomy courses (AAC) selected from",
-          "unparsed": true
-        },
-        {
-          "title": "12 credits of biologically oriented courses (BOC) selected from",
-          "unparsed": true
         }
       ]
     }

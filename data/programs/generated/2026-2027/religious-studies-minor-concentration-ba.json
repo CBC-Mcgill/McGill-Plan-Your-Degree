@@ -21,7 +21,7 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "6 credits of Introductory Courses at the 200 level",
           "courses": [
             "ANTH 209",
             "CATH 200",
@@ -50,10 +50,12 @@
             "RELG 270",
             "RELG 271",
             "RELG 288"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
-          "title": "Complementary Courses",
+          "title": "9 credits of Advanced Courses at the 300 level or higher",
           "courses": [
             "CATH 310",
             "CATH 320",
@@ -148,15 +150,9 @@
             "RELG 570",
             "RELG 571",
             "RELG 572"
-          ]
-        },
-        {
-          "title": "6 credits of Introductory Courses at the 200 level",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits of Advanced Courses at the 300 level or higher",
-          "unparsed": true
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         }
       ]
     }

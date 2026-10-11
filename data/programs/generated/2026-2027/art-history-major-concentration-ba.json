@@ -13,14 +13,16 @@
       "credits": 36,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3-15 credits from the following list, as an introduction to methods, theories, and practices in diverse fields of the discipline",
           "courses": [
             "ARTH 302",
             "ARTH 305",
             "ARTH 315",
             "ARTH 339",
             "ARTH 357"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 15
         },
         {
           "title": "Complementary Courses",
@@ -76,10 +78,6 @@
             "PHIL 336",
             "PHIL 436"
           ]
-        },
-        {
-          "title": "3-15 credits from the following list, as an introduction to methods, theories, and practices in diverse fields of the discipline",
-          "unparsed": true
         },
         {
           "title": "21-33 complementary credits chosen from among departmental course offerings as follows",

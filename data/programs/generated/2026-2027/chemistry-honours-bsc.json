@@ -39,18 +39,16 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "6 credits of research",
           "courses": [
             "CHEM 470",
             "CHEM 480"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "Students may take up to 12 Research Project credits but only 6 of these may be used to fulfil the program requirement",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits of research",
           "unparsed": true
         },
         {

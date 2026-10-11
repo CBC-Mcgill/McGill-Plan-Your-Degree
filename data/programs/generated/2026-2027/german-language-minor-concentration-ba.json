@@ -13,13 +13,18 @@
       "credits": 18,
       "rules": [
         {
-          "title": "18 credits of language courses or any course above the 325 level given in the German language, selected from the following",
+          "title": "Language Courses",
           "courses": [
             "GERM 200",
             "GERM 202",
             "GERM 300",
             "GERM 307",
-            "GERM 325",
+            "GERM 325"
+          ]
+        },
+        {
+          "title": "List of Complementary Courses",
+          "courses": [
             "GERM 255",
             "GERM 326",
             "GERM 331",
@@ -47,9 +52,11 @@
             "GERM 388",
             "GERM 390",
             "GERM 397"
-          ],
-          "minCredits": 18,
-          "maxCredits": 18
+          ]
+        },
+        {
+          "title": "18 credits of language courses or any course above the 325 level given in the German language, selected from the following",
+          "unparsed": true
         }
       ]
     }

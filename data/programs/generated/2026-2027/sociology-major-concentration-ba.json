@@ -24,7 +24,7 @@
       "credits": 24,
       "rules": [
         {
-          "title": "9 credits maximum at the 200 level",
+          "title": "No more than 6 credits of the current problems, independent study and/or reading courses listed below may count toward the Major concentration",
           "courses": [
             "SOCI 341",
             "SOCI 342",
@@ -32,7 +32,8 @@
             "SOCI 441",
             "SOCI 442",
             "SOCI 443"
-          ]
+          ],
+          "maxCredits": 6
         },
         {
           "title": "Institutions, Deviance, and Culture",
@@ -140,8 +141,12 @@
           }
         },
         {
-          "title": "No more than 6 credits of the current problems, independent study and/or reading courses listed below may count toward the Major concentration",
-          "unparsed": true
+          "title": "9 credits maximum at the 200 level",
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     }

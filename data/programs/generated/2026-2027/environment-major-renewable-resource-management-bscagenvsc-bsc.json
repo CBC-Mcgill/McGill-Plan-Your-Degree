@@ -87,17 +87,19 @@
           "maxCourses": 1
         },
         {
-          "title": "Advanced Ecosystem Components",
+          "title": "Advanced Ecosystem Components: 6 credits of advanced ecosystem components selected from",
           "courses": [
             "BIOL 553",
             "GEOG 372",
             "PLNT 358",
             "SOIL 326",
             "WILD 307"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
-          "title": "Advanced Ecological Processes",
+          "title": "Advanced Ecological Processes: 6 credits of advanced ecological processes selected from",
           "courses": [
             "BIOL 343",
             "BIOL 432",
@@ -109,7 +111,9 @@
             "MICR 331",
             "NRSC 333",
             "PLNT 460"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "Note: you can take BREE 217 or GEOG 322, but not both",
@@ -120,7 +124,7 @@
           ]
         },
         {
-          "title": "Social Processes",
+          "title": "Social Processes: 6 credits of social processes selected as follows",
           "courses": [
             "AGEC 333",
             "ANTH 339",
@@ -129,7 +133,9 @@
             "GEOG 340",
             "GEOG 498",
             "RELG 270"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "Note: You may take AGEC 333 and ECON 405, but not both",
@@ -140,7 +146,7 @@
           ]
         },
         {
-          "title": "Ecosystem Components or Management of Ecosystems",
+          "title": "Ecosystem Components or Management of Ecosystems: 9 credits of ecosystem components or management of ecosystems selected from",
           "courses": [
             "AGRI 452",
             "AGRI 550",
@@ -151,7 +157,9 @@
             "PLNT 200",
             "WILD 401",
             "WOOD 441"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "9 credits - Basic Principles of Ecosystem Processes and Diversity",
@@ -179,22 +187,6 @@
         },
         {
           "title": "9 credits of basic principles of ecosystem processes and diversity are selected as follows",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits of advanced ecosystem components selected from",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits of advanced ecological processes selected from",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits of social processes selected as follows",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits of ecosystem components or management of ecosystems selected from",
           "unparsed": true
         }
       ]

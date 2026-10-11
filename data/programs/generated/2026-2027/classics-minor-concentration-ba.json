@@ -21,7 +21,7 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "6 credits minimum of Ancient Greek or Latin",
           "courses": [
             "CLAS 210",
             "CLAS 212",
@@ -40,14 +40,11 @@
             "CLAS 420",
             "CLAS 422",
             "CLAS 429"
-          ]
+          ],
+          "minCredits": 6
         },
         {
           "title": "15 credits of Classics (CLAS) or related courses according to the following stipulations",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits minimum of Ancient Greek or Latin",
           "unparsed": true
         },
         {

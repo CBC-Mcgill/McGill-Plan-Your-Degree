@@ -39,13 +39,15 @@
       "credits": 39,
       "rules": [
         {
-          "title": "Math or Biology Research Course",
+          "title": "Math or Biology Research Course: 3-6 credits from the following Math or Biology research courses",
           "courses": [
             "BIOL 466",
             "BIOL 467",
             "BIOL 468",
             "MATH 410"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
         },
         {
           "title": "Stream 1: Applied Mathematics: 9-12 credits from the following courses",
@@ -89,15 +91,20 @@
         {
           "title": "Ecology and Evolutionary Biology Stream: 3 credits from",
           "courses": [
-            "BIOL 206",
+            "BIOL 206"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Ecology and Evolutionary Biology Stream",
+          "courses": [
             "BIOL 240",
             "BIOL 331",
             "BIOL 334",
             "BIOL 432",
             "BIOL 573"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
+          ]
         },
         {
           "title": "Ecology and Evolutionary Biology Stream: 9-15 credits from",
@@ -177,10 +184,6 @@
         },
         {
           "title": "Students selecting a BIOL course count this toward their 21 credits of BIOL, NEUR, PHGY, PSYC courses while students selecting a MATH course count this toward their 18 credits of MATH courses",
-          "unparsed": true
-        },
-        {
-          "title": "3-6 credits from the following Math or Biology research courses",
           "unparsed": true
         },
         {

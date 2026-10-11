@@ -77,7 +77,7 @@
           ]
         },
         {
-          "title": "List D: Field Studies",
+          "title": "List D: Field Studies: At least 3 credits from List D",
           "courses": [
             "BIOL 331",
             "BIOL 335",
@@ -85,19 +85,66 @@
             "ENTO 340",
             "EPSC 231",
             "WILD 475"
-          ]
+          ],
+          "minCredits": 3
         },
         {
           "title": "Students select 21 credits from among four course lists (A (Zoology), B (Botany), C (Earth and Environmental Sciences), and D (Field Courses)) with the following specifications",
           "unparsed": true
         },
         {
-          "title": "At least 3 credits and no more than 9 credits from each of Lists A, B, and C",
-          "unparsed": true
+          "title": "At least 3 credits and no more than 9 credits from each of Lists A, B, and C (List A)",
+          "courses": [
+            "AEBI 211",
+            "ANTH 312",
+            "BIOL 205",
+            "BIOL 215",
+            "BIOL 305",
+            "BIOL 350",
+            "BIOL 352",
+            "BIOL 418",
+            "BIOL 427",
+            "ENTO 330",
+            "EPSC 334",
+            "WILD 307",
+            "WILD 350",
+            "WILD 420"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
         },
         {
-          "title": "At least 3 credits from List D",
-          "unparsed": true
+          "title": "At least 3 credits and no more than 9 credits from each of Lists A, B, and C (List B)",
+          "courses": [
+            "AEBI 210",
+            "BIOL 205",
+            "BIOL 215",
+            "BIOL 240",
+            "PLNT 304",
+            "PLNT 353",
+            "PLNT 358",
+            "PLNT 460"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        },
+        {
+          "title": "At least 3 credits and no more than 9 credits from each of Lists A, B, and C (List C)",
+          "courses": [
+            "BIOL 540",
+            "ENVR 200",
+            "ENVR 202",
+            "EPSC 210",
+            "EPSC 233",
+            "ESYS 200",
+            "ESYS 300",
+            "GEOG 203",
+            "GEOG 272",
+            "GEOG 470",
+            "GEOG 550"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
         },
         {
           "title": "No more than 3 credits from any one list may be at the 200 level",

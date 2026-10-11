@@ -13,7 +13,7 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "18 credits to be chosen from",
           "courses": [
             "RUSS 210",
             "RUSS 211",
@@ -28,11 +28,9 @@
             "RUSS 411",
             "RUSS 415",
             "RUSS 453"
-          ]
-        },
-        {
-          "title": "18 credits to be chosen from",
-          "unparsed": true
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
         }
       ]
     }

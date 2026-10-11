@@ -1,0 +1,60 @@
+{
+  "id": "environmental-engineering-minor-beng",
+  "name": "Environmental Engineering Minor",
+  "degree": "B.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/environmental-engineering-minor-beng/",
+  "credits": 21,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "3-4 credits from the following list",
+          "courses": [
+            "BREE 327",
+            "CIVE 225"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "Stream B",
+          "courses": [
+            "AEBI 425",
+            "AEBI 427"
+          ]
+        },
+        {
+          "title": "18 credits from Stream A or Stream B",
+          "unparsed": true
+        },
+        {
+          "title": "15 credits from the Engineering Course List and 3 credits from the Non-Engineering Course List below",
+          "unparsed": true
+        },
+        {
+          "title": "A minimum of 6 credits must be from outside the student's department",
+          "unparsed": true
+        },
+        {
+          "title": "A maximum of 6 credits of research project courses may be counted toward this category, provided the project has sufficient environmental engineering content (project requires approval of project supervisor and coordinator of the Minor)",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits of courses specified from the \"Barbados Interdisciplinary Tropical Studies (BITS)\" field semester below, provided the project has sufficient environmental engineering content (project requires approval of the Coordinator of the Minor)",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits chosen from the Engineering Course List below, excluding CHEE 496",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "overlap": 12,
+  "generated": true
+}

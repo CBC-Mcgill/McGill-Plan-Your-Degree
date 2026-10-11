@@ -34,7 +34,7 @@
       "credits": 9,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "9 credits of the complementary courses selected from",
           "courses": [
             "ANSC 234",
             "ANSC 250",
@@ -61,11 +61,9 @@
             "PLNT 353",
             "PLNT 426",
             "PLNT 435"
-          ]
-        },
-        {
-          "title": "9 credits of the complementary courses selected from",
-          "unparsed": true
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         }
       ]
     }

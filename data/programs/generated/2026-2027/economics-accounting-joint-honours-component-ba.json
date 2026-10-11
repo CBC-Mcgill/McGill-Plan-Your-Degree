@@ -27,16 +27,14 @@
       "credits": 3,
       "rules": [
         {
-          "title": "Economics - Complementary Courses",
+          "title": "3 credits selected from the following Economics courses",
           "courses": [
             "ECON 460",
             "ECON 461",
             "ECON 469"
-          ]
-        },
-        {
-          "title": "3 credits selected from the following Economics courses",
-          "unparsed": true
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         }
       ]
     },
@@ -59,7 +57,7 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Accounting - Complementary Courses",
+          "title": "12 credits of Accounting courses selected from",
           "courses": [
             "ACCT 354",
             "ACCT 362",
@@ -69,11 +67,9 @@
             "ACCT 463",
             "ACCT 475",
             "ACCT 486"
-          ]
-        },
-        {
-          "title": "12 credits of Accounting courses selected from",
-          "unparsed": true
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         }
       ]
     }

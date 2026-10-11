@@ -22,25 +22,37 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits in Biochemistry, one of",
           "courses": [
             "ANSC 234",
             "BIOC 311"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
-          "title": "Complementary Courses",
+          "title": "3 credits in Physiology, one of",
           "courses": [
             "ANSC 323",
             "PHGY 210"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
-          "title": "Complementary Courses",
+          "title": "3 credits in Nutrition, one of",
           "courses": [
             "ANSC 433",
             "NUTR 307"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
           "title": "9 credits selected from",
@@ -60,18 +72,6 @@
           ],
           "minCredits": 9,
           "maxCredits": 9
-        },
-        {
-          "title": "3 credits in Biochemistry, one of",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits in Physiology, one of",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits in Nutrition, one of",
-          "unparsed": true
         }
       ]
     }

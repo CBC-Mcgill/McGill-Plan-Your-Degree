@@ -13,16 +13,14 @@
       "credits": 24,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 or 6 credits selected from the following",
           "courses": [
             "PSYC 211",
             "PSYC 213",
             "PSYC 215"
-          ]
-        },
-        {
-          "title": "3 or 6 credits selected from the following",
-          "unparsed": true
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
         },
         {
           "title": "18 or 21 credits selected from Psychology courses at the 300 level or above",
