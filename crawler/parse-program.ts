@@ -606,9 +606,21 @@ function parseNote(text: string): NoteRule | null {
 // Sentences that set a number of credits or courses, as opposed to advice and notices.
 const CONSTRAINT =
   /\b(\d+|one|two|three|four|five|six)\b[^.]*\b(credits?|courses?)\b|\b(at least|at most|no more than|maximum|minimum|remaining credits)\b/i;
-// Notices that repeat the group total or only describe transfer credit.
-const NOISE =
-  /^(?:generally,|only \d+ credits will be applied to the program|\d+ credits will be applied to the program)/i;
+// Notices that restrict nothing the app counts: the group total again, transfer credit, advice, prerequisites, registration, and what replaces a course taken before.
+const NOISE = new RegExp(
+  [
+    String.raw`^(?:generally,|only \d+ credits will be applied to the program|\d+ credits will be applied to the program)`,
+    String.raw`\btransfer credits (?:may|can) be (?:accepted|used)\b`,
+    String.raw`^it is (?:strongly |highly )?(?:recommended|not advisable)\b|\b(?:are|is) (?:strongly )?(?:advised|urged) to\b|\bencourages students to\b`,
+    String.raw`^students (?:are (?:therefore )?expected to take|should meet with|will register for)\b`,
+    String.raw`^(?:note that )?[A-Z]{4} \d{3}\b[^.]*? is (?:a )?prerequisite\b|^prerequisites?:|\bto take an? [^,]*course[^,]*, students must have taken\b`,
+    String.raw`^admission to [^.]*\brequires\b|\bCGPA\b[^.]*\b(?:required|prerequisites)\b|^although [^.]*\bprerequisites\b`,
+    String.raw`^courses are offered on a rotational basis\b|^taken in two semesters\b|\bare courses sponsored by\b|^it is possible for students to transfer\b|^electives are selected\b`,
+    String.raw`^\W*(?:note:\s*)?(?:students who|a student who|if a student)\b(?![^;]*\bnot count\b)[^;]*\b(?:equivalent|CEGEP)\b`,
+    String.raw`^students are normally permitted to count \d+ credits from other departments\b|^in exceptional circumstances\b`,
+  ].join("|"),
+  "i",
+);
 const DEPARTMENT_LINE =
   /^[A-Za-z&,'-][A-Za-z&,'\s-]{1,60} \([A-Z]{3}[A-Z\d]\b[^)]*\)/;
 
@@ -685,7 +697,7 @@ function noteRules(notes: string[]): Rule[] {
       return [{ title: trimEnd(note), maxCourses: 1, courses: parsed.either }];
     }
     if (parsed) return [parsed];
-    return CONSTRAINT.test(note) ? [unparsed(note)] : [];
+    return CONSTRAINT.test(note) && !NOISE.test(note) ? [unparsed(note)] : [];
   });
 }
 

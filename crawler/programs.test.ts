@@ -462,3 +462,21 @@ test("reads how many subjects a group must span and how much one subject may giv
     ),
   ).toEqual([{ unparsed: true }]);
 });
+
+test("drops notices that restrict nothing the app counts, and keeps a sentence that does", () => {
+  for (const text of [
+    "Maximum of 6 relevant transfer credits may be accepted from approved exchange programs subject to adviser and University approval.",
+    "No more than 12 POLI transfer credits can be used toward the program requirements.",
+    "It is strongly recommended that students take COMP 251, as it is a prerequisite of many later computer science courses.",
+    "To take a 300- or 400-level POLI course, students must have taken a 200-level POLI course in the same field.",
+    "Students will register for the 6 credits offered the Winter of their participation in the field study semester.",
+    "Students who have successfully completed an equivalent to MATH 222 at CEGEP or elsewhere, must replace these credits with a 3-credit elective course to satisfy the total credit requirement for the Neuroscience Major.",
+  ]) {
+    expect(read(text), text).toEqual([]);
+  }
+  expect(
+    read(
+      "Credits for the introductory sequence MGCR 293 and ECON 295 that are prerequisites for 300-level courses in economics do not count as part of this Minor concentration.",
+    ),
+  ).toEqual([{ unparsed: true }]);
+});
