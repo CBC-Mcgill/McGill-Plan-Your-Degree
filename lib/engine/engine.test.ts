@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 import type { Course, Requirement } from "../catalogue/types.ts";
 import type { CourseRecord, Plan, Term } from "../profile/types.ts";
-import type { Program, Rule } from "../programs/types.ts";
+import type { ComplementaryGroup, Program, Rule } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
@@ -942,4 +942,58 @@ test("a stated amount is a target, so a course may overshoot it and other rules 
   // A real cap still holds: only one 200-level course counts.
   expect(group?.rules[2]?.creditsDone).toBe(3);
   expect(group).toMatchObject({ creditsDone: 22, satisfied: true });
+});
+
+test("a range narrower than a course is a target, so lists that share courses can both fill", () => {
+  const shared: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          {
+            title: "3 credits of",
+            courses: ["COMP 330", "COMP 350"],
+            minCredits: 3,
+            maxCredits: 3,
+          },
+          {
+            title: "3-4 credits of",
+            courses: ["COMP 250", "COMP 330", "COMP 350"],
+            minCredits: 3,
+            maxCredits: 4,
+          },
+          {
+            title: "0-3 credits of",
+            courses: ["COMP 250", "MATH 240"],
+            maxCredits: 3,
+          },
+        ],
+      },
+    ],
+  };
+  const done = buildSnapshot([
+    record("COMP 330", "completed"),
+    record("COMP 350", "completed"),
+    record("COMP 250", "completed"),
+    record("MATH 240", "completed"),
+  ]);
+  const [group] = programProgress(shared, done, catalogue).groups;
+  expect(group).toMatchObject({ creditsDone: 6, satisfied: true });
+  expect(group?.courses.map((c) => c.code)).toEqual(["COMP 330", "COMP 350"]);
+  // A cap with no floor still caps.
+  expect(
+    fitsCaps(
+      shared.groups[0] as ComplementaryGroup,
+      [
+        { courses: [] },
+        { courses: [] },
+        { courses: [{ code: "COMP 250", credits: 3 }] },
+      ],
+      "MATH 240",
+      3,
+    ),
+  ).toBe(false);
 });

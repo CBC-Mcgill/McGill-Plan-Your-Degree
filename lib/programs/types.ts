@@ -32,7 +32,7 @@ export interface Rule {
   title: string;
   /** At least this many credits must come from the rule. */
   minCredits?: number;
-  /** Credits beyond this do not count toward the group. Equal to `minCredits` it only records the catalogue's amount, as in "9 credits from", and does not cap, so a 4-credit course may overshoot. */
+  /** Credits beyond this do not count toward the group. Equal to `minCredits`, or above it by less than the course being counted, it only records the catalogue's amount, as in "9 credits from" or "3-4 credits of", and does not cap, so a 4-credit course may overshoot. */
   maxCredits?: number;
   minCourses?: number;
   /** Courses beyond this do not count toward the group, which expresses "A and B cannot both be taken". */

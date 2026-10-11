@@ -236,9 +236,12 @@ export function fitsCaps(
     const sameSubject = mine
       .filter((c) => subjectOf(c.code) === subjectOf(code))
       .reduce((sum, c) => sum + c.credits, 0);
-    // "9 credits from" is a target, not a cap: a 4-credit course may overshoot it, and reaching it must not refuse courses from other rules the course also fits.
+    // "9 credits from" is a target, not a cap: a 4-credit course may overshoot it, and reaching it must not refuse courses from other rules the course also fits. A range narrower than the course, as "3-4 credits of", only records that courses differ in credits.
     const cap =
-      !extra && rule.maxCredits === rule.minCredits
+      !extra &&
+      rule.minCredits !== undefined &&
+      rule.maxCredits !== undefined &&
+      rule.maxCredits - rule.minCredits < credits
         ? undefined
         : rule.maxCredits;
     return (
