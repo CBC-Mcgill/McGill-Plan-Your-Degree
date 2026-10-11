@@ -105,7 +105,13 @@
         },
         {
           "title": "A minimum of 3 credits must be at the 400 level or above (other than ARTH 490 Museum Internship)",
-          "unparsed": true
+          "minCredits": 3,
+          "match": {
+            "minLevel": 400,
+            "exclude": [
+              "ARTH 490"
+            ]
+          }
         }
       ]
     }

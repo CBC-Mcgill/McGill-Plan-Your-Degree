@@ -85,7 +85,10 @@
         },
         {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {},
+          "adviser": true
         },
         {
           "title": "3 credits from a list of 400-level courses in Cultural Studies with a theoretical component",
@@ -97,14 +100,6 @@
         },
         {
           "title": "9 additional credits from ENGL offerings, in the Literature, Cultural Studies, and Drama and Theatre Options",
-          "unparsed": true
-        },
-        {
-          "title": "Students are normally permitted to count 6 credits from other departments toward their English programs",
-          "unparsed": true
-        },
-        {
-          "title": "In exceptional circumstances, an adviser who is approached by a student with strong academic grounds for including a third such course may grant permission (to a maximum of 9 extra-departmental credits) and must so indicate in advance by signing the departmental program audit sheet",
           "unparsed": true
         }
       ]

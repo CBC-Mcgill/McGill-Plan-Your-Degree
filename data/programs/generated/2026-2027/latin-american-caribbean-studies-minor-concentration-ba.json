@@ -131,7 +131,10 @@
         },
         {
           "title": "At least one course should be at the 300 level or above",
-          "unparsed": true
+          "minCourses": 1,
+          "match": {
+            "minLevel": 300
+          }
         },
         {
           "title": "No more than 6 credits in Spanish or Portuguese language shall count for the Minor Concentration",

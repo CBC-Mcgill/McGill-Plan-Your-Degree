@@ -46,7 +46,11 @@
         },
         {
           "title": "Only 3 credits at the 200 level may count towards complementary credits",
-          "unparsed": true
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     }

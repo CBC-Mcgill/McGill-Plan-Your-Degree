@@ -171,7 +171,14 @@
         },
         {
           "title": "The remaining 33 credits must come from POLI courses at the 300 level and above",
-          "unparsed": true
+          "minCredits": 33,
+          "maxCredits": 33,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "POLI"
+            ]
+          }
         },
         {
           "title": "6 credits in POLI Methods courses must be taken at the 300 or 400 level",
@@ -195,14 +202,6 @@
         },
         {
           "title": "To take an upper-level POLI course (i.e. courses at the 300, 400 or 500 level), students must have taken a 200-level POLI course in the same field",
-          "unparsed": true
-        },
-        {
-          "title": "Students are therefore expected to take all their 200-level courses in their first two years",
-          "unparsed": true
-        },
-        {
-          "title": "No more than 15 Political Science transfer credits can be used toward the program requirements",
           "unparsed": true
         }
       ]

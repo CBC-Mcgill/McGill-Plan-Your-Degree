@@ -175,7 +175,13 @@
         },
         {
           "title": "18 credits in Jewish Studies of which 9 are normally taken at the 300 level or above",
-          "unparsed": true
+          "minCredits": 18,
+          "maxCredits": 18,
+          "match": {
+            "subjects": [
+              "JWST"
+            ]
+          }
         },
         {
           "title": "At least 9 credits will normally be taken at an advanced level in a single area or theme (e.g., Biblical Studies, East European Studies, Jewish History, Jewish Thought, Literature (Hebrew, Yiddish), Modern Jewish Studies, and Rabbinic Studies)",

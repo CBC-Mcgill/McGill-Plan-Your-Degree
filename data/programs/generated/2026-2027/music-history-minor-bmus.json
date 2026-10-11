@@ -14,7 +14,15 @@
       "rules": [
         {
           "title": "18 credits selected from MUHL or MUPP prefix at the 300 level or higher",
-          "unparsed": true
+          "minCredits": 18,
+          "maxCredits": 18,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "MUHL",
+              "MUPP"
+            ]
+          }
         }
       ]
     }

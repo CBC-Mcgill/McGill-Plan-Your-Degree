@@ -125,11 +125,18 @@
         },
         {
           "title": "9 credits minimum at the 400 level or higher",
-          "unparsed": true
+          "minCredits": 9,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "9 credits maximum at the 200 level",
-          "unparsed": true
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     }

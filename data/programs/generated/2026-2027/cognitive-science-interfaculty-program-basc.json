@@ -263,7 +263,10 @@
         },
         {
           "title": "Of the 33 Complementary Course credits, 15 credits taken must be at the 400 level or higher",
-          "unparsed": true
+          "minCredits": 15,
+          "match": {
+            "minLevel": 400
+          }
         }
       ]
     }

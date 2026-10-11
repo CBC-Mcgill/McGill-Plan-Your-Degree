@@ -115,7 +115,10 @@
         },
         {
           "title": "At least 6 of the 9 complementary credits must be at the 300 level or above",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300
+          }
         }
       ]
     }

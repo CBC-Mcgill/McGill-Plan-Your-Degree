@@ -178,7 +178,14 @@
         },
         {
           "title": "The remaining 24 credits must come from POLI courses at the 300 level and above",
-          "unparsed": true
+          "minCredits": 24,
+          "maxCredits": 24,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "POLI"
+            ]
+          }
         },
         {
           "title": "At least 9 credits must be taken at the 400 level and above, including one mandatory 500-level Honours Seminar which must be taken at McGill",
@@ -190,18 +197,6 @@
         },
         {
           "title": "However, if the field is Comparative Politics the maximum is 21 credits",
-          "unparsed": true
-        },
-        {
-          "title": "To take a 300- or 400-level POLI course, students must have taken a 200-level POLI course in the same field",
-          "unparsed": true
-        },
-        {
-          "title": "Students are therefore expected to take all their 200-level courses in their first two years",
-          "unparsed": true
-        },
-        {
-          "title": "No more than 12 POLI transfer credits can be used toward the program requirements",
           "unparsed": true
         }
       ]

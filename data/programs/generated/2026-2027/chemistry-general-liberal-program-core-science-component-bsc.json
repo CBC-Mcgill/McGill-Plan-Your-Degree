@@ -44,7 +44,14 @@
         },
         {
           "title": "3-6 credits of Chemistry courses at the 300+ level",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "CHEM"
+            ]
+          }
         }
       ]
     }

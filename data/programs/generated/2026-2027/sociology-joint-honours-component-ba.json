@@ -117,7 +117,14 @@
         },
         {
           "title": "18 credits of complementary sociology (SOCI) courses approved by the Departmental Honours Adviser",
-          "unparsed": true
+          "minCredits": 18,
+          "maxCredits": 18,
+          "match": {
+            "subjects": [
+              "SOCI"
+            ]
+          },
+          "adviser": true
         }
       ]
     }

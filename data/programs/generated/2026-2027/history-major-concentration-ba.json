@@ -110,11 +110,18 @@
         },
         {
           "title": "Maximum 15 credits of complementary courses at the 200-level",
-          "unparsed": true
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "Minimum 6 credits of 400- or 500- level courses",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "Note: student may use at most 3 credits of HIST 498 or HIST 499 to fulfill this requirement",

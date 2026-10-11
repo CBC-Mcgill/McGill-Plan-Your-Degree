@@ -148,7 +148,10 @@
         },
         {
           "title": "Or any 400 or 500 level special topics courses in the area of artificial intelligence with the approval of the Electrical and Computer Engineering department",
-          "unparsed": true
+          "match": {
+            "minLevel": 400
+          },
+          "adviser": true
         }
       ]
     }

@@ -79,7 +79,10 @@
         },
         {
           "title": "Students must take a minimum of 6 credits at the 400 to 500 level",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "Students complete a minimum of 9 credits each in two areas",

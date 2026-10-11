@@ -130,11 +130,33 @@
         },
         {
           "title": "9 credits in Psychology at the 400 or 500 level",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "PSYC"
+            ]
+          }
         },
         {
           "title": "9 credits at the 300 level or above in any of the following disciplines:; Psychology (PSYC), Anatomy and Cell Biology (ANAT), Biology (BIOL), Biochemistry (BIOC), Chemistry (CHEM), Computer Science (COMP), Mathematics (MATH), Physiology (PHGY), Psychiatry (PSYT)",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "PSYC",
+              "ANAT",
+              "BIOL",
+              "BIOC",
+              "CHEM",
+              "COMP",
+              "MATH",
+              "PHGY",
+              "PSYT"
+            ]
+          }
         }
       ]
     }

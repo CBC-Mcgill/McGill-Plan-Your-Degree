@@ -72,7 +72,17 @@
         },
         {
           "title": "The remaining 18 credits are to be selected from Geography (GEOG) courses excluding GEOG 200 and GEOG 205",
-          "unparsed": true
+          "minCredits": 18,
+          "maxCredits": 18,
+          "match": {
+            "subjects": [
+              "GEOG"
+            ],
+            "exclude": [
+              "GEOG 200",
+              "GEOG 205"
+            ]
+          }
         },
         {
           "title": "Of these 18 credits, at least 3 credits must be at the 400 level or above",

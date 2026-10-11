@@ -223,7 +223,10 @@
         },
         {
           "title": "15-21 credits, planned with an adviser and normally chosen to reflect progress to the advanced level in one of the areas of study",
-          "unparsed": true
+          "minCredits": 15,
+          "maxCredits": 21,
+          "match": {},
+          "adviser": true
         }
       ]
     }

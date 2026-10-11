@@ -88,7 +88,12 @@
         },
         {
           "title": "all MATH 500-level courses",
-          "unparsed": true
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "MATH"
+            ]
+          }
         }
       ]
     }

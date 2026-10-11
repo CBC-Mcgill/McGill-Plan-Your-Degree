@@ -127,7 +127,10 @@
         },
         {
           "title": "At least 3 credits must be taken at the 300-level or higher",
-          "unparsed": true
+          "minCredits": 3,
+          "match": {
+            "minLevel": 300
+          }
         }
       ]
     }

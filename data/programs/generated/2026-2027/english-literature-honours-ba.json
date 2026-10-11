@@ -37,7 +37,10 @@
         },
         {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {},
+          "adviser": true
         }
       ]
     },

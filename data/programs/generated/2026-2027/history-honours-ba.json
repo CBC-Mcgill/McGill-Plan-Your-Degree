@@ -123,11 +123,21 @@
         },
         {
           "title": "Minimum 6 additional credits of 400-level or higher HIST courses",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "HIST"
+            ]
+          }
         },
         {
           "title": "Maximum 18 credits complementary courses at 200-level",
-          "unparsed": true
+          "maxCredits": 18,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "3.30 in program courses,",

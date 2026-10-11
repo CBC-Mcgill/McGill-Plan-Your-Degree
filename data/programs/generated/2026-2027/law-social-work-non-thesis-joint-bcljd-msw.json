@@ -27,11 +27,14 @@
       "rules": [
         {
           "title": "15 credits of SWRK courses at the 500 or 600 level",
-          "unparsed": true
-        },
-        {
-          "title": "Up to 6 graduate-level credits may be taken outside the School of Social Work with the approval of the Academic Adviser",
-          "unparsed": true
+          "minCredits": 15,
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "SWRK"
+            ]
+          }
         }
       ]
     },

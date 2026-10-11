@@ -62,7 +62,11 @@
         },
         {
           "title": "Maximum 12 credits of complementary courses at the 200 level",
-          "unparsed": true
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "NOTE: 9 credits maximum of non-CLAS courses may be counted toward the program",
@@ -82,11 +86,22 @@
         },
         {
           "title": "Minimum 6 credits 400-level CLAS courses",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400,
+            "maxLevel": 400,
+            "subjects": [
+              "CLAS"
+            ]
+          }
         },
         {
           "title": "Maximum 12 credits of complementary courses at the 200 level",
-          "unparsed": true
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "NOTE: 9 credits maximum of non-CLAS courses may be counted toward the program",

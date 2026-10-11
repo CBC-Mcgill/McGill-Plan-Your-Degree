@@ -136,7 +136,22 @@
         },
         {
           "title": "9 credits at the 300 level or above selected from:; Anatomy and Cell Biology (ANAT), Biochemistry (BIOC), Biology (BIOL), Chemistry (CHEM), Computer Science (COMP), Mathematics (MATH), Physiology (PHGY), Psychiatry (PYST), Psychology (PSYC)",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "ANAT",
+              "BIOC",
+              "BIOL",
+              "CHEM",
+              "COMP",
+              "MATH",
+              "PHGY",
+              "PYST",
+              "PSYC"
+            ]
+          }
         }
       ]
     }

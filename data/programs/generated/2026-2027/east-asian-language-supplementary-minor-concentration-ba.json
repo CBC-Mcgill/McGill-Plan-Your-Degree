@@ -14,7 +14,10 @@
       "rules": [
         {
           "title": "18 credits in second, third, or fourth level language courses in a single East Asian language, or a combination of an advanced language and other courses in East Asian culture, literature, or society at the 300 level or above, chosen in consultation with the Departmental Program Adviser",
-          "unparsed": true
+          "minCredits": 18,
+          "maxCredits": 18,
+          "match": {},
+          "adviser": true
         }
       ]
     }

@@ -180,7 +180,10 @@
         },
         {
           "title": "At least 6 credits must be taken at the 400 or 500 level",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400
+          }
         }
       ]
     }

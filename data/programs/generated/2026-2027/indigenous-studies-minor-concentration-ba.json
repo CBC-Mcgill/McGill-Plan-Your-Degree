@@ -115,7 +115,11 @@
         },
         {
           "title": "A maximum of 3 complementary course credits at the 200-level",
-          "unparsed": true
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "A maximum of 6 credits from any given discipline with the exception of Indigenous Studies (INDG) courses",

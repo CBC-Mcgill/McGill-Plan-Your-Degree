@@ -57,7 +57,10 @@
       "rules": [
         {
           "title": "3 credits, chosen in consultation with the academic adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {},
+          "adviser": true
         }
       ]
     }

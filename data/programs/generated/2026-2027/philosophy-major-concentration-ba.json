@@ -98,8 +98,19 @@
           "maxCredits": 3
         },
         {
-          "title": "33 credits, of which no more than 9 may be at the 200 level and at least 9 must be at the 400 or 500 level, distributed as follows",
-          "unparsed": true
+          "title": "No more than 9 may be at the 200 level",
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
+        },
+        {
+          "title": "At least 9 must be at the 400 or 500 level",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "18 credits from Groups A, B, C, D, E, and F",

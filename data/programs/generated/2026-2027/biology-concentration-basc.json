@@ -33,10 +33,6 @@
           ]
         },
         {
-          "title": "*Students who have already taken CHEM 212 or its equivalent as advance credits may choose to substitute CHEM 204, or CHEM 222, or a 300-500 levels complementary Biology course, to be approved by the Biology Advisor",
-          "unparsed": true
-        },
-        {
           "title": "3-4 credits from",
           "courses": [
             "BIOL 301",
@@ -75,7 +71,14 @@
         },
         {
           "title": "4-6 credits from Biology courses at the 300-500 levels",
-          "unparsed": true
+          "minCredits": 4,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "BIOL"
+            ]
+          }
         }
       ]
     }

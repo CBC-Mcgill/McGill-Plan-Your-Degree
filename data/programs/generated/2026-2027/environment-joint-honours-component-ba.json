@@ -80,11 +80,18 @@
         },
         {
           "title": "6-12 credits selected in consultation with the Program Adviser",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 12,
+          "match": {},
+          "adviser": true
         },
         {
           "title": "A maximum of 3 credits may be at the 200 or 300 level",
-          "unparsed": true
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 300
+          }
         }
       ]
     }

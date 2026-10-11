@@ -46,7 +46,11 @@
         },
         {
           "title": "or any 300- or 400-level course approved by an adviser",
-          "unparsed": true
+          "match": {
+            "minLevel": 300,
+            "maxLevel": 400
+          },
+          "adviser": true
         }
       ]
     }

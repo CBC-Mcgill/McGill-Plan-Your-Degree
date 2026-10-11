@@ -41,7 +41,10 @@
         },
         {
           "title": "3 credits of a course in Animal Production or Plant Production approved by the Adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {},
+          "adviser": true
         }
       ]
     }

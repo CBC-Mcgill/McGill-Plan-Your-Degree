@@ -163,7 +163,11 @@
         },
         {
           "title": "12 of the 36 credits must be taken at the 200 level",
-          "unparsed": true
+          "minCredits": 12,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "No more than 3 credits at the 200 level may be in any given group - the groups being Canadian Politics, Comparative Politics, International Relations, Political Theory, and Methods",
@@ -171,22 +175,18 @@
         },
         {
           "title": "All other 24 credits must come from 300- or 400-level POLI courses",
-          "unparsed": true
+          "minCredits": 24,
+          "maxCredits": 24,
+          "match": {
+            "minLevel": 300,
+            "maxLevel": 400,
+            "subjects": [
+              "POLI"
+            ]
+          }
         },
         {
           "title": "3 credits must be taken at the 400 level at McGill rather than as transfer credits",
-          "unparsed": true
-        },
-        {
-          "title": "To take a 300- or 400-level POLI course, students must have taken a 200-level POLI course in the same field",
-          "unparsed": true
-        },
-        {
-          "title": "Students are therefore expected to take all their 200-level courses in their first two years",
-          "unparsed": true
-        },
-        {
-          "title": "No more than 12 POLI transfer credits can be used toward the program requirements",
           "unparsed": true
         }
       ]

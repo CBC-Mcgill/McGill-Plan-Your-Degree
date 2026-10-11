@@ -111,7 +111,14 @@
         },
         {
           "title": "6 credits from courses with a prefix of MUHL or MUPP",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "subjects": [
+              "MUHL",
+              "MUPP"
+            ]
+          }
         }
       ]
     },

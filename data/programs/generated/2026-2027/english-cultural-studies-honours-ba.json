@@ -105,15 +105,18 @@
         },
         {
           "title": "At least 6 of the 39 credits must be at the 500 level",
-          "unparsed": true
-        },
-        {
-          "title": "A maximum of 9 credits may be from another department with the signed permission of the program adviser",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 500
+          }
         },
         {
           "title": "A maximum of 9 of the 39 credits are allowed at the 200 level, none in the final year of the program",
-          "unparsed": true
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "3 credits from a list of courses on Major Figures in Cultural Studies",
@@ -125,7 +128,10 @@
         },
         {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {},
+          "adviser": true
         },
         {
           "title": "6 credits from a list of courses in Cultural Studies with an historical dimension",

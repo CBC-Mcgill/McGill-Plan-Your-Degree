@@ -134,7 +134,10 @@
         },
         {
           "title": "3 credits minimum at the 400 level or higher",
-          "unparsed": true
+          "minCredits": 3,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "No more than 6 credits of the current problems, independent study and/or reading courses listed below may count toward the Major concentration",

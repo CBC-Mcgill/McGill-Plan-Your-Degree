@@ -178,14 +178,13 @@
         },
         {
           "title": "Of these 21 credits, at least 15 credits must be at the 300-level or above",
-          "unparsed": true
+          "minCredits": 15,
+          "match": {
+            "minLevel": 300
+          }
         },
         {
           "title": "At least 6 credits must also be taken outside of Geography",
-          "unparsed": true
-        },
-        {
-          "title": "Although Architecture courses have prerequisites, they are waived for Urban Studies students, but 500-level courses may not be taken before the U3",
           "unparsed": true
         }
       ]

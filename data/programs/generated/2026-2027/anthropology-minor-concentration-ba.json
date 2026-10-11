@@ -14,7 +14,15 @@
       "rules": [
         {
           "title": "6-9 credits from 200-level courses in Anthropology",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200,
+            "subjects": [
+              "ANTH"
+            ]
+          }
         },
         {
           "title": "9-12 credits from any 300-, or 400-, or 500-level courses in Anthropology (only 3 credits of which can be at the 400 or 500 level",

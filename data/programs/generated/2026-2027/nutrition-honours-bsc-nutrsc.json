@@ -46,7 +46,10 @@
       "rules": [
         {
           "title": "15 credits chosen in consultation with the research supervisor, a limited number of credits may be taken at other Quebec and/or Canadian universities",
-          "unparsed": true
+          "minCredits": 15,
+          "maxCredits": 15,
+          "match": {},
+          "adviser": true
         }
       ]
     }

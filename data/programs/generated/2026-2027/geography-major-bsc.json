@@ -127,15 +127,10 @@
         },
         {
           "title": "6 credits of approved advanced courses in Geography, or elsewhere in the Faculty of Science that have been approved by the Program Adviser, including any geography courses from the above complementary lists",
-          "unparsed": true
-        },
-        {
-          "title": "Admission to 500-level courses in Geography requires the instructor's permission",
-          "unparsed": true
-        },
-        {
-          "title": "It is not advisable to take more than one 500-level course in a term",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {},
+          "adviser": true
         }
       ]
     }

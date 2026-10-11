@@ -126,15 +126,18 @@
         },
         {
           "title": "At least 6 of the 42 credits must be at the 500 level",
-          "unparsed": true
-        },
-        {
-          "title": "A maximum of 9 credits may be from another department with the signed permission of the Program Adviser",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 500
+          }
         },
         {
           "title": "A maximum of 9 of the 42 credits are allowed at the 200 level, none in the final year of the program",
-          "unparsed": true
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "3 credits from the following practice-based courses",
@@ -158,7 +161,10 @@
         },
         {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {},
+          "adviser": true
         },
         {
           "title": "3 credits from a list of courses with a theoretical component, from the option's offerings at the 400 level or above",
@@ -170,15 +176,14 @@
         },
         {
           "title": "12 credits in English selected in consultation with an academic adviser",
-          "unparsed": true
-        },
-        {
-          "title": "Students are normally permitted to count 6 credits from other departments toward their English programs",
-          "unparsed": true
-        },
-        {
-          "title": "In exceptional circumstances, an adviser, approached by a student with strong academic grounds for including a third such course, may grant permission, to a maximum of 9 extra-departmental credits, and must so indicate in advance by signing the departmental program audit sheet",
-          "unparsed": true
+          "match": {
+            "subjects": [
+              "ENGL"
+            ]
+          },
+          "minCredits": 12,
+          "maxCredits": 12,
+          "adviser": true
         }
       ]
     }
