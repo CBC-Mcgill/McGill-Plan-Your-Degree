@@ -152,13 +152,9 @@ const isOpen = (rule: Rule) =>
   rule.maxCreditsPerSubject === undefined &&
   rule.minSubjects === undefined;
 
-/** The option a rule belongs to: its own, or one per rule in a `pickOne` group. */
-const optionOf = (group: ComplementaryGroup, rule: Rule, i: number) =>
-  rule.option ?? (group.pickOne ? `${i}` : undefined);
-
 /** True when the student completes one of the group's options, so only that option's rules need to be met. */
 export const picksOne = (group: ComplementaryGroup) =>
-  group.pickOne === true || group.rules.some((rule) => rule.option);
+  group.rules.some((rule) => rule.option);
 
 /** True when the group lists courses or subjects, false for "any department" groups like a free elective. */
 export function namesCourses(group: ComplementaryGroup): boolean {
@@ -338,22 +334,16 @@ function complementaryProgress(
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
 ): GroupProgress {
-  const names = [
-    ...new Set(
-      group.rules.flatMap((rule, i) => optionOf(group, rule, i) ?? []),
-    ),
-  ];
+  const names = [...new Set(group.rules.flatMap((rule) => rule.option ?? []))];
   if (names.length > 0) {
     // Each option is counted with the shared rules as if it were the whole group, and the one furthest along stands for the group.
     const options = names.map((name) => {
-      const mine = group.rules.flatMap((rule, i) => {
-        const own = optionOf(group, rule, i);
-        return own === undefined || own === name ? [{ rule, i }] : [];
-      });
+      const mine = group.rules.flatMap((rule, i) =>
+        rule.option === undefined || rule.option === name ? [{ rule, i }] : [],
+      );
       const progress = complementaryProgress(
         {
           ...group,
-          pickOne: undefined,
           rules: mine.map(({ rule }) => ({ ...rule, option: undefined })),
         },
         counted,
@@ -371,7 +361,7 @@ function complementaryProgress(
     for (const { code } of best.progress.courses) used.add(code);
     // In file order: an option's own rules as its count read them, the shared rules as the best option's did.
     const rules = group.rules.flatMap((rule, i) => {
-      const own = optionOf(group, rule, i);
+      const own = rule.option;
       const from = options.find((o) => o.name === own) ?? best;
       const done = from.progress.rules[from.mine.findIndex((m) => m.i === i)];
       return done

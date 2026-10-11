@@ -307,7 +307,7 @@ export function nextView(
         title: ruleTitle(b.rule),
         progress: minimumText(b.rule, b.done),
         entries: b.entries,
-        ...((b.rule.option || group.pickOne) && { stream: true as const }),
+        ...(b.rule.option && { stream: true as const }),
       }));
     if (rest.length > 0) {
       listed.push({ title: "Other options", progress: null, entries: rest });
