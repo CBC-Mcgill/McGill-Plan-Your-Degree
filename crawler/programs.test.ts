@@ -742,7 +742,7 @@ test("reads Music electives and a Foundation year listed under Prerequisite Cour
   });
 });
 
-test("reads streams as a group that counts one of them, and leaves streams of several lists as text", () => {
+test("reads streams as a group that counts one of them, each stream's lists under its name", () => {
   const streams = (second: string) =>
     programOf(
       "Test Minor (B.Eng.) (18 credits)",
@@ -758,29 +758,61 @@ test("reads streams as a group that counts one of them, and leaves streams of se
   expect(read.groups).toEqual([
     expect.objectContaining({
       credits: 12,
-      pickOne: true,
       rules: [
         expect.objectContaining({
           title: "Aerodynamics Stream",
           minCredits: 12,
+          option: "Aerodynamics Stream",
         }),
-        expect.objectContaining({ title: "Avionics Stream", minCredits: 12 }),
+        expect.objectContaining({
+          title: "Avionics Stream",
+          minCredits: 12,
+          option: "Avionics Stream",
+        }),
       ],
     }),
     expect.objectContaining({ title: "Technical Complementaries", credits: 6 }),
   ]);
-  const unread = streams(
+  const lists = streams(
     `<p>6 credits from:</p>${table("ECSE 403", "ECSE 408")}<p>6 credits from:</p>${table("ECSE 412", "ECSE 420")}`,
   );
-  expect(unread.groups).toHaveLength(1);
-  expect(unread.groups[0]).not.toHaveProperty("pickOne");
-  expect(unread.groups[0]).toMatchObject({
-    rules: expect.arrayContaining([
-      expect.objectContaining({
-        unparsed: true,
-        title: "12 credits from one of the following streams",
-      }),
-    ]),
+  expect(validateProgram(lists)).toMatchObject({ ok: true });
+  expect(lists.groups[0]).toMatchObject({
+    credits: 12,
+    rules: [
+      { option: "Aerodynamics Stream" },
+      {
+        minCredits: 6,
+        courses: ["ECSE 403", "ECSE 408"],
+        option: "Avionics Stream",
+      },
+      {
+        minCredits: 6,
+        courses: ["ECSE 412", "ECSE 420"],
+        option: "Avionics Stream",
+      },
+    ],
+  });
+});
+
+test("streams beside other lists, and stream headings that slipped out after them, join the group as options", () => {
+  const program = programOf(
+    "Test Major (B.Sc.) (12 credits)",
+    `<h2>Complementary Courses (12 credits)</h2><h3>Statistics</h3><p>3 credits from:</p>${table("MATH 203", "GEOG 202")}` +
+      `<p>9 credits from one of the following two streams:</p>` +
+      `<h2>Biological Stream</h2><p>9 credits from:</p>${table("BIOL 310", "BIOL 342", "BIOL 432")}` +
+      `<h2>Physical Stream</h2><h3>Atmosphere</h3><p>6 credits from:</p>${table("ATOC 214", "ATOC 315")}<h3>Calculus</h3><p>3 credits from:</p>${table("MATH 222")}`,
+  );
+  expect(validateProgram(program)).toMatchObject({ ok: true });
+  expect(program.groups).toHaveLength(1);
+  expect(program.groups[0]).toMatchObject({
+    credits: 12,
+    rules: [
+      { title: "Statistics: 3 credits from" },
+      { option: "Biological Stream", minCredits: 9 },
+      { option: "Physical Stream", title: "Atmosphere: 6 credits from" },
+      { option: "Physical Stream", title: "Calculus: 3 credits from" },
+    ],
   });
 });
 

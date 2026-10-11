@@ -169,6 +169,12 @@ export function minimumText(rule: Rule, done: RuleProgress | undefined) {
   return null;
 }
 
+/** A rule's title, under its stream's name when it belongs to one, as "Choral Stream: Large Ensembles: 4 credits from the following". */
+export const ruleTitle = (rule: Rule) =>
+  rule.option && rule.option !== rule.title
+    ? `${rule.option}: ${rule.title}`
+    : rule.title;
+
 const flatten = (items: (string | { oneOf: string[] })[]) =>
   items.flatMap((item) => (typeof item === "string" ? [item] : item.oneOf));
 
@@ -296,7 +302,7 @@ export function nextView(
     const listed: Bucket[] = buckets
       .filter((b) => b.entries.length > 0)
       .map((b) => ({
-        title: b.rule.title,
+        title: ruleTitle(b.rule),
         progress: minimumText(b.rule, b.done),
         entries: b.entries,
       }));
@@ -304,7 +310,7 @@ export function nextView(
       listed.push({ title: "Other options", progress: null, entries: rest });
     }
     const checks = group.rules.flatMap((rule) =>
-      rule.unparsed ? [rule.title] : [],
+      rule.unparsed ? [ruleTitle(rule)] : [],
     );
     return listed.length + checks.length > 0
       ? [

@@ -43,6 +43,8 @@ export interface RuleProgress {
   adviser?: true;
   /** The counted courses must span this many subjects. */
   minSubjects?: number;
+  /** The option the rule belongs to, in a group that counts one option. */
+  option?: string;
   satisfied: boolean;
 }
 
@@ -67,6 +69,8 @@ export interface GroupProgress {
   unparsed: number;
   /** Only on the replace group: the required courses met without credit, with the catalogue credits it makes up for. */
   replaces?: Claimed[];
+  /** In a group that counts one option, the option furthest along, which stands for the group. */
+  option?: string;
 }
 
 export interface ProgramProgress {
@@ -147,6 +151,14 @@ const isOpen = (rule: Rule) =>
   !rule.adviser &&
   rule.maxCreditsPerSubject === undefined &&
   rule.minSubjects === undefined;
+
+/** The option a rule belongs to: its own, or one per rule in a `pickOne` group. */
+const optionOf = (group: ComplementaryGroup, rule: Rule, i: number) =>
+  rule.option ?? (group.pickOne ? `${i}` : undefined);
+
+/** True when the student completes one of the group's options, so only that option's rules need to be met. */
+export const picksOne = (group: ComplementaryGroup) =>
+  group.pickOne === true || group.rules.some((rule) => rule.option);
 
 /** True when the group lists courses or subjects, false for "any department" groups like a free elective. */
 export function namesCourses(group: ComplementaryGroup): boolean {
@@ -323,23 +335,47 @@ function complementaryProgress(
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
 ): GroupProgress {
-  if (group.pickOne) {
-    // Each rule is counted on its own, as if it were the whole group, and the one furthest along stands for the group.
-    const options = group.rules.map((rule) =>
-      complementaryProgress(
-        { ...group, pickOne: undefined, rules: [rule] },
+  const names = [
+    ...new Set(
+      group.rules.flatMap((rule, i) => optionOf(group, rule, i) ?? []),
+    ),
+  ];
+  if (names.length > 0) {
+    // Each option is counted with the shared rules as if it were the whole group, and the one furthest along stands for the group.
+    const options = names.map((name) => {
+      const mine = group.rules.flatMap((rule, i) => {
+        const own = optionOf(group, rule, i);
+        return own === undefined || own === name ? [{ rule, i }] : [];
+      });
+      const progress = complementaryProgress(
+        {
+          ...group,
+          pickOne: undefined,
+          rules: mine.map(({ rule }) => ({ ...rule, option: undefined })),
+        },
         counted,
         new Set(used),
-      ),
-    );
+      );
+      return { name, mine, progress };
+    });
     const best = options.reduce((a, b) =>
-      b.satisfied > a.satisfied ||
-      (b.satisfied === a.satisfied && b.creditsDone > a.creditsDone)
+      b.progress.satisfied > a.progress.satisfied ||
+      (b.progress.satisfied === a.progress.satisfied &&
+        b.progress.creditsDone > a.progress.creditsDone)
         ? b
         : a,
     );
-    for (const { code } of best.courses) used.add(code);
-    return { ...best, rules: options.flatMap((option) => option.rules) };
+    for (const { code } of best.progress.courses) used.add(code);
+    // In file order: an option's own rules as its count read them, the shared rules as the best option's did.
+    const rules = group.rules.flatMap((rule, i) => {
+      const own = optionOf(group, rule, i);
+      const from = options.find((o) => o.name === own) ?? best;
+      const done = from.progress.rules[from.mine.findIndex((m) => m.i === i)];
+      return done
+        ? [{ ...done, ...(own !== undefined && { option: own }) }]
+        : [];
+    });
+    return { ...best.progress, option: best.name, rules };
   }
   const pool = new Map<string, number>();
   for (const [code, credits] of counted) {
@@ -695,7 +731,12 @@ export function lacking(group: GroupProgress): string | null {
   if (group.creditsDone < group.credits) {
     return `${creditsText(group.credits - group.creditsDone)} to go`;
   }
-  const open = group.rules.filter((rule) => !rule.satisfied && !rule.unparsed);
+  const open = group.rules.filter(
+    (rule) =>
+      !rule.satisfied &&
+      !rule.unparsed &&
+      (rule.option === undefined || rule.option === group.option),
+  );
   const [rule] = open;
   if (!rule) {
     return group.minCourses !== undefined &&

@@ -196,7 +196,27 @@ function readSections($: cheerio.CheerioAPI, container: Q): Section[] {
     for (const item of section.items) if (item.kind === "section") drop(item);
   };
   drop(root);
-  return root.items.filter((item) => item.kind === "section");
+  const top = root.items.filter((item) => item.kind === "section");
+  // "27 credits from one of the following two streams:" ending a section owns the stream headings that slipped out after it.
+  for (const [i, section] of top.entries()) {
+    let holder = section;
+    for (let last = holder.items.at(-1); last?.kind === "section"; ) {
+      holder = last;
+      last = holder.items.at(-1);
+    }
+    const last = holder.items.at(-1);
+    const m = last?.kind === "text" ? STREAMS.exec(last.text) : null;
+    if (m?.[4]?.toLowerCase() !== "streams") continue;
+    const after = top.slice(i + 1);
+    const end = after.findIndex((s) => !/\bstream\b/i.test(s.title));
+    const streams = after.slice(0, end < 0 ? after.length : end);
+    const count = COUNTS[(m[3] ?? "").toLowerCase()];
+    if (streams.length < 2 || (count !== undefined && streams.length !== count))
+      continue;
+    holder.items.push(...streams);
+    top.splice(i + 1, streams.length);
+  }
+  return top;
 }
 
 /** Headings, paragraphs and tables of a section and everything under it, in page order. */
@@ -404,7 +424,12 @@ function listAmount(text: string, adjacent = false): ListAmount | null {
   return { ...found, parts: [...(found.parts ?? []), ...extra] };
 }
 
-function statementAmount(text: string, adjacent: boolean): ListAmount | null {
+function statementAmount(
+  statement: string,
+  adjacent: boolean,
+): ListAmount | null {
+  // "300-level complementary courses: 6 credits from the following" names the list before its amount.
+  const text = statement.replace(/^(?!note\b)[^:.;]{1,60}:\s+(?=\d)/i, "");
   const lead = LIST_LEAD.exec(text)?.[0] ?? "";
   const body = text.slice(lead.length);
   const m = AMOUNT.exec(body);
@@ -1263,7 +1288,25 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     let pending: string[] = [];
     // A statement above several tables with no statement of their own is about all of them.
     let run: Rule | null = null;
+    // "27 credits from one of the following two streams" beside other lists: each stream's rules join the group under its name.
+    const streams = streamsOf(sec);
+    const options =
+      streams && streamOptions(streams.options, streams.credits, ctx);
     for (const [i, item] of sec.items.entries()) {
+      if (options && item === streams.statement) continue;
+      if (
+        options &&
+        item.kind === "section" &&
+        streams.options.includes(item)
+      ) {
+        if (item === streams.options[0]) {
+          tell(pending, sec);
+          pending = [];
+          run = null;
+          rules.push(...options);
+        }
+        continue;
+      }
       if (item.kind === "text") {
         pending.push(item.text);
       } else if (item.kind === "section") {
@@ -1556,8 +1599,17 @@ function streamsOf(section: Section) {
       ? kindOf
       : children;
   const wanted = names?.length ?? COUNTS[(count ?? "").toLowerCase()];
+  // A heading between two streams that is not one of them, as "OR Global Governance" after Stream 2, may belong to either.
+  const place = (s: Section | undefined) => (s ? section.items.indexOf(s) : -1);
+  const between = children.some(
+    (c) =>
+      !options.includes(c) &&
+      place(c) > place(options[0]) &&
+      place(c) < place(options.at(-1)),
+  );
   if (
     options.length < 2 ||
+    between ||
     (wanted !== undefined && options.length !== wanted)
   ) {
     return null;
@@ -1593,11 +1645,42 @@ function streamRule(stream: Section, credits: number): Rule | null {
   };
 }
 
+/** The section without a last line that points at lists after it, as "36 credits selected from any combination of the following lists:" ending a stream, since those lists are not in it. */
+function withoutPointer(section: Section): Section {
+  const last = section.items.at(-1);
+  if (last?.kind === "section") {
+    return {
+      ...section,
+      items: [...section.items.slice(0, -1), withoutPointer(last)],
+    };
+  }
+  return last?.kind === "text" && /\bfollowing\b[^.]*:$/i.test(last.text)
+    ? { ...section, items: section.items.slice(0, -1) }
+    : section;
+}
+
+/** Each stream's rules, named by its title: one rule for a single list, else what its lists and sentences say. Null when a stream says nothing. */
+function streamOptions(
+  streams: Section[],
+  credits: number,
+  ctx: Context,
+): Rule[] | null {
+  const rules: Rule[] = [];
+  for (const whole of streams) {
+    const stream = withoutPointer(whole);
+    const one = streamRule(stream, credits);
+    const own = one ? [one] : rulesOf(stream, ctx);
+    if (own.length === 0) return null;
+    rules.push(...own.map((rule) => ({ ...rule, option: whole.title })));
+  }
+  return rules;
+}
+
 /** "12 credits from one of the following streams" as a group that counts one stream, and whatever else the section asks as groups of its own. */
 function streamGroups(section: Section, ctx: Context): Group[] | null {
   const streams = streamsOf(section);
   if (!streams) return null;
-  const rules = streams.options.map((o) => streamRule(o, streams.credits));
+  const rules = streamOptions(streams.options, streams.credits, ctx);
   const rest = section.items.filter(
     (item) =>
       item !== streams.statement &&
@@ -1611,12 +1694,11 @@ function streamGroups(section: Section, ctx: Context): Group[] | null {
         item.kind === "text" && constraint(item.text) ? [item.text] : [],
       );
   const widening = notes.every((t) => /approv|permission/i.test(t));
-  if (!rules.every((rule) => rule !== null) || !widening) return null;
+  if (!rules || !widening) return null;
   const group: ComplementaryGroup = {
     title: section.title,
     kind: "complementary",
     credits: streams.credits,
-    pickOne: true,
     rules,
   };
   if (notes.length > 0) group.note = notes.join(" ");

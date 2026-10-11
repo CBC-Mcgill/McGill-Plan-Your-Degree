@@ -49,9 +49,11 @@ export interface Rule {
   minSubjects?: number;
   /** The rule narrows the group's courses by subject and level and adds none, like a level-only filter, as in "at least 12 credits must be from COMP courses at the 500 level" over a group's lists. */
   filter?: true;
+  /** The stream the rule belongs to, in a group where the student completes one of several streams, as in "27 credits from one of the following two streams". A rule without one applies to every stream. */
+  option?: string;
 }
 
-/** A course counts once toward the group total but can satisfy several rules in the group. */
+/** A course counts once toward the group total but can satisfy several rules in the group. When rules name an `option`, each option is counted with the shared rules as if it were the whole group, and the option furthest along stands for the group. */
 export interface ComplementaryGroup {
   title: string;
   kind: "complementary";
@@ -59,7 +61,7 @@ export interface ComplementaryGroup {
   credits: number;
   /** For "9-12 credits (3 courses)" style lines. */
   minCourses?: number;
-  /** "12 credits from one of the following streams": the student completes exactly one of the rules, so the group counts the rule that is furthest along and is satisfied when that rule alone meets the group's credits. */
+  /** The older form of one rule per stream, the same as giving each rule an `option` of its own. Files written before `option` still use it. */
   pickOne?: true;
   rules: Rule[];
   note?: string;

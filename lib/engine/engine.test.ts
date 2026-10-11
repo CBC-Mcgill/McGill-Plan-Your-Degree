@@ -781,6 +781,65 @@ test("a subject filter caps the group's lists and adds no course of its own", ()
   expect(group?.courses.map((c) => c.code)).toEqual(["COMP 250", "MATH 240"]);
 });
 
+test("an option group counts each stream of several lists with the shared rules, and the best one stands for the group", () => {
+  const streams: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 9,
+        rules: [
+          { title: "Shared", minCredits: 3, courses: ["COMP 202"] },
+          {
+            title: "3 credits from",
+            minCredits: 3,
+            courses: ["COMP 330"],
+            option: "Theory",
+          },
+          {
+            title: "3 credits from",
+            minCredits: 3,
+            courses: ["COMP 360"],
+            option: "Theory",
+          },
+          {
+            title: "6 credits from",
+            minCredits: 6,
+            courses: ["COMP 250", "COMP 251"],
+            option: "Systems",
+          },
+        ],
+      },
+    ],
+  };
+  expect(validateProgram(streams)).toMatchObject({ ok: true });
+  const [group] = streams.groups;
+  expect(
+    group?.kind === "complementary" &&
+      validateProgram({
+        ...streams,
+        groups: [{ ...group, rules: group.rules.slice(0, 3) }],
+      }),
+  ).toMatchObject({ ok: false });
+  const done = buildSnapshot([
+    record("COMP 202", "completed"),
+    record("COMP 330", "completed"),
+    record("COMP 250", "completed"),
+    record("COMP 251", "completed"),
+  ]);
+  const progress = programProgress(streams, done, catalogue);
+  expect(progress.groups[0]).toMatchObject({
+    creditsDone: 9,
+    satisfied: true,
+    option: "Systems",
+  });
+  expect(progress.groups[0]?.rules.map((rule) => rule.creditsDone)).toEqual([
+    3, 3, 0, 6,
+  ]);
+  expect(progress.unclaimed).toEqual([{ code: "COMP 330", credits: 3 }]);
+});
+
 test("a pick-one group counts the stream furthest along and leaves the other stream's courses free", () => {
   const streams: Program = {
     ...tiny,
