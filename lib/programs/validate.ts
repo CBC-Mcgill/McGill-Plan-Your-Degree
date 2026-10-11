@@ -137,7 +137,7 @@ export function validateProgram(value: unknown): ValidationResult {
     }
   }
 
-  /** `any` lets an empty match through, for a rule open to any course an adviser approves. */
+  /** `any` lets an empty match through, for a rule over any course: one an adviser approves, or a spread over the whole group. */
   function match(v: unknown, path: string, any: boolean) {
     const m = object(v, path, ["subjects", "minLevel", "maxLevel", "exclude"]);
     if (!m) return;
@@ -172,6 +172,8 @@ export function validateProgram(value: unknown): ValidationResult {
       "match",
       "unparsed",
       "adviser",
+      "maxCreditsPerSubject",
+      "minSubjects",
     ]);
     if (!r) return;
     text(r, "title", path);
@@ -185,8 +187,11 @@ export function validateProgram(value: unknown): ValidationResult {
       fail(path, "expected courses or match");
     }
     if (r.courses !== undefined) list(r.courses, `${path}.courses`, 1, code);
+    const spread =
+      optionalNum(r, "maxCreditsPerSubject", path, "credits") !== null ||
+      optionalNum(r, "minSubjects", path, "count") !== null;
     if (r.match !== undefined) {
-      match(r.match, `${path}.match`, r.adviser === true);
+      match(r.match, `${path}.match`, r.adviser === true || spread);
     }
     atMost(
       optionalNum(r, "minCredits", path, "credits"),

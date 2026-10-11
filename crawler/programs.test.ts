@@ -434,3 +434,31 @@ test("reads what an adviser must approve, and leaves optional extras out", () =>
     }),
   ).toMatchObject({ ok: true });
 });
+
+test("reads how many subjects a group must span and how much one subject may give", () => {
+  expect(
+    read(
+      "21 credits from the Group B course lists below drawn from at least 3 disciplines with no more than 9 credits from any one discipline.",
+    ),
+  ).toEqual([
+    { match: {}, minSubjects: 3, maxCreditsPerSubject: 9, minCredits: 21 },
+  ]);
+  expect(
+    read(
+      "No more than 6 credits in any given area (LLCU, GERM, HISP, ITAL, and RUSS) shall count toward the Minor Concentration (not including LLCU 210).",
+    ),
+  ).toEqual([
+    {
+      match: {
+        subjects: ["LLCU", "GERM", "HISP", "ITAL", "RUSS"],
+        exclude: ["LLCU 210"],
+      },
+      maxCreditsPerSubject: 6,
+    },
+  ]);
+  expect(
+    read(
+      "A maximum of 6 credits from any given discipline with the exception of Indigenous Studies (INDG) courses.",
+    ),
+  ).toEqual([{ unparsed: true }]);
+});

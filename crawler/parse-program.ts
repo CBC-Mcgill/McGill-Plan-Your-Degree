@@ -486,7 +486,17 @@ function readClause(
 
 // Splits "Three credits minimum must be at the 400 or 500 level and 9 credits maximum may be at the 200 level" into its constraints.
 const CLAUSE_BREAK = new RegExp(
-  String.raw`\s*;\s*|(?:,\s*(?:and |with |of which |while )?|\s+(?:and|with|of which|while)\s+)(?=(?:${MIN_LEAD}|${MAX_LEAD}|\d{1,2}|${COUNT_WORD}|nine|twelve)\b)|,\s*(?=(?:preferably|none in)\b)`,
+  String.raw`\s*;\s*|(?:,\s*(?:and |with |of which |while )?|\s+(?:and|with|of which|while)\s+)(?=(?:${MIN_LEAD}|${MAX_LEAD}|\d{1,2}|${COUNT_WORD}|nine|twelve)\b)|,\s*(?=(?:preferably|none in)\b)|\s+(?=drawn from at least\b)`,
+  "i",
+);
+// "drawn from at least 3 disciplines", "Courses from at least two disciplines or departments must be included".
+const SPREAD_LEAST = new RegExp(
+  String.raw`^(?:courses |drawn )?from at least (\d+|${COUNT_WORD}) (?:different )?disciplines(?: or departments)?(?: must be included)?$`,
+  "i",
+);
+// "no more than 9 credits from any one discipline", "No more than 6 credits in any given area (LLCU, GERM, HISP, ITAL, and RUSS) shall count toward the Minor Concentration (not including LLCU 210)".
+const SPREAD_MOST = new RegExp(
+  String.raw`^(?:no more than|a maximum of|at most) (\d+) credits (?:can be |may be )?(?:from|in) (?:any (?:one|given)|a single) (?:discipline|area)(?: \((${SUBJECT_LIST})\))?(?: shall count toward the [A-Za-z ]+?)?(?: \((?:not including|except|excluding) (${CODE}(?:(?:,? and |, )${CODE})*)\))?$`,
   "i",
 );
 const AS_FOLLOWS =
@@ -520,9 +530,34 @@ function readStatement(
   // "9 credits in Computer Science selected as follows" leaves the courses to the lists below.
   const listed = /\bas (?:follows|described below)\b/i.test(text);
   const rules: Rule[] = [];
+  // A spread over the group, with the credits of "18 credits from the Group B course lists below drawn from at least 3 disciplines".
+  let spread: Rule | null = null;
+  let lists: number | undefined;
   for (const part of text.slice(scope?.[0].length ?? 0).split(CLAUSE_BREAK)) {
     const clause = trimEnd(part.replace(AS_FOLLOWS, ""));
     if (!clause || ADVICE.test(clause) || INTRO.test(clause)) continue;
+    const least = SPREAD_LEAST.exec(clause);
+    const most = SPREAD_MOST.exec(clause);
+    if (least || most) {
+      spread ??= { title: trimEnd(text), match: {} };
+      const [, n = "", subjects, except] = most ?? [];
+      if (least) {
+        const word = (least[1] ?? "").toLowerCase();
+        spread.minSubjects = NUMBERS[word] ?? Number(word);
+      }
+      if (most) spread.maxCreditsPerSubject = Number(n);
+      if (subjects) spread.match = { subjects: subjectsIn(subjects) };
+      if (except && spread.match) spread.match.exclude = codesIn(except);
+      continue;
+    }
+    const below =
+      /^(\d+) credits from the (?:Group [A-Z] )?course lists? below$/i.exec(
+        clause,
+      );
+    if (below) {
+      lists = Number(below[1]);
+      continue;
+    }
     const total = bareTotal(clause);
     if (total && other(total.credits)) return null;
     if (total) continue;
@@ -530,6 +565,9 @@ function readStatement(
     if (!rule) return null;
     rules.push(rule);
   }
+  // Credits from the lists below belong to those lists, unless a spread over them says the group is those lists.
+  if (lists !== undefined && !spread) return null;
+  if (spread) rules.push(lists ? { ...spread, minCredits: lists } : spread);
   if (rules.length === 1 && rules[0]) rules[0].title = trimEnd(text);
   return rules.length > 0 ? rules : null;
 }

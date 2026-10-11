@@ -25,7 +25,7 @@ export interface Match {
   exclude?: string[];
 }
 
-/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` just filters, as in "at least 6 credits at the 400 level". */
+/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` just filters, as in "at least 6 credits at the 400 level". A spread rule without `courses` only filters too. */
 export interface Rule {
   title: string;
   /** At least this many credits must come from the rule. */
@@ -41,6 +41,10 @@ export interface Rule {
   unparsed?: true;
   /** The student's adviser must approve the choice, so the app counts what it can and shows a reminder. */
   adviser?: true;
+  /** At most this many credits from any one subject count toward the rule, as in "no more than 9 credits from any one discipline". */
+  maxCreditsPerSubject?: number;
+  /** The rule's courses must span at least this many subjects, as in "drawn from at least 3 disciplines". */
+  minSubjects?: number;
 }
 
 /** A course counts once toward the group total but can satisfy several rules in the group. */

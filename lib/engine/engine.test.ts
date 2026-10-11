@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 import type { Course, Requirement } from "../catalogue/types.ts";
 import type { CourseRecord, Plan, Term } from "../profile/types.ts";
-import type { Program } from "../programs/types.ts";
+import type { Program, Rule } from "../programs/types.ts";
 import { validateProgram } from "../programs/validate.ts";
 import { earnedCredits, pendingCredits } from "./credits.ts";
 import { whatsNext } from "./next.ts";
@@ -399,6 +399,56 @@ test("an adviser rule next to a list adds approved courses up to its credits and
   // COMP 330 is on the list, COMP 250 is the one approved extra, and COMP 202 is past the adviser's 3 credits.
   expect(group?.courses.map((c) => c.code)).toEqual(["COMP 250", "COMP 330"]);
   expect(group?.rules[1]).toMatchObject({ adviser: true, satisfied: true });
+});
+
+const spread = (rule: Rule, ...codes: string[]) => {
+  const program: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "List", courses: ["COMP 250", "COMP 330", "MATH 240"] },
+          rule,
+        ],
+      },
+    ],
+  };
+  const done = buildSnapshot(codes.map((code) => record(code, "completed")));
+  return programProgress(program, done, catalogue).groups[0];
+};
+
+test("a cap per subject leaves out a second course of the same subject", () => {
+  const group = spread(
+    {
+      title: "No more than 3 credits from any one discipline",
+      maxCreditsPerSubject: 3,
+      match: {},
+    },
+    "COMP 250",
+    "COMP 330",
+    "MATH 240",
+  );
+  expect(group?.courses.map((c) => c.code)).toEqual(["COMP 250", "MATH 240"]);
+});
+
+test("a rule over several subjects is met only once its courses span them", () => {
+  const rule = {
+    title: "Drawn from at least 2 disciplines",
+    minCredits: 6,
+    minSubjects: 2,
+    match: {},
+  };
+  expect(spread(rule, "COMP 250", "COMP 330", "MATH 240")).toMatchObject({
+    satisfied: true,
+    rules: [{}, { satisfied: true }],
+  });
+  expect(spread(rule, "COMP 250", "COMP 330")).toMatchObject({
+    satisfied: false,
+    rules: [{}, { satisfied: false }],
+  });
 });
 
 test("credit sources name plain rule titles and give up on sentences", () => {
