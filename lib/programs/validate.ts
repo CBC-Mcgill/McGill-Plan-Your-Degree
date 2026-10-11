@@ -187,9 +187,9 @@ export function validateProgram(value: unknown): ValidationResult {
       fail(path, "expected courses or match");
     }
     if (r.courses !== undefined) list(r.courses, `${path}.courses`, 1, code);
-    const spread =
-      optionalNum(r, "maxCreditsPerSubject", path, "credits") !== null ||
-      optionalNum(r, "minSubjects", path, "count") !== null;
+    const perSubject = optionalNum(r, "maxCreditsPerSubject", path, "credits");
+    const subjects = optionalNum(r, "minSubjects", path, "count");
+    const spread = perSubject !== null || subjects !== null;
     if (r.match !== undefined) {
       match(r.match, `${path}.match`, r.adviser === true || spread);
     }
