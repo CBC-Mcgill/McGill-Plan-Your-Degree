@@ -137,20 +137,31 @@ export function validateProgram(value: unknown): ValidationResult {
     }
   }
 
-  /** `any` lets an empty match through, for a rule over any course: one an adviser approves, or a spread over the whole group. */
+  /** `any` lets an empty match through, for a rule over any course: one an adviser approves, a spread over the whole group, or an elective. */
   function match(v: unknown, path: string, any: boolean) {
-    const m = object(v, path, ["subjects", "minLevel", "maxLevel", "exclude"]);
+    const m = object(v, path, [
+      "subjects",
+      "excludeSubjects",
+      "minLevel",
+      "maxLevel",
+      "exclude",
+    ]);
     if (!m) return;
     if (
       !any &&
       m.subjects === undefined &&
+      m.excludeSubjects === undefined &&
       m.minLevel === undefined &&
       m.maxLevel === undefined
     ) {
-      fail(path, "expected at least one of subjects, minLevel, maxLevel");
+      fail(
+        path,
+        "expected at least one of subjects, excludeSubjects, minLevel, maxLevel",
+      );
     }
-    if (m.subjects !== undefined) {
-      list(m.subjects, `${path}.subjects`, 1, (s, p) => {
+    for (const key of ["subjects", "excludeSubjects"]) {
+      if (m[key] === undefined) continue;
+      list(m[key], `${path}.${key}`, 1, (s, p) => {
         if (typeof s !== "string" || !SUBJECT.test(s))
           fail(p, "expected a four-letter subject such as COMP");
       });
@@ -190,8 +201,10 @@ export function validateProgram(value: unknown): ValidationResult {
     const perSubject = optionalNum(r, "maxCreditsPerSubject", path, "credits");
     const subjects = optionalNum(r, "minSubjects", path, "count");
     const spread = perSubject !== null || subjects !== null;
+    // "42 credits of Free Electives": a minimum over any course.
+    const elective = r.courses === undefined && r.minCredits !== undefined;
     if (r.match !== undefined) {
-      match(r.match, `${path}.match`, r.adviser === true || spread);
+      match(r.match, `${path}.match`, r.adviser === true || spread || elective);
     }
     atMost(
       optionalNum(r, "minCredits", path, "credits"),
@@ -238,6 +251,7 @@ export function validateProgram(value: unknown): ValidationResult {
         "kind",
         "credits",
         "minCourses",
+        "pickOne",
         "rules",
         "note",
         "foundation",
@@ -248,7 +262,15 @@ export function validateProgram(value: unknown): ValidationResult {
       optionalNum(g, "minCourses", path, "count");
       optionalText(g, "note", path);
       optionalTrue(g, "foundation", path);
-      list(g.rules, `${path}.rules`, 1, rule);
+      optionalTrue(g, "pickOne", path);
+      list(g.rules, `${path}.rules`, g.pickOne ? 2 : 1, rule);
+      if (
+        g.pickOne &&
+        Array.isArray(g.rules) &&
+        g.rules.some((r) => isObj(r) && r.unparsed)
+      ) {
+        fail(`${path}.rules`, "a pickOne group needs every rule parsed");
+      }
     } else {
       fail(`${path}.kind`, 'expected "required" or "complementary"');
     }

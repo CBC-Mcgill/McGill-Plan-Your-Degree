@@ -11,6 +11,7 @@ import {
   creditSources,
   creditSplit,
   fitsCaps,
+  namesCourses,
   programProgress,
   programSplit,
   REPLACE_TITLE,
@@ -701,4 +702,105 @@ test("status for 10,000 courses takes under 100 ms", () => {
   const start = performance.now();
   for (const c of many) courseStatus(c, snapshot);
   expect(performance.now() - start).toBeLessThan(100);
+});
+
+test("a free elective group takes any course, caps MUEN and keeps music out of the non-music rule", () => {
+  const electives: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Elective Courses",
+        kind: "complementary",
+        credits: 9,
+        rules: [
+          {
+            title: "3 credits of Non-Music Electives",
+            minCredits: 3,
+            match: { excludeSubjects: ["MUEN", "MUTH"] },
+          },
+          { title: "6 credits of Free Electives", minCredits: 6, match: {} },
+          {
+            title: "At most 2 credits of MUEN courses",
+            maxCredits: 2,
+            match: { subjects: ["MUEN"] },
+          },
+        ],
+      },
+    ],
+  };
+  expect(validateProgram(electives)).toMatchObject({ ok: true });
+  const [group] = electives.groups;
+  expect(group?.kind === "complementary" && namesCourses(group)).toBe(false);
+  const done = buildSnapshot([
+    record("MUEN 563", "completed", 2),
+    record("MUEN 572", "completed", 2),
+    record("MUTH 150", "completed"),
+    record("COMP 250", "completed"),
+  ]);
+  const [progress] = programProgress(electives, done, catalogue).groups;
+  expect(progress?.rules[0]?.courses).toEqual([
+    { code: "COMP 250", credits: 3 },
+  ]);
+  expect(progress?.courses.map((c) => c.code).sort()).toEqual([
+    "COMP 250",
+    "MUEN 563",
+    "MUTH 150",
+  ]);
+  expect(progress).toMatchObject({ creditsDone: 8, satisfied: false });
+});
+
+test("a pick-one group counts the stream furthest along and leaves the other stream's courses free", () => {
+  const streams: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Streams",
+        kind: "complementary",
+        credits: 6,
+        pickOne: true,
+        rules: [
+          {
+            title: "Theory Stream",
+            minCredits: 6,
+            courses: ["COMP 330", "COMP 360"],
+          },
+          {
+            title: "Systems Stream",
+            minCredits: 6,
+            courses: ["COMP 250", "COMP 251"],
+          },
+        ],
+      },
+    ],
+  };
+  expect(validateProgram(streams)).toMatchObject({ ok: true });
+  expect(
+    validateProgram({
+      ...streams,
+      groups: [
+        {
+          ...streams.groups[0],
+          rules: [{ title: "Theory Stream", courses: ["COMP 330"] }],
+        },
+      ],
+    }),
+  ).toMatchObject({ ok: false });
+  const done = buildSnapshot([
+    record("COMP 330", "completed"),
+    record("COMP 250", "completed"),
+    record("COMP 251", "completed"),
+  ]);
+  const progress = programProgress(streams, done, catalogue);
+  expect(progress.groups[0]).toMatchObject({
+    creditsDone: 6,
+    satisfied: true,
+    courses: [
+      { code: "COMP 250", credits: 3 },
+      { code: "COMP 251", credits: 3 },
+    ],
+  });
+  expect(progress.groups[0]?.rules.map((rule) => rule.creditsDone)).toEqual([
+    3, 6,
+  ]);
+  expect(progress.unclaimed).toEqual([{ code: "COMP 330", credits: 3 }]);
 });

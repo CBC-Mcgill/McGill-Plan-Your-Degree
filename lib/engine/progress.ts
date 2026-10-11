@@ -92,7 +92,11 @@ export const REPLACE_TITLE = "Replace exempted credits";
 
 function matchesMatch(match: Match, code: string): boolean {
   const space = code.indexOf(" ");
-  if (match.subjects && !match.subjects.includes(code.slice(0, space))) {
+  const subject = code.slice(0, space);
+  if (
+    (match.subjects && !match.subjects.includes(subject)) ||
+    match.excludeSubjects?.includes(subject)
+  ) {
     return false;
   }
   const level = Math.floor(Number(code.slice(space + 1)) / 100) * 100;
@@ -132,9 +136,22 @@ const subjectsIn = (courses: readonly Claimed[]) =>
     courses.flatMap((c) => (c.code === STANDING ? [] : subjectOf(c.code))),
   ).size;
 
+/** A rule open to any course, maybe but some subjects, such as "42 credits of Free Electives". An adviser's or a spread rule's empty match keeps its own meaning. */
+const isOpen = (rule: Rule) =>
+  !rule.courses &&
+  rule.match !== undefined &&
+  !rule.match.subjects &&
+  rule.match.minLevel === undefined &&
+  rule.match.maxLevel === undefined &&
+  !rule.adviser &&
+  rule.maxCreditsPerSubject === undefined &&
+  rule.minSubjects === undefined;
+
 /** True when the group lists courses or subjects, false for "any department" groups like a free elective. */
 export function namesCourses(group: ComplementaryGroup): boolean {
-  return group.rules.some((rule) => !isFilter(rule));
+  return (
+    !group.rules.some(isOpen) && group.rules.some((rule) => !isFilter(rule))
+  );
 }
 
 const or = new Intl.ListFormat("en-GB", { type: "disjunction" });
@@ -164,7 +181,7 @@ export function creditSources(group: ComplementaryGroup): string | null {
   return plain ? or.format(names) : null;
 }
 
-/** The union of the rules that name courses. A group of only filters allows whatever they match. */
+/** The union of the rules that name courses. A group of only filters, or with a rule open to any course, allows whatever its rules match. */
 export function groupAllows(group: ComplementaryGroup, code: string): boolean {
   const rules = namesCourses(group)
     ? group.rules.filter((rule) => !isFilter(rule))
@@ -301,6 +318,24 @@ function complementaryProgress(
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
 ): GroupProgress {
+  if (group.pickOne) {
+    // Each rule is counted on its own, as if it were the whole group, and the one furthest along stands for the group.
+    const options = group.rules.map((rule) =>
+      complementaryProgress(
+        { ...group, pickOne: undefined, rules: [rule] },
+        counted,
+        new Set(used),
+      ),
+    );
+    const best = options.reduce((a, b) =>
+      b.satisfied > a.satisfied ||
+      (b.satisfied === a.satisfied && b.creditsDone > a.creditsDone)
+        ? b
+        : a,
+    );
+    for (const { code } of best.courses) used.add(code);
+    return { ...best, rules: options.flatMap((option) => option.rules) };
+  }
   const pool = new Map<string, number>();
   for (const [code, credits] of counted) {
     if (!used.has(code) && counts(group, code)) pool.set(code, credits);

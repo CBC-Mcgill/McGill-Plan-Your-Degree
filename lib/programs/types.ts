@@ -13,10 +13,12 @@ export interface RequiredGroup {
   foundation?: true;
 }
 
-/** Selects courses by code list, by subject and level, or both. */
+/** Selects courses by subject and level. An empty match is any course, as in "42 credits of Free Electives". */
 export interface Match {
   /** Four-letter subject codes such as COMP. Leave out to match any subject. */
   subjects?: string[];
+  /** Subjects that never match, as in "6 credits of Non-Music Electives". */
+  excludeSubjects?: string[];
   /** Lowest hundred-level, so 300 means COMP 300 and up. */
   minLevel?: number;
   /** Highest hundred-level, so 300 means nothing above COMP 399. */
@@ -25,7 +27,7 @@ export interface Match {
   exclude?: string[];
 }
 
-/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` just filters, as in "at least 6 credits at the 400 level". A spread rule without `courses` only filters too. */
+/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` just filters, as in "at least 6 credits at the 400 level", and a spread rule without `courses` only filters too. A plain `match` with no subjects or level, on a rule that is neither an adviser nor a spread rule, opens the group to any course, as in "42 credits of Free Electives". */
 export interface Rule {
   title: string;
   /** At least this many credits must come from the rule. */
@@ -55,6 +57,8 @@ export interface ComplementaryGroup {
   credits: number;
   /** For "9-12 credits (3 courses)" style lines. */
   minCourses?: number;
+  /** "12 credits from one of the following streams": the student completes exactly one of the rules, so the group counts the rule that is furthest along and is satisfied when that rule alone meets the group's credits. */
+  pickOne?: true;
   rules: Rule[];
   note?: string;
   /** Year 0 or Foundation courses that Quebec CEGEP students are credited for. */
