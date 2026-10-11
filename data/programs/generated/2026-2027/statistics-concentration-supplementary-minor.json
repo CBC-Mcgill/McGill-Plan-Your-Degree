@@ -88,7 +88,13 @@
         },
         {
           "title": "Students can take at most one of MATH 410, MATH 420, MATH 571 and WCOM 314",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "MATH 410",
+            "MATH 420",
+            "MATH 571",
+            "WCOM 314"
+          ]
         }
       ]
     }

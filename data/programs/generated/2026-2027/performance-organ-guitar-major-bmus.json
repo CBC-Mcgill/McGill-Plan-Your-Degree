@@ -110,7 +110,7 @@
           ]
         },
         {
-          "title": "Performance",
+          "title": "Performance: 4 credits* (1 credit per term) from",
           "courses": [
             "MUEN 540",
             "MUEN 541",
@@ -118,7 +118,9 @@
             "MUEN 562",
             "MUEN 569",
             "MUEN 580"
-          ]
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
         },
         {
           "title": "Musicianship",
@@ -133,10 +135,6 @@
         },
         {
           "title": "12 credits* (2 credits per term; as assigned by audition) from large ensembles",
-          "unparsed": true
-        },
-        {
-          "title": "4 credits* (1 credit per term) from",
           "unparsed": true
         },
         {

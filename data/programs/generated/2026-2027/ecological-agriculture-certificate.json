@@ -24,7 +24,7 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "18 credits chosen from the following, in consultation with the Academic Adviser for Ecological Agriculture",
           "courses": [
             "AGRI 310",
             "AGRI 411",
@@ -41,11 +41,10 @@
             "PLNT 460",
             "SOIL 326",
             "WOOD 441"
-          ]
-        },
-        {
-          "title": "18 credits chosen from the following, in consultation with the Academic Adviser for Ecological Agriculture",
-          "unparsed": true
+          ],
+          "minCredits": 18,
+          "maxCredits": 18,
+          "adviser": true
         }
       ]
     }

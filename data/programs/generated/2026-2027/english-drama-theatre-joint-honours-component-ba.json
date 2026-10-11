@@ -42,7 +42,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Theory, Criticism and Methods",
+          "title": "Theory, Criticism and Methods: 3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "courses": [
             "ENGL 317",
             "ENGL 318",
@@ -50,7 +50,10 @@
             "ENGL 322",
             "ENGL 346",
             "ENGL 352"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "adviser": true
         },
         {
           "title": "History of the Theatre: 3 credits in History of the Theatre",
@@ -127,13 +130,6 @@
         {
           "title": "For example, Joint Honours with Anthropology allows the option of combining 3 credits of essay work with 3 credits in the joint subject to create a joint essay.)",
           "unparsed": true
-        },
-        {
-          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "minCredits": 3,
-          "maxCredits": 3,
-          "match": {},
-          "adviser": true
         },
         {
           "title": "3 credits in Dramatic Literature",

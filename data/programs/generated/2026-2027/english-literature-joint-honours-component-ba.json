@@ -170,7 +170,7 @@
           ]
         },
         {
-          "title": "Theory, Criticism and Methods",
+          "title": "Theory, Criticism and Methods: 3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "courses": [
             "ENGL 317",
             "ENGL 318",
@@ -178,7 +178,10 @@
             "ENGL 322",
             "ENGL 346",
             "ENGL 352"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "adviser": true
         },
         {
           "title": "In addition to the 6-credit requirement for Advanced Study described below, all Joint Honours students' programs of study shall include 6 credits of study at the 400 level or above",
@@ -219,21 +222,6 @@
         {
           "title": "3 credits from one of the following areas",
           "unparsed": true
-        },
-        {
-          "title": "3 credits from one of the following areas",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from one of the following areas",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "minCredits": 3,
-          "maxCredits": 3,
-          "match": {},
-          "adviser": true
         },
         {
           "title": "6 additional credits of English (ENGL) courses, preferably courses at the 300 level or above",

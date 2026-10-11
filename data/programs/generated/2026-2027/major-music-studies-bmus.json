@@ -30,7 +30,9 @@
             "MUSP 171",
             "MUTH 150",
             "MUTH 151"
-          ]
+          ],
+          "minCredits": 15,
+          "option": "Classical Stream"
         },
         {
           "title": "Jazz Stream",
@@ -42,7 +44,9 @@
             "MUJZ 187",
             "MUSP 123",
             "MUSP 124"
-          ]
+          ],
+          "minCredits": 15,
+          "option": "Jazz Stream"
         },
         {
           "title": "4 credits from courses with a MUEN prefix",
@@ -53,10 +57,6 @@
               "MUEN"
             ]
           }
-        },
-        {
-          "title": "15 credits from one of the following two streams",
-          "unparsed": true
         }
       ],
       "foundation": true
@@ -74,36 +74,37 @@
     {
       "title": "Complementary Courses",
       "kind": "complementary",
-      "credits": 46,
+      "credits": 10,
       "rules": [
         {
-          "title": "Theory",
+          "title": "Classical Stream",
           "courses": [
             "MUTH 250",
-            "MUTH 251"
-          ]
-        },
-        {
-          "title": "Musicianship",
-          "courses": [
+            "MUTH 251",
             "MUSP 240",
             "MUSP 241"
-          ]
+          ],
+          "minCredits": 10,
+          "option": "Classical Stream"
         },
         {
-          "title": "Theory",
+          "title": "Jazz Stream",
           "courses": [
             "MUJZ 260",
-            "MUJZ 261"
-          ]
-        },
-        {
-          "title": "Musicianship",
-          "courses": [
+            "MUJZ 261",
             "MUJZ 213",
             "MUJZ 214"
-          ]
-        },
+          ],
+          "minCredits": 10,
+          "option": "Jazz Stream"
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
         {
           "title": "Practical Studies (entry by audition)",
           "courses": [
@@ -155,16 +156,13 @@
           "maxCredits": 9
         },
         {
-          "title": "10 credits from one of the following two streams",
-          "unparsed": true
-        },
-        {
-          "title": "36 credits selected from any combination of the following lists of courses",
-          "unparsed": true
-        },
-        {
           "title": "No more than 6 credits from courses with a MUEN prefix",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "subjects": [
+              "MUEN"
+            ]
+          }
         },
         {
           "title": "3-9 credits from courses with a MUHL or MUPP prefix at the 300 level or higher",

@@ -72,7 +72,6 @@
       "title": "Complementary Courses",
       "kind": "complementary",
       "credits": 17,
-      "pickOne": true,
       "rules": [
         {
           "title": "Stream A - CEGEP Students",
@@ -84,7 +83,8 @@
             "MPMC 330",
             "MPMC 421"
           ],
-          "minCredits": 17
+          "minCredits": 17,
+          "option": "Stream A - CEGEP Students"
         },
         {
           "title": "Stream B - Non-CEGEP Students",
@@ -96,7 +96,8 @@
             "MIME 424",
             "MIME 428"
           ],
-          "minCredits": 17
+          "minCredits": 17,
+          "option": "Stream B - Non-CEGEP Students"
         }
       ]
     },

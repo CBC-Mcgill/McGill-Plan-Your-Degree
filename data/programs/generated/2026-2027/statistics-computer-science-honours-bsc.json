@@ -121,14 +121,6 @@
           "maxCredits": 15
         },
         {
-          "title": "MATH 578 and COMP 540 cannot both be taken for program credit",
-          "maxCourses": 1,
-          "courses": [
-            "MATH 578",
-            "COMP 540"
-          ]
-        },
-        {
           "title": "0-9 credits selected from Computer Science courses selected from COMP courses at the 300 level or above excluding COMP 396",
           "maxCredits": 9,
           "match": {

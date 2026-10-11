@@ -28,16 +28,42 @@
             "CLAS 420",
             "CLAS 422",
             "CLAS 429"
-          ]
+          ],
+          "option": "Classical Languages Stream"
         },
         {
-          "title": "Classical Studies Stream: 6 credits in the following",
+          "title": "33 credits of classics (CLAS) or related courses according to the following stipulations",
+          "unparsed": true,
+          "option": "Classical Languages Stream"
+        },
+        {
+          "title": "Minimum 6 credits advanced Ancient Greek and/or Latin",
+          "unparsed": true,
+          "option": "Classical Languages Stream"
+        },
+        {
+          "title": "Maximum 12 credits of complementary courses at the 200 level",
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          },
+          "option": "Classical Languages Stream"
+        },
+        {
+          "title": "NOTE: 9 credits maximum of non-CLAS courses may be counted toward the program",
+          "unparsed": true,
+          "option": "Classical Languages Stream"
+        },
+        {
+          "title": "6 credits in the following",
           "courses": [
             "CLAS 301",
             "CLAS 302"
           ],
           "minCredits": 6,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Classical Studies Stream"
         },
         {
           "title": "Classical Studies Stream",
@@ -48,39 +74,18 @@
             "CLAS 320",
             "CLAS 322",
             "CLAS 326"
-          ]
-        },
-        {
-          "title": "33 credits from one of the following two streams",
-          "unparsed": true
-        },
-        {
-          "title": "33 credits of classics (CLAS) or related courses according to the following stipulations",
-          "unparsed": true
-        },
-        {
-          "title": "Minimum 6 credits advanced Ancient Greek and/or Latin",
-          "unparsed": true
-        },
-        {
-          "title": "Maximum 12 credits of complementary courses at the 200 level",
-          "maxCredits": 12,
-          "match": {
-            "minLevel": 200,
-            "maxLevel": 200
-          }
-        },
-        {
-          "title": "NOTE: 9 credits maximum of non-CLAS courses may be counted toward the program",
-          "unparsed": true
+          ],
+          "option": "Classical Studies Stream"
         },
         {
           "title": "27 credits of classics (CLAS) or related courses according to the following stipulations",
-          "unparsed": true
+          "unparsed": true,
+          "option": "Classical Studies Stream"
         },
         {
           "title": "Minimum 6 credits intermediate Ancient Greek and/or Latin",
-          "unparsed": true
+          "unparsed": true,
+          "option": "Classical Studies Stream"
         },
         {
           "title": "Minimum 6 credits 400-level CLAS courses",
@@ -91,7 +96,8 @@
             "subjects": [
               "CLAS"
             ]
-          }
+          },
+          "option": "Classical Studies Stream"
         },
         {
           "title": "Maximum 12 credits of complementary courses at the 200 level",
@@ -99,15 +105,18 @@
           "match": {
             "minLevel": 200,
             "maxLevel": 200
-          }
+          },
+          "option": "Classical Studies Stream"
         },
         {
           "title": "NOTE: 9 credits maximum of non-CLAS courses may be counted toward the program",
-          "unparsed": true
+          "unparsed": true,
+          "option": "Classical Studies Stream"
         },
         {
           "title": "For either stream students may count a maximum total of 12 credits of non-CLAS McGill courses and/or classics courses not taken at McGill (transfer credits) toward the program",
-          "unparsed": true
+          "unparsed": true,
+          "option": "Classical Studies Stream"
         }
       ]
     }

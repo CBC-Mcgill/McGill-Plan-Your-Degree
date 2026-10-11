@@ -183,7 +183,14 @@
         },
         {
           "title": "At least 12 credits must be from COMP courses at the 500 level or above",
-          "unparsed": true
+          "minCredits": 12,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "COMP"
+            ]
+          },
+          "filter": true
         }
       ]
     }

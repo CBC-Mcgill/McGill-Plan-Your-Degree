@@ -38,7 +38,7 @@
           ]
         },
         {
-          "title": "List A",
+          "title": "List A: 6 credits in Psychology from List A (Behavioural Neuroscience, Cognition, and Quantitative Methods)",
           "courses": [
             "NSCI 201",
             "PSYC 302",
@@ -78,10 +78,12 @@
             "PSYC 545",
             "PSYC 560",
             "PSYC 562"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
-          "title": "List B",
+          "title": "List B: 6 credits in Psychology from List B (Social, Health, and Developmental Psychology)",
           "courses": [
             "PSYC 304",
             "PSYC 309",
@@ -108,7 +110,9 @@
             "PSYC 528",
             "PSYC 535",
             "PSYC 539"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "3-9 credits must be completed with the following course(s)",
@@ -124,14 +128,6 @@
         },
         {
           "title": "21 credits of Honours courses are to be completed with the following",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits in Psychology from List A (Behavioural Neuroscience, Cognition, and Quantitative Methods)",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits in Psychology from List B (Social, Health, and Developmental Psychology)",
           "unparsed": true
         },
         {

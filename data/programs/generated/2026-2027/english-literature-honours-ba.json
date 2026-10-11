@@ -25,7 +25,7 @@
       "credits": 3,
       "rules": [
         {
-          "title": "Complementary Courses Theory, Criticism and Methods",
+          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "courses": [
             "ENGL 317",
             "ENGL 318",
@@ -33,13 +33,9 @@
             "ENGL 322",
             "ENGL 346",
             "ENGL 352"
-          ]
-        },
-        {
-          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
+          ],
           "minCredits": 3,
           "maxCredits": 3,
-          "match": {},
           "adviser": true
         }
       ]

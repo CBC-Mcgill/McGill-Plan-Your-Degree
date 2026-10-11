@@ -54,6 +54,14 @@
           "maxCredits": 30
         },
         {
+          "title": "Note: Only one of ITAL 250 or ITAL 255 can count toward the program",
+          "maxCourses": 1,
+          "courses": [
+            "ITAL 250",
+            "ITAL 255"
+          ]
+        },
+        {
           "title": "Group C - Courses Taught in English",
           "courses": [
             "ITAL 199",

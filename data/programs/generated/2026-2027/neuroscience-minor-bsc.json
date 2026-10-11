@@ -23,7 +23,7 @@
       "credits": 16,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "0-10 credits from the following list of 200- and 300-level courses",
           "courses": [
             "ANAT 212",
             "BIOC 212",
@@ -43,7 +43,8 @@
             "PSYC 317",
             "PSYC 318",
             "PSYC 342"
-          ]
+          ],
+          "maxCredits": 10
         },
         {
           "title": "Students may select either BIOL 306 or PHGY 314",
@@ -54,7 +55,7 @@
           ]
         },
         {
-          "title": "Complementary Courses",
+          "title": "6-15 credits from the following list of 400- and 500-level courses",
           "courses": [
             "BIOL 530",
             "BIOL 532",
@@ -75,7 +76,9 @@
             "PSYC 522",
             "PSYC 526",
             "PSYT 500"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 15
         },
         {
           "title": "At least 12-13 credits must be from outside the student's home department",
@@ -83,14 +86,6 @@
         },
         {
           "title": "At least 6 of the 12-13 credits have to be at the 400 or 500 level",
-          "unparsed": true
-        },
-        {
-          "title": "0-10 credits from the following list of 200- and 300-level courses",
-          "unparsed": true
-        },
-        {
-          "title": "6-15 credits from the following list of 400- and 500-level courses",
           "unparsed": true
         }
       ]

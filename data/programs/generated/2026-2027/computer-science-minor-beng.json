@@ -67,7 +67,17 @@
             "MATH 240"
           ],
           "minCredits": 9,
-          "maxCredits": 9
+          "maxCredits": 9,
+          "match": {
+            "subjects": [
+              "COMP"
+            ],
+            "minLevel": 300,
+            "exclude": [
+              "COMP 396",
+              "COMP 400"
+            ]
+          }
         }
       ]
     }

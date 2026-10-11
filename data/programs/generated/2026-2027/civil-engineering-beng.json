@@ -120,6 +120,14 @@
           ]
         },
         {
+          "title": "Students may choose only one of CHEE 521 or CIVE 521",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 521",
+            "CIVE 521"
+          ]
+        },
+        {
           "title": "0-9 credits from the following, or from other suitable undergraduate or 500-level courses",
           "unparsed": true
         }

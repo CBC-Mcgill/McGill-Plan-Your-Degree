@@ -63,7 +63,7 @@
           "maxCredits": 24
         },
         {
-          "title": "East Asian Studies (EAST)",
+          "title": "East Asian Literature, Culture and Society: 24 credits of courses in the following",
           "courses": [
             "EAST 303",
             "EAST 304",
@@ -112,25 +112,10 @@
             "EAST 551",
             "EAST 559",
             "EAST 564",
-            "EAST 569"
-          ]
-        },
-        {
-          "title": "Anthropology (ANTH)",
-          "courses": [
+            "EAST 569",
             "ANTH 331",
-            "ANTH 500"
-          ]
-        },
-        {
-          "title": "Geography (GEOG)",
-          "courses": [
-            "GEOG 408"
-          ]
-        },
-        {
-          "title": "History (HIST)",
-          "courses": [
+            "ANTH 500",
+            "GEOG 408",
             "HIST 208",
             "HIST 218",
             "HIST 308",
@@ -143,24 +128,9 @@
             "HIST 445",
             "HIST 508",
             "HIST 568",
-            "HIST 578"
-          ]
-        },
-        {
-          "title": "Management (ORGB)",
-          "courses": [
-            "ORGB 380"
-          ]
-        },
-        {
-          "title": "Political Science (POLI)",
-          "courses": [
-            "POLI 349"
-          ]
-        },
-        {
-          "title": "Religious Studies (RELG)",
-          "courses": [
+            "HIST 578",
+            "ORGB 380",
+            "POLI 349",
             "RELG 253",
             "RELG 264",
             "RELG 265",
@@ -172,11 +142,9 @@
             "RELG 451",
             "RELG 464",
             "RELG 465"
-          ]
-        },
-        {
-          "title": "24 credits of courses in East Asian Literature, Culture and Society",
-          "unparsed": true
+          ],
+          "minCredits": 24,
+          "maxCredits": 24
         }
       ]
     }

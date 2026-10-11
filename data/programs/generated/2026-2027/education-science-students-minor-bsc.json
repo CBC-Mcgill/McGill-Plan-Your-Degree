@@ -54,6 +54,24 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
+        },
+        {
+          "title": "If chosen, EDPE 304 or EDES 304 may be taken, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "EDPE 304",
+            "EDES 304"
+          ]
+        },
+        {
+          "title": "Other Education courses may be included with the permission of the Program Adviser",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "Other Education may be included with the permission of the Program Advisor",
+          "match": {},
+          "adviser": true
         }
       ]
     }

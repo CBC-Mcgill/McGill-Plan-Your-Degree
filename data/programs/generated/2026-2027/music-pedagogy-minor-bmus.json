@@ -22,8 +22,29 @@
       "credits": 12,
       "rules": [
         {
-          "title": "12 credits selected from any undergraduate-level courses with a prefix of MUCT, MUGT, MUIT, of which 6 credits must be at the 300-level or above",
-          "unparsed": true
+          "title": "12 credits selected from any undergraduate-level courses with a prefix of MUCT, MUGT, MUIT",
+          "minCredits": 12,
+          "maxCredits": 12,
+          "match": {
+            "subjects": [
+              "MUCT",
+              "MUGT",
+              "MUIT"
+            ]
+          }
+        },
+        {
+          "title": "6 credits must be at the 300-level or above",
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "MUCT",
+              "MUGT",
+              "MUIT"
+            ]
+          },
+          "filter": true
         }
       ]
     }

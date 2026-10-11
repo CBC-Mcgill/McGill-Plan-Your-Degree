@@ -20,7 +20,69 @@
     {
       "title": "Complementary Courses",
       "kind": "complementary",
-      "credits": 9,
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "MGPO 438"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "option": "Social Entrepreneurship Stream"
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "COMS 355",
+            "COMS 492",
+            "ECON 310",
+            "ECON 447",
+            "LLCU 212",
+            "PHIL 237",
+            "POLI 318",
+            "POLI 473",
+            "SOCI 307",
+            "SOCI 386"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "option": "Social Entrepreneurship Stream"
+        },
+        {
+          "title": "Kinesiology and Physical Education Stream",
+          "courses": [
+            "BUSA 465",
+            "EDKP 302",
+            "MGPO 438",
+            "MIMM 387"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6,
+          "option": "Kinesiology and Physical Education Stream"
+        },
+        {
+          "title": "Agribusiness Stream",
+          "courses": [
+            "AGEC 231",
+            "AGEC 332",
+            "AGEC 430",
+            "AGEC 450",
+            "AGRI 411",
+            "AGRI 493",
+            "FAES 300",
+            "FAES 310"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6,
+          "option": "Agribusiness Stream"
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
       "rules": [
         {
           "title": "3 credits from the following",
@@ -38,61 +100,6 @@
           ],
           "minCredits": 3,
           "maxCredits": 3
-        },
-        {
-          "title": "Social Entrepreneurship Stream: 3 credits from the following",
-          "courses": [
-            "MGPO 438"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
-        },
-        {
-          "title": "Social Entrepreneurship Stream: 3 credits from the following",
-          "courses": [
-            "COMS 355",
-            "COMS 492",
-            "ECON 310",
-            "ECON 447",
-            "LLCU 212",
-            "PHIL 237",
-            "POLI 318",
-            "POLI 473",
-            "SOCI 307",
-            "SOCI 386"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
-        },
-        {
-          "title": "Kinesiology and Physical Education Stream: 6 credits from the following",
-          "courses": [
-            "BUSA 465",
-            "EDKP 302",
-            "MGPO 438",
-            "MIMM 387"
-          ],
-          "minCredits": 6,
-          "maxCredits": 6
-        },
-        {
-          "title": "Agribusiness Stream: 6 credits from the following",
-          "courses": [
-            "AGEC 231",
-            "AGEC 332",
-            "AGEC 430",
-            "AGEC 450",
-            "AGRI 411",
-            "AGRI 493",
-            "FAES 300",
-            "FAES 310"
-          ],
-          "minCredits": 6,
-          "maxCredits": 6
-        },
-        {
-          "title": "6 credits from one of the following streams",
-          "unparsed": true
         }
       ]
     }

@@ -80,19 +80,11 @@
         },
         {
           "title": "4 credits must be chosen from the Honours advanced thematic courses (in consultation with the program coordinator/Honours thesis supervisor)",
-          "minCredits": 4,
-          "maxCredits": 4,
-          "match": {},
-          "adviser": true
+          "unparsed": true
         },
         {
           "title": "6 credits at the 400 level or higher, chosen from the Faculty of Engineering or Faculty of Science (in consultation with the program coordinator/Honours thesis supervisor)",
-          "minCredits": 6,
-          "maxCredits": 6,
-          "match": {
-            "minLevel": 400
-          },
-          "adviser": true
+          "unparsed": true
         }
       ]
     },

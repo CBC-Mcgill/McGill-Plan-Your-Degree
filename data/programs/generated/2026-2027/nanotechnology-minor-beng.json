@@ -28,7 +28,45 @@
         },
         {
           "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "MIME 260",
+            "MIME 261",
+            "MIME 262",
+            "CHEE 380"
+          ]
+        },
+        {
+          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 515",
+            "MIME 515"
+          ]
+        },
+        {
+          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 521",
+            "CIVE 521"
+          ]
+        },
+        {
+          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
+          "maxCourses": 1,
+          "courses": [
+            "CHEM 534",
+            "PHYS 534"
+          ]
+        },
+        {
+          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 319",
+            "PHYS 319"
+          ]
         },
         {
           "title": "Bioengineering",
@@ -46,10 +84,6 @@
             "CHEE 582",
             "CHEE 585"
           ]
-        },
-        {
-          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
-          "unparsed": true
         },
         {
           "title": "Chemistry",
@@ -74,10 +108,6 @@
           ]
         },
         {
-          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
-          "unparsed": true
-        },
-        {
           "title": "Mechanical Engineering",
           "courses": [
             "MECH 500",
@@ -85,10 +115,6 @@
             "MECH 556",
             "MIME 260"
           ]
-        },
-        {
-          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
-          "unparsed": true
         },
         {
           "title": "Materials Engineering",
@@ -100,10 +126,6 @@
             "MIME 569",
             "MIME 571"
           ]
-        },
-        {
-          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
-          "unparsed": true
         },
         {
           "title": "Pharmacology",
@@ -121,15 +143,11 @@
           ]
         },
         {
-          "title": "Students can take only one course from each set of the following courses: MIME 260, MIME 261, MIME 262 or CHEE 380 CHEE 515 or MIME 515 CHEE 521 or CIVE 521 CHEM 534 or PHYS 534 BIOL 319 or PHYS 319",
-          "unparsed": true
-        },
-        {
           "title": "Students will be required to take up to 18-19 credits of courses from Group B, depending on how many courses from Group A were taken",
           "unparsed": true
         },
         {
-          "title": "​A research-based course (maximum 4cr) with the focus on nanotechnology taken at McGill University may be considered for credits towards this Minor; students must obtain the approval of the research project from the Minor adviser prior to taking the course in order for the course to be counted as part of the Minor credits",
+          "title": "A research-based course (maximum 4cr) with the focus on nanotechnology taken at McGill University may be considered for credits towards this Minor; students must obtain the approval of the research project from the Minor adviser prior to taking the course in order for the course to be counted as part of the Minor credits",
           "unparsed": true
         }
       ]

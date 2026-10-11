@@ -8,6 +8,17 @@
   "credits": 54,
   "groups": [
     {
+      "title": "Program Requirements",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students may take up to 30 credits at the 200 level and must take no fewer than 12 credits at the 400 level or above",
+          "unparsed": true
+        }
+      ]
+    },
+    {
       "title": "Required Courses",
       "kind": "required",
       "credits": 24,
@@ -111,7 +122,11 @@
         },
         {
           "title": "If chosen, you may take only one of the following courses: ANTH 451 or GEOG 451",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "ANTH 451",
+            "GEOG 451"
+          ]
         },
         {
           "title": "Agriculture",
@@ -169,7 +184,11 @@
         },
         {
           "title": "If chosen, you make take only one of the following courses: BIOL 308 or ENVB 305",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 308",
+            "ENVB 305"
+          ]
         },
         {
           "title": "Advanced Ecology",
@@ -185,7 +204,11 @@
         },
         {
           "title": "If chosen, you may take only one of the following courses: BIOL 451 or NRSC 451",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 451",
+            "NRSC 451"
+          ]
         },
         {
           "title": "Techniques and Management",
@@ -199,7 +222,11 @@
         },
         {
           "title": "If chosen, you may take only one of the following courses: ENVB 529 or GEOG 201",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "ENVB 529",
+            "GEOG 201"
+          ]
         },
         {
           "title": "Immunology and Infectious Disease",
@@ -214,7 +241,11 @@
         },
         {
           "title": "If chosen, you may take only one of the following courses: MIMM 413 or PARA 424",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "MIMM 413",
+            "PARA 424"
+          ]
         },
         {
           "title": "Hydrology and Climate",
@@ -227,7 +258,11 @@
         },
         {
           "title": "If chosen, you may take only one of the following courses: BREE 217 or GEOG 322",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "BREE 217",
+            "GEOG 322"
+          ]
         },
         {
           "title": "9 credits from List A (with a maximum of 3 credits from any category)",

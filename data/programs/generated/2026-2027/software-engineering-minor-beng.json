@@ -33,7 +33,35 @@
         },
         {
           "title": "Students may choose only one course in each of the following sets: COMP 250 and ECSE 250 COMP 424 and ECSE 526 ECSE 439 and ECSE 539 ECSE 446 and ECSE 546",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "COMP 250",
+            "ECSE 250"
+          ]
+        },
+        {
+          "title": "Students may choose only one course in each of the following sets: COMP 250 and ECSE 250 COMP 424 and ECSE 526 ECSE 439 and ECSE 539 ECSE 446 and ECSE 546",
+          "maxCourses": 1,
+          "courses": [
+            "COMP 424",
+            "ECSE 526"
+          ]
+        },
+        {
+          "title": "Students may choose only one course in each of the following sets: COMP 250 and ECSE 250 COMP 424 and ECSE 526 ECSE 439 and ECSE 539 ECSE 446 and ECSE 546",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 439",
+            "ECSE 539"
+          ]
+        },
+        {
+          "title": "Students may choose only one course in each of the following sets: COMP 250 and ECSE 250 COMP 424 and ECSE 526 ECSE 439 and ECSE 539 ECSE 446 and ECSE 546",
+          "maxCourses": 1,
+          "courses": [
+            "ECSE 446",
+            "ECSE 546"
+          ]
         },
         {
           "title": "6 credits from the following",
@@ -63,10 +91,6 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
-        },
-        {
-          "title": "Students may choose only one course in each of the following sets: COMP 250 and ECSE 250 COMP 424 and ECSE 526 ECSE 439 and ECSE 539 ECSE 446 and ECSE 546",
-          "unparsed": true
         },
         {
           "title": "Restricted to Honours students or Computer Engineering or Electrical Engineering students with CGPA of at least 3.0 and B+ or better in prerequisites",

@@ -40,7 +40,13 @@
             "LING 201",
             "LING 210",
             "LING 260"
-          ]
+          ],
+          "match": {
+            "subjects": [
+              "LING"
+            ],
+            "minLevel": 300
+          }
         },
         {
           "title": "Philosophy",

@@ -9,23 +9,11 @@
   "groups": [
     {
       "title": "Required Course",
-      "kind": "complementary",
+      "kind": "required",
       "credits": 4,
-      "rules": [
-        {
-          "title": "Required Course",
-          "courses": [
-            "MUIN 384"
-          ]
-        },
-        {
-          "title": "3 credits from the following",
-          "courses": [
-            "MUPG 580"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
-        }
+      "courses": [
+        "MUIN 384",
+        "MUPG 580"
       ]
     },
     {
@@ -34,12 +22,13 @@
       "credits": 14,
       "rules": [
         {
-          "title": "Orchestral Stream: 4 credits from the following",
+          "title": "4 credits from the following",
           "courses": [
             "MUPG 315"
           ],
           "minCredits": 4,
-          "maxCredits": 4
+          "maxCredits": 4,
+          "option": "Orchestral Stream"
         },
         {
           "title": "Large Ensembles: 4 credits from the following",
@@ -51,7 +40,8 @@
             "MUEN 597"
           ],
           "minCredits": 4,
-          "maxCredits": 4
+          "maxCredits": 4,
+          "option": "Orchestral Stream"
         },
         {
           "title": "Large Ensembles: 6 credits from the following",
@@ -67,15 +57,17 @@
             "MUHL 392"
           ],
           "minCredits": 6,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Orchestral Stream"
         },
         {
-          "title": "Choral Stream: 4 credits from the following",
+          "title": "4 credits from the following",
           "courses": [
             "MUPG 316"
           ],
           "minCredits": 4,
-          "maxCredits": 4
+          "maxCredits": 4,
+          "option": "Choral Stream"
         },
         {
           "title": "Large Ensembles: 4 credits from the following",
@@ -85,7 +77,8 @@
             "MUEN 593"
           ],
           "minCredits": 4,
-          "maxCredits": 4
+          "maxCredits": 4,
+          "option": "Choral Stream"
         },
         {
           "title": "Large Ensembles: 6 credits from the following",
@@ -116,11 +109,8 @@
             "MUTH 304"
           ],
           "minCredits": 6,
-          "maxCredits": 6
-        },
-        {
-          "title": "14 credits from one of the two streams",
-          "unparsed": true
+          "maxCredits": 6,
+          "option": "Choral Stream"
         }
       ]
     }

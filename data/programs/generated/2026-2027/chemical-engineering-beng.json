@@ -100,7 +100,27 @@
         },
         {
           "title": "Students may choose only one course in each of the following sets: CHEE 521 or CIVE 521 CHEE 563 or MECH 563 CHEE 593 or CIVE 430",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 521",
+            "CIVE 521"
+          ]
+        },
+        {
+          "title": "Students may choose only one course in each of the following sets: CHEE 521 or CIVE 521 CHEE 563 or MECH 563 CHEE 593 or CIVE 430",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 563",
+            "MECH 563"
+          ]
+        },
+        {
+          "title": "Students may choose only one course in each of the following sets: CHEE 521 or CIVE 521 CHEE 563 or MECH 563 CHEE 593 or CIVE 430",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 593",
+            "CIVE 430"
+          ]
         },
         {
           "title": "List B: 0-6 credits from the following",
@@ -119,7 +139,17 @@
         },
         {
           "title": "Students may choose only one project course: CHEE 494, CHEE 495, or CHEE 496",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 494",
+            "CHEE 495",
+            "CHEE 496"
+          ]
+        },
+        {
+          "title": "The remaining credits, up to a maximum of 3 credits, may be taken from other suitable undergraduate courses in the Faculty of Engineering, with departmental permission",
+          "match": {},
+          "adviser": true
         }
       ]
     },

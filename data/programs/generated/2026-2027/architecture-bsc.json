@@ -10,7 +10,7 @@
     {
       "title": "Required Year 0 Courses",
       "kind": "required",
-      "credits": 28,
+      "credits": 10,
       "courses": [
         "MATH 133",
         "MATH 140",
@@ -18,6 +18,69 @@
       ],
       "foundation": true,
       "note": "A PHYS course equivalent to Mechanics with labs may be substituted upon approval of the department."
+    },
+    {
+      "title": "Required Year 0 Courses, extra credits",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits from among any 100- or 200-level courses with the subject codes of ATOC (Atmospheric and Oceanic Sciences), COMP (Computer Science), ENVR (Environment), and EPSC (Earth and Planetary Sciences)",
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 100,
+            "maxLevel": 200,
+            "subjects": [
+              "ATOC",
+              "COMP",
+              "ENVR",
+              "EPSC"
+            ]
+          }
+        },
+        {
+          "title": "15 credits from among any 100- or 200-level courses with the subject codes of AFRI (African Studies), ANTH (Anthropology), ARTH (Art History), CANS (Canadian Studies), CATH (Catholic Studies), CLAS (Classics), COMS (Communication Studies), EAST (East Asian Studies), ECON (Economics), ENGL (English), FREN (French), FSCI (Faculty of Science), GEOG (Geography), GSFS (Gender, Sexuality, Feminist, and Social Justice), GERM (German), HISP (Hispanic Studies), HIST (History), INDG (Indigenous Studies), ISLA (Islamic Studies), ITAL (Italian), JWST (Jewish Studies), LING (Linguistics), LLCU (Languages, Literatures, and Cultures), PHIL (Philosophy), POLI (Political Science), PSYC (Psychology), RELG (Religious Studies), RUSS (Russian), SOCI (Sociology)",
+          "minCredits": 15,
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 100,
+            "maxLevel": 200,
+            "subjects": [
+              "AFRI",
+              "ANTH",
+              "ARTH",
+              "CANS",
+              "CATH",
+              "CLAS",
+              "COMS",
+              "EAST",
+              "ECON",
+              "ENGL",
+              "FREN",
+              "FSCI",
+              "GEOG",
+              "GSFS",
+              "GERM",
+              "HISP",
+              "HIST",
+              "INDG",
+              "ISLA",
+              "ITAL",
+              "JWST",
+              "LING",
+              "LLCU",
+              "PHIL",
+              "POLI",
+              "PSYC",
+              "RELG",
+              "RUSS",
+              "SOCI"
+            ]
+          }
+        }
+      ],
+      "foundation": true
     },
     {
       "title": "Required Courses",
@@ -93,7 +156,11 @@
           "title": "9 credits of elective courses outside the School of Architecture must be completed, subject to approval by the Student Advisor",
           "minCredits": 9,
           "maxCredits": 9,
-          "match": {},
+          "match": {
+            "excludeSubjects": [
+              "ARCH"
+            ]
+          },
           "adviser": true
         }
       ]

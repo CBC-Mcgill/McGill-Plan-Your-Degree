@@ -22,7 +22,7 @@
       "credits": 30,
       "rules": [
         {
-          "title": "List A",
+          "title": "List A: 6 credits from the courses in List A",
           "courses": [
             "ARTH 204",
             "ARTH 205",
@@ -52,10 +52,13 @@
             "RELG 203",
             "RUSS 223",
             "RUSS 224"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6,
+          "option": "Stream 1: Literature and the Arts (including Theatre and Architecture)"
         },
         {
-          "title": "List B",
+          "title": "List B: Students in this stream may also choose a maximum of 9 credits from the following list",
           "courses": [
             "AFRI 401",
             "ARCH 250",
@@ -99,10 +102,33 @@
             "RELG 311",
             "RELG 312",
             "RELG 455"
-          ]
+          ],
+          "maxCredits": 9,
+          "option": "Stream 1: Literature and the Arts (including Theatre and Architecture)"
         },
         {
-          "title": "List A",
+          "title": "The additional courses may be substituted with the approval of the Program Director",
+          "match": {},
+          "adviser": true,
+          "option": "Stream 1: Literature and the Arts (including Theatre and Architecture)"
+        },
+        {
+          "title": "24 credits from the courses in List B",
+          "unparsed": true,
+          "option": "Stream 1: Literature and the Arts (including Theatre and Architecture)"
+        },
+        {
+          "title": "Music: up to 6 credits of Music courses (labelled MUAR) can be selected in consultation with the Program Director",
+          "unparsed": true,
+          "option": "Stream 1: Literature and the Arts (including Theatre and Architecture)"
+        },
+        {
+          "title": "any course (other than a course dedicated to teaching a language) at the 200 level or above in Jewish Studies (JWST) listed in the Course Catalogue under the headings “Biblical Studies,” “Languages and Literatures – Hebrew” and “Language and Literature – Yiddish.”",
+          "unparsed": true,
+          "option": "Stream 1: Literature and the Arts (including Theatre and Architecture)"
+        },
+        {
+          "title": "List A: 6 credits from the courses in List A",
           "courses": [
             "CATH 200",
             "COMS 200",
@@ -133,10 +159,13 @@
             "POLI 244",
             "SOCI 210",
             "SOCI 211"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6,
+          "option": "Stream 2: History, Culture, and Society"
         },
         {
-          "title": "List B",
+          "title": "List B: Students in this stream may also choose a maximum of 9 credits from the following list",
           "courses": [
             "ANTH 202",
             "ANTH 206",
@@ -215,10 +244,23 @@
             "RUSS 427",
             "RUSS 428",
             "RUSS 430"
-          ]
+          ],
+          "maxCredits": 9,
+          "option": "Stream 2: History, Culture, and Society"
         },
         {
-          "title": "List A: 6 credits from the courses in List A: 6 credits from the courses in List A: 6 credits from the courses in List A",
+          "title": "The additional courses may be substituted with the approval of the Program Director",
+          "match": {},
+          "adviser": true,
+          "option": "Stream 2: History, Culture, and Society"
+        },
+        {
+          "title": "24 credits from the courses in List B",
+          "unparsed": true,
+          "option": "Stream 2: History, Culture, and Society"
+        },
+        {
+          "title": "List A: 6 credits from the courses in List A",
           "courses": [
             "ISLA 200",
             "ISLA 210",
@@ -240,10 +282,11 @@
             "RELG 380"
           ],
           "minCredits": 6,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Stream 3: Philosophy and Religion"
         },
         {
-          "title": "List B: 24 credits from the courses in List B: 24 credits from the courses in List B: 24 credits from the courses in List B",
+          "title": "List B: Students in this stream may also choose a maximum of 9 credits from the following list",
           "courses": [
             "ANTH 209",
             "ANTH 318",
@@ -260,12 +303,24 @@
             "LIBA 395",
             "LLCU 301"
           ],
-          "minCredits": 24,
-          "maxCredits": 24
+          "maxCredits": 9,
+          "option": "Stream 3: Philosophy and Religion"
         },
         {
-          "title": "Students must complete 30 credits in one of the three specialized streams set out below",
-          "unparsed": true
+          "title": "The additional courses may be substituted with the approval of the Program Director",
+          "match": {},
+          "adviser": true,
+          "option": "Stream 3: Philosophy and Religion"
+        },
+        {
+          "title": "24 credits from the courses in List B",
+          "unparsed": true,
+          "option": "Stream 3: Philosophy and Religion"
+        },
+        {
+          "title": "any course (other than a course dedicated to teaching a language) at the 200 level or above in the following departments and programs:; Philosophy (PHIL), Religious Studies (RELG), Catholic Studies (CATH), Islamic Studies (ISLA), and Jewish Studies (JWST); and; any course in Political Science (POLI) listed in the Course Catalogue under the heading “Political Theory.”",
+          "unparsed": true,
+          "option": "Stream 3: Philosophy and Religion"
         },
         {
           "title": "at least 6 credits from the 200-level introductory courses within one stream",
@@ -286,42 +341,6 @@
         },
         {
           "title": "historical periods: at least 6 credits in coursework primarily emphasizing texts or history from before 1500, and at least 6 credits in coursework primarily emphasizing texts or history from 1500-1900 (a given course may satisfy both the geographical area and the historical period requirement)",
-          "unparsed": true
-        },
-        {
-          "title": "Students must choose 30 credits as follows",
-          "unparsed": true
-        },
-        {
-          "title": "Music: up to 6 credits of Music courses (labelled MUAR) can be selected in consultation with the Program Director",
-          "unparsed": true
-        },
-        {
-          "title": "any course (other than a course dedicated to teaching a language) at the 200 level or above in Jewish Studies (JWST) listed in the Course Catalogue under the headings “Biblical Studies,” “Languages and Literatures – Hebrew” and “Language and Literature – Yiddish.”",
-          "unparsed": true
-        },
-        {
-          "title": "Students in this stream may also choose a maximum of 9 credits from the following list",
-          "unparsed": true
-        },
-        {
-          "title": "Students must choose 30 credits as follows",
-          "unparsed": true
-        },
-        {
-          "title": "Students in this stream may also choose a maximum of 9 credits from the following list",
-          "unparsed": true
-        },
-        {
-          "title": "Students must choose 30 credits as follows",
-          "unparsed": true
-        },
-        {
-          "title": "any course (other than a course dedicated to teaching a language) at the 200 level or above in the following departments and programs:; Philosophy (PHIL), Religious Studies (RELG), Catholic Studies (CATH), Islamic Studies (ISLA), and Jewish Studies (JWST); and; any course in Political Science (POLI) listed in the Course Catalogue under the heading “Political Theory.”",
-          "unparsed": true
-        },
-        {
-          "title": "Students in this stream may also choose a maximum of 9 credits from the following list",
           "unparsed": true
         }
       ]
