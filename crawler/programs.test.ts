@@ -766,3 +766,41 @@ test("reads streams as a group that counts one of them, and leaves streams of se
     ]),
   });
 });
+
+test("adds up a required heading with no credits from one course of each choice", () => {
+  const program = programOf(
+    "Test Honours (B.Sc.) (24 credits)",
+    `<h2>Required Courses</h2><h3>U1 Required Courses (9 credits)</h3>${table("BIOL 200", "BIOL 202")}<p>One of:</p>${table("BIOC 212", "BIOL 201")}` +
+      `<h3>U3 Required Courses (15 credits)</h3>${table("MIMM 413", "MIMM 501D1:6", "MIMM 501D2:6", "MIMM 502D1:6", "MIMM 502D2:6")}` +
+      `<dl><dd>Students take either MIMM 501D1 and MIMM 501D2 or MIMM 502D1 and MIMM 502D2.</dd></dl>` +
+      `<h3>U3 Complementary Courses (3 credits)</h3><p>3 credits selected from:</p>${table("MIMM 414")}` +
+      `<h3>Complementary Courses (3 credits)</h3><p>3 credits selected from:</p>${table("ANAT 261")}`,
+  );
+  expect(program.groups.map((g) => [g.kind, g.credits])).toEqual([
+    ["required", 24],
+    ["complementary", 3],
+    ["complementary", 3],
+  ]);
+});
+
+test("repairs headings that slipped a level and reads credits written beside a heading", () => {
+  const program = programOf(
+    "Test Major (B.Mus.) (40 credits)",
+    `<h2>Complementary Studies</h2><p>9 credits</p><h3>Group A</h3><p>3 credits from the following:</p>${table("ANTH 212")}` +
+      `<h2>Group B</h2><p>6 credits from the following:</p>${table("ECON 225", "HIST 207")}` +
+      `<h2>Complementary Musicianship</h2><p>(2 credits)</p><p>2 credits from:</p>${table("MUSP 324:2")}` +
+      `<h3>Required Courses (8 credits)</h3><h3>Diction (5 credits)</h3>${table("MUPG 209:2", "MUPG 210:3")}<h3>Theory</h3>${table("MUTH 150")}` +
+      `<h2>Complementary Courses (18 or 21 credits)</h2><p>0-3 credits from:</p>${table("MATH 203")}<p>At least 6 credits selected from:</p>${table("MATH 314", "MATH 315")}` +
+      `<h2>Specialization (24 credits)</h2><ul><li>Agribusiness (24 credits)</li></ul>`,
+  );
+  expect(program.groups.map((g) => [g.title, g.credits])).toEqual([
+    ["Complementary Studies Group A", 3],
+    ["Complementary Studies Group B", 6],
+    ["Complementary Musicianship", 2],
+    ["Required Courses", 8],
+    ["Complementary Courses", 18],
+  ]);
+  expect(program.groups[3]).toMatchObject({
+    courses: ["MUPG 209", "MUPG 210", "MUTH 150"],
+  });
+});

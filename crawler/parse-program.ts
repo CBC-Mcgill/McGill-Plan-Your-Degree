@@ -20,6 +20,8 @@ export interface ParseOptions {
 type Q = ReturnType<cheerio.CheerioAPI>;
 interface Row {
   codes: string[];
+  /** The codes as printed, so ECSE 458D1 and ECSE 458D2 stay two parts of ECSE 458. */
+  printed: string[];
   credits: number;
   or: boolean;
 }
@@ -52,6 +54,8 @@ const codesIn = (text: string) =>
 const skeleton = (text: string) => text.replace(CODE_G, "CODE");
 const NUM = String.raw`(\d+(?:\.\d+)?)`;
 const RANGE = String.raw`${NUM}(?:\s*[-–]\s*${NUM})?`;
+// A range as headings and amounts write it: "6-9", "3 or 4", "6 to 7".
+const SPAN = String.raw`${NUM}(?:\s*(?:[-–]|or|to)\s*${NUM})?`;
 const sentences = (text: string) =>
   text
     .split(/(?<=[.:;])\s+(?=[A-Z(])/)
@@ -64,7 +68,7 @@ export function catalogueYear(html: string): string | null {
 }
 
 const HEADING_CREDITS = new RegExp(
-  String.raw`\s*\(\s*${RANGE}\s*credits?\s*\)\s*$`,
+  String.raw`\s*\(\s*${SPAN}\s*credits?\s*\)\s*$`,
   "i",
 );
 
@@ -83,6 +87,7 @@ function readRow(tr: Q): Row | null {
   if (codes.length === 0) return null;
   return {
     codes,
+    printed: [...cell.matchAll(CODE_G)].map((m) => m[0]),
     credits: Number(clean(tr.children("td.hourscol").text())) || 0,
     or: /^or\s/i.test(cell) || tr.hasClass("orclass"),
   };
@@ -96,6 +101,8 @@ function readSections($: cheerio.CheerioAPI): Section[] {
   const text = (el: Q) => clean(el.clone().find("sup").remove().end().text());
   const root: Section = { kind: "section", level: 1, title: "", items: [] };
   const stack = [root];
+  let lastList: { kind: string; letter: number; level: number } | undefined;
+  let adopted: number | undefined;
   const add = (item: Section | Table | Text) => {
     stack.at(-1)?.items.push(item);
   };
@@ -104,7 +111,32 @@ function readSections($: cheerio.CheerioAPI): Section[] {
       const el = $(child);
       const tag = child.tagName;
       if (/^h[2-6]$/.test(tag)) {
-        const level = Number(tag[1]);
+        let level = Number(tag[1]);
+        const id = /^(Group|List) ([A-Z])\b/.exec(text(el));
+        const kind = id?.[1] ?? "";
+        const letter = id?.[2]?.charCodeAt(0) ?? 0;
+        // "Group B" one level above the "Group A" right before it slipped out of its list.
+        if (
+          lastList?.kind === kind &&
+          lastList.letter + 1 === letter &&
+          level < lastList.level
+        ) {
+          level = lastList.level;
+        }
+        lastList = id ? { kind, letter, level } : undefined;
+        if (adopted !== undefined && level < adopted) adopted = undefined;
+        // An empty "Required Courses (44 credits)" above headings of its own level heads them, until the next "... Courses (N credits)".
+        const top = /\bcourses?\b.*\bcredits?\)$/i.test(text(el));
+        if (level === adopted) level = top ? 2 : 3;
+        else if (
+          level > 2 &&
+          top &&
+          /^required\b/i.test(text(el)) &&
+          el.next().is(tag)
+        ) {
+          adopted = level;
+          level = 2;
+        }
         while (stack.length > 1 && (stack.at(-1)?.level ?? 0) >= level) {
           stack.pop();
         }
@@ -146,6 +178,19 @@ function readSections($: cheerio.CheerioAPI): Section[] {
     section.items = section.items.filter(
       (item) => item.kind !== "text" || item.text,
     );
+    // "(18-19 credits)" on its own line under a heading is the heading's.
+    const [first] = section.items;
+    const credits =
+      first?.kind === "text" && section.min === undefined
+        ? new RegExp(String.raw`^\(\s*${SPAN}\s*credits?\s*\)$`, "i").exec(
+            first.text,
+          )
+        : null;
+    if (credits) {
+      section.min = Number(credits[1]);
+      section.max = Number(credits[2] ?? credits[1]);
+      section.items.shift();
+    }
     for (const item of section.items) if (item.kind === "section") drop(item);
   };
   drop(root);
@@ -182,7 +227,7 @@ const LEADS: Record<string, "min" | "max"> = {
   "no more than": "max",
 };
 const AMOUNT = new RegExp(
-  String.raw`^(at least |a minimum of |minimum of |minimum |up to |at most |a maximum of |maximum of |no more than )?${NUM}(?:\s*(?:[-–]|or|to)\s*${NUM})?\s*credits?(?:\s*\(\s*(\d+|${COUNT_WORD})(?:\s*[-–]\s*(\d+))?\s*courses?\s*\))?`,
+  String.raw`^(at least |a minimum of |minimum of |minimum |up to |at most |a maximum of |maximum of |no more than )?${SPAN}\s*credits?(?:\s*\(\s*(\d+|${COUNT_WORD})(?:\s*[-–]\s*(\d+))?\s*courses?\s*\))?`,
   "i",
 );
 // Who takes the list, in front of the amount: "Students must take at least 3 credits from the following courses".
@@ -265,7 +310,7 @@ const PART_SUBJECT =
 const PART_EACH =
   /^with at least (\d+) credits from each of (?:the )?subject codes ([A-Z]{3}[A-Z\d](?:(?:, | and |, and )[A-Z]{3}[A-Z\d])*)$/;
 const PART_LEVEL = new RegExp(
-  String.raw`^(?:with |of which )?(?:at least |a minimum of )?${RANGE}(?: of the \d+)? credits (?:must |should )?(?:be )?(?:taken )?at the (\d{3})(?: or (\d{3}))?[- ]level(?: or (?:above|higher))?$`,
+  String.raw`^(?:with |of which )?(?:at least |a minimum of )?${SPAN}(?: of the \d+)? credits (?:must |should )?(?:be )?(?:taken )?at the (\d{3})(?: or (\d{3}))?[- ]level(?: or (?:above|higher))?$`,
   "i",
 );
 
@@ -453,7 +498,7 @@ function statementAmount(text: string, adjacent: boolean): ListAmount | null {
 
 /** A total with nothing to choose from, such as "9-12 credits (3 courses) must be taken, chosen as follows:". */
 const BARE_TOTAL = new RegExp(
-  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${RANGE}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*(?:must be taken|(?:are )?selected|chosen|of complementary courses (?:are )?selected|all of the courses below)(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
+  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${SPAN}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*(?:must be taken|(?:are )?selected|chosen|of complementary courses (?:are )?selected|all of the courses below)(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
   "i",
 );
 
@@ -847,7 +892,7 @@ function referenceRules(
     );
     const pairs = [
       ...clause.matchAll(
-        /(?:^| and )at least (\d+) credits from ((?:Group|List|Block) [A-Z\d])/gi,
+        /(?:^|,? and )at least (\d+) credits (?:selected )?from ((?:Group|List|Block) [A-Z\d])/gi,
       ),
     ];
     const read = every
@@ -959,7 +1004,7 @@ const MUSIC = [
   "MUTH",
 ];
 const ELECTIVE = new RegExp(
-  String.raw`^${RANGE}\s*credits? of (non-)?(?:free )?(?:([A-Za-z][A-Za-z ]*?)(?: \(([A-Z]{3}[A-Z\d])\))? )?(?:electives?|courses)(?: to be chosen freely| are taken to meet the minimum credit requirement for the degree)?(?: \(may (not )?include (?:(\d+) credits of )?courses with an? ([A-Z]{3}[A-Z\d]) prefix\))?\.?$`,
+  String.raw`^${SPAN}\s*credits? of (non-)?(?:free )?(?:([A-Za-z][A-Za-z ]*?)(?: \(([A-Z]{3}[A-Z\d])\))? )?(?:electives?|courses)(?: to be chosen freely| are taken to meet the minimum credit requirement for the degree)?(?: \(may (not )?include (?:(\d+) credits of )?courses with an? ([A-Z]{3}[A-Z\d]) prefix\))?\.?$`,
   "i",
 );
 
@@ -1128,9 +1173,18 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
   let previous: string[] = [];
   // The courses under each heading such as "Group A", for statements that name them.
   const lists = new Map<string, string[]>();
+  // A list's courses leave out those of a list labelled inside it, as "Group D" under "Group C".
+  const own = (sec: Section): Table[] =>
+    sec.items.flatMap((item) =>
+      item.kind === "table"
+        ? [item]
+        : item.kind === "section" && !listId(item.title)
+          ? own(item)
+          : [],
+    );
   const label = (sec: Section) => {
     const id = listId(sec.title);
-    if (id) lists.set(id, coursesOf(tablesIn(sec)));
+    if (id) lists.set(id, coursesOf(own(sec)));
     for (const item of sec.items) if (item.kind === "section") label(item);
   };
   label(section);
@@ -1322,13 +1376,32 @@ function requiredGroup(section: Section): RequiredGroup | null {
     intro = [];
   }
   if (items.length === 0) return null;
+  const parts = new Map<string, Map<string, number>>();
+  for (const row of rows) {
+    row.codes.forEach((code, i) => {
+      const part = parts.get(code) ?? new Map<string, number>();
+      part.set(row.printed[i] ?? code, row.credits);
+      parts.set(code, part);
+    });
+  }
+  const creditsOf = (code: string) =>
+    [...(parts.get(code)?.values() ?? [])].reduce((sum, n) => sum + n, 0);
+  const courses = dedupe(items);
   const group: RequiredGroup = {
     title: section.title,
     kind: "required",
+    // Without a heading total, one course of each "one of" counts.
     credits:
       section.max ??
-      rows.filter((r) => !r.or).reduce((sum, r) => sum + r.credits, 0),
-    courses: dedupe(items),
+      courses.reduce(
+        (sum, item) =>
+          sum +
+          (typeof item === "string"
+            ? creditsOf(item)
+            : Math.min(...item.oneOf.map(creditsOf))),
+        0,
+      ),
+    courses,
   };
   if (FOUNDATION.test(section.title)) group.foundation = true;
   if (notes.length > 0) group.note = notes.join(" ");
@@ -1382,7 +1455,7 @@ const hasOwnCredits = (section: Section) => {
 };
 
 const STREAMS = new RegExp(
-  String.raw`^(?:(?:honours )?students must complete )?${RANGE}\s*credits? (?:from|in) one of (?:the )?(?:following )?(?:(${COUNT_WORD}) )?(?:(?:specialized )?(streams|lists|specializations|options)(?: set out below| listed below)?(?::\s*([^.;:]+?))?|((?:Stream|List|Option) [A-Z\d](?: or (?:Stream|List|Option) [A-Z\d])+))\s*[:.]?$`,
+  String.raw`^(?:(?:honours )?students must complete )?${SPAN}\s*credits? (?:from|in) one of (?:the )?(?:following )?(?:(${COUNT_WORD}) )?(?:(?:specialized )?(streams|lists|specializations|options)(?: set out below| listed below)?(?::\s*([^.;:]+?))?|((?:Stream|List|Option) [A-Z\d](?: or (?:Stream|List|Option) [A-Z\d])+))\s*[:.]?$`,
   "i",
 );
 
@@ -1547,7 +1620,9 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     e.kind === "text" ? [e.text] : [],
   );
   const total = text[0] ? bareTotal(text[0]) : null;
-  const stated = text.map((t) => AMOUNT.exec(t)).find((m) => m && !m[1]);
+  const stated = text
+    .map((t) => AMOUNT.exec(t))
+    .find((m) => m && !m[1] && Number(m[2]) > 0);
   const credits = section.min ?? total?.credits ?? Number(stated?.[2]);
   if (!credits) return [];
   const group: ComplementaryGroup = {
@@ -1567,6 +1642,8 @@ const ALTERNATIVE = /^alternative|^option\b/i;
 function groupsOf(section: Section, ctx: Context): Group[] {
   const title = section.title;
   if (/prerequisite/i.test(title) && !FOUNDATION.test(title)) return [];
+  // The Specialization a B.Sc.(Ag.Env.Sc.) major names is a program of its own, outside this one's credits.
+  if (/^specializations?$/i.test(title)) return [];
   if (!/\brequired\b/i.test(title) || SEPARATE.test(title)) {
     return complementaryGroups(section, ctx);
   }
@@ -1598,15 +1675,24 @@ function groupsOf(section: Section, ctx: Context): Group[] {
   }
   const extra = additionalCredits(own);
   if (extra) required.credits -= extra.credits;
+  const tail = split < 0 ? [] : items.slice(split);
+  // Headings after the first Complementary one are its own unless each states its credits.
+  const separate = tail.every(
+    (item) => item.kind === "section" && hasOwnCredits(item),
+  );
   return [
     required,
     ...(extra ? [extra] : []),
-    ...(nested?.kind === "section"
-      ? groupsOf(
-          { ...nested, items: [...nested.items, ...items.slice(split + 1)] },
-          ctx,
+    ...(separate
+      ? tail.flatMap((item) =>
+          item.kind === "section" ? groupsOf(item, ctx) : [],
         )
-      : []),
+      : nested?.kind === "section"
+        ? groupsOf(
+            { ...nested, items: [...nested.items, ...items.slice(split + 1)] },
+            ctx,
+          )
+        : []),
   ];
 }
 
@@ -1755,7 +1841,7 @@ export function parseProgramPage(
   const year = catalogueYear(html);
   const overview = clean($("#programoverviewtextcontainer").text());
   const total = new RegExp(
-    String.raw`\(\s*${RANGE}\s*credits?\s*\)\s*$`,
+    String.raw`\(\s*${SPAN}\s*credits?\s*\)\s*$`,
     "i",
   ).exec(heading);
   const credits = Number(
