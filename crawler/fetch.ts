@@ -12,6 +12,8 @@ const MAX_ATTEMPTS = 5;
 const CACHE_DIR = ".cache/catalogue";
 // ponytail: cache freshness is one fixed window, make it a flag if anyone needs older resumes.
 const CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000;
+// CRAWL_OFFLINE=1 reads only the cache, however old, so the parser can be rerun without touching the site.
+const OFFLINE = process.env.CRAWL_OFFLINE === "1";
 
 let lastRequestAt = 0;
 
@@ -55,9 +57,10 @@ function cachePath(path: string): string {
 export async function fetchPage(path: string): Promise<string> {
   const file = cachePath(path);
   const cached = await stat(file).catch(() => null);
-  if (cached && Date.now() - cached.mtimeMs < CACHE_MAX_AGE_MS) {
+  if (cached && (OFFLINE || Date.now() - cached.mtimeMs < CACHE_MAX_AGE_MS)) {
     return readFile(file, "utf8");
   }
+  if (OFFLINE) throw new NotFoundError(`${BASE_URL + path} (not in the cache)`);
   const html = await politeFetch(BASE_URL + path);
   await mkdir(dirname(file), { recursive: true });
   await writeFile(file, html);
