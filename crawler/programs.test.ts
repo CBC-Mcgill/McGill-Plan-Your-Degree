@@ -884,3 +884,14 @@ test("a Foundation heading with only its total takes the courses listed under Pr
     }),
   ]);
 });
+
+test("a level sentence under a nested heading with its own credits counts that heading's courses only", () => {
+  const rules = complementary(
+    `<p>6 credits from:</p>${table("ENVR 400", "ENVR 201")}` +
+      `<h3>Related Courses (6 credits)</h3>${table("GEOG 302", "GEOG 408")}<p>At least 3 credits must be at the 400 level or above.</p>`,
+  );
+  expect(rules).toContainEqual(
+    expect.objectContaining({ minCredits: 3, courses: ["GEOG 408"] }),
+  );
+  expect(rules.some((rule) => rule.match?.minLevel !== undefined)).toBe(false);
+});

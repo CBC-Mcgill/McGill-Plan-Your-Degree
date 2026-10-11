@@ -1173,11 +1173,42 @@ function partRules(
   return rules;
 }
 
+/** A level rule from a nested heading as a rule over that heading's courses at the level, so it does not reach the group's other lists. */
+function scoped(rule: Rule, scope: Section): Rule {
+  const { match, title, ...amount } = rule;
+  if (
+    !match ||
+    rule.courses ||
+    match.subjects ||
+    match.excludeSubjects ||
+    (match.minLevel === undefined && match.maxLevel === undefined) ||
+    rule.adviser ||
+    rule.maxCreditsPerSubject !== undefined ||
+    rule.minSubjects !== undefined
+  ) {
+    return rule;
+  }
+  const courses = coursesOf(tablesIn(scope)).filter((code) => {
+    const level = Math.floor(Number(code.split(" ")[1]) / 100) * 100;
+    return (
+      (match.minLevel === undefined || level >= match.minLevel) &&
+      (match.maxLevel === undefined || level <= match.maxLevel) &&
+      !match.exclude?.includes(code)
+    );
+  });
+  return courses.length > 0 ? { title, ...amount, courses } : unparsed(title);
+}
+
 /** The rules of a complementary group, from its tables and the sentences around them. */
 function rulesOf(section: Section, ctx: Context): Rule[] {
   const rules: Rule[] = [];
   const named = new Map<string, Rule>();
-  const narrative: string[] = [];
+  // A sentence under a nested heading with credits of its own is about that heading's lists.
+  const narrative: { text: string; scope?: Section }[] = [];
+  const tell = (texts: string[], sec: Section) => {
+    const scope = sec !== section && sec.min !== undefined ? sec : undefined;
+    narrative.push(...texts.map((text) => ({ text, scope })));
+  };
   let previous: string[] = [];
   // The courses under each heading such as "Group A", for statements that name them.
   const lists = new Map<string, string[]>();
@@ -1226,7 +1257,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       courses: coursesOf(tables),
       ...amount,
     });
-    for (const child of children) narrative.push(...textsIn(child));
+    for (const child of children) tell(textsIn(child), child);
     for (const table of tables) rules.push(...noteRules(table.notes));
     return true;
   };
@@ -1243,10 +1274,13 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
         const statement = pending.findLast((t) => listAmount(t));
         const children = sec.items.slice(i).filter((c) => c.kind === "section");
         if (statement && union(statement, children, label)) {
-          narrative.push(...pending.filter((t) => t !== statement));
+          tell(
+            pending.filter((t) => t !== statement),
+            sec,
+          );
           return;
         }
-        narrative.push(...pending);
+        tell(pending, sec);
         pending = [];
         run = null;
         visit(item, item.title);
@@ -1271,7 +1305,10 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
               p,
             ),
         );
-        narrative.push(...pending.filter((p) => p !== bound && p !== name));
+        tell(
+          pending.filter((p) => p !== bound && p !== name),
+          sec,
+        );
         // An unread condition between two lists means the second is not part of the first one's run.
         if (pending.some((p) => p !== bound && constraint(p))) run = null;
         pending = [];
@@ -1299,17 +1336,19 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
         previous = courses;
       }
     }
-    narrative.push(...pending);
+    tell(pending, sec);
   };
   visit(section, "");
 
-  const statements: string[] = [];
-  for (const text of narrative.flatMap(sentences)) {
-    if (DEPARTMENT_LINE.test(text) && statements.length > 0) {
-      statements[statements.length - 1] += `; ${text}`;
-    } else statements.push(text);
+  const statements: { text: string; scope?: Section }[] = [];
+  for (const { text: line, scope } of narrative) {
+    for (const text of sentences(line)) {
+      const last = statements.at(-1);
+      if (DEPARTMENT_LINE.test(text) && last) last.text += `; ${text}`;
+      else statements.push({ text, scope });
+    }
   }
-  for (const text of statements) {
+  for (const { text, scope } of statements) {
     if (bareTotal(text) || NOISE.test(text) || !constraint(text)) {
       continue;
     }
@@ -1323,7 +1362,11 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       rules.push(...electives);
       continue;
     }
-    rules.push(...statementRules(text, ctx.subjectsOf, section.min));
+    // The sentence parser reads English, so a French condition stays for a person to check.
+    const read = CONSTRAINT.test(text)
+      ? statementRules(text, ctx.subjectsOf, scope?.min ?? section.min)
+      : [unparsed(text)];
+    rules.push(...(scope ? read.map((rule) => scoped(rule, scope)) : read));
   }
   return rules;
 }
