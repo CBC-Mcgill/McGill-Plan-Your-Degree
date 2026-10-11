@@ -1,4 +1,5 @@
 import * as cheerio from "cheerio";
+import { ruleMatches } from "../lib/engine/progress.ts";
 import { logicalCode } from "../lib/profile/types.ts";
 import { isMinor } from "../lib/programs/minor.ts";
 import type {
@@ -594,7 +595,7 @@ const MIN_LEAD = "at least|a minimum of|minimum of|minimum";
 const MAX_LEAD =
   "up to|at most|a maximum of|maximum of|maximum|no more than|only";
 const CLAUSE_AMOUNT = new RegExp(
-  String.raw`^(?:(${MIN_LEAD}|${MAX_LEAD}|any) )?(\d+(?:\.\d+)?)(?:-(\d+(?:\.\d+)?))?(?: (credits?|courses?))?(?: (minimum|maximum))?(?: (\d+) courses?)?(?: |$)`,
+  String.raw`^(?:(${MIN_LEAD}|${MAX_LEAD}|any) )?(\d+(?:\.\d+)?)(?:(?:-| or )(\d+(?:\.\d+)?))?(?: (credits?|courses?))?(?: (minimum|maximum))?(?: (\d+) courses?)?(?: |$)`,
 );
 const NUMBER_WORD = new RegExp(
   String.raw`\b(?:${COUNT_WORD}|nine|twelve)\b`,
@@ -699,6 +700,7 @@ function readClause(
   }
   const match: Match = { ...level?.match };
   const amount: Amount = {};
+  let max = false;
   if (m) {
     // "two 400-level ANTH courses" counts courses, "3 complementary course credits" counts credits.
     const named = rest.findIndex((t) => /^c(?:redit|ourse)s?$/.test(t));
@@ -710,10 +712,9 @@ function readClause(
       !/^credit/.test(rest[named + 1] ?? "")
         ? "courses"
         : "credits");
-    const max =
+    max =
       after === "maximum" ||
       (after !== "minimum" && new RegExp(`^(?:${MAX_LEAD})$`).test(lead));
-    if (max && subjects.length > 0) return null;
     const [least, most] = unit.startsWith("course")
       ? (["minCourses", "maxCourses"] as const)
       : (["minCredits", "maxCredits"] as const);
@@ -731,16 +732,16 @@ function readClause(
       amount.maxCourses = Number(count);
     }
   }
-  if (subjects.length > 0) {
-    // A subject rule adds courses to the group, so it cannot narrow the list.
-    if (narrows) return null;
-    match.subjects = unique(subjects);
-  } else if (!level || !m) return null;
+  // "must be from COMP courses" or "a maximum of 6 credits of SEAD courses" narrows the group's courses instead of adding to them.
+  const filter = subjects.length > 0 && (narrows || max);
+  if (subjects.length === 0 ? !level || !m : filter && !m) return null;
+  if (subjects.length > 0) match.subjects = unique(subjects);
   if (exclude.length > 0) match.exclude = exclude;
   return {
     title: trimEnd(clause).replace(/^\w/, (c) => c.toUpperCase()),
     ...amount,
     match,
+    ...(filter && { filter: true as const }),
   };
 }
 
@@ -848,7 +849,8 @@ function readStatement(
     if (total && other(total.credits)) return null;
     if (total) continue;
     const rule = readClause(clause, subjectsOf, scope !== null || listed);
-    if (!rule) return null;
+    // "36 credits in Jewish Studies selected as described below" names the program, not a subject its lists keep to.
+    if (!rule || (listed && rule.match?.subjects)) return null;
     rules.push(rule);
   }
   // Credits from the lists below belong to those lists, unless a spread over them says the group is those lists.
@@ -1173,29 +1175,24 @@ function partRules(
   return rules;
 }
 
-/** A level rule from a nested heading as a rule over that heading's courses at the level, so it does not reach the group's other lists. */
+/** A level rule or a filter from a nested heading as a rule over that heading's courses it matches, so it does not reach the group's other lists. */
 function scoped(rule: Rule, scope: Section): Rule {
-  const { match, title, ...amount } = rule;
+  const { match, title, filter, ...amount } = rule;
   if (
     !match ||
     rule.courses ||
-    match.subjects ||
+    (match.subjects && !filter) ||
     match.excludeSubjects ||
-    (match.minLevel === undefined && match.maxLevel === undefined) ||
+    (!filter && match.minLevel === undefined && match.maxLevel === undefined) ||
     rule.adviser ||
     rule.maxCreditsPerSubject !== undefined ||
     rule.minSubjects !== undefined
   ) {
     return rule;
   }
-  const courses = coursesOf(tablesIn(scope)).filter((code) => {
-    const level = Math.floor(Number(code.split(" ")[1]) / 100) * 100;
-    return (
-      (match.minLevel === undefined || level >= match.minLevel) &&
-      (match.maxLevel === undefined || level <= match.maxLevel) &&
-      !match.exclude?.includes(code)
-    );
-  });
+  const courses = coursesOf(tablesIn(scope)).filter((code) =>
+    ruleMatches({ title, match }, code),
+  );
   return courses.length > 0 ? { title, ...amount, courses } : unparsed(title);
 }
 
@@ -1203,11 +1200,11 @@ function scoped(rule: Rule, scope: Section): Rule {
 function rulesOf(section: Section, ctx: Context): Rule[] {
   const rules: Rule[] = [];
   const named = new Map<string, Rule>();
-  // A sentence under a nested heading with credits of its own is about that heading's lists.
-  const narrative: { text: string; scope?: Section }[] = [];
+  // A sentence under a nested heading with credits of its own is about that heading's lists. `own` is the heading it sits under.
+  const narrative: { text: string; scope?: Section; own: Section }[] = [];
   const tell = (texts: string[], sec: Section) => {
     const scope = sec !== section && sec.min !== undefined ? sec : undefined;
-    narrative.push(...texts.map((text) => ({ text, scope })));
+    narrative.push(...texts.map((text) => ({ text, scope, own: sec })));
   };
   let previous: string[] = [];
   // The courses under each heading such as "Group A", for statements that name them.
@@ -1340,15 +1337,20 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
   };
   visit(section, "");
 
-  const statements: { text: string; scope?: Section }[] = [];
-  for (const { text: line, scope } of narrative) {
+  const statements: typeof narrative = [];
+  for (const { text: line, scope, own } of narrative) {
     for (const text of sentences(line)) {
       const last = statements.at(-1);
       if (DEPARTMENT_LINE.test(text) && last) last.text += `; ${text}`;
-      else statements.push({ text, scope });
+      else statements.push({ text, scope, own });
     }
   }
-  for (const { text, scope } of statements) {
+  // A filter alone under a heading with no list, as "A maximum of 12 credits of ANTH courses" under "200 Level", is a source of its own.
+  const alone = ({ filter: _, ...rule }: Rule, own: Section): Rule =>
+    own !== section && tablesIn(own).length === 0
+      ? rule
+      : { ...rule, filter: true };
+  for (const { text, scope, own } of statements) {
     if (bareTotal(text) || NOISE.test(text) || !constraint(text)) {
       continue;
     }
@@ -1366,9 +1368,20 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     const read = CONSTRAINT.test(text)
       ? statementRules(text, ctx.subjectsOf, scope?.min ?? section.min)
       : [unparsed(text)];
-    rules.push(...(scope ? read.map((rule) => scoped(rule, scope)) : read));
+    rules.push(
+      ...read.map((rule) =>
+        scope ? scoped(rule, scope) : rule.filter ? alone(rule, own) : rule,
+      ),
+    );
   }
-  return rules;
+  // A filter with no list to narrow would stand for the whole group.
+  const listed = rules.some(
+    (rule) =>
+      !rule.unparsed && !rule.filter && (rule.courses || rule.match?.subjects),
+  );
+  return listed
+    ? rules
+    : rules.map((rule) => (rule.filter ? unparsed(rule.title) : rule));
 }
 
 const FOUNDATION = /year 0|foundation/i;

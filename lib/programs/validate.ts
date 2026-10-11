@@ -185,11 +185,16 @@ export function validateProgram(value: unknown): ValidationResult {
       "adviser",
       "maxCreditsPerSubject",
       "minSubjects",
+      "filter",
     ]);
     if (!r) return;
     text(r, "title", path);
     optionalTrue(r, "unparsed", path);
     optionalTrue(r, "adviser", path);
+    optionalTrue(r, "filter", path);
+    if (r.filter && (r.match === undefined || r.courses !== undefined)) {
+      fail(path, "a filter narrows by match, so it needs match and no courses");
+    }
     if (
       r.unparsed !== true &&
       r.courses === undefined &&

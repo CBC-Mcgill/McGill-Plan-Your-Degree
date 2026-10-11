@@ -364,7 +364,7 @@ test("reads level minimums and caps, and subjects at a level, from sentences", (
         },
       ],
     ],
-    // About one list of a 24-credit group, a list that follows, and a narrowing a subject rule cannot express.
+    // About one list of a 24-credit group, and a list that follows.
     [
       "At least 3 of these 9-12 credits must be at the 400 level or above.",
       24,
@@ -374,7 +374,24 @@ test("reads level minimums and caps, and subjects at a level, from sentences", (
     [
       "At least 12 credits must be from COMP courses at the 500 level or above.",
       33,
-      [{ unparsed: true }],
+      [
+        {
+          minCredits: 12,
+          match: { minLevel: 500, subjects: ["COMP"] },
+          filter: true,
+        },
+      ],
+    ],
+    [
+      "6 or 9 POLI credits at the 200 level.",
+      18,
+      [
+        {
+          minCredits: 6,
+          maxCredits: 9,
+          match: { minLevel: 200, maxLevel: 200, subjects: ["POLI"] },
+        },
+      ],
     ],
   ];
   for (const [text, credits, rules] of cases) {
@@ -882,6 +899,30 @@ test("a Foundation heading with only its total takes the courses listed under Pr
         }),
       ],
     }),
+  ]);
+});
+
+test("a subject sentence beside lists narrows them, adds its courses alone under a heading, and stays text with no list", () => {
+  const rules = complementary(
+    `<p>At least 12 credits must be from COMP courses at the 500 level or above.</p>` +
+      `<h3>Group C</h3>${table("COMP 409", "COMP 523", "ECSE 420")}` +
+      `<h3>200 Level</h3><p>A maximum of 12 credits of Anthropology (ANTH) courses at the 200 level.</p>`,
+  );
+  expect(rules).toContainEqual(
+    expect.objectContaining({ minCredits: 12, filter: true }),
+  );
+  expect(rules).toContainEqual({
+    title:
+      "A maximum of 12 credits of Anthropology (ANTH) courses at the 200 level",
+    maxCredits: 12,
+    match: { minLevel: 200, maxLevel: 200, subjects: ["ANTH"] },
+  });
+  expect(
+    complementary(
+      "<p>Note: Maximum 6 credits of SEAD courses are allowed.</p>",
+    ),
+  ).toEqual([
+    { title: "Maximum 6 credits of SEAD courses are allowed", unparsed: true },
   ]);
 });
 

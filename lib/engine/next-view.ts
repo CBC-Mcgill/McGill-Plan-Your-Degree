@@ -150,11 +150,12 @@ function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
 const hasMinimum = (rule: Rule) =>
   rule.minCredits !== undefined || rule.minCourses !== undefined;
 
-/** A rule that lists courses and can host them: one with a minimum still to meet, or a plain list. "Cannot both be taken" rules only cap. */
+/** A rule that lists courses and can host them: one with a minimum still to meet, or a plain list. "Cannot both be taken" rules and filters with only a cap just cap. */
 export const hostsCourses = (rule: Rule, done: RuleProgress | undefined) =>
   hasMinimum(rule)
     ? !done?.satisfied
     : rule.maxCourses === undefined &&
+      !rule.filter &&
       Boolean(rule.courses || rule.match?.subjects);
 
 export function minimumText(rule: Rule, done: RuleProgress | undefined) {

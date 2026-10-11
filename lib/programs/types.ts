@@ -27,7 +27,7 @@ export interface Match {
   exclude?: string[];
 }
 
-/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` just filters, as in "at least 6 credits at the 400 level", and a spread rule without `courses` only filters too. A plain `match` with no subjects or level, on a rule that is neither an adviser nor a spread rule, opens the group to any course, as in "42 credits of Free Electives". */
+/** One line of a complementary list. `courses` or `match.subjects` add courses to the group, a level-only `match` or a `filter` rule just filters, as in "at least 6 credits at the 400 level", and a spread rule without `courses` only filters too. A plain `match` with no subjects or level, on a rule that is neither an adviser nor a spread rule, opens the group to any course, as in "42 credits of Free Electives". */
 export interface Rule {
   title: string;
   /** At least this many credits must come from the rule. */
@@ -47,6 +47,8 @@ export interface Rule {
   maxCreditsPerSubject?: number;
   /** The rule's courses must span at least this many subjects, as in "drawn from at least 3 disciplines". */
   minSubjects?: number;
+  /** The rule narrows the group's courses by subject and level and adds none, like a level-only filter, as in "at least 12 credits must be from COMP courses at the 500 level" over a group's lists. */
+  filter?: true;
 }
 
 /** A course counts once toward the group total but can satisfy several rules in the group. */

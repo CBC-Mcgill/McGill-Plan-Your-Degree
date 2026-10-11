@@ -749,6 +749,38 @@ test("a free elective group takes any course, caps MUEN and keeps music out of t
   expect(progress).toMatchObject({ creditsDone: 8, satisfied: false });
 });
 
+test("a subject filter caps the group's lists and adds no course of its own", () => {
+  const capped: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "List", courses: ["COMP 250", "COMP 330", "MATH 240"] },
+          {
+            title: "At most 3 credits of COMP courses",
+            maxCredits: 3,
+            match: { subjects: ["COMP"] },
+            filter: true,
+          },
+        ],
+      },
+    ],
+  };
+  expect(validateProgram(capped)).toMatchObject({ ok: true });
+  const done = buildSnapshot([
+    record("COMP 250", "completed"),
+    record("COMP 330", "completed"),
+    record("COMP 350", "completed"),
+    record("MATH 240", "completed"),
+  ]);
+  const [group] = programProgress(capped, done, catalogue).groups;
+  expect(group).toMatchObject({ creditsDone: 6, satisfied: true });
+  expect(group?.courses.map((c) => c.code)).toEqual(["COMP 250", "MATH 240"]);
+});
+
 test("a pick-one group counts the stream furthest along and leaves the other stream's courses free", () => {
   const streams: Program = {
     ...tiny,

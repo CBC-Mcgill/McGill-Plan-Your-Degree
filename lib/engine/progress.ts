@@ -121,10 +121,11 @@ export function ruleMatches(rule: Rule, code: string): boolean {
   );
 }
 
-/** A rule that only filters, such as "at least 6 credits at the 400 level" or a spread over the group, and names no courses of its own. */
+/** A rule that only filters, such as "at least 6 credits at the 400 level", "at most 6 credits of SEAD courses" or a spread over the group, and names no courses of its own. */
 const isFilter = (rule: Rule) =>
   !rule.courses &&
-  (!rule.match?.subjects ||
+  (rule.filter === true ||
+    !rule.match?.subjects ||
     rule.maxCreditsPerSubject !== undefined ||
     rule.minSubjects !== undefined);
 
