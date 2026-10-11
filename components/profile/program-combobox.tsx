@@ -13,16 +13,16 @@ import {
 } from "react";
 import { usePhone } from "@/components/profile/layout";
 import { controlStyles, FieldLabel } from "@/components/ui/field";
-import type { Definition } from "@/lib/glossary";
+import { type Definition, GLOSSARY } from "@/lib/glossary";
 import { useProgramIndex } from "@/lib/programs/client";
 import { isMinor } from "@/lib/programs/minor";
 import type { ProgramSummary } from "@/lib/programs/types";
 
 const NO_PROGRAMS: ProgramSummary[] = [];
 
-/** The words around the list: programs and minors share the field and differ only here. */
+/** The words around the list: the program and the second program share the field and differ only here. */
 const COPY: Record<
-  "program" | "minor",
+  "program" | "second",
   {
     label: string;
     placeholder: string;
@@ -38,12 +38,12 @@ const COPY: Record<
     list: "Programs",
     noun: "program",
   },
-  minor: {
-    label: "Minor",
-    placeholder: "No minor",
-    none: "No minor",
-    list: "Minors",
-    noun: "minor",
+  second: {
+    label: GLOSSARY.second.label,
+    placeholder: "None",
+    none: "None",
+    list: "Minors and programs",
+    noun: "program",
   },
 };
 
@@ -58,8 +58,8 @@ const plain = (text: string) =>
 const labelOf = (program: ProgramSummary) =>
   `${program.name} (${program.degree})`;
 
-/** Programs whose name, degree or faculty hold every word of the query, grouped by faculty. */
-function search(programs: ProgramSummary[], query: string) {
+/** Programs whose name, degree or faculty hold every word of the query, grouped by faculty. `suffix` follows each faculty's name, as in "Arts minors". */
+function search(programs: ProgramSummary[], query: string, suffix = "") {
   const words = plain(query).split(" ").filter(Boolean);
   const groups = new Map<string, ProgramSummary[]>();
   for (const program of programs) {
@@ -73,21 +73,28 @@ function search(programs: ProgramSummary[], query: string) {
   return [...groups]
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([faculty, list]) => ({
-      faculty,
+      faculty: faculty + suffix,
       programs: list.sort((a, b) => a.name.localeCompare(b.name)),
     }));
 }
 
-/** A searchable list of every program, or of every minor. The empty choice is "My program isn't listed" for a program the catalogue does not have, and "No minor" for a minor. `info` makes the label a `Term`. */
+/**
+ * A searchable list of every program but the minors, or for the second program, of every program with the minors first. Neither lists `other`, the program in the other field.
+ * The empty choice is "My program isn't listed" for a program the catalogue does not have, and "None" for the second. `label` replaces the field's own, and `info` makes the label a `Term`.
+ */
 export function ProgramCombobox({
   value,
   onChange,
   kind = "program",
+  other = null,
+  label,
   info,
 }: {
   value: string | null;
   onChange: (programId: string | null) => void;
-  kind?: "program" | "minor";
+  kind?: "program" | "second";
+  other?: string | null;
+  label?: string;
   info?: Definition;
 }) {
   const copy = COPY[kind];
@@ -96,10 +103,11 @@ export function ProgramCombobox({
     () =>
       index.status === "ready"
         ? index.programs.filter(
-            (program) => isMinor(program) === (kind === "minor"),
+            (program) =>
+              program.id !== other && (kind === "second" || !isMinor(program)),
           )
         : NO_PROGRAMS,
-    [index, kind],
+    [index, kind, other],
   );
   const chosen = programs.find((program) => program.id === value);
   const listId = useId();
@@ -113,8 +121,17 @@ export function ProgramCombobox({
   const [active, setActive] = useState(0);
 
   const groups = useMemo(
-    () => search(programs, query ?? ""),
-    [programs, query],
+    () =>
+      kind === "second"
+        ? [
+            ...search(programs.filter(isMinor), query ?? "", " minors"),
+            ...search(
+              programs.filter((program) => !isMinor(program)),
+              query ?? "",
+            ),
+          ]
+        : search(programs, query ?? ""),
+    [programs, query, kind],
   );
   // The last choice is always the empty one.
   const options = [...groups.flatMap((group) => group.programs), null];
@@ -161,7 +178,7 @@ export function ProgramCombobox({
       <div className="grid gap-2">
         <FieldLabel
           htmlFor={inputId}
-          label={copy.label}
+          label={label ?? copy.label}
           info={info}
           describedBy={infoId}
         />
@@ -203,7 +220,7 @@ export function ProgramCombobox({
                   choose(options[active] ?? null);
                 }
               }}
-              className={cn(controlStyles, "w-full pr-9 max-md:text-ellipsis")}
+              className={cn(controlStyles, "w-full text-ellipsis pr-9")}
             />
             <ChevronDown
               aria-hidden

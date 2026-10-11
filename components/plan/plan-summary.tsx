@@ -26,6 +26,7 @@ import {
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { creditsText, sentence } from "@/lib/format";
 import { GLOSSARY } from "@/lib/glossary";
+import { pairOf } from "@/lib/programs/minor";
 import type { Group, Program } from "@/lib/programs/types";
 
 interface Standing {
@@ -105,9 +106,9 @@ const ROW =
 /** The middle column, on a line of its own on phones. */
 const UNDER = "max-md:col-span-2 max-md:row-start-2";
 
-/** "Minor" before a minor group's name, so it reads apart from the program's. */
-const MinorPrefix = ({ minor }: { minor: boolean }) =>
-  minor && <span className="font-normal text-fg-muted">Minor · </span>;
+/** "Minor" or another word for the second program before its group's name, so it reads apart from the program's. */
+const SecondPrefix = ({ prefix }: { prefix?: string }) =>
+  prefix && <span className="font-normal text-fg-muted">{prefix} · </span>;
 
 /** What an open group lacks: the required courses as tags, or the credits a list still needs. Null when only rules to check are left. */
 function lacks(
@@ -155,13 +156,13 @@ function lacks(
   );
 }
 
-/** One row per open requirement of the program, then of the minor, and one per rule nobody could read. */
+/** One row per open requirement of the program, then of the second program, and one per rule nobody could read. */
 function missingRows(
-  standings: (Standing & { minor: boolean })[],
+  standings: (Standing & { prefix?: string })[],
   snapshot: Snapshot,
   catalogue: Catalogue,
 ) {
-  return standings.flatMap(({ program, progress, minor }) =>
+  return standings.flatMap(({ program, progress, prefix }) =>
     progress.groups.flatMap((group, g) => {
       if (group.satisfied) return [];
       const key = `${program.id}-${g}`;
@@ -178,7 +179,7 @@ function missingRows(
                     className="size-4 shrink-0 text-warn"
                   />
                   <span>
-                    <MinorPrefix minor={minor} />
+                    <SecondPrefix prefix={prefix} />
                     {COPY.checkRequirement}
                   </span>
                 </span>
@@ -196,7 +197,7 @@ function missingRows(
       return [
         <li key={key} className={ROW}>
           <span className="font-medium">
-            <MinorPrefix minor={minor} />
+            <SecondPrefix prefix={prefix} />
             {sentence(group.title)}
           </span>
           {what}
@@ -218,7 +219,7 @@ function missingRows(
   );
 }
 
-/** The plan's headline: program credits with the plan, what is still missing, the minor, and the warning count. */
+/** The plan's headline: program credits with the plan, what is still missing, the second program, and the warning count. */
 export function PlanSummary({
   standing,
   minor,
@@ -229,7 +230,7 @@ export function PlanSummary({
   graduationPassed,
 }: {
   standing: Standing | null;
-  /** The student's minor, counted on its own from the same courses. */
+  /** The student's minor or other second program, counted on its own from the same courses. */
   minor: Standing | null;
   snapshot: Snapshot;
   catalogue: Catalogue;
@@ -254,9 +255,12 @@ export function PlanSummary({
       </button>
     </p>
   );
+  const pair = pairOf(standing?.program ?? null, minor?.program ?? null);
   const standings = [
-    ...(standing ? [{ ...standing, minor: false }] : []),
-    ...(minor ? [{ ...minor, minor: true }] : []),
+    ...(standing ? [standing] : []),
+    ...(minor
+      ? [{ ...minor, prefix: COPY.capital(COPY.pair[pair].nouns[1]) }]
+      : []),
   ];
   const rows = missingRows(standings, snapshot, catalogue);
   const short = standing
@@ -296,7 +300,7 @@ export function PlanSummary({
         <div className="mt-4">
           <ProgramBars
             program={{
-              label: "Major",
+              label: COPY.pair[pair].labels[0],
               done: standing.progress.creditsDone,
               split: programSplit(standing.progress, snapshot),
               total: standing.progress.credits,
@@ -304,7 +308,7 @@ export function PlanSummary({
             }}
             minor={
               minor && {
-                label: COPY.minorTitle(minor.program.name),
+                label: COPY.secondTitle(minor.program),
                 done: minor.progress.creditsDone,
                 split: programSplit(minor.progress, snapshot),
                 total: minor.progress.credits,
@@ -337,7 +341,7 @@ export function PlanSummary({
             Your plan meets every requirement of{" "}
             {standings
               .map(({ program }, i) =>
-                i === 0 ? program.name : COPY.minorTitle(program.name),
+                i === 0 ? program.name : COPY.secondTitle(program),
               )
               .join(" and ")}
             .

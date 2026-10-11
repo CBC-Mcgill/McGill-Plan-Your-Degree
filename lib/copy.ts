@@ -4,6 +4,8 @@ import type { Basis } from "./engine/progress.ts";
 import { creditsText } from "./format.ts";
 import { termLabel } from "./profile/term-options.ts";
 import type { Season, Term } from "./profile/types.ts";
+import { isMinor, type Pair } from "./programs/minor.ts";
+import type { ProgramSummary } from "./programs/types.ts";
 
 const BASIS: Record<Basis, string> = {
   earned: "earned",
@@ -11,13 +13,52 @@ const BASIS: Record<Basis, string> = {
   plan: "with your plan",
 };
 
-/** "Technological Entrepreneurship Minor" becomes "Technological Entrepreneurship minor", and a name without the word gains it. */
-const minorTitle = (name: string) =>
-  /\sminor$/i.test(name)
-    ? name.replace(/minor$/i, "minor")
-    : /\bminor\b/i.test(name)
-      ? name
-      : `${name} minor`;
+/** A minor's "Technological Entrepreneurship Minor" becomes "Technological Entrepreneurship minor", and a minor's name without the word gains it. Any other program keeps its name. */
+const secondTitle = ({
+  name,
+  ...program
+}: Pick<ProgramSummary, "id" | "name" | "degree">) =>
+  !isMinor(program)
+    ? name
+    : /\sminor$/i.test(name)
+      ? name.replace(/minor$/i, "minor")
+      : /\bminor\b/i.test(name)
+        ? name
+        : `${name} minor`;
+
+/** What each program of a pair is called: `labels` on bars and fields, `nouns` inside sentences, both as [program, second program]. */
+const PAIR: Record<
+  Pair,
+  { labels: [string, string]; nouns: [string, string] }
+> = {
+  minor: { labels: ["Major", "Minor"], nouns: ["program", "minor"] },
+  joint: {
+    labels: ["Joint honours", "Joint honours"],
+    nouns: ["first component", "second component"],
+  },
+  majors: {
+    labels: ["Major", "Second major"],
+    nouns: ["first major", "second major"],
+  },
+  liberal: {
+    labels: ["Core", "Breadth"],
+    nouns: ["core", "breadth component"],
+  },
+  other: {
+    labels: ["Program", "Second program"],
+    nouns: ["first program", "second program"],
+  },
+};
+
+const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+
+/** "Major and minor credits", or "Joint honours credits" when both halves share the word. */
+const pairCredits = (pair: Pair) => {
+  const [first, second] = PAIR[pair].labels;
+  return first === second
+    ? `${first} credits`
+    : `${first} and ${second.toLowerCase()} credits`;
+};
 
 /** "Winter 2027 and Fall 2027", the terms a multi-term course spans. One term reads as itself. */
 const termPair = (...terms: Term[]) => list.format(terms.map(termLabel));
@@ -55,12 +96,16 @@ export const COPY = {
       : `${list.format(courses.map((c) => c.code))} were exempted without credit. Make up their credits with any course and check with your advisor.`,
   hasConditions: "Has conditions",
   countsForBoth: "Counts for both",
-  programOnly: "Program only",
   checkRequirement: "Check this requirement",
   catalogueLink: "McGill catalogue",
   vsbLink: "Visual Schedule Builder",
   generated: "Read automatically from the catalogue",
-  minorTitle,
+  secondTitle,
+  pair: PAIR,
+  pairCredits,
+  capital,
+  /** "Program only" on a second program's row whose course counts for the first program alone. */
+  firstOnly: (pair: Pair) => `${capital(PAIR[pair].nouns[0])} only`,
   importTranscript: "Import your transcript",
   startWithout: "Start without a transcript",
   restore: "Restore a backup",

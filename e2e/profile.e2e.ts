@@ -20,9 +20,9 @@ test("importing a transcript saves its courses, and a re-import says what it rep
 
   await expect(page.getByText("9 courses, not saved yet.")).toBeVisible();
   await expect(page.getByText(/Saving replaces/)).toHaveCount(0);
-  await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue(
-    "Computer Science Major (B.Sc.)",
-  );
+  await expect(
+    page.getByRole("combobox", { name: "Program", exact: true }),
+  ).toHaveValue("Computer Science Major (B.Sc.)");
   await expect(page.getByLabel("Start term", { exact: true })).toHaveValue(
     /.+/,
   );
@@ -34,9 +34,9 @@ test("importing a transcript saves its courses, and a re-import says what it rep
     page.getByRole("heading", { level: 1, name: "Profile" }),
   ).toBeAttached();
   await expect(page.getByText("COMP 250", { exact: true })).toBeVisible();
-  await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue(
-    "Computer Science Major (B.Sc.)",
-  );
+  await expect(
+    page.getByRole("combobox", { name: "Program", exact: true }),
+  ).toHaveValue("Computer Science Major (B.Sc.)");
 
   await page.locator('input[accept*="pdf"]').setInputFiles(fixture);
   await expect(
@@ -53,7 +53,7 @@ test("a program read from the catalogue can be found and used", async ({
   await page
     .getByRole("button", { name: "Start without a transcript" })
     .click();
-  const program = page.getByRole("combobox", { name: "Program" });
+  const program = page.getByRole("combobox", { name: "Program", exact: true });
   await program.fill("psychology major bsc");
   await expect(page.getByRole("group", { name: "Science" })).toBeVisible();
   await program.press("Enter");
@@ -230,7 +230,9 @@ test("starting without a transcript counts as a profile everywhere", async ({
   await page
     .getByRole("button", { name: "Start without a transcript" })
     .click();
-  await expect(page.getByRole("combobox", { name: "Program" })).toHaveValue("");
+  await expect(
+    page.getByRole("combobox", { name: "Program", exact: true }),
+  ).toHaveValue("");
 
   await page.getByRole("link", { name: "What's next", exact: true }).click();
   await expect(

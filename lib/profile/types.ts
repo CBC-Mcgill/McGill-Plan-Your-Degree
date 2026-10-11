@@ -48,7 +48,7 @@ export const isCegep = (previousEducation: string | null) =>
 export interface Profile {
   records: CourseRecord[];
   programId: string | null;
-  /** A minor taken alongside the program. Its credits sit inside the degree's total. */
+  /** A second program taken alongside the program: a minor, a second major, the other half of a joint honours, or a B.Sc. Liberal breadth component. Its credits sit inside the degree's total. The name stays so saved profiles load. */
   minorId: string | null;
   entry: EntryRoute | null;
   /** Lump-sum credits from the transcript's advanced standing, on top of the course records. 0 to 60. */

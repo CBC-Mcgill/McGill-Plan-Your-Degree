@@ -96,7 +96,7 @@ test("on a phone a visitor imports a transcript and saves it from the bar", asyn
   const toast = await undo.boundingBox();
   expect((toast?.y ?? 0) + (toast?.height ?? 0)).toBeLessThan(bar?.y ?? 0);
 
-  await page.getByRole("combobox", { name: "Program" }).click();
+  await page.getByRole("combobox", { name: "Program", exact: true }).click();
   await expect(save).toBeHidden();
   await page.getByRole("heading", { name: "Check your transcript" }).click();
   await save.click();
@@ -116,10 +116,10 @@ test("on a phone a student's profile stacks, and every action is a tap away", as
 
   await page.getByRole("link", { name: "Degree", exact: true }).click();
   await expect(
-    page.getByRole("combobox", { name: "Program" }),
+    page.getByRole("combobox", { name: "Program", exact: true }),
   ).toBeInViewport();
   await page.getByRole("combobox", { name: "Minor" }).click();
-  const list = page.getByRole("listbox", { name: "Minors" });
+  const list = page.getByRole("listbox", { name: "Minors and programs" });
   const box = await list.boundingBox();
   expect(box?.x).toBeGreaterThanOrEqual(0);
   expect((box?.x ?? 0) + (box?.width ?? 0)).toBeLessThanOrEqual(

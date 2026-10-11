@@ -97,7 +97,7 @@ function Summary() {
         ? `from ${formatTerm(start)}`
         : end && `until ${formatTerm(end)}`;
   const first = [
-    [degree, minor && `with the ${COPY.minorTitle(minor.name)}`]
+    [degree, minor && `with the ${COPY.secondTitle(minor)}`]
       .filter(Boolean)
       .join(" "),
     terms,

@@ -30,7 +30,7 @@ import {
   logicalCode,
   type Term,
 } from "@/lib/profile/types";
-import { guessMinor, guessProgram } from "@/lib/programs";
+import { guessMinor, guessProgram, guessSecond } from "@/lib/programs";
 import { useProgramIndex } from "@/lib/programs/client";
 import type { ProgramSummary } from "@/lib/programs/types";
 import type { Transcript } from "@/lib/transcript/parse";
@@ -71,13 +71,20 @@ function Review({
     const store = useProfileStore.getState();
     const entry = isCegep(transcript.previousEducation) ? "cegep" : store.entry;
     const start = earliest(transcript);
+    const guessed = guessProgram(
+      transcript.degree,
+      transcript.programs,
+      programs,
+    );
+    const programId = guessed ?? store.programId;
+    const minorId =
+      guessMinor(transcript.degree, transcript.minors, programs) ??
+      guessSecond(transcript.degree, transcript.programs, guessed, programs) ??
+      store.minorId;
     return {
-      programId:
-        guessProgram(transcript.degree, transcript.programs, programs) ??
-        store.programId,
-      minorId:
-        guessMinor(transcript.degree, transcript.minors, programs) ??
-        store.minorId,
+      programId,
+      // A saved second program can be the program this transcript names.
+      minorId: minorId === programId ? null : minorId,
       entry,
       advancedStanding: transcript.advancedStanding,
       creditsRequired: transcript.creditsRequired ?? store.creditsRequired,

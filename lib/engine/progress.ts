@@ -1,5 +1,6 @@
 import { creditsText, sentence } from "../format.ts";
 import type { EntryRoute } from "../profile/types.ts";
+import { isMinor } from "../programs/minor.ts";
 import type {
   ComplementaryGroup,
   Group,
@@ -447,11 +448,25 @@ export function programStanding(
   });
 }
 
-/** The most credits a minor may share with the program: what its page says, else 0 in Arts, where no course may fulfill more than one program (mcgill.ca/oasis degree planning guide). Undefined when nobody says. */
-export const overlapCap = (minor: Program): number | undefined =>
-  minor.overlap ?? (minor.faculty === "Arts" ? 0 : undefined);
+/** An Arts degree, where no course may fulfill more than one program (mcgill.ca/oasis degree planning guide). A B.A. counts even when a Science department runs the component. */
+const inArts = (program: Program) =>
+  program.faculty === "Arts" || program.degree === "B.A.";
 
-/** How a minor shares the program's courses: `shared` counts for both, `programOnly` went past the cap and counts for the program alone. */
+/**
+ * The most credits a second program may share with the program: what its page says, else 0 in Arts. Undefined when nobody says, so every shared course counts for both.
+ * A minor reads only its own page and faculty. Any other second program also reads the program's, since a joint honours or a double major is one degree.
+ */
+export const overlapCap = (
+  second: Program,
+  program: Program | null = null,
+): number | undefined =>
+  isMinor(second)
+    ? (second.overlap ?? (second.faculty === "Arts" ? 0 : undefined))
+    : (second.overlap ??
+      program?.overlap ??
+      ([second, program].some((p) => p && inArts(p)) ? 0 : undefined));
+
+/** How a minor or other second program shares the program's courses: `shared` counts for both, `programOnly` went past the cap and counts for the program alone. */
 export interface MinorOverlap {
   cap: number | undefined;
   shared: ReadonlySet<string>;
@@ -469,7 +484,7 @@ export function minorOverlap(
   entry: EntryRoute | null,
   basis: Basis,
 ): MinorOverlap {
-  const cap = overlapCap(minor);
+  const cap = overlapCap(minor, program);
   const programCodes = new Set(
     program
       ? programStanding(program, snapshot, catalogue, entry, basis)

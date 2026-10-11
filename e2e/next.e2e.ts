@@ -215,6 +215,35 @@ test("met and CEGEP-credited groups, the restriction note and the minor open fro
   expect(width).toBeLessThanOrEqual(0);
 });
 
+test("two joint honours components show as a pair, each with its own bar", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [done("MATH 235")],
+    programId: "economics-joint-honours-component-ba",
+    minorId: "mathematics-joint-honours-component-ba",
+    plan: [],
+  });
+
+  await expect(page.getByText("Joint honours credits")).toBeVisible();
+  const bars = page.getByRole("region", { name: "Credit progress" });
+  await expect(bars).toContainText("Joint honours");
+  await expect(bars).toContainText("Mathematics Joint Honours Component");
+  await expect(bars).toContainText("3 of 36 credits");
+  await expect(bars).not.toContainText("minor");
+
+  await requirement(page, "Mathematics Joint Honours Component").click();
+  const second = page.getByRole("region", {
+    name: "Mathematics Joint Honours Component",
+  });
+  await second
+    .getByRole("button", { name: "Mathematics Joint Honours Component" })
+    .hover();
+  await expect(page.getByRole("tooltip")).toContainText(
+    "two components of your joint honours degree",
+  );
+});
+
 test("a started profile with no program asks for one", async ({ page }) => {
   await openWith(page, {
     records: [],
@@ -250,7 +279,7 @@ test("a minor picked on the profile shows on What's next", async ({ page }) => {
 
   const minorName = "Technological Entrepreneurship Minor";
   await page
-    .getByRole("combobox", { name: "Program" })
+    .getByRole("combobox", { name: "Program", exact: true })
     .fill("technological entrepreneurship");
   await expect(page.getByText("No program matches")).toBeVisible();
 
