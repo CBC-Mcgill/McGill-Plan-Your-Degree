@@ -9,7 +9,14 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { type ReactNode, useEffect, useId, useMemo, useRef } from "react";
+import {
+  Fragment,
+  type ReactNode,
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+} from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
 import {
@@ -1014,18 +1021,25 @@ function GroupBody({
       {group.replaces && (
         <p className="text-fg-muted">{COPY.replaces(group.replaces)}</p>
       )}
-      {definition?.kind === "complementary" && picksOne(definition) && (
-        <p className="text-fg-muted">{COPY.pickOne}</p>
-      )}
-      {open?.buckets.map((bucket) => (
-        <Bucket
-          key={bucket.title}
-          title={bucket.title}
-          progress={bucket.progress}
-          entries={bucket.entries}
-          context={context}
-          heading={heading}
-        />
+      {definition?.kind === "complementary" &&
+        picksOne(definition) &&
+        !open?.buckets.some((bucket) => bucket.stream) && (
+          <p className="text-fg-muted">{COPY.pickOne}</p>
+        )}
+      {open?.buckets.map((bucket, i) => (
+        <Fragment key={bucket.title}>
+          {/* Before the first stream's list, so lists every stream shares do not read as streams. */}
+          {bucket.stream && !open.buckets[i - 1]?.stream && (
+            <p className="text-fg-muted">{COPY.pickOne}</p>
+          )}
+          <Bucket
+            title={bucket.title}
+            progress={bucket.progress}
+            entries={bucket.entries}
+            context={context}
+            heading={heading}
+          />
+        </Fragment>
       ))}
       {open && open.checks.length > 0 && (
         <ul>

@@ -40,6 +40,8 @@ export interface Bucket {
   /** "3 of 6 credits", when the rule states a minimum. */
   progress: string | null;
   entries: Entry[];
+  /** The list belongs to one of the streams the student picks between. */
+  stream?: true;
 }
 
 export interface OpenGroup {
@@ -169,11 +171,11 @@ export function minimumText(rule: Rule, done: RuleProgress | undefined) {
   return null;
 }
 
-/** A rule's title, under its stream's name when it belongs to one, as "Choral Stream: Large Ensembles: 4 credits from the following". */
+/** A rule's title, under its stream's name when it belongs to one, as "Choral Stream: 4 credits from the following" or "Choral Stream, Large Ensembles: 4 credits from the following". */
 export const ruleTitle = (rule: Rule) =>
-  rule.option && rule.option !== rule.title
-    ? `${rule.option}: ${rule.title}`
-    : rule.title;
+  !rule.option || rule.option === rule.title
+    ? rule.title
+    : `${rule.option}${rule.title.includes(": ") ? "," : ":"} ${rule.title}`;
 
 const flatten = (items: (string | { oneOf: string[] })[]) =>
   items.flatMap((item) => (typeof item === "string" ? [item] : item.oneOf));
@@ -305,6 +307,7 @@ export function nextView(
         title: ruleTitle(b.rule),
         progress: minimumText(b.rule, b.done),
         entries: b.entries,
+        ...((b.rule.option || group.pickOne) && { stream: true as const }),
       }));
     if (rest.length > 0) {
       listed.push({ title: "Other options", progress: null, entries: rest });
