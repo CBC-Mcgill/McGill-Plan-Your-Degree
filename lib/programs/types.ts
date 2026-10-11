@@ -39,6 +39,8 @@ export interface Rule {
   match?: Match;
   /** The crawler could not turn this catalogue text into a rule, so it matches no course and `title` holds the text for a person to read. */
   unparsed?: true;
+  /** The student's adviser must approve the choice, so the app counts what it can and shows a reminder. */
+  adviser?: true;
 }
 
 /** A course counts once toward the group total but can satisfy several rules in the group. */

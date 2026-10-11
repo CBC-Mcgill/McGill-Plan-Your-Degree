@@ -361,6 +361,8 @@ function readClause(
   const exclude: string[] = [];
   let unknown = false;
   let text = clause
+    .replace(/^(?:one|a|any) (\d+)-credit /i, "$1 credits ")
+    .replace(/\ba coherent set of /i, "")
     .replace(/\bNOTE\b:?/g, "")
     .replace(/\s*\(\d+(?: or \d+)? credits?(?: each)?\)/gi, "")
     .replace(EXCLUDING, (_, inner = "", list = "") => {
@@ -386,6 +388,7 @@ function readClause(
       ),
       (_, list) => subject(list),
     )
+    .replace(/\s+/g, " ")
     .replace(
       new RegExp(
         String.raw`\bwith an? (?:prefix of )?(${SUBJECT_LIST})(?: prefix)?|\b(${SUBJECT_LIST}) prefix\b|\b(${SUBJECT_LIST})\b(?! ?\d{3})`,
@@ -393,8 +396,9 @@ function readClause(
       ),
       (_, a, b, c) => subject(a ?? b ?? c),
     )
+    .replace(/\s+/g, " ")
     .replace(
-      /\b(of|in|from|credits) (?:(?:additional|other|complementary) )?((?:(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+ ){0,2}(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+)(?= courses?\b| (?:at )?_level_|\s*$)/g,
+      /\b(of|in|from|credits) (?:(?:additional|other|complementary) )?((?:(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+ ){0,2}(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+)(?= courses?\b| (?:at )?_level_| _subj_|\s*$)/g,
       (all, before, name) => {
         const found = subjectsOf(name.toLowerCase());
         if (found.length === 0) return all;
@@ -575,6 +579,49 @@ const unparsed = (text: string): Rule => ({
   unparsed: true,
 });
 
+// "subject to approval by the Student Advisor", "(approved by the Department)", "in consultation with the Program Adviser", "or with the permission of your department adviser".
+const APPROVAL =
+  /(?:\s*\(|,\s*|\s+|^)(?:(?:or|and|but) )?(?:(?:selected|chosen|planned|taken) )?(?:either from these lists or )?\b(?:(?:subject to|with|by|only with) (?:the )?(?:prior |signed |written )?(?:adviser and university |departmental |department )?(?:approval|permission)|in consultation with|with (?:an |the )?(?:academic )?advis[eo]r\b|(?:must be |to be |that have been |unless explicitly )?approved by|with (?:advis[eo]r|department|departmental) (?:approval|permission))[^,;()]*\)?/gi;
+
+/** A sentence whose courses need the adviser's approval: the rest of it read as usual, any course for a stated amount, nothing for an optional extra outside the lists. */
+function adviserRules(
+  text: string,
+  rest: string,
+  subjectsOf: (department: string) => string[],
+  credits?: number,
+): Rule[] {
+  const title = trimEnd(text);
+  const read = readStatement(rest, subjectsOf, credits);
+  if (read) {
+    return read.map((rule) => ({
+      ...rule,
+      ...(read.length === 1 && { title }),
+      adviser: true,
+    }));
+  }
+  if (/\b(?:following|below)\b|\b(?:group|list) [A-Z\d]\b/i.test(text)) {
+    return [unparsed(text)];
+  }
+  const m = AMOUNT.exec(rest);
+  const { minCredits, maxCredits } = m ? amountOf(m) : {};
+  // "A maximum of 9 credits may be from another department with permission": the lists still count, so the extra is left out.
+  const optional = !minCredits || /^[^,]*\b(?:may|can)\b/i.test(rest);
+  if (
+    optional &&
+    /\b(?:outside|another|other|elsewhere)\b|\bnon-/i.test(rest)
+  ) {
+    return [];
+  }
+  if (minCredits && !optional) {
+    const match = { ...levelIn(rest.split(",")[0] ?? "")?.match };
+    return [{ title, minCredits, maxCredits, match, adviser: true }];
+  }
+  // "or any 300- or 400-level course approved by an adviser" adds to a list, so it counts nothing and reminds.
+  const level = /^or any\b/i.test(rest) ? levelIn(rest) : null;
+  if (level) return [{ title, match: level.match, adviser: true }];
+  return [unparsed(text)];
+}
+
 /** The rules one sentence of a complementary group states: none for a notice, its text as an unparsed rule when it cannot be read. */
 export function statementRules(
   text: string,
@@ -582,6 +629,10 @@ export function statementRules(
   credits?: number,
 ): Rule[] {
   if (NOISE.test(text) || !CONSTRAINT.test(text)) return [];
+  const rest = trimEnd(text.replace(APPROVAL, "")).replace(/^[\s,]+/, "");
+  if (rest !== trimEnd(text)) {
+    return adviserRules(text, rest, subjectsOf, credits);
+  }
   return readStatement(text, subjectsOf, credits) ?? [unparsed(text)];
 }
 

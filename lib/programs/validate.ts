@@ -137,10 +137,12 @@ export function validateProgram(value: unknown): ValidationResult {
     }
   }
 
-  function match(v: unknown, path: string) {
+  /** `any` lets an empty match through, for a rule open to any course an adviser approves. */
+  function match(v: unknown, path: string, any: boolean) {
     const m = object(v, path, ["subjects", "minLevel", "maxLevel", "exclude"]);
     if (!m) return;
     if (
+      !any &&
       m.subjects === undefined &&
       m.minLevel === undefined &&
       m.maxLevel === undefined
@@ -169,10 +171,12 @@ export function validateProgram(value: unknown): ValidationResult {
       "courses",
       "match",
       "unparsed",
+      "adviser",
     ]);
     if (!r) return;
     text(r, "title", path);
     optionalTrue(r, "unparsed", path);
+    optionalTrue(r, "adviser", path);
     if (
       r.unparsed !== true &&
       r.courses === undefined &&
@@ -181,7 +185,9 @@ export function validateProgram(value: unknown): ValidationResult {
       fail(path, "expected courses or match");
     }
     if (r.courses !== undefined) list(r.courses, `${path}.courses`, 1, code);
-    if (r.match !== undefined) match(r.match, `${path}.match`);
+    if (r.match !== undefined) {
+      match(r.match, `${path}.match`, r.adviser === true);
+    }
     atMost(
       optionalNum(r, "minCredits", path, "credits"),
       optionalNum(r, "maxCredits", path, "credits"),

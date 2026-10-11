@@ -379,3 +379,58 @@ test("reads level minimums and caps, and subjects at a level, from sentences", (
     expect(read(text, credits), text).toEqual(rules);
   }
 });
+
+test("reads what an adviser must approve, and leaves optional extras out", () => {
+  const cases: [string, object[]][] = [
+    [
+      "24 credits of Geography (GEOG) courses excluding GEOG 200 and GEOG 205, selected in consultation with the Program Adviser.",
+      [
+        {
+          minCredits: 24,
+          maxCredits: 24,
+          match: { subjects: ["GEOG"], exclude: ["GEOG 200", "GEOG 205"] },
+          adviser: true,
+        },
+      ],
+    ],
+    [
+      "9 credits of elective courses outside the School of Architecture must be completed, subject to approval by the Student Advisor.",
+      [{ minCredits: 9, maxCredits: 9, match: {}, adviser: true }],
+    ],
+    [
+      "or any 300- or 400-level course approved by an adviser.",
+      [{ match: { minLevel: 300, maxLevel: 400 }, adviser: true }],
+    ],
+    [
+      "A maximum of 9 credits may be from another department with the signed permission of the program adviser.",
+      [],
+    ],
+    [
+      "12 credits chosen from the following list in consultation with the Academic Adviser for the Minor:",
+      [{ unparsed: true }],
+    ],
+  ];
+  for (const [text, rules] of cases) expect(read(text), text).toEqual(rules);
+  const [rule] = statementRules(
+    "3 credits, chosen in consultation with the academic adviser.",
+  );
+  expect(
+    validateProgram({
+      id: "x-minor",
+      name: "X",
+      degree: "B.A.",
+      faculty: "Arts",
+      catalogueYear: "2026-2027",
+      source: "https://coursecatalogue.mcgill.ca/x/",
+      credits: 3,
+      groups: [
+        {
+          title: "Electives",
+          kind: "complementary",
+          credits: 3,
+          rules: [rule],
+        },
+      ],
+    }),
+  ).toMatchObject({ ok: true });
+});

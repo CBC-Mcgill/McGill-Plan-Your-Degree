@@ -39,6 +39,8 @@ export interface RuleProgress {
   minCourses?: number;
   /** The crawler could not read this rule, so nothing counts toward it and it is never satisfied. */
   unparsed?: true;
+  /** The student's adviser must approve the courses, so the page shows a reminder. */
+  adviser?: true;
   satisfied: boolean;
 }
 
@@ -154,21 +156,41 @@ export function groupAllows(group: ComplementaryGroup, code: string): boolean {
   return rules.some((rule) => ruleMatches(rule, code));
 }
 
+/** "9 credits chosen in consultation with an adviser" next to course lists: it adds any course it matches to the group, up to its credits. */
+const addsApproved = (group: ComplementaryGroup, rule: Rule) =>
+  rule.adviser === true &&
+  isFilter(rule) &&
+  rule.maxCredits !== undefined &&
+  namesCourses(group);
+
+/** What the group counts: what its lists allow, plus the courses an adviser approves on top of them. */
+const counts = (group: ComplementaryGroup, code: string) =>
+  groupAllows(group, code) ||
+  (code !== STANDING &&
+    group.rules.some(
+      (rule) => addsApproved(group, rule) && ruleMatches(rule, code),
+    ));
+
 /** True when one more course stays within the caps of every rule it matches, given what each rule already holds, in rule order. */
 export function fitsCaps(
   group: ComplementaryGroup,
-  held: readonly Pick<RuleProgress, "creditsDone" | "coursesDone">[],
+  held: readonly Pick<RuleProgress, "courses">[],
   code: string,
   credits: number,
 ): boolean {
   return group.rules.every((rule, i) => {
-    const creditsDone = held[i]?.creditsDone ?? 0;
-    const coursesDone = held[i]?.coursesDone ?? 0;
+    if (!ruleMatches(rule, code)) return true;
+    // An adviser's extra caps only the courses it adds, never those the lists name.
+    const extra = addsApproved(group, rule);
+    if (extra && groupAllows(group, code)) return true;
+    const mine = (held[i]?.courses ?? []).filter(
+      (c) => !extra || !groupAllows(group, c.code),
+    );
+    const creditsDone = mine.reduce((sum, c) => sum + c.credits, 0);
     return (
-      !ruleMatches(rule, code) ||
-      ((rule.maxCredits === undefined ||
+      (rule.maxCredits === undefined ||
         creditsDone + credits <= rule.maxCredits) &&
-        (rule.maxCourses === undefined || coursesDone < rule.maxCourses))
+      (rule.maxCourses === undefined || mine.length < rule.maxCourses)
     );
   });
 }
@@ -260,7 +282,7 @@ function complementaryProgress(
 ): GroupProgress {
   const pool = new Map<string, number>();
   for (const [code, credits] of counted) {
-    if (!used.has(code) && groupAllows(group, code)) pool.set(code, credits);
+    if (!used.has(code) && counts(group, code)) pool.set(code, credits);
   }
   const state = group.rules.map((rule) => ({
     rule,
@@ -317,6 +339,7 @@ function complementaryProgress(
     minCredits: rule.minCredits,
     minCourses: rule.minCourses,
     unparsed: rule.unparsed,
+    adviser: rule.adviser,
     satisfied:
       !rule.unparsed &&
       creditsDone >= (rule.minCredits ?? 0) &&
