@@ -43,7 +43,6 @@
         {
           "title": "9 credits of Social Work (SWRK) courses",
           "minCredits": 9,
-          "maxCredits": 9,
           "match": {
             "subjects": [
               "SWRK"
@@ -52,7 +51,12 @@
         },
         {
           "title": "12 credits of non-Social Work courses",
-          "unparsed": true
+          "minCredits": 12,
+          "match": {
+            "excludeSubjects": [
+              "SWRK"
+            ]
+          }
         }
       ]
     },
@@ -63,7 +67,12 @@
       "rules": [
         {
           "title": "6 credits of non-Social Work courses",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "excludeSubjects": [
+              "SWRK"
+            ]
+          }
         }
       ]
     }

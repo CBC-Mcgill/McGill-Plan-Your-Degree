@@ -68,7 +68,7 @@
       "credits": 6,
       "rules": [
         {
-          "title": "Complementary Courses East Asian Studies (EAST)",
+          "title": "6 credits at the 300 level or above in East Asian Studies (EAST) courses selected from",
           "courses": [
             "EAST 303",
             "EAST 304",
@@ -118,11 +118,9 @@
             "EAST 559",
             "EAST 564",
             "EAST 569"
-          ]
-        },
-        {
-          "title": "6 credits at the 300 level or above in East Asian Studies (EAST) courses selected from",
-          "unparsed": true
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         }
       ]
     }

@@ -74,12 +74,14 @@
           "maxCredits": 3
         },
         {
-          "title": "Statistics",
+          "title": "Statistics: 3 credits from the following Statistics courses or equivalent",
           "courses": [
             "AEMA 310",
             "GEOG 202",
             "MATH 203"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Science, Policy, and Management: 9 credits from",
@@ -209,10 +211,6 @@
             "ENTO 330",
             "BIOL 350"
           ]
-        },
-        {
-          "title": "3 credits from the following Statistics courses or equivalent",
-          "unparsed": true
         }
       ]
     }

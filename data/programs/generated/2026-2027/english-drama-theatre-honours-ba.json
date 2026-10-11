@@ -23,14 +23,16 @@
       "credits": 42,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits from the following practice-based courses",
           "courses": [
             "ENGL 269",
             "ENGL 365",
             "ENGL 368",
             "ENGL 372",
             "ENGL 377"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Shakespeare or Another Major Figure in Drama and Theatre Courses",
@@ -41,14 +43,16 @@
           ]
         },
         {
-          "title": "Drama and/or Theatre Courses with a Canadian Component",
+          "title": "Drama and/or Theatre Courses with a Canadian Component: 3 credits from a list of courses in Drama and/or Theatre with a Canadian component",
           "courses": [
             "ENGL 313",
             "ENGL 413"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Theatre History Courses",
+          "title": "Theatre History Courses: 3 credits from the list of courses in Theatre History",
           "courses": [
             "ENGL 306",
             "ENGL 308",
@@ -63,7 +67,9 @@
             "ENGL 467",
             "ENGL 486",
             "ENGL 516"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Drama and Theatre Before 1900 Courses",
@@ -99,7 +105,7 @@
           ]
         },
         {
-          "title": "Performance-Oriented Courses",
+          "title": "Performance-Oriented Courses: 9 credits from the list of Performance-Oriented courses",
           "courses": [
             "ENGL 365",
             "ENGL 367",
@@ -113,7 +119,9 @@
             "ENGL 466",
             "ENGL 469",
             "ENGL 565"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "Drama and Theatre - Courses of Interest - Other Departments",
@@ -140,19 +148,7 @@
           }
         },
         {
-          "title": "3 credits from the following practice-based courses",
-          "unparsed": true
-        },
-        {
           "title": "3 credits from a list of courses on Shakespeare or, when available and with an instructor's signed permission on the student's Audit Sheet, another major figure in Drama and Theatre",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from a list of courses in Drama and/or Theatre with a Canadian component",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the list of courses in Theatre History",
           "unparsed": true
         },
         {
@@ -168,10 +164,6 @@
         },
         {
           "title": "3 credits from a list of courses with a theoretical component, from the option's offerings at the 400 level or above",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits from the list of Performance-Oriented courses",
           "unparsed": true
         },
         {

@@ -23,6 +23,82 @@
         "MATH 423"
       ],
       "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202, but must replace it by either COMP 250 or COMP 350. Students have to take MATH 204 prior to MATH 324. Students who have successfully completed a course equivalent to MATH 222 with a grade of C or better may omit MATH 222, but must replace it with 3 credits of complementary courses. MATH 236 is an equivalent prerequisiste to MATH 223 for required and complementary Computer Science courses listed below."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "MATH 203"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "At least 6 credits selected from",
+          "courses": [
+            "COMP 250",
+            "COMP 350",
+            "MATH 209",
+            "MATH 243",
+            "MATH 314",
+            "MATH 315",
+            "MATH 316",
+            "MATH 317",
+            "MATH 326",
+            "MATH 327",
+            "MATH 329",
+            "MATH 340",
+            "MATH 350",
+            "MATH 378",
+            "MATH 417",
+            "MATH 430",
+            "MATH 463"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "If chosen, students can take either MATH 317 or COMP 350, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 317",
+            "COMP 350"
+          ]
+        },
+        {
+          "title": "At least 9 credits selected from",
+          "courses": [
+            "COMP 551",
+            "MATH 208",
+            "MATH 308",
+            "MATH 410",
+            "MATH 420",
+            "MATH 427",
+            "MATH 447",
+            "MATH 462",
+            "MATH 510",
+            "MATH 523",
+            "MATH 524",
+            "MATH 525",
+            "MATH 526",
+            "MATH 527",
+            "MATH 545",
+            "MATH 556",
+            "MATH 557",
+            "MATH 558",
+            "MATH 559",
+            "MATH 598",
+            "WCOM 314"
+          ],
+          "minCredits": 9
+        },
+        {
+          "title": "If chosen, students can take at most one of MATH 410, MATH 420, MATH 527D1/MATH 527D2, and WCOM 314",
+          "unparsed": true
+        }
+      ]
     }
   ],
   "generated": true

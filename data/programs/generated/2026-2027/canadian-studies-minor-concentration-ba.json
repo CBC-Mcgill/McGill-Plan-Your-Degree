@@ -35,7 +35,14 @@
             "POLI 221",
             "POLI 222",
             "QCST 200",
-            "SOCI 230",
+            "SOCI 230"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3-9 credits in interdisciplinary Canadian Studies (CANS) courses from",
+          "courses": [
             "CANS 300",
             "CANS 301",
             "CANS 306",
@@ -54,7 +61,7 @@
             "CANS 499"
           ],
           "minCredits": 3,
-          "maxCredits": 3
+          "maxCredits": 9
         },
         {
           "title": "0-6 credits chosen from",
@@ -86,10 +93,6 @@
             "SOCI 475"
           ],
           "maxCredits": 6
-        },
-        {
-          "title": "3-9 credits in interdisciplinary Canadian Studies (CANS) courses from",
-          "unparsed": true
         }
       ]
     }

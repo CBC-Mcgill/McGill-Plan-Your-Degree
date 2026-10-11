@@ -13,7 +13,7 @@
       "credits": 6,
       "rules": [
         {
-          "title": "6 credits",
+          "title": "Africa Field Study Semester Africa Field Study Semester - Required Courses",
           "courses": [
             "ANTH 451",
             "BIOL 451",
@@ -77,7 +77,7 @@
       "credits": 9,
       "rules": [
         {
-          "title": "9 credits",
+          "title": "Panama Field Study Semester Panama Field Study Semester - Required Courses",
           "courses": [
             "BIOL 553",
             "ENVR 451"
@@ -91,7 +91,7 @@
       "credits": 6,
       "rules": [
         {
-          "title": "6 credits",
+          "title": "Panama Field Study Semester Panama Field Study Semester - Complementary Courses",
           "courses": [
             "AGRI 550",
             "GEOG 498"
@@ -114,9 +114,13 @@
         "ATOC 373",
         "EPSC 373",
         "GEOG 373",
-        "ATOC 473",
-        "EPSC 473",
-        "GEOG 473"
+        {
+          "oneOf": [
+            "ATOC 473",
+            "EPSC 473",
+            "GEOG 473"
+          ]
+        }
       ]
     }
   ],

@@ -57,10 +57,26 @@
             "BIOL 373",
             "COMP 204",
             "COMP 250",
-            "PSYC 305",
+            "PSYC 305"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3-4 credits, one of",
+          "courses": [
             "ANAT 214",
             "ANAT 261",
-            "ANAT 316",
+            "ANAT 316"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4,
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
             "BIOL 532",
             "BMDE 505",
             "BMDE 519",
@@ -88,7 +104,20 @@
             "PHGY 556",
             "PHGY 560",
             "PSYC 470",
-            "PSYT 500",
+            "PSYT 500"
+          ]
+        },
+        {
+          "title": "the 6-credit course equals 3 credits of ULP and 6 credits of electives",
+          "unparsed": true
+        },
+        {
+          "title": "the 9-credit course equals 3 credits of ULP and 6 credits of electives",
+          "unparsed": true
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
             "ANAT 321",
             "ANAT 322",
             "ANAT 365",
@@ -101,22 +130,30 @@
             "BIOC 458",
             "BIOL 300",
             "BIOL 303",
+            "BIOL 309",
             "BIOL 313",
             "BIOL 314",
             "BIOL 324",
+            "BIOL 373",
             "BIOL 389",
             "BIOL 416",
             "BIOL 468",
             "BIOL 518",
             "BIOL 520",
             "BIOL 524",
+            "BIOL 532",
             "BIOL 544",
             "BIOL 546",
             "BIOL 551",
             "BIOL 588",
             "CHEM 214",
             "EXMD 401",
+            "EXMD 502",
+            "EXMD 503",
             "EXMD 504",
+            "EXMD 506",
+            "EXMD 507",
+            "EXMD 508",
             "EXMD 510",
             "HGEN 575",
             "NEUR 310",
@@ -132,22 +169,11 @@
             "PSYC 342",
             "PSYC 410",
             "PSYC 427",
+            "PSYC 470",
             "PSYC 522",
             "PSYC 526",
-            "PHIL 341",
-            "PHIL 343",
-            "REDM 410"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
-        },
-        {
-          "title": "the 6-credit course equals 3 credits of ULP and 6 credits of electives",
-          "unparsed": true
-        },
-        {
-          "title": "the 9-credit course equals 3 credits of ULP and 6 credits of electives",
-          "unparsed": true
+            "PSYT 500"
+          ]
         },
         {
           "title": "Students may take ANAT 458 or BIOC 458 but not both",
@@ -158,8 +184,12 @@
           ]
         },
         {
-          "title": "3-4 credits, one of",
-          "unparsed": true
+          "title": "Complementary Courses",
+          "courses": [
+            "PHIL 341",
+            "PHIL 343",
+            "REDM 410"
+          ]
         },
         {
           "title": "12 credits selected from the Upper-Level Physiology (ULP) course list as follows",

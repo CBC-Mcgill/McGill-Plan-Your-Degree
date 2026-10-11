@@ -31,7 +31,7 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Civil Law Immersion Courses",
+          "title": "Civil Law Immersion Courses: 3 credits from the following list of civil law courses",
           "courses": [
             "BUS2 561",
             "LAWG 506",
@@ -39,20 +39,24 @@
             "PRV1 549",
             "PRV2 270",
             "PRV4 548"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Common Law Immersion Courses",
+          "title": "Common Law Immersion Courses: 3 credits from the following list of common law courses",
           "courses": [
             "PRV3 200",
             "PRV3 534",
             "PRV4 500",
             "PRV4 549",
             "PRV5 582"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Social Diversity, Human Rights and Indigenous Law Courses",
+          "title": "Social Diversity, Human Rights and Indigenous Law Courses: Students must take at least 3 credits from the following courses",
           "courses": [
             "CMPL 500",
             "CMPL 504",
@@ -79,7 +83,8 @@
             "PUB2 503",
             "PUB2 507",
             "PUB2 551"
-          ]
+          ],
+          "minCredits": 3
         },
         {
           "title": "Principles of Canadian Administrative Law: 3 credits from the following courses",
@@ -112,18 +117,6 @@
           ],
           "minCredits": 3,
           "maxCredits": 3
-        },
-        {
-          "title": "3 credits from the following list of civil law courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the following list of common law courses",
-          "unparsed": true
-        },
-        {
-          "title": "Students must take at least 3 credits from the following courses",
-          "unparsed": true
         }
       ]
     },

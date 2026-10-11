@@ -34,7 +34,13 @@
         {
           "title": "0-3 credits selected from",
           "courses": [
-            "MATH 203",
+            "MATH 203"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "Part I: 6 credits selected from",
+          "courses": [
             "COMP 208",
             "COMP 250",
             "COMP 251",
@@ -52,7 +58,22 @@
             "MATH 378",
             "MATH 417",
             "MATH 430",
-            "MATH 463",
+            "MATH 463"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "If chosen, students take either MATH 317 or COMP 350, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 317",
+            "COMP 350"
+          ]
+        },
+        {
+          "title": "Part II: 14 credits selected from",
+          "courses": [
             "COMP 451",
             "COMP 551",
             "MATH 308",
@@ -74,15 +95,8 @@
             "MATH 598",
             "WCOM 314"
           ],
-          "maxCredits": 3
-        },
-        {
-          "title": "If chosen, students take either MATH 317 or COMP 350, but not both",
-          "maxCourses": 1,
-          "courses": [
-            "MATH 317",
-            "COMP 350"
-          ]
+          "minCredits": 14,
+          "maxCredits": 14
         },
         {
           "title": "If chosen, students can take either COMP 451 or COMP 551, but not both",
@@ -94,14 +108,6 @@
         },
         {
           "title": "If chosen, students can at most one of MATH 410, MATH 420, MATH 527D1/MATH 527D2, and WCOM 314",
-          "unparsed": true
-        },
-        {
-          "title": "Part I: 6 credits selected from",
-          "unparsed": true
-        },
-        {
-          "title": "Part II: 14 credits selected from",
           "unparsed": true
         }
       ]

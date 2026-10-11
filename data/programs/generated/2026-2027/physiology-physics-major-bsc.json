@@ -60,21 +60,21 @@
       "credits": 6,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits, one of",
           "courses": [
             "PHGY 311",
             "PHGY 314"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
         },
         {
           "title": "Complementary Courses",
           "courses": [
             "PHYS 519"
           ]
-        },
-        {
-          "title": "3 credits, one of",
-          "unparsed": true
         }
       ]
     }

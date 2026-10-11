@@ -55,7 +55,14 @@
             "BIOL 373",
             "COMP 204",
             "COMP 250",
-            "PSYC 305",
+            "PSYC 305"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
             "BIOL 532",
             "BMDE 519",
             "EXMD 502",
@@ -81,9 +88,7 @@
             "PHGY 560",
             "PSYC 470",
             "PSYT 500"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
+          ]
         },
         {
           "title": "6 credits selected from the Upper-Level Physiology (ULP) course list as follows",

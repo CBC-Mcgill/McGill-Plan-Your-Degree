@@ -40,7 +40,34 @@
             "MATH 317",
             "MATH 324",
             "MATH 335",
-            "MATH 340",
+            "MATH 340"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        },
+        {
+          "title": "At least 6 credits must be at the 400 or 500 level",
+          "courses": [
+            "MATH 410",
+            "MATH 417",
+            "MATH 423",
+            "MATH 427",
+            "MATH 430",
+            "MATH 447",
+            "MATH 451",
+            "MATH 462",
+            "MATH 463",
+            "MATH 478",
+            "MATH 510",
+            "MATH 523",
+            "MATH 525",
+            "MATH 545"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "15-21 credits selected from the following: at least 6 credits must be at the 400 or 500 level",
+          "courses": [
             "MATH 204",
             "MATH 208",
             "MATH 308",
@@ -69,12 +96,8 @@
             "MATH 525",
             "MATH 545"
           ],
-          "minCredits": 6,
-          "maxCredits": 12
-        },
-        {
-          "title": "15-21 credits selected from the following: at least 6 credits must be at the 400 or 500 level",
-          "unparsed": true
+          "minCredits": 15,
+          "maxCredits": 21
         },
         {
           "title": "If necessary, 6 additional credits in Mathematics or related disciplines selected in consultation with the Adviser",

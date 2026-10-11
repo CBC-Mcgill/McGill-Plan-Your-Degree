@@ -61,7 +61,7 @@
           "maxCredits": 9
         },
         {
-          "title": "300 and 400 levels",
+          "title": "300 and 400 levels: 9-15 credits in interdisciplinary Canadian Studies (CANS) courses chosen from",
           "courses": [
             "CANS 300",
             "CANS 301",
@@ -79,7 +79,9 @@
             "CANS 408",
             "CANS 413",
             "CANS 499"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
         },
         {
           "title": "300 and 400 levels: 12-18 credits chosen from",
@@ -115,10 +117,6 @@
         },
         {
           "title": "Or another undergraduate 3-credit course focused on Quebec",
-          "unparsed": true
-        },
-        {
-          "title": "9-15 credits in interdisciplinary Canadian Studies (CANS) courses chosen from",
           "unparsed": true
         }
       ]

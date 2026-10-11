@@ -10,22 +10,85 @@
     {
       "title": "Program Prerequisites - Foundation Program",
       "kind": "complementary",
-      "credits": 32,
+      "credits": 10,
       "rules": [
-        {
-          "title": "22 credits of Prerequisite Courses",
-          "unparsed": true
-        },
         {
           "title": "4 credits of Large Ensemble",
           "unparsed": true
         },
         {
           "title": "6 credits of Non-Music Electives",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         }
       ],
       "foundation": true
+    },
+    {
+      "title": "Prerequisite Courses",
+      "kind": "required",
+      "credits": 22,
+      "courses": [
+        "MUHL 186",
+        "MUIN 180",
+        "MUIN 181",
+        "MUPD 135",
+        "MUSP 140",
+        "MUSP 141",
+        "MUSP 170",
+        "MUSP 171",
+        "MUTH 150",
+        "MUTH 151"
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 44,
+      "courses": [
+        "MUIN 280",
+        "MUIN 281",
+        "MUIN 282",
+        "MUIN 380",
+        "MUIN 381",
+        "MUIN 382",
+        "MUIN 480",
+        "MUIN 481",
+        "MUIN 482",
+        "MUPG 209",
+        "MUPG 210",
+        "MUPG 211",
+        "MUPG 212",
+        "MUPG 213",
+        "MUTH 250",
+        "MUTH 251",
+        "MUTH 350",
+        "MUSP 240",
+        "MUSP 241",
+        "MUHL 286",
+        "MUPD 235"
+      ]
     },
     {
       "title": "Complementary Courses",
@@ -33,7 +96,7 @@
       "credits": 27,
       "rules": [
         {
-          "title": "Performance",
+          "title": "Performance: 10 credits of complementary performance selected from",
           "courses": [
             "MUEN 454",
             "MUEN 496",
@@ -46,10 +109,12 @@
             "MUEN 587",
             "MUEN 593",
             "MUEN 594"
-          ]
+          ],
+          "minCredits": 10,
+          "maxCredits": 10
         },
         {
-          "title": "Performance",
+          "title": "Performance: 9 credits of complementary performance selected from",
           "courses": [
             "MUIN 300",
             "MUIN 301",
@@ -60,7 +125,9 @@
             "MUPG 353",
             "MUPG 380",
             "MUPG 453"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "Musicianship: 2 credits from",
@@ -86,14 +153,6 @@
           "maxCredits": 6
         },
         {
-          "title": "10 credits of complementary performance selected from",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits of complementary performance selected from",
-          "unparsed": true
-        },
-        {
           "title": "MUEN courses at the 400 or 500 level (maximum 4 credits)",
           "unparsed": true
         }
@@ -106,11 +165,42 @@
       "rules": [
         {
           "title": "3 credits of non-Music Electives",
-          "unparsed": true
+          "minCredits": 3,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         },
         {
           "title": "17 credits of Free Electives (may include 2 credits of courses with a MUEN prefix)",
-          "unparsed": true
+          "minCredits": 17,
+          "match": {}
+        },
+        {
+          "title": "At most 2 credits of MUEN courses",
+          "maxCredits": 2,
+          "match": {
+            "subjects": [
+              "MUEN"
+            ]
+          }
         }
       ]
     }

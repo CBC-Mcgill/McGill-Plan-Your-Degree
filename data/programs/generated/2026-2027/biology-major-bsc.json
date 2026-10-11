@@ -30,42 +30,54 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Core",
+          "title": "3 or 4 credits selected from CHEM block",
           "courses": [
             "CHEM 204",
             "CHEM 212"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
         },
         {
-          "title": "Block A-Ecology and Evolution",
+          "title": "At least 3 credits from Block A",
           "courses": [
             "BIOL 304",
             "BIOL 305",
             "BIOL 308"
-          ]
+          ],
+          "minCredits": 3
         },
         {
-          "title": "Block B-Molecular and Cellular",
+          "title": "At least 3 credits from Block B",
           "courses": [
             "BIOL 300",
             "BIOL 303",
             "BIOL 313"
-          ]
+          ],
+          "minCredits": 3
         },
         {
-          "title": "Block C-Neuro/Behaviour",
+          "title": "At least 3 credits from Block C",
           "courses": [
             "BIOL 306",
             "BIOL 307"
-          ]
-        },
-        {
-          "title": "3 or 4 credits selected from CHEM block",
-          "unparsed": true
+          ],
+          "minCredits": 3
         },
         {
           "title": "9 credits (3 credits from each of Blocks A, B and C)",
-          "unparsed": true
+          "courses": [
+            "BIOL 304",
+            "BIOL 305",
+            "BIOL 308",
+            "BIOL 300",
+            "BIOL 303",
+            "BIOL 313",
+            "BIOL 306",
+            "BIOL 307"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         }
       ]
     },

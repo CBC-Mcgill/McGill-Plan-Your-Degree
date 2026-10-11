@@ -70,7 +70,28 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Complementary Courses Geography",
+          "title": "At least 6 credits must be at the 300-level or above",
+          "courses": [
+            "GEOG 303",
+            "GEOG 310",
+            "GEOG 311",
+            "GEOG 314",
+            "GEOG 315",
+            "GEOG 316",
+            "GEOG 325",
+            "GEOG 331",
+            "GEOG 333",
+            "GEOG 408",
+            "GEOG 409",
+            "GEOG 414",
+            "GEOG 417",
+            "GEOG 418",
+            "GEOG 420"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "12 credits selected from the course list below. Of these 12 credits, at least 6 credits must be at the 300-level or above",
           "courses": [
             "GEOG 210",
             "GEOG 216",
@@ -90,18 +111,9 @@
             "GEOG 417",
             "GEOG 418",
             "GEOG 420"
-          ]
-        },
-        {
-          "title": "12 credits selected from the course list below",
-          "unparsed": true
-        },
-        {
-          "title": "Of these 12 credits, at least 6 credits must be at the 300-level or above",
-          "minCredits": 6,
-          "match": {
-            "minLevel": 300
-          }
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
         }
       ]
     },

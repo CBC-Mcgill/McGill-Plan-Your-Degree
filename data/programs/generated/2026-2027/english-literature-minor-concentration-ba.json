@@ -22,7 +22,7 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Major Author",
+          "title": "Major Author: 3 credits on a Major Author",
           "courses": [
             "ENGL 315",
             "ENGL 316",
@@ -31,7 +31,9 @@
             "ENGL 416",
             "ENGL 417",
             "ENGL 418"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Pre-1800",
@@ -83,10 +85,6 @@
             "ENGL 460",
             "ENGL 461"
           ]
-        },
-        {
-          "title": "3 credits on a Major Author",
-          "unparsed": true
         },
         {
           "title": "3 credits from a list of pre-1800 literature courses",

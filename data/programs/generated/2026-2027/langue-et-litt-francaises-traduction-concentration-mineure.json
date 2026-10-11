@@ -1,0 +1,67 @@
+{
+  "id": "langue-et-litt-francaises-traduction-concentration-mineure",
+  "name": "Concentration mineure Langue et litt. françaises - Traduction",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/litteratures-langue-francaise-traduction-creation/langue-et-litt-francaises-traduction-concentration-mineure/",
+  "credits": 18,
+  "groups": [
+    {
+      "title": "Cours Obligatoires",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "FREN 244"
+      ]
+    },
+    {
+      "title": "Cours Complémentaires",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "6 à 12 crédits choisis parmi les cours suivants",
+          "courses": [
+            "FREN 239",
+            "FREN 320",
+            "FREN 324",
+            "FREN 341",
+            "FREN 346",
+            "FREN 347",
+            "FREN 349",
+            "FREN 431",
+            "FREN 441",
+            "FREN 443",
+            "FREN 494"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        },
+        {
+          "title": "3 à 9 crédits choisis parmi les cours suivants",
+          "courses": [
+            "FREN 201",
+            "FREN 203",
+            "FREN 231",
+            "FREN 245",
+            "FREN 250",
+            "FREN 251",
+            "FREN 252",
+            "FREN 313",
+            "FREN 336",
+            "FREN 356",
+            "FREN 394",
+            "FREN 425",
+            "FREN 434",
+            "FREN 491",
+            "FREN 492"
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

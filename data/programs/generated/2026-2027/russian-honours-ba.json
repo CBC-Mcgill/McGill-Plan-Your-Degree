@@ -25,7 +25,7 @@
       "credits": 48,
       "rules": [
         {
-          "title": "Group B: Russian Language",
+          "title": "Group B: Russian Language: 0 - 24 credits to be chosen from",
           "courses": [
             "RUSS 210",
             "RUSS 211",
@@ -36,10 +36,11 @@
             "RUSS 410",
             "RUSS 411",
             "RUSS 415"
-          ]
+          ],
+          "maxCredits": 24
         },
         {
-          "title": "Group C: 200 level",
+          "title": "Group C: 200 level: 9 - 12 credits to be chosen from",
           "courses": [
             "RUSS 213",
             "RUSS 217",
@@ -48,10 +49,12 @@
             "RUSS 224",
             "RUSS 229",
             "RUSS 250"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
         },
         {
-          "title": "Group D: 300 and 400 level",
+          "title": "Group D: 300 and 400 level: 12 - 33 credits to be chosen from",
           "courses": [
             "RUSS 327",
             "RUSS 328",
@@ -78,10 +81,12 @@
             "RUSS 475",
             "RUSS 500",
             "RUSS 501"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 33
         },
         {
-          "title": "Group E: LLC and Faculty of Arts",
+          "title": "Group E: LLC and Faculty of Arts: 0 - 6 credits to be chosen from the following or their equivalent",
           "courses": [
             "ANTH 303",
             "HIST 216",
@@ -96,23 +101,8 @@
             "POLI 329",
             "POLI 331",
             "SOCI 455"
-          ]
-        },
-        {
-          "title": "0 - 24 credits to be chosen from",
-          "unparsed": true
-        },
-        {
-          "title": "9 - 12 credits to be chosen from",
-          "unparsed": true
-        },
-        {
-          "title": "12 - 33 credits to be chosen from",
-          "unparsed": true
-        },
-        {
-          "title": "0 - 6 credits to be chosen from the following or their equivalent",
-          "unparsed": true
+          ],
+          "maxCredits": 6
         }
       ]
     }

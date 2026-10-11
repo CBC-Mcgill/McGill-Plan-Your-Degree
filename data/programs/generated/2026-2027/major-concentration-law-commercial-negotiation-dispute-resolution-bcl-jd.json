@@ -40,7 +40,7 @@
       "credits": 27,
       "rules": [
         {
-          "title": "Law Courses",
+          "title": "Law Courses: 15-21 credits of law courses selected from",
           "courses": [
             "BUS1 532",
             "BUS2 503",
@@ -73,7 +73,9 @@
             "PUB2 503",
             "PUB2 507",
             "PUB2 517"
-          ]
+          ],
+          "minCredits": 15,
+          "maxCredits": 21
         },
         {
           "title": "Non-Law Courses - Economics",
@@ -116,10 +118,6 @@
         },
         {
           "title": "27 credits from the following lists of law and non-law courses of which at least 6 credits must be non-law courses",
-          "unparsed": true
-        },
-        {
-          "title": "15-21 credits of law courses selected from",
           "unparsed": true
         },
         {

@@ -27,33 +27,52 @@
       "credits": 3,
       "rules": [
         {
-          "title": "U1 Complementary Course",
+          "title": "3 credits, select one from",
           "courses": [
             "BIOC 212",
             "BIOL 201"
-          ]
-        },
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
+        }
+      ]
+    },
+    {
+      "title": "U1, U2, or U3 Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
         {
-          "title": "U1, U2, or U3 Required Course",
-          "courses": [
+          "oneOf": [
             "BIOL 373",
             "MATH 203",
             "PSYC 204"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "U2 Required Courses",
+      "kind": "required",
+      "credits": 16,
+      "courses": [
+        "MIMM 301",
+        "MIMM 314",
+        "MIMM 323",
+        "MIMM 324",
+        "MIMM 384",
+        "MIMM 385"
+      ]
+    },
+    {
+      "title": "U3 Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
         {
-          "title": "U2 Required Courses",
-          "courses": [
-            "MIMM 301",
-            "MIMM 314",
-            "MIMM 323",
-            "MIMM 324",
-            "MIMM 384",
-            "MIMM 385"
-          ]
-        },
-        {
-          "title": "U3 Complementary Courses: 6 credits selected from",
+          "title": "6 credits selected from",
           "courses": [
             "MIMM 387",
             "MIMM 413",
@@ -64,9 +83,16 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
-        },
+        }
+      ]
+    },
+    {
+      "title": "U1, U2 or U3 Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
         {
-          "title": "U1, U2 or U3 Complementary Courses: 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "ANAT 261",
             "ANAT 262",
@@ -107,14 +133,6 @@
           ],
           "minCredits": 3,
           "maxCredits": 3
-        },
-        {
-          "title": "3 credits, select one from",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits, select one from",
-          "unparsed": true
         }
       ]
     }

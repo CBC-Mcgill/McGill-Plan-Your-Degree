@@ -25,17 +25,19 @@
       "credits": 45,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits of statistics",
           "courses": [
             "BIOL 373",
             "GEOG 202",
             "MATH 203",
             "PSYC 204",
             "SOCI 350"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Complementary Courses",
+          "title": "9 credits of systematic physical geography",
           "courses": [
             "GEOG 305",
             "GEOG 321",
@@ -44,15 +46,19 @@
             "GEOG 373",
             "GEOG 470",
             "GEOG 471"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
-          "title": "Complementary Courses",
+          "title": "3 credits of field courses",
           "courses": [
             "GEOG 398",
             "GEOG 495",
             "GEOG 496"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "6 or 9 credits of environmental analysis/techniques",
@@ -62,10 +68,12 @@
             "GEOG 384",
             "GEOG 414",
             "GEOG 428"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
         },
         {
-          "title": "Complementary Courses",
+          "title": "6 or 9 credits in (Environment, Earth System and Sustainability sciences)",
           "courses": [
             "ENVR 200",
             "ENVR 201",
@@ -76,7 +84,9 @@
             "GEOG 360",
             "GEOG 438",
             "GEOG 460"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
         },
         {
           "title": "9 credits on human-environment linkages",
@@ -89,7 +99,9 @@
             "GEOG 310",
             "GEOG 311",
             "GEOG 315"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "Geography Approved Course List - Major, Honours and Liberal Programs",
@@ -106,23 +118,7 @@
           ]
         },
         {
-          "title": "3 credits of statistics",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits of systematic physical geography",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits of field courses",
-          "unparsed": true
-        },
-        {
           "title": "Students must take a total of 15 credits from the next 2 blocks; they will choose 9 credits from one block and 6 credits from the other block, depending on their training focus",
-          "unparsed": true
-        },
-        {
-          "title": "6 or 9 credits in (Environment, Earth System and Sustainability sciences)",
           "unparsed": true
         },
         {

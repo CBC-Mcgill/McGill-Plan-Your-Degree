@@ -21,7 +21,7 @@
       "credits": 27,
       "rules": [
         {
-          "title": "27 credits (select no more than two 200-level courses)",
+          "title": "Complementary Courses",
           "courses": [
             "AGRI 510",
             "BREE 324",
@@ -49,6 +49,10 @@
             "LSCI 230",
             "NUTR 207"
           ]
+        },
+        {
+          "title": "27 credits (select no more than two 200-level courses)",
+          "unparsed": true
         }
       ]
     }

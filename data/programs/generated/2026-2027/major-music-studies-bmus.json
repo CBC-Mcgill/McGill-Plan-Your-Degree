@@ -13,7 +13,49 @@
       "credits": 21,
       "rules": [
         {
-          "title": "Program Prerequisites - Foundation Program",
+          "title": "Professional Development: 2 credits from",
+          "courses": [
+            "MUPD 145"
+          ],
+          "minCredits": 2,
+          "maxCredits": 2
+        },
+        {
+          "title": "Classical Stream",
+          "courses": [
+            "MUHL 186",
+            "MUSP 140",
+            "MUSP 141",
+            "MUSP 170",
+            "MUSP 171",
+            "MUTH 150",
+            "MUTH 151"
+          ]
+        },
+        {
+          "title": "Jazz Stream",
+          "courses": [
+            "MUJZ 160",
+            "MUJZ 161",
+            "MUJZ 170",
+            "MUJZ 171",
+            "MUJZ 187",
+            "MUSP 123",
+            "MUSP 124"
+          ]
+        },
+        {
+          "title": "4 credits from courses with a MUEN prefix",
+          "minCredits": 4,
+          "maxCredits": 4,
+          "match": {
+            "subjects": [
+              "MUEN"
+            ]
+          }
+        },
+        {
+          "title": "15 credits from one of the following two streams",
           "unparsed": true
         }
       ],
@@ -73,7 +115,15 @@
           ]
         },
         {
-          "title": "Composition",
+          "title": "Composition: At least 3 credits must be from a course with a MUCO prefix",
+          "courses": [
+            "MUCO 230",
+            "MUCO 260"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "Composition: 3-9 credits from the following, of which at least 3 credits must be from a course with a MUCO prefix",
           "courses": [
             "MUCO 230",
             "MUCO 260",
@@ -89,7 +139,9 @@
             "MUTH 528",
             "MUTH 538",
             "MUTH 539"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
         },
         {
           "title": "Applied Performance Sciences: 3-9 credits from the following",
@@ -161,10 +213,6 @@
               "MUPD"
             ]
           }
-        },
-        {
-          "title": "3-9 credits from the following, of which at least 3 credits must be from a course with a MUCO prefix",
-          "unparsed": true
         }
       ]
     },
@@ -175,11 +223,33 @@
       "rules": [
         {
           "title": "6 credits of Non-Music Electives",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         },
         {
           "title": "42 credits of Free Electives",
-          "unparsed": true
+          "minCredits": 42,
+          "match": {}
         }
       ]
     }

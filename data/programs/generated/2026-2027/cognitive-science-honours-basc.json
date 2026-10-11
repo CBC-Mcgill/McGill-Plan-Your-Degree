@@ -22,77 +22,65 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Core Complementary Courses:",
+          "title": "3 credits from the following logic courses",
           "courses": [
             "COMP 230",
             "MATH 318",
             "PHIL 210"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Core Complementary Courses:",
+          "title": "3 credits from the following statistics courses",
           "courses": [
             "MATH 203",
             "MATH 323",
             "PSYC 204"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Core Complementary Courses:",
+          "title": "3 credits from the following computer science courses",
           "courses": [
             "COMP 202",
             "COMP 204",
             "COMP 250"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Core Complementary Courses:",
+          "title": "3 credits from the following linguistics courses",
           "courses": [
             "LING 201",
             "LING 210",
             "LING 260"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Core Complementary Courses:",
+          "title": "3 credits from the following philosophy courses",
           "courses": [
             "PHIL 200",
             "PHIL 201",
             "PHIL 203",
             "PHIL 221"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Core Complementary Courses:",
+          "title": "3 credits from the following neuroscience courses",
           "courses": [
             "NSCI 200",
             "PHGY 209",
             "PSYC 211"
-          ]
-        },
-        {
-          "title": "3 credits from the following logic courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the following statistics courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the following computer science courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the following linguistics courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the following philosophy courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the following neuroscience courses",
-          "unparsed": true
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         }
       ]
     },

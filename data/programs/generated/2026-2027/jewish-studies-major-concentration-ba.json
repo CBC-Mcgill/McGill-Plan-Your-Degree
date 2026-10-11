@@ -13,14 +13,15 @@
       "credits": 36,
       "rules": [
         {
-          "title": "Jewish History",
+          "title": "Jewish History: 6 credits (minimum) in the history of Jewish civilization to be chosen from",
           "courses": [
             "HIST 207",
             "HIST 219",
             "JWST 211",
             "JWST 216",
             "JWST 217"
-          ]
+          ],
+          "minCredits": 6
         },
         {
           "title": "Jewish Language",
@@ -195,10 +196,6 @@
         },
         {
           "title": "36 credits in Jewish Studies of which 24 are normally taken at the 300 level or above, selected as described below",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits (minimum) in the history of Jewish civilization to be chosen from",
           "unparsed": true
         },
         {

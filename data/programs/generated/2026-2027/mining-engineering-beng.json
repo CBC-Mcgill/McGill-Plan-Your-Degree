@@ -71,7 +71,8 @@
     {
       "title": "Complementary Courses",
       "kind": "complementary",
-      "credits": 34,
+      "credits": 17,
+      "pickOne": true,
       "rules": [
         {
           "title": "Stream A - CEGEP Students",
@@ -82,7 +83,8 @@
             "MPMC 329",
             "MPMC 330",
             "MPMC 421"
-          ]
+          ],
+          "minCredits": 17
         },
         {
           "title": "Stream B - Non-CEGEP Students",
@@ -93,10 +95,18 @@
             "MIME 421",
             "MIME 424",
             "MIME 428"
-          ]
-        },
+          ],
+          "minCredits": 17
+        }
+      ]
+    },
+    {
+      "title": "Technical Complementaries",
+      "kind": "complementary",
+      "credits": 8,
+      "rules": [
         {
-          "title": "List A",
+          "title": "List A: 3-9 credits must be chosen from the following",
           "courses": [
             "MIME 320",
             "MIME 442",
@@ -109,7 +119,9 @@
             "MIME 544",
             "MIME 545",
             "MIME 588"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
         },
         {
           "title": "List B",
@@ -131,14 +143,6 @@
             "SEAD 520",
             "SEAD 550"
           ]
-        },
-        {
-          "title": "17 credits from one of Stream A or Stream B",
-          "unparsed": true
-        },
-        {
-          "title": "3-9 credits must be chosen from the following",
-          "unparsed": true
         },
         {
           "title": "0-6 credits can be chosen from the following or from other technical courses in Engineering, Management or Science with department approval",

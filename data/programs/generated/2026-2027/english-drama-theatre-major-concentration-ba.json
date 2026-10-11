@@ -22,17 +22,19 @@
       "credits": 30,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3 credits from the following practice-based courses",
           "courses": [
             "ENGL 269",
             "ENGL 365",
             "ENGL 368",
             "ENGL 372",
             "ENGL 377"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Performance-Oriented Courses",
+          "title": "Performance-Oriented Courses: 3 credits from the list of Performance-Oriented Courses",
           "courses": [
             "ENGL 365",
             "ENGL 367",
@@ -45,14 +47,18 @@
             "ENGL 465",
             "ENGL 466",
             "ENGL 469"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
-          "title": "Drama and/or Theatre Courses with a Canadian Component",
+          "title": "Drama and/or Theatre Courses with a Canadian Component: 3 credits from the list of Drama and/or Theatre courses with a Canadian component",
           "courses": [
             "ENGL 313",
             "ENGL 413"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Theory, Criticism and Methods",
@@ -66,7 +72,7 @@
           ]
         },
         {
-          "title": "Theatre History Courses",
+          "title": "Theatre History Courses: 3 credits from the list of Theatre History courses",
           "courses": [
             "ENGL 306",
             "ENGL 310",
@@ -76,7 +82,9 @@
             "ENGL 444",
             "ENGL 467",
             "ENGL 486"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Drama and Theatre Before 1900 Courses",
@@ -91,27 +99,11 @@
           ]
         },
         {
-          "title": "3 credits from the following practice-based courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the list of Performance-Oriented Courses",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the list of Drama and/or Theatre courses with a Canadian component",
-          "unparsed": true
-        },
-        {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "minCredits": 3,
           "maxCredits": 3,
           "match": {},
           "adviser": true
-        },
-        {
-          "title": "3 credits from the list of Theatre History courses",
-          "unparsed": true
         },
         {
           "title": "3 credits from the list of courses in Drama and Theatre before 1900",

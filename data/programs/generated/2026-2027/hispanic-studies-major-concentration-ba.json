@@ -13,7 +13,7 @@
       "credits": 36,
       "rules": [
         {
-          "title": "Language and Civilization",
+          "title": "Language and Civilization: 0-18 credits in Language and Civilization from",
           "courses": [
             "HISP 210",
             "HISP 218",
@@ -21,19 +21,37 @@
             "HISP 220",
             "HISP 225",
             "HISP 226"
-          ]
+          ],
+          "maxCredits": 18
         },
         {
-          "title": "Introductory Courses",
+          "title": "Introductory Courses: 6 - 12 credits in Introductory courses from",
           "courses": [
             "HISP 245",
             "HISP 246",
             "HISP 247",
             "HISP 248"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
         },
         {
-          "title": "Hispanic Literature and Culture",
+          "title": "Hispanic Literature and Culture: A minimum of 6 credits at the 400 level or above",
+          "courses": [
+            "HISP 432",
+            "HISP 437",
+            "HISP 438",
+            "HISP 439",
+            "HISP 451",
+            "HISP 454",
+            "HISP 455",
+            "HISP 458",
+            "HISP 505"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "Hispanic Literature and Culture: 6-30 credits from the following with a minimum of 6 credits at the 400 level or above",
           "courses": [
             "HISP 320",
             "HISP 325",
@@ -58,19 +76,9 @@
             "HISP 455",
             "HISP 458",
             "HISP 505"
-          ]
-        },
-        {
-          "title": "0-18 credits in Language and Civilization from",
-          "unparsed": true
-        },
-        {
-          "title": "6 - 12 credits in Introductory courses from",
-          "unparsed": true
-        },
-        {
-          "title": "6-30 credits from the following with a minimum of 6 credits at the 400 level or above",
-          "unparsed": true
+          ],
+          "minCredits": 6,
+          "maxCredits": 30
         },
         {
           "title": "No more than 12 credits in courses taught in English shall count towards the Major",

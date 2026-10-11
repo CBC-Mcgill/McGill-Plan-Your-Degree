@@ -21,8 +21,12 @@
         "CHEM 212",
         "PHGY 209",
         "PHGY 210",
-        "MATH 203",
-        "PSYC 204"
+        {
+          "oneOf": [
+            "MATH 203",
+            "PSYC 204"
+          ]
+        }
       ],
       "note": "Students who have taken the equivalent of CHEM 212 and/or MATH 203 in CEGEP and receive a course exemption upon admission are exempt from the program requirement(s) and must replace these credits with elective course credits to satisfy the total credit requirement for their degree."
     },
@@ -32,7 +36,7 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "9 credits of advanced anatomy courses (AAC) selected from",
           "courses": [
             "ANAT 314",
             "ANAT 321",
@@ -42,10 +46,12 @@
             "ANAT 514",
             "ANAT 565",
             "NEUR 310"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
-          "title": "Complementary Courses",
+          "title": "6-7 credits of biologically oriented courses (BOC) selected from",
           "courses": [
             "ANAT 314",
             "ANAT 321",
@@ -67,18 +73,12 @@
             "PATH 300",
             "PHAR 300",
             "PHAR 301"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 7
         },
         {
           "title": "Students complete a minimum of 15 or a maximum of 16 complementary course credits selected as follows",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits of advanced anatomy courses (AAC) selected from",
-          "unparsed": true
-        },
-        {
-          "title": "6-7 credits of biologically oriented courses (BOC) selected from",
           "unparsed": true
         }
       ]

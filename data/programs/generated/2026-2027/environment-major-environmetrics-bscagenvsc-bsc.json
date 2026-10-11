@@ -112,7 +112,7 @@
           "maxCourses": 1
         },
         {
-          "title": "List 1",
+          "title": "List 1: 3 credits minimum of statistics and mathematics chosen from",
           "courses": [
             "BREE 252",
             "BREE 319",
@@ -124,10 +124,11 @@
             "MATH 525",
             "SOCI 504",
             "SOCI 580"
-          ]
+          ],
+          "minCredits": 3
         },
         {
-          "title": "List 2",
+          "title": "List 2: 3 credits minimum of environmental sciences chosen from",
           "courses": [
             "AGRI 550",
             "ATOC 341",
@@ -145,7 +146,8 @@
             "NRSC 333",
             "PLNT 460",
             "WILD 401"
-          ]
+          ],
+          "minCredits": 3
         },
         {
           "title": "12 credits - Fundamentals",
@@ -173,14 +175,6 @@
         },
         {
           "title": "A total of 15 credits are chosen from the following two lists",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits minimum of statistics and mathematics chosen from",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits minimum of environmental sciences chosen from",
           "unparsed": true
         }
       ]

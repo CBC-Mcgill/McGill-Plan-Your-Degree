@@ -22,17 +22,18 @@
       "credits": 30,
       "rules": [
         {
-          "title": "Group A - Basic Language Courses",
+          "title": "Group A - Basic Language Courses: 0-12 credits from Group A – Basic Language Courses",
           "courses": [
             "ITAL 205",
             "ITAL 206",
             "ITAL 210",
             "ITAL 215",
             "ITAL 216"
-          ]
+          ],
+          "maxCredits": 12
         },
         {
-          "title": "Group B - Courses Taught in Italian",
+          "title": "Group B - Courses Taught in Italian: 12-30 credits from Group B – Courses Taught in Italian",
           "courses": [
             "ITAL 250",
             "ITAL 255",
@@ -48,7 +49,9 @@
             "ITAL 400",
             "ITAL 410",
             "ITAL 560"
-          ]
+          ],
+          "minCredits": 12,
+          "maxCredits": 30
         },
         {
           "title": "Group C - Courses Taught in English",
@@ -78,14 +81,6 @@
         },
         {
           "title": "30 credits, 6 of which must be at the 400 level or above, selected from the four Italian course lists as follows",
-          "unparsed": true
-        },
-        {
-          "title": "0-12 credits from Group A – Basic Language Courses",
-          "unparsed": true
-        },
-        {
-          "title": "12-30 credits from Group B – Courses Taught in Italian",
           "unparsed": true
         },
         {

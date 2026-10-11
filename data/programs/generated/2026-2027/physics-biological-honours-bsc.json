@@ -76,7 +76,14 @@
             "PHGY 425",
             "PHYS 432",
             "PHYS 434",
-            "PHYS 447",
+            "PHYS 447"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 to 7 credits selected from",
+          "courses": [
             "BIOL 300",
             "BIOL 301",
             "BIOL 303",
@@ -85,12 +92,8 @@
             "BIOL 316",
             "BIOL 551"
           ],
-          "minCredits": 3,
-          "maxCredits": 3
-        },
-        {
-          "title": "6 to 7 credits selected from",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 7
         }
       ]
     }

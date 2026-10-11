@@ -85,7 +85,7 @@
       ]
     },
     {
-      "title": "Stream 1: Theoretical Ecology and Evolutionary Biology",
+      "title": "Course Requirements for Quantitative Biology Streams",
       "kind": "complementary",
       "credits": 21,
       "rules": [
@@ -109,7 +109,7 @@
           ]
         },
         {
-          "title": "Field Courses",
+          "title": "Field Courses: 6 credits chosen from the following list of courses at the 400 level or above",
           "courses": [
             "BIOL 432",
             "BIOL 435",
@@ -118,25 +118,12 @@
             "BIOL 515",
             "BIOL 540",
             "BIOL 594"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
-          "title": "3 credits from the following list or any other field course with permission",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits chosen from the following list of courses at the 400 level or above",
-          "unparsed": true
-        }
-      ]
-    },
-    {
-      "title": "Stream 2: Physical Biology",
-      "kind": "complementary",
-      "credits": 21,
-      "rules": [
-        {
-          "title": "21 credits: 9 credits from",
+          "title": "Stream 2: Physical Biology: 9 credits from",
           "courses": [
             "BIOL 319",
             "PHYS 319",
@@ -178,6 +165,14 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
+        },
+        {
+          "title": "21 credits from one of the following two streams",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from the following list or any other field course with permission",
+          "unparsed": true
         }
       ]
     },

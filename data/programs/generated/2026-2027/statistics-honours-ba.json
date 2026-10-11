@@ -88,7 +88,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Part II",
+          "title": "Part II: 6-11 credits in mathematics and computer science selected from",
           "courses": [
             "COMP 206",
             "COMP 252",
@@ -109,7 +109,9 @@
             "MATH 478",
             "MATH 480",
             "MATH 527"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 11
         },
         {
           "title": "Students can select either MATH 248 or MATH 358, but not both",
@@ -136,13 +138,18 @@
             "MATH 558",
             "MATH 559",
             "MATH 587",
-            "MATH 589",
-            "MATH 329",
-            "MATH 378",
-            "MATH 427"
+            "MATH 589"
           ],
           "minCredits": 15,
           "maxCredits": 23
+        },
+        {
+          "title": "Part III",
+          "courses": [
+            "MATH 329",
+            "MATH 378",
+            "MATH 427"
+          ]
         },
         {
           "title": "Part III: 0-8 credits selected from",
@@ -169,10 +176,6 @@
             "MATH 594",
             "MATH 598"
           ]
-        },
-        {
-          "title": "6-11 credits in mathematics and computer science selected from",
-          "unparsed": true
         },
         {
           "title": "and any 500-level course offered by the Department of Mathematics and Statistics not listed in Part III below",

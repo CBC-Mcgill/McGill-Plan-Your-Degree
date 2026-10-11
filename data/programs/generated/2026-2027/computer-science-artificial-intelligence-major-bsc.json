@@ -29,12 +29,12 @@
       "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202."
     },
     {
-      "title": "Complementary Courses",
+      "title": "Complementary Courses Group A",
       "kind": "complementary",
-      "credits": 24,
+      "credits": 6,
       "rules": [
         {
-          "title": "Group A: 6 credits selected from",
+          "title": "6 credits selected from",
           "courses": [
             "COMP 330",
             "COMP 350",
@@ -42,34 +42,64 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
-        },
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group B",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
         {
-          "title": "Group B: 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "COMP 310",
             "COMP 421"
           ],
           "minCredits": 3,
           "maxCredits": 3
-        },
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group C",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
         {
-          "title": "Group C",
+          "title": "3 or 4 credits selected from",
           "courses": [
             "COMP 451",
             "COMP 551"
-          ]
-        },
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group D",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
         {
-          "title": "Group D: 3 credits selected from",
+          "title": "3 credits selected from",
           "courses": [
             "COMP 345",
             "COMP 370"
           ],
           "minCredits": 3,
           "maxCredits": 3
-        },
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group E",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
         {
-          "title": "Group E",
+          "title": "3 or 4 credits selected from",
           "courses": [
             "COMP 417",
             "COMP 445",
@@ -85,16 +115,17 @@
             "COMP 585",
             "ECSE 552",
             "ECSE 557"
-          ]
-        },
-        {
-          "title": "3 or 4 credits selected from",
-          "unparsed": true
-        },
-        {
-          "title": "3 or 4 credits selected from",
-          "unparsed": true
-        },
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Group F",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
         {
           "title": "6 credits of COMP courses at the 300 level or above (except COMP 396)",
           "minCredits": 6,

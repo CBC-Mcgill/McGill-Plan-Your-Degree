@@ -96,7 +96,132 @@
             "GEOG 217",
             "GEOG 221",
             "GEOG 300",
-            "GEOG 310",
+            "GEOG 310"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "At least 3 credits of ATOC",
+          "courses": [
+            "ATOC 215",
+            "ATOC 309",
+            "ATOC 312",
+            "ATOC 315",
+            "ATOC 404",
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 541"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "At least 3 credits of EPSC",
+          "courses": [
+            "EPSC 212",
+            "EPSC 320",
+            "EPSC 325",
+            "EPSC 331",
+            "EPSC 334",
+            "EPSC 340",
+            "EPSC 341",
+            "EPSC 350",
+            "EPSC 355",
+            "EPSC 423",
+            "EPSC 425",
+            "EPSC 445",
+            "EPSC 452",
+            "EPSC 519",
+            "EPSC 525",
+            "EPSC 530",
+            "EPSC 549",
+            "EPSC 561",
+            "EPSC 567",
+            "EPSC 590"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "At least 3 credits of GEOG",
+          "courses": [
+            "GEOG 272",
+            "GEOG 305",
+            "GEOG 321",
+            "GEOG 322",
+            "GEOG 351",
+            "GEOG 372",
+            "GEOG 401",
+            "GEOG 414",
+            "GEOG 470",
+            "GEOG 495",
+            "GEOG 505",
+            "GEOG 506",
+            "GEOG 530",
+            "GEOG 535",
+            "GEOG 536",
+            "GEOG 550"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "At least 9 of the 15 credits must be at the 400 level or higher",
+          "courses": [
+            "ATOC 404",
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 541",
+            "BIOL 432",
+            "BIOL 441",
+            "BIOL 465",
+            "BIOL 540",
+            "BIOL 573",
+            "BREE 509",
+            "BREE 510",
+            "BREE 533",
+            "ECON 405",
+            "EPSC 423",
+            "EPSC 425",
+            "EPSC 445",
+            "EPSC 452",
+            "EPSC 519",
+            "EPSC 525",
+            "EPSC 530",
+            "EPSC 549",
+            "EPSC 561",
+            "EPSC 567",
+            "EPSC 590",
+            "GEOG 401",
+            "GEOG 414",
+            "GEOG 470",
+            "GEOG 495",
+            "GEOG 505",
+            "GEOG 506",
+            "GEOG 530",
+            "GEOG 535",
+            "GEOG 536",
+            "GEOG 550",
+            "MATH 423",
+            "MATH 437",
+            "MATH 447",
+            "MATH 525",
+            "PHYS 404",
+            "PHYS 432"
+          ],
+          "minCredits": 9
+        },
+        {
+          "title": "15 credits from the following course list, with at least 3 credits from each of subject codes ATOC, EPSC, and GEOG. At least 9 of the 15 credits must be at the 400 level or higher",
+          "courses": [
             "ATOC 215",
             "ATOC 309",
             "ATOC 312",
@@ -177,19 +302,11 @@
             "PHYS 404",
             "PHYS 432"
           ],
-          "minCredits": 3,
-          "maxCredits": 3
+          "minCredits": 15,
+          "maxCredits": 15
         },
         {
           "title": "MATH 315 is a required course for the B.Sc. Honours Earth System Science",
-          "unparsed": true
-        },
-        {
-          "title": "15 credits from the following course list, with at least 3 credits from each of subject codes ATOC, EPSC, and GEOG",
-          "unparsed": true
-        },
-        {
-          "title": "At least 9 of the 15 credits must be at the 400 level or higher",
           "unparsed": true
         }
       ]

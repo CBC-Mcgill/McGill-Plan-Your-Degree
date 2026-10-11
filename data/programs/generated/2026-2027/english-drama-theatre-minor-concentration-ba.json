@@ -21,7 +21,7 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Theatre History Courses",
+          "title": "Theatre History Courses: 3 credits from a list of courses in Theatre History",
           "courses": [
             "ENGL 306",
             "ENGL 310",
@@ -31,7 +31,9 @@
             "ENGL 444",
             "ENGL 467",
             "ENGL 486"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Drama and Theatre Courses Before 1900",
@@ -46,7 +48,7 @@
           ]
         },
         {
-          "title": "Drama and Theatre Courses at the 400 level",
+          "title": "Drama and Theatre Courses at the 400 level: 3 credits from a list of Drama and Theatre courses",
           "courses": [
             "ENGL 407",
             "ENGL 413",
@@ -56,7 +58,9 @@
             "ENGL 459",
             "ENGL 467",
             "ENGL 486"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Drama and Theatre Option's Offerings - Additional Courses",
@@ -75,15 +79,7 @@
           ]
         },
         {
-          "title": "3 credits from a list of courses in Theatre History",
-          "unparsed": true
-        },
-        {
           "title": "3 credits from a list of courses in Drama and Theatre before 1900",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from a list of Drama and Theatre courses",
           "unparsed": true
         },
         {

@@ -82,43 +82,30 @@
           ],
           "minCredits": 2,
           "maxCredits": 2
-        },
-        {
-          "title": "Diction",
-          "courses": [
-            "MUPG 209",
-            "MUPG 210",
-            "MUPG 211",
-            "MUPG 212",
-            "MUPG 213"
-          ]
-        },
-        {
-          "title": "Theory",
-          "courses": [
-            "MUTH 150",
-            "MUTH 151",
-            "MUTH 250"
-          ]
-        },
-        {
-          "title": "Musicianship",
-          "courses": [
-            "MUSP 140",
-            "MUSP 141",
-            "MUSP 170",
-            "MUSP 171",
-            "MUSP 240",
-            "MUSP 241"
-          ]
-        },
-        {
-          "title": "History",
-          "courses": [
-            "MUHL 186",
-            "MUHL 286"
-          ]
         }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 34,
+      "courses": [
+        "MUPG 209",
+        "MUPG 210",
+        "MUPG 211",
+        "MUPG 212",
+        "MUPG 213",
+        "MUTH 150",
+        "MUTH 151",
+        "MUTH 250",
+        "MUSP 140",
+        "MUSP 141",
+        "MUSP 170",
+        "MUSP 171",
+        "MUSP 240",
+        "MUSP 241",
+        "MUHL 186",
+        "MUHL 286"
       ]
     }
   ],

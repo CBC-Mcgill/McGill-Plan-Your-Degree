@@ -10,7 +10,7 @@
     {
       "title": "Required Year 0 and Year 1 Courses",
       "kind": "required",
-      "credits": 60,
+      "credits": 58.5,
       "courses": [
         "GEAC 211",
         "GEAC 212",
@@ -80,7 +80,7 @@
       "credits": 41,
       "rules": [
         {
-          "title": "30 credits",
+          "title": "List A: Breadth Stream Core",
           "courses": [
             "BIEN 219",
             "CHEE 231",
@@ -113,7 +113,7 @@
           ]
         },
         {
-          "title": "9-11 credits",
+          "title": "List B: Breadth Stream Technical Complementaries",
           "courses": [
             "BIEN 320",
             "CHEE 370",
@@ -134,7 +134,7 @@
           ]
         },
         {
-          "title": "6-7 credits",
+          "title": "List C: Breadth Stream Sustainability Complementaries",
           "courses": [
             "SEAD 500",
             "SEAD 510",
@@ -143,7 +143,7 @@
           ]
         },
         {
-          "title": "41 credits",
+          "title": "Stream 2: Biological",
           "courses": [
             "BIEN 210",
             "BIEN 219",
@@ -160,7 +160,7 @@
           ]
         },
         {
-          "title": "44 credits",
+          "title": "Stream 3: Chemical",
           "courses": [
             "CHEE 200",
             "CHEE 204",
@@ -178,7 +178,7 @@
           ]
         },
         {
-          "title": "47 credits",
+          "title": "Stream 4: Civil",
           "courses": [
             "CIVE 202",
             "CIVE 207",
@@ -196,7 +196,7 @@
           ]
         },
         {
-          "title": "46-47 credits",
+          "title": "Stream 5: Data Science",
           "courses": [
             "COMP 206",
             "COMP 251",
@@ -227,7 +227,7 @@
           ]
         },
         {
-          "title": "44 credits",
+          "title": "List A: Electrical Stream Core",
           "courses": [
             "ECSE 206",
             "ECSE 210",
@@ -244,7 +244,7 @@
           ]
         },
         {
-          "title": "3-4 credits",
+          "title": "List B: Electrical Stream Technical Complementaries",
           "courses": [
             "COMP 417",
             "ECSE 335",
@@ -269,7 +269,7 @@
           ]
         },
         {
-          "title": "50 credits",
+          "title": "List A: Entrepreneurship Stream Core",
           "courses": [
             "BIEN 310",
             "CHEE 231",
@@ -308,7 +308,7 @@
           ]
         },
         {
-          "title": "3 credits",
+          "title": "List B: Entrepreneurship Stream Technical Complementaries",
           "courses": [
             "BUSA 465",
             "LAWG 570",
@@ -318,7 +318,7 @@
           ]
         },
         {
-          "title": "40 credits",
+          "title": "List A: Materials Stream Core",
           "courses": [
             "FACC 463",
             "MECH 390",
@@ -335,7 +335,7 @@
           ]
         },
         {
-          "title": "6 credits",
+          "title": "List B: Materials Stream Technical Complementaries",
           "courses": [
             "MIME 345",
             "MIME 350",
@@ -347,7 +347,7 @@
           ]
         },
         {
-          "title": "38-41 credits",
+          "title": "List A: Mechanical Stream Core",
           "courses": [
             "CIVE 207",
             "ECSE 206",
@@ -401,7 +401,7 @@
           ]
         },
         {
-          "title": "6-7 credits",
+          "title": "List B: Mechanical Stream Technical Complementaries",
           "courses": [
             "COMP 417",
             "ECSE 307",

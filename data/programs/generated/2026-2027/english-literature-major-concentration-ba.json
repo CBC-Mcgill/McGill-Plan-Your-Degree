@@ -23,7 +23,7 @@
       "credits": 27,
       "rules": [
         {
-          "title": "Canadian Literature",
+          "title": "Canadian Literature: 3 credits from a list of Canadian Literature courses",
           "courses": [
             "ENGL 228",
             "ENGL 229",
@@ -33,7 +33,9 @@
             "ENGL 409",
             "ENGL 410",
             "ENGL 411"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Theory, Criticism and Methods",
@@ -182,10 +184,6 @@
             "ENGL 417",
             "ENGL 418"
           ]
-        },
-        {
-          "title": "3 credits from a list of Canadian Literature courses",
-          "unparsed": true
         },
         {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",

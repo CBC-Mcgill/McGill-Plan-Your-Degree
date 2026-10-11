@@ -9,30 +9,22 @@
   "groups": [
     {
       "title": "Required (core) Courses",
-      "kind": "complementary",
+      "kind": "required",
       "credits": 30,
-      "rules": [
+      "courses": [
+        "ECON 250",
+        "ECON 257",
+        "ECON 353",
+        "ECON 354",
+        "ECON 450",
+        "ECON 452",
+        "ECON 468",
         {
-          "title": "Required (core) Courses",
-          "courses": [
-            "ECON 250",
-            "ECON 257",
-            "ECON 353",
-            "ECON 354",
-            "ECON 450",
-            "ECON 452",
-            "ECON 468"
-          ]
-        },
-        {
-          "title": "3 credits from",
-          "courses": [
+          "oneOf": [
             "ECON 460",
             "ECON 461",
             "ECON 469"
-          ],
-          "minCredits": 3,
-          "maxCredits": 3
+          ]
         }
       ]
     },

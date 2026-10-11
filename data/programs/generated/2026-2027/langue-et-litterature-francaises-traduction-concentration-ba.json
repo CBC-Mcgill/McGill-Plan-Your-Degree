@@ -1,0 +1,122 @@
+{
+  "id": "langue-et-litterature-francaises-traduction-concentration-ba",
+  "name": "Concentration majeure Langue et littérature françaises - Traduction",
+  "degree": "B.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/undergraduate/arts/programs/litteratures-langue-francaise-traduction-creation/langue-et-litterature-francaises-traduction-concentration-ba/",
+  "credits": 36,
+  "groups": [
+    {
+      "title": "Cours Obligatoires",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "FREN 222",
+        "FREN 244",
+        "FREN 245"
+      ]
+    },
+    {
+      "title": "Cours Complémentaires",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "De 12 à 18 crédits choisis parmi les cours suivants",
+          "courses": [
+            "FREN 239",
+            "FREN 320",
+            "FREN 324",
+            "FREN 341",
+            "FREN 346",
+            "FREN 347",
+            "FREN 349",
+            "FREN 431",
+            "FREN 441",
+            "FREN 443",
+            "FREN 494"
+          ],
+          "minCredits": 12,
+          "maxCredits": 18
+        },
+        {
+          "title": "De 3 à 6 crédits choisis parmi les cours suivants",
+          "courses": [
+            "FREN 231",
+            "FREN 313",
+            "FREN 336",
+            "FREN 356",
+            "FREN 394",
+            "FREN 425",
+            "FREN 434",
+            "FREN 491",
+            "FREN 492"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "(a) Série « Œuvres et courants »",
+          "courses": [
+            "FREN 250",
+            "FREN 251",
+            "FREN 252",
+            "FREN 253",
+            "FREN 310",
+            "FREN 311",
+            "FREN 315",
+            "FREN 355",
+            "FREN 360",
+            "FREN 362",
+            "FREN 364",
+            "FREN 366",
+            "FREN 372",
+            "FREN 380",
+            "FREN 381",
+            "FREN 382",
+            "FREN 453",
+            "FREN 455",
+            "FREN 456",
+            "FREN 457",
+            "FREN 458",
+            "FREN 459",
+            "FREN 461",
+            "FREN 472",
+            "FREN 480",
+            "FREN 482",
+            "FREN 485",
+            "FREN 498"
+          ]
+        },
+        {
+          "title": "(a) Série « Création »",
+          "courses": [
+            "FREN 240",
+            "FREN 320",
+            "FREN 340",
+            "FREN 440",
+            "FREN 460"
+          ]
+        },
+        {
+          "title": "(b) Série: « Édition »",
+          "courses": [
+            "FREN 376",
+            "FREN 377",
+            "FREN 476"
+          ]
+        },
+        {
+          "title": "6 à 9 crédits choisis parmi les cours du bloc « Études » (au moins 3 de ces crédits doivent porter sur la littérature avant 1800 et 3 autres sur la littérature depuis 1800)",
+          "unparsed": true
+        },
+        {
+          "title": "0 à 3 crédits choisis parmi les séries « Création » et « Édition » du bloc « Pratiques »",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "generated": true
+}

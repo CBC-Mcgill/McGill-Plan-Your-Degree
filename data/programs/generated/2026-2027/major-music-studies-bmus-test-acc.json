@@ -28,42 +28,88 @@
           ]
         },
         {
-          "title": "Theory",
-          "courses": [
-            "MUTH 250",
-            "MUTH 251"
-          ]
+          "title": "23 credits of Prerequisite courses",
+          "unparsed": true
         },
         {
-          "title": "Musicianship",
-          "courses": [
-            "MUSP 240",
-            "MUSP 241"
-          ]
+          "title": "4 credits of Large Ensemble",
+          "unparsed": true
         },
         {
-          "title": "Music History",
-          "courses": [
-            "MUHL 286"
-          ]
+          "title": "6 credits of non-Music electives",
+          "minCredits": 6,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         },
         {
-          "title": "Performance",
-          "courses": [
-            "MUIN 280",
-            "MUIN 281",
-            "MUIN 283"
-          ]
-        },
+          "title": "23 credits, select all of the following courses",
+          "unparsed": true
+        }
+      ],
+      "foundation": true
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "MUTH 250",
+        "MUTH 251",
+        "MUSP 240",
+        "MUSP 241",
+        "MUHL 286",
+        "MUIN 280",
+        "MUIN 281",
+        "MUIN 283",
+        "MUPD 245",
+        "MUPD 350"
+      ]
+    },
+    {
+      "title": "Complementary Courses Music History",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
         {
-          "title": "Professional Development",
-          "courses": [
-            "MUPD 245",
-            "MUPD 350"
-          ]
-        },
+          "title": "9 credits from courses with a prefix of MUHL or MUPP at the 300 level or higher",
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "MUHL",
+              "MUPP"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Musicianship",
+      "kind": "complementary",
+      "credits": 2,
+      "rules": [
         {
-          "title": "Musicianship: 2 credits from",
+          "title": "2 credits from",
           "courses": [
             "MUSP 324",
             "MUSP 346",
@@ -76,9 +122,16 @@
           ],
           "minCredits": 2,
           "maxCredits": 2
-        },
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Performance",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
         {
-          "title": "Performance: 6 credits from",
+          "title": "6 credits from",
           "courses": [
             "MUEN 563",
             "MUEN 572",
@@ -93,45 +146,45 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
-        },
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 49,
+      "rules": [
         {
-          "title": "23 credits of Prerequisite courses",
-          "unparsed": true
-        },
-        {
-          "title": "4 credits of Large Ensemble",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits of non-Music electives",
-          "unparsed": true
-        },
-        {
-          "title": "23 credits, select all of the following courses",
-          "unparsed": true
-        },
-        {
-          "title": "9 credits from courses with a prefix of MUHL or MUPP at the 300 level or higher",
-          "minCredits": 9,
-          "maxCredits": 9,
+          "title": "6 credits of non-Music Electives",
+          "minCredits": 6,
           "match": {
-            "minLevel": 300,
-            "subjects": [
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
               "MUHL",
-              "MUPP"
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
             ]
           }
         },
         {
-          "title": "6 credits of non-Music Electives",
-          "unparsed": true
-        },
-        {
           "title": "43 credits of Free Electives",
-          "unparsed": true
+          "minCredits": 43,
+          "match": {}
         }
-      ],
-      "foundation": true
+      ]
     },
     {
       "title": "Courses — Winter 2026 Admits",
@@ -154,73 +207,6 @@
           ]
         },
         {
-          "title": "Theory",
-          "courses": [
-            "MUTH 250",
-            "MUTH 251"
-          ]
-        },
-        {
-          "title": "Musicianship",
-          "courses": [
-            "MUSP 240",
-            "MUSP 241"
-          ]
-        },
-        {
-          "title": "Music History",
-          "courses": [
-            "MUHL 286"
-          ]
-        },
-        {
-          "title": "Professional Development",
-          "courses": [
-            "MUPD 245",
-            "MUPD 350"
-          ]
-        },
-        {
-          "title": "Practical Studies: 6 credits from",
-          "courses": [
-            "MUIN 280",
-            "MUIN 281",
-            "MUIN 283"
-          ],
-          "minCredits": 6,
-          "maxCredits": 6
-        },
-        {
-          "title": "Composition",
-          "courses": [
-            "MUCO 230",
-            "MUCO 260",
-            "MUHL 375",
-            "MUHL 385",
-            "MUHL 388",
-            "MUHL 391",
-            "MUHL 392",
-            "MUHL 393",
-            "MUHL 396",
-            "MUTH 322",
-            "MUTH 526",
-            "MUTH 528",
-            "MUTH 538",
-            "MUTH 539"
-          ]
-        },
-        {
-          "title": "Applied Performance Sciences: 9 credits from the following",
-          "courses": [
-            "MUGT 205",
-            "MUGT 350",
-            "MUGT 405",
-            "MUPG 300"
-          ],
-          "minCredits": 9,
-          "maxCredits": 9
-        },
-        {
           "title": "23 credits of Prerequisite Courses",
           "unparsed": true
         },
@@ -237,6 +223,77 @@
         {
           "title": "23 credits, select all of the following courses",
           "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "MUTH 250",
+        "MUTH 251",
+        "MUSP 240",
+        "MUSP 241",
+        "MUHL 286",
+        "MUPD 245",
+        "MUPD 350"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Practical Studies: 6 credits from",
+          "courses": [
+            "MUIN 280",
+            "MUIN 281",
+            "MUIN 283"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Composition: At least 3 credits must be from a course with a MUCO prefix",
+          "courses": [
+            "MUCO 230",
+            "MUCO 260"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "Composition: 9 credits from the following, of which at least 3 credits must be from a course with a MUCO prefix",
+          "courses": [
+            "MUCO 230",
+            "MUCO 260",
+            "MUHL 375",
+            "MUHL 385",
+            "MUHL 388",
+            "MUHL 391",
+            "MUHL 392",
+            "MUHL 393",
+            "MUHL 396",
+            "MUTH 322",
+            "MUTH 526",
+            "MUTH 528",
+            "MUTH 538",
+            "MUTH 539"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "Applied Performance Sciences: 9 credits from the following",
+          "courses": [
+            "MUGT 205",
+            "MUGT 350",
+            "MUGT 405",
+            "MUPG 300"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
         },
         {
           "title": "30 credits selected from any combination of the following lists of courses",
@@ -310,18 +367,43 @@
               "MUPD"
             ]
           }
-        },
-        {
-          "title": "9 credits from the following, of which at least 3 credits must be from a course with a MUCO prefix",
-          "unparsed": true
-        },
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 48,
+      "rules": [
         {
           "title": "6 credits of non-Music Electives",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "excludeSubjects": [
+              "MUCO",
+              "MUCT",
+              "MUEN",
+              "MUGS",
+              "MUGT",
+              "MUHL",
+              "MUIN",
+              "MUIT",
+              "MUJZ",
+              "MUMT",
+              "MUPD",
+              "MUPG",
+              "MUPP",
+              "MURG",
+              "MUSP",
+              "MUSR",
+              "MUTH"
+            ]
+          }
         },
         {
           "title": "42 credits of Free Electives",
-          "unparsed": true
+          "minCredits": 42,
+          "match": {}
         }
       ]
     }

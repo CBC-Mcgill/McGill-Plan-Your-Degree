@@ -56,7 +56,28 @@
           "maxCredits": 12
         },
         {
-          "title": "Biology Block",
+          "title": "Biology Block: 3-6 credits at the 400 level or above",
+          "courses": [
+            "BIOL 416",
+            "BIOL 435",
+            "BIOL 518",
+            "BIOL 520",
+            "BIOL 524",
+            "BIOL 530",
+            "BIOL 532",
+            "BIOL 546",
+            "BIOL 551",
+            "BIOL 568",
+            "BIOL 569",
+            "BIOL 580",
+            "BIOL 588",
+            "HGEN 575"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "Biology Block: 9-12 credits from the following, with 3-6 credits at the 400 level or above",
           "courses": [
             "BIOL 300",
             "BIOL 303",
@@ -86,7 +107,9 @@
             "BIOL 588",
             "HGEN 575",
             "NEUR 310"
-          ]
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
         },
         {
           "title": "The remaining 18-21 credits is to be chosen from the following, with at least 9 credits at the 400 level or above",
@@ -94,10 +117,6 @@
         },
         {
           "title": "At least 3 of these 9-12 credits must be at the 400 level or above",
-          "unparsed": true
-        },
-        {
-          "title": "9-12 credits from the following, with 3-6 credits at the 400 level or above",
           "unparsed": true
         }
       ]

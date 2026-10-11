@@ -28,26 +28,22 @@
       "credits": 6,
       "rules": [
         {
-          "title": "Core",
+          "title": "3 or 4 credits selected from",
           "courses": [
             "CHEM 204",
             "CHEM 212"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
         },
         {
-          "title": "Core",
+          "title": "3 or 4 credits selected from",
           "courses": [
             "BIOL 301",
             "BIOL 311"
-          ]
-        },
-        {
-          "title": "3 or 4 credits selected from",
-          "unparsed": true
-        },
-        {
-          "title": "3 or 4 credits selected from",
-          "unparsed": true
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
         }
       ]
     },

@@ -23,13 +23,15 @@
       "credits": 15,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "6 credits from the following: *",
           "courses": [
             "GEOG 403",
             "MIMM 413",
             "PARA 410",
             "PARA 424"
-          ]
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
         },
         {
           "title": "9 credits from the following",
@@ -50,10 +52,6 @@
           ],
           "minCredits": 9,
           "maxCredits": 9
-        },
-        {
-          "title": "6 credits from the following: *",
-          "unparsed": true
         }
       ]
     }

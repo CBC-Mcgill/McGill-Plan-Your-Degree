@@ -23,7 +23,7 @@
       "credits": 48,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "3-9 credits from Introductory Courses at the 200 level",
           "courses": [
             "ANTH 209",
             "CATH 200",
@@ -52,10 +52,12 @@
             "RELG 270",
             "RELG 271",
             "RELG 288"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 9
         },
         {
-          "title": "Complementary Courses",
+          "title": "0-12 credits of Classical language courses",
           "courses": [
             "CLAS 210",
             "CLAS 212",
@@ -83,10 +85,11 @@
             "RELG 465",
             "RELG 491",
             "RELG 492"
-          ]
+          ],
+          "maxCredits": 12
         },
         {
-          "title": "Complementary Courses",
+          "title": "33-39 credits of Advanced Courses at the 300 level or higher",
           "courses": [
             "CATH 310",
             "CATH 320",
@@ -183,19 +186,9 @@
             "RELG 570",
             "RELG 571",
             "RELG 572"
-          ]
-        },
-        {
-          "title": "3-9 credits from Introductory Courses at the 200 level",
-          "unparsed": true
-        },
-        {
-          "title": "0-12 credits of Classical language courses",
-          "unparsed": true
-        },
-        {
-          "title": "33-39 credits of Advanced Courses at the 300 level or higher",
-          "unparsed": true
+          ],
+          "minCredits": 33,
+          "maxCredits": 39
         }
       ]
     }

@@ -69,7 +69,28 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Global Governance, Conflict and Human Rights",
+          "title": "Global Governance, Conflict and Human Rights: At least 6 credits at the 300 level or above",
+          "courses": [
+            "CANS 307",
+            "COMS 320",
+            "HIST 302",
+            "HIST 304",
+            "HIST 371",
+            "HIST 387",
+            "HIST 388",
+            "PHIL 334",
+            "POLI 322",
+            "POLI 345",
+            "POLI 360",
+            "POLI 450",
+            "RELG 370",
+            "SOCI 307",
+            "SOCI 386"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "Global Governance, Conflict and Human Rights: 18 credits of the following courses with at least 6 credits at the 300 level or above",
           "courses": [
             "ANTH 212",
             "ANTH 222",
@@ -96,7 +117,9 @@
             "SOCI 230",
             "SOCI 307",
             "SOCI 386"
-          ]
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
         },
         {
           "title": "18 credits from one of the following three Streams",
@@ -156,10 +179,6 @@
         },
         {
           "title": "Minor Concentration in Political Science (18 credits)",
-          "unparsed": true
-        },
-        {
-          "title": "18 credits of the following courses with at least 6 credits at the 300 level or above",
           "unparsed": true
         },
         {
