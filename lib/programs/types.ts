@@ -57,7 +57,7 @@ export interface Rule {
 export interface ComplementaryGroup {
   title: string;
   kind: "complementary";
-  /** Credits needed from the group. A range in the catalogue takes its lower bound. */
+  /** Credits needed from the group. A range in the catalogue takes its lower bound. 0 for a group whose rules are all unparsed and hold a condition over the whole program, such as "a maximum of 34 credits at the 200 level", so a person checks it and no credits move. */
   credits: number;
   /** For "9-12 credits (3 courses)" style lines. */
   minCourses?: number;

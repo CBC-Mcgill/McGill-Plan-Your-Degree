@@ -667,7 +667,7 @@ const NUMBER_WORD = new RegExp(
 const NUMBERS: Record<string, number> = { ...COUNTS, nine: 9, twelve: 12 };
 // Words that add nothing to a level or subject constraint. Any other word leaves the clause for a person to read.
 const FILLER = new Set(
-  "a additional all allowed an any are at be can chosen come complementary completed count course courses credit credits from have honours in is may must number of program selected should taken the to toward towards undergraduate used which".split(
+  "a additional all allowed among an any are at be can chosen come complementary completed count course courses credit credits from have honours in is may must number of program selected should taken the to toward towards undergraduate used which".split(
     " ",
   ),
 );
@@ -689,6 +689,8 @@ function readClause(
     .replace(/\ba coherent set of /i, "")
     .replace(/\bNOTE\b:?/g, "")
     .replace(/\s*\(\d+(?: or \d+)? credits?(?: each)?\)/gi, "")
+    // "ATOC (Atmospheric and Oceanic Sciences)" names the subject after its code.
+    .replace(/\b([A-Z]{3}[A-Z\d]) \([A-Z][a-z][^()]*\)/g, "$1")
     .replace(EXCLUDING, (_, inner = "", list = "") => {
       const codes = codesIn(inner || list);
       if (codes.length === 0) unknown = true;
@@ -715,7 +717,7 @@ function readClause(
     .replace(/\s+/g, " ")
     .replace(
       new RegExp(
-        String.raw`\bwith an? (?:prefix of )?(${SUBJECT_LIST})(?: prefix)?|\b(${SUBJECT_LIST}) prefix\b|\b(${SUBJECT_LIST})\b(?! ?\d{3})`,
+        String.raw`\bwith (?:an? (?:prefix of )?|the subject codes? (?:of )?)(${SUBJECT_LIST})(?: prefix)?|\b(${SUBJECT_LIST}) prefix\b|\b(${SUBJECT_LIST})\b(?! ?\d{3})`,
         "g",
       ),
       (_, a, b, c) => subject(a ?? b ?? c),
@@ -1148,16 +1150,44 @@ function adviserRules(
   }
   const m = AMOUNT.exec(rest);
   const { minCredits, maxCredits } = m ? amountOf(m) : {};
-  // "A maximum of 9 credits may be from another department with permission": the lists still count, so the extra is left out.
+  // "A maximum of 9 credits may be from another department with permission": the lists still count, so the extra only reminds.
   const optional = !minCredits || /^[^,]*\b(?:may|can)\b/i.test(rest);
   if (
     optional &&
     /\b(?:outside|another|other|elsewhere)\b|\bnon-/i.test(rest)
   ) {
-    return [];
+    return [reminder(text)];
   }
   if (minCredits && !optional) {
-    const match = { ...levelIn(rest.split(",")[0] ?? "")?.match };
+    const level = levelIn(rest);
+    const outside =
+      /\b(?:outside|other than) (?:the )?(?:(?:school|department|faculty) of )?([a-z]+(?: [a-z]+){0,3}?)(?= must\b| selected\b| chosen\b|,|$)/i.exec(
+        rest,
+      );
+    const excluded = outside
+      ? subjectsOf((outside[1] ?? "").toLowerCase())
+      : [];
+    // Anything left once the amount, the level and "outside X" are read names courses the app cannot tell apart, as "from the Faculty of Science".
+    // A clause after the amount that only permits, as ", a limited number of credits may be taken at other universities", restricts nothing.
+    const said = rest.replace(/(?:,[^,]*\bmay\b[^,]*)+$/i, "");
+    const left = [m?.[0], level?.phrase, outside?.[0]]
+      .reduce<string>(
+        (t, phrase) => (phrase ? t.replace(phrase, " ") : t),
+        said,
+      )
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, " ")
+      .split(/\s+/)
+      .filter(
+        (word) => word && !FILLER.has(word) && !/^electives?$/.test(word),
+      );
+    if (left.length > 0 || (outside && excluded.length === 0)) {
+      return [unparsed(text)];
+    }
+    const match: Match = {
+      ...level?.match,
+      ...(excluded.length > 0 && { excludeSubjects: excluded }),
+    };
     return [{ title, minCredits, maxCredits, match, adviser: true }];
   }
   // "or any 300- or 400-level course approved by an adviser" adds to a list, so it counts nothing and reminds.
@@ -1166,13 +1196,29 @@ function adviserRules(
   return [unparsed(text)];
 }
 
-/** The rules one sentence of a complementary group states: none for a notice, its text as an unparsed rule when it cannot be read. */
+/** A rule that counts nothing and reminds the student that an adviser can approve more courses. */
+const reminder = (text: string): Rule => ({
+  title: trimEnd(text),
+  match: {},
+  adviser: true,
+});
+
+/** "Other Education courses may be included with the permission of the Program Adviser": approval for courses beyond the lists, with no amount. */
+const approves = (text: string) =>
+  (new RegExp(APPROVAL.source, "i").test(text) ||
+    /\bapprovals? (?:is |are )?required\b/i.test(text)) &&
+  /\b(?:chosen|included|used|substitut\w*|counted|selected|taken|any|other)\b/i.test(
+    text,
+  );
+
+/** The rules one sentence of a complementary group states: none for a notice, a reminder for an approval with no amount, its text as an unparsed rule when it cannot be read. */
 export function statementRules(
   text: string,
   subjectsOf: (department: string) => string[] = () => [],
   credits?: number,
 ): Rule[] {
-  if (NOISE.test(text) || !CONSTRAINT.test(text)) return [];
+  if (NOISE.test(text)) return [];
+  if (!CONSTRAINT.test(text)) return approves(text) ? [reminder(text)] : [];
   const rest = trimEnd(text.replace(APPROVAL, "")).replace(/^[\s,]+/, "");
   if (rest !== trimEnd(text)) {
     return adviserRules(text, rest, subjectsOf, credits);
@@ -1545,7 +1591,11 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       rules.push(...sets);
       continue;
     }
-    if (bareTotal(text) || NOISE.test(text) || !constraint(text)) {
+    if (
+      bareTotal(text) ||
+      NOISE.test(text) ||
+      (!constraint(text) && !approves(text))
+    ) {
       continue;
     }
     const referred = referenceRules(text, rules, named, lists);
@@ -1559,9 +1609,10 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       continue;
     }
     // The sentence parser reads English, so a French condition stays for a person to check.
-    const read = CONSTRAINT.test(text)
-      ? statementRules(text, ctx.subjectsOf, scope?.min ?? section.min)
-      : [unparsed(text)];
+    const read =
+      CONSTRAINT.test(text) || approves(text)
+        ? statementRules(text, ctx.subjectsOf, scope?.min ?? section.min)
+        : [unparsed(text)];
     rules.push(
       ...read.map((rule) =>
         scope ? scoped(rule, scope) : rule.filter ? alone(rule, own) : rule,
@@ -1684,12 +1735,38 @@ function requiredGroup(section: Section): RequiredGroup | null {
   return group;
 }
 
-/** "AND 3 credits Natural Science complementary courses" after a required list, with subject lines such as "Physics (PHYS)". */
-function additionalCredits(section: Section): ComplementaryGroup | null {
+/** "AND 3 credits Natural Science complementary courses" after a required list, with subject lines such as "Physics (PHYS)", or "must also successfully complete 18 credits as follows:" with lines the sentence parser reads. */
+function additionalCredits(
+  section: Section,
+  ctx: Context,
+): ComplementaryGroup | null {
   const all = events(section);
   const after = all
     .slice(all.findLastIndex((e) => e.kind === "table") + 1)
     .flatMap((e) => (e.kind === "text" ? [e.text] : []));
+  const also = after.findIndex((t) =>
+    /\bmust (?:also )?(?:successfully )?complete \d+ credits as follows:?$/i.test(
+      t,
+    ),
+  );
+  if (also >= 0) {
+    const [statement = "", ...lines] = after.slice(also);
+    const rules = lines.flatMap((line) => statementRules(line, ctx.subjectsOf));
+    if (
+      lines.length === 0 ||
+      rules.length === 0 ||
+      rules.some((r) => r.unparsed)
+    )
+      return null;
+    const group: ComplementaryGroup = {
+      title: `${section.title}, extra credits`,
+      kind: "complementary",
+      credits: Number(/(\d+) credits as follows/i.exec(statement)?.[1]),
+      rules,
+    };
+    if (FOUNDATION.test(section.title)) group.foundation = true;
+    return group;
+  }
   const at = after.findIndex((t) => /^(?:and|plus) \d/i.test(t));
   const [statement, ...lines] = after.slice(at);
   const credits = /^(?:and|plus) (\d+(?:\.\d+)?) credits/i.exec(
@@ -1945,6 +2022,15 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     .map((t) => AMOUNT.exec(t))
     .find((m) => m && !m[1] && Number(m[2]) > 0);
   const credits = section.min ?? total?.credits ?? Number(stated?.[2]);
+  // A condition over the whole program, as "a maximum of 34 credits at the 200 level ... in this program", with no credits of its own: a group that only asks a person to check it.
+  if (
+    !credits &&
+    /\brequirements?\b/i.test(section.title) &&
+    rules.length > 0 &&
+    rules.every((rule) => rule.unparsed)
+  ) {
+    return [{ title: section.title, kind: "complementary", credits: 0, rules }];
+  }
   if (!credits) return [];
   const group: ComplementaryGroup = {
     title: section.title,
@@ -1994,7 +2080,7 @@ function groupsOf(section: Section, ctx: Context): Group[] {
       .filter(Boolean)
       .join(" ");
   }
-  const extra = additionalCredits(own);
+  const extra = additionalCredits(own, ctx);
   if (extra) required.credits -= extra.credits;
   const tail = split < 0 ? [] : items.slice(split);
   // Headings after the first Complementary one are its own unless each states its credits.

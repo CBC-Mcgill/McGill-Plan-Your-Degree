@@ -265,7 +265,12 @@ export function validateProgram(value: unknown): ValidationResult {
       ]);
       if (!g) return;
       text(g, "title", path);
-      num(g, "credits", path, "positive");
+      const checks =
+        Array.isArray(g.rules) &&
+        g.rules.length > 0 &&
+        g.rules.every((r) => isObj(r) && r.unparsed === true);
+      // A group that only asks a person to check a condition over the whole program needs no credits.
+      num(g, "credits", path, checks ? "credits" : "positive");
       optionalNum(g, "minCourses", path, "count");
       optionalText(g, "note", path);
       optionalTrue(g, "foundation", path);

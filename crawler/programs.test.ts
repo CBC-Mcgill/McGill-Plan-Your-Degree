@@ -302,7 +302,10 @@ test("reads how many credits a minor shares with the program from its page", () 
 const read = (text: string, credits?: number) =>
   statementRules(
     text,
-    (name) => ({ chemistry: ["CHEM"], biology: ["BIOL"] })[name] ?? [],
+    (name) =>
+      ({ chemistry: ["CHEM"], biology: ["BIOL"], architecture: ["ARCH"] })[
+        name
+      ] ?? [],
     credits,
   ).map(({ title: _, ...rule }) => rule);
 
@@ -414,15 +417,31 @@ test("reads what an adviser must approve, and leaves optional extras out", () =>
     ],
     [
       "9 credits of elective courses outside the School of Architecture must be completed, subject to approval by the Student Advisor.",
-      [{ minCredits: 9, maxCredits: 9, match: {}, adviser: true }],
+      [
+        {
+          minCredits: 9,
+          maxCredits: 9,
+          match: { excludeSubjects: ["ARCH"] },
+          adviser: true,
+        },
+      ],
     ],
     [
       "or any 300- or 400-level course approved by an adviser.",
       [{ match: { minLevel: 300, maxLevel: 400 }, adviser: true }],
     ],
+    // An optional extra and an approval with no amount only remind, and a set the app cannot tell apart stays text.
     [
       "A maximum of 9 credits may be from another department with the signed permission of the program adviser.",
-      [],
+      [{ match: {}, adviser: true }],
+    ],
+    [
+      "Other Education courses may be included with the permission of the Program Adviser.",
+      [{ match: {}, adviser: true }],
+    ],
+    [
+      "6 credits at the 400 level or higher, chosen from the Faculty of Engineering or Faculty of Science (in consultation with the program coordinator).",
+      [{ unparsed: true }],
     ],
     [
       "12 credits chosen from the following list in consultation with the Academic Adviser for the Minor:",
@@ -1024,5 +1043,46 @@ test("a Required heading over one course stays required, and a choice it cannot 
     ["Required Course", "required", 4],
     ["Africa Semester - Required Courses", "complementary", 6],
     ["Africa Semester - Complementary Courses", "complementary", 9],
+  ]);
+});
+
+test("credits a Year 0 heading asks for after its list join a group of their own, and a condition over the whole program is a check", () => {
+  const program = programOf(
+    "Test (B.Sc.) (31 credits)",
+    `<h2>Required Year 0 Courses (28 credits)</h2><p>All Year 0 students must successfully complete 10 credits from the following:</p>${table("MATH 133", "MATH 140", "PHYS 131:4")}` +
+      "<p>All Year 0 students must also successfully complete 18 credits as follows:</p>" +
+      "<p>3 credits from among any 100- or 200-level courses with the subject codes of ATOC (Atmospheric and Oceanic Sciences), COMP (Computer Science), and EPSC (Earth and Planetary Sciences).</p>" +
+      "<p>15 credits from among any 100- or 200-level courses with the subject codes of AFRI (African Studies), GSFS (Gender, Sexuality, Feminist, and Social Justice), and SOCI (Sociology).</p>" +
+      "<h2>Program Requirements</h2><p>Note: Students are required to take a maximum of 30 credits at the 200 level and a minimum of 12 credits at the 400 level or higher in this program.</p>" +
+      `<h2>Complementary Courses (3 credits)</h2><p>3 credits from:</p>${table("ENVR 400")}`,
+  );
+  expect(validateProgram(program)).toMatchObject({ ok: true });
+  expect(program.groups).toMatchObject([
+    { kind: "required", credits: 10 },
+    {
+      kind: "complementary",
+      credits: 18,
+      foundation: true,
+      rules: [
+        {
+          minCredits: 3,
+          match: {
+            minLevel: 100,
+            maxLevel: 200,
+            subjects: ["ATOC", "COMP", "EPSC"],
+          },
+        },
+        {
+          minCredits: 15,
+          match: {
+            minLevel: 100,
+            maxLevel: 200,
+            subjects: ["AFRI", "GSFS", "SOCI"],
+          },
+        },
+      ],
+    },
+    { title: "Program Requirements", credits: 0, rules: [{ unparsed: true }] },
+    { title: "Complementary Courses", credits: 3 },
   ]);
 });
