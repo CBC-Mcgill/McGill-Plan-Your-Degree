@@ -54,8 +54,9 @@ const codesIn = (text: string) =>
 const skeleton = (text: string) => text.replace(CODE_G, "CODE");
 const NUM = String.raw`(\d+(?:\.\d+)?)`;
 const RANGE = String.raw`${NUM}(?:\s*[-–]\s*${NUM})?`;
-// A range as headings and amounts write it: "6-9", "3 or 4", "6 to 7".
-const SPAN = String.raw`${NUM}(?:\s*(?:[-–]|or|to)\s*${NUM})?`;
+// A range as headings and amounts write it: "6-9", "3 or 4", "6 to 7", and on French pages "12 à 18".
+const SPAN = String.raw`${NUM}(?:\s*(?:[-–]|or|to|à)\s*${NUM})?`;
+const CREDITS = "cr[eé]dits?";
 const sentences = (text: string) =>
   text
     .split(/(?<=[.:;])\s+(?=[A-Z(])/)
@@ -68,7 +69,7 @@ export function catalogueYear(html: string): string | null {
 }
 
 const HEADING_CREDITS = new RegExp(
-  String.raw`\s*\(\s*${SPAN}\s*credits?\s*\)\s*$`,
+  String.raw`\s*\(\s*${SPAN}\s*${CREDITS}\s*\)\s*$`,
   "i",
 );
 
@@ -94,7 +95,7 @@ function readRow(tr: Q): Row | null {
 }
 
 /** Flattens the Courses tab into a tree of headings holding paragraphs, tables and their footnotes, in page order. */
-function readSections($: cheerio.CheerioAPI): Section[] {
+function readSections($: cheerio.CheerioAPI, container: Q): Section[] {
   $(".sc_courseinline").each((_, el) => {
     $(el).replaceWith($(el).find("a.code").first().text() || $(el).text());
   });
@@ -173,7 +174,7 @@ function readSections($: cheerio.CheerioAPI): Section[] {
       }
     }
   };
-  walk($("#coursestextcontainer"));
+  walk(container);
   const drop = (section: Section) => {
     section.items = section.items.filter(
       (item) => item.kind !== "text" || item.text,
@@ -182,7 +183,7 @@ function readSections($: cheerio.CheerioAPI): Section[] {
     const [first] = section.items;
     const credits =
       first?.kind === "text" && section.min === undefined
-        ? new RegExp(String.raw`^\(\s*${SPAN}\s*credits?\s*\)$`, "i").exec(
+        ? new RegExp(String.raw`^\(\s*${SPAN}\s*${CREDITS}\s*\)$`, "i").exec(
             first.text,
           )
         : null;
@@ -220,6 +221,7 @@ const LEADS: Record<string, "min" | "max"> = {
   "a minimum of": "min",
   "minimum of": "min",
   minimum: "min",
+  "au moins": "min",
   "up to": "max",
   "at most": "max",
   "a maximum of": "max",
@@ -227,12 +229,12 @@ const LEADS: Record<string, "min" | "max"> = {
   "no more than": "max",
 };
 const AMOUNT = new RegExp(
-  String.raw`^(at least |a minimum of |minimum of |minimum |up to |at most |a maximum of |maximum of |no more than )?${SPAN}\s*credits?(?:\s*\(\s*(\d+|${COUNT_WORD})(?:\s*[-–]\s*(\d+))?\s*courses?\s*\))?`,
+  String.raw`^(at least |au moins |a minimum of |minimum of |minimum |up to |at most |a maximum of |maximum of |no more than )?${SPAN}\s*${CREDITS}(?:\s*\(\s*(\d+|${COUNT_WORD})(?:\s*[-–]\s*(\d+))?\s*courses?\s*\))?`,
   "i",
 );
 // Who takes the list, in front of the amount: "Students must take at least 3 credits from the following courses".
 const LIST_LEAD =
-  /^(?:(?:all )?students (?:must |should |will )?(?:take|complete|select|choose)(?: \(or have taken\))? |select |plus |and |part [ivx]+: )/i;
+  /^(?:(?:all )?students (?:must |should |will )?(?:take|complete|select|choose)(?: \(or have taken\))? |select |plus |and |part [ivx]+: |de )/i;
 const FROM_UNION =
   /^,?\s*(?:selected |chosen )?from the following list or the previous(?: list)?\s*[:.]?$/i;
 // Advice in parentheses that does not change which courses count.
@@ -246,10 +248,10 @@ const AT_LEVEL =
   /\s*\bat the ([1-5]00)(?: or ([1-5]00))?[- ]level( or (?:above|higher))?/i;
 // Words that add a condition the amount alone would hide, so a statement that has one stays unparsed.
 const UNREAD =
-  /\d|\b(?:least|most|max(?:imum)?|min(?:imum)?|each|any|only|must|not|no|except|excluding|other|others|another|either|both|permission|consultation|approv\w*|substitut\w*|students?|student's|if|per|additional|remaining|remainder|levels?|groups?|streams?|areas?|categor\w*|options?|forms?|plans?|one|two|three|four|five|six|outside|home|department\w*|previous|preceding|above|elsewhere|offerings?|prefix\w*|subject|combination|includ\w*|total|semesters?|terms?|years?|assigned|audition|note|instead|replace\w*|sets?|requirements?|specifications?|stipulations?|see|prerequisites?)\b/i;
+  /\d|«|\b(?:au moins|blocs?|séries?|chaque|seulement|autres?|sauf|least|most|max(?:imum)?|min(?:imum)?|each|any|only|must|not|no|except|excluding|other|others|another|either|both|permission|consultation|approv\w*|substitut\w*|students?|student's|if|per|additional|remaining|remainder|levels?|groups?|streams?|areas?|categor\w*|options?|forms?|plans?|one|two|three|four|five|six|outside|home|department\w*|previous|preceding|above|elsewhere|offerings?|prefix\w*|subject|combination|includ\w*|total|semesters?|terms?|years?|assigned|audition|note|instead|replace\w*|sets?|requirements?|specifications?|stipulations?|see|prerequisites?)\b/i;
 // The statement points at the table that follows: "selected from:", "from the following list of common law courses:", "of:".
 const POINTER =
-  /\b(?:from|among)\b|\bthe following\b|\b(?:of|in)$|\bas follows$/i;
+  /\b(?:from|among|parmi)\b|\bthe following\b|\bsuivants?\b|\b(?:of|in)$|\bas follows$/i;
 
 interface Amount {
   minCredits?: number;
@@ -468,7 +470,7 @@ function statementAmount(text: string, adjacent: boolean): ListAmount | null {
     UNREAD.test(rest) ||
     /\b(?:List|Block) [A-Z\d]\b/.test(rest) ||
     !(POINTER.test(rest) || adjacent || colon) ||
-    !/^(?:,?\s*(?:are |is )?(?:selected|chosen|taken|from|among|of|in|on|for)\b|$)/i.test(
+    !/^(?:,?\s*(?:are |is )?(?:selected|chosen|taken|from|among|of|in|on|for|choisis|parmi)\b|$)/i.test(
       rest,
     )
   ) {
@@ -498,7 +500,7 @@ function statementAmount(text: string, adjacent: boolean): ListAmount | null {
 
 /** A total with nothing to choose from, such as "9-12 credits (3 courses) must be taken, chosen as follows:". */
 const BARE_TOTAL = new RegExp(
-  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${SPAN}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*(?:must be taken|(?:are )?selected|chosen|of complementary courses (?:are )?selected|all of the courses below)(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
+  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${SPAN}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*(?:must be taken|(?:are )?selected|distributed|chosen|of complementary courses (?:are )?selected|all of the courses below)(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
   "i",
 );
 
@@ -1045,6 +1047,12 @@ function parseElective(
   return rules;
 }
 
+/** True for a sentence that sets credits or courses, French ones included, as opposed to advice. */
+const constraint = (text: string) =>
+  CONSTRAINT.test(
+    text.replace(/crédit/gi, "credit").replace(/\bau moins\b/gi, "at least"),
+  );
+
 const unparsed = (text: string): Rule => ({
   title: trimEnd(text),
   unparsed: true,
@@ -1207,7 +1215,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
         (c) =>
           textsIn(c).some((t) => listAmount(t)) ||
           // A condition before a heading's first list describes a source the union would miss.
-          before(c).some((e) => e.kind === "text" && CONSTRAINT.test(e.text)),
+          before(c).some((e) => e.kind === "text" && constraint(e.text)),
       )
     ) {
       return false;
@@ -1254,11 +1262,18 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
           found = null;
         }
         const name = pending.findLast(
-          (p) => p.length <= 60 && !/[.:;]/.test(p) && !/^or$/i.test(p),
+          (p) =>
+            p.length <= 60 &&
+            !/[.:;]/.test(p) &&
+            !/^or$/i.test(p) &&
+            // "MUEN prefix - maximum 4 credits" is a cap, while "300-level complementary courses" names the list.
+            !/\bcr[eé]dits?\b|\b(?:maximum|minimum|at least|no more than)\b/i.test(
+              p,
+            ),
         );
         narrative.push(...pending.filter((p) => p !== bound && p !== name));
         // An unread condition between two lists means the second is not part of the first one's run.
-        if (pending.some((p) => p !== bound && CONSTRAINT.test(p))) run = null;
+        if (pending.some((p) => p !== bound && constraint(p))) run = null;
         pending = [];
         if (courses.length === 0) continue;
         const notes = noteRules(item.notes);
@@ -1295,7 +1310,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     } else statements.push(text);
   }
   for (const text of statements) {
-    if (bareTotal(text) || NOISE.test(text) || !CONSTRAINT.test(text)) {
+    if (bareTotal(text) || NOISE.test(text) || !constraint(text)) {
       continue;
     }
     const referred = referenceRules(text, rules, named, lists);
@@ -1499,7 +1514,7 @@ function streamRule(stream: Section, credits: number): Rule | null {
   const tables = tablesIn(stream);
   const courses = coursesOf(tables);
   const statements = textsIn(stream).filter(
-    (t) => CONSTRAINT.test(t) || listAmount(t),
+    (t) => constraint(t) || listAmount(t),
   );
   const [statement] = statements;
   const found = statement === undefined ? {} : listAmount(statement, true);
@@ -1537,7 +1552,7 @@ function streamGroups(section: Section, ctx: Context): Group[] | null {
   const notes = tables
     ? []
     : rest.flatMap((item) =>
-        item.kind === "text" && CONSTRAINT.test(item.text) ? [item.text] : [],
+        item.kind === "text" && constraint(item.text) ? [item.text] : [],
       );
   const widening = notes.every((t) => /approv|permission/i.test(t));
   if (!rules.every((rule) => rule !== null) || !widening) return null;
@@ -1636,7 +1651,7 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   return [group];
 }
 
-const SEPARATE = /complementary|elective/i;
+const SEPARATE = /complementary|elective|compl[ée]mentaires?/i;
 const ALTERNATIVE = /^alternative|^option\b/i;
 
 function groupsOf(section: Section, ctx: Context): Group[] {
@@ -1644,7 +1659,7 @@ function groupsOf(section: Section, ctx: Context): Group[] {
   if (/prerequisite/i.test(title) && !FOUNDATION.test(title)) return [];
   // The Specialization a B.Sc.(Ag.Env.Sc.) major names is a program of its own, outside this one's credits.
   if (/^specializations?$/i.test(title)) return [];
-  if (!/\brequired\b/i.test(title) || SEPARATE.test(title)) {
+  if (!/\brequired\b|\bobligatoires?\b/i.test(title) || SEPARATE.test(title)) {
     return complementaryGroups(section, ctx);
   }
   // What follows "OR" is another way to meet the requirement, and a Complementary heading under a Required one starts its own group.
@@ -1704,9 +1719,17 @@ function foundationGroups(
   next: Section,
   ctx: Context,
 ): Group[] {
-  if (events(section).length === 0) {
+  const own = events(section);
+  if (own.every((e) => e.kind === "text" && bareTotal(e.text))) {
+    const total =
+      own[0]?.kind === "text" ? bareTotal(own[0].text)?.credits : undefined;
     return groupsOf(
-      { ...next, title: section.title, min: section.min, max: section.max },
+      {
+        ...next,
+        title: section.title,
+        min: section.min ?? total,
+        max: section.max ?? total,
+      },
       ctx,
     );
   }
@@ -1745,6 +1768,9 @@ const DEGREE = new RegExp(`((?:${PAREN}\\s+(?:or|and)\\s+)*${PAREN})$`);
 
 function degreeAndName(heading: string) {
   const title = clean(heading.replace(HEADING_CREDITS, ""));
+  // French pages: "Baccalauréat ès Arts (B.A.) - Concentration majeure Langue et littérature françaises".
+  const french = /^Baccalauréat[^()]*\(([^()]+)\)\s*-\s*(.+)$/.exec(title);
+  if (french) return { name: french[2] ?? title, degree: french[1] ?? "" };
   const tail = DEGREE.exec(title);
   if (!tail || tail.index === 0) return { name: title, degree: "" };
   const degree = clean(
@@ -1839,21 +1865,36 @@ export function parseProgramPage(
   const $ = cheerio.load(html);
   const heading = clean($("h1.page-title").text());
   const year = catalogueYear(html);
-  const overview = clean($("#programoverviewtextcontainer").text());
+  const overview = clean(
+    $("#programoverviewtextcontainer, #gnralitstextcontainer").text(),
+  );
+  // The requirements are under the Courses tab, else under the tab a few pages use instead, the one that has lists.
+  const courses = $("#coursestextcontainer");
+  const container = courses.length
+    ? courses
+    : $(
+        "#exigencestextcontainer, #newitemtextcontainer, #programoverviewtextcontainer",
+      )
+        .filter((_, el) => $(el).find("table").length > 0)
+        .first();
   const total = new RegExp(
-    String.raw`\(\s*${SPAN}\s*credits?\s*\)\s*$`,
+    String.raw`\(\s*${SPAN}\s*${CREDITS}\s*\)\s*$`,
     "i",
   ).exec(heading);
   const credits = Number(
     total?.[1] ??
       /Program credit weight:\s*(\d+(?:\.\d+)?)/.exec(overview)?.[1],
   );
-  const slug = path.split("/").at(-2);
+  // One French page's address ends its last word with a dash.
+  const slug = path
+    .split("/")
+    .at(-2)
+    ?.replace(/^-+|-+$/g, "");
   if (!year || !slug || !credits) return null;
   const ctx = { subjectsOf: options.subjectsOf ?? (() => []) };
 
   const groups: Group[] = [];
-  const sections = readSections($);
+  const sections = readSections($, container);
   const continues = (a: Section | undefined, b: Section | undefined) =>
     a && b && FOUNDATION.test(a.title) && PREREQUISITES.test(b.title);
   for (const [i, section] of sections.entries()) {

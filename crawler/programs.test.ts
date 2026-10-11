@@ -804,3 +804,83 @@ test("repairs headings that slipped a level and reads credits written beside a h
     courses: ["MUPG 209", "MUPG 210", "MUTH 150"],
   });
 });
+
+test("takes a B.Eng. program from Engineering when another faculty lists it too", () => {
+  const sitemap = `<urlset>${[
+    "agri-env-sci/programs/minor-programs/environmental-engineering-minor-beng/",
+    "engineering/programs/minor-programs/environmental-engineering-minor-beng/",
+    "arts/programs/mathematics-statistics/mathematics-honours-bsc/",
+    "science/programs/mathematics-statistics/mathematics-honours-bsc/",
+  ]
+    .map(
+      (path) =>
+        `<url><loc>https://coursecatalogue.mcgill.ca${BASE}/${path}</loc></url>`,
+    )
+    .join("")}</urlset>`;
+  expect(programPaths(sitemap)).toEqual([
+    `${BASE}/arts/programs/mathematics-statistics/mathematics-honours-bsc/`,
+    `${BASE}/engineering/programs/minor-programs/environmental-engineering-minor-beng/`,
+  ]);
+});
+
+test("reads a French program page from its requirements tab", () => {
+  const program = parseProgramPage(
+    `<h1 class="page-title">Baccalauréat ès Arts (B.A.) - Concentration mineure Langue et littérature françaises (18 crédits)</h1><p>2026-2027 Undergraduate Catalogue</p>` +
+      `<div id="gnralitstextcontainer">Offered by: French Language &amp; Literature (Faculty of Arts)</div><div id="exigencestextcontainer">` +
+      `<h2>Cours Obligatoires (6 crédits)</h2>${table("FREN 222", "FREN 244")}` +
+      `<h2>Cours Complémentaires (12 crédits)</h2><p>De 3 à 6 crédits choisis parmi les cours suivants :</p>${table("FREN 239", "FREN 320")}` +
+      `<p>6 à 9 crédits choisis parmi les cours du bloc « Études ».</p><h3>Bloc: Études</h3>${table("FREN 250", "FREN 251")}</div>`,
+    `${BASE}/arts/programs/french/langue-litterature-francaises-concentration-mineure-/`,
+  ) as Program;
+  expect(validateProgram(program)).toMatchObject({ ok: true });
+  expect(program).toMatchObject({
+    id: "langue-litterature-francaises-concentration-mineure",
+    name: "Concentration mineure Langue et littérature françaises",
+    degree: "B.A.",
+    faculty: "Arts",
+    credits: 18,
+    groups: [
+      { kind: "required", credits: 6, courses: ["FREN 222", "FREN 244"] },
+      {
+        kind: "complementary",
+        credits: 12,
+        rules: expect.arrayContaining([
+          expect.objectContaining({ minCredits: 3, maxCredits: 6 }),
+          expect.objectContaining({
+            unparsed: true,
+            title: "6 à 9 crédits choisis parmi les cours du bloc « Études »",
+          }),
+        ]),
+      },
+    ],
+  });
+});
+
+test("a Foundation heading with only its total takes the courses listed under Prerequisite Courses", () => {
+  const program = programOf(
+    "Test Major (B.Mus./B.Ed.) (16 credits)",
+    `<h2>Program Prerequisites — Foundation Program</h2><p>16 credits distributed as follows:</p>` +
+      `<h2>Prerequisite Courses</h2><p>4 credits of Large Ensemble</p><p>6 credits of non-Music electives</p><p>and 6 credits in the following course list:</p>${table("MUTH 150", "MUHL 186")}`,
+  );
+  expect(program.groups).toEqual([
+    expect.objectContaining({
+      foundation: true,
+      credits: 16,
+      rules: [
+        expect.objectContaining({
+          minCredits: 6,
+          maxCredits: 6,
+          courses: ["MUTH 150", "MUHL 186"],
+        }),
+        expect.objectContaining({
+          unparsed: true,
+          title: "4 credits of Large Ensemble",
+        }),
+        expect.objectContaining({
+          minCredits: 6,
+          match: { excludeSubjects: expect.any(Array) },
+        }),
+      ],
+    }),
+  ]);
+});
