@@ -525,6 +525,13 @@ function statementAmount(
     .replace(/\s*[:.]?\s*$/, "");
   const level = AT_LEVEL.exec(rest);
   rest = rest.replace(AT_LEVEL, "");
+  // "from the following list of 400- and 500-level courses" names the level of the list.
+  const listOf =
+    /\blist of ((?:[1-5]00-?(?:,? (?:and|or) |, )?)+level) courses\b/i.exec(
+      rest,
+    );
+  const listLevel = listOf ? levelIn(listOf[1] ?? "") : null;
+  if (listOf && listLevel) rest = rest.replace(listOf[0], "list");
   const colon = /:\s*$/.test(text.replace(/\s*\*+\s*$/, ""));
   if (
     unread ||
@@ -543,6 +550,13 @@ function statementAmount(
   }
   const amount = amountOf(m);
   if (floor) delete amount.maxCredits;
+  if (listOf && listLevel && amount.minCredits !== undefined) {
+    parts.push({
+      title: `${m[0]} at the ${listOf[1]}`,
+      minCredits: amount.minCredits,
+      level: listLevel.match,
+    });
+  }
   if (level) {
     if (amount.minCredits === undefined) return null;
     parts.push({
@@ -695,6 +709,11 @@ function readClause(
     .replace(/\s*\(\d+(?: or \d+)? credits?(?: each)?\)/gi, "")
     // "ATOC (Atmospheric and Oceanic Sciences)" names the subject after its code.
     .replace(/\b([A-Z]{3}[A-Z\d]) \([A-Z][a-z][^()]*\)/g, "$1")
+    .replace(/\bundergraduate(?:[- ]level)? /gi, "")
+    .replace(
+      /\bcourses with ([1-5]00)-level numbers\b/gi,
+      "courses at the $1 level",
+    )
     .replace(EXCLUDING, (_, inner = "", list = "") => {
       const codes = codesIn(inner || list);
       if (codes.length === 0) unknown = true;
@@ -728,7 +747,7 @@ function readClause(
     )
     .replace(/\s+/g, " ")
     .replace(
-      /\b(of|in|from|credits) (?:(?:additional|other|complementary) )?((?:(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+ ){0,2}(?!(?:courses?|at|of|in|from)\b)[A-Za-z]+)(?= courses?\b| (?:at )?_level_| _subj_|,|\s*$)/g,
+      /\b(of|in|from|credits) (?:(?:additional|other|complementary) )?((?:(?!(?:courses?|at|of|in|from|complementary)\b)[A-Za-z]+ ){0,2}(?!(?:courses?|at|of|in|from|complementary)\b)[A-Za-z]+)(?= (?:complementary )?courses?\b| (?:at )?_level_| _subj_|,|\s*$)/g,
       (all, before, name) => {
         const found = subjectsOf(name.toLowerCase());
         if (found.length === 0) return all;
@@ -816,7 +835,7 @@ function readClause(
 
 // Splits "Three credits minimum must be at the 400 or 500 level and 9 credits maximum may be at the 200 level" into its constraints.
 const CLAUSE_BREAK = new RegExp(
-  String.raw`\s*;\s*|(?:,\s*(?:and |with |of which |while )?|\s+(?:and|with|of which|while)\s+)(?=(?:${MIN_LEAD}|${MAX_LEAD}|\d{1,2}|${COUNT_WORD}|nine|twelve)\b)|,\s*(?=(?:preferably|none in)\b)|\s+(?=drawn from at least\b)`,
+  String.raw`\s*;\s*|(?:,\s*(?:and |with |of which |while |including )?|\s+(?:and|with|of which|while|including)\s+)(?=(?:${MIN_LEAD}|${MAX_LEAD}|\d{1,2}|${COUNT_WORD}|nine|twelve)\b)|,\s*(?=(?:preferably|none in)\b)|\s+(?=drawn from at least\b)`,
   "i",
 );
 // "drawn from at least 3 disciplines", "Courses from at least two disciplines or departments must be included".
@@ -838,10 +857,15 @@ const INTRO =
 
 /** The rules of a sentence, one per constraint, or null when any part of it cannot be read. `credits` is the group's, to tell a sentence about the group from one about a list inside it. */
 function readStatement(
-  text: string,
+  statement: string,
   subjectsOf: (department: string) => string[],
   credits?: number,
 ): Rule[] | null {
+  // "(of which a maximum of 21 credits may be at the 200 level)" and "(only 3 credits of which can be at the 400 level" are clauses of the sentence.
+  const text = statement.replace(
+    /\s*\((?=(?:of which|only|at least|including)\b)([^()]*)\)?/gi,
+    ", $1",
+  );
   const whole = parseSource(text, subjectsOf) ?? parseAnyCourse(text);
   if (whole) return [whole];
   // "9 credits at the 300 level or above in any of the following disciplines:; Psychology (PSYC), Biology (BIOL)" names its subjects after the colon.
@@ -889,7 +913,10 @@ function readStatement(
   // A spread over the group, with the credits of "18 credits from the Group B course lists below drawn from at least 3 disciplines".
   let spread: Rule | null = null;
   let lists: number | undefined;
-  for (const part of text.slice(scope?.[0].length ?? 0).split(CLAUSE_BREAK)) {
+  let topics = false;
+  const body = text.slice(scope?.[0].length ?? 0);
+  const breaks = [...body.matchAll(new RegExp(CLAUSE_BREAK.source, "gi"))];
+  for (const [i, part] of body.split(CLAUSE_BREAK).entries()) {
     const clause = trimEnd(part.replace(AS_FOLLOWS, ""));
     if (!clause || ADVICE.test(clause) || INTRO.test(clause)) continue;
     const least = SPREAD_LEAST.exec(clause);
@@ -918,14 +945,39 @@ function readStatement(
     if (total && other(total.credits)) return null;
     if (total) continue;
     const rule = readClause(clause, subjectsOf, scope !== null || listed);
+    // "and a maximum of 3 credits can be a Special Topic course": the app cannot tell those courses apart, so the sentence stays for a person to check beside what the rest of it says.
+    if (!rule && /\bspecial topics?\b/i.test(clause)) {
+      topics = true;
+      continue;
+    }
     // "36 credits in Jewish Studies selected as described below" names the program, not a subject its lists keep to.
     if (!rule || (listed && rule.match?.subjects)) return null;
+    // "12 credits of MUCT courses, of which 6 credits must be at the 300 level": the level is about the courses just named.
+    const source = rules.at(-1);
+    if (
+      /\bof which\b|\bincluding\b/i.test(
+        `${breaks[i - 1]?.[0] ?? ""} ${part}`,
+      ) &&
+      source?.match?.subjects &&
+      !source.filter &&
+      !source.courses &&
+      rule.match &&
+      !rule.match.subjects
+    ) {
+      rule.match = {
+        ...rule.match,
+        subjects: source.match.subjects,
+        ...(source.match.exclude && { exclude: source.match.exclude }),
+      };
+      rule.filter = true;
+    }
     rules.push(rule);
   }
   // Credits from the lists below belong to those lists, unless a spread over them says the group is those lists.
   if (lists !== undefined && !spread) return null;
   if (spread) rules.push(lists ? { ...spread, minCredits: lists } : spread);
-  if (rules.length === 1 && rules[0]) rules[0].title = trimEnd(text);
+  if (topics) return rules.length > 0 ? [...rules, unparsed(statement)] : null;
+  if (rules.length === 1 && rules[0]) rules[0].title = trimEnd(statement);
   return rules.length > 0 ? rules : null;
 }
 

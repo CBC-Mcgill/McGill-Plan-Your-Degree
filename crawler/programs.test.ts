@@ -390,6 +390,48 @@ test("reads level minimums and caps, and subjects at a level, from sentences", (
         },
       ],
     ],
+    // Qualifiers in parentheses or after "of which" and "including" are clauses, and a Special Topics part stays for a person beside what reads.
+    [
+      "A maximum of 36 credits of 200- and 300-level courses (of which a maximum of 21 credits may be at the 200 level and a maximum of 6 credits may be Special Topic courses.)",
+      undefined,
+      [
+        { maxCredits: 36, match: { minLevel: 200, maxLevel: 300 } },
+        { maxCredits: 21, match: { minLevel: 200, maxLevel: 200 } },
+        { unparsed: true },
+      ],
+    ],
+    [
+      "12 credits selected from any undergraduate-level courses with a prefix of MUCT, MUGT, MUIT, of which 6 credits must be at the 300-level or above",
+      12,
+      [
+        {
+          minCredits: 12,
+          maxCredits: 12,
+          match: { subjects: ["MUCT", "MUGT", "MUIT"] },
+        },
+        {
+          minCredits: 6,
+          match: { minLevel: 300, subjects: ["MUCT", "MUGT", "MUIT"] },
+          filter: true,
+        },
+      ],
+    ],
+    [
+      "15 credits of Biology complementary courses at the 300-500 levels, including at least 3 credits at the 400-500 levels",
+      undefined,
+      [
+        {
+          minCredits: 15,
+          maxCredits: 15,
+          match: { minLevel: 300, subjects: ["BIOL"] },
+        },
+        {
+          minCredits: 3,
+          match: { minLevel: 400, subjects: ["BIOL"] },
+          filter: true,
+        },
+      ],
+    ],
     [
       "6 or 9 POLI credits at the 200 level.",
       18,
@@ -615,6 +657,10 @@ test("reads the amount of a list statement in front of its table", () => {
     [
       "9 credits of systematic physical geography",
       { minCredits: 9, maxCredits: 9 },
+    ],
+    [
+      "0-10 credits from the following list of 200- and 300-level courses:",
+      { maxCredits: 10 },
     ],
   ];
   for (const [statement, amount] of cases) {
