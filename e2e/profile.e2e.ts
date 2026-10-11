@@ -69,7 +69,7 @@ test("a program read from the catalogue can be found and used", async ({
     }),
   ).toBeVisible();
   await page.getByRole("tab", { name: /^Complementary courses/ }).click();
-  await expect(page.getByText("Check this requirement").first()).toBeVisible();
+  await expect(page.getByText(/^List A/).first()).toBeVisible();
 });
 
 test("a file that is not a transcript shows an error", async ({ page }) => {
