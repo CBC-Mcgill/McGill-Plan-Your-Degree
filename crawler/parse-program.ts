@@ -200,9 +200,15 @@ function readSections($: cheerio.CheerioAPI, container: Q): Section[] {
     for (const item of section.items) if (item.kind === "section") drop(item);
   };
   drop(root);
-  const top = root.items.filter((item) => item.kind === "section");
-  // "27 credits from one of the following two streams:" ending a section owns the stream headings that slipped out after it.
-  for (const [i, section] of top.entries()) {
+  adoptStreams(root.items);
+  return root.items.filter((item) => item.kind === "section");
+}
+
+/** "27 credits from one of the following two streams:" ending a section owns the stream headings that slipped out after it, at any level. */
+function adoptStreams(items: (Section | Table | Text)[]) {
+  for (let i = 0; i < items.length; i++) {
+    const section = items[i];
+    if (section?.kind !== "section") continue;
     let holder = section;
     for (let last = holder.items.at(-1); last?.kind === "section"; ) {
       holder = last;
@@ -210,17 +216,22 @@ function readSections($: cheerio.CheerioAPI, container: Q): Section[] {
     }
     const last = holder.items.at(-1);
     const m = last?.kind === "text" ? STREAMS.exec(last.text) : null;
-    if (m?.[4]?.toLowerCase() !== "streams") continue;
-    const after = top.slice(i + 1);
-    const end = after.findIndex((s) => !/\bstream\b/i.test(s.title));
+    const after = items.slice(i + 1);
+    const end = after.findIndex(
+      (s) => s.kind !== "section" || !/\bstream\b/i.test(s.title),
+    );
     const streams = after.slice(0, end < 0 ? after.length : end);
-    const count = COUNTS[(m[3] ?? "").toLowerCase()];
-    if (streams.length < 2 || (count !== undefined && streams.length !== count))
-      continue;
-    holder.items.push(...streams);
-    top.splice(i + 1, streams.length);
+    const count = COUNTS[(m?.[3] ?? "").toLowerCase()];
+    if (
+      m?.[4]?.toLowerCase() === "streams" &&
+      streams.length >= 2 &&
+      (count === undefined || streams.length === count)
+    ) {
+      holder.items.push(...streams);
+      items.splice(i + 1, streams.length);
+    }
+    adoptStreams(section.items);
   }
-  return top;
 }
 
 /** Headings, paragraphs and tables of a section and everything under it, in page order. */

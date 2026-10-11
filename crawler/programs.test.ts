@@ -884,6 +884,20 @@ test("streams beside other lists, and stream headings that slipped out after the
       { option: "Physical Stream", title: "Calculus: 3 credits from" },
     ],
   });
+  const nested = programOf(
+    "Test Major (B.Mus.) (19 credits)",
+    `<h2>Foundation Program (19 credits)</h2><h3>Ensembles</h3><p>4 credits from courses with a MUEN prefix.</p><p>15 credits from one of the following two streams:</p>` +
+      `<h3>Classical Stream</h3>${table("MUHL 186", "MUSP 140", "MUSP 141", "MUTH 150", "MUTH 151")}` +
+      `<h3>Jazz Stream</h3>${table("MUJZ 160", "MUJZ 161", "MUJZ 170", "MUJZ 171", "MUJZ 187")}`,
+  );
+  expect(nested.groups[0]).toMatchObject({
+    credits: 19,
+    rules: [
+      { option: "Classical Stream", minCredits: 15 },
+      { option: "Jazz Stream", minCredits: 15 },
+      { minCredits: 4, match: { subjects: ["MUEN"] } },
+    ],
+  });
 });
 
 test("adds up a required heading with no credits from one course of each choice", () => {
