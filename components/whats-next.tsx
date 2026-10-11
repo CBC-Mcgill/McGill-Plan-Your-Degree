@@ -56,7 +56,12 @@ import {
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { sentence } from "@/lib/format";
-import { type Definition, GLOSSARY, shareDefinition } from "@/lib/glossary";
+import {
+  type Definition,
+  GLOSSARY,
+  PAIR_TIPS,
+  shareDefinition,
+} from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import {
   currentTerm,
@@ -72,6 +77,7 @@ import {
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 import { useProgram } from "@/lib/programs/client";
+import { type Pair, pairOf } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
 const BUCKET_LIMIT = 5;
@@ -96,12 +102,14 @@ interface Context {
   /** Course code to the term the plan starts it in. */
   planned: ReadonlyMap<string, Term>;
   facts: ReadonlyMap<string, Fact>;
-  /** Courses the program lists or counts, so the minor's rows for them say they count for both. */
+  /** Courses the program lists or counts, so the second program's rows for them say they count for both. */
   both?: ReadonlySet<string>;
-  /** The program's courses past the minor's overlap cap, which count for the program only. */
+  /** The program's courses past the second program's overlap cap, which count for the program only. */
   programOnly?: ReadonlySet<string>;
-  /** The minor's overlap cap, for the tooltips. */
+  /** The second program's overlap cap, for the tooltips. */
   cap?: number;
+  /** How the second program pairs with the program, for the share labels. */
+  pair?: Pair;
 }
 
 type Heading = "h3" | "h4";
@@ -260,6 +268,7 @@ function Page({
   );
   const unclaimed = withPlan?.unclaimed ?? [];
   const context: Context = { catalogue, term, planned, facts };
+  const pair = pairOf(program, minor);
 
   if (!program || !view.progress) {
     return (
@@ -315,7 +324,7 @@ function Page({
     const { progress } = minorView;
     requirements.push({
       key: "minor",
-      label: COPY.minorTitle(minor.name),
+      label: COPY.secondTitle(minor),
       done: progress.satisfied,
       side: `${progress.creditsDone} of ${progress.credits}`,
       split:
@@ -341,6 +350,7 @@ function Page({
                 : without(programCodes(view), overlap?.programOnly),
             programOnly: overlap?.programOnly,
             cap: overlap?.cap,
+            pair,
           }}
         />
       ),
@@ -388,7 +398,7 @@ function Page({
   const minorBar =
     minor && minorView?.progress && minorWithPlan
       ? {
-          label: COPY.minorTitle(minor.name),
+          label: COPY.secondTitle(minor),
           done: minorView.progress.creditsDone,
           split: programSplit(minorWithPlan, snapshot),
           total: minorView.progress.credits,
@@ -401,7 +411,7 @@ function Page({
       <h1>{program.name}</h1>
       <p className="mt-2 text-fg-muted">
         {minorBar ? (
-          "Major and minor credits"
+          COPY.pairCredits(pair)
         ) : (
           <>
             <span className="tabular-nums">
@@ -424,7 +434,7 @@ function Page({
         <div className="mt-4">
           <ProgramBars
             program={{
-              label: "Major",
+              label: COPY.pair[pair].labels[0],
               done: creditsDone,
               split: programSplit(withPlan, snapshot),
               total: credits,
@@ -733,16 +743,16 @@ const flatten = (items: Item[]) =>
 const without = (codes: ReadonlySet<string>, drop?: ReadonlySet<string>) =>
   drop ? new Set([...codes].filter((code) => !drop.has(code))) : codes;
 
-/** The share label on a minor's row: counts for both, or for the program only past the minor's cap. */
+/** The share label on a second program's row: counts for both, or for the program only past the second program's cap. */
 function shareFor(
   code: string,
-  { both, programOnly, cap }: Context,
+  { both, programOnly, cap, pair }: Context,
 ): Definition | undefined {
-  if (programOnly?.has(code)) return shareDefinition(true, cap);
-  if (both?.has(code)) return shareDefinition(false, cap);
+  if (programOnly?.has(code)) return shareDefinition(true, cap, pair);
+  if (both?.has(code)) return shareDefinition(false, cap, pair);
 }
 
-/** Every course the program still lists or already counts, so a minor row for one of them counts for both. */
+/** Every course the program still lists or already counts, so a second program's row for one of them counts for both. */
 function programCodes(view: NextView): ReadonlySet<string> {
   return new Set([
     ...flatten([...view.mustTake, ...view.later]).map(
@@ -1200,7 +1210,7 @@ function PaneRow({
   /** Stands in for the course link, for a row with no course behind it. */
   title?: ReactNode;
   uncertain?: boolean;
-  /** On a minor's row: counts for both, or for the program only. */
+  /** On a second program's row: counts for both, or for the program only. */
   share?: Definition;
   note: ReactNode;
   action?: ReactNode;
@@ -1423,7 +1433,7 @@ function CheckRow({ text, source }: { text: string; source: string }) {
   );
 }
 
-/** The minor's pane: its bar, then each of its groups the way a program group's pane shows it. */
+/** The second program's pane: its bar, then each of its groups the way a program group's pane shows it. */
 function MinorPane({
   minor,
   view,
@@ -1438,8 +1448,10 @@ function MinorPane({
   context: Context;
 }) {
   const groups = view.progress?.groups ?? [];
-  const title = COPY.minorTitle(minor.name);
+  const title = COPY.secondTitle(minor);
   const cut = title.lastIndexOf(" ") + 1;
+  const pair = context.pair ?? "minor";
+  const [first, second] = COPY.pair[pair].nouns;
   return (
     <Card
       className={BAND_WRAPS}
@@ -1447,7 +1459,7 @@ function MinorPane({
         <>
           {/* Only the last word stays with the info icon, so a long name wraps on a phone. */}
           {title.slice(0, cut)}
-          <Defined def={{ label: title, tip: GLOSSARY.minor.tip }}>
+          <Defined def={{ label: title, tip: PAIR_TIPS[pair] }}>
             {title.slice(cut)}
           </Defined>
         </>
@@ -1505,13 +1517,13 @@ function MinorPane({
         ))}
         {context.programOnly && context.programOnly.size > 0 && (
           <section className="flex flex-col gap-4">
-            <h3 className="text-base">Counts for your program only</h3>
+            <h3 className="text-base">Counts for your {first} only</h3>
             <p className="text-fg-muted">
-              This minor shares{" "}
+              This {second} shares{" "}
               {context.cap
                 ? `at most ${COPY.credits(context.cap)}`
                 : "no credits"}{" "}
-              with your program, so these count for your program alone.
+              with your {first}, so these count for your {first} alone.
             </p>
             <ul className="-mx-5 border-line border-t px-5">
               {[...context.programOnly].sort().map((code) => (

@@ -150,7 +150,7 @@ test("a course not offered in the catalogue year is never Can take now", () => {
   );
 });
 
-test("a minor shares the program's courses only up to its overlap cap", () => {
+test("a minor shares the program's courses only up to its overlap cap, and another second program shares them all outside Arts", () => {
   const base = {
     degree: "B.Sc.",
     catalogueYear: "2026-2027",
@@ -239,4 +239,11 @@ test("a minor shares the program's courses only up to its overlap cap", () => {
       "earned",
     ).shared.size,
   ).toBe(0);
+  const shared = (second: Program, first = program) =>
+    minorOverlap(second, first, snapshot, catalogue, null, "earned").shared
+      .size;
+  const major = { ...minor(), id: "s-major" };
+  expect(shared(major)).toBe(3);
+  expect(shared({ ...major, degree: "B.A." })).toBe(0);
+  expect(shared(major, { ...program, faculty: "Arts" })).toBe(0);
 });

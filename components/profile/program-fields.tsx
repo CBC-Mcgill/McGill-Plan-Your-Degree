@@ -8,11 +8,13 @@ import { ProgramCombobox } from "@/components/profile/program-combobox";
 import { EntrySelect, TermSelect } from "@/components/profile/selects";
 import { Button } from "@/components/ui/button";
 import { TextField } from "@/components/ui/field";
+import { COPY } from "@/lib/copy";
 import { degreeCredits, standingCredits } from "@/lib/engine/credits";
-import { GLOSSARY } from "@/lib/glossary";
+import { GLOSSARY, PAIR_TIPS } from "@/lib/glossary";
 import { currentTerm } from "@/lib/profile/terms";
 import type { EntryRoute, Term } from "@/lib/profile/types";
 import { useProgram } from "@/lib/programs/client";
+import { pairOf } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
 export interface ProgramValues {
@@ -37,7 +39,9 @@ export function ProgramFields({
 }) {
   // Null credits mean "use the default", so the field only holds what the student typed.
   const program = useProgram(value.programId);
-  const minor = useProgram(value.minorId);
+  const second = useProgram(value.minorId);
+  const pair = pairOf(program ?? null, second ?? null);
+  const secondLabel = second ? COPY.pair[pair].labels[1] : undefined;
   const defaultCredits = degreeCredits(null, value.entry, program ?? null);
   // A number that only repeats the old default would be wrong for the new program or entry.
   const changeProgramOrEntry = (patch: Partial<ProgramValues>) =>
@@ -52,6 +56,7 @@ export function ProgramFields({
       <div className="col-span-2">
         <ProgramCombobox
           value={value.programId}
+          other={value.minorId}
           onChange={(programId) => changeProgramOrEntry({ programId })}
           info={
             detected
@@ -63,11 +68,18 @@ export function ProgramFields({
       </div>
       <div className="col-span-2">
         <ProgramCombobox
-          kind="minor"
+          kind="second"
           value={value.minorId}
+          other={value.programId}
           onChange={(minorId) => onChange({ minorId })}
+          label={secondLabel}
+          info={
+            secondLabel
+              ? { label: secondLabel, tip: PAIR_TIPS[pair] }
+              : GLOSSARY.second
+          }
         />
-        {minor?.generated && <GeneratedLine program={minor} />}
+        {second?.generated && <GeneratedLine program={second} />}
       </div>
       <TermSelect
         label="Start term"
@@ -104,7 +116,7 @@ export function ProgramFields({
   );
 }
 
-/** "Read automatically from the catalogue · McGill catalogue" under a crawled program or minor (D39). */
+/** "Read automatically from the catalogue · McGill catalogue" under a crawled program or second program (D39). */
 function GeneratedLine({ program }: { program: Program }) {
   const hasChecks = program.groups.some(
     (group) =>

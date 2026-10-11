@@ -3,6 +3,7 @@ import { COPY } from "./copy.ts";
 import type { View } from "./engine/browse.ts";
 import type { BrowseStatus } from "./engine/status.ts";
 import type { CourseStatus } from "./profile/types.ts";
+import type { Pair } from "./programs/minor.ts";
 
 /** Every definition the app shows in a tooltip. `label` names the term for screen readers, so it matches the label on screen. */
 export interface Definition {
@@ -14,12 +15,23 @@ const checkTip =
   "We could not read this rule from the catalogue. Check it on the program page.";
 const bothTip =
   "A course can count for both your program and your minor, up to a limit set by your faculty. Check with your advisor.";
+const pairBothTip =
+  "A course both programs list counts for both, unless a program page says otherwise. When either program is in Arts, it counts for one of them only. Either way it counts once toward your degree's total credits.";
 const termsTip = `Terms the course runs in the ${meta.catalogueYear} catalogue.`;
 
+/** What the second program is, on its name, by the pair it makes with the program. */
+export const PAIR_TIPS: Record<Pair, string> = {
+  minor: `A second subject you study alongside your program. ${bothTip}`,
+  joint: `One of the two components of your joint honours degree. Together they make your program. ${pairBothTip}`,
+  majors: `A second major taken alongside your first, toward the same degree. ${pairBothTip}`,
+  liberal: `The breadth component of your Liberal program, taken alongside your core science component. ${pairBothTip}`,
+  other: `A second program taken alongside your program. ${pairBothTip}`,
+};
+
 export const GLOSSARY = {
-  minor: {
-    label: "Minor",
-    tip: `A second subject you study alongside your program. ${bothTip}`,
+  second: {
+    label: "Minor or second program",
+    tip: "A minor, a second major, the other component of a joint honours degree, or the breadth component of a Liberal program.",
   },
   countsForBoth: { label: COPY.countsForBoth, tip: bothTip },
   graduation: {
@@ -114,22 +126,29 @@ export const VIEW_TIPS: Partial<Record<View, string>> = {
     "Courses you can take now: you have the prerequisites, it runs this year and it is an undergraduate course.",
 };
 
-/** "Counts for both" or "Program only" on a minor's course, with the minor's overlap cap when its page or faculty states one. */
+/** "Counts for both" or "Program only" on a second program's course, with its overlap cap when its page or faculty states one. */
 export function shareDefinition(
   programOnly: boolean,
   cap: number | undefined,
+  pair: Pair = "minor",
 ): Definition {
+  const [first, second] = COPY.pair[pair].nouns;
   if (programOnly) {
     return {
-      label: COPY.programOnly,
-      tip: `This minor lets at most ${COPY.credits(cap ?? 0)} count for your program too, and they are used, so this course counts for your program only.`,
+      label: COPY.firstOnly(pair),
+      tip:
+        pair !== "minor" && !cap
+          ? `No course may count for both programs, so this course counts for your ${first} only.`
+          : `This ${second} lets at most ${COPY.credits(cap ?? 0)} count for your ${first} too, and they are used, so this course counts for your ${first} only.`,
     };
   }
   return {
     label: COPY.countsForBoth,
     tip:
-      cap === undefined
-        ? bothTip
-        : `Up to ${COPY.credits(cap)} can count for both your program and this minor.`,
+      cap !== undefined
+        ? `Up to ${COPY.credits(cap)} can count for both your ${first} and this ${second}.`
+        : pair === "minor"
+          ? bothTip
+          : pairBothTip,
   };
 }

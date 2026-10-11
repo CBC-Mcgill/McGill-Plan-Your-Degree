@@ -1,8 +1,8 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import type { Course } from "../catalogue/types.ts";
-import { guessMinor, guessProgram, PROGRAMS } from "./index.ts";
-import { isMinor } from "./minor.ts";
+import { guessMinor, guessProgram, guessSecond, PROGRAMS } from "./index.ts";
+import { isMinor, pairOf } from "./minor.ts";
 import { programCourseCodes, validateProgram } from "./validate.ts";
 
 const catalogueDir = new URL("../../data/catalogue/courses/", import.meta.url);
@@ -120,4 +120,108 @@ test("isMinor reads the id or the degree, and guessMinor matches a transcript mi
   expect(
     guessProgram("Bachelor of Science", ["Major Computer Science"], index),
   ).toBe("computer-science-major-bsc");
+});
+
+test("pairOf reads a minor, joint honours, two majors and a Liberal core from names and ids", () => {
+  const program = (id: string, name: string, degree = "B.A.") => ({
+    id,
+    name,
+    degree,
+  });
+  const engineering = program(
+    "computer-engineering-beng",
+    "Computer Engineering",
+    "B.Eng.",
+  );
+  const economicsJoint = program(
+    "economics-joint-honours-component-ba",
+    "Economics Joint Honours Component",
+  );
+  const mathJoint = program(
+    "mathematics-joint-honours-component-ba",
+    "Mathematics Joint Honours Component",
+  );
+  const psychology = program(
+    "psychology-major-concentration-ba",
+    "Psychology Major Concentration",
+  );
+  const economics = program(
+    "economics-major-concentration-ba",
+    "Economics Major Concentration",
+  );
+  const core = program(
+    "biology-liberal-program-core-science-component",
+    "Biology, Liberal Program - Core Science Component",
+    "Bachelor of Science",
+  );
+  const minor = program(
+    "economics-minor-concentration-ba",
+    "Economics Minor Concentration",
+  );
+  expect(pairOf(engineering, minor)).toBe("minor");
+  expect(pairOf(engineering, null)).toBe("minor");
+  expect(pairOf(economicsJoint, mathJoint)).toBe("joint");
+  expect(pairOf(psychology, economics)).toBe("majors");
+  expect(pairOf(core, minor)).toBe("liberal");
+  expect(pairOf(core, mathJoint)).toBe("liberal");
+  expect(pairOf(economicsJoint, economics)).toBe("other");
+});
+
+test("two program lines fill the program and the second program when one program fits each", () => {
+  const program = (id: string, name: string, degree = "B.A.") => ({
+    id,
+    name,
+    degree,
+    faculty: "Arts",
+  });
+  const index = [
+    program(
+      "economics-joint-honours-component-ba",
+      "Economics Joint Honours Component",
+    ),
+    program(
+      "mathematics-joint-honours-component-ba",
+      "Mathematics Joint Honours Component",
+    ),
+    program(
+      "mathematics-joint-honours-component-bs",
+      "Mathematics Joint Honours Component",
+      "B.A. & Sc.",
+    ),
+    program(
+      "psychology-major-concentration-ba",
+      "Psychology Major Concentration",
+    ),
+    program(
+      "economics-major-concentration-ba",
+      "Economics Major Concentration",
+    ),
+  ];
+  const guess = (lines: string[]) => {
+    const programId = guessProgram("Bachelor of Arts", lines, index);
+    return [
+      programId,
+      guessSecond("Bachelor of Arts", lines, programId, index),
+    ];
+  };
+  expect(
+    guess(["Joint Honours Economics", "Joint Honours Mathematics"]),
+  ).toEqual([
+    "economics-joint-honours-component-ba",
+    "mathematics-joint-honours-component-ba",
+  ]);
+  expect(
+    guess(["Major Concentration Psychology", "Major Concentration Economics"]),
+  ).toEqual([
+    "psychology-major-concentration-ba",
+    "economics-major-concentration-ba",
+  ]);
+  expect(guess(["Major Concentration Psychology"])).toEqual([
+    "psychology-major-concentration-ba",
+    null,
+  ]);
+  expect(guess(["Joint Honours Economics", "Joint Honours History"])).toEqual([
+    "economics-joint-honours-component-ba",
+    null,
+  ]);
 });

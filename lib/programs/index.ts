@@ -43,11 +43,14 @@ const DEGREE_LETTERS: Record<string, string> = {
   "bachelor of theology": "bth",
 };
 
-const KINDS = /\b(major|minor|honours|concentration|joint|component)\b/g;
+const KINDS = /\b(major|minor|honours|concentration|joint)\b/g;
 
-/** "Major Computer Science" and "Computer Science Major" both become the kind "major" and the name "computer science". */
+/** "Major Computer Science" and "Computer Science Major" both become the kind "major" and the name "computer science". "Component" is dropped, so "Joint Honours Economics" fits "Economics Joint Honours Component". */
 function kindAndName(text: string): [kind: string, name: string] {
-  const lower = text.toLowerCase().replace(/&/g, " and ");
+  const lower = text
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/\bcomponent\b/g, " ");
   const kind = [...new Set(lower.match(KINDS))].sort().join(" ");
   const name = lower
     .replace(KINDS, " ")
@@ -65,24 +68,48 @@ const fitsDegree = (degree: string, letters: string) =>
     .split(/\s+or\s+/)
     .some((d) => d.replace(/[^a-z]/g, "") === letters);
 
+/** For each program line, the programs of `index` it names in the transcript's degree. */
+function fitsByLine(
+  degree: string,
+  lines: string[],
+  index: readonly ProgramSummary[],
+): ProgramSummary[][] {
+  const letters = DEGREE_LETTERS[degree];
+  return lines.map((line) => {
+    const [kind, name] = kindAndName(line);
+    return letters
+      ? index.filter((program) => {
+          const [programKind, programName] = kindAndName(program.name);
+          return (
+            !isMinor(program) &&
+            fitsDegree(program.degree, letters) &&
+            kind === programKind &&
+            name === programName
+          );
+        })
+      : [];
+  });
+}
+
+/** The two programs of two program lines, such as two joint honours components or two majors, when exactly one program fits each. */
+function twoPrograms(byLine: ProgramSummary[][]): [string, string] | null {
+  const [first, second] = byLine.map((fits) =>
+    fits.length === 1 ? fits[0]?.id : undefined,
+  );
+  return byLine.length === 2 && first && second && first !== second
+    ? [first, second]
+    : null;
+}
+
 function guessFromIndex(
   degree: string,
   lines: string[],
   index: readonly ProgramSummary[],
 ): string | null {
-  const letters = DEGREE_LETTERS[degree];
-  if (!letters) return null;
-  const wanted = lines.map(kindAndName);
-  const fits = index.filter(
-    (program) =>
-      !isMinor(program) &&
-      fitsDegree(program.degree, letters) &&
-      wanted.some(([kind, name]) => {
-        const [programKind, programName] = kindAndName(program.name);
-        return kind === programKind && name === programName;
-      }),
-  );
-  return fits.length === 1 ? (fits[0]?.id ?? null) : null;
+  const byLine = fitsByLine(degree, lines, index);
+  const fits = new Set(byLine.flat());
+  const [only] = fits;
+  return fits.size === 1 && only ? only.id : (twoPrograms(byLine)?.[0] ?? null);
 }
 
 /** Maps the degree and program lines of a transcript to a program id, or null when none or several fit. The five hand-written programs match by exact line, then `index` is searched by degree and name. */
@@ -102,6 +129,21 @@ export function guessProgram(
   return ids.size === 1 && exact
     ? exact
     : guessFromIndex(wantedDegree, lines, index);
+}
+
+/** With two program lines, the program that is not `programId`, so a second joint honours component or a second major fills the profile's second program. */
+export function guessSecond(
+  degree: string | null,
+  programs: string[],
+  programId: string | null,
+  index: readonly ProgramSummary[],
+): string | null {
+  const pair = twoPrograms(
+    fitsByLine(degree?.trim().toLowerCase() ?? "", programs, index),
+  );
+  return pair && programId && pair.includes(programId)
+    ? (pair.find((id) => id !== programId) ?? null)
+    : null;
 }
 
 /** Maps the minor lines of a transcript, such as "Minor Management", to a minor in `index`, or null when none or several fit. A minor whose degree is just "Minor" fits any degree. */
