@@ -115,11 +115,15 @@
         },
         {
           "title": "Courses from at least two disciplines or departments must be included",
-          "unparsed": true
+          "match": {},
+          "minSubjects": 2
         },
         {
           "title": "At least 6 of the 21 credits must be at the 300 level or above",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300
+          }
         },
         {
           "title": "No more than 6 credits in Spanish or Portuguese language (HISP 210D1/HISP 210D2, HISP 218, HISP 219, HISP 220D1/HISP 220D2) shall count for the Major concentration",

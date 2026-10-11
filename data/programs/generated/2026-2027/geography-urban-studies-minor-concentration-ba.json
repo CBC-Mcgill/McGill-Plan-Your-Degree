@@ -84,7 +84,10 @@
         },
         {
           "title": "At least 9 credits must be completed at the 300-level or above",
-          "unparsed": true
+          "minCredits": 9,
+          "match": {
+            "minLevel": 300
+          }
         }
       ]
     }

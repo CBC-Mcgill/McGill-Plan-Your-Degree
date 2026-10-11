@@ -29,7 +29,10 @@
         },
         {
           "title": "At least 6 of these credits must be in 400- or 500-level courses",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "No more than 6 credits may be at the 200 level",

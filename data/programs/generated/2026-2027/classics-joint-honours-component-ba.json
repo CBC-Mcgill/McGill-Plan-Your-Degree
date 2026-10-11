@@ -43,7 +43,11 @@
         },
         {
           "title": "Maximum 15 credits complementary courses at the 200 level",
-          "unparsed": true
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "Maximum 9 credits of non-CLAS courses",

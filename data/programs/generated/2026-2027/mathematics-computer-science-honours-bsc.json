@@ -88,7 +88,17 @@
         },
         {
           "title": "12 credits in Computer Science, selected from Computer Science courses at the 300 level or above excluding COMP 396",
-          "unparsed": true
+          "minCredits": 12,
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "COMP"
+            ],
+            "exclude": [
+              "COMP 396"
+            ]
+          }
         }
       ]
     }

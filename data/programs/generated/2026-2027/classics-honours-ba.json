@@ -119,7 +119,11 @@
         },
         {
           "title": "Maximum 18 credits of complementary courses at the 200 level",
-          "unparsed": true
+          "maxCredits": 18,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "Note: a maximum total of 18 credits of non-CLAS McGill courses and/or classics courses not taken at McGill (transfer credits) may be counted toward the program",

@@ -278,7 +278,8 @@
         },
         {
           "title": "no more than 21 credits can be from a single discipline",
-          "unparsed": true
+          "match": {},
+          "maxCreditsPerSubject": 21
         },
         {
           "title": "geographical area: at least 6 credits in coursework primarily emphasizing Africa and/or Asia, and at least 6 credits in coursework emphasizing Europe and/or the Americas or Australasia, and",

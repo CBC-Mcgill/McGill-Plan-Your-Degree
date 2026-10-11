@@ -105,11 +105,20 @@
         },
         {
           "title": "A minimum of 6 credits must be at the 400 level or above (other than ARTH 490 Museum Internship)",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400,
+            "exclude": [
+              "ARTH 490"
+            ]
+          }
         },
         {
           "title": "6 credits should be taken in a language other than English or in courses in one or two related disciplines selected with the written approval of the academic adviser",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {},
+          "adviser": true
         }
       ]
     }

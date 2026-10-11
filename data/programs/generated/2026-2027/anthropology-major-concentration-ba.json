@@ -14,7 +14,15 @@
       "rules": [
         {
           "title": "6 credits selected from 200-level courses in Anthropology (ANTH)",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200,
+            "subjects": [
+              "ANTH"
+            ]
+          }
         }
       ]
     },
@@ -44,7 +52,15 @@
       "rules": [
         {
           "title": "6 credits, two 400-level Anthropology (ANTH) courses",
-          "unparsed": true
+          "minCourses": 2,
+          "maxCourses": 2,
+          "match": {
+            "minLevel": 400,
+            "maxLevel": 400,
+            "subjects": [
+              "ANTH"
+            ]
+          }
         }
       ]
     },

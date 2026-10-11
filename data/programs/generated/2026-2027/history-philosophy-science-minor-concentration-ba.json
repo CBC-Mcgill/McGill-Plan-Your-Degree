@@ -57,7 +57,11 @@
         },
         {
           "title": "18 credits with a maximum of 9 credits at the 200 level selected as follows",
-          "unparsed": true
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     }

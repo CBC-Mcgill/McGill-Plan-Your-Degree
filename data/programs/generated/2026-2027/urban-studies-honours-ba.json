@@ -98,7 +98,10 @@
         },
         {
           "title": "Of these 12 credits, at least 6 credits must be at the 300-level or above",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300
+          }
         }
       ]
     },
@@ -201,7 +204,10 @@
         },
         {
           "title": "Of these 18 credits, at least 12 credits must be at the 300-level or above",
-          "unparsed": true
+          "minCredits": 12,
+          "match": {
+            "minLevel": 300
+          }
         },
         {
           "title": "At least 6 credits must also be taken outside of Geography",
@@ -216,7 +222,10 @@
       "rules": [
         {
           "title": "6 credits to be taken at the 300-level or above",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300
+          }
         }
       ]
     }

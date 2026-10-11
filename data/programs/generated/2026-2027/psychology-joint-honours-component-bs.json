@@ -31,7 +31,14 @@
       "rules": [
         {
           "title": "3 credits in Psychology at the 400 or 500 level",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "PSYC"
+            ]
+          }
         }
       ]
     }

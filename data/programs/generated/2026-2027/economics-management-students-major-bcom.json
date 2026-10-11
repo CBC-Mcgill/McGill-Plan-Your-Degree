@@ -45,7 +45,11 @@
         },
         {
           "title": "No more than 6 of the 18 credits may be taken at the 200 level",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     }

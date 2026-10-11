@@ -139,7 +139,14 @@
         },
         {
           "title": "6 credits in Psychology at the 400 or 500 level",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "PSYC"
+            ]
+          }
         }
       ]
     }

@@ -38,10 +38,6 @@
           ]
         },
         {
-          "title": "If a student has already taken CHEM 212 or its equivalent, the credits can be made up with CHEM 204, CHEM 222, or a 3- or 4-credit Biology complementary course to be approved by the Biology Adviser",
-          "unparsed": true
-        },
-        {
           "title": "Block A- Ecology and Evolution",
           "courses": [
             "BIOL 304",
@@ -103,16 +99,15 @@
           "unparsed": true
         },
         {
-          "title": "With permission of the Biology Adviser, up to 6 credits may be taken from other science department courses (300-500 levels)",
-          "unparsed": true
-        },
-        {
           "title": "Up to 3 credits of previous independent research courses may be included",
           "unparsed": true
         },
         {
           "title": "Must include 6 credits of 400-500 levels",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400
+          }
         }
       ]
     }

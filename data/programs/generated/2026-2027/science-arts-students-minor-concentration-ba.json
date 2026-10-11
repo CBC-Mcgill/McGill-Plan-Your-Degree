@@ -245,15 +245,7 @@
           "unparsed": true
         },
         {
-          "title": "The Department also strongly encourages students to take one or more courses involving a laboratory because the science of chemistry is rooted in laboratory experience",
-          "unparsed": true
-        },
-        {
           "title": "Students select 15 credits from the following courses and their associated prerequisites",
-          "unparsed": true
-        },
-        {
-          "title": "CHEM 212 or its equivalent is prerequisite to all 200-level or higher courses",
           "unparsed": true
         },
         {
@@ -261,19 +253,11 @@
           "unparsed": true
         },
         {
-          "title": "Students should meet with an EPSC departmental adviser prior to selecting their courses, as some 200-level courses have specific prerequisites",
-          "unparsed": true
-        },
-        {
           "title": "Students select 15 credits from the following courses and their associated prerequisites",
           "unparsed": true
         },
         {
           "title": "Students select 15 credits from the following courses and their associated prerequisites",
-          "unparsed": true
-        },
-        {
-          "title": "CHEM 212 or its equivalent is prerequisite, or corequisite, to these courses",
           "unparsed": true
         },
         {
@@ -302,7 +286,17 @@
         },
         {
           "title": "Plus 6 credits Psychology courses at the 300 level or higher (excluding PSYC 305)",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "PSYC"
+            ],
+            "exclude": [
+              "PSYC 305"
+            ]
+          }
         }
       ]
     }

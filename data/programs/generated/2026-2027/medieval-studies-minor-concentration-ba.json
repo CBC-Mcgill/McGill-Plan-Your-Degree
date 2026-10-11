@@ -128,7 +128,10 @@
         },
         {
           "title": "No more than 6 credits may be taken below the 300 level",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "maxLevel": 200
+          }
         }
       ]
     }

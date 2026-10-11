@@ -79,8 +79,19 @@
           ]
         },
         {
-          "title": "18 credits, of which no more than 9 credits may be at the 200 level and at least 3 credits must be at the 400 or 500 level, distributed as follows",
-          "unparsed": true
+          "title": "No more than 9 credits may be at the 200 level",
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
+        },
+        {
+          "title": "At least 3 credits must be at the 400 or 500 level",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "15 credits from Groups A, B, C, D, and E with one course from at least four of the five groups",

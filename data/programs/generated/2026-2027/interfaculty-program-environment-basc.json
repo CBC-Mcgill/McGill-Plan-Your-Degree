@@ -209,7 +209,11 @@
         },
         {
           "title": "At least 6 credits must be at the 400 level or higher, selected either from these lists or in consultation with the Program Adviser",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400
+          },
+          "adviser": true
         }
       ]
     }

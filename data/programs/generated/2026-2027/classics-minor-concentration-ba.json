@@ -52,11 +52,22 @@
         },
         {
           "title": "Minimum 3 credits CLAS courses at the 400-level NOTE",
-          "unparsed": true
+          "minCredits": 3,
+          "match": {
+            "minLevel": 400,
+            "maxLevel": 400,
+            "subjects": [
+              "CLAS"
+            ]
+          }
         },
         {
           "title": "Maximum 9 credits complementary courses at the 200-level",
-          "unparsed": true
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "Note: a maximum total of 6 credits of non-CLAS McGill courses and/or classics courses not taken at McGill (transfer credits) may be counted toward the program",

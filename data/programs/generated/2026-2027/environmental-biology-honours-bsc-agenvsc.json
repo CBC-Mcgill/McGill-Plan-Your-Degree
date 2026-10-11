@@ -74,11 +74,19 @@
         },
         {
           "title": "12 credits of Honours research courses in the subject area of the student's Major, chosen in consultation with the Program Director of the student's Major and the professor who has agreed to supervise the research project",
-          "unparsed": true
+          "minCredits": 12,
+          "maxCredits": 12,
+          "match": {},
+          "adviser": true
         },
         {
           "title": "6 credits of Honours project courses in the subject area of the student’s Major as well as 6 credits in 400- or 500-level courses, normally selected from the Faculty of Agricultural and Environmental Sciences, in consultation with the Program Director of the student's Major and the professor who has agreed to supervise the project",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 400
+          },
+          "adviser": true
         }
       ]
     }

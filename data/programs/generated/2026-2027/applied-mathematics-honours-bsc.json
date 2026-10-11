@@ -48,10 +48,6 @@
           "maxCredits": 3
         },
         {
-          "title": "It is strongly recommended that students take both MATH 245 and MATH 254. Advising Notes: Students interested in continuous applied mathematics are urged to choose these as part of their Complementary Courses: MATH 454, MATH 455 and MATH 478, and are advised to choose additional courses from MATH 387, MATH 397, MATH 555, MATH 574, MATH 578, MATH 579, MATH 580, MATH 581. Students interested in discrete applied mathematics are advised to choose from these as part of their Complementary Courses: COMP 362, MATH 456, MATH 457, MATH 517, MATH 547, MATH 550, MATH 552",
-          "unparsed": true
-        },
-        {
           "title": "3 credits selected from",
           "courses": [
             "MATH 235",
@@ -59,10 +55,6 @@
           ],
           "minCredits": 3,
           "maxCredits": 3
-        },
-        {
-          "title": "It is strongly recommended that students take both MATH 245 and MATH 254. Advising Notes: Students interested in continuous applied mathematics are urged to choose these as part of their Complementary Courses: MATH 454, MATH 455 and MATH 478, and are advised to choose additional courses from MATH 387, MATH 397, MATH 555, MATH 574, MATH 578, MATH 579, MATH 580, MATH 581. Students interested in discrete applied mathematics are advised to choose from these as part of their Complementary Courses: COMP 362, MATH 456, MATH 457, MATH 517, MATH 547, MATH 550, MATH 552",
-          "unparsed": true
         },
         {
           "title": "3 credits selected from",
@@ -116,7 +108,12 @@
         },
         {
           "title": "All MATH 500-level courses",
-          "unparsed": true
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "MATH"
+            ]
+          }
         }
       ]
     }

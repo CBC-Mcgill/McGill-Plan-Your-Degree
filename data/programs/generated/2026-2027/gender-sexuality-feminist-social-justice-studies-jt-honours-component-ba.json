@@ -180,15 +180,22 @@
           "unparsed": true
         },
         {
-          "title": "Three credits minimum must be at the 400 or 500 level and 9 credits maximum may be at the 200 level",
-          "unparsed": true
+          "title": "Three credits minimum must be at the 400 or 500 level",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 400
+          }
+        },
+        {
+          "title": "9 credits maximum may be at the 200 level",
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "Complementary courses must centrally engage with at least two of the following themes: gender, sexuality, feminism, and social justice",
-          "unparsed": true
-        },
-        {
-          "title": "Maximum of 12 transfer credits may be accepted by approved exchange programs, subject to University approval",
           "unparsed": true
         }
       ]

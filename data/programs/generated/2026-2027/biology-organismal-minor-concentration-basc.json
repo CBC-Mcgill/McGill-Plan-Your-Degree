@@ -27,7 +27,15 @@
       "rules": [
         {
           "title": "Any 3-credit biology course at the 300 level or higher approved by the Biology Adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "BIOL"
+            ]
+          },
+          "adviser": true
         }
       ]
     }

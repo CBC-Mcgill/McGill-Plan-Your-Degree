@@ -97,7 +97,17 @@
         },
         {
           "title": "6 credits of COMP courses at the 300 level or above (except COMP 396)",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "COMP"
+            ],
+            "exclude": [
+              "COMP 396"
+            ]
+          }
         }
       ]
     }

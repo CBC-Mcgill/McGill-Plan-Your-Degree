@@ -43,11 +43,23 @@
       "rules": [
         {
           "title": "12 credits of Economics courses at the 300, 400, or 500 level, approved by an Honours adviser",
-          "unparsed": true
+          "minCredits": 12,
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "ECON"
+            ]
+          },
+          "adviser": true
         },
         {
           "title": "Unless explicitly approved by the Honours advisor, at least 9 of the 12 credits have to be at the 400 or 500 level",
-          "unparsed": true
+          "minCredits": 9,
+          "match": {
+            "minLevel": 400
+          },
+          "adviser": true
         }
       ]
     }

@@ -91,7 +91,10 @@
       "rules": [
         {
           "title": "9 credits of elective courses outside the School of Architecture must be completed, subject to approval by the Student Advisor",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {},
+          "adviser": true
         }
       ]
     }

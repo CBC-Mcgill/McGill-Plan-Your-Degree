@@ -50,10 +50,6 @@
           "maxCredits": 3
         },
         {
-          "title": "Note: A student who has not taken MATH 222 (or equivalent) prior to entering the program must take it in their first semester, increasing the program credits from 78 to 81",
-          "unparsed": true
-        },
-        {
           "title": "3-4 credits from",
           "courses": [
             "COMP 400",
@@ -91,15 +87,36 @@
         },
         {
           "title": "Any COMP course at the 400- or 500-level (excluding COMP 400) (3 or 4 credits)",
-          "unparsed": true
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "COMP"
+            ],
+            "exclude": [
+              "COMP 400"
+            ]
+          }
         },
         {
           "title": "Any number of PHYS courses at the 500 level (3 credits each)",
-          "unparsed": true
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "PHYS"
+            ]
+          }
         },
         {
           "title": "Any number of COMP courses at the 400 or 500-level (excluding COMP 400) (3 or 4 credits each)",
-          "unparsed": true
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "COMP"
+            ],
+            "exclude": [
+              "COMP 400"
+            ]
+          }
         }
       ]
     }

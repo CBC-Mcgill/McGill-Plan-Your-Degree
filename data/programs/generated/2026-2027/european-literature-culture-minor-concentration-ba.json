@@ -104,11 +104,26 @@
         },
         {
           "title": "At least 6 credits should be at the 300-level or above",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300
+          }
         },
         {
           "title": "No more than 6 credits in any given area (LLCU, GERM, HISP, ITAL, and RUSS) shall count toward the Minor Concentration (not including LLCU 210)",
-          "unparsed": true
+          "match": {
+            "subjects": [
+              "LLCU",
+              "GERM",
+              "HISP",
+              "ITAL",
+              "RUSS"
+            ],
+            "exclude": [
+              "LLCU 210"
+            ]
+          },
+          "maxCreditsPerSubject": 6
         },
         {
           "title": "0-6 credits in literature courses offered by Classical Studies (CLAS), English (ENGL), and French (FREN) selected from the following list",

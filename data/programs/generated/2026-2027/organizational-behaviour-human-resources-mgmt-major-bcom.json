@@ -59,7 +59,17 @@
         },
         {
           "title": "9 credits at the 300 or 400 level of courses in PSYC, SOCI or ANTH",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 300,
+            "maxLevel": 400,
+            "subjects": [
+              "PSYC",
+              "SOCI",
+              "ANTH"
+            ]
+          }
         }
       ]
     }

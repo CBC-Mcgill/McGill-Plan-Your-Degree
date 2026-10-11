@@ -147,7 +147,16 @@
         },
         {
           "title": "6-8 credits (2 courses) from 500-level ECSE courses",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 8,
+          "minCourses": 2,
+          "maxCourses": 2,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "ECSE"
+            ]
+          }
         },
         {
           "title": "3-4 credits (1 course) from List A, List B, List C or from 500-level ECSE courses",
@@ -247,7 +256,8 @@
           "minCredits": 3,
           "match": {
             "minLevel": 200
-          }
+          },
+          "adviser": true
         }
       ]
     }

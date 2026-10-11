@@ -83,11 +83,27 @@
         },
         {
           "title": "27 credits selected from courses with a prefix of MUHL or MUPP at the 300 level or higher",
-          "unparsed": true
+          "minCredits": 27,
+          "maxCredits": 27,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "MUHL",
+              "MUPP"
+            ]
+          }
         },
         {
           "title": "3 credits from courses with a prefix of MUTH at the 200 or 300 level",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 300,
+            "subjects": [
+              "MUTH"
+            ]
+          }
         }
       ]
     },

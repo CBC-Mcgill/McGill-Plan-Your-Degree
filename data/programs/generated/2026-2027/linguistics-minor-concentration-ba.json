@@ -43,14 +43,17 @@
         {
           "title": "6 credits must be at the 300 level or higher",
           "minCredits": 6,
-          "maxCredits": 6,
           "match": {
             "minLevel": 300
           }
         },
         {
           "title": "Only 3 credits at the 200 level may count towards complementary credits",
-          "unparsed": true
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "Students who take LING 360 as one of their complementary courses may also count one of the following courses that are its prerequisites toward the complementary course requirement",

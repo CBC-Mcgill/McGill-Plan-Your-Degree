@@ -144,7 +144,17 @@
         },
         {
           "title": "6 credits at the 300 level or above selected from the following disciplines:; Anthropology (ANTH), Linguistics (LING), Psychology (PSYC), or Sociology (SOCI)",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "ANTH",
+              "LING",
+              "PSYC",
+              "SOCI"
+            ]
+          }
         }
       ]
     }

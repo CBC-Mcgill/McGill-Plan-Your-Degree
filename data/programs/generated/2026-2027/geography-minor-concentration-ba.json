@@ -35,7 +35,14 @@
         },
         {
           "title": "9 credits from Geography (GEOG) courses at the 300 level or above",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "GEOG"
+            ]
+          }
         }
       ]
     }

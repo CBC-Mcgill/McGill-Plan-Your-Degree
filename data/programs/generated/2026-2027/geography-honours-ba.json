@@ -82,11 +82,26 @@
       "rules": [
         {
           "title": "24 credits of Geography (GEOG) courses excluding GEOG 200 and GEOG 205, selected in consultation with the Program Adviser",
-          "unparsed": true
+          "minCredits": 24,
+          "maxCredits": 24,
+          "match": {
+            "subjects": [
+              "GEOG"
+            ],
+            "exclude": [
+              "GEOG 200",
+              "GEOG 205"
+            ]
+          },
+          "adviser": true
         },
         {
           "title": "No more than 6 credits may be taken from 200-level courses",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     },
@@ -97,7 +112,12 @@
       "rules": [
         {
           "title": "9 credits at the 300 or 400 level or above of courses taught by units other than Geography selected from the humanities, social and physical sciences or engineering that have been approved by the Program Adviser as related to the student's focus within Geography",
-          "unparsed": true
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 300
+          },
+          "adviser": true
         }
       ]
     }

@@ -26,7 +26,10 @@
       "rules": [
         {
           "title": "At least 9 credits of undergraduate courses at the 400-level or above",
-          "unparsed": true
+          "minCredits": 9,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "All remaining credits may be selected from courses given in Spanish in the Department at or above the intermediate Spanish language level (HISP 219 OR HISP 220D1/HISP 220D2)",

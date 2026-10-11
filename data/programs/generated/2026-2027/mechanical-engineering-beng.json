@@ -71,7 +71,14 @@
       "rules": [
         {
           "title": "6 credits at the 500 level or higher, chosen from Mechanical Engineering courses (subject code MECH)",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "MECH"
+            ]
+          }
         },
         {
           "title": "9 credits chosen from courses at the 300 level or higher (approved by the Department) in the Faculty of Engineering (including MECH courses) or from courses in the Faculty of Science; or selected courses from Group A and Group B (approved by the Department)",

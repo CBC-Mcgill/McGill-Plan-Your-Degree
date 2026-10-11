@@ -96,7 +96,11 @@
         },
         {
           "title": "A maximum of 15 credits from 200-level courses may be used toward the Honours program",
-          "unparsed": true
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     }

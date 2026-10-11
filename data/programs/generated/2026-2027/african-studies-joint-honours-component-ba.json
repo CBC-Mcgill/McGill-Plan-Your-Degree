@@ -130,7 +130,10 @@
         },
         {
           "title": "18 credits from the Group B course lists below drawn from at least 3 disciplines with no more than 9 credits from any one discipline",
-          "unparsed": true
+          "match": {},
+          "minSubjects": 3,
+          "maxCreditsPerSubject": 9,
+          "minCredits": 18
         }
       ]
     }

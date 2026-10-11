@@ -58,11 +58,26 @@
         },
         {
           "title": "12-15 credits from a coherent set of Geography (GEOG) courses excluding GEOG 200 and GEOG 205, approved by the Program Adviser",
-          "unparsed": true
+          "minCredits": 12,
+          "maxCredits": 15,
+          "match": {
+            "subjects": [
+              "GEOG"
+            ],
+            "exclude": [
+              "GEOG 200",
+              "GEOG 205"
+            ]
+          },
+          "adviser": true
         },
         {
           "title": "No more than 6 credits may be taken from 200-level courses",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         }
       ]
     }

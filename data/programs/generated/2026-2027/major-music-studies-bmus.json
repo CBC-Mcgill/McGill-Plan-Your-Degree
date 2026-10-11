@@ -116,19 +116,51 @@
         },
         {
           "title": "3-9 credits from courses with a MUHL or MUPP prefix at the 300 level or higher",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "MUHL",
+              "MUPP"
+            ]
+          }
         },
         {
           "title": "3-9 credits from courses with a MUGT, MUCT, MUIT prefix at the 200 level or higher",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "subjects": [
+              "MUGT",
+              "MUCT",
+              "MUIT"
+            ]
+          }
         },
         {
           "title": "3-9 credits from courses with a MUMT or MUSR prefix at the 200 level or higher",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "subjects": [
+              "MUMT",
+              "MUSR"
+            ]
+          }
         },
         {
           "title": "3-9 credits from courses with a MUPD prefix at the 200 level or higher",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "subjects": [
+              "MUPD"
+            ]
+          }
         },
         {
           "title": "3-9 credits from the following, of which at least 3 credits must be from a course with a MUCO prefix",

@@ -124,7 +124,10 @@
         },
         {
           "title": "Complementary courses are selected as follows with a minimum of 6 credits at the 400 level or higher",
-          "unparsed": true
+          "minCredits": 6,
+          "match": {
+            "minLevel": 400
+          }
         },
         {
           "title": "12 credits of advanced anatomy courses (AAC) selected from",

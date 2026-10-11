@@ -194,7 +194,11 @@
         },
         {
           "title": "A maximum of 9 of the 24 credits are allowed at the 200 level, none in the final year of the program",
-          "unparsed": true
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
         },
         {
           "title": "6 credits of advanced study, in one of the following two forms A or B, in order of preference",
@@ -226,11 +230,20 @@
         },
         {
           "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "unparsed": true
+          "minCredits": 3,
+          "maxCredits": 3,
+          "match": {},
+          "adviser": true
         },
         {
           "title": "6 additional credits of English (ENGL) courses, preferably courses at the 300 level or above",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "subjects": [
+              "ENGL"
+            ]
+          }
         }
       ]
     }
