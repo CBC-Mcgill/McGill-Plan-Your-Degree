@@ -96,7 +96,13 @@
         },
         {
           "title": "If chosen, students can take at most one of MATH 410, MATH 420, MATH 527D1/MATH 527D2, and WCOM 314",
-          "unparsed": true
+          "maxCourses": 1,
+          "courses": [
+            "MATH 410",
+            "MATH 420",
+            "MATH 527",
+            "WCOM 314"
+          ]
         }
       ]
     }

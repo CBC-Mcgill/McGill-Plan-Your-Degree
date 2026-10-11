@@ -112,12 +112,7 @@
       "rules": [
         {
           "title": "9 credits at the 300 or 400 level or above of courses taught by units other than Geography selected from the humanities, social and physical sciences or engineering that have been approved by the Program Adviser as related to the student's focus within Geography",
-          "minCredits": 9,
-          "maxCredits": 9,
-          "match": {
-            "minLevel": 300
-          },
-          "adviser": true
+          "unparsed": true
         }
       ]
     }

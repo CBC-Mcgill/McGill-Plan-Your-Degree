@@ -24,7 +24,14 @@
         },
         {
           "title": "18 or 21 credits selected from Psychology courses at the 300 level or above",
-          "unparsed": true
+          "minCredits": 18,
+          "maxCredits": 21,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "PSYC"
+            ]
+          }
         }
       ]
     }

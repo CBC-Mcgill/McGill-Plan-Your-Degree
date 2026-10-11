@@ -173,12 +173,9 @@
           ]
         },
         {
-          "title": "Students may take either PHAR 503 or PHAR 505",
-          "maxCourses": 1,
-          "courses": [
-            "PHAR 503",
-            "PHAR 505"
-          ]
+          "title": "Committee approval is required to substitute a science course not in the list below",
+          "match": {},
+          "adviser": true
         }
       ]
     }

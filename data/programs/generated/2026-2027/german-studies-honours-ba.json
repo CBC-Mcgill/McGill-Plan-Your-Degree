@@ -85,7 +85,14 @@
         },
         {
           "title": "Students can take a maximum of 6 credits of LLCU courses and only with prior approval",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "subjects": [
+              "LLCU"
+            ]
+          },
+          "adviser": true,
+          "filter": true
         },
         {
           "title": "A maximum of 9 credits in GERM courses offered in English and only with prior approval",

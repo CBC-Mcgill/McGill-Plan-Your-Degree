@@ -45,7 +45,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Theory, Criticism and Methods",
+          "title": "Theory, Criticism and Methods: 3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "courses": [
             "ENGL 317",
             "ENGL 318",
@@ -53,7 +53,10 @@
             "ENGL 322",
             "ENGL 346",
             "ENGL 352"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "adviser": true
         },
         {
           "title": "Historical Dimension: 3 credits from a list of courses in Cultural Studies with an historical dimension",
@@ -70,7 +73,7 @@
           "maxCredits": 3
         },
         {
-          "title": "400-Level Theory",
+          "title": "400-Level Theory: 3 credits from a list of 400-level courses in Cultural Studies with a theoretical component",
           "courses": [
             "ENGL 444",
             "ENGL 454",
@@ -79,7 +82,9 @@
             "ENGL 489",
             "ENGL 490",
             "ENGL 492"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "In addition to the 6-credit requirement for Advanced Study described below, all Joint Honours students' programs of study shall include 6 credits of study at the 400 level or above",
@@ -111,17 +116,6 @@
         },
         {
           "title": "For example, Joint Honours with Anthropology allows the option of combining 3 credits of essay work with 3 credits in the joint subject to create a joint essay.)",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "minCredits": 3,
-          "maxCredits": 3,
-          "match": {},
-          "adviser": true
-        },
-        {
-          "title": "3 credits from a list of 400-level courses in Cultural Studies with a theoretical component",
           "unparsed": true
         },
         {

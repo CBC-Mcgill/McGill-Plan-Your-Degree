@@ -13,14 +13,15 @@
       "credits": 18,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "Students may also select a maximum of 3 credits of MATH courses from the list below",
           "courses": [
             "MATH 223",
             "MATH 318",
             "MATH 323",
             "MATH 324",
             "MATH 340"
-          ]
+          ],
+          "maxCredits": 3
         },
         {
           "title": "18 credits selected from Computer Science (COMP) courses at the 300 level or above excluding COMP 396",
@@ -35,10 +36,6 @@
               "COMP 396"
             ]
           }
-        },
-        {
-          "title": "Students may also select a maximum of 3 credits of MATH courses from the list below",
-          "unparsed": true
         }
       ]
     }

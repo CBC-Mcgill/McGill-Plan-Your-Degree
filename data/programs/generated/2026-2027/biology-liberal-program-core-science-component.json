@@ -53,8 +53,31 @@
       "credits": 15,
       "rules": [
         {
-          "title": "15 credits of Biology complementary courses at the 300-500 levels, including at least 3 credits at the 400-500 levels",
-          "unparsed": true
+          "title": "15 credits of Biology complementary courses at the 300-500 levels",
+          "minCredits": 15,
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "BIOL"
+            ]
+          }
+        },
+        {
+          "title": "At least 3 credits at the 400-500 levels",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "BIOL"
+            ]
+          },
+          "filter": true
+        },
+        {
+          "title": "Up to 6 credits may be from non-BIOL science courses, with Adviser permission",
+          "match": {},
+          "adviser": true
         },
         {
           "title": "Up to 6 credits of independent research may be included",

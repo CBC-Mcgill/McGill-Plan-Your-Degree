@@ -35,6 +35,11 @@
               "SWRK"
             ]
           }
+        },
+        {
+          "title": "Up to 6 graduate-level credits may be taken outside the School of Social Work with the approval of the Academic Adviser",
+          "match": {},
+          "adviser": true
         }
       ]
     },
@@ -179,6 +184,17 @@
       "rules": [
         {
           "title": "Students must take 28 other elective courses offered within the Faculty or approved as credit equivalencies in order to complete the 132-credit degree requirement",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Minimum Writing Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "All students are required to submit at least one research paper",
           "unparsed": true
         }
       ]

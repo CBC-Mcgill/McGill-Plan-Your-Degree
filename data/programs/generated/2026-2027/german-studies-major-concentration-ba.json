@@ -71,7 +71,14 @@
         },
         {
           "title": "A maximum of 6 credits of LLCU courses, with prior departmental approval",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "subjects": [
+              "LLCU"
+            ]
+          },
+          "adviser": true,
+          "filter": true
         }
       ]
     }

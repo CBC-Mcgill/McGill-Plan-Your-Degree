@@ -8,6 +8,17 @@
   "credits": 63,
   "groups": [
     {
+      "title": "Program Requirements",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "You are required to take a maximum of 33 credits at the 200 level and a minimum of 12 credits at the 400 level or higher in this program",
+          "unparsed": true
+        }
+      ]
+    },
+    {
       "title": "Core: Required Courses",
       "kind": "required",
       "credits": 18,
@@ -96,10 +107,6 @@
             "BIOL 200",
             "LSCI 211"
           ]
-        },
-        {
-          "title": "Note: You will not receive credit for either LSCI 211 or LSCI 202 if you have already received credit for both BIOL 200 and BIOL 201; you will not receive credit for either BIOL 200 or BIOL 201 if you have already received credit for both LSCI 202 and LSCI 211",
-          "unparsed": true
         },
         {
           "title": "Statistics: One of the following Statistics courses or equivalent",
@@ -261,6 +268,22 @@
             "NRSC 451",
             "PLNT 304",
             "PLNT 460"
+          ]
+        },
+        {
+          "title": "Note: You may take ENVR 540 or BIOL 540, but not both; you many take BIOL 451 or NRSC 451, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "ENVR 540",
+            "BIOL 540"
+          ]
+        },
+        {
+          "title": "Note: You may take ENVR 540 or BIOL 540, but not both; you many take BIOL 451 or NRSC 451, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 451",
+            "NRSC 451"
           ]
         },
         {

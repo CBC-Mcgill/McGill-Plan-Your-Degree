@@ -45,7 +45,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Theory, Criticism and Methods",
+          "title": "Theory, Criticism and Methods: 3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "courses": [
             "ENGL 317",
             "ENGL 318",
@@ -53,10 +53,13 @@
             "ENGL 322",
             "ENGL 346",
             "ENGL 352"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "adviser": true
         },
         {
-          "title": "400-Level Theory",
+          "title": "400-Level Theory: 3 credits from a list of 400-level courses in Cultural Studies with a theoretical component",
           "courses": [
             "ENGL 444",
             "ENGL 454",
@@ -65,7 +68,9 @@
             "ENGL 489",
             "ENGL 490",
             "ENGL 492"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "Historical Dimension: 6 credits from a list of courses in Cultural Studies with an historical dimension",
@@ -80,17 +85,6 @@
           ],
           "minCredits": 6,
           "maxCredits": 6
-        },
-        {
-          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "minCredits": 3,
-          "maxCredits": 3,
-          "match": {},
-          "adviser": true
-        },
-        {
-          "title": "3 credits from a list of 400-level courses in Cultural Studies with a theoretical component",
-          "unparsed": true
         },
         {
           "title": "9 additional credits from ENGL offerings, in the Literature, Cultural Studies, and Drama and Theatre Options",

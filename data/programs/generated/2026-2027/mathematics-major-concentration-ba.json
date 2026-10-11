@@ -48,6 +48,14 @@
           "maxCredits": 18
         },
         {
+          "title": "Note: Either MATH 249 or MATH 316 may be taken but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 249",
+            "MATH 316"
+          ]
+        },
+        {
           "title": "0-3 credits from",
           "courses": [
             "MATH 329",

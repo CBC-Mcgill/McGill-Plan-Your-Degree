@@ -31,12 +31,43 @@
           ]
         },
         {
+          "title": "Students may take a maximum of 9 credits at the 300 and 400 level offered by other departments if they are directly related to their focus of study within Anthropology and are approved by their departmental program adviser",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "A maximum of 36 credits of 200- and 300-level courses",
+          "maxCredits": 36,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 300
+          }
+        },
+        {
+          "title": "A maximum of 21 credits may be at the 200 level",
+          "maxCredits": 21,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200
+          }
+        },
+        {
           "title": "A maximum of 36 credits of 200- and 300-level courses (of which a maximum of 21 credits may be at the 200 level and a maximum of 6 credits may be Special Topic courses.)",
           "unparsed": true
         },
         {
           "title": "Select a minimum of 9 credits of core courses at the 350 level selected from",
           "unparsed": true
+        },
+        {
+          "title": "A minimum of 9 credits of Anthropology (ANTH) courses at the 400- or 500-level",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "ANTH"
+            ]
+          }
         },
         {
           "title": "A minimum of 9 credits of Anthropology (ANTH) courses at the 400- or 500-level, and a maximum of 3 credits can be a Special Topic course",

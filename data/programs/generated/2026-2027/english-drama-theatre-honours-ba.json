@@ -85,7 +85,7 @@
           ]
         },
         {
-          "title": "Theory, Criticism and Methods",
+          "title": "Theory, Criticism and Methods: 3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "courses": [
             "ENGL 317",
             "ENGL 318",
@@ -93,7 +93,10 @@
             "ENGL 322",
             "ENGL 346",
             "ENGL 352"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "adviser": true
         },
         {
           "title": "400-Level Theory Courses",
@@ -140,6 +143,11 @@
           }
         },
         {
+          "title": "A maximum of 9 credits may be from another department with the signed permission of the Program Adviser",
+          "match": {},
+          "adviser": true
+        },
+        {
           "title": "A maximum of 9 of the 42 credits are allowed at the 200 level, none in the final year of the program",
           "maxCredits": 9,
           "match": {
@@ -154,13 +162,6 @@
         {
           "title": "3 credits from the list of courses in Drama and Theatre before 1900",
           "unparsed": true
-        },
-        {
-          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "minCredits": 3,
-          "maxCredits": 3,
-          "match": {},
-          "adviser": true
         },
         {
           "title": "3 credits from a list of courses with a theoretical component, from the option's offerings at the 400 level or above",

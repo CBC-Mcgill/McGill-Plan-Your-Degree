@@ -58,8 +58,43 @@
           ]
         },
         {
-          "title": "3 credits from each of the groups A, B, C, and D",
-          "unparsed": true
+          "title": "3 credits from each of the groups A, B, C, and D (Group A)",
+          "courses": [
+            "MATH 222",
+            "MATH 323",
+            "MATH 324"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from each of the groups A, B, C, and D (Group B)",
+          "courses": [
+            "MATH 223",
+            "MATH 318",
+            "MATH 340"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from each of the groups A, B, C, and D (Group C)",
+          "courses": [
+            "COMP 330",
+            "COMP 350",
+            "COMP 360"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from each of the groups A, B, C, and D (Group D)",
+          "courses": [
+            "COMP 302",
+            "COMP 303"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
         },
         {
           "title": "An additional 3 credits may be selected from Group A or B",

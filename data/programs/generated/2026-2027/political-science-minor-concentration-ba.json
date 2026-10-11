@@ -142,7 +142,15 @@
         },
         {
           "title": "6 or 9 POLI credits at the 200 level",
-          "unparsed": true
+          "minCredits": 6,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200,
+            "subjects": [
+              "POLI"
+            ]
+          }
         },
         {
           "title": "The rest of the 18 credits (9 or 12 credits) must come from POLI courses at the 300 or 400 level in any group(s)",

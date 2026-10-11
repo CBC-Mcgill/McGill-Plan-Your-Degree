@@ -172,12 +172,17 @@
           "unparsed": true
         },
         {
-          "title": "9 credits selected from the GSFS Course List, 3 credits of which must be at the 400 or 500 level",
-          "unparsed": true
-        },
-        {
-          "title": "12 credits selected from the Complementary Course List",
-          "unparsed": true
+          "title": "3 credits must be at the 400 or 500 level",
+          "courses": [
+            "GSFS 401",
+            "GSFS 402",
+            "GSFS 403",
+            "GSFS 404",
+            "GSFS 405",
+            "GSFS 406",
+            "GSFS 407"
+          ],
+          "minCredits": 3
         },
         {
           "title": "Three credits minimum must be at the 400 or 500 level",

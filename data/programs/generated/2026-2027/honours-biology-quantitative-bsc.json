@@ -98,7 +98,8 @@
             "BIOL 308"
           ],
           "minCredits": 12,
-          "maxCredits": 12
+          "maxCredits": 12,
+          "option": "Stream 1: Theoretical Ecology and Evolutionary Biology"
         },
         {
           "title": "Field Courses",
@@ -106,7 +107,8 @@
             "BIOL 240",
             "BIOL 331",
             "BIOL 432"
-          ]
+          ],
+          "option": "Stream 1: Theoretical Ecology and Evolutionary Biology"
         },
         {
           "title": "Field Courses: 6 credits chosen from the following list of courses at the 400 level or above",
@@ -120,10 +122,16 @@
             "BIOL 594"
           ],
           "minCredits": 6,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Stream 1: Theoretical Ecology and Evolutionary Biology"
         },
         {
-          "title": "Stream 2: Physical Biology: 9 credits from",
+          "title": "3 credits from the following list or any other field course with permission",
+          "unparsed": true,
+          "option": "Stream 1: Theoretical Ecology and Evolutionary Biology"
+        },
+        {
+          "title": "9 credits from",
           "courses": [
             "BIOL 319",
             "PHYS 319",
@@ -131,7 +139,8 @@
             "PHYS 346"
           ],
           "minCredits": 9,
-          "maxCredits": 9
+          "maxCredits": 9,
+          "option": "Stream 2: Physical Biology"
         },
         {
           "title": "Students choose either BIOL 319 or PHYS 319",
@@ -139,7 +148,8 @@
           "courses": [
             "BIOL 319",
             "PHYS 319"
-          ]
+          ],
+          "option": "Stream 2: Physical Biology"
         },
         {
           "title": "300-level complementary courses: 6 credits from the following",
@@ -151,7 +161,8 @@
             "BIOL 313"
           ],
           "minCredits": 6,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Stream 2: Physical Biology"
         },
         {
           "title": "500-level complementary courses: 6 credits from the following",
@@ -164,15 +175,8 @@
             "BIOL 588"
           ],
           "minCredits": 6,
-          "maxCredits": 6
-        },
-        {
-          "title": "21 credits from one of the following two streams",
-          "unparsed": true
-        },
-        {
-          "title": "3 credits from the following list or any other field course with permission",
-          "unparsed": true
+          "maxCredits": 6,
+          "option": "Stream 2: Physical Biology"
         }
       ]
     },

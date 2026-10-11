@@ -238,6 +238,11 @@
           "match": {
             "minLevel": 300
           }
+        },
+        {
+          "title": "Courses may be selected from the lists above or from outside the program in consultation with the student's adviser",
+          "match": {},
+          "adviser": true
         }
       ]
     }

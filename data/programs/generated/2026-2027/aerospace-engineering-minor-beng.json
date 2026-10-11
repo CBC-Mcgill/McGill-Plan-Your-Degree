@@ -21,7 +21,6 @@
       "title": "Complementary Courses",
       "kind": "complementary",
       "credits": 12,
-      "pickOne": true,
       "rules": [
         {
           "title": "Aerodynamics and Propulsion Stream",
@@ -36,7 +35,8 @@
             "MECH 566",
             "MECH 579"
           ],
-          "minCredits": 12
+          "minCredits": 12,
+          "option": "Aerodynamics and Propulsion Stream"
         },
         {
           "title": "Aircraft Structures Stream",
@@ -50,7 +50,8 @@
             "MIME 560",
             "MIME 565"
           ],
-          "minCredits": 12
+          "minCredits": 12,
+          "option": "Aircraft Structures Stream"
         },
         {
           "title": "Spacecraft and Systems Stream",
@@ -63,7 +64,8 @@
             "MIME 565",
             "PHYS 320"
           ],
-          "minCredits": 12
+          "minCredits": 12,
+          "option": "Spacecraft and Systems Stream"
         },
         {
           "title": "Material and Processes Stream",
@@ -81,7 +83,16 @@
             "MIME 571",
             "MIME 580"
           ],
-          "minCredits": 12
+          "option": "Material and Processes Stream"
+        },
+        {
+          "title": "Students may choose only one of CHEE 515 or MIME 515",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 515",
+            "MIME 515"
+          ],
+          "option": "Material and Processes Stream"
         },
         {
           "title": "Avionics Stream",
@@ -106,7 +117,8 @@
             "ECSE 541",
             "ECSE 593"
           ],
-          "minCredits": 12
+          "minCredits": 12,
+          "option": "Avionics Stream"
         }
       ],
       "note": "Students may take one complementary course outside of their stream, but their selection must be approved by the Minor Advisor prior to the registration for the course."

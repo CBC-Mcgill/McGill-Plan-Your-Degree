@@ -155,12 +155,29 @@
             "PHIL 434",
             "PHIL 442"
           ],
-          "minCredits": 18,
-          "maxCredits": 18
+          "minCredits": 18
         },
         {
           "title": "6 credits, two courses from either Group C or Group D",
-          "unparsed": true
+          "courses": [
+            "PHIL 344",
+            "PHIL 345",
+            "PHIL 350",
+            "PHIL 353",
+            "PHIL 354",
+            "PHIL 355",
+            "PHIL 356",
+            "PHIL 452",
+            "PHIL 453",
+            "PHIL 454",
+            "PHIL 360",
+            "PHIL 361",
+            "PHIL 366",
+            "PHIL 367",
+            "PHIL 444",
+            "PHIL 445"
+          ],
+          "minCredits": 6
         },
         {
           "title": "15 additional credits from Groups A, B, C, D, E or F or from other Philosophy (PHIL) courses",
@@ -168,11 +185,26 @@
         },
         {
           "title": "6 credits (two courses) from Group C OR Group D",
-          "unparsed": true
-        },
-        {
-          "title": "6 credits (two courses) from Group C OR Group D",
-          "unparsed": true
+          "courses": [
+            "PHIL 344",
+            "PHIL 345",
+            "PHIL 350",
+            "PHIL 353",
+            "PHIL 354",
+            "PHIL 355",
+            "PHIL 356",
+            "PHIL 452",
+            "PHIL 453",
+            "PHIL 454",
+            "PHIL 360",
+            "PHIL 361",
+            "PHIL 366",
+            "PHIL 367",
+            "PHIL 444",
+            "PHIL 445"
+          ],
+          "minCredits": 6,
+          "minCourses": 2
         }
       ]
     }

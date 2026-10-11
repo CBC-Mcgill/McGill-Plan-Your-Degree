@@ -38,7 +38,7 @@
           "maxCredits": 3
         },
         {
-          "title": "Theory, Criticism and Methods",
+          "title": "Theory, Criticism and Methods: 3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
           "courses": [
             "ENGL 317",
             "ENGL 318",
@@ -46,7 +46,10 @@
             "ENGL 322",
             "ENGL 346",
             "ENGL 352"
-          ]
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "adviser": true
         },
         {
           "title": "Backgrounds of English Literature",
@@ -184,17 +187,6 @@
             "ENGL 417",
             "ENGL 418"
           ]
-        },
-        {
-          "title": "3 credits of Theory, Criticism, and Methods courses from the complementary list or with the permission of your department adviser",
-          "minCredits": 3,
-          "maxCredits": 3,
-          "match": {},
-          "adviser": true
-        },
-        {
-          "title": "6 credits, 3 credits each from two of the following areas",
-          "unparsed": true
         },
         {
           "title": "6 credits, 3 credits each from two of the following areas",

@@ -32,7 +32,25 @@
         },
         {
           "title": "A maximum of 12 credits of Anthropology (ANTH) courses at the 200 level",
-          "unparsed": true
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 200,
+            "maxLevel": 200,
+            "subjects": [
+              "ANTH"
+            ]
+          }
+        },
+        {
+          "title": "A minimum of 6 credits of Anthropology (ANTH) courses at the 300 level",
+          "minCredits": 6,
+          "match": {
+            "minLevel": 300,
+            "maxLevel": 300,
+            "subjects": [
+              "ANTH"
+            ]
+          }
         },
         {
           "title": "A minimum of 6 credits of Anthropology (ANTH) courses at the 300 level (only one 3-credit Special Topic course at the 300 level is permitted)",

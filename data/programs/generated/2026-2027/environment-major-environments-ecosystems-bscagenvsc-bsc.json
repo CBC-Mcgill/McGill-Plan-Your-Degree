@@ -8,6 +8,17 @@
   "credits": 63,
   "groups": [
     {
+      "title": "Program Requirements",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students are required to take a maximum of 30 credits at the 200 level and a minimum of 12 credits at the 400 level or higher in this program",
+          "unparsed": true
+        }
+      ]
+    },
+    {
       "title": "Required Courses",
       "kind": "required",
       "credits": 21,
@@ -80,17 +91,6 @@
           "maxCredits": 3
         },
         {
-          "title": "27 credits from one of the following two streams",
-          "unparsed": true
-        }
-      ]
-    },
-    {
-      "title": "Biological Stream",
-      "kind": "complementary",
-      "credits": 3,
-      "rules": [
-        {
           "title": "Social Sciences and Policy: 3-6 credits from",
           "courses": [
             "AGEC 333",
@@ -115,7 +115,8 @@
             "WILD 421"
           ],
           "minCredits": 3,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Biological Stream"
         },
         {
           "title": "Water Environments and Habitats: 12-15 credits from",
@@ -141,7 +142,26 @@
             "WILD 302"
           ],
           "minCredits": 12,
-          "maxCredits": 15
+          "maxCredits": 15,
+          "option": "Biological Stream"
+        },
+        {
+          "title": "You may take only one of: BIOL 540 or ENVR 540; ENVB 210 or GEOG 305",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 540",
+            "ENVR 540"
+          ],
+          "option": "Biological Stream"
+        },
+        {
+          "title": "You may take only one of: BIOL 540 or ENVR 540; ENVB 210 or GEOG 305",
+          "maxCourses": 1,
+          "courses": [
+            "ENVB 210",
+            "GEOG 305"
+          ],
+          "option": "Biological Stream"
         },
         {
           "title": "Surface and Atmospheric Processes: 6-9 credits from",
@@ -167,15 +187,36 @@
             "GEOG 550"
           ],
           "minCredits": 6,
-          "maxCredits": 9
-        }
-      ]
-    },
-    {
-      "title": "Physical Stream",
-      "kind": "complementary",
-      "credits": 6,
-      "rules": [
+          "maxCredits": 9,
+          "option": "Biological Stream"
+        },
+        {
+          "title": "You may take only one of: ATOC 219 or CHEM 219; ENVB 529 or GEOG 201; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 219",
+            "CHEM 219"
+          ],
+          "option": "Biological Stream"
+        },
+        {
+          "title": "You may take only one of: ATOC 219 or CHEM 219; ENVB 529 or GEOG 201; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "ENVB 529",
+            "GEOG 201"
+          ],
+          "option": "Biological Stream"
+        },
+        {
+          "title": "You may take only one of: ATOC 219 or CHEM 219; ENVB 529 or GEOG 201; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "EPSC 522",
+            "GEOG 522"
+          ],
+          "option": "Biological Stream"
+        },
         {
           "title": "Atmosphere and Thermodynamics: 6 credits from",
           "courses": [
@@ -183,7 +224,8 @@
             "ATOC 315"
           ],
           "minCredits": 6,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Physical Stream"
         },
         {
           "title": "Advanced Hydrology: 3 credits from",
@@ -195,7 +237,8 @@
             "GEOG 522"
           ],
           "minCredits": 3,
-          "maxCredits": 3
+          "maxCredits": 3,
+          "option": "Physical Stream"
         },
         {
           "title": "Intermediate Calculus: 3 credits from",
@@ -204,7 +247,8 @@
             "MATH 222"
           ],
           "minCredits": 3,
-          "maxCredits": 3
+          "maxCredits": 3,
+          "option": "Physical Stream"
         },
         {
           "title": "Engineering/Mathematics/Hydrology: 6-9 credits from",
@@ -233,7 +277,53 @@
             "SOIL 315"
           ],
           "minCredits": 6,
-          "maxCredits": 9
+          "maxCredits": 9,
+          "option": "Physical Stream"
+        },
+        {
+          "title": "You may take only one of: ENVB 529 or GEOG 201; ENVB 530 or GEOG 506; ENVB 210 or GEOG 305; AEMA 305 or MATH 315; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "ENVB 529",
+            "GEOG 201"
+          ],
+          "option": "Physical Stream"
+        },
+        {
+          "title": "You may take only one of: ENVB 529 or GEOG 201; ENVB 530 or GEOG 506; ENVB 210 or GEOG 305; AEMA 305 or MATH 315; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "ENVB 530",
+            "GEOG 506"
+          ],
+          "option": "Physical Stream"
+        },
+        {
+          "title": "You may take only one of: ENVB 529 or GEOG 201; ENVB 530 or GEOG 506; ENVB 210 or GEOG 305; AEMA 305 or MATH 315; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "ENVB 210",
+            "GEOG 305"
+          ],
+          "option": "Physical Stream"
+        },
+        {
+          "title": "You may take only one of: ENVB 529 or GEOG 201; ENVB 530 or GEOG 506; ENVB 210 or GEOG 305; AEMA 305 or MATH 315; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "AEMA 305",
+            "MATH 315"
+          ],
+          "option": "Physical Stream"
+        },
+        {
+          "title": "You may take only one of: ENVB 529 or GEOG 201; ENVB 530 or GEOG 506; ENVB 210 or GEOG 305; AEMA 305 or MATH 315; EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "EPSC 522",
+            "GEOG 522"
+          ],
+          "option": "Physical Stream"
         },
         {
           "title": "Marine and Freshwater Biology: 6-9 credits from",
@@ -252,7 +342,8 @@
             "WILD 421"
           ],
           "minCredits": 6,
-          "maxCredits": 9
+          "maxCredits": 9,
+          "option": "Physical Stream"
         }
       ]
     }

@@ -24,18 +24,17 @@
       "credits": 12,
       "rules": [
         {
-          "title": "Complementary Courses",
+          "title": "12 credits chosen from the following list in consultation with the Academic Adviser for the Minor",
           "courses": [
             "AGRI 215",
             "AGRI 340",
             "ANSC 458",
             "PLNT 302",
             "PLNT 307"
-          ]
-        },
-        {
-          "title": "12 credits chosen from the following list in consultation with the Academic Adviser for the Minor",
-          "unparsed": true
+          ],
+          "minCredits": 12,
+          "maxCredits": 12,
+          "adviser": true
         }
       ]
     }

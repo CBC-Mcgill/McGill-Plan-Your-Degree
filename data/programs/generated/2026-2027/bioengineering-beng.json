@@ -127,6 +127,14 @@
           ]
         },
         {
+          "title": "Note: Students may choose only one of CHEE 563 and MECH 563",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 563",
+            "MECH 563"
+          ]
+        },
+        {
           "title": "Note: Students may only take one of the two 4-credit technical courses",
           "unparsed": true
         },
@@ -140,7 +148,13 @@
         },
         {
           "title": "Maximum 6 credits of SEAD courses are allowed",
-          "unparsed": true
+          "maxCredits": 6,
+          "match": {
+            "subjects": [
+              "SEAD"
+            ]
+          },
+          "filter": true
         }
       ]
     },

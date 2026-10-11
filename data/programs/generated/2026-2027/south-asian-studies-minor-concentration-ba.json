@@ -26,7 +26,8 @@
             "RELG 254"
           ],
           "minCredits": 6,
-          "maxCredits": 6
+          "maxCredits": 6,
+          "option": "Stream 1: Culture and Civilization"
         },
         {
           "title": "Intermediate and Advanced Curriculum: 12 credits from the following",
@@ -70,7 +71,13 @@
             "SOCI 550"
           ],
           "minCredits": 12,
-          "maxCredits": 12
+          "maxCredits": 12,
+          "option": "Stream 1: Culture and Civilization"
+        },
+        {
+          "title": "Students may apply up to 6 credits in South Asian language study, with approval from the adviser",
+          "unparsed": true,
+          "option": "Stream 1: Culture and Civilization"
         },
         {
           "title": "Persian",
@@ -80,7 +87,8 @@
             "ISLA 443",
             "ISLA 545",
             "ISLA 546"
-          ]
+          ],
+          "option": "Stream 2: Language"
         },
         {
           "title": "Sanskrit",
@@ -88,7 +96,8 @@
             "RELG 257",
             "RELG 357",
             "RELG 457"
-          ]
+          ],
+          "option": "Stream 2: Language"
         },
         {
           "title": "Tibetan",
@@ -99,7 +108,8 @@
             "RELG 365",
             "RELG 464",
             "RELG 465"
-          ]
+          ],
+          "option": "Stream 2: Language"
         },
         {
           "title": "Urdu-Hindi",
@@ -108,23 +118,18 @@
             "ISLA 352",
             "ISLA 553",
             "ISLA 554"
-          ]
-        },
-        {
-          "title": "18 credits from one of the following streams",
-          "unparsed": true
-        },
-        {
-          "title": "Students may apply up to 6 credits in South Asian language study, with approval from the adviser",
-          "unparsed": true
+          ],
+          "option": "Stream 2: Language"
         },
         {
           "title": "Either 18 credits in one of the following languages",
-          "unparsed": true
+          "unparsed": true,
+          "option": "Stream 2: Language"
         },
         {
           "title": "Or 18 credits of combined language study from courses listed below, consisting of 6 credits of one of Persian, Sanskrit, Tibetan, or Urdu-Hindi and 12 credits of another South Asian language from the courses listed below",
-          "unparsed": true
+          "unparsed": true,
+          "option": "Stream 2: Language"
         }
       ]
     }

@@ -63,7 +63,14 @@
           "maxCourses": 1,
           "courses": [
             "ECON 209",
-            "ECON 332",
+            "ECON 332"
+          ]
+        },
+        {
+          "title": "If chosen, students choose either ECON 209 or ECON 332 and ECON 333",
+          "maxCourses": 1,
+          "courses": [
+            "ECON 209",
             "ECON 333"
           ]
         }

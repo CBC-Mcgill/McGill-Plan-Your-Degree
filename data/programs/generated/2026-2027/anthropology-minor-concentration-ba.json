@@ -25,8 +25,26 @@
           }
         },
         {
-          "title": "9-12 credits from any 300-, or 400-, or 500-level courses in Anthropology (only 3 credits of which can be at the 400 or 500 level",
-          "unparsed": true
+          "title": "9-12 credits from any 300-, or 400-, or 500-level courses in Anthropology",
+          "minCredits": 9,
+          "maxCredits": 12,
+          "match": {
+            "minLevel": 300,
+            "subjects": [
+              "ANTH"
+            ]
+          }
+        },
+        {
+          "title": "Only 3 credits of which can be at the 400 or 500 level",
+          "maxCredits": 3,
+          "match": {
+            "minLevel": 400,
+            "subjects": [
+              "ANTH"
+            ]
+          },
+          "filter": true
         },
         {
           "title": "Only 1 Special Topic course can be taken.)",
