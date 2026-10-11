@@ -155,9 +155,14 @@ test("parses an Engineering page: Year 0, extra credits, named lists and footnot
       courses: ["COMP 350", "ECSE 343"],
     }),
   );
-  expect(rules.filter((rule) => rule.unparsed)).toEqual([
-    expect.objectContaining({ title: expect.stringContaining("A or List B") }),
-  ]);
+  expect(rules.filter((rule) => rule.unparsed)).toEqual([]);
+  expect(rules).toContainEqual(
+    expect.objectContaining({
+      title: expect.stringContaining("A or List B"),
+      minCredits: 8,
+      minCourses: 3,
+    }),
+  );
 });
 
 test("parses an Arts minor: lists without a stated amount and notes it cannot read", () => {
@@ -1085,4 +1090,51 @@ test("credits a Year 0 heading asks for after its list join a group of their own
     { title: "Program Requirements", credits: 0, rules: [{ unparsed: true }] },
     { title: "Complementary Courses", credits: 3 },
   ]);
+});
+
+test("reads statements that name a list by its letter and description, its amount, or its heading", () => {
+  const rules = complementary(
+    "<p>3 credits in Psychology from List A - (Behavioural Neuroscience, Cognition and Quantitative Methods)</p>" +
+      "<p>6 credits (two courses) from Group C OR Group D:</p>" +
+      "<p>9 credits selected from the GSFS Course List, 3 credits of which must be at the 400 or 500 level.</p>" +
+      "<p>at least 6 credits must be taken from the Basic Life Sciences List,</p>" +
+      `<h3>List A - (Behavioural Neuroscience, Cognition and Quantitative Methods)</h3>${table("PSYC 301", "NSCI 201")}` +
+      `<h3>Group C</h3>${table("PHIL 344", "PHIL 345")}<h3>Group D</h3>${table("PHIL 360")}` +
+      `<h3>GSFS</h3><p>9 credits from the following:</p>${table("GSFS 301", "GSFS 401")}` +
+      `<h3>Basic Life Science</h3><p>At least 6 credits from:</p>${table("ANAT 212", "BIOL 200")}`,
+  );
+  expect(rules.filter((rule) => rule.unparsed)).toEqual([]);
+  expect(rules).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        minCredits: 3,
+        courses: ["PSYC 301", "NSCI 201"],
+      }),
+      expect.objectContaining({
+        minCredits: 6,
+        courses: ["PHIL 344", "PHIL 345", "PHIL 360"],
+      }),
+      expect.objectContaining({ minCredits: 3, courses: ["GSFS 401"] }),
+    ]),
+  );
+});
+
+test("a statement naming its own heading, and any of the lists, take in the lists it covers", () => {
+  const rules = complementary(
+    "<p>9 credits from any of the two lists.</p>" +
+      `<h3>Literature and Society</h3><p>6 credits of courses in Literature and Society.</p><h4>History (HIST)</h4>${table("HIST 208")}<h4>Religion (RELG)</h4>${table("RELG 253")}` +
+      `<h3>Language</h3><p>3 credits from:</p>${table("EAST 220")}`,
+  );
+  expect(rules).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        minCredits: 6,
+        courses: ["HIST 208", "RELG 253"],
+      }),
+      expect.objectContaining({
+        minCredits: 9,
+        courses: ["HIST 208", "RELG 253", "EAST 220"],
+      }),
+    ]),
+  );
 });

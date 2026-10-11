@@ -46,7 +46,11 @@ interface Section {
 }
 type Event = { kind: "heading"; text: string } | Text | Table;
 
-const clean = (text: string) => text.replace(/\s+/g, " ").trim();
+const clean = (text: string) =>
+  text
+    .replace(/[\u200b\ufeff]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 const trimEnd = (text: string) => text.replace(/[\s:;.]+$/, "");
 const CODE = String.raw`[A-Z]{3}[A-Z\d] \d{3}(?:[DJN]\d)?`;
 const CODE_G = new RegExp(String.raw`\b${CODE}\b`, "g");
@@ -260,7 +264,7 @@ const FROM_UNION =
   /^,?\s*(?:selected |chosen )?from the following list or the previous(?: list)?\s*[:.]?$/i;
 // Advice in parentheses that does not change which courses count.
 const LIST_ADVICE =
-  /\s*\((?:usually|normally|ordinarily|recommended|highly recommended|or (?:their )?equivalents?)\b[^()]*\)/gi;
+  /\s*\((?:(?:usually|normally|ordinarily|recommended|highly recommended|or (?:their )?equivalents?)\b[^()]*|\d+ credits? per (?:term|semester))\)/gi;
 // Words that change nothing: "9 credits ordinarily selected from", "of Arabic language (3 levels)", "from courses not taken above and the following".
 const LIST_FILLER =
   /\s*\(\d+ levels\)|\b(?:ordinarily|usually|normally) |\bcourses not (?:already )?taken above and |\bor (?:their )?equivalents?\b/gi;
@@ -292,7 +296,7 @@ interface Part {
   list?: string;
 }
 
-const LIST_IDS = String.raw`(?:Group|List|Block)s? [A-Z\d](?:(?:, | and |, and )(?:(?:Group|List|Block) )?[A-Z\d])*`;
+const LIST_IDS = String.raw`(?:Group|List|Block)s? [A-Z\d](?:(?:, | and |, and | or |, or )(?:(?:Group|List|Block) )?[A-Z\d])*`;
 
 /** "Groups A, B and C" as ["group a", "group b", "group c"]. */
 function listIds(text: string): string[] {
@@ -564,7 +568,7 @@ function statementAmount(
 
 /** A total with nothing to choose from, such as "9-12 credits (3 courses) must be taken, chosen as follows:". */
 const BARE_TOTAL = new RegExp(
-  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${SPAN}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*(?:must be taken|(?:are )?selected|distributed|chosen|of complementary courses (?:are )?selected|all of the courses below)(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
+  String.raw`^(?:students (?:must |should )?(?:choose|select|take) )?${SPAN}\s*credits?(?:\s*\(\s*${NUM}(?:\s*[-–]\s*\d+)?\s*courses?\s*\))?(?:,?\s*(?:must be taken|(?:are )?selected|distributed|chosen|of complementary courses (?:are )?selected|all of the courses below|from one or more of the following (?:groups|lists))(?:,?\s*(?:chosen |selected )?(?:as follows|as described below)(?:,?\s*in consultation with[^:.]*)?)?)?\s*[:.]?$`,
   "i",
 );
 
@@ -926,7 +930,7 @@ function readStatement(
 }
 
 const REFERENCE = new RegExp(
-  String.raw`^(?: and no more than (\d+) credits)?(?: must be)?(?: selected| chosen)? (?:from|of) (each of )?(?:the courses in )?(${LIST_IDS})(?: [–-] [A-Z][\w ]*)?(?:,? with (.+?))?\s*[:.]?$`,
+  String.raw`^(?: and no more than (\d+) credits)?(?:,? (?:${COUNT_WORD}) courses?)?(?: in [A-Z][a-z]+(?: [A-Z][a-z]+)*)?(?: must be)?(?: selected| chosen)? (?:from|of) (?:either )?(each of )?(?:the courses in |the )?(${LIST_IDS})(?:(?: [–-])? \([^()]*\)| [–-] [A-Z][\w ]*)?(?:,? with (.+?))?\s*[:.]?$`,
   "i",
 );
 
@@ -1006,6 +1010,89 @@ function referenceRules(
   return [...parts, { title, courses: union, ...amount }];
 }
 
+const NAMED_LIST =
+  /^(\d+) credits (?:selected |chosen )?from the (?:[A-Z][\w,-]* )+?(?:Course )?List(?:,\s*(.+?))?\s*[:.]?$/;
+
+/** "9 credits selected from the GSFS Course List, 3 credits of which must be at the 400 or 500 level": the one list of the group with that amount, so only its qualifier is new. Null when no single list has the amount. */
+function namedListRules(
+  text: string,
+  rules: Rule[],
+  lists: ReadonlyMap<string, string[]>,
+): Rule[] | null {
+  const m = NAMED_LIST.exec(text);
+  if (!m) return null;
+  const credits = Number(m[1]);
+  const same = rules.filter(
+    (rule) => rule.courses && !rule.unparsed && rule.minCredits === credits,
+  );
+  const [target] = same;
+  if (same.length !== 1 || !target?.courses) return null;
+  if (!m[2]) return [];
+  const parts = partOf(
+    m[2].replace(/^(\d+) credits of which /i, "of which $1 credits "),
+  );
+  return (
+    parts &&
+    partRules({ minCredits: credits, parts }, target.courses, "", lists)
+  );
+}
+
+const ANY_LIST = new RegExp(
+  String.raw`^(the remaining )?(\d+) credits (?:may be )?(?:selected |chosen )?from any of the (?:(${COUNT_WORD}) )?lists$`,
+  "i",
+);
+
+/** "15 credits from any of the five lists": the union of the group's lists, the streams when it has them. Null when the count does not match. */
+function anyListRules(text: string, rules: Rule[]): Rule[] | null {
+  const m = ANY_LIST.exec(text);
+  if (!m) return null;
+  const streams = rules.filter((rule) => rule.option && rule.courses);
+  const lists =
+    streams.length > 0
+      ? streams
+      : rules.filter(
+          (rule) =>
+            rule.courses && !rule.unparsed && rule.maxCourses === undefined,
+        );
+  const count = COUNTS[(m[3] ?? "").toLowerCase()];
+  const matches = lists.flatMap((rule) => (rule.match ? [rule.match] : []));
+  if (
+    lists.length === 0 ||
+    (count !== undefined && lists.length !== count) ||
+    matches.length > 1
+  ) {
+    return null;
+  }
+  // "The remaining 9 credits may be selected from any of the lists" is what the lists already allow.
+  if (m[1] && streams.length === 0) return [];
+  return [
+    {
+      title: text,
+      courses: unique(lists.flatMap((rule) => rule.courses ?? [])),
+      minCredits: Number(m[2]),
+      ...(matches[0] && { match: matches[0] }),
+    },
+  ];
+}
+
+const HEADING_LIST =
+  /^(?:at least |a minimum of )?(\d+) credits (?:must be (?:taken |selected |chosen )?)?from the ([A-Z][\w ,&-]*?) List$/i;
+
+/** "at least 9 credits must be taken from the Basic Life Sciences List" over a heading of that name that already asks for 9: a repeat. Null when no heading has the name or its amount differs. */
+function headingListRules(text: string, rules: Rule[]): Rule[] | null {
+  const m = HEADING_LIST.exec(text.replace(/[,\s]+$/, ""));
+  const words = (name: string) =>
+    name.toLowerCase().replace(/s\b/g, "").replace(/\W+/g, " ").trim();
+  const name = words(m?.[2] ?? "");
+  const named = rules.filter(
+    (rule) => rule.courses && words(rule.title.split(":")[0] ?? "") === name,
+  );
+  const [target] = named;
+  return m && named.length === 1 && target?.minCredits === Number(m[1])
+    ? []
+    : null;
+}
+
 type NoteRule = Rule | { either: string[] };
 
 /** Footnotes that name courses and say how they combine. */
@@ -1046,6 +1133,7 @@ const NOISE = new RegExp(
     String.raw`^courses are offered on a rotational basis\b|^taken in two semesters\b|\bare courses sponsored by\b|^it is possible for students to transfer\b|^electives are selected\b`,
     String.raw`^\W*(?:note:\s*)?(?:students who|a student who|if a student)\b(?![^;]*\bnot count\b)[^;]*\b(?:equivalent|CEGEP)\b`,
     String.raw`^students are normally permitted to count \d+ credits from other departments\b|^in exceptional circumstances\b`,
+    String.raw`^the \d+ credits required for this program must satisfy the following\b`,
   ].join("|"),
   "i",
 );
@@ -1484,12 +1572,16 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
         if (opens && listed && !listed.rule.match) listed.rule.match = opens;
         else pending.push(item.text);
       } else if (item.kind === "section") {
-        // Everything after a heading belongs to it or to a later heading.
-        const statement = pending.findLast((t) => listAmount(t));
+        // Everything after a heading belongs to it or to a later heading. "24 credits of courses in East Asian Literature" under that heading points at its lists.
+        const titled = (t: string) =>
+          sec.title && t.includes(sec.title) && !listAmount(t)
+            ? t.replace(sec.title, "the following")
+            : t;
+        const statement = pending.map(titled).findLast((t) => listAmount(t));
         const children = sec.items.slice(i).filter((c) => c.kind === "section");
         if (statement && union(statement, children, label)) {
           tell(
-            pending.filter((t) => t !== statement),
+            pending.filter((t) => titled(t) !== statement),
             sec,
           );
           return;
@@ -1598,7 +1690,11 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     ) {
       continue;
     }
-    const referred = referenceRules(text, rules, named, lists);
+    const referred =
+      referenceRules(text, rules, named, lists) ??
+      namedListRules(trimEnd(text), rules, lists) ??
+      anyListRules(trimEnd(text), rules) ??
+      headingListRules(trimEnd(text), rules);
     if (referred) {
       rules.push(...referred);
       continue;
