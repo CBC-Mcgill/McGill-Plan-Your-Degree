@@ -968,3 +968,61 @@ test("a level sentence under a nested heading with its own credits counts that h
   );
   expect(rules.some((rule) => rule.match?.minLevel !== undefined)).toBe(false);
 });
+
+test("reads which courses cannot both count, from footnotes and from sentences", () => {
+  const rules = complementary(
+    `<p>15 credits from:</p>${table("BREE 529", "ENVB 529", "GEOG 201", "BIOL 540", "ENVR 540", "ENVB 210", "GEOG 305", "MUJZ 440:2", "MUJZ 441:2", "MUJZ 461D1:2", "MUJZ 461D2:2")}` +
+      "<dl><dd>Note: Students may take only one of BREE 529, ENVB 529, or GEOG 201.</dd></dl>" +
+      "<p>You may take only one of: BIOL 540 or ENVR 540; ENVB 210 or GEOG 305.</p>" +
+      "<p>Students select either MUJZ 440 and MUJZ 441 or MUJZ 461D1 and MUJZ 461D2.</p>",
+  );
+  expect(
+    rules.filter((rule) => rule.maxCourses === 1).map((rule) => rule.courses),
+  ).toEqual([
+    ["BREE 529", "ENVB 529", "GEOG 201"],
+    ["BIOL 540", "ENVR 540"],
+    ["ENVB 210", "GEOG 305"],
+    ["MUJZ 440", "MUJZ 461"],
+    ["MUJZ 441", "MUJZ 461"],
+  ]);
+});
+
+test("a line beside a list opens it to a subject, and courses not taken above join the lists before", () => {
+  const rules = complementary(
+    `<p>9 credits from:</p>${table("COMP 251", "MATH 240")}<p>COMP courses at the 300 level or above except COMP 396, COMP 400.</p>` +
+      `<p>6 credits selected from:</p>${table("MUTH 202", "MUTH 204")}<p>6 credits selected from courses not taken above and the following:</p>${table("MUCO 575")}`,
+  );
+  expect(rules).toEqual([
+    {
+      title: "9 credits from",
+      courses: ["COMP 251", "MATH 240"],
+      minCredits: 9,
+      maxCredits: 9,
+      match: {
+        subjects: ["COMP"],
+        minLevel: 300,
+        exclude: ["COMP 396", "COMP 400"],
+      },
+    },
+    expect.objectContaining({ courses: ["MUTH 202", "MUTH 204"] }),
+    expect.objectContaining({
+      courses: ["COMP 251", "MATH 240", "MUTH 202", "MUTH 204", "MUCO 575"],
+      minCredits: 6,
+    }),
+  ]);
+});
+
+test("a Required heading over one course stays required, and a choice it cannot read stays complementary", () => {
+  const program = programOf(
+    "Test Minor (B.Sc.) (19 credits)",
+    `<h2>Required Course (4 credits)</h2>${table("MUIN 384:1")}<p>3 credits from the following:</p>${table("MUPG 580:1.5")}` +
+      `<h2>Africa Semester (15 credits)</h2><h3>Africa Semester - Required Courses</h3><p>6 credits</p>` +
+      `<p>Students select one course titled "Research in Society" and one course titled "Research in Ecology" from the courses below.</p>${table("ANTH 451", "BIOL 451", "GEOG 451")}` +
+      `<h3>Africa Semester - Complementary Courses</h3><p>9 credits from:</p>${table("ANTH 416", "BIOL 405", "BIOL 428")}`,
+  );
+  expect(program.groups.map((g) => [g.title, g.kind, g.credits])).toEqual([
+    ["Required Course", "required", 4],
+    ["Africa Semester - Required Courses", "complementary", 6],
+    ["Africa Semester - Complementary Courses", "complementary", 9],
+  ]);
+});

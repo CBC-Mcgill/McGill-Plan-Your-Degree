@@ -408,7 +408,38 @@ function partCourses(
   });
 }
 
-type ListAmount = Amount & { union?: true; parts?: Part[] };
+/** `union` takes in the list right before, "above" every list before it in the group. */
+type ListAmount = Amount & { union?: true | "above"; parts?: Part[] };
+
+/** A line that opens a list to a subject at a level, before it as "Any course at the 300, 400 or 500 level from the department of Linguistics, or from the following list:" or after it as "COMP courses at the 300 level or above except COMP 396, COMP 400". */
+function widening(
+  text: string,
+  subjectsOf: (department: string) => string[],
+): Match | null {
+  const before =
+    /^any course (.+?) from the department of ([A-Za-z ]+?),? or(?: from the following list)?\s*:$/i.exec(
+      text,
+    );
+  const after = new RegExp(
+    String.raw`^([A-Z]{3}[A-Z\d]) courses (at the .+?)(?:,? (?:except|excluding) (${CODE}(?:(?:,? and |, |,? or )${CODE})*))?\.?$`,
+  ).exec(text);
+  const at = before?.[1] ?? after?.[2];
+  const level = at === undefined ? null : levelIn(at);
+  const subjects = before
+    ? subjectsOf((before[2] ?? "").toLowerCase())
+    : [after?.[1] ?? ""];
+  if (
+    !level ||
+    at?.replace(level.phrase, "").trim() !== "at" ||
+    !subjects.every(Boolean) ||
+    subjects.length === 0
+  ) {
+    return null;
+  }
+  const match: Match = { subjects, ...level.match };
+  if (after?.[3]) match.exclude = codesIn(after[3]);
+  return match;
+}
 
 /** "3-9 credits selected from:", "12 credits of advanced anatomy courses (AAC) selected from:" or "One of:" in front of a table. `adjacent` also takes a plain "9 credits of systematic physical geography" right above its table. */
 function listAmount(text: string, adjacent = false): ListAmount | null {
@@ -521,7 +552,14 @@ function statementAmount(
           },
     });
   }
-  return { ...amount, ...(parts.length > 0 && { parts }) };
+  return {
+    ...amount,
+    ...(parts.length > 0 && { parts }),
+    // "12 credits selected from courses not taken above and the following:".
+    ...(/\bcourses not (?:already )?taken above and /i.test(body) && {
+      union: "above" as const,
+    }),
+  };
 }
 
 /** A total with nothing to choose from, such as "9-12 credits (3 courses) must be taken, chosen as follows:". */
@@ -1146,8 +1184,91 @@ interface Context {
   subjectsOf: (department: string) => string[];
 }
 
+const SET = `CODE(?:(?:,? or |, |,? and |/)CODE)+`;
+const WHO = `(?:(?:students|you) )?(?:may |many |make |can )?`;
+// "only one of: A or B; C or D", "at most one of A, B and C", "only one project course: A, B, or C".
+const ONLY_ONE = new RegExp(
+  String.raw`^${WHO}(?:(?:take|select|choose) )?(?:only|at most) one (?:of|project course)(?: the following courses)?\s*:?\s*(${SET}(?:;\s*${SET})*)$`,
+  "i",
+);
+// "only one course in each of the following sets: A or B C or D".
+const EACH = new RegExp(
+  String.raw`^${WHO}(?:take|select|choose) only one course (?:in each of the following sets|from each set of the following courses)\s*:?\s*((?:CODE (?:or|and) CODE\s*)+)$`,
+  "i",
+);
+// "A or B, but not both", "Either A or B may be taken but not both", "Only one of A or B can count toward the program".
+const NOT_BOTH = new RegExp(
+  `^(?:${WHO}(?:take|select|choose) )?(?:either )?(${SET}),? (?:(?:may|can) be taken,? )?but not both$|^only one of (${SET}) can count towards? the program$`,
+  "i",
+);
+// "Students select either MUJZ 440 and MUJZ 441 or MUJZ 461D1 and MUJZ 461D2": one set or the other.
+const EITHER_SETS = new RegExp(
+  `^${WHO}(?:take|select|choose) either (CODE(?: and CODE)*) or (CODE(?: and CODE)*)$`,
+  "i",
+);
+
+/** Sentences that let a student count only one course of each set they name, as one "not both" rule per set. Null when the sentence says more. */
+function exclusiveSets(text: string): Rule[] | null {
+  const title = trimEnd(text);
+  const s = skeleton(title)
+    .replace(/^(?:program notes|note)\s*:\s*/i, "")
+    .replace(/^if chosen,?\s*/i, "");
+  const codes = codesIn(title);
+  const count = (chunk: string) => chunk.match(/CODE/g)?.length ?? 0;
+  const take = (chunks: string[]) => {
+    let at = 0;
+    return chunks.map((chunk) => {
+      const set = codes.slice(at, at + count(chunk));
+      at += set.length;
+      return unique(set);
+    });
+  };
+  const rule = (set: string[]): Rule => ({
+    title,
+    maxCourses: 1,
+    courses: set,
+  });
+  const either = EITHER_SETS.exec(s);
+  if (either && /and/.test(s)) {
+    const [first = [], second = []] = take([either[1] ?? "", either[2] ?? ""]);
+    const pairs = first.flatMap((a) =>
+      second.flatMap((b) => (a === b ? [] : [rule([a, b])])),
+    );
+    return pairs.length > 0 ? pairs : null;
+  }
+  const one = ONLY_ONE.exec(s);
+  const each = EACH.exec(s);
+  const chunks = one
+    ? (one[1] ?? "").split(/;\s*/)
+    : each
+      ? ((each[1] ?? "").match(/CODE (?:or|and) CODE/g) ?? [])
+      : s.split(/;\s*/).map((chunk) => {
+          const m = NOT_BOTH.exec(chunk);
+          return m ? (m[1] ?? m[2] ?? "") : null;
+        });
+  if (chunks.length === 0 || chunks.some((chunk) => chunk === null))
+    return null;
+  const rules = take(chunks as string[])
+    .filter((set) => set.length > 1)
+    .map(rule);
+  return rules.length > 0 ? rules : null;
+}
+
+/** A note of several sentences whose only condition is a set of courses that cannot both count, as "Students may take either COMP 202 or COMP 204, but not both. Students who have taken the equivalent...". */
+function sentenceSets(note: string): Rule[] | null {
+  const parts = sentences(note);
+  const sets = parts.map(exclusiveSets);
+  return parts.length > 1 &&
+    sets.some(Boolean) &&
+    parts.every((p, i) => sets[i] || NOISE.test(p) || !constraint(p))
+    ? sets.flatMap((set) => set ?? [])
+    : null;
+}
+
 function noteRules(notes: string[]): Rule[] {
   return notes.flatMap((note) => {
+    const sets = exclusiveSets(note) ?? sentenceSets(note);
+    if (sets) return sets;
     const parsed = parseNote(note);
     if (parsed && "either" in parsed) {
       return [{ title: trimEnd(note), maxCourses: 1, courses: parsed.either }];
@@ -1288,6 +1409,8 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     let pending: string[] = [];
     // A statement above several tables with no statement of their own is about all of them.
     let run: Rule | null = null;
+    // The last list and its rule, for a line after it that opens the list further.
+    let listed: { table: Table; rule: Rule } | null = null;
     // "27 credits from one of the following two streams" beside other lists: each stream's rules join the group under its name.
     const streams = streamsOf(sec);
     const options =
@@ -1308,7 +1431,12 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
         continue;
       }
       if (item.kind === "text") {
-        pending.push(item.text);
+        const opens =
+          listed && sec.items[i - 1] === listed.table
+            ? widening(item.text, ctx.subjectsOf)
+            : null;
+        if (opens && listed && !listed.rule.match) listed.rule.match = opens;
+        else pending.push(item.text);
       } else if (item.kind === "section") {
         // Everything after a heading belongs to it or to a later heading.
         const statement = pending.findLast((t) => listAmount(t));
@@ -1326,6 +1454,11 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
         visit(item, item.title);
       } else {
         const courses = coursesOf([item]);
+        const widen = widening(pending.at(-1) ?? "", ctx.subjectsOf);
+        if (widen) {
+          pending.pop();
+          run = null;
+        }
         const last = pending.at(-1);
         const adjacent = last !== undefined && listAmount(last, true);
         let bound = adjacent ? last : pending.findLast((p) => listAmount(p));
@@ -1357,18 +1490,25 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
         if (run && !found) {
           run.courses = unique([...(run.courses ?? []), ...courses]);
           previous = courses;
+          listed = { table: item, rule: run };
           rules.push(...notes);
           continue;
         }
         const { union, parts: _, ...amount } = found ?? {};
+        const above = rules.flatMap((rule) => rule.courses ?? []);
         const rule: Rule = {
           title:
             [name ?? label, bound && trimEnd(bound)]
               .filter(Boolean)
               .join(": ") || section.title,
-          courses: union ? unique([...previous, ...courses]) : courses,
+          courses: unique([
+            ...(union === "above" ? above : union ? previous : []),
+            ...courses,
+          ]),
           ...amount,
+          ...(widen && { match: widen }),
         };
+        listed = { table: item, rule };
         rules.push(...(parts ?? []), rule, ...notes);
         if (found) run = rule;
         const id = listId(label);
@@ -1382,6 +1522,12 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
 
   const statements: typeof narrative = [];
   for (const { text: line, scope, own } of narrative) {
+    // "You may take only one of: A or B; C or D" before the splitter cuts it at the colon.
+    const sets = exclusiveSets(line) ?? sentenceSets(line);
+    if (sets) {
+      rules.push(...sets);
+      continue;
+    }
     for (const text of sentences(line)) {
       const last = statements.at(-1);
       if (DEPARTMENT_LINE.test(text) && last) last.text += `; ${text}`;
@@ -1394,6 +1540,11 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       ? rule
       : { ...rule, filter: true };
   for (const { text, scope, own } of statements) {
+    const sets = exclusiveSets(text);
+    if (sets) {
+      rules.push(...sets);
+      continue;
+    }
     if (bareTotal(text) || NOISE.test(text) || !constraint(text)) {
       continue;
     }
@@ -1453,15 +1604,26 @@ function requiredGroup(section: Section): RequiredGroup | null {
     const choices = intro.flatMap(
       (t, i) => listAmount(t, i === intro.length - 1) ?? [],
     );
-    // "Select 3 credits of the following:" over 3-credit courses is one of them.
+    // "Select 3 credits of the following:" over 3-credit courses is one of them, and so is any amount over a single course.
     const single = (c: ListAmount) =>
       c.maxCourses === 1 ||
+      (codes.length === 1 && (c.minCredits ?? 0) > 0) ||
       (c.minCredits !== undefined &&
         c.minCredits === c.maxCredits &&
         !c.parts &&
         event.rows.every((row) => row.credits === c.minCredits));
-    // "6 credits from the following" under a Required heading is a choice, so the list is not required.
-    if (!choices.every(single)) return null;
+    // "6 credits from the following" under a Required heading is a choice, so the list is not required, and so is a choice it cannot read, as "Students select one course titled ...".
+    const unread = intro.some(
+      (t) =>
+        new RegExp(
+          String.raw`\b(?:select|choose) (?:${COUNT_WORD}|\d+)\b`,
+          "i",
+        ).test(t) &&
+        constraint(t) &&
+        !listAmount(t) &&
+        !bareTotal(t),
+    );
+    if (unread || !choices.every(single)) return null;
     if (choices.length > 0 && codes.length > 1) {
       items.push({ oneOf: [...new Set(codes)] });
     } else {
@@ -1668,7 +1830,8 @@ function streamOptions(
   const rules: Rule[] = [];
   for (const whole of streams) {
     const stream = withoutPointer(whole);
-    const one = streamRule(stream, credits);
+    const widened = textsIn(stream).some((t) => widening(t, ctx.subjectsOf));
+    const one = widened ? null : streamRule(stream, credits);
     const own = one ? [one] : rulesOf(stream, ctx);
     if (own.length === 0) return null;
     rules.push(...own.map((rule) => ({ ...rule, option: whole.title })));
@@ -1755,8 +1918,13 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     shares.reduce((sum, n) => sum + (n ?? 0), 0) === whole
   ) {
     return children.flatMap((child) =>
-      complementaryGroups(
-        { ...child, title: `${section.title} ${child.title}` },
+      groupsOf(
+        {
+          ...child,
+          title: child.title.startsWith(section.title)
+            ? child.title
+            : `${section.title} ${child.title}`,
+        },
         ctx,
       ),
     );
