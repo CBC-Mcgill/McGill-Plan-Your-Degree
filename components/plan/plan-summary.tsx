@@ -169,7 +169,9 @@ function missingRows(
       const what = lacks(group, program.groups[g], catalogue);
       const gap = group.credits - group.creditsDone;
       const checks = group.rules.flatMap((rule, r) =>
-        rule.unparsed
+        rule.unparsed &&
+        !rule.confirmed &&
+        (rule.option === undefined || rule.option === group.option)
           ? [
               // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
               <li key={`${key}-${r}`} className={ROW}>
