@@ -69,11 +69,7 @@
       "rules": [
         {
           "title": "3 credits at the 500 level or higher in consultation with the program adviser chosen from courses offered by the Department of Integrated Studies in Education",
-          "minCredits": 3,
-          "match": {
-            "minLevel": 500
-          },
-          "adviser": true
+          "unparsed": true
         }
       ]
     }

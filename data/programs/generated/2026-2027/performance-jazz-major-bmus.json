@@ -149,14 +149,12 @@
           ]
         },
         {
-          "title": "Note: students playing Rhythm Section instruments (piano,guitar, bass, drums, vibraphone) can substitute 4 credits of large ensemble with free electives)",
-          "unparsed": true
-        },
-        {
           "title": "4 credits from either 4 credits from either MUJZ 440 and MUJZ 441, or MUJZ 461D1/MUJZ 461D2",
           "unparsed": true
         }
-      ]
+      ],
+      "maxCredits": 18,
+      "note": "Note: students playing Rhythm Section instruments (piano,guitar, bass, drums, vibraphone) can substitute 4 credits of large ensemble with free electives)."
     },
     {
       "title": "Elective Courses",
@@ -192,7 +190,8 @@
           "title": "18-22 credits of Free Electives (may not include courses with a MUEN prefix); students playing Rhythm Section instruments may take up to 22 Free Electives",
           "unparsed": true
         }
-      ]
+      ],
+      "maxCredits": 25
     }
   ],
   "generated": true

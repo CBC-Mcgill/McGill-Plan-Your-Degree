@@ -8,6 +8,17 @@
   "credits": 36,
   "groups": [
     {
+      "title": "Program Requirements",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "At least 9 of the 36 credits must be at the 400 level or above",
+          "unparsed": true
+        }
+      ]
+    },
+    {
       "title": "Required Courses",
       "kind": "required",
       "credits": 18,
