@@ -41,7 +41,7 @@ export interface Rule {
   match?: Match;
   /** The crawler could not turn this catalogue text into a rule, so it matches no course and `title` holds the text for a person to read. */
   unparsed?: true;
-  /** The student's adviser must approve the choice, so the app counts what it can and shows a reminder. */
+  /** The student's adviser must approve the choice, so the app counts what it can and shows a reminder. With no `minCredits` and no `maxCredits` the rule only reminds and counts no course. */
   adviser?: true;
   /** At most this many credits from any one subject count toward the rule, as in "no more than 9 credits from any one discipline". */
   maxCreditsPerSubject?: number;
@@ -57,8 +57,10 @@ export interface Rule {
 export interface ComplementaryGroup {
   title: string;
   kind: "complementary";
-  /** Credits needed from the group. A range in the catalogue takes its lower bound. 0 for a group whose rules are all unparsed and hold a condition over the whole program, such as "a maximum of 34 credits at the 200 level", so a person checks it and no credits move. */
+  /** Credits needed from the group. A range in the catalogue takes its lower bound. 0 for a group whose rules are all unparsed, or reminders beside unparsed ones, and hold a condition over the whole program, such as "a maximum of 34 credits at the 200 level", so a person checks it and no credits move. */
   credits: number;
+  /** The top of a range heading, as "Thesis Courses (24-33 credits)": the group keeps counting courses past `credits` up to it, toward the program total. */
+  maxCredits?: number;
   /** For "9-12 credits (3 courses)" style lines. */
   minCourses?: number;
   rules: Rule[];

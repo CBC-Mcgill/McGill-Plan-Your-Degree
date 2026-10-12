@@ -5,6 +5,7 @@ import type {
   Rule,
 } from "../lib/programs/types.ts";
 import { programCourseCodes } from "../lib/programs/validate.ts";
+import { TOTAL_TITLE } from "./parse-program.ts";
 
 const MAX_COUNT_DROP = 0.05;
 
@@ -196,13 +197,16 @@ export function compareWithHandWritten(
   return lines;
 }
 
-/** Programs whose groups add up to more or fewer credits than the program, which often means alternatives were read as requirements or a section was skipped. A program with no total, as a doctorate, has nothing to add up to. */
+/** Programs whose groups add up to more credits than the program, and those that could not reach it without a Program total check, which often means alternatives were read as requirements or a section was skipped. A program with no total, as a doctorate, has nothing to add up to. */
 export function creditMismatches(programs: Program[]) {
-  const sum = (p: Program) => p.groups.reduce((n, g) => n + g.credits, 0);
+  const sum = (p: Program) =>
+    p.groups.reduce((n, g) => n + (g.title === TOTAL_TITLE ? 0 : g.credits), 0);
   const totalled = programs.filter((p) => p.credits > 0);
   return {
     over: totalled.filter((p) => sum(p) > p.credits).map((p) => p.id),
-    under: totalled.filter((p) => sum(p) < p.credits).map((p) => p.id),
+    under: totalled
+      .filter((p) => p.groups.some((g) => g.title === TOTAL_TITLE))
+      .map((p) => p.id),
   };
 }
 
@@ -247,7 +251,7 @@ function levelLines(
     `- Programs fully readable: ${programs.length - withUnparsed} of ${programs.length}`,
     `- Complementary rules kept as raw text: ${unparsed} of ${rules}`,
     `- Programs whose groups add up to more credits than the program: ${over.length}`,
-    `- Programs whose groups add up to fewer credits than the program: ${under.length}`,
+    `- Programs whose groups cannot reach the program's credits, given a Program total check: ${under.length}`,
     "",
     "#### Most common unparsed phrasings",
     "",

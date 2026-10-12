@@ -1178,6 +1178,8 @@ test("a Required heading over one course stays required, and a choice it cannot 
     ["Required Course", "required", 4],
     ["Africa Semester - Required Courses", "complementary", 6],
     ["Africa Semester - Complementary Courses", "complementary", 9],
+    // The heading asks 4 credits of courses that add up to 2.5.
+    ["Program total", "complementary", 1.5],
   ]);
 });
 
@@ -1440,7 +1442,18 @@ test("reads graduate sentences: 700-level phrases, a 600-level cap, coursework, 
     ],
     [
       "12 credits of courses at the 500 level or higher from within and/or outside the Department in consultation with the Program Adviser.",
-      [{ minCredits: 12, match: { minLevel: 500 }, adviser: true }],
+      [
+        {
+          minCredits: 12,
+          match: { minLevel: 500 },
+          maxCredits: 12,
+          adviser: true,
+        },
+      ],
+    ],
+    [
+      "0-3 credits at the 500 level or higher approved by the Advisory Committee.",
+      [{ match: { minLevel: 500 }, maxCredits: 3, adviser: true }],
     ],
     [
       "Or 3 credits at the 500 level or higher recommended by the Advisory Committee and approved by the Environment Option Committee.",
@@ -1464,7 +1477,7 @@ test("reads graduate sentences: 700-level phrases, a 600-level cap, coursework, 
   for (const [text, rules] of cases) expect(read(text), text).toEqual(rules);
 });
 
-test("a reminder alone in a group keeps the level it names", () => {
+test("a reminder alone in a group counts the group's credits at the level it names", () => {
   const program = programOf(
     "Test Major (B.Sc.) (9 credits)",
     `<h2>Required Courses (3 credits)</h2>${table("BIOL 200")}` +
@@ -1472,6 +1485,162 @@ test("a reminder alone in a group keeps the level it names", () => {
   );
   expect(program.groups[1]).toMatchObject({
     credits: 6,
-    rules: [{ match: { minLevel: 500 }, adviser: true }],
+    rules: [{ minCredits: 6, match: { minLevel: 500 }, adviser: true }],
   });
+});
+
+test("a range heading counts courses up to its top, and credits no group can reach become a Program total check", () => {
+  const thesis = graduateOf(
+    "Chemistry (Thesis) (M.Sc.) (45 credits)",
+    `<h2>Thesis Courses (24-31 credits)</h2><p>At least 24 credits chosen from the following:</p>${table("CHEM 691:3", "CHEM 692:6", "CHEM 693:9", "CHEM 694:12", "CHEM 695:15")}` +
+      `<h2>Required Courses (5 credits)</h2>${table("CHEM 650:1", "CHEM 651:1", "CHEM 688:3")}` +
+      "<h2>Complementary Courses (9-16 credits)</h2><p>Students will normally take 9-16 credits of CHEM (or approved) courses at the 500 or 600 level.</p>",
+  ) as Program;
+  expect(validateProgram(thesis)).toMatchObject({ ok: true });
+  expect(thesis.groups).toMatchObject([
+    { title: "Thesis Courses", credits: 24, maxCredits: 31 },
+    { kind: "required", credits: 5 },
+    { title: "Complementary Courses", credits: 9, rules: [{ unparsed: true }] },
+  ]);
+  // A check counts no course, so it keeps its lower bound and the thesis top makes up the total.
+  expect(thesis.groups[2]).not.toHaveProperty("maxCredits");
+  expect(
+    programOf(
+      "Test Major (B.Sc.) (12 credits)",
+      `<h2>Required Courses (6 credits)</h2>${table("BIOL 200")}<h2>Complementary Courses (3 credits)</h2><p>3 credits from:</p>${table("BIOL 300", "BIOL 301")}`,
+    ).groups.at(-1),
+  ).toEqual({
+    title: "Program total",
+    kind: "complementary",
+    credits: 6,
+    rules: [
+      {
+        title:
+          "6 more credits to reach the program's 12 credits, which the catalogue page does not list in a group above",
+        unparsed: true,
+      },
+    ],
+  });
+});
+
+test("sections with no credits below a Required heading join it when their courses make up exactly what it lacks", () => {
+  const required = (thesis: string) =>
+    graduateOf(
+      "Classics (Thesis) (M.A.) (45 credits)",
+      `<h2>Required Courses (21 credits)</h2>${table("CLAS 685")}<h2>Thesis Courses</h2>${thesis}` +
+        `<h2>Complementary Courses (24 credits)</h2><p>24 credits from the following:</p>${table("CLAS 610", "CLAS 612")}`,
+    )?.groups[0];
+  expect(required(table("CLAS 695:6", "CLAS 696:6", "CLAS 698:6"))).toEqual({
+    title: "Required Courses",
+    kind: "required",
+    credits: 21,
+    courses: ["CLAS 685", "CLAS 695", "CLAS 696", "CLAS 698"],
+  });
+  expect(required(table("CLAS 695:6", "CLAS 696:6"))).toMatchObject({
+    courses: ["CLAS 685"],
+  });
+});
+
+test("a section with no credits asks what its lists say, else a person checks what it demands, and a permission or notice stays out", () => {
+  const doctorate = (section: string) =>
+    graduateOf(
+      "Computer Science: Bioinformatics (Ph.D.)",
+      `<h2>Required Courses</h2>${table("COMP 701")}${section}`,
+    )?.groups.slice(1);
+  expect(
+    doctorate(
+      `<h2>Complementary Courses</h2><p>Two courses chosen from the following:</p>${table("BINF 621", "BMDE 652", "BTEC 555")}`,
+    ),
+  ).toEqual([
+    {
+      title: "Complementary Courses",
+      kind: "complementary",
+      credits: 6,
+      rules: [
+        {
+          title: "Two courses chosen from the following",
+          courses: ["BINF 621", "BMDE 652", "BTEC 555"],
+          minCourses: 2,
+          maxCourses: 2,
+        },
+      ],
+    },
+  ]);
+  expect(
+    doctorate(
+      "<h2>Composition Performance</h2><p>The candidate must present a concert of his/her compositions. With the permission of the Composition Area Committee, the compositions may be presented as parts of two or three concerts.</p>",
+    ),
+  ).toEqual([
+    {
+      title: "Composition Performance",
+      kind: "complementary",
+      credits: 0,
+      rules: [
+        {
+          title: "The candidate must present a concert of his/her compositions",
+          unparsed: true,
+        },
+      ],
+    },
+  ]);
+  expect(
+    doctorate(
+      `<h2>Additional Thesis Courses</h2><p>With the approval of the Associate Dean (Graduate Studies), students may take up to an additional 3 credits of thesis courses by completing one or both of:</p>${table("CMPL 618", "CMPL 619")}`,
+    ),
+  ).toEqual([]);
+  expect(
+    programOf(
+      "Test Major (B.Sc.) (3 credits)",
+      `<h2>Required Courses (3 credits)</h2>${table("AGEC 200")}<h2>Electives</h2><p>To meet the minimum credit requirement for the degree.</p><h2>Social Sciences and Policy</h2><p>0-3 credits from:</p>${table("ECON 205")}`,
+    ).groups,
+  ).toHaveLength(1);
+});
+
+test("a level sentence that is a group's only source stays for a person to check when it also names a department, a kind of course or lists that follow", () => {
+  const rules = (sentence: string) => {
+    const [group] = (
+      graduateOf(
+        "Social Work (Non-Thesis) (M.S.W.) (21 credits)",
+        `<h2>Complementary Courses (21 credits)</h2><p>${sentence}</p>`,
+      ) as Program
+    ).groups;
+    return group?.kind === "complementary"
+      ? group.rules.map((rule) => ({ ...rule, title: undefined }))
+      : [];
+  };
+  for (const sentence of [
+    "21 credits of courses at the 500 or 600 level courses chosen in consultation with school adviser; up to 6 credits in total may be taken outside the School.",
+    "21 credits at the 500 or 600 level, chosen as follows:",
+    "Two 3-credit courses at the 500 level or higher recommended by the supervisory committee; one of which must be in quantitative methods/techniques.",
+    "21 credits at the 500 level or higher in consultation with the program adviser chosen from courses offered by the Department of Integrated Studies in Education.",
+  ]) {
+    expect(rules(sentence), sentence).toEqual([
+      { title: undefined, unparsed: true },
+    ]);
+  }
+  expect(
+    rules(
+      "21 credits of courses at the 500 level or higher from within and/or outside the Department in consultation with the Program Adviser.",
+    ),
+  ).toEqual([
+    {
+      title: undefined,
+      minCredits: 21,
+      match: { minLevel: 500 },
+      maxCredits: 21,
+      adviser: true,
+    },
+  ]);
+});
+
+test("a permission to count or substitute a course is the group's note, not a check", () => {
+  const [group] = programOf(
+    "Test Minor (B.Sc.) (6 credits)",
+    `<h2>Complementary Courses (6 credits)</h2><p>6 credits from the following:</p>${table("GEOG 501", "GEOG 502")}<p>GEOG 696 can count among these complementary credits for students with an appropriate background.</p>`,
+  ).groups;
+  expect(group).toMatchObject({
+    note: "GEOG 696 can count among these complementary credits for students with an appropriate background.",
+    rules: [{ courses: ["GEOG 501", "GEOG 502"], minCredits: 6 }],
+  });
+  expect(group?.kind === "complementary" && group.rules).toHaveLength(1);
 });

@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import { ruleMatches } from "../lib/engine/progress.ts";
+import { isReminder, ruleMatches } from "../lib/engine/progress.ts";
 import { logicalCode } from "../lib/profile/types.ts";
 import { isMinor } from "../lib/programs/minor.ts";
 import type {
@@ -1308,11 +1308,31 @@ function adviserRules(
   );
   const read = readStatement(rest, subjectsOf, credits);
   if (read) {
-    return read.map((rule) => ({
-      ...rule,
-      ...(read.length === 1 && { title }),
-      adviser: true,
-    }));
+    // "0-3 credits at the 500 level or higher approved by the Advisory Committee" adds approved courses up to its top, and a level "from within and/or outside the Department" adds them up to its amount.
+    const top = /^0\s*[-–]\s*(\d+(?:\.\d+)?)\s*credits?\b/i.exec(rest)?.[1];
+    const opened = rest !== unapproved;
+    return read.map((rule) => {
+      const leveled =
+        !rule.courses &&
+        !rule.match?.subjects &&
+        !rule.match?.excludeSubjects &&
+        (rule.match?.minLevel !== undefined ||
+          rule.match?.maxLevel !== undefined) &&
+        rule.maxCredits === undefined;
+      const maxCredits = !leveled
+        ? undefined
+        : rule.minCredits === undefined
+          ? top && Number(top)
+          : opened
+            ? rule.minCredits
+            : undefined;
+      return {
+        ...rule,
+        ...(read.length === 1 && { title }),
+        ...(maxCredits && { maxCredits }),
+        adviser: true,
+      };
+    });
   }
   if (/\b(?:following|below)\b|\b(?:group|list) [A-Z\d]\b/i.test(text)) {
     return [unparsed(text)];
@@ -1489,6 +1509,19 @@ function sentenceSets(note: string): Rule[] | null {
     : null;
 }
 
+/** "GEOG 696 can count among these complementary credits for students with an appropriate background": a permission the group's note keeps, since it blocks nothing. A sentence that starts with an amount, as "9 credits selected from the list below and other courses may be substituted with permission", asks for more. */
+const permits = (text: string) =>
+  /\b(?:can|may) (?:count among|be substituted|substitute|replace)\b/i.test(
+    text,
+  ) && !/^\W*\d/.test(text);
+
+/** The permissions a section's sentences and footnotes give, for the group's note. */
+const permissions = (section: Section) =>
+  [
+    ...textsIn(section).flatMap(sentences),
+    ...tablesIn(section).flatMap((table) => table.notes),
+  ].filter(permits);
+
 function noteRules(notes: string[]): Rule[] {
   return notes.flatMap((note) => {
     const sets = exclusiveSets(note) ?? sentenceSets(note);
@@ -1498,7 +1531,9 @@ function noteRules(notes: string[]): Rule[] {
       return [{ title: trimEnd(note), maxCourses: 1, courses: parsed.either }];
     }
     if (parsed) return [parsed];
-    return CONSTRAINT.test(note) && !NOISE.test(note) ? [unparsed(note)] : [];
+    return CONSTRAINT.test(note) && !NOISE.test(note) && !permits(note)
+      ? [unparsed(note)]
+      : [];
   });
 }
 
@@ -1785,6 +1820,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     if (
       bareTotal(text) ||
       NOISE.test(text) ||
+      permits(text) ||
       (!constraint(text) && !approves(text))
     ) {
       continue;
@@ -1829,13 +1865,35 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
   if (listed) return rules;
   return rules.map((rule) => {
     if (rule.filter) return unparsed(rule.title);
-    // With no list a reminder is the group's source, so it keeps the level it names, as "At the 500 level or higher, and selected in consultation with the academic adviser".
     const level = levelIn(rule.title)?.match;
+    // With no list a level minimum stands for the group's courses, and so does a reminder no check guards, so one that says more than its level stays for a person to check.
+    const source =
+      level &&
+      !rule.unparsed &&
+      !rule.courses &&
+      !rule.match?.subjects &&
+      !rule.match?.excludeSubjects &&
+      (rule.minCredits !== undefined ||
+        rule.minCourses !== undefined ||
+        (isReminder(rule) && !rules.some((other) => other.unparsed)));
+    if (source && !levelHolds(rule.title)) return unparsed(rule.title);
+    // A reminder keeps the level it names, as "At the 500 level or higher, and selected in consultation with the academic adviser".
     return level && rule.adviser && JSON.stringify(rule.match) === "{}"
       ? { ...rule, match: level }
       : rule;
   });
 }
+
+// What a level alone cannot hold: a department, faculty or school, a kind of course, or lists that follow, as "3 credits at the 500 level or higher chosen from courses offered by the Department of Integrated Studies in Education".
+const LEVEL_ASIDE =
+  /\b(?:departments?|faculty|faculties|school|offered by|seminars?|methods?|methodology|quantitative)\b|\bas follows\W*$/i;
+// "from within and/or outside the Department" opens any department, and who approves the courses restricts none of them.
+const ANY_DEPARTMENT =
+  /\b(?:either )?within (?:and\/or|or) outside (?:of )?the department\b|\bfrom any department\b/gi;
+const APPROVER =
+  /\b(?:approved by|(?:approval|permission) (?:of|from)|in consultation with)\b.*?(?=[,;]|\b(?:chosen|selected|taken|offered)\b|$)/gi;
+const levelHolds = (title: string) =>
+  !LEVEL_ASIDE.test(title.replace(ANY_DEPARTMENT, " ").replace(APPROVER, " "));
 
 const FOUNDATION = /year 0|foundation/i;
 
@@ -1919,25 +1977,35 @@ function requiredGroup(section: Section): RequiredGroup | null {
       parts.set(code, part);
     });
   }
-  const creditsOf = (code: string) =>
-    [...(parts.get(code)?.values() ?? [])].reduce((sum, n) => sum + n, 0);
+  // A course printed whole counts once, its D1 and D2 parts add up, and N1 and N2 are the same course spread over other terms.
+  const creditsOf = (code: string) => {
+    const printed = parts.get(code) ?? new Map<string, number>();
+    const whole = printed.get(code);
+    if (whole !== undefined) return whole;
+    const sums = new Map<string, number>();
+    for (const [part, n] of printed) {
+      const letter = part.slice(-2, -1);
+      sums.set(letter, (sums.get(letter) ?? 0) + n);
+    }
+    return Math.max(0, ...sums.values());
+  };
   const courses = dedupe(items);
+  // One course of each "one of" counts.
+  const listed = courses.reduce(
+    (sum, item) =>
+      sum +
+      (typeof item === "string"
+        ? creditsOf(item)
+        : Math.min(...item.oneOf.map(creditsOf))),
+    0,
+  );
   const group: RequiredGroup = {
     title: section.title,
     kind: "required",
-    // Without a heading total, one course of each "one of" counts.
-    credits:
-      section.max ??
-      courses.reduce(
-        (sum, item) =>
-          sum +
-          (typeof item === "string"
-            ? creditsOf(item)
-            : Math.min(...item.oneOf.map(creditsOf))),
-        0,
-      ),
+    credits: section.max ?? listed,
     courses,
   };
+  LISTED.set(group, listed);
   if (FOUNDATION.test(section.title)) group.foundation = true;
   if (notes.length > 0) group.note = notes.join(" ");
   if (section.min !== undefined && section.min < group.credits) {
@@ -1948,6 +2016,8 @@ function requiredGroup(section: Section): RequiredGroup | null {
 
 /** The lower bound of a required heading's range, as "U1 Required Courses (20-24 credits)", for pages whose total counts it. A complementary range keeps its lower bound, since that is when the group is done. */
 const LOWER = new WeakMap<RequiredGroup, number>();
+/** The credits a required group's courses add up to, which a heading can state more than. */
+const LISTED = new WeakMap<RequiredGroup, number>();
 
 /** "AND 3 credits Natural Science complementary courses" after a required list, with subject lines such as "Physics (PHYS)", or "must also successfully complete 18 credits as follows:" with lines the sentence parser reads. */
 function additionalCredits(
@@ -2173,7 +2243,8 @@ function streamGroups(section: Section, ctx: Context): Group[] | null {
     credits: streams.credits,
     rules,
   };
-  if (notes.length > 0) group.note = notes.join(" ");
+  const allowed = [...new Set([...notes, ...permissions(section)])];
+  if (allowed.length > 0) group.note = allowed.join(" ");
   if (FOUNDATION.test(section.title)) group.foundation = true;
   const left =
     section.min === undefined ? undefined : section.min - streams.credits;
@@ -2245,7 +2316,6 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   ) {
     return children.flatMap((child) => groupsOf(child, ctx));
   }
-  const rules = rulesOf(section, ctx);
   const text = events(section).flatMap((e) =>
     e.kind === "text" ? [e.text] : [],
   );
@@ -2254,6 +2324,21 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     .map((t) => AMOUNT.exec(t))
     .find((m) => m && !m[1] && Number(m[2]) > 0);
   const credits = section.min ?? total?.credits ?? Number(stated?.[2]);
+  const read = rulesOf(section, ctx);
+  const [lone] = read;
+  const leveled =
+    lone?.match?.minLevel !== undefined || lone?.match?.maxLevel !== undefined;
+  // Reminders count no course, so one alone at a level is the group's source, as "At the 500 level or higher, and selected in consultation with the academic adviser" under "Elective Courses (6 credits)", and any other is for a person to check.
+  const rules =
+    read.length > 0 && read.every(isReminder)
+      ? read.length === 1 &&
+        lone &&
+        leveled &&
+        credits &&
+        levelHolds(lone.title)
+        ? [{ ...lone, minCredits: credits }]
+        : read.map((rule) => unparsed(rule.title))
+      : read;
   // A condition over the whole program, as "a maximum of 34 credits at the 200 level ... in this program", with no credits of its own: a group that only asks a person to check it.
   if (
     !credits &&
@@ -2285,6 +2370,10 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
       },
     ];
   }
+  if (!credits && section.min === undefined) {
+    const asks = creditless(section, rules);
+    if (asks) return [asks];
+  }
   if (!credits) return [];
   const group: ComplementaryGroup = {
     title: section.title,
@@ -2292,12 +2381,88 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     credits,
     rules: rules.length > 0 ? rules : [unparsed(section.title)],
   };
+  // "Thesis Courses (24-33 credits)" counts courses up to its top, unless only a person can check it.
+  if (
+    section.max !== undefined &&
+    section.max > credits &&
+    group.rules.some((rule) => !rule.unparsed && !isReminder(rule))
+  ) {
+    group.maxCredits = section.max;
+  }
   if (total?.minCourses) group.minCourses = total.minCourses;
+  const allowed = [...new Set(permissions(section))];
+  if (allowed.length > 0) group.note = allowed.join(" ");
   if (FOUNDATION.test(section.title)) group.foundation = true;
   return [group];
 }
 
+// Sentences a check group leaves out, since they permit, advise, or apply to some students only.
+const ASIDE =
+  /\b(?:may|can|encouraged|urged|should|advised?|consult|prerequisites?|applicants?|not required|no longer required)\b|\bup to an additional\b|^whenever\b|\b(?:students?|candidates?) (?:who|wishing|following|interested|planning|considering|for whom)\b/i;
+const DEMANDS = /\bmust\b|\brequired\b/i;
+
+/** A section with no credits that still asks for something: a group of what its lists ask, as "Two courses chosen from the following", else a group a person checks, one rule per sentence that demands. Null when its lists come with a permission, as "students may take up to an additional 3 credits of thesis courses", or nothing demands. */
+function creditless(
+  section: Section,
+  rules: Rule[],
+): ComplementaryGroup | null {
+  const all = events(section);
+  const first = all.findIndex((e) => e.kind === "table");
+  const intro = all
+    .slice(0, first)
+    .flatMap((e) => (e.kind === "text" ? sentences(e.text) : []));
+  if (first >= 0 && intro.some((t) => ASIDE.test(t))) return null;
+  const rows = tablesIn(section).flatMap((table) => table.rows);
+  const credit = (code: string) =>
+    Math.min(
+      ...rows.flatMap((row) =>
+        row.credits > 0 && row.codes.includes(code) ? [row.credits] : [],
+      ),
+    );
+  const lists = rules.filter(
+    (rule) =>
+      rule.courses && !rule.unparsed && (rule.minCredits || rule.minCourses),
+  );
+  const apart = lists.every((a, i) =>
+    lists
+      .slice(i + 1)
+      .every((b) => !b.courses?.some((code) => a.courses?.includes(code))),
+  );
+  // "One of the following courses" asks for the least credits a course of the list has, and "0-6 credits from" asks nothing.
+  const credits = lists.reduce(
+    (sum, rule) =>
+      sum +
+      (rule.minCredits ??
+        (rule.minCourses ?? 0) * Math.min(...(rule.courses ?? []).map(credit))),
+    0,
+  );
+  if (first >= 0 && apart && credits > 0 && Number.isFinite(credits)) {
+    return { title: section.title, kind: "complementary", credits, rules };
+  }
+  const checks = textsIn(section)
+    .flatMap(sentences)
+    .filter(
+      (t) =>
+        (DEMANDS.test(t) ||
+          (first >= 0 &&
+            constraint(t) &&
+            !/^0\s*(?:[-–]|or|to)\s*\d/.test(t))) &&
+        !ASIDE.test(t) &&
+        !NOISE.test(t),
+    );
+  return checks.length > 0
+    ? {
+        title: section.title,
+        kind: "complementary",
+        credits: 0,
+        rules: [...new Set(checks)].map(unparsed),
+      }
+    : null;
+}
+
 const SEPARATE = /complementary|elective|compl[ée]mentaires?/i;
+const ALTERNATIVE_NOTE =
+  "The catalogue also lists an alternative set of required courses.";
 const CHECKED = /^thesis$|\brequirements?\b|complementary|elective/i;
 const ALTERNATIVE = /^alternative|^option\b/i;
 
@@ -2328,12 +2493,7 @@ function groupsOf(section: Section, ctx: Context): Group[] {
   const required = requiredGroup(own);
   if (!required) return complementaryGroups(section, ctx);
   if (cut >= 0 || own.items.length < head.length) {
-    required.note = [
-      required.note,
-      "The catalogue also lists an alternative set of required courses.",
-    ]
-      .filter(Boolean)
-      .join(" ");
+    required.note = [required.note, ALTERNATIVE_NOTE].filter(Boolean).join(" ");
   }
   const extra = additionalCredits(own, ctx);
   if (extra) required.credits -= extra.credits;
@@ -2356,6 +2516,43 @@ function groupsOf(section: Section, ctx: Context): Group[] {
           )
         : []),
   ];
+}
+
+/** Headings with no credits right below a Required heading whose courses make up exactly what its total says it lacks, as "Thesis Courses" under a "Required Courses (36 credits)" that lists 5, join it. Returns the sections it took. */
+function absorbBelow(required: RequiredGroup, after: Section[]): Section[] {
+  if (LOWER.has(required)) return [];
+  let short = required.credits - (LISTED.get(required) ?? required.credits);
+  const taken: RequiredGroup[] = [];
+  for (const section of after) {
+    if (short <= 0) break;
+    // "one hour per week ... OR one and a half hours per week": the first way counts, as under a Required heading.
+    const cut = section.items.findIndex(
+      (item) => item.kind === "text" && /^or$/i.test(item.text),
+    );
+    const items = cut < 0 ? section.items : section.items.slice(0, cut);
+    const plain = items.every(
+      (item) =>
+        item.kind === "table" ||
+        (item.kind === "text" &&
+          !constraint(item.text) &&
+          !listAmount(item.text)),
+    );
+    const group =
+      plain && !hasOwnCredits(section) && requiredGroup({ ...section, items });
+    if (!group) return [];
+    if (cut >= 0) group.note = ALTERNATIVE_NOTE;
+    taken.push(group);
+    short -= LISTED.get(group) ?? 0;
+  }
+  if (short !== 0 || taken.length === 0) return [];
+  required.courses = dedupe([
+    ...required.courses,
+    ...taken.flatMap((group) => group.courses),
+  ]);
+  const notes = [required.note, ...taken.map((group) => group.note)];
+  if (notes.some(Boolean)) required.note = notes.filter(Boolean).join(" ");
+  LISTED.set(required, required.credits);
+  return after.slice(0, taken.length);
 }
 
 const PREREQUISITES = /^prerequisite courses$/i;
@@ -2525,6 +2722,20 @@ export function overlapOf(text: string): number | undefined {
   return found.length > 0 ? Math.min(...found) : undefined;
 }
 
+/** Title of the group that makes up credits the program total asks for and no group of the page lists. */
+export const TOTAL_TITLE = "Program total";
+
+/** The most credits some groups can count toward the program total: a range at its top, and a required group no more than its courses add up to. */
+const reach = (groups: readonly Group[]) =>
+  groups.reduce(
+    (n, g) =>
+      n +
+      (g.kind === "complementary"
+        ? (g.maxCredits ?? g.credits)
+        : Math.min(g.credits, LISTED.get(g) ?? g.credits)),
+    0,
+  );
+
 /** Reads one program page. Returns null for pages with no requirements, such as department indexes. */
 export function parseProgramPage(
   html: string,
@@ -2572,20 +2783,28 @@ export function parseProgramPage(
   const sections = readSections($, container);
   const continues = (a: Section | undefined, b: Section | undefined) =>
     a && b && FOUNDATION.test(a.title) && PREREQUISITES.test(b.title);
+  const absorbed = new Set<Section>();
   for (const [i, section] of sections.entries()) {
-    if (continues(sections[i - 1], section)) continue;
+    if (absorbed.has(section) || continues(sections[i - 1], section)) continue;
     const next = sections[i + 1];
     const found =
       next && continues(section, next)
         ? foundationGroups(section, next, ctx)
         : groupsOf(section, ctx);
     groups.push(...found);
-    // A list under a heading such as "Group C" belongs to the complementary group before it.
+    const [only] = found;
+    if (found.length === 1 && only?.kind === "required") {
+      for (const below of absorbBelow(only, sections.slice(i + 1))) {
+        absorbed.add(below);
+      }
+    }
+    // A list under a heading such as "Group C" belongs to the complementary group before it, unless that group only asks a person to check it.
     const last = groups.at(-1);
     if (
       found.length === 0 &&
       /^(?:group|list) [A-Z\d]\b/i.test(section.title) &&
-      last?.kind === "complementary"
+      last?.kind === "complementary" &&
+      last.credits > 0
     ) {
       last.rules.push(...rulesOf(section, ctx));
     }
@@ -2615,6 +2834,20 @@ export function parseProgramPage(
       kind: "complementary",
       credits: credits - counted,
       rules: [unparsed(base[0])],
+    });
+  }
+  // Credits no group can count would leave the program short of its total forever, so a person checks them.
+  const short = credits - reach(groups);
+  if (short > 0) {
+    groups.push({
+      title: TOTAL_TITLE,
+      kind: "complementary",
+      credits: short,
+      rules: [
+        unparsed(
+          `${short} more ${short === 1 ? "credit" : "credits"} to reach the program's ${credits} credits, which the catalogue page does not list in a group above`,
+        ),
+      ],
     });
   }
 

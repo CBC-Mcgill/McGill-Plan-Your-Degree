@@ -69,8 +69,10 @@ export interface GroupProgress {
   rules: RuleProgress[];
   /** Rules in the group that still need a manual check. Such a group is never satisfied. */
   unparsed: number;
-  /** Every rule is an unparsed one the student marked as checked, so the group counts as met with full credits, like a credited one. */
+  /** Every unparsed rule is checked and the others only remind, so the group counts as met with full credits, like a credited one. */
   confirmed?: true;
+  /** Complementary groups: the top of the group's range, up to which its courses count toward the program total. */
+  maxCredits?: number;
   /** Only on the replace group: the required courses met without credit, with the catalogue credits it makes up for. */
   replaces?: Claimed[];
   /** In a group that counts one option, the option furthest along, which stands for the group. */
@@ -79,8 +81,9 @@ export interface GroupProgress {
 
 export interface ProgramProgress {
   credits: number;
-  /** Credits across groups, each group capped at what it needs. */
+  /** Credits across groups, each group capped at what it needs, or at the top of its range. */
   creditsDone: number;
+  /** Every group is met and, for a program with a credit total, the credits reach it. */
   satisfied: boolean;
   /** In the same order as the program file. */
   groups: GroupProgress[];
@@ -115,17 +118,19 @@ function matchesMatch(match: Match, code: string): boolean {
   );
 }
 
+/** "Other Education courses may be included with the permission of the Program Adviser": an adviser rule with no amount, which reminds and counts no course. */
+export const isReminder = (rule: Rule) =>
+  rule.adviser === true &&
+  rule.minCredits === undefined &&
+  rule.maxCredits === undefined;
+
 export function ruleMatches(rule: Rule, code: string): boolean {
+  if (rule.unparsed || isReminder(rule)) return false;
   // ponytail: advanced standing has no subject or level, so it fits any rule that only filters, such as a 200-level elective.
-  if (code === STANDING) {
-    return !rule.unparsed && !rule.courses && !rule.match?.subjects;
-  }
-  return (
-    !rule.unparsed &&
-    Boolean(
-      rule.courses?.includes(code) ||
-        (rule.match && matchesMatch(rule.match, code)),
-    )
+  if (code === STANDING) return !rule.courses && !rule.match?.subjects;
+  return Boolean(
+    rule.courses?.includes(code) ||
+      (rule.match && matchesMatch(rule.match, code)),
   );
 }
 
@@ -350,13 +355,14 @@ export function checkKey(
   );
 }
 
-/** `confirmed` tells which unparsed rules the student marked as checked. `streams` is false inside one option's count, which keeps each rule's option for its key. */
+/** `confirmed` tells which unparsed rules the student marked as checked. `streams` is false inside one option's count, which keeps each rule's option for its key. The group stops taking courses once it holds `limit` credits. */
 function complementaryProgress(
   group: ComplementaryGroup,
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
   confirmed: (rule: Rule) => boolean = () => false,
   streams = true,
+  limit = group.credits,
 ): GroupProgress {
   const names = streams
     ? [...new Set(group.rules.flatMap((rule) => rule.option ?? []))]
@@ -373,6 +379,7 @@ function complementaryProgress(
         new Set(used),
         confirmed,
         false,
+        limit,
       );
       return { name, mine, progress };
     });
@@ -445,7 +452,7 @@ function complementaryProgress(
     }
   }
   for (const [code, credits] of pool) {
-    if (total >= group.credits && chosen.size >= (group.minCourses ?? 0)) break;
+    if (total >= limit && chosen.size >= (group.minCourses ?? 0)) break;
     if (!chosen.has(code) && fits(code, credits)) take(code, credits);
   }
 
@@ -470,12 +477,15 @@ function complementaryProgress(
           subjectsIn(courses) >= (rule.minSubjects ?? 0),
     };
   });
-  // Nothing can count toward a group of only unparsed rules, so once all are checked it is met in full.
-  const checked = rules.every((rule) => rule.confirmed);
+  // Nothing can count toward a group of only unparsed rules and reminders, so once every unparsed one is checked it is met in full.
+  const checked =
+    rules.some((rule) => rule.confirmed) &&
+    group.rules.every((rule, i) => rules[i]?.confirmed || isReminder(rule));
   return {
     title: group.title,
     kind: "complementary",
     credits: group.credits,
+    ...(group.maxCredits !== undefined && { maxCredits: group.maxCredits }),
     creditsDone: checked ? group.credits : total,
     minCourses: group.minCourses,
     coursesDone: chosen.size,
@@ -539,13 +549,13 @@ export function programProgress(
       );
     }
   }
+  const confirmed = (group: ComplementaryGroup) => (rule: Rule) =>
+    snapshot.checked.has(checkKey(program, group, rule));
   for (const group of program.groups) {
     if (!credited(group) && group.kind === "complementary") {
       results.set(
         group,
-        complementaryProgress(group, counted, used, (rule) =>
-          snapshot.checked.has(checkKey(program, group, rule)),
-        ),
+        complementaryProgress(group, counted, used, confirmed(group)),
       );
     }
   }
@@ -564,13 +574,39 @@ export function programProgress(
       replaces,
     });
   }
+  // Once every group has what it needs, a range takes the courses nobody else did, up to its top. It picks the same courses first, so it stays met.
+  program.groups.forEach((group, i) => {
+    const done = groups[i];
+    if (
+      group.kind !== "complementary" ||
+      group.maxCredits === undefined ||
+      !done ||
+      done.credited ||
+      done.confirmed
+    ) {
+      return;
+    }
+    for (const { code } of done.courses) used.delete(code);
+    groups[i] = complementaryProgress(
+      group,
+      counted,
+      used,
+      confirmed(group),
+      true,
+      group.maxCredits,
+    );
+  });
+  const creditsDone = groups.reduce(
+    (sum, group) =>
+      sum + Math.min(group.creditsDone, group.maxCredits ?? group.credits),
+    0,
+  );
   return {
     credits: program.credits,
-    creditsDone: groups.reduce(
-      (sum, group) => sum + Math.min(group.creditsDone, group.credits),
-      0,
-    ),
-    satisfied: groups.every((group) => group.satisfied),
+    creditsDone,
+    satisfied:
+      groups.every((group) => group.satisfied) &&
+      creditsDone >= program.credits,
     groups,
     remaining: groups.flatMap((group) => group.remaining),
     unclaimed: [...counted]
@@ -684,10 +720,11 @@ export interface CreditSplit {
   planned: number;
 }
 
-/** A group's credits by the status of the courses it claimed, capped at what it needs: earned first, then in progress, then planned. Pass a group counted with the plan. */
+/** A group's credits by the status of the courses it claimed, capped at what it needs or at `top`: earned first, then in progress, then planned. Pass a group counted with the plan. */
 export function creditSplit(
   group: Pick<GroupProgress, "credited" | "confirmed" | "credits" | "courses">,
   snapshot: Snapshot,
+  top = group.credits,
 ): CreditSplit {
   if (group.credited || group.confirmed) {
     return { completed: group.credits, inProgress: 0, planned: 0 };
@@ -700,7 +737,7 @@ export function creditSplit(
     else if (snapshot.planned.has(code)) planned += credits;
     else completed += credits;
   }
-  let left = group.credits;
+  let left = top;
   const take = (credits: number) => {
     const taken = Math.min(credits, left);
     left -= taken;
@@ -749,14 +786,18 @@ export function splitCourses(
   };
 }
 
-/** A program's credits by status, the sum of its groups' splits. */
+/** A program's credits by status, the sum of its groups' splits, each range counted up to its top. */
 export function programSplit(
   progress: ProgramProgress,
   snapshot: Snapshot,
 ): CreditSplit {
   const total = { completed: 0, inProgress: 0, planned: 0 };
   for (const group of progress.groups) {
-    const split = creditSplit(group, snapshot);
+    const split = creditSplit(
+      group,
+      snapshot,
+      group.maxCredits ?? group.credits,
+    );
     total.completed += split.completed;
     total.inProgress += split.inProgress;
     total.planned += split.planned;
