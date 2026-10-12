@@ -41,16 +41,24 @@ const DEGREE_LETTERS: Record<string, string> = {
   "bachelor of science": "bsc",
   "bachelor of social work": "bsw",
   "bachelor of theology": "bth",
+  "master of arts": "ma",
+  "master of business administration": "mba",
+  "master of engineering": "meng",
+  "master of laws": "llm",
+  "master of music": "mmus",
+  "master of science": "msc",
+  "doctor of philosophy": "phd",
 };
 
-const KINDS = /\b(major|minor|honours|concentration|joint)\b/g;
+const KINDS = /\b(major|minor|honours|concentration|joint|thesis|nonthesis)\b/g;
 
-/** "Major Computer Science" and "Computer Science Major" both become the kind "major" and the name "computer science". "Component" is dropped, so "Joint Honours Economics" fits "Economics Joint Honours Component". */
+/** "Major Computer Science" and "Computer Science Major" both become the kind "major" and the name "computer science", as "Computer Science (Thesis)" becomes "thesis" and "computer science". "Component" is dropped, so "Joint Honours Economics" fits "Economics Joint Honours Component". */
 function kindAndName(text: string): [kind: string, name: string] {
   const lower = text
     .toLowerCase()
     .replace(/&/g, " and ")
-    .replace(/\bcomponent\b/g, " ");
+    .replace(/\bcomponent\b/g, " ")
+    .replace(/\bnon[\s-]*thesis\b/g, "nonthesis");
   const kind = [...new Set(lower.match(KINDS))].sort().join(" ");
   const name = lower
     .replace(KINDS, " ")
