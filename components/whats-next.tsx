@@ -56,7 +56,6 @@ import {
   ruleTitle,
   termSnapshot,
 } from "@/lib/engine/next-view";
-import { termLoad } from "@/lib/engine/plan";
 import {
   type Claimed,
   type CreditSplit,
@@ -208,7 +207,6 @@ function Page({
   const entry = useProfileStore((state) => state.entry);
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
-  const creditLimit = useProfileStore((state) => state.creditLimit);
   const paneId = useId();
   const panes = useRef<HTMLDivElement>(null);
   const asked = useSearchParams().get("req");
@@ -243,9 +241,18 @@ function Page({
     () => termSnapshot(snapshot, plan, term),
     [snapshot, plan, term],
   );
+  // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
+  const withPlan = useMemo(
+    () =>
+      program
+        ? programStanding(program, snapshot, catalogue, entry, "plan")
+        : null,
+    [program, snapshot, catalogue, entry],
+  );
   const view = useMemo(
-    () => nextView(catalogue, judged, term, program, entry),
-    [catalogue, judged, term, program, entry],
+    () =>
+      nextView(catalogue, judged, term, program, entry, undefined, withPlan),
+    [catalogue, judged, term, program, entry, withPlan],
   );
   const overlap = useMemo(
     () =>
@@ -257,20 +264,6 @@ function Page({
     () =>
       minor && minorOverlap(minor, program, snapshot, catalogue, entry, "plan"),
     [minor, program, snapshot, catalogue, entry],
-  );
-  const minorView = useMemo(
-    () =>
-      minor &&
-      nextView(catalogue, judged, term, minor, entry, overlap?.programOnly),
-    [catalogue, judged, term, minor, entry, overlap],
-  );
-  // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
-  const withPlan = useMemo(
-    () =>
-      program
-        ? programStanding(program, snapshot, catalogue, entry, "plan")
-        : null,
-    [program, snapshot, catalogue, entry],
   );
   const minorWithPlan = useMemo(
     () =>
@@ -285,6 +278,20 @@ function Page({
           )
         : null,
     [minor, snapshot, catalogue, entry, overlapWithPlan],
+  );
+  const minorView = useMemo(
+    () =>
+      minor &&
+      nextView(
+        catalogue,
+        judged,
+        term,
+        minor,
+        entry,
+        overlap?.programOnly,
+        minorWithPlan,
+      ),
+    [catalogue, judged, term, minor, entry, overlap, minorWithPlan],
   );
   const unclaimed = withPlan?.unclaimed ?? [];
   const context: Context = { catalogue, term, planned, facts };
@@ -502,21 +509,15 @@ function Page({
           />
         </div>
       )}
-      <div className="mt-6 flex items-center justify-between gap-4 max-md:flex-col max-md:items-start max-md:gap-2">
-        <p>
-          What you can take in{" "}
-          <span className="font-semibold">{termLabel(term)}</span>, your next
-          term ·{" "}
-          <Link href="/plan" className="link">
-            Plan later terms
-          </Link>{" "}
-          · Sections and times in <VsbLink />
-        </p>
-        <TermLoad
-          credits={termLoad(plan, catalogue, term)}
-          limit={creditLimit}
-        />
-      </div>
+      <p className="mt-6">
+        The lists mark what you can take in{" "}
+        <span className="font-semibold">{termLabel(term)}</span>, your next term
+        ·{" "}
+        <Link href="/plan" className="link">
+          Plan later terms
+        </Link>{" "}
+        · Sections and times in <VsbLink />
+      </p>
 
       <div
         ref={panes}
@@ -823,6 +824,7 @@ function programCodes(view: NextView): ReadonlySet<string> {
         entries.map(({ course }) => course.code),
       ),
     ),
+    ...view.planned.flat().map(({ course }) => course.code),
     ...(view.progress?.groups ?? []).flatMap(({ courses }) =>
       courses.map(({ code }) => code),
     ),
@@ -835,22 +837,6 @@ const hasChecks = (program: Program) =>
       group.kind === "complementary" &&
       group.rules.some((rule) => rule.unparsed),
   );
-
-/** What the plan holds in the term against the credit limit, with a warn icon once it goes over. */
-function TermLoad({ credits, limit }: { credits: number; limit: number }) {
-  const over = credits > limit;
-  return (
-    <p
-      className={cn(
-        "flex items-center gap-2 tabular-nums max-lg:shrink-0",
-        over ? "text-warn" : "text-fg-muted",
-      )}
-    >
-      {over && <TriangleAlert aria-hidden className="size-4" />}
-      {COPY.termLoad(credits, limit)}
-    </p>
-  );
-}
 
 const fraction = (group: GroupProgress) =>
   COPY.fraction(Math.min(group.creditsDone, group.credits), group.credits);
@@ -1071,16 +1057,61 @@ function GroupBody({
             : [],
         )
       : [];
+  const planned = view.planned[index] ?? [];
   return (
     <>
       {group.replaces && (
-        <p className="text-fg-muted">{COPY.replaces(group.replaces)}</p>
+        <p className="text-fg-muted">
+          Any course can make up the credits of a course exempted without
+          credit. Check your choice with your advisor.
+        </p>
       )}
       {definition?.kind === "complementary" &&
         picksOne(definition) &&
         !open?.buckets.some((bucket) => bucket.stream) && (
           <p className="text-fg-muted">{COPY.pickOne}</p>
         )}
+      {!open &&
+        !group.satisfied &&
+        definition?.kind === "complementary" &&
+        definition.rules.map(
+          (rule, i) =>
+            !rule.adviser &&
+            !rule.unparsed && (
+              // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
+              <p key={i} className="text-fg-muted">
+                {ruleTitle(rule)}
+              </p>
+            ),
+        )}
+      <Block
+        status="planned"
+        title="Planned"
+        count={planned.length}
+        heading={heading}
+      >
+        <ul>
+          <ItemRows items={planned} context={context} plannedBlock />
+        </ul>
+      </Block>
+      {group.replaces && (
+        <Block
+          status="exemption"
+          title="Exempted without credit"
+          count={group.replaces.length}
+          heading={heading}
+        >
+          <ul>
+            {group.replaces.map(({ code }) => (
+              <CountedRow
+                key={code}
+                claimed={{ code, credits: 0 }}
+                context={context}
+              />
+            ))}
+          </ul>
+        </Block>
+      )}
       {open?.buckets.map((bucket, i) => (
         <Fragment key={bucket.title}>
           {/* Before the first stream's list, so lists every stream shares do not read as streams. */}
@@ -1110,19 +1141,6 @@ function GroupBody({
           ))}
         </ul>
       )}
-      {!open &&
-        !group.satisfied &&
-        definition?.kind === "complementary" &&
-        definition.rules.map(
-          (rule, i) =>
-            !rule.adviser &&
-            !rule.unparsed && (
-              // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
-              <p key={i} className="text-fg-muted">
-                {ruleTitle(rule)}
-              </p>
-            ),
-        )}
       {group.rules.some((rule) => rule.adviser) && (
         <ul>
           {group.rules.map(

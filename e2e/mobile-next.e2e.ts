@@ -149,6 +149,22 @@ test("every pane fits a phone, and a link opens the minor's pane", async ({
   }
 });
 
+test("on a phone a planned course sits in its own block and fits", async ({
+  page,
+}) => {
+  await openStudent(page, "/next?req=complementary-studies-group-b", {
+    plan: [{ term: { season: "Winter", year: 2028 }, courses: ["BUSA 465"] }],
+  });
+  const pane = page.getByRole("region", {
+    name: "Complementary studies group B",
+  });
+  await expect(pane.getByRole("heading", { name: "Planned 1" })).toBeVisible();
+  await expect(
+    pane.getByRole("listitem").filter({ hasText: "BUSA 465" }),
+  ).toHaveCount(1);
+  await expectNoSideScroll(page);
+});
+
 test("a rule to check has a full-size button that fits a phone", async ({
   page,
 }) => {

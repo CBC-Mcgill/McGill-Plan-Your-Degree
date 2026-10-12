@@ -72,7 +72,7 @@ test("a required course can be added to the next term, and the planner opens the
     plan: [],
   });
   await expect(page.getByRole("main")).toContainText(
-    "What you can take in Winter 2027, your next term",
+    "The lists mark what you can take in Winter 2027, your next term",
   );
   await expect(page.getByRole("tablist", { name: "Term" })).toHaveCount(0);
   await expect(
@@ -217,6 +217,50 @@ test("met and CEGEP-credited groups, the restriction note and the minor open fro
     () => document.documentElement.scrollWidth - window.innerWidth,
   );
   expect(width).toBeLessThanOrEqual(0);
+});
+
+test("planned courses and exempted credits show in blocks of their own, and the term line has no load", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [
+      { ...done("COMP 202"), credits: null, grade: null, status: "exemption" },
+    ],
+    programId: "computer-engineering-beng",
+    entry: "cegep",
+    plan: [
+      {
+        term: { season: "Winter", year: 2028 },
+        courses: ["BUSA 465", "LING 201", "PSYC 215"],
+      },
+    ],
+  });
+  await expect(page.getByRole("main")).not.toContainText("credits planned");
+
+  await requirement(page, "Complementary studies group B").click();
+  const groupB = page.getByRole("region", {
+    name: "Complementary studies group B",
+  });
+  await expect(
+    groupB.getByRole("heading", { name: "Planned 1" }),
+  ).toBeVisible();
+  await expect(
+    row(page, "Complementary studies group B", "BUSA 465"),
+  ).toHaveText(/Winter 2028/);
+
+  await requirement(page, "Replace exempted credits").click();
+  const replace = page.getByRole("region", {
+    name: "Replace exempted credits",
+  });
+  await expect(
+    replace.getByRole("heading", { name: "Exempted without credit 1" }),
+  ).toBeVisible();
+  await expect(row(page, "Replace exempted credits", "COMP 202")).toContainText(
+    "3 credits to replace",
+  );
+  await expect(row(page, "Replace exempted credits", "PSYC 215")).toContainText(
+    "Winter 2028",
+  );
 });
 
 test("a rule the crawler could not read can be marked as checked, and the mark taken back", async ({

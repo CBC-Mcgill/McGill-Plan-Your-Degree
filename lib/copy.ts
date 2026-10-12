@@ -79,8 +79,6 @@ export const COPY = {
   pending: (n: number) => `${creditsText(n)} pending`,
   termsLeft: (n: number, term: Term) =>
     `${n} ${n === 1 ? "term" : "terms"} left, until ${termLabel(term)}`,
-  termLoad: (n: number, limit: number) =>
-    `${n} of ${limit} credits planned${n > limit ? ", over your limit" : ""}`,
   termCredits: creditsText,
   term: termLabel,
   termPair,
@@ -92,11 +90,6 @@ export const COPY = {
   needs: (text: string) => `Needs ${text} first`,
   notOpen: (codes: readonly string[]) =>
     `Not open to students who have taken ${list.format(codes)}`,
-  /** What the replace group asks for, from the required courses met without credit. */
-  replaces: (courses: readonly { code: string }[]) =>
-    courses.length === 1
-      ? `${courses[0]?.code} was exempted without credit. Make up its credits with any course and check with your advisor.`
-      : `${list.format(courses.map((c) => c.code))} were exempted without credit. Make up their credits with any course and check with your advisor.`,
   hasConditions: "Has conditions",
   countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",
