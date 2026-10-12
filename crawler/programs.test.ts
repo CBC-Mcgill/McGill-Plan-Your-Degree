@@ -1442,7 +1442,18 @@ test("reads graduate sentences: 700-level phrases, a 600-level cap, coursework, 
     ],
     [
       "12 credits of courses at the 500 level or higher from within and/or outside the Department in consultation with the Program Adviser.",
-      [{ minCredits: 12, match: { minLevel: 500 }, adviser: true }],
+      [
+        {
+          minCredits: 12,
+          match: { minLevel: 500 },
+          maxCredits: 12,
+          adviser: true,
+        },
+      ],
+    ],
+    [
+      "0-3 credits at the 500 level or higher approved by the Advisory Committee.",
+      [{ match: { minLevel: 500 }, maxCredits: 3, adviser: true }],
     ],
     [
       "Or 3 credits at the 500 level or higher recommended by the Advisory Committee and approved by the Environment Option Committee.",
@@ -1612,7 +1623,20 @@ test("a level sentence that is a group's only source stays for a person to check
       title: undefined,
       minCredits: 21,
       match: { minLevel: 500 },
+      maxCredits: 21,
       adviser: true,
     },
   ]);
+});
+
+test("a permission to count or substitute a course is the group's note, not a check", () => {
+  const [group] = programOf(
+    "Test Minor (B.Sc.) (6 credits)",
+    `<h2>Complementary Courses (6 credits)</h2><p>6 credits from the following:</p>${table("GEOG 501", "GEOG 502")}<p>GEOG 696 can count among these complementary credits for students with an appropriate background.</p>`,
+  ).groups;
+  expect(group).toMatchObject({
+    note: "GEOG 696 can count among these complementary credits for students with an appropriate background.",
+    rules: [{ courses: ["GEOG 501", "GEOG 502"], minCredits: 6 }],
+  });
+  expect(group?.kind === "complementary" && group.rules).toHaveLength(1);
 });

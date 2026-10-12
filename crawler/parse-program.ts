@@ -1308,11 +1308,31 @@ function adviserRules(
   );
   const read = readStatement(rest, subjectsOf, credits);
   if (read) {
-    return read.map((rule) => ({
-      ...rule,
-      ...(read.length === 1 && { title }),
-      adviser: true,
-    }));
+    // "0-3 credits at the 500 level or higher approved by the Advisory Committee" adds approved courses up to its top, and a level "from within and/or outside the Department" adds them up to its amount.
+    const top = /^0\s*[-–]\s*(\d+(?:\.\d+)?)\s*credits?\b/i.exec(rest)?.[1];
+    const opened = rest !== unapproved;
+    return read.map((rule) => {
+      const leveled =
+        !rule.courses &&
+        !rule.match?.subjects &&
+        !rule.match?.excludeSubjects &&
+        (rule.match?.minLevel !== undefined ||
+          rule.match?.maxLevel !== undefined) &&
+        rule.maxCredits === undefined;
+      const maxCredits = !leveled
+        ? undefined
+        : rule.minCredits === undefined
+          ? top && Number(top)
+          : opened
+            ? rule.minCredits
+            : undefined;
+      return {
+        ...rule,
+        ...(read.length === 1 && { title }),
+        ...(maxCredits && { maxCredits }),
+        adviser: true,
+      };
+    });
   }
   if (/\b(?:following|below)\b|\b(?:group|list) [A-Z\d]\b/i.test(text)) {
     return [unparsed(text)];
@@ -1489,6 +1509,19 @@ function sentenceSets(note: string): Rule[] | null {
     : null;
 }
 
+/** "GEOG 696 can count among these complementary credits for students with an appropriate background": a permission the group's note keeps, since it blocks nothing. A sentence that starts with an amount, as "9 credits selected from the list below and other courses may be substituted with permission", asks for more. */
+const permits = (text: string) =>
+  /\b(?:can|may) (?:count among|be substituted|substitute|replace)\b/i.test(
+    text,
+  ) && !/^\W*\d/.test(text);
+
+/** The permissions a section's sentences and footnotes give, for the group's note. */
+const permissions = (section: Section) =>
+  [
+    ...textsIn(section).flatMap(sentences),
+    ...tablesIn(section).flatMap((table) => table.notes),
+  ].filter(permits);
+
 function noteRules(notes: string[]): Rule[] {
   return notes.flatMap((note) => {
     const sets = exclusiveSets(note) ?? sentenceSets(note);
@@ -1498,7 +1531,9 @@ function noteRules(notes: string[]): Rule[] {
       return [{ title: trimEnd(note), maxCourses: 1, courses: parsed.either }];
     }
     if (parsed) return [parsed];
-    return CONSTRAINT.test(note) && !NOISE.test(note) ? [unparsed(note)] : [];
+    return CONSTRAINT.test(note) && !NOISE.test(note) && !permits(note)
+      ? [unparsed(note)]
+      : [];
   });
 }
 
@@ -1785,6 +1820,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     if (
       bareTotal(text) ||
       NOISE.test(text) ||
+      permits(text) ||
       (!constraint(text) && !approves(text))
     ) {
       continue;
@@ -2207,7 +2243,8 @@ function streamGroups(section: Section, ctx: Context): Group[] | null {
     credits: streams.credits,
     rules,
   };
-  if (notes.length > 0) group.note = notes.join(" ");
+  const allowed = [...new Set([...notes, ...permissions(section)])];
+  if (allowed.length > 0) group.note = allowed.join(" ");
   if (FOUNDATION.test(section.title)) group.foundation = true;
   const left =
     section.min === undefined ? undefined : section.min - streams.credits;
@@ -2354,6 +2391,8 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     group.maxCredits = section.max;
   }
   if (total?.minCourses) group.minCourses = total.minCourses;
+  const allowed = [...new Set(permissions(section))];
+  if (allowed.length > 0) group.note = allowed.join(" ");
   if (FOUNDATION.test(section.title)) group.foundation = true;
   return [group];
 }
