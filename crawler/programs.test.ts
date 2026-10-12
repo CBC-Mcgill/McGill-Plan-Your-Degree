@@ -908,6 +908,28 @@ test("streams beside other lists, and stream headings that slipped out after the
   });
 });
 
+test("a stream that opens its list to a department still asks for the stream's credits", () => {
+  const program = parseProgramPage(
+    `<h1 class="page-title">Test Program (B.A. &amp; Sc.) (33 credits)</h1><p>2026-2027 Undergraduate Catalogue</p><div id="coursestextcontainer">` +
+      `<h2>Complementary Courses (33 credits)</h2><p>18 credits from one of the following lists: Computer Science, or Linguistics.</p><p>15 credits from any of the two lists.</p>` +
+      `<h3>Computer Science</h3>${table("COMP 330", "COMP 424")}` +
+      `<h3>Linguistics</h3><p>Any course at the 300, 400 or 500 level from the department of Linguistics, or from the following list:</p>${table("LING 201", "LING 210")}</div>`,
+    `${BASE}/science/programs/test/test-program/`,
+    { subjectsOf: (name) => (name === "linguistics" ? ["LING"] : []) },
+  );
+  expect(program?.groups[0]).toMatchObject({
+    credits: 33,
+    rules: expect.arrayContaining([
+      expect.objectContaining({ option: "Computer Science", minCredits: 18 }),
+      expect.objectContaining({
+        option: "Linguistics",
+        match: { subjects: ["LING"], minLevel: 300 },
+        minCredits: 18,
+      }),
+    ]),
+  });
+});
+
 test("adds up a required heading with no credits from one course of each choice", () => {
   const program = programOf(
     "Test Honours (B.Sc.) (24 credits)",
@@ -1080,6 +1102,30 @@ test("reads which courses cannot both count, from footnotes and from sentences",
     ["MUJZ 441", "MUJZ 461"],
     ["MIME 260", "MIME 261", "CHEE 380"],
     ["CHEE 515", "MIME 515"],
+  ]);
+});
+
+test("reads permission to take one of a set as a not-both rule, and leaves permission for all of them alone", () => {
+  const rules = complementary(
+    `<p>15 credits from:</p>${table("ATOC 214", "ATOC 215", "ATOC 219", "CHEM 219", "MATH 223", "MATH 247")}` +
+      "<dl><dd>If chosen, students may take ATOC 219 or CHEM 219.</dd>" +
+      "<dd>Note: You may take one of BREE 529, ENVB 529 or GEOG 314; you may take one of GEOG 322 or BREE 217; you may take one of ANSC 326 or BIOL 324.</dd>" +
+      "<dd>If chosen, students can take one of MATH 410, and MATH 527D1/MATH 527D2, but not both.</dd>" +
+      "<dd>Students may take ATOC 214 and ATOC 215.</dd>" +
+      "<dd>Students take MATH 223 or MATH 247.</dd></dl>" +
+      "<p>A maximum of 15 credits from 200-level courses may be used toward the Honours program. Only one of PHIL 200 or PHIL 201 may be counted toward the program.</p>" +
+      "<p>Note: If chosen, you may take AGEC 200 or ECON 208.</p>",
+  );
+  expect(
+    rules.filter((rule) => rule.maxCourses === 1).map((rule) => rule.courses),
+  ).toEqual([
+    ["ATOC 219", "CHEM 219"],
+    ["BREE 529", "ENVB 529", "GEOG 314"],
+    ["GEOG 322", "BREE 217"],
+    ["ANSC 326", "BIOL 324"],
+    ["MATH 410", "MATH 527"],
+    ["AGEC 200", "ECON 208"],
+    ["PHIL 200", "PHIL 201"],
   ]);
 });
 
