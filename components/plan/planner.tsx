@@ -106,11 +106,22 @@ function PlannerReady({
         startTerm,
         graduationTerm,
         entry,
+        program,
         catalogue,
         warnings,
         now,
       }),
-    [records, plan, startTerm, graduationTerm, entry, catalogue, warnings, now],
+    [
+      records,
+      plan,
+      startTerm,
+      graduationTerm,
+      entry,
+      program,
+      catalogue,
+      warnings,
+      now,
+    ],
   );
   const progress = useMemo(
     () =>

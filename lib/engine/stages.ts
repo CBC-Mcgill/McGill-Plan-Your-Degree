@@ -75,6 +75,8 @@ export interface StageInput {
   startTerm: Term | null;
   graduationTerm: Term | null;
   entry: EntryRoute | null;
+  /** The student's program, which sets how long the default graduation term runs. */
+  program?: Pick<Program, "level" | "credits"> | null;
   catalogue: Catalogue;
   warnings: readonly PlanWarning[];
   now: Term;
@@ -83,7 +85,7 @@ export interface StageInput {
 /**
  * One stage per term from the start to graduation, Fall and Winter only.
  * Any other term holding a course, a plan, or a later part of a multi-term course, planned or owed, gets a stage too, so nothing the student saved is hidden.
- * Without a start the path begins at the earliest saved term, and without a graduation term it runs four years.
+ * Without a start the path begins at the earliest saved term, and without a graduation term it runs the usual length of the program.
  */
 export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
   const { records, plan, catalogue, now } = input;
@@ -95,7 +97,13 @@ export function buildStages(input: StageInput): { stages: Stage[]; end: Term } {
   const start = input.startTerm ?? saved[0] ?? now;
   const end =
     input.graduationTerm ??
-    defaultGraduation(start, input.entry, lastTerm(records), now);
+    defaultGraduation(
+      start,
+      input.entry,
+      lastTerm(records),
+      now,
+      input.program,
+    );
 
   const loads = planLoads(plan, catalogue);
   const missing = input.warnings.filter(

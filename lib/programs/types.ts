@@ -94,5 +94,5 @@ export interface Program {
 /** One line of the program list: enough to search and to show, without the requirements. */
 export type ProgramSummary = Pick<
   Program,
-  "id" | "name" | "degree" | "faculty" | "level"
+  "id" | "name" | "degree" | "faculty" | "level" | "credits"
 >;

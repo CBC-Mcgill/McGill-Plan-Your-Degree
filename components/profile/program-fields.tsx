@@ -11,11 +11,12 @@ import { TextField } from "@/components/ui/field";
 import { COPY } from "@/lib/copy";
 import { degreeCredits, standingCredits } from "@/lib/engine/credits";
 import { GLOSSARY, PAIR_TIPS } from "@/lib/glossary";
+import { defaultGraduation } from "@/lib/profile/term-options";
 import { currentTerm } from "@/lib/profile/terms";
-import type { EntryRoute, Term } from "@/lib/profile/types";
+import { compareTerms, type EntryRoute, type Term } from "@/lib/profile/types";
 import { useProgram } from "@/lib/programs/client";
 import { pairOf } from "@/lib/programs/minor";
-import type { Program } from "@/lib/programs/types";
+import type { Program, ProgramSummary } from "@/lib/programs/types";
 
 export interface ProgramValues {
   programId: string | null;
@@ -53,17 +54,35 @@ export function ProgramFields({
         : patch,
     );
 
+  // A graduation term that only repeats the old program's guess would be wrong for the new program.
+  const guess = (of: Pick<Program, "level" | "credits"> | null | undefined) =>
+    value.startTerm &&
+    defaultGraduation(value.startTerm, value.entry, null, undefined, of);
+  const pickProgram = (
+    programId: string | null,
+    chosen: ProgramSummary | null,
+  ) => {
+    const patch: Partial<ProgramValues> = chosen?.level
+      ? { programId, minorId: null }
+      : { programId };
+    const before = guess(program);
+    if (
+      before &&
+      value.graduationTerm &&
+      compareTerms(before, value.graduationTerm) === 0
+    ) {
+      patch.graduationTerm = guess(chosen);
+    }
+    changeProgramOrEntry(patch);
+  };
+
   return (
     <div className={`grid grid-cols-2 items-start gap-4 ${PHONE_FIELDS}`}>
       <div className="col-span-2">
         <ProgramCombobox
           value={value.programId}
           other={value.minorId}
-          onChange={(programId, chosen) =>
-            changeProgramOrEntry(
-              chosen?.level ? { programId, minorId: null } : { programId },
-            )
-          }
+          onChange={pickProgram}
           info={
             detected
               ? { label: "Program", tip: `On your transcript: ${detected}` }
