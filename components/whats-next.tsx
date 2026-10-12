@@ -67,7 +67,6 @@ import {
   picksOne,
   programSplit,
   programStanding,
-  STANDING,
   splitCourses,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
@@ -1319,15 +1318,12 @@ function Row({
 /** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action on hover. Below 1024px the title wraps and the action always shows, and below 768px the code, title and note stack with credits and the action on the right. */
 function PaneRow({
   course,
-  title,
   uncertain = false,
   share,
   note,
   action,
 }: {
   course: CourseSummary;
-  /** Stands in for the course link, for a row with no course behind it. */
-  title?: ReactNode;
   uncertain?: boolean;
   /** On a second program's row: counts for both, or for the program only. */
   share?: Definition;
@@ -1347,23 +1343,21 @@ function PaneRow({
           "max-md:col-start-1 max-md:row-start-1 max-md:items-end",
         )}
       >
-        {title ?? (
-          <Link
-            href={`/courses/${courseSlug(course.code)}`}
-            prefetch={false}
-            className={cn(ROW_LINK, "max-md:flex-col max-md:gap-0.5")}
+        <Link
+          href={`/courses/${courseSlug(course.code)}`}
+          prefetch={false}
+          className={cn(ROW_LINK, "max-md:flex-col max-md:gap-0.5")}
+        >
+          <span className="w-24 shrink-0 font-semibold">
+            <CourseCode code={course.code} />
+          </span>
+          <span
+            className="min-w-0 truncate max-lg:whitespace-normal"
+            title={course.title}
           >
-            <span className="w-24 shrink-0 font-semibold">
-              <CourseCode code={course.code} />
-            </span>
-            <span
-              className="min-w-0 truncate max-lg:whitespace-normal"
-              title={course.title}
-            >
-              {course.title}
-            </span>
-          </Link>
-        )}
+            {course.title}
+          </span>
+        </Link>
         {uncertain && <UncertainFlag />}
         {share && (
           <span className="hidden shrink-0 text-fg-muted @3xl:inline">
@@ -1415,15 +1409,6 @@ function CountedRow({
   context: Context;
 }) {
   const { catalogue, facts } = context;
-  if (code === STANDING) {
-    return (
-      <PaneRow
-        course={{ ...stub(code), credits }}
-        title={<span className="font-semibold">Advanced standing</span>}
-        note="Credit from before McGill"
-      />
-    );
-  }
   const { status, term } = facts.get(code) ?? {
     status: "completed",
     term: null,

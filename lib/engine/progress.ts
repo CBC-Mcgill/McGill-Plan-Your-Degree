@@ -91,12 +91,7 @@ export interface ProgramProgress {
   remaining: RequiredItem[];
   /** Counted courses that no group claimed. They still count toward the degree's total credits. */
   unclaimed: Claimed[];
-  /** Advanced standing credits that no group claimed, beyond the credited Year 0. */
-  standing: number;
 }
-
-/** The code advanced standing claims under: earned credit with no course behind it. Only a group open to any course takes it. */
-export const STANDING = "";
 
 /** Title of the group that makes up the credits of required courses met without credit. */
 export const REPLACE_TITLE = "Replace exempted credits";
@@ -126,8 +121,6 @@ export const isReminder = (rule: Rule) =>
 
 export function ruleMatches(rule: Rule, code: string): boolean {
   if (rule.unparsed || isReminder(rule)) return false;
-  // ponytail: advanced standing has no subject or level, so it fits any rule that only filters, such as a 200-level elective.
-  if (code === STANDING) return !rule.courses && !rule.match?.subjects;
   return Boolean(
     rule.courses?.includes(code) ||
       (rule.match && matchesMatch(rule.match, code)),
@@ -147,11 +140,9 @@ const isFilter = (rule: Rule) =>
 
 const subjectOf = (code: string) => code.slice(0, code.indexOf(" "));
 
-/** How many subjects some courses span. Advanced standing has none. */
+/** How many subjects some courses span. */
 const subjectsIn = (courses: readonly Claimed[]) =>
-  new Set(
-    courses.flatMap((c) => (c.code === STANDING ? [] : subjectOf(c.code))),
-  ).size;
+  new Set(courses.map((c) => subjectOf(c.code))).size;
 
 /** A rule open to any course, maybe but some subjects, such as "42 credits of Free Electives". An adviser's or a spread rule's empty match keeps its own meaning. */
 const isOpen = (rule: Rule) =>
@@ -220,10 +211,9 @@ const addsApproved = (group: ComplementaryGroup, rule: Rule) =>
 /** What the group counts: what its lists allow, plus the courses an adviser approves on top of them. */
 const counts = (group: ComplementaryGroup, code: string) =>
   groupAllows(group, code) ||
-  (code !== STANDING &&
-    group.rules.some(
-      (rule) => addsApproved(group, rule) && ruleMatches(rule, code),
-    ));
+  group.rules.some(
+    (rule) => addsApproved(group, rule) && ruleMatches(rule, code),
+  );
 
 /** True when one more course stays within the caps of every rule it matches, given what each rule already holds, in rule order. */
 export function fitsCaps(
@@ -518,12 +508,6 @@ export function programProgress(
   for (const [code, credits] of snapshot.earned) {
     if (allowed(code)) counted.set(code, credits ?? creditsOf(code));
   }
-  // A CEGEP lump sum is the credit for the credited Year 0 groups, so only what is left over can fill an elective.
-  const standing = Math.max(
-    0,
-    snapshot.standing - creditedCredits(count.entry, program),
-  );
-  if (standing > 0) counted.set(STANDING, standing);
   const extra: Iterable<string>[] = [];
   if (count.inProgress) extra.push(snapshot.inProgress.keys());
   if (count.planned) extra.push(snapshot.planned);
@@ -610,9 +594,8 @@ export function programProgress(
     groups,
     remaining: groups.flatMap((group) => group.remaining),
     unclaimed: [...counted]
-      .filter(([code]) => !used.has(code) && code !== STANDING)
+      .filter(([code]) => !used.has(code))
       .map(([code, credits]) => ({ code, credits })),
-    standing: used.has(STANDING) ? 0 : standing,
   };
 }
 
@@ -750,7 +733,7 @@ export function creditSplit(
   };
 }
 
-/** The courses behind each part of a split, for the legend's tooltips: a CEGEP-credited or checked group by its title, lump-sum credit as advanced standing. */
+/** The courses behind each part of a split, for the legend's tooltips: a CEGEP-credited or checked group by its title. */
 export function splitCourses(
   groups: readonly Pick<
     GroupProgress,
@@ -773,10 +756,9 @@ export function splitCourses(
       continue;
     }
     for (const { code } of group.courses) {
-      const label = code === STANDING ? "Advanced standing" : code;
-      if (snapshot.inProgress.has(code)) parts.inProgress.add(label);
-      else if (snapshot.planned.has(code)) parts.planned.add(label);
-      else parts.completed.add(label);
+      if (snapshot.inProgress.has(code)) parts.inProgress.add(code);
+      else if (snapshot.planned.has(code)) parts.planned.add(code);
+      else parts.completed.add(code);
     }
   }
   return {

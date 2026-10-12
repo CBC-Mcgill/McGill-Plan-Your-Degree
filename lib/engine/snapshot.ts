@@ -27,8 +27,6 @@ export interface Snapshot {
   taken: ReadonlySet<string>;
   /** Science DEC equivalents in `done` that the student did not take at McGill. */
   covered: ReadonlySet<string>;
-  /** Lump-sum advanced standing credits, earned with no course behind them. */
-  standing: number;
   /** Rules the crawler could not read that the student marked as checked, by `checkKey`. */
   checked: ReadonlySet<string>;
 }
@@ -50,7 +48,6 @@ export function buildSnapshot(
   records: readonly CourseRecord[],
   plan: Plan = [],
   entry: EntryRoute | null = null,
-  advancedStanding = 0,
   checked: readonly string[] = [],
 ): Snapshot {
   const done = new Set<string>();
@@ -99,7 +96,6 @@ export function buildSnapshot(
     planned: new Set(plan.flatMap((entry) => entry.courses)),
     taken: new Set([...done, ...inProgress.keys()]),
     covered,
-    standing: advancedStanding,
     checked: new Set(checked),
   };
 }

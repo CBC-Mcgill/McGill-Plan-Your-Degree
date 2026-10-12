@@ -420,7 +420,7 @@ test("a rule the student marked as checked is met, and a group of only such rule
     const group = confirming.groups[g] as ComplementaryGroup;
     return checkKey(confirming, group, group.rules[r] as Rule);
   };
-  const marked = buildSnapshot([record("COMP 330", "completed")], [], null, 0, [
+  const marked = buildSnapshot([record("COMP 330", "completed")], [], null, [
     key(0, 1),
     key(1, 0),
     key(3, 1),
@@ -536,7 +536,7 @@ test("a reminder counts no course, and a group of unparsed rules and reminders i
   const key = checkKey(checks, group, group.rules[0] as Rule);
   const met = programProgress(
     checks,
-    buildSnapshot(records, [], null, 0, [key]),
+    buildSnapshot(records, [], null, [key]),
     catalogue,
   );
   expect(met).toMatchObject({ creditsDone: 6, satisfied: true });

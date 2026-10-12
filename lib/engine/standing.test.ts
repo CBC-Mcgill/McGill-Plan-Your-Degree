@@ -103,35 +103,39 @@ test("one student's progress reads 21, 30 and 33 program credits on the three ba
   });
 });
 
-test("a CEGEP engineering student's degree and program credits agree, Year 0 counted once", () => {
+test("a CEGEP engineering student's Year 0 counts once, and standing past it counts for the degree only", () => {
   const program = getProgram("computer-engineering-beng");
   if (!program) throw new Error("missing program");
   const records = ["ECSE 200", "ECSE 250", "MATH 262", "COMP 206"].map((code) =>
     record(code, "Fall", 2025),
   );
-  const earned = (advancedStanding: number) => {
-    const snapshot = buildSnapshot(records, [], "cegep", advancedStanding);
-    return [
-      degreeStanding(
-        snapshot,
-        catalogue,
-        {
-          records,
-          plan: [],
-          advancedStanding,
-          creditsRequired: null,
-          entry: "cegep",
-        },
-        program,
-      ).earned,
-      programStanding(program, snapshot, catalogue, "cegep", "earned")
-        .creditsDone,
-    ];
-  };
+  const snapshot = buildSnapshot(records, [], "cegep");
+  const progress = programStanding(
+    program,
+    snapshot,
+    catalogue,
+    "cegep",
+    "earned",
+  );
+  const earned = (advancedStanding: number) => [
+    degreeStanding(
+      snapshot,
+      catalogue,
+      {
+        records,
+        plan: [],
+        advancedStanding,
+        creditsRequired: null,
+        entry: "cegep",
+      },
+      program,
+    ).earned,
+    progress.creditsDone,
+  ];
 
-  // 12 course credits plus the 22 credited Year 0 credits. A 25-credit CEGEP lump sum leaves 3 for the elective.
+  // 12 course credits plus the 22 credited Year 0 credits. The 3 a 25-credit CEGEP lump sum leaves over count for the degree, not for the elective.
   expect(earned(0)).toEqual([34, 34]);
-  expect(earned(25)).toEqual([37, 37]);
+  expect(earned(25)).toEqual([37, 34]);
 });
 
 test("a graduate program ignores the entry, and a doctorate counts requirements met instead of credits", () => {
@@ -183,7 +187,6 @@ test("a graduate program ignores the entry, and a doctorate counts requirements 
     ],
     [{ term: { season: "Winter", year: 2027 }, courses: ["COMP 701"] }],
     "cegep",
-    0,
     [checkKey(doctorate, thesis, rule)],
   );
   const progress = programStanding(
@@ -278,7 +281,6 @@ test("a minor shares the program's courses only up to its overlap cap, and anoth
     ),
     [],
     null,
-    0,
   );
   const capped = minorOverlap(
     minor(3),
