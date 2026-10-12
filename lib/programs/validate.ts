@@ -248,7 +248,7 @@ export function validateProgram(value: unknown): ValidationResult {
       ]);
       if (!g) return;
       text(g, "title", path);
-      num(g, "credits", path, "positive");
+      num(g, "credits", path, "credits");
       optionalText(g, "note", path);
       optionalTrue(g, "foundation", path);
       list(g.courses, `${path}.courses`, 1, item);
@@ -294,11 +294,16 @@ export function validateProgram(value: unknown): ValidationResult {
     "credits",
     "groups",
     "overlap",
+    "level",
     "generated",
   ]);
   if (program) {
     optionalTrue(program, "generated", "program");
     optionalNum(program, "overlap", "program", "credits");
+    const graduate = program.level === "graduate";
+    if (program.level !== undefined && !graduate) {
+      fail("program.level", 'expected "graduate", or leave it out');
+    }
     text(
       program,
       "id",
@@ -323,7 +328,8 @@ export function validateProgram(value: unknown): ValidationResult {
       /^https:\/\/\S+$/,
       "use the https URL of the program page",
     );
-    num(program, "credits", "program", "positive");
+    // Only a graduate page may give no total, as a doctorate does.
+    num(program, "credits", "program", graduate ? "credits" : "positive");
     list(program.groups, "program.groups", 1, group);
   }
 

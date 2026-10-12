@@ -13,6 +13,41 @@ test("every program file passes the schema", () => {
   }
 });
 
+test("a graduate program may give no credit total, an undergraduate one may not", () => {
+  const doctorate = {
+    id: "history-phd",
+    name: "History",
+    degree: "Ph.D.",
+    faculty: "Arts",
+    catalogueYear: "2026-2027",
+    source: "https://coursecatalogue.mcgill.ca/en/graduate/arts/history-phd/",
+    credits: 0,
+    level: "graduate",
+    groups: [
+      {
+        title: "Required Courses",
+        kind: "required",
+        credits: 0,
+        courses: ["HIST 702"],
+      },
+      {
+        title: "Thesis",
+        kind: "complementary",
+        credits: 0,
+        rules: [{ title: "A thesis for the doctoral degree", unparsed: true }],
+      },
+    ],
+  };
+  expect(validateProgram(doctorate)).toMatchObject({ ok: true });
+  expect(validateProgram({ ...doctorate, level: undefined })).toMatchObject({
+    ok: false,
+    errors: ["program.credits: expected a number above 0"],
+  });
+  expect(
+    validateProgram({ ...doctorate, level: "undergraduate" }),
+  ).toMatchObject({ ok: false });
+});
+
 test("every program course exists in the catalogue", () => {
   const codes = new Set(
     readdirSync(catalogueDir)
