@@ -12,6 +12,7 @@ import {
   creditSources,
   creditSplit,
   fitsCaps,
+  type GroupProgress,
   namesCourses,
   programProgress,
   programSplit,
@@ -456,6 +457,92 @@ test("a rule the student marked as checked is met, and a group of only such rule
   ]);
 });
 
+test("a range keeps counting past its lower bound toward the program total, and a program below its total is not met", () => {
+  const ranged: Program = {
+    ...tiny,
+    credits: 9,
+    groups: [
+      {
+        title: "Thesis Courses",
+        kind: "complementary",
+        credits: 3,
+        maxCredits: 6,
+        rules: [{ title: "Thesis Courses", courses: ["COMP 250", "COMP 330"] }],
+      },
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 3,
+        rules: [{ title: "Theory", courses: ["COMP 330", "COMP 202"] }],
+      },
+    ],
+  };
+  const done = (...codes: string[]) =>
+    programProgress(
+      ranged,
+      buildSnapshot(codes.map((code) => record(code, "completed"))),
+      catalogue,
+    );
+  const short = done("COMP 250", "COMP 202");
+  expect(short.groups.map((group) => group.satisfied)).toEqual([true, true]);
+  expect(short).toMatchObject({ creditsDone: 6, satisfied: false });
+  const full = done("COMP 250", "COMP 202", "COMP 330");
+  expect(full.groups[0]).toMatchObject({ creditsDone: 6, maxCredits: 6 });
+  expect(full).toMatchObject({ creditsDone: 9, satisfied: true });
+  const snapshot = buildSnapshot([]);
+  expect(creditSplit(full.groups[0] as GroupProgress, snapshot).completed).toBe(
+    3,
+  );
+  expect(programSplit(full, snapshot).completed).toBe(9);
+  // The range takes only what the later group did not need.
+  expect(done("COMP 250", "COMP 330").groups[1]?.courses).toEqual([
+    { code: "COMP 330", credits: 3 },
+  ]);
+});
+
+test("a reminder counts no course, and a group of unparsed rules and reminders is met once its checks are", () => {
+  const checks: Program = {
+    ...tiny,
+    credits: 6,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          {
+            title:
+              "3 credits in advanced research methods at the 600 level or higher",
+            unparsed: true,
+          },
+          {
+            title:
+              "It may be taken in any academic unit at McGill or another university, subject to the approval of the Graduate Program or School Director",
+            match: {},
+            adviser: true,
+          },
+        ],
+      },
+    ],
+  };
+  const group = checks.groups[0] as ComplementaryGroup;
+  const records = [record("COMP 250", "completed")];
+  const [open] = programProgress(
+    checks,
+    buildSnapshot(records),
+    catalogue,
+  ).groups;
+  expect(open).toMatchObject({ creditsDone: 0, satisfied: false, unparsed: 1 });
+  const key = checkKey(checks, group, group.rules[0] as Rule);
+  const met = programProgress(
+    checks,
+    buildSnapshot(records, [], null, 0, [key]),
+    catalogue,
+  );
+  expect(met).toMatchObject({ creditsDone: 6, satisfied: true });
+  expect(met.groups[0]).toMatchObject({ confirmed: true, courses: [] });
+});
+
 test("an adviser rule next to a list adds approved courses up to its credits and never caps the list", () => {
   const approved = {
     title: "3 credits, chosen in consultation with the academic adviser",
@@ -581,6 +668,7 @@ test("credit sources name plain rule titles and give up on sentences", () => {
 test("a CEGEP entry credits foundation groups and drops their courses from what's next", () => {
   const foundation: Program = {
     ...tiny,
+    credits: 3,
     groups: [
       {
         title: "Year 0",

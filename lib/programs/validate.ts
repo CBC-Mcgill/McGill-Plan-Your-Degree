@@ -257,6 +257,7 @@ export function validateProgram(value: unknown): ValidationResult {
         "title",
         "kind",
         "credits",
+        "maxCredits",
         "minCourses",
         "rules",
         "note",
@@ -264,18 +265,31 @@ export function validateProgram(value: unknown): ValidationResult {
       ]);
       if (!g) return;
       text(g, "title", path);
+      const all = Array.isArray(g.rules) ? g.rules.filter(isObj) : [];
+      const reminder = (r: Obj) =>
+        r.adviser === true &&
+        r.minCredits === undefined &&
+        r.maxCredits === undefined;
+      if (all.length > 0 && all.every(reminder)) {
+        fail(`${path}.rules`, "a group of only reminders counts no course");
+      }
       const checks =
-        Array.isArray(g.rules) &&
-        g.rules.length > 0 &&
-        g.rules.every((r) => isObj(r) && r.unparsed === true);
+        all.some((r) => r.unparsed === true) &&
+        all.every((r) => r.unparsed === true || reminder(r));
       // A group that only asks a person to check a condition over the whole program needs no credits.
-      num(g, "credits", path, checks ? "credits" : "positive");
+      const credits = num(g, "credits", path, checks ? "credits" : "positive");
+      const top = optionalNum(g, "maxCredits", path, "credits");
+      if (top !== null && credits !== null && top <= credits) {
+        fail(
+          `${path}.maxCredits`,
+          `expected a number above credits (${credits})`,
+        );
+      }
       optionalNum(g, "minCourses", path, "count");
       optionalText(g, "note", path);
       optionalTrue(g, "foundation", path);
       list(g.rules, `${path}.rules`, 1, rule);
-      const rules = Array.isArray(g.rules) ? g.rules.filter(isObj) : [];
-      const options = new Set(rules.flatMap((r) => r.option ?? []));
+      const options = new Set(all.flatMap((r) => r.option ?? []));
       if (options.size === 1) {
         fail(`${path}.rules`, "rules that name an option need at least two");
       }

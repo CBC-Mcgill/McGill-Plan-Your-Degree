@@ -48,6 +48,52 @@ test("a graduate program may give no credit total, an undergraduate one may not"
   ).toMatchObject({ ok: false });
 });
 
+test("a range group's top is above its credits, and a group of only reminders is refused", () => {
+  const program = (group: object) => ({
+    id: "chemistry-thesis-msc",
+    name: "Chemistry (Thesis)",
+    degree: "M.Sc.",
+    faculty: "Science",
+    catalogueYear: "2026-2027",
+    source: "https://coursecatalogue.mcgill.ca/en/graduate/science/",
+    credits: 45,
+    level: "graduate",
+    groups: [
+      { title: "Thesis Courses", kind: "complementary", credits: 24, ...group },
+    ],
+  });
+  const thesis = [{ title: "Thesis Courses", courses: ["CHEM 690"] }];
+  expect(
+    validateProgram(program({ maxCredits: 33, rules: thesis })),
+  ).toMatchObject({ ok: true });
+  expect(
+    validateProgram(program({ maxCredits: 24, rules: thesis })),
+  ).toMatchObject({
+    ok: false,
+    errors: [
+      "program.groups[0].maxCredits: expected a number above credits (24)",
+    ],
+  });
+  expect(
+    validateProgram(
+      program({
+        rules: [
+          {
+            title: "Courses chosen with the adviser",
+            match: {},
+            adviser: true,
+          },
+        ],
+      }),
+    ),
+  ).toMatchObject({
+    ok: false,
+    errors: [
+      "program.groups[0].rules: a group of only reminders counts no course",
+    ],
+  });
+});
+
 test("every program course exists in the catalogue", () => {
   const codes = new Set(
     readdirSync(catalogueDir)
