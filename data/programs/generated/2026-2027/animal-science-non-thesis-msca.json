@@ -1,0 +1,59 @@
+{
+  "id": "animal-science-non-thesis-msca",
+  "name": "Animal Science (Non-Thesis)",
+  "degree": "M.Sc.A.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/animal-science/animal-science-non-thesis-msca/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "ANSC 643",
+            "ANSC 644",
+            "ANSC 645",
+            "ANSC 646",
+            "ANSC 647"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "15-30 credits from the following",
+          "courses": [
+            "AEMA 610",
+            "ANSC 530",
+            "ANSC 551",
+            "ANSC 552",
+            "ANSC 560",
+            "ANSC 600",
+            "ANSC 604",
+            "ANSC 608",
+            "ANSC 636",
+            "ANSC 691",
+            "ANSC 692"
+          ],
+          "minCredits": 15,
+          "maxCredits": 30
+        },
+        {
+          "title": "0-15 credits selected from 500- and 600-level courses from across the Faculty (with the possibility of up to 9 credits from outside the Faculty if deemed appropriate by the supervisor)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

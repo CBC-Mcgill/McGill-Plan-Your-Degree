@@ -1,0 +1,39 @@
+{
+  "id": "educational-leadership-1-graduate-certificate",
+  "name": "Educational Leadership 1",
+  "degree": "Gr. Cert.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/educational-leadership-1-graduate-certificate/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits from",
+          "courses": [
+            "EDEC 635",
+            "EDEM 610",
+            "EDEM 628",
+            "EDEM 635",
+            "EDEM 637",
+            "EDEM 644",
+            "EDEM 646"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        },
+        {
+          "title": "Or other 500-level or higher courses approved by the Graduate Certificate Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

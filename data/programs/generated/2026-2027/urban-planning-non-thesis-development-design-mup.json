@@ -1,0 +1,112 @@
+{
+  "id": "urban-planning-non-thesis-development-design-mup",
+  "name": "Urban Planning (Non-Thesis): Urban Development and Urban Design",
+  "degree": "M.U.P.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/urban-planning/urban-planning-non-thesis-development-design-mup/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 45,
+      "courses": [
+        "URBP 553",
+        "URBP 609",
+        "URBP 610",
+        "URBP 611",
+        "URBP 612",
+        "URBP 622",
+        "URBP 623",
+        "URBP 624",
+        "URBP 628",
+        "URBP 630",
+        "URBP 631",
+        "URBP 632",
+        "URBP 635",
+        "URBP 640",
+        "URBP 641",
+        "URBP 642"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Group A: 9-15 credits from the following",
+          "courses": [
+            "URBP 555",
+            "URBP 557",
+            "URBP 581",
+            "URBP 582",
+            "URBP 583",
+            "URBP 586",
+            "URBP 587",
+            "URBP 591",
+            "URBP 592",
+            "URBP 593",
+            "URBP 596",
+            "URBP 597",
+            "URBP 605",
+            "URBP 606",
+            "URBP 620",
+            "URBP 629",
+            "URBP 651",
+            "URBP 656",
+            "URBP 684",
+            "URBP 685",
+            "URBP 694",
+            "URBP 695"
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
+        },
+        {
+          "title": "Group B",
+          "courses": [
+            "ARCH 515",
+            "GEOG 525",
+            "URBP 501",
+            "URBP 503",
+            "URBP 504",
+            "URBP 506",
+            "URBP 514",
+            "URBP 530",
+            "URBP 541",
+            "URBP 542",
+            "URBP 543",
+            "URBP 556",
+            "URBP 607",
+            "URBP 616",
+            "URBP 617",
+            "URBP 618",
+            "URBP 619",
+            "URBP 625",
+            "URBP 626",
+            "URBP 643",
+            "URBP 644",
+            "URBP 645",
+            "URBP 646",
+            "URBP 647",
+            "URBP 648",
+            "URBP 649"
+          ]
+        },
+        {
+          "title": "0-6 credits from the following or other 500 or 600 level courses (see note below)",
+          "unparsed": true
+        },
+        {
+          "title": "Students may also take courses at the 500 or 600 level in any academic unit at McGill or at another Montreal university, subject to the approval of the School",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,92 @@
+{
+  "id": "performance-piano-thesis-mmus",
+  "name": "Performance: Piano (Thesis)",
+  "degree": "M.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/performance-piano-thesis-mmus/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "MUGS 605",
+        "MUPG 683",
+        "MUPG 684",
+        "MUIN 620",
+        "MUIN 621",
+        "MUIN 622",
+        "MUPG 600"
+      ],
+      "note": "Students may take MUIN 622 or MUIN 622D1 and MUIN 622D2."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "MUPG 601",
+            "MUPG 602",
+            "MUPG 603",
+            "MUPG 604",
+            "MUPG 606",
+            "MUPG 607"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "If chosen, students may take either MUPG 606 or MUPG 607",
+          "maxCourses": 1,
+          "courses": [
+            "MUPG 606",
+            "MUPG 607"
+          ]
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "MUEN 540",
+            "MUEN 541",
+            "MUEN 553",
+            "MUEN 560",
+            "MUEN 561",
+            "MUEN 568",
+            "MUEN 569",
+            "MUEN 578",
+            "MUEN 579",
+            "MUEN 582",
+            "MUEN 584",
+            "MUEN 585",
+            "MUEN 588",
+            "MUEN 590",
+            "MUEN 594",
+            "MUEN 597",
+            "MUEN 688",
+            "MUPD 580",
+            "MUPG 571",
+            "MUPG 572",
+            "MUPG 670",
+            "MUPG 671",
+            "MUPG 687",
+            "MUPG 688",
+            "MUPG 689"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "9 credits at the 500 level or higher, to be chosen from the Schulich School of Music’s seminar offerings; 3 of the 9 credits must have a MUCO, MUGS, MUGT, MUHL, MUMT, MUPP or MUTH subject code",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

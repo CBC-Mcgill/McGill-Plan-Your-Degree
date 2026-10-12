@@ -1,0 +1,49 @@
+{
+  "id": "law-non-thesis-llm",
+  "name": "Law (Non-Thesis)",
+  "degree": "LL.M.",
+  "faculty": "Law",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/law/law-non-thesis-llm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "CMPL 655"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "CMPL 610",
+        "CMPL 611",
+        "CMPL 641",
+        "LAWG 601",
+        "LAWG 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "The remaining 21 credits (or fewer if more credits are earned for the research project) are chosen from among Faculty offerings at the 500 and 600 levels",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

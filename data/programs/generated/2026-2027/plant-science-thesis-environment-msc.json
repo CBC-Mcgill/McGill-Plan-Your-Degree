@@ -1,0 +1,74 @@
+{
+  "id": "plant-science-thesis-environment-msc",
+  "name": "Plant Science (Thesis): Environment",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/plant-science/plant-science-thesis-environment-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PLNT 664",
+            "PLNT 665",
+            "PLNT 667"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Invitational Seminar",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "PLNT 690"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "ENVR 615"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3-6 credits from",
+          "courses": [
+            "ENVR 610",
+            "ENVR 614"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "ENVR 585",
+            "ENVR 630",
+            "ENVR 680"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "or other graduate course recommended by the Advisory Committee and approved by the Environment Option Committee",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

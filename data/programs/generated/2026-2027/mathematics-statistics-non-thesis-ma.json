@@ -1,0 +1,38 @@
+{
+  "id": "mathematics-statistics-non-thesis-ma",
+  "name": "Mathematics and Statistics (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/mathematics-statistics/mathematics-statistics-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 16,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "MATH 640",
+            "MATH 641"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 29,
+      "rules": [
+        {
+          "title": "At least eight approved graduate courses, at the 500, 600, or 700 level, of 3 or more credits each",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

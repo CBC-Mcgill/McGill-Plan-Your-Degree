@@ -1,0 +1,141 @@
+{
+  "id": "sustainability-engineering-design-non-thesis-meng",
+  "name": "Sustainability in Engineering and Design (Non-Thesis)",
+  "degree": "M.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/sustainability-engineering-design/sustainability-engineering-design-non-thesis-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "SEAD 500",
+        "SEAD 510",
+        "SEAD 520",
+        "SEAD 530",
+        "SEAD 540",
+        "SEAD 550",
+        "SEAD 660",
+        "SEAD 670"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Sustainable Processes and Manufacturing",
+          "courses": [
+            "CHEE 511",
+            "CHEE 521",
+            "CIVE 521",
+            "CIVE 663",
+            "CIVE 677",
+            "MECH 534",
+            "MECH 560",
+            "MIME 511",
+            "MIME 514",
+            "MIME 556",
+            "MIME 588",
+            "URBP 506"
+          ]
+        },
+        {
+          "title": "Students can take only one of CHEE 521 or CIVE 521",
+          "maxCourses": 1,
+          "courses": [
+            "CHEE 521",
+            "CIVE 521"
+          ]
+        },
+        {
+          "title": "Renewable Energy and Energy Efficiency",
+          "courses": [
+            "CHEE 511",
+            "CIVE 570",
+            "CIVE 677",
+            "ECSE 562",
+            "MECH 534",
+            "MECH 579"
+          ]
+        },
+        {
+          "title": "Sustainable Urban Development",
+          "courses": [
+            "ARCH 515",
+            "ARCH 517",
+            "ARCH 564",
+            "MECH 534",
+            "URBP 504",
+            "URBP 551",
+            "URBP 620",
+            "URBP 651"
+          ]
+        },
+        {
+          "title": "Sustainable Infrastructure",
+          "courses": [
+            "ARCH 515",
+            "ARCH 564",
+            "CIVE 540",
+            "CIVE 621",
+            "CIVE 623",
+            "CIVE 629",
+            "CIVE 652",
+            "SEAD 515",
+            "URBP 620",
+            "URBP 651"
+          ]
+        },
+        {
+          "title": "Sustainable Infrastructure",
+          "courses": [
+            "BIEN 520",
+            "BREE 518",
+            "CHEE 515",
+            "BREE 520",
+            "CHEE 541",
+            "CHEE 543",
+            "CIVE 550",
+            "CIVE 555",
+            "CIVE 660",
+            "CIVE 686",
+            "ECSE 507",
+            "ECSE 563",
+            "MECH 535",
+            "MECH 559",
+            "MIME 556",
+            "MIME 638",
+            "SEAD 560",
+            "SEAD 600",
+            "SEAD 602",
+            "URBP 619"
+          ]
+        },
+        {
+          "title": "Credits can be selected from thematic areas in List A and 0-8 credits from List B",
+          "unparsed": true
+        },
+        {
+          "title": "Thematic Areas Technical Complementaries (10-18 credits)",
+          "unparsed": true
+        },
+        {
+          "title": "List B (0-8 credits )",
+          "unparsed": true
+        },
+        {
+          "title": "Other unlisted 500 level or higher courses taught at McGill or another Montreal university may be permitted, subject to approval by the program director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

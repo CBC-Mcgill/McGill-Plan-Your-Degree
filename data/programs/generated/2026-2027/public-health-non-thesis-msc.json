@@ -1,0 +1,102 @@
+{
+  "id": "public-health-non-thesis-msc",
+  "name": "Public Health (Non-Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/population-global-health/public-health-non-thesis-msc/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 36,
+      "courses": [
+        "EPIB 601",
+        "EPIB 603",
+        "EPIB 605",
+        "EPIB 607",
+        "EPIB 613",
+        "EPIB 621",
+        "PPHS 602",
+        "PPHS 612",
+        "PPHS 630"
+      ]
+    },
+    {
+      "title": "Complementary Courses Environmental Health Sciences",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "GEOG 503",
+            "OCCH 602",
+            "OCCH 604",
+            "PPHS 529"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Health Services Research Policy and Management",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "PPHS 525",
+            "PPHS 527",
+            "PPHS 528",
+            "PPHS 617"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Population and Public Health Interventions (social and behavioural science)",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "EPIB 632",
+            "PPHS 614",
+            "PPHS 616",
+            "PPHS 618"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits of coursework, at the 500 level or higher",
+          "minCredits": 15,
+          "match": {
+            "minLevel": 500
+          }
+        },
+        {
+          "title": "Courses will be selected with and approved by the Program's Academic Advisor",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

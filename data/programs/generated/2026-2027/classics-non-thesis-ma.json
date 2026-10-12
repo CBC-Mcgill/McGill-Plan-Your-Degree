@@ -1,0 +1,62 @@
+{
+  "id": "classics-non-thesis-ma",
+  "name": "Classics (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/history-classical-studies/classics-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "CLAS 681",
+            "CLAS 682",
+            "CLAS 683"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "CLAS 500",
+        "CLAS 610",
+        "CLAS 612",
+        "CLAS 620",
+        "CLAS 622",
+        "CLAS 685"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits of 500-level or 600-level courses in Classics, Ancient History, or another classics-related discipline",
+          "unparsed": true
+        },
+        {
+          "title": "Classics-related courses must be chosen in consultation with the classics graduate advisor",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "A maximum of 6 credits of complementary courses may be taken outside the Department of History and Classical Studies, unless approved by the Classical Studies Committee",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

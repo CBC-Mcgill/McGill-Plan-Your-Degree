@@ -1,0 +1,70 @@
+{
+  "id": "biochemistry-thesis-msc",
+  "name": "Biochemistry (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/biochemistry-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "BIOC 697",
+            "BIOC 698",
+            "BIOC 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "BIOC 696"
+      ],
+      "note": "Students choose either BIOC 696D1/D2 or BIOC 696N1/N2."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "At least 3 credits must be chosen from the following",
+          "courses": [
+            "BIOC 600",
+            "BIOC 603",
+            "BIOC 604",
+            "BIOC 605",
+            "BIOC 670",
+            "EXMD 615",
+            "EXMD 635"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "Complementary courses are chosen in consultation with the Research Director",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "0-3 credits, at the 500 level or higher in biomedical and allied sciences",
+          "unparsed": true
+        },
+        {
+          "title": "BIOC 450 and BIOC 454 are additional requirements for those who have not previously completed equivalent courses in their prior training",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

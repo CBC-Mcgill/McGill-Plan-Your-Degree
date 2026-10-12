@@ -1,0 +1,41 @@
+{
+  "id": "digital-archives-management-gr-cert",
+  "name": "Digital Archives Management",
+  "degree": "Gr. Cert.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/information-studies/digital-archives-management-gr-cert/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "INFS 607",
+        "INFS 649"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "INFS 609",
+            "INFS 633",
+            "INFS 641",
+            "INFS 642",
+            "INFS 645",
+            "INFS 657",
+            "INFS 660"
+          ]
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

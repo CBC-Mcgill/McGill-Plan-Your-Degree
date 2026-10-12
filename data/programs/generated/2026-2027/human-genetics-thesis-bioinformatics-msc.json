@@ -1,0 +1,55 @@
+{
+  "id": "human-genetics-thesis-bioinformatics-msc",
+  "name": "Human Genetics (Thesis): Bioinformatics",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/human-genetics-thesis-bioinformatics-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "HGEN 680",
+            "HGEN 681",
+            "HGEN 682"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "COMP 616",
+        "HGEN 692"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from the following courses",
+          "courses": [
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

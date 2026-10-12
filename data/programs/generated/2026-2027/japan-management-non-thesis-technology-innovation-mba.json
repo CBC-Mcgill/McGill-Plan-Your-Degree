@@ -1,0 +1,70 @@
+{
+  "id": "japan-management-non-thesis-technology-innovation-mba",
+  "name": "Japan Management (Non-Thesis): Technology and Innovation Management",
+  "degree": "M.B.A.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/japan-management-non-thesis-technology-innovation-mba/",
+  "credits": 57,
+  "groups": [
+    {
+      "title": "Required Core Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "MGCR 629",
+        "MGCR 650",
+        "MGCR 651",
+        "MGCR 652",
+        "MGCR 653",
+        "MGCR 661"
+      ]
+    },
+    {
+      "title": "Required Concentration Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "INSY 606",
+        "MGSC 616"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "9 credits selected from the following courses toward the concentration",
+          "courses": [
+            "INSY 608",
+            "INSY 609",
+            "MGSC 602",
+            "MGSC 603",
+            "MGSC 605",
+            "MGSC 615",
+            "MGSC 631",
+            "ORGB 625"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "BUSA 650",
+            "BUSA 651"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "The remaining 15 credits of courses are chosen from 500- and 600-level courses offered by the Faculty",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

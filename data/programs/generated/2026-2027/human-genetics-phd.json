@@ -1,0 +1,67 @@
+{
+  "id": "human-genetics-phd",
+  "name": "Human Genetics",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/human-genetics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "HGEN 692",
+        "HGEN 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "HGEN 660",
+            "HGEN 661",
+            "HGEN 663",
+            "HGEN 693",
+            "HGEN 696",
+            "HGEN 697",
+            "HGEN 698",
+            "HGEN 699"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "HGEN 670"
+          ]
+        },
+        {
+          "title": "(15 credits or 6 credits depending on admission status as described above.)",
+          "unparsed": true
+        },
+        {
+          "title": "Courses are to be chosen from the list below and/or from among 500-, 600-, or 700-level courses offered in the Faculties of Medicine and Science",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

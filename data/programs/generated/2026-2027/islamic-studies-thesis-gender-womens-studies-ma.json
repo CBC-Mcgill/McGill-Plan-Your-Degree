@@ -1,0 +1,92 @@
+{
+  "id": "islamic-studies-thesis-gender-womens-studies-ma",
+  "name": "Islamic Studies (Thesis): Gender and Women's Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/islamic-studies/islamic-studies-thesis-gender-womens-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis",
+          "courses": [
+            "ISLA 697",
+            "ISLA 698",
+            "ISLA 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "ISLA 603",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "WMST 602"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credit of a seminar course at the 600 or 700 level",
+          "unparsed": true
+        },
+        {
+          "title": "or a 3-credit course, at the 500 level or higher, in gender/women’s issues",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits of ISLA courses at the 500 level or higher",
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "ISLA"
+            ]
+          }
+        },
+        {
+          "title": "With permission of the Institute, up to 3 credits of these 9 credits of Complementary Courses may be chosen from departments at McGill or other educational institutions",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "With the approval of the student's supervisor, courses taken with an IIS faculty member or an associate member in other departments (i.e., History, Anthropology, Political Science) can count toward the coursework requirements in the same way as ISLA courses",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    },
+    {
+      "title": "Language Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students must demonstrate proficiency in Arabic or Persian at the second-year level as evidenced by completion of ISLA 622D1/ISLA 622D2 or ISLA 642D1/ISLA 642D2, respectively, or by an examination administered by the Institute",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

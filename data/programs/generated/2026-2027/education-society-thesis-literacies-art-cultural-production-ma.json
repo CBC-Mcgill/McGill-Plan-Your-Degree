@@ -1,0 +1,83 @@
+{
+  "id": "education-society-thesis-literacies-art-cultural-production-ma",
+  "name": "Education and Society (Thesis): Literacies, Art, Cultural Production",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/education-society-thesis-literacies-art-cultural-production-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "EDEC 520",
+        "EDEM 609",
+        "EDEM 621",
+        "EDEM 623",
+        "EDEM 690",
+        "EDEM 699"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Arts:",
+          "courses": [
+            "EDEA 555",
+            "EDEA 655",
+            "EDEC 518"
+          ]
+        },
+        {
+          "title": "Language:",
+          "courses": [
+            "EDEC 627",
+            "EDEC 629",
+            "EDSL 628",
+            "EDSL 632"
+          ]
+        },
+        {
+          "title": "Cultural Production:",
+          "courses": [
+            "EDEC 602",
+            "EDEC 604",
+            "EDEC 606",
+            "EDEC 612"
+          ]
+        },
+        {
+          "title": "9 credits from the following (combination of any category)",
+          "unparsed": true
+        },
+        {
+          "title": "Other courses at the 500 level or higher relevant to literacies, art, and cultural production may be chosen with the permission and prior written approval of the Graduate Program Coordinator",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits at the 500 level or higher in consultation with the program adviser chosen from courses offered by the Department of Integrated Studies in Education",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

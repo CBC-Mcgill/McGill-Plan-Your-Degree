@@ -1,0 +1,144 @@
+{
+  "id": "performance-jazz-thesis-mmus",
+  "name": "Performance: Jazz Performance (Thesis)",
+  "degree": "M.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/performance-jazz-thesis-mmus/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "MUJZ 601"
+      ]
+    },
+    {
+      "title": "Required Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "9 credits from",
+          "courses": [
+            "MUIN 626",
+            "MUIN 627",
+            "MUIN 628"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "Jazz Performance",
+          "courses": [
+            "MUPG 651",
+            "MUPG 659"
+          ]
+        },
+        {
+          "title": "Jazz Composition and Arranging",
+          "courses": [
+            "MUPG 652",
+            "MUPG 659"
+          ]
+        },
+        {
+          "title": "Jazz Orchestra",
+          "courses": [
+            "MUPG 651",
+            "MUPG 652"
+          ]
+        },
+        {
+          "title": "18 credits from one of the following",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Jazz Performance Stream",
+          "courses": [
+            "MUJZ 640",
+            "MUJZ 641",
+            "MUPG 695"
+          ],
+          "option": "Jazz Performance Stream"
+        },
+        {
+          "title": "3 credits of a seminar at the 600-level or higher, approved by the Department",
+          "unparsed": true,
+          "option": "Jazz Performance Stream"
+        },
+        {
+          "title": "5 credits of ensembles, at the 500 level or above, with the prefix MUEN (4 credits must be in jazz related ensembles)",
+          "unparsed": true,
+          "option": "Jazz Performance Stream"
+        },
+        {
+          "title": "MUPG 572D1/MUPG 572D2 can be substituted for 1 credit of jazz ensemble",
+          "unparsed": true,
+          "option": "Jazz Performance Stream"
+        },
+        {
+          "title": "Jazz Composition and Arranging Stream",
+          "courses": [
+            "MUJZ 640",
+            "MUJZ 641"
+          ],
+          "option": "Jazz Composition and Arranging Stream"
+        },
+        {
+          "title": "6 credits of seminars at the 600-level or higher, approved by the Schulich School of Music",
+          "unparsed": true,
+          "option": "Jazz Composition and Arranging Stream"
+        },
+        {
+          "title": "5 credits of ensembles, at the 500 level or above, with the prefix MUEN (4 credits must be in jazz related ensembles)",
+          "unparsed": true,
+          "option": "Jazz Composition and Arranging Stream"
+        },
+        {
+          "title": "MUPG 572D1/MUPG 572D2 can be substituted for 1 credit of jazz ensemble",
+          "unparsed": true,
+          "option": "Jazz Composition and Arranging Stream"
+        },
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "MUJZ 640",
+            "MUJZ 641",
+            "MUJZ 644",
+            "MUJZ 645"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4,
+          "option": "Jazz Orchestra Stream"
+        },
+        {
+          "title": "3 credits of a seminar at the 600 level or higher, approved by the Schulich School of Music",
+          "unparsed": true,
+          "option": "Jazz Orchestra Stream"
+        },
+        {
+          "title": "8 credits of ensembles at the 500 level or above, with the prefix MUEN (4 credits must be in jazz related ensembles)",
+          "unparsed": true,
+          "option": "Jazz Orchestra Stream"
+        },
+        {
+          "title": "MUPG 572D1/MUPG 572D2 can be substituted for 1 credit of jazz ensemble",
+          "unparsed": true,
+          "option": "Jazz Orchestra Stream"
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,73 @@
+{
+  "id": "manufacturing-management-non-thesis-mm",
+  "name": "Manufacturing Management (Non-Thesis)",
+  "degree": "M.M.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/manufacturing-management-non-thesis-mm/",
+  "credits": 56,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 20,
+      "courses": [
+        "MGCR 611",
+        "MGCR 612",
+        "MGCR 616",
+        "MGCR 641",
+        "MGSC 609",
+        "MGSC 610",
+        "MGSC 611"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "15-18 credits of General Business and Management courses from the following",
+          "courses": [
+            "MGSC 602",
+            "MGSC 604",
+            "MGSC 607",
+            "MGSC 608",
+            "MGSC 619",
+            "ORGB 625",
+            "ORGB 632",
+            "ORGB 633",
+            "ORGB 640",
+            "ORGB 685"
+          ],
+          "minCredits": 15,
+          "maxCredits": 18
+        },
+        {
+          "title": "18-21 credits of Manufacturing and Supply Chain courses from the following",
+          "courses": [
+            "INSY 610",
+            "MGSC 603",
+            "MGSC 605",
+            "MGSC 614",
+            "MGSC 615",
+            "MGSC 617",
+            "MGSC 618",
+            "MGSC 631",
+            "MGSC 690",
+            "MGSC 691"
+          ],
+          "minCredits": 18,
+          "maxCredits": 21
+        },
+        {
+          "title": "Or any other relevant 600-level courses offered by Desautels Faculty of Management with permission of the Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

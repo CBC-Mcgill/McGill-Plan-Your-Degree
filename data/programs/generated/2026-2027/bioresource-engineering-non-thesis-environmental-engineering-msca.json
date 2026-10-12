@@ -1,0 +1,149 @@
+{
+  "id": "bioresource-engineering-non-thesis-environmental-engineering-msca",
+  "name": "Bioresource Engineering (Non-Thesis): Environmental Engineering",
+  "degree": "M.Sc.A.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/bioresource-engineering/bioresource-engineering-non-thesis-environmental-engineering-msca/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "BREE 671",
+            "BREE 672"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "BREE 533",
+        "CHEE 591",
+        "CIVE 615"
+      ]
+    },
+    {
+      "title": "Complementary Courses Data Analysis Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "AEMA 611",
+            "CIVE 555",
+            "PSYC 650"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Toxicology Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "OCCH 612",
+            "OCCH 616"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Water Pollution Engineering Course",
+      "kind": "complementary",
+      "credits": 4,
+      "rules": [
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "CIVE 651",
+            "CIVE 652",
+            "CIVE 660"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Air Pollution Engineering Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "CHEE 592",
+            "MECH 534"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or an approved 500-, 600-, or 700-level alternative course",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Environmental Impact Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "GEOG 601"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or an approved 500-, 600-, or 700-level alternative course",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Environmental Policy Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "URBP 506"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or an approved 500-, 600-, or 700-level alternative course",
+          "unparsed": true
+        },
+        {
+          "title": "Further complementary courses (balance of coursework to meet the 45-credit program requirement)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

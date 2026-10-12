@@ -1,0 +1,70 @@
+{
+  "id": "linguistics-non-thesis-ma",
+  "name": "Linguistics (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/linguistics/linguistics-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "LING 605",
+            "LING 606",
+            "LING 607"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "LING 601",
+        "LING 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "9-12 credits from",
+          "courses": [
+            "LING 630",
+            "LING 631",
+            "LING 660",
+            "LING 671"
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
+        },
+        {
+          "title": "9-15 credits in Linguistics at the 500, 600, or 700 level",
+          "minCredits": 9,
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "LING"
+            ]
+          }
+        },
+        {
+          "title": "0-3 credits in a related field at the 500, 600, or 700 level, chosen in consultation with the supervisor and the graduate program director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,70 @@
+{
+  "id": "chemical-engineering-thesis-msc",
+  "name": "Chemical Engineering (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/chemical-engineering/chemical-engineering-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 31,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "CHEE 697",
+            "CHEE 698",
+            "CHEE 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 4,
+      "courses": [
+        "CHEE 681",
+        "CHEE 682",
+        "CHEE 687"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 10,
+      "rules": [
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "CHEE 611",
+            "CHEE 621",
+            "CHEE 631",
+            "CHEE 641",
+            "CHEE 651",
+            "CHEE 662",
+            "CHEE 672",
+            "CHEE 688"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "A minimum of 3 credits of Chemical Engineering courses at the 500, 600, or 700 level",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "CHEE"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

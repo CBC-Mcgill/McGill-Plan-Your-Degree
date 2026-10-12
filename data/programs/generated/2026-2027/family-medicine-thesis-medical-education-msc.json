@@ -1,0 +1,71 @@
+{
+  "id": "family-medicine-thesis-medical-education-msc",
+  "name": "Family Medicine (Thesis): Medical Education",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/family-medicine-thesis-medical-education-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "FMED 697",
+            "FMED 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "EDPE 637",
+        "FMED 505",
+        "FMED 610",
+        "FMED 614",
+        "FMED 625"
+      ]
+    },
+    {
+      "title": "Complementary courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "FMED 509",
+            "FMED 603",
+            "FMED 606",
+            "FMED 615",
+            "FMED 616"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "EDEC 612",
+            "EDEM 644",
+            "EDEM 673",
+            "EDPE 635",
+            "EDPE 664",
+            "EDPE 670"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": "history-thesis-gender-womens-studies-ma",
+  "name": "History (Thesis): Gender and Women's Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/history-classical-studies/history-thesis-gender-womens-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "HIST 696",
+            "HIST 697",
+            "HIST 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "HIST 601",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits at the 500, 600, or 700 level, selected as follows",
+          "minCredits": 12,
+          "match": {
+            "minLevel": 500
+          }
+        },
+        {
+          "title": "3 credits on gender-related issues",
+          "unparsed": true
+        },
+        {
+          "title": "Up to 6 credits of non-HIST courses may be taken outside the Department",
+          "unparsed": true
+        },
+        {
+          "title": "Credits at the 500 level are normally to be taken as 3-credit courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

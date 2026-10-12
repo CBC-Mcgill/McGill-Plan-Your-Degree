@@ -1,0 +1,59 @@
+{
+  "id": "mechanical-engineering-non-thesis-meng",
+  "name": "Mechanical Engineering (Non-Thesis)",
+  "degree": "M.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/mechanical-engineering/mechanical-engineering-non-thesis-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 13,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "MECH 603",
+            "MECH 604",
+            "MECH 609"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 16,
+      "courses": [
+        "MECH 605",
+        "MECH 610",
+        "MECH 632",
+        "MECH 642"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 16,
+      "rules": [
+        {
+          "title": "A minimum of 16 credits (500, 600, or 700 level) from the Faculty of Engineering may be selected by the student, based on interest and the choice of area of concentration",
+          "unparsed": true
+        },
+        {
+          "title": "Courses at the graduate level from other faculties may also be taken, with prior approval from the student's project supervisor and the Graduate Program Director",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "A maximum of 3 credits of FACC courses at the 500, 600, or 700 level may be credited toward the degree",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

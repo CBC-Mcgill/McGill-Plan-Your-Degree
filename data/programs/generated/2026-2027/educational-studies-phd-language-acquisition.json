@@ -1,0 +1,91 @@
+{
+  "id": "educational-studies-phd-language-acquisition",
+  "name": "Educational Studies: Language Acquisition",
+  "degree": "Ph.D.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/educational-studies-phd-language-acquisition/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 14,
+      "courses": [
+        "EDEC 700",
+        "EDEC 701",
+        "EDEC 702",
+        "EDEC 713",
+        "EDEC 714",
+        "LING 710",
+        "PSYC 709",
+        "SCSD 712"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EDPE 676",
+            "EDPE 682",
+            "LING 620",
+            "PSYC 650",
+            "PSYC 651"
+          ]
+        },
+        {
+          "title": "3 credits selected from the following list",
+          "courses": [
+            "EDEC 630",
+            "EDEM 655",
+            "EDEM 692"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "At least 3 credits selected from the following list",
+          "courses": [
+            "EDSL 620",
+            "EDSL 623",
+            "EDSL 624",
+            "EDSL 627",
+            "EDSL 632",
+            "LING 651",
+            "PSYC 545",
+            "PSYC 735",
+            "SCSD 619",
+            "SCSD 632",
+            "SCSD 637",
+            "SCSD 643",
+            "SCSD 652",
+            "SCSD 653",
+            "SCSD 654"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "3 credits of graduate-level statistics from the courses below",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

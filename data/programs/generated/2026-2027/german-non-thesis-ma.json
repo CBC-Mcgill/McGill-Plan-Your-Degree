@@ -1,0 +1,44 @@
+{
+  "id": "german-non-thesis-ma",
+  "name": "German (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/languages-literatures-cultures/german-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "GERM 680",
+            "GERM 681",
+            "GERM 682"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Nine 3-credit courses chosen from any graduate seminar listed as offered in the Department of German Studies",
+          "unparsed": true
+        },
+        {
+          "title": "With the approval of the Graduate Studies Committee, students are permitted to take a maximum of 3 credits in another department",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

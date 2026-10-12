@@ -1,0 +1,63 @@
+{
+  "id": "plant-science-bioinformatics-phd",
+  "name": "Plant Science: Bioinformatics",
+  "degree": "Ph.D.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/plant-science/plant-science-bioinformatics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Invitational Seminar",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "PLNT 690"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "COMP 616",
+        "PLNT 701"
+      ],
+      "note": "Must be taken within one year of registering."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BINF 511",
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ]
+        },
+        {
+          "title": "Two courses to be chosen from the following",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

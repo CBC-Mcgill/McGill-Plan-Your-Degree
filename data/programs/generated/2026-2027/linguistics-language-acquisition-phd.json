@@ -1,0 +1,117 @@
+{
+  "id": "linguistics-language-acquisition-phd",
+  "name": "Linguistics: Language Acquisition",
+  "degree": "Ph.D.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/linguistics/linguistics-language-acquisition-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "LING 601",
+        "LING 602",
+        "LING 630",
+        "LING 631",
+        "LING 635",
+        "LING 660",
+        "LING 671",
+        "LING 706",
+        "LING 707",
+        "LING 710",
+        "PSYC 709",
+        "SCSD 712"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits of statistics from the following list",
+          "courses": [
+            "EDPE 676",
+            "EDPE 682",
+            "LING 620",
+            "PSYC 650",
+            "PSYC 651"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "If LING 620 is taken to satisfy both the Statistics and the Methods complementary requirements, then 3 additional credits should be taken at the 500, 600, or 700 level",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "LING 665",
+            "LING 675"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from the following methods courses",
+          "courses": [
+            "LING 610",
+            "LING 620",
+            "LING 645",
+            "LING 661"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EDSL 620",
+            "EDSL 623",
+            "EDSL 624",
+            "EDSL 627",
+            "EDSL 632",
+            "LING 651",
+            "PSYC 545",
+            "PSYC 735",
+            "SCSD 619",
+            "SCSD 632",
+            "SCSD 637",
+            "SCSD 643",
+            "SCSD 652",
+            "SCSD 653"
+          ]
+        },
+        {
+          "title": "0-2 credits from the following",
+          "courses": [
+            "EDPE 713",
+            "EDSL 711"
+          ],
+          "maxCredits": 2
+        },
+        {
+          "title": "6 additional credits at the 500, 600, or 700 level, at least 3 credits selected from the following list",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "teaching-learning-non-thesis-ma-mathematics-option",
+  "name": "Teaching and Learning (Non-Thesis): Mathematics Option",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/teaching-learning-non-thesis-ma-mathematics-option/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 42,
+      "courses": [
+        "EDEC 550",
+        "EDER 615",
+        "EDIN 510",
+        "EDIN 520",
+        "EDPS 600",
+        "EDPS 610",
+        "EDPS 622",
+        "EDTL 515",
+        "EDTL 520",
+        "EDTL 604",
+        "EDTL 607",
+        "EDTL 609",
+        "EDTL 627",
+        "EDTL 628"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "EDEC 612",
+            "EDER 600",
+            "EDTL 508",
+            "EDTL 640"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or 3 credits to be chosen from among 500-level or 600-level department course offerings to be determined by the student’s area of study",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

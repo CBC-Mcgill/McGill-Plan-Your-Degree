@@ -1,0 +1,76 @@
+{
+  "id": "educational-psychology-thesis-ma-human-development",
+  "name": "Educational Psychology (Thesis): Human Development",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/educational-psychology-thesis-ma-human-development/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EDPE 604",
+            "EDPE 607",
+            "EDPE 693",
+            "EDPE 694",
+            "EDPE 695",
+            "EDPE 696"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "EDPE 502",
+        "EDPE 605",
+        "EDPE 632",
+        "EDPE 672",
+        "EDPE 673",
+        "EDPE 676"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 682",
+            "EDPE 687"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 515",
+            "EDPE 616",
+            "EDPE 623",
+            "EDPI 642"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or other 500-, 600-, or 700-level courses offered by the Department and with the approval of the supervisor and the Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

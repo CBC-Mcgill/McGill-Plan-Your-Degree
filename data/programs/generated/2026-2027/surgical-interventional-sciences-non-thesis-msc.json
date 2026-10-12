@@ -1,0 +1,111 @@
+{
+  "id": "surgical-interventional-sciences-non-thesis-msc",
+  "name": "Surgical and Interventional Sciences (Non-Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-interventional-sciences-non-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "EXSU 500",
+        "EXSU 602",
+        "EXSU 623"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "EDPE 575",
+            "EPIB 507",
+            "EXSU 606"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "EXSU 603",
+            "FMED 525"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits selected from the following",
+          "courses": [
+            "EDPE 637",
+            "EDPH 689",
+            "EPIB 521",
+            "EXSU 505",
+            "EXSU 620",
+            "EXSU 621",
+            "PPHS 528"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Note: Students either take EDPE 637 and EDPH 689; or EPIB 521 and PPHS 528; or EXSU 620 and EXSU 621; or EXSU 505 and any course in the course grouping available in a given year if the number of registered students has not exceeded the projected enrolment",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits selected from",
+          "courses": [
+            "BMDE 653",
+            "BMDE 654",
+            "BMDE 655",
+            "DENT 669",
+            "EDPE 637",
+            "EDPE 687",
+            "EDPH 689",
+            "EPIB 681",
+            "EXMD 609",
+            "EXMD 610",
+            "EXSU 501",
+            "EXSU 601",
+            "EXSU 605",
+            "EXSU 620",
+            "EXSU 621",
+            "EXSU 622",
+            "EXSU 684",
+            "FMED 619",
+            "GPHL 500",
+            "PHGY 518",
+            "PHGY 550",
+            "PPHS 529"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "Or 3 credits of a research design or statistics course at the 500 level or higher",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits taken from 500-, 600-, or 700-level courses at the University, which may include courses from the list above, will be taken with the approval of the director of the program/adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

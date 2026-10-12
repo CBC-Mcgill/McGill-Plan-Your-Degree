@@ -1,0 +1,41 @@
+{
+  "id": "regenerative-medicine-gr-cert",
+  "name": "Regenerative Medicine",
+  "degree": "Gr. Cert.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/regenerative-medicine-gr-cert/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "FMED 525",
+        "HGEN 675",
+        "PHAR 508"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "CHEE 512",
+            "EXMD 501",
+            "EXMD 505",
+            "HGEN 660"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

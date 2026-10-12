@@ -1,0 +1,40 @@
+{
+  "id": "impm-non-thesis-mm",
+  "name": "IMPM (Non-Thesis)",
+  "degree": "M.M.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/impm-non-thesis-mm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "BUSA 689"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "BUSA 666",
+        "BUSA 668",
+        "BUSA 670",
+        "BUSA 672",
+        "BUSA 675",
+        "BUSA 680",
+        "BUSA 685"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

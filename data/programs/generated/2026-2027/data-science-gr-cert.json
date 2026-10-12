@@ -1,0 +1,47 @@
+{
+  "id": "data-science-gr-cert",
+  "name": "Data Science",
+  "degree": "Gr. Cert.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/mathematics-statistics/data-science-gr-cert/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "COMP 551",
+        "COMP 570",
+        "MATH 682"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3-4 credits from the following",
+          "courses": [
+            "INFS 630",
+            "INFS 685",
+            "MATH 533",
+            "MATH 545",
+            "MATH 559",
+            "MATH 680"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "Students may take a 500-level course outside the department with the Graduate Program Director’s approval",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,64 @@
+{
+  "id": "kinesiology-sciences-phd",
+  "name": "Kinesiology Sciences",
+  "degree": "Ph.D.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/kpe/kinesiology-sciences-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "EDKP 621",
+        "EDKP 622",
+        "EDKP 623",
+        "EDKP 624",
+        "EDKP 661",
+        "EDKP 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EDKP 552",
+            "EDKP 553",
+            "EDKP 603",
+            "EDKP 605",
+            "EDKP 616",
+            "EDKP 654",
+            "EDKP 662",
+            "EDKP 664",
+            "EDKP 671",
+            "EDKP 672",
+            "EDPE 676"
+          ]
+        },
+        {
+          "title": "A minimum of 6 credits from the following; other courses, at the 500-level or higher, on these topics from the Faculty of Education or other Faculties may be selected subject to approval of the program adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

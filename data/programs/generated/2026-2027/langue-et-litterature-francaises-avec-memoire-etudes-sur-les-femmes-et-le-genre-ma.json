@@ -1,0 +1,55 @@
+{
+  "id": "langue-et-litterature-francaises-avec-memoire-etudes-sur-les-femmes-et-le-genre-ma",
+  "name": "Langue et littérature françaises (avec mémoire): études sur les femmes et le genre",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/french-language-literature/langue-et-litterature-francaises-avec-memoire-etudes-sur-les-femmes-et-le-genre-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Mémoire",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Mémoire",
+          "courses": [
+            "FREN 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cours obligatoires",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "FREN 696",
+        "FREN 697",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Cours complémentaires",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 crédits au 500 niveau ou plus",
+          "unparsed": true
+        },
+        {
+          "title": "Six crédits de séminaires au choix parmi les séminaires du Département ou à l'extérieur du Département qui ont été approuvés par l'option",
+          "unparsed": true
+        },
+        {
+          "title": "Six crédits de séminaires au choix, dont un peut être suivi à l'extérieur du Département",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,104 @@
+{
+  "id": "educational-leadership-non-thesis-ma-course-work",
+  "name": "Educational Leadership (Non-Thesis): Course Work",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/educational-leadership-non-thesis-ma-course-work/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "EDEM 609",
+        "EDEM 610",
+        "EDEM 673"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "18-21 credits selected from the following courses",
+          "courses": [
+            "EDEM 606",
+            "EDEM 628",
+            "EDEM 630",
+            "EDEM 635",
+            "EDEM 637",
+            "EDEM 644",
+            "EDEM 646",
+            "EDEM 660",
+            "EDEM 664",
+            "EDEM 671",
+            "EDEM 674",
+            "EDEM 675",
+            "EDEM 677",
+            "EDEM 681",
+            "EDEM 690",
+            "EDEM 693",
+            "EDEM 695"
+          ],
+          "minCredits": 18,
+          "maxCredits": 21
+        },
+        {
+          "title": "6-9 credits selected from the following courses",
+          "courses": [
+            "EDEA 555",
+            "EDEA 655",
+            "EDEC 520",
+            "EDEC 575",
+            "EDEC 602",
+            "EDEC 604",
+            "EDEC 606",
+            "EDEC 612",
+            "EDEC 625",
+            "EDEC 628",
+            "EDEC 635",
+            "EDEC 648",
+            "EDEC 650",
+            "EDEM 679",
+            "EDEM 688",
+            "EDER 536",
+            "EDER 600",
+            "EDER 607",
+            "EDER 608",
+            "EDER 614",
+            "EDER 615",
+            "EDER 617",
+            "EDER 622",
+            "EDER 625",
+            "EDER 626",
+            "EDER 639",
+            "EDER 643",
+            "EDER 649"
+          ],
+          "minCredits": 6,
+          "maxCredits": 9
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits at the 500, 600, or 700 level chosen in consultation with the Graduate Program Coordinator or the Graduate Program Director",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

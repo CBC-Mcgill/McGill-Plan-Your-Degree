@@ -1,0 +1,66 @@
+{
+  "id": "italian-non-thesis-ma",
+  "name": "Italian (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/languages-literatures-cultures/italian-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "ITAL 690",
+            "ITAL 691"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "ITAL 602",
+        "ITAL 610",
+        "ITAL 619",
+        "ITAL 680"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 additional course credits, chosen in consultation with an adviser from among the graduate courses offered by the Department",
+          "unparsed": true
+        },
+        {
+          "title": "The courses should cover at least three distinct chronological periods in Italian literature",
+          "unparsed": true
+        },
+        {
+          "title": "A maximum of 6 credits of graduate courses may be taken outside the Italian Studies Department, upon the advice of the Supervisor and with the permission of the Graduate Studies Director",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "Literary Theory course, ITAL 610, three complementary courses, and ITAL 690",
+          "unparsed": true
+        },
+        {
+          "title": "ITAL 602, ITAL 680, two complementary courses, and ITAL 691",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

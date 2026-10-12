@@ -1,0 +1,53 @@
+{
+  "id": "langue-et-litterature-francaises-avec-memoire-ma",
+  "name": "Langue et littérature françaises (avec mémoire)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/french-language-literature/langue-et-litterature-francaises-avec-memoire-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Mémoire",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Mémoire",
+          "courses": [
+            "FREN 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cours obligatoires",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "FREN 696",
+        "FREN 697"
+      ]
+    },
+    {
+      "title": "Cours complémentaires",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Cours complémentaires",
+          "courses": [
+            "FREN 609",
+            "FREN 611"
+          ]
+        },
+        {
+          "title": "5 séminaires; un maximum de 6 crédits peuvent être suivis dans un autre département de McGill qui offre des cours dans le domaine des Humanités de l'annuaire des Études supérieures et postdoctorales, ou dans une autre université",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

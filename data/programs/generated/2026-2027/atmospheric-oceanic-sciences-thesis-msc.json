@@ -1,0 +1,70 @@
+{
+  "id": "atmospheric-oceanic-sciences-thesis-msc",
+  "name": "Atmospheric and Oceanic Sciences (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/atmospheric-oceanic-sciences/atmospheric-oceanic-sciences-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "ATOC 691",
+            "ATOC 692",
+            "ATOC 694",
+            "ATOC 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ATOC 512",
+            "ATOC 513",
+            "ATOC 515",
+            "ATOC 519",
+            "ATOC 521",
+            "ATOC 525",
+            "ATOC 531",
+            "ATOC 540",
+            "ATOC 541",
+            "ATOC 548",
+            "ATOC 568",
+            "ATOC 626",
+            "CHEM 519"
+          ]
+        },
+        {
+          "title": "Students may select either ATOC 519 or CHEM 519",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 519",
+            "CHEM 519"
+          ]
+        },
+        {
+          "title": "Students with a strong background in atmospheric or oceanic science, or a Diploma in Meteorology, will take at least the 7-credit minimum",
+          "unparsed": true
+        },
+        {
+          "title": "Students with no previous background in atmospheric or oceanic science must take the 20-credit maximum",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

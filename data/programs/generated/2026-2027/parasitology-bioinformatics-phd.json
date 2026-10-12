@@ -1,0 +1,55 @@
+{
+  "id": "parasitology-bioinformatics-phd",
+  "name": "Parasitology: Bioinformatics",
+  "degree": "Ph.D.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/parasitology/parasitology-bioinformatics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 13,
+      "courses": [
+        "COMP 616",
+        "PARA 635",
+        "PARA 655",
+        "PARA 701",
+        "PARA 710",
+        "PARA 711"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits chosen from the following",
+          "courses": [
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

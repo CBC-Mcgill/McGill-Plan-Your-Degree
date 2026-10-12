@@ -1,0 +1,67 @@
+{
+  "id": "clinical-translational-research-thesis-digital-health-innovation-msc",
+  "name": "Clinical and Translational Research (Thesis): Digital Health Innovation",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/clinical-translational-research-thesis-digital-health-innovation-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 36,
+      "courses": [
+        "EXMD 601",
+        "EXMD 634",
+        "EXMD 650",
+        "EXMD 693",
+        "EXMD 694",
+        "EXSU 500"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EXMD 630",
+            "EXSU 620"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3-4 credits from the following",
+          "courses": [
+            "BMDE 503",
+            "BMDE 508",
+            "BMDE 517",
+            "BMDE 520",
+            "BMDE 655",
+            "COMP 550",
+            "COMP 551",
+            "ECSE 551",
+            "EXMD 651"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "or a 3-credit course at the 500 level or higher as approved by the Director",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "Thesis programs are 45 credits, but the credits in this program may minimally be exceeded in some cases due to course selection",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

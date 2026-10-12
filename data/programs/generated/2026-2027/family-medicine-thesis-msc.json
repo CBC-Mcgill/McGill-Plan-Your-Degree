@@ -1,0 +1,71 @@
+{
+  "id": "family-medicine-thesis-msc",
+  "name": "Family Medicine (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/family-medicine-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "FMED 697",
+            "FMED 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 13,
+      "courses": [
+        "FMED 505",
+        "FMED 509",
+        "FMED 603",
+        "FMED 614",
+        "FMED 616",
+        "FMED 625"
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 8,
+      "rules": [
+        {
+          "title": "Elective Courses",
+          "courses": [
+            "FMED 504",
+            "FMED 525",
+            "FMED 601",
+            "FMED 604",
+            "FMED 605",
+            "FMED 606",
+            "FMED 608",
+            "FMED 610",
+            "FMED 611",
+            "FMED 612",
+            "FMED 615",
+            "FMED 619",
+            "FMED 621",
+            "FMED 690"
+          ]
+        },
+        {
+          "title": "8 credits at the 500 level or higher chosen by the student and the Department in consultation with the student’s thesis supervisor(s) of which 3 credits may be chosen from another department at McGill",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

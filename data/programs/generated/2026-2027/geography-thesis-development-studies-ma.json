@@ -1,0 +1,51 @@
+{
+  "id": "geography-thesis-development-studies-ma",
+  "name": "Geography (Thesis): Development Studies",
+  "degree": "M.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/geography/geography-thesis-development-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "GEOG 698",
+            "GEOG 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "GEOG 631",
+        "INTD 657"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits of courses at the 500 level or higher related to geography and international development studies to be chosen in consultation with an adviser",
+          "unparsed": true
+        },
+        {
+          "title": "GEOG 696 can count among these complementary credits for students with an appropriate background",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

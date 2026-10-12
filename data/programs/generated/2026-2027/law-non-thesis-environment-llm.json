@@ -1,0 +1,78 @@
+{
+  "id": "law-non-thesis-environment-llm",
+  "name": "Law (Non-Thesis): Environment",
+  "degree": "LL.M.",
+  "faculty": "Law",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/law/law-non-thesis-environment-llm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "CMPL 655"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "CMPL 610",
+        "CMPL 611",
+        "CMPL 615",
+        "LAWG 601",
+        "LAWG 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "12-15 credits chosen from",
+          "courses": [
+            "CMPL 500",
+            "CMPL 546",
+            "CMPL 580"
+          ],
+          "minCredits": 12,
+          "maxCredits": 15
+        },
+        {
+          "title": "3-6 credits chosen from",
+          "courses": [
+            "ENVR 610",
+            "ENVR 614"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "0-3 credits chosen from",
+          "courses": [
+            "ENVR 585",
+            "ENVR 630",
+            "ENVR 680"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "or 3 credits at the 500 level or higher recommended by the Advisory Committee and approved by the Environment Option Committee",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

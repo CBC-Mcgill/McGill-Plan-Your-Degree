@@ -1,0 +1,79 @@
+{
+  "id": "education-society-thesis-ma-gender-womens-studies",
+  "name": "Education and Society (Thesis): Gender and Women's Studies",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/education-society-thesis-ma-gender-womens-studies/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EDEM 621",
+            "EDEM 623",
+            "EDEM 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "EDEM 609",
+        "EDEM 690",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "WMST 602"
+          ]
+        },
+        {
+          "title": "3 credits chosen from the following, must be either",
+          "unparsed": true
+        },
+        {
+          "title": "or one 3-credit course, at the 500, 600, or 700 level on gender/women's issues, chosen in consultation with the Thesis Supervisor or Graduate Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits at the 500- level or higher, chosen in consultation with the Thesis Supervisor or Graduate Program Director",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        },
+        {
+          "title": "Maximum 3 credits from outside the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

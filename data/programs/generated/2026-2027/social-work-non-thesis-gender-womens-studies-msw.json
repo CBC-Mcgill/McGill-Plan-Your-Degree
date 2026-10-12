@@ -1,0 +1,53 @@
+{
+  "id": "social-work-non-thesis-gender-womens-studies-msw",
+  "name": "Social Work (Non-Thesis): Gender and Women's Studies",
+  "degree": "M.S.W.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/social-work/social-work-non-thesis-gender-womens-studies-msw/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "SWRK 527",
+        "SWRK 605",
+        "SWRK 653",
+        "SWRK 664",
+        "SWRK 665",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "WMST 602"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "OR, 3 credits of WMST at the 500 or 600 level",
+          "unparsed": true
+        },
+        {
+          "title": "OR, 3 credits of 500- or 600-level courses in another department or discipline approved as a complementary course to the Option in Gender and Women's Studies by an MSW adviser in the School of Social Work",
+          "unparsed": true
+        },
+        {
+          "title": "AND 15 credits of 500- or 600-level courses selected from the School of Social Work",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,90 @@
+{
+  "id": "jewish-studies-thesis-ma",
+  "name": "Jewish Studies (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/jewish-studies/jewish-studies-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "JWST 695",
+            "JWST 696",
+            "JWST 697"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "JWST 699"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits of courses at the 500, 600, or 700 level, chosen according to each student's specialization in consultation with the student's thesis adviser",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Language Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students choosing Eastern European studies, Jewish thought, or Hebrew literature must demonstrate fluency in either Hebrew or Yiddish according to their field of specialization",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "History of the Jewish Interpretation of the Bible Stream",
+      "kind": "complementary",
+      "credits": 45,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "JWST 690",
+            "JWST 691",
+            "JWST 692",
+            "JWST 694"
+          ]
+        },
+        {
+          "title": "Required Courses",
+          "courses": [
+            "JWST 510",
+            "JWST 511",
+            "JWST 699"
+          ]
+        },
+        {
+          "title": "12 credits of courses at the 500, 600, or 700 level, chosen in consultation with the student's thesis adviser",
+          "minCredits": 12,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

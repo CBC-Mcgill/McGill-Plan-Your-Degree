@@ -1,0 +1,53 @@
+{
+  "id": "biotechnology-non-thesis-msca",
+  "name": "Biotechnology (Non-Thesis)",
+  "degree": "M.Sc.A.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/biotechnology/biotechnology-non-thesis-msca/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 16,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "BTEC 622",
+            "BTEC 623",
+            "BTEC 624",
+            "BTEC 625"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 20,
+      "courses": [
+        "BIOT 505",
+        "BTEC 501",
+        "BTEC 619",
+        "BTEC 620",
+        "BTEC 621",
+        "HGEN 660"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits at the 500 level or higher, selected within the Faculties of Agricultural and Environmental Sciences, Medicine, Science, or Management in consultation with the academic adviser of the program in line with the interests of the student",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

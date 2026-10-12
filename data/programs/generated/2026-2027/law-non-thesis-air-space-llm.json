@@ -1,0 +1,59 @@
+{
+  "id": "law-non-thesis-air-space-llm",
+  "name": "Law (Non-Thesis): Air and Space Law",
+  "degree": "LL.M.",
+  "faculty": "Law",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/law/law-non-thesis-air-space-llm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "ASPL 655"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "ASPL 633",
+        "ASPL 636",
+        "ASPL 637",
+        "LAWG 601",
+        "LAWG 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "CMPL 610",
+            "CMPL 611",
+            "CMPL 641"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "15 credits (or fewer if more credits are earned for the research project) at the 500 level or higher chosen from among Faculty offerings (including ASPL offerings)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

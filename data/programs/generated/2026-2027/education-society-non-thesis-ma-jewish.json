@@ -1,0 +1,71 @@
+{
+  "id": "education-society-non-thesis-ma-jewish",
+  "name": "Education and Society (Non-Thesis): Jewish Education",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/education-society-non-thesis-ma-jewish/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Internship",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "EDER 610"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "EDEM 690",
+        "EDER 520"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "9 credits chosen from the following courses",
+          "courses": [
+            "EDER 525",
+            "EDER 527",
+            "EDER 528"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "6 credits selected from the following courses",
+          "courses": [
+            "EDPE 535",
+            "EDPE 616",
+            "EDPI 526",
+            "EDPI 642",
+            "EDPI 654"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "24 credits at the 500, 600, or 700 level, selected in consultation with the program adviser",
+          "minCredits": 24,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        },
+        {
+          "title": "9 credits from the course offerings of the Department of Jewish Studies, Faculty of Arts",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

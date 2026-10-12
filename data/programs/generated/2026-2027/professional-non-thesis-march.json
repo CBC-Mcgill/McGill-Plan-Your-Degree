@@ -1,0 +1,56 @@
+{
+  "id": "professional-non-thesis-march",
+  "name": "Professional Master of Architecture (Non-Thesis)",
+  "degree": "M.Arch.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/architecture/professional-non-thesis-march/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 42,
+      "courses": [
+        "ARCH 672",
+        "ARCH 673",
+        "ARCH 674",
+        "ARCH 676",
+        "ARCH 678",
+        "ARCH 683"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "ARCH 628"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "McGill B.Sc. (Arch.) graduates who completed ARCH 451 during their undergraduate training are exempt from registering in ARCH 628 and can replace ARCH 628 with another Complementary Course",
+          "unparsed": true
+        },
+        {
+          "title": "15-18 credits of courses at the 500 or 600 level, chosen from Architecture courses (subject code ARCH)",
+          "minCredits": 15,
+          "maxCredits": 18,
+          "match": {
+            "minLevel": 500,
+            "maxLevel": 600,
+            "subjects": [
+              "ARCH"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

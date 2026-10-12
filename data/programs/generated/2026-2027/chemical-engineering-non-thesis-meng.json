@@ -1,0 +1,62 @@
+{
+  "id": "chemical-engineering-non-thesis-meng",
+  "name": "Chemical Engineering (Non-Thesis)",
+  "degree": "M.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/chemical-engineering/chemical-engineering-non-thesis-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "CHEE 695"
+          ]
+        },
+        {
+          "title": "Project (design or research): 6-12 credits",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits must include the following course",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "A minimum of 18 credits in Chemical Engineering at the 500, 600, or 700 level",
+          "minCredits": 18,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "CHEE"
+            ]
+          }
+        },
+        {
+          "title": "9 credits must be in an area of concentration",
+          "unparsed": true
+        },
+        {
+          "title": "12 additional courses at the 500, 600, or 700 level",
+          "minCourses": 12,
+          "match": {
+            "minLevel": 500
+          }
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,90 @@
+{
+  "id": "interdisciplinary-cancer-sciences-phd",
+  "name": "Interdisciplinary Cancer Sciences",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/interdepartmental-studies/interdisciplinary-cancer-sciences-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 4,
+      "courses": [
+        "CANC 621",
+        "CANC 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 10,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "EXMD 635",
+            "ONCO 610"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "BIOC 600",
+            "BIOC 603",
+            "BIOC 605",
+            "BMDE 507",
+            "BMDE 653",
+            "BMDE 655",
+            "CANC 601",
+            "CANC 602",
+            "CANC 603",
+            "CANC 604",
+            "CANC 605",
+            "CANC 606",
+            "CANC 607",
+            "CANC 608",
+            "EPIB 507",
+            "EPIB 521",
+            "EPIB 635",
+            "EPIB 671",
+            "EXMD 504",
+            "EXMD 602",
+            "EXMD 607",
+            "EXMD 608",
+            "EXMD 614",
+            "EXMD 617",
+            "EXMD 618",
+            "EXMD 619",
+            "EXMD 647",
+            "EXSU 500",
+            "EXSU 606",
+            "HGEN 676",
+            "HGEN 677",
+            "HGEN 679",
+            "HGEN 693",
+            "NUR2 515",
+            "NUR2 783",
+            "ONCO 611",
+            "ONCO 615",
+            "ONCO 620",
+            "ONCO 625",
+            "ONCO 635",
+            "ONCO 645",
+            "PATH 652",
+            "PHAR 508",
+            "PHGY 513",
+            "POTH 637"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

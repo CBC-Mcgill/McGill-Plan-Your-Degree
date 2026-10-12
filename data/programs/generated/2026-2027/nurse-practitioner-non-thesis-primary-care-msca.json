@@ -1,0 +1,48 @@
+{
+  "id": "nurse-practitioner-non-thesis-primary-care-msca",
+  "name": "Nurse Practitioner (Non-Thesis): Primary Care",
+  "degree": "M.Sc.A.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/nursing/nurse-practitioner-non-thesis-primary-care-msca/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 42,
+      "courses": [
+        "NUR2 608",
+        "NUR2 611",
+        "NUR2 612",
+        "NUR2 617",
+        "NUR2 642",
+        "NUR3 670",
+        "NUR3 671",
+        "NUR3 672",
+        "NUR3 673",
+        "NUR3 674",
+        "NUR3 676"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "NUR2 600",
+            "NUR2 603",
+            "NUR2 626"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

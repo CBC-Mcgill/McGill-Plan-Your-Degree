@@ -1,0 +1,57 @@
+{
+  "id": "religious-studies-non-thesis-stm",
+  "name": "Religious Studies (Non-Thesis)",
+  "degree": "S.T.M.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/religious-studies/religious-studies-non-thesis-stm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "RELG 645",
+        "RELG 646",
+        "RELG 647"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "RELG 644",
+            "RELG 648",
+            "RELG 652",
+            "RELG 653",
+            "RELG 656",
+            "RELG 663"
+          ]
+        },
+        {
+          "title": "18 credits at the 500 level or higher",
+          "minCredits": 18,
+          "match": {
+            "minLevel": 500
+          }
+        },
+        {
+          "title": "12 credits from Area Studies listed below",
+          "unparsed": true
+        },
+        {
+          "title": "Related courses, at the 500 level or higher, are also available in other departments and must be chosen in consultation with the S.T.M",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

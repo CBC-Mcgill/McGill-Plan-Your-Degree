@@ -1,0 +1,52 @@
+{
+  "id": "chemistry-thesis-msc",
+  "name": "Chemistry (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/chemistry/chemistry-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "At least 24 credits chosen from the following",
+          "courses": [
+            "CHEM 691",
+            "CHEM 692",
+            "CHEM 693",
+            "CHEM 694",
+            "CHEM 695"
+          ],
+          "minCredits": 24
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 5,
+      "courses": [
+        "CHEM 650",
+        "CHEM 651",
+        "CHEM 688"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Students will normally take 9-16 credits of CHEM (or approved) courses at the 500 or 600 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

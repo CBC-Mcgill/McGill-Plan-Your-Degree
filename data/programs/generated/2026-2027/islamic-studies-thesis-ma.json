@@ -1,0 +1,79 @@
+{
+  "id": "islamic-studies-thesis-ma",
+  "name": "Islamic Studies (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/islamic-studies/islamic-studies-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "ISLA 697",
+            "ISLA 698",
+            "ISLA 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "ISLA 603"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "With the approval of the student's supervisor, courses taken with an IIS faculty member or an associate member in other departments (i.e., History, Anthropology, and Political Science) can count toward the coursework requirements in the same way as ISLA courses",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "With permission of the Institute, up to 6 credits from other departments at McGill or other educational institutions can be used",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "3 credit seminar course at the 600 or 700 level",
+          "unparsed": true
+        },
+        {
+          "title": "15 credits of ISLA courses at the 500, 600, or 700 level",
+          "minCredits": 15,
+          "maxCredits": 15,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "ISLA"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Language Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students must demonstrate proficiency in Arabic or Persian at the second-year level as evidenced by completion of ISLA 622D1/ISLA 622D2 or ISLA 642D1/ISLA 643D2, respectively, or by an examination administered by the Institute",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

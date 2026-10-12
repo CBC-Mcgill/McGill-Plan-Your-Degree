@@ -1,0 +1,64 @@
+{
+  "id": "medical-sociology-thesis-ma",
+  "name": "Medical Sociology (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/sociology/medical-sociology-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "SOCI 690",
+            "SOCI 691",
+            "SOCI 693",
+            "SOCI 695"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "SOCI 504",
+        "SOCI 580",
+        "SOCI 600",
+        "SOCI 625",
+        "SOCI 652"
+      ],
+      "note": "All students must have taken these courses or take them during the first year of the program. Students granted an exemption from any one or more of these courses by the Graduate Studies Committee must substitute another substantive seminar in its place."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3 credits, ONE of the following courses",
+          "courses": [
+            "SOCI 515",
+            "SOCI 538"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "3 credits (at the 500, 600, or 700 level) in History of Medicine",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

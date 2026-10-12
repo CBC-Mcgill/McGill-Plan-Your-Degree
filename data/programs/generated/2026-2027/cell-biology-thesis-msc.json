@@ -1,0 +1,87 @@
+{
+  "id": "cell-biology-thesis-msc",
+  "name": "Cell Biology (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/cell-biology-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Course",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Course",
+          "courses": [
+            "ANAT 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "ANAT 601",
+        "ANAT 695",
+        "ANAT 696",
+        "ANAT 697"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Cell Developmental Biology Stream",
+          "courses": [
+            "ANAT 690"
+          ],
+          "minCredits": 6,
+          "option": "Cell Developmental Biology Stream"
+        },
+        {
+          "title": "Human Systems Biology Stream",
+          "courses": [
+            "ANAT 690"
+          ],
+          "option": "Human Systems Biology Stream"
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "BMDE 502",
+            "BMDE 519",
+            "BTEC 501",
+            "COMP 564",
+            "COMP 680",
+            "EXMD 602",
+            "MIMM 613",
+            "MIMM 614",
+            "MIMM 615",
+            "NEUR 502"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "option": "Human Systems Biology Stream"
+        },
+        {
+          "title": "6 credits required",
+          "unparsed": true,
+          "option": "Human Systems Biology Stream"
+        },
+        {
+          "title": "Upon consultation with the supervisor, students may select a 3-credit course outside of this list from Biomedical Science courses at the 500-600 level",
+          "unparsed": true,
+          "option": "Human Systems Biology Stream"
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

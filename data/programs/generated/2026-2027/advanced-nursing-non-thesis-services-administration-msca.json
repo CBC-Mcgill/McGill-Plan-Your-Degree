@@ -1,0 +1,63 @@
+{
+  "id": "advanced-nursing-non-thesis-services-administration-msca",
+  "name": "Advanced Nursing (Non-Thesis): Nursing Services Administration",
+  "degree": "M.Sc.A.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/nursing/advanced-nursing-non-thesis-services-administration-msca/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "NUR2 515",
+        "NUR2 600",
+        "NUR2 608",
+        "NUR2 611",
+        "NUR2 612",
+        "NUR2 617",
+        "NUR2 626",
+        "NUR2 642",
+        "NUR3 624"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Knowledge Translation Stream",
+          "courses": [
+            "NUR2 601",
+            "NUR2 602"
+          ]
+        },
+        {
+          "title": "Research Stream",
+          "courses": [
+            "NUR2 630",
+            "NUR2 631",
+            "NUR2 632"
+          ]
+        },
+        {
+          "title": "3 credits at the 500-level or higher in the area of Health Equity to be approved by an Academic Advisor",
+          "unparsed": true
+        },
+        {
+          "title": "6-9 credits at the 500 level or higher of a course that furthers advanced practice nursing competencies, including relevant School of Continuing Studies courses in the area of administration, to be approved by an academic adviser",
+          "unparsed": true
+        },
+        {
+          "title": "9-12 credits from the following two streams",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

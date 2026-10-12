@@ -1,0 +1,120 @@
+{
+  "id": "sociology-gender-womens-studies-phd",
+  "name": "Sociology: Gender and Women's Studies",
+  "degree": "Ph.D.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/sociology/sociology-gender-womens-studies-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "SOCI 625",
+        "SOCI 702",
+        "SOCI 703",
+        "SOCI 704",
+        "SOCI 705",
+        "WMST 601",
+        "WMST 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Qualitative Stream",
+          "courses": [
+            "SOCI 601",
+            "SOCI 602"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "option": "Qualitative Stream"
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "SOCI 620",
+            "SOCI 621",
+            "SOCI 622",
+            "SOCI 623"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3,
+          "option": "Quantitative Stream"
+        },
+        {
+          "title": "Quantitative Stream",
+          "courses": [
+            "SOCI 502",
+            "SOCI 506",
+            "SOCI 507",
+            "SOCI 514",
+            "SOCI 515",
+            "SOCI 519",
+            "SOCI 520",
+            "SOCI 525",
+            "SOCI 526",
+            "SOCI 530",
+            "SOCI 535",
+            "SOCI 538",
+            "SOCI 545",
+            "SOCI 550",
+            "SOCI 571",
+            "SOCI 588",
+            "SOCI 590",
+            "SOCI 601",
+            "SOCI 620",
+            "SOCI 621",
+            "SOCI 622",
+            "SOCI 623",
+            "SOCI 624",
+            "SOCI 631",
+            "SOCI 720",
+            "SOCI 730"
+          ],
+          "option": "Quantitative Stream"
+        },
+        {
+          "title": "0-12 credits from the following",
+          "courses": [
+            "SOCI 504",
+            "SOCI 580",
+            "SOCI 600",
+            "SOCI 652"
+          ],
+          "maxCredits": 12,
+          "option": "Quantitative Stream"
+        },
+        {
+          "title": "6 credits from the following 500-, 600-, or 700-level courses, 3 of the 6 credits must be on Gender & Women's Issues, chosen from among the following",
+          "unparsed": true,
+          "option": "Quantitative Stream"
+        },
+        {
+          "title": "If you are admitted at the Ph.D. 1 level and an exemption is obtained for one or more of the four courses above, another one, at the 500-level or higher, must then be substituted in its place",
+          "unparsed": true,
+          "option": "Quantitative Stream"
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

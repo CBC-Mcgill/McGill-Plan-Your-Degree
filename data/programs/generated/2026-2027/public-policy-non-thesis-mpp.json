@@ -1,0 +1,104 @@
+{
+  "id": "public-policy-non-thesis-mpp",
+  "name": "Public Policy (Non-Thesis)",
+  "degree": "M.P.P.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/public-policy/public-policy-non-thesis-mpp/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "PPOL 602",
+        "PPOL 604",
+        "PPOL 606",
+        "PPOL 609",
+        "PPOL 620"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "3 credits selected from the following courses",
+          "courses": [
+            "PPOL 611",
+            "PPOL 613"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from the following courses",
+          "courses": [
+            "PPOL 605",
+            "PPOL 608"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "PPOL 601",
+            "PPOL 603",
+            "PPOL 607",
+            "PPOL 610",
+            "PPOL 612",
+            "PPOL 614",
+            "PPOL 615",
+            "PPOL 616",
+            "PPOL 617",
+            "PPOL 618",
+            "PPOL 619"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "4 credits from the following courses",
+          "courses": [
+            "PPOL 631",
+            "PPOL 632",
+            "PPOL 633",
+            "PPOL 634",
+            "PPOL 635",
+            "PPOL 636",
+            "PPOL 637",
+            "PPOL 638"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        },
+        {
+          "title": "8 credits from the following courses",
+          "courses": [
+            "PPOL 640",
+            "PPOL 641",
+            "PPOL 642",
+            "PPOL 643",
+            "PPOL 644",
+            "PPOL 645",
+            "PPOL 646",
+            "PPOL 647",
+            "PPOL 648",
+            "PPOL 649",
+            "PPOL 650",
+            "PPOL 651",
+            "PPOL 652",
+            "PPOL 653"
+          ],
+          "minCredits": 8,
+          "maxCredits": 8
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

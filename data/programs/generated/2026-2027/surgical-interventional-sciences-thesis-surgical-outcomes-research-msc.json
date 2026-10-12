@@ -1,0 +1,66 @@
+{
+  "id": "surgical-interventional-sciences-thesis-surgical-outcomes-research-msc",
+  "name": "Surgical and Interventional Sciences (Thesis): Surgical Outcomes Research",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-interventional-sciences-thesis-surgical-outcomes-research-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "EXSU 610",
+        "EXSU 690",
+        "EXSU 691",
+        "EXSU 692",
+        "EXSU 693"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EPIB 600",
+            "EXMD 600"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EPIB 507",
+            "EXMD 634"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "EPIB 521",
+            "EPIB 629",
+            "EXSU 500",
+            "FMED 625",
+            "PPHS 527"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Or other relevant 500-, 600-, or 700-level courses upon approval of the student’s Research Advisory Committee",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

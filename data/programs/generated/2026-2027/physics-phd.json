@@ -1,0 +1,55 @@
+{
+  "id": "physics-phd",
+  "name": "Physics",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/physics/physics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "PHYS 700"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "PHYS 601",
+            "PHYS 602"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits at the 600 level or higher, with at least 3 credits in the candidate's area of specialization",
+          "unparsed": true
+        },
+        {
+          "title": "Students who completed two or more courses at the 600-level as part of the McGill M.Sc. in Physics program may contact the department to request a 3-credits exemption",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

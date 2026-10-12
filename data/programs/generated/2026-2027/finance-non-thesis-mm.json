@@ -1,0 +1,64 @@
+{
+  "id": "finance-non-thesis-mm",
+  "name": "Finance (Non-Thesis)",
+  "degree": "M.M.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/finance-non-thesis-mm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "ACCT 604",
+        "FINE 679",
+        "FINE 680",
+        "FINE 681",
+        "FINE 682",
+        "FINE 684",
+        "FINE 688"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "12 credits from",
+          "courses": [
+            "ACCT 605",
+            "FINE 674",
+            "FINE 677",
+            "FINE 678",
+            "FINE 683",
+            "FINE 685",
+            "FINE 686",
+            "FINE 687"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "12 credits from",
+          "courses": [
+            "FINE 670",
+            "FINE 671",
+            "FINE 689"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "or any other relevant 600-level courses offered by Desautels Faculty of Management with permission of the Program Adviser",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

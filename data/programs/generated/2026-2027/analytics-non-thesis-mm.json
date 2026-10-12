@@ -1,0 +1,83 @@
+{
+  "id": "analytics-non-thesis-mm",
+  "name": "Analytics (Non-Thesis)",
+  "degree": "M.M.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/analytics-non-thesis-mm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "BUSA 693",
+        "INSY 660",
+        "INSY 661",
+        "INSY 662",
+        "MGSC 660",
+        "MGSC 661",
+        "MGSC 662",
+        "ORGB 660",
+        "ORGB 661"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "BUSA 600",
+            "BUSA 649"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "15 credits from the following",
+          "courses": [
+            "ACCT 626",
+            "ACCT 696",
+            "BUSA 611",
+            "BUSA 613",
+            "BUSA 684",
+            "FINE 675",
+            "FINE 695",
+            "FINE 696",
+            "INSY 669",
+            "INSY 670",
+            "INSY 671",
+            "INSY 672",
+            "INSY 673",
+            "INSY 674",
+            "INSY 684",
+            "INSY 695",
+            "MGPO 695",
+            "MGSC 670",
+            "MGSC 672",
+            "MGSC 673",
+            "MGSC 674",
+            "MGSC 684",
+            "MGSC 695",
+            "MRKT 671",
+            "MRKT 672",
+            "MRKT 673",
+            "MRKT 674",
+            "MRKT 696",
+            "ORGB 671",
+            "ORGB 672",
+            "ORGB 695"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}
