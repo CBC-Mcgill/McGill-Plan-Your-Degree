@@ -184,6 +184,35 @@ test("a rule to check has a full-size button that fits a phone", async ({
   await expectNoSideScroll(page);
 });
 
+test("on a phone a student adds and removes a listed course with full-size targets", async ({
+  page,
+}) => {
+  await openStudent(page, "/next?req=complementary-courses", {
+    records: [done("ECON 305")],
+    programId: "economics-major-concentration-ba",
+    minorId: null,
+    entry: null,
+    plan: [],
+  });
+  const pane = page.getByRole("region", { name: "Complementary courses" });
+  const add = pane.getByRole("button", { name: "Add a course" });
+  expect((await add.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+  await add.tap();
+  const search = page.getByRole("combobox", { name: "Add a course" });
+  expect((await search.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+  await search.fill("ECON 305");
+  await page.getByRole("option", { name: /ECON 305/ }).tap();
+  const remove = pane.getByRole("button", { name: "Remove ECON 305" });
+  await expect(remove).toBeVisible();
+  expect((await remove.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+  await expectNoSideScroll(page);
+  await remove.tap();
+  await expect(
+    pane.getByRole("list", { name: "Courses you listed" }),
+  ).toHaveCount(0);
+  await expectNoSideScroll(page);
+});
+
 test("on a phone a doctorate reads its progress as requirements met", async ({
   page,
 }) => {

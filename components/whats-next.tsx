@@ -4,11 +4,13 @@ import { cn } from "cn";
 import {
   ChevronLeft,
   ChevronRight,
+  Plus,
   TriangleAlert,
   UserCheck,
 } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { AlertDialog } from "radix-ui";
 import {
   Fragment,
   type ReactNode,
@@ -30,6 +32,7 @@ import { CreditsLabel } from "@/components/credits-label";
 import { CatalogueLink, VsbLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
+import { CourseSearch, type PickState } from "@/components/plan/add-course";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
 import {
   BAR_WITH_LEGEND,
@@ -37,6 +40,7 @@ import {
   RoomLeft,
 } from "@/components/program-bars";
 import {
+  STATUS,
   type Status,
   StatusBadge,
   StatusBar,
@@ -48,6 +52,7 @@ import { CARD, Card } from "@/components/ui/card";
 import { Disclosure, ShowMore } from "@/components/ui/disclosure";
 import { Term as Defined } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
+import { indexCourses } from "@/lib/catalogue/search";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
@@ -72,9 +77,11 @@ import {
   picksOne,
   programSplit,
   programStanding,
+  replaceKey,
   splitCourses,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
+import { courseStatus } from "@/lib/engine/status";
 import { sentence } from "@/lib/format";
 import {
   type Definition,
@@ -118,6 +125,8 @@ interface Fact {
 
 interface Context {
   catalogue: Catalogue;
+  /** With the plan, for the status of a course the student searches for. */
+  snapshot: Snapshot;
   term: Term;
   /** Course code to the term the plan starts it in. */
   planned: ReadonlyMap<string, Term>;
@@ -298,7 +307,7 @@ function Page({
     [catalogue, judged, term, minor, entry, overlap, minorWithPlan],
   );
   const unclaimed = withPlan?.unclaimed ?? [];
-  const context: Context = { catalogue, term, planned, facts };
+  const context: Context = { catalogue, snapshot, term, planned, facts };
   const pair = pairOf(program, minor);
 
   if (!program || !view.progress) {
@@ -574,10 +583,11 @@ function Page({
   );
 }
 
-/** A required group of 0-credit courses, such as a comprehensive examination, counts courses instead. */
+/** A required group of 0-credit courses, such as a comprehensive examination, counts courses instead. A group of rules to check counts credits once the student lists courses under one. */
 const countsCredits = (group: GroupProgress) =>
   group.credits > 0 &&
-  (group.kind === "required" || group.rules.some((rule) => !rule.unparsed));
+  (group.kind === "required" ||
+    group.rules.some((rule) => !rule.unparsed || rule.listed));
 
 const checksText = (checks: number) =>
   checks === 1 ? "1 rule to check" : `${checks} rules to check`;
@@ -1058,6 +1068,13 @@ function GroupBody({
           credit. Check your choice with your advisor.
         </p>
       )}
+      {group.replaces && (
+        <RuleCourses
+          ruleKey={replaceKey(program)}
+          listed={group.rules[0]?.listed ?? []}
+          context={context}
+        />
+      )}
       {definition?.kind === "complementary" &&
         picksOne(definition) &&
         !open?.buckets.some((bucket) => bucket.stream) && (
@@ -1128,23 +1145,30 @@ function GroupBody({
               source={program.source}
               ruleKey={key}
               confirmed={group.rules[i]?.confirmed === true}
-              keepPane={context.keepPane}
+              listed={group.rules[i]?.listed ?? []}
+              context={context}
             />
           ))}
         </ul>
       )}
-      {group.rules.some((rule) => rule.adviser) && (
-        <ul>
-          {group.rules.map(
-            (rule, i) =>
-              rule.adviser &&
-              (rule.option === undefined || rule.option === group.option) && (
-                // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
-                <AdviserRow key={i} text={rule.title} />
-              ),
-          )}
-        </ul>
-      )}
+      {definition?.kind === "complementary" &&
+        group.rules.some((rule) => rule.adviser) && (
+          <ul>
+            {definition.rules.map(
+              (rule, i) =>
+                rule.adviser &&
+                (rule.option === undefined || rule.option === group.option) && (
+                  <AdviserRow
+                    key={checkKey(program, definition, rule)}
+                    text={rule.title}
+                    ruleKey={checkKey(program, definition, rule)}
+                    listed={group.rules[i]?.listed ?? []}
+                    context={context}
+                  />
+                ),
+            )}
+          </ul>
+        )}
       <Counted courses={group.courses} context={context} heading={heading} />
     </>
   );
@@ -1393,19 +1417,18 @@ const stub = (code: string): CourseSummary => ({
 
 const byCode = (a: Claimed, b: Claimed) => (a.code < b.code ? -1 : 1);
 
-/** A course a requirement counts, or one no requirement counts, with the student's status and term for it. */
+/** A course a requirement counts, one no requirement counts or one the student listed, with the student's status and term for it. */
 function CountedRow({
   claimed: { code, credits },
   context,
+  action,
 }: {
   claimed: Claimed;
   context: Context;
+  action?: ReactNode;
 }) {
   const { catalogue, facts } = context;
-  const { status, term } = facts.get(code) ?? {
-    status: "completed",
-    term: null,
-  };
+  const { status, term } = facts.get(code) ?? { status: null, term: null };
   const course = catalogue.get(code) ?? stub(code);
   // An exemption or a DEC equivalent meets the requirement, but its credits go to the replace group.
   const toReplace =
@@ -1418,11 +1441,16 @@ function CountedRow({
       share={shareFor(code, context)}
       note={
         <>
-          <StatusBadge status={status} />
+          {status ? (
+            <StatusBadge status={status} />
+          ) : (
+            <StatusBadge status="available" word={COPY.notTaken} />
+          )}
           {term && <span>{termLabel(term)}</span>}
           {toReplace && <span>{toReplace}</span>}
         </>
       }
+      action={action}
     />
   );
 }
@@ -1508,30 +1536,37 @@ function Rows({
   );
 }
 
-/** A rule the crawler could not read. It shows the catalogue text and links to the program, and counts as met once the student marks it as checked. Below 768px the button moves under the text. */
+/** A rule's list sits under its text, its rows bleeding to the card's right edge only. */
+const UNDER_RULE = "basis-full pl-6 [&_li]:-ml-2 [&_li]:pl-2";
+
+/** A rule the crawler could not read. It shows the catalogue text, links to the program and lists the courses the student counts for it. It counts as met once the student marks it as checked, after they confirm their listed courses meet it. Below 1024px the button is 44px tall, and below 768px it moves under the list. */
 function CheckRow({
   text,
   source,
   ruleKey,
   confirmed,
-  keepPane,
+  listed,
+  context,
 }: {
   text: string;
   source: string;
   ruleKey: string;
   confirmed: boolean;
-  keepPane?: () => void;
+  listed: Claimed[];
+  context: Context;
 }) {
   const setChecked = useProfileStore((state) => state.setChecked);
   const textId = useId();
+  const [asking, setAsking] = useState(false);
+  const button = useRef<HTMLButtonElement>(null);
 
-  function toggle() {
-    keepPane?.();
-    setChecked(ruleKey, !confirmed);
+  function mark(checked: boolean) {
+    context.keepPane?.();
+    setChecked(ruleKey, checked);
   }
 
   return (
-    <li className="flex min-h-11 items-start gap-2 py-3 max-md:flex-wrap">
+    <li className="flex min-h-11 flex-wrap items-start gap-2 py-3">
       <span className="flex h-5 w-4 shrink-0 items-center">
         {confirmed ? (
           <StatusIcon status="completed" />
@@ -1553,34 +1588,256 @@ function CheckRow({
         <CatalogueLink href={coursesTab(source)} />
       </p>
       <Button
+        ref={button}
         variant="secondary"
         aria-describedby={textId}
-        onClick={toggle}
-        className="-my-2 max-md:my-0 max-md:ml-6 max-md:h-11"
+        onClick={() =>
+          confirmed
+            ? mark(false)
+            : listed.length > 0
+              ? setAsking(true)
+              : mark(true)
+        }
+        className="-my-2 max-lg:-my-3 max-lg:h-11 max-md:order-last max-md:my-0 max-md:ml-6"
       >
         {confirmed ? COPY.undo : COPY.markChecked}
       </Button>
+      <RuleCourses
+        ruleKey={ruleKey}
+        listed={listed}
+        describedBy={textId}
+        context={context}
+        className={UNDER_RULE}
+      />
+      <AlertDialog.Root open={asking} onOpenChange={setAsking}>
+        <AlertDialog.Portal>
+          <AlertDialog.Overlay className="fixed inset-0 z-50 bg-scrim transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none" />
+          <AlertDialog.Content
+            // With no trigger, focus goes back to the button by hand.
+            onCloseAutoFocus={(event) => {
+              event.preventDefault();
+              button.current?.focus();
+            }}
+            className="fixed top-1/2 left-1/2 z-50 max-h-[calc(100dvh-2rem)] w-[32rem] max-w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-lg bg-bg p-6 shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
+          >
+            <AlertDialog.Title>{COPY.meetsRequirement}</AlertDialog.Title>
+            <AlertDialog.Description className="mt-2 text-fg-muted">
+              {text}
+            </AlertDialog.Description>
+            <ul aria-label={COPY.listedCourses} className="mt-4">
+              {listed.map(({ code, credits }) => (
+                <li
+                  key={code}
+                  className="flex gap-4 border-line border-t py-2 first:border-t-0"
+                >
+                  <span className="w-24 shrink-0 font-semibold">
+                    <CourseCode code={code} />
+                  </span>
+                  <span className="min-w-0 flex-1 truncate max-md:whitespace-normal">
+                    {context.catalogue.get(code)?.title}
+                  </span>
+                  <span className="shrink-0 text-fg-muted tabular-nums">
+                    {COPY.credits(credits)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="flex justify-between border-line border-t pt-2 font-semibold tabular-nums">
+              <span>Total</span>
+              {COPY.credits(listed.reduce((sum, c) => sum + c.credits, 0))}
+            </p>
+            <div className="mt-6 flex justify-end gap-2 max-md:flex-col-reverse max-md:gap-3 max-md:[&>button]:h-11">
+              <AlertDialog.Cancel asChild>
+                <Button variant="secondary">{COPY.notYet}</Button>
+              </AlertDialog.Cancel>
+              <AlertDialog.Action asChild>
+                <Button onClick={() => mark(true)}>
+                  {COPY.confirmChecked}
+                </Button>
+              </AlertDialog.Action>
+            </div>
+          </AlertDialog.Content>
+        </AlertDialog.Portal>
+      </AlertDialog.Root>
     </li>
   );
 }
 
-/** A rule whose courses the student's adviser must approve. It counts like any rule and shows the catalogue text with a reminder. */
-function AdviserRow({ text }: { text: string }) {
+/** A rule whose courses the student's adviser must approve. It counts like any rule, shows the catalogue text with a reminder and lists the courses the student counts for it. */
+function AdviserRow({
+  text,
+  ruleKey,
+  listed,
+  context,
+}: {
+  text: string;
+  ruleKey: string;
+  listed: Claimed[];
+  context: Context;
+}) {
+  const textId = useId();
   return (
-    <li className="flex min-h-11 items-start gap-2 py-3">
+    <li className="flex min-h-11 flex-wrap items-start gap-2 py-3">
       <span className="flex h-5 w-4 shrink-0 items-center">
         <UserCheck aria-hidden className="size-4 text-fg-muted" />
       </span>
-      <p className="min-w-0">
+      <p className="min-w-0 flex-1">
         <span className="font-semibold">
           <Defined def={GLOSSARY.adviserApproval} />
         </span>
         <span className="text-fg-muted">
           {dot}
-          {text}
+          <span id={textId}>{text}</span>
         </span>
       </p>
+      <RuleCourses
+        ruleKey={ruleKey}
+        listed={listed}
+        describedBy={textId}
+        context={context}
+        className={UNDER_RULE}
+      />
     </li>
+  );
+}
+
+/** The courses the student listed under a rule, each with its status from the transcript and the plan, then "Add a course" to search the catalogue for another. */
+function RuleCourses({
+  ruleKey,
+  listed,
+  describedBy,
+  context,
+  className,
+}: {
+  ruleKey: string;
+  listed: Claimed[];
+  /** The rule's text, so each button names the rule it acts on. */
+  describedBy?: string;
+  context: Context;
+  className?: string;
+}) {
+  const setAssigned = useProfileStore((state) => state.setAssigned);
+  const [adding, setAdding] = useState(false);
+  const toggle = useRef<HTMLButtonElement>(null);
+  const searchId = useId();
+  const codes = listed.map(({ code }) => code);
+
+  function save(next: string[]) {
+    context.keepPane?.();
+    setAssigned(ruleKey, next);
+  }
+
+  function close() {
+    setAdding(false);
+    toggle.current?.focus();
+  }
+
+  return (
+    <div className={className}>
+      {listed.length > 0 && (
+        <>
+          <p className="text-fg-muted">
+            <Defined def={GLOSSARY.listedCourses} />
+          </p>
+          <ul aria-label={COPY.listedCourses}>
+            {listed.map((claimed) => (
+              <CountedRow
+                key={claimed.code}
+                claimed={claimed}
+                context={context}
+                action={
+                  <Button
+                    variant="secondary"
+                    aria-label={`Remove ${claimed.code}`}
+                    aria-describedby={describedBy}
+                    onClick={() => {
+                      save(codes.filter((code) => code !== claimed.code));
+                      toggle.current?.focus();
+                    }}
+                    className="max-lg:h-11"
+                  >
+                    Remove
+                  </Button>
+                }
+              />
+            ))}
+          </ul>
+        </>
+      )}
+      <Button
+        ref={toggle}
+        variant="ghost"
+        aria-expanded={adding}
+        aria-controls={searchId}
+        aria-describedby={describedBy}
+        onClick={() => (adding ? close() : setAdding(true))}
+        className="-ml-2 px-2 max-lg:h-11"
+      >
+        <Plus aria-hidden />
+        {COPY.addCourse}
+      </Button>
+      <div
+        id={searchId}
+        hidden={!adding}
+        className="mt-2 max-w-md max-lg:max-w-none"
+      >
+        {adding && (
+          <RulePicker
+            codes={codes}
+            onPick={(code) => save([...codes, code])}
+            onClose={close}
+            context={context}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** The catalogue search under a rule's list, focused when it opens. A course already listed cannot be picked again. */
+function RulePicker({
+  codes,
+  onPick,
+  onClose,
+  context: { catalogue, snapshot },
+}: {
+  codes: string[];
+  onPick: (code: string) => void;
+  onClose: () => void;
+  context: Context;
+}) {
+  const index = useMemo(() => indexCourses(catalogue.values()), [catalogue]);
+  const wrap = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    wrap.current?.querySelector("input")?.focus();
+  }, []);
+
+  const stateOf = (course: CourseSummary): PickState => {
+    const { status } = courseStatus(course, snapshot);
+    const listed = codes.includes(course.code);
+    return {
+      status,
+      disabled: listed,
+      reason: "is already in your list",
+      note: listed
+        ? "Listed"
+        : status === "available" || status === "locked"
+          ? ""
+          : STATUS[status].label,
+    };
+  };
+
+  return (
+    <div ref={wrap}>
+      <CourseSearch
+        label={COPY.addCourse}
+        placeholder="Search all courses, like COMP 251"
+        index={index}
+        stateOf={stateOf}
+        onPick={(course) => onPick(course.code)}
+        onEscape={onClose}
+      />
+    </div>
   );
 }
 

@@ -29,6 +29,8 @@ export interface Snapshot {
   covered: ReadonlySet<string>;
   /** Rules the crawler could not read that the student marked as checked, by `checkKey`. */
   checked: ReadonlySet<string>;
+  /** Courses the student listed under a rule, by `checkKey`, in the order added. */
+  assigned: ReadonlyMap<string, readonly string[]>;
 }
 
 /** Courses a Quebec Science DEC covers at every CEGEP, from mcgill.ca/transfercredit/prospective/cegep. They meet prerequisites but carry no McGill credit. */
@@ -49,6 +51,7 @@ export function buildSnapshot(
   plan: Plan = [],
   entry: EntryRoute | null = null,
   checked: readonly string[] = [],
+  assigned: Readonly<Record<string, readonly string[]>> = {},
 ): Snapshot {
   const done = new Set<string>();
   const earned = new Map<string, number | null>();
@@ -97,5 +100,6 @@ export function buildSnapshot(
     taken: new Set([...done, ...inProgress.keys()]),
     covered,
     checked: new Set(checked),
+    assigned: new Map(Object.entries(assigned)),
   };
 }

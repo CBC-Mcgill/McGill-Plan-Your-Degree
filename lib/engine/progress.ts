@@ -41,6 +41,8 @@ export interface RuleProgress {
   unparsed?: true;
   /** An unparsed rule the student marked as checked, so it counts as met. */
   confirmed?: true;
+  /** The courses the student listed under the rule, in the order added, with their credits. The ones the basis counts are claimed first, up to the group's credits. */
+  listed?: Claimed[];
   /** The student's adviser must approve the courses, so the page shows a reminder. */
   adviser?: true;
   /** The counted courses must span this many subjects. */
@@ -95,6 +97,9 @@ export interface ProgramProgress {
 
 /** Title of the group that makes up the credits of required courses met without credit. */
 export const REPLACE_TITLE = "Replace exempted credits";
+
+/** The replace group's one rule, open to any course. */
+const ANY_COURSE: Rule = { title: "Any course", match: {} };
 
 function matchesMatch(match: Match, code: string): boolean {
   const space = code.indexOf(" ");
@@ -331,26 +336,53 @@ function requiredProgress(
   };
 }
 
-/** The key a rule the student marked as checked is saved under. The same text recurs in two streams of one group and in groups that share a title, so it holds the option and how many groups of that title come before. */
+/** The key a rule the student marked as checked, or listed courses under, is saved under. The same text recurs in two streams of one group and in groups that share a title, so it holds the option and how many groups of that title come before. */
 export function checkKey(
   program: Program,
   group: ComplementaryGroup,
   rule: Rule,
 ): string {
   const before = program.groups
-    .slice(0, program.groups.indexOf(group))
+    .slice(0, Math.max(0, program.groups.indexOf(group)))
     .filter((g) => g.title === group.title).length;
   return [program.id, group.title, before, rule.option ?? "", rule.title].join(
     "\u0000",
   );
 }
 
-/** `confirmed` tells which unparsed rules the student marked as checked. `streams` is false inside one option's count, which keeps each rule's option for its key. The group stops taking courses once it holds `limit` credits. */
+const replaceGroup = (credits: number): ComplementaryGroup => ({
+  title: REPLACE_TITLE,
+  kind: "complementary",
+  credits,
+  rules: [ANY_COURSE],
+});
+
+/** The key the courses the student picks for the replace group are saved under. */
+export const replaceKey = (program: Program) =>
+  checkKey(program, replaceGroup(0), ANY_COURSE);
+
+/** What the student marked on a program's rules. */
+interface Marks {
+  /** The unparsed rules the student marked as checked. */
+  confirmed: (rule: Rule) => boolean;
+  /** The courses the student listed under a rule. */
+  listed: (rule: Rule) => Claimed[];
+  /** Every course listed under a rule of the program, which no group counts unless its rule lists it. */
+  reserved: ReadonlySet<string>;
+}
+
+const NO_MARKS: Marks = {
+  confirmed: () => false,
+  listed: () => [],
+  reserved: new Set(),
+};
+
+/** `streams` is false inside one option's count, which keeps each rule's option for its key. The group stops taking courses once it holds `limit` credits. */
 function complementaryProgress(
   group: ComplementaryGroup,
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
-  confirmed: (rule: Rule) => boolean = () => false,
+  marks: Marks = NO_MARKS,
   streams = true,
   limit = group.credits,
 ): GroupProgress {
@@ -367,7 +399,7 @@ function complementaryProgress(
         { ...group, rules: mine.map(({ rule }) => rule) },
         counted,
         new Set(used),
-        confirmed,
+        marks,
         false,
         limit,
       );
@@ -394,16 +426,20 @@ function complementaryProgress(
   }
   const pool = new Map<string, number>();
   for (const [code, credits] of counted) {
-    if (!used.has(code) && counts(group, code)) pool.set(code, credits);
+    if (!used.has(code) && !marks.reserved.has(code) && counts(group, code)) {
+      pool.set(code, credits);
+    }
   }
   const state = group.rules.map((rule) => ({
     rule,
+    listed: marks.listed(rule),
     creditsDone: 0,
     coursesDone: 0,
     courses: [] as Claimed[],
   }));
   const chosen = new Map<string, number>();
   let total = 0;
+  const full = () => total >= limit && chosen.size >= (group.minCourses ?? 0);
 
   const fits = (code: string, credits: number) =>
     fitsCaps(group, state, code, credits);
@@ -411,13 +447,33 @@ function complementaryProgress(
     chosen.set(code, credits);
     total += credits;
     for (const s of state) {
-      if (ruleMatches(s.rule, code)) {
+      if (
+        ruleMatches(s.rule, code) ||
+        s.listed.some((listed) => listed.code === code)
+      ) {
         s.creditsDone += credits;
         s.coursesDone++;
         s.courses.push({ code, credits });
       }
     }
   };
+
+  // Courses the student listed count first, up to the group's credits and the rule's cap.
+  for (const s of state) {
+    for (const { code } of s.listed) {
+      const credits = counted.get(code);
+      if (full()) break;
+      if (
+        credits !== undefined &&
+        !used.has(code) &&
+        !chosen.has(code) &&
+        (s.rule.maxCredits === undefined ||
+          s.creditsDone + credits <= s.rule.maxCredits)
+      ) {
+        take(code, credits);
+      }
+    }
+  }
 
   // ponytail: greedy per group in file order with no backtracking, so a course two groups could use goes to the first. Upgrade to matching if real transcripts hit it.
   for (const s of state) {
@@ -442,31 +498,34 @@ function complementaryProgress(
     }
   }
   for (const [code, credits] of pool) {
-    if (total >= limit && chosen.size >= (group.minCourses ?? 0)) break;
+    if (full()) break;
     if (!chosen.has(code) && fits(code, credits)) take(code, credits);
   }
 
   for (const code of chosen.keys()) used.add(code);
-  const rules = state.map(({ rule, creditsDone, coursesDone, courses }) => {
-    const checked = rule.unparsed === true && confirmed(rule);
-    return {
-      title: rule.title,
-      creditsDone,
-      coursesDone,
-      courses,
-      minCredits: rule.minCredits,
-      minCourses: rule.minCourses,
-      unparsed: rule.unparsed,
-      ...(checked && { confirmed: true as const }),
-      adviser: rule.adviser,
-      minSubjects: rule.minSubjects,
-      satisfied: rule.unparsed
-        ? checked
-        : creditsDone >= (rule.minCredits ?? 0) &&
-          coursesDone >= (rule.minCourses ?? 0) &&
-          subjectsIn(courses) >= (rule.minSubjects ?? 0),
-    };
-  });
+  const rules = state.map(
+    ({ rule, listed, creditsDone, coursesDone, courses }) => {
+      const checked = rule.unparsed === true && marks.confirmed(rule);
+      return {
+        title: rule.title,
+        creditsDone,
+        coursesDone,
+        courses,
+        minCredits: rule.minCredits,
+        minCourses: rule.minCourses,
+        unparsed: rule.unparsed,
+        ...(checked && { confirmed: true as const }),
+        ...(listed.length > 0 && { listed }),
+        adviser: rule.adviser,
+        minSubjects: rule.minSubjects,
+        satisfied: rule.unparsed
+          ? checked
+          : creditsDone >= (rule.minCredits ?? 0) &&
+            coursesDone >= (rule.minCourses ?? 0) &&
+            subjectsIn(courses) >= (rule.minSubjects ?? 0),
+      };
+    },
+  );
   // Nothing can count toward a group of only unparsed rules and reminders, so once every unparsed one is checked it is met in full.
   const checked =
     rules.some((rule) => rule.confirmed) &&
@@ -533,28 +592,42 @@ export function programProgress(
       );
     }
   }
-  const confirmed = (group: ComplementaryGroup) => (rule: Rule) =>
-    snapshot.checked.has(checkKey(program, group, rule));
-  for (const group of program.groups) {
-    if (!credited(group) && group.kind === "complementary") {
-      results.set(
-        group,
-        complementaryProgress(group, counted, used, confirmed(group)),
-      );
-    }
+  const listedUnder = (key: string) => snapshot.assigned.get(key) ?? [];
+  const open = program.groups.filter(
+    (group): group is ComplementaryGroup =>
+      !credited(group) && group.kind === "complementary",
+  );
+  // A listed course waits for its rule, so a group before it never takes it.
+  const reserved = new Set([
+    ...open.flatMap((group) =>
+      group.rules.flatMap((rule) =>
+        listedUnder(checkKey(program, group, rule)),
+      ),
+    ),
+    ...listedUnder(replaceKey(program)),
+  ]);
+  const marks = (group: ComplementaryGroup): Marks => ({
+    confirmed: (rule) => snapshot.checked.has(checkKey(program, group, rule)),
+    listed: (rule) =>
+      listedUnder(checkKey(program, group, rule)).map((code) => ({
+        code,
+        credits: counted.get(code) ?? creditsOf(code),
+      })),
+    reserved,
+  });
+  for (const group of open) {
+    results.set(
+      group,
+      complementaryProgress(group, counted, used, marks(group)),
+    );
   }
   const groups = program.groups.flatMap((group) => results.get(group) ?? []);
   const moved = replaces.reduce((sum, claimed) => sum + claimed.credits, 0);
   if (moved > 0) {
     // Last, so it takes only what no group of the program wanted. It stays after the program's groups, so their indexes still line up.
-    const replace: ComplementaryGroup = {
-      title: REPLACE_TITLE,
-      kind: "complementary",
-      credits: moved,
-      rules: [{ title: "Any course", match: {} }],
-    };
+    const replace = replaceGroup(moved);
     groups.push({
-      ...complementaryProgress(replace, counted, used),
+      ...complementaryProgress(replace, counted, used, marks(replace)),
       replaces,
     });
   }
@@ -575,7 +648,7 @@ export function programProgress(
       group,
       counted,
       used,
-      confirmed(group),
+      marks(group),
       true,
       group.maxCredits,
     );

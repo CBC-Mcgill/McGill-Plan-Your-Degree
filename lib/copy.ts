@@ -101,6 +101,12 @@ export const COPY = {
   checkRequirement: "Check this requirement",
   checkedByYou: "Checked by you",
   markChecked: "Mark as checked",
+  addCourse: "Add a course",
+  listedCourses: "Courses you listed",
+  meetsRequirement: "Do these courses meet the requirement?",
+  confirmChecked: "Yes, mark as checked",
+  notYet: "Not yet",
+  notTaken: "Not taken",
   adviserApproval: "Your advisor must approve these courses",
   pickOne:
     "Complete one of these streams. The one you are furthest along in counts.",

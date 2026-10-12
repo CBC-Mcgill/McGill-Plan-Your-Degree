@@ -64,6 +64,8 @@ export interface Profile {
   importedAt: string | null;
   /** Rules the crawler could not read that the student marked as checked, as `checkKey` builds them. Keys of a program the profile no longer uses stay and do no harm. */
   checked: string[];
+  /** Courses the student listed under a rule the crawler could not read, an adviser-approval rule or the replace group's rule, by `checkKey`, in the order added. Their status still comes from the records and the plan. */
+  assigned: Record<string, string[]>;
 }
 
 const SEASON_ORDER: Record<Season, number> = { Winter: 0, Summer: 1, Fall: 2 };

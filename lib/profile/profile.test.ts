@@ -82,23 +82,30 @@ test("applyTranscript maps lines to records and keeps manual ones", () => {
 });
 
 test("parseProfileFile rejects a malformed file and round-trips an export", () => {
-  store
-    .getState()
-    .setChecked("economics-major-concentration-ba\u0000Rule", true);
+  const rule = "economics-major-concentration-ba\u0000Rule";
+  store.getState().setChecked(rule, true);
+  store.getState().setAssigned(rule, ["ECON 340", "ECON 468"]);
+  store.getState().setAssigned(`${rule} 2`, []);
   const exported = exportProfile(store.getState());
   expect(parseProfileFile(exported)).toEqual({
     ok: true,
     profile: JSON.parse(exported).profile,
   });
-  expect(JSON.parse(exported).profile.checked).toEqual([
-    "economics-major-concentration-ba\u0000Rule",
-  ]);
+  const { checked, assigned } = JSON.parse(exported).profile;
+  expect(checked).toEqual([rule]);
+  expect(assigned).toEqual({ [rule]: ["ECON 340", "ECON 468"] });
 
   const file = JSON.parse(exported);
   file.profile.records[0].status = "graduated";
   expect(parseProfileFile(JSON.stringify(file))).toEqual({
     ok: false,
     error: expect.stringContaining("profile.records[0].status"),
+  });
+  const listed = JSON.parse(exported);
+  listed.profile.assigned[rule] = ["ECON 340", "not a code"];
+  expect(parseProfileFile(JSON.stringify(listed))).toEqual({
+    ok: false,
+    error: expect.stringContaining("profile.assigned[0][1]"),
   });
   expect(parseProfileFile("not json").ok).toBe(false);
 });
@@ -142,7 +149,7 @@ test("a version 3 file loads without a minor, and a minor survives an export", (
   };
   expect(parseProfileFile(JSON.stringify(file))).toMatchObject({
     ok: true,
-    profile: { minorId: null, checked: [] },
+    profile: { minorId: null, checked: [], assigned: {} },
   });
   const exported = exportProfile({
     ...store.getState(),

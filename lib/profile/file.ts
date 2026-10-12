@@ -10,7 +10,7 @@ import {
   termKey,
 } from "./types.ts";
 
-export const PROFILE_VERSION = 5;
+export const PROFILE_VERSION = 6;
 
 const FORMAT = "plan-your-degree-profile";
 const MAX_FILE_CHARS = 1_000_000;
@@ -18,6 +18,7 @@ const MAX_RECORDS = 2000;
 const MAX_PLAN_TERMS = 60;
 const MAX_TERM_COURSES = 30;
 const MAX_CHECKED = 1000;
+const MAX_LISTED = 60;
 // Loose on purpose, since the catalogue has codes like FIGG MYR1 and HIST 298AA.
 const CODE = /^[A-Z0-9]{4} [A-Z0-9]{3,6}$/;
 const PART = /^[DJN]\d$/;
@@ -136,6 +137,27 @@ function plan(value: unknown, path: string): Plan {
   return result;
 }
 
+/** Rule keys to the course codes listed under each, as `checkKey` builds them. */
+function assigned(value: unknown, path: string): Record<string, string[]> {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) {
+    bad(path, "must be an object");
+  }
+  const entries = Object.entries(value);
+  if (entries.length > MAX_CHECKED) {
+    bad(path, `can hold at most ${MAX_CHECKED} rules`);
+  }
+  return Object.fromEntries(
+    entries.map(([key, codes], i) => {
+      const at = `${path}[${i}]`;
+      const list = array(codes, at, MAX_LISTED).map((c, j) =>
+        code(c, `${at}[${j}]`),
+      );
+      if (new Set(list).size !== list.length) bad(at, "lists a course twice");
+      return [text(key, `${at} key`, 2000), list];
+    }),
+  );
+}
+
 function programId(value: unknown, path: string): string {
   const id = text(value, path, 100);
   if (!PROGRAM_ID.test(id))
@@ -157,6 +179,7 @@ function profile(value: unknown): Profile {
     "creditLimit",
     "importedAt",
     "checked",
+    "assigned",
   ]);
   return {
     records: array(o.records, "profile.records", MAX_RECORDS).map((r, i) =>
@@ -197,6 +220,7 @@ function profile(value: unknown): Profile {
     checked: array(o.checked, "profile.checked", MAX_CHECKED).map((key, i) =>
       text(key, `profile.checked[${i}]`, 2000),
     ),
+    assigned: assigned(o.assigned, "profile.assigned"),
   };
 }
 
@@ -231,6 +255,9 @@ export function migrateProfile(data: unknown, version: number): unknown {
   if (version < 5 && typeof migrated === "object" && migrated !== null) {
     migrated = { checked: [], ...migrated };
   }
+  if (version < 6 && typeof migrated === "object" && migrated !== null) {
+    migrated = { assigned: {}, ...migrated };
+  }
   return migrated;
 }
 
@@ -249,6 +276,7 @@ export function profileOf(state: Profile): Profile {
     creditLimit: state.creditLimit,
     importedAt: state.importedAt,
     checked: state.checked,
+    assigned: state.assigned,
   };
 }
 

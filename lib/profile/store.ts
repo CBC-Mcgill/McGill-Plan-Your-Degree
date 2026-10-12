@@ -81,6 +81,8 @@ export interface ProfileActions {
   setCreditLimit: (creditLimit: number) => void;
   /** Marks a rule from `checkKey` as checked by the student, or takes the mark back. */
   setChecked: (key: string, checked: boolean) => void;
+  /** Replaces the courses listed under a rule from `checkKey`. An empty list drops the key. */
+  setAssigned: (key: string, codes: string[]) => void;
   /** A course sits in one term at most, so adding it again moves it. */
   addToPlan: (term: Term, code: string) => void;
   removeFromPlan: (term: Term, code: string) => void;
@@ -106,6 +108,7 @@ const initial: Profile = {
   creditLimit: 17,
   importedAt: null,
   checked: [],
+  assigned: {},
 };
 
 /** The record a transcript line becomes. */
@@ -199,6 +202,13 @@ export const useProfileStore = create<ProfileState>()(
             ...state.checked.filter((k) => k !== key),
             ...(checked ? [key] : []),
           ],
+        })),
+      setAssigned: (key, codes) =>
+        set((state) => ({
+          assigned: Object.fromEntries([
+            ...Object.entries(state.assigned).filter(([k]) => k !== key),
+            ...(codes.length > 0 ? [[key, codes]] : []),
+          ]),
         })),
       addToPlan: (term, code) =>
         set((state) => ({ plan: put(state.plan, term, code) })),

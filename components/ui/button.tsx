@@ -3,7 +3,7 @@ import { cn } from "cn";
 import { Slot } from "radix-ui";
 import type * as React from "react";
 
-/** One red primary per screen at most, a white bevelled button for everything else. 36px tall with 8px corners, never a pill. A disabled primary turns neutral, since red means "do this". */
+/** One red primary per screen at most, a white bevelled button for everything else, and a flat ghost as a bevelled button's quieter sibling. 36px tall with 8px corners, never a pill. A disabled primary turns neutral, since red means "do this". */
 const buttonVariants = cva(
   "inline-flex h-9 shrink-0 select-none items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold text-sm transition-[background-color,box-shadow,translate] duration-100 active:translate-y-px active:shadow-pressed disabled:pointer-events-none motion-reduce:transition-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
@@ -15,6 +15,7 @@ const buttonVariants = cva(
           "bg-bg px-3 text-fg shadow-button hover:bg-subtle disabled:opacity-50",
         danger:
           "bg-bg px-3 text-danger shadow-button hover:bg-subtle disabled:opacity-50",
+        ghost: "px-3 text-fg hover:bg-tint disabled:opacity-50",
       },
       /** A 36px square for an icon with an aria-label. */
       icon: { true: "w-9 px-0" },
