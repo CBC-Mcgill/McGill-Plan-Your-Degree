@@ -4,9 +4,16 @@ import meta from "../../data/catalogue/meta.json";
 import type { Course } from "../catalogue/types.ts";
 import type { CourseRecord, Profile, Season } from "../profile/types.ts";
 import { getProgram } from "../programs/index.ts";
-import type { Program } from "../programs/types.ts";
-import { degreeStanding, earnedCredits } from "./credits.ts";
-import { minorOverlap, programStanding } from "./progress.ts";
+import type { ComplementaryGroup, Program, Rule } from "../programs/types.ts";
+import {
+  degreeCredits,
+  degreeStanding,
+  earnedCredits,
+  requirementSplit,
+  requirementsMet,
+  standingCredits,
+} from "./credits.ts";
+import { checkKey, minorOverlap, programStanding } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { canTakeNow } from "./status.ts";
 
@@ -125,6 +132,73 @@ test("a CEGEP engineering student's degree and program credits agree, Year 0 cou
   // 12 course credits plus the 22 credited Year 0 credits. A 25-credit CEGEP lump sum leaves 3 for the elective.
   expect(earned(0)).toEqual([34, 34]);
   expect(earned(25)).toEqual([37, 37]);
+});
+
+test("a graduate program ignores the entry, and a doctorate counts requirements met instead of credits", () => {
+  const rule: Rule = {
+    title: "A thesis for the doctoral degree",
+    unparsed: true,
+  };
+  const thesis: ComplementaryGroup = {
+    title: "Thesis",
+    kind: "complementary",
+    credits: 0,
+    rules: [rule],
+  };
+  const doctorate: Program = {
+    id: "computer-science-phd",
+    name: "Computer Science",
+    degree: "Ph.D.",
+    faculty: "Science",
+    catalogueYear: meta.catalogueYear,
+    source:
+      "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-phd/",
+    credits: 0,
+    level: "graduate",
+    groups: [
+      thesis,
+      {
+        title: "Required Courses",
+        kind: "required",
+        credits: 4,
+        courses: ["COMP 604", "COMP 700", "COMP 701"],
+      },
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [{ title: "graduate-level courses", match: { minLevel: 500 } }],
+      },
+    ],
+  };
+  const masters = { ...doctorate, degree: "M.Sc.", credits: 45 };
+  expect(degreeCredits(null, "foundation", masters)).toBe(45);
+  expect(degreeCredits(null, "cegep", doctorate)).toBeNull();
+  expect(standingCredits(6, "cegep", doctorate)).toBe(6);
+
+  const snapshot = buildSnapshot(
+    [
+      record("COMP 604", "Fall", 2025),
+      record("COMP 700", "Fall", 2026, "in-progress"),
+    ],
+    [{ term: { season: "Winter", year: 2027 }, courses: ["COMP 701"] }],
+    "cegep",
+    0,
+    [checkKey(doctorate, thesis, rule)],
+  );
+  const progress = programStanding(
+    doctorate,
+    snapshot,
+    catalogue,
+    "cegep",
+    "plan",
+  );
+  expect(requirementsMet(progress)).toEqual([2, 3]);
+  expect(requirementSplit(progress, snapshot)).toEqual({
+    completed: 1,
+    inProgress: 0,
+    planned: 1,
+  });
 });
 
 test("a course passed twice counts its credits once", () => {

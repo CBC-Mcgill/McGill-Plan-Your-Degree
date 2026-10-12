@@ -1,6 +1,10 @@
 import type { EntryRoute, Profile } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
-import { creditedCredits } from "./progress.ts";
+import {
+  type CreditSplit,
+  creditedCredits,
+  type ProgramProgress,
+} from "./progress.ts";
 import type { Catalogue, Snapshot } from "./snapshot.ts";
 
 /** Credits earned from completed and transfer courses, using the catalogue for records that do not state them. Advanced standing is not included. */
@@ -24,14 +28,16 @@ export function pendingCredits(snapshot: Snapshot): number {
 
 const BSC_CREDITS: Record<EntryRoute, number> = { cegep: 90, foundation: 120 };
 
-/** The credits the whole degree needs: the stated total, else the program's for a B.Eng., else 90 or 120 for a B.Sc. by entry. Null when unknown. */
+/** The credits the whole degree needs: the stated total, else the program's for a B.Eng. or a graduate program, else 90 or 120 for a B.Sc. by entry. Null when unknown, as for a doctorate. */
 export function degreeCredits(
   creditsRequired: number | null,
   entry: EntryRoute | null,
   program: Program | null,
 ): number | null {
   if (creditsRequired !== null) return creditsRequired;
-  if (program?.degree === "B.Eng.") return program.credits;
+  if (program?.degree === "B.Eng." || program?.level === "graduate") {
+    return program.credits || null;
+  }
   if (program?.degree === "B.Sc." && entry) return BSC_CREDITS[entry];
   return null;
 }
@@ -78,4 +84,25 @@ export function degreeStanding(
     pending: pendingCredits(snapshot),
     required: degreeCredits(profile.creditsRequired, profile.entry, program),
   };
+}
+
+/** Requirements met over requirements, for a program with no credit total such as a doctorate. */
+export const requirementsMet = ({ groups }: ProgramProgress) =>
+  [groups.filter((group) => group.satisfied).length, groups.length] as const;
+
+/** Met requirements by the latest status among the courses that met them, for a `StatusBar` counted in requirements. */
+export function requirementSplit(
+  { groups }: ProgramProgress,
+  snapshot: Snapshot,
+): CreditSplit {
+  const split = { completed: 0, inProgress: 0, planned: 0 };
+  for (const group of groups) {
+    if (!group.satisfied) continue;
+    const codes = group.courses.map((course) => course.code);
+    if (codes.some((code) => snapshot.planned.has(code))) split.planned++;
+    else if (codes.some((code) => snapshot.inProgress.has(code))) {
+      split.inProgress++;
+    } else split.completed++;
+  }
+  return split;
 }

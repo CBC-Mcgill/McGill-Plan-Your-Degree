@@ -115,8 +115,9 @@ export function termSnapshot(
 
 const level = (course: CourseSummary) => Number.parseInt(course.number, 10);
 
-// Suggestions stay undergraduate: graduate courses (600+) are left to the course browser.
-const undergraduate = (s: Suggestion) => level(s.course) < 600;
+/** An undergraduate program's lists leave graduate courses (600+) to the course browser. A graduate program lists them all. */
+const listable = (program: Program | null, course: CourseSummary) =>
+  program?.level === "graduate" || level(course) < 600;
 
 /** Electives worth a look: 100 to 400 level courses with credits, the student's own subjects first and diploma or continuing studies subjects (FMT4, CPL2) last. */
 function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
@@ -234,7 +235,8 @@ export function nextView(
       : [];
   // A course is listed once, under the first open group and rule that take it.
   const placed = openGroups.map(() => [] as Suggestion[]);
-  for (const s of next.canTake.complementary.filter(undergraduate)) {
+  for (const s of next.canTake.complementary) {
+    if (!listable(program, s.course)) continue;
     const { code, credits } = s.course;
     const at = openGroups.findIndex(
       ({ group, done }) =>
@@ -256,7 +258,7 @@ export function nextView(
       if (
         !course ||
         seen.has(code) ||
-        level(course) >= 600 ||
+        !listable(program, course) ||
         snapshot.done.has(code) ||
         snapshot.inProgress.has(code)
       ) {
