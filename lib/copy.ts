@@ -97,6 +97,8 @@ export const COPY = {
   hasConditions: "Has conditions",
   countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",
+  checkedByYou: "Checked by you",
+  markChecked: "Mark as checked",
   adviserApproval: "Your advisor must approve these courses",
   pickOne:
     "Complete one of these streams. The one you are furthest along in counts.",
