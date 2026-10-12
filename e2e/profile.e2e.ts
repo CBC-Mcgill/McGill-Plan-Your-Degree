@@ -85,6 +85,12 @@ test("a graduate program is found by its degree and asks no entry question and n
   });
   await expect(entry).toBeVisible();
   await expect(second).toBeVisible();
+  const graduation = page.getByLabel("Expected graduation", { exact: true });
+  const graduationYear = async () =>
+    Number(
+      (await graduation.locator("option:checked").textContent())?.slice(-4),
+    );
+  const undergraduateYear = await graduationYear();
 
   const program = page.getByRole("combobox", { name: "Program", exact: true });
   await program.fill("computer science phd");
@@ -105,6 +111,7 @@ test("a graduate program is found by its degree and asks no entry question and n
   await expect(entry).toHaveCount(0);
   await expect(second).toHaveCount(0);
   await expect(page.getByText("45 required (from your program)")).toBeVisible();
+  await expect.poll(graduationYear).toBe(undergraduateYear - 2);
 });
 
 test("a file that is not a transcript shows an error", async ({ page }) => {

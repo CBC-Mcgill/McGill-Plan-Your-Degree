@@ -96,7 +96,13 @@ function Review({
       graduationTerm:
         store.graduationTerm ??
         (start &&
-          defaultGraduation(start, entry, lastTerm(transcript.courses))),
+          defaultGraduation(
+            start,
+            entry,
+            lastTerm(transcript.courses),
+            undefined,
+            programs.find((p) => p.id === programId),
+          )),
     };
   });
 

@@ -195,3 +195,17 @@ test("defaultGraduation follows entry and never lands in the past", () => {
     defaultGraduation({ season: "Fall", year: 2020 }, null, null, now),
   ).toEqual(now);
 });
+
+test("defaultGraduation guesses two years for a master's and four for a doctorate", () => {
+  const start: Term = { season: "Fall", year: 2026 };
+  const now: Term = { season: "Fall", year: 2026 };
+  const guess = (credits: number, entry: "cegep" | null = null) =>
+    defaultGraduation(start, entry, null, now, { level: "graduate", credits });
+  expect(guess(45)).toEqual({ season: "Winter", year: 2028 });
+  expect(guess(45, "cegep")).toEqual({ season: "Winter", year: 2028 });
+  expect(guess(0)).toEqual({ season: "Winter", year: 2030 });
+  expect(defaultGraduation(start, null, null, now, { credits: 90 })).toEqual({
+    season: "Winter",
+    year: 2030,
+  });
+});

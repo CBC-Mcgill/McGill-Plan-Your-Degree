@@ -83,6 +83,7 @@ test("guessProgram falls back to the program list by degree and name", () => {
     name,
     degree,
     faculty: "Any",
+    credits: 0,
   });
   const index = [
     program("psychology-major-bsc", "Psychology Major", "B.Sc."),
@@ -127,6 +128,7 @@ test("guessProgram reads a graduate degree, with thesis and non-thesis as kinds"
     name,
     degree,
     faculty: "Science",
+    credits: 45,
     level: "graduate" as const,
   });
   const index = [
@@ -171,6 +173,7 @@ test("isMinor reads the id or the degree, and guessMinor matches a transcript mi
     name,
     degree,
     faculty: "Any",
+    credits: 0,
   });
   const index = [
     program("management-minor-beng", "Management Minor", "B.Eng."),
@@ -257,6 +260,7 @@ test("two program lines fill the program and the second program when one program
     name,
     degree,
     faculty: "Arts",
+    credits: 0,
   });
   const index = [
     program(
