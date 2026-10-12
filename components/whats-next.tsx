@@ -59,6 +59,7 @@ import { COPY } from "@/lib/copy";
 import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
 import {
   type Entry,
+  groupKeys,
   type Item,
   type NextView,
   nextView,
@@ -580,23 +581,6 @@ function Page({
       </div>
     </>
   );
-}
-
-const slug = (title: string) =>
-  title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-
-/** One URL key per group from its title, numbered when two groups share one. */
-function groupKeys(groups: GroupProgress[]): string[] {
-  const seen = new Set<string>();
-  return groups.map((group, index) => {
-    const base = slug(group.title);
-    const key = seen.has(base) ? `${base}-${index + 1}` : base;
-    seen.add(key);
-    return key;
-  });
 }
 
 /** A required group of 0-credit courses, such as a comprehensive examination, counts courses instead. A group of rules to check counts credits once the student lists courses under one. */
