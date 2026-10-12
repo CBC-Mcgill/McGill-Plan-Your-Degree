@@ -58,12 +58,14 @@ const plain = (text: string) =>
 const labelOf = (program: ProgramSummary) =>
   `${program.name} (${program.degree})`;
 
-/** Programs whose name, degree or faculty hold every word of the query, grouped by faculty. `suffix` follows each faculty's name, as in "Arts minors". */
+/** Programs whose name, degree, faculty or level hold every word of the query, grouped by faculty. `suffix` follows each faculty's name, as in "Arts minors". */
 function search(programs: ProgramSummary[], query: string, suffix = "") {
   const words = plain(query).split(" ").filter(Boolean);
   const groups = new Map<string, ProgramSummary[]>();
   for (const program of programs) {
-    const text = plain(`${program.name} ${program.degree} ${program.faculty}`);
+    const text = plain(
+      `${program.name} ${program.degree} ${program.faculty} ${program.level ?? ""}`,
+    );
     if (!words.every((word) => text.includes(word))) continue;
     groups.set(program.faculty, [
       ...(groups.get(program.faculty) ?? []),
@@ -79,7 +81,7 @@ function search(programs: ProgramSummary[], query: string, suffix = "") {
 }
 
 /**
- * A searchable list of every program but the minors, or for the second program, of every program with the minors first. Neither lists `other`, the program in the other field.
+ * A searchable list of every program but the minors, graduate programs last, or for the second program, of every undergraduate program with the minors first. Neither lists `other`, the program in the other field.
  * The empty choice is "My program isn't listed" for a program the catalogue does not have, and "None" for the second. `label` replaces the field's own, and `info` makes the label a `Term`.
  */
 export function ProgramCombobox({
@@ -91,7 +93,7 @@ export function ProgramCombobox({
   info,
 }: {
   value: string | null;
-  onChange: (programId: string | null) => void;
+  onChange: (programId: string | null, program: ProgramSummary | null) => void;
   kind?: "program" | "second";
   other?: string | null;
   label?: string;
@@ -104,7 +106,8 @@ export function ProgramCombobox({
       index.status === "ready"
         ? index.programs.filter(
             (program) =>
-              program.id !== other && (kind === "second" || !isMinor(program)),
+              program.id !== other &&
+              (kind === "second" ? !program.level : !isMinor(program)),
           )
         : NO_PROGRAMS,
     [index, kind, other],
@@ -130,7 +133,17 @@ export function ProgramCombobox({
               query ?? "",
             ),
           ]
-        : search(programs, query ?? ""),
+        : [
+            ...search(
+              programs.filter((program) => !program.level),
+              query ?? "",
+            ),
+            ...search(
+              programs.filter((program) => program.level),
+              query ?? "",
+              " graduate programs",
+            ),
+          ],
     [programs, query, kind],
   );
   // The last choice is always the empty one.
@@ -160,7 +173,7 @@ export function ProgramCombobox({
   }
 
   function choose(program: ProgramSummary | null) {
-    onChange(program?.id ?? null);
+    onChange(program?.id ?? null, program);
     close();
   }
 

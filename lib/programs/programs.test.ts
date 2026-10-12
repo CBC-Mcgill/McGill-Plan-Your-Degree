@@ -121,6 +121,50 @@ test("guessProgram falls back to the program list by degree and name", () => {
   expect(guessProgram(null, ["Major Psychology"], index)).toBeNull();
 });
 
+test("guessProgram reads a graduate degree, with thesis and non-thesis as kinds", () => {
+  const program = (id: string, name: string, degree: string) => ({
+    id,
+    name,
+    degree,
+    faculty: "Science",
+    level: "graduate" as const,
+  });
+  const index = [
+    program(
+      "computer-science-thesis-msc",
+      "Computer Science (Thesis)",
+      "M.Sc.",
+    ),
+    program(
+      "computer-science-non-thesis-msc",
+      "Computer Science (Non-Thesis)",
+      "M.Sc.",
+    ),
+    program("computer-science-phd", "Computer Science", "Ph.D."),
+    program(
+      "electrical-engineering-non-thesis-meng",
+      "Electrical Engineering (Non-Thesis)",
+      "M.Eng.",
+    ),
+  ];
+  const guess = (degree: string, line: string) =>
+    guessProgram(degree, [line], index);
+
+  expect(guess("Master of Science", "Computer Science - Thesis")).toBe(
+    "computer-science-thesis-msc",
+  );
+  expect(guess("Master of Science", "Computer Science Non Thesis")).toBe(
+    "computer-science-non-thesis-msc",
+  );
+  expect(guess("Doctor of Philosophy", "Computer Science")).toBe(
+    "computer-science-phd",
+  );
+  expect(
+    guess("Master of Engineering", "Non-Thesis Electrical Engineering"),
+  ).toBe("electrical-engineering-non-thesis-meng");
+  expect(guess("Master of Science", "Computer Science")).toBeNull();
+});
+
 test("isMinor reads the id or the degree, and guessMinor matches a transcript minor by name", () => {
   const program = (id: string, name: string, degree: string) => ({
     id,

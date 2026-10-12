@@ -72,6 +72,41 @@ test("a program read from the catalogue can be found and used", async ({
   await expect(page.getByText(/^List A/).first()).toBeVisible();
 });
 
+test("a graduate program is found by its degree and asks no entry question and no second program", async ({
+  page,
+}) => {
+  await page.goto("/profile");
+  await page
+    .getByRole("button", { name: "Start without a transcript" })
+    .click();
+  const entry = page.getByLabel("How you started at McGill", { exact: true });
+  const second = page.getByRole("combobox", {
+    name: "Minor or second program",
+  });
+  await expect(entry).toBeVisible();
+  await expect(second).toBeVisible();
+
+  const program = page.getByRole("combobox", { name: "Program", exact: true });
+  await program.fill("computer science phd");
+  await expect(
+    page
+      .getByRole("group", { name: "Science graduate programs" })
+      .getByRole("option", { name: "Computer Science Ph.D.", exact: true }),
+  ).toBeVisible();
+  await program.fill("computer science thesis");
+  await page
+    .getByRole("group", { name: "Science graduate programs" })
+    .getByRole("option", {
+      name: "Computer Science (Thesis) M.Sc.",
+      exact: true,
+    })
+    .click();
+  await expect(program).toHaveValue("Computer Science (Thesis) (M.Sc.)");
+  await expect(entry).toHaveCount(0);
+  await expect(second).toHaveCount(0);
+  await expect(page.getByText("45 required (from your program)")).toBeVisible();
+});
+
 test("a file that is not a transcript shows an error", async ({ page }) => {
   await page.goto("/profile");
   await page.locator('input[accept*="pdf"]').setInputFiles({
