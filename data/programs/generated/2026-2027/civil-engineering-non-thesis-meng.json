@@ -17,77 +17,27 @@
           "courses": [
             "CIVE 664"
           ]
-        },
-        {
-          "title": "Infrastructure Stream",
-          "courses": [
-            "CIVE 512",
-            "CIVE 602",
-            "CIVE 603",
-            "CIVE 609",
-            "CIVE 623"
-          ]
-        },
-        {
-          "title": "Environmental/Hydraulics-Water Resources",
-          "courses": [
-            "CIVE 555",
-            "CIVE 572",
-            "CIVE 584",
-            "CIVE 651",
-            "CIVE 677"
-          ]
-        },
-        {
-          "title": "Transportation",
-          "courses": [
-            "CIVE 540",
-            "CIVE 542",
-            "CIVE 560",
-            "CIVE 609"
-          ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "List A: Research Courses (12-42) credits",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
         {
           "title": "A minimum of 12 credits from research courses, from one of the research streams: 1) Infrastructure, 2) Environmental/Hydraulics-Water Resources, and 3) Transportation",
           "unparsed": true
-        },
+        }
+      ]
+    },
+    {
+      "title": "Program total",
+      "kind": "complementary",
+      "credits": 42,
+      "rules": [
         {
-          "title": "List B: Other Complementary Courses from the Department",
-          "courses": [
-            "CIVE 507",
-            "CIVE 520",
-            "CIVE 521",
-            "CIVE 527",
-            "CIVE 528",
-            "CIVE 543",
-            "CIVE 550",
-            "CIVE 557",
-            "CIVE 561",
-            "CIVE 570",
-            "CIVE 573",
-            "CIVE 574",
-            "CIVE 577",
-            "CIVE 604",
-            "CIVE 605",
-            "CIVE 607",
-            "CIVE 612",
-            "CIVE 614",
-            "CIVE 615",
-            "CIVE 616",
-            "CIVE 617",
-            "CIVE 622",
-            "CIVE 625",
-            "CIVE 628",
-            "CIVE 652",
-            "CIVE 660",
-            "CIVE 661",
-            "CIVE 663",
-            "CIVE 683",
-            "CIVE 686"
-          ]
-        },
-        {
-          "title": "Courses from List A that are not used to fulfill the 15 credits requirement of Research Courses can be used also as complementary courses",
+          "title": "42 more credits to reach the program's 45 credits, which the catalogue page does not list in a group above",
           "unparsed": true
         }
       ]

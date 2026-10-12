@@ -39,10 +39,7 @@
       "rules": [
         {
           "title": "Two 3-credit courses at the 500 level or higher recommended by the supervisory committee; one of which must be in quantitative methods/techniques",
-          "minCredits": 6,
-          "match": {
-            "minLevel": 500
-          }
+          "unparsed": true
         }
       ]
     }

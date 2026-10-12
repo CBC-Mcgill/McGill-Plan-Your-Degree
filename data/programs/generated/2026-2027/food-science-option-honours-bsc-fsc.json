@@ -46,12 +46,42 @@
       ]
     },
     {
+      "title": "Honours Courses",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Two 6-credit Honours research courses in the subject area of the student's major, chosen in consultation with the Program Director of the student's major and the professor who has agreed to supervise the research project",
+          "unparsed": true
+        },
+        {
+          "title": "A minimum of two 3-credit Honours courses and 6 credits in 400- or 500-level courses, from the Faculty of Agricultural and Environmental Sciences, selected in consultation with the Program Director of the student's major",
+          "unparsed": true
+        },
+        {
+          "title": "The topic of the Honours research project must be on a topic related to their major and selected in consultation with the Program Director of the student's major and the professor who has agreed to supervise the research project",
+          "unparsed": true
+        }
+      ]
+    },
+    {
       "title": "Elective Courses",
       "kind": "complementary",
       "credits": 6,
       "rules": [
         {
           "title": "Elective Courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Program total",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 more credits to reach the program's 90 credits, which the catalogue page does not list in a group above",
           "unparsed": true
         }
       ]

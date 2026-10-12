@@ -38,11 +38,7 @@
       "rules": [
         {
           "title": "33 credits at the 500 or 600 level, chosen as follows",
-          "minCredits": 33,
-          "match": {
-            "minLevel": 500,
-            "maxLevel": 600
-          }
+          "unparsed": true
         }
       ]
     },
@@ -109,6 +105,25 @@
         },
         {
           "title": "For students that choose the advanced methods courses as part of the Advanced Research Tools, 3 credits must be the advanced methods courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Advanced Research Tools",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students must pass an advanced-level translation test from a language other than English",
+          "unparsed": true
+        },
+        {
+          "title": "In selecting a language to fulfil this requirement, the student must demonstrate in writing how the chosen language is related to his or her research",
+          "unparsed": true
+        },
+        {
+          "title": "To fulfil this requirement, students must complete 3 advanced methods credits (at the 600, or 700 level) in qualitative or quantitative methods, selected in consultation with the student advisor, the Graduate Program Director, and the methods coordinator",
           "unparsed": true
         }
       ]

@@ -27,6 +27,35 @@
         "SWRK 720",
         "SWRK 721"
       ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "One of the following courses",
+          "courses": [
+            "SWRK 722",
+            "SWRK 723"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One of the following courses",
+          "courses": [
+            "SWRK 724",
+            "SWRK 725"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "One course in Social Work or a related discipline",
+          "unparsed": true
+        }
+      ]
     }
   ],
   "level": "graduate",

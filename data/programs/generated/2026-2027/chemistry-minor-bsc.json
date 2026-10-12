@@ -35,9 +35,17 @@
             "CHEM 381",
             "CHEM 462"
           ]
-        },
+        }
+      ],
+      "note": "Any level 300-500 CHEM course can be substituted for courses within this list."
+    },
+    {
+      "title": "Program total",
+      "kind": "complementary",
+      "credits": 1,
+      "rules": [
         {
-          "title": "Any level 300-500 CHEM course can be substituted for courses within this list",
+          "title": "1 more credit to reach the program's 20 credits, which the catalogue page does not list in a group above",
           "unparsed": true
         }
       ]
