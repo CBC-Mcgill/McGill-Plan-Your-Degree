@@ -1555,7 +1555,7 @@ function Rows({
 /** A rule's list sits under its text, its rows bleeding to the card's right edge only. */
 const UNDER_RULE = "basis-full pl-6 [&_li]:-ml-2 [&_li]:pl-2";
 
-/** A rule the crawler could not read. It shows the catalogue text, links to the program and lists the courses the student counts for it. It counts as met once the student marks it as checked, after they confirm their listed courses meet it. Below 768px the button moves under the list. */
+/** A rule the crawler could not read. It shows the catalogue text, links to the program and lists the courses the student counts for it. It counts as met once the student marks it as checked, after they confirm their listed courses meet it. Below 1024px the button is 44px tall, and below 768px it moves under the list. */
 function CheckRow({
   text,
   source,
@@ -1614,7 +1614,7 @@ function CheckRow({
               ? setAsking(true)
               : mark(true)
         }
-        className="-my-2 max-md:order-last max-md:my-0 max-md:ml-6 max-md:h-11"
+        className="-my-2 max-lg:-my-3 max-lg:h-11 max-md:order-last max-md:my-0 max-md:ml-6"
       >
         {confirmed ? COPY.undo : COPY.markChecked}
       </Button>
