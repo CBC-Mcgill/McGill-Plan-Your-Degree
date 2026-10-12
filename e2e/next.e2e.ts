@@ -336,6 +336,12 @@ test("a program with every group met short of its total says what is missing, he
   });
   const line = "4 more credits needed. Thesis courses can take up to 31.";
   await expect(page.getByRole("main")).toContainText(line);
+  await expect(requirement(page, "Thesis courses")).toContainText(
+    "27 of 24 to 31",
+  );
+  await expect(
+    page.getByRole("region", { name: "Thesis courses" }),
+  ).toContainText("27 of 24 to 31 credits");
   await page.getByRole("link", { name: "Plan later terms" }).click();
   await expect(page.getByRole("main")).toContainText(line);
 });

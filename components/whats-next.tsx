@@ -334,13 +334,13 @@ function Page({
         : group.confirmed
           ? COPY.checkedByYou
           : counts
-            ? `${Math.min(group.creditsDone, group.credits)} of ${group.credits}`
+            ? groupCount(group)
             : group.kind === "required"
               ? `${group.coursesDone} of ${courseCount(group.coursesDone + group.remaining.length)}`
               : checksText(group.unparsed),
       split:
         !group.satisfied && counts && split
-          ? { ...creditSplit(split, snapshot), total: group.credits }
+          ? { ...creditSplit(split, snapshot, top(group)), total: top(group) }
           : undefined,
       checks: group.unparsed,
       body: (
@@ -842,8 +842,12 @@ const hasChecks = (program: Program) =>
       group.rules.some((rule) => rule.unparsed),
   );
 
-const fraction = (group: GroupProgress) =>
-  COPY.fraction(Math.min(group.creditsDone, group.credits), group.credits);
+/** A range group counts courses up to the top of its range, past the credits it needs. */
+const top = (group: GroupProgress) => group.maxCredits ?? group.credits;
+
+/** "19 of 23", or "27 of 24 to 31" for a range group. */
+const groupCount = (group: GroupProgress) =>
+  `${Math.min(group.creditsDone, top(group))} of ${group.credits}${group.maxCredits === undefined ? "" : ` to ${group.maxCredits}`}`;
 
 /** Rules to check, then credits, unless every rule needs a check and nothing can count. `split`, the same group counted with the plan, adds a small bar. */
 function GroupMeta({
@@ -865,11 +869,11 @@ function GroupMeta({
           {checksText(checks)}
         </span>
       )}
-      {counts && fraction(group)}
+      {counts && `${groupCount(group)} credits`}
       {counts && split && snapshot && (
         <StatusBar
-          {...creditSplit(split, snapshot)}
-          total={group.credits}
+          {...creditSplit(split, snapshot, top(group))}
+          total={top(group)}
           className="w-20"
         />
       )}
@@ -923,8 +927,8 @@ function GroupPane({
       <div className="flex flex-col gap-6">
         {!group.credited && countsCredits(group) && split && (
           <Progress
-            {...creditSplit(split, snapshot)}
-            total={group.credits}
+            {...creditSplit(split, snapshot, top(group))}
+            total={top(group)}
             courses={splitCourses([split], snapshot)}
           />
         )}
@@ -1162,7 +1166,7 @@ function GroupBody({
   );
 }
 
-/** Can take, planned and not open in the term, then the courses it counts. */
+/** Planned, can take and not open in the term, then the courses it counts. */
 function RequiredBlocks({
   group,
   view,
@@ -1192,16 +1196,6 @@ function RequiredBlocks({
   return (
     <>
       <Block
-        status="available"
-        title={`Can take in ${when}`}
-        count={open.length}
-        heading={heading}
-      >
-        <ul>
-          <ItemRows items={open} context={context} />
-        </ul>
-      </Block>
-      <Block
         status="planned"
         title="Planned"
         count={planned.length}
@@ -1209,6 +1203,16 @@ function RequiredBlocks({
       >
         <ul>
           <ItemRows items={planned} context={context} plannedBlock />
+        </ul>
+      </Block>
+      <Block
+        status="available"
+        title={`Can take in ${when}`}
+        count={open.length}
+        heading={heading}
+      >
+        <ul>
+          <ItemRows items={open} context={context} />
         </ul>
       </Block>
       <Block
