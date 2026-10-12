@@ -1,7 +1,7 @@
 import meta from "../data/catalogue/meta.json";
 import { creditsLabel, list } from "./engine/parts.ts";
 import type { Basis } from "./engine/progress.ts";
-import { creditsText } from "./format.ts";
+import { creditsText, sentence } from "./format.ts";
 import { termLabel } from "./profile/term-options.ts";
 import type { Season, Term } from "./profile/types.ts";
 import { isMinor, type Pair } from "./programs/minor.ts";
@@ -76,6 +76,12 @@ export const COPY = {
       ? `${n} credits earned`
       : `${n} of ${total} degree credits earned`,
   basis: BASIS,
+  /** "4 more credits needed. Thesis courses can take up to 33." */
+  roomLeft: (
+    missing: number,
+    ranges: readonly { title: string; max: number }[],
+  ) =>
+    `${missing} more ${missing === 1 ? "credit" : "credits"} needed. ${list.format(ranges.map(({ title, max }) => `${sentence(title)} can take up to ${max}`))}.`,
   pending: (n: number) => `${creditsText(n)} pending`,
   termsLeft: (n: number, term: Term) =>
     `${n} ${n === 1 ? "term" : "terms"} left, until ${termLabel(term)}`,

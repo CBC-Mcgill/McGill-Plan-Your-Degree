@@ -86,6 +86,20 @@ export function degreeStanding(
   };
 }
 
+/** What a program whose groups are all met still lacks toward its credit total, and the ranges that can take it. Null when nothing is missing or no range has room. */
+export function roomLeft({ credits, creditsDone, groups }: ProgramProgress) {
+  const ranges = groups.flatMap(({ title, creditsDone, maxCredits }) =>
+    maxCredits !== undefined && creditsDone < maxCredits
+      ? [{ title, max: maxCredits }]
+      : [],
+  );
+  return creditsDone < credits &&
+    ranges.length > 0 &&
+    groups.every((group) => group.satisfied)
+    ? { missing: credits - creditsDone, ranges }
+    : null;
+}
+
 /** Requirements met over requirements, for a program with no credit total such as a doctorate. */
 export const requirementsMet = ({ groups }: ProgramProgress) =>
   [groups.filter((group) => group.satisfied).length, groups.length] as const;

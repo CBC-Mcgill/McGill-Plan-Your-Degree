@@ -31,7 +31,11 @@ import { CatalogueLink, VsbLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { BAR_WITH_LEGEND, ProgramBars } from "@/components/program-bars";
+import {
+  BAR_WITH_LEGEND,
+  ProgramBars,
+  RoomLeft,
+} from "@/components/program-bars";
 import {
   type Status,
   StatusBadge,
@@ -506,6 +510,7 @@ function Page({
             }
             minor={minorBar}
           />
+          <RoomLeft progress={view.progress} className="mt-2" />
         </div>
       )}
       <p className="mt-6">

@@ -11,6 +11,7 @@ import {
   earnedCredits,
   requirementSplit,
   requirementsMet,
+  roomLeft,
   standingCredits,
 } from "./credits.ts";
 import { checkKey, minorOverlap, programStanding } from "./progress.ts";
@@ -322,4 +323,74 @@ test("a minor shares the program's courses only up to its overlap cap, and anoth
   expect(shared(major)).toBe(3);
   expect(shared({ ...major, degree: "B.A." })).toBe(0);
   expect(shared(major, { ...program, faculty: "Arts" })).toBe(0);
+});
+
+test("a program with every group met short of its total names the range that can take the rest", () => {
+  const thesis: Program = {
+    id: "chemistry-thesis-msc",
+    name: "Chemistry",
+    degree: "M.Sc.",
+    faculty: "Science",
+    catalogueYear: meta.catalogueYear,
+    source:
+      "https://coursecatalogue.mcgill.ca/en/graduate/science/chemistry/chemistry-thesis-msc/",
+    credits: 45,
+    level: "graduate",
+    groups: [
+      {
+        title: "Thesis Courses",
+        kind: "complementary",
+        credits: 24,
+        maxCredits: 33,
+        rules: [
+          {
+            title: "At least 24 credits chosen from the following",
+            minCredits: 24,
+            courses: ["CHEM 694", "CHEM 695"],
+          },
+        ],
+      },
+      {
+        title: "Required Courses",
+        kind: "required",
+        credits: 5,
+        courses: ["CHEM 650", "CHEM 651", "CHEM 688"],
+      },
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 9,
+        rules: [
+          {
+            title: "9 credits of CHEM courses",
+            minCredits: 9,
+            courses: ["CHEM 502", "CHEM 534", "CHEM 555"],
+          },
+        ],
+      },
+    ],
+  };
+  const taken = (code: string, credits: number) => ({
+    ...record(code, "Fall", 2025),
+    credits,
+  });
+  const progress = programStanding(
+    thesis,
+    buildSnapshot([
+      taken("CHEM 694", 12),
+      taken("CHEM 695", 15),
+      taken("CHEM 650", 1),
+      taken("CHEM 651", 1),
+      taken("CHEM 688", 3),
+      ...["CHEM 502", "CHEM 534", "CHEM 555"].map((code) => taken(code, 3)),
+    ]),
+    catalogue,
+    null,
+    "earned",
+  );
+  expect(progress.creditsDone).toBe(41);
+  expect(roomLeft(progress)).toEqual({
+    missing: 4,
+    ranges: [{ title: "Thesis Courses", max: 33 }],
+  });
 });
