@@ -55,6 +55,25 @@ export interface OpenGroup {
   buckets: Bucket[];
 }
 
+const slug = (title: string) =>
+  title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+/** One `?req=` key per group of What's next from its title, numbered when two groups share one. The second program's pane is `SECOND_KEY`. */
+export function groupKeys(groups: readonly { title: string }[]): string[] {
+  const seen = new Set<string>();
+  return groups.map((group, index) => {
+    const base = slug(group.title);
+    const key = seen.has(base) ? `${base}-${index + 1}` : base;
+    seen.add(key);
+    return key;
+  });
+}
+
+export const SECOND_KEY = "minor";
+
 export interface NextView {
   progress: ProgramProgress | null;
   mustTake: Item[];

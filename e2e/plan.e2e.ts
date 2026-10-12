@@ -115,9 +115,14 @@ test("the headline lists one row per open requirement, with missing courses link
   await expect(missing).toContainText("7 requirements still open");
   const rows = missing.getByRole("listitem");
   await expect(rows).toHaveCount(6);
+  const technical = rows.filter({ hasText: "Technical complementaries" });
+  await expect(technical).toContainText(
+    "Any 9 credits from List A or List B · See choices",
+  );
+  // The link opens that group's pane on What's next.
   await expect(
-    rows.filter({ hasText: "Technical complementaries" }),
-  ).toContainText("Any 9 credits from List A or List B · See choices");
+    technical.getByRole("link", { name: "See choices" }),
+  ).toHaveAttribute("href", "/next?req=technical-complementaries");
   await missing.getByRole("button", { name: "Show 1 more" }).click();
   await expect(rows).toHaveCount(7);
   await expect(rows.last()).toContainText("Elective course");
