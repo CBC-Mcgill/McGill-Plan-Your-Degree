@@ -1,0 +1,47 @@
+{
+  "id": "earth-planetary-sciences-thesis-msc",
+  "name": "Earth and Planetary Sciences (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/earth-planetary-sciences/earth-planetary-sciences-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "At least 30 credits must be chosen from",
+          "courses": [
+            "EPSC 696",
+            "EPSC 697",
+            "EPSC 698",
+            "EPSC 699"
+          ],
+          "minCredits": 30
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EPSC 695"
+          ]
+        },
+        {
+          "title": "12-15 credits of EPSC (or other approved) courses chosen at the 500-, 600-, or 700-level in consultation with the thesis supervisor, which may include the following (for those with adequate preparation and departmental approval)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

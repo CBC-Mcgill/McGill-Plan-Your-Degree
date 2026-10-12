@@ -1,0 +1,69 @@
+{
+  "id": "urban-planning-policy-design-thesis-msc",
+  "name": "Urban Planning, Policy and Design (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/urban-planning/urban-planning-policy-design-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "URBP 606",
+        "URBP 612",
+        "URBP 690"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits selected from the following research methods courses",
+          "courses": [
+            "URBP 605",
+            "URBP 608",
+            "URBP 633",
+            "URBP 640",
+            "URBP 641",
+            "URBP 642",
+            "URBP 643",
+            "URBP 644",
+            "URBP 645",
+            "URBP 646",
+            "URBP 647",
+            "URBP 648"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "9 credits selected from among the 500 or 600 level URBP courses offered by the School",
+          "unparsed": true
+        },
+        {
+          "title": "Students may also take research methods courses at the 500 or 600 level in other academic units at McGill or another Montreal university, subject to the approval of the School",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits offered at the 500 or 600 level by any academic units at McGill or at another Montreal university, with the approval of the School, if they are related to one or more subject areas in the field of planning",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

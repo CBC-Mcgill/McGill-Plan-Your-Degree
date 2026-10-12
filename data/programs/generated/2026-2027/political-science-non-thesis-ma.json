@@ -1,0 +1,71 @@
+{
+  "id": "political-science-non-thesis-ma",
+  "name": "Political Science (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/political-science/political-science-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "POLI 693",
+            "POLI 694",
+            "POLI 695",
+            "POLI 696",
+            "POLI 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "POLI 691"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "POLI 612"
+          ]
+        },
+        {
+          "title": "One of the following courses",
+          "courses": [
+            "POLI 561",
+            "POLI 613",
+            "POLI 614",
+            "POLI 616",
+            "POLI 617"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "15-18 credits of 500- or 600-level courses; up to 6 credits may be outside the Department",
+          "unparsed": true
+        },
+        {
+          "title": "3-6 credits, either of the following 3-credit options, or preferably, both",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

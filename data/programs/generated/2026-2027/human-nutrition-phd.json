@@ -1,0 +1,34 @@
+{
+  "id": "human-nutrition-phd",
+  "name": "Human Nutrition",
+  "degree": "Ph.D.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/human-nutrition/human-nutrition-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 2,
+      "courses": [
+        "NUTR 695",
+        "NUTR 701",
+        "NUTR 796"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

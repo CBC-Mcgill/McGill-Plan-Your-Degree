@@ -1,0 +1,45 @@
+{
+  "id": "japan-management-non-thesis-general-mba",
+  "name": "Japan Management (Non-Thesis): General Management",
+  "degree": "M.B.A.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/japan-management-non-thesis-general-mba/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Core Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "BUSA 695",
+        "MGCR 613",
+        "MGCR 614",
+        "MGCR 617",
+        "MGCR 618",
+        "MGCR 620",
+        "MGCR 621",
+        "MGCR 622",
+        "MGCR 628",
+        "MGCR 638",
+        "MGCR 639",
+        "MGCR 640",
+        "MGCR 642",
+        "MGCR 660"
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "24 credits of courses are chosen from 600-level courses offered by the Faculty",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

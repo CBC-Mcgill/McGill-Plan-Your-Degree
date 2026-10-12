@@ -1,0 +1,78 @@
+{
+  "id": "animal-science-non-thesis-sustainable-agriculture-msca",
+  "name": "Animal Science (Non-Thesis): Sustainable Agriculture",
+  "degree": "M.Sc.A.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/animal-science/animal-science-non-thesis-sustainable-agriculture-msca/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "ANSC 643",
+            "ANSC 644",
+            "ANSC 645",
+            "ANSC 646",
+            "ANSC 647"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "ANSC 555",
+        "BREE 533",
+        "IGFS 611",
+        "PLNT 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits from the following list",
+          "courses": [
+            "AEMA 610",
+            "AEMA 611",
+            "AEMA 614"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "9-15 credits from the following list",
+          "courses": [
+            "ANSC 530",
+            "ANSC 551",
+            "ANSC 552",
+            "ANSC 560",
+            "ANSC 604",
+            "ANSC 611",
+            "FDSC 545",
+            "PLNT 635",
+            "PLNT 662"
+          ],
+          "minCredits": 9,
+          "maxCredits": 15
+        },
+        {
+          "title": "0-6 credits of sufficient 500-, or 600-level courses (with Adviser's approval) to bring the total credits to 45",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

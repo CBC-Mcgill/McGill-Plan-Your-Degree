@@ -1,0 +1,59 @@
+{
+  "id": "mental-health-phd",
+  "name": "Mental Health",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/mental-health-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "PSYT 606",
+        "PSYT 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "PSYT 500",
+            "PSYT 515",
+            "PSYT 620",
+            "PSYT 625",
+            "PSYT 630",
+            "PSYT 633",
+            "PSYT 682",
+            "PSYT 696",
+            "PSYT 711",
+            "PSYT 713"
+          ]
+        },
+        {
+          "title": "3 credits from the following or 3 credits of 500 level or higher from another unit chosen in consultation with the student's academic advisor or supervisor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

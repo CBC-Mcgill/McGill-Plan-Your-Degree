@@ -1,0 +1,74 @@
+{
+  "id": "computer-science-thesis-bioinformatics-msc",
+  "name": "Computer Science (Thesis): Bioinformatics",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-thesis-bioinformatics-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "22 credits selected from",
+          "courses": [
+            "COMP 691",
+            "COMP 696",
+            "COMP 697",
+            "COMP 698",
+            "COMP 699"
+          ],
+          "minCredits": 22,
+          "maxCredits": 22
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "COMP 616"
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 2,
+      "courses": [
+        "COMP 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "6 credits chosen from the following courses",
+          "courses": [
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "12 credits of 4-credit courses chosen from 500-, 600-, or 700-level Computer Science courses in consultation with the candidate’s supervisor",
+          "unparsed": true
+        },
+        {
+          "title": "Students with an appropriate background can substitute 4 credits by COMP 697",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

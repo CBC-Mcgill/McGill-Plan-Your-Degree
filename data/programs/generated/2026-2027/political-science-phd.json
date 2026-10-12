@@ -1,0 +1,106 @@
+{
+  "id": "political-science-phd",
+  "name": "Political Science",
+  "degree": "Ph.D.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/political-science/political-science-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "POLI 700",
+        "POLI 701",
+        "POLI 702",
+        "POLI 799"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 39,
+      "rules": [
+        {
+          "title": "39 credits at the 500 or 600 level, chosen as follows",
+          "minCredits": 39,
+          "match": {
+            "minLevel": 500,
+            "maxLevel": 600
+          }
+        }
+      ]
+    },
+    {
+      "title": "Major Fields",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits chosen in first major field of which 3 credits must be the core course in the field",
+          "unparsed": true
+        },
+        {
+          "title": "9 credits chosen in second major field of which 3 credits must be the core course in the field",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Political Theory",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits in political theory at the 500 or 600 level",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Methods",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "POLI 612"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Remaining Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits of which at least 3 credits must be outside the student’s major fields",
+          "unparsed": true
+        },
+        {
+          "title": "For students that choose the advanced methods courses as part of the Advanced Research Tools, 6 of these 12 credits must be the advanced methods courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

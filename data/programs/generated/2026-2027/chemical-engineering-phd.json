@@ -1,0 +1,61 @@
+{
+  "id": "chemical-engineering-phd",
+  "name": "Chemical Engineering",
+  "degree": "Ph.D.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/chemical-engineering/chemical-engineering-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 4,
+      "courses": [
+        "CHEE 681",
+        "CHEE 682",
+        "CHEE 687",
+        "CHEE 795",
+        "CHEE 796",
+        "CHEE 797",
+        "CHEE 798"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6-12 credits at the 500 level or higher, in consultation with the supervisor and depending on student's background. May include the following",
+          "courses": [
+            "CHEE 611",
+            "CHEE 621",
+            "CHEE 631",
+            "CHEE 641",
+            "CHEE 651",
+            "CHEE 662",
+            "CHEE 672",
+            "CHEE 688"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12,
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

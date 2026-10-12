@@ -1,0 +1,53 @@
+{
+  "id": "animal-science-bioinformatics-phd",
+  "name": "Animal Science: Bioinformatics",
+  "degree": "Ph.D.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/animal-science/animal-science-bioinformatics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 5,
+      "courses": [
+        "ANSC 701",
+        "ANSC 797",
+        "ANSC 798",
+        "COMP 616"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Two courses chosen from the following",
+          "courses": [
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ],
+          "minCourses": 2,
+          "maxCourses": 2
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

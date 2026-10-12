@@ -1,0 +1,38 @@
+{
+  "id": "psychology-thesis-msc",
+  "name": "Psychology (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/psychology/psychology-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PSYC 690",
+            "PSYC 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "PSYC 601",
+        "PSYC 650",
+        "PSYC 651",
+        "PSYC 660"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,70 @@
+{
+  "id": "biochemistry-phd",
+  "name": "Biochemistry",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/biochemistry-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "BIOC 696",
+        "BIOC 701",
+        "BIOC 702",
+        "BIOC 703"
+      ],
+      "note": "Students choose either BIOC 696D1/D2 or BIOC 696N1/N2. Students fast-tracking from the M.Sc. to the Ph.D. program, and who registered for and passed BIOC 696 at the M.Sc. level, do not register for BIOC 696 at the Ph.D. level. NOTE: Students DO NOT register for these courses until notified by the Student Affairs Officer."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3-6 credits selected from",
+          "courses": [
+            "BIOC 600",
+            "BIOC 603",
+            "BIOC 604",
+            "BIOC 605",
+            "BIOC 670",
+            "EXMD 615",
+            "EXMD 635"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "Complementary courses are chosen in consultation with the Research Director",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "0-3 credits, at the 500 level or higher in the biomedical and allied sciences",
+          "unparsed": true
+        },
+        {
+          "title": "BIOC 450 and BIOC 454 are additional requirements for those who have not previously completed equivalent courses in their prior training",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

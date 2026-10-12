@@ -1,0 +1,63 @@
+{
+  "id": "geography-thesis-neotropical-environment-ma",
+  "name": "Geography (Thesis): Neotropical Environment",
+  "degree": "M.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/geography/geography-thesis-neotropical-environment-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "GEOG 698",
+            "GEOG 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "BIOL 640",
+        "ENVR 610",
+        "GEOG 631"
+      ]
+    },
+    {
+      "title": "Complementary Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits, one Geography graduate course",
+          "unparsed": true
+        },
+        {
+          "title": "GEOG 696 can count among these complementary credits for students with an appropriate background",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits, at the 500 level or higher, on environmental issues to be chosen in consultation with and approved by the student’s supervisor AND the Neotropical Environment Options Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,72 @@
+{
+  "id": "religious-studies-thesis-gender-womens-ma",
+  "name": "Religious Studies (Thesis): Gender and Women's Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/religious-studies/religious-studies-thesis-gender-womens-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "27 credits from",
+          "courses": [
+            "RELG 688",
+            "RELG 689",
+            "RELG 698",
+            "RELG 699"
+          ],
+          "minCredits": 27,
+          "maxCredits": 27
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from",
+          "courses": [
+            "RELG 645",
+            "WMST 601"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Either",
+          "courses": [
+            "WMST 602"
+          ]
+        },
+        {
+          "title": "12 credits selected from the 500- or 600-level courses accepted by the School of Religious Studies for the granting of a master’s degree",
+          "unparsed": true
+        },
+        {
+          "title": "Must include within the 12 credits",
+          "unparsed": true
+        },
+        {
+          "title": "or 3 credits of another 500- or 600-level course in Gender and Women’s Studies",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

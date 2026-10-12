@@ -1,0 +1,34 @@
+{
+  "id": "computer-science-bioinformatics-phd",
+  "name": "Computer Science: Bioinformatics",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-bioinformatics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "COMP 616",
+        "COMP 700",
+        "COMP 701"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

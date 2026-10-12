@@ -1,0 +1,71 @@
+{
+  "id": "dental-sciences-non-thesis-ms",
+  "name": "Dental Sciences (Non-Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Dental Medicine and Oral Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/dentistry/dental-sciences-non-thesis-ms/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "DENT 601",
+        "DENT 625",
+        "DENT 663",
+        "DENT 671",
+        "DENT 685",
+        "DENT 690"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "30 credits from the following",
+          "courses": [
+            "ANAT 690",
+            "BMDE 505",
+            "DENT 504",
+            "DENT 505",
+            "DENT 509",
+            "DENT 625",
+            "DENT 654",
+            "DENT 664",
+            "DENT 665",
+            "DENT 669",
+            "DENT 681",
+            "DENT 682",
+            "DENT 683",
+            "DENT 686",
+            "DENT 688",
+            "EDEM 692",
+            "EPIB 635",
+            "EPIB 641",
+            "EPIB 669",
+            "EPIB 671",
+            "EPIB 677",
+            "EPIB 679",
+            "EXMD 609",
+            "EXMD 610",
+            "PHGY 518",
+            "PHGY 550"
+          ],
+          "minCredits": 30,
+          "maxCredits": 30
+        },
+        {
+          "title": "Other complementary 500- or 600-level courses at the University may be taken with the approval of the director of the program and GPS",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "education-society-thesis-ma",
+  "name": "Education and Society (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/education-society-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EDEM 621",
+            "EDEM 623",
+            "EDEM 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "EDEM 609",
+        "EDEM 690"
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "15 credits at the 500, 600, or 700 level, chosen in consultation with the Thesis Supervisor or Graduate Program Director",
+          "minCredits": 15,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        },
+        {
+          "title": "The student may take a maximum of 6 credits from outside the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

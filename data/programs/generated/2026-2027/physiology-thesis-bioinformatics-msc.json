@@ -1,0 +1,58 @@
+{
+  "id": "physiology-thesis-bioinformatics-msc",
+  "name": "Physiology (Thesis): Bioinformatics",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/physiology-thesis-bioinformatics-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PHGY 621",
+            "PHGY 622",
+            "PHGY 623"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "COMP 616",
+        "PHGY 601",
+        "PHGY 602",
+        "PHGY 604",
+        "PHGY 607",
+        "PHGY 608"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits to be chosen from the following",
+          "courses": [
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

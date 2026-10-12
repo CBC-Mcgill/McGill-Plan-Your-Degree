@@ -1,0 +1,76 @@
+{
+  "id": "dental-sciences-thesis-ms",
+  "name": "Dental Sciences (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Dental Medicine and Oral Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/dentistry/dental-sciences-thesis-ms/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "DENT 650",
+            "DENT 651",
+            "DENT 652",
+            "DENT 653"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "DENT 601",
+        "DENT 663",
+        "DENT 671"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6-15 credits chosen from the following courses",
+          "courses": [
+            "DENT 504",
+            "DENT 505",
+            "DENT 509",
+            "DENT 602",
+            "DENT 610",
+            "DENT 654",
+            "DENT 664",
+            "DENT 665",
+            "DENT 681",
+            "DENT 682",
+            "DENT 683",
+            "DENT 685",
+            "DENT 686",
+            "DENT 688",
+            "DENT 690",
+            "EPIB 621",
+            "EPIB 635",
+            "EXMD 610"
+          ],
+          "minCredits": 6,
+          "maxCredits": 15
+        },
+        {
+          "title": "Other complementary 500- or 600-level courses may be taken with the approval of the supervisor or the research director and GPS",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "religious-studies-thesis-bioethics-ma",
+  "name": "Religious Studies (Thesis): Bioethics",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/religious-studies/religious-studies-thesis-bioethics-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "BIOE 690",
+            "BIOE 691",
+            "BIOE 692",
+            "BIOE 693"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "BIOE 680",
+        "BIOE 681",
+        "RELG 571",
+        "RELG 645"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits at the 500 or 600 level, deemed necessary or accepted by the base faculty for the granting of a master's degree, in consultation with the supervisor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

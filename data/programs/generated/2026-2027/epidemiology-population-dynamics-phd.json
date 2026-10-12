@@ -1,0 +1,78 @@
+{
+  "id": "epidemiology-population-dynamics-phd",
+  "name": "Epidemiology: Population Dynamics",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/population-global-health/epidemiology-population-dynamics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 23,
+      "courses": [
+        "EPIB 701",
+        "EPIB 702",
+        "EPIB 703",
+        "EPIB 704",
+        "EPIB 705",
+        "EPIB 706",
+        "EPIB 707",
+        "SOCI 545",
+        "SOCI 626"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ECON 634",
+            "ECON 641",
+            "ECON 734",
+            "ECON 741",
+            "ECON 742",
+            "ECON 744",
+            "EPIB 648",
+            "EPIB 681",
+            "PPHS 525",
+            "PPHS 528",
+            "PPHS 529",
+            "PPHS 615",
+            "SOCI 502",
+            "SOCI 520",
+            "SOCI 525",
+            "SOCI 535",
+            "SOCI 588"
+          ]
+        },
+        {
+          "title": "9 credits of coursework, at the 500 level or higher, with a minimum of 3 credits in biostatistics, 3 credits in epidemiology, and 3 credits from courses approved for the Population Dynamics Option from the list below",
+          "unparsed": true
+        },
+        {
+          "title": "Courses must be chosen in consultation with the student's supervisor and/or the program director or advisor",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

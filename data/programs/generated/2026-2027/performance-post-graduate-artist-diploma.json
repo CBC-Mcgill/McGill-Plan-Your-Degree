@@ -1,0 +1,103 @@
+{
+  "id": "performance-post-graduate-artist-diploma",
+  "name": "Performance (Post-Grad Artist Diploma)",
+  "degree": "PGD-AT",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/performance-post-graduate-artist-diploma/",
+  "credits": 30,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 16,
+      "courses": [
+        "MUIN 715",
+        "MUIN 716"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 14,
+      "rules": [
+        {
+          "title": "8 credits from the following",
+          "courses": [
+            "MUPG 750",
+            "MUPG 751",
+            "MUPG 752",
+            "MUPG 753",
+            "MUPG 754"
+          ],
+          "minCredits": 8,
+          "maxCredits": 8
+        },
+        {
+          "title": "0-3 credits from",
+          "courses": [
+            "MUSR 692"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "3-6 credits from the following",
+          "courses": [
+            "MUPG 571",
+            "MUPG 572"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "Voice",
+          "courses": [
+            "MUIN 610",
+            "MUIN 611"
+          ]
+        },
+        {
+          "title": "Piano",
+          "courses": [
+            "MUPG 670",
+            "MUPG 671",
+            "MUPG 687",
+            "MUPG 688",
+            "MUPG 689"
+          ]
+        },
+        {
+          "title": "Chamber Music",
+          "courses": [
+            "MUIN 500"
+          ]
+        },
+        {
+          "title": "Organ",
+          "courses": [
+            "MUPG 575",
+            "MUPG 670",
+            "MUPG 671"
+          ]
+        },
+        {
+          "title": "Early Music",
+          "courses": [
+            "MUPG 670",
+            "MUPG 671"
+          ]
+        },
+        {
+          "title": "3-6 credits from any ensemble courses with the prefix MUEN at the 500 or 600 level",
+          "unparsed": true
+        },
+        {
+          "title": "One 3-credit seminar at the 500 or 600 level approved by the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

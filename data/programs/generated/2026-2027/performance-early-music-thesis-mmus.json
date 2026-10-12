@@ -1,0 +1,110 @@
+{
+  "id": "performance-early-music-thesis-mmus",
+  "name": "Performance: Early Music (Thesis)",
+  "degree": "M.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/performance-early-music-thesis-mmus/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "MUEN 580",
+        "MUGS 605",
+        "MUIN 620",
+        "MUIN 621",
+        "MUIN 622",
+        "MUPG 600"
+      ],
+      "note": "3 terms of MUEN 580 Students may take MUIN 622 or MUIN 622D1 and MUIN 622D2."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "MUPG 601",
+            "MUPG 602",
+            "MUPG 603",
+            "MUPG 604",
+            "MUPG 606",
+            "MUPG 607",
+            "MUPG 614"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "If chosen, students may take either MUPG 606 or MUPG 607",
+          "maxCourses": 1,
+          "courses": [
+            "MUPG 606",
+            "MUPG 607"
+          ]
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "MUHL 591",
+            "MUPG 575",
+            "MUPG 590",
+            "MUPG 691",
+            "MUTH 602"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Instruments: 6 credits from the following",
+          "courses": [
+            "MUEN 569",
+            "MUEN 572",
+            "MUEN 573"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Voice: 3 credits from the following",
+          "courses": [
+            "MUIN 610",
+            "MUIN 611",
+            "MUIN 612"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Voice: 3 credits from the following",
+          "courses": [
+            "MUEN 553",
+            "MUEN 569",
+            "MUEN 572",
+            "MUEN 579",
+            "MUEN 593",
+            "MUEN 654",
+            "MUEN 696"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits at the 500 level or higher, to be chosen from the Schulich School of Music’s seminar offerings; 3 of the 6 credits must have a MUCO, MUGS, MUGT, MUHL, MUMT, MUPP or MUTH subject code",
+          "unparsed": true
+        },
+        {
+          "title": "Students take 6 credits from either Instruments or Voice from the following",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,70 @@
+{
+  "id": "educational-studies-phd-gender-womens",
+  "name": "Educational Studies: Gender and Women's Studies",
+  "degree": "Ph.D.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/educational-studies-phd-gender-womens/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 14,
+      "courses": [
+        "EDEC 700",
+        "EDEC 701",
+        "EDEC 702",
+        "EDEC 713",
+        "EDEC 714",
+        "WMST 601",
+        "WMST 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EDEC 630",
+            "EDEM 655",
+            "EDEM 692"
+          ]
+        },
+        {
+          "title": "3 credits form one of the following courses",
+          "unparsed": true
+        },
+        {
+          "title": "A different research methods course at the 500 level or higher, either within or outside the Department, may be taken, in consultation with the Supervisor and/or Doctoral Advisory Committee",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "3 credits from the following courses",
+          "unparsed": true
+        },
+        {
+          "title": "3 credit course, at the 500 level or higher, on gender/women's issues, to be chosen from the approved list (available from the McGill Institute for Gender, Sexuality, and Feminist Studies) in consultation with the Doctoral Advisory Committee depending on the student's background and research interests",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

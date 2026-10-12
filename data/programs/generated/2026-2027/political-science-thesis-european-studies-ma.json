@@ -1,0 +1,101 @@
+{
+  "id": "political-science-thesis-european-studies-ma",
+  "name": "Political Science (Thesis): European Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/political-science/political-science-thesis-european-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "POLI 697",
+            "POLI 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "POLI 659",
+        "POLI 694"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "POLI 612"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "POLI 561",
+            "POLI 613",
+            "POLI 614",
+            "POLI 616",
+            "POLI 617"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "POLI 619",
+            "POLI 628",
+            "POLI 629",
+            "POLI 630",
+            "POLI 639",
+            "POLI 680"
+          ]
+        },
+        {
+          "title": "6-9 credits at the 500, 600, or 700 level in courses in political science",
+          "minCredits": 6,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "POLI"
+            ]
+          }
+        },
+        {
+          "title": "3-6 credits, either of the following 3-credit options, or preferably both",
+          "unparsed": true
+        },
+        {
+          "title": "or a more suitable more advanced 500- or 600-level course",
+          "unparsed": true
+        },
+        {
+          "title": "or one of the following courses",
+          "unparsed": true
+        },
+        {
+          "title": "3-6 credits from the following group of courses on European politics",
+          "unparsed": true
+        },
+        {
+          "title": "Of the 15 credits of complementary courses, up to 3 credits at the 500 level or higher may be taken outside the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "physiology-thesis-chemical-biology-msc",
+  "name": "Physiology (Thesis): Chemical Biology",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/physiology-thesis-chemical-biology-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PHGY 621",
+            "PHGY 622",
+            "PHGY 623"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "BIOC 610",
+        "BIOC 611",
+        "PHGY 601",
+        "PHGY 602",
+        "PHGY 604",
+        "PHGY 607",
+        "PHGY 608",
+        "PHGY 620",
+        {
+          "oneOf": [
+            "CHEM 502",
+            "CHEM 503",
+            "PHAR 503"
+          ]
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

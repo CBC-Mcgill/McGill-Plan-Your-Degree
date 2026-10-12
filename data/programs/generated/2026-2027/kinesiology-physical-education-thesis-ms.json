@@ -1,0 +1,74 @@
+{
+  "id": "kinesiology-physical-education-thesis-ms",
+  "name": "Kinesiology and Physical Education (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/kpe/kinesiology-physical-education-thesis-ms/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EDKP 691",
+            "EDKP 692",
+            "EDKP 693",
+            "EDKP 694"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "EDKP 605",
+        "EDKP 621",
+        "EDKP 622",
+        "EDKP 623",
+        "EDKP 624",
+        "EDPE 676"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EDKP 548",
+            "EDKP 552",
+            "EDKP 553",
+            "EDKP 566",
+            "EDKP 603",
+            "EDKP 616",
+            "EDKP 631",
+            "EDKP 662",
+            "EDKP 664",
+            "EDKP 671",
+            "EDKP 672"
+          ]
+        },
+        {
+          "title": "Students must take a minimum of 3 credits of coursework in a classroom setting in the area of concentration selected in consultation with the Graduate Student Advisor",
+          "unparsed": true
+        },
+        {
+          "title": "Students may also take courses (500, 600, or 700 level) from outside of the department chosen in consultation with the supervisor or student advisor, up to a maximum of 6 credits",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,46 @@
+{
+  "id": "langue-et-litterature-francaises-sans-memoire-ma",
+  "name": "Langue et littérature françaises (sans mémoire)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/french-language-literature/langue-et-litterature-francaises-sans-memoire-ma/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Projet de recherche",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Projet de recherche",
+          "courses": [
+            "FREN 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cours obligatoires",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "FREN 600",
+        "FREN 697"
+      ]
+    },
+    {
+      "title": "Cours complémentaires",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "24 crédits, 8 cours; un maximum de 6 crédits peuvent être suivis dans un autre département de McGill qui offre des cours dans le domaine des Humanités de l'annuaire des Études supérieures et postdoctorales, ou dans une autre université",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

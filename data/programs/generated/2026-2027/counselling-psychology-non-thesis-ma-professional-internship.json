@@ -1,0 +1,57 @@
+{
+  "id": "counselling-psychology-non-thesis-ma-professional-internship",
+  "name": "Counselling Psychology (Non-Thesis): Professional/Internship",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/counselling-psychology-non-thesis-ma-professional-internship/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Internship",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "EDPC 677",
+        "EDPC 678",
+        "EDPC 679",
+        "EDPC 683",
+        "EDPC 684",
+        "EDPC 685"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "EDPC 606",
+        "EDPC 607",
+        "EDPC 608",
+        "EDPC 609",
+        "EDPC 615",
+        "EDPC 618",
+        "EDPC 624",
+        "EDPC 662",
+        "EDPC 665",
+        "EDPE 622"
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Elective Courses",
+          "courses": [
+            "EDPC 616",
+            "EDPC 670"
+          ]
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

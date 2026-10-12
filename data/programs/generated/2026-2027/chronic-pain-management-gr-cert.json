@@ -1,0 +1,53 @@
+{
+  "id": "chronic-pain-management-gr-cert",
+  "name": "Chronic Pain Management",
+  "degree": "Gr. Cert.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/physical-occupational-therapy/chronic-pain-management-gr-cert/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "POTH 663",
+        "POTH 664",
+        "POTH 665",
+        "POTH 666"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "One of",
+          "courses": [
+            "POTH 603",
+            "POTH 618"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "or another 500-level or higher course (online or not) from a different university, as approved by the Graduate Certificate Program Chair",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "POTH 603 and POTH 618 are not online courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students are encouraged to plan such courses with the instructor at least one semester before intended enrolment",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

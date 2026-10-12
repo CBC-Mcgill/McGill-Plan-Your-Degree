@@ -1,0 +1,42 @@
+{
+  "id": "thesis-msc",
+  "name": "Architecture (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/architecture/thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "ARCH 627",
+        "ARCH 694",
+        "ARCH 695",
+        "ARCH 696"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits of courses at the 600-level, chosen from Architectural courses (subject code ARCH)",
+          "unparsed": true
+        },
+        {
+          "title": "Other courses at the 600-level or higher, outside the School, relevant to the program of study, may be chosen with approval by the student's supervisor and Graduate Program Director",
+          "match": {
+            "minLevel": 600
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

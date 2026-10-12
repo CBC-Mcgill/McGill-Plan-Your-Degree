@@ -1,0 +1,48 @@
+{
+  "id": "biology-thesis-neotropical-environment-msc",
+  "name": "Biology (Thesis): Neotropical Environment",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/biology/biology-thesis-neotropical-environment-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "BIOL 690",
+            "BIOL 697",
+            "BIOL 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "BIOL 640",
+        "ENVR 610"
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits, at the 500 level or higher, on environmental issues to be chosen in consultation with and approved by the student’s supervisor AND the Neotropical Environment Options Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

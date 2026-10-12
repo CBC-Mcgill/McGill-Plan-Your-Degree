@@ -1,0 +1,74 @@
+{
+  "id": "political-science-thesis-ma",
+  "name": "Political Science (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/political-science/political-science-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "POLI 697",
+            "POLI 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "POLI 694"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "POLI 612"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "POLI 561",
+            "POLI 613",
+            "POLI 614",
+            "POLI 616",
+            "POLI 617"
+          ]
+        },
+        {
+          "title": "12-15 credits of 500- or 600-level courses as determined by the student's area of study",
+          "unparsed": true
+        },
+        {
+          "title": "3-6 credits, either of the following 3-credit options or, preferably, both: or a more suitable advanced course at the 500 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "or, one of the following courses",
+          "unparsed": true
+        },
+        {
+          "title": "Of the 18 credits of complementary courses, up to 3 credits at the 500 level or higher may be outside the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

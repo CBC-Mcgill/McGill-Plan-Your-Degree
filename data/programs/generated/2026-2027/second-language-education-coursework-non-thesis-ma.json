@@ -1,0 +1,122 @@
+{
+  "id": "second-language-education-coursework-non-thesis-ma",
+  "name": "Second Language Education: Coursework (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/second-language-education-coursework-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "EDEM 609",
+        "EDPE 575",
+        "EDSL 623",
+        "EDSL 627"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "12-18 credits chosen from the following courses",
+          "courses": [
+            "EDEC 630",
+            "EDEM 690",
+            "EDSL 601",
+            "EDSL 602",
+            "EDSL 617",
+            "EDSL 620",
+            "EDSL 624",
+            "EDSL 628",
+            "EDSL 631",
+            "EDSL 632",
+            "EDSL 640",
+            "EDSL 651"
+          ],
+          "minCredits": 12,
+          "maxCredits": 18
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6-12 credits from the following",
+          "courses": [
+            "EDEC 520",
+            "EDEA 555",
+            "EDEA 655",
+            "EDEC 604",
+            "EDEC 606",
+            "EDEC 612",
+            "EDEC 628",
+            "EDEC 635",
+            "EDEC 648",
+            "EDEC 650",
+            "EDEM 637",
+            "EDEM 644",
+            "EDEM 646",
+            "EDEM 655",
+            "EDEM 660",
+            "EDEM 679",
+            "EDEM 688",
+            "EDER 600",
+            "EDER 607",
+            "EDER 608",
+            "EDER 609",
+            "EDER 614",
+            "EDER 615",
+            "EDER 622",
+            "EDER 639",
+            "EDER 649"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Elective Courses",
+          "courses": [
+            "WCOM 642",
+            "WCOM 645",
+            "WCOM 661",
+            "WCOM 662"
+          ]
+        },
+        {
+          "title": "9 credits of courses at the 500, 600, or 700 level are selected in consultation with the Graduate Program Director or Coordinator and may include complementary courses listed above",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        },
+        {
+          "title": "Up to 6 of the elective credits may include the following courses",
+          "unparsed": true
+        },
+        {
+          "title": "Exceptionally, one 3-credit undergraduate language course, at any level, in a language not formally studied previously may be taken as an elective",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

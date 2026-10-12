@@ -1,0 +1,37 @@
+{
+  "id": "rehabilitation-non-thesis-msc",
+  "name": "Rehabilitation Science (Non-Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/physical-occupational-therapy/rehabilitation-non-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 25,
+      "courses": [
+        "POTH 610",
+        "POTH 614",
+        "POTH 617",
+        "POTH 628",
+        "POTH 661",
+        "POTH 662"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 20,
+      "rules": [
+        {
+          "title": "20 credits of courses that pertain to the student's area of specialization; to be chosen from the School course offerings or other courses at the 500, 600 or 700 level with permission from the Graduate Program Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

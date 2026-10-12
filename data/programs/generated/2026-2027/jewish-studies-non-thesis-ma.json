@@ -1,0 +1,71 @@
+{
+  "id": "jewish-studies-non-thesis-ma",
+  "name": "Jewish Studies (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/jewish-studies/jewish-studies-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "JWST 699"
+      ]
+    },
+    {
+      "title": "Jewish Thought",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Jewish Thought",
+          "courses": [
+            "JWST 504",
+            "JWST 510",
+            "JWST 511",
+            "JWST 558",
+            "JWST 604"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Jewish History",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Jewish History",
+          "courses": [
+            "HIST 655",
+            "JWST 585",
+            "JWST 586",
+            "JWST 602"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Jewish Literature",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Jewish Literature",
+          "courses": [
+            "JWST 510",
+            "JWST 511",
+            "JWST 520",
+            "JWST 538",
+            "JWST 615"
+          ]
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

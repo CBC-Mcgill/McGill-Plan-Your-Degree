@@ -1,0 +1,37 @@
+{
+  "id": "mining-engineering-gr-dip",
+  "name": "Mining Engineering",
+  "degree": "Gr. Dip.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/mining-materials-engineering/mining-engineering-gr-dip/",
+  "credits": 30,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "MIME 601",
+        "MIME 673"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "24 credits of courses at the 500 level or higher selected from within and/or outside the department in consultation with the Program Advisor",
+          "minCredits": 24,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,62 @@
+{
+  "id": "human-genetics-thesis-msc",
+  "name": "Human Genetics (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/human-genetics-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "HGEN 680",
+            "HGEN 681",
+            "HGEN 682"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "HGEN 662",
+        "HGEN 692"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "HGEN 660",
+            "HGEN 661",
+            "HGEN 663",
+            "HGEN 670",
+            "HGEN 693",
+            "HGEN 696",
+            "HGEN 697",
+            "HGEN 698",
+            "HGEN 699"
+          ]
+        },
+        {
+          "title": "6 credits chosen from the departmental offerings below or from 500-, 600-, or 700-level courses offered in the Faculties of Medicine or Science",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

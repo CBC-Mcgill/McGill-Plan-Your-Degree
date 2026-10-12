@@ -1,0 +1,59 @@
+{
+  "id": "microbiology-immunology-thesis-msc",
+  "name": "Microbiology and Immunology (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/microbiology-immunology-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "MIMM 697",
+            "MIMM 698",
+            "MIMM 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "MIMM 611",
+        "MIMM 612"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Minimum 6 credits from",
+          "courses": [
+            "MIMM 607",
+            "MIMM 616",
+            "MIMM 617",
+            "MIMM 619",
+            "NEUR 502"
+          ],
+          "minCredits": 6
+        },
+        {
+          "title": "Any life sciences-related 500-level or above course (3 credits)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

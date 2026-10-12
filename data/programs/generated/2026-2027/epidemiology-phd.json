@@ -1,0 +1,54 @@
+{
+  "id": "epidemiology-phd",
+  "name": "Epidemiology",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/population-global-health/epidemiology-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 17,
+      "courses": [
+        "EPIB 701",
+        "EPIB 702",
+        "EPIB 703",
+        "EPIB 704",
+        "EPIB 705",
+        "EPIB 706",
+        "EPIB 707"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits of coursework, at the 500 level or higher, with a minimum of 3 credits in biostatistics and 6 credits in epidemiology and/or substantive topic (normally related to the thesis topic)",
+          "unparsed": true
+        },
+        {
+          "title": "Courses must be chosen in consultation with the student’s supervisor and/or the program director or advisor",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

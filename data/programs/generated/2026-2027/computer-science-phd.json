@@ -1,0 +1,49 @@
+{
+  "id": "computer-science-phd",
+  "name": "Computer Science",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 4,
+      "courses": [
+        "COMP 604",
+        "COMP 700",
+        "COMP 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "32 credits of graduate-level courses, excluding COMP 604, COMP 700, and COMP 701",
+          "unparsed": true
+        },
+        {
+          "title": "Students must take a minimum of 6 credits of complementary courses at the graduate level from McGill after the course reduction",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,73 @@
+{
+  "id": "plant-science-environment-phd",
+  "name": "Plant Science: Environment",
+  "degree": "Ph.D.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/plant-science/plant-science-environment-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Invitational Seminar",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "PLNT 690"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "ENVR 615",
+        "PLNT 701"
+      ],
+      "note": "Must be taken within the first year of registering"
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3-6 credits from",
+          "courses": [
+            "ENVR 610",
+            "ENVR 614"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "ENVR 585",
+            "ENVR 630",
+            "ENVR 680"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or 3 credits at the 500 level or higher recommended by the Advisory Committee and and approved by the Environment Option Committee",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

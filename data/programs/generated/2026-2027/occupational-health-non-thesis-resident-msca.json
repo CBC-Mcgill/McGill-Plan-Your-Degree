@@ -1,0 +1,42 @@
+{
+  "id": "occupational-health-non-thesis-resident-msca",
+  "name": "Occupational Health (Non-Thesis) (Resident)",
+  "degree": "M.Sc.A.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/population-global-health/occupational-health-non-thesis-resident-msca/",
+  "credits": 46,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "OCCH 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 31,
+      "courses": [
+        "EPIB 507",
+        "EPIB 601",
+        "OCCH 602",
+        "OCCH 604",
+        "OCCH 605",
+        "OCCH 608",
+        "OCCH 612",
+        "OCCH 615",
+        "OCCH 616"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

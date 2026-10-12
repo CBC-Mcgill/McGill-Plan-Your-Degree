@@ -1,0 +1,94 @@
+{
+  "id": "electrical-engineering-non-thesis-meng-appllied-artificial-intelligence",
+  "name": "Electrical Engineering (Non-Thesis): Applied Artificial Intelligence",
+  "degree": "M.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/electrical-computer-engineering/electrical-engineering-non-thesis-meng-appllied-artificial-intelligence/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 14,
+      "courses": [
+        "ECSE 551",
+        "ECSE 552",
+        "ECSE 679"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "6-8 credits from the following",
+          "courses": [
+            "ECSE 526",
+            "ECSE 555",
+            "ECSE 556",
+            "ECSE 557",
+            "ECSE 626",
+            "ECSE 683"
+          ],
+          "minCredits": 6,
+          "maxCredits": 8
+        },
+        {
+          "title": "3-4 credits from the following",
+          "courses": [
+            "COMP 540",
+            "ECSE 500",
+            "ECSE 501",
+            "ECSE 507",
+            "ECSE 509",
+            "ECSE 543",
+            "ECSE 621"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        },
+        {
+          "title": "9-12 credits from the following",
+          "courses": [
+            "COMP 545",
+            "COMP 549",
+            "COMP 558",
+            "COMP 565",
+            "COMP 579",
+            "COMP 585",
+            "COMP 588",
+            "COMP 685",
+            "ECSE 506",
+            "ECSE 508",
+            "ECSE 541",
+            "ECSE 544",
+            "ECSE 546",
+            "ECSE 554",
+            "MECH 559"
+          ],
+          "minCredits": 9,
+          "maxCredits": 12
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 7,
+      "rules": [
+        {
+          "title": "7-13 credits at the 500 or 600 level (excluding ECSE 691 to ECSE 697)",
+          "unparsed": true
+        },
+        {
+          "title": "* No more that 16 credits in total may be outside the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

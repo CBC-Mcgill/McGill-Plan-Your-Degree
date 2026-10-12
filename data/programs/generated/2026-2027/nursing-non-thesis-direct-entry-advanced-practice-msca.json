@@ -1,0 +1,66 @@
+{
+  "id": "nursing-non-thesis-direct-entry-advanced-practice-msca",
+  "name": "Nursing (Non-Thesis): Direct Entry to Advanced Practice Nursing",
+  "degree": "M.Sc.A.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/nursing/nursing-non-thesis-direct-entry-advanced-practice-msca/",
+  "credits": 61,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 49,
+      "courses": [
+        "IPEA 502",
+        "IPEA 503",
+        "NUR2 515",
+        "NUR2 516",
+        "NUR2 607",
+        "NUR2 609",
+        "NUR2 610",
+        "NUR2 611",
+        "NUR2 612",
+        "NUR2 616",
+        "NUR2 619",
+        "NUR2 621",
+        "NUR2 623",
+        "NUR2 626",
+        "NUR2 634",
+        "NUR2 637",
+        "NUR2 638",
+        "NUR2 640",
+        "NUR2 642"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Knowledge Translation Stream",
+          "courses": [
+            "NUR2 600",
+            "NUR2 601",
+            "NUR2 602"
+          ],
+          "minCredits": 12,
+          "option": "Knowledge Translation Stream"
+        },
+        {
+          "title": "Research Stream",
+          "courses": [
+            "NUR2 630",
+            "NUR2 631",
+            "NUR2 632"
+          ],
+          "minCredits": 12,
+          "option": "Research Stream"
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

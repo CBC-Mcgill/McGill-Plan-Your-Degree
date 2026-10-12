@@ -1,0 +1,74 @@
+{
+  "id": "art-history-phd",
+  "name": "Art History",
+  "degree": "Ph.D.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/art-history/art-history-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "ARTH 600",
+        "ARTH 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Four courses chosen from the following",
+          "courses": [
+            "ARTH 501",
+            "ARTH 502",
+            "ARTH 714",
+            "ARTH 723",
+            "ARTH 724",
+            "ARTH 725",
+            "ARTH 731"
+          ],
+          "minCourses": 4,
+          "maxCourses": 4
+        },
+        {
+          "title": "or from the 600-level complementary courses listed for the M.A",
+          "unparsed": true
+        },
+        {
+          "title": "Alternatively, up to 3 of the 12 credits may be from other disciplines, as approved by the Department",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    },
+    {
+      "title": "Language Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Ph.D. students must demonstrate proficiency in one or more languages other than English that is related to their dissertation research, as determined by their supervisor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

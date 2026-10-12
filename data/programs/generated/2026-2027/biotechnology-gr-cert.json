@@ -1,0 +1,49 @@
+{
+  "id": "biotechnology-gr-cert",
+  "name": "Biotechnology",
+  "degree": "Gr. Cert.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/biotechnology/biotechnology-gr-cert/",
+  "credits": 16,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 10,
+      "courses": [
+        "BIOT 505",
+        "BTEC 620",
+        "BTEC 621"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Two courses chosen from the following",
+          "courses": [
+            "BINF 511",
+            "BIOL 524",
+            "BIOL 568",
+            "BTEC 501",
+            "BTEC 502",
+            "BTEC 535",
+            "BTEC 555",
+            "EXMD 602",
+            "EXMD 610",
+            "PARA 635",
+            "PHGY 518",
+            "BREE 530"
+          ],
+          "minCourses": 2,
+          "maxCourses": 2
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

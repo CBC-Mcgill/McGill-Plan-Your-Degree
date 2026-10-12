@@ -1,0 +1,48 @@
+{
+  "id": "music-composition-thesis-mmus",
+  "name": "Music: Composition (Thesis)",
+  "degree": "M.Mus.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/music-composition-thesis-mmus/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 33,
+      "courses": [
+        "MUCO 622",
+        "MUGS 684",
+        "MUGS 685",
+        "MUGS 686"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "MUCO 631",
+            "MUCO 632",
+            "MUCO 633",
+            "MUCO 634",
+            "MUCO 635",
+            "MUCO 636"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "6 credits of seminars, at the 600 level or higher, approved by the Schulich School of Music",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

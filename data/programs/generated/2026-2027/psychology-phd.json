@@ -1,0 +1,86 @@
+{
+  "id": "psychology-phd",
+  "name": "Psychology",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/psychology/psychology-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "PSYC 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "PSYC 712",
+            "PSYC 715",
+            "PSYC 722",
+            "PSYC 723",
+            "PSYC 724",
+            "PSYC 725",
+            "PSYC 727",
+            "PSYC 728",
+            "PSYC 729",
+            "PSYC 730",
+            "PSYC 732",
+            "PSYC 733",
+            "PSYC 734",
+            "PSYC 735",
+            "PSYC 736",
+            "PSYC 740",
+            "PSYC 741",
+            "PSYC 742",
+            "PSYC 744",
+            "PSYC 746",
+            "PSYC 747",
+            "PSYC 748",
+            "PSYC 749",
+            "PSYC 750",
+            "PSYC 752",
+            "PSYC 753"
+          ]
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "PSYC 650",
+            "PSYC 651",
+            "PSYC 660"
+          ]
+        },
+        {
+          "title": "12 credits (one course per term in Year 2 and Year 3) chosen from the following list",
+          "unparsed": true
+        },
+        {
+          "title": "0-12 credits from the following (students without a master's degree from McGill need to take all 12 credits)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

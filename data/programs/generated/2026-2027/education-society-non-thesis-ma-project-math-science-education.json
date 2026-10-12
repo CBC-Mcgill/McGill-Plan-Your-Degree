@@ -1,0 +1,106 @@
+{
+  "id": "education-society-non-thesis-ma-project-math-science-education",
+  "name": "Education and Society (Non-Thesis): Project Math & Science Education",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/education-society-non-thesis-ma-project-math-science-education/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Project Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Project Courses",
+          "courses": [
+            "EDER 633",
+            "EDER 634"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "EDEC 624",
+        "EDEC 625",
+        "EDEC 626",
+        "EDEM 609",
+        "EDEM 690"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDEC 646",
+            "EDEC 647"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "EDEC 602",
+            "EDEC 606",
+            "EDEC 612",
+            "EDEC 627",
+            "EDEC 635",
+            "EDEM 644",
+            "EDEM 660",
+            "EDEM 676",
+            "EDEM 690",
+            "EDER 600",
+            "EDER 606",
+            "EDER 607",
+            "EDER 608",
+            "EDER 609",
+            "EDER 614",
+            "EDER 615",
+            "EDER 617",
+            "EDER 622",
+            "EDER 625",
+            "EDER 626",
+            "EDER 643",
+            "EDER 649",
+            "EDPE 635",
+            "EDPE 676",
+            "EDTL 500",
+            "EDTL 508"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits at the 500 level or higher",
+          "minCredits": 6,
+          "match": {
+            "minLevel": 500
+          }
+        },
+        {
+          "title": "A maximum of 9 credits, at the 500 level or higher, may be taken outside of the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

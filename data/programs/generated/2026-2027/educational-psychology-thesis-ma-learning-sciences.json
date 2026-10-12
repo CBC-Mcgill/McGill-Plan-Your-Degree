@@ -1,0 +1,69 @@
+{
+  "id": "educational-psychology-thesis-ma-learning-sciences",
+  "name": "Educational Psychology (Thesis): Learning Sciences",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/educational-psychology-thesis-ma-learning-sciences/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EDPE 604",
+            "EDPE 607",
+            "EDPE 693",
+            "EDPE 694",
+            "EDPE 695",
+            "EDPE 696"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "EDPE 605",
+        "EDPE 656",
+        "EDPE 663",
+        "EDPE 666",
+        "EDPE 676",
+        "EDPE 682"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 510",
+            "EDPE 561",
+            "EDPE 636",
+            "EDPE 640",
+            "EDPE 664",
+            "EDPE 687"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or other 500-, or 600-level courses offered by the Department and with the approval of the supervisor and the Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

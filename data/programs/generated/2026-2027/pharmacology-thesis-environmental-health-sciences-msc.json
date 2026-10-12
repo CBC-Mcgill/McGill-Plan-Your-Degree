@@ -1,0 +1,42 @@
+{
+  "id": "pharmacology-thesis-environmental-health-sciences-msc",
+  "name": "Pharmacology (Thesis): Environmental Health Sciences",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/pharmacology-thesis-environmental-health-sciences-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PHAR 696",
+            "PHAR 698",
+            "PHAR 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "PHAR 601",
+        "PHAR 602",
+        "PHAR 609",
+        "PHAR 610",
+        "PHAR 670",
+        "PHAR 671",
+        "PHAR 712"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

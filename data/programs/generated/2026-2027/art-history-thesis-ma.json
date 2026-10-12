@@ -1,0 +1,51 @@
+{
+  "id": "art-history-thesis-ma",
+  "name": "Art History (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/art-history/art-history-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "ARTH 600",
+        "ARTH 698",
+        "ARTH 699"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ARTH 501",
+            "ARTH 502",
+            "ARTH 630",
+            "ARTH 645",
+            "ARTH 646",
+            "ARTH 647",
+            "ARTH 653",
+            "ARTH 654",
+            "ARTH 660",
+            "ARTH 661",
+            "ARTH 675",
+            "ARTH 678",
+            "ARTH 714",
+            "ARTH 724",
+            "ARTH 725",
+            "ARTH 731"
+          ]
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,73 @@
+{
+  "id": "music-theory-thesis-ma",
+  "name": "Music: Theory (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/music-theory-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "MUGS 683",
+            "MUGS 685",
+            "MUGS 686"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "MUTH 652",
+            "MUTH 653",
+            "MUTH 654",
+            "MUTH 655",
+            "MUTH 656",
+            "MUTH 657"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "MUTH 658",
+            "MUTH 659"
+          ]
+        },
+        {
+          "title": "0-6 credits from the following",
+          "courses": [
+            "MUGS 684"
+          ],
+          "maxCredits": 6
+        },
+        {
+          "title": "3-6 credits will be from the following",
+          "unparsed": true
+        },
+        {
+          "title": "0-9 credits at the 600 level or higher, approved by the Schulich School of Music",
+          "match": {
+            "minLevel": 600
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

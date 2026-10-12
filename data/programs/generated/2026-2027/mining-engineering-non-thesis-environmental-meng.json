@@ -1,0 +1,169 @@
+{
+  "id": "mining-engineering-non-thesis-environmental-meng",
+  "name": "Mining Engineering (Non-Thesis): Environmental Engineering",
+  "degree": "M.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/mining-materials-engineering/mining-engineering-non-thesis-environmental-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "MIME 628"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "CHEE 591",
+        "CIVE 615"
+      ]
+    },
+    {
+      "title": "Complementary Courses Data Analysis Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "AEMA 611",
+            "CIVE 555",
+            "PSYC 650"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Toxicology Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "OCCH 612",
+            "OCCH 616"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Water Pollution Engineering Course",
+      "kind": "complementary",
+      "credits": 4,
+      "rules": [
+        {
+          "title": "4 credits from the following",
+          "courses": [
+            "CIVE 651",
+            "CIVE 652",
+            "CIVE 660"
+          ],
+          "minCredits": 4,
+          "maxCredits": 4
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Air Pollution Engineering Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "CHEE 592",
+            "MECH 534"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Soil and Water Quality Management Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3-4 credits from the following",
+          "courses": [
+            "BREE 533",
+            "CIVE 686"
+          ],
+          "minCredits": 3,
+          "maxCredits": 4
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Environmental Impact Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "GEOG 601"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses Environmental Policy Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "URBP 506"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or 3 credits approved at the 500-, 600-, or 700-level alternative",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 10,
+      "rules": [
+        {
+          "title": "Elective Courses",
+          "courses": [
+            "MIME 629"
+          ]
+        },
+        {
+          "title": "Another project course and/or Engineering or non-Engineering 500-, 600-, or 700-level course subject to approval of the Department",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

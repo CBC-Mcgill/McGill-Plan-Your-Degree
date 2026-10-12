@@ -1,0 +1,59 @@
+{
+  "id": "religious-studies-non-thesis-ma",
+  "name": "Religious Studies (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/religious-studies/religious-studies-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "RELG 660",
+            "RELG 661",
+            "RELG 662"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "RELG 555",
+        "RELG 645"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "30 credits of courses selected from the 500- or 600-level courses accepted by the School of Religious Studies for the granting of a master's degree",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Language Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students are required to give their area committee evidence of reading knowledge of a scholarly language other than English",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

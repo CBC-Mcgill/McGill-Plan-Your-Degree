@@ -1,0 +1,43 @@
+{
+  "id": "russian-slavic-studies-ma",
+  "name": "Russian and Slavic Studies (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/languages-literatures-cultures/russian-slavic-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "RUSS 691",
+            "RUSS 692"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "12-18 credits of graduate coursework in the Department",
+          "unparsed": true
+        },
+        {
+          "title": "0-6 credits of graduate coursework outside the Department, subject to approval by the Department Graduate Committee",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

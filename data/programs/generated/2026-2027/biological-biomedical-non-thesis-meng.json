@@ -1,0 +1,102 @@
+{
+  "id": "biological-biomedical-non-thesis-meng",
+  "name": "Biological and Biomedical Engineering (Non-Thesis)",
+  "degree": "M.Eng.",
+  "faculty": "Interfaculty Studies",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/interfaculty-studies/biological-biomedical-engineering/biological-biomedical-non-thesis-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Internship Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Internship Courses",
+          "courses": [
+            "BBME 681",
+            "BBME 682"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BBME 600",
+            "BIEN 601"
+          ]
+        },
+        {
+          "title": "Students take either BBME 600D1 and BBME 600D2 or BBME 600N1 and BBME 600N2",
+          "maxCourses": 1,
+          "courses": [
+            "BBME 600",
+            "BBME 600",
+            "BBME 600",
+            "BBME 600"
+          ]
+        },
+        {
+          "title": "Quantitative Core Courses",
+          "courses": [
+            "BIEN 510",
+            "BIEN 530",
+            "BIEN 550",
+            "BIEN 560",
+            "BIEN 570",
+            "BIEN 590",
+            "BMDE 502",
+            "BMDE 503",
+            "BMDE 512",
+            "BMDE 519",
+            "BMDE 520",
+            "BMDE 610",
+            "BMDE 660",
+            "MDPH 607"
+          ]
+        },
+        {
+          "title": "Non-Quantitative Core Courses",
+          "courses": [
+            "BIEN 535",
+            "BIEN 540",
+            "BIEN 580",
+            "BIEN 680",
+            "BMDE 501",
+            "BMDE 504",
+            "BMDE 505",
+            "BMDE 508",
+            "BMDE 525",
+            "BMDE 650",
+            "BMDE 654"
+          ]
+        },
+        {
+          "title": "Minimum of 12 credits must come from the core courses listed below",
+          "unparsed": true
+        },
+        {
+          "title": "At least 6 credits must be chosen from the \"quantitative\" courses listed below",
+          "unparsed": true
+        },
+        {
+          "title": "The remaining 12 credits of complementary courses must come from core or non-core complementary courses chosen from BBME courses or from other courses, a the 500 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "At least 6 of the 12 credits must have both life sciences content and content from the physical sciences, engineering or computer science",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

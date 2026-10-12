@@ -1,0 +1,62 @@
+{
+  "id": "educational-psychology-phd-learning-sciences",
+  "name": "Educational Psychology: Learning Sciences",
+  "degree": "Ph.D.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/educational-psychology-phd-learning-sciences/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "EDPE 684",
+        "EDPE 687",
+        "EDPE 704",
+        "EDPE 705",
+        "EDPE 706",
+        "EDPE 707",
+        "EDPE 708"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 636",
+            "EDPE 663",
+            "EDPE 664",
+            "EDPE 668",
+            "EDPH 689"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "or other 600-, 700-level courses offered by the Department and with the approval of the supervisor and the Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

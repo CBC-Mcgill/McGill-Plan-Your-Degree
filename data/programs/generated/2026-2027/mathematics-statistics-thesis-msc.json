@@ -1,0 +1,40 @@
+{
+  "id": "mathematics-statistics-thesis-msc",
+  "name": "Mathematics and Statistics (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/mathematics-statistics/mathematics-statistics-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "MATH 600",
+            "MATH 601",
+            "MATH 604",
+            "MATH 605"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "At least six approved graduate courses, at the 500, 600, or 700 level, of 3 or more credits each",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

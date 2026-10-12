@@ -1,0 +1,47 @@
+{
+  "id": "hispanic-studies-non-thesis-ma",
+  "name": "Hispanic Studies (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/languages-literatures-cultures/hispanic-studies-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "HISP 603"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 42,
+      "rules": [
+        {
+          "title": "Research Project: 18 credits to be chosen from",
+          "courses": [
+            "HISP 615",
+            "HISP 616",
+            "HISP 617"
+          ],
+          "minCredits": 18,
+          "maxCredits": 18
+        },
+        {
+          "title": "24 credits at the 500, 600, 700 level in Hispanic Studies courses and courses offered by the Department of Languages, Literatures, and Cultures",
+          "unparsed": true
+        },
+        {
+          "title": "Students can take up to 6 credits in courses offered by other departments with permission of the Director of Graduate Studies",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

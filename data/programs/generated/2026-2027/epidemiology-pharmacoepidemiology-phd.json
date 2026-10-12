@@ -1,0 +1,58 @@
+{
+  "id": "epidemiology-pharmacoepidemiology-phd",
+  "name": "Epidemiology: Pharmacoepidemiology",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/population-global-health/epidemiology-pharmacoepidemiology-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 26,
+      "courses": [
+        "EPIB 639",
+        "EPIB 654",
+        "EPIB 661",
+        "EPIB 662",
+        "EPIB 701",
+        "EPIB 702",
+        "EPIB 703",
+        "EPIB 704",
+        "EPIB 705",
+        "EPIB 706",
+        "EPIB 707"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits of coursework in biostatistics at the 500 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "Courses must be chosen in consultation with the student’s supervisor and/or the program director or advisor",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "geography-thesis-gender-womens-studies-ma",
+  "name": "Geography (Thesis): Gender and Women's Studies",
+  "degree": "M.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/geography/geography-thesis-gender-womens-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "GEOG 698",
+            "GEOG 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "GEOG 631",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "WMST 602"
+          ]
+        },
+        {
+          "title": "6 credits at the 500 level or above in Geography",
+          "minCredits": 6,
+          "maxCredits": 6,
+          "match": {
+            "minLevel": 500,
+            "subjects": [
+              "GEOG"
+            ]
+          }
+        },
+        {
+          "title": "GEOG 696 can count among these complementary credits for students with an appropriate background",
+          "unparsed": true
+        },
+        {
+          "title": "OR one 3-credit graduate course on gender/women's issues",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "health-sciences-education-phd",
+  "name": "Health Sciences Education",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/health-sciences-education/health-sciences-education-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "PSYT 625",
+            "FMED 509",
+            "FMED 604",
+            "FMED 625",
+            "FMED 690",
+            "NUR2 702",
+            "NUR2 706",
+            "MGPO 701",
+            "EDEC 707",
+            "EDPE 682",
+            "EDPE 687",
+            "SOCI 588"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Electives (0-9)",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Depending on the student's prior coursework and in consultation with the Supervisor and/or Doctoral Advisory Committee, an additional 0-9 credits of elective courses at the 500 level or higher may be required",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

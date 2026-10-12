@@ -1,0 +1,51 @@
+{
+  "id": "chemistry-phd",
+  "name": "Chemistry",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/chemistry/chemistry-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 5,
+      "courses": [
+        "CHEM 650",
+        "CHEM 651",
+        "CHEM 688",
+        "CHEM 701",
+        "CHEM 702"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Students entering the program with an M.Sc. degree will normally take three (3) graduate-level courses",
+          "unparsed": true
+        },
+        {
+          "title": "Students entering without an M.Sc. degree will normally take five (5) graduate-level courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

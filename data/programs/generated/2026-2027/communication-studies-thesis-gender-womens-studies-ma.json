@@ -1,0 +1,59 @@
+{
+  "id": "communication-studies-thesis-gender-womens-studies-ma",
+  "name": "Communication Studies (Thesis): Gender and Women's Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/communication-studies/communication-studies-thesis-gender-womens-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "COMS 692",
+            "COMS 693",
+            "COMS 694",
+            "COMS 695"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "COMS 616",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "WMST 602"
+          ]
+        },
+        {
+          "title": "3 credits of complementary coursework must be in Gender and Women's Studies",
+          "unparsed": true
+        },
+        {
+          "title": "OR, one 3-credit course on gender/women's issues at the 500, 600, or 700 level (may be in the Department or outside)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

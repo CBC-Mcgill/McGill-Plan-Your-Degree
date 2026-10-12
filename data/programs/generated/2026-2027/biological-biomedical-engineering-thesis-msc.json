@@ -1,0 +1,99 @@
+{
+  "id": "biological-biomedical-engineering-thesis-msc",
+  "name": "Biological and Biomedical Engineering (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Interfaculty Studies",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/interfaculty-studies/biological-biomedical-engineering/biological-biomedical-engineering-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "BBME 693",
+            "BBME 694",
+            "BBME 695",
+            "BBME 696",
+            "BBME 697"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "BBME 600"
+      ],
+      "note": "The catalogue also lists an alternative set of required courses."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "3 credits from the following quantitative courses",
+          "courses": [
+            "BIEN 510",
+            "BIEN 530",
+            "BIEN 550",
+            "BIEN 560",
+            "BIEN 570",
+            "BIEN 590",
+            "BMDE 502",
+            "BMDE 503",
+            "BMDE 512",
+            "BMDE 519",
+            "BMDE 610",
+            "BMDE 660",
+            "MDPH 607"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "BIEN 510",
+            "BIEN 530",
+            "BIEN 540",
+            "BIEN 550",
+            "BIEN 560",
+            "BIEN 570",
+            "BIEN 590",
+            "BIEN 680",
+            "BMDE 501",
+            "BMDE 502",
+            "BMDE 503",
+            "BMDE 504",
+            "BMDE 505",
+            "BMDE 508",
+            "BMDE 512",
+            "BMDE 519",
+            "BMDE 525",
+            "BMDE 610",
+            "BMDE 650",
+            "BMDE 654",
+            "BMDE 660",
+            "MDPH 607"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits at the 500-level or higher chosen from a list on the program web site https://www.mcgill.ca/bbme/students/courses or from other courses, at the 500 level or higher, at least 3 credits of which have both life sciences content and content from the physical sciences, engineering, or computer science, with the prior written approval of the Thesis Supervisor and the Graduate Program Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "anthropology-thesis-environment-ma",
+  "name": "Anthropology (Thesis): Environment",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/anthropology/anthropology-thesis-environment-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 36,
+      "courses": [
+        "ANTH 602",
+        "ANTH 603",
+        "ANTH 609",
+        "ANTH 699",
+        "ENVR 615"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from",
+          "courses": [
+            "ENVR 610",
+            "ENVR 614"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from",
+          "courses": [
+            "ENVR 585",
+            "ENVR 630",
+            "ENVR 680"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from any 500 level or above departmental course offerings related to Environment, as approved by the advisory committee",
+          "unparsed": true
+        },
+        {
+          "title": "or 3 credits to be chosen from among 500 level or above departmental course offerings related to Environment, recommended by the Advisory Committee, and approved by the Environment Option Committee",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

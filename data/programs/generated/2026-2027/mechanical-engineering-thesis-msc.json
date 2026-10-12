@@ -1,0 +1,45 @@
+{
+  "id": "mechanical-engineering-thesis-msc",
+  "name": "Mechanical Engineering (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/mechanical-engineering/mechanical-engineering-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "MECH 609",
+            "MECH 691",
+            "MECH 692",
+            "MECH 696"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits (at the 500, 600, or 700 level) from the Faculty of Engineering or Faculty of Science, at least 6 of which must be from within the Faculty of Engineering",
+          "unparsed": true
+        },
+        {
+          "title": "Any courses outside of these Faculties must be approved by the Graduate Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

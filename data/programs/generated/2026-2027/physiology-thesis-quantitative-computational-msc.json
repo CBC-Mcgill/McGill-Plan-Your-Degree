@@ -1,0 +1,58 @@
+{
+  "id": "physiology-thesis-quantitative-computational-msc",
+  "name": "Physiology (Thesis): Quantitative and Computational Physiology",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/physiology-thesis-quantitative-computational-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 42,
+      "courses": [
+        "PHGY 601",
+        "PHGY 602",
+        "PHGY 604",
+        "PHGY 607",
+        "PHGY 608",
+        "PHGY 620",
+        "PHGY 621",
+        "PHGY 623",
+        "PHGY 690",
+        "QLSC 600"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BMDE 502",
+            "BMDE 519",
+            "COMP 551",
+            "COMP 552",
+            "COMP 558",
+            "COMP 564",
+            "COMP 680",
+            "ECSE 509",
+            "ECSE 512",
+            "ECSE 520",
+            "ECSE 626",
+            "MATH 545",
+            "MATH 547",
+            "MATH 680",
+            "NEUR 503",
+            "PHYS 559"
+          ]
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

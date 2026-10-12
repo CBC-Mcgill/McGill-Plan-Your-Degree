@@ -1,0 +1,74 @@
+{
+  "id": "human-nutrition-non-thesis-project-msca",
+  "name": "Human Nutrition (Non-Thesis): Project",
+  "degree": "M.Sc.A.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/human-nutrition/human-nutrition-non-thesis-project-msca/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "NUTR 652",
+            "NUTR 653",
+            "NUTR 654",
+            "NUTR 655"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "NUTR 651",
+        "NUTR 660",
+        "NUTR 695",
+        "NUTR 696"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits of 500-level or higher Statistics",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits in research methods at the 500 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits of course work, at the 500 level or higher, in Nutrition, Animal Science, or Food Science chosen in consultation with the student's supervisor",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits of 500-level or higher courses in consultation with the student’s academic adviser or supervisor",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "human-genetics-bioinformatics-phd",
+  "name": "Human Genetics: Bioinformatics",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/human-genetics-bioinformatics-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "COMP 616",
+        "HGEN 692",
+        "HGEN 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Two courses from the following",
+          "courses": [
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ],
+          "minCourses": 2,
+          "maxCourses": 2
+        },
+        {
+          "title": "Students who enter in Ph.D. 1 will need to take an additional 6 credits of complementary courses chosen from the departmental offerings listed for the Ph.D. in Human Genetics and/or from among 500-, 600-, or 700-level courses in the Faculties of Medicine or Science",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

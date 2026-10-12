@@ -1,0 +1,66 @@
+{
+  "id": "law-thesis-air-space-llm",
+  "name": "Law (Thesis): Air and Space Law",
+  "degree": "LL.M.",
+  "faculty": "Law",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/law/law-thesis-air-space-llm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "ASPL 690",
+            "ASPL 691",
+            "ASPL 692",
+            "ASPL 693"
+          ]
+        },
+        {
+          "title": "As part of the course Master's Thesis 1, a thesis candidate must provide a protocol to his or her supervisor setting out details as to the thesis topic, the deadlines for the completion of the various thesis courses, and the schedule of meetings with the thesis supervisor",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "ASPL 633",
+        "ASPL 636",
+        "ASPL 637",
+        "LAWG 601",
+        "LAWG 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "CMPL 610",
+            "CMPL 611",
+            "CMPL 641"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits at the 500 level or higher, chosen from among Faculty offerings (including ASPL offerings)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

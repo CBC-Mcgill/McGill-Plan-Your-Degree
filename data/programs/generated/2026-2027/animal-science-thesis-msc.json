@@ -1,0 +1,39 @@
+{
+  "id": "animal-science-thesis-msc",
+  "name": "Animal Science (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/animal-science/animal-science-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "ANSC 680",
+            "ANSC 681",
+            "ANSC 682",
+            "ANSC 683"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "ANSC 695",
+        "ANSC 696",
+        "ANSC 697"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

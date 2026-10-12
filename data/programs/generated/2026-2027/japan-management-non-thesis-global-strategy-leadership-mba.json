@@ -1,0 +1,72 @@
+{
+  "id": "japan-management-non-thesis-global-strategy-leadership-mba",
+  "name": "Japan Management (Non-Thesis): Global Strategy and Leadership",
+  "degree": "M.B.A.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/japan-management-non-thesis-global-strategy-leadership-mba/",
+  "credits": 57,
+  "groups": [
+    {
+      "title": "Required Core Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "MGCR 629",
+        "MGCR 650",
+        "MGCR 651",
+        "MGCR 652",
+        "MGCR 653",
+        "MGCR 661"
+      ]
+    },
+    {
+      "title": "Required Concentration Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "MGPO 683",
+        "ORGB 685"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "9 credits selected from the following courses toward the concentration",
+          "courses": [
+            "BUSA 660",
+            "BUSA 690",
+            "MGPO 615",
+            "MGPO 630",
+            "MGPO 640",
+            "MGPO 645",
+            "MGPO 651",
+            "MGPO 669",
+            "ORGB 633",
+            "ORGB 640"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "BUSA 650",
+            "BUSA 651"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "The remaining 15 credits of courses are chosen from 500- and 600-level courses offered by the Faculty",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

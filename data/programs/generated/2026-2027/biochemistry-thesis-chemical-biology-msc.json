@@ -1,0 +1,90 @@
+{
+  "id": "biochemistry-thesis-chemical-biology-msc",
+  "name": "Biochemistry (Thesis): Chemical Biology",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/biochemistry-thesis-chemical-biology-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "BIOC 695",
+            "BIOC 698",
+            "BIOC 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "BIOC 610",
+        "BIOC 611",
+        "BIOC 696"
+      ],
+      "note": "Students choose either BIOC 696D1/D2 or BIOC 696N1/N2."
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "CHEM 502",
+            "CHEM 503",
+            "PHAR 503"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "BIOC 600",
+            "BIOC 603",
+            "BIOC 604",
+            "BIOC 605",
+            "BIOC 670",
+            "CHEM 522",
+            "CHEM 582",
+            "CHEM 591",
+            "CHEM 621",
+            "CHEM 629",
+            "EXMD 510",
+            "EXMD 602",
+            "EXMD 615",
+            "EXMD 635",
+            "PHAR 504",
+            "PHAR 562",
+            "PHAR 563",
+            "PHAR 707"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Complementary courses are chosen in consultation with the Research Director",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "BIOC 450 and BIOC 454 are additional requirements for those who have not previously completed equivalent courses in their prior training",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

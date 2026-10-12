@@ -1,0 +1,71 @@
+{
+  "id": "family-medicine-thesis-global-health-msc",
+  "name": "Family Medicine (Thesis): Global Health",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/family-medicine-thesis-global-health-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "FMED 697",
+            "FMED 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "FMED 504",
+        "FMED 505",
+        "FMED 603",
+        "FMED 615",
+        "FMED 625"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "FMED 506",
+            "FMED 527",
+            "FMED 604",
+            "FMED 611",
+            "FMED 619",
+            "GPHL 500",
+            "PPHS 613"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits at the 500 level or higher chosen in consultation with the student’s thesis supervisor and the Director of the concentration, based on the student's area of interest",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

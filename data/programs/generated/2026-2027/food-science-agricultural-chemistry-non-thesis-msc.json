@@ -1,0 +1,77 @@
+{
+  "id": "food-science-agricultural-chemistry-non-thesis-msc",
+  "name": "Food Science and Agricultural Chemistry (Non-Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/food-science-agricultural-chemistry/food-science-agricultural-chemistry-non-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "FDSC 697",
+            "FDSC 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "3 credits chosen from the following",
+          "courses": [
+            "FDSC 695",
+            "FDSC 696"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "15 credits chosen from the following",
+          "courses": [
+            "AGRI 510",
+            "FDSC 515",
+            "FDSC 516",
+            "FDSC 519",
+            "FDSC 520",
+            "FDSC 536",
+            "FDSC 537",
+            "FDSC 538",
+            "FDSC 540",
+            "FDSC 545",
+            "FDSC 634",
+            "FDSC 651",
+            "FDSC 652"
+          ],
+          "minCredits": 15,
+          "maxCredits": 15
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "At the 500 level or higher, and chosen in consultation with the academic adviser",
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

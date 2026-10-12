@@ -1,0 +1,61 @@
+{
+  "id": "history-phd",
+  "name": "History",
+  "degree": "Ph.D.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/history-classical-studies/history-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "HIST 701",
+        "HIST 702",
+        "HIST 703",
+        "HIST 704"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A maximum of 9 credits previously completed at the graduate level, whether at McGill or elsewhere",
+          "unparsed": true
+        },
+        {
+          "title": "Up to 6 credits may be taken in another department",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Language Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Ph.D. candidates must offer one foreign language for examination purposes",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}
