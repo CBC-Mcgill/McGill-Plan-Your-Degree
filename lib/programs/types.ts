@@ -5,7 +5,7 @@ export type RequiredItem = string | { oneOf: string[] };
 export interface RequiredGroup {
   title: string;
   kind: "required";
-  /** Credits when every item is taken, as the catalogue heading states. For a range, the bound the program total counts. */
+  /** Credits when every item is taken, as the catalogue heading states. For a range, the bound the program total counts. 0 when every item is a 0-credit course, such as a comprehensive examination. */
   credits: number;
   courses: RequiredItem[];
   note?: string;
@@ -80,11 +80,13 @@ export interface Program {
   catalogueYear: string;
   /** The program page the file was checked against. */
   source: string;
-  /** Total program credits, the lower bound when the page gives a range. */
+  /** Total program credits, the lower bound when the page gives a range. 0 when the catalogue gives no total, as for a doctorate, so progress reads by requirements met rather than by credits. */
   credits: number;
   groups: Group[];
   /** Minors: the most credits that may also count toward the student's program, as the minor's page states. 0 when none may. */
   overlap?: number;
+  /** A graduate program: master's, doctorate, graduate certificate or diploma. Left out for undergraduate programs. */
+  level?: "graduate";
   /** Written by the program crawler rather than by hand. */
   generated?: true;
 }
@@ -92,5 +94,5 @@ export interface Program {
 /** One line of the program list: enough to search and to show, without the requirements. */
 export type ProgramSummary = Pick<
   Program,
-  "id" | "name" | "degree" | "faculty"
+  "id" | "name" | "degree" | "faculty" | "level"
 >;

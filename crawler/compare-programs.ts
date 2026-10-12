@@ -15,6 +15,7 @@ export interface IndexEntry {
   degree: string;
   faculty: string;
   credits: number;
+  level?: "graduate";
   unparsedRules: number;
 }
 
@@ -33,6 +34,7 @@ export function indexOf(programs: Program[]): IndexEntry[] {
     degree: p.degree,
     faculty: p.faculty,
     credits: p.credits,
+    ...(p.level && { level: p.level }),
     unparsedRules: unparsedCount(p),
   }));
 }
