@@ -2106,6 +2106,24 @@ function streamOptions(
     const one = widened ? null : streamRule(stream, credits);
     const own = one ? [one] : rulesOf(stream, ctx);
     if (own.length === 0) return null;
+    // A single list read beside a subject line or a footnote still owes the stream's credits, as streamRule's plain list does. A sentence left as text may give it another amount.
+    const lists = own.filter(
+      (rule) =>
+        !rule.filter &&
+        rule.maxCourses === undefined &&
+        (rule.courses || rule.match?.subjects),
+    );
+    const [list] = lists;
+    if (
+      list &&
+      lists.length === 1 &&
+      !own.some((rule) => rule.unparsed) &&
+      list.minCredits === undefined &&
+      list.maxCredits === undefined &&
+      list.minCourses === undefined
+    ) {
+      list.minCredits = stream.min ?? credits;
+    }
     rules.push(...own.map((rule) => ({ ...rule, option: whole.title })));
   }
   return rules;

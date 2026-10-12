@@ -908,6 +908,28 @@ test("streams beside other lists, and stream headings that slipped out after the
   });
 });
 
+test("a stream that opens its list to a department still asks for the stream's credits", () => {
+  const program = parseProgramPage(
+    `<h1 class="page-title">Test Program (B.A. &amp; Sc.) (33 credits)</h1><p>2026-2027 Undergraduate Catalogue</p><div id="coursestextcontainer">` +
+      `<h2>Complementary Courses (33 credits)</h2><p>18 credits from one of the following lists: Computer Science, or Linguistics.</p><p>15 credits from any of the two lists.</p>` +
+      `<h3>Computer Science</h3>${table("COMP 330", "COMP 424")}` +
+      `<h3>Linguistics</h3><p>Any course at the 300, 400 or 500 level from the department of Linguistics, or from the following list:</p>${table("LING 201", "LING 210")}</div>`,
+    `${BASE}/science/programs/test/test-program/`,
+    { subjectsOf: (name) => (name === "linguistics" ? ["LING"] : []) },
+  );
+  expect(program?.groups[0]).toMatchObject({
+    credits: 33,
+    rules: expect.arrayContaining([
+      expect.objectContaining({ option: "Computer Science", minCredits: 18 }),
+      expect.objectContaining({
+        option: "Linguistics",
+        match: { subjects: ["LING"], minLevel: 300 },
+        minCredits: 18,
+      }),
+    ]),
+  });
+});
+
 test("adds up a required heading with no credits from one course of each choice", () => {
   const program = programOf(
     "Test Honours (B.Sc.) (24 credits)",
