@@ -1428,7 +1428,7 @@ test("reads a graduate degree from the parenthesis with dotted letters, and skip
   expect(graduateOf("Bioengineering", "")).toBeNull();
 });
 
-test("reads graduate sentences: 700-level phrases, coursework, any department and approved alternatives", () => {
+test("reads graduate sentences: 700-level phrases, a 600-level cap, coursework, any department and approved alternatives", () => {
   const cases: [string, object[]][] = [
     [
       "6 credits at the 500, 600, or 700 level chosen in consultation with the Graduate Program Director.",
@@ -1447,6 +1447,16 @@ test("reads graduate sentences: 700-level phrases, coursework, any department an
       [{ match: {}, adviser: true }],
     ],
     [
+      "15 credits of SWRK courses at the 500 or 600 level.",
+      [
+        {
+          minCredits: 15,
+          maxCredits: 15,
+          match: { minLevel: 500, maxLevel: 600, subjects: ["SWRK"] },
+        },
+      ],
+    ],
+    [
       "7-13 credits at the 500 or 600 level (excluding ECSE 691 to ECSE 697).",
       [{ unparsed: true }],
     ],
@@ -1454,13 +1464,13 @@ test("reads graduate sentences: 700-level phrases, coursework, any department an
   for (const [text, rules] of cases) expect(read(text), text).toEqual(rules);
 });
 
-test("a reminder alone in a graduate group keeps the level it names", () => {
-  const program = graduateOf(
-    "Food Science (Non-Thesis) (M.Sc.) (45 credits)",
-    `<h2>Required Courses (39 credits)</h2>${table("FDSC 600")}` +
+test("a reminder alone in a group keeps the level it names", () => {
+  const program = programOf(
+    "Test Major (B.Sc.) (9 credits)",
+    `<h2>Required Courses (3 credits)</h2>${table("BIOL 200")}` +
       "<h2>Elective Courses (6 credits)</h2><p>At the 500 level or higher, and selected in consultation with the academic adviser.</p>",
   );
-  expect(program?.groups[1]).toMatchObject({
+  expect(program.groups[1]).toMatchObject({
     credits: 6,
     rules: [{ match: { minLevel: 500 }, adviser: true }],
   });

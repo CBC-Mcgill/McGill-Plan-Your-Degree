@@ -619,7 +619,7 @@ const LEVEL_PHRASE = new RegExp(
   "gi",
 );
 
-/** The first level phrase of a text and the levels it allows. Nothing above the 500 level is an undergraduate course, so 500 leaves the top open. */
+/** The first level phrase of a text and the levels it allows. Nothing above the 500 level is an undergraduate course and nothing above 700 a graduate one, so 500 and 700 leave the top open, while "500 or 600 level" stops at 600. */
 function levelIn(text: string): { match: Match; phrase: string } | null {
   for (const m of text.matchAll(LEVEL_PHRASE)) {
     const phrase = m[0];
@@ -629,7 +629,7 @@ function levelIn(text: string): { match: Match; phrase: string } | null {
     const high = Math.max(...levels);
     const match: Match = m[1]
       ? { maxLevel: low - 100 }
-      : /\+|above|higher/i.test(phrase) || high >= 500
+      : /\+|above|higher/i.test(phrase) || high === 500 || high >= 700
         ? { minLevel: low }
         : { minLevel: low, maxLevel: high };
     return { match, phrase };
@@ -1831,10 +1831,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     if (rule.filter) return unparsed(rule.title);
     // With no list a reminder is the group's source, so it keeps the level it names, as "At the 500 level or higher, and selected in consultation with the academic adviser".
     const level = levelIn(rule.title)?.match;
-    return ctx.graduate &&
-      level &&
-      rule.adviser &&
-      JSON.stringify(rule.match) === "{}"
+    return level && rule.adviser && JSON.stringify(rule.match) === "{}"
       ? { ...rule, match: level }
       : rule;
   });
