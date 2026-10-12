@@ -88,10 +88,12 @@ export function degreeStanding(
 
 /** What a program whose groups are all met still lacks toward its credit total, and the ranges that can take it. Null when nothing is missing or no range has room. */
 export function roomLeft({ credits, creditsDone, groups }: ProgramProgress) {
-  const ranges = groups.flatMap(({ title, creditsDone, maxCredits }) =>
-    maxCredits !== undefined && creditsDone < maxCredits
-      ? [{ title, max: maxCredits }]
-      : [],
+  // A checked group counts no course, so its range has no room to offer.
+  const ranges = groups.flatMap(
+    ({ title, creditsDone, maxCredits, confirmed }) =>
+      maxCredits !== undefined && creditsDone < maxCredits && !confirmed
+        ? [{ title, max: maxCredits }]
+        : [],
   );
   return creditsDone < credits &&
     ranges.length > 0 &&
