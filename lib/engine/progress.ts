@@ -119,7 +119,7 @@ function matchesMatch(match: Match, code: string): boolean {
 }
 
 /** "Other Education courses may be included with the permission of the Program Adviser": an adviser rule with no amount, which reminds and counts no course. */
-const isReminder = (rule: Rule) =>
+export const isReminder = (rule: Rule) =>
   rule.adviser === true &&
   rule.minCredits === undefined &&
   rule.maxCredits === undefined;

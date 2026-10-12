@@ -1178,6 +1178,8 @@ test("a Required heading over one course stays required, and a choice it cannot 
     ["Required Course", "required", 4],
     ["Africa Semester - Required Courses", "complementary", 6],
     ["Africa Semester - Complementary Courses", "complementary", 9],
+    // The heading asks 4 credits of courses that add up to 2.5.
+    ["Program total", "complementary", 1.5],
   ]);
 });
 
@@ -1464,7 +1466,7 @@ test("reads graduate sentences: 700-level phrases, a 600-level cap, coursework, 
   for (const [text, rules] of cases) expect(read(text), text).toEqual(rules);
 });
 
-test("a reminder alone in a group keeps the level it names", () => {
+test("a reminder alone in a group counts the group's credits at the level it names", () => {
   const program = programOf(
     "Test Major (B.Sc.) (9 credits)",
     `<h2>Required Courses (3 credits)</h2>${table("BIOL 200")}` +
@@ -1472,6 +1474,40 @@ test("a reminder alone in a group keeps the level it names", () => {
   );
   expect(program.groups[1]).toMatchObject({
     credits: 6,
-    rules: [{ match: { minLevel: 500 }, adviser: true }],
+    rules: [{ minCredits: 6, match: { minLevel: 500 }, adviser: true }],
+  });
+});
+
+test("a range heading counts courses up to its top, and credits no group can reach become a Program total check", () => {
+  const thesis = graduateOf(
+    "Chemistry (Thesis) (M.Sc.) (45 credits)",
+    `<h2>Thesis Courses (24-31 credits)</h2><p>At least 24 credits chosen from the following:</p>${table("CHEM 691:3", "CHEM 692:6", "CHEM 693:9", "CHEM 694:12", "CHEM 695:15")}` +
+      `<h2>Required Courses (5 credits)</h2>${table("CHEM 650:1", "CHEM 651:1", "CHEM 688:3")}` +
+      "<h2>Complementary Courses (9-16 credits)</h2><p>Students will normally take 9-16 credits of CHEM (or approved) courses at the 500 or 600 level.</p>",
+  ) as Program;
+  expect(validateProgram(thesis)).toMatchObject({ ok: true });
+  expect(thesis.groups).toMatchObject([
+    { title: "Thesis Courses", credits: 24, maxCredits: 31 },
+    { kind: "required", credits: 5 },
+    { title: "Complementary Courses", credits: 9, rules: [{ unparsed: true }] },
+  ]);
+  // A check counts no course, so it keeps its lower bound and the thesis top makes up the total.
+  expect(thesis.groups[2]).not.toHaveProperty("maxCredits");
+  expect(
+    programOf(
+      "Test Major (B.Sc.) (12 credits)",
+      `<h2>Required Courses (6 credits)</h2>${table("BIOL 200")}<h2>Complementary Courses (3 credits)</h2><p>3 credits from:</p>${table("BIOL 300", "BIOL 301")}`,
+    ).groups.at(-1),
+  ).toEqual({
+    title: "Program total",
+    kind: "complementary",
+    credits: 6,
+    rules: [
+      {
+        title:
+          "6 more credits to reach the program's 12 credits, which the catalogue page does not list in a group above",
+        unparsed: true,
+      },
+    ],
   });
 });

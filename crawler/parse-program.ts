@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import { ruleMatches } from "../lib/engine/progress.ts";
+import { isReminder, ruleMatches } from "../lib/engine/progress.ts";
 import { logicalCode } from "../lib/profile/types.ts";
 import { isMinor } from "../lib/programs/minor.ts";
 import type {
@@ -1919,25 +1919,35 @@ function requiredGroup(section: Section): RequiredGroup | null {
       parts.set(code, part);
     });
   }
-  const creditsOf = (code: string) =>
-    [...(parts.get(code)?.values() ?? [])].reduce((sum, n) => sum + n, 0);
+  // A course printed whole counts once, its D1 and D2 parts add up, and N1 and N2 are the same course spread over other terms.
+  const creditsOf = (code: string) => {
+    const printed = parts.get(code) ?? new Map<string, number>();
+    const whole = printed.get(code);
+    if (whole !== undefined) return whole;
+    const sums = new Map<string, number>();
+    for (const [part, n] of printed) {
+      const letter = part.slice(-2, -1);
+      sums.set(letter, (sums.get(letter) ?? 0) + n);
+    }
+    return Math.max(0, ...sums.values());
+  };
   const courses = dedupe(items);
+  // One course of each "one of" counts.
+  const listed = courses.reduce(
+    (sum, item) =>
+      sum +
+      (typeof item === "string"
+        ? creditsOf(item)
+        : Math.min(...item.oneOf.map(creditsOf))),
+    0,
+  );
   const group: RequiredGroup = {
     title: section.title,
     kind: "required",
-    // Without a heading total, one course of each "one of" counts.
-    credits:
-      section.max ??
-      courses.reduce(
-        (sum, item) =>
-          sum +
-          (typeof item === "string"
-            ? creditsOf(item)
-            : Math.min(...item.oneOf.map(creditsOf))),
-        0,
-      ),
+    credits: section.max ?? listed,
     courses,
   };
+  LISTED.set(group, listed);
   if (FOUNDATION.test(section.title)) group.foundation = true;
   if (notes.length > 0) group.note = notes.join(" ");
   if (section.min !== undefined && section.min < group.credits) {
@@ -1948,6 +1958,8 @@ function requiredGroup(section: Section): RequiredGroup | null {
 
 /** The lower bound of a required heading's range, as "U1 Required Courses (20-24 credits)", for pages whose total counts it. A complementary range keeps its lower bound, since that is when the group is done. */
 const LOWER = new WeakMap<RequiredGroup, number>();
+/** The credits a required group's courses add up to, which a heading can state more than. */
+const LISTED = new WeakMap<RequiredGroup, number>();
 
 /** "AND 3 credits Natural Science complementary courses" after a required list, with subject lines such as "Physics (PHYS)", or "must also successfully complete 18 credits as follows:" with lines the sentence parser reads. */
 function additionalCredits(
@@ -2245,7 +2257,6 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   ) {
     return children.flatMap((child) => groupsOf(child, ctx));
   }
-  const rules = rulesOf(section, ctx);
   const text = events(section).flatMap((e) =>
     e.kind === "text" ? [e.text] : [],
   );
@@ -2254,6 +2265,17 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     .map((t) => AMOUNT.exec(t))
     .find((m) => m && !m[1] && Number(m[2]) > 0);
   const credits = section.min ?? total?.credits ?? Number(stated?.[2]);
+  const read = rulesOf(section, ctx);
+  const [lone] = read;
+  const leveled =
+    lone?.match?.minLevel !== undefined || lone?.match?.maxLevel !== undefined;
+  // Reminders count no course, so one alone at a level is the group's source, as "At the 500 level or higher, and selected in consultation with the academic adviser" under "Elective Courses (6 credits)", and any other is for a person to check.
+  const rules =
+    read.length > 0 && read.every(isReminder)
+      ? read.length === 1 && lone && leveled && credits
+        ? [{ ...lone, minCredits: credits }]
+        : read.map((rule) => unparsed(rule.title))
+      : read;
   // A condition over the whole program, as "a maximum of 34 credits at the 200 level ... in this program", with no credits of its own: a group that only asks a person to check it.
   if (
     !credits &&
@@ -2292,6 +2314,15 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
     credits,
     rules: rules.length > 0 ? rules : [unparsed(section.title)],
   };
+  // "Thesis Courses (24-33 credits)" counts courses up to its top, unless only a person can check it.
+  if (
+    section.max !== undefined &&
+    section.max > credits &&
+    credits === section.min &&
+    group.rules.some((rule) => !rule.unparsed && !isReminder(rule))
+  ) {
+    group.maxCredits = section.max;
+  }
   if (total?.minCourses) group.minCourses = total.minCourses;
   if (FOUNDATION.test(section.title)) group.foundation = true;
   return [group];
@@ -2525,6 +2556,20 @@ export function overlapOf(text: string): number | undefined {
   return found.length > 0 ? Math.min(...found) : undefined;
 }
 
+/** Title of the group that makes up credits the program total asks for and no group of the page lists. */
+export const TOTAL_TITLE = "Program total";
+
+/** The most credits some groups can count toward the program total: a range at its top, and a required group no more than its courses add up to. */
+const reach = (groups: readonly Group[]) =>
+  groups.reduce(
+    (n, g) =>
+      n +
+      (g.kind === "complementary"
+        ? (g.maxCredits ?? g.credits)
+        : Math.min(g.credits, LISTED.get(g) ?? g.credits)),
+    0,
+  );
+
 /** Reads one program page. Returns null for pages with no requirements, such as department indexes. */
 export function parseProgramPage(
   html: string,
@@ -2615,6 +2660,20 @@ export function parseProgramPage(
       kind: "complementary",
       credits: credits - counted,
       rules: [unparsed(base[0])],
+    });
+  }
+  // Credits no group can count would leave the program short of its total forever, so a person checks them.
+  const short = credits - reach(groups);
+  if (short > 0) {
+    groups.push({
+      title: TOTAL_TITLE,
+      kind: "complementary",
+      credits: short,
+      rules: [
+        unparsed(
+          `${short} more ${short === 1 ? "credit" : "credits"} to reach the program's ${credits} credits, which the catalogue page does not list in a group above`,
+        ),
+      ],
     });
   }
 
