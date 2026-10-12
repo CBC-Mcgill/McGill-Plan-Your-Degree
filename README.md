@@ -1,17 +1,5 @@
 # McGill Plan Your Degree
 
-## A note from the creator
-
-McGill's curriculum is outdated, at least for Computer Engineering, so after my first year I stopped following it and started building my own.
-I pick courses by interest, which turns every term into a constraint problem of prerequisites, offering terms, and program requirements, and the courses that matter most for my program are often the hardest ones to find.
-The interesting ones sit at the end of the degree, and some required ones are outdated in ways you only discover after you've taken them.
-Every semester I had the catalogue, Minerva, and my own notes open across a dozen tabs just to answer the same questions.
-Plan Your Degree puts the whole degree in one view and checks every plan against the catalogue, so you spend that time choosing courses instead of hunting for them.
-It also stands on the work of other student-built open-source projects, especially [McGill Enhanced](https://github.com/demetrios-koziris/McGillEnhanced) and [mcgill.courses](https://github.com/mcgill-courses/mcgill.courses), which showed how much better McGill's tools get when students build them.
-The long-term goal is to make planning something students actually enjoy, and to build it with them, not just for them.
-
-Thai ([thaimtl](https://github.com/thaimtl))
-
 ## About
 
 Open-source degree planner for McGill students.
@@ -145,6 +133,18 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) for the code rules, how to fix crawler b
 The product spec is in [PRD.md](PRD.md).
 For how the crawler, the data, the app and the transcript import fit together, read [ARCHITECTURE.md](ARCHITECTURE.md).
 
+## A note from the creator
+
+McGill's "suggested" curriculum for Computer Engineering is so outdated that I stopped following it after first year to build my own. I started picking courses by interest and pushing the boring required ones towards the end. This turned every term into a massive constraint problem of prerequisites, offering terms, and program requirements.
+Every semester, I had the catalogue, Minerva, and my own notes open across a dozen tabs just to answer the same questions over and over again.
+
+I made Plan Your Degree for myself, but realized all students face this. Since the infra isn't complicated and I'm hosting it on Vercel's free tier, I decided to make it public and free for anyone else in need :D
+
+It also stands on the work of other student-built open-source projects, especially [McGill Enhanced](https://github.com/demetrios-koziris/McGillEnhanced) and [mcgill.courses](https://github.com/mcgill-courses/mcgill.courses), which showed how much better McGill's tools get when students build them.
+
+The long-term goal is to make planning something students actually enjoy, and to build it with them, not just for them. I genuinely believe this will move the needle and provide students a better education.
+
+Thai ([thaimtl](https://github.com/thaimtl))
 ## License
 
 MIT
