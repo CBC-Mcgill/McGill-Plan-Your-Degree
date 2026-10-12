@@ -47,6 +47,7 @@ import { useCatalogue } from "@/lib/catalogue/client";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
+import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
 import {
   type Entry,
   type Item,
@@ -307,6 +308,7 @@ function Page({
   }
 
   const { creditsDone, credits, groups } = view.progress;
+  const [met, needed] = requirementsMet(view.progress);
   const keys = groupKeys(groups);
   const when = termLabel(term);
   const requirements: Pane[] = groups.map((group, index) => {
@@ -323,7 +325,9 @@ function Page({
           ? COPY.checkedByYou
           : counts
             ? `${Math.min(group.creditsDone, group.credits)} of ${group.credits}`
-            : checksText(group.unparsed),
+            : group.kind === "required"
+              ? `${group.coursesDone} of ${courseCount(group.coursesDone + group.remaining.length)}`
+              : checksText(group.unparsed),
       split:
         !group.satisfied && counts && split
           ? { ...creditSplit(split, snapshot), total: group.credits }
@@ -443,17 +447,28 @@ function Page({
     <>
       <h1>{program.name}</h1>
       <p className="mt-2 text-fg-muted">
-        {minorBar ? (
-          COPY.pairCredits(pair)
-        ) : (
+        {credits === 0 ? (
           <>
             <span className="tabular-nums">
-              {creditsDone} of {credits}
+              {met} of {needed}
             </span>{" "}
-            program credits
+            <Defined def={GLOSSARY.requirementsMet} />
           </>
-        )}{" "}
-        <Defined def={GLOSSARY.earnedOrInProgress} />
+        ) : (
+          <>
+            {minorBar ? (
+              COPY.pairCredits(pair)
+            ) : (
+              <>
+                <span className="tabular-nums">
+                  {creditsDone} of {credits}
+                </span>{" "}
+                program credits
+              </>
+            )}{" "}
+            <Defined def={GLOSSARY.earnedOrInProgress} />
+          </>
+        )}
         {dot}
         <CatalogueLink href={coursesTab(program.source)} />
         {program.generated && (
@@ -466,13 +481,23 @@ function Page({
       {withPlan && (
         <div className="mt-4">
           <ProgramBars
-            program={{
-              label: COPY.pair[pair].labels[0],
-              done: creditsDone,
-              split: programSplit(withPlan, snapshot),
-              total: credits,
-              courses: splitCourses(withPlan.groups, snapshot),
-            }}
+            program={
+              credits === 0
+                ? {
+                    label: program.name,
+                    done: met,
+                    split: requirementSplit(view.progress, snapshot),
+                    total: needed,
+                    requirements: true,
+                  }
+                : {
+                    label: COPY.pair[pair].labels[0],
+                    done: creditsDone,
+                    split: programSplit(withPlan, snapshot),
+                    total: credits,
+                    courses: splitCourses(withPlan.groups, snapshot),
+                  }
+            }
             minor={minorBar}
           />
         </div>
@@ -560,8 +585,10 @@ function groupKeys(groups: GroupProgress[]): string[] {
   });
 }
 
+/** A required group of 0-credit courses, such as a comprehensive examination, counts courses instead. */
 const countsCredits = (group: GroupProgress) =>
-  group.kind === "required" || group.rules.some((rule) => !rule.unparsed);
+  group.credits > 0 &&
+  (group.kind === "required" || group.rules.some((rule) => !rule.unparsed));
 
 const checksText = (checks: number) =>
   checks === 1 ? "1 rule to check" : `${checks} rules to check`;

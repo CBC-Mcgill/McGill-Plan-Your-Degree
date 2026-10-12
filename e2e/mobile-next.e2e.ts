@@ -167,3 +167,23 @@ test("a rule to check has a full-size button that fits a phone", async ({
   await expect(pane.getByRole("button", { name: "Undo" })).toBeVisible();
   await expectNoSideScroll(page);
 });
+
+test("on a phone a doctorate reads its progress as requirements met", async ({
+  page,
+}) => {
+  await openStudent(page, "/next", {
+    records: [],
+    programId: "computer-science-phd",
+    minorId: null,
+    entry: null,
+    plan: [],
+  });
+  await expect(page.getByRole("main")).toContainText(
+    /(?<!\d)0 of \d+ requirements met/,
+  );
+  await expect(
+    page.getByRole("img", { name: /^0 of \d+ requirements met$/ }),
+  ).toBeVisible();
+  await expect(page.getByRole("main")).not.toContainText("program credits");
+  await expectNoSideScroll(page);
+});

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { StatusBar } from "@/components/status";
+import { COPY } from "@/lib/copy";
 import type { CreditSplit } from "@/lib/engine/progress";
 
 export interface CreditBar {
@@ -11,6 +12,8 @@ export interface CreditBar {
   note?: ReactNode;
   /** The courses behind each part, for the legend's tooltips. */
   courses?: Record<keyof CreditSplit, string[]>;
+  /** Counts requirements met instead of credits, for a program with no credit total. The page's heading says the number, so the bar has no legend. */
+  requirements?: true;
 }
 
 /** Gives each legend item of the StatusBars inside a 44px tap target below 1024px. */
@@ -28,6 +31,17 @@ export function ProgramBars({
   program: CreditBar;
   minor: CreditBar | null;
 }) {
+  if (!minor && program.requirements) {
+    return (
+      <span
+        role="img"
+        aria-label={COPY.requirementsMet(program.done, program.total)}
+        className="block w-80 max-md:w-full"
+      >
+        <StatusBar {...program.split} total={program.total} />
+      </span>
+    );
+  }
   if (!minor) {
     return (
       <div className={BAR_WITH_LEGEND}>

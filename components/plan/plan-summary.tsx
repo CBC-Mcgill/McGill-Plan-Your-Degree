@@ -14,6 +14,7 @@ import { Section } from "@/components/ui/section";
 import { Term } from "@/components/ui/tooltip";
 import { courseSlug } from "@/lib/catalogue/slug";
 import { COPY } from "@/lib/copy";
+import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
 import {
   creditSources,
   creditSplit,
@@ -276,14 +277,26 @@ export function PlanSummary({
     );
   const met =
     standing !== null && standings.every(({ progress }) => progress.satisfied);
+  // A doctorate gives no credit total, so it counts requirements met.
+  const byRequirements = standing?.progress.credits === 0;
+  const [done, needed] = standing ? requirementsMet(standing.progress) : [0, 0];
 
   return (
     <div>
       <div className="flex items-baseline justify-between gap-8 max-md:flex-col max-md:gap-2">
         {standing ? (
           <h1 className="tabular-nums max-md:text-2xl">
-            {standing.progress.creditsDone} of {standing.progress.credits}{" "}
-            program credits <Term def={GLOSSARY.withPlan} />
+            {byRequirements ? (
+              <>
+                {COPY.requirementsMet(done, needed)}{" "}
+                <Term def={GLOSSARY.withPlan} />
+              </>
+            ) : (
+              <>
+                {standing.progress.creditsDone} of {standing.progress.credits}{" "}
+                program credits <Term def={GLOSSARY.withPlan} />
+              </>
+            )}
           </h1>
         ) : (
           <>
@@ -301,13 +314,23 @@ export function PlanSummary({
       {standing && (
         <div className="mt-4">
           <ProgramBars
-            program={{
-              label: COPY.pair[pair].labels[0],
-              done: standing.progress.creditsDone,
-              split: programSplit(standing.progress, snapshot),
-              total: standing.progress.credits,
-              courses: splitCourses(standing.progress.groups, snapshot),
-            }}
+            program={
+              byRequirements
+                ? {
+                    label: standing.program.name,
+                    done,
+                    split: requirementSplit(standing.progress, snapshot),
+                    total: needed,
+                    requirements: true,
+                  }
+                : {
+                    label: COPY.pair[pair].labels[0],
+                    done: standing.progress.creditsDone,
+                    split: programSplit(standing.progress, snapshot),
+                    total: standing.progress.credits,
+                    courses: splitCourses(standing.progress.groups, snapshot),
+                  }
+            }
             minor={
               minor && {
                 label: COPY.secondTitle(minor.program),

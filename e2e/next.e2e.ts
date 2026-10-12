@@ -240,6 +240,29 @@ test("a rule the crawler could not read can be marked as checked, and the mark t
   await expect(pane).not.toContainText("Checked by you");
 });
 
+test("a doctorate counts requirements met, and checking its thesis rule meets one", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [],
+    programId: "computer-science-phd",
+    plan: [],
+  });
+  const main = page.getByRole("main");
+  await expect(main).toContainText(/(?<!\d)0 of \d+ requirements met/);
+  await expect(main).not.toContainText("program credits");
+  await expect(
+    page.getByRole("img", { name: /^0 of \d+ requirements met$/ }),
+  ).toBeVisible();
+
+  await requirement(page, "Thesis").click();
+  await page
+    .getByRole("region", { name: "Thesis" })
+    .getByRole("button", { name: "Mark as checked" })
+    .click();
+  await expect(main).toContainText(/(?<!\d)1 of \d+ requirements met/);
+});
+
 test("two joint honours components show as a pair, each with its own bar", async ({
   page,
 }) => {

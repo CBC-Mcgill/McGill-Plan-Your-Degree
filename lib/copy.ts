@@ -68,6 +68,9 @@ export const COPY = {
   credits: creditsText,
   rowCredits: creditsLabel,
   fraction: (n: number, total: number) => `${n} of ${total} credits`,
+  /** Progress for a program with no credit total, such as a doctorate. */
+  requirementsMet: (n: number, total: number) =>
+    `${n} of ${total} requirements met`,
   degreeFigure: (n: number, total: number | null) =>
     total === null
       ? `${n} credits earned`
