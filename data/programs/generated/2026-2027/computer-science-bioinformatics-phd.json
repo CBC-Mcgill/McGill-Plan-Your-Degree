@@ -27,6 +27,28 @@
         "COMP 700",
         "COMP 701"
       ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Two courses chosen from the following",
+          "courses": [
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ],
+          "minCourses": 2,
+          "maxCourses": 2
+        },
+        {
+          "title": "Students who have completed the M.Sc.-level option in Bioinformatics must complete 6 credits of complementary courses not taken in the master's program",
+          "unparsed": true
+        }
+      ]
     }
   ],
   "level": "graduate",

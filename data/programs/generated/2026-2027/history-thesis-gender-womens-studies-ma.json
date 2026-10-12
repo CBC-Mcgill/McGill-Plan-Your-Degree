@@ -38,10 +38,7 @@
       "rules": [
         {
           "title": "12 credits at the 500, 600, or 700 level, selected as follows",
-          "minCredits": 12,
-          "match": {
-            "minLevel": 500
-          }
+          "unparsed": true
         },
         {
           "title": "3 credits on gender-related issues",

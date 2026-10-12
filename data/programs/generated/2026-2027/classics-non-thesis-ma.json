@@ -55,6 +55,21 @@
           "adviser": true
         }
       ]
+    },
+    {
+      "title": "Examinations",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Each candidate for the MA degree must pass three exams",
+          "unparsed": true
+        },
+        {
+          "title": "Exams must be passed within two years of starting the program and within three attempts, or the student will not be allowed to continue in the program",
+          "unparsed": true
+        }
+      ]
     }
   ],
   "level": "graduate",

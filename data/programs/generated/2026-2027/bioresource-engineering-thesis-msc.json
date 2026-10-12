@@ -14,7 +14,15 @@
       "courses": [
         "BREE 651",
         "BREE 652",
-        "BREE 699"
+        "BREE 699",
+        "BREE 691",
+        "BREE 692",
+        "BREE 693",
+        "BREE 694",
+        "BREE 695",
+        "BREE 696",
+        "BREE 697",
+        "BREE 698"
       ]
     },
     {
@@ -27,7 +35,8 @@
           "match": {
             "minLevel": 500
           },
-          "adviser": true
+          "adviser": true,
+          "minCredits": 9
         }
       ]
     }

@@ -17,8 +17,12 @@
         "INFS 611",
         "INFS 617",
         "INFS 619",
-        "INFS 620"
-      ]
+        "INFS 620",
+        "INFS 603",
+        "INFS 604",
+        "INFS 605"
+      ],
+      "note": "either INFS 605 or INFS 605/INFS 605D2."
     },
     {
       "title": "Complementary Courses",
@@ -81,6 +85,17 @@
       "rules": [
         {
           "title": "0-12 credits from other 500-, 600-, or 700-level courses; up to 6 credits may be from other Quebec universities",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Program total",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 more credits to reach the program's 48 credits, which the catalogue page does not list in a group above",
           "unparsed": true
         }
       ]
