@@ -119,8 +119,13 @@ const level = (course: CourseSummary) => Number.parseInt(course.number, 10);
 const listable = (program: Program | null, course: CourseSummary) =>
   program?.level === "graduate" || level(course) < 600;
 
-/** Electives worth a look: 100 to 400 level courses with credits, the student's own subjects first and diploma or continuing studies subjects (FMT4, CPL2) last. */
-function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
+/** Electives worth a look: 100 to 400 level courses with credits, or 500 to 700 for a graduate program, the student's own subjects first and diploma or continuing studies subjects (FMT4, CPL2) last. */
+function electives(
+  suggestions: Suggestion[],
+  snapshot: Snapshot,
+  graduate: boolean,
+): Entry[] {
+  const [lowest, above] = graduate ? [500, 800] : [100, 500];
   // Only courses actually taken at McGill, so CEGEP-credited courses don't steer the ranking.
   const subjects = new Set(
     [...snapshot.earned.keys(), ...snapshot.inProgress.keys()].map(
@@ -130,8 +135,8 @@ function electives(suggestions: Suggestion[], snapshot: Snapshot): Entry[] {
   return suggestions
     .filter(
       (s) =>
-        level(s.course) >= 100 &&
-        level(s.course) < 500 &&
+        level(s.course) >= lowest &&
+        level(s.course) < above &&
         (s.course.credits ?? 0) > 0,
     )
     .sort(
@@ -329,6 +334,10 @@ export function nextView(
     mustTake,
     later,
     complementary,
-    other: electives(next.canTake.other, snapshot),
+    other: electives(
+      next.canTake.other,
+      snapshot,
+      program?.level === "graduate",
+    ),
   };
 }

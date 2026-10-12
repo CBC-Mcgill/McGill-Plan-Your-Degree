@@ -486,8 +486,8 @@ function Page({
                 ? {
                     label: program.name,
                     done: met,
-                    split: requirementSplit(view.progress, snapshot),
-                    total: needed,
+                    split: requirementSplit(withPlan, snapshot),
+                    total: requirementsMet(withPlan)[1],
                     requirements: true,
                   }
                 : {

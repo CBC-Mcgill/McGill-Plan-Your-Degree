@@ -102,3 +102,26 @@ test("a required course blocked by a restriction asks the advisor", () => {
     "Not open to students who have taken MATH 222. Ask your advisor whether MATH 222 counts instead.",
   );
 });
+
+test("other courses are 100 to 400 level for an undergraduate program and 500 to 700 for a graduate one", () => {
+  const levels = new Map(
+    ["COMP 189", "COMP 424", "COMP 551", "COMP 652", "COMP 766"].map((code) => [
+      code,
+      course(code),
+    ]),
+  );
+  const doctorate: Program = {
+    ...program,
+    id: "tiny-phd",
+    degree: "Ph.D.",
+    credits: 0,
+    level: "graduate",
+    groups: [],
+  };
+  const other = (p: Program) =>
+    nextView(levels, buildSnapshot([]), winter, p).other.map(
+      (entry) => entry.course.code,
+    );
+  expect(other({ ...program, groups: [] })).toEqual(["COMP 189", "COMP 424"]);
+  expect(other(doctorate)).toEqual(["COMP 551", "COMP 652", "COMP 766"]);
+});
