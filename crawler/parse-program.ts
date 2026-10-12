@@ -70,7 +70,9 @@ const sentences = (text: string) =>
 
 /** The catalogue year the page belongs to, such as 2026-2027. */
 export function catalogueYear(html: string): string | null {
-  return /(\d{4}-\d{4}) Undergraduate Catalogue/.exec(html)?.[1] ?? null;
+  return (
+    /(\d{4}-\d{4}) (?:Undergraduate|Graduate) Catalogue/.exec(html)?.[1] ?? null
+  );
 }
 
 const HEADING_CREDITS = new RegExp(
