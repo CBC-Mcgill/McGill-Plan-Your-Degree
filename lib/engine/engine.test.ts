@@ -17,6 +17,7 @@ import {
   programProgress,
   programSplit,
   REPLACE_TITLE,
+  replaceKey,
   ruleMatches,
   splitCourses,
 } from "./progress.ts";
@@ -541,6 +542,73 @@ test("a reminder counts no course, and a group of unparsed rules and reminders i
   );
   expect(met).toMatchObject({ creditsDone: 6, satisfied: true });
   expect(met.groups[0]).toMatchObject({ confirmed: true, courses: [] });
+});
+
+test("courses listed under a rule count first, up to the group's credits, and the check stays the student's", () => {
+  const raw: Rule = {
+    title: "32 credits of graduate-level courses",
+    unparsed: true,
+  };
+  const listing: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Electives",
+        kind: "complementary",
+        credits: 3,
+        rules: [{ title: "Any COMP course", match: { subjects: ["COMP"] } }],
+      },
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [raw],
+      },
+    ],
+  };
+  const key = checkKey(listing, listing.groups[1] as ComplementaryGroup, raw);
+  const assigned = { [key]: ["COMP 330", "COMP 250", "COMP 202"] };
+  const count = (checked: string[] = []) =>
+    programProgress(
+      listing,
+      buildSnapshot(records, [], null, checked, assigned),
+      catalogue,
+      { inProgress: true },
+    );
+  const progress = count();
+  const [electives, listed] = progress.groups;
+  // Electives comes first yet leaves the listed courses to their rule, and COMP 202, past the group's 6 credits, stays with no group.
+  expect(electives?.courses).toEqual([]);
+  expect(progress.unclaimed).toEqual([{ code: "COMP 202", credits: 3 }]);
+  expect(listed).toMatchObject({
+    creditsDone: 6,
+    satisfied: false,
+    unparsed: 1,
+  });
+  expect(listed?.rules[0]?.courses.map((c) => c.code)).toEqual([
+    "COMP 330",
+    "COMP 250",
+  ]);
+  expect(listed?.rules[0]?.listed?.map((c) => c.code)).toEqual(assigned[key]);
+  expect(count([key]).groups[1]).toMatchObject({
+    satisfied: true,
+    confirmed: true,
+  });
+  // Unlisted, the same courses go to the first group that takes them.
+  const plain = programProgress(listing, snapshot, catalogue).groups;
+  expect(plain.map((group) => group.creditsDone)).toEqual([3, 0]);
+
+  // The course picked for the replace group is claimed before any group counts greedily.
+  const replaced = programProgress(
+    tiny,
+    buildSnapshot(records, [], null, [], { [replaceKey(tiny)]: ["COMP 330"] }),
+    catalogue,
+  ).groups;
+  expect(replaced.map((g) => [g.title, g.creditsDone])).toEqual([
+    ["Required Courses", 3],
+    ["Complementary Courses", 0],
+    [REPLACE_TITLE, 3],
+  ]);
 });
 
 test("an adviser rule next to a list adds approved courses up to its credits and never caps the list", () => {

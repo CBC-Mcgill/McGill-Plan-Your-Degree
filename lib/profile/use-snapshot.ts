@@ -15,9 +15,12 @@ export function useSnapshot(): Snapshot | null | undefined {
   const plan = useProfileStore((state) => state.plan);
   const entry = useProfileStore((state) => state.entry);
   const checked = useProfileStore((state) => state.checked);
+  const assigned = useProfileStore((state) => state.assigned);
   const started = useProfileStore(isStarted);
   return useMemo(() => {
     if (!hydrated) return undefined;
-    return started ? buildSnapshot(records, plan, entry, checked) : null;
-  }, [hydrated, started, records, plan, entry, checked]);
+    return started
+      ? buildSnapshot(records, plan, entry, checked, assigned)
+      : null;
+  }, [hydrated, started, records, plan, entry, checked, assigned]);
 }
