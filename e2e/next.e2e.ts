@@ -11,11 +11,15 @@ const done = (code: string) => ({
   source: "manual",
 });
 
-/** Opens What's next on 8 October 2026, so the next term is Winter 2027, with a saved profile. */
+/** Opens What's next on 8 October 2026, so the next term is Winter 2027, with a saved profile that a reload keeps. */
 async function openWith(page: Page, state: Record<string, unknown>) {
   await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
   await page.addInitScript(
-    ([key, value]) => localStorage.setItem(key as string, value as string),
+    ([key, value]) => {
+      if (!localStorage.getItem(key as string)) {
+        localStorage.setItem(key as string, value as string);
+      }
+    },
     [KEY, JSON.stringify({ state: { creditLimit: 17, ...state }, version: 4 })],
   );
   await page.goto("/next");
@@ -213,6 +217,27 @@ test("met and CEGEP-credited groups, the restriction note and the minor open fro
     () => document.documentElement.scrollWidth - window.innerWidth,
   );
   expect(width).toBeLessThanOrEqual(0);
+});
+
+test("a rule the crawler could not read can be marked as checked, and the mark taken back", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [],
+    programId: "economics-major-concentration-ba",
+    plan: [],
+  });
+  await requirement(page, "Complementary courses").click();
+  const pane = page.getByRole("region", { name: "Complementary courses" });
+  await pane.getByRole("button", { name: "Mark as checked" }).click();
+  await expect(pane).toContainText("Checked by you");
+  await expect(pane.getByRole("button", { name: "Undo" })).toBeFocused();
+
+  await page.reload();
+  await expect(pane).toContainText("Checked by you");
+  await pane.getByRole("button", { name: "Undo" }).click();
+  await expect(pane).toContainText("Check this requirement");
+  await expect(pane).not.toContainText("Checked by you");
 });
 
 test("two joint honours components show as a pair, each with its own bar", async ({
