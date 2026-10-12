@@ -2371,8 +2371,21 @@ function foundationGroups(
 const PAREN = String.raw`\((?:[^()]|\([^()]*\))*\)`;
 const DEGREE = new RegExp(`((?:${PAREN}\\s+(?:or|and)\\s+)*${PAREN})$`);
 
-function degreeAndName(heading: string) {
+function degreeAndName(heading: string, graduate: boolean) {
   const title = clean(heading.replace(HEADING_CREDITS, ""));
+  // Graduate titles put a qualifier after the degree, as "Music (M.A.): Theory (Non-Thesis)": the degree is the last parenthesis holding dotted letters.
+  if (graduate) {
+    const dotted = [...title.matchAll(new RegExp(PAREN, "g"))]
+      .filter((m) => /[A-Za-z]\./.test(m[0]))
+      .at(-1);
+    if (!dotted) return { name: title, degree: "" };
+    return {
+      name: clean(
+        `${title.slice(0, dotted.index).trimEnd()}${title.slice(dotted.index + dotted[0].length)}`,
+      ),
+      degree: clean(dotted[0].slice(1, -1)),
+    };
+  }
   // French pages: "Baccalauréat ès Arts (B.A.) - Concentration majeure Langue et littérature françaises".
   const french = /^Baccalauréat[^()]*\(([^()]+)\)\s*-\s*(.+)$/.exec(title);
   if (french) return { name: french[2] ?? title, degree: french[1] ?? "" };
@@ -2388,12 +2401,17 @@ const FACULTY_BY_PATH: Record<string, string> = {
   "agri-env-sci": "Agricultural and Environmental Sciences",
   "arts-science": "Arts and Science",
   arts: "Arts",
+  dentistry: "Dental Medicine and Oral Health Sciences",
   education: "Education",
   engineering: "Engineering",
   environment: "Environment",
+  "interfaculty-studies": "Interfaculty Studies",
   law: "Law",
   management: "Management",
+  "medicine-health-sciences": "Medicine and Health Sciences",
   music: "Music",
+  nursing: "Medicine and Health Sciences",
+  "physical-occupational-therapy": "Medicine and Health Sciences",
   science: "Science",
 };
 
@@ -2401,7 +2419,11 @@ function facultyOf(offered: string, path: string): string {
   const named = /\(([^()]*)\)\s*$/.exec(offered)?.[1] ?? "";
   const faculties = named
     .split(";")
-    .map((f) => clean(f).replace(/^.*?\b(?:Faculty|School) of /, ""))
+    .map((f) =>
+      clean(f)
+        .replace(/^.*?\b(?:Faculty|School) of /, "")
+        .replace(/ & /g, " and "),
+    )
     .filter(Boolean);
   if (faculties.length > 0) return faculties.join(" and ");
   return FACULTY_BY_PATH[path.split("/")[3] ?? ""] ?? "";
@@ -2473,8 +2495,10 @@ export function parseProgramPage(
   const overview = clean(
     $("#programoverviewtextcontainer, #gnralitstextcontainer").text(),
   );
-  // The requirements are under the Courses tab, else under the tab a few pages use instead, the one that has lists.
-  const courses = $("#coursestextcontainer");
+  // The requirements are under the Courses tab, the graduate Program Requirements tab, else under the tab a few pages use instead, the one that has lists.
+  const courses = $("#coursestextcontainer").length
+    ? $("#coursestextcontainer")
+    : $("#programrequirementstextcontainer");
   const container = courses.length
     ? courses
     : $(
@@ -2486,16 +2510,20 @@ export function parseProgramPage(
     String.raw`\(\s*${SPAN}\s*${CREDITS}\s*\)\s*$`,
     "i",
   ).exec(heading);
-  const credits = Number(
-    total?.[1] ??
-      /Program credit weight:\s*(\d+(?:\.\d+)?)/.exec(overview)?.[1],
-  );
+  const credits =
+    Number(
+      total?.[1] ??
+        /Program credit weight:\s*(\d+(?:\.\d+)?)/.exec(overview)?.[1],
+    ) || 0;
   // One French page's address ends its last word with a dash.
   const slug = path
     .split("/")
     .at(-2)
-    ?.replace(/^-+|-+$/g, "");
-  if (!year || !slug || !credits) return null;
+    ?.replace(/^-+|-+$/g, "")
+    .replace(/--+/g, "-");
+  const graduate = path.startsWith("/en/graduate/");
+  // A doctorate gives no credit total.
+  if (!year || !slug || (!credits && !graduate)) return null;
   const ctx = { subjectsOf: options.subjectsOf ?? (() => []) };
 
   const groups: Group[] = [];
@@ -2548,12 +2576,14 @@ export function parseProgramPage(
     });
   }
 
-  const { name, degree } = degreeAndName(heading);
+  const { name, degree } = degreeAndName(heading, graduate);
   const overlap = overlapOf(
     clean($("#programoverviewtextcontainer, #coursestextcontainer").text()),
   );
   const offered =
-    /Offered by:\s*(.*?)\s*(?:Degree:|$)/.exec(overview)?.[1] ?? "";
+    /Offered by:\s*(.*?)\s*(?:Degree:|Program credit weight:|$)/.exec(
+      overview,
+    )?.[1] ?? "";
   return {
     id: slug,
     name,
@@ -2567,6 +2597,7 @@ export function parseProgramPage(
     credits,
     groups,
     ...(isMinor({ id: slug, degree }) && overlap !== undefined && { overlap }),
+    ...(graduate && { level: "graduate" as const }),
     generated: true,
   };
 }

@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 
-const PROGRAMS = /^\/en\/undergraduate\/[^/]+\/programs\/.+\/$/;
+const PROGRAMS =
+  /^\/en\/(?:undergraduate\/[^/]+\/programs\/.+|graduate\/(?!about\/).+)\/$/;
 // Faculty paths that list the same programs under a second name come last, so the faculty's own page wins.
 const SHARED_FACULTY = "/arts-science/";
 // Degrees only one faculty grants: another faculty's page for such a slug only points to the real one.
@@ -32,7 +33,8 @@ export function programPaths(sitemapXml: string): string[] {
       borrowed(a) - borrowed(b) ||
       (a < b ? -1 : 1),
   )) {
-    const slug = path.split("/").at(-2) ?? "";
+    // Undergraduate and graduate pages are deduplicated apart, since a slug they share names two different pages.
+    const slug = `${path.split("/")[2]}/${path.split("/").at(-2)}`;
     if (!bySlug.has(slug)) bySlug.set(slug, path);
   }
   return [...bySlug.values()].sort();

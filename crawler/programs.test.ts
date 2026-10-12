@@ -25,8 +25,9 @@ const page = (name: string, path: string) =>
   ) as Program;
 
 test("finds program pages in the sitemap and skips department indexes", () => {
+  const GRAD = "/en/graduate";
   const loc = (path: string) =>
-    `<url><loc>https://coursecatalogue.mcgill.ca${BASE}/${path}</loc></url>`;
+    `<url><loc>https://coursecatalogue.mcgill.ca${path.startsWith("/") ? path : `${BASE}/${path}`}</loc></url>`;
   const sitemap = `<urlset>${[
     "science/programs/",
     "science/programs/biology/",
@@ -35,10 +36,21 @@ test("finds program pages in the sitemap and skips department indexes", () => {
     "arts-science/programs/chemistry/chemistry-minor-bsc/",
     "science/programs/chemistry/chemistry-minor-bsc/",
     "science/degree-requirements/",
+    "arts/programs/environment/",
+    `${GRAD}/about/admissions-guidelines/`,
+    `${GRAD}/science/computer-science/`,
+    `${GRAD}/science/computer-science/computer-science-phd/`,
+    `${GRAD}/arts/geography/geography-phd/`,
+    `${GRAD}/science/geography/geography-phd/`,
+    `${GRAD}/environment/`,
   ]
     .map(loc)
     .join("")}</urlset>`;
   expect(programPaths(sitemap)).toEqual([
+    `${GRAD}/arts/geography/geography-phd/`,
+    `${GRAD}/environment/`,
+    `${GRAD}/science/computer-science/computer-science-phd/`,
+    `${BASE}/arts/programs/environment/`,
     `${BASE}/science/programs/biology/biology-major-bsc/`,
     `${BASE}/science/programs/chemistry/chemistry-minor-bsc/`,
     `${BASE}/science/programs/music-science-students/`,
