@@ -2329,6 +2329,8 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
 }
 
 const SEPARATE = /complementary|elective|compl[ée]mentaires?/i;
+const ALTERNATIVE_NOTE =
+  "The catalogue also lists an alternative set of required courses.";
 const CHECKED = /^thesis$|\brequirements?\b|complementary|elective/i;
 const ALTERNATIVE = /^alternative|^option\b/i;
 
@@ -2359,12 +2361,7 @@ function groupsOf(section: Section, ctx: Context): Group[] {
   const required = requiredGroup(own);
   if (!required) return complementaryGroups(section, ctx);
   if (cut >= 0 || own.items.length < head.length) {
-    required.note = [
-      required.note,
-      "The catalogue also lists an alternative set of required courses.",
-    ]
-      .filter(Boolean)
-      .join(" ");
+    required.note = [required.note, ALTERNATIVE_NOTE].filter(Boolean).join(" ");
   }
   const extra = additionalCredits(own, ctx);
   if (extra) required.credits -= extra.credits;
@@ -2387,6 +2384,42 @@ function groupsOf(section: Section, ctx: Context): Group[] {
           )
         : []),
   ];
+}
+
+/** Headings with no credits right below a Required heading whose courses make up exactly what its total says it lacks, as "Thesis Courses" under a "Required Courses (36 credits)" that lists 5, join it. Returns the sections it took. */
+function absorbBelow(required: RequiredGroup, after: Section[]): Section[] {
+  let short = required.credits - (LISTED.get(required) ?? required.credits);
+  const taken: RequiredGroup[] = [];
+  for (const section of after) {
+    if (short <= 0 || LOWER.has(required)) break;
+    // "one hour per week ... OR one and a half hours per week": the first way counts, as under a Required heading.
+    const cut = section.items.findIndex(
+      (item) => item.kind === "text" && /^or$/i.test(item.text),
+    );
+    const items = cut < 0 ? section.items : section.items.slice(0, cut);
+    const plain = items.every(
+      (item) =>
+        item.kind === "table" ||
+        (item.kind === "text" &&
+          !constraint(item.text) &&
+          !listAmount(item.text)),
+    );
+    const group =
+      plain && !hasOwnCredits(section) && requiredGroup({ ...section, items });
+    if (!group) return [];
+    if (cut >= 0) group.note = ALTERNATIVE_NOTE;
+    taken.push(group);
+    short -= LISTED.get(group) ?? 0;
+  }
+  if (short !== 0 || taken.length === 0) return [];
+  required.courses = dedupe([
+    ...required.courses,
+    ...taken.flatMap((group) => group.courses),
+  ]);
+  const notes = [required.note, ...taken.map((group) => group.note)];
+  if (notes.some(Boolean)) required.note = notes.filter(Boolean).join(" ");
+  LISTED.set(required, required.credits);
+  return after.slice(0, taken.length);
 }
 
 const PREREQUISITES = /^prerequisite courses$/i;
@@ -2617,14 +2650,21 @@ export function parseProgramPage(
   const sections = readSections($, container);
   const continues = (a: Section | undefined, b: Section | undefined) =>
     a && b && FOUNDATION.test(a.title) && PREREQUISITES.test(b.title);
+  const absorbed = new Set<Section>();
   for (const [i, section] of sections.entries()) {
-    if (continues(sections[i - 1], section)) continue;
+    if (absorbed.has(section) || continues(sections[i - 1], section)) continue;
     const next = sections[i + 1];
     const found =
       next && continues(section, next)
         ? foundationGroups(section, next, ctx)
         : groupsOf(section, ctx);
     groups.push(...found);
+    const [only] = found;
+    if (found.length === 1 && only?.kind === "required") {
+      for (const below of absorbBelow(only, sections.slice(i + 1))) {
+        absorbed.add(below);
+      }
+    }
     // A list under a heading such as "Group C" belongs to the complementary group before it.
     const last = groups.at(-1);
     if (

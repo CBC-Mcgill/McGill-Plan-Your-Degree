@@ -1511,3 +1511,21 @@ test("a range heading counts courses up to its top, and credits no group can rea
     ],
   });
 });
+
+test("sections with no credits below a Required heading join it when their courses make up exactly what it lacks", () => {
+  const required = (thesis: string) =>
+    graduateOf(
+      "Classics (Thesis) (M.A.) (45 credits)",
+      `<h2>Required Courses (21 credits)</h2>${table("CLAS 685")}<h2>Thesis Courses</h2>${thesis}` +
+        `<h2>Complementary Courses (24 credits)</h2><p>24 credits from the following:</p>${table("CLAS 610", "CLAS 612")}`,
+    )?.groups[0];
+  expect(required(table("CLAS 695:6", "CLAS 696:6", "CLAS 698:6"))).toEqual({
+    title: "Required Courses",
+    kind: "required",
+    credits: 21,
+    courses: ["CLAS 685", "CLAS 695", "CLAS 696", "CLAS 698"],
+  });
+  expect(required(table("CLAS 695:6", "CLAS 696:6"))).toMatchObject({
+    courses: ["CLAS 685"],
+  });
+});
