@@ -1584,3 +1584,35 @@ test("a section with no credits asks what its lists say, else a person checks wh
     ).groups,
   ).toHaveLength(1);
 });
+
+test("a level sentence that is a group's only source stays for a person to check when it also names a department, a kind of course or lists that follow", () => {
+  const rules = (sentence: string) =>
+    (
+      graduateOf(
+        "Social Work (Non-Thesis) (M.S.W.) (21 credits)",
+        `<h2>Complementary Courses (21 credits)</h2><p>${sentence}</p>`,
+      )?.groups[0] as { rules: object[] }
+    ).rules.map((rule) => ({ ...rule, title: undefined }));
+  for (const sentence of [
+    "21 credits of courses at the 500 or 600 level courses chosen in consultation with school adviser; up to 6 credits in total may be taken outside the School.",
+    "21 credits at the 500 or 600 level, chosen as follows:",
+    "Two 3-credit courses at the 500 level or higher recommended by the supervisory committee; one of which must be in quantitative methods/techniques.",
+    "21 credits at the 500 level or higher in consultation with the program adviser chosen from courses offered by the Department of Integrated Studies in Education.",
+  ]) {
+    expect(rules(sentence), sentence).toEqual([
+      { title: undefined, unparsed: true },
+    ]);
+  }
+  expect(
+    rules(
+      "21 credits of courses at the 500 level or higher from within and/or outside the Department in consultation with the Program Adviser.",
+    ),
+  ).toEqual([
+    {
+      title: undefined,
+      minCredits: 21,
+      match: { minLevel: 500 },
+      adviser: true,
+    },
+  ]);
+});

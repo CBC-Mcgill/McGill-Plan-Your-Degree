@@ -1829,13 +1829,35 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
   if (listed) return rules;
   return rules.map((rule) => {
     if (rule.filter) return unparsed(rule.title);
-    // With no list a reminder is the group's source, so it keeps the level it names, as "At the 500 level or higher, and selected in consultation with the academic adviser".
     const level = levelIn(rule.title)?.match;
+    // With no list a level minimum stands for the group's courses, and so does a reminder no check guards, so one that says more than its level stays for a person to check.
+    const source =
+      level &&
+      !rule.unparsed &&
+      !rule.courses &&
+      !rule.match?.subjects &&
+      !rule.match?.excludeSubjects &&
+      (rule.minCredits !== undefined ||
+        rule.minCourses !== undefined ||
+        (isReminder(rule) && !rules.some((other) => other.unparsed)));
+    if (source && !levelHolds(rule.title)) return unparsed(rule.title);
+    // A reminder keeps the level it names, as "At the 500 level or higher, and selected in consultation with the academic adviser".
     return level && rule.adviser && JSON.stringify(rule.match) === "{}"
       ? { ...rule, match: level }
       : rule;
   });
 }
+
+// What a level alone cannot hold: a department, faculty or school, a kind of course, or lists that follow, as "3 credits at the 500 level or higher chosen from courses offered by the Department of Integrated Studies in Education".
+const LEVEL_ASIDE =
+  /\b(?:departments?|faculty|faculties|school|offered by|seminars?|methods?|methodology|quantitative)\b|\bas follows\W*$/i;
+// "from within and/or outside the Department" opens any department, and who approves the courses restricts none of them.
+const ANY_DEPARTMENT =
+  /\b(?:either )?within (?:and\/or|or) outside (?:of )?the department\b|\bfrom any department\b/gi;
+const APPROVER =
+  /\b(?:approved by|(?:approval|permission) (?:of|from)|in consultation with)\b.*?(?=[,;]|\b(?:chosen|selected|taken|offered)\b|$)/gi;
+const levelHolds = (title: string) =>
+  !LEVEL_ASIDE.test(title.replace(ANY_DEPARTMENT, " ").replace(APPROVER, " "));
 
 const FOUNDATION = /year 0|foundation/i;
 
@@ -2272,7 +2294,11 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   // Reminders count no course, so one alone at a level is the group's source, as "At the 500 level or higher, and selected in consultation with the academic adviser" under "Elective Courses (6 credits)", and any other is for a person to check.
   const rules =
     read.length > 0 && read.every(isReminder)
-      ? read.length === 1 && lone && leveled && credits
+      ? read.length === 1 &&
+        lone &&
+        leveled &&
+        credits &&
+        levelHolds(lone.title)
         ? [{ ...lone, minCredits: credits }]
         : read.map((rule) => unparsed(rule.title))
       : read;
