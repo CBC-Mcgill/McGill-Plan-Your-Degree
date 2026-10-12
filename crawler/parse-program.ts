@@ -610,7 +610,7 @@ function bareTotal(text: string) {
 const SUBJECT_LIST = String.raw`[A-Z]{3}[A-Z\d](?:(?:, | or | and |, or |, and )[A-Z]{3}[A-Z\d])*`;
 const subjectsIn = (text: string) => text.split(/, or |, and |, | or | and /);
 
-const HUNDRED = "[1-6]00";
+const HUNDRED = "[1-7]00";
 // "400 level or higher", "400- or 500-level", "300, 400, or 500 levels", "400/500 level", "300-500 levels", "300+ level", "below the 300 level".
 const LEVEL_PHRASE = new RegExp(
   String.raw`\b(below )?(?:the )?${HUNDRED}(?:-level|-(?!${HUNDRED}))?(?:(?:,? (?:or|and|to) |, |\s?[-–/]\s?)${HUNDRED}(?:-level|-(?!${HUNDRED}))?)*\+?(?: ?levels?)?(?: (?:or|and) (?:above|higher))?`,
@@ -727,7 +727,8 @@ function readClause(
     )
     .replace(EXCLUDING, (_, inner = "", list = "") => {
       const codes = codesIn(inner || list);
-      if (codes.length === 0) unknown = true;
+      // "excluding ECSE 691 to ECSE 697" is a range the codes alone would miss.
+      if (codes.length === 0 || /\bto\b/.test(inner || list)) unknown = true;
       exclude.push(...codes);
       return " ";
     });
@@ -1312,7 +1313,9 @@ function adviserRules(
   const m = AMOUNT.exec(rest);
   const { minCredits, maxCredits } = m ? amountOf(m) : {};
   // "A maximum of 9 credits may be from another department with permission": the lists still count, so the extra only reminds.
-  const optional = !minCredits || /^[^,]*\b(?:may|can)\b/i.test(rest);
+  const alternative = /^\W*or\b/i.test(rest);
+  const optional =
+    !minCredits || alternative || /^[^,]*\b(?:may|can)\b/i.test(rest);
   if (
     optional &&
     /\b(?:outside|another|other|elsewhere)\b|\bnon-/i.test(rest)
@@ -1354,7 +1357,8 @@ function adviserRules(
   // "or any 300- or 400-level course approved by an adviser" adds to a list, so it counts nothing and reminds.
   const level = /^or any\b/i.test(rest) ? levelIn(rest) : null;
   if (level) return [{ title, match: level.match, adviser: true }];
-  return [unparsed(text)];
+  // "Or 3 credits at the 500 level or higher approved by the Committee" is an approved alternative to the list before it, so it reminds too.
+  return [alternative ? reminder(text) : unparsed(text)];
 }
 
 /** A rule that counts nothing and reminds the student that an adviser can approve more courses. */
@@ -1389,6 +1393,8 @@ export function statementRules(
 
 interface Context {
   subjectsOf: (department: string) => string[];
+  /** A graduate page, whose prose-only headings such as a doctorate's "Thesis" become checks. */
+  graduate: boolean;
 }
 
 const SET = `CODE(?:(?:,? or |, |,? and |/)CODE)+`;
@@ -1813,9 +1819,18 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     (rule) =>
       !rule.unparsed && !rule.filter && (rule.courses || rule.match?.subjects),
   );
-  return listed
-    ? rules
-    : rules.map((rule) => (rule.filter ? unparsed(rule.title) : rule));
+  if (listed) return rules;
+  return rules.map((rule) => {
+    if (rule.filter) return unparsed(rule.title);
+    // With no list a reminder is the group's source, so it keeps the level it names, as "At the 500 level or higher, and selected in consultation with the academic adviser".
+    const level = levelIn(rule.title)?.match;
+    return ctx.graduate &&
+      level &&
+      rule.adviser &&
+      JSON.stringify(rule.match) === "{}"
+      ? { ...rule, match: level }
+      : rule;
+  });
 }
 
 const FOUNDATION = /year 0|foundation/i;
@@ -2244,6 +2259,28 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   ) {
     return [{ title: section.title, kind: "complementary", credits: 0, rules }];
   }
+  // A heading with no credits and no list that asks for a thesis, a requirement or courses described in prose, as every doctorate's "Thesis": a group a person checks.
+  const [prose] = textsIn(section);
+  if (
+    ctx.graduate &&
+    !credits &&
+    prose &&
+    tablesIn(section).length === 0 &&
+    CHECKED.test(section.title)
+  ) {
+    const checks =
+      rules.length > 0
+        ? rules.map((rule) => (rule.unparsed ? rule : unparsed(rule.title)))
+        : [unparsed(sentences(prose)[0] ?? prose)];
+    return [
+      {
+        title: section.title,
+        kind: "complementary",
+        credits: 0,
+        rules: checks,
+      },
+    ];
+  }
   if (!credits) return [];
   const group: ComplementaryGroup = {
     title: section.title,
@@ -2257,6 +2294,7 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
 }
 
 const SEPARATE = /complementary|elective|compl[ée]mentaires?/i;
+const CHECKED = /^thesis$|\brequirements?\b|complementary|elective/i;
 const ALTERNATIVE = /^alternative|^option\b/i;
 
 function groupsOf(section: Section, ctx: Context): Group[] {
@@ -2524,7 +2562,7 @@ export function parseProgramPage(
   const graduate = path.startsWith("/en/graduate/");
   // A doctorate gives no credit total.
   if (!year || !slug || (!credits && !graduate)) return null;
-  const ctx = { subjectsOf: options.subjectsOf ?? (() => []) };
+  const ctx = { subjectsOf: options.subjectsOf ?? (() => []), graduate };
 
   const groups: Group[] = [];
   const sections = readSections($, container);
