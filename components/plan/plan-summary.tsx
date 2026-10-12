@@ -15,6 +15,7 @@ import { Term } from "@/components/ui/tooltip";
 import { courseSlug } from "@/lib/catalogue/slug";
 import { COPY } from "@/lib/copy";
 import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
+import { groupKeys, SECOND_KEY } from "@/lib/engine/next-view";
 import {
   creditSources,
   creditSplit,
@@ -116,6 +117,8 @@ function lacks(
   group: GroupProgress,
   definition: Group | undefined,
   catalogue: Catalogue,
+  /** The What's next pane that lists the group's choices. */
+  pane: string,
 ): ReactNode {
   if (group.kind === "required") {
     return (
@@ -149,7 +152,7 @@ function lacks(
     what && (
       <span className={cn("text-fg-muted", UNDER)}>
         {what} ·{" "}
-        <Link href="/next" prefetch={false} className="link">
+        <Link href={`/next?req=${pane}`} prefetch={false} className="link">
           See choices
         </Link>
       </span>
@@ -163,11 +166,18 @@ function missingRows(
   snapshot: Snapshot,
   catalogue: Catalogue,
 ) {
-  return standings.flatMap(({ program, progress, prefix }) =>
-    progress.groups.flatMap((group, g) => {
+  return standings.flatMap(({ program, progress, prefix }) => {
+    // The second program has one pane on What's next, the first one pane per group.
+    const panes = groupKeys(progress.groups);
+    return progress.groups.flatMap((group, g) => {
       if (group.satisfied) return [];
       const key = `${program.id}-${g}`;
-      const what = lacks(group, program.groups[g], catalogue);
+      const what = lacks(
+        group,
+        program.groups[g],
+        catalogue,
+        prefix ? SECOND_KEY : (panes[g] ?? ""),
+      );
       const gap = group.credits - group.creditsDone;
       const checks = group.rules.flatMap((rule, r) =>
         rule.unparsed &&
@@ -218,8 +228,8 @@ function missingRows(
         </li>,
         ...checks,
       ];
-    }),
-  );
+    });
+  });
 }
 
 /** The plan's headline: program credits with the plan, what is still missing, the second program, and the warning count. */
