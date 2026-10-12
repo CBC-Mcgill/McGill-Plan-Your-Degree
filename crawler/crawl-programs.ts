@@ -98,7 +98,12 @@ async function main() {
     if ((i + 1) % 100 === 0) console.log(`${i + 1} of ${paths.length}`);
   }
 
+  const ids = new Set<string>();
   for (const program of programs) {
+    // An undergraduate and a graduate page with the same slug would write one file over the other.
+    if (ids.has(program.id))
+      throw new Error(`Two pages share the id ${program.id}`);
+    ids.add(program.id);
     const result = validateProgram(program);
     if (!result.ok) {
       throw new Error(`${program.id} is invalid: ${result.errors[0]}`);
@@ -130,7 +135,7 @@ async function main() {
     generated: programs.find((p) => p.id === program.id),
   }));
   const summary = summarize({
-    found: paths.length,
+    paths,
     skipped,
     programs,
     hand,

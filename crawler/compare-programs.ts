@@ -196,12 +196,13 @@ export function compareWithHandWritten(
   return lines;
 }
 
-/** Programs whose groups add up to more or fewer credits than the program, which often means alternatives were read as requirements or a section was skipped. */
+/** Programs whose groups add up to more or fewer credits than the program, which often means alternatives were read as requirements or a section was skipped. A program with no total, as a doctorate, has nothing to add up to. */
 export function creditMismatches(programs: Program[]) {
   const sum = (p: Program) => p.groups.reduce((n, g) => n + g.credits, 0);
+  const totalled = programs.filter((p) => p.credits > 0);
   return {
-    over: programs.filter((p) => sum(p) > p.credits).map((p) => p.id),
-    under: programs.filter((p) => sum(p) < p.credits).map((p) => p.id),
+    over: totalled.filter((p) => sum(p) > p.credits).map((p) => p.id),
+    under: totalled.filter((p) => sum(p) < p.credits).map((p) => p.id),
   };
 }
 
@@ -220,7 +221,7 @@ export function missingCourses(
 }
 
 export interface Summary {
-  found: number;
+  paths: string[];
   skipped: string[];
   programs: Program[];
   hand: { program: Program; generated: Program | undefined }[];
@@ -228,39 +229,68 @@ export interface Summary {
   missing: Map<string, number>;
 }
 
+/** The metrics of one level of study, so undergraduate and graduate numbers are tracked apart. */
+function levelLines(
+  paths: string[],
+  skipped: string[],
+  programs: Program[],
+): string[] {
+  const withUnparsed = programs.filter((p) => unparsedCount(p) > 0).length;
+  const unparsed = programs.reduce((sum, p) => sum + unparsedCount(p), 0);
+  const rules = programs.reduce((sum, p) => sum + rulesOf(p).length, 0);
+  const { over, under } = creditMismatches(programs);
+  return [
+    `- Program pages found: ${paths.length}`,
+    `- Programs written: ${programs.length}`,
+    `- Pages skipped for having no requirements: ${skipped.length}`,
+    `- Programs with unparsed rules: ${withUnparsed} of ${programs.length}`,
+    `- Programs fully readable: ${programs.length - withUnparsed} of ${programs.length}`,
+    `- Complementary rules kept as raw text: ${unparsed} of ${rules}`,
+    `- Programs whose groups add up to more credits than the program: ${over.length}`,
+    `- Programs whose groups add up to fewer credits than the program: ${under.length}`,
+    "",
+    "#### Most common unparsed phrasings",
+    "",
+    ...topUnparsed(programs).map((line) => `- ${line}`),
+    "",
+  ];
+}
+
+const isGraduate = (path: string) => path.startsWith("/en/graduate/");
+
 /** A Markdown summary of the program crawl for the data PR. */
 export function summarize({
-  found,
+  paths,
   skipped,
   programs,
   hand,
   previous,
   missing,
 }: Summary): string {
-  const withUnparsed = programs.filter((p) => unparsedCount(p) > 0).length;
-  const unparsed = programs.reduce((sum, p) => sum + unparsedCount(p), 0);
-  const rules = programs.reduce((sum, p) => sum + rulesOf(p).length, 0);
-  const { over, under } = creditMismatches(programs);
   return [
     "## Program crawl",
     "",
-    `- Program pages found: ${found}`,
     `- Programs written: ${programs.length} (was ${previous.length})`,
-    `- Pages skipped for having no requirements: ${skipped.length}`,
-    `- Programs with unparsed rules: ${withUnparsed} of ${programs.length}`,
-    `- Complementary rules kept as raw text: ${unparsed} of ${rules}`,
-    `- Programs whose groups add up to more credits than the program: ${over.length}`,
-    `- Programs whose groups add up to fewer credits than the program: ${under.length}`,
     `- Course codes with no page in the course catalogue: ${missing.size}${
       missing.size
         ? ` (${[...missing].map(([code, n]) => `${code} in ${n} programs`).join(", ")})`
         : ""
     }`,
     "",
-    "### Most common unparsed phrasings",
-    "",
-    ...topUnparsed(programs).map((line) => `- ${line}`),
-    "",
+    ...(
+      [
+        ["Undergraduate", false],
+        ["Graduate", true],
+      ] as const
+    ).flatMap(([title, graduate]) => [
+      `### ${title}`,
+      "",
+      ...levelLines(
+        paths.filter((path) => isGraduate(path) === graduate),
+        skipped.filter((path) => isGraduate(path) === graduate),
+        programs.filter((p) => (p.level === "graduate") === graduate),
+      ),
+    ]),
     "### Hand-written programs against generated",
     "",
     ...hand.flatMap(({ program, generated }) => {

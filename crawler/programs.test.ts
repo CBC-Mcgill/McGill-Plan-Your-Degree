@@ -25,8 +25,9 @@ const page = (name: string, path: string) =>
   ) as Program;
 
 test("finds program pages in the sitemap and skips department indexes", () => {
+  const GRAD = "/en/graduate";
   const loc = (path: string) =>
-    `<url><loc>https://coursecatalogue.mcgill.ca${BASE}/${path}</loc></url>`;
+    `<url><loc>https://coursecatalogue.mcgill.ca${path.startsWith("/") ? path : `${BASE}/${path}`}</loc></url>`;
   const sitemap = `<urlset>${[
     "science/programs/",
     "science/programs/biology/",
@@ -35,10 +36,21 @@ test("finds program pages in the sitemap and skips department indexes", () => {
     "arts-science/programs/chemistry/chemistry-minor-bsc/",
     "science/programs/chemistry/chemistry-minor-bsc/",
     "science/degree-requirements/",
+    "arts/programs/environment/",
+    `${GRAD}/about/admissions-guidelines/`,
+    `${GRAD}/science/computer-science/`,
+    `${GRAD}/science/computer-science/computer-science-phd/`,
+    `${GRAD}/arts/geography/geography-phd/`,
+    `${GRAD}/science/geography/geography-phd/`,
+    `${GRAD}/environment/`,
   ]
     .map(loc)
     .join("")}</urlset>`;
   expect(programPaths(sitemap)).toEqual([
+    `${GRAD}/arts/geography/geography-phd/`,
+    `${GRAD}/environment/`,
+    `${GRAD}/science/computer-science/computer-science-phd/`,
+    `${BASE}/arts/programs/environment/`,
     `${BASE}/science/programs/biology/biology-major-bsc/`,
     `${BASE}/science/programs/chemistry/chemistry-minor-bsc/`,
     `${BASE}/science/programs/music-science-students/`,
@@ -1279,4 +1291,187 @@ test("a required range takes the bound the program total counts, and an Honours 
       rules: [{ unparsed: true }],
     },
   ]);
+});
+
+// Graduate
+
+const GRAD = "/en/graduate";
+const graduatePage = (name: string, path: string) =>
+  parseProgramPage(
+    readFileSync(
+      new URL(`fixtures/program-${name}.html`, import.meta.url),
+      "utf8",
+    ),
+    `${GRAD}/${path}/`,
+  ) as Program;
+const graduateOf = (heading: string, body: string) =>
+  parseProgramPage(
+    `<h1 class="page-title">${heading}</h1><p>2026-2027 Graduate Catalogue</p><div id="programrequirementstextcontainer">${body}</div>`,
+    `${GRAD}/science/test/test-program/`,
+  );
+
+test("parses a thesis master's page: its degree, and thesis courses read as a list", () => {
+  const msc = graduatePage(
+    "computer-science-thesis-msc",
+    "science/computer-science/computer-science-thesis-msc",
+  );
+  expect(validateProgram(msc)).toMatchObject({ ok: true });
+  expect(msc).toMatchObject({
+    id: "computer-science-thesis-msc",
+    name: "Computer Science (Thesis)",
+    degree: "M.Sc.",
+    faculty: "Science",
+    credits: 45,
+    level: "graduate",
+    groups: [
+      {
+        title: "Thesis Courses",
+        kind: "complementary",
+        credits: 29,
+        rules: [
+          {
+            minCredits: 29,
+            maxCredits: 29,
+            courses: [
+              "COMP 691",
+              "COMP 696",
+              "COMP 697",
+              "COMP 698",
+              "COMP 699",
+            ],
+          },
+        ],
+      },
+      { kind: "required", credits: 2, courses: ["COMP 602", "COMP 603"] },
+      { title: "Complementary Courses", kind: "complementary", credits: 14 },
+    ],
+  });
+});
+
+test("parses a doctorate: no credit total, its thesis and requirements as checks, and required courses added up from their table", () => {
+  const phd = graduatePage(
+    "history-phd",
+    "arts/history-classical-studies/history-phd",
+  );
+  expect(validateProgram(phd)).toMatchObject({ ok: true });
+  expect(phd).toMatchObject({
+    name: "History",
+    degree: "Ph.D.",
+    faculty: "Arts",
+    credits: 0,
+    level: "graduate",
+  });
+  expect(phd.groups).toEqual([
+    {
+      title: "Thesis",
+      kind: "complementary",
+      credits: 0,
+      rules: [
+        {
+          title:
+            "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          unparsed: true,
+        },
+      ],
+    },
+    {
+      title: "Required Courses",
+      kind: "required",
+      credits: 3,
+      courses: ["HIST 701", "HIST 702", "HIST 703", "HIST 704"],
+    },
+    {
+      title: "Complementary Courses",
+      kind: "complementary",
+      credits: 0,
+      rules: [
+        {
+          title:
+            "A maximum of 9 credits previously completed at the graduate level, whether at McGill or elsewhere",
+          unparsed: true,
+        },
+        {
+          title: "Up to 6 credits may be taken in another department",
+          unparsed: true,
+        },
+      ],
+    },
+    {
+      title: "Language Requirement",
+      kind: "complementary",
+      credits: 0,
+      rules: [
+        {
+          title:
+            "Ph.D. candidates must offer one foreign language for examination purposes",
+          unparsed: true,
+        },
+      ],
+    },
+  ]);
+});
+
+test("reads a graduate degree from the parenthesis with dotted letters, and skips a page with no requirements", () => {
+  const list = `<h2>Required Courses (45 credits)</h2>${table("MUTH 650")}`;
+  expect(
+    graduateOf("Music (M.A.): Theory (Non-Thesis) (45 credits)", list),
+  ).toMatchObject({ name: "Music: Theory (Non-Thesis)", degree: "M.A." });
+  expect(
+    graduateOf(
+      "Japan Management (Non-Thesis): Finance (M.B.A.) (57 credits)",
+      list,
+    ),
+  ).toMatchObject({
+    name: "Japan Management (Non-Thesis): Finance",
+    degree: "M.B.A.",
+  });
+  expect(graduateOf("Bioengineering", "")).toBeNull();
+});
+
+test("reads graduate sentences: 700-level phrases, a 600-level cap, coursework, any department and approved alternatives", () => {
+  const cases: [string, object[]][] = [
+    [
+      "6 credits at the 500, 600, or 700 level chosen in consultation with the Graduate Program Director.",
+      [{ minCredits: 6, match: { minLevel: 500 }, adviser: true }],
+    ],
+    [
+      "26 credits of coursework, at the 500 level or higher, chosen in consultation with the student's academic adviser or supervisor.",
+      [{ minCredits: 26, match: { minLevel: 500 }, adviser: true }],
+    ],
+    [
+      "12 credits of courses at the 500 level or higher from within and/or outside the Department in consultation with the Program Adviser.",
+      [{ minCredits: 12, match: { minLevel: 500 }, adviser: true }],
+    ],
+    [
+      "Or 3 credits at the 500 level or higher recommended by the Advisory Committee and approved by the Environment Option Committee.",
+      [{ match: {}, adviser: true }],
+    ],
+    [
+      "15 credits of SWRK courses at the 500 or 600 level.",
+      [
+        {
+          minCredits: 15,
+          maxCredits: 15,
+          match: { minLevel: 500, maxLevel: 600, subjects: ["SWRK"] },
+        },
+      ],
+    ],
+    [
+      "7-13 credits at the 500 or 600 level (excluding ECSE 691 to ECSE 697).",
+      [{ unparsed: true }],
+    ],
+  ];
+  for (const [text, rules] of cases) expect(read(text), text).toEqual(rules);
+});
+
+test("a reminder alone in a group keeps the level it names", () => {
+  const program = programOf(
+    "Test Major (B.Sc.) (9 credits)",
+    `<h2>Required Courses (3 credits)</h2>${table("BIOL 200")}` +
+      "<h2>Elective Courses (6 credits)</h2><p>At the 500 level or higher, and selected in consultation with the academic adviser.</p>",
+  );
+  expect(program.groups[1]).toMatchObject({
+    credits: 6,
+    rules: [{ match: { minLevel: 500 }, adviser: true }],
+  });
 });
