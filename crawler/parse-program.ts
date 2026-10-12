@@ -696,7 +696,7 @@ const NUMBER_WORD = new RegExp(
 const NUMBERS: Record<string, number> = { ...COUNTS, nine: 9, twelve: 12 };
 // Words that add nothing to a level or subject constraint. Any other word leaves the clause for a person to read.
 const FILLER = new Set(
-  "a additional all allowed among an any are at be can chosen come complementary completed count course courses credit credits from have honours in is may must number of program selected should taken the to toward towards undergraduate used which".split(
+  "a additional all allowed among an any are at be can chosen come complementary completed count course courses coursework credit credits from have honours in is may must number of program selected should taken the to toward towards undergraduate used which".split(
     " ",
   ),
 );
