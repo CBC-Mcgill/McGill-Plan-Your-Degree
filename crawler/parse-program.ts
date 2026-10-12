@@ -1294,11 +1294,16 @@ const APPROVAL =
 /** A sentence whose courses need the adviser's approval: the rest of it read as usual, any course for a stated amount, nothing for an optional extra outside the lists. */
 function adviserRules(
   text: string,
-  rest: string,
+  unapproved: string,
   subjectsOf: (department: string) => string[],
   credits?: number,
 ): Rule[] {
   const title = trimEnd(text);
+  // "selected from within and/or outside the Department" allows any department.
+  const rest = unapproved.replace(
+    /\s*(?:selected )?(?:from )?within and\/or outside (?:of )?the department\b/i,
+    "",
+  );
   const read = readStatement(rest, subjectsOf, credits);
   if (read) {
     return read.map((rule) => ({
