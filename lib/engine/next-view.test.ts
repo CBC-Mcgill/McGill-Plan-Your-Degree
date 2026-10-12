@@ -3,6 +3,7 @@ import type { Course } from "../catalogue/types.ts";
 import type { CourseRecord, Term } from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import { nextView, termSnapshot } from "./next-view.ts";
+import { programStanding } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 
 const course = (code: string, extra: Partial<Course> = {}): Course => ({
@@ -124,4 +125,46 @@ test("other courses are 100 to 400 level for an undergraduate program and 500 to
     );
   expect(other({ ...program, groups: [] })).toEqual(["COMP 189", "COMP 424"]);
   expect(other(doctorate)).toEqual(["COMP 551", "COMP 652", "COMP 766"]);
+});
+
+test("a complementary group shows the planned courses it counts apart from its lists", () => {
+  const pick: Program = {
+    ...program,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "List A", courses: ["COMP 251", "COMP 302"] },
+          { title: "List B", courses: ["MATH 262"] },
+        ],
+      },
+    ],
+  };
+  const later = [{ term: fall, courses: ["COMP 251"] }];
+  const full = buildSnapshot([done("COMP 250"), done("MATH 222")], later);
+  const view = (withPlan: boolean) =>
+    nextView(
+      catalogue,
+      termSnapshot(full, later, winter),
+      winter,
+      pick,
+      null,
+      undefined,
+      withPlan ? programStanding(pick, full, catalogue, null, "plan") : null,
+    );
+  const lists = (withPlan: boolean) =>
+    view(withPlan).complementary[0]?.buckets.map((bucket) => [
+      bucket.title,
+      bucket.entries.map(({ course }) => course.code),
+    ]);
+  expect(view(true).planned[0]?.map(({ course }) => course.code)).toEqual([
+    "COMP 251",
+  ]);
+  expect(lists(true)).toEqual([
+    ["List A", ["COMP 302"]],
+    ["List B", ["MATH 262"]],
+  ]);
+  expect(lists(false)?.[0]).toEqual(["List A", ["COMP 251", "COMP 302"]]);
 });

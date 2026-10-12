@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import { StatusBar } from "@/components/status";
 import { COPY } from "@/lib/copy";
-import type { CreditSplit } from "@/lib/engine/progress";
+import { roomLeft } from "@/lib/engine/credits";
+import type { CreditSplit, ProgramProgress } from "@/lib/engine/progress";
 
 export interface CreditBar {
   label: ReactNode;
@@ -22,6 +23,22 @@ const LEGEND_TAPS =
 
 /** Wraps a StatusBar whose legend sits beside it, and moves the legend under the bar below 768px. */
 export const BAR_WITH_LEGEND = `${LEGEND_TAPS} max-md:[&>div]:flex-col max-md:[&>div]:items-stretch max-md:[&>div]:gap-2`;
+
+/** Under the program bar once every group is met short of the credit total: how many credits are missing and which ranges can take them. */
+export function RoomLeft({
+  progress,
+  className,
+}: {
+  progress: ProgramProgress;
+  className?: string;
+}) {
+  const room = roomLeft(progress);
+  return (
+    room && (
+      <p className={className}>{COPY.roomLeft(room.missing, room.ranges)}</p>
+    )
+  );
+}
 
 /** The program's credits bar, and the second program's (a minor, a second major, the other joint honours component or a breadth component) beside it at the same level. They stack below 768px. */
 export function ProgramBars({

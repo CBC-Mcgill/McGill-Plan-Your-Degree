@@ -60,6 +60,8 @@ export interface NextView {
   mustTake: Item[];
   later: Item[];
   complementary: OpenGroup[];
+  /** Per group of `progress`, the planned courses a complementary group counts with the plan, which its pane shows apart from its lists. */
+  planned: Entry[][];
   other: Entry[];
 }
 
@@ -191,12 +193,27 @@ export function nextView(
   entry: EntryRoute | null = null,
   /** Courses the program may not count, such as a minor's share past its overlap cap. */
   exclude?: ReadonlySet<string>,
+  /** The program counted with the plan, so each group's planned courses match its bar. */
+  withPlan?: ProgramProgress | null,
 ): NextView {
   const next = whatsNext(catalogue, snapshot, term, program, entry);
   const progress = program
     ? programStanding(program, snapshot, catalogue, entry, "counting", exclude)
     : null;
 
+  // With the plan, a course a complementary group counts that is neither earned nor in progress is planned.
+  const planned = (progress?.groups ?? []).map((group, i) =>
+    group.kind === "complementary"
+      ? (withPlan?.groups[i]?.courses ?? []).flatMap(({ code }) => {
+          const course = catalogue.get(code);
+          return course &&
+            !snapshot.earned.has(code) &&
+            !snapshot.inProgress.has(code)
+            ? [{ course, uncertain: isUncertain(course) }]
+            : [];
+        })
+      : [],
+  );
   const takeable = new Map(next.mustTake.map((s) => [s.course.code, s]));
   const entryFor = (code: string): Entry[] => {
     const suggestion = takeable.get(code);
@@ -290,12 +307,13 @@ export function nextView(
       entries: [] as Entry[],
     }));
     const rest: Entry[] = [];
+    const mine = new Set(planned[index]?.map(({ course }) => course.code));
     const entries = [
       ...(placed[i] ?? []).map(asEntry),
       ...(waiting[i] ?? []).sort((a, b) =>
         a.course.code < b.course.code ? -1 : 1,
       ),
-    ];
+    ].filter(({ course }) => !mine.has(course.code));
     for (const entry of entries) {
       const bucket = buckets.find(
         (b) =>
@@ -334,6 +352,7 @@ export function nextView(
     mustTake,
     later,
     complementary,
+    planned,
     other: electives(
       next.canTake.other,
       snapshot,

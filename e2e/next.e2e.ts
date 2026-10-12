@@ -72,7 +72,7 @@ test("a required course can be added to the next term, and the planner opens the
     plan: [],
   });
   await expect(page.getByRole("main")).toContainText(
-    "What you can take in Winter 2027, your next term",
+    "The lists mark what you can take in Winter 2027, your next term",
   );
   await expect(page.getByRole("tablist", { name: "Term" })).toHaveCount(0);
   await expect(
@@ -219,6 +219,50 @@ test("met and CEGEP-credited groups, the restriction note and the minor open fro
   expect(width).toBeLessThanOrEqual(0);
 });
 
+test("planned courses and exempted credits show in blocks of their own, and the term line has no load", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [
+      { ...done("COMP 202"), credits: null, grade: null, status: "exemption" },
+    ],
+    programId: "computer-engineering-beng",
+    entry: "cegep",
+    plan: [
+      {
+        term: { season: "Winter", year: 2028 },
+        courses: ["BUSA 465", "LING 201", "PSYC 215"],
+      },
+    ],
+  });
+  await expect(page.getByRole("main")).not.toContainText("credits planned");
+
+  await requirement(page, "Complementary studies group B").click();
+  const groupB = page.getByRole("region", {
+    name: "Complementary studies group B",
+  });
+  await expect(
+    groupB.getByRole("heading", { name: "Planned 1" }),
+  ).toBeVisible();
+  await expect(
+    row(page, "Complementary studies group B", "BUSA 465"),
+  ).toHaveText(/Winter 2028/);
+
+  await requirement(page, "Replace exempted credits").click();
+  const replace = page.getByRole("region", {
+    name: "Replace exempted credits",
+  });
+  await expect(
+    replace.getByRole("heading", { name: "Exempted without credit 1" }),
+  ).toBeVisible();
+  await expect(row(page, "Replace exempted credits", "COMP 202")).toContainText(
+    "3 credits to replace",
+  );
+  await expect(row(page, "Replace exempted credits", "PSYC 215")).toContainText(
+    "Winter 2028",
+  );
+});
+
 test("a rule the crawler could not read can be marked as checked, and the mark taken back", async ({
   page,
 }) => {
@@ -261,6 +305,45 @@ test("a doctorate counts requirements met, and checking its thesis rule meets on
     .getByRole("button", { name: "Mark as checked" })
     .click();
   await expect(main).toContainText(/(?<!\d)1 of \d+ requirements met/);
+});
+
+test("a program with every group met short of its total says what is missing, here and on the planner", async ({
+  page,
+}) => {
+  const taken = (code: string, credits: number) => ({
+    ...done(code),
+    credits,
+  });
+  await openWith(page, {
+    records: [
+      taken("CHEM 694", 12),
+      taken("CHEM 695", 15),
+      taken("CHEM 650", 1),
+      taken("CHEM 651", 1),
+      taken("CHEM 688", 3),
+    ],
+    programId: "chemistry-thesis-msc",
+    checked: [
+      [
+        "chemistry-thesis-msc",
+        "Complementary Courses",
+        0,
+        "",
+        "Students will normally take 9-16 credits of CHEM (or approved) courses at the 500 or 600 level",
+      ].join("\u0000"),
+    ],
+    plan: [],
+  });
+  const line = "4 more credits needed. Thesis courses can take up to 31.";
+  await expect(page.getByRole("main")).toContainText(line);
+  await expect(requirement(page, "Thesis courses")).toContainText(
+    "27 of 24 to 31",
+  );
+  await expect(
+    page.getByRole("region", { name: "Thesis courses" }),
+  ).toContainText("27 of 24 to 31 credits");
+  await page.getByRole("link", { name: "Plan later terms" }).click();
+  await expect(page.getByRole("main")).toContainText(line);
 });
 
 test("two joint honours components show as a pair, each with its own bar", async ({

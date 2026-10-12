@@ -1,7 +1,7 @@
 import meta from "../data/catalogue/meta.json";
 import { creditsLabel, list } from "./engine/parts.ts";
 import type { Basis } from "./engine/progress.ts";
-import { creditsText } from "./format.ts";
+import { creditsText, sentence } from "./format.ts";
 import { termLabel } from "./profile/term-options.ts";
 import type { Season, Term } from "./profile/types.ts";
 import { isMinor, type Pair } from "./programs/minor.ts";
@@ -76,11 +76,15 @@ export const COPY = {
       ? `${n} credits earned`
       : `${n} of ${total} degree credits earned`,
   basis: BASIS,
+  /** "4 more credits needed. Thesis courses can take up to 33." */
+  roomLeft: (
+    missing: number,
+    ranges: readonly { title: string; max: number }[],
+  ) =>
+    `${missing} more ${missing === 1 ? "credit" : "credits"} needed. ${list.format(ranges.map(({ title, max }) => `${sentence(title)} can take up to ${max}`))}.`,
   pending: (n: number) => `${creditsText(n)} pending`,
   termsLeft: (n: number, term: Term) =>
     `${n} ${n === 1 ? "term" : "terms"} left, until ${termLabel(term)}`,
-  termLoad: (n: number, limit: number) =>
-    `${n} of ${limit} credits planned${n > limit ? ", over your limit" : ""}`,
   termCredits: creditsText,
   term: termLabel,
   termPair,
@@ -92,11 +96,6 @@ export const COPY = {
   needs: (text: string) => `Needs ${text} first`,
   notOpen: (codes: readonly string[]) =>
     `Not open to students who have taken ${list.format(codes)}`,
-  /** What the replace group asks for, from the required courses met without credit. */
-  replaces: (courses: readonly { code: string }[]) =>
-    courses.length === 1
-      ? `${courses[0]?.code} was exempted without credit. Make up its credits with any course and check with your advisor.`
-      : `${list.format(courses.map((c) => c.code))} were exempted without credit. Make up their credits with any course and check with your advisor.`,
   hasConditions: "Has conditions",
   countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",

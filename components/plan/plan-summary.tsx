@@ -7,7 +7,7 @@ import { Fragment, type ReactNode } from "react";
 import { CourseCode } from "@/components/course-code";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
-import { ProgramBars } from "@/components/program-bars";
+import { ProgramBars, RoomLeft } from "@/components/program-bars";
 import { ShowMore } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
 import { Section } from "@/components/ui/section";
@@ -352,6 +352,7 @@ export function PlanSummary({
       )}
 
       <div className="mt-2 flex flex-col gap-1 empty:hidden">
+        {standing && <RoomLeft progress={standing.progress} />}
         {graduationPassed && (
           <Notice tone="warn">
             Your expected graduation, {graduationPassed}, has passed.{" "}

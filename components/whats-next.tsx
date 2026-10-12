@@ -31,7 +31,11 @@ import { CatalogueLink, VsbLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { NoProfile } from "@/components/no-profile";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import { BAR_WITH_LEGEND, ProgramBars } from "@/components/program-bars";
+import {
+  BAR_WITH_LEGEND,
+  ProgramBars,
+  RoomLeft,
+} from "@/components/program-bars";
 import {
   type Status,
   StatusBadge,
@@ -56,7 +60,6 @@ import {
   ruleTitle,
   termSnapshot,
 } from "@/lib/engine/next-view";
-import { termLoad } from "@/lib/engine/plan";
 import {
   type Claimed,
   type CreditSplit,
@@ -68,7 +71,6 @@ import {
   picksOne,
   programSplit,
   programStanding,
-  STANDING,
   splitCourses,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
@@ -208,7 +210,6 @@ function Page({
   const entry = useProfileStore((state) => state.entry);
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
-  const creditLimit = useProfileStore((state) => state.creditLimit);
   const paneId = useId();
   const panes = useRef<HTMLDivElement>(null);
   const asked = useSearchParams().get("req");
@@ -243,9 +244,18 @@ function Page({
     () => termSnapshot(snapshot, plan, term),
     [snapshot, plan, term],
   );
+  // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
+  const withPlan = useMemo(
+    () =>
+      program
+        ? programStanding(program, snapshot, catalogue, entry, "plan")
+        : null,
+    [program, snapshot, catalogue, entry],
+  );
   const view = useMemo(
-    () => nextView(catalogue, judged, term, program, entry),
-    [catalogue, judged, term, program, entry],
+    () =>
+      nextView(catalogue, judged, term, program, entry, undefined, withPlan),
+    [catalogue, judged, term, program, entry, withPlan],
   );
   const overlap = useMemo(
     () =>
@@ -257,20 +267,6 @@ function Page({
     () =>
       minor && minorOverlap(minor, program, snapshot, catalogue, entry, "plan"),
     [minor, program, snapshot, catalogue, entry],
-  );
-  const minorView = useMemo(
-    () =>
-      minor &&
-      nextView(catalogue, judged, term, minor, entry, overlap?.programOnly),
-    [catalogue, judged, term, minor, entry, overlap],
-  );
-  // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
-  const withPlan = useMemo(
-    () =>
-      program
-        ? programStanding(program, snapshot, catalogue, entry, "plan")
-        : null,
-    [program, snapshot, catalogue, entry],
   );
   const minorWithPlan = useMemo(
     () =>
@@ -285,6 +281,20 @@ function Page({
           )
         : null,
     [minor, snapshot, catalogue, entry, overlapWithPlan],
+  );
+  const minorView = useMemo(
+    () =>
+      minor &&
+      nextView(
+        catalogue,
+        judged,
+        term,
+        minor,
+        entry,
+        overlap?.programOnly,
+        minorWithPlan,
+      ),
+    [catalogue, judged, term, minor, entry, overlap, minorWithPlan],
   );
   const unclaimed = withPlan?.unclaimed ?? [];
   const context: Context = { catalogue, term, planned, facts };
@@ -324,13 +334,13 @@ function Page({
         : group.confirmed
           ? COPY.checkedByYou
           : counts
-            ? `${Math.min(group.creditsDone, group.credits)} of ${group.credits}`
+            ? groupCount(group)
             : group.kind === "required"
               ? `${group.coursesDone} of ${courseCount(group.coursesDone + group.remaining.length)}`
               : checksText(group.unparsed),
       split:
         !group.satisfied && counts && split
-          ? { ...creditSplit(split, snapshot), total: group.credits }
+          ? { ...creditSplit(split, snapshot, top(group)), total: top(group) }
           : undefined,
       checks: group.unparsed,
       body: (
@@ -500,23 +510,18 @@ function Page({
             }
             minor={minorBar}
           />
+          <RoomLeft progress={view.progress} className="mt-2" />
         </div>
       )}
-      <div className="mt-6 flex items-center justify-between gap-4 max-md:flex-col max-md:items-start max-md:gap-2">
-        <p>
-          What you can take in{" "}
-          <span className="font-semibold">{termLabel(term)}</span>, your next
-          term ·{" "}
-          <Link href="/plan" className="link">
-            Plan later terms
-          </Link>{" "}
-          · Sections and times in <VsbLink />
-        </p>
-        <TermLoad
-          credits={termLoad(plan, catalogue, term)}
-          limit={creditLimit}
-        />
-      </div>
+      <p className="mt-6">
+        The lists mark what you can take in{" "}
+        <span className="font-semibold">{termLabel(term)}</span>, your next term
+        ·{" "}
+        <Link href="/plan" className="link">
+          Plan later terms
+        </Link>{" "}
+        · Sections and times in <VsbLink />
+      </p>
 
       <div
         ref={panes}
@@ -823,6 +828,7 @@ function programCodes(view: NextView): ReadonlySet<string> {
         entries.map(({ course }) => course.code),
       ),
     ),
+    ...view.planned.flat().map(({ course }) => course.code),
     ...(view.progress?.groups ?? []).flatMap(({ courses }) =>
       courses.map(({ code }) => code),
     ),
@@ -836,24 +842,12 @@ const hasChecks = (program: Program) =>
       group.rules.some((rule) => rule.unparsed),
   );
 
-/** What the plan holds in the term against the credit limit, with a warn icon once it goes over. */
-function TermLoad({ credits, limit }: { credits: number; limit: number }) {
-  const over = credits > limit;
-  return (
-    <p
-      className={cn(
-        "flex items-center gap-2 tabular-nums max-lg:shrink-0",
-        over ? "text-warn" : "text-fg-muted",
-      )}
-    >
-      {over && <TriangleAlert aria-hidden className="size-4" />}
-      {COPY.termLoad(credits, limit)}
-    </p>
-  );
-}
+/** A range group counts courses up to the top of its range, past the credits it needs. */
+const top = (group: GroupProgress) => group.maxCredits ?? group.credits;
 
-const fraction = (group: GroupProgress) =>
-  COPY.fraction(Math.min(group.creditsDone, group.credits), group.credits);
+/** "19 of 23", or "27 of 24 to 31" for a range group. */
+const groupCount = (group: GroupProgress) =>
+  `${Math.min(group.creditsDone, top(group))} of ${group.credits}${group.maxCredits === undefined ? "" : ` to ${group.maxCredits}`}`;
 
 /** Rules to check, then credits, unless every rule needs a check and nothing can count. `split`, the same group counted with the plan, adds a small bar. */
 function GroupMeta({
@@ -875,11 +869,11 @@ function GroupMeta({
           {checksText(checks)}
         </span>
       )}
-      {counts && fraction(group)}
+      {counts && `${groupCount(group)} credits`}
       {counts && split && snapshot && (
         <StatusBar
-          {...creditSplit(split, snapshot)}
-          total={group.credits}
+          {...creditSplit(split, snapshot, top(group))}
+          total={top(group)}
           className="w-20"
         />
       )}
@@ -933,8 +927,8 @@ function GroupPane({
       <div className="flex flex-col gap-6">
         {!group.credited && countsCredits(group) && split && (
           <Progress
-            {...creditSplit(split, snapshot)}
-            total={group.credits}
+            {...creditSplit(split, snapshot, top(group))}
+            total={top(group)}
             courses={splitCourses([split], snapshot)}
           />
         )}
@@ -1071,16 +1065,61 @@ function GroupBody({
             : [],
         )
       : [];
+  const planned = view.planned[index] ?? [];
   return (
     <>
       {group.replaces && (
-        <p className="text-fg-muted">{COPY.replaces(group.replaces)}</p>
+        <p className="text-fg-muted">
+          Any course can make up the credits of a course exempted without
+          credit. Check your choice with your advisor.
+        </p>
       )}
       {definition?.kind === "complementary" &&
         picksOne(definition) &&
         !open?.buckets.some((bucket) => bucket.stream) && (
           <p className="text-fg-muted">{COPY.pickOne}</p>
         )}
+      {!open &&
+        !group.satisfied &&
+        definition?.kind === "complementary" &&
+        definition.rules.map(
+          (rule, i) =>
+            !rule.adviser &&
+            !rule.unparsed && (
+              // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
+              <p key={i} className="text-fg-muted">
+                {ruleTitle(rule)}
+              </p>
+            ),
+        )}
+      <Block
+        status="planned"
+        title="Planned"
+        count={planned.length}
+        heading={heading}
+      >
+        <ul>
+          <ItemRows items={planned} context={context} plannedBlock />
+        </ul>
+      </Block>
+      {group.replaces && (
+        <Block
+          status="exemption"
+          title="Exempted without credit"
+          count={group.replaces.length}
+          heading={heading}
+        >
+          <ul>
+            {group.replaces.map(({ code }) => (
+              <CountedRow
+                key={code}
+                claimed={{ code, credits: 0 }}
+                context={context}
+              />
+            ))}
+          </ul>
+        </Block>
+      )}
       {open?.buckets.map((bucket, i) => (
         <Fragment key={bucket.title}>
           {/* Before the first stream's list, so lists every stream shares do not read as streams. */}
@@ -1110,19 +1149,6 @@ function GroupBody({
           ))}
         </ul>
       )}
-      {!open &&
-        !group.satisfied &&
-        definition?.kind === "complementary" &&
-        definition.rules.map(
-          (rule, i) =>
-            !rule.adviser &&
-            !rule.unparsed && (
-              // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
-              <p key={i} className="text-fg-muted">
-                {ruleTitle(rule)}
-              </p>
-            ),
-        )}
       {group.rules.some((rule) => rule.adviser) && (
         <ul>
           {group.rules.map(
@@ -1140,7 +1166,7 @@ function GroupBody({
   );
 }
 
-/** Can take, planned and not open in the term, then the courses it counts. */
+/** Planned, can take and not open in the term, then the courses it counts. */
 function RequiredBlocks({
   group,
   view,
@@ -1170,16 +1196,6 @@ function RequiredBlocks({
   return (
     <>
       <Block
-        status="available"
-        title={`Can take in ${when}`}
-        count={open.length}
-        heading={heading}
-      >
-        <ul>
-          <ItemRows items={open} context={context} />
-        </ul>
-      </Block>
-      <Block
         status="planned"
         title="Planned"
         count={planned.length}
@@ -1187,6 +1203,16 @@ function RequiredBlocks({
       >
         <ul>
           <ItemRows items={planned} context={context} plannedBlock />
+        </ul>
+      </Block>
+      <Block
+        status="available"
+        title={`Can take in ${when}`}
+        count={open.length}
+        heading={heading}
+      >
+        <ul>
+          <ItemRows items={open} context={context} />
         </ul>
       </Block>
       <Block
@@ -1301,15 +1327,12 @@ function Row({
 /** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action on hover. Below 1024px the title wraps and the action always shows, and below 768px the code, title and note stack with credits and the action on the right. */
 function PaneRow({
   course,
-  title,
   uncertain = false,
   share,
   note,
   action,
 }: {
   course: CourseSummary;
-  /** Stands in for the course link, for a row with no course behind it. */
-  title?: ReactNode;
   uncertain?: boolean;
   /** On a second program's row: counts for both, or for the program only. */
   share?: Definition;
@@ -1329,23 +1352,21 @@ function PaneRow({
           "max-md:col-start-1 max-md:row-start-1 max-md:items-end",
         )}
       >
-        {title ?? (
-          <Link
-            href={`/courses/${courseSlug(course.code)}`}
-            prefetch={false}
-            className={cn(ROW_LINK, "max-md:flex-col max-md:gap-0.5")}
+        <Link
+          href={`/courses/${courseSlug(course.code)}`}
+          prefetch={false}
+          className={cn(ROW_LINK, "max-md:flex-col max-md:gap-0.5")}
+        >
+          <span className="w-24 shrink-0 font-semibold">
+            <CourseCode code={course.code} />
+          </span>
+          <span
+            className="min-w-0 truncate max-lg:whitespace-normal"
+            title={course.title}
           >
-            <span className="w-24 shrink-0 font-semibold">
-              <CourseCode code={course.code} />
-            </span>
-            <span
-              className="min-w-0 truncate max-lg:whitespace-normal"
-              title={course.title}
-            >
-              {course.title}
-            </span>
-          </Link>
-        )}
+            {course.title}
+          </span>
+        </Link>
         {uncertain && <UncertainFlag />}
         {share && (
           <span className="hidden shrink-0 text-fg-muted @3xl:inline">
@@ -1397,15 +1418,6 @@ function CountedRow({
   context: Context;
 }) {
   const { catalogue, facts } = context;
-  if (code === STANDING) {
-    return (
-      <PaneRow
-        course={{ ...stub(code), credits }}
-        title={<span className="font-semibold">Advanced standing</span>}
-        note="Credit from before McGill"
-      />
-    );
-  }
   const { status, term } = facts.get(code) ?? {
     status: "completed",
     term: null,
