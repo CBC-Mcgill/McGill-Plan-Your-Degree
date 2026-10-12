@@ -89,7 +89,7 @@ export const GLOSSARY = {
   },
   adviserApproval: {
     label: COPY.adviserApproval,
-    tip: "The catalogue asks your advisor to approve the courses for this rule. We count them as if approved, so confirm your choice with your advisor.",
+    tip: "The catalogue asks your advisor to approve courses for this rule. When it gives an amount, we count your courses up to that amount as if approved. When it gives none, it only reminds you and counts no course on its own. Either way, confirm your choice with your advisor.",
   },
   generated: {
     label: COPY.generated,
