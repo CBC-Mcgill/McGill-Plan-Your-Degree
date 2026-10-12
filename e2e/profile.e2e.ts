@@ -91,7 +91,7 @@ test("a graduate program is found by its degree and asks no entry question and n
   await expect(
     page
       .getByRole("group", { name: "Science graduate programs" })
-      .getByRole("option", { name: /Computer Science/ }),
+      .getByRole("option", { name: "Computer Science Ph.D.", exact: true }),
   ).toBeVisible();
   await program.fill("computer science thesis");
   await page
