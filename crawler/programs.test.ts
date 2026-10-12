@@ -1529,3 +1529,58 @@ test("sections with no credits below a Required heading join it when their cours
     courses: ["CLAS 685"],
   });
 });
+
+test("a section with no credits asks what its lists say, else a person checks what it demands, and a permission or notice stays out", () => {
+  const doctorate = (section: string) =>
+    graduateOf(
+      "Computer Science: Bioinformatics (Ph.D.)",
+      `<h2>Required Courses</h2>${table("COMP 701")}${section}`,
+    )?.groups.slice(1);
+  expect(
+    doctorate(
+      `<h2>Complementary Courses</h2><p>Two courses chosen from the following:</p>${table("BINF 621", "BMDE 652", "BTEC 555")}`,
+    ),
+  ).toEqual([
+    {
+      title: "Complementary Courses",
+      kind: "complementary",
+      credits: 6,
+      rules: [
+        {
+          title: "Two courses chosen from the following",
+          courses: ["BINF 621", "BMDE 652", "BTEC 555"],
+          minCourses: 2,
+          maxCourses: 2,
+        },
+      ],
+    },
+  ]);
+  expect(
+    doctorate(
+      "<h2>Composition Performance</h2><p>The candidate must present a concert of his/her compositions. With the permission of the Composition Area Committee, the compositions may be presented as parts of two or three concerts.</p>",
+    ),
+  ).toEqual([
+    {
+      title: "Composition Performance",
+      kind: "complementary",
+      credits: 0,
+      rules: [
+        {
+          title: "The candidate must present a concert of his/her compositions",
+          unparsed: true,
+        },
+      ],
+    },
+  ]);
+  expect(
+    doctorate(
+      `<h2>Additional Thesis Courses</h2><p>With the approval of the Associate Dean (Graduate Studies), students may take up to an additional 3 credits of thesis courses by completing one or both of:</p>${table("CMPL 618", "CMPL 619")}`,
+    ),
+  ).toEqual([]);
+  expect(
+    programOf(
+      "Test Major (B.Sc.) (3 credits)",
+      `<h2>Required Courses (3 credits)</h2>${table("AGEC 200")}<h2>Electives</h2><p>To meet the minimum credit requirement for the degree.</p><h2>Social Sciences and Policy</h2><p>0-3 credits from:</p>${table("ECON 205")}`,
+    ).groups,
+  ).toHaveLength(1);
+});

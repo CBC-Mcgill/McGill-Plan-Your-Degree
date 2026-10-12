@@ -2307,6 +2307,10 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
       },
     ];
   }
+  if (!credits && section.min === undefined) {
+    const asks = creditless(section, rules);
+    if (asks) return [asks];
+  }
   if (!credits) return [];
   const group: ComplementaryGroup = {
     title: section.title,
@@ -2326,6 +2330,70 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   if (total?.minCourses) group.minCourses = total.minCourses;
   if (FOUNDATION.test(section.title)) group.foundation = true;
   return [group];
+}
+
+// Sentences a check group leaves out, since they permit, advise, or apply to some students only.
+const ASIDE =
+  /\b(?:may|can|encouraged|urged|should|advised?|consult|prerequisites?|applicants?|not required|no longer required)\b|\bup to an additional\b|^whenever\b|\b(?:students?|candidates?) (?:who|wishing|following|interested|planning|considering|for whom)\b/i;
+const DEMANDS = /\bmust\b|\brequired\b/i;
+
+/** A section with no credits that still asks for something: a group of what its lists ask, as "Two courses chosen from the following", else a group a person checks, one rule per sentence that demands. Null when its lists come with a permission, as "students may take up to an additional 3 credits of thesis courses", or nothing demands. */
+function creditless(
+  section: Section,
+  rules: Rule[],
+): ComplementaryGroup | null {
+  const all = events(section);
+  const first = all.findIndex((e) => e.kind === "table");
+  const intro = all
+    .slice(0, first)
+    .flatMap((e) => (e.kind === "text" ? sentences(e.text) : []));
+  if (first >= 0 && intro.some((t) => ASIDE.test(t))) return null;
+  const rows = tablesIn(section).flatMap((table) => table.rows);
+  const credit = (code: string) =>
+    Math.min(
+      ...rows.flatMap((row) =>
+        row.credits > 0 && row.codes.includes(code) ? [row.credits] : [],
+      ),
+    );
+  const lists = rules.filter(
+    (rule) =>
+      rule.courses && !rule.unparsed && (rule.minCredits || rule.minCourses),
+  );
+  const apart = lists.every((a, i) =>
+    lists
+      .slice(i + 1)
+      .every((b) => !b.courses?.some((code) => a.courses?.includes(code))),
+  );
+  // "One of the following courses" asks for the least credits a course of the list has, and "0-6 credits from" asks nothing.
+  const credits = lists.reduce(
+    (sum, rule) =>
+      sum +
+      (rule.minCredits ??
+        (rule.minCourses ?? 0) * Math.min(...(rule.courses ?? []).map(credit))),
+    0,
+  );
+  if (first >= 0 && apart && credits > 0 && Number.isFinite(credits)) {
+    return { title: section.title, kind: "complementary", credits, rules };
+  }
+  const checks = textsIn(section)
+    .flatMap(sentences)
+    .filter(
+      (t) =>
+        (DEMANDS.test(t) ||
+          (first >= 0 &&
+            constraint(t) &&
+            !/^0\s*(?:[-–]|or|to)\s*\d/.test(t))) &&
+        !ASIDE.test(t) &&
+        !NOISE.test(t),
+    );
+  return checks.length > 0
+    ? {
+        title: section.title,
+        kind: "complementary",
+        credits: 0,
+        rules: [...new Set(checks)].map(unparsed),
+      }
+    : null;
 }
 
 const SEPARATE = /complementary|elective|compl[ée]mentaires?/i;
@@ -2665,12 +2733,13 @@ export function parseProgramPage(
         absorbed.add(below);
       }
     }
-    // A list under a heading such as "Group C" belongs to the complementary group before it.
+    // A list under a heading such as "Group C" belongs to the complementary group before it, unless that group only asks a person to check it.
     const last = groups.at(-1);
     if (
       found.length === 0 &&
       /^(?:group|list) [A-Z\d]\b/i.test(section.title) &&
-      last?.kind === "complementary"
+      last?.kind === "complementary" &&
+      last.credits > 0
     ) {
       last.rules.push(...rulesOf(section, ctx));
     }
