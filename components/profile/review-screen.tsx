@@ -83,8 +83,12 @@ function Review({
       store.minorId;
     return {
       programId,
-      // A saved second program can be the program this transcript names.
-      minorId: minorId === programId ? null : minorId,
+      // A saved second program can be the program this transcript names, and a graduate program takes none.
+      minorId:
+        minorId === programId ||
+        programs.some((p) => p.id === programId && p.level)
+          ? null
+          : minorId,
       entry,
       advancedStanding: transcript.advancedStanding,
       creditsRequired: transcript.creditsRequired ?? store.creditsRequired,

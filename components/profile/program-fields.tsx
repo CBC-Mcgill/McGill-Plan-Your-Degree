@@ -42,6 +42,8 @@ export function ProgramFields({
   const second = useProgram(value.minorId);
   const pair = pairOf(program ?? null, second ?? null);
   const secondLabel = second ? COPY.pair[pair].labels[1] : undefined;
+  // A graduate program has no CEGEP or U0 entry and no second program.
+  const graduate = program?.level === "graduate";
   const defaultCredits = degreeCredits(null, value.entry, program ?? null);
   // A number that only repeats the old default would be wrong for the new program or entry.
   const changeProgramOrEntry = (patch: Partial<ProgramValues>) =>
@@ -57,7 +59,11 @@ export function ProgramFields({
         <ProgramCombobox
           value={value.programId}
           other={value.minorId}
-          onChange={(programId) => changeProgramOrEntry({ programId })}
+          onChange={(programId, chosen) =>
+            changeProgramOrEntry(
+              chosen?.level ? { programId, minorId: null } : { programId },
+            )
+          }
           info={
             detected
               ? { label: "Program", tip: `On your transcript: ${detected}` }
@@ -66,21 +72,23 @@ export function ProgramFields({
         />
         {program?.generated && <GeneratedLine program={program} />}
       </div>
-      <div className="col-span-2">
-        <ProgramCombobox
-          kind="second"
-          value={value.minorId}
-          other={value.programId}
-          onChange={(minorId) => onChange({ minorId })}
-          label={secondLabel}
-          info={
-            secondLabel
-              ? { label: secondLabel, tip: PAIR_TIPS[pair] }
-              : GLOSSARY.second
-          }
-        />
-        {second?.generated && <GeneratedLine program={second} />}
-      </div>
+      {!graduate && (
+        <div className="col-span-2">
+          <ProgramCombobox
+            kind="second"
+            value={value.minorId}
+            other={value.programId}
+            onChange={(minorId) => onChange({ minorId })}
+            label={secondLabel}
+            info={
+              secondLabel
+                ? { label: secondLabel, tip: PAIR_TIPS[pair] }
+                : GLOSSARY.second
+            }
+          />
+          {second?.generated && <GeneratedLine program={second} />}
+        </div>
+      )}
       <TermSelect
         label="Start term"
         className="max-md:col-span-2"
@@ -96,16 +104,19 @@ export function ProgramFields({
         value={value.graduationTerm}
         onChange={(graduationTerm) => onChange({ graduationTerm })}
       />
-      <EntrySelect
-        info={GLOSSARY.entry}
-        className="col-span-2"
-        value={value.entry}
-        onChange={(entry) => changeProgramOrEntry({ entry })}
-      />
+      {!graduate && (
+        <EntrySelect
+          info={GLOSSARY.entry}
+          className="col-span-2"
+          value={value.entry}
+          onChange={(entry) => changeProgramOrEntry({ entry })}
+        />
+      )}
       <Credits
         value={value}
         onChange={onChange}
         defaultCredits={program === undefined ? undefined : defaultCredits}
+        noTotal={program?.credits === 0}
         standing={standingCredits(
           value.advancedStanding,
           value.entry,
@@ -138,11 +149,14 @@ function Credits({
   value,
   onChange,
   defaultCredits,
+  noTotal,
   standing,
 }: {
   value: ProgramValues;
   onChange: (patch: Partial<ProgramValues>) => void;
   defaultCredits: number | null | undefined;
+  /** A doctorate gives no credit total, so the total is neither shown nor asked. */
+  noTotal: boolean;
   /** The advanced standing the degree counts, at least the credited Year 0. */
   standing: number;
 }) {
@@ -153,8 +167,9 @@ function Credits({
     if (open) first.current?.focus();
   }, [open]);
 
-  const required =
-    value.creditsRequired !== null
+  const required = noTotal
+    ? null
+    : value.creditsRequired !== null
       ? `${value.creditsRequired} required`
       : defaultCredits === undefined
         ? null
@@ -205,21 +220,23 @@ function Credits({
             })
           }
         />
-        <TextField
-          label="Credits required for your degree"
-          info={GLOSSARY.creditsRequired}
-          type="number"
-          min={1}
-          max={200}
-          placeholder={defaultCredits ? String(defaultCredits) : "Optional"}
-          value={value.creditsRequired ?? ""}
-          onChange={(event) => {
-            const credits = Number(event.target.value);
-            onChange({
-              creditsRequired: credits >= 1 ? Math.min(200, credits) : null,
-            });
-          }}
-        />
+        {!noTotal && (
+          <TextField
+            label="Credits required for your degree"
+            info={GLOSSARY.creditsRequired}
+            type="number"
+            min={1}
+            max={200}
+            placeholder={defaultCredits ? String(defaultCredits) : "Optional"}
+            value={value.creditsRequired ?? ""}
+            onChange={(event) => {
+              const credits = Number(event.target.value);
+              onChange({
+                creditsRequired: credits >= 1 ? Math.min(200, credits) : null,
+              });
+            }}
+          />
+        )}
       </div>
     </div>
   );
