@@ -49,6 +49,14 @@
           ],
           "minCredits": 3,
           "maxCredits": 3
+        },
+        {
+          "title": "Students can take PPHS 525 OR SOCI 525",
+          "maxCourses": 1,
+          "courses": [
+            "PPHS 525",
+            "SOCI 525"
+          ]
         }
       ]
     }

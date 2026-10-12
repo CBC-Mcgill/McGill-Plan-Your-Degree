@@ -279,6 +279,14 @@
           "maxCredits": 6
         },
         {
+          "title": "If chosen, students may take either MATH 203 or MATH 324",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 203",
+            "MATH 324"
+          ]
+        },
+        {
           "title": "21-23 credits from one of the following four streams",
           "unparsed": true
         }

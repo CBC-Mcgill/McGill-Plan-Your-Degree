@@ -62,6 +62,14 @@
           ]
         },
         {
+          "title": "Note: You may take BIOL 308 or ENVB 305",
+          "maxCourses": 1,
+          "courses": [
+            "BIOL 308",
+            "ENVB 305"
+          ]
+        },
+        {
           "title": "Area 2: Biodiversity and Conservation",
           "courses": [
             "BIOL 305",
@@ -201,6 +209,22 @@
             "WILD 401",
             "WILD 421",
             "WOOD 441"
+          ]
+        },
+        {
+          "title": "If chosen, you may take EPSC 522 or GEOG 522",
+          "maxCourses": 1,
+          "courses": [
+            "EPSC 522",
+            "GEOG 522"
+          ]
+        },
+        {
+          "title": "Note: If chosen, you may take AGEC 200 or ECON 208",
+          "maxCourses": 1,
+          "courses": [
+            "AGEC 200",
+            "ECON 208"
           ]
         },
         {

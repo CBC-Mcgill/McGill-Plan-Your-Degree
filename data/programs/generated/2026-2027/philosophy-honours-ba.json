@@ -97,6 +97,14 @@
             "minLevel": 200,
             "maxLevel": 200
           }
+        },
+        {
+          "title": "Only one of PHIL 200 or PHIL 201 may be counted toward the program",
+          "maxCourses": 1,
+          "courses": [
+            "PHIL 200",
+            "PHIL 201"
+          ]
         }
       ]
     }

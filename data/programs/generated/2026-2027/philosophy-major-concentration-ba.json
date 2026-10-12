@@ -184,6 +184,14 @@
           "unparsed": true
         },
         {
+          "title": "Only one of PHIL 200 or PHIL 201 may be included in the program",
+          "maxCourses": 1,
+          "courses": [
+            "PHIL 200",
+            "PHIL 201"
+          ]
+        },
+        {
           "title": "6 credits (two courses) from Group C OR Group D",
           "courses": [
             "PHIL 344",

@@ -79,6 +79,14 @@
           ]
         },
         {
+          "title": "If chosen, students can take one of MATH 410, and MATH 527D1/MATH 527D2, but not both",
+          "maxCourses": 1,
+          "courses": [
+            "MATH 410",
+            "MATH 527"
+          ]
+        },
+        {
           "title": "MATH 578 and COMP 540 cannot both be taken for program credit",
           "maxCourses": 1,
           "courses": [

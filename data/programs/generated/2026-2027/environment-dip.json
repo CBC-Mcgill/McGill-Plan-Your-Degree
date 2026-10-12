@@ -148,6 +148,14 @@
           "maxCredits": 12
         },
         {
+          "title": "If chosen, you may take one of LSCI 230 or MIMM 211",
+          "maxCourses": 1,
+          "courses": [
+            "LSCI 230",
+            "MIMM 211"
+          ]
+        },
+        {
           "title": "3 credits from outside the area of the student's previous degree (i.e. students with a BA must complete 3 credits from Natural Sciences and Technology; students with a BSc must complete 3 credits from Social Sciences and Policy)",
           "unparsed": true
         },
