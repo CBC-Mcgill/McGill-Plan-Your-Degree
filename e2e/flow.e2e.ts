@@ -55,12 +55,15 @@ test("a CEGEP engineering student with an exemption reads the same credits on Wh
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     `${counting} of 133 program credits`,
   );
-  await expect(
-    page.getByRole("heading", {
-      name: `Your plan is ${133 - counting} credits short`,
-    }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("listitem").filter({ hasText: "Replace exempted credits" }),
-  ).toContainText("3 to go");
+  const short = page.getByRole("region", {
+    name: `Your plan is ${133 - counting} credits short`,
+  });
+  await expect(short).toBeVisible();
+  // Advanced standing counts for the degree only, so the elective is still to take.
+  await short.getByRole("button", { name: /^Show \d+ more$/ }).click();
+  for (const group of ["Elective course", "Replace exempted credits"]) {
+    await expect(
+      short.getByRole("listitem").filter({ hasText: group }),
+    ).toContainText("3 to go");
+  }
 });

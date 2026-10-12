@@ -307,6 +307,39 @@ test("a doctorate counts requirements met, and checking its thesis rule meets on
   await expect(main).toContainText(/(?<!\d)1 of \d+ requirements met/);
 });
 
+test("a program with every group met short of its total says what is missing, here and on the planner", async ({
+  page,
+}) => {
+  const taken = (code: string, credits: number) => ({
+    ...done(code),
+    credits,
+  });
+  await openWith(page, {
+    records: [
+      taken("CHEM 694", 12),
+      taken("CHEM 695", 15),
+      taken("CHEM 650", 1),
+      taken("CHEM 651", 1),
+      taken("CHEM 688", 3),
+    ],
+    programId: "chemistry-thesis-msc",
+    checked: [
+      [
+        "chemistry-thesis-msc",
+        "Complementary Courses",
+        0,
+        "",
+        "Students will normally take 9-16 credits of CHEM (or approved) courses at the 500 or 600 level",
+      ].join("\u0000"),
+    ],
+    plan: [],
+  });
+  const line = "4 more credits needed. Thesis courses can take up to 31.";
+  await expect(page.getByRole("main")).toContainText(line);
+  await page.getByRole("link", { name: "Plan later terms" }).click();
+  await expect(page.getByRole("main")).toContainText(line);
+});
+
 test("two joint honours components show as a pair, each with its own bar", async ({
   page,
 }) => {
