@@ -87,6 +87,10 @@ export const GLOSSARY = {
     label: COPY.checkedByYou,
     tip: "We count this rule as met because you confirmed it with your advisor or on the program page.",
   },
+  listedCourses: {
+    label: COPY.listedCourses,
+    tip: "Your own reading of this rule: the courses you count toward it. We count them toward the requirement, but whether they meet it is yours to check, with your advisor or on the program page.",
+  },
   adviserApproval: {
     label: COPY.adviserApproval,
     tip: "The catalogue asks your advisor to approve courses for this rule. When it gives an amount, we count your courses up to that amount as if approved. When it gives none, it only reminds you and counts no course on its own. Either way, confirm your choice with your advisor.",

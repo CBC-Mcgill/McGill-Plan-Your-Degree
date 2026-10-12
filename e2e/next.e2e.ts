@@ -284,6 +284,72 @@ test("a rule the crawler could not read can be marked as checked, and the mark t
   await expect(pane).not.toContainText("Checked by you");
 });
 
+test("a student lists a course under a raw rule, confirms it meets the rule and takes it back", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [{ ...done("COMP 551"), credits: 4 }],
+    programId: "computer-science-phd",
+    plan: [],
+  });
+  const tab = requirement(page, "Complementary courses");
+  await expect(tab).toContainText("2 rules to check");
+  await tab.click();
+  const pane = page.getByRole("region", { name: "Complementary courses" });
+  const rule = pane
+    .getByRole("listitem")
+    .filter({ hasText: "32 credits of graduate-level courses" });
+  await rule.getByRole("button", { name: "Add a course" }).click();
+  await page.getByRole("combobox", { name: "Add a course" }).fill("COMP 551");
+  await page.keyboard.press("Enter");
+  const listed = rule.getByRole("list", { name: "Courses you listed" });
+  await expect(listed.getByRole("listitem")).toHaveCount(1);
+  await expect(listed).toContainText("COMP 551");
+  await expect(listed).toContainText("Completed");
+  await expect(tab).toContainText("4 of 6");
+
+  await rule.getByRole("button", { name: "Mark as checked" }).click();
+  const confirm = page.getByRole("alertdialog", {
+    name: "Do these courses meet the requirement?",
+  });
+  await expect(confirm).toContainText("Applied Machine Learning");
+  await expect(confirm).toContainText("Total4 credits");
+  await confirm.getByRole("button", { name: "Yes, mark as checked" }).click();
+  await expect(rule).toContainText("Checked by you");
+  await expect(rule.getByRole("button", { name: "Undo" })).toBeFocused();
+
+  await page.reload();
+  await expect(rule).toContainText("Checked by you");
+  await expect(listed).toContainText("COMP 551");
+  await rule.getByRole("button", { name: "Remove COMP 551" }).click();
+  await expect(listed).toHaveCount(0);
+  await expect(tab).toContainText("1 rule to check");
+});
+
+test("an undergraduate's listed course counts toward the group, and Not yet leaves the rule unchecked", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [done("ECON 305")],
+    programId: "economics-major-concentration-ba",
+    plan: [],
+  });
+  const tab = requirement(page, "Complementary courses");
+  await tab.click();
+  await expect(tab).toContainText("0 of 18");
+  const pane = page.getByRole("region", { name: "Complementary courses" });
+  await pane.getByRole("button", { name: "Add a course" }).click();
+  await page.getByRole("combobox", { name: "Add a course" }).fill("econ 305");
+  await page.getByRole("option", { name: /ECON 305/ }).click();
+  await expect(tab).toContainText("3 of 18");
+  await pane.getByRole("button", { name: "Mark as checked" }).click();
+  await page.getByRole("button", { name: "Not yet" }).click();
+  await expect(pane).toContainText("Check this requirement");
+  await expect(
+    pane.getByRole("button", { name: "Mark as checked" }),
+  ).toBeFocused();
+});
+
 test("a doctorate counts requirements met, and checking its thesis rule meets one", async ({
   page,
 }) => {

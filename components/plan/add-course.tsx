@@ -11,13 +11,21 @@ import { type IndexedCourse, searchCourses } from "@/lib/catalogue/search";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { creditsLabel } from "@/lib/engine/parts";
 import type { Snapshot } from "@/lib/engine/snapshot";
-import { courseStatus } from "@/lib/engine/status";
+import { type BrowseStatus, courseStatus } from "@/lib/engine/status";
 import { termLabel } from "@/lib/profile/term-options";
 import { type Plan, type Term, termKey } from "@/lib/profile/types";
 
 const MAX_RESULTS = 6;
 
-/** Search combobox that puts a course in the term. The first course that can be added is highlighted, arrow keys skip the rest, Enter adds and Escape clears. A course planned elsewhere moves here. */
+/** How a search result stands: its status glyph, whether it can be picked and why not, and the word in place of its credits. */
+export interface PickState {
+  status: BrowseStatus;
+  disabled: boolean;
+  reason: string;
+  note: string;
+}
+
+/** Search combobox that puts a course in the term. A course planned elsewhere moves here. */
 export function AddCourse({
   term,
   index,
@@ -31,16 +39,9 @@ export function AddCourse({
   plan: Plan;
   placeholder?: string;
 }) {
-  const listId = useId();
-  const wrap = useRef<HTMLDivElement>(null);
-  const [query, setQuery] = useState("");
-  const [open, setOpen] = useState(false);
-  const [picked, setPicked] = useState<string | null>(null);
-  const [notice, setNotice] = useState("");
-  const text = query.trim();
   const label = termLabel(term);
 
-  const stateOf = (course: CourseSummary) => {
+  const stateOf = (course: CourseSummary): PickState => {
     const { status } = courseStatus(course, snapshot);
     const at = plan.find((entry) => entry.courses.includes(course.code))?.term;
     const done =
@@ -64,6 +65,41 @@ export function AddCourse({
     };
   };
 
+  return (
+    <CourseSearch
+      label={`Add a course to ${label}`}
+      placeholder={placeholder ?? `Add a course to ${label}, like COMP 251`}
+      index={index}
+      stateOf={stateOf}
+      onPick={(course) => addWithUndo(term, course.code)}
+    />
+  );
+}
+
+/** Search combobox over the catalogue. The first course that can be picked is highlighted, arrow keys skip the rest, Enter picks and Escape clears, then calls `onEscape` once the box is empty. */
+export function CourseSearch({
+  label,
+  placeholder,
+  index,
+  stateOf,
+  onPick,
+  onEscape,
+}: {
+  label: string;
+  placeholder: string;
+  index: readonly IndexedCourse[];
+  stateOf: (course: CourseSummary) => PickState;
+  onPick: (course: CourseSummary) => void;
+  onEscape?: () => void;
+}) {
+  const listId = useId();
+  const wrap = useRef<HTMLDivElement>(null);
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [notice, setNotice] = useState("");
+  const text = query.trim();
+
   const results = (text ? searchCourses(index, text) : [])
     .slice(0, MAX_RESULTS)
     .map((course) => ({ course, ...stateOf(course) }));
@@ -80,7 +116,7 @@ export function AddCourse({
       setNotice(`${course.code} ${state.reason}`);
       return;
     }
-    addWithUndo(term, course.code);
+    onPick(course);
     setQuery("");
     setPicked(null);
     setOpen(false);
@@ -107,7 +143,7 @@ export function AddCourse({
         <input
           type="text"
           role="combobox"
-          aria-label={`Add a course to ${label}`}
+          aria-label={label}
           aria-expanded={showResults}
           aria-controls={showResults ? listId : undefined}
           aria-activedescendant={
@@ -117,7 +153,7 @@ export function AddCourse({
           autoComplete="off"
           autoCorrect="off"
           spellCheck={false}
-          placeholder={placeholder ?? `Add a course to ${label}, like COMP 251`}
+          placeholder={placeholder}
           value={query}
           onFocus={() => setOpen(true)}
           onBlur={(event) => {
@@ -145,6 +181,7 @@ export function AddCourse({
               // With nothing to add, Enter says why the first match cannot be added.
               commit((results[active] ?? results[0])?.course);
             } else if (event.key === "Escape") {
+              if (!query) onEscape?.();
               setQuery("");
               setOpen(false);
             }
