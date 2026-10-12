@@ -37,8 +37,10 @@ export interface RuleProgress {
   courses: Claimed[];
   minCredits?: number;
   minCourses?: number;
-  /** The crawler could not read this rule, so nothing counts toward it and it is never satisfied. */
+  /** The crawler could not read this rule, so nothing counts toward it and it is met only once the student marks it as checked. */
   unparsed?: true;
+  /** An unparsed rule the student marked as checked, so it counts as met. */
+  confirmed?: true;
   /** The student's adviser must approve the courses, so the page shows a reminder. */
   adviser?: true;
   /** The counted courses must span this many subjects. */
@@ -65,8 +67,10 @@ export interface GroupProgress {
   remaining: RequiredItem[];
   /** Complementary groups: one entry per rule. */
   rules: RuleProgress[];
-  /** Rules in the group that need a manual check. Such a group is never satisfied. */
+  /** Rules in the group that still need a manual check. Such a group is never satisfied. */
   unparsed: number;
+  /** Every rule is an unparsed one the student marked as checked, so the group counts as met with full credits, like a credited one. */
+  confirmed?: true;
   /** Only on the replace group: the required courses met without credit, with the catalogue credits it makes up for. */
   replaces?: Claimed[];
   /** In a group that counts one option, the option furthest along, which stands for the group. */
@@ -152,13 +156,9 @@ const isOpen = (rule: Rule) =>
   rule.maxCreditsPerSubject === undefined &&
   rule.minSubjects === undefined;
 
-/** The option a rule belongs to: its own, or one per rule in a `pickOne` group. */
-const optionOf = (group: ComplementaryGroup, rule: Rule, i: number) =>
-  rule.option ?? (group.pickOne ? `${i}` : undefined);
-
 /** True when the student completes one of the group's options, so only that option's rules need to be met. */
 export const picksOne = (group: ComplementaryGroup) =>
-  group.pickOne === true || group.rules.some((rule) => rule.option);
+  group.rules.some((rule) => rule.option);
 
 /** True when the group lists courses or subjects, false for "any department" groups like a free elective. */
 export function namesCourses(group: ComplementaryGroup): boolean {
@@ -333,31 +333,43 @@ function requiredProgress(
   };
 }
 
+/** The key a rule the student marked as checked is saved under. The same text recurs in two streams of one group and in groups that share a title, so it holds the option and how many groups of that title come before. */
+export function checkKey(
+  program: Program,
+  group: ComplementaryGroup,
+  rule: Rule,
+): string {
+  const before = program.groups
+    .slice(0, program.groups.indexOf(group))
+    .filter((g) => g.title === group.title).length;
+  return [program.id, group.title, before, rule.option ?? "", rule.title].join(
+    "\u0000",
+  );
+}
+
+/** `confirmed` tells which unparsed rules the student marked as checked. `streams` is false inside one option's count, which keeps each rule's option for its key. */
 function complementaryProgress(
   group: ComplementaryGroup,
   counted: ReadonlyMap<string, number>,
   used: Set<string>,
+  confirmed: (rule: Rule) => boolean = () => false,
+  streams = true,
 ): GroupProgress {
-  const names = [
-    ...new Set(
-      group.rules.flatMap((rule, i) => optionOf(group, rule, i) ?? []),
-    ),
-  ];
+  const names = streams
+    ? [...new Set(group.rules.flatMap((rule) => rule.option ?? []))]
+    : [];
   if (names.length > 0) {
     // Each option is counted with the shared rules as if it were the whole group, and the one furthest along stands for the group.
     const options = names.map((name) => {
-      const mine = group.rules.flatMap((rule, i) => {
-        const own = optionOf(group, rule, i);
-        return own === undefined || own === name ? [{ rule, i }] : [];
-      });
+      const mine = group.rules.flatMap((rule, i) =>
+        rule.option === undefined || rule.option === name ? [{ rule, i }] : [],
+      );
       const progress = complementaryProgress(
-        {
-          ...group,
-          pickOne: undefined,
-          rules: mine.map(({ rule }) => ({ ...rule, option: undefined })),
-        },
+        { ...group, rules: mine.map(({ rule }) => rule) },
         counted,
         new Set(used),
+        confirmed,
+        false,
       );
       return { name, mine, progress };
     });
@@ -371,7 +383,7 @@ function complementaryProgress(
     for (const { code } of best.progress.courses) used.add(code);
     // In file order: an option's own rules as its count read them, the shared rules as the best option's did.
     const rules = group.rules.flatMap((rule, i) => {
-      const own = optionOf(group, rule, i);
+      const own = rule.option;
       const from = options.find((o) => o.name === own) ?? best;
       const done = from.progress.rules[from.mine.findIndex((m) => m.i === i)];
       return done
@@ -435,38 +447,46 @@ function complementaryProgress(
   }
 
   for (const code of chosen.keys()) used.add(code);
-  const rules = state.map(({ rule, creditsDone, coursesDone, courses }) => ({
-    title: rule.title,
-    creditsDone,
-    coursesDone,
-    courses,
-    minCredits: rule.minCredits,
-    minCourses: rule.minCourses,
-    unparsed: rule.unparsed,
-    adviser: rule.adviser,
-    minSubjects: rule.minSubjects,
-    satisfied:
-      !rule.unparsed &&
-      creditsDone >= (rule.minCredits ?? 0) &&
-      coursesDone >= (rule.minCourses ?? 0) &&
-      subjectsIn(courses) >= (rule.minSubjects ?? 0),
-  }));
+  const rules = state.map(({ rule, creditsDone, coursesDone, courses }) => {
+    const checked = rule.unparsed === true && confirmed(rule);
+    return {
+      title: rule.title,
+      creditsDone,
+      coursesDone,
+      courses,
+      minCredits: rule.minCredits,
+      minCourses: rule.minCourses,
+      unparsed: rule.unparsed,
+      ...(checked && { confirmed: true as const }),
+      adviser: rule.adviser,
+      minSubjects: rule.minSubjects,
+      satisfied: rule.unparsed
+        ? checked
+        : creditsDone >= (rule.minCredits ?? 0) &&
+          coursesDone >= (rule.minCourses ?? 0) &&
+          subjectsIn(courses) >= (rule.minSubjects ?? 0),
+    };
+  });
+  // Nothing can count toward a group of only unparsed rules, so once all are checked it is met in full.
+  const checked = rules.every((rule) => rule.confirmed);
   return {
     title: group.title,
     kind: "complementary",
     credits: group.credits,
-    creditsDone: total,
+    creditsDone: checked ? group.credits : total,
     minCourses: group.minCourses,
     coursesDone: chosen.size,
     satisfied:
-      total >= group.credits &&
-      chosen.size >= (group.minCourses ?? 0) &&
-      rules.every((rule) => rule.satisfied),
+      checked ||
+      (total >= group.credits &&
+        chosen.size >= (group.minCourses ?? 0) &&
+        rules.every((rule) => rule.satisfied)),
     credited: false,
     courses: [...chosen].map(([code, credits]) => ({ code, credits })),
     remaining: [],
     rules,
-    unparsed: rules.filter((rule) => rule.unparsed).length,
+    unparsed: rules.filter((rule) => rule.unparsed && !rule.confirmed).length,
+    ...(checked && { confirmed: true as const }),
   };
 }
 
@@ -518,7 +538,12 @@ export function programProgress(
   }
   for (const group of program.groups) {
     if (!credited(group) && group.kind === "complementary") {
-      results.set(group, complementaryProgress(group, counted, used));
+      results.set(
+        group,
+        complementaryProgress(group, counted, used, (rule) =>
+          snapshot.checked.has(checkKey(program, group, rule)),
+        ),
+      );
     }
   }
   const groups = program.groups.flatMap((group) => results.get(group) ?? []);
@@ -658,10 +683,10 @@ export interface CreditSplit {
 
 /** A group's credits by the status of the courses it claimed, capped at what it needs: earned first, then in progress, then planned. Pass a group counted with the plan. */
 export function creditSplit(
-  group: Pick<GroupProgress, "credited" | "credits" | "courses">,
+  group: Pick<GroupProgress, "credited" | "confirmed" | "credits" | "courses">,
   snapshot: Snapshot,
 ): CreditSplit {
-  if (group.credited) {
+  if (group.credited || group.confirmed) {
     return { completed: group.credits, inProgress: 0, planned: 0 };
   }
   let completed = 0;
@@ -685,9 +710,12 @@ export function creditSplit(
   };
 }
 
-/** The courses behind each part of a split, for the legend's tooltips: a CEGEP-credited group by its title, lump-sum credit as advanced standing. */
+/** The courses behind each part of a split, for the legend's tooltips: a CEGEP-credited or checked group by its title, lump-sum credit as advanced standing. */
 export function splitCourses(
-  groups: readonly Pick<GroupProgress, "credited" | "title" | "courses">[],
+  groups: readonly Pick<
+    GroupProgress,
+    "credited" | "confirmed" | "credits" | "title" | "courses"
+  >[],
   snapshot: Snapshot,
 ): Record<keyof CreditSplit, string[]> {
   const parts = {
@@ -696,8 +724,12 @@ export function splitCourses(
     planned: new Set<string>(),
   };
   for (const group of groups) {
-    if (group.credited) {
-      parts.completed.add(`${sentence(group.title)} (CEGEP)`);
+    if (group.credited || group.confirmed) {
+      if (group.credits > 0) {
+        parts.completed.add(
+          `${sentence(group.title)} (${group.credited ? "CEGEP" : "checked by you"})`,
+        );
+      }
       continue;
     }
     for (const { code } of group.courses) {

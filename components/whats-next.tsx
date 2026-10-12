@@ -16,6 +16,7 @@ import {
   useId,
   useMemo,
   useRef,
+  useState,
 } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
@@ -58,6 +59,7 @@ import { termLoad } from "@/lib/engine/plan";
 import {
   type Claimed,
   type CreditSplit,
+  checkKey,
   creditSplit,
   type GroupProgress,
   minorOverlap,
@@ -124,6 +126,8 @@ interface Context {
   cap?: number;
   /** How the second program pairs with the program, for the share labels. */
   pair?: Pair;
+  /** Keeps the pane the rows sit in open, so meeting its last rule does not open the next one. */
+  keepPane?: () => void;
 }
 
 type Heading = "h3" | "h4";
@@ -207,6 +211,7 @@ function Page({
   const paneId = useId();
   const panes = useRef<HTMLDivElement>(null);
   const asked = useSearchParams().get("req");
+  const [kept, keep] = useState<string | null>(null);
   // Opening a pane or going back to the list removes what had focus, so focus moves to the new view once it renders.
   const focusNext = useRef<string | null>(null);
   useEffect(() => {
@@ -307,15 +312,18 @@ function Page({
   const requirements: Pane[] = groups.map((group, index) => {
     const split = withPlan?.groups[index];
     const counts = countsCredits(group);
+    const key = keys[index] ?? String(index);
     return {
-      key: keys[index] ?? String(index),
+      key,
       label: sentence(group.title),
       done: group.satisfied,
       side: group.credited
         ? "Credited from CEGEP"
-        : counts
-          ? `${Math.min(group.creditsDone, group.credits)} of ${group.credits}`
-          : checksText(group.unparsed),
+        : group.confirmed
+          ? COPY.checkedByYou
+          : counts
+            ? `${Math.min(group.creditsDone, group.credits)} of ${group.credits}`
+            : checksText(group.unparsed),
       split:
         !group.satisfied && counts && split
           ? { ...creditSplit(split, snapshot), total: group.credits }
@@ -329,7 +337,7 @@ function Page({
           program={program}
           view={view}
           snapshot={snapshot}
-          context={context}
+          context={{ ...context, keepPane: () => keepPane(key) }}
         />
       ),
     };
@@ -365,6 +373,7 @@ function Page({
             programOnly: overlap?.programOnly,
             cap: overlap?.cap,
             pair,
+            keepPane: () => keepPane("minor"),
           }}
         />
       ),
@@ -391,7 +400,11 @@ function Page({
   const all = [...requirements, ...extras];
   // Below 1024px the list is the page until `?req=` opens one pane.
   const open = all.find((p) => p.key === asked);
-  const pane = open ?? requirements.find((p) => !p.done) ?? all[0];
+  const pane =
+    open ??
+    all.find((p) => p.key === kept) ??
+    requirements.find((p) => !p.done) ??
+    all[0];
 
   function select(key: string, replace: boolean) {
     const url = `?req=${key}`;
@@ -401,6 +414,12 @@ function Page({
     if ((panes.current?.getBoundingClientRect().top ?? 0) < 0) {
       panes.current?.scrollIntoView();
     }
+  }
+
+  // The router reads a new URL a render late, so `kept` holds the pane until then and the URL keeps it on reload.
+  function keepPane(key: string) {
+    keep(key);
+    window.history.replaceState(null, "", `?req=${key}`);
   }
 
   function go(url: string, focus: string) {
@@ -542,7 +561,7 @@ function groupKeys(groups: GroupProgress[]): string[] {
 }
 
 const countsCredits = (group: GroupProgress) =>
-  group.kind === "required" || group.unparsed < group.rules.length;
+  group.kind === "required" || group.rules.some((rule) => !rule.unparsed);
 
 const checksText = (checks: number) =>
   checks === 1 ? "1 rule to check" : `${checks} rules to check`;
@@ -1016,6 +1035,15 @@ function GroupBody({
     );
   }
   const open = view.complementary.find((g) => g.index === index);
+  // A met group keeps only the rules the student checked, so they can take the mark back.
+  const checks =
+    definition?.kind === "complementary"
+      ? definition.rules.flatMap((rule, i) =>
+          rule.unparsed && (!group.satisfied || group.rules[i]?.confirmed)
+            ? [{ rule, i, key: checkKey(program, definition, rule) }]
+            : [],
+        )
+      : [];
   return (
     <>
       {group.replaces && (
@@ -1041,11 +1069,17 @@ function GroupBody({
           />
         </Fragment>
       ))}
-      {open && open.checks.length > 0 && (
+      {checks.length > 0 && (
         <ul>
-          {open.checks.map((text, i) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share the same text and the list never reorders
-            <CheckRow key={i} text={text} source={program.source} />
+          {checks.map(({ rule, i, key }) => (
+            <CheckRow
+              key={key}
+              text={ruleTitle(rule)}
+              source={program.source}
+              ruleKey={key}
+              confirmed={group.rules[i]?.confirmed === true}
+              keepPane={context.keepPane}
+            />
           ))}
         </ul>
       )}
@@ -1054,7 +1088,8 @@ function GroupBody({
         definition?.kind === "complementary" &&
         definition.rules.map(
           (rule, i) =>
-            !rule.adviser && (
+            !rule.adviser &&
+            !rule.unparsed && (
               // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
               <p key={i} className="text-fg-muted">
                 {ruleTitle(rule)}
@@ -1450,24 +1485,58 @@ function Rows({
   );
 }
 
-/** A rule the crawler could not read. It shows the catalogue text and links to the program, and never counts as done. */
-function CheckRow({ text, source }: { text: string; source: string }) {
+/** A rule the crawler could not read. It shows the catalogue text and links to the program, and counts as met once the student marks it as checked. Below 768px the button moves under the text. */
+function CheckRow({
+  text,
+  source,
+  ruleKey,
+  confirmed,
+  keepPane,
+}: {
+  text: string;
+  source: string;
+  ruleKey: string;
+  confirmed: boolean;
+  keepPane?: () => void;
+}) {
+  const setChecked = useProfileStore((state) => state.setChecked);
+  const textId = useId();
+
+  function toggle() {
+    keepPane?.();
+    setChecked(ruleKey, !confirmed);
+  }
+
   return (
-    <li className="flex min-h-11 items-start gap-2 py-3">
+    <li className="flex min-h-11 items-start gap-2 py-3 max-md:flex-wrap">
       <span className="flex h-5 w-4 shrink-0 items-center">
-        <TriangleAlert aria-hidden className="size-4 text-warn" />
+        {confirmed ? (
+          <StatusIcon status="completed" />
+        ) : (
+          <TriangleAlert aria-hidden className="size-4 text-warn" />
+        )}
       </span>
-      <p className="min-w-0">
+      <p className="min-w-0 flex-1 max-md:basis-[calc(100%-1.5rem)]">
         <span className="font-semibold">
-          <Defined def={GLOSSARY.checkRequirement} />
+          <Defined
+            def={confirmed ? GLOSSARY.checkedByYou : GLOSSARY.checkRequirement}
+          />
         </span>
         <span className="text-fg-muted">
           {dot}
-          {text}
+          <span id={textId}>{text}</span>
           {dot}
         </span>
         <CatalogueLink href={coursesTab(source)} />
       </p>
+      <Button
+        variant="secondary"
+        aria-describedby={textId}
+        onClick={toggle}
+        className="-my-2 max-md:my-0 max-md:ml-6 max-md:h-11"
+      >
+        {confirmed ? COPY.undo : COPY.markChecked}
+      </Button>
     </li>
   );
 }

@@ -61,8 +61,6 @@ export interface ComplementaryGroup {
   credits: number;
   /** For "9-12 credits (3 courses)" style lines. */
   minCourses?: number;
-  /** The older form of one rule per stream, the same as giving each rule an `option` of its own. Files written before `option` still use it. */
-  pickOne?: true;
   rules: Rule[];
   note?: string;
   /** Year 0 or Foundation courses that Quebec CEGEP students are credited for. */

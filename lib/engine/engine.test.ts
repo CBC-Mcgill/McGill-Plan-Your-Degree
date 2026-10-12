@@ -8,6 +8,7 @@ import { whatsNext } from "./next.ts";
 import { nextView } from "./next-view.ts";
 import { planLoads, planWarnings, schoolTerms, termChoices } from "./plan.ts";
 import {
+  checkKey,
   creditSources,
   creditSplit,
   fitsCaps,
@@ -16,6 +17,7 @@ import {
   programSplit,
   REPLACE_TITLE,
   ruleMatches,
+  splitCourses,
 } from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { fillForTerm } from "./stages.ts";
@@ -370,6 +372,88 @@ test("a group with an unparsed rule is never satisfied and counts the rules to c
   });
   expect(group?.rules.map((rule) => rule.satisfied)).toEqual([true, false]);
   expect(programProgress(checked, snapshot, catalogue).satisfied).toBe(false);
+});
+
+test("a rule the student marked as checked is met, and a group of only such rules is met in full", () => {
+  const check = (title: string, option?: string): Rule => ({
+    title,
+    unparsed: true,
+    ...(option && { option }),
+  });
+  const confirming: Program = {
+    ...tiny,
+    groups: [
+      {
+        title: "Complementary Courses",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "Theory", courses: ["COMP 330", "COMP 360"] },
+          check("No more than 3 credits per discipline"),
+        ],
+      },
+      {
+        title: "Program Requirements",
+        kind: "complementary",
+        credits: 0,
+        rules: [check("At most 31 credits at the 200 level")],
+      },
+      {
+        title: "Program Requirements",
+        kind: "complementary",
+        credits: 9,
+        rules: [check("At most 31 credits at the 200 level")],
+      },
+      {
+        title: "Streams",
+        kind: "complementary",
+        credits: 6,
+        rules: [
+          { title: "Theory", option: "A", courses: ["COMP 360"] },
+          check("6 credits from the stream list", "B"),
+        ],
+      },
+    ],
+  };
+  const key = (g: number, r: number) => {
+    const group = confirming.groups[g] as ComplementaryGroup;
+    return checkKey(confirming, group, group.rules[r] as Rule);
+  };
+  const marked = buildSnapshot([record("COMP 330", "completed")], [], null, 0, [
+    key(0, 1),
+    key(1, 0),
+    key(3, 1),
+  ]);
+  const progress = programProgress(confirming, marked, catalogue);
+  const [a, b, c, d] = progress.groups;
+  expect(a).toMatchObject({ creditsDone: 3, satisfied: false, unparsed: 0 });
+  expect(a?.confirmed).toBeUndefined();
+  expect(a?.rules[1]).toMatchObject({ confirmed: true, satisfied: true });
+  expect(b).toMatchObject({ creditsDone: 0, satisfied: true, confirmed: true });
+  // Same title and text as the group before it, but its own key.
+  expect(c).toMatchObject({ creditsDone: 0, satisfied: false, unparsed: 1 });
+  expect(d).toMatchObject({
+    creditsDone: 6,
+    satisfied: true,
+    confirmed: true,
+    option: "B",
+  });
+  expect(programSplit(progress, marked).completed).toBe(9);
+  expect(splitCourses(progress.groups, marked).completed).toEqual([
+    "COMP 330",
+    "Streams (checked by you)",
+  ]);
+  const unmarked = programProgress(
+    confirming,
+    buildSnapshot([record("COMP 330", "completed")]),
+    catalogue,
+  ).groups;
+  expect(unmarked.map((group) => [group.satisfied, group.unparsed])).toEqual([
+    [false, 1],
+    [false, 1],
+    [false, 1],
+    [false, 0],
+  ]);
 });
 
 test("an adviser rule next to a list adds approved courses up to its credits and never caps the list", () => {
@@ -836,62 +920,6 @@ test("an option group counts each stream of several lists with the shared rules,
   });
   expect(progress.groups[0]?.rules.map((rule) => rule.creditsDone)).toEqual([
     3, 3, 0, 6,
-  ]);
-  expect(progress.unclaimed).toEqual([{ code: "COMP 330", credits: 3 }]);
-});
-
-test("a pick-one group counts the stream furthest along and leaves the other stream's courses free", () => {
-  const streams: Program = {
-    ...tiny,
-    groups: [
-      {
-        title: "Streams",
-        kind: "complementary",
-        credits: 6,
-        pickOne: true,
-        rules: [
-          {
-            title: "Theory Stream",
-            minCredits: 6,
-            courses: ["COMP 330", "COMP 360"],
-          },
-          {
-            title: "Systems Stream",
-            minCredits: 6,
-            courses: ["COMP 250", "COMP 251"],
-          },
-        ],
-      },
-    ],
-  };
-  expect(validateProgram(streams)).toMatchObject({ ok: true });
-  expect(
-    validateProgram({
-      ...streams,
-      groups: [
-        {
-          ...streams.groups[0],
-          rules: [{ title: "Theory Stream", courses: ["COMP 330"] }],
-        },
-      ],
-    }),
-  ).toMatchObject({ ok: false });
-  const done = buildSnapshot([
-    record("COMP 330", "completed"),
-    record("COMP 250", "completed"),
-    record("COMP 251", "completed"),
-  ]);
-  const progress = programProgress(streams, done, catalogue);
-  expect(progress.groups[0]).toMatchObject({
-    creditsDone: 6,
-    satisfied: true,
-    courses: [
-      { code: "COMP 250", credits: 3 },
-      { code: "COMP 251", credits: 3 },
-    ],
-  });
-  expect(progress.groups[0]?.rules.map((rule) => rule.creditsDone)).toEqual([
-    3, 6,
   ]);
   expect(progress.unclaimed).toEqual([{ code: "COMP 330", credits: 3 }]);
 });

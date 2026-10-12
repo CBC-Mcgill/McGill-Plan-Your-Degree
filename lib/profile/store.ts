@@ -79,6 +79,8 @@ export interface ProfileActions {
     terms: Partial<Pick<Profile, "startTerm" | "graduationTerm">>,
   ) => void;
   setCreditLimit: (creditLimit: number) => void;
+  /** Marks a rule from `checkKey` as checked by the student, or takes the mark back. */
+  setChecked: (key: string, checked: boolean) => void;
   /** A course sits in one term at most, so adding it again moves it. */
   addToPlan: (term: Term, code: string) => void;
   removeFromPlan: (term: Term, code: string) => void;
@@ -103,6 +105,7 @@ const initial: Profile = {
   plan: [],
   creditLimit: 17,
   importedAt: null,
+  checked: [],
 };
 
 /** The record a transcript line becomes. */
@@ -190,6 +193,13 @@ export const useProfileStore = create<ProfileState>()(
       setBackground: (background) => set(background),
       setTerms: (terms) => set(terms),
       setCreditLimit: (creditLimit) => set({ creditLimit }),
+      setChecked: (key, checked) =>
+        set((state) => ({
+          checked: [
+            ...state.checked.filter((k) => k !== key),
+            ...(checked ? [key] : []),
+          ],
+        })),
       addToPlan: (term, code) =>
         set((state) => ({ plan: put(state.plan, term, code) })),
       removeFromPlan: (term, code) =>

@@ -53,10 +53,6 @@ export interface OpenGroup {
   creditsDone: number;
   credits: number;
   buckets: Bucket[];
-  /** The catalogue text of each rule that needs a manual check. */
-  checks: string[];
-  /** False when every rule needs a check, so no course counts toward the group and its credits would read as zero. */
-  counted: boolean;
 }
 
 export interface NextView {
@@ -307,15 +303,12 @@ export function nextView(
         title: ruleTitle(b.rule),
         progress: minimumText(b.rule, b.done),
         entries: b.entries,
-        ...((b.rule.option || group.pickOne) && { stream: true as const }),
+        ...(b.rule.option && { stream: true as const }),
       }));
     if (rest.length > 0) {
       listed.push({ title: "Other options", progress: null, entries: rest });
     }
-    const checks = group.rules.flatMap((rule) =>
-      rule.unparsed ? [ruleTitle(rule)] : [],
-    );
-    return listed.length + checks.length > 0
+    return listed.length > 0 || group.rules.some((rule) => rule.unparsed)
       ? [
           {
             index,
@@ -324,8 +317,6 @@ export function nextView(
             creditsDone: Math.min(done.creditsDone, group.credits),
             credits: group.credits,
             buckets: listed,
-            checks,
-            counted: checks.length < group.rules.length,
           },
         ]
       : [];

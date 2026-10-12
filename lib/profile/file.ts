@@ -10,13 +10,14 @@ import {
   termKey,
 } from "./types.ts";
 
-export const PROFILE_VERSION = 4;
+export const PROFILE_VERSION = 5;
 
 const FORMAT = "plan-your-degree-profile";
 const MAX_FILE_CHARS = 1_000_000;
 const MAX_RECORDS = 2000;
 const MAX_PLAN_TERMS = 60;
 const MAX_TERM_COURSES = 30;
+const MAX_CHECKED = 1000;
 // Loose on purpose, since the catalogue has codes like FIGG MYR1 and HIST 298AA.
 const CODE = /^[A-Z0-9]{4} [A-Z0-9]{3,6}$/;
 const PART = /^[DJN]\d$/;
@@ -155,6 +156,7 @@ function profile(value: unknown): Profile {
     "plan",
     "creditLimit",
     "importedAt",
+    "checked",
   ]);
   return {
     records: array(o.records, "profile.records", MAX_RECORDS).map((r, i) =>
@@ -192,6 +194,9 @@ function profile(value: unknown): Profile {
       }
       return v;
     }),
+    checked: array(o.checked, "profile.checked", MAX_CHECKED).map((key, i) =>
+      text(key, `profile.checked[${i}]`, 2000),
+    ),
   };
 }
 
@@ -223,6 +228,9 @@ export function migrateProfile(data: unknown, version: number): unknown {
   if (version < 4 && typeof migrated === "object" && migrated !== null) {
     migrated = { minorId: null, ...migrated };
   }
+  if (version < 5 && typeof migrated === "object" && migrated !== null) {
+    migrated = { checked: [], ...migrated };
+  }
   return migrated;
 }
 
@@ -240,6 +248,7 @@ export function profileOf(state: Profile): Profile {
     plan: state.plan,
     creditLimit: state.creditLimit,
     importedAt: state.importedAt,
+    checked: state.checked,
   };
 }
 

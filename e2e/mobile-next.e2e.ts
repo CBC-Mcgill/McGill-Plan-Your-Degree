@@ -9,8 +9,12 @@ const done = (code: string) => ({
   source: "manual",
 });
 
-/** Opens What's next on 8 October 2026, so the next term is Winter 2027, as a Computer Engineering student with a minor. */
-async function openStudent(page: Page, path = "/next") {
+/** Opens What's next on 8 October 2026, so the next term is Winter 2027, as a Computer Engineering student with a minor unless `state` says otherwise. */
+async function openStudent(
+  page: Page,
+  path = "/next",
+  state: Record<string, unknown> = {},
+) {
   await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
   await page.addInitScript(
     (value) => {
@@ -33,6 +37,7 @@ async function openStudent(page: Page, path = "/next") {
         plan: [
           { term: { season: "Winter", year: 2027 }, courses: ["ECSE 202"] },
         ],
+        ...state,
       },
       version: 4,
     }),
@@ -142,4 +147,23 @@ test("every pane fits a phone, and a link opens the minor's pane", async ({
     ).toBeVisible();
     await expectNoSideScroll(page);
   }
+});
+
+test("a rule to check has a full-size button that fits a phone", async ({
+  page,
+}) => {
+  await openStudent(page, "/next?req=complementary-courses", {
+    records: [],
+    programId: "economics-major-concentration-ba",
+    minorId: null,
+    entry: null,
+    plan: [],
+  });
+  const pane = page.getByRole("region", { name: "Complementary courses" });
+  const mark = pane.getByRole("button", { name: "Mark as checked" });
+  expect((await mark.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+  await expectNoSideScroll(page);
+  await mark.tap();
+  await expect(pane.getByRole("button", { name: "Undo" })).toBeVisible();
+  await expectNoSideScroll(page);
 });

@@ -62,6 +62,8 @@ export interface Profile {
   creditLimit: number;
   /** ISO time of the last transcript import. */
   importedAt: string | null;
+  /** Rules the crawler could not read that the student marked as checked, as `checkKey` builds them. Keys of a program the profile no longer uses stay and do no harm. */
+  checked: string[];
 }
 
 const SEASON_ORDER: Record<Season, number> = { Winter: 0, Summer: 1, Fall: 2 };
