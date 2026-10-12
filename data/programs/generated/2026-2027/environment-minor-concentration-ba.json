@@ -159,6 +159,14 @@
           "maxCredits": 3
         },
         {
+          "title": "If chosen, you may take one of LSCI 230 or MIMM 211",
+          "maxCourses": 1,
+          "courses": [
+            "LSCI 230",
+            "MIMM 211"
+          ]
+        },
+        {
           "title": "18 credits of complementary courses, all of which must fall outside the discipline or field of the student's major program or concentration, and which must be 200-level or above, selected as follows",
           "unparsed": true
         }

@@ -101,6 +101,14 @@
           ],
           "minCredits": 3,
           "maxCredits": 6
+        },
+        {
+          "title": "If chosen, you may take one of LSCI 230 or MIMM 211",
+          "maxCourses": 1,
+          "courses": [
+            "LSCI 230",
+            "MIMM 211"
+          ]
         }
       ]
     }

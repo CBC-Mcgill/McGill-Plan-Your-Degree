@@ -38,6 +38,14 @@
           "maxCredits": 6
         },
         {
+          "title": "If chosen, students may take ATOC 219 or CHEM 219",
+          "maxCourses": 1,
+          "courses": [
+            "ATOC 219",
+            "CHEM 219"
+          ]
+        },
+        {
           "title": "3 credits selected from",
           "courses": [
             "ATOC 357",
@@ -242,6 +250,7 @@
             "PHYS 404",
             "PHYS 512"
           ],
+          "minCredits": 15,
           "option": "Atmospheric Chemistry and Physics Stream"
         },
         {

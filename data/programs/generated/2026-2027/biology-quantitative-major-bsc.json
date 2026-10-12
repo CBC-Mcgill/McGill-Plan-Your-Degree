@@ -158,6 +158,14 @@
           ],
           "minCredits": 9,
           "maxCredits": 9
+        },
+        {
+          "title": "Students may take COMP 350 OR MATH 317",
+          "maxCourses": 1,
+          "courses": [
+            "COMP 350",
+            "MATH 317"
+          ]
         }
       ]
     }
