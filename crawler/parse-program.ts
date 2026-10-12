@@ -1403,9 +1403,13 @@ const EACH = new RegExp(
   String.raw`^${WHO}(?:take|select|choose) only one course (?:in each of the following sets|from each set of the following courses)\s*:?\s*((?:CODE(?:, CODE)* (?:or|and) CODE\s*)+)$`,
   "i",
 );
-// "A or B, but not both", "Either A or B may be taken but not both", "Only one of A or B can count toward the program".
+// "A or B, but not both", "Either A or B may be taken but not both", "Only one of A or B may be counted toward the program", and permission to take one, as "You may take one of A, B or C" or "Students can take A OR B".
 const NOT_BOTH = new RegExp(
-  `^(?:${WHO}(?:take|select|choose) )?(?:either )?(${SET}),? (?:(?:may|can) be taken,? )?but not both$|^only one of (${SET}) can count towards? the program$`,
+  [
+    `^(?:${WHO}(?:take|select|choose) )?(?:either |one of )?(${SET}),? (?:(?:may|can) be taken,? )?but not both$`,
+    `^only one of (${SET}) (?:can|may) (?:count|be counted|be included) (?:towards?|in) the program$`,
+    `^(?:students|you) (?:may|can) (?:take|select|choose) (?:(?:either|one of) (${SET})|(CODE(?:, CODE)*,? or CODE))$`,
+  ].join("|"),
   "i",
 );
 // "Students select either MUJZ 440 and MUJZ 441 or MUJZ 461D1 and MUJZ 461D2": one set or the other.
@@ -1451,7 +1455,7 @@ function exclusiveSets(text: string): Rule[] | null {
       ? ((each[1] ?? "").match(/CODE(?:, CODE)* (?:or|and) CODE/g) ?? [])
       : s.split(/;\s*/).map((chunk) => {
           const m = NOT_BOTH.exec(chunk);
-          return m ? (m[1] ?? m[2] ?? "") : null;
+          return m ? (m.slice(1).find(Boolean) ?? "") : null;
         });
   if (chunks.length === 0 || chunks.some((chunk) => chunk === null))
     return null;

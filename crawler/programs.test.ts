@@ -1083,6 +1083,30 @@ test("reads which courses cannot both count, from footnotes and from sentences",
   ]);
 });
 
+test("reads permission to take one of a set as a not-both rule, and leaves permission for all of them alone", () => {
+  const rules = complementary(
+    `<p>15 credits from:</p>${table("ATOC 214", "ATOC 215", "ATOC 219", "CHEM 219", "MATH 223", "MATH 247")}` +
+      "<dl><dd>If chosen, students may take ATOC 219 or CHEM 219.</dd>" +
+      "<dd>Note: You may take one of BREE 529, ENVB 529 or GEOG 314; you may take one of GEOG 322 or BREE 217; you may take one of ANSC 326 or BIOL 324.</dd>" +
+      "<dd>If chosen, students can take one of MATH 410, and MATH 527D1/MATH 527D2, but not both.</dd>" +
+      "<dd>Students may take ATOC 214 and ATOC 215.</dd>" +
+      "<dd>Students take MATH 223 or MATH 247.</dd></dl>" +
+      "<p>A maximum of 15 credits from 200-level courses may be used toward the Honours program. Only one of PHIL 200 or PHIL 201 may be counted toward the program.</p>" +
+      "<p>Note: If chosen, you may take AGEC 200 or ECON 208.</p>",
+  );
+  expect(
+    rules.filter((rule) => rule.maxCourses === 1).map((rule) => rule.courses),
+  ).toEqual([
+    ["ATOC 219", "CHEM 219"],
+    ["BREE 529", "ENVB 529", "GEOG 314"],
+    ["GEOG 322", "BREE 217"],
+    ["ANSC 326", "BIOL 324"],
+    ["MATH 410", "MATH 527"],
+    ["AGEC 200", "ECON 208"],
+    ["PHIL 200", "PHIL 201"],
+  ]);
+});
+
 test("a line beside a list opens it to a subject, and courses not taken above join the lists before", () => {
   const rules = complementary(
     `<p>9 credits from:</p>${table("COMP 251", "MATH 240")}<p>COMP courses at the 300 level or above except COMP 396, COMP 400.</p>` +
