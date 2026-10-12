@@ -452,6 +452,23 @@ test("a rule over several subjects is met only once its courses span them", () =
   });
 });
 
+test("a not-both rule caps the lists and adds none of its own courses", () => {
+  const notBoth = (a: string, b: string): Rule => ({
+    title: `${a} or ${b}, but not both`,
+    maxCourses: 1,
+    courses: [a, b],
+  });
+  const codes = (rule: Rule, ...done: string[]) =>
+    spread(rule, ...done)?.courses.map((c) => c.code);
+  expect(
+    codes(notBoth("COMP 250", "COMP 330"), "COMP 250", "COMP 330", "MATH 240"),
+  ).toEqual(["COMP 250", "MATH 240"]);
+  // COMP 424 is named only by the footnote, never by a list.
+  expect(
+    codes(notBoth("COMP 330", "COMP 424"), "COMP 250", "COMP 424"),
+  ).toEqual(["COMP 250"]);
+});
+
 test("credit sources name plain rule titles and give up on sentences", () => {
   const group = (titles: string[]) => ({
     title: "Technical Complementaries",
