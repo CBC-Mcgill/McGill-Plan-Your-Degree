@@ -1,0 +1,83 @@
+{
+  "id": "law-thesis-environment-llm",
+  "name": "Law (Thesis): Environment",
+  "degree": "LL.M.",
+  "faculty": "Law",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/law/law-thesis-environment-llm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "CMPL 612",
+            "CMPL 613",
+            "CMPL 614",
+            "CMPL 615",
+            "CMPL 616"
+          ]
+        },
+        {
+          "title": "As part of the course Master's Thesis 1, a thesis candidate must provide a protocol to his or her supervisor setting out details as to the thesis topic, the deadlines for the completion of the various thesis courses and the schedule of meetings with the thesis supervisor",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "CMPL 610",
+        "CMPL 611",
+        "CMPL 615",
+        "LAWG 601",
+        "LAWG 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3-6 credits chosen from",
+          "courses": [
+            "ENVR 610",
+            "ENVR 614"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "0-3 credits chosen from",
+          "courses": [
+            "ENVR 585",
+            "ENVR 630",
+            "ENVR 680"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "Or 3 credits at the 500 level or higher recommended by the Advisory Committee and approved by the Environment Option Committee",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "0-3 credits at the 500 level or higher approved by the Advisory Committee",
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

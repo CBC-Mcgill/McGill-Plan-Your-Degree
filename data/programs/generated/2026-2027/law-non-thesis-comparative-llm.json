@@ -1,0 +1,50 @@
+{
+  "id": "law-non-thesis-comparative-llm",
+  "name": "Law (Non-Thesis): Comparative Law",
+  "degree": "LL.M.",
+  "faculty": "Law",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/law/law-non-thesis-comparative-llm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "CMPL 655"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "CMPL 600",
+        "CMPL 610",
+        "CMPL 611",
+        "CMPL 641",
+        "LAWG 601",
+        "LAWG 602"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "The remaining 18 credits (or fewer if more credits are earned for the research project) are chosen from among Faculty offerings at the 500 and 600 levels",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

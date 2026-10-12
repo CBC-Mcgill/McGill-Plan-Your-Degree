@@ -1,0 +1,68 @@
+{
+  "id": "oral-health-sciences-phd",
+  "name": "Oral Health Sciences",
+  "degree": "Ph.D.",
+  "faculty": "Dental Medicine and Oral Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/dentistry/oral-health-sciences-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "DENT 663",
+        "DENT 664",
+        "DENT 665",
+        "DENT 671",
+        "DENT 700",
+        "DENT 701",
+        "DENT 786"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6-12 credits from the following",
+          "courses": [
+            "DENT 504",
+            "DENT 602",
+            "DENT 610",
+            "DENT 654",
+            "DENT 669",
+            "DENT 681",
+            "DENT 682",
+            "DENT 683",
+            "DENT 685",
+            "DENT 688",
+            "DENT 706"
+          ],
+          "minCredits": 6,
+          "maxCredits": 12
+        },
+        {
+          "title": "Courses at the 500 level or higher in other departments can be chosen in consultation with their supervisors and the program director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

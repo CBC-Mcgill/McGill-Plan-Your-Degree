@@ -1,0 +1,51 @@
+{
+  "id": "family-medicine-primary-care-phd",
+  "name": "Family Medicine & Primary Care",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/family-medicine-primary-care-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "FMED 601",
+        "FMED 604",
+        "FMED 702"
+      ],
+      "note": "Note: this slot course must be taken three times (3 cr.)"
+    },
+    {
+      "title": "Elective Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits in advanced research methods, at the 600 level or higher",
+          "unparsed": true
+        },
+        {
+          "title": "May be chosen from outside the Department, in consultation with the student's academic advisor or supervisor",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

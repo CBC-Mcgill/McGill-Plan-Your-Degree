@@ -1,0 +1,52 @@
+{
+  "id": "physiology-phd",
+  "name": "Physiology",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/physiology-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 8,
+      "courses": [
+        "PHGY 604",
+        "PHGY 701",
+        "PHGY 703",
+        "PHGY 704",
+        "PHGY 720",
+        "PHGY 721",
+        "PHGY 722",
+        "PHGY 723",
+        "PHGY 724",
+        "PHGY 725"
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits of Physiology or Science at the 500 level or above, in consultation with the GSAAC and the candidate's supervisor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

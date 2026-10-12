@@ -1,0 +1,64 @@
+{
+  "id": "school-applied-phd-child-psychology",
+  "name": "School/Applied Child Psychology",
+  "degree": "Ph.D.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/school-applied-phd-child-psychology/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Comprehensive Exam",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "EDSP 701"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 60,
+      "courses": [
+        "EDPC 714",
+        "EDPE 712",
+        "EDSP 702",
+        "EDSP 705",
+        "EDSP 710",
+        "EDSP 715",
+        "EDSP 721",
+        "EDSP 722",
+        "EDSP 725"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 684",
+            "EDPE 687"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

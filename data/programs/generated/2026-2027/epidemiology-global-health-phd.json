@@ -1,0 +1,72 @@
+{
+  "id": "epidemiology-global-health-phd",
+  "name": "Epidemiology: Global Health",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/population-global-health/epidemiology-global-health-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 23,
+      "courses": [
+        "EPIB 681",
+        "EPIB 701",
+        "EPIB 702",
+        "EPIB 703",
+        "EPIB 704",
+        "EPIB 705",
+        "EPIB 706",
+        "EPIB 707",
+        "GPHL 500"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "GEOG 503",
+            "NUTR 501",
+            "PPHS 525",
+            "PPHS 527",
+            "PPHS 529",
+            "SOCI 519",
+            "SOCI 545"
+          ]
+        },
+        {
+          "title": "6 credits of coursework at the 500 level or higher, with a minimum of 3 credits in biostatistics, and 3 credits in epidemiology",
+          "unparsed": true
+        },
+        {
+          "title": "Courses must be chosen in consultation with the student's supervisor and/or the program director or advisor",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "3 credits of coursework at the 500 level or higher from this list, or any other course approved by the Global Health Option Committee that have not been taken to satisfy other program requirements",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

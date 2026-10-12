@@ -1,0 +1,66 @@
+{
+  "id": "surgical-interventional-sciences-phd",
+  "name": "Surgical and Interventional Sciences",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-interventional-sciences-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "EXSU 700",
+        {
+          "oneOf": [
+            "EDPE 575",
+            "EPIB 507",
+            "EXSU 606"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "EDPH 689",
+            "EXMD 634",
+            "EXSU 500",
+            "EXSU 601",
+            "EXSU 602",
+            "EXSU 603",
+            "EXSU 619",
+            "EXSU 620",
+            "EXSU 621"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "And 6 credits at the 500 level or higher in the student's specialty, selected in consultation with the Research Supervisory Committee",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

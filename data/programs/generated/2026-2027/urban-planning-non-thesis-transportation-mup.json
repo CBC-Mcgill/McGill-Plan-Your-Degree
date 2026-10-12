@@ -1,0 +1,82 @@
+{
+  "id": "urban-planning-non-thesis-transportation-mup",
+  "name": "Urban Planning (Non-Thesis): Transportation Planning",
+  "degree": "M.U.P.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/urban-planning/urban-planning-non-thesis-transportation-mup/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 49,
+      "courses": [
+        "URBP 605",
+        "URBP 609",
+        "URBP 610",
+        "URBP 611",
+        "URBP 612",
+        "URBP 619",
+        "URBP 622",
+        "URBP 623",
+        "URBP 624",
+        "URBP 628",
+        "URBP 630",
+        "URBP 631",
+        "URBP 632",
+        "URBP 635",
+        "URBP 640",
+        "URBP 641",
+        "URBP 642"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 11,
+      "rules": [
+        {
+          "title": "Group A: 5-11 credits from the following",
+          "courses": [
+            "CIVE 540",
+            "CIVE 561",
+            "CIVE 661",
+            "URBP 503",
+            "URBP 504",
+            "URBP 506",
+            "URBP 536",
+            "URBP 537",
+            "URBP 581",
+            "URBP 582",
+            "URBP 583",
+            "URBP 586",
+            "URBP 587",
+            "URBP 591",
+            "URBP 592",
+            "URBP 593",
+            "URBP 596",
+            "URBP 597",
+            "URBP 608",
+            "URBP 620",
+            "URBP 643",
+            "URBP 655",
+            "URBP 684",
+            "URBP 685",
+            "URBP 694",
+            "URBP 695"
+          ],
+          "minCredits": 5,
+          "maxCredits": 11
+        },
+        {
+          "title": "0-6 credits of coursework at the 500 or 600 level offered by any offered by any academic unit at McGill or another Montreal university, with the approval of the School, if they help students to develop an in-depth knowledge of one or more subject areas in the field of planning",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

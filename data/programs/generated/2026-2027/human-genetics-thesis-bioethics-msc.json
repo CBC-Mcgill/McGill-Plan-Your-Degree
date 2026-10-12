@@ -1,0 +1,63 @@
+{
+  "id": "human-genetics-thesis-bioethics-msc",
+  "name": "Human Genetics (Thesis): Bioethics",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/human-genetics-thesis-bioethics-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "HGEN 681",
+            "HGEN 682",
+            "HGEN 683"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "12 credits from",
+          "courses": [
+            "BIOE 680",
+            "BIOE 681",
+            "HGEN 662",
+            "HGEN 692"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "CMPL 642",
+            "PHIL 643",
+            "RELG 571"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "surgical-innovation-gr-cert",
+  "name": "Surgical Innovation",
+  "degree": "Gr. Cert.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-innovation-gr-cert/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "9 credits in",
+          "courses": [
+            "EXSU 619",
+            "EXSU 620",
+            "EXSU 621"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 575",
+            "EPIB 507",
+            "EXSU 606"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Elective Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits at the 500 level or higher, taken in consultation with the program director/adviser",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

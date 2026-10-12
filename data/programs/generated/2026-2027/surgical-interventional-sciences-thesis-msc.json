@@ -1,0 +1,59 @@
+{
+  "id": "surgical-interventional-sciences-thesis-msc",
+  "name": "Surgical and Interventional Sciences (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-interventional-sciences-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EXSU 690",
+            "EXSU 691",
+            "EXSU 692",
+            "EXSU 693"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "EXSU 602",
+        {
+          "oneOf": [
+            "EDPE 575",
+            "EPIB 507",
+            "EXSU 606"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits, taken from 500, 600, or 700 level courses in consultation with the Research Advisory Committee",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

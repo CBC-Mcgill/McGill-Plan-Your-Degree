@@ -1,5 +1,4352 @@
 [
   {
+    "id": "animal-science-bioinformatics-phd",
+    "name": "Animal Science: Bioinformatics",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "animal-science-non-thesis-msca",
+    "name": "Animal Science (Non-Thesis)",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "animal-science-non-thesis-sustainable-agriculture-msca",
+    "name": "Animal Science (Non-Thesis): Sustainable Agriculture",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "animal-science-phd",
+    "name": "Animal Science",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "animal-science-thesis-msc",
+    "name": "Animal Science (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "bioresource-engineering-non-thesis-environmental-engineering-msca",
+    "name": "Bioresource Engineering (Non-Thesis): Environmental Engineering",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "bioresource-engineering-non-thesis-integrated-food-bioprocessing-msca",
+    "name": "Bioresource Engineering (Non-Thesis): Integrated Food and Bioprocessing",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "bioresource-engineering-non-thesis-integrated-water-resources-management-msc",
+    "name": "Bioresource Engineering (Non-Thesis): Integrated Water Resources Management",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "bioresource-engineering-non-thesis-msca",
+    "name": "Bioresource Engineering (Non-Thesis)",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "bioresource-engineering-phd",
+    "name": "Bioresource Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "bioresource-engineering-thesis-msc",
+    "name": "Bioresource Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "biotechnology-gr-cert",
+    "name": "Biotechnology",
+    "degree": "Gr. Cert.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 16,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "biotechnology-non-thesis-msca",
+    "name": "Biotechnology (Non-Thesis)",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "food-science-agricultural-chemistry-food-safety-non-thesis-msc",
+    "name": "Food Science & Agricultural Chemistry: Food Safety (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "food-science-agricultural-chemistry-non-thesis-msc",
+    "name": "Food Science and Agricultural Chemistry (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "food-science-agricultural-chemistry-phd",
+    "name": "Food Science and Agricultural Chemistry",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "food-science-agricultural-chemistry-thesis-msc",
+    "name": "Food Science and Agricultural Chemistry (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "human-nutrition-non-thesis-dietetics-credentialing-mcsa",
+    "name": "Human Nutrition (Non-Thesis): Dietetics Credentialing",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 83,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "human-nutrition-non-thesis-practicum-msca",
+    "name": "Human Nutrition (Non-Thesis): Practicum",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "human-nutrition-non-thesis-project-msca",
+    "name": "Human Nutrition (Non-Thesis): Project",
+    "degree": "M.Sc.A.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "human-nutrition-phd",
+    "name": "Human Nutrition",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "human-nutrition-thesis-msc",
+    "name": "Human Nutrition (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "registered-dietitian-credentialing-gr-dip",
+    "name": "Registered Dietitian Credentialing",
+    "degree": "Gr. Dip.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "agricultural-economics-thesis-msc",
+    "name": "Agricultural Economics (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "entomology-phd",
+    "name": "Entomology",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "entomology-thesis-msc",
+    "name": "Entomology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "microbiology-phd",
+    "name": "Microbiology",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "microbiology-thesis-msc",
+    "name": "Microbiology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "renewable-resources-neotropical-environment-phd",
+    "name": "Renewable Resources: Neotropical Environment",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "renewable-resources-phd",
+    "name": "Renewable Resources",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "renewable-resources-thesis-msc",
+    "name": "Renewable Resources (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "renewable-resources-thesis-neotropical-environment-msc",
+    "name": "Renewable Resources (Thesis): Neotropical Environment",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "parasitology-bioinformatics-phd",
+    "name": "Parasitology: Bioinformatics",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "parasitology-phd",
+    "name": "Parasitology",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "parasitology-thesis-msc",
+    "name": "Parasitology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "bioinformatics-gr-cert",
+    "name": "Bioinformatics",
+    "degree": "Gr. Cert.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "plant-science-bioinformatics-phd",
+    "name": "Plant Science: Bioinformatics",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "plant-science-environment-phd",
+    "name": "Plant Science: Environment",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "plant-science-neotropical-environment-phd",
+    "name": "Plant Science: Neotropical Environment",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "plant-science-phd",
+    "name": "Plant Science",
+    "degree": "Ph.D.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "plant-science-thesis-bioinformatics-msc",
+    "name": "Plant Science (Thesis): Bioinformatics",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "plant-science-thesis-environment-msc",
+    "name": "Plant Science (Thesis): Environment",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "plant-science-thesis-msc",
+    "name": "Plant Science (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "plant-science-thesis-neotropical-environment-msc",
+    "name": "Plant Science (Thesis): Neotropical Environment",
+    "degree": "M.Sc.",
+    "faculty": "Agricultural and Environmental Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "anthropology-neotropical-environment-phd",
+    "name": "Anthropology: Neotropical Environment",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 6
+  },
+  {
+    "id": "anthropology-non-thesis-ma",
+    "name": "Anthropology (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "anthropology-phd",
+    "name": "Anthropology",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "anthropology-thesis-development-studies-ma",
+    "name": "Anthropology (Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "anthropology-thesis-environment-ma",
+    "name": "Anthropology (Thesis): Environment",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "anthropology-thesis-gender-womens-studies-ma",
+    "name": "Anthropology (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "anthropology-thesis-ma",
+    "name": "Anthropology (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "medical-anthropology-thesis-ma",
+    "name": "Medical Anthropology (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "art-history-gender-womens-studies-phd",
+    "name": "Art History: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "art-history-phd",
+    "name": "Art History",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "art-history-thesis-gender-womens-studies-ma",
+    "name": "Art History (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "art-history-thesis-ma",
+    "name": "Art History (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "communication-studies-gender-womens-studies-phd",
+    "name": "Communication Studies: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "communication-studies-phd",
+    "name": "Communication Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "communication-studies-thesis-gender-womens-studies-ma",
+    "name": "Communication Studies (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "communication-studies-thesis-ma",
+    "name": "Communication Studies (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "east-asian-studies-ad-hoc-phd",
+    "name": "East Asian Studies (Ad Hoc)",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "east-asian-studies-thesis-ad-hoc-ma",
+    "name": "East Asian Studies (Thesis) (Ad Hoc)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "economics-non-thesis-development-studies-ma",
+    "name": "Economics (Non-Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "economics-non-thesis-ma",
+    "name": "Economics (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "economics-non-thesis-population-dynamics-ma",
+    "name": "Economics (Non-Thesis): Population Dynamics",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "economics-phd",
+    "name": "Economics",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "economics-thesis-ma",
+    "name": "Economics (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "english-non-thesis-ma",
+    "name": "English (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "english-phd",
+    "name": "English",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "english-thesis-ma",
+    "name": "English (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "langue-et-litterature-francaises-avec-memoire-etudes-sur-les-femmes-et-le-genre-ma",
+    "name": "Langue et littérature françaises (avec mémoire): études sur les femmes et le genre",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "langue-et-litterature-francaises-avec-memoire-ma",
+    "name": "Langue et littérature françaises (avec mémoire)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "langue-et-litterature-francaises-etudes-sur-les-femmes-et-le-genre-phd",
+    "name": "Langue et littérature françaises: études sur les femmes et le genre",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "langue-et-litterature-francaises-phd",
+    "name": "Langue et littérature françaises",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "langue-et-litterature-francaises-sans-memoire-ma",
+    "name": "Langue et littérature françaises (sans mémoire)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "geography-environment-phd",
+    "name": "Geography: Environment",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "geography-gender-womens-studies-phd",
+    "name": "Geography: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "geography-neotropical-environment-phd",
+    "name": "Geography: Neotropical Environment",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "geography-phd",
+    "name": "Geography",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "geography-thesis-development-studies-ma",
+    "name": "Geography (Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "geography-thesis-environment-ma",
+    "name": "Geography (Thesis): Environment",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "geography-thesis-gender-womens-studies-ma",
+    "name": "Geography (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "geography-thesis-ma",
+    "name": "Geography (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "geography-thesis-neotropical-environment-ma",
+    "name": "Geography (Thesis): Neotropical Environment",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "classics-non-thesis-ma",
+    "name": "Classics (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "classics-thesis-ma",
+    "name": "Classics (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "history-phd",
+    "name": "History",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "history-thesis-development-studies-ma",
+    "name": "History (Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "history-thesis-gender-womens-studies-ma",
+    "name": "History (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "history-thesis-ma",
+    "name": "History (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "cloud-operational-tech-security-gr-cert",
+    "name": "Cloud and Operational Technology Security",
+    "degree": "Gr. Cert.",
+    "faculty": "Arts",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "cybersecurity-gr-cert",
+    "name": "Cybersecurity",
+    "degree": "Gr. Cert.",
+    "faculty": "Arts",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "digital-archives-management-gr-cert",
+    "name": "Digital Archives Management",
+    "degree": "Gr. Cert.",
+    "faculty": "Arts",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "information-architecture-design-gr-cert",
+    "name": "Information Architecture and Design",
+    "degree": "Gr. Cert.",
+    "faculty": "Arts",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "information-knowledge-management-gr-cert",
+    "name": "Information and Knowledge Management",
+    "degree": "Gr. Cert.",
+    "faculty": "Arts",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "information-studies-non-thesis-course-work-mist",
+    "name": "Information Studies (Non-Thesis): Course Work",
+    "degree": "M.I.St.",
+    "faculty": "Arts",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "information-studies-non-thesis-project-mist",
+    "name": "Information Studies (Non-Thesis): Project",
+    "degree": "M.I.St.",
+    "faculty": "Arts",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "information-studies-phd",
+    "name": "Information Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "library-information-studies-gr-cert",
+    "name": "Library and Information Studies",
+    "degree": "Gr. Cert.",
+    "faculty": "Arts",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "islamic-studies-gender-womens-studies-phd",
+    "name": "Islamic Studies: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "islamic-studies-phd",
+    "name": "Islamic Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "islamic-studies-thesis-gender-womens-studies-ma",
+    "name": "Islamic Studies (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "islamic-studies-thesis-ma",
+    "name": "Islamic Studies (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "jewish-studies-non-thesis-ma",
+    "name": "Jewish Studies (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "jewish-studies-thesis-ma",
+    "name": "Jewish Studies (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "german-non-thesis-ma",
+    "name": "German (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "german-phd",
+    "name": "German",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "german-thesis-ma",
+    "name": "German (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "hispanic-studies-non-thesis-ma",
+    "name": "Hispanic Studies (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "hispanic-studies-phd",
+    "name": "Hispanic Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "hispanic-studies-thesis-ma",
+    "name": "Hispanic Studies (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "italian-non-thesis-ma",
+    "name": "Italian (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "italian-thesis-ma",
+    "name": "Italian (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "russian-slavic-studies-ma",
+    "name": "Russian and Slavic Studies (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "russian-slavic-studies-phd",
+    "name": "Russian and Slavic Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "linguistics-language-acquisition-phd",
+    "name": "Linguistics: Language Acquisition",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "linguistics-non-thesis-ma",
+    "name": "Linguistics (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "linguistics-phd",
+    "name": "Linguistics",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "linguistics-thesis-ma",
+    "name": "Linguistics (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mathematics-statistics-non-thesis-ma",
+    "name": "Mathematics and Statistics (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mathematics-statistics-phd",
+    "name": "Mathematics and Statistics",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "mathematics-statistics-thesis-ma",
+    "name": "Mathematics and Statistics (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "philosophy-environment-phd",
+    "name": "Philosophy: Environment",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 6
+  },
+  {
+    "id": "philosophy-gender-womens-studies-phd",
+    "name": "Philosophy: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 7
+  },
+  {
+    "id": "philosophy-phd",
+    "name": "Philosophy",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 6
+  },
+  {
+    "id": "philosophy-teaching-philosophy-phd",
+    "name": "Philosophy: Teaching Philosophy",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 6
+  },
+  {
+    "id": "philosophy-thesis-bioethics-ma",
+    "name": "Philosophy (Thesis): Bioethics",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "political-science-gender-womens-studies-phd",
+    "name": "Political Science: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 7
+  },
+  {
+    "id": "political-science-non-thesis-development-studies-ma",
+    "name": "Political Science (Non-Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "political-science-non-thesis-european-studies-ma",
+    "name": "Political Science (Non-Thesis): European Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 5
+  },
+  {
+    "id": "political-science-non-thesis-gender-womens-studies-ma",
+    "name": "Political Science (Non-Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 5
+  },
+  {
+    "id": "political-science-non-thesis-ma",
+    "name": "Political Science (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "political-science-non-thesis-social-statistics-ma",
+    "name": "Political Science (Non-Thesis): Social Statistics",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "political-science-phd",
+    "name": "Political Science",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 6
+  },
+  {
+    "id": "political-science-thesis-development-studies-ma",
+    "name": "Political Science (Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "political-science-thesis-european-studies-ma",
+    "name": "Political Science (Thesis): European Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 5
+  },
+  {
+    "id": "political-science-thesis-ma",
+    "name": "Political Science (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "psychology-behavioural-neuroscience-phd",
+    "name": "Psychology: Behavioural Neuroscience",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "psychology-language-acquisition-phd",
+    "name": "Psychology: Language Acquisition",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "psychology-phd",
+    "name": "Psychology",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "psychology-thesis-ma",
+    "name": "Psychology (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "public-policy-non-thesis-mpp",
+    "name": "Public Policy (Non-Thesis)",
+    "degree": "M.P.P.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "religious-studies-gender-womens-phd",
+    "name": "Religious Studies: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "religious-studies-non-thesis-ma",
+    "name": "Religious Studies (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "religious-studies-non-thesis-stm",
+    "name": "Religious Studies (Non-Thesis)",
+    "degree": "S.T.M.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "religious-studies-phd",
+    "name": "Religious Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "religious-studies-thesis-bioethics-ma",
+    "name": "Religious Studies (Thesis): Bioethics",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "religious-studies-thesis-gender-womens-ma",
+    "name": "Religious Studies (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "religious-studies-thesis-ma",
+    "name": "Religious Studies (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "couple-family-therapy-non-thesis-msca",
+    "name": "Couple and Family Therapy (Non-Thesis)",
+    "degree": "M.Sc.A.",
+    "faculty": "Arts",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "law-social-work-non-thesis-joint-bcljdmsw",
+    "name": "Law & Social Work (Non-Thesis)",
+    "degree": "Joint B.C.L./J.D & M.S.W.",
+    "faculty": "Law",
+    "credits": 132,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "social-work-non-thesis-gender-womens-studies-msw",
+    "name": "Social Work (Non-Thesis): Gender and Women's Studies",
+    "degree": "M.S.W.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "social-work-non-thesis-msw",
+    "name": "Social Work (Non-Thesis)",
+    "degree": "M.S.W.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "social-work-phd",
+    "name": "Social Work: McGill/UdeM/UQAM",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "social-work-thesis-gender-womens-studies-msw",
+    "name": "Social Work (Thesis): Gender and Women's Studies",
+    "degree": "M.S.W.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "social-work-thesis-msw",
+    "name": "Social Work (Thesis)",
+    "degree": "M.S.W.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "medical-sociology-non-thesis-ma",
+    "name": "Medical Sociology (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "medical-sociology-thesis-ma",
+    "name": "Medical Sociology (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "sociology-gender-womens-studies-phd",
+    "name": "Sociology: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "sociology-non-thesis-development-studies-ma",
+    "name": "Sociology (Non-Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "sociology-non-thesis-gender-womens-studies-ma",
+    "name": "Sociology (Non-Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "sociology-non-thesis-ma",
+    "name": "Sociology (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "sociology-non-thesis-population-dynamics-ma",
+    "name": "Sociology (Non-Thesis): Population Dynamics",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "sociology-phd",
+    "name": "Sociology",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "sociology-population-dynamics-phd",
+    "name": "Sociology: Population Dynamics",
+    "degree": "Ph.D.",
+    "faculty": "Arts",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "sociology-thesis-development-studies-ma",
+    "name": "Sociology (Thesis): Development Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "sociology-thesis-gender-womens-studies-ma",
+    "name": "Sociology (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "sociology-thesis-ma",
+    "name": "Sociology (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "sociology-thesis-population-dynamics-ma",
+    "name": "Sociology (Thesis): Population Dynamics",
+    "degree": "M.A.",
+    "faculty": "Arts",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "dental-sciences-non-thesis-ms",
+    "name": "Dental Sciences (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Dental Medicine and Oral Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "dental-sciences-thesis-ms",
+    "name": "Dental Sciences (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Dental Medicine and Oral Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "oral-health-sciences-phd",
+    "name": "Oral Health Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Dental Medicine and Oral Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "oral-med-gr-dip",
+    "name": "Oral Medicine",
+    "degree": "Gr. Dip.",
+    "faculty": "Dental Medicine and Oral Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "counselling-psychology-counselling-applied-teaching-grad-cert",
+    "name": "Counselling Applied to Teaching",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "counselling-psychology-counselling-childhood-intervention-grad-cert",
+    "name": "Early Childhood Intervention",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "counselling-psychology-counselling-residency-grad-dip",
+    "name": "Counselling Psychology (Residency)",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 36,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "counselling-psychology-counselling-school-applied-residency-grad-dip",
+    "name": "School/Applied Child Psychology (Residency)",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 36,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "counselling-psychology-non-thesis-ma-professional-internship",
+    "name": "Counselling Psychology (Non-Thesis): Professional/Internship",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "counselling-psychology-non-thesis-ma-project",
+    "name": "Counselling Psychology (Non-Thesis): Project",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "counselling-psychology-phd",
+    "name": "Counselling Psychology",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "educational-psychology-human-development",
+    "name": "Educational Psychology: Human Development",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "educational-psychology-phd-learning-sciences",
+    "name": "Educational Psychology: Learning Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "educational-psychology-thesis-ma-health-professions-education",
+    "name": "Educational Psychology (Thesis): Health Professions Education",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-psychology-thesis-ma-human-development",
+    "name": "Educational Psychology (Thesis): Human Development",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-psychology-thesis-ma-learning-sciences",
+    "name": "Educational Psychology (Thesis): Learning Sciences",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "psychology-non-thesis-med-general-project",
+    "name": "Educational Psychology (Non-Thesis): General Educational Psychology: Project",
+    "degree": "M.Ed.",
+    "faculty": "Education",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "psychology-non-thesis-med-general",
+    "name": "Educational Psychology (Non-Thesis): General Educational Psychology",
+    "degree": "M.Ed.",
+    "faculty": "Education",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "psychology-non-thesis-med-inclusive-project",
+    "name": "Educational Psychology (Non-Thesis): Inclusive Education: Project",
+    "degree": "M.Ed.",
+    "faculty": "Education",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "psychology-non-thesis-med-inclusive",
+    "name": "Educational Psychology (Non-Thesis): Inclusive Education",
+    "degree": "M.Ed.",
+    "faculty": "Education",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "psychology-non-thesis-med-learning-sciences",
+    "name": "Educational Psychology (Non-Thesis): Learning Sciences",
+    "degree": "M.Ed.",
+    "faculty": "Education",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "school-applied-child-psychology-non-thesis-ma",
+    "name": "School/Applied Child Psychology (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "school-applied-child-psychology-post-phd-gr-dip",
+    "name": "School/Applied Child Psychology (Post-Ph.D.)",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 66,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "school-applied-dpsy-child-psychology",
+    "name": "School/Applied Child Psychology",
+    "degree": "Psy.D",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "school-applied-dpsy-counselling-psychology",
+    "name": "Counselling Psychology",
+    "degree": "Psy.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "school-applied-phd-child-psychology",
+    "name": "School/Applied Child Psychology",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-non-thesis-ma-course-work-literacies-art-cultural-production",
+    "name": "Education and Society (Non-Thesis): Course Work Literacies, Art, Cultural Production",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-non-thesis-ma-course-work-math-science",
+    "name": "Education and Society (Non-Thesis): Course Work Math & Science Education",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-non-thesis-ma-course-work",
+    "name": "Education and Society (Non-Thesis): Course Work",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "education-society-non-thesis-ma-gender-womens-studies",
+    "name": "Education and Society (Non-Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "education-society-non-thesis-ma-jewish",
+    "name": "Education and Society (Non-Thesis): Jewish Education",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-non-thesis-ma-project-literacies-art-cultural-production",
+    "name": "Education and Society (Non-Thesis): Project Literacies, Art, Cultural Production",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-non-thesis-ma-project-math-science-education",
+    "name": "Education and Society (Non-Thesis): Project Math & Science Education",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-non-thesis-ma",
+    "name": "Education and Society (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-thesis-literacies-art-cultural-production-ma",
+    "name": "Education and Society (Thesis): Literacies, Art, Cultural Production",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-thesis-ma-gender-womens-studies",
+    "name": "Education and Society (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "education-society-thesis-ma-mathematics-science-education",
+    "name": "Education and Society (Thesis): Mathematics and Science Education",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "education-society-thesis-ma",
+    "name": "Education and Society (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "educational-leadership-1-graduate-certificate",
+    "name": "Educational Leadership 1",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-leadership-2-graduate-certificate",
+    "name": "Educational Leadership 2",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-leadership-3-graduate-certificate",
+    "name": "Educational Leadership 3",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-leadership-non-thesis-ma-course-work",
+    "name": "Educational Leadership (Non-Thesis): Course Work",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-leadership-non-thesis-ma-gender-womens-studies",
+    "name": "Educational Leadership (Non-Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "educational-leadership-non-thesis-ma-project",
+    "name": "Educational Leadership (Non-Thesis): Project",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-leadership-thesis-ma-gender-womens-studies",
+    "name": "Educational Leadership (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "educational-leadership-thesis-ma",
+    "name": "Educational Leadership (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "educational-studies-phd-gender-womens",
+    "name": "Educational Studies: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "educational-studies-phd-language-acquisition",
+    "name": "Educational Studies: Language Acquisition",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "educational-studies-phd-literacies-art-cultural-production",
+    "name": "Educational Studies - Literacies, Art, Cultural Production",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "educational-studies-phd-mathematics-science-education",
+    "name": "Educational Studies: Mathematics and Science Education",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 5
+  },
+  {
+    "id": "educational-studies-phd",
+    "name": "Educational Studies",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 5
+  },
+  {
+    "id": "international-leadership-educational-administrative-development-graduate-certificate",
+    "name": "International Leadership in Educational and Administrative Development",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "pedagogie-limmersion-francaise-certificat-detudes-superieures",
+    "name": "Pédagogie de l'immersion française",
+    "degree": "Cert.ed.sup.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "second-language-education-coursework-non-thesis-ma",
+    "name": "Second Language Education: Coursework (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "second-language-education-non-thesis-ma-project",
+    "name": "Second Language Education (Non-Thesis): Project",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "second-language-education-thesis-ma-gender-womens-studies",
+    "name": "Second Language Education (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "second-language-education-thesis-ma",
+    "name": "Second Language Education (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "teaching-english-second-language-graduate-certificate",
+    "name": "Teaching English as a Second Language",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "teaching-indigenous-education-non-indigenous-educators-graduate-certificate",
+    "name": "Teaching Indigenous Education for Non Indigenous Educators",
+    "degree": "Gr. Cert.",
+    "faculty": "Education",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "teaching-learning-grad-dip-english-french-second-language-option",
+    "name": "Teaching and Learning: French or English as a Second Language",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "teaching-learning-grad-dip-english-language-arts-option",
+    "name": "Teaching and Learning: English Language Arts",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "teaching-learning-grad-dip-mathematics-option",
+    "name": "Teaching and Learning: Mathematics",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "teaching-learning-grad-dip-science-technology-option",
+    "name": "Teaching and Learning: Science and Technology",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "teaching-learning-grad-dip-social-sciences-option",
+    "name": "Teaching and Learning Social Sciences",
+    "degree": "Gr. Dip.",
+    "faculty": "Education",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "teaching-learning-non-thesis-ma-english-french-second-language",
+    "name": "Teaching and Learning (Non-Thesis): English or French Second Language",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "teaching-learning-non-thesis-ma-english-language-arts-option",
+    "name": "Teaching and Learning (Non-Thesis): English Language Arts Option",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "teaching-learning-non-thesis-ma-mathematics-option",
+    "name": "Teaching and Learning (Non-Thesis): Mathematics Option",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "teaching-learning-non-thesis-ma-science-technology-option",
+    "name": "Teaching and Learning (Non-Thesis): Science and Technology Option",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "teaching-learning-non-thesis-ma-social-sciences-option",
+    "name": "Teaching and Learning (Non-Thesis): Social Sciences Option",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "kinesiology-physical-education-thesis-ma",
+    "name": "Kinesiology and Physical Education (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "kinesiology-physical-education-thesis-ms",
+    "name": "Kinesiology and Physical Education (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Education",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "kinesiology-sciences-phd",
+    "name": "Kinesiology Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Education",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "architecture-phd",
+    "name": "Architecture",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "professional-non-thesis-march",
+    "name": "Professional Master of Architecture (Non-Thesis)",
+    "degree": "M.Arch.",
+    "faculty": "Engineering",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "thesis-msc",
+    "name": "Architecture (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "chemical-engineering-non-thesis-environmental-meng",
+    "name": "Chemical Engineering (Non-Thesis): Environmental Engineering",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "chemical-engineering-non-thesis-meng",
+    "name": "Chemical Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "chemical-engineering-phd",
+    "name": "Chemical Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "chemical-engineering-thesis-msc",
+    "name": "Chemical Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "civil-engineering-non-thesis-environmental-meng",
+    "name": "Civil Engineering (Non-Thesis): Environmental Engineering",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "civil-engineering-non-thesis-meng",
+    "name": "Civil Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "civil-engineering-phd",
+    "name": "Civil Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "civil-engineering-thesis-msc",
+    "name": "Civil Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "electrical-engineering-non-thesis-meng-appllied-artificial-intelligence",
+    "name": "Electrical Engineering (Non-Thesis): Applied Artificial Intelligence",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "electrical-engineering-non-thesis-meng",
+    "name": "Electrical Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "electrical-engineering-phd",
+    "name": "Electrical Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "electrical-engineering-thesis-msc",
+    "name": "Electrical Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "aerospace-engineering-non-thesis-meng",
+    "name": "Aerospace Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mechanical-engineering-non-thesis-meng",
+    "name": "Mechanical Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "mechanical-engineering-phd",
+    "name": "Mechanical Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mechanical-engineering-thesis-msc",
+    "name": "Mechanical Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "materials-engineering-non-thesis-environmental-meng",
+    "name": "Materials Engineering (Non-Thesis): Environmental Engineering",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "materials-engineering-non-thesis-meng",
+    "name": "Materials Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "materials-engineering-phd",
+    "name": "Materials Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "materials-engineering-thesis-msc",
+    "name": "Materials Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "mining-engineering-gr-dip",
+    "name": "Mining Engineering",
+    "degree": "Gr. Dip.",
+    "faculty": "Engineering",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "mining-engineering-non-thesis-environmental-meng",
+    "name": "Mining Engineering (Non-Thesis): Environmental Engineering",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mining-engineering-non-thesis-meng",
+    "name": "Mining Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "mining-engineering-phd",
+    "name": "Mining Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mining-engineering-thesis-msc",
+    "name": "Mining Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "sustainability-engineering-design-non-thesis-meng",
+    "name": "Sustainability in Engineering and Design (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "urban-planning-non-thesis-development-design-mup",
+    "name": "Urban Planning (Non-Thesis): Urban Development and Urban Design",
+    "degree": "M.U.P.",
+    "faculty": "Engineering",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "urban-planning-non-thesis-mup",
+    "name": "Urban Planning (Non-Thesis)",
+    "degree": "M.U.P.",
+    "faculty": "Engineering",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "urban-planning-non-thesis-transportation-mup",
+    "name": "Urban Planning (Non-Thesis): Transportation Planning",
+    "degree": "M.U.P.",
+    "faculty": "Engineering",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "urban-planning-policy-design-phd",
+    "name": "Urban Planning, Policy and Design",
+    "degree": "Ph.D.",
+    "faculty": "Engineering",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 8
+  },
+  {
+    "id": "urban-planning-policy-design-thesis-msc",
+    "name": "Urban Planning, Policy and Design (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Engineering",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "biological-biomedical-engineering-phd",
+    "name": "Biological and Biomedical Engineering",
+    "degree": "Ph.D.",
+    "faculty": "Interfaculty Studies",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "biological-biomedical-engineering-thesis-msc",
+    "name": "Biological and Biomedical Engineering (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Interfaculty Studies",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "biological-biomedical-non-thesis-meng",
+    "name": "Biological and Biomedical Engineering (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Interfaculty Studies",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "biologics-manufacturing-gr-cert",
+    "name": "Biologics Manufacturing",
+    "degree": "Gr. Cert.",
+    "faculty": "Engineering",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "biomanufacturing-meng",
+    "name": "Biological and Biomedical Engineering - Biomanufacturing (Non-Thesis)",
+    "degree": "M.Eng.",
+    "faculty": "Interfaculty Studies",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "synthetic-biology-msc",
+    "name": "Biological and Biomedical Engineering: Synthetic Biology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Interfaculty Studies",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "biophysics-phd",
+    "name": "Biophysics (Ad Hoc)",
+    "degree": "Ph.D.",
+    "faculty": "Interfaculty Studies",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "foundations-health-sciences-education-gr-cert",
+    "name": "Foundations in Health Sciences Education",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "neuroscience-phd",
+    "name": "Neuroscience",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "neuroscience-thesis-msc",
+    "name": "Neuroscience (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "quantitative-life-sciences-phd",
+    "name": "Quantitative Life Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Interfaculty Studies",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "air-space-dcl",
+    "name": "Air and Space Law",
+    "degree": "D.C.L.",
+    "faculty": "Law",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "air-space-law-gr-cert",
+    "name": "Air and Space Law",
+    "degree": "Gr. Cert.",
+    "faculty": "Law",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "comparative-law-gr-cert",
+    "name": "Comparative Law",
+    "degree": "Gr. Cert.",
+    "faculty": "Law",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "law-comparative-dcl",
+    "name": "Law: Comparative Law",
+    "degree": "D.C.L.",
+    "faculty": "Law",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "law-dcl",
+    "name": "Law",
+    "degree": "D.C.L.",
+    "faculty": "Law",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "law-non-thesis-air-space-llm",
+    "name": "Law (Non-Thesis): Air and Space Law",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "law-non-thesis-comparative-llm",
+    "name": "Law (Non-Thesis): Comparative Law",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "law-non-thesis-environment-llm",
+    "name": "Law (Non-Thesis): Environment",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "law-non-thesis-llm",
+    "name": "Law (Non-Thesis)",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "law-thesis-air-space-llm",
+    "name": "Law (Thesis): Air and Space Law",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "law-thesis-bioethics-llm",
+    "name": "Law (Thesis): Bioethics",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "law-thesis-comparative-llm",
+    "name": "Law (Thesis): Comparative Law",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "law-thesis-environment-llm",
+    "name": "Law (Thesis): Environment",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "law-thesis-llm",
+    "name": "Law (Thesis)",
+    "degree": "LL.M.",
+    "faculty": "Law",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "analytics-non-thesis-mm",
+    "name": "Analytics (Non-Thesis)",
+    "degree": "M.M.",
+    "faculty": "Management",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "finance-non-thesis-mm",
+    "name": "Finance (Non-Thesis)",
+    "degree": "M.M.",
+    "faculty": "Management",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "healthcare-management-gr-cert",
+    "name": "Healthcare Management",
+    "degree": "Gr. Cert.",
+    "faculty": "Management",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "imhl-non-thesis-mm",
+    "name": "IMHL (Non-Thesis)",
+    "degree": "M.M.",
+    "faculty": "Management",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "impm-non-thesis-mm",
+    "name": "IMPM (Non-Thesis)",
+    "degree": "M.M.",
+    "faculty": "Management",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "japan-management-non-thesis-finance-mba",
+    "name": "Japan Management (Non-Thesis): Finance",
+    "degree": "M.B.A.",
+    "faculty": "Management",
+    "credits": 57,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "japan-management-non-thesis-general-mba",
+    "name": "Japan Management (Non-Thesis): General Management",
+    "degree": "M.B.A.",
+    "faculty": "Management",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "japan-management-non-thesis-global-strategy-leadership-mba",
+    "name": "Japan Management (Non-Thesis): Global Strategy and Leadership",
+    "degree": "M.B.A.",
+    "faculty": "Management",
+    "credits": 57,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "japan-management-non-thesis-marketing-mba",
+    "name": "Japan Management (Non-Thesis): Marketing",
+    "degree": "M.B.A.",
+    "faculty": "Management",
+    "credits": 57,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "japan-management-non-thesis-technology-innovation-mba",
+    "name": "Japan Management (Non-Thesis): Technology and Innovation Management",
+    "degree": "M.B.A.",
+    "faculty": "Management",
+    "credits": 57,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "joint-executive-mba-non-thesis-emba",
+    "name": "Joint Executive M.B.A. (Non-Thesis)",
+    "degree": "E.M.B.A.",
+    "faculty": "Management",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "management-non-thesis-general-management-law-joint-mba-bcl-jd",
+    "name": "Management (Non-Thesis): General Management & Law",
+    "degree": "Joint M.B.A. & B.C.L./J.D.",
+    "faculty": "Law",
+    "credits": 132,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "management-non-thesis-general-mba",
+    "name": "Management (Non-Thesis): General Management",
+    "degree": "M.B.A.",
+    "faculty": "Management",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "management-non-thesis-mba",
+    "name": "Management (Non-Thesis)",
+    "degree": "M.B.A.",
+    "faculty": "Management",
+    "credits": 54,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "management-phd",
+    "name": "Management",
+    "degree": "Ph.D.",
+    "faculty": "Management",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "manufacturing-management-non-thesis-mm",
+    "name": "Manufacturing Management (Non-Thesis)",
+    "degree": "M.M.",
+    "faculty": "Management",
+    "credits": 56,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "post-mba-gr-cert",
+    "name": "Post MBA",
+    "degree": "Gr. Cert.",
+    "faculty": "Management",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "post-mba-japan-gr-cert",
+    "name": "Post MBA Japan",
+    "degree": "Gr. Cert.",
+    "faculty": "Management",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "professional-accounting-gr-cert",
+    "name": "Professional Accounting",
+    "degree": "Gr. Cert.",
+    "faculty": "Management",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "retailing-non-thesis-mm",
+    "name": "Retailing (Non-Thesis)",
+    "degree": "M.M.",
+    "faculty": "Management",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "biochemistry-bioinformatics-phd",
+    "name": "Biochemistry: Bioinformatics",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "biochemistry-chemical-biology-phd",
+    "name": "Biochemistry: Chemical Biology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "biochemistry-phd",
+    "name": "Biochemistry",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "biochemistry-thesis-bioinformatics-msc",
+    "name": "Biochemistry (Thesis): Bioinformatics",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "biochemistry-thesis-chemical-biology-msc",
+    "name": "Biochemistry (Thesis): Chemical Biology",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "biochemistry-thesis-msc",
+    "name": "Biochemistry (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "biomedical-science-translational-research-gr-cert",
+    "name": "Biomedical Science Translational Research",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "cell-biology-phd",
+    "name": "Cell Biology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "cell-biology-thesis-msc",
+    "name": "Cell Biology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "genetic-counselling-non-thesis-msc",
+    "name": "Genetic Counselling (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "human-genetics-bioinformatics-phd",
+    "name": "Human Genetics: Bioinformatics",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "human-genetics-phd",
+    "name": "Human Genetics",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "human-genetics-thesis-bioethics-msc",
+    "name": "Human Genetics (Thesis): Bioethics",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "human-genetics-thesis-bioinformatics-msc",
+    "name": "Human Genetics (Thesis): Bioinformatics",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "human-genetics-thesis-msc",
+    "name": "Human Genetics (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "microbiology-immunology-phd",
+    "name": "Microbiology and Immunology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "microbiology-immunology-thesis-msc",
+    "name": "Microbiology and Immunology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "pharmacology-environmental-health-sciences-phd",
+    "name": "Pharmacology: Environmental Health Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "pharmacology-phd",
+    "name": "Pharmacology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "pharmacology-thesis-environmental-health-sciences-msc",
+    "name": "Pharmacology (Thesis): Environmental Health Sciences",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "pharmacology-thesis-msc",
+    "name": "Pharmacology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "physiology-bioinformatics-phd",
+    "name": "Physiology: Bioinformatics",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "physiology-chemical-biology-phd",
+    "name": "Physiology: Chemical Biology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "physiology-phd",
+    "name": "Physiology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "physiology-quantitative-computational-phd",
+    "name": "Physiology: Quantitative and Computational Physiology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "physiology-thesis-bioinformatics-msc",
+    "name": "Physiology (Thesis): Bioinformatics",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "physiology-thesis-chemical-biology-msc",
+    "name": "Physiology (Thesis): Chemical Biology",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "physiology-thesis-msc",
+    "name": "Physiology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "physiology-thesis-quantitative-computational-msc",
+    "name": "Physiology (Thesis): Quantitative and Computational Physiology",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "translational-biomedical-engineering-gr-cert",
+    "name": "Translational Biomedical Engineering",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "translational-biomedical-engineering-non-thesis-msca",
+    "name": "Translational Biomedical Engineering (Non-Thesis)",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "communication-sciences-disorders-language-acquisition-phd",
+    "name": "Communication Sciences and Disorders: Language Acquisition",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 6
+  },
+  {
+    "id": "communication-sciences-disorders-non-thesis-speech-language-pathology-msca",
+    "name": "Communication Sciences & Disorders (Non-Thesis): Speech-Language Pathology",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 82,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "communication-sciences-disorders-phd",
+    "name": "Communication Sciences and Disorders",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "communication-sciences-disorders-thesis-msc",
+    "name": "Communication Sciences and Disorders (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "health-sciences-education-phd",
+    "name": "Health Sciences Education",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "interdisciplinary-cancer-sciences-phd",
+    "name": "Interdisciplinary Cancer Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "clinical-research-gr-dip",
+    "name": "Clinical Research",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "clinical-translational-research-clinical-research-phd",
+    "name": "Clinical and Translational Research: Clinical Research",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "clinical-translational-research-digital-health-innovation-phd",
+    "name": "Clinical and Translational Research: Digital Health Innovation",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "clinical-translational-research-phd",
+    "name": "Clinical and Translational Research",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "clinical-translational-research-thesis-bioethics-msc",
+    "name": "Clinical and Translational Research (Thesis): Bioethics",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "clinical-translational-research-thesis-clinical-research-msc",
+    "name": "Clinical and Translational Research (Thesis): Clinical Research",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "clinical-translational-research-thesis-digital-health-innovation-msc",
+    "name": "Clinical and Translational Research (Thesis): Digital Health Innovation",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "clinical-translational-research-thesis-msc",
+    "name": "Clinical and Translational Research (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "family-medicine-primary-care-phd",
+    "name": "Family Medicine & Primary Care",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "family-medicine-thesis-bioethics-msc",
+    "name": "Family Medicine (Thesis): Bioethics",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "family-medicine-thesis-global-health-msc",
+    "name": "Family Medicine (Thesis): Global Health",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "family-medicine-thesis-medical-education-msc",
+    "name": "Family Medicine (Thesis): Medical Education",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "family-medicine-thesis-msc",
+    "name": "Family Medicine (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "medical-radiation-physics-gr-dip",
+    "name": "Medical Radiation Physics",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "medical-radiation-physics-thesis-msc",
+    "name": "Medical Radiation Physics (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "mental-health-phd",
+    "name": "Mental Health",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "mental-health-thesis-msc",
+    "name": "Mental Health (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "oncology-grad-dip",
+    "name": "Oncology",
+    "degree": "Grad. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "pathology-phd",
+    "name": "Pathology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "pathology-thesis-msc",
+    "name": "Pathology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "regenerative-medicine-gr-cert",
+    "name": "Regenerative Medicine",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "surgical-innovation-gr-cert",
+    "name": "Surgical Innovation",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "surgical-innovation-gr-dip",
+    "name": "Surgical Innovation",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "surgical-interventional-sciences-non-thesis-msc",
+    "name": "Surgical and Interventional Sciences (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "surgical-interventional-sciences-non-thesis-oncology-msc",
+    "name": "Surgical and Interventional Sciences (Non-Thesis): Oncology",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "surgical-interventional-sciences-phd",
+    "name": "Surgical and Interventional Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "surgical-interventional-sciences-surgical-education-msc",
+    "name": "Surgical and Interventional Sciences (Thesis): Surgical Education",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "surgical-interventional-sciences-thesis-digital-health-innovation-msc",
+    "name": "Surgical and Interventional Sciences (Thesis): Digital Health Innovation",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "surgical-interventional-sciences-thesis-global-surgery-msc",
+    "name": "Surgical and Interventional Sciences (Thesis): Global Surgery",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "surgical-interventional-sciences-thesis-msc",
+    "name": "Surgical and Interventional Sciences (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "surgical-interventional-sciences-thesis-otolaryngology-msc",
+    "name": "Surgical and Interventional Sciences (Thesis): Otolaryngology",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "surgical-interventional-sciences-thesis-surgical-innovation-msc",
+    "name": "Surgical and Interventional Sciences (Thesis): Surgical Innovation",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "surgical-interventional-sciences-thesis-surgical-outcomes-research-msc",
+    "name": "Surgical and Interventional Sciences (Thesis): Surgical Outcomes Research",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "biostatistics-non-thesis-msc",
+    "name": "Biostatistics (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "biostatistics-phd",
+    "name": "Biostatistics",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "biostatistics-thesis-msc",
+    "name": "Biostatistics (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "epidemiology-global-health-phd",
+    "name": "Epidemiology: Global Health",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "epidemiology-non-thesis-environmental-occupational-health-msc",
+    "name": "Epidemiology (Non-Thesis): Environmental & Occupational Health",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "epidemiology-non-thesis-pharmacoepidemiology-msc",
+    "name": "Epidemiology (Non-Thesis): Pharmacoepidemiology",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "epidemiology-pharmacoepidemiology-phd",
+    "name": "Epidemiology: Pharmacoepidemiology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "epidemiology-phd",
+    "name": "Epidemiology",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "epidemiology-population-dynamics-phd",
+    "name": "Epidemiology: Population Dynamics",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "epidemiology-thesis-msc",
+    "name": "Epidemiology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "health-data-analytics-1-gr-cert",
+    "name": "Health Data Analytics 1",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "occupational-health-non-thesis-distance-msca",
+    "name": "Occupational Health (Non-Thesis) (Distance)",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "occupational-health-non-thesis-resident-msca",
+    "name": "Occupational Health (Non-Thesis) (Resident)",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 46,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "occupational-health-phd",
+    "name": "Occupational Health",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "public-health-non-thesis-msc",
+    "name": "Public Health (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "music-composition-dmus",
+    "name": "Music: Composition",
+    "degree": "D.Mus.",
+    "faculty": "Music",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "music-composition-education-musicology-technology-sound-recording-theory-interdisciplinary-studies-phd",
+    "name": "Music (Composition, Music Education, Musicology, Music Technology, Sound Recording, Theory, Interdisciplinary Studies and Applied Performance Sciences)",
+    "degree": "Ph.D.",
+    "faculty": "Music",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "music-composition-thesis-mmus",
+    "name": "Music: Composition (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "music-education-non-thesis-ma",
+    "name": "Music: Music Education (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "music-education-thesis-ma",
+    "name": "Music: Music Education (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "music-gender-womens-studies-phd",
+    "name": "Music: Gender and Women's Studies",
+    "degree": "Ph.D.",
+    "faculty": "Music",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "music-musicology-non-thesis-ma",
+    "name": "Music: Musicology (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "music-musicology-thesis-gender-womens-studies-ma",
+    "name": "Music Musicology (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "music-musicology-thesis-ma",
+    "name": "Music: Musicology (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "music-performance-studies-dmus",
+    "name": "Music: Performance Studies",
+    "degree": "D.Mus.",
+    "faculty": "Music",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "music-technology-thesis-ma",
+    "name": "Music: Music Technology (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "music-theory-non-thesis-ma",
+    "name": "Music: Theory (Non-Thesis)",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "music-theory-thesis-ma-gender-womens-studies",
+    "name": "Music Theory (Thesis): Gender and Women's Studies",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "music-theory-thesis-ma",
+    "name": "Music: Theory (Thesis)",
+    "degree": "M.A.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "performance-choral-conducting-graduate-certificate",
+    "name": "Performance Choral Conducting",
+    "degree": "Gr. Cert.",
+    "faculty": "Music",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "performance-collaborative-piano-thesis-mmus",
+    "name": "Performance: Collaborative Piano (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "performance-conducting-thesis-mmus",
+    "name": "Performance: Conducting (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "performance-early-music-thesis-mmus",
+    "name": "Performance: Early Music (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "performance-gr-dip",
+    "name": "Performance",
+    "degree": "Gr. Dip.",
+    "faculty": "Music",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "performance-jazz-thesis-mmus",
+    "name": "Performance: Jazz Performance (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 10
+  },
+  {
+    "id": "performance-opera-voice-thesis-mmus",
+    "name": "Performance: Opera and Voice (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "performance-orchestral-instruments-guitar-thesis-mmus",
+    "name": "Performance: Orchestral Instruments, Guitar (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 7
+  },
+  {
+    "id": "performance-organ-thesis-mmus",
+    "name": "Performance: Organ (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "performance-piano-thesis-mmus",
+    "name": "Performance: Piano (Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "performance-post-graduate-artist-diploma",
+    "name": "Performance (Post-Grad Artist Diploma)",
+    "degree": "PGD-AT",
+    "faculty": "Music",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "sound-recording-non-thesis-mmus",
+    "name": "Sound Recording (Non-Thesis)",
+    "degree": "M.Mus.",
+    "faculty": "Music",
+    "credits": 60,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "adult-care-nurse-practitioner-gr-cert",
+    "name": "Adult Care Nurse Practitioner",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 21,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "adult-care-nurse-practitioner-gr-dip",
+    "name": "Adult Care Nurse Practitioner",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "advanced-nursing-non-thesis-global-health-msca",
+    "name": "Advanced Nursing (Non-Thesis): Global Health",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "advanced-nursing-non-thesis-practice-msca",
+    "name": "Advanced Nursing (Non-Thesis): Advanced Practice Nursing",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "advanced-nursing-non-thesis-services-administration-msca",
+    "name": "Advanced Nursing (Non-Thesis): Nursing Services Administration",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 48,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "mental-health-nurse-practitioner-gr-cert",
+    "name": "Mental Health Nurse Practitioner",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 21,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "mental-health-nurse-practitioner-gr-dip",
+    "name": "Mental Health Nurse Practitioner",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "neonatal-nurse-practitioner-gr-cert",
+    "name": "Neonatal Nurse Practitioner",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 24,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "neonatal-nurse-practitioner-gr-dip",
+    "name": "Neonatal Nurse Practitioner",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nurse-practitioner-non-thesis-adult-care-msca",
+    "name": "Nurse Practitioner (Non-Thesis): Adult Care",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nurse-practitioner-non-thesis-mental-health-msca",
+    "name": "Nurse Practitioner (Non-Thesis): Mental Health",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nurse-practitioner-non-thesis-neonatal-msca",
+    "name": "Nurse Practitioner (Non-Thesis): Neonatal",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nurse-practitioner-non-thesis-pediatrics-msca",
+    "name": "Nurse Practitioner (Non-Thesis): Pediatric",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nurse-practitioner-non-thesis-primary-care-msca",
+    "name": "Nurse Practitioner (Non-Thesis): Primary Care",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nursing-non-thesis-direct-entry-advanced-practice-msca",
+    "name": "Nursing (Non-Thesis): Direct Entry to Advanced Practice Nursing",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 61,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nursing-non-thesis-global-health-direct-entry",
+    "name": "Nursing (Non-Thesis): Global Health Direct Entry",
+    "degree": "M.Sc.A.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 61,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "nursing-phd",
+    "name": "Nursing",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "pediatric-nurse-practitioner-gr-cert",
+    "name": "Pediatric Nurse Practitioner",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 27,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "pediatric-nurse-practitioner-gr-dip",
+    "name": "Pediatric Nurse Practitioner",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "primary-care-nurse-practitioner-gr-cert",
+    "name": "Primary Care Nurse Practitioner",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 27,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "primary-care-nurse-practitioner-gr-dip",
+    "name": "Primary Care Nurse Practitioner",
+    "degree": "Gr. Dip.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 30,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "chronic-pain-management-gr-cert",
+    "name": "Chronic Pain Management",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "driving-rehabilitation-gr-cert",
+    "name": "Driving Rehabilitation",
+    "degree": "Gr. Cert.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
+    "id": "occupational-therapy-non-thesis-mscaot",
+    "name": "Occupational Therapy (Non-Thesis)",
+    "degree": "M.Sc.A.OT.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 63,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "physical-therapy-non-thesis-mscapt",
+    "name": "Physical Therapy (Non-Thesis)",
+    "degree": "M.Sc.A.PT.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 61,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "rehabilitation-non-thesis-msc",
+    "name": "Rehabilitation Science (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "rehabilitation-science-phd",
+    "name": "Rehabilitation Science",
+    "degree": "Ph.D.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "rehabilitation-thesis-msc",
+    "name": "Rehabilitation Science (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Medicine and Health Sciences",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "atmospheric-oceanic-sciences-phd",
+    "name": "Atmospheric and Oceanic Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "atmospheric-oceanic-sciences-thesis-msc",
+    "name": "Atmospheric and Oceanic Sciences (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "biology-neotropical-environment-phd",
+    "name": "Biology: Neotropical Environment",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "biology-phd",
+    "name": "Biology",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "biology-thesis-msc",
+    "name": "Biology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "biology-thesis-neotropical-environment-msc",
+    "name": "Biology (Thesis): Neotropical Environment",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "chemistry-phd",
+    "name": "Chemistry",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "chemistry-thesis-msc",
+    "name": "Chemistry (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "computer-science-bioinformatics-phd",
+    "name": "Computer Science: Bioinformatics",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "computer-science-non-thesis-msc",
+    "name": "Computer Science (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "computer-science-phd",
+    "name": "Computer Science",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "computer-science-thesis-bioinformatics-msc",
+    "name": "Computer Science (Thesis): Bioinformatics",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "computer-science-thesis-msc",
+    "name": "Computer Science (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "earth-planetary-sciences-phd",
+    "name": "Earth and Planetary Sciences",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 4
+  },
+  {
+    "id": "earth-planetary-sciences-thesis-msc",
+    "name": "Earth and Planetary Sciences (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "geography-thesis-environment-msc",
+    "name": "Geography (Thesis): Environment",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "geography-thesis-msc",
+    "name": "Geography (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 2
+  },
+  {
+    "id": "geography-thesis-neotropical-environment-msc",
+    "name": "Geography (Thesis): Neotropical Environment",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "data-science-gr-cert",
+    "name": "Data Science",
+    "degree": "Gr. Cert.",
+    "faculty": "Science",
+    "credits": 15,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mathematics-statistics-non-thesis-msc",
+    "name": "Mathematics and Statistics (Non-Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "mathematics-statistics-thesis-msc",
+    "name": "Mathematics and Statistics (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "physics-phd",
+    "name": "Physics",
+    "degree": "Ph.D.",
+    "faculty": "Science",
+    "credits": 0,
+    "level": "graduate",
+    "unparsedRules": 3
+  },
+  {
+    "id": "physics-thesis-msc",
+    "name": "Physics (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 1
+  },
+  {
+    "id": "psychology-thesis-msc",
+    "name": "Psychology (Thesis)",
+    "degree": "M.Sc.",
+    "faculty": "Science",
+    "credits": 45,
+    "level": "graduate",
+    "unparsedRules": 0
+  },
+  {
     "id": "livestock-major-bsc-agenvsc",
     "name": "Livestock Specialization",
     "degree": "B.Sc.(Ag.Env.Sc.)",

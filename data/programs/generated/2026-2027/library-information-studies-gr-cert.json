@@ -1,0 +1,36 @@
+{
+  "id": "library-information-studies-gr-cert",
+  "name": "Library and Information Studies",
+  "degree": "Gr. Cert.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/information-studies/library-information-studies-gr-cert/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "INFS 605",
+            "INFS 689",
+            "INFS 696"
+          ]
+        },
+        {
+          "title": "9-15 credits, three to five INFS courses chosen in consultation with the student's advisor with the exception of the following courses",
+          "unparsed": true
+        },
+        {
+          "title": "0-6 credits of non-INFS courses with a maximum of 3 credits from outside McGill",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

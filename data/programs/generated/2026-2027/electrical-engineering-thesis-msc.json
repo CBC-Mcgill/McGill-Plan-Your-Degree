@@ -1,0 +1,51 @@
+{
+  "id": "electrical-engineering-thesis-msc",
+  "name": "Electrical Engineering (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/electrical-computer-engineering/electrical-engineering-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "ECSE 691",
+            "ECSE 692",
+            "ECSE 693",
+            "ECSE 694",
+            "ECSE 695",
+            "ECSE 696",
+            "ECSE 697"
+          ]
+        },
+        {
+          "title": "Students who choose the thesis option must register for all 27 credits during the three terms of residency",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits of 500-, 600-, or 700-level courses, of which no more than 6 credits may be outside the Department",
+          "unparsed": true
+        },
+        {
+          "title": "Students may be allowed to take more than 6 credits of non-Departmental courses; a letter of recommendation from their supervisor outlining the reason for such an action is required",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

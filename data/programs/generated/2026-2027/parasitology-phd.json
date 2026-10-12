@@ -1,0 +1,36 @@
+{
+  "id": "parasitology-phd",
+  "name": "Parasitology",
+  "degree": "Ph.D.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/parasitology/parasitology-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 10,
+      "courses": [
+        "PARA 635",
+        "PARA 655",
+        "PARA 701",
+        "PARA 710",
+        "PARA 711"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "human-nutrition-thesis-msc",
+  "name": "Human Nutrition (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/human-nutrition/human-nutrition-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "NUTR 680",
+            "NUTR 681",
+            "NUTR 682",
+            "NUTR 683"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "NUTR 695",
+        "NUTR 696",
+        "NUTR 697"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits in graduate-level statistics",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits in graduate-level research methods",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits in graduate-level courses (chosen in consultation with supervisory committee)",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

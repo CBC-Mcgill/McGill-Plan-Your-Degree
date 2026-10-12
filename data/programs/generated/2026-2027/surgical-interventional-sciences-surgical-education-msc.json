@@ -1,0 +1,69 @@
+{
+  "id": "surgical-interventional-sciences-surgical-education-msc",
+  "name": "Surgical and Interventional Sciences (Thesis): Surgical Education",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-interventional-sciences-surgical-education-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EXSU 690",
+            "EXSU 691",
+            "EXSU 692",
+            "EXSU 693"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "EDPH 689",
+        "EXSU 603"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 575",
+            "EDPE 676",
+            "EXSU 606"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "EDPE 605",
+            "EDPE 637"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "Or from 500-, 600-, or 700-level courses in consultation with the Research Advisory Committee",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

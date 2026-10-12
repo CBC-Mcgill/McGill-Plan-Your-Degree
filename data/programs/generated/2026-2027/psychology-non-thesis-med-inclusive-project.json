@@ -1,0 +1,67 @@
+{
+  "id": "psychology-non-thesis-med-inclusive-project",
+  "name": "Educational Psychology (Non-Thesis): Inclusive Education: Project",
+  "degree": "M.Ed.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/psychology-non-thesis-med-inclusive-project/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 42,
+      "courses": [
+        "EDPE 502",
+        "EDPE 575",
+        "EDPE 602",
+        "EDPE 635",
+        "EDPI 543",
+        "EDPI 642",
+        "EDPI 645",
+        "EDPI 654",
+        "EDPI 665",
+        "EDPI 667",
+        "EDPI 691",
+        "EDPI 692",
+        "EDPI 693",
+        "EDPI 694"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "EDPC 501",
+            "EDPC 502",
+            "EDPC 503",
+            "EDPC 504",
+            "EDPC 505",
+            "EDPC 507",
+            "EDPC 540",
+            "EDPC 542",
+            "EDPC 562",
+            "EDPE 515",
+            "EDPE 595",
+            "EDPE 596",
+            "EDPE 640",
+            "EDPE 676",
+            "EDPE 687",
+            "EDPI 526",
+            "EDPI 527",
+            "EDPI 539",
+            "EDPI 540"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

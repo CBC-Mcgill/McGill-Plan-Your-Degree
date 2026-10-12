@@ -1,0 +1,94 @@
+{
+  "id": "biomanufacturing-meng",
+  "name": "Biological and Biomedical Engineering - Biomanufacturing (Non-Thesis)",
+  "degree": "M.Eng.",
+  "faculty": "Interfaculty Studies",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/interfaculty-studies/biological-biomedical-engineering/biomanufacturing-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "BBME 681",
+        "BBME 682",
+        "BIEN 601"
+      ],
+      "note": "must take place in the Biomanufacturing sector"
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Biomanufacturing Core",
+          "courses": [
+            "BIEN 580",
+            "BIEN 585",
+            "BIEN 590",
+            "BIEN 602",
+            "BIEN 670",
+            "BIEN 675",
+            "BIEN 680",
+            "BIEN 685",
+            "BMDE 505",
+            "BMDE 507",
+            "CHEE 512",
+            "CHEE 651"
+          ]
+        },
+        {
+          "title": "BBME Courses (Quantitative)",
+          "courses": [
+            "BIEN 510",
+            "BIEN 530",
+            "BIEN 550",
+            "BIEN 560",
+            "BIEN 570",
+            "BIEN 590",
+            "BMDE 502",
+            "BMDE 503",
+            "BMDE 512",
+            "BMDE 519",
+            "BMDE 520",
+            "BMDE 610"
+          ]
+        },
+        {
+          "title": "BBME Core (Non-Quantitative)",
+          "courses": [
+            "BIEN 500",
+            "BIEN 535",
+            "BIEN 540",
+            "BIEN 580",
+            "BIEN 680",
+            "BMDE 501",
+            "BMDE 504",
+            "BMDE 505",
+            "BMDE 508",
+            "BMDE 525",
+            "BMDE 650",
+            "BMDE 654"
+          ]
+        },
+        {
+          "title": "Minimum of 18 credits from the following three lists of core courses",
+          "unparsed": true
+        },
+        {
+          "title": "At least 12 credits must be chosen from biomanufacturing core courses",
+          "unparsed": true
+        },
+        {
+          "title": "At least 12 credits must be chosen from BBME core courses, of which at least 6 credits must be chosen from quantitative courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

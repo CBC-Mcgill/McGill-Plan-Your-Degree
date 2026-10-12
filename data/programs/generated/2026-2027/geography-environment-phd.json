@@ -1,0 +1,70 @@
+{
+  "id": "geography-environment-phd",
+  "name": "Geography: Environment",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/geography/geography-environment-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "ENVR 615",
+        "GEOG 631",
+        "GEOG 700",
+        "GEOG 701",
+        "GEOG 702"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3-6 credits chosen from",
+          "courses": [
+            "ENVR 610",
+            "ENVR 614"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "0-3 credits chosen from",
+          "courses": [
+            "ENVR 585",
+            "ENVR 630",
+            "ENVR 680"
+          ],
+          "maxCredits": 3
+        },
+        {
+          "title": "or 3 credits at the 500 level or higher recommended by the Advisory Committee and approved by the Environment Option Committee",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "0-3 credits of Geography course at the 500 level or higher selected according to the guidelines of the Department",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

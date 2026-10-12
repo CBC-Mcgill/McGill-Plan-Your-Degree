@@ -1,0 +1,41 @@
+{
+  "id": "surgical-interventional-sciences-thesis-digital-health-innovation-msc",
+  "name": "Surgical and Interventional Sciences (Thesis): Digital Health Innovation",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-interventional-sciences-thesis-digital-health-innovation-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EXSU 690",
+            "EXSU 691",
+            "EXSU 692",
+            "EXSU 693"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 15,
+      "courses": [
+        "EXMD 600",
+        "EXMD 601",
+        "EXMD 634",
+        "EXSU 500",
+        "EXSU 620"
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

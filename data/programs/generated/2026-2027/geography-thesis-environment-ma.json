@@ -1,0 +1,66 @@
+{
+  "id": "geography-thesis-environment-ma",
+  "name": "Geography (Thesis): Environment",
+  "degree": "M.A.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/geography/geography-thesis-environment-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "GEOG 697",
+            "GEOG 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "ENVR 610",
+        "ENVR 650",
+        "ENVR 651",
+        "ENVR 652",
+        "GEOG 631"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ENVR 620",
+            "ENVR 630",
+            "ENVR 680"
+          ]
+        },
+        {
+          "title": "9 credits of courses at the 500 level or higher selected according to guidelines of the Department",
+          "unparsed": true
+        },
+        {
+          "title": "GEOG 696 can count among these complementary credits for students with an appropriate background",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits, one course chosen from one of the following",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

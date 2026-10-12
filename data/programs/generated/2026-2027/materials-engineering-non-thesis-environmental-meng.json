@@ -1,0 +1,123 @@
+{
+  "id": "materials-engineering-non-thesis-environmental-meng",
+  "name": "Materials Engineering (Non-Thesis): Environmental Engineering",
+  "degree": "M.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/mining-materials-engineering/materials-engineering-non-thesis-environmental-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "MIME 680"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "CHEE 591",
+        "CIVE 615"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 22,
+      "rules": [
+        {
+          "title": "Data Analysis Course: One of the following courses",
+          "courses": [
+            "AEMA 611",
+            "CIVE 555",
+            "PSYC 650"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Toxicology Course: One of the following courses",
+          "courses": [
+            "OCCH 612",
+            "OCCH 616"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Water Pollution Engineering Course: One of the following courses",
+          "courses": [
+            "CIVE 651",
+            "CIVE 652",
+            "CIVE 660"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Air Pollution Engineering Course: One of the following courses",
+          "courses": [
+            "CHEE 592",
+            "MECH 534"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Soil and Water Quality Management Course: One of the following courses",
+          "courses": [
+            "BREE 533",
+            "CIVE 686"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "Environmental Impact Course: One of the following courses",
+          "courses": [
+            "GEOG 601"
+          ],
+          "minCourses": 1,
+          "maxCourses": 1
+        },
+        {
+          "title": "(minimum 22 credits)",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 11,
+      "rules": [
+        {
+          "title": "Elective Courses",
+          "courses": [
+            "MIME 681"
+          ]
+        },
+        {
+          "title": "(minimum 11 credits)",
+          "unparsed": true
+        },
+        {
+          "title": "Another project course and/or Engineering or non-Engineering 500-, 600-, or 700-level course subject to approval of the Department",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

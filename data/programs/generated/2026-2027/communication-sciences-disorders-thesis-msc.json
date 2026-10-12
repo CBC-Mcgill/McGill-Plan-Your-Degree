@@ -1,0 +1,53 @@
+{
+  "id": "communication-sciences-disorders-thesis-msc",
+  "name": "Communication Sciences and Disorders (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/communication-sciences-disorders/communication-sciences-disorders-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "SCSD 671",
+            "SCSD 672"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "6-21 credits chosen from",
+          "courses": [
+            "SCSD 675",
+            "SCSD 676",
+            "SCSD 677",
+            "SCSD 678"
+          ],
+          "minCredits": 6,
+          "maxCredits": 21
+        },
+        {
+          "title": "0-15 credits chosen from",
+          "courses": [
+            "SCSD 673",
+            "SCSD 674"
+          ],
+          "maxCredits": 15
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

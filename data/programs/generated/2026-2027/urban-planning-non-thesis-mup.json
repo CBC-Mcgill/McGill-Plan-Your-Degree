@@ -1,0 +1,113 @@
+{
+  "id": "urban-planning-non-thesis-mup",
+  "name": "Urban Planning (Non-Thesis)",
+  "degree": "M.U.P.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/urban-planning/urban-planning-non-thesis-mup/",
+  "credits": 60,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 42,
+      "courses": [
+        "URBP 609",
+        "URBP 610",
+        "URBP 611",
+        "URBP 612",
+        "URBP 622",
+        "URBP 623",
+        "URBP 624",
+        "URBP 628",
+        "URBP 630",
+        "URBP 631",
+        "URBP 632",
+        "URBP 635",
+        "URBP 640",
+        "URBP 641",
+        "URBP 642"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Group A: 9-18 credits from the following",
+          "courses": [
+            "ARCH 515",
+            "CIVE 540",
+            "CIVE 561",
+            "GEOG 504",
+            "GEOG 525",
+            "URBP 501",
+            "URBP 503",
+            "URBP 504",
+            "URBP 506",
+            "URBP 514",
+            "URBP 530",
+            "URBP 536",
+            "URBP 537",
+            "URBP 541",
+            "URBP 542",
+            "URBP 543",
+            "URBP 553",
+            "URBP 555",
+            "URBP 556",
+            "URBP 557",
+            "URBP 581",
+            "URBP 582",
+            "URBP 583",
+            "URBP 586",
+            "URBP 587",
+            "URBP 591",
+            "URBP 592",
+            "URBP 593",
+            "URBP 596",
+            "URBP 597",
+            "URBP 605",
+            "URBP 607",
+            "URBP 608",
+            "URBP 616",
+            "URBP 617",
+            "URBP 618",
+            "URBP 619",
+            "URBP 620",
+            "URBP 625",
+            "URBP 626",
+            "URBP 629",
+            "URBP 643",
+            "URBP 644",
+            "URBP 645",
+            "URBP 646",
+            "URBP 647",
+            "URBP 648",
+            "URBP 649",
+            "URBP 651",
+            "URBP 655",
+            "URBP 656",
+            "URBP 684",
+            "URBP 685",
+            "URBP 694",
+            "URBP 695"
+          ],
+          "minCredits": 9,
+          "maxCredits": 18
+        },
+        {
+          "title": "Students are encouraged to complete at least one course in each of the four areas of design, environment, housing, and transportation",
+          "unparsed": true
+        },
+        {
+          "title": "0-9 credits at the 500 or 600 level of coursework offered by any academic unit at McGill or at another Montreal university, with the approval of the School, if they help students to develop an in-depth knowledge of one or more subject areas in the field of planning, with the approval of the School",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

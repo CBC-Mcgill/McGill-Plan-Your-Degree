@@ -1,0 +1,90 @@
+{
+  "id": "information-studies-non-thesis-course-work-mist",
+  "name": "Information Studies (Non-Thesis): Course Work",
+  "degree": "M.I.St.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/information-studies/information-studies-non-thesis-course-work-mist/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "INFS 601",
+        "INFS 607",
+        "INFS 611",
+        "INFS 617",
+        "INFS 619",
+        "INFS 620"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "INFS 608",
+            "INFS 609",
+            "INFS 612",
+            "INFS 614",
+            "INFS 615",
+            "INFS 616",
+            "INFS 618",
+            "INFS 626",
+            "INFS 627",
+            "INFS 629",
+            "INFS 630",
+            "INFS 631",
+            "INFS 633",
+            "INFS 634",
+            "INFS 635",
+            "INFS 636",
+            "INFS 639",
+            "INFS 641",
+            "INFS 642",
+            "INFS 645",
+            "INFS 649",
+            "INFS 650",
+            "INFS 656",
+            "INFS 657",
+            "INFS 660",
+            "INFS 661",
+            "INFS 662",
+            "INFS 663",
+            "INFS 664",
+            "INFS 665",
+            "INFS 671",
+            "INFS 672",
+            "INFS 673",
+            "INFS 679",
+            "INFS 688",
+            "INFS 689",
+            "INFS 690",
+            "INFS 691",
+            "INFS 692",
+            "INFS 693",
+            "INFS 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "0-12 credits from other 500-, 600-, or 700-level courses; up to 6 credits may be from other Quebec universities",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

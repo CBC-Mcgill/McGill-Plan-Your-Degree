@@ -1,0 +1,71 @@
+{
+  "id": "rehabilitation-thesis-msc",
+  "name": "Rehabilitation Science (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/physical-occupational-therapy/rehabilitation-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 29,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "POTH 696",
+            "POTH 697",
+            "POTH 698",
+            "POTH 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 10,
+      "courses": [
+        "POTH 609",
+        "POTH 610",
+        "POTH 614",
+        "POTH 617"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits of the following",
+          "courses": [
+            "POTH 628"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Or 3 credits of advanced qualitative methodology chosen from courses offered by the School at the 500, 600, or 700 level in consultation with the Graduate Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits that pertain to the student's area of specialization: to be chosen from the School course offerings or other courses at the 500, 600, or 700 level with permission from the Graduate Program Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

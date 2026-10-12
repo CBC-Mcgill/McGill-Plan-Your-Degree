@@ -1,0 +1,55 @@
+{
+  "id": "epidemiology-thesis-msc",
+  "name": "Epidemiology (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/population-global-health/epidemiology-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Course",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "Thesis Course",
+          "courses": [
+            "EPIB 690"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "EPIB 601",
+        "EPIB 603",
+        "EPIB 605",
+        "EPIB 607",
+        "EPIB 613",
+        "EPIB 621",
+        "PPHS 602"
+      ]
+    },
+    {
+      "title": "Complementary Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits of coursework, at the 500 level or higher, chosen in consultation with the student's academic adviser or supervisor",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

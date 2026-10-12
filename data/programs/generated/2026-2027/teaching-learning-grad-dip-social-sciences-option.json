@@ -1,0 +1,68 @@
+{
+  "id": "teaching-learning-grad-dip-social-sciences-option",
+  "name": "Teaching and Learning Social Sciences",
+  "degree": "Gr. Dip.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/teaching-learning-grad-dip-social-sciences-option/",
+  "credits": 30,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "EDEC 550",
+        "EDER 615",
+        "EDPS 600",
+        "EDTL 515",
+        "EDTL 604",
+        "EDTL 607",
+        "EDTL 609",
+        "EDTL 633"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "EDEC 648",
+            "EDER 626"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "EDTL 612",
+            "EDTL 634"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits selected from",
+          "courses": [
+            "EDEC 612",
+            "EDER 600",
+            "EDTL 508",
+            "EDTL 640"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "Or 3 credits may be chosen from 500-level or 600-level department course offerings to be determined by the student's area of study",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

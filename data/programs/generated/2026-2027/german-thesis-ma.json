@@ -1,0 +1,44 @@
+{
+  "id": "german-thesis-ma",
+  "name": "German (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/languages-literatures-cultures/german-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "GERM 690",
+            "GERM 691",
+            "GERM 692"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "18 credits chosen from any graduate seminar listed as offered in German Studies and, with permission of the Graduate Program Director in Languages, Literatures, and Cultures",
+          "unparsed": true
+        },
+        {
+          "title": "With the approval of the Graduate Studies Committee, students are normally permitted to take a maximum of 3 credits in another department",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

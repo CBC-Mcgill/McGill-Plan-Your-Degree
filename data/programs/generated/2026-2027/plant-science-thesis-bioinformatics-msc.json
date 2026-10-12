@@ -1,0 +1,62 @@
+{
+  "id": "plant-science-thesis-bioinformatics-msc",
+  "name": "Plant Science (Thesis): Bioinformatics",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/plant-science/plant-science-thesis-bioinformatics-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 36,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PLNT 664",
+            "PLNT 665",
+            "PLNT 667"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Invitational Seminar",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "PLNT 690"
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "COMP 616",
+        "PLNT 691"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BINF 511",
+            "BINF 621",
+            "BMDE 652",
+            "BTEC 555",
+            "PHGY 603"
+          ]
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

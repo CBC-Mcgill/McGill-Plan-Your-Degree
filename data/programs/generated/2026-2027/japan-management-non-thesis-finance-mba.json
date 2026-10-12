@@ -1,0 +1,68 @@
+{
+  "id": "japan-management-non-thesis-finance-mba",
+  "name": "Japan Management (Non-Thesis): Finance",
+  "degree": "M.B.A.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/japan-management-non-thesis-finance-mba/",
+  "credits": 57,
+  "groups": [
+    {
+      "title": "Required Core Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "MGCR 629",
+        "MGCR 650",
+        "MGCR 651",
+        "MGCR 652",
+        "MGCR 653",
+        "MGCR 661"
+      ]
+    },
+    {
+      "title": "Required Concentration Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "FINE 622",
+        "FINE 646"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 30,
+      "rules": [
+        {
+          "title": "9 credits selected from the following courses toward the concentration",
+          "courses": [
+            "ACCT 618",
+            "FINE 620",
+            "FINE 639",
+            "FINE 648",
+            "FINE 690",
+            "FINE 693"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "BUSA 650",
+            "BUSA 651"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "The remaining 15 credits of courses are chosen from 500- and 600-level courses offered by the Faculty",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

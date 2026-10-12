@@ -1,0 +1,74 @@
+{
+  "id": "agricultural-economics-thesis-msc",
+  "name": "Agricultural Economics (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/natural-resource-sciences/agricultural-economics-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "AGEC 691",
+            "AGEC 692",
+            "AGEC 693",
+            "AGEC 694",
+            "AGEC 695"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "AGEC 690"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "ECON 610",
+            "ECON 620"
+          ]
+        },
+        {
+          "title": "At least 3 credits of quantitative methods course chosen from",
+          "courses": [
+            "ECON 665"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "A minimum of 3 credits from the following",
+          "courses": [
+            "AGEC 685"
+          ],
+          "minCredits": 3
+        },
+        {
+          "title": "6 credits, two theory courses chosen from",
+          "unparsed": true
+        },
+        {
+          "title": "To complete the 45 credit program requirement from courses in your field or thesis area at the 500 level or higher in consultation with the Agricultural Economics Adviser",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

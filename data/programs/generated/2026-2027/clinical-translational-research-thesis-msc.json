@@ -1,0 +1,60 @@
+{
+  "id": "clinical-translational-research-thesis-msc",
+  "name": "Clinical and Translational Research (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/clinical-translational-research-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 39,
+      "courses": [
+        "EXMD 634",
+        "EXMD 690",
+        "EXMD 692",
+        "EXMD 693",
+        "EXMD 694"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EXMD 510",
+            "EXMD 521",
+            "EXMD 600",
+            "EXMD 602",
+            "EXMD 604",
+            "EXMD 605",
+            "EXMD 609",
+            "EXMD 610",
+            "EXMD 616"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Electives",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits at the 500 level or higher",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 500
+          }
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

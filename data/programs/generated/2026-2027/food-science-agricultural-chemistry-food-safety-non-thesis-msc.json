@@ -1,0 +1,83 @@
+{
+  "id": "food-science-agricultural-chemistry-food-safety-non-thesis-msc",
+  "name": "Food Science & Agricultural Chemistry: Food Safety (Non-Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/food-science-agricultural-chemistry/food-science--agricultural-chemistry-food-safety-non-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "FDSC 545",
+        "FDSC 624",
+        "FDSC 626",
+        "FDSC 634"
+      ]
+    },
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "FDSC 697",
+            "FDSC 698"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "3 credits chosen from the following",
+          "courses": [
+            "FDSC 695",
+            "FDSC 696"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "12 credits chosen from the following",
+          "courses": [
+            "AGRI 510",
+            "BREE 535",
+            "FDSC 525",
+            "FDSC 536",
+            "FDSC 555",
+            "NRSC 515",
+            "NUTR 512",
+            "OCCH 612"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "At the 500 level or higher, and selected in consultation with the academic adviser",
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

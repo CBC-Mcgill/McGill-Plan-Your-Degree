@@ -1,0 +1,56 @@
+{
+  "id": "materials-engineering-thesis-msc",
+  "name": "Materials Engineering (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/mining-materials-engineering/materials-engineering-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "MIME 690",
+            "MIME 691",
+            "MIME 692",
+            "MIME 693",
+            "MIME 694",
+            "MIME 695"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "MIME 601",
+        "MIME 610",
+        "MIME 670"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits at the 500-level or higher selected from within and/or outside the Department in consultation with the student's supervisor and/or Advisory Committee",
+          "minCredits": 9,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

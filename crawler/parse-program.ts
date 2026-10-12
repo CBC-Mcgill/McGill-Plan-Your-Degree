@@ -70,7 +70,9 @@ const sentences = (text: string) =>
 
 /** The catalogue year the page belongs to, such as 2026-2027. */
 export function catalogueYear(html: string): string | null {
-  return /(\d{4}-\d{4}) Undergraduate Catalogue/.exec(html)?.[1] ?? null;
+  return (
+    /(\d{4}-\d{4}) (?:Undergraduate|Graduate) Catalogue/.exec(html)?.[1] ?? null
+  );
 }
 
 const HEADING_CREDITS = new RegExp(
@@ -610,14 +612,14 @@ function bareTotal(text: string) {
 const SUBJECT_LIST = String.raw`[A-Z]{3}[A-Z\d](?:(?:, | or | and |, or |, and )[A-Z]{3}[A-Z\d])*`;
 const subjectsIn = (text: string) => text.split(/, or |, and |, | or | and /);
 
-const HUNDRED = "[1-6]00";
+const HUNDRED = "[1-7]00";
 // "400 level or higher", "400- or 500-level", "300, 400, or 500 levels", "400/500 level", "300-500 levels", "300+ level", "below the 300 level".
 const LEVEL_PHRASE = new RegExp(
   String.raw`\b(below )?(?:the )?${HUNDRED}(?:-level|-(?!${HUNDRED}))?(?:(?:,? (?:or|and|to) |, |\s?[-–/]\s?)${HUNDRED}(?:-level|-(?!${HUNDRED}))?)*\+?(?: ?levels?)?(?: (?:or|and) (?:above|higher))?`,
   "gi",
 );
 
-/** The first level phrase of a text and the levels it allows. Nothing above the 500 level is an undergraduate course, so 500 leaves the top open. */
+/** The first level phrase of a text and the levels it allows. Nothing above the 500 level is an undergraduate course and nothing above 700 a graduate one, so 500 and 700 leave the top open, while "500 or 600 level" stops at 600. */
 function levelIn(text: string): { match: Match; phrase: string } | null {
   for (const m of text.matchAll(LEVEL_PHRASE)) {
     const phrase = m[0];
@@ -627,7 +629,7 @@ function levelIn(text: string): { match: Match; phrase: string } | null {
     const high = Math.max(...levels);
     const match: Match = m[1]
       ? { maxLevel: low - 100 }
-      : /\+|above|higher/i.test(phrase) || high >= 500
+      : /\+|above|higher/i.test(phrase) || high === 500 || high >= 700
         ? { minLevel: low }
         : { minLevel: low, maxLevel: high };
     return { match, phrase };
@@ -696,7 +698,7 @@ const NUMBER_WORD = new RegExp(
 const NUMBERS: Record<string, number> = { ...COUNTS, nine: 9, twelve: 12 };
 // Words that add nothing to a level or subject constraint. Any other word leaves the clause for a person to read.
 const FILLER = new Set(
-  "a additional all allowed among an any are at be can chosen come complementary completed count course courses credit credits from have honours in is may must number of program selected should taken the to toward towards undergraduate used which".split(
+  "a additional all allowed among an any are at be can chosen come complementary completed count course courses coursework credit credits from have honours in is may must number of program selected should taken the to toward towards undergraduate used which".split(
     " ",
   ),
 );
@@ -727,7 +729,8 @@ function readClause(
     )
     .replace(EXCLUDING, (_, inner = "", list = "") => {
       const codes = codesIn(inner || list);
-      if (codes.length === 0) unknown = true;
+      // "excluding ECSE 691 to ECSE 697" is a range the codes alone would miss.
+      if (codes.length === 0 || /\bto\b/.test(inner || list)) unknown = true;
       exclude.push(...codes);
       return " ";
     });
@@ -1293,11 +1296,16 @@ const APPROVAL =
 /** A sentence whose courses need the adviser's approval: the rest of it read as usual, any course for a stated amount, nothing for an optional extra outside the lists. */
 function adviserRules(
   text: string,
-  rest: string,
+  unapproved: string,
   subjectsOf: (department: string) => string[],
   credits?: number,
 ): Rule[] {
   const title = trimEnd(text);
+  // "selected from within and/or outside the Department" allows any department.
+  const rest = unapproved.replace(
+    /\s*(?:selected )?(?:from )?within and\/or outside (?:of )?the department\b/i,
+    "",
+  );
   const read = readStatement(rest, subjectsOf, credits);
   if (read) {
     return read.map((rule) => ({
@@ -1312,7 +1320,9 @@ function adviserRules(
   const m = AMOUNT.exec(rest);
   const { minCredits, maxCredits } = m ? amountOf(m) : {};
   // "A maximum of 9 credits may be from another department with permission": the lists still count, so the extra only reminds.
-  const optional = !minCredits || /^[^,]*\b(?:may|can)\b/i.test(rest);
+  const alternative = /^\W*or\b/i.test(rest);
+  const optional =
+    !minCredits || alternative || /^[^,]*\b(?:may|can)\b/i.test(rest);
   if (
     optional &&
     /\b(?:outside|another|other|elsewhere)\b|\bnon-/i.test(rest)
@@ -1354,7 +1364,8 @@ function adviserRules(
   // "or any 300- or 400-level course approved by an adviser" adds to a list, so it counts nothing and reminds.
   const level = /^or any\b/i.test(rest) ? levelIn(rest) : null;
   if (level) return [{ title, match: level.match, adviser: true }];
-  return [unparsed(text)];
+  // "Or 3 credits at the 500 level or higher approved by the Committee" is an approved alternative to the list before it, so it reminds too.
+  return [alternative ? reminder(text) : unparsed(text)];
 }
 
 /** A rule that counts nothing and reminds the student that an adviser can approve more courses. */
@@ -1389,6 +1400,8 @@ export function statementRules(
 
 interface Context {
   subjectsOf: (department: string) => string[];
+  /** A graduate page, whose prose-only headings such as a doctorate's "Thesis" become checks. */
+  graduate: boolean;
 }
 
 const SET = `CODE(?:(?:,? or |, |,? and |/)CODE)+`;
@@ -1813,9 +1826,15 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
     (rule) =>
       !rule.unparsed && !rule.filter && (rule.courses || rule.match?.subjects),
   );
-  return listed
-    ? rules
-    : rules.map((rule) => (rule.filter ? unparsed(rule.title) : rule));
+  if (listed) return rules;
+  return rules.map((rule) => {
+    if (rule.filter) return unparsed(rule.title);
+    // With no list a reminder is the group's source, so it keeps the level it names, as "At the 500 level or higher, and selected in consultation with the academic adviser".
+    const level = levelIn(rule.title)?.match;
+    return level && rule.adviser && JSON.stringify(rule.match) === "{}"
+      ? { ...rule, match: level }
+      : rule;
+  });
 }
 
 const FOUNDATION = /year 0|foundation/i;
@@ -2244,6 +2263,28 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   ) {
     return [{ title: section.title, kind: "complementary", credits: 0, rules }];
   }
+  // A heading with no credits and no list that asks for a thesis, a requirement or courses described in prose, as every doctorate's "Thesis": a group a person checks.
+  const [prose] = textsIn(section);
+  if (
+    ctx.graduate &&
+    !credits &&
+    prose &&
+    tablesIn(section).length === 0 &&
+    CHECKED.test(section.title)
+  ) {
+    const checks =
+      rules.length > 0
+        ? rules.map((rule) => (rule.unparsed ? rule : unparsed(rule.title)))
+        : [unparsed(sentences(prose)[0] ?? prose)];
+    return [
+      {
+        title: section.title,
+        kind: "complementary",
+        credits: 0,
+        rules: checks,
+      },
+    ];
+  }
   if (!credits) return [];
   const group: ComplementaryGroup = {
     title: section.title,
@@ -2257,6 +2298,7 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
 }
 
 const SEPARATE = /complementary|elective|compl[ée]mentaires?/i;
+const CHECKED = /^thesis$|\brequirements?\b|complementary|elective/i;
 const ALTERNATIVE = /^alternative|^option\b/i;
 
 function groupsOf(section: Section, ctx: Context): Group[] {
@@ -2371,8 +2413,21 @@ function foundationGroups(
 const PAREN = String.raw`\((?:[^()]|\([^()]*\))*\)`;
 const DEGREE = new RegExp(`((?:${PAREN}\\s+(?:or|and)\\s+)*${PAREN})$`);
 
-function degreeAndName(heading: string) {
+function degreeAndName(heading: string, graduate: boolean) {
   const title = clean(heading.replace(HEADING_CREDITS, ""));
+  // Graduate titles put a qualifier after the degree, as "Music (M.A.): Theory (Non-Thesis)": the degree is the last parenthesis holding dotted letters.
+  if (graduate) {
+    const dotted = [...title.matchAll(new RegExp(PAREN, "g"))]
+      .filter((m) => /[A-Za-z]\./.test(m[0]))
+      .at(-1);
+    if (!dotted) return { name: title, degree: "" };
+    return {
+      name: clean(
+        `${title.slice(0, dotted.index).trimEnd()}${title.slice(dotted.index + dotted[0].length)}`,
+      ),
+      degree: clean(dotted[0].slice(1, -1)),
+    };
+  }
   // French pages: "Baccalauréat ès Arts (B.A.) - Concentration majeure Langue et littérature françaises".
   const french = /^Baccalauréat[^()]*\(([^()]+)\)\s*-\s*(.+)$/.exec(title);
   if (french) return { name: french[2] ?? title, degree: french[1] ?? "" };
@@ -2388,12 +2443,17 @@ const FACULTY_BY_PATH: Record<string, string> = {
   "agri-env-sci": "Agricultural and Environmental Sciences",
   "arts-science": "Arts and Science",
   arts: "Arts",
+  dentistry: "Dental Medicine and Oral Health Sciences",
   education: "Education",
   engineering: "Engineering",
   environment: "Environment",
+  "interfaculty-studies": "Interfaculty Studies",
   law: "Law",
   management: "Management",
+  "medicine-health-sciences": "Medicine and Health Sciences",
   music: "Music",
+  nursing: "Medicine and Health Sciences",
+  "physical-occupational-therapy": "Medicine and Health Sciences",
   science: "Science",
 };
 
@@ -2401,7 +2461,11 @@ function facultyOf(offered: string, path: string): string {
   const named = /\(([^()]*)\)\s*$/.exec(offered)?.[1] ?? "";
   const faculties = named
     .split(";")
-    .map((f) => clean(f).replace(/^.*?\b(?:Faculty|School) of /, ""))
+    .map((f) =>
+      clean(f)
+        .replace(/^.*?\b(?:Faculty|School) of /, "")
+        .replace(/ & /g, " and "),
+    )
     .filter(Boolean);
   if (faculties.length > 0) return faculties.join(" and ");
   return FACULTY_BY_PATH[path.split("/")[3] ?? ""] ?? "";
@@ -2473,8 +2537,10 @@ export function parseProgramPage(
   const overview = clean(
     $("#programoverviewtextcontainer, #gnralitstextcontainer").text(),
   );
-  // The requirements are under the Courses tab, else under the tab a few pages use instead, the one that has lists.
-  const courses = $("#coursestextcontainer");
+  // The requirements are under the Courses tab, the graduate Program Requirements tab, else under the tab a few pages use instead, the one that has lists.
+  const courses = $("#coursestextcontainer").length
+    ? $("#coursestextcontainer")
+    : $("#programrequirementstextcontainer");
   const container = courses.length
     ? courses
     : $(
@@ -2486,17 +2552,21 @@ export function parseProgramPage(
     String.raw`\(\s*${SPAN}\s*${CREDITS}\s*\)\s*$`,
     "i",
   ).exec(heading);
-  const credits = Number(
-    total?.[1] ??
-      /Program credit weight:\s*(\d+(?:\.\d+)?)/.exec(overview)?.[1],
-  );
+  const credits =
+    Number(
+      total?.[1] ??
+        /Program credit weight:\s*(\d+(?:\.\d+)?)/.exec(overview)?.[1],
+    ) || 0;
   // One French page's address ends its last word with a dash.
   const slug = path
     .split("/")
     .at(-2)
-    ?.replace(/^-+|-+$/g, "");
-  if (!year || !slug || !credits) return null;
-  const ctx = { subjectsOf: options.subjectsOf ?? (() => []) };
+    ?.replace(/^-+|-+$/g, "")
+    .replace(/--+/g, "-");
+  const graduate = path.startsWith("/en/graduate/");
+  // A doctorate gives no credit total.
+  if (!year || !slug || (!credits && !graduate)) return null;
+  const ctx = { subjectsOf: options.subjectsOf ?? (() => []), graduate };
 
   const groups: Group[] = [];
   const sections = readSections($, container);
@@ -2548,12 +2618,14 @@ export function parseProgramPage(
     });
   }
 
-  const { name, degree } = degreeAndName(heading);
+  const { name, degree } = degreeAndName(heading, graduate);
   const overlap = overlapOf(
     clean($("#programoverviewtextcontainer, #coursestextcontainer").text()),
   );
   const offered =
-    /Offered by:\s*(.*?)\s*(?:Degree:|$)/.exec(overview)?.[1] ?? "";
+    /Offered by:\s*(.*?)\s*(?:Degree:|Program credit weight:|$)/.exec(
+      overview,
+    )?.[1] ?? "";
   return {
     id: slug,
     name,
@@ -2567,6 +2639,7 @@ export function parseProgramPage(
     credits,
     groups,
     ...(isMinor({ id: slug, degree }) && overlap !== undefined && { overlap }),
+    ...(graduate && { level: "graduate" as const }),
     generated: true,
   };
 }

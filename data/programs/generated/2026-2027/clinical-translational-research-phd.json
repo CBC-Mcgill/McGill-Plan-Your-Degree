@@ -1,0 +1,75 @@
+{
+  "id": "clinical-translational-research-phd",
+  "name": "Clinical and Translational Research",
+  "degree": "Ph.D.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/clinical-translational-research-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "EXMD 634",
+        "EXMD 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EXMD 510",
+            "EXMD 521",
+            "EXMD 600",
+            "EXMD 602",
+            "EXMD 604",
+            "EXMD 605",
+            "EXMD 609",
+            "EXMD 610",
+            "EXMD 616"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Electives",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits, at the 500 level or higher, are required for students admitted to Ph.D. 2, i.e. students entering the program with a prior Master's degree",
+          "unparsed": true
+        },
+        {
+          "title": "12 credits, at the 500 level or higher, are required for students admitted to Ph.D. 1, i.e. students entering the program with only a B.Sc. or M.D. degree",
+          "unparsed": true
+        },
+        {
+          "title": "Students that fast track from the masters level should take a total of 18 credits including previous courses taken at the Masters Level in a related-field",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

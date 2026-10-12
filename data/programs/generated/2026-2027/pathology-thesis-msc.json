@@ -1,0 +1,66 @@
+{
+  "id": "pathology-thesis-msc",
+  "name": "Pathology (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/pathology-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 33,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PATH 690",
+            "PATH 691",
+            "PATH 692",
+            "PATH 693"
+          ]
+        },
+        {
+          "title": "Students are required to complete all four thesis courses as part of their M.Sc",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "PATH 620",
+        "PATH 622"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "3-6 credits, from the following",
+          "courses": [
+            "PATH 504",
+            "PATH 607",
+            "PATH 652"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6
+        },
+        {
+          "title": "0-3 credits at 500-, 600-, or 700-level, subject to approval of the research director and Graduate Students Committee",
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

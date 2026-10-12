@@ -1,0 +1,49 @@
+{
+  "id": "english-non-thesis-ma",
+  "name": "English (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/english/english-non-thesis-ma/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "ENGL 681",
+            "ENGL 682",
+            "ENGL 683",
+            "ENGL 684"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "ENGL 693",
+        "ENGL 694"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 21,
+      "rules": [
+        {
+          "title": "21 credits of Departmental seminar courses at the 500, 600, or 700 level",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

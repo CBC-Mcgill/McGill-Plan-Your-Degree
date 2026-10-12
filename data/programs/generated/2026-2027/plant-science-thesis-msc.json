@@ -1,0 +1,47 @@
+{
+  "id": "plant-science-thesis-msc",
+  "name": "Plant Science (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/plant-science/plant-science-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 39,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PLNT 664",
+            "PLNT 665",
+            "PLNT 666"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Invitational Seminar",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "PLNT 690"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Two graduate-level courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

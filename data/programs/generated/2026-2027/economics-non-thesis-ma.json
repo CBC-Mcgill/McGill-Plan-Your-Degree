@@ -1,0 +1,55 @@
+{
+  "id": "economics-non-thesis-ma",
+  "name": "Economics (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/economics/economics-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "ECON 650",
+            "ECON 651",
+            "ECON 680",
+            "ECON 681",
+            "ECON 682",
+            "ECON 683"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "ECON 610",
+        "ECON 620",
+        "ECON 654",
+        "ECON 661",
+        "ECON 664",
+        "ECON 665"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits at the 500, 600, or 700 level, as determined by the student's area of study, in consultation with the supervisor [excluding ECON 662, ECON 662D1, ECON 662D2, and ECON 663]",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

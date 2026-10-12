@@ -1,0 +1,66 @@
+{
+  "id": "retailing-non-thesis-mm",
+  "name": "Retailing (Non-Thesis)",
+  "degree": "M.M.",
+  "faculty": "Management",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/management/retailing-non-thesis-mm/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "RETL 601",
+        "RETL 603",
+        "RETL 610",
+        "RETL 611",
+        "RETL 613",
+        "RETL 615",
+        "RETL 617",
+        "RETL 625",
+        "RETL 639"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "12-18 credits from",
+          "courses": [
+            "RETL 621",
+            "RETL 631",
+            "RETL 633",
+            "RETL 635",
+            "RETL 637",
+            "RETL 641",
+            "RETL 643",
+            "RETL 645",
+            "RETL 647",
+            "RETL 651",
+            "RETL 652",
+            "RETL 661",
+            "RETL 662",
+            "RETL 663",
+            "RETL 664"
+          ],
+          "minCredits": 12,
+          "maxCredits": 18
+        },
+        {
+          "title": "0-6 credits from",
+          "unparsed": true
+        },
+        {
+          "title": "up to 6 credits of course from 600-level courses offered by Desautels Faculty of Management",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

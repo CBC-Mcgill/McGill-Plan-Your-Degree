@@ -1,0 +1,50 @@
+{
+  "id": "economics-thesis-ma",
+  "name": "Economics (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/economics/economics-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "ECON 650",
+        "ECON 651",
+        "ECON 652",
+        "ECON 670",
+        "ECON 671",
+        "ECON 672"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "12 credits from the following",
+          "courses": [
+            "ECON 662",
+            "ECON 663",
+            "ECON 709",
+            "ECON 711",
+            "ECON 712",
+            "ECON 713"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "6 credits at the 500 level or higher, as determined by the student's area of study and in consultation with the MA Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

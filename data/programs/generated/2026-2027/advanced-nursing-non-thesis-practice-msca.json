@@ -1,0 +1,78 @@
+{
+  "id": "advanced-nursing-non-thesis-practice-msca",
+  "name": "Advanced Nursing (Non-Thesis): Advanced Practice Nursing",
+  "degree": "M.Sc.A.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/nursing/advanced-nursing-non-thesis-practice-msca/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 30,
+      "courses": [
+        "NUR2 515",
+        "NUR2 600",
+        "NUR2 603",
+        "NUR2 605",
+        "NUR2 608",
+        "NUR2 611",
+        "NUR2 612",
+        "NUR2 617",
+        "NUR2 626",
+        "NUR2 642"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Knowledge Translation Stream",
+          "courses": [
+            "NUR2 601",
+            "NUR2 602"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9,
+          "option": "Knowledge Translation Stream"
+        },
+        {
+          "title": "12 credits from the following project-based courses",
+          "courses": [
+            "NUR2 630",
+            "NUR2 631",
+            "NUR2 632"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12,
+          "option": "Research Stream"
+        },
+        {
+          "title": "3-6 credits from the following clinical courses",
+          "courses": [
+            "NUR2 622",
+            "NUR3 628"
+          ],
+          "minCredits": 3,
+          "maxCredits": 6,
+          "option": "Research Stream"
+        },
+        {
+          "title": "3 credits at the 500-level or higher in the area of health equity to be approved by an Academic Adviser",
+          "unparsed": true,
+          "option": "Research Stream"
+        },
+        {
+          "title": "0-3 credits at the 500-level or higher of a course that furthers advanced practice nursing competencies, to be approved by an Academic Adviser",
+          "unparsed": true,
+          "option": "Research Stream"
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

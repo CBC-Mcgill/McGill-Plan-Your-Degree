@@ -1,0 +1,53 @@
+{
+  "id": "atmospheric-oceanic-sciences-phd",
+  "name": "Atmospheric and Oceanic Sciences",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/atmospheric-oceanic-sciences/atmospheric-oceanic-sciences-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 4,
+      "courses": [
+        "ATOC 700",
+        "ATOC 701"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 7,
+      "rules": [
+        {
+          "title": "1 credit from",
+          "courses": [
+            "ATOC 751",
+            "ATOC 752"
+          ],
+          "minCredits": 1,
+          "maxCredits": 1
+        },
+        {
+          "title": "6 credits from the Department of Atmospheric and Oceanic Sciences, at the 500 or 600 level, as approved by the department Graduate Program Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "bioresource-engineering-non-thesis-msca",
+  "name": "Bioresource Engineering (Non-Thesis)",
+  "degree": "M.Sc.A.",
+  "faculty": "Agricultural and Environmental Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/agri-env-sci/bioresource-engineering/bioresource-engineering-non-thesis-msca/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 12,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "BREE 671",
+            "BREE 672"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 2,
+      "courses": [
+        "BREE 651",
+        "BREE 652"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 31,
+      "rules": [
+        {
+          "title": "31 credits of 500-, 600-, or 700-level courses in bioresource engineering and other fields to be determined in consultation with the Project Director",
+          "unparsed": true
+        },
+        {
+          "title": "Note: 12 of the 31 credits are expected to be from collaborative departments, e.g., food process engineering: 12 credits divided between Food Science and Chemical Engineering",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

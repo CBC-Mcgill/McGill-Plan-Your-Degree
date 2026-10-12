@@ -1,0 +1,128 @@
+{
+  "id": "computer-science-thesis-msc",
+  "name": "Computer Science (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 29,
+      "rules": [
+        {
+          "title": "29 credits selected from",
+          "courses": [
+            "COMP 691",
+            "COMP 696",
+            "COMP 697",
+            "COMP 698",
+            "COMP 699"
+          ],
+          "minCredits": 29,
+          "maxCredits": 29
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 2,
+      "courses": [
+        "COMP 602",
+        "COMP 603"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 14,
+      "rules": [
+        {
+          "title": "Category A: Theory",
+          "courses": [
+            "COMP 523",
+            "COMP 525",
+            "COMP 527",
+            "COMP 531",
+            "COMP 532",
+            "COMP 540",
+            "COMP 547",
+            "COMP 552",
+            "COMP 553",
+            "COMP 554",
+            "COMP 562",
+            "COMP 567",
+            "COMP 594",
+            "COMP 595",
+            "COMP 610",
+            "COMP 611",
+            "COMP 642",
+            "COMP 647",
+            "COMP 649",
+            "COMP 690",
+            "COMP 760",
+            "COMP 761"
+          ]
+        },
+        {
+          "title": "Category B: Systems and Programming",
+          "courses": [
+            "COMP 512",
+            "COMP 513",
+            "COMP 520",
+            "COMP 529",
+            "COMP 533",
+            "COMP 535",
+            "COMP 555",
+            "COMP 596",
+            "COMP 597",
+            "COMP 614",
+            "COMP 621",
+            "COMP 762",
+            "COMP 763",
+            "COMP 764",
+            "COMP 765"
+          ]
+        },
+        {
+          "title": "Category C: Applications",
+          "courses": [
+            "COMP 511",
+            "COMP 514",
+            "COMP 521",
+            "COMP 545",
+            "COMP 546",
+            "COMP 549",
+            "COMP 550",
+            "COMP 551",
+            "COMP 557",
+            "COMP 558",
+            "COMP 559",
+            "COMP 561",
+            "COMP 564",
+            "COMP 565",
+            "COMP 579",
+            "COMP 585",
+            "COMP 588",
+            "COMP 598",
+            "COMP 599",
+            "COMP 654",
+            "COMP 680",
+            "COMP 685",
+            "COMP 766",
+            "COMP 767"
+          ]
+        },
+        {
+          "title": "14 credits of COMP (or approved) courses at the 500-, 600-, or 700-level, with at least 3-4 credits from two of the following three categories of courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

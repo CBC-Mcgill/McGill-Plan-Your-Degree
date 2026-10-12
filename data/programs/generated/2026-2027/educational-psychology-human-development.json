@@ -1,0 +1,68 @@
+{
+  "id": "educational-psychology-human-development",
+  "name": "Educational Psychology: Human Development",
+  "degree": "Ph.D.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/educational-psychology-human-development/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "EDPE 683",
+        "EDPE 686",
+        "EDPE 708",
+        "EDPH 689"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "6 credits from the following",
+          "courses": [
+            "EDPE 682",
+            "EDPE 684",
+            "EDPE 687"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        },
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "EDPE 620",
+            "EDPI 642",
+            "EDPI 656",
+            "EDPI 665"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "Or other 600- and 700-level courses offered by the Department, which must be approved by the Supervisor and Program Director",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

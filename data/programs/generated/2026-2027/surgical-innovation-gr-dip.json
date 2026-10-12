@@ -1,0 +1,73 @@
+{
+  "id": "surgical-innovation-gr-dip",
+  "name": "Surgical Innovation",
+  "degree": "Gr. Dip.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/medicine/surgical-innovation-gr-dip/",
+  "credits": 30,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "12 credits in",
+          "courses": [
+            "CORG 556",
+            "EXSU 619",
+            "EXSU 620",
+            "EXSU 621"
+          ],
+          "minCredits": 12,
+          "maxCredits": 12
+        },
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "EDPE 575",
+            "EPIB 507",
+            "EXSU 606"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        }
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "CACC 520",
+            "CMR2 642",
+            "CPL2 610"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "9 credits of graduate-level courses taken at Concordia University, chosen in consultation with the program director/advisor",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits at the 500 lever or higher, taken in consultation with the program director/advisor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

@@ -1,0 +1,62 @@
+{
+  "id": "civil-engineering-thesis-msc",
+  "name": "Civil Engineering (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/civil-engineering/civil-engineering-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "CIVE 630",
+            "CIVE 631",
+            "CIVE 632",
+            "CIVE 633",
+            "CIVE 634",
+            "CIVE 635"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Course",
+      "kind": "required",
+      "credits": 1,
+      "courses": [
+        "CIVE 662"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 17,
+      "rules": [
+        {
+          "title": "17 credits at the 500 or 600 level",
+          "minCredits": 17,
+          "match": {
+            "minLevel": 500,
+            "maxLevel": 600
+          }
+        },
+        {
+          "title": "At least 8 credits at the 600 level",
+          "minCredits": 8,
+          "match": {
+            "minLevel": 600,
+            "maxLevel": 600
+          }
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

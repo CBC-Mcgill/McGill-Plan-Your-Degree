@@ -1,0 +1,113 @@
+{
+  "id": "performance-gr-dip",
+  "name": "Performance",
+  "degree": "Gr. Dip.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/performance-gr-dip/",
+  "credits": 30,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 16,
+      "courses": [
+        "MUIN 634",
+        "MUIN 635"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 14,
+      "rules": [
+        {
+          "title": "8 credits from the following",
+          "courses": [
+            "MUPG 640",
+            "MUPG 641",
+            "MUPG 642",
+            "MUPG 643",
+            "MUPG 644",
+            "MUPG 645"
+          ],
+          "minCredits": 8,
+          "maxCredits": 8
+        },
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "MUPG 571",
+            "MUPG 572"
+          ]
+        },
+        {
+          "title": "Voice",
+          "courses": [
+            "MUIN 610",
+            "MUIN 611",
+            "MUPG 590"
+          ]
+        },
+        {
+          "title": "Piano",
+          "courses": [
+            "MUPG 670",
+            "MUPG 671",
+            "MUPG 683",
+            "MUPG 684",
+            "MUPG 687",
+            "MUPG 688",
+            "MUPG 689"
+          ]
+        },
+        {
+          "title": "Chamber Music",
+          "courses": [
+            "MUIN 500"
+          ]
+        },
+        {
+          "title": "Organ",
+          "courses": [
+            "MUPG 575",
+            "MUPG 670",
+            "MUPG 671"
+          ]
+        },
+        {
+          "title": "Early Music/Harpsichord",
+          "courses": [
+            "MUPG 670",
+            "MUPG 671"
+          ]
+        },
+        {
+          "title": "Jazz",
+          "courses": [
+            "MUJZ 640",
+            "MUJZ 641"
+          ]
+        },
+        {
+          "title": "6 credits of Performance courses with Schulich School of Music approval from the following",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of any ensemble courses from the following list for these areas",
+          "unparsed": true
+        },
+        {
+          "title": "One 3-credit seminar at the 500 or 600 level approved by The Schulich School of Music",
+          "unparsed": true
+        },
+        {
+          "title": "One 3-credit seminar starting with MUPG",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

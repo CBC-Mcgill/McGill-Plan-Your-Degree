@@ -1,0 +1,51 @@
+{
+  "id": "music-education-non-thesis-ma",
+  "name": "Music: Music Education (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Music",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/music/music-education-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 27,
+      "courses": [
+        "MUGS 614",
+        "MUGS 615",
+        "MUGT 610",
+        "MUGS 635",
+        "MUGS 636"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "9 credits from the following",
+          "courses": [
+            "MUGT 610",
+            "MUGT 611",
+            "MUGT 612",
+            "MUGT 613"
+          ],
+          "minCredits": 9,
+          "maxCredits": 9
+        },
+        {
+          "title": "9 credits of seminars at the 600 level or higher, approved by the Schulich School of Music",
+          "unparsed": true
+        },
+        {
+          "title": "With the approval of the Music Education Area, 6 credits may be taken in the Faculty of Education",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

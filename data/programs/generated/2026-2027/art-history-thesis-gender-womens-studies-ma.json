@@ -1,0 +1,58 @@
+{
+  "id": "art-history-thesis-gender-womens-studies-ma",
+  "name": "Art History (Thesis): Gender and Women's Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/art-history/art-history-thesis-gender-womens-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 30,
+      "courses": [
+        "ARTH 600",
+        "ARTH 698",
+        "ARTH 699",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 15,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "COMS 633",
+            "WMST 602"
+          ]
+        },
+        {
+          "title": "15 credits at the 500 level or higher to be chosen in consultation with a supervisor",
+          "minCredits": 15,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        },
+        {
+          "title": "3 credits of complementary coursework must be chosen from one of the courses below",
+          "unparsed": true
+        },
+        {
+          "title": "Or a 3-credit, option-approved course at the 500, 600, or 700 level, taught outside WMST (e.g., an option-approved Art History course, or an option-approved course taught in another discipline)",
+          "unparsed": true
+        },
+        {
+          "title": "3 credits of the 15 credits of complementary coursework may be taken at another university in Montreal",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

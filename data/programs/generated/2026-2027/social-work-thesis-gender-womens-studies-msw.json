@@ -1,0 +1,64 @@
+{
+  "id": "social-work-thesis-gender-womens-studies-msw",
+  "name": "Social Work (Thesis): Gender and Women's Studies",
+  "degree": "M.S.W.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/social-work/social-work-thesis-gender-womens-studies-msw/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "SWRK 698",
+            "SWRK 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 9,
+      "courses": [
+        "SWRK 605",
+        "SWRK 653",
+        "WMST 601"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "3 credits from the following",
+          "courses": [
+            "WMST 602"
+          ],
+          "minCredits": 3,
+          "maxCredits": 3
+        },
+        {
+          "title": "3 credits of 500- or 600- level courses in another department or discipline approved as a complementary course to the Option in Gender and Women's Studies by an MSW adviser in the School of Social Work",
+          "unparsed": true
+        },
+        {
+          "title": "6 credits of 500- or 600-level courses selected from the School of Social Work",
+          "unparsed": true
+        },
+        {
+          "title": "OR 3 credits of 500- or 600-level WMST courses",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

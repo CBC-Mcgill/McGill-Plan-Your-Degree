@@ -1,0 +1,78 @@
+{
+  "id": "second-language-education-thesis-ma",
+  "name": "Second Language Education (Thesis)",
+  "degree": "M.A.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/second-language-education-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "EDSL 666",
+            "EDSL 667",
+            "EDSL 668",
+            "EDSL 669"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "EDEM 690",
+        "EDPE 575",
+        "EDSL 623",
+        "EDSL 627"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "6 credits selected from the following courses",
+          "courses": [
+            "EDEC 630",
+            "EDEM 609",
+            "EDSL 617",
+            "EDSL 620",
+            "EDSL 624",
+            "EDSL 631",
+            "EDSL 632",
+            "EDSL 640",
+            "EDSL 651"
+          ],
+          "minCredits": 6,
+          "maxCredits": 6
+        }
+      ]
+    },
+    {
+      "title": "Elective Course",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits at the 500, 600, or 700 level chosen in consultation with the Graduate Program Director",
+          "minCredits": 3,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

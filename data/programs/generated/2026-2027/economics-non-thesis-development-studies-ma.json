@@ -1,0 +1,57 @@
+{
+  "id": "economics-non-thesis-development-studies-ma",
+  "name": "Economics (Non-Thesis): Development Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/economics/economics-non-thesis-development-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "ECON 650",
+            "ECON 651",
+            "ECON 680",
+            "ECON 681",
+            "ECON 682",
+            "ECON 683"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 24,
+      "courses": [
+        "ECON 610",
+        "ECON 620",
+        "ECON 634",
+        "ECON 661",
+        "ECON 664",
+        "ECON 665",
+        "ECON 734",
+        "INTD 657"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits at the 500, 600, or 700 level, related to development studies [excluding ECON 662, ECON 662D1, ECON 662D2, and ECON 663]",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

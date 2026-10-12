@@ -1,0 +1,66 @@
+{
+  "id": "occupational-therapy-non-thesis-mscaot",
+  "name": "Occupational Therapy (Non-Thesis)",
+  "degree": "M.Sc.A.OT.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/physical-occupational-therapy/occupational-therapy-non-thesis-mscaot/",
+  "credits": 63,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 60,
+      "courses": [
+        "IPEA 502",
+        "IPEA 503",
+        "OCC1 501",
+        "OCC1 502",
+        "OCC1 503",
+        "OCC1 600",
+        "OCC1 602",
+        "OCC1 617",
+        "OCC1 618",
+        "OCC1 620",
+        "OCC1 622",
+        "OCC1 623",
+        "POTH 612",
+        "POTH 624"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "OCC1 625",
+            "OCC1 626",
+            "POTH 625",
+            "POTH 627",
+            "POTH 632",
+            "POTH 634",
+            "POTH 635",
+            "POTH 636",
+            "POTH 637",
+            "POTH 638",
+            "POTH 640"
+          ]
+        },
+        {
+          "title": "3 credits chosen from the following courses offered by the School",
+          "unparsed": true
+        },
+        {
+          "title": "With permission from the Academic Director, students may take courses offered at the 500 or 600 levels by other departments at McGill",
+          "match": {},
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

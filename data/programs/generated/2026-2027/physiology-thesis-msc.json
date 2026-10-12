@@ -1,0 +1,52 @@
+{
+  "id": "physiology-thesis-msc",
+  "name": "Physiology (Thesis)",
+  "degree": "M.Sc.",
+  "faculty": "Medicine and Health Sciences",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/medicine-health-sciences/biomedical-sciences/physiology-thesis-msc/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Thesis Courses",
+      "kind": "complementary",
+      "credits": 27,
+      "rules": [
+        {
+          "title": "Thesis Courses",
+          "courses": [
+            "PHGY 621",
+            "PHGY 622",
+            "PHGY 623"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "PHGY 601",
+        "PHGY 602",
+        "PHGY 604",
+        "PHGY 607",
+        "PHGY 608",
+        "PHGY 620"
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Students must select 6 approved credits in Physiology or Science at the 500 level or above",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

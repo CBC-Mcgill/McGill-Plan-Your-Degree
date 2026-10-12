@@ -1,0 +1,36 @@
+{
+  "id": "anthropology-thesis-development-studies-ma",
+  "name": "Anthropology (Thesis): Development Studies",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/anthropology/anthropology-thesis-development-studies-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 36,
+      "courses": [
+        "ANTH 602",
+        "ANTH 603",
+        "ANTH 609",
+        "ANTH 699",
+        "INTD 657"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "9 credits to be chosen from among 500-level or above departmental course offerings related to Development Studies and in consultation with the program advisor",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

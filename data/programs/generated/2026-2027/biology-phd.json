@@ -1,0 +1,61 @@
+{
+  "id": "biology-phd",
+  "name": "Biology",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/biology/biology-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "BIOL 700",
+        "BIOL 702"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "BIOL 601",
+            "BIOL 602",
+            "BIOL 603"
+          ]
+        },
+        {
+          "title": "3 credits from the following [choose BIOL 601 and either BIOL 602 or BIOL 603]",
+          "unparsed": true
+        },
+        {
+          "title": "*Or 3 credits at the 500 level or higher with the approval of the Graduate Program Director",
+          "match": {},
+          "adviser": true
+        },
+        {
+          "title": "6 credits at the 500, 600, or 700 level in Biology or other departments, and approved by the Supervisory Committee",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

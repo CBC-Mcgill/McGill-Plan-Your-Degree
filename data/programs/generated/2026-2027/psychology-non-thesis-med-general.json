@@ -1,0 +1,84 @@
+{
+  "id": "psychology-non-thesis-med-general",
+  "name": "Educational Psychology (Non-Thesis): General Educational Psychology",
+  "degree": "M.Ed.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ecp/psychology-non-thesis-med-general/",
+  "credits": 48,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 21,
+      "courses": [
+        "EDPE 502",
+        "EDPE 535",
+        "EDPE 575",
+        "EDPE 602",
+        "EDPE 635",
+        "EDPE 670",
+        "EDPI 642"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "24 credits from the following",
+          "courses": [
+            "EDPC 501",
+            "EDPC 502",
+            "EDPC 503",
+            "EDPC 504",
+            "EDPC 505",
+            "EDPC 507",
+            "EDPC 540",
+            "EDPC 542",
+            "EDPC 562",
+            "EDPE 515",
+            "EDPE 555",
+            "EDPE 595",
+            "EDPE 596",
+            "EDPE 616",
+            "EDPE 620",
+            "EDPE 623",
+            "EDPE 636",
+            "EDPE 640",
+            "EDPE 663",
+            "EDPE 664",
+            "EDPE 666",
+            "EDPE 699",
+            "EDPI 526",
+            "EDPI 527",
+            "EDPI 539",
+            "EDPI 540",
+            "EDPI 543",
+            "EDPI 645",
+            "EDPI 654",
+            "EDPI 656",
+            "EDPI 665",
+            "EDPI 667"
+          ],
+          "minCredits": 24,
+          "maxCredits": 24
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "3 credits at the 500- or 600-level of courses offered by the Department or from other departments or faculties with approval of the Program Director",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

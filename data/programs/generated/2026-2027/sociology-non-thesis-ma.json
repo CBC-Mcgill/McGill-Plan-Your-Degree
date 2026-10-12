@@ -1,0 +1,88 @@
+{
+  "id": "sociology-non-thesis-ma",
+  "name": "Sociology (Non-Thesis)",
+  "degree": "M.A.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/sociology/sociology-non-thesis-ma/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Research Project",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Research Project",
+          "courses": [
+            "SOCI 696",
+            "SOCI 697",
+            "SOCI 699"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 18,
+      "courses": [
+        "SOCI 504",
+        "SOCI 580",
+        "SOCI 600",
+        "SOCI 603",
+        "SOCI 604",
+        "SOCI 625",
+        "SOCI 652"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 9,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "SOCI 506",
+            "SOCI 507",
+            "SOCI 514",
+            "SOCI 515",
+            "SOCI 519",
+            "SOCI 520",
+            "SOCI 525",
+            "SOCI 526",
+            "SOCI 530",
+            "SOCI 535",
+            "SOCI 538",
+            "SOCI 545",
+            "SOCI 550",
+            "SOCI 571",
+            "SOCI 588",
+            "SOCI 590",
+            "SOCI 595",
+            "SOCI 601",
+            "SOCI 621",
+            "SOCI 622",
+            "SOCI 623",
+            "SOCI 624",
+            "SOCI 631",
+            "SOCI 720",
+            "SOCI 730"
+          ]
+        },
+        {
+          "title": "9 credits (at the 500, 600 or 700 level), which may be in a cognate field, subject to the approval of the graduate committee",
+          "minCredits": 9,
+          "maxCredits": 9,
+          "match": {
+            "minLevel": 500
+          },
+          "adviser": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

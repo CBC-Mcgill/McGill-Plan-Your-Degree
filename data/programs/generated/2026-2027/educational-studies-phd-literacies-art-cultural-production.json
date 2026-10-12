@@ -1,0 +1,71 @@
+{
+  "id": "educational-studies-phd-literacies-art-cultural-production",
+  "name": "Educational Studies - Literacies, Art, Cultural Production",
+  "degree": "Ph.D.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/educational-studies-phd-literacies-art-cultural-production/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 11,
+      "courses": [
+        "EDEC 520",
+        "EDEC 700",
+        "EDEC 701",
+        "EDEC 702",
+        "EDEC 703"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EDEA 655",
+            "EDEC 606",
+            "EDEC 630",
+            "EDEM 688"
+          ]
+        },
+        {
+          "title": "Arts:",
+          "courses": [
+            "EDEA 555",
+            "EDEA 655",
+            "EDEC 518"
+          ]
+        },
+        {
+          "title": "Language:",
+          "courses": [
+            "EDEC 627",
+            "EDEC 629",
+            "EDSL 628",
+            "EDSL 632"
+          ]
+        },
+        {
+          "title": "Cultural Production:",
+          "courses": [
+            "EDEC 602",
+            "EDEC 604",
+            "EDEC 606",
+            "EDEC 612"
+          ]
+        },
+        {
+          "title": "3 credits from the following, or 3 credits of another courses at the 500 level or higher, with the permission and prior written approval of the Graduate Program Coordinator",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

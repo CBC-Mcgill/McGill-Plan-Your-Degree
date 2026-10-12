@@ -1,0 +1,58 @@
+{
+  "id": "civil-engineering-non-thesis-environmental-meng",
+  "name": "Civil Engineering (Non-Thesis): Environmental Engineering",
+  "degree": "M.Eng.",
+  "faculty": "Engineering",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/engineering/civil-engineering/civil-engineering-non-thesis-environmental-meng/",
+  "credits": 45,
+  "groups": [
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 6,
+      "courses": [
+        "CHEE 591",
+        "CIVE 615"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 24,
+      "rules": [
+        {
+          "title": "a minimum of 22 credits chosen from the following",
+          "courses": [
+            "AEMA 611",
+            "CIVE 555",
+            "PSYC 650",
+            "OCCH 612",
+            "CIVE 651",
+            "CIVE 652",
+            "CIVE 660",
+            "MECH 534",
+            "BREE 533",
+            "CIVE 686",
+            "GEOG 601",
+            "URBP 506"
+          ],
+          "minCredits": 22
+        }
+      ]
+    },
+    {
+      "title": "Elective Courses",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Also, 0-15 credits of graduate courses from an approved list of courses from the Faculties of Engineering, Agricultural and Environmental Sciences, Law, Management",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

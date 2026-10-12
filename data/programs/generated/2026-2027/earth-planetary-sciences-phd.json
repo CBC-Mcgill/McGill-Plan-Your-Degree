@@ -1,0 +1,57 @@
+{
+  "id": "earth-planetary-sciences-phd",
+  "name": "Earth and Planetary Sciences",
+  "degree": "Ph.D.",
+  "faculty": "Science",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/science/earth-planetary-sciences/earth-planetary-sciences-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 0,
+      "courses": [
+        "EPSC 700"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 6,
+      "rules": [
+        {
+          "title": "Complementary Courses",
+          "courses": [
+            "EPSC 695"
+          ]
+        },
+        {
+          "title": "(as PhD2) are required to take 6-9 credits of courses at level 500 or higher selected in consultation with the thesis supervisor",
+          "unparsed": true
+        },
+        {
+          "title": "Students entering with a B.Sc (as PhD1) are required to take 18-21 credits of courses at the 500 level or higher selected in consultation with the thesis supervisor",
+          "unparsed": true
+        },
+        {
+          "title": "Students with adequate preparation (typically the equivalent of more than four courses at the 500 level or higher) may request special departmental approval to take the following course as a complementary course",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

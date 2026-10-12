@@ -1,0 +1,55 @@
+{
+  "id": "hispanic-studies-phd",
+  "name": "Hispanic Studies",
+  "degree": "Ph.D.",
+  "faculty": "Arts",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/arts/languages-literatures-cultures/hispanic-studies-phd/",
+  "credits": 0,
+  "groups": [
+    {
+      "title": "Thesis",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "A thesis for the doctoral degree must constitute original scholarship and must be a distinct contribution to knowledge",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Required Courses",
+      "kind": "required",
+      "credits": 3,
+      "courses": [
+        "HISP 701",
+        "HISP 713"
+      ]
+    },
+    {
+      "title": "Complementary Courses",
+      "kind": "complementary",
+      "credits": 18,
+      "rules": [
+        {
+          "title": "Six 3-credit courses",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Language Requirement",
+      "kind": "complementary",
+      "credits": 0,
+      "rules": [
+        {
+          "title": "Proficiency in Spanish, and, when appropriate, in Portuguese, as well as a functional ability in French and English",
+          "unparsed": true
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}

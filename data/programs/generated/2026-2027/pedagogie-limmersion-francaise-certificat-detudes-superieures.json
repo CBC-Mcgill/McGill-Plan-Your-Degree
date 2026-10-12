@@ -1,0 +1,54 @@
+{
+  "id": "pedagogie-limmersion-francaise-certificat-detudes-superieures",
+  "name": "Pédagogie de l'immersion française",
+  "degree": "Cert.ed.sup.",
+  "faculty": "Education",
+  "catalogueYear": "2026-2027",
+  "source": "https://coursecatalogue.mcgill.ca/en/graduate/education/ise/pedagogie-limmersion-francaise-certificat-detudes-superieures/",
+  "credits": 15,
+  "groups": [
+    {
+      "title": "Cours obligatoires",
+      "kind": "required",
+      "credits": 12,
+      "courses": [
+        "EDSL 501",
+        "EDSL 570",
+        "EDSL 572",
+        "EDSL 574",
+        "EDSL 576",
+        "EDSL 582",
+        "EDSL 584"
+      ]
+    },
+    {
+      "title": "Cours complémentaires",
+      "kind": "complementary",
+      "credits": 3,
+      "rules": [
+        {
+          "title": "2 crédits parmi les suivants",
+          "courses": [
+            "EDSL 578",
+            "EDSL 580"
+          ],
+          "minCredits": 2,
+          "maxCredits": 2
+        },
+        {
+          "title": "1 crédit parmi les suivants",
+          "courses": [
+            "EDSL 585",
+            "EDSL 586",
+            "EDSL 590",
+            "EDSL 591"
+          ],
+          "minCredits": 1,
+          "maxCredits": 1
+        }
+      ]
+    }
+  ],
+  "level": "graduate",
+  "generated": true
+}
