@@ -2385,7 +2385,6 @@ function complementaryGroups(section: Section, ctx: Context): Group[] {
   if (
     section.max !== undefined &&
     section.max > credits &&
-    credits === section.min &&
     group.rules.some((rule) => !rule.unparsed && !isReminder(rule))
   ) {
     group.maxCredits = section.max;
@@ -2521,10 +2520,11 @@ function groupsOf(section: Section, ctx: Context): Group[] {
 
 /** Headings with no credits right below a Required heading whose courses make up exactly what its total says it lacks, as "Thesis Courses" under a "Required Courses (36 credits)" that lists 5, join it. Returns the sections it took. */
 function absorbBelow(required: RequiredGroup, after: Section[]): Section[] {
+  if (LOWER.has(required)) return [];
   let short = required.credits - (LISTED.get(required) ?? required.credits);
   const taken: RequiredGroup[] = [];
   for (const section of after) {
-    if (short <= 0 || LOWER.has(required)) break;
+    if (short <= 0) break;
     // "one hour per week ... OR one and a half hours per week": the first way counts, as under a Required heading.
     const cut = section.items.findIndex(
       (item) => item.kind === "text" && /^or$/i.test(item.text),

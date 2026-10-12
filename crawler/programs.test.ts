@@ -1597,13 +1597,17 @@ test("a section with no credits asks what its lists say, else a person checks wh
 });
 
 test("a level sentence that is a group's only source stays for a person to check when it also names a department, a kind of course or lists that follow", () => {
-  const rules = (sentence: string) =>
-    (
+  const rules = (sentence: string) => {
+    const [group] = (
       graduateOf(
         "Social Work (Non-Thesis) (M.S.W.) (21 credits)",
         `<h2>Complementary Courses (21 credits)</h2><p>${sentence}</p>`,
-      )?.groups[0] as { rules: object[] }
-    ).rules.map((rule) => ({ ...rule, title: undefined }));
+      ) as Program
+    ).groups;
+    return group?.kind === "complementary"
+      ? group.rules.map((rule) => ({ ...rule, title: undefined }))
+      : [];
+  };
   for (const sentence of [
     "21 credits of courses at the 500 or 600 level courses chosen in consultation with school adviser; up to 6 credits in total may be taken outside the School.",
     "21 credits at the 500 or 600 level, chosen as follows:",
