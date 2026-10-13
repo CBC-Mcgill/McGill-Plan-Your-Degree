@@ -18,7 +18,7 @@ Open-source degree planner for McGill students.
 Import your unofficial transcript, see which courses you can take next, and plan every term up to graduation.
 Plan Your Degree is not affiliated with McGill University.
 
-Try it at [mcgill-plan-your-degree.vercel.app](https://mcgill-plan-your-degree.vercel.app).
+Try it at [plan-your-degree.vercel.app](https://plan-your-degree.vercel.app).
 
 ![The landing page, "Plan your whole McGill degree in one tab", with the import button, the three facts and the planner window](docs/screenshots/landing.webp)
 

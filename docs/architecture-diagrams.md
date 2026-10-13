@@ -342,7 +342,7 @@ flowchart TB
   subgraph deploy["Manual deploy, GitHub is not connected to Vercel"]
     cli["pnpm dlx vercel deploy<br/>--prod --yes from a clean main"]
     vbuild["Vercel runs next build<br/>and reads data/"]
-    live["Live alias<br/>mcgill-plan-your-degree.vercel.app"]
+    live["Live alias<br/>plan-your-degree.vercel.app"]
     check["Check the live stylesheet<br/>has the new tokens"]
     cli --> vbuild --> live --> check
   end
