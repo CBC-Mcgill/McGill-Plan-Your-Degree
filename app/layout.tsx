@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { MotionConfig } from "motion/react";
 import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
@@ -74,6 +75,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Toaster />
           </TooltipProvider>
         </MotionConfig>
+        {/* Anonymous page views only, no cookies, nothing from the profile. */}
+        <Analytics />
       </body>
     </html>
   );

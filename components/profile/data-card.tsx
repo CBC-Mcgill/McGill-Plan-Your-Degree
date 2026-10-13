@@ -35,7 +35,7 @@ export function DataCard({ flow }: { flow: ImportFlow }) {
   return (
     <Section id="data" title="Your data">
       <p className="text-fg-muted">
-        It all lives in this browser, and nothing is sent anywhere.{" "}
+        It all lives in this browser. Only an anonymous page count leaves it.{" "}
         <span id={warning}>
           Restoring a backup replaces your current profile.
         </span>
