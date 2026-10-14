@@ -1166,6 +1166,25 @@ test("a line beside a list opens it to a subject, and courses not taken above jo
   ]);
 });
 
+test("the remaining credits after a list come from the subject, level and courses the sentence names", () => {
+  const rules = complementary(
+    `<p>At least 6 credits selected from:</p>${table("COMP 424", "COMP 551")}<p>The remaining Computer Science credits are selected from COMP courses at the 300 level or above (except COMP 396) and ECSE 508.</p>`,
+  );
+  expect(rules.at(-1)).toEqual({
+    title:
+      "The remaining Computer Science credits are selected from COMP courses at the 300 level or above (except COMP 396) and ECSE 508",
+    match: { subjects: ["COMP"], minLevel: 300, exclude: ["COMP 396"] },
+    courses: ["ECSE 508"],
+  });
+  expect(
+    read(
+      "The remaining complementary credits must be selected from any COMP courses at the 300 level or above except COMP 396.",
+    ),
+  ).toEqual([
+    { match: { subjects: ["COMP"], minLevel: 300, exclude: ["COMP 396"] } },
+  ]);
+});
+
 test("a Required heading over one course stays required, and a choice it cannot read stays complementary", () => {
   const program = programOf(
     "Test Minor (B.Sc.) (19 credits)",
