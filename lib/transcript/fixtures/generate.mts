@@ -32,6 +32,7 @@ interface Row {
 
 interface CreditRow {
   code: string;
+  // "" prints a bare row, a course credited inside its block's total.
   value: string;
   status: "transfer" | "exemption";
   title?: string;
@@ -413,6 +414,13 @@ const fixtures: Fixture[] = [
               { code: "ECON 2XX", value: "3", status: "transfer" },
             ],
           },
+          {
+            from: "Collège Sainte-Anne - 30 credits",
+            rows: [
+              { code: "MATH 203", value: "", status: "exemption" },
+              { code: "MATH 222", value: "", status: "exemption" },
+            ],
+          },
         ],
         rows: [
           row("COMP 250", "Intro to Computer Science", 3, "A-", "completed"),
@@ -434,6 +442,9 @@ const fixtures: Fixture[] = [
           },
         ],
         rows: [
+          row("COMP 303", "Software Design", "TBA", "A", "completed", {
+            unrecognized: true,
+          }),
           row(
             "COMP 251",
             "Algorithms and Data Structures",

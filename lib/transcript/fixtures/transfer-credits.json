@@ -9,7 +9,7 @@
       "minors": [],
       "creditsRequired": 90,
       "previousEducation": "Quebec CEGEP/IB",
-      "advancedStanding": 24,
+      "advancedStanding": 54,
       "courses": [
         {
           "code": "COMP 202",
@@ -96,6 +96,34 @@
           "status": "transfer"
         },
         {
+          "code": "MATH 203",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": null,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "exemption"
+        },
+        {
+          "code": "MATH 222",
+          "title": null,
+          "term": {
+            "season": "Fall",
+            "year": 2024
+          },
+          "credits": null,
+          "grade": null,
+          "remarks": null,
+          "earnedCredits": 0,
+          "multiTerm": false,
+          "status": "exemption"
+        },
+        {
           "code": "COMP 250",
           "title": "Intro to Computer Science",
           "term": {
@@ -166,7 +194,9 @@
           "status": "completed"
         }
       ],
-      "unrecognized": []
+      "unrecognized": [
+        "COMP 303 001 Software Design TBA A NaN B"
+      ]
     }
   },
   "mustNotContain": [
