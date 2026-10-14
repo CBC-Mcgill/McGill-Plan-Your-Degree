@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { MotionConfig } from "motion/react";
 import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
+import Script from "next/script";
 import { CommandPalette } from "@/components/command-palette";
 import { SiteHeader } from "@/components/site-header";
 import { StorageBanner } from "@/components/storage-banner";
@@ -75,8 +76,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Toaster />
           </TooltipProvider>
         </MotionConfig>
-        {/* Anonymous page views only, no cookies, nothing from the profile. */}
+        {/* Anonymous page views only, no cookies, nothing from the profile. Umami feeds the public dashboard. */}
         <Analytics />
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="e5113fc5-2a6f-4e0f-aaa6-1ac650b08e3a"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

@@ -75,7 +75,8 @@ Everything stays in your browser.
 The transcript is read on your device and is never uploaded, and the PDF is never stored.
 The app has no accounts and no backend.
 Course pages load public ratings from mcgill.courses, which receives only the course code, never profile data.
-Vercel Web Analytics counts page views without cookies, so we can see how many people use the app and which pages, never who they are or what is in their profile.
+Vercel Web Analytics and Umami count page views without cookies, so we can see how many people use the app and which pages, never who they are or what is in their profile.
+The Umami numbers are on a public dashboard, so anyone can check them.
 Export your data as a file or delete all of it from the profile page at any time.
 
 ## Setup
