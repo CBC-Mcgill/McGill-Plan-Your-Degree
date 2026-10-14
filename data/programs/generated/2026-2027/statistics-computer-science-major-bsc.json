@@ -110,6 +110,21 @@
         {
           "title": "9 credits in Computer Science selected as follows",
           "unparsed": true
+        },
+        {
+          "title": "The remaining Computer Science credits are selected from COMP courses at the 300 level or above (except COMP 396) and ECSE 508",
+          "match": {
+            "subjects": [
+              "COMP"
+            ],
+            "minLevel": 300,
+            "exclude": [
+              "COMP 396"
+            ]
+          },
+          "courses": [
+            "ECSE 508"
+          ]
         }
       ]
     }
