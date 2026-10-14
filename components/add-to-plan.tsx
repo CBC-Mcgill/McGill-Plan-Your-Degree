@@ -39,6 +39,7 @@ import { planTermOptions } from "@/lib/profile/term-options";
 import { currentTerm } from "@/lib/profile/terms";
 import {
   type CourseRecord,
+  doneStatus,
   type Plan,
   type Term as PlanTerm,
   termKey,
@@ -183,12 +184,8 @@ function statusLine(
         : { ...line(status), word: COPY.notOfferedYear };
     }
     default: {
-      const record = records.find(
-        (r) =>
-          r.code === course.code &&
-          (r.status === "transfer" || r.status === "exemption"),
-      );
-      const shown = record?.status ?? status;
+      const done = status === "completed" && doneStatus(records, course.code);
+      const shown = done || status;
       return {
         glyph: status,
         word: STATUS[shown].label,
@@ -203,9 +200,11 @@ function statusLine(
 /**
  * The page's one action: plan the course in the next term it can start, in any other term to graduation, or take it back out (D30).
  * Red only when the student can take it and it runs next term. Courses taken or in progress have none.
+ * Beside it, "Mark as waived" for a course the student has not taken, and "Undo" once they have waived it.
  */
 export function AddToPlan({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
+  const records = useProfileStore((state) => state.records);
   if (snapshot === undefined) return null;
   if (snapshot === null) {
     return (
@@ -215,6 +214,9 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
     );
   }
   const { status } = courseStatus(course, snapshot);
+  if (status === "completed" && doneStatus(records, course.code) === "waived") {
+    return <WaiveButton code={course.code} waived />;
+  }
   if (
     status === "completed" ||
     status === "covered" ||
@@ -223,10 +225,32 @@ export function AddToPlan({ course }: { course: CourseSummary }) {
     return null;
   }
   return (
-    <PlanActions
-      course={course}
-      open={status === "available" && runsThisYear(course)}
-    />
+    <div className="flex gap-2 max-md:flex-col-reverse max-md:items-start">
+      <WaiveButton code={course.code} waived={false} />
+      <PlanActions
+        course={course}
+        open={status === "available" && runsThisYear(course)}
+      />
+    </div>
+  );
+}
+
+/** Marks the course as waived, or takes the mark back. The button is replaced either way, so focus moves to the one that replaces it. */
+function WaiveButton({ code, waived }: { code: string; waived: boolean }) {
+  const setWaived = useProfileStore((state) => state.setWaived);
+  return (
+    <Button
+      id="waive"
+      variant="secondary"
+      aria-label={waived ? "Undo waiver" : undefined}
+      onClick={() => {
+        flushSync(() => setWaived(code, !waived));
+        document.getElementById("waive")?.focus();
+      }}
+      className="max-md:h-11"
+    >
+      {waived ? COPY.undo : COPY.markWaived}
+    </Button>
   );
 }
 

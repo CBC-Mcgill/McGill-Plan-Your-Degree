@@ -47,6 +47,11 @@ export const STATUS: Record<
     color: "var(--completed)",
     text: "var(--completed)",
   },
+  waived: {
+    label: "Waived",
+    color: "var(--completed)",
+    text: "var(--completed)",
+  },
   failed: { label: "Failed", color: "var(--danger)", text: "var(--danger)" },
   withdrawn: {
     label: "Withdrawn",
@@ -134,7 +139,8 @@ export function StatusIcon({
       )}
       {(status === "completed" ||
         status === "transfer" ||
-        status === "exemption") && (
+        status === "exemption" ||
+        status === "waived") && (
         <>
           <circle cx="7" cy="7" r="6.25" fill="currentColor" />
           <path d="m4.4 7.2 1.8 1.8 3.5-3.7" stroke="white" {...mark} />
@@ -210,6 +216,7 @@ const TINTED: ReadonlySet<Status> = new Set([
   "covered",
   "transfer",
   "exemption",
+  "waived",
   "in-progress",
   "planned",
   "failed",

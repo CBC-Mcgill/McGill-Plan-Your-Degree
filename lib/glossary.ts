@@ -131,6 +131,8 @@ export const STATUS_TIPS: Record<BrowseStatus | CourseStatus, string> = {
   transfer: "McGill gave you credit for this course from earlier studies.",
   exemption:
     "You are exempt from this course. It meets prerequisites and requirements but earns no credit, so another course must make up its credits.",
+  waived:
+    "You marked this course as covered by equivalent preparation. Confirm it with your advisor.",
   failed: "You did not pass this course, so it earns no credit.",
   withdrawn: "You withdrew from this course, so it earns no credit.",
   deferred: "The final grade is not in yet. The course counts once it is.",

@@ -14,6 +14,7 @@ export const COURSE_STATUSES = [
   "deferred",
   "transfer",
   "exemption",
+  "waived",
 ] as const;
 
 export type CourseStatus = (typeof COURSE_STATUSES)[number];
@@ -101,14 +102,30 @@ export function termFromKey(key: number): Term {
   };
 }
 
-/** Done means it counts for prerequisites: completed, transfer, or exemption. */
+/** How a done course counts, from the record that counts most. A waiver is one the student declared, so it never reads as a Minerva exemption. */
+const DONE_ORDER = [
+  "completed",
+  "transfer",
+  "exemption",
+  "waived",
+] as const satisfies readonly CourseStatus[];
+
+/** Done means it counts for prerequisites: completed, transfer, exemption, or waived. */
 export function isDone(status: CourseStatus): boolean {
-  return (
-    status === "completed" || status === "transfer" || status === "exemption"
+  return (DONE_ORDER as readonly CourseStatus[]).includes(status);
+}
+
+/** The status word a done course shows: Completed, or transfer, exemption or waived when no record says completed. */
+export function doneStatus(
+  records: readonly CourseRecord[],
+  code: string,
+): CourseStatus | undefined {
+  return DONE_ORDER.find((status) =>
+    records.some((r) => r.code === code && r.status === status),
   );
 }
 
-/** An exemption is done but gives no credit. */
+/** An exemption or a waiver is done but gives no credit. */
 export function earnsCredit(status: CourseStatus): boolean {
   return status === "completed" || status === "transfer";
 }

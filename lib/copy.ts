@@ -104,6 +104,10 @@ export const COPY = {
   checkRequirement: "Check this requirement",
   checkedByYou: "Checked by you",
   markChecked: "Mark as checked",
+  markWaived: "Mark as waived",
+  waivedByYou: "Waived by you",
+  waiverReminder:
+    "A waiver you marked still needs its credits replaced. Confirm it with your advisor.",
   addCourse: "Add a course",
   listedCourses: "Courses you listed",
   meetsRequirement: "Do these courses meet the requirement?",

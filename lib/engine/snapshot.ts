@@ -14,7 +14,7 @@ export type Catalogue = ReadonlyMap<string, CourseSummary>;
 
 /** What a student has done, is doing, and has planned, indexed once so every lookup is a set hit. */
 export interface Snapshot {
-  /** Completed, transfer, exemption, or covered by a Science DEC. */
+  /** Completed, transfer, exemption, waived, or covered by a Science DEC. */
   done: ReadonlySet<string>;
   /** Credit-bearing done courses with the credits the record states, once each even when passed twice. Null means use the catalogue. */
   earned: ReadonlyMap<string, number | null>;

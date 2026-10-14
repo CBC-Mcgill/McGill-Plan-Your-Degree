@@ -26,6 +26,8 @@ import {
   type StatusInput,
 } from "@/lib/engine/status";
 import { GLOSSARY } from "@/lib/glossary";
+import { useProfileStore } from "@/lib/profile/store";
+import { type CourseRecord, doneStatus } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
 
 const TAKEN: ReadonlySet<Status> = new Set([
@@ -33,6 +35,14 @@ const TAKEN: ReadonlySet<Status> = new Set([
   "covered",
   "in-progress",
 ]);
+
+/** Completed, or how a done course counts when a record says it is a transfer, an exemption or a waiver. */
+const shownStatus = (
+  status: Status,
+  code: string,
+  records: readonly CourseRecord[],
+): Status =>
+  status === "completed" ? (doneStatus(records, code) ?? status) : status;
 
 /** True on the page of a course the student has taken or is taking, where glyphs on its requirements only repeat that. */
 const Settled = createContext(false);
@@ -48,9 +58,12 @@ export function LinkedCode({
   onlyTaken?: boolean;
 }) {
   const snapshot = useSnapshot();
+  const records = useProfileStore((state) => state.records);
   const settled = use(Settled);
   const status =
-    snapshot && !settled ? courseStatus(course, snapshot).status : null;
+    snapshot && !settled
+      ? shownStatus(courseStatus(course, snapshot).status, course.code, records)
+      : null;
   const link = (
     <Link
       href={`/courses/${courseSlug(course.code)}`}
@@ -142,12 +155,16 @@ export function RequirementChecklist({
   courses: RequirementCourses;
 }) {
   const snapshot = useSnapshot();
+  const records = useProfileStore((state) => state.records);
   const settled = use(Settled);
   const known = snapshot && !settled ? snapshot : null;
 
   const row = (code: string) => {
     const course = courses[code];
-    const status = course && known && courseStatus(course, known).status;
+    const status =
+      course &&
+      known &&
+      shownStatus(courseStatus(course, known).status, course.code, records);
     return (
       <CodeRow
         key={code}

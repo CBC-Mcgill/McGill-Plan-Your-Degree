@@ -32,6 +32,8 @@ const MAX_SUGGESTIONS = 8;
 const NO_CATALOGUE: Catalogue = new Map();
 const CODE = /^[A-Z0-9]{4} [A-Z0-9]{3,6}$/;
 
+type ManualStatus = "completed" | "in-progress" | "waived";
+
 /** "comp250" and "comp  250" both become "COMP 250". */
 const normalizeCode = (text: string) =>
   text
@@ -76,9 +78,7 @@ export function CoursesCard() {
 
   const [text, setText] = useState("");
   const [term, setTerm] = useState<Term | null>(null);
-  const [status, setStatus] = useState<"completed" | "in-progress" | null>(
-    null,
-  );
+  const [status, setStatus] = useState<ManualStatus | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const ready = catalogue.status === "ready" ? catalogue.catalogue : null;
@@ -104,6 +104,8 @@ export function CoursesCard() {
     (termKey(chosenTerm) >= termKey(currentTerm())
       ? "in-progress"
       : "completed");
+  // A waiver has no term and earns no credit.
+  const waived = chosenStatus === "waived";
 
   function close() {
     setAdding(false);
@@ -133,8 +135,8 @@ export function CoursesCard() {
       addCourse({
         code: logicalCode(code),
         ...(part && { part }),
-        term: chosenTerm,
-        credits: credits ?? null,
+        term: waived ? null : chosenTerm,
+        credits: waived ? null : (credits ?? null),
         grade: null,
         status: chosenStatus,
       });
@@ -222,16 +224,20 @@ export function CoursesCard() {
             </option>
           ))}
         </datalist>
-        <TermSelect label="Term" value={chosenTerm} onChange={setTerm} />
+        <TermSelect
+          label="Term"
+          value={waived ? null : chosenTerm}
+          onChange={setTerm}
+          disabled={waived}
+        />
         <SelectField
           label="Status"
           value={chosenStatus}
-          onChange={(event) =>
-            setStatus(event.target.value as "completed" | "in-progress")
-          }
+          onChange={(event) => setStatus(event.target.value as ManualStatus)}
         >
           <option value="completed">Completed</option>
           <option value="in-progress">In progress</option>
+          <option value="waived">Waived</option>
         </SelectField>
         <Button
           type="submit"
