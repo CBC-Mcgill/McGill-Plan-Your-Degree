@@ -99,6 +99,18 @@
         {
           "title": "An additional 3 credits may be selected from Group A or B",
           "unparsed": true
+        },
+        {
+          "title": "The remaining complementary credits must be selected from any COMP courses at the 300 level or above except COMP 396",
+          "match": {
+            "subjects": [
+              "COMP"
+            ],
+            "minLevel": 300,
+            "exclude": [
+              "COMP 396"
+            ]
+          }
         }
       ]
     }
