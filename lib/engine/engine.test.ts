@@ -254,6 +254,23 @@ test("an exemption meets its course, and its credits move to a group any course 
   expect([met.satisfied, met.creditsDone, met.credits]).toEqual([true, 15, 15]);
 });
 
+test("a waived course meets its required item without credit, its credits move to the replace group, and it opens the course after it", () => {
+  const waived = buildSnapshot([
+    record("COMP 250", "completed"),
+    { ...record("MATH 240", "waived", null), term: null },
+  ]);
+  expect(waived.earned.has("MATH 240")).toBe(false);
+  const progress = programProgress(tiny, waived, catalogue);
+  expect(progress.remaining).toEqual(["COMP 251"]);
+  expect(progress.groups[0]?.creditsDone).toBe(3);
+  expect(progress.groups.at(-1)?.replaces).toEqual([
+    { code: "MATH 240", credits: 3 },
+  ]);
+  expect(courseStatus(catalogue.get("COMP 251") as Course, waived).status).toBe(
+    "available",
+  );
+});
+
 test("credit splits count earned, then in progress, then planned, up to what a group needs", () => {
   const planned = buildSnapshot(records, [
     {

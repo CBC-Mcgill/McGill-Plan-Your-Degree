@@ -129,6 +129,8 @@ export function RecordTable({ rows }: { rows: RecordRow[] }) {
             <td className={CELL}>
               {row.term ? (
                 formatTerm(row.term)
+              ) : row.status === "waived" ? (
+                <Dash label="No term" />
               ) : (
                 <span className="text-fg-muted">Before your first term</span>
               )}
@@ -166,7 +168,9 @@ export function RecordTable({ rows }: { rows: RecordRow[] }) {
 /** A record's term, status and credits, the second line of a phone row. */
 function details(row: RecordRow) {
   return [
-    row.term ? formatTerm(row.term) : "Before your first term",
+    row.term
+      ? formatTerm(row.term)
+      : row.status !== "waived" && "Before your first term",
     <span
       key="status"
       className="inline-flex items-center gap-1.5"

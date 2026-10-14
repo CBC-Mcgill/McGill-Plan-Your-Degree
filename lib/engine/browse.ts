@@ -2,7 +2,13 @@ import type { IndexedCourse } from "../catalogue/search.ts";
 import { indexCourses } from "../catalogue/search.ts";
 import type { CourseSummary } from "../catalogue/types.ts";
 import { COPY } from "../copy.ts";
-import type { CourseRecord, Plan, Season } from "../profile/types.ts";
+import { STATUS_TIPS } from "../glossary.ts";
+import {
+  type CourseRecord,
+  doneStatus,
+  type Plan,
+  type Season,
+} from "../profile/types.ts";
 import type { Program } from "../programs/types.ts";
 import { groupAllows, namesCourses } from "./progress.ts";
 import type { Snapshot } from "./snapshot.ts";
@@ -395,17 +401,13 @@ export function statusDetail(
         : "You are taking this now.";
     }
     case "completed": {
+      const shown = doneStatus(student.records, course.code);
       const record = student.records.find(
-        (r) =>
-          r.code === course.code &&
-          (r.status === "completed" ||
-            r.status === "transfer" ||
-            r.status === "exemption"),
+        (r) => r.code === course.code && r.status === shown,
       );
-      if (record?.status === "transfer") return "Counted as transfer credit.";
-      if (record?.status === "exemption") {
-        return "You are exempt from this course.";
-      }
+      if (shown === "transfer") return "Counted as transfer credit.";
+      if (shown === "exemption") return "You are exempt from this course.";
+      if (shown === "waived") return STATUS_TIPS.waived;
       const when = record?.term ? ` in ${COPY.term(record.term)}` : "";
       const grade = record?.grade
         ? ` with ${article(record.grade)} ${record.grade}`

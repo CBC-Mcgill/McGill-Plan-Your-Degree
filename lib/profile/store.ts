@@ -81,6 +81,8 @@ export interface ProfileActions {
   setCreditLimit: (creditLimit: number) => void;
   /** Marks a rule from `checkKey` as checked by the student, or takes the mark back. */
   setChecked: (key: string, checked: boolean) => void;
+  /** Marks a course as waived by the student, or takes the mark back. The course's other records stay. */
+  setWaived: (code: string, waived: boolean) => void;
   /** Replaces the courses listed under a rule from `checkKey`. An empty list drops the key. */
   setAssigned: (key: string, codes: string[]) => void;
   /** A course sits in one term at most, so adding it again moves it. */
@@ -201,6 +203,26 @@ export const useProfileStore = create<ProfileState>()(
           checked: [
             ...state.checked.filter((k) => k !== key),
             ...(checked ? [key] : []),
+          ],
+        })),
+      setWaived: (code, waived) =>
+        set((state) => ({
+          records: [
+            ...state.records.filter(
+              (r) => !(r.code === code && r.status === "waived"),
+            ),
+            ...(waived
+              ? [
+                  {
+                    code,
+                    term: null,
+                    credits: null,
+                    grade: null,
+                    status: "waived" as const,
+                    source: "manual" as const,
+                  },
+                ]
+              : []),
           ],
         })),
       setAssigned: (key, codes) =>

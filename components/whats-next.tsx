@@ -97,7 +97,7 @@ import {
 } from "@/lib/profile/term-options";
 import {
   type CourseRecord,
-  isDone,
+  doneStatus,
   type Plan,
   type Term,
   termKey,
@@ -758,8 +758,6 @@ function LinkList({
   );
 }
 
-const DONE_ORDER = ["completed", "transfer", "exemption"];
-
 /** The status and term of every course the student has done, is taking or planned. */
 function courseFacts(
   records: readonly CourseRecord[],
@@ -773,23 +771,11 @@ function courseFacts(
   for (const [code, term] of snapshot.inProgress) {
     facts.set(code, { status: "in-progress", term });
   }
-  const best = new Map<string, CourseRecord>();
-  for (const record of records) {
-    const before = best.get(record.code);
-    if (
-      isDone(record.status) &&
-      (!before ||
-        DONE_ORDER.indexOf(record.status) < DONE_ORDER.indexOf(before.status))
-    ) {
-      best.set(record.code, record);
-    }
-  }
   for (const code of snapshot.done) {
-    const record = best.get(code);
+    const shown = doneStatus(records, code);
+    const record = records.find((r) => r.code === code && r.status === shown);
     facts.set(code, {
-      status: snapshot.covered.has(code)
-        ? "covered"
-        : (record?.status ?? "completed"),
+      status: snapshot.covered.has(code) ? "covered" : (shown ?? "completed"),
       term: record?.term ?? null,
     });
   }
@@ -1007,6 +993,9 @@ function GroupBody({
   heading: Heading;
 }) {
   const definition = program.groups[index];
+  const note = definition?.note && (
+    <p className="text-fg-muted">{definition.note}</p>
+  );
   if (group.credited) {
     const codes =
       definition?.kind === "required"
@@ -1041,12 +1030,15 @@ function GroupBody({
   }
   if (group.kind === "required") {
     return (
-      <RequiredBlocks
-        group={group}
-        view={view}
-        context={context}
-        heading={heading}
-      />
+      <>
+        {note}
+        <RequiredBlocks
+          group={group}
+          view={view}
+          context={context}
+          heading={heading}
+        />
+      </>
     );
   }
   const open = view.complementary.find((g) => g.index === index);
@@ -1062,12 +1054,16 @@ function GroupBody({
   const planned = view.planned[index] ?? [];
   return (
     <>
+      {note}
       {group.replaces && (
         <p className="text-fg-muted">
           Any course can make up the credits of a course exempted without
           credit. Check your choice with your advisor.
         </p>
       )}
+      {group.replaces?.some(
+        ({ code }) => context.facts.get(code)?.status === "waived",
+      ) && <p className="text-fg-muted">{COPY.waiverReminder}</p>}
       {group.replaces && (
         <RuleCourses
           ruleKey={replaceKey(program)}
@@ -1220,7 +1216,7 @@ function RequiredBlocks({
         heading={heading}
       >
         <ul>
-          <ItemRows items={open} context={context} />
+          <ItemRows items={open} context={context} waivable />
         </ul>
       </Block>
       <Block
@@ -1230,7 +1226,7 @@ function RequiredBlocks({
         heading={heading}
       >
         <ul>
-          <ItemRows items={blocked} context={context} />
+          <ItemRows items={blocked} context={context} waivable />
         </ul>
       </Block>
       <Counted courses={group.courses} context={context} heading={heading} />
@@ -1242,10 +1238,13 @@ function ItemRows({
   items,
   context,
   plannedBlock,
+  waivable,
 }: {
   items: Item[];
   context: Context;
   plannedBlock?: boolean;
+  /** A required course still to take, which the student may mark as waived. */
+  waivable?: boolean;
 }) {
   return items.map((item) =>
     "oneOf" in item ? (
@@ -1261,6 +1260,7 @@ function ItemRows({
               entry={entry}
               context={context}
               plannedBlock={plannedBlock}
+              waivable={waivable}
             />
           ))}
         </ul>
@@ -1271,21 +1271,40 @@ function ItemRows({
         entry={item}
         context={context}
         plannedBlock={plannedBlock}
+        waivable={waivable}
       />
     ),
   );
 }
+
+// A row that moves to another block takes focus with it, to the button of this name there.
+const focusLater = (name: string) =>
+  requestAnimationFrame(() =>
+    document
+      .querySelector<HTMLElement>(`[aria-label="${CSS.escape(name)}"]`)
+      ?.focus(),
+  );
+
+// A row button stays 36px tall, its target grown to 44px where actions always show.
+const HIT_AREA =
+  "max-lg:relative max-lg:after:absolute max-lg:after:-inset-y-1 max-lg:after:inset-x-0";
+
+const markWaived = (code: string) => `${COPY.markWaived} ${code}`;
+const undoWaiver = (code: string) => `${COPY.undo} ${code} waiver`;
 
 /** A course still to take: open with Add, planned with Remove in its own term, or not open with why. Under the Planned heading the term alone says it. */
 function Row({
   entry: { course, uncertain, reason },
   context,
   plannedBlock = false,
+  waivable = false,
 }: {
   entry: Entry;
   context: Context;
   plannedBlock?: boolean;
+  waivable?: boolean;
 }) {
+  const setWaived = useProfileStore((state) => state.setWaived);
   const { term, planned } = context;
   const plannedIn = planned.get(course.code);
   const here = plannedIn !== undefined && termKey(plannedIn) === termKey(term);
@@ -1296,12 +1315,13 @@ function Row({
   function toggle() {
     if (here) removeWithUndo(term, course.code);
     else addWithUndo(term, course.code);
-    // The row moves to another block, so focus follows it there.
-    requestAnimationFrame(() =>
-      document
-        .querySelector<HTMLElement>(`[aria-label="${CSS.escape(label(here))}"]`)
-        ?.focus(),
-    );
+    focusLater(label(here));
+  }
+
+  function waive() {
+    context.keepPane?.();
+    setWaived(course.code, true);
+    focusLater(undoWaiver(course.code));
   }
 
   return (
@@ -1316,13 +1336,26 @@ function Row({
             : COPY.plannedFor(plannedIn)
           : (reason ?? `Offered ${seasonsOffered(course)}`)
       }
+      waive={
+        waivable &&
+        !plannedIn && (
+          <Button
+            variant="secondary"
+            aria-label={markWaived(course.code)}
+            onClick={waive}
+            className={HIT_AREA}
+          >
+            {COPY.markWaived}
+          </Button>
+        )
+      }
       action={
         here || (!plannedIn && !reason) ? (
           <Button
             variant="secondary"
             aria-label={label(!here)}
             onClick={toggle}
-            className="max-lg:relative max-lg:after:absolute max-lg:after:-inset-y-1 max-lg:after:inset-x-0"
+            className={HIT_AREA}
           >
             {here ? "Remove" : "Add"}
           </Button>
@@ -1338,6 +1371,7 @@ function PaneRow({
   uncertain = false,
   share,
   note,
+  waive,
   action,
 }: {
   course: CourseSummary;
@@ -1345,6 +1379,8 @@ function PaneRow({
   /** On a second program's row: counts for both, or for the program only. */
   share?: Definition;
   note: ReactNode;
+  /** "Mark as waived" before the action. On hover it covers the credits, and where actions always show it sits under them. */
+  waive?: ReactNode;
   action?: ReactNode;
 }) {
   return (
@@ -1352,6 +1388,7 @@ function PaneRow({
       className={cn(
         ROW,
         "max-md:grid max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-3 max-md:gap-y-1",
+        waive && "relative max-lg:pb-14 pointer-coarse:pb-14",
       )}
     >
       <span
@@ -1394,7 +1431,17 @@ function PaneRow({
       <span className="w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums max-md:col-start-2 max-md:row-start-1 max-md:w-auto">
         <CreditsLabel course={course} />
       </span>
-      <span className="-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 max-lg:opacity-100 max-md:col-start-2 max-md:row-start-2 max-md:w-auto max-md:self-center pointer-coarse:opacity-100">
+      <span
+        className={cn(
+          "-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 max-lg:opacity-100 max-md:col-start-2 max-md:row-start-2 max-md:w-auto max-md:self-center pointer-coarse:opacity-100",
+          waive && "gap-2",
+        )}
+      >
+        {waive && (
+          <span className="flex max-lg:absolute max-lg:right-5 max-lg:bottom-3 pointer-coarse:absolute pointer-coarse:right-5 pointer-coarse:bottom-3">
+            {waive}
+          </span>
+        )}
         {action}
       </span>
     </li>
@@ -1427,12 +1474,14 @@ function CountedRow({
   context: Context;
   action?: ReactNode;
 }) {
+  const setWaived = useProfileStore((state) => state.setWaived);
   const { catalogue, facts } = context;
   const { status, term } = facts.get(code) ?? { status: null, term: null };
   const course = catalogue.get(code) ?? stub(code);
-  // An exemption or a DEC equivalent meets the requirement, but its credits go to the replace group.
+  const waived = status === "waived";
+  // An exemption, a waiver or a DEC equivalent meets the requirement, but its credits go to the replace group.
   const toReplace =
-    (status === "exemption" || status === "covered") && course.credits
+    (status === "exemption" || status === "covered" || waived) && course.credits
       ? `${COPY.credits(course.credits)} to replace`
       : null;
   return (
@@ -1442,7 +1491,10 @@ function CountedRow({
       note={
         <>
           {status ? (
-            <StatusBadge status={status} />
+            <StatusBadge
+              status={status}
+              word={waived ? COPY.waivedByYou : undefined}
+            />
           ) : (
             <StatusBadge status="available" word={COPY.notTaken} />
           )}
@@ -1450,7 +1502,23 @@ function CountedRow({
           {toReplace && <span>{toReplace}</span>}
         </>
       }
-      action={action}
+      action={
+        action ??
+        (waived && (
+          <Button
+            variant="secondary"
+            aria-label={undoWaiver(code)}
+            onClick={() => {
+              context.keepPane?.();
+              setWaived(code, false);
+              focusLater(markWaived(code));
+            }}
+            className={HIT_AREA}
+          >
+            {COPY.undo}
+          </Button>
+        ))
+      }
     />
   );
 }

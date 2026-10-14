@@ -289,7 +289,7 @@ function creditedProgress(group: Group): GroupProgress {
   };
 }
 
-/** An exemption or a Science DEC equivalent meets its item without credit, so its catalogue credits move to `replaces`. */
+/** An exemption, a waiver or a Science DEC equivalent meets its item without credit, so its catalogue credits move to `replaces`. */
 function requiredProgress(
   group: RequiredGroup,
   have: ReadonlySet<string>,
@@ -560,7 +560,7 @@ export function programProgress(
   count: CountOptions = {},
 ): ProgramProgress {
   const creditsOf = (code: string) => catalogue.get(code)?.credits ?? 0;
-  // An exemption satisfies a required course but is never in `counted`, so it adds no credit.
+  // An exemption or a waiver satisfies a required course but is never in `counted`, so it adds no credit.
   const allowed = (code: string) => !count.exclude?.has(code);
   const have = new Set([...snapshot.done].filter(allowed));
   const counted = new Map<string, number>();

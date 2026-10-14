@@ -11,9 +11,13 @@ const done = (code: string) => ({
   source: "manual",
 });
 
-/** Opens What's next on 8 October 2026, so the next term is Winter 2027, with a saved profile that a reload keeps. */
-async function openWith(page: Page, state: Record<string, unknown>) {
-  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
+/** Opens What's next on 8 October 2026, or `now`, so the next term is Winter 2027, with a saved profile that a reload keeps. */
+async function openWith(
+  page: Page,
+  state: Record<string, unknown>,
+  now = "2026-10-08T12:00:00",
+) {
+  await page.clock.setFixedTime(new Date(now));
   await page.addInitScript(
     ([key, value]) => {
       if (!localStorage.getItem(key as string)) {
@@ -525,4 +529,82 @@ test("the picked requirement lives in the URL, so Back and links reopen it", asy
       name: "Other courses you can take in Winter 2027",
     }),
   ).toBeVisible();
+});
+
+test("a required course can be marked as waived, which opens the courses after it, and the mark undone", async ({
+  page,
+}) => {
+  const taking = (code: string) => ({
+    code,
+    term: { season: "Fall", year: 2026 },
+    credits: 3,
+    grade: null,
+    status: "in-progress",
+    source: "manual",
+  });
+  await page.route("https://mcgill.courses/**", (route) => route.abort());
+  await openWith(
+    page,
+    {
+      records: [taking("COMP 206"), taking("COMP 250")],
+      programId: "computer-science-artificial-intelligence-major-bsc",
+      plan: [],
+    },
+    "2026-10-14T12:00:00",
+  );
+  const required = page.getByRole("region", { name: "Required courses" });
+  const comp202 = row(page, "Required courses", "COMP 202");
+  await expect(comp202).toContainText(
+    "Not open to students who have taken COMP 206 and COMP 250",
+  );
+  await page.goto("/courses/comp-551");
+  const needs = page.getByText(/Needs .* first/);
+  await expect(needs).toContainText("COMP 202");
+
+  await page.goto("/next");
+  await expect(required).toContainText(
+    "Students who have sufficient knowledge in a programming language do not need to take COMP 202",
+  );
+  await comp202.getByRole("button", { name: "Mark as waived" }).click();
+  await expect(
+    page.getByRole("button", { name: "Undo COMP 202 waiver" }),
+  ).toBeFocused();
+  await expect(
+    required.getByRole("heading", { name: "Counted 3" }),
+  ).toBeVisible();
+  await expect(comp202).toContainText("Waived by you");
+  await expect(comp202).toContainText("3 credits to replace");
+
+  await requirement(page, "Replace exempted credits").click();
+  await expect(
+    page.getByRole("region", { name: "Replace exempted credits" }),
+  ).toContainText(
+    "A waiver you marked still needs its credits replaced. Confirm it with your advisor.",
+  );
+
+  await page.goto("/courses/comp-551");
+  await expect(needs).not.toContainText("COMP 202");
+  await expect(
+    page
+      .getByRole("region", { name: "Prerequisites" })
+      .getByRole("img", { name: "Waived" }),
+  ).toBeVisible();
+  await page.goto("/courses/comp-202");
+  await expect(page.getByRole("main")).toContainText("Waived");
+  await expect(page.getByRole("button", { name: "Undo waiver" })).toBeVisible();
+
+  await page.goto("/profile");
+  await expect(
+    page.getByRole("row").filter({ hasText: "COMP 202" }),
+  ).toContainText("Waived");
+
+  await page.goto("/next");
+  await row(page, "Required courses", "COMP 202")
+    .getByRole("button", { name: "Undo COMP 202 waiver" })
+    .click();
+  await expect(
+    comp202.getByRole("button", { name: "Mark as waived" }),
+  ).toBeFocused();
+  await expect(comp202).toContainText("Not open to students");
+  await expect(requirement(page, "Replace exempted credits")).toHaveCount(0);
 });
