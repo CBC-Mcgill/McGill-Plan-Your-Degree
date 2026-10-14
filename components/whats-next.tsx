@@ -1340,7 +1340,7 @@ function Row({
         waivable &&
         !plannedIn && (
           <Button
-            variant="secondary"
+            variant="ghost"
             aria-label={markWaived(course.code)}
             onClick={waive}
             className={HIT_AREA}
@@ -1379,7 +1379,7 @@ function PaneRow({
   /** On a second program's row: counts for both, or for the program only. */
   share?: Definition;
   note: ReactNode;
-  /** "Mark as waived" before the action. On hover it covers the credits, and where actions always show it sits under them. */
+  /** "Mark as waived" before the action. On hover it takes the credits' place. Where actions always show, the two share a line under the row, and on a phone they follow the note when it leaves room. */
   waive?: ReactNode;
   action?: ReactNode;
 }) {
@@ -1387,8 +1387,9 @@ function PaneRow({
     <li
       className={cn(
         ROW,
-        "max-md:grid max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-3 max-md:gap-y-1",
-        waive && "relative max-lg:pb-14 pointer-coarse:pb-14",
+        waive
+          ? "flex-wrap gap-y-2 max-md:gap-x-3 max-md:gap-y-0"
+          : "max-md:grid max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-3 max-md:gap-y-1",
       )}
     >
       <span
@@ -1419,7 +1420,12 @@ function PaneRow({
           </span>
         )}
       </span>
-      <span className="flex w-50 shrink-0 flex-wrap items-start gap-x-2 gap-y-1 text-fg-muted @3xl:w-64 max-md:col-start-1 max-md:row-start-2 max-md:w-auto max-md:self-center">
+      <span
+        className={cn(
+          "flex w-50 shrink-0 flex-wrap items-start gap-x-2 gap-y-1 text-fg-muted @3xl:w-64 max-md:col-start-1 max-md:row-start-2 max-md:w-auto max-md:self-center",
+          waive && "max-md:order-3 max-md:mt-1 max-md:shrink max-md:grow",
+        )}
+      >
         {note}
         {/* Too wide beside a title in a narrow row, so it moves under the note there. */}
         {share && (
@@ -1428,20 +1434,32 @@ function PaneRow({
           </span>
         )}
       </span>
-      <span className="w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums max-md:col-start-2 max-md:row-start-1 max-md:w-auto">
-        <CreditsLabel course={course} />
-      </span>
       <span
         className={cn(
-          "-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 max-lg:opacity-100 max-md:col-start-2 max-md:row-start-2 max-md:w-auto max-md:self-center pointer-coarse:opacity-100",
-          waive && "gap-2",
+          "w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums max-md:col-start-2 max-md:row-start-1 max-md:w-auto",
+          // The margin keeps the action column's room once the buttons wrap below.
+          waive &&
+            "max-md:order-1 md:max-lg:mr-24 lg:pointer-coarse:mr-24 lg:pointer-fine:group-focus-within:opacity-0 lg:pointer-fine:group-hover:opacity-0",
         )}
       >
-        {waive && (
-          <span className="flex max-lg:absolute max-lg:right-5 max-lg:bottom-3 pointer-coarse:absolute pointer-coarse:right-5 pointer-coarse:bottom-3">
-            {waive}
-          </span>
+        <CreditsLabel course={course} />
+      </span>
+      {/* On a phone the note starts a line of its own. */}
+      {waive && (
+        <span
+          aria-hidden
+          className="hidden max-md:order-2 max-md:block max-md:basis-full"
+        />
+      )}
+      <span
+        className={cn(
+          "-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 max-lg:opacity-100 max-md:w-auto max-md:self-center pointer-coarse:opacity-100",
+          waive
+            ? "gap-2 max-lg:my-0 max-lg:basis-full lg:pointer-coarse:my-0 lg:pointer-coarse:basis-full max-md:order-4 max-md:mt-1 max-md:ml-auto max-md:basis-auto"
+            : "max-md:col-start-2 max-md:row-start-2",
         )}
+      >
+        {waive}
         {action}
       </span>
     </li>
