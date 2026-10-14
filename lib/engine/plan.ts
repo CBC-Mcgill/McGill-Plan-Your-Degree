@@ -78,7 +78,7 @@ export function courseLoads(
     [];
   let term = start;
   const loads = chosen.map((part, i): PlannedLoad => {
-    if (i > 0) term = nextPartTerm(part.code.slice(-2, -1), term);
+    if (i > 0) term = nextPartTerm(part.code.slice(-2, -1), term, part);
     return {
       code,
       label: part.code,
@@ -229,9 +229,12 @@ export function planWarnings(
   }
   for (const [course, { owed }] of snapshot.pending) {
     if (owed && !placed.has(course)) {
+      const part = catalogue
+        .get(course)
+        ?.parts?.find((p) => p.code === course + owed.part);
       warnings.push({
         kind: "missing-part",
-        term: owed.due,
+        term: nextPartTerm(owed.part.slice(0, 1), owed.afterTerm, part),
         course,
         part: owed.part,
         after: owed.after,

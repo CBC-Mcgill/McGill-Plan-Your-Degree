@@ -32,6 +32,7 @@ import { codeFromSlug, courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
 import { nextView } from "@/lib/engine/next-view";
+import { startTerm } from "@/lib/engine/plan";
 import { courseStatus } from "@/lib/engine/status";
 import { useProfileStore } from "@/lib/profile/store";
 import {
@@ -259,7 +260,7 @@ function PaletteDialog() {
         ? [
             {
               kind: "action",
-              label: `Add ${first.code} to ${termLabel(nextTerm)}`,
+              label: `Add ${first.code} to ${termLabel(startTerm(first, nextTerm))}`,
               run: () => addWithUndo(nextTerm, first.code),
             },
           ]

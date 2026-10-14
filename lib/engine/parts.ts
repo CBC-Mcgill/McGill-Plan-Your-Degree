@@ -21,11 +21,19 @@ export const list = new Intl.ListFormat("en-GB", {
 const digit = (code: string) => Number(code.slice(-1));
 const route = (code: string) => code.slice(-2, -1);
 
-/** The term the next part runs in: the next Fall or Winter, or for J the very next term. */
-export function nextPartTerm(letter: string, term: Term): Term {
-  const next = termKey(term) + 1;
-  const skip = letter !== "J" && termFromKey(next).season === "Summer";
-  return termFromKey(skip ? next + 1 : next);
+/** The term the next part runs in: the first of the next two terms in a season the catalogue lists for the part, else the next Fall or Winter, or for J the very next term. */
+export function nextPartTerm(
+  letter: string,
+  term: Term,
+  part?: Pick<CoursePart, "terms">,
+): Term {
+  const key = termKey(term);
+  for (let next = key + 1; next <= key + 2; next++) {
+    const at = termFromKey(next);
+    if (part?.terms.some((listed) => listed.startsWith(at.season))) return at;
+  }
+  const skip = letter !== "J" && termFromKey(key + 1).season === "Summer";
+  return termFromKey(skip ? key + 2 : key + 1);
 }
 
 /** The routes of a multi-term course with their parts in order, such as D1 then D2 and N1 then N2. */
@@ -53,7 +61,8 @@ export function creditsLabel(
   return `${course.credits} cr${terms > 1 ? `, ${terms} terms` : ""}`;
 }
 
-const WORDS = ["", "", "two", "three"];
+/** How many terms a route takes, in words: "two" or "three". */
+export const WORDS = ["", "", "two", "three"];
 
 /** The seasons a route's parts run in, or null when the catalogue does not say for every part. */
 function seasons(parts: CoursePart[]): Season[] | null {
@@ -90,8 +99,6 @@ export interface OwedPart {
   /** The part before it, such as "D1". */
   after: string;
   afterTerm: Term;
-  /** The next Fall or Winter after `afterTerm`, where the part belongs. */
-  due: Term;
 }
 
 /** A multi-term course with some parts done and the route unfinished. */
@@ -197,7 +204,6 @@ export function settleParts(
                     part: `${letter}${next}`,
                     after: `${letter}${next - 1}`,
                     afterTerm: anchor.term,
-                    due: nextPartTerm(letter, anchor.term),
                   }
                 : null,
           };
