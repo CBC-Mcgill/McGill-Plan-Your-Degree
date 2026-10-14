@@ -286,9 +286,11 @@ function parseCourse(
     };
   }
   const transfer = TRANSFER_CREDITS.exec(last);
-  // No value means the course is credited inside its "From:" block's total. A section cell means a broken course table row.
+  // No value means the course is credited inside its "From:" block's total. A section cell or a stray credit value means a broken course table row.
   if (!transfer) {
-    if (SECTION.test(rest[0] ?? "")) return "unrecognized";
+    if (SECTION.test(rest[0] ?? "") || rest.some(isCredits)) {
+      return "unrecognized";
+    }
     return {
       ...base,
       title: rest.join(" ") || null,
