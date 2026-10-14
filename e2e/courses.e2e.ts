@@ -299,3 +299,57 @@ test("the header stays in view while the course list scrolls", async ({
     .toBeGreaterThan(500);
   await expect(page.getByRole("navigation", { name: "Main" })).toBeInViewport();
 });
+
+test("a multi-term course that ends after graduation can still be added and says why", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-14T12:00:00"));
+  await seedProfile(
+    page,
+    [
+      "ECSE 211",
+      "ECSE 324",
+      "CCOM 206",
+      "COMP 302",
+      "COMP 250",
+      "MATH 240",
+    ].map(done),
+    { season: "Winter", year: 2027 },
+  );
+  const late =
+    "Takes two terms, so it ends after your expected graduation in Winter 2027";
+  const every = "Every start ends after your expected graduation";
+  await page.goto("/courses/comp-251");
+  await expect(
+    page.getByRole("button", { name: "Add to Winter 2027" }),
+  ).toBeVisible();
+  await expect(page.getByText(late)).toHaveCount(0);
+  await page.getByRole("button", { name: "Choose a term" }).click();
+  await expect(page.getByRole("menu")).not.toContainText(every);
+  await page.keyboard.press("Escape");
+
+  await page.goto("/courses/ecse-458");
+  await expect(
+    page.getByRole("button", { name: "About Can take" }),
+  ).toBeVisible();
+  await expect(page.getByText(late)).toBeVisible();
+  await page.getByRole("button", { name: "Add to a term" }).click();
+  const menu = page.getByRole("menu");
+  await expect(menu).toContainText(`${every} in Winter 2027.`);
+  await expect(
+    menu.getByRole("menuitem", { name: "Change your graduation term" }),
+  ).toHaveAttribute("href", "/profile");
+  const item = menu.getByRole("menuitem", {
+    name: /^Winter 2027 and Fall 2027/,
+  });
+  await expect(item).toContainText("Ends after graduation");
+  await item.click();
+  await expect(
+    page.getByText("Planned for Winter 2027 and Fall 2027"),
+  ).toBeVisible();
+
+  await page.getByRole("link", { name: "Planner" }).click();
+  await expect(page.getByRole("list", { name: "Warnings" })).toContainText(
+    "continues into Fall 2027, after your expected graduation in Winter 2027",
+  );
+});

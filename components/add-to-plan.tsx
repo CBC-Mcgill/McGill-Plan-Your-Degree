@@ -17,7 +17,7 @@ import { Term } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
-import { list } from "@/lib/engine/parts";
+import { list, partRoutes } from "@/lib/engine/parts";
 import {
   courseLoads,
   loadsTerms,
@@ -49,13 +49,34 @@ const SEASONS = ["Fall", "Winter", "Summer"] as const;
 const runsThisYear = (course: CourseSummary) =>
   SEASONS.some((season) => isOffered(course, season));
 
+/** The starts the menu offers, and the expected graduation when every one of them ends after it. */
+function useStarts(course: CourseSummary) {
+  const catalogue = useCatalogue();
+  const plan = useProfileStore((state) => state.plan);
+  const graduation = useProfileStore((state) => state.graduationTerm);
+  const ready = catalogue.status === "ready";
+  const choices = termChoices(
+    course,
+    plan,
+    ready ? catalogue.catalogue : new Map(),
+    graduation,
+    currentTerm(),
+  );
+  const late =
+    graduation && choices.length > 0 && choices.every((c) => c.endsAfter)
+      ? graduation
+      : null;
+  return { choices, late, ready };
+}
+
 /** The status line under the course title, in the status color, with why after it. For students only (D33). */
 export function CourseStatusLine({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
+  const { late } = useStarts(course);
   if (snapshot === undefined) return <div aria-hidden className="mt-4 h-5" />;
-  const line = snapshot && statusLine(course, snapshot, records, plan);
+  const line = snapshot && statusLine(course, snapshot, records, plan, late);
   if (!line) return null;
   return (
     <p className="mt-4 flex items-start gap-2">
@@ -88,12 +109,13 @@ interface Line {
   uncertain?: boolean;
 }
 
-/** Glyph, word and reason for the status line. A planned course says when, and why it can go there. */
+/** Glyph, word and reason for the status line. A planned course says when, and why it can go there. `late` is the graduation every start ends after. */
 function statusLine(
   course: CourseSummary,
   snapshot: Snapshot,
   records: readonly CourseRecord[],
   plan: Plan,
+  late: PlanTerm | null,
 ): Line {
   const { status, uncertain, blockedBy } = courseStatus(course, snapshot);
   const prerequisites = course.prerequisites;
@@ -144,14 +166,19 @@ function statusLine(
       };
     }
     case "available": {
-      // Say why the red "Add to" button is missing when the next term does not run the course.
+      // Say why the red "Add to" button is missing when no start ends in time or the next term does not run the course.
       const next = planTermOptions([])[0];
       return runsThisYear(course)
         ? line(
             status,
-            next && !isOffered(course, next.season)
-              ? COPY.notOfferedIn(next.season)
-              : undefined,
+            late
+              ? COPY.endsAfterGraduation(
+                  partRoutes(course)[0]?.length ?? 2,
+                  late,
+                )
+              : next && !isOffered(course, next.season)
+                ? COPY.notOfferedIn(next.season)
+                : undefined,
           )
         : { ...line(status), word: COPY.notOfferedYear };
     }
@@ -210,29 +237,22 @@ function PlanActions({
   course: CourseSummary;
   open: boolean;
 }) {
-  const catalogue = useCatalogue();
   const plan = useProfileStore((state) => state.plan);
-  const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const creditLimit = useProfileStore((state) => state.creditLimit);
+  const { choices, late, ready } = useStarts(course);
   const root = useRef<HTMLDivElement>(null);
 
   const planned = plan.find((entry) =>
     entry.courses.includes(course.code),
   )?.term;
-  const ready = catalogue.status === "ready";
-  const choices = termChoices(
-    course,
-    plan,
-    ready ? catalogue.catalogue : new Map(),
-    graduationTerm,
-    currentTerm(),
-  ).filter((choice) => !choice.endsAfter);
   const nextTerm = planTermOptions([])[0];
   const next =
     open && !planned && nextTerm
       ? choices.find(
           (choice) =>
-            choice.offered && termKey(choice.term) === termKey(nextTerm),
+            choice.offered &&
+            !choice.endsAfter &&
+            termKey(choice.term) === termKey(nextTerm),
         )
       : undefined;
   const never = !runsThisYear(course);
@@ -274,6 +294,15 @@ function PlanActions({
       >
         {never && (
           <p className="px-3 py-2 text-fg-muted">{COPY.notOfferedYear}</p>
+        )}
+        {late && (
+          <div className="-mx-1 mb-1 border-line border-b px-1 pb-1">
+            <p className="w-0 min-w-full px-3 py-2 text-fg-muted">
+              Every start ends after your expected graduation in{" "}
+              {COPY.term(late)}.
+            </p>
+            <MenuItem href="/profile">Change your graduation term</MenuItem>
+          </div>
         )}
         {choices.map((choice) => (
           <TermItem
@@ -321,6 +350,12 @@ function TermItem({
   const [only] = choice.planned;
   const meta = [
     !choice.offered && !never && COPY.notOffered,
+    choice.endsAfter && (
+      <span key="late" className="flex items-center gap-1 text-warn">
+        <TriangleAlert aria-hidden className="size-4" />
+        {COPY.endsAfter}
+      </span>
+    ),
     over && (
       <span key="over" className="flex items-center gap-1 text-warn">
         <TriangleAlert aria-hidden className="size-4" />

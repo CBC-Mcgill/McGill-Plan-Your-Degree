@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { DropdownMenu } from "radix-ui";
 import type { ReactNode } from "react";
 
@@ -21,7 +22,7 @@ export function Menu({
           align={align}
           sideOffset={4}
           collisionPadding={16}
-          className="z-[85] max-h-[min(400px,var(--radix-dropdown-menu-content-available-height))] min-w-56 overflow-y-auto rounded-lg bg-bg p-1 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
+          className="z-[85] max-h-[min(400px,var(--radix-dropdown-menu-content-available-height))] min-w-56 max-w-[var(--radix-dropdown-menu-content-available-width)] overflow-y-auto rounded-lg bg-bg p-1 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
         >
           {children}
         </DropdownMenu.Content>
@@ -30,25 +31,23 @@ export function Menu({
   );
 }
 
-/** A 40px option. `meta` sits on the right in --fg-muted. */
+/** A 40px option, or a link with `href`. `meta` sits on the right in --fg-muted, or below when the screen is too narrow. */
 export function MenuItem({
   onSelect,
+  href,
   disabled,
   children,
   meta,
 }: {
-  onSelect: (event: Event) => void;
+  onSelect?: (event: Event) => void;
+  href?: string;
   disabled?: boolean;
   children: ReactNode;
   meta?: ReactNode;
 }) {
-  return (
-    <DropdownMenu.Item
-      onSelect={onSelect}
-      disabled={disabled}
-      className="flex h-10 cursor-default select-none items-center gap-4 rounded-md px-3 outline-none data-[disabled]:text-fg-muted data-[highlighted]:selected pointer-coarse:h-11"
-    >
-      <span className="flex min-w-0 flex-1 items-center gap-2 whitespace-nowrap">
+  const content = (
+    <>
+      <span className="flex min-w-0 flex-auto items-center gap-2 whitespace-nowrap">
         {children}
       </span>
       {meta && (
@@ -56,6 +55,16 @@ export function MenuItem({
           {meta}
         </span>
       )}
+    </>
+  );
+  return (
+    <DropdownMenu.Item
+      onSelect={onSelect}
+      disabled={disabled}
+      asChild={href !== undefined}
+      className="flex min-h-10 cursor-default select-none flex-wrap items-center gap-x-4 gap-y-0.5 rounded-md px-3 py-2 outline-none data-[disabled]:text-fg-muted data-[highlighted]:selected pointer-coarse:min-h-11"
+    >
+      {href === undefined ? content : <Link href={href}>{content}</Link>}
     </DropdownMenu.Item>
   );
 }

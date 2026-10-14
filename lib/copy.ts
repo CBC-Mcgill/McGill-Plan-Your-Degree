@@ -1,5 +1,5 @@
 import meta from "../data/catalogue/meta.json";
-import { creditsLabel, list } from "./engine/parts.ts";
+import { creditsLabel, list, WORDS } from "./engine/parts.ts";
 import type { Basis } from "./engine/progress.ts";
 import { creditsText, sentence } from "./format.ts";
 import { termLabel } from "./profile/term-options.ts";
@@ -93,6 +93,9 @@ export const COPY = {
   notOfferedYear: `Not offered in ${meta.catalogueYear}`,
   notOfferedIn: (season: Season) => `Not offered in ${season}`,
   notOffered: "Not offered",
+  endsAfter: "Ends after graduation",
+  endsAfterGraduation: (terms: number, graduation: Term) =>
+    `Takes ${WORDS[terms]} terms, so it ends after your expected graduation in ${termLabel(graduation)}`,
   needs: (text: string) => `Needs ${text} first`,
   notOpen: (codes: readonly string[]) =>
     `Not open to students who have taken ${list.format(codes)}`,

@@ -853,6 +853,40 @@ test("a multi-term course loads each part in its own term", () => {
   ).toContain("after-graduation");
 });
 
+test("a later part goes in the next term its catalogue season runs, else the next Fall or Winter", () => {
+  const twoParts = (code: string, d1: string[], d2: string[]) =>
+    course(code, {
+      parts: [
+        { code: `${code}D1`, credits: 3, terms: d1 },
+        { code: `${code}D2`, credits: 3, terms: d2 },
+      ],
+    });
+  const shapes = new Map(
+    [
+      twoParts("BIOL 334", ["Winter 2027"], ["Summer 2026"]),
+      twoParts("DENT 113", ["Fall 2026"], ["Fall 2026", "Winter 2027"]),
+      twoParts("ITAL 210", [], []),
+    ].map((c) => [c.code, c]),
+  );
+  const winter2027: Term = { season: "Winter", year: 2027 };
+  const terms = (code: string, start: Term) =>
+    planLoads([{ term: start, courses: [code] }], shapes).map(
+      (load) => `${load.term.season} ${load.term.year}`,
+    );
+  expect(terms("BIOL 334", winter2027)).toEqual(["Winter 2027", "Summer 2027"]);
+  expect(terms("DENT 113", fall2026)).toEqual(["Fall 2026", "Winter 2027"]);
+  expect(terms("ITAL 210", winter2027)).toEqual(["Winter 2027", "Fall 2027"]);
+
+  const d1 = {
+    ...record("BIOL 334", "completed"),
+    part: "D1",
+    term: winter2027,
+  };
+  expect(planWarnings([], buildSnapshot([d1]), shapes)).toMatchObject([
+    { kind: "missing-part", term: { season: "Summer", year: 2027 } },
+  ]);
+});
+
 test("the school period runs from the next term to graduation, and multi-term courses start where part 1 runs", () => {
   const label = (term: Term) => `${term.season} ${term.year}`;
   const winter2028: Term = { season: "Winter", year: 2028 };
