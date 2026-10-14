@@ -83,7 +83,7 @@ Evidence so far is anecdotal (firsthand experience and the v1 PRD), and validati
 - Detects a McGill unofficial transcript by the markers in section 8 and says so clearly when the file is not one.
 - Discards the identity header (name, McGill ID, permanent code) and holds, strips the repeating page header and footer, and joins term blocks that break across pages.
 - Reads degree, program lines, minor, credits required, previous education, and advanced standing to pre-fill the profile.
-- Reads code, credits, grade, and term for every course line, including `RW` registrations with no grade, pass/fail grades, withdrawals, failures, deferred grades, transfer credits, exemptions (`EXC`, no credit), and multi-term courses marked `²` or with D1/D2 and N1/N2 suffixes.
+- Reads code, credits, grade, and term for every course line, including `RW` registrations with no grade, pass/fail grades, withdrawals, failures, deferred grades, transfer credits, exemptions (`EXC` or a course code with no value, no credit), and multi-term courses marked `²` or with D1/D2 and N1/N2 suffixes.
 - Matches courses by code only, since transcript titles are abbreviated, and saves nothing until the student confirms a review screen where each course is matched to the catalogue and unknown lines are flagged and editable.
 - A corpus of synthetic transcripts, built from real layouts with fake identities and grades, runs in CI and must pass at 100%, and real transcripts never enter the repo.
 

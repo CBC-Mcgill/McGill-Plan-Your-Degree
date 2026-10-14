@@ -177,7 +177,7 @@ function Review({
                 <div>
                   <Notice tone="warn">
                     {plural(unread.length, "line", "lines")} could not be read.
-                    Add them by hand on your profile if they are missing.
+                    If a course is missing, add it by hand on your profile.
                   </Notice>
                   <ul className="mt-2 pl-6 text-fg-muted">
                     {unread.map((line, i) => (

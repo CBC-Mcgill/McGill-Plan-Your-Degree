@@ -271,7 +271,7 @@ function parseCourse(
     return { ...course, grade, remarks, earnedCredits, status };
   }
 
-  // Credits/Exemptions row: code, optional title, then credits or an exemption mark.
+  // Credits/Exemptions row: code, optional title, then credits, an exemption mark, or nothing.
   if (!inCredits || registration) return "unrecognized";
   const last = rest.at(-1) ?? "";
   if (EXEMPTION.test(last)) {
@@ -286,7 +286,18 @@ function parseCourse(
     };
   }
   const transfer = TRANSFER_CREDITS.exec(last);
-  if (!transfer) return "unrecognized";
+  // No value means the course is credited inside its "From:" block's total. A section cell means a broken course table row.
+  if (!transfer) {
+    if (SECTION.test(rest[0] ?? "")) return "unrecognized";
+    return {
+      ...base,
+      title: rest.join(" ") || null,
+      credits: null,
+      grade: null,
+      earnedCredits: 0,
+      status: "exemption",
+    };
+  }
   const value = Number(transfer[1]);
   return {
     ...base,

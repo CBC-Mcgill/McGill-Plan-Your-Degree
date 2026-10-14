@@ -46,6 +46,18 @@ test("importing a transcript saves its courses, and a re-import says what it rep
   ).toBeVisible();
 });
 
+test("a course listed under a CEGEP block with no value imports as an exemption", async ({
+  page,
+}) => {
+  await page.goto("/profile");
+  await page
+    .locator('input[accept*="pdf"]')
+    .setInputFiles("lib/transcript/fixtures/transfer-credits.pdf");
+  await expect(
+    page.getByRole("row").filter({ hasText: "MATH 222" }),
+  ).toContainText("Exemption");
+});
+
 test("a program read from the catalogue can be found and used", async ({
   page,
 }) => {
