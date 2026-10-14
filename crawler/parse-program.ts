@@ -637,9 +637,12 @@ function levelIn(text: string): { match: Match; phrase: string } | null {
   return null;
 }
 
-const EXCEPT = String.raw`(?:\s*\((?:except|excluding) (${CODE}(?:(?:, | and |, and )${CODE})*)\))?`;
+const CODES = `${CODE}(?:(?:, | and |, and )${CODE})*`;
+const EXCEPT = String.raw`(?:\s*\((?:except|excluding) (${CODES})\)|,? (?:except|excluding) (${CODES}))?`;
+// "The remaining credits", "the remaining Computer Science credits", "the remaining complementary credits".
+const REMAINING = `remaining(?: [a-z]+){0,2} credits`;
 const SOURCE = new RegExp(
-  String.raw`^(?:the remaining credits|${RANGE}\s*credits?|at least ${NUM} credits)(?: selected| chosen)? (?:from|in) (?:any )?(?:undergraduate )?(.+?)(?: courses?)?(?: at the (\d{3})[- ]level(?: or (above|higher))?)?${EXCEPT}(?:,? and (${CODE}(?:(?:, | and |, and )${CODE})*))?\.?$`,
+  String.raw`^(?:the ${REMAINING}(?: are| must be| are to be)?|${RANGE}\s*credits?|at least ${NUM} credits)(?: selected| chosen)? (?:from|in) (?:any )?(?:undergraduate )?(.+?)(?: courses?)?(?: at the (\d{3})[- ]level(?: or (above|higher))?)?${EXCEPT}(?:,? and (${CODES}))?\.?$`,
   "i",
 );
 
@@ -650,7 +653,8 @@ function parseSource(
 ): Rule | null {
   const m = SOURCE.exec(text);
   if (!m) return null;
-  const [, low, high, atLeast, name = "", level, up, except, extra] = m;
+  const [, low, high, atLeast, name = "", level, up, inside, after, extra] = m;
+  const except = inside ?? after;
   const subjects = new RegExp(`^${SUBJECT_LIST}$`).test(name)
     ? subjectsIn(name)
     : subjectsOf(name.toLowerCase());
@@ -1195,8 +1199,10 @@ function parseNote(text: string): NoteRule | null {
 }
 
 // Sentences that set a number of credits or courses, as opposed to advice and notices.
-const CONSTRAINT =
-  /\b(\d+|one|two|three|four|five|six)\b[^.]*\b(credits?|courses?)\b|\b(at least|at most|no more than|maximum|minimum|remaining credits)\b/i;
+const CONSTRAINT = new RegExp(
+  String.raw`\b(\d+|one|two|three|four|five|six)\b[^.]*\b(credits?|courses?)\b|\b(at least|at most|no more than|maximum|minimum|${REMAINING})\b`,
+  "i",
+);
 // Notices that restrict nothing the app counts: the group total again, transfer credit, advice, prerequisites, registration, and what replaces a course taken before.
 const NOISE = new RegExp(
   [
