@@ -65,14 +65,19 @@ const HEADLINE =
 
 const LINE = "max-w-[34ch] text-[17px] text-fg-muted leading-[26px]";
 
-/** Each step's third of the pinned scroll, in steps: it builds over the first half, holds, then hands off to the next over the last fifth. */
+/** The pinned scroll in steps: step 1 builds on the way in, so it only holds and hands off, and each later step builds over its first half, holds, then hands off over its last fifth. */
 const BUILD = 0.5;
 const HANDOFF = 0.2;
+const LENGTH = STEPS.length - BUILD;
+
+/** Where step i starts, as progress. */
+const stepAt = (i: number) => Math.max(0, i - BUILD) / LENGTH;
 
 /** Where step i is on, as progress: it comes in over the hand-off before it and leaves over the one after. The last step stays. */
 const onRange = (i: number) => {
-  const out = i < STEPS.length - 1 ? i + 1 - HANDOFF : STEPS.length + 1;
-  return [i - HANDOFF, i, out, out + HANDOFF].map((t) => t / STEPS.length);
+  const band = HANDOFF / LENGTH;
+  const out = i < STEPS.length - 1 ? stepAt(i + 1) - band : 2;
+  return [stepAt(i) - band, stepAt(i), out, out + band];
 };
 
 /** How long one part takes to come in, as a share of its visual's build. */
@@ -133,9 +138,14 @@ function Pinned() {
   const { scrollY } = useScroll();
   const start = useMotionValue(0);
   const range = useMotionValue(1);
-  // Progress runs from the pane sticking to it letting go, so each step gets a third of the pinned scroll.
+  const lead = useMotionValue(1);
+  // Progress runs from the pane sticking to it letting go.
   const progress = useTransform(() =>
     Math.min(1, Math.max(0, (scrollY.get() - start.get()) / range.get())),
+  );
+  // Step 1 builds as the pane comes in, from 40% in view to sticking, so it never arrives empty.
+  const arrival = useTransform(() =>
+    Math.min(1, Math.max(0, 1 - (start.get() - scrollY.get()) / lead.get())),
   );
 
   // Measured when a size changes, so a scroll reads no layout.
@@ -154,14 +164,15 @@ function Pinned() {
       range.set(
         Math.max(1, section.offsetHeight - before - after - pane.offsetHeight),
       );
+      lead.set(Math.max(1, innerHeight - top - 0.4 * pane.offsetHeight));
     });
     observer.observe(section);
     observer.observe(document.body);
     return () => observer.disconnect();
-  }, [start, range]);
+  }, [start, range, lead]);
 
   return (
-    <section ref={ref} className="relative h-[340vh] pt-16 pb-16 max-md:hidden">
+    <section ref={ref} className="relative h-[290vh] pt-16 pb-16 max-md:hidden">
       {/* A 31rem pane centered in the space under the header. */}
       <div
         ref={pinned}
@@ -193,6 +204,7 @@ function Pinned() {
                 Visual={step.Visual}
                 i={i}
                 progress={progress}
+                arrival={arrival}
               />
             ))}
           </div>
@@ -236,17 +248,19 @@ function Slide({
   Visual,
   i,
   progress,
+  arrival,
 }: {
   Visual: Visual;
   i: number;
   progress: MotionValue<number>;
+  arrival: MotionValue<number>;
 }) {
   const on = useTransform(progress, onRange(i), [0, 1, 1, 0]);
   const lift = useTransform(progress, onRange(i), [24, 0, 0, -24]);
   const y = useTransform(lift, Math.round);
   const built = useTransform(
     progress,
-    [i / STEPS.length, (i + BUILD) / STEPS.length],
+    [stepAt(i), stepAt(i) + BUILD / LENGTH],
     [0, 1],
   );
   return (
@@ -254,7 +268,7 @@ function Slide({
       className="absolute inset-0 flex items-center"
       style={{ opacity: on, y }}
     >
-      <Visual progress={built} />
+      <Visual progress={i === 0 ? arrival : built} />
     </motion.div>
   );
 }
