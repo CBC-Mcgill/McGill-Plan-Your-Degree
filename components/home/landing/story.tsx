@@ -143,7 +143,7 @@ function Pinned() {
   const progress = useTransform(() =>
     Math.min(1, Math.max(0, (scrollY.get() - start.get()) / range.get())),
   );
-  // Step 1 builds as the pane comes in, from 40% in view to sticking, so it never arrives empty.
+  // Step 1 builds as the pane comes in, from entering the view to sticking, so its rows are there as they show.
   const arrival = useTransform(() =>
     Math.min(1, Math.max(0, 1 - (start.get() - scrollY.get()) / lead.get())),
   );
@@ -164,7 +164,7 @@ function Pinned() {
       range.set(
         Math.max(1, section.offsetHeight - before - after - pane.offsetHeight),
       );
-      lead.set(Math.max(1, innerHeight - top - 0.4 * pane.offsetHeight));
+      lead.set(Math.max(1, innerHeight - top));
     });
     observer.observe(section);
     observer.observe(document.body);
