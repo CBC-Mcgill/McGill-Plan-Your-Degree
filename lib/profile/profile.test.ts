@@ -1,7 +1,11 @@
 import { expect, test, vi } from "vitest";
 import type { Transcript, TranscriptCourse } from "../transcript/parse.ts";
 import { exportProfile, parseProfileFile } from "./file.ts";
-import { defaultGraduation, pastTermOptions } from "./term-options.ts";
+import {
+  defaultGraduation,
+  pastTermOptions,
+  sampleTerm,
+} from "./term-options.ts";
 import type { Term } from "./types.ts";
 
 const data = new Map<string, string>();
@@ -247,4 +251,17 @@ test("pastTermOptions runs from the start to the term before today's, or six bac
     "Fall 2025",
     "Winter 2026",
   ]);
+});
+
+test("sampleTerm counts from the academic year's Fall so its seasons stay true all year", () => {
+  const label = (offset: number, date: string) => {
+    const term = sampleTerm(offset, new Date(date));
+    return `${term.season} ${term.year}`;
+  };
+  expect(label(0, "2026-10-15")).toBe("Fall 2026");
+  expect(label(0, "2027-02-10")).toBe("Fall 2026");
+  expect(label(0, "2027-06-01")).toBe("Fall 2027");
+  expect(label(1, "2027-02-10")).toBe("Winter 2027");
+  expect(label(-2, "2027-02-10")).toBe("Fall 2025");
+  expect(label(3, "2026-10-15")).toBe("Winter 2028");
 });

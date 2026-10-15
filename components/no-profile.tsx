@@ -9,8 +9,7 @@ import { Button } from "@/components/ui/button";
 import { BAND, CARD } from "@/components/ui/card";
 import { COPY } from "@/lib/copy";
 import { startProfile } from "@/lib/profile/started";
-import { currentTerm, termLabel } from "@/lib/profile/term-options";
-import { type Term, termFromKey, termKey } from "@/lib/profile/types";
+import { sampleTerm, termLabel } from "@/lib/profile/term-options";
 
 /** The visitor state of a page that needs a profile (D34): the h1, one sentence and the two ways to start, beside a sample of the page. */
 export function NoProfile({
@@ -76,18 +75,6 @@ function SampleTag() {
       Sample
     </span>
   );
-}
-
-/** A Fall or Winter term counted from today's, so a sample never looks dated: 0 is this term (the Fall after a Summer), -1 the last, 1 the next. */
-export function sampleTerm(offset: number): Term {
-  const now = currentTerm();
-  let key = termKey(now) + (now.season === "Summer" ? 1 : 0);
-  const step = Math.sign(offset);
-  for (let i = 0; i < Math.abs(offset); i++) {
-    do key += step;
-    while (termFromKey(key).season === "Summer");
-  }
-  return termFromKey(key);
 }
 
 /** A made-up course row: glyph, subject tag, title, then an optional status word and credits. */

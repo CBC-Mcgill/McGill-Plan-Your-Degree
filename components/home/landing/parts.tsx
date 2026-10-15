@@ -4,9 +4,9 @@ import { cn } from "cn";
 import { motion } from "motion/react";
 import { type ReactNode, useSyncExternalStore } from "react";
 import { CourseCode } from "@/components/course-code";
-import { sampleTerm } from "@/components/no-profile";
+
 import type { Status } from "@/components/status";
-import { termLabel } from "@/lib/profile/term-options";
+import { sampleTerm, termLabel } from "@/lib/profile/term-options";
 import { subjectHue } from "@/lib/subject-color";
 
 export interface Course {
