@@ -1,7 +1,7 @@
 import { expect, test, vi } from "vitest";
 import type { Transcript, TranscriptCourse } from "../transcript/parse.ts";
 import { exportProfile, parseProfileFile } from "./file.ts";
-import { defaultGraduation } from "./term-options.ts";
+import { defaultGraduation, pastTermOptions } from "./term-options.ts";
 import type { Term } from "./types.ts";
 
 const data = new Map<string, string>();
@@ -81,14 +81,17 @@ test("applyTranscript maps lines to records and keeps manual ones", () => {
   expect(state.programId).toBe("software-engineering-major-bsc");
 });
 
-test("setTaken undo removes only the term-less manual record", () => {
+test("setMarked undo removes only the record it wrote", () => {
   store.getState().reset();
   store
     .getState()
-    .applyTranscript(transcript([line("ANTH 502", fall2024, "completed")]));
-  store.getState().setTaken("ANTH 502", true);
-  expect(store.getState().records).toHaveLength(2);
-  store.getState().setTaken("ANTH 502", false);
+    .applyTranscript(transcript([line("ANTH 502", fall2024, "in-progress")]));
+  const { setMarked } = store.getState();
+  setMarked("ANTH 502", fall2024, "in-progress", true);
+  setMarked("ANTH 502", null, "completed", true);
+  expect(store.getState().records).toHaveLength(3);
+  setMarked("ANTH 502", fall2024, "in-progress", false);
+  setMarked("ANTH 502", null, "completed", false);
   expect(
     store.getState().records.map((r) => [r.code, r.term, r.source]),
   ).toEqual([["ANTH 502", fall2024, "transcript"]]);
@@ -228,4 +231,20 @@ test("defaultGraduation guesses two years for a master's and four for a doctorat
     season: "Winter",
     year: 2030,
   });
+});
+
+test("pastTermOptions runs from the start to the term before today's, or six back", () => {
+  const today = new Date("2026-10-15T12:00:00");
+  const label = (terms: Term[]) => terms.map((t) => `${t.season} ${t.year}`);
+  expect(label(pastTermOptions({ season: "Fall", year: 2025 }, today))).toEqual(
+    ["Fall 2025", "Winter 2026"],
+  );
+  expect(label(pastTermOptions(null, today))).toEqual([
+    "Fall 2023",
+    "Winter 2024",
+    "Fall 2024",
+    "Winter 2025",
+    "Fall 2025",
+    "Winter 2026",
+  ]);
 });

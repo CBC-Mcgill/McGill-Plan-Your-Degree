@@ -68,3 +68,12 @@ export function MenuItem({
     </DropdownMenu.Item>
   );
 }
+
+/** A small heading over a run of options, with a line above it after the first run. Its options name it too, since screen readers skip it. */
+export function MenuLabel({ children }: { children: ReactNode }) {
+  return (
+    <DropdownMenu.Label className="-mx-1 px-4 pt-2 pb-1 text-[13px] text-fg-muted leading-[18px] [&:not(:first-child)]:mt-1 [&:not(:first-child)]:border-line [&:not(:first-child)]:border-t">
+      {children}
+    </DropdownMenu.Label>
+  );
+}

@@ -609,7 +609,7 @@ test("a required course can be marked as waived, which opens the courses after i
   await expect(requirement(page, "Replace exempted credits")).toHaveCount(0);
 });
 
-test("a course listed under a rule to check can be marked as taken, which moves the group's bar, and the mark undone", async ({
+test("a course listed under a rule to check can be marked as taken in a term, taking now or planned, each undone, and a taken one shows in its term on the planner", async ({
   page,
 }) => {
   await openWith(
@@ -632,14 +632,47 @@ test("a course listed under a rule to check can be marked as taken, which moves 
     .filter({ hasText: "ANTH 502" });
   await expect(anth).toContainText("Not taken");
   await expect(pane).toContainText("0 of 15 credits");
+  const markAs = anth.getByRole("button", { name: "Mark as ANTH 502" });
+  await expect(markAs).toHaveAttribute("aria-haspopup", "menu");
 
-  await anth.getByRole("button", { name: "Mark as taken ANTH 502" }).click();
+  await markAs.click();
+  await page.getByRole("menuitem", { name: "Taking now Fall 2026" }).click();
+  const undoNow = anth.getByRole("button", {
+    name: "Undo marking ANTH 502 as taking now",
+  });
+  await expect(undoNow).toBeFocused();
+  await expect(anth).toContainText("In progress");
+  await expect(anth).toContainText("Fall 2026");
+  await expect(pane).toContainText("3 of 15 credits");
+  await expect(pane).toContainText("3 in progress");
+  await undoNow.click();
+  await expect(markAs).toBeFocused();
+  await expect(anth).toContainText("Not taken");
+  await expect(pane).toContainText("0 of 15 credits");
+
+  await markAs.click();
+  await page.getByRole("menuitem", { name: /^Plan for Winter 2027/ }).click();
+  const undoPlan = anth.getByRole("button", {
+    name: "Undo planning ANTH 502 for Winter 2027",
+  });
+  await expect(undoPlan).toBeFocused();
+  await expect(anth).toContainText("Planned");
+  await expect(anth).toContainText("Winter 2027");
+  await expect(pane).toContainText("3 planned");
+  await undoPlan.click();
+  await expect(markAs).toBeFocused();
+  await expect(anth).toContainText("Not taken");
+
+  await markAs.click();
+  await page.getByRole("menuitem", { name: "Taken in Winter 2026" }).click();
   const undo = anth.getByRole("button", {
     name: "Undo marking ANTH 502 as taken",
   });
   await expect(undo).toBeFocused();
   await expect(anth).toContainText("Completed");
+  await expect(anth).toContainText("Winter 2026");
   await expect(pane).toContainText("3 of 15 credits");
+  await expect(pane).toContainText("3 earned");
   await expect(tab).toHaveAccessibleName(
     /^Complementary courses 3 of 15 ?, 1 rule to check$/,
   );
@@ -647,14 +680,17 @@ test("a course listed under a rule to check can be marked as taken, which moves 
   await page.goto("/profile");
   const record = page.getByRole("row").filter({ hasText: "ANTH 502" });
   await expect(record).toContainText("Completed");
-  await expect(record).toContainText("No term");
-  await expect(record).not.toContainText("Before your first term");
+  await expect(record).toContainText("Winter 2026");
+
+  await page.goto("/plan");
+  await page.getByRole("tab", { name: /^Winter 2026/ }).click();
+  await expect(
+    page.getByRole("tabpanel").getByRole("list", { name: "Your courses" }),
+  ).toContainText("ANTH 502");
 
   await page.goto("/next?req=complementary-courses");
   await undo.click();
-  await expect(
-    anth.getByRole("button", { name: "Mark as taken ANTH 502" }),
-  ).toBeFocused();
+  await expect(markAs).toBeFocused();
   await expect(anth).toContainText("Not taken");
   await expect(pane).toContainText("0 of 15 credits");
 });
