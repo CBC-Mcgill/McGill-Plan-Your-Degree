@@ -27,6 +27,8 @@ export interface RecordRow {
   credits: number | null;
   grade: string | null;
   status: CourseStatus;
+  /** Added by the student, so a record with no term has none, where a transcript's comes before the first term. */
+  manual?: boolean;
   /** Such as when a part's credit arrives. */
   note?: string;
   missing?: boolean;
@@ -129,7 +131,7 @@ export function RecordTable({ rows }: { rows: RecordRow[] }) {
             <td className={CELL}>
               {row.term ? (
                 formatTerm(row.term)
-              ) : row.status === "waived" ? (
+              ) : row.manual ? (
                 <Dash label="No term" />
               ) : (
                 <span className="text-fg-muted">Before your first term</span>
@@ -168,9 +170,7 @@ export function RecordTable({ rows }: { rows: RecordRow[] }) {
 /** A record's term, status and credits, the second line of a phone row. */
 function details(row: RecordRow) {
   return [
-    row.term
-      ? formatTerm(row.term)
-      : row.status !== "waived" && "Before your first term",
+    row.term ? formatTerm(row.term) : !row.manual && "Before your first term",
     <span
       key="status"
       className="inline-flex items-center gap-1.5"

@@ -81,6 +81,19 @@ test("applyTranscript maps lines to records and keeps manual ones", () => {
   expect(state.programId).toBe("software-engineering-major-bsc");
 });
 
+test("setTaken undo removes only the term-less manual record", () => {
+  store.getState().reset();
+  store
+    .getState()
+    .applyTranscript(transcript([line("ANTH 502", fall2024, "completed")]));
+  store.getState().setTaken("ANTH 502", true);
+  expect(store.getState().records).toHaveLength(2);
+  store.getState().setTaken("ANTH 502", false);
+  expect(
+    store.getState().records.map((r) => [r.code, r.term, r.source]),
+  ).toEqual([["ANTH 502", fall2024, "transcript"]]);
+});
+
 test("parseProfileFile rejects a malformed file and round-trips an export", () => {
   const rule = "economics-major-concentration-ba\u0000Rule";
   store.getState().setChecked(rule, true);
