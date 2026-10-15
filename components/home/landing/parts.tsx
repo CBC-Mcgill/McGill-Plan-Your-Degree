@@ -154,6 +154,58 @@ export const PATH: PathTerm[] = [
   },
 ];
 
+/** What's next for the sample's next term, grouped as /next groups the major: two required courses open, then two complementary courses locked, one not offered that term and one waiting on a prerequisite. */
+export const NEXT: {
+  title: string;
+  done: number;
+  total: number;
+  courses: {
+    code: string;
+    title: string;
+    checks: string[];
+    missing?: string;
+    /** False when the course does not run in the term. */
+    offered?: false;
+  }[];
+}[] = [
+  {
+    title: "Required courses",
+    done: 24,
+    total: 33,
+    courses: [
+      {
+        code: "COMP 302",
+        title: "Programming Languages and Paradigms",
+        checks: ["COMP 250", "MATH 240"],
+      },
+      {
+        code: "COMP 303",
+        title: "Software Design",
+        checks: ["COMP 206", "COMP 250"],
+      },
+    ],
+  },
+  {
+    title: "Complementary courses",
+    done: 3,
+    total: 30,
+    courses: [
+      {
+        code: "COMP 350",
+        title: "Numerical Computing",
+        checks: [],
+        offered: false,
+      },
+      {
+        code: "COMP 421",
+        title: "Database Systems",
+        checks: ["COMP 206", "COMP 251"],
+        missing: "COMP 302",
+      },
+    ],
+  },
+];
+
 export const credits = (course: Course) => course.credits ?? 3;
 export const termCredits = (term: PathTerm) =>
   term.courses.reduce((sum, course) => sum + credits(course), 0);
@@ -275,8 +327,8 @@ export function Sheet({
                     initial={{ opacity: 0 }}
                     animate={{ opacity: lit ? [0, 1, 0.35] : 0 }}
                     transition={{
-                      delay: lit ? 0.1 + i * 0.09 : 0,
-                      duration: 0.6,
+                      delay: lit ? 0.05 + i * 0.035 : 0,
+                      duration: 0.35,
                     }}
                   />
                 )}
