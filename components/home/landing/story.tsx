@@ -388,11 +388,11 @@ function Next({ on }: { on: boolean }) {
             </span>
           </div>
           {group.courses.map((course, n) => {
-            const reason =
-              course.offered === false
-                ? COPY.notOfferedIn(season)
-                : course.missing && COPY.needs(course.missing);
-            const status = reason ? "locked" : "available";
+            const offered = course.offered !== false;
+            const status = offered && !course.missing ? "available" : "locked";
+            const word = offered
+              ? STATUS[status].label
+              : COPY.notOfferedIn(season);
             const at = ((NEXT_STARTS[g] ?? 0) + n) * 0.06;
             return (
               <motion.div
@@ -411,42 +411,52 @@ function Next({ on }: { on: boolean }) {
                     status === "locked" && "text-fg-muted",
                   )}
                 >
+                  {/* On phones a long word moves under the title, so the title still fits. */}
                   <span
-                    className="shrink-0 font-medium"
+                    className={cn(
+                      "shrink-0 font-medium",
+                      !offered && "max-md:hidden",
+                    )}
                     style={{ color: STATUS[status].text }}
                   >
-                    {STATUS[status].label}
+                    {word}
                   </span>
                 </MockRow>
-                <div className="flex flex-wrap gap-1.5 pb-2 pl-[2.875rem]">
-                  {course.checks.map((code) => (
-                    <Check
-                      key={code}
-                      code={code}
-                      on={on}
-                      delay={on ? at + 0.2 : 0}
-                    />
-                  ))}
-                  {reason && (
-                    <motion.span
-                      className="inline-flex h-5 shrink-0 items-center gap-1 whitespace-nowrap rounded-[5px] bg-tint pr-1.5 pl-1 font-medium text-[12px] text-fg-muted leading-none"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={
-                        on
-                          ? { opacity: 1, scale: 1 }
-                          : { opacity: 0, scale: 0.8 }
-                      }
-                      transition={{
-                        delay: on ? at + 0.2 : 0,
-                        duration: 0.3,
-                        ease: EASE,
-                      }}
-                    >
-                      <StatusIcon status="locked" size={12} />
-                      {reason}
-                    </motion.span>
-                  )}
-                </div>
+                {offered ? (
+                  <div className="flex flex-wrap gap-1.5 pb-2 pl-[2.875rem]">
+                    {course.checks.map((code) => (
+                      <Check
+                        key={code}
+                        code={code}
+                        on={on}
+                        delay={on ? at + 0.2 : 0}
+                      />
+                    ))}
+                    {course.missing && (
+                      <motion.span
+                        className="inline-flex h-5 shrink-0 items-center gap-1 whitespace-nowrap rounded-[5px] bg-tint pr-1.5 pl-1 font-medium text-[12px] text-fg-muted leading-none"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={
+                          on
+                            ? { opacity: 1, scale: 1 }
+                            : { opacity: 0, scale: 0.8 }
+                        }
+                        transition={{
+                          delay: on ? at + 0.2 : 0,
+                          duration: 0.3,
+                          ease: EASE,
+                        }}
+                      >
+                        <StatusIcon status="locked" size={12} />
+                        {COPY.needs(course.missing)}
+                      </motion.span>
+                    )}
+                  </div>
+                ) : (
+                  <span className="pb-2 pl-[2.875rem] font-medium text-[12px] text-fg-muted leading-5 md:hidden">
+                    {word}
+                  </span>
+                )}
               </motion.div>
             );
           })}

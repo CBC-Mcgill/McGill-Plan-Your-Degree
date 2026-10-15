@@ -154,7 +154,7 @@ export const PATH: PathTerm[] = [
   },
 ];
 
-/** What's next for the sample's next term, grouped as /next groups the major: two required courses open, then two complementary courses locked, one not offered that term and one waiting on a prerequisite. */
+/** What's next for the sample's next term, grouped as /next groups the major: two required courses open, then a complementary course not offered that term and one locked. */
 export const NEXT: {
   title: string;
   done: number;
