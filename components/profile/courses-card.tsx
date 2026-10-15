@@ -19,6 +19,7 @@ import { useProfileStore } from "@/lib/profile/store";
 import { currentTerm } from "@/lib/profile/terms";
 import {
   type CourseRecord,
+  earnsCredit,
   logicalCode,
   partOf,
   recordLabel,
@@ -266,9 +267,15 @@ export function CoursesCard() {
               code: recordLabel(record),
               title: ready?.get(record.code)?.title ?? null,
               term: record.term,
-              credits: record.credits,
+              // With none stated, a whole course earns its catalogue credits, as the engine counts them.
+              credits:
+                record.credits ??
+                (earnsCredit(record.status) && !record.part
+                  ? (ready?.get(record.code)?.credits ?? null)
+                  : null),
               grade: record.grade,
               status: record.status,
+              manual: record.source === "manual",
               note: creditNote(record, snapshot?.pending),
               missing: ready !== null && !ready.has(record.code),
               onRemove: () => removeWithUndo(record),

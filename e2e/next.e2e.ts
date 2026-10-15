@@ -608,3 +608,53 @@ test("a required course can be marked as waived, which opens the courses after i
   await expect(comp202).toContainText("Not open to students");
   await expect(requirement(page, "Replace exempted credits")).toHaveCount(0);
 });
+
+test("a course listed under a rule to check can be marked as taken, which moves the group's bar, and the mark undone", async ({
+  page,
+}) => {
+  await openWith(
+    page,
+    { records: [], programId: "anthropology-non-thesis-ma", plan: [] },
+    "2026-10-15T12:00:00",
+  );
+  await page.goto("/next?req=complementary-courses");
+  const tab = requirement(page, "Complementary courses");
+  await expect
+    .soft(tab)
+    .toHaveAccessibleName("Complementary courses 1 rule to check");
+  const pane = page.getByRole("region", { name: "Complementary courses" });
+  await pane.getByRole("button", { name: "Add a course" }).click();
+  await page.getByRole("combobox", { name: "Add a course" }).fill("ANTH 502");
+  await page.getByRole("option", { name: /ANTH 502/ }).click();
+  const anth = pane
+    .getByRole("list", { name: "Courses you listed" })
+    .getByRole("listitem")
+    .filter({ hasText: "ANTH 502" });
+  await expect(anth).toContainText("Not taken");
+  await expect(pane).toContainText("0 of 15 credits");
+
+  await anth.getByRole("button", { name: "Mark as taken ANTH 502" }).click();
+  const undo = anth.getByRole("button", {
+    name: "Undo marking ANTH 502 as taken",
+  });
+  await expect(undo).toBeFocused();
+  await expect(anth).toContainText("Completed");
+  await expect(pane).toContainText("3 of 15 credits");
+  await expect(tab).toHaveAccessibleName(
+    /^Complementary courses 3 of 15 ?, 1 rule to check$/,
+  );
+
+  await page.goto("/profile");
+  const record = page.getByRole("row").filter({ hasText: "ANTH 502" });
+  await expect(record).toContainText("Completed");
+  await expect(record).toContainText("No term");
+  await expect(record).not.toContainText("Before your first term");
+
+  await page.goto("/next?req=complementary-courses");
+  await undo.click();
+  await expect(
+    anth.getByRole("button", { name: "Mark as taken ANTH 502" }),
+  ).toBeFocused();
+  await expect(anth).toContainText("Not taken");
+  await expect(pane).toContainText("0 of 15 credits");
+});

@@ -98,6 +98,7 @@ import {
 import {
   type CourseRecord,
   doneStatus,
+  isTaken,
   type Plan,
   type Term,
   termKey,
@@ -674,6 +675,11 @@ function PaneList({
 
 /** A requirement's label with its tick and warn icon, then its bar and fraction or a line of text. */
 function PaneSummary({ pane }: { pane: Pane }) {
+  const checks = pane.checks ? checksText(pane.checks) : null;
+  // Read after the fraction, unless the line under the label already says it.
+  const said = checks && checks !== pane.side && (
+    <span className="sr-only">, {checks}</span>
+  );
   return (
     <>
       <span className="flex items-start gap-2 font-semibold">
@@ -686,12 +692,11 @@ function PaneSummary({ pane }: { pane: Pane }) {
           {/* Keeps a short last word, as in "group B", off a line of its own. */}
           {pane.label.replace(/ (\S{1,2})$/, "\u00a0$1")}
         </span>
-        {pane.checks ? (
+        {checks && (
           <span className="flex h-5 items-center">
             <TriangleAlert aria-hidden className="size-3.5 text-warn" />
-            <span className="sr-only">, {checksText(pane.checks)}</span>
           </span>
-        ) : null}
+        )}
       </span>
       {pane.split ? (
         <span className="flex items-center gap-3 font-normal">
@@ -700,6 +705,7 @@ function PaneSummary({ pane }: { pane: Pane }) {
           </span>
           <span className="shrink-0 text-fg-muted tabular-nums">
             {pane.side}
+            {said}
           </span>
         </span>
       ) : (
@@ -710,6 +716,7 @@ function PaneSummary({ pane }: { pane: Pane }) {
           )}
         >
           {pane.side}
+          {said}
         </span>
       )}
     </>
@@ -1336,7 +1343,7 @@ function Row({
             : COPY.plannedFor(plannedIn)
           : (reason ?? `Offered ${seasonsOffered(course)}`)
       }
-      waive={
+      mark={
         waivable &&
         !plannedIn && (
           <Button
@@ -1371,7 +1378,7 @@ function PaneRow({
   uncertain = false,
   share,
   note,
-  waive,
+  mark,
   action,
 }: {
   course: CourseSummary;
@@ -1379,15 +1386,15 @@ function PaneRow({
   /** On a second program's row: counts for both, or for the program only. */
   share?: Definition;
   note: ReactNode;
-  /** "Mark as waived" before the action. On hover it takes the credits' place. Where actions always show, the two share a line under the row, and on a phone they follow the note when it leaves room. */
-  waive?: ReactNode;
+  /** "Mark as waived" or "Mark as taken" before the action. On hover it takes the credits' place. Where actions always show, the two share a line under the row, and on a phone they follow the note when it leaves room. */
+  mark?: ReactNode;
   action?: ReactNode;
 }) {
   return (
     <li
       className={cn(
         ROW,
-        waive
+        mark
           ? "flex-wrap gap-y-2 max-md:gap-x-3 max-md:gap-y-0"
           : "max-md:grid max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-3 max-md:gap-y-1",
       )}
@@ -1423,7 +1430,7 @@ function PaneRow({
       <span
         className={cn(
           "flex w-50 shrink-0 flex-wrap items-start gap-x-2 gap-y-1 text-fg-muted @3xl:w-64 max-md:col-start-1 max-md:row-start-2 max-md:w-auto max-md:self-center",
-          waive && "max-md:order-3 max-md:mt-1 max-md:shrink max-md:grow",
+          mark && "max-md:order-3 max-md:mt-1 max-md:shrink max-md:grow",
         )}
       >
         {note}
@@ -1438,14 +1445,14 @@ function PaneRow({
         className={cn(
           "w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums max-md:col-start-2 max-md:row-start-1 max-md:w-auto",
           // The margin keeps the action column's room once the buttons wrap below.
-          waive &&
+          mark &&
             "max-md:order-1 md:max-lg:mr-24 lg:pointer-coarse:mr-24 lg:pointer-fine:group-focus-within:opacity-0 lg:pointer-fine:group-hover:opacity-0",
         )}
       >
         <CreditsLabel course={course} />
       </span>
       {/* On a phone the note starts a line of its own. */}
-      {waive && (
+      {mark && (
         <span
           aria-hidden
           className="hidden max-md:order-2 max-md:block max-md:basis-full"
@@ -1454,12 +1461,13 @@ function PaneRow({
       <span
         className={cn(
           "-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 max-lg:opacity-100 max-md:w-auto max-md:self-center pointer-coarse:opacity-100",
-          waive
-            ? "gap-2 max-lg:my-0 max-lg:basis-full lg:pointer-coarse:my-0 lg:pointer-coarse:basis-full max-md:order-4 max-md:mt-1 max-md:ml-auto max-md:basis-auto"
+          // Positioned, so the buttons stay above the hidden credits they overlap.
+          mark
+            ? "relative gap-2 max-lg:my-0 max-lg:basis-full lg:pointer-coarse:my-0 lg:pointer-coarse:basis-full max-md:order-4 max-md:mt-1 max-md:ml-auto max-md:basis-auto"
             : "max-md:col-start-2 max-md:row-start-2",
         )}
       >
-        {waive}
+        {mark}
         {action}
       </span>
     </li>
@@ -1486,10 +1494,12 @@ const byCode = (a: Claimed, b: Claimed) => (a.code < b.code ? -1 : 1);
 function CountedRow({
   claimed: { code, credits },
   context,
+  mark,
   action,
 }: {
   claimed: Claimed;
   context: Context;
+  mark?: ReactNode;
   action?: ReactNode;
 }) {
   const setWaived = useProfileStore((state) => state.setWaived);
@@ -1520,6 +1530,7 @@ function CountedRow({
           {toReplace && <span>{toReplace}</span>}
         </>
       }
+      mark={mark}
       action={
         action ??
         (waived && (
@@ -1803,6 +1814,8 @@ function RuleCourses({
   className?: string;
 }) {
   const setAssigned = useProfileStore((state) => state.setAssigned);
+  const setTaken = useProfileStore((state) => state.setTaken);
+  const records = useProfileStore((state) => state.records);
   const [adding, setAdding] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
   const searchId = useId();
@@ -1818,6 +1831,31 @@ function RuleCourses({
     toggle.current?.focus();
   }
 
+  // Only a course with no record and no plan, or with only the record this button wrote.
+  function markTaken(code: string) {
+    const own = records.filter((r) => r.code === code);
+    const taken = own.length === 1 && own.every(isTaken);
+    if (!taken && (own.length > 0 || context.facts.has(code))) return null;
+    return (
+      <Button
+        variant="secondary"
+        aria-label={
+          taken
+            ? `${COPY.undo} marking ${code} as taken`
+            : `${COPY.markTaken} ${code}`
+        }
+        aria-describedby={describedBy}
+        onClick={() => {
+          context.keepPane?.();
+          setTaken(code, !taken);
+        }}
+        className="max-lg:h-11"
+      >
+        {taken ? COPY.undo : COPY.markTaken}
+      </Button>
+    );
+  }
+
   return (
     <div className={className}>
       {listed.length > 0 && (
@@ -1831,6 +1869,7 @@ function RuleCourses({
                 key={claimed.code}
                 claimed={claimed}
                 context={context}
+                mark={markTaken(claimed.code)}
                 action={
                   <Button
                     variant="secondary"
