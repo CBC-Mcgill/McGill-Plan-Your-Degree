@@ -9,6 +9,18 @@ import {
   termKey,
 } from "./types.ts";
 
+/** A Fall or Winter term counted from the academic year's Fall, so a sample never looks dated and its seasons stay true all year: 0 is that Fall (the one behind in Winter, the one ahead in Summer), -1 the term before, 1 the term after. */
+export function sampleTerm(offset: number, now = new Date()): Term {
+  const term = currentTerm(now);
+  let key = termKey(term) + { Fall: 0, Winter: -1, Summer: 1 }[term.season];
+  const step = Math.sign(offset);
+  for (let i = 0; i < Math.abs(offset); i++) {
+    do key += step;
+    while (termFromKey(key).season === "Summer");
+  }
+  return termFromKey(key);
+}
+
 export function termLabel(term: Term): string {
   return `${term.season} ${term.year}`;
 }
