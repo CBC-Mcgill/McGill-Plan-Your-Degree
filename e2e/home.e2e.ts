@@ -1,4 +1,4 @@
-import { expect, type Page, test } from "@playwright/test";
+import { expect, type Locator, type Page, test } from "@playwright/test";
 
 const expectNoHorizontalScroll = async (page: Page) => {
   const overflow = await page.evaluate(
@@ -8,6 +8,100 @@ const expectNoHorizontalScroll = async (page: Page) => {
   );
   expect(overflow).toBeLessThanOrEqual(0);
 };
+
+const LINES = [
+  "Import the transcript PDF from Minerva. Your courses and grades fill in, and the file never leaves your browser.",
+  "What's next checks prerequisites for you and shows what you can take next term, what is locked and why.",
+  "The Planner holds every term until graduation and warns you when a course is not offered or comes too early.",
+];
+
+/** Scrolls the pinned story that holds `heading` to `step`, from 0 where it sticks to 3 where it lets go. */
+const scrollStory = (heading: Locator, step: number) =>
+  heading.evaluate((h2, step) => {
+    let pane = h2.parentElement;
+    while (pane && getComputedStyle(pane).position !== "sticky") {
+      pane = pane.parentElement;
+    }
+    const section = pane?.parentElement;
+    if (!pane || !section) throw new Error("No pinned story");
+    const style = getComputedStyle(section);
+    const before = Number.parseFloat(style.paddingTop);
+    const range =
+      section.offsetHeight -
+      before -
+      Number.parseFloat(style.paddingBottom) -
+      pane.offsetHeight;
+    const start =
+      section.getBoundingClientRect().top +
+      scrollY +
+      before -
+      Number.parseFloat(getComputedStyle(pane).top);
+    scrollTo({ top: start + (range * step) / 3, behavior: "instant" });
+  }, step);
+
+/** How much each text shows in the pinned story: its opacity times its ancestors', and 0 while its box is clipped shut. */
+const shown = (heading: Locator, texts: string[]) =>
+  heading.evaluate((h2, texts) => {
+    const section = h2.closest("section");
+    const all = [...(section?.querySelectorAll("*") ?? [])];
+    return texts.map((text) => {
+      let element = all.findLast((each) => each.textContent === text) ?? null;
+      if (!(element instanceof HTMLElement)) return 0;
+      if (element.clientHeight < element.scrollHeight - 1) return 0;
+      let opacity = 1;
+      for (; element && element !== section; element = element.parentElement) {
+        opacity *= Number(getComputedStyle(element).opacity);
+      }
+      return Math.round(opacity * 100) / 100;
+    });
+  }, texts);
+
+test("the pinned story opens each step's line under its headline as it scrolls", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const heading = page
+    .getByRole("main")
+    .getByRole("heading", { level: 2, name: "See what you can take next" });
+  for (const [i, line] of LINES.entries()) {
+    await scrollStory(heading, i + 0.5);
+    await expect
+      .poll(() => shown(heading, LINES))
+      .toEqual(LINES.map((each) => (each === line ? 1 : 0)));
+  }
+  await expectNoHorizontalScroll(page);
+});
+
+test("the pinned story builds with the scroll, holds still when it stops and runs back", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const heading = page
+    .getByRole("main")
+    .getByRole("heading", { level: 2, name: "See what you can take next" });
+  const rows = [
+    "Programming Languages and Paradigms",
+    "Software Design",
+    "Numerical Computing",
+    "Database Systems",
+  ];
+  const parts = [...rows, "COMP 250", "Needs COMP 302 first"];
+  const full = async () =>
+    (await shown(heading, rows)).filter((opacity) => opacity === 1).length;
+
+  await scrollStory(heading, 1.25);
+  await expect.poll(async () => (await shown(heading, parts))[0]).toBe(1);
+  expect((await shown(heading, parts)).at(-1)).toBe(0);
+  const built = await shown(heading, parts);
+  const count = await full();
+
+  // Nothing is timed, so a second later the card is as the scroll left it.
+  await page.waitForTimeout(1000);
+  expect(await shown(heading, parts)).toEqual(built);
+
+  await page.mouse.wheel(0, -100);
+  await expect.poll(full).toBeLessThan(count);
+});
 
 test("landing renders its primary action", async ({ page }) => {
   await page.goto("/");

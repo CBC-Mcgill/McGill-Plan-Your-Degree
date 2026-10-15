@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "cn";
-import { motion } from "motion/react";
+import { type MotionValue, motion, useTransform } from "motion/react";
 import { type ReactNode, useSyncExternalStore } from "react";
 import { CourseCode } from "@/components/course-code";
 import { sampleTerm } from "@/components/no-profile";
@@ -154,6 +154,62 @@ export const PATH: PathTerm[] = [
   },
 ];
 
+export interface NextCourse {
+  code: string;
+  title: string;
+  /** Prerequisites done by the end of this term, each shown checked. */
+  checks: string[];
+  /** The prerequisite still to take, which locks the course. */
+  missing?: string;
+  /** False when the course does not run in the next term's season. */
+  offered?: boolean;
+}
+
+/** The sample's What's next for the term after this one, grouped as /next shows it, each group with its credits done or in progress. */
+export const NEXT: {
+  title: string;
+  done: number;
+  total: number;
+  courses: NextCourse[];
+}[] = [
+  {
+    title: "Required courses",
+    done: 24,
+    total: 33,
+    courses: [
+      {
+        code: "COMP 302",
+        title: "Programming Languages and Paradigms",
+        checks: ["COMP 250", "MATH 240"],
+      },
+      {
+        code: "COMP 303",
+        title: "Software Design",
+        checks: ["COMP 206", "COMP 250"],
+      },
+    ],
+  },
+  {
+    title: "Complementary courses",
+    done: 3,
+    total: 30,
+    courses: [
+      {
+        code: "COMP 350",
+        title: "Numerical Computing",
+        checks: [],
+        offered: false,
+      },
+      {
+        code: "COMP 421",
+        title: "Database Systems",
+        checks: ["COMP 206", "COMP 251"],
+        missing: "COMP 302",
+      },
+    ],
+  },
+];
+
 export const credits = (course: Course) => course.credits ?? 3;
 export const termCredits = (term: PathTerm) =>
   term.courses.reduce((sum, course) => sum + credits(course), 0);
@@ -178,29 +234,46 @@ export function useReduce() {
   );
 }
 
-/** A met prerequisite: a green check that draws in, then the course code. It animates in on mount, unless an `AnimatePresence initial={false}` above it blocks first animations. */
+/** A met prerequisite: a green check that draws in, then the course code. It animates in on mount, unless an `AnimatePresence initial={false}` above it blocks first animations or `scrub` drives it. */
 export function Check({
   code,
-  on,
+  on = true,
   delay = 0,
+  scrub,
   className,
 }: {
   code: string;
-  on: boolean;
+  on?: boolean;
   delay?: number;
+  /** The chip's opacity and x and how much of its tick is drawn, from a scroll story instead of `on`. */
+  scrub?: {
+    opacity: MotionValue<number>;
+    x: MotionValue<number>;
+    tick: MotionValue<number>;
+  };
   className?: string;
 }) {
   const ease = { delay, duration: 0.3, ease: [0.2, 0.7, 0.2, 1] } as const;
   return (
     <motion.span
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={on ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+      initial={scrub ? false : { opacity: 0, scale: 0.8 }}
+      animate={
+        scrub
+          ? undefined
+          : on
+            ? { opacity: 1, scale: 1 }
+            : { opacity: 0, scale: 0.8 }
+      }
       transition={ease}
       className={cn(
         "inline-flex h-5 shrink-0 items-center gap-1 rounded-[5px] pr-1.5 pl-1 font-medium text-[12px] text-completed leading-none",
         className,
       )}
-      style={{ background: "color-mix(in oklab, var(--completed) 11%, white)" }}
+      style={{
+        background: "color-mix(in oklab, var(--completed) 11%, white)",
+        opacity: scrub?.opacity,
+        x: scrub?.x,
+      }}
     >
       <svg viewBox="0 0 14 14" className="size-3" aria-hidden>
         <circle cx="7" cy="7" r="6.25" fill="currentColor" />
@@ -211,9 +284,10 @@ export function Check({
           strokeWidth={1.75}
           strokeLinecap="round"
           strokeLinejoin="round"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: on ? 1 : 0 }}
+          initial={scrub ? false : { pathLength: 0 }}
+          animate={scrub ? undefined : { pathLength: on ? 1 : 0 }}
           transition={{ ...ease, delay: delay + 0.12 }}
+          style={scrub && { pathLength: scrub.tick }}
         />
       </svg>
       {code}
@@ -230,8 +304,8 @@ export function Sheet({
   className?: string;
   /** Course codes, one line each, grouped by term with a short heading line before each group. */
   lines: string[][];
-  /** Lights the course lines one by one, in step with the rows they turn into. Leave it out for a plain sheet. */
-  lit?: boolean;
+  /** How many course lines the reading has reached: each lights as it is reached and dims two lines later, in step with the rows they turn into. Leave it out for a plain sheet. */
+  lit?: MotionValue<number>;
 }) {
   const starts = lines.map((_, g) =>
     lines.slice(0, g).reduce((sum, group) => sum + group.length, 0),
@@ -268,18 +342,7 @@ export function Sheet({
                 key={code}
                 className="relative mt-1.5 flex items-center gap-1.5"
               >
-                {lit !== undefined && (
-                  <motion.span
-                    aria-hidden
-                    className="absolute -inset-x-1.5 -inset-y-[3px] rounded-[3px] bg-planned/12"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: lit ? [0, 1, 0.35] : 0 }}
-                    transition={{
-                      delay: lit ? 0.1 + i * 0.09 : 0,
-                      duration: 0.6,
-                    }}
-                  />
-                )}
+                {lit && <Light lit={lit} line={i} />}
                 <span
                   className="relative h-1.5 w-7 rounded-[2px]"
                   style={{ background: `var(--subject-${hue})`, opacity: 0.7 }}
@@ -295,6 +358,17 @@ export function Sheet({
         </div>
       ))}
     </div>
+  );
+}
+
+function Light({ lit, line }: { lit: MotionValue<number>; line: number }) {
+  const opacity = useTransform(lit, [line, line + 1, line + 2], [0, 1, 0.35]);
+  return (
+    <motion.span
+      aria-hidden
+      className="absolute -inset-x-1.5 -inset-y-[3px] rounded-[3px] bg-planned/12"
+      style={{ opacity }}
+    />
   );
 }
 

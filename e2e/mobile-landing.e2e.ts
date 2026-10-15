@@ -15,6 +15,12 @@ const STORY = [
   "Plan every term to graduation",
 ];
 
+const LINES = [
+  "Import the transcript PDF from Minerva. Your courses and grades fill in, and the file never leaves your browser.",
+  "What's next checks prerequisites for you and shows what you can take next term, what is locked and why.",
+  "The Planner holds every term until graduation and warns you when a course is not offered or comes too early.",
+];
+
 test("on a phone the landing stacks, fits the screen and its calls work by tap", async ({
   page,
 }) => {
@@ -47,6 +53,9 @@ test("on a phone the landing stacks, fits the screen and its calls work by tap",
   // The pinned story is gone on phones, so each heading is there once.
   for (const name of STORY) {
     await expect(main.getByRole("heading", { level: 2, name })).toBeVisible();
+  }
+  for (const line of LINES) {
+    await expect(main.getByText(line).filter({ visible: true })).toBeVisible();
   }
   await expect(
     main.getByRole("heading", { name: "Start mapping your degree" }),
