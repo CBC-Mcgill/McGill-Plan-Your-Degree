@@ -105,7 +105,7 @@ export const COPY = {
   checkedByYou: "Checked by you",
   markChecked: "Mark as checked",
   markWaived: "Mark as waived",
-  markTaken: "Mark as taken",
+  markAs: "Mark as",
   waivedByYou: "Waived by you",
   waiverReminder:
     "A waiver you marked still needs its credits replaced. Confirm it with your advisor.",

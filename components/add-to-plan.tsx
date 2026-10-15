@@ -51,7 +51,7 @@ const runsThisYear = (course: CourseSummary) =>
   SEASONS.some((season) => isOffered(course, season));
 
 /** The starts the menu offers, and the expected graduation when every one of them ends after it. */
-function useStarts(course: CourseSummary) {
+export function useStarts(course: CourseSummary) {
   const catalogue = useCatalogue();
   const plan = useProfileStore((state) => state.plan);
   const graduation = useProfileStore((state) => state.graduationTerm);
@@ -350,12 +350,14 @@ function PlanActions({
 }
 
 /** One term the course can start in, with the credits the plan holds there (D49). Terms where it does not run stay selectable and the planner warns. */
-function TermItem({
+export function TermItem({
   course,
   choice,
   planned,
   limit,
   never,
+  prefix,
+  onAdd = addWithUndo,
 }: {
   course: CourseSummary;
   choice: TermChoice;
@@ -363,6 +365,9 @@ function TermItem({
   /** Null while the catalogue loads and the credits are unknown. */
   limit: number | null;
   never: boolean;
+  /** Read before the term, such as "Plan for". */
+  prefix?: string;
+  onAdd?: (term: PlanTerm, code: string) => void;
 }) {
   const here =
     planned !== undefined && termKey(planned) === termKey(choice.term);
@@ -394,7 +399,7 @@ function TermItem({
   return (
     <MenuItem
       onSelect={() => {
-        if (!here) addWithUndo(choice.term, course.code);
+        if (!here) onAdd(choice.term, course.code);
       }}
       meta={meta.flatMap((item, i) => (i > 0 ? [" · ", item] : [item]))}
     >
@@ -403,6 +408,7 @@ function TermItem({
           {here && <Check aria-hidden className="size-4" />}
         </span>
       )}
+      {prefix && <span className="sr-only">{prefix} </span>}
       {choice.label}
       {here && <span className="sr-only"> (planned here)</span>}
     </MenuItem>

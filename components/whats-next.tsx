@@ -2,6 +2,7 @@
 
 import { cn } from "cn";
 import {
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
   Plus,
@@ -20,6 +21,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { TermItem, useStarts } from "@/components/add-to-plan";
 import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
 import {
@@ -50,6 +52,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CARD, Card } from "@/components/ui/card";
 import { Disclosure, ShowMore } from "@/components/ui/disclosure";
+import { Menu, MenuItem, MenuLabel } from "@/components/ui/menu";
 import { Term as Defined } from "@/components/ui/tooltip";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses } from "@/lib/catalogue/search";
@@ -92,13 +95,14 @@ import {
 import { useProfileStore } from "@/lib/profile/store";
 import {
   currentTerm,
+  pastTermOptions,
   planTermOptions,
   termLabel,
 } from "@/lib/profile/term-options";
 import {
   type CourseRecord,
   doneStatus,
-  isTaken,
+  isMarked,
   type Plan,
   type Term,
   termKey,
@@ -1292,6 +1296,12 @@ const focusLater = (name: string) =>
       ?.focus(),
   );
 
+/** The button gives way to another in its place, so focus moves to the first button there once it renders. */
+const focusInPlace = (button: Element | null) => {
+  const slot = button?.parentElement;
+  requestAnimationFrame(() => slot?.querySelector("button")?.focus());
+};
+
 // A row button stays 36px tall, its target grown to 44px where actions always show.
 const HIT_AREA =
   "max-lg:relative max-lg:after:absolute max-lg:after:-inset-y-1 max-lg:after:inset-x-0";
@@ -1394,6 +1404,8 @@ function PaneRow({
     <li
       className={cn(
         ROW,
+        // An open menu takes focus out of the row, so the row stays as hover left it.
+        "has-[[data-state=open]]:bg-tint",
         mark
           ? "flex-wrap gap-y-2 max-md:gap-x-3 max-md:gap-y-0"
           : "max-md:grid max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-3 max-md:gap-y-1",
@@ -1446,7 +1458,7 @@ function PaneRow({
           "w-22 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums max-md:col-start-2 max-md:row-start-1 max-md:w-auto",
           // The margin keeps the action column's room once the buttons wrap below.
           mark &&
-            "max-md:order-1 md:max-lg:mr-24 lg:pointer-coarse:mr-24 lg:pointer-fine:group-focus-within:opacity-0 lg:pointer-fine:group-hover:opacity-0",
+            "max-md:order-1 md:max-lg:mr-24 lg:pointer-coarse:mr-24 lg:pointer-fine:group-focus-within:opacity-0 lg:pointer-fine:group-hover:opacity-0 lg:pointer-fine:group-has-[[data-state=open]]:opacity-0",
         )}
       >
         <CreditsLabel course={course} />
@@ -1460,7 +1472,7 @@ function PaneRow({
       )}
       <span
         className={cn(
-          "-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 max-lg:opacity-100 max-md:w-auto max-md:self-center pointer-coarse:opacity-100",
+          "-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100 max-lg:opacity-100 max-md:w-auto max-md:self-center pointer-coarse:opacity-100",
           // Positioned, so the buttons stay above the hidden credits they overlap.
           mark
             ? "relative gap-2 max-lg:my-0 max-lg:basis-full lg:pointer-coarse:my-0 lg:pointer-coarse:basis-full max-md:order-4 max-md:mt-1 max-md:ml-auto max-md:basis-auto"
@@ -1814,7 +1826,7 @@ function RuleCourses({
   className?: string;
 }) {
   const setAssigned = useProfileStore((state) => state.setAssigned);
-  const setTaken = useProfileStore((state) => state.setTaken);
+  const setMarked = useProfileStore((state) => state.setMarked);
   const records = useProfileStore((state) => state.records);
   const [adding, setAdding] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -1831,28 +1843,50 @@ function RuleCourses({
     toggle.current?.focus();
   }
 
-  // Only a course with no record and no plan, or with only the record this button wrote.
-  function markTaken(code: string) {
+  const undo = (label: string, run: () => void) => (
+    <Button
+      variant="secondary"
+      aria-label={label}
+      aria-describedby={describedBy}
+      onClick={(event) => {
+        context.keepPane?.();
+        focusInPlace(event.currentTarget);
+        run();
+      }}
+      className="max-lg:h-11"
+    >
+      {COPY.undo}
+    </Button>
+  );
+
+  // "Mark as" only for a course with no record and no plan, and Undo only for what it wrote.
+  function mark(code: string) {
     const own = records.filter((r) => r.code === code);
-    const taken = own.length === 1 && own.every(isTaken);
-    if (!taken && (own.length > 0 || context.facts.has(code))) return null;
+    const [only] = own;
+    const plannedIn = context.planned.get(code);
+    if (own.length === 1 && only && isMarked(only)) {
+      const as = only.status === "completed" ? "taken" : "taking now";
+      return undo(`${COPY.undo} marking ${code} as ${as}`, () =>
+        setMarked(code, only.term, only.status, false),
+      );
+    }
+    if (
+      own.length === 0 &&
+      plannedIn &&
+      context.facts.get(code)?.status === "planned"
+    ) {
+      return undo(
+        `${COPY.undo} planning ${code} for ${termLabel(plannedIn)}`,
+        () => removeWithUndo(plannedIn, code),
+      );
+    }
+    if (own.length > 0 || context.facts.has(code)) return null;
     return (
-      <Button
-        variant="secondary"
-        aria-label={
-          taken
-            ? `${COPY.undo} marking ${code} as taken`
-            : `${COPY.markTaken} ${code}`
-        }
-        aria-describedby={describedBy}
-        onClick={() => {
-          context.keepPane?.();
-          setTaken(code, !taken);
-        }}
-        className="max-lg:h-11"
-      >
-        {taken ? COPY.undo : COPY.markTaken}
-      </Button>
+      <MarkAs
+        course={context.catalogue.get(code) ?? stub(code)}
+        describedBy={describedBy}
+        keepPane={context.keepPane}
+      />
     );
   }
 
@@ -1869,7 +1903,7 @@ function RuleCourses({
                 key={claimed.code}
                 claimed={claimed}
                 context={context}
-                mark={markTaken(claimed.code)}
+                mark={mark(claimed.code)}
                 action={
                   <Button
                     variant="secondary"
@@ -1916,6 +1950,81 @@ function RuleCourses({
         )}
       </div>
     </div>
+  );
+}
+
+/** One menu of terms for a listed course: taken in a past term, taking now, or planned for a start ahead. */
+function MarkAs({
+  course,
+  describedBy,
+  keepPane,
+}: {
+  course: CourseSummary;
+  describedBy?: string;
+  keepPane?: () => void;
+}) {
+  const setMarked = useProfileStore((state) => state.setMarked);
+  const start = useProfileStore((state) => state.startTerm);
+  const creditLimit = useProfileStore((state) => state.creditLimit);
+  const { choices, ready } = useStarts(course);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const { code } = course;
+  const now = currentTerm();
+  const past = pastTermOptions(start);
+
+  function pick(write: () => void) {
+    keepPane?.();
+    focusInPlace(trigger.current);
+    write();
+  }
+
+  return (
+    <Menu
+      align="end"
+      trigger={
+        <Button
+          ref={trigger}
+          variant="secondary"
+          aria-label={`${COPY.markAs} ${code}`}
+          aria-describedby={describedBy}
+          className="max-lg:h-11"
+        >
+          {COPY.markAs}
+          <ChevronDown aria-hidden className="text-fg-muted" />
+        </Button>
+      }
+    >
+      {past.length > 0 && <MenuLabel>Taken in</MenuLabel>}
+      {past.map((term) => (
+        <MenuItem
+          key={termKey(term)}
+          onSelect={() => pick(() => setMarked(code, term, "completed", true))}
+        >
+          <span className="sr-only">Taken in </span>
+          {termLabel(term)}
+        </MenuItem>
+      ))}
+      <MenuLabel>Taking now</MenuLabel>
+      <MenuItem
+        onSelect={() => pick(() => setMarked(code, now, "in-progress", true))}
+      >
+        <span className="sr-only">Taking now </span>
+        {termLabel(now)}
+      </MenuItem>
+      {choices.length > 0 && <MenuLabel>Plan for</MenuLabel>}
+      {choices.map((choice) => (
+        <TermItem
+          key={termKey(choice.term)}
+          course={course}
+          choice={choice}
+          planned={undefined}
+          limit={ready ? creditLimit : null}
+          never={false}
+          prefix="Plan for"
+          onAdd={(term) => pick(() => addWithUndo(term, code))}
+        />
+      ))}
+    </Menu>
   );
 }
 

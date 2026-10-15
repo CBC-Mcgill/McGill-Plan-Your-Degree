@@ -125,9 +125,15 @@ export function doneStatus(
   );
 }
 
-/** The record "Mark as taken" writes: completed by hand, with no term. */
-export const isTaken = (r: CourseRecord) =>
-  r.source === "manual" && r.status === "completed" && r.term === null;
+export type MarkedStatus = "completed" | "in-progress";
+
+/** A record "Mark as" writes: taken or taking by hand, with no credits stated. Earlier versions wrote taken ones with no term. */
+export const isMarked = (
+  r: CourseRecord,
+): r is CourseRecord & { status: MarkedStatus } =>
+  r.source === "manual" &&
+  r.credits === null &&
+  (r.status === "completed" || r.status === "in-progress");
 
 /** An exemption or a waiver is done but gives no credit. */
 export function earnsCredit(status: CourseStatus): boolean {

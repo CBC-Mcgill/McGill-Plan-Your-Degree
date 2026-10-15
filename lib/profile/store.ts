@@ -15,8 +15,9 @@ import {
   type CourseRecord,
   compareTerms,
   isCegep,
-  isTaken,
+  isMarked,
   logicalCode,
+  type MarkedStatus,
   type Plan,
   type Profile,
   partOf,
@@ -84,8 +85,13 @@ export interface ProfileActions {
   setChecked: (key: string, checked: boolean) => void;
   /** Marks a course as waived by the student, or takes the mark back. The course's other records stay. */
   setWaived: (code: string, waived: boolean) => void;
-  /** Adds a completed record with no term for a course the student says they took, or removes only that record. */
-  setTaken: (code: string, taken: boolean) => void;
+  /** Adds a record with no credits stated for a course the student says they took or are taking in the term, or removes only that record. */
+  setMarked: (
+    code: string,
+    term: Term | null,
+    status: MarkedStatus,
+    marked: boolean,
+  ) => void;
   /** Replaces the courses listed under a rule from `checkKey`. An empty list drops the key. */
   setAssigned: (key: string, codes: string[]) => void;
   /** A course sits in one term at most, so adding it again moves it. */
@@ -228,18 +234,26 @@ export const useProfileStore = create<ProfileState>()(
               : []),
           ],
         })),
-      setTaken: (code, taken) =>
+      setMarked: (code, term, status, marked) =>
         set((state) => ({
           records: [
-            ...state.records.filter((r) => !(r.code === code && isTaken(r))),
-            ...(taken
+            ...state.records.filter(
+              (r) =>
+                !(
+                  r.code === code &&
+                  isMarked(r) &&
+                  r.status === status &&
+                  sameTerm(r.term, term)
+                ),
+            ),
+            ...(marked
               ? [
                   {
                     code,
-                    term: null,
+                    term,
                     credits: null,
                     grade: null,
-                    status: "completed" as const,
+                    status,
                     source: "manual" as const,
                   },
                 ]

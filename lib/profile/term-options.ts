@@ -43,6 +43,23 @@ export function defaultGraduation(
   return compareTerms(guess, floor) < 0 ? floor : guess;
 }
 
+/** The Fall and Winter terms from the start to the one before today's, or the last six without a start. */
+export function pastTermOptions(
+  start: Term | null,
+  today = new Date(),
+): Term[] {
+  const terms: Term[] = [];
+  for (
+    let key = termKey(currentTerm(today)) - 1;
+    start ? key >= termKey(start) : terms.length < FALL_WINTER_TERMS;
+    key--
+  ) {
+    const term = termFromKey(key);
+    if (term.season !== "Summer") terms.unshift(term);
+  }
+  return terms;
+}
+
 /** The next six Fall and Winter terms after today's, plus every term the plan already uses, in order. */
 export function planTermOptions(plan: Plan, today = new Date()): Term[] {
   const terms = new Map<number, Term>();
