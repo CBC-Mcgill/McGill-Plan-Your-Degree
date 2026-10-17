@@ -15,6 +15,7 @@ import {
   addWithUndo,
   removeWithUndo,
 } from "@/components/plan/add-with-undo";
+import { PriorityFlag } from "@/components/plan/priority-flag";
 import { TermWarnings } from "@/components/plan/term-warnings";
 import {
   STATUS,
@@ -44,6 +45,7 @@ import {
   type PlannedLoad,
   startTerm,
 } from "@/lib/engine/plan";
+import { type Priority, priorities } from "@/lib/engine/priority";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import {
   type FillOption,
@@ -314,17 +316,27 @@ function Fill({
   program,
   catalogue,
   creditLimit,
+  priorityOf,
+  now,
+  graduation,
 }: {
   stage: Stage;
   options: FillOption[];
   program: Program;
   catalogue: Catalogue;
   creditLimit: number;
+  priorityOf: (code: string) => Priority;
+  now: Term;
+  graduation: Term;
 }) {
   const panelId = useId();
   const [filter, setFilter] = useState<Filter>("all");
   const [picked, setPicked] = useState<ReadonlySet<string>>(new Set());
   const label = termLabel(stage.term);
+  // The column for the unlock count shows only when some course unlocks one.
+  const flagged = options.some(
+    ({ course }) => priorityOf(course.code).dependents.length > 0,
+  );
   // Both kinds or none: a filter with one choice would filter nothing.
   const filtered = new Set(options.map((option) => option.kind)).size > 1;
   const shown = options.filter(
@@ -359,12 +371,21 @@ function Fill({
       {part.map(({ course, group }) => {
         const checked = picked.has(course.code);
         const counts = sentence(program.groups[group]?.title ?? "");
+        // The unlock count is a button of its own, so it sits beside the label rather than inside it. The label reaches under that cell, so its empty space still ticks the box.
         return (
-          <li key={course.code} className="-mx-5 border-line border-b">
+          <li
+            key={course.code}
+            className={cn(
+              "relative -mx-5 flex items-center border-line border-b hover:bg-tint max-md:items-start",
+              checked && "bg-tint",
+            )}
+          >
             <label
               className={cn(
-                "flex min-h-11 cursor-pointer items-center gap-4 px-5 py-2 hover:bg-tint max-md:items-start",
-                checked && "bg-tint",
+                "flex min-h-11 min-w-0 flex-1 cursor-pointer items-center gap-4 py-2 pl-5 max-md:items-start",
+                flagged
+                  ? "pr-4 after:absolute after:inset-y-0 after:right-0 after:w-16"
+                  : "pr-5",
               )}
             >
               <input
@@ -395,10 +416,20 @@ function Fill({
               >
                 {counts}
               </span>
-              <span className="w-14 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums">
+              {/* At least the width of "3 cr", wider for "6 cr, 2 terms", so it never runs into the unlock count. */}
+              <span className="min-w-14 shrink-0 whitespace-nowrap text-right text-fg-muted tabular-nums">
                 <CreditsLabel course={course} />
               </span>
             </label>
+            {flagged && (
+              <span className="flex min-w-16 shrink-0 justify-end pr-5 max-md:pt-2.5">
+                <PriorityFlag
+                  priority={priorityOf(course.code)}
+                  now={now}
+                  graduation={graduation}
+                />
+              </span>
+            )}
           </li>
         );
       })}
@@ -502,9 +533,12 @@ export function TermPanel({
   creditLimit,
   moveOptions,
   onSelect,
+  graduation,
 }: {
   stage: Stage;
   now: Term;
+  /** The plan's last term: the expected graduation, or its default. */
+  graduation: Term;
   snapshot: Snapshot;
   catalogue: Catalogue;
   index: readonly IndexedCourse[];
@@ -554,6 +588,10 @@ export function TermPanel({
     open && program
       ? fillForTerm(program, snapshot, catalogue, plan, stage.term, entry)
       : [];
+  const priorityOf =
+    open && program
+      ? priorities(program, snapshot, catalogue, plan, graduation, entry)
+      : undefined;
   const empty = records.length + stage.planned.length + stage.owed.length === 0;
 
   // The row a move or remove acted on is gone, so keep keyboard focus inside the panel, and follow the course back on Undo.
@@ -716,13 +754,16 @@ export function TermPanel({
         </p>
       )}
 
-      {open && program && options.length > 0 && (
+      {program && priorityOf && options.length > 0 && (
         <Fill
           stage={stage}
           options={options}
           program={program}
           catalogue={catalogue}
           creditLimit={creditLimit}
+          priorityOf={priorityOf}
+          now={now}
+          graduation={graduation}
         />
       )}
 
@@ -734,6 +775,9 @@ export function TermPanel({
             index={index}
             snapshot={snapshot}
             plan={plan}
+            priorityOf={priorityOf}
+            now={now}
+            graduation={graduation}
             placeholder={
               options.length > 0
                 ? phone
