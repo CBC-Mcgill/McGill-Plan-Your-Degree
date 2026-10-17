@@ -16,3 +16,15 @@ export async function githubStars(): Promise<number | null> {
     return null;
   }
 }
+
+/** A new-issue link that opens the bug form with the page and browser already filled in. GitHub hosts any screenshot the student pastes there. */
+export function bugReportUrl(fields: {
+  page?: string;
+  browser?: string;
+}): string {
+  const params = new URLSearchParams({ template: "bug_report.yml" });
+  for (const [field, value] of Object.entries(fields)) {
+    if (value) params.set(field, value);
+  }
+  return `${REPO_URL}/issues/new?${params}`;
+}

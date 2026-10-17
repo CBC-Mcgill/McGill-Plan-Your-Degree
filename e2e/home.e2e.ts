@@ -86,3 +86,18 @@ test("a returning student keeps the landing without the calls to start", async (
     main.getByRole("button", { name: "Start without a transcript" }),
   ).toHaveCount(0);
 });
+
+test("the footer's bug report opens GitHub's form with the page filled in", async ({
+  page,
+}) => {
+  await page.goto("/courses?q=comp");
+  const link = page.getByRole("contentinfo").getByRole("link", {
+    name: /Report a bug/,
+  });
+  await expect(link).toHaveAttribute("target", "_blank");
+  await expect(link).toHaveAttribute("href", /browser=Mozilla/);
+  const url = new URL((await link.getAttribute("href")) ?? "");
+  expect(url.pathname).toBe("/CBC-Mcgill/McGill-Plan-Your-Degree/issues/new");
+  expect(url.searchParams.get("template")).toBe("bug_report.yml");
+  expect(url.searchParams.get("page")).toBe("/courses?q=comp");
+});

@@ -29,6 +29,9 @@ test("on a phone the landing stacks, fits the screen and its calls work by tap",
   );
   expect(Math.round(lines)).toBeLessThanOrEqual(4);
   await expectNoHorizontalScroll(page);
+  await expect(
+    page.getByRole("contentinfo").getByRole("link", { name: /Report a bug/ }),
+  ).toBeVisible();
 
   const width = page.viewportSize()?.width ?? 0;
   const start = main.getByRole("button", {

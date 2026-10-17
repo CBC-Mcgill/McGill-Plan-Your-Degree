@@ -4,10 +4,13 @@ import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
 import Script from "next/script";
 import { CommandPalette } from "@/components/command-palette";
+import { ExternalLink } from "@/components/external-link";
+import { ReportBugLink } from "@/components/report-bug-link";
 import { SiteHeader } from "@/components/site-header";
 import { StorageBanner } from "@/components/storage-banner";
 import { Toaster } from "@/components/toast";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { REPO_URL } from "@/lib/github";
 import { FIRST_PAINT } from "@/lib/profile/first-paint";
 import "./globals.css";
 
@@ -60,17 +63,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             >
               {children}
             </main>
-            <footer className="mx-auto flex w-full max-w-page items-baseline justify-between gap-8 px-8 py-8 text-fg-muted max-md:px-4">
+            <footer className="mx-auto flex w-full max-w-page flex-wrap items-baseline justify-between gap-x-8 gap-y-3 px-8 py-8 text-fg-muted max-md:px-4">
               <p>
                 Open source on{" "}
-                <a
-                  href="https://github.com/CBC-Mcgill/McGill-Plan-Your-Degree"
-                  className="link"
-                >
-                  GitHub
-                </a>
-                . Not affiliated with McGill University.
+                <ExternalLink href={REPO_URL}>GitHub</ExternalLink>. Not
+                affiliated with McGill University.
               </p>
+              <ReportBugLink />
             </footer>
             <CommandPalette />
             <Toaster />
