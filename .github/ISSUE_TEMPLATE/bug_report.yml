@@ -1,0 +1,23 @@
+name: Report a bug
+description: Something in the app is broken or looks wrong.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Say what you did, what the app showed, and what you expected. Paste or drag a screenshot in here.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Filled in by the app. Change it if the bug is elsewhere.
+      placeholder: /plan
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: Filled in by the app.
