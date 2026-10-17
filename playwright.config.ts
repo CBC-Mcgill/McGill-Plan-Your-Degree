@@ -8,6 +8,8 @@ export default defineConfig({
   forbidOnly: isCI,
   retries: 0,
   reporter: isCI ? "github" : "list",
+  // A transcript pick compiles pdf.js in dev, parses and fetches the program list before anything renders, so wait as long as the app does (READ_TIMEOUT_MS).
+  expect: { timeout: 15_000 },
   use: { baseURL: "http://localhost:3000", trace: "retain-on-failure" },
   projects: [
     {
