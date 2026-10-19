@@ -7,7 +7,8 @@ export type ImportError =
   | "too-many-pages"
   | "unreadable"
   | "timeout"
-  | "not-transcript";
+  | "not-transcript"
+  | "no-text";
 
 export const IMPORT_ERROR_MESSAGES: Record<ImportError, string> = {
   "not-pdf":
@@ -21,6 +22,8 @@ export const IMPORT_ERROR_MESSAGES: Record<ImportError, string> = {
   timeout:
     "Reading this PDF took too long, so we stopped. Check that you picked your unofficial transcript, or print it to PDF again and retry.",
   "not-transcript": "This PDF is not a McGill unofficial transcript.",
+  "no-text":
+    "This PDF has no text in it, only a picture of the page. This happens with Microsoft Print to PDF or a scan. Print your transcript again and choose Save as PDF.",
 };
 
 export type ReadResult =
