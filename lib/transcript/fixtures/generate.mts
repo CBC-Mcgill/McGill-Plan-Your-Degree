@@ -1000,4 +1000,13 @@ await writeFile(
   join(dir, "too-many-pages.json"),
   json({ result: { ok: false, error: "too-many-pages" }, mustNotContain: [] }),
 );
+// Microsoft Print to PDF draws every glyph as a shape, so the PDF has no text layer.
+await page.setContent(
+  `<!doctype html><svg width="600" height="200"><path d="M10 10h80v20H10zM110 10h200v20H110zM10 50h120v20H10z"/></svg>`,
+);
+await writeFile(join(dir, "no-text.pdf"), await page.pdf({ format: "Letter" }));
+await writeFile(
+  join(dir, "no-text.json"),
+  json({ result: { ok: false, error: "no-text" }, mustNotContain: [] }),
+);
 await browser.close();

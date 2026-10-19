@@ -105,7 +105,8 @@ export function ImportScreen({
             </li>
             <li>
               Print the page and choose{" "}
-              <strong className="font-semibold">Save as PDF</strong>.
+              <strong className="font-semibold">Save as PDF</strong>, not
+              Microsoft Print to PDF.
             </li>
           </ol>
           <p className="mt-4 flex items-start gap-2 text-fg-muted">

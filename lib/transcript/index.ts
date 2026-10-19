@@ -57,6 +57,7 @@ export async function readTranscript(bytes: Uint8Array): Promise<ReadResult> {
     } catch {
       return fail("unreadable");
     }
+    if (lines.length === 0) return fail("no-text");
     const transcript = parseTranscript(lines);
     return transcript ? { ok: true, transcript } : fail("not-transcript");
   } finally {
