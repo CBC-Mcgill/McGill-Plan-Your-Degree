@@ -113,6 +113,7 @@ export function ImportScreen({
               Microsoft Print to PDF, then click Save.
               <Image
                 src={printDialog}
+                loading="eager"
                 alt="The print dialog with Destination set to Save as PDF"
                 className="mt-3 w-full max-w-[369px] rounded-lg border border-line"
               />
