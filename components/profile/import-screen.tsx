@@ -1,6 +1,7 @@
 "use client";
 
 import { ShieldCheck } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ImportNotice } from "@/components/profile/import-notice";
 import { PAGE } from "@/components/profile/layout";
@@ -8,6 +9,7 @@ import type { ImportFlow } from "@/components/profile/use-import-flow";
 import { Button } from "@/components/ui/button";
 import { FileButton } from "@/components/ui/file-button";
 import { COPY } from "@/lib/copy";
+import printDialog from "./print-dialog.png";
 
 const hasFiles = (event: DragEvent) =>
   event.dataTransfer?.types.includes("Files") ?? false;
@@ -104,9 +106,16 @@ export function ImportScreen({
               .
             </li>
             <li>
-              Print the page and choose{" "}
+              Press <strong className="font-semibold">Ctrl+P</strong>, or{" "}
+              <strong className="font-semibold">⌘P</strong> on a Mac. Set
+              Destination to{" "}
               <strong className="font-semibold">Save as PDF</strong>, not
-              Microsoft Print to PDF.
+              Microsoft Print to PDF, then click Save.
+              <Image
+                src={printDialog}
+                alt="The print dialog with Destination set to Save as PDF"
+                className="mt-3 w-full max-w-[369px] rounded-lg border border-line"
+              />
             </li>
           </ol>
           <p className="mt-4 flex items-start gap-2 text-fg-muted">
