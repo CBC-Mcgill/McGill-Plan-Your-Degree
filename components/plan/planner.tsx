@@ -213,6 +213,7 @@ function PlannerReady({
             key={selected.key}
             stage={selected}
             now={now}
+            graduation={end}
             snapshot={snapshot}
             catalogue={catalogue}
             index={index}
