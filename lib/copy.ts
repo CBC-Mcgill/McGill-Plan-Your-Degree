@@ -7,6 +7,8 @@ import type { Season, Term } from "./profile/types.ts";
 import { isMinor, type Pair } from "./programs/minor.ts";
 import type { ProgramSummary } from "./programs/types.ts";
 
+const or = new Intl.ListFormat("en-GB", { type: "disjunction" });
+
 const BASIS: Record<Basis, string> = {
   earned: "earned",
   counting: "earned or in progress",
@@ -99,6 +101,10 @@ export const COPY = {
   needs: (text: string) => `Needs ${text} first`,
   notOpen: (codes: readonly string[]) =>
     `Not open to students who have taken ${list.format(codes)}`,
+  notCountedInstead: "Won't count toward your program",
+  onlyOneCounts: (options: readonly string[], instead: string) =>
+    `Only one of ${or.format(options)} counts, and ${instead} already does`,
+  countsInstead: (code: string) => `${code} counts instead`,
   hasConditions: "Has conditions",
   countsForBoth: "Counts for both",
   checkRequirement: "Check this requirement",

@@ -1961,15 +1961,24 @@ function requiredGroup(section: Section): RequiredGroup | null {
     }
     for (const note of event.notes) {
       const parsed = parseNote(note);
-      const either = parsed && "either" in parsed ? parsed.either : [];
-      const at = items.indexOf(either[0] ?? "");
+      const sets =
+        parsed && "either" in parsed
+          ? [parsed.either]
+          : ((exclusiveSets(note) ?? sentenceSets(note))?.map(
+              (rule) => rule.courses ?? [],
+            ) ?? []);
+      const codes = sets.flatMap((set) => [...new Set(set)]);
       if (
-        either.length > 1 &&
-        at >= 0 &&
-        either.every((c) => items.includes(c))
+        sets.length > 0 &&
+        new Set(codes).size === codes.length &&
+        sets.every(
+          (set) => set.length > 1 && set.every((c) => items.includes(c)),
+        )
       ) {
-        items.splice(at, 0, { oneOf: either });
-        for (const c of either) items.splice(items.indexOf(c), 1);
+        for (const set of sets) {
+          items.splice(items.indexOf(set[0] ?? ""), 0, { oneOf: set });
+          for (const c of set) items.splice(items.indexOf(c), 1);
+        }
       } else notes.push(note);
     }
     intro = [];

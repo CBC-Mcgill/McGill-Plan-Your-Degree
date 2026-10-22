@@ -942,6 +942,24 @@ test("a stream that opens its list to a department still asks for the stream's c
   });
 });
 
+test("a required not-both footnote makes the pair a choice, worded as complementary footnotes are", () => {
+  const program = programOf(
+    "Test Major (B.Sc.) (9 credits)",
+    `<h2>Required Courses (9 credits)</h2>${table("MATH 222", "MATH 223", "MATH 236", "GEOG 221", "NRSC 221")}` +
+      `<dl><dd>Students take either MATH 223 or MATH 236, but not both. Both courses are equivalent as prerequisites for the courses listed.</dd>` +
+      `<dd>Choose only one of the following courses: GEOG 221 or NRSC 221.</dd></dl>`,
+  );
+  expect(program.groups).toEqual([
+    expect.objectContaining({
+      courses: [
+        "MATH 222",
+        { oneOf: ["MATH 223", "MATH 236"] },
+        { oneOf: ["GEOG 221", "NRSC 221"] },
+      ],
+    }),
+  ]);
+});
+
 test("adds up a required heading with no credits from one course of each choice", () => {
   const program = programOf(
     "Test Honours (B.Sc.) (24 credits)",
