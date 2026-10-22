@@ -73,6 +73,7 @@ import {
   type Claimed,
   type CreditSplit,
   checkKey,
+  countedInstead,
   creditSplit,
   type GroupProgress,
   minorOverlap,
@@ -415,7 +416,17 @@ function Page({
             key: "not-counted",
             label: "Not counted",
             side: courseCount(unclaimed.length),
-            body: <NotCounted courses={unclaimed} context={context} />,
+            body: (
+              <NotCounted
+                courses={unclaimed}
+                context={context}
+                reasonFor={(code) => {
+                  const pick =
+                    withPlan && countedInstead(program, withPlan, code);
+                  return pick ? COPY.countsInstead(pick.instead) : undefined;
+                }}
+              />
+            ),
           },
         ]
       : []),
@@ -1508,11 +1519,13 @@ function CountedRow({
   context,
   mark,
   action,
+  reason,
 }: {
   claimed: Claimed;
   context: Context;
   mark?: ReactNode;
   action?: ReactNode;
+  reason?: string;
 }) {
   const setWaived = useProfileStore((state) => state.setWaived);
   const { catalogue, facts } = context;
@@ -1540,6 +1553,7 @@ function CountedRow({
           )}
           {term && <span>{termLabel(term)}</span>}
           {toReplace && <span>{toReplace}</span>}
+          {reason && <span>{reason}</span>}
         </>
       }
       mark={mark}
@@ -2194,9 +2208,11 @@ function MinorPane({
 function NotCounted({
   courses: unclaimed,
   context,
+  reasonFor,
 }: {
   courses: Claimed[];
   context: Context;
+  reasonFor: (code: string) => string | undefined;
 }) {
   const credits = unclaimed.reduce((sum, claimed) => sum + claimed.credits, 0);
   return (
@@ -2208,7 +2224,12 @@ function NotCounted({
       <p className="text-fg-muted">{GLOSSARY.notCounted.tip}</p>
       <ul className="-mx-5 mt-4 border-line border-t px-5">
         {[...unclaimed].sort(byCode).map((claimed) => (
-          <CountedRow key={claimed.code} claimed={claimed} context={context} />
+          <CountedRow
+            key={claimed.code}
+            claimed={claimed}
+            context={context}
+            reason={reasonFor(claimed.code)}
+          />
         ))}
       </ul>
     </Card>

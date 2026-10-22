@@ -160,6 +160,32 @@ test("each requirement shows the courses it counts", async ({ page }) => {
   await expect(anth).toContainText("Fall 2025");
 });
 
+test("the other course of a pick-one pair says it will not count, before and after it is planned", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [done("COMP 350")],
+    programId: "statistics-computer-science-major-bsc",
+    plan: [{ term: { season: "Winter", year: 2027 }, courses: ["MATH 317"] }],
+  });
+  await requirement(page, "Not counted").click();
+  await expect(
+    page
+      .getByRole("region", { name: "Not counted toward your program" })
+      .getByRole("listitem")
+      .filter({ hasText: "MATH 317" }),
+  ).toContainText("COMP 350 counts instead");
+
+  await page.goto("/courses/math-317");
+  await expect(page.getByRole("main")).toContainText(
+    "Won't count toward your program · Only one of COMP 350 or MATH 317 counts, and COMP 350 already does",
+  );
+  await page.goto("/courses/comp-350");
+  await expect(page.getByRole("main")).not.toContainText(
+    "Won't count toward your program",
+  );
+});
+
 test("met and CEGEP-credited groups, the restriction note and the minor open from the list", async ({
   page,
 }) => {

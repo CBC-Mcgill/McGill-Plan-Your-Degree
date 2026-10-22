@@ -24,6 +24,7 @@ import {
   type TermChoice,
   termChoices,
 } from "@/lib/engine/plan";
+import { countedInstead, programStanding } from "@/lib/engine/progress";
 import type { Snapshot } from "@/lib/engine/snapshot";
 import {
   courseStatus,
@@ -45,6 +46,7 @@ import {
   termKey,
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
+import { useProgram } from "@/lib/programs/client";
 
 const SEASONS = ["Fall", "Winter", "Summer"] as const;
 const runsThisYear = (course: CourseSummary) =>
@@ -75,10 +77,54 @@ export function CourseStatusLine({ course }: { course: CourseSummary }) {
   const snapshot = useSnapshot();
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
+  const entry = useProfileStore((state) => state.entry);
+  const program = useProgram(useProfileStore((state) => state.programId));
+  const catalogue = useCatalogue();
   const { late } = useStarts(course);
   if (snapshot === undefined) return <div aria-hidden className="mt-4 h-5" />;
   const line = snapshot && statusLine(course, snapshot, records, plan, late);
   if (!line) return null;
+  const pick =
+    program && catalogue.status === "ready"
+      ? countedInstead(
+          program,
+          programStanding(
+            program,
+            {
+              ...snapshot,
+              planned: new Set([...snapshot.planned, course.code]),
+            },
+            catalogue.catalogue,
+            entry,
+            "plan",
+          ),
+          course.code,
+        )
+      : null;
+  return (
+    <>
+      <StatusParagraph line={line} />
+      {pick && (
+        <p className="mt-1 flex items-start gap-2">
+          <span className="flex h-5 shrink-0 items-center text-warn">
+            <TriangleAlert aria-hidden className="size-4" />
+          </span>
+          <span>
+            <span className="font-semibold text-warn">
+              {COPY.notCountedInstead}
+            </span>
+            <span className="text-fg-muted">
+              {" "}
+              · {COPY.onlyOneCounts(pick.options, pick.instead)}
+            </span>
+          </span>
+        </p>
+      )}
+    </>
+  );
+}
+
+function StatusParagraph({ line }: { line: Line }) {
   return (
     <p className="mt-4 flex items-start gap-2">
       <span className="flex h-5 shrink-0 items-center">

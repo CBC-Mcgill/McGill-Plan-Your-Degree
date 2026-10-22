@@ -697,6 +697,26 @@ export function programStanding(
   });
 }
 
+export function countedInstead(
+  program: Program,
+  progress: ProgramProgress,
+  code: string,
+): { options: string[]; instead: string } | null {
+  if (!progress.unclaimed.some((claimed) => claimed.code === code)) return null;
+  const claimed = new Set(
+    progress.groups.flatMap((group) => group.courses.map((c) => c.code)),
+  );
+  for (const group of program.groups) {
+    if (group.kind !== "required") continue;
+    for (const item of group.courses) {
+      if (typeof item === "string" || !item.oneOf.includes(code)) continue;
+      const instead = item.oneOf.find((c) => claimed.has(c));
+      if (instead) return { options: [...new Set(item.oneOf)], instead };
+    }
+  }
+  return null;
+}
+
 /** An Arts degree, where no course may fulfill more than one program (mcgill.ca/oasis degree planning guide). A B.A. counts even when a Science department runs the component. */
 const inArts = (program: Program) =>
   program.faculty === "Arts" || program.degree === "B.A.";
