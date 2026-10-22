@@ -20,10 +20,14 @@
         "MUIN 620",
         "MUIN 621",
         "MUIN 622",
-        "MUPG 600",
-        "MUPG 653"
+        {
+          "oneOf": [
+            "MUPG 653",
+            "MUPG 600"
+          ]
+        }
       ],
-      "note": "2 terms of MUEN 584 Students may take MUIN 622 or MUIN 622D1 and MUIN 622D2. Students may take MUPG 653 or MUPG 600"
+      "note": "2 terms of MUEN 584 Students may take MUIN 622 or MUIN 622D1 and MUIN 622D2."
     },
     {
       "title": "Complementary Courses",
@@ -65,6 +69,17 @@
         },
         {
           "title": "9 credits at the 500 level or higher, to be chosen from the Schulich School of Music’s seminar offerings; 3 of the 9 credits must have a MUCO, MUGS, MUGT, MUHL, MUMT, MUPP or MUTH subject code",
+          "unparsed": true
+        }
+      ]
+    },
+    {
+      "title": "Program total",
+      "kind": "complementary",
+      "credits": 1,
+      "rules": [
+        {
+          "title": "1 more credit to reach the program's 45 credits, which the catalogue page does not list in a group above",
           "unparsed": true
         }
       ]

@@ -19,8 +19,12 @@
         "MATH 222",
         "MATH 223",
         "MATH 323",
-        "COMP 202",
-        "COMP 204",
+        {
+          "oneOf": [
+            "COMP 202",
+            "COMP 204"
+          ]
+        },
         "COMP 206",
         "COMP 250",
         "COMP 251",
@@ -29,7 +33,7 @@
         "BIOL 215",
         "COMP 401"
       ],
-      "note": "Students with CEGEP-level credit for the equivalents of MATH 222 and/or CHEM 212 do not have to take these courses. Students should speak with an advisor if uncertain if they are exempted. Students may take either COMP 202 or COMP 204, but not both. Students who have taken the equivalent of COMP 202/COMP 204 prior to their McGill studies are exempt from COMP 202/COMP 204."
+      "note": "Students with CEGEP-level credit for the equivalents of MATH 222 and/or CHEM 212 do not have to take these courses. Students should speak with an advisor if uncertain if they are exempted."
     },
     {
       "title": "Complementary Courses",
