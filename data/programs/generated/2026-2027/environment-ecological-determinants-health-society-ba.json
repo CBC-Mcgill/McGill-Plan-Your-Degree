@@ -29,11 +29,14 @@
         "ENVR 203",
         "ENVR 301",
         "ENVR 400",
-        "GEOG 221",
-        "GEOG 303",
-        "NRSC 221"
-      ],
-      "note": "Choose only one of the following courses: GEOG 221 or NRSC 221."
+        {
+          "oneOf": [
+            "GEOG 221",
+            "NRSC 221"
+          ]
+        },
+        "GEOG 303"
+      ]
     },
     {
       "title": "Complementary Courses",

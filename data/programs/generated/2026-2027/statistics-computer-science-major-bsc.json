@@ -27,16 +27,20 @@
         },
         "COMP 360",
         "MATH 222",
-        "MATH 223",
+        {
+          "oneOf": [
+            "MATH 223",
+            "MATH 236"
+          ]
+        },
         "MATH 235",
-        "MATH 236",
         "MATH 242",
         "MATH 314",
         "MATH 323",
         "MATH 324",
         "MATH 423"
       ],
-      "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202 but can replace it with an additional Computer Science complementary course. Students take either MATH 223 or MATH 236, but not both. Both courses are equivalent as prerequisites for required and complementary Computer Science courses listed."
+      "note": "Students who have sufficient knowledge in a programming language do not need to take COMP 202 but can replace it with an additional Computer Science complementary course."
     },
     {
       "title": "Complementary Courses",
