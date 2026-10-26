@@ -20,9 +20,11 @@ import type { ProgramSummary } from "@/lib/programs/types";
 
 const NO_PROGRAMS: ProgramSummary[] = [];
 
-/** The words around the list: the program and the second program share the field and differ only here. */
+type Kind = "program" | "second" | "extra";
+
+/** The words around the list: the program, the second program and the extra minor share the field and differ only here. */
 const COPY: Record<
-  "program" | "second",
+  Kind,
   {
     label: string;
     placeholder: string;
@@ -44,6 +46,13 @@ const COPY: Record<
     none: "None",
     list: "Minors and programs",
     noun: "program",
+  },
+  extra: {
+    label: "Minor",
+    placeholder: "Choose a minor",
+    none: "None",
+    list: "Minors",
+    noun: "minor",
   },
 };
 
@@ -81,23 +90,26 @@ function search(programs: ProgramSummary[], query: string, suffix = "") {
 }
 
 /**
- * A searchable list of every program but the minors, graduate programs last, or for the second program, of every undergraduate program with the minors first. Neither lists `other`, the program in the other field.
+ * A searchable list of every program but the minors, graduate programs last, for the second program, of every undergraduate program with the minors first, and for the extra minor, of the undergraduate minors. None lists `others`, the programs in the other fields.
  * The empty choice is "My program isn't listed" for a program the catalogue does not have, and "None" for the second. `label` replaces the field's own, and `info` makes the label a `Term`.
  */
 export function ProgramCombobox({
   value,
   onChange,
   kind = "program",
-  other = null,
+  others = [],
   label,
   info,
+  autoFocus,
 }: {
   value: string | null;
   onChange: (programId: string | null, program: ProgramSummary | null) => void;
-  kind?: "program" | "second";
-  other?: string | null;
+  kind?: Kind;
+  others?: readonly (string | null)[];
   label?: string;
   info?: Definition;
+  /** Focuses the field and opens its list on mount, for a field the student just asked for. */
+  autoFocus?: boolean;
 }) {
   const copy = COPY[kind];
   const index = useProgramIndex();
@@ -106,11 +118,13 @@ export function ProgramCombobox({
       index.status === "ready"
         ? index.programs.filter(
             (program) =>
-              program.id !== other &&
-              (kind === "second" ? !program.level : !isMinor(program)),
+              !others.includes(program.id) &&
+              (kind === "program"
+                ? !isMinor(program)
+                : !program.level && (kind === "second" || isMinor(program))),
           )
         : NO_PROGRAMS,
-    [index, kind, other],
+    [index, kind, others],
   );
   const chosen = programs.find((program) => program.id === value);
   const listId = useId();
@@ -125,25 +139,27 @@ export function ProgramCombobox({
 
   const groups = useMemo(
     () =>
-      kind === "second"
-        ? [
-            ...search(programs.filter(isMinor), query ?? "", " minors"),
-            ...search(
-              programs.filter((program) => !isMinor(program)),
-              query ?? "",
-            ),
-          ]
-        : [
-            ...search(
-              programs.filter((program) => !program.level),
-              query ?? "",
-            ),
-            ...search(
-              programs.filter((program) => program.level),
-              query ?? "",
-              " graduate programs",
-            ),
-          ],
+      kind === "extra"
+        ? search(programs, query ?? "", " minors")
+        : kind === "second"
+          ? [
+              ...search(programs.filter(isMinor), query ?? "", " minors"),
+              ...search(
+                programs.filter((program) => !isMinor(program)),
+                query ?? "",
+              ),
+            ]
+          : [
+              ...search(
+                programs.filter((program) => !program.level),
+                query ?? "",
+              ),
+              ...search(
+                programs.filter((program) => program.level),
+                query ?? "",
+                " graduate programs",
+              ),
+            ],
     [programs, query, kind],
   );
   // The last choice is always the empty one.
@@ -199,6 +215,8 @@ export function ProgramCombobox({
           <span ref={field} className="relative max-md:scroll-mt-12">
             <input
               id={inputId}
+              // biome-ignore lint/a11y/noAutofocus: only set right after the student asks for the field
+              autoFocus={autoFocus}
               role="combobox"
               aria-expanded={open}
               aria-controls={open ? listId : undefined}

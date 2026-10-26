@@ -59,7 +59,7 @@ import { GLOSSARY, VIEW_TIPS } from "@/lib/glossary";
 import { useProfileStore } from "@/lib/profile/store";
 import type { CourseRecord, Plan } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { useProgram } from "@/lib/programs/client";
+import { useProgram, useSeconds } from "@/lib/programs/client";
 import { replaceUrl, useScrollMemory } from "@/lib/use-scroll-memory";
 
 const PAGE_SIZE = 50;
@@ -90,7 +90,7 @@ function useBrowse(): BrowseData {
   const catalogue = useCatalogue();
   const snapshot = useSnapshot();
   const program = useProgram(useProfileStore((state) => state.programId));
-  const minor = useProgram(useProfileStore((state) => state.minorId));
+  const seconds = useSeconds();
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
   const courses = catalogue.status === "ready" ? catalogue.catalogue : null;
@@ -100,10 +100,10 @@ function useBrowse(): BrowseData {
   );
   const inProgram = useMemo(
     () =>
-      base && program !== undefined && minor !== undefined
-        ? programCodes(program, minor, base.index)
+      base && program !== undefined && seconds !== undefined
+        ? programCodes(program, seconds, base.index)
         : null,
-    [base, program, minor],
+    [base, program, seconds],
   );
   const states = useMemo(
     () =>

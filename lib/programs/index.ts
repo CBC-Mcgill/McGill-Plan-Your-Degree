@@ -154,20 +154,23 @@ export function guessSecond(
     : null;
 }
 
-/** Maps the minor lines of a transcript, such as "Minor Management", to a minor in `index`, or null when none or several fit. A minor whose degree is just "Minor" fits any degree. */
-export function guessMinor(
+/** Maps each minor line of a transcript, such as "Minor Management", to a minor in `index`, in line order, leaving out a line that none or several fit. A minor whose degree is just "Minor" fits any degree. */
+export function guessMinors(
   degree: string | null,
   minors: string[],
   index: readonly ProgramSummary[],
-): string | null {
+): string[] {
   const letters = DEGREE_LETTERS[degree?.trim().toLowerCase() ?? ""];
-  const wanted = minors.map((line) => kindAndName(line)[1]);
-  const fits = index.filter(
-    (program) =>
-      isMinor(program) &&
-      (/^(supplementary )?minor$/i.test(program.degree) ||
-        (letters !== undefined && fitsDegree(program.degree, letters))) &&
-      wanted.includes(kindAndName(program.name)[1]),
-  );
-  return fits.length === 1 ? (fits[0]?.id ?? null) : null;
+  const ids = minors.flatMap((line) => {
+    const wanted = kindAndName(line)[1];
+    const fits = index.filter(
+      (program) =>
+        isMinor(program) &&
+        (/^(supplementary )?minor$/i.test(program.degree) ||
+          (letters !== undefined && fitsDegree(program.degree, letters))) &&
+        kindAndName(program.name)[1] === wanted,
+    );
+    return fits.length === 1 && fits[0] ? [fits[0].id] : [];
+  });
+  return [...new Set(ids)];
 }

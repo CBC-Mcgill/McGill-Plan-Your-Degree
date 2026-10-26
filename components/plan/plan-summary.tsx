@@ -15,7 +15,8 @@ import { Term } from "@/components/ui/tooltip";
 import { courseSlug } from "@/lib/catalogue/slug";
 import { COPY } from "@/lib/copy";
 import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
-import { groupKeys, SECOND_KEY } from "@/lib/engine/next-view";
+import { EXTRA_KEY, groupKeys, SECOND_KEY } from "@/lib/engine/next-view";
+import { list } from "@/lib/engine/parts";
 import {
   creditSources,
   creditSplit,
@@ -108,7 +109,7 @@ const ROW =
 /** The middle column, on a line of its own on phones. */
 const UNDER = "max-md:col-span-2 max-md:row-start-2";
 
-/** "Minor" or another word for the second program before its group's name, so it reads apart from the program's. */
+/** "Minor" or another word for a second program before its group's name, so it reads apart from the program's. */
 const SecondPrefix = ({ prefix }: { prefix?: string }) =>
   prefix && <span className="font-normal text-fg-muted">{prefix} · </span>;
 
@@ -160,14 +161,14 @@ function lacks(
   );
 }
 
-/** One row per open requirement of the program, then of the second program, and one per rule nobody could read. */
+/** One row per open requirement of the program, then of each second program, and one per rule nobody could read. */
 function missingRows(
-  standings: (Standing & { prefix?: string })[],
+  standings: (Standing & { prefix?: string; pane?: string })[],
   snapshot: Snapshot,
   catalogue: Catalogue,
 ) {
-  return standings.flatMap(({ program, progress, prefix }) => {
-    // The second program has one pane on What's next, the first one pane per group.
+  return standings.flatMap(({ program, progress, prefix, pane }) => {
+    // Each second program has one pane on What's next, the first one pane per group.
     const panes = groupKeys(progress.groups);
     return progress.groups.flatMap((group, g) => {
       if (group.satisfied) return [];
@@ -176,7 +177,7 @@ function missingRows(
         group,
         program.groups[g],
         catalogue,
-        prefix ? SECOND_KEY : (panes[g] ?? ""),
+        pane ?? panes[g] ?? "",
       );
       const gap = group.credits - group.creditsDone;
       const checks = group.rules.flatMap((rule, r) =>
@@ -232,10 +233,10 @@ function missingRows(
   });
 }
 
-/** The plan's headline: program credits with the plan, what is still missing, the second program, and the warning count. */
+/** The plan's headline: program credits with the plan, what is still missing, the second programs, and the warning count. */
 export function PlanSummary({
   standing,
-  minor,
+  seconds,
   snapshot,
   catalogue,
   warningCount,
@@ -243,8 +244,8 @@ export function PlanSummary({
   graduationPassed,
 }: {
   standing: Standing | null;
-  /** The student's minor or other second program, counted on its own from the same courses. */
-  minor: Standing | null;
+  /** The student's minor or other second program, then the extra minor, each counted on its own from the same courses. */
+  seconds: readonly Standing[];
   snapshot: Snapshot;
   catalogue: Catalogue;
   warningCount: number;
@@ -268,11 +269,27 @@ export function PlanSummary({
       </button>
     </p>
   );
-  const pair = pairOf(standing?.program ?? null, minor?.program ?? null);
+  const [second, extra] = seconds;
+  const pair = pairOf(standing?.program ?? null, second?.program ?? null);
   const standings = [
     ...(standing ? [standing] : []),
-    ...(minor
-      ? [{ ...minor, prefix: COPY.capital(COPY.pair[pair].nouns[1]) }]
+    ...(second
+      ? [
+          {
+            ...second,
+            prefix: COPY.capital(COPY.pair[pair].nouns[1]),
+            pane: SECOND_KEY,
+          },
+        ]
+      : []),
+    ...(second && extra
+      ? [
+          {
+            ...extra,
+            prefix: COPY.extraLabel(second.program),
+            pane: EXTRA_KEY,
+          },
+        ]
       : []),
   ];
   const rows = missingRows(standings, snapshot, catalogue);
@@ -341,22 +358,21 @@ export function PlanSummary({
                     courses: splitCourses(standing.progress.groups, snapshot),
                   }
             }
-            minor={
-              minor && {
-                label: COPY.secondTitle(minor.program),
-                done: minor.progress.creditsDone,
-                split: programSplit(minor.progress, snapshot),
-                total: minor.progress.credits,
-                courses: splitCourses(minor.progress.groups, snapshot),
-                note: minor.program.generated && (
-                  <>
-                    <GeneratedNote hasChecks={hasChecks(minor.program)} />
-                    {" · "}
-                    <CatalogueLink href={minor.program.source} />
-                  </>
-                ),
-              }
-            }
+            seconds={seconds.map(({ program, progress }) => ({
+              label: COPY.secondTitle(program),
+              done: progress.creditsDone,
+              split: programSplit(progress, snapshot),
+              total: progress.credits,
+              courses: splitCourses(progress.groups, snapshot),
+              note: program.generated && (
+                <>
+                  <GeneratedNote hasChecks={hasChecks(program)} />{" "}
+                  <span className="whitespace-nowrap">
+                    · <CatalogueLink href={program.source} />
+                  </span>
+                </>
+              ),
+            }))}
           />
         </div>
       )}
@@ -375,11 +391,11 @@ export function PlanSummary({
         {met && (
           <p>
             Your plan meets every requirement of{" "}
-            {standings
-              .map(({ program }, i) =>
+            {list.format(
+              standings.map(({ program }, i) =>
                 i === 0 ? program.name : COPY.secondTitle(program),
-              )
-              .join(" and ")}
+              ),
+            )}
             .
           </p>
         )}

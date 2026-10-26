@@ -150,7 +150,7 @@ test("parseProfileFile migrates a version 1 file to version 2", () => {
   });
 });
 
-test("a version 3 file loads without a minor, and a minor survives an export", () => {
+test("a version 3 file loads without a minor, and both minors survive an export", () => {
   const file = {
     format: "plan-your-degree-profile",
     version: 3,
@@ -169,15 +169,24 @@ test("a version 3 file loads without a minor, and a minor survives an export", (
   };
   expect(parseProfileFile(JSON.stringify(file))).toMatchObject({
     ok: true,
-    profile: { minorId: null, checked: [], assigned: {} },
+    profile: {
+      minorId: null,
+      extraMinorId: null,
+      checked: [],
+      assigned: {},
+    },
   });
   const exported = exportProfile({
     ...store.getState(),
     minorId: "statistics-minor-bsc",
+    extraMinorId: "mathematics-minor-bsc",
   });
   expect(parseProfileFile(exported)).toMatchObject({
     ok: true,
-    profile: { minorId: "statistics-minor-bsc" },
+    profile: {
+      minorId: "statistics-minor-bsc",
+      extraMinorId: "mathematics-minor-bsc",
+    },
   });
 });
 

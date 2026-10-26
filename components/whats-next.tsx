@@ -62,11 +62,13 @@ import { COPY } from "@/lib/copy";
 import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
 import {
   type Entry,
+  EXTRA_KEY,
   groupKeys,
   type Item,
   type NextView,
   nextView,
   ruleTitle,
+  SECOND_KEY,
   termSnapshot,
 } from "@/lib/engine/next-view";
 import {
@@ -76,12 +78,12 @@ import {
   countedInstead,
   creditSplit,
   type GroupProgress,
-  minorOverlap,
   type ProgramProgress,
   picksOne,
   programSplit,
   programStanding,
   replaceKey,
+  secondOverlaps,
   splitCourses,
 } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
@@ -109,7 +111,7 @@ import {
   termKey,
 } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { useProgram } from "@/lib/programs/client";
+import { useProgram, useSeconds } from "@/lib/programs/client";
 import { type Pair, pairOf } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
@@ -183,10 +185,9 @@ export function WhatsNext() {
 // Split out so a visitor without a profile does not download the catalogue.
 function Ready({ snapshot }: { snapshot: Snapshot }) {
   const programId = useProfileStore((state) => state.programId);
-  const minorId = useProfileStore((state) => state.minorId);
   const catalogue = useCatalogue();
   const program = useProgram(programId);
-  const minor = useProgram(minorId);
+  const seconds = useSeconds();
   if (catalogue.status === "error") {
     return (
       <>
@@ -198,7 +199,7 @@ function Ready({ snapshot }: { snapshot: Snapshot }) {
   if (
     catalogue.status !== "ready" ||
     program === undefined ||
-    minor === undefined
+    seconds === undefined
   ) {
     return <PageSkeleton />;
   }
@@ -207,7 +208,7 @@ function Ready({ snapshot }: { snapshot: Snapshot }) {
       snapshot={snapshot}
       catalogue={catalogue.catalogue}
       program={program}
-      minor={minor}
+      seconds={seconds}
     />
   );
 }
@@ -216,12 +217,13 @@ function Page({
   snapshot,
   catalogue,
   program,
-  minor,
+  seconds,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
-  minor: Program | null;
+  /** The second program, then the extra minor. */
+  seconds: readonly Program[];
 }) {
   const entry = useProfileStore((state) => state.entry);
   const records = useProfileStore((state) => state.records);
@@ -273,48 +275,49 @@ function Page({
       nextView(catalogue, judged, term, program, entry, undefined, withPlan),
     [catalogue, judged, term, program, entry, withPlan],
   );
-  const overlap = useMemo(
+  const overlaps = useMemo(
     () =>
-      minor &&
-      minorOverlap(minor, program, judged, catalogue, entry, "counting"),
-    [minor, program, judged, catalogue, entry],
+      secondOverlaps(seconds, program, judged, catalogue, entry, "counting"),
+    [seconds, program, judged, catalogue, entry],
   );
-  const overlapWithPlan = useMemo(
-    () =>
-      minor && minorOverlap(minor, program, snapshot, catalogue, entry, "plan"),
-    [minor, program, snapshot, catalogue, entry],
-  );
-  const minorWithPlan = useMemo(
-    () =>
-      minor
-        ? programStanding(
-            minor,
-            snapshot,
-            catalogue,
-            entry,
-            "plan",
-            overlapWithPlan?.programOnly,
-          )
-        : null,
-    [minor, snapshot, catalogue, entry, overlapWithPlan],
-  );
-  const minorView = useMemo(
-    () =>
-      minor &&
-      nextView(
+  const secondsWithPlan = useMemo(() => {
+    const withPlanOverlaps = secondOverlaps(
+      seconds,
+      program,
+      snapshot,
+      catalogue,
+      entry,
+      "plan",
+    );
+    return seconds.map((second, i) =>
+      programStanding(
+        second,
+        snapshot,
         catalogue,
-        judged,
-        term,
-        minor,
         entry,
-        overlap?.programOnly,
-        minorWithPlan,
+        "plan",
+        withPlanOverlaps[i]?.programOnly,
       ),
-    [catalogue, judged, term, minor, entry, overlap, minorWithPlan],
+    );
+  }, [seconds, program, snapshot, catalogue, entry]);
+  const secondViews = useMemo(
+    () =>
+      seconds.map((second, i) =>
+        nextView(
+          catalogue,
+          judged,
+          term,
+          second,
+          entry,
+          overlaps[i]?.programOnly,
+          secondsWithPlan[i],
+        ),
+      ),
+    [catalogue, judged, term, seconds, entry, overlaps, secondsWithPlan],
   );
   const unclaimed = withPlan?.unclaimed ?? [];
   const context: Context = { catalogue, snapshot, term, planned, facts };
-  const pair = pairOf(program, minor);
+  const pair = pairOf(program, seconds[0] ?? null);
 
   if (!program || !view.progress) {
     return (
@@ -372,26 +375,37 @@ function Page({
       ),
     };
   });
-  if (minor && minorView?.progress) {
-    const { progress } = minorView;
+  seconds.forEach((second, i) => {
+    const secondView = secondViews[i];
+    const secondWithPlan = secondsWithPlan[i] ?? null;
+    const overlap = overlaps[i];
+    const progress = secondView?.progress;
+    if (!secondView || !progress) return;
+    const key = i === 0 ? SECOND_KEY : EXTRA_KEY;
+    // The extra minor shares with the program and the second program, both counted before it.
+    const others = new Set(
+      [view, ...secondViews.slice(0, i)].flatMap((earlier) => [
+        ...programCodes(earlier),
+      ]),
+    );
     requirements.push({
-      key: "minor",
-      label: COPY.secondTitle(minor),
+      key,
+      label: COPY.secondTitle(second),
       done: progress.satisfied,
       side: `${progress.creditsDone} of ${progress.credits}`,
       split:
-        !progress.satisfied && minorWithPlan
+        !progress.satisfied && secondWithPlan
           ? {
-              ...programSplit(minorWithPlan, snapshot),
-              total: minorWithPlan.credits,
+              ...programSplit(secondWithPlan, snapshot),
+              total: secondWithPlan.credits,
             }
           : undefined,
       checks: progress.groups.reduce((sum, group) => sum + group.unparsed, 0),
       body: (
         <MinorPane
-          minor={minor}
-          view={minorView}
-          withPlan={minorWithPlan}
+          minor={second}
+          view={secondView}
+          withPlan={secondWithPlan}
           snapshot={snapshot}
           context={{
             ...context,
@@ -399,16 +413,16 @@ function Page({
             both:
               overlap && overlap.left <= 0
                 ? overlap.shared
-                : without(programCodes(view), overlap?.programOnly),
+                : without(others, overlap?.programOnly),
             programOnly: overlap?.programOnly,
             cap: overlap?.cap,
-            pair,
-            keepPane: () => keepPane("minor"),
+            pair: i === 0 ? pair : "extra",
+            keepPane: () => keepPane(key),
           }}
         />
       ),
     });
-  }
+  });
   const extras: Pane[] = [
     ...(unclaimed.length > 0
       ? [
@@ -468,16 +482,22 @@ function Page({
     panes.current?.scrollIntoView();
   }
 
-  const minorBar =
-    minor && minorView?.progress && minorWithPlan
-      ? {
-          label: COPY.secondTitle(minor),
-          done: minorView.progress.creditsDone,
-          split: programSplit(minorWithPlan, snapshot),
-          total: minorView.progress.credits,
-          courses: splitCourses(minorWithPlan.groups, snapshot),
-        }
-      : null;
+  const secondBars = seconds.flatMap((second, i) => {
+    const progress = secondViews[i]?.progress;
+    const secondWithPlan = secondsWithPlan[i];
+    return progress && secondWithPlan
+      ? [
+          {
+            label: COPY.secondTitle(second),
+            done: progress.creditsDone,
+            split: programSplit(secondWithPlan, snapshot),
+            total: progress.credits,
+            courses: splitCourses(secondWithPlan.groups, snapshot),
+          },
+        ]
+      : [];
+  });
+  const [second] = seconds;
 
   return (
     <>
@@ -492,8 +512,8 @@ function Page({
           </>
         ) : (
           <>
-            {minorBar ? (
-              COPY.pairCredits(pair)
+            {second && secondBars.length > 0 ? (
+              COPY.pairCredits(pair, seconds[1] && COPY.extraLabel(second))
             ) : (
               <>
                 <span className="tabular-nums">
@@ -534,7 +554,7 @@ function Page({
                     courses: splitCourses(withPlan.groups, snapshot),
                   }
             }
-            minor={minorBar}
+            seconds={secondBars}
           />
           <RoomLeft progress={view.progress} className="mt-2" />
         </div>
@@ -2179,7 +2199,9 @@ function MinorPane({
               {context.cap
                 ? `at most ${COPY.credits(context.cap)}`
                 : "no credits"}{" "}
-              with your {first}, so these count for your {first} alone.
+              with your {first}, so these count for{" "}
+              {pair === "extra" ? "one of them instead" : `your ${first} alone`}
+              .
             </p>
             <ul className="-mx-5 border-line border-t px-5">
               {[...context.programOnly].sort().map((code) => (

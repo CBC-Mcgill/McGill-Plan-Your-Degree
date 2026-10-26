@@ -744,7 +744,16 @@ export interface MinorOverlap {
   left: number;
 }
 
-/** Lets the minor count the program's courses up to its cap, in the minor's group order, and leaves the rest to the program. */
+/** A program counted before a second program, with the courses it may not count past its own cap. */
+interface Earlier {
+  program: Program;
+  exclude?: ReadonlySet<string>;
+}
+
+/**
+ * Lets the minor count the courses the program and any `earlier` second program count, up to its cap, in the minor's group order, and leaves the rest to them.
+ * The cap is one budget across all of them, since no page says a minor may share its cap again with each program.
+ */
 export function minorOverlap(
   minor: Program,
   program: Program | null,
@@ -752,14 +761,22 @@ export function minorOverlap(
   catalogue: Catalogue,
   entry: EntryRoute | null,
   basis: Basis,
+  earlier: readonly Earlier[] = [],
 ): MinorOverlap {
   const cap = overlapCap(minor, program);
   const programCodes = new Set(
-    program
-      ? programStanding(program, snapshot, catalogue, entry, basis)
-          .groups.flatMap((group) => group.courses)
-          .map((course) => course.code)
-      : [],
+    [...(program ? [{ program }] : []), ...earlier].flatMap((other) =>
+      programStanding(
+        other.program,
+        snapshot,
+        catalogue,
+        entry,
+        basis,
+        other.exclude,
+      )
+        .groups.flatMap((group) => group.courses)
+        .map((course) => course.code),
+    ),
   );
   const programOnly = new Set<string>();
   // ponytail: greedy passes keep the minor's earliest shared courses, a search could pick the ones that help it most.
@@ -905,4 +922,33 @@ export function lacking(group: GroupProgress): string | null {
         ? `${rule.coursesDone} of ${rule.minCourses} courses`
         : `${subjectsIn(rule.courses)} of ${rule.minSubjects} subjects`;
   return `${rule.title} (${need})${open.length > 1 ? ` and ${open.length - 1} more` : ""}`;
+}
+
+/** The overlap of each second program in turn, the second program first and then the extra minor, each sharing with the program and the ones before it. */
+export function secondOverlaps(
+  seconds: readonly Program[],
+  program: Program | null,
+  snapshot: Snapshot,
+  catalogue: Catalogue,
+  entry: EntryRoute | null,
+  basis: Basis,
+): MinorOverlap[] {
+  const result: MinorOverlap[] = [];
+  for (const second of seconds) {
+    result.push(
+      minorOverlap(
+        second,
+        program,
+        snapshot,
+        catalogue,
+        entry,
+        basis,
+        seconds.slice(0, result.length).map((earlier, i) => ({
+          program: earlier,
+          exclude: result[i]?.programOnly,
+        })),
+      ),
+    );
+  }
+  return result;
 }

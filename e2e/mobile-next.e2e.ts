@@ -149,6 +149,30 @@ test("every pane fits a phone, and a link opens the minor's pane", async ({
   }
 });
 
+test("on a phone two majors and a minor stack their bars and each opens its pane", async ({
+  page,
+}) => {
+  await openStudent(page, "/next", {
+    records: [done("MATH 222")],
+    programId: "economics-major-concentration-ba",
+    minorId: "psychology-major-concentration-ba",
+    extraMinorId: "statistics-minor-concentration-ba",
+    entry: null,
+    plan: [],
+  });
+  const bars = page.getByRole("region", { name: "Credit progress" });
+  await expect(bars).toContainText("Psychology Major Concentration");
+  await expect(bars).toContainText("Statistics Minor Concentration");
+  await expectNoSideScroll(page);
+  await list(page)
+    .getByRole("link", { name: /Statistics Minor Concentration/ })
+    .tap();
+  await expect(
+    page.getByRole("region", { name: "Statistics Minor Concentration" }),
+  ).toBeVisible();
+  await expectNoSideScroll(page);
+});
+
 test("on a phone a planned course sits in its own block and fits", async ({
   page,
 }) => {

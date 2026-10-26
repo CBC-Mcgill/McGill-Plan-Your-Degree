@@ -1,6 +1,7 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useMemo, useSyncExternalStore } from "react";
+import { useProfileStore } from "../profile/store.ts";
 import type { Program, ProgramSummary } from "./types.ts";
 
 export type ProgramIndexState =
@@ -70,6 +71,19 @@ export function useProgram(
     },
     () => (programId ? programs.get(programId) : null),
     () => (programId ? undefined : null),
+  );
+}
+
+/** The profile's second program, then its extra minor, leaving out the ones not set. Undefined while either loads. */
+export function useSeconds(): Program[] | undefined {
+  const minor = useProgram(useProfileStore((state) => state.minorId));
+  const extra = useProgram(useProfileStore((state) => state.extraMinorId));
+  return useMemo(
+    () =>
+      minor === undefined || extra === undefined
+        ? undefined
+        : [minor, extra].filter((program) => program !== null),
+    [minor, extra],
   );
 }
 

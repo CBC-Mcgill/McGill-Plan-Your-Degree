@@ -1,3 +1,4 @@
+import { cn } from "cn";
 import type { ReactNode } from "react";
 import { StatusBar } from "@/components/status";
 import { COPY } from "@/lib/copy";
@@ -40,15 +41,15 @@ export function RoomLeft({
   );
 }
 
-/** The program's credits bar, and the second program's (a minor, a second major, the other joint honours component or a breadth component) beside it at the same level. They stack below 768px. */
+/** The program's credits bar, and the second program's (a minor, a second major, the other joint honours component or a breadth component) and the extra minor's beside it at the same level. Three bars share a row from 1024px, and they stack below 768px. */
 export function ProgramBars({
   program,
-  minor,
+  seconds,
 }: {
   program: CreditBar;
-  minor: CreditBar | null;
+  seconds: readonly CreditBar[];
 }) {
-  if (!minor && program.requirements) {
+  if (seconds.length === 0 && program.requirements) {
     return (
       <span
         role="img"
@@ -59,7 +60,7 @@ export function ProgramBars({
       </span>
     );
   }
-  if (!minor) {
+  if (seconds.length === 0) {
     return (
       <div className={BAR_WITH_LEGEND}>
         <StatusBar
@@ -75,11 +76,18 @@ export function ProgramBars({
   return (
     <section
       aria-label="Credit progress"
-      className={`grid max-w-[60rem] grid-cols-2 gap-x-12 max-md:grid-cols-1 max-md:gap-y-5 ${LEGEND_TAPS}`}
+      className={cn(
+        "grid max-w-[60rem] grid-cols-2 gap-x-12 max-md:grid-cols-1 max-md:gap-y-5",
+        seconds.length > 1 &&
+          "grid-cols-3 gap-x-8 max-lg:grid-cols-1 max-lg:gap-y-5",
+        LEGEND_TAPS,
+      )}
     >
-      {[program, minor].map((bar, index) => (
-        <div key={index === 0 ? "program" : "minor"}>
-          <p className="flex items-baseline justify-between gap-4">
+      {[program, ...seconds].map((bar, index) => (
+        // A subgrid keeps the bars on one line when one label wraps and another does not.
+        // biome-ignore lint/suspicious/noArrayIndexKey: the bars never reorder
+        <div key={index} className="row-span-3 grid grid-rows-subgrid gap-y-0">
+          <p className="flex items-baseline-last justify-between gap-4 self-end">
             <span className="font-semibold">{bar.label}</span>
             <span className="shrink-0 text-fg-muted tabular-nums">
               {bar.done} of {bar.total} credits

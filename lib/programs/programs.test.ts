@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import type { Course } from "../catalogue/types.ts";
-import { guessMinor, guessProgram, guessSecond, PROGRAMS } from "./index.ts";
+import { guessMinors, guessProgram, guessSecond, PROGRAMS } from "./index.ts";
 import { isMinor, pairOf } from "./minor.ts";
 import { programCourseCodes, validateProgram } from "./validate.ts";
 
@@ -213,7 +213,7 @@ test("guessProgram reads a graduate degree, with thesis and non-thesis as kinds"
   expect(guess("Master of Science", "Computer Science")).toBeNull();
 });
 
-test("isMinor reads the id or the degree, and guessMinor matches a transcript minor by name", () => {
+test("isMinor reads the id or the degree, and guessMinors matches each transcript minor by name", () => {
   const program = (id: string, name: string, degree: string) => ({
     id,
     name,
@@ -230,26 +230,33 @@ test("isMinor reads the id or the degree, and guessMinor matches a transcript mi
       "Minor",
     ),
     program("computer-science-major-bsc", "Computer Science Major", "B.Sc."),
+    program("statistics-minor-ba", "Statistics Minor", "B.A."),
     program(
       "langue-litterature-francaises-concentration-mineure",
       "Concentration mineure Langue et littérature françaises",
       "B.A.",
     ),
   ];
-  expect(index.map(isMinor)).toEqual([true, true, true, false, true]);
+  expect(index.map(isMinor)).toEqual([true, true, true, false, true, true]);
   expect(
-    guessMinor("Bachelor of Engineering", ["Minor Management"], index),
-  ).toBe("management-minor-beng");
+    guessMinors("Bachelor of Engineering", ["Minor Management"], index),
+  ).toEqual(["management-minor-beng"]);
+  expect(guessMinors("Bachelor of Arts", ["Minor Management"], index)).toEqual(
+    [],
+  );
   expect(
-    guessMinor("Bachelor of Arts", ["Minor Management"], index),
-  ).toBeNull();
-  expect(
-    guessMinor(
+    guessMinors(
       "Bachelor of Arts",
-      ["Minor Entrepreneurship (for Non-Management Students)"],
+      [
+        "Minor Entrepreneurship (for Non-Management Students)",
+        "Minor Statistics",
+      ],
       index,
     ),
-  ).toBe("entrepreneurship-non-management-students");
+  ).toEqual([
+    "entrepreneurship-non-management-students",
+    "statistics-minor-ba",
+  ]);
   expect(
     guessProgram("Bachelor of Science", ["Major Computer Science"], index),
   ).toBe("computer-science-major-bsc");

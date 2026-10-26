@@ -12,14 +12,14 @@ import { Notice } from "@/components/ui/notice";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses } from "@/lib/catalogue/search";
 import { planWarnings, termRange } from "@/lib/engine/plan";
-import { minorOverlap, programStanding } from "@/lib/engine/progress";
+import { programStanding, secondOverlaps } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { buildStages } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
 import { currentTerm, termLabel } from "@/lib/profile/term-options";
 import { compareTerms, type Term, termKey } from "@/lib/profile/types";
 import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { useProgram } from "@/lib/programs/client";
+import { useProgram, useSeconds } from "@/lib/programs/client";
 import type { Program } from "@/lib/programs/types";
 
 /** The planner. Without a profile it offers to import a transcript or to plan from scratch. */
@@ -43,9 +43,8 @@ export function Planner() {
 function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
   const catalogue = useCatalogue();
   const programId = useProfileStore((state) => state.programId);
-  const minorId = useProfileStore((state) => state.minorId);
   const program = useProgram(programId);
-  const minor = useProgram(minorId);
+  const seconds = useSeconds();
 
   if (catalogue.status === "error") {
     return (
@@ -58,7 +57,7 @@ function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
   if (
     catalogue.status !== "ready" ||
     program === undefined ||
-    minor === undefined
+    seconds === undefined
   ) {
     return <PlannerSkeleton />;
   }
@@ -67,7 +66,7 @@ function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
       snapshot={snapshot}
       catalogue={catalogue.catalogue}
       program={program}
-      minor={minor}
+      seconds={seconds}
     />
   );
 }
@@ -76,12 +75,12 @@ function PlannerReady({
   snapshot,
   catalogue,
   program,
-  minor,
+  seconds,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
-  minor: Program | null;
+  seconds: readonly Program[];
 }) {
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
@@ -130,21 +129,27 @@ function PlannerReady({
         : null,
     [program, snapshot, catalogue, entry],
   );
-  const minorProgress = useMemo(
-    () =>
-      minor
-        ? programStanding(
-            minor,
-            snapshot,
-            catalogue,
-            entry,
-            "plan",
-            minorOverlap(minor, program, snapshot, catalogue, entry, "plan")
-              .programOnly,
-          )
-        : null,
-    [minor, program, snapshot, catalogue, entry],
-  );
+  const secondStandings = useMemo(() => {
+    const overlaps = secondOverlaps(
+      seconds,
+      program,
+      snapshot,
+      catalogue,
+      entry,
+      "plan",
+    );
+    return seconds.map((second, i) => ({
+      program: second,
+      progress: programStanding(
+        second,
+        snapshot,
+        catalogue,
+        entry,
+        "plan",
+        overlaps[i]?.programOnly,
+      ),
+    }));
+  }, [seconds, program, snapshot, catalogue, entry]);
   const moveOptions = useMemo(() => {
     const first = stages[0]?.term ?? now;
     const terms = new Map<number, Term>();
@@ -181,11 +186,7 @@ function PlannerReady({
     <>
       <PlanSummary
         standing={program && progress ? { program, progress } : null}
-        minor={
-          minor && minorProgress
-            ? { program: minor, progress: minorProgress }
-            : null
-        }
+        seconds={secondStandings}
         snapshot={snapshot}
         catalogue={catalogue}
         warningCount={warnings.length}
