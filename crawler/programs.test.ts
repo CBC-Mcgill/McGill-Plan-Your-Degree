@@ -1670,6 +1670,22 @@ test("a level sentence that is a group's only source stays for a person to check
   ]);
 });
 
+test("a level floor or cap over a source no rule could read stays for a person to check, so it takes no other subject's courses", () => {
+  const limits =
+    "<p>At least 6 of these credits must be in 400- or 500-level courses.</p><p>No more than 6 credits may be at the 200 level.</p>";
+  expect(
+    complementary(
+      `<p>18 credits in Economics selected from other 200- (with numbers above 209), 300-, 400- and 500-level courses.</p>${limits}`,
+    ).map((rule) => rule.unparsed),
+  ).toEqual([true, true, true]);
+  // With a level source of its own, the floor and cap narrow it.
+  expect(
+    complementary(
+      `<p>18 credits at the 200 level or higher.</p><p>Up to 6 credits of non-ECON courses may be taken outside the Department.</p>${limits}`,
+    ).map((rule) => rule.unparsed),
+  ).toEqual([undefined, true, undefined, undefined]);
+});
+
 test("a permission to count or substitute a course is the group's note, not a check", () => {
   const [group] = programOf(
     "Test Minor (B.Sc.) (6 credits)",

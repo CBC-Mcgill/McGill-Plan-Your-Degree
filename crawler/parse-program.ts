@@ -692,6 +692,11 @@ function parseAnyCourse(text: string): Rule | null {
 const MIN_LEAD = "at least|a minimum of|minimum of|minimum";
 const MAX_LEAD =
   "up to|at most|a maximum of|maximum of|maximum|no more than|only";
+// "At least 6 of these credits" limits courses chosen elsewhere.
+const NARROWING = new RegExp(
+  String.raw`^(?:${MIN_LEAD}|${MAX_LEAD})\b|\bof (?:these|which|the \d+)\b|\bmust (?:be|include)\b`,
+  "i",
+);
 const CLAUSE_AMOUNT = new RegExp(
   String.raw`^(?:(${MIN_LEAD}|${MAX_LEAD}|any) )?(\d+(?:\.\d+)?)(?:(?:-| or )(\d+(?:\.\d+)?))?(?: (credits?|courses?))?(?: (minimum|maximum))?(?: (\d+) courses?)?(?: |$)`,
 );
@@ -1869,8 +1874,24 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
       !rule.unparsed && !rule.filter && (rule.courses || rule.match?.subjects),
   );
   if (listed) return rules;
+  const levelOnly = (rule: Rule) =>
+    !rule.unparsed &&
+    !rule.adviser &&
+    !rule.courses &&
+    !rule.match?.subjects &&
+    !rule.match?.excludeSubjects &&
+    (rule.match?.minLevel !== undefined || rule.match?.maxLevel !== undefined);
+  const narrows = (rule: Rule) =>
+    NARROWING.test(rule.title) ||
+    (rule.minCredits === undefined && rule.minCourses === undefined);
+  // A level limit over an unread list would claim any subject's courses.
+  const unread =
+    rules.some((rule) => rule.unparsed) &&
+    !rules.some((rule) => levelOnly(rule) && !narrows(rule));
   return rules.map((rule) => {
-    if (rule.filter) return unparsed(rule.title);
+    if (rule.filter || (unread && levelOnly(rule) && narrows(rule))) {
+      return unparsed(rule.title);
+    }
     const level = levelIn(rule.title)?.match;
     // With no list a level minimum stands for the group's courses, and so does a reminder no check guards, so one that says more than its level stays for a person to check.
     const source =
