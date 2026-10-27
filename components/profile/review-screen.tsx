@@ -30,7 +30,7 @@ import {
   logicalCode,
   type Term,
 } from "@/lib/profile/types";
-import { guessMinor, guessProgram, guessSecond } from "@/lib/programs";
+import { guessMinors, guessProgram, guessSecond } from "@/lib/programs";
 import { useProgramIndex } from "@/lib/programs/client";
 import type { ProgramSummary } from "@/lib/programs/types";
 import type { Transcript } from "@/lib/transcript/parse";
@@ -77,18 +77,20 @@ function Review({
       programs,
     );
     const programId = guessed ?? store.programId;
-    const minorId =
-      guessMinor(transcript.degree, transcript.minors, programs) ??
-      guessSecond(transcript.degree, transcript.programs, guessed, programs) ??
-      store.minorId;
+    // A second major or joint component goes first, minors fill the rest.
+    const read = [
+      guessSecond(transcript.degree, transcript.programs, guessed, programs),
+      ...guessMinors(transcript.degree, transcript.minors, programs),
+    ].filter((id) => id !== null);
+    const [minorId, extraMinorId] = (
+      read.length > 0 ? read : [store.minorId, store.extraMinorId]
+    ).filter((id) => id !== null && id !== programId);
+    // A graduate program takes no second program.
+    const graduate = programs.some((p) => p.id === programId && p.level);
     return {
       programId,
-      // A saved second program can be the program this transcript names, and a graduate program takes none.
-      minorId:
-        minorId === programId ||
-        programs.some((p) => p.id === programId && p.level)
-          ? null
-          : minorId,
+      minorId: graduate ? null : (minorId ?? null),
+      extraMinorId: graduate ? null : (extraMinorId ?? null),
       entry,
       advancedStanding: transcript.advancedStanding,
       creditsRequired: transcript.creditsRequired ?? store.creditsRequired,
@@ -142,7 +144,10 @@ function Review({
       courses: kept.map(({ course }) => course),
     });
     store.setProgram(values.programId);
-    store.setMinor(values.minorId);
+    store.setSeconds({
+      minorId: values.minorId,
+      extraMinorId: values.extraMinorId,
+    });
     store.setBackground({
       entry: values.entry,
       advancedStanding: values.advancedStanding,

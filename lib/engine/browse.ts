@@ -125,16 +125,16 @@ export function pinSubjects(
 
 export type ProgramRole = "required" | "complementary" | "minor";
 
-/** The program's required courses, every course a complementary group names, then the minor's courses. Each keeps its first role, and graduate courses (600 and up) are left out. */
+/** Each program's course codes with their first role, leaving out graduate courses. */
 export function programCodes(
   program: Program | null,
-  minor: Program | null,
+  seconds: readonly Program[],
   index: readonly IndexedCourse[],
 ): Map<string, ProgramRole> {
   const codes = new Map<string, ProgramRole>();
   const sources = [
     { groups: program?.groups ?? [], minor: false },
-    { groups: minor?.groups ?? [], minor: true },
+    ...seconds.map((second) => ({ groups: second.groups, minor: true })),
   ];
   for (const source of sources) {
     for (const group of source.groups) {

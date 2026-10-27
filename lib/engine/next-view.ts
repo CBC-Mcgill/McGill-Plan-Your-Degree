@@ -61,7 +61,7 @@ const slug = (title: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
-/** One `?req=` key per group of What's next from its title, numbered when two groups share one. The second program's pane is `SECOND_KEY`. */
+/** One unique `?req=` key per What's next group, from its title. */
 export function groupKeys(groups: readonly { title: string }[]): string[] {
   const seen = new Set<string>();
   return groups.map((group, index) => {
@@ -73,6 +73,7 @@ export function groupKeys(groups: readonly { title: string }[]): string[] {
 }
 
 export const SECOND_KEY = "minor";
+export const EXTRA_KEY = "extra-minor";
 
 export interface NextView {
   progress: ProgramProgress | null;

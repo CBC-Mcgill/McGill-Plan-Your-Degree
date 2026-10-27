@@ -50,16 +50,20 @@ const PAIR: Record<
     labels: ["Program", "Second program"],
     nouns: ["first program", "second program"],
   },
+  extra: { labels: ["Programs", "Minor"], nouns: ["other programs", "minor"] },
 };
+
+/** "Second minor" beside a minor, else "Minor". */
+const extraLabel = (second: Pick<ProgramSummary, "id" | "degree">) =>
+  isMinor(second) ? "Second minor" : "Minor";
 
 const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
-/** "Major and minor credits", or "Joint honours credits" when both halves share the word. */
-const pairCredits = (pair: Pair) => {
-  const [first, second] = PAIR[pair].labels;
-  return first === second
-    ? `${first} credits`
-    : `${first} and ${second.toLowerCase()} credits`;
+/** "Major and minor credits", or "Major, second major and minor credits". */
+const pairCredits = (pair: Pair, extra?: string) => {
+  const labels: string[] = [...PAIR[pair].labels];
+  const [first, ...rest] = new Set(extra ? [...labels, extra] : labels);
+  return `${list.format([first ?? "", ...rest.map((label) => label.toLowerCase())])} credits`;
 };
 
 /** "Winter 2027 and Fall 2027", the terms a multi-term course spans. One term reads as itself. */
@@ -130,6 +134,7 @@ export const COPY = {
   secondTitle,
   pair: PAIR,
   pairCredits,
+  extraLabel,
   capital,
   /** "Program only" on a second program's row whose course counts for the first program alone. */
   firstOnly: (pair: Pair) => `${capital(PAIR[pair].nouns[0])} only`,

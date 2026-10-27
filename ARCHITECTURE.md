@@ -310,7 +310,8 @@ The profile holds:
 
 - **records:** one `CourseRecord` per transcript line or manual entry, with the logical code, an optional part such as `D1`, term, credits, grade, status and source.
   Statuses are `completed`, `in-progress`, `failed`, `withdrawn`, `deferred`, `transfer` and `exemption`.
-- **program and background:** `programId`, an optional `minorId` (its progress is counted on its own from the same courses, so a course can count for both), the entry route (`cegep` or `foundation`), advanced standing credits and credits required.
+- **program and background:** `programId`, an optional second program `minorId`, an optional `extraMinorId` set only beside a second program, the entry route (`cegep` or `foundation`), advanced standing credits and credits required.
+  Each second program's progress is counted on its own from the same courses, and `secondOverlaps` in `lib/engine/progress.ts` decides which shared courses it may count: the second program shares with the program, then the extra minor shares with both under its one cap.
 - **terms and plan:** the start term, the graduation term, a credit limit per term (17 by default) and the plan.
 - **importedAt:** the time of the last transcript import.
 

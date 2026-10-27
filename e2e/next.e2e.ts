@@ -471,6 +471,99 @@ test("two joint honours components show as a pair, each with its own bar", async
   );
 });
 
+test("a major and two minors show three bars, and in Arts the second minor gives up the courses the first one counts", async ({
+  page,
+}) => {
+  await openWith(page, {
+    records: [done("MATH 222"), done("MATH 223"), done("MATH 323")],
+    programId: "economics-major-concentration-ba",
+    minorId: "mathematics-minor-concentration-ba",
+    extraMinorId: "statistics-minor-concentration-ba",
+    plan: [],
+  });
+
+  await expect(
+    page.getByText("Major, minor and second minor credits"),
+  ).toBeVisible();
+  const bars = page.getByRole("region", { name: "Credit progress" });
+  await expect(bars).toContainText("Mathematics Minor Concentration");
+  await expect(bars).toContainText("Statistics Minor Concentration");
+
+  await requirement(page, "Statistics Minor Concentration").click();
+  await expect(page).toHaveURL("/next?req=extra-minor");
+  const extra = page.getByRole("region", {
+    name: "Statistics Minor Concentration",
+  });
+  await expect(
+    extra.getByRole("heading", { name: "Counts for your other programs only" }),
+  ).toBeVisible();
+  await expect(
+    row(page, "Statistics Minor Concentration", "MATH 222").first(),
+  ).toBeVisible();
+});
+
+test("a minor added beside a second major saves, and moves up when the second major is cleared", async ({
+  page,
+}) => {
+  await page.addInitScript((key) => {
+    if (localStorage.getItem(key as string)) return;
+    localStorage.setItem(
+      key as string,
+      JSON.stringify({
+        state: {
+          records: [],
+          programId: "economics-major-concentration-ba",
+          minorId: "psychology-major-concentration-ba",
+          startTerm: { season: "Fall", year: 2026 },
+        },
+        version: 6,
+      }),
+    );
+  }, KEY);
+  let release = () => {};
+  const loaded = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/programs.json", async (route) => {
+    await loaded;
+    await route.continue();
+  });
+  await page.goto("/profile");
+
+  await page.getByRole("button", { name: "Add a minor" }).click();
+  const minor = page.getByRole("combobox", { name: "Minor", exact: true });
+  await expect(minor).toBeFocused();
+  await minor.fill("statistics minor concentration ba");
+  // Enter while the list loads must not pick None.
+  await minor.press("Enter");
+  await expect(minor).toHaveValue("statistics minor concentration ba");
+  release();
+  await expect(
+    page.getByRole("option", { name: /Statistics Minor Concentration/ }),
+  ).toBeVisible();
+  await minor.press("Enter");
+  await expect(minor).toHaveValue("Statistics Minor Concentration (B.A.)");
+  await expect(page.getByRole("main")).toContainText(
+    "with the Psychology Major Concentration and the Statistics Minor Concentration",
+  );
+
+  await page.goto("/next");
+  await expect(
+    page.getByText("Major, second major and minor credits"),
+  ).toBeVisible();
+
+  await page.goto("/profile");
+  const second = page.getByRole("combobox", { name: "Second major" });
+  await second.fill("no such program");
+  await second.press("Enter");
+  await expect(
+    page.getByRole("combobox", { name: "Minor", exact: true }),
+  ).toHaveValue("Statistics Minor Concentration (B.A.)");
+  await expect(
+    page.getByRole("button", { name: "Add a second minor" }),
+  ).toBeVisible();
+});
+
 test("a started profile with no program asks for one", async ({ page }) => {
   await openWith(page, {
     records: [],

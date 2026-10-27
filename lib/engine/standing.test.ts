@@ -14,7 +14,12 @@ import {
   roomLeft,
   standingCredits,
 } from "./credits.ts";
-import { checkKey, minorOverlap, programStanding } from "./progress.ts";
+import {
+  checkKey,
+  minorOverlap,
+  programStanding,
+  secondOverlaps,
+} from "./progress.ts";
 import { buildSnapshot } from "./snapshot.ts";
 import { canTakeNow } from "./status.ts";
 
@@ -228,7 +233,7 @@ test("a course not offered in the catalogue year is never Can take now", () => {
   );
 });
 
-test("a minor shares the program's courses only up to its overlap cap, and another second program shares them all outside Arts", () => {
+test("a minor shares the program's courses only up to its overlap cap, another second program shares them all outside Arts, and an extra minor shares with both", () => {
   const base = {
     degree: "B.Sc.",
     catalogueYear: "2026-2027",
@@ -323,6 +328,26 @@ test("a minor shares the program's courses only up to its overlap cap, and anoth
   expect(shared(major)).toBe(3);
   expect(shared({ ...major, degree: "B.A." })).toBe(0);
   expect(shared(major, { ...program, faculty: "Arts" })).toBe(0);
+  // The extra minor's one cap also covers the second program's COMP 302.
+  const [second, extra] = secondOverlaps(
+    [major, minor(3)],
+    program,
+    snapshot,
+    catalogue,
+    null,
+    "earned",
+  );
+  expect(second?.shared.size).toBe(3);
+  expect([extra?.shared.size, extra?.programOnly.size]).toEqual([1, 3]);
+  const arts = secondOverlaps(
+    [{ ...major, degree: "B.A." }, minor(undefined, "Arts")],
+    program,
+    snapshot,
+    catalogue,
+    null,
+    "earned",
+  );
+  expect(arts.map((overlap) => overlap.shared.size)).toEqual([0, 0]);
 });
 
 test("a program with every group met short of its total names the range that can take the rest", () => {

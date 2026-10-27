@@ -38,6 +38,7 @@ Evidence so far is anecdotal (firsthand experience and the v1 PRD), and validati
 - As a Software Engineering student, I want to upload my unofficial transcript and have every completed course saved, so that I never type them in.
 - As a CS Major student, I want to see the required courses I still have left and my progress on each complementary list, so that I know what I must take before graduating.
 - As a joint honours or double major student, I want both programs tracked side by side, so that I see what each one still needs.
+- As a B.A. student with two majors and a minor, or a major and two minors, I want all three programs tracked, so that my plan covers my whole degree.
 - As a doctoral student, I want my thesis and comprehensive exam tracked as requirements met, so that a program with no credit total still shows my progress.
 - As any student, I want to lay out my remaining terms and get warned when a course sits before its prerequisite or in a term it is not offered, so that my plan is actually possible.
 - As a student whose program has a rule the app cannot read, I want to list the courses I use for it and mark it as checked, so that my progress is complete.
@@ -82,7 +83,7 @@ Evidence so far is anecdotal (firsthand experience and the v1 PRD), and validati
 - Extracts text only, in a Web Worker with a timeout, so a malformed PDF cannot freeze or attack the page.
 - Detects a McGill unofficial transcript by the markers in section 8 and says so clearly when the file is not one.
 - Discards the identity header (name, McGill ID, permanent code) and holds, strips the repeating page header and footer, and joins term blocks that break across pages.
-- Reads degree, program lines, minor, credits required, previous education, and advanced standing to pre-fill the profile.
+- Reads degree, program lines, minors, credits required, previous education, and advanced standing to pre-fill the profile.
 - Reads code, credits, grade, and term for every course line, including `RW` registrations with no grade, pass/fail grades, withdrawals, failures, deferred grades, transfer credits, exemptions (`EXC` or a course code with no value, no credit), and multi-term courses marked `²` or with D1/D2 and N1/N2 suffixes.
 - Matches courses by code only, since transcript titles are abbreviated, and saves nothing until the student confirms a review screen where each course is matched to the catalogue and unknown lines are flagged and editable.
 - A corpus of synthetic transcripts, built from real layouts with fake identities and grades, runs in CI and must pass at 100%, and real transcripts never enter the repo.
@@ -92,7 +93,7 @@ Safari and Firefox prints and graduate transcripts have no real sample, and the 
 
 #### P0-5 Local profile
 
-- Stores course records, program, second program, entry route, advanced standing, terms, plan, credit limit, checked rules, and listed courses in browser storage, with no account.
+- Stores course records, program, second program, extra minor, entry route, advanced standing, terms, plan, credit limit, checked rules, and listed courses in browser storage, with no account.
 - Students can add or remove courses by hand when the import gets something wrong.
 - Exports to a JSON file and imports it back, versioned with migrations (version 6) so old exports keep loading.
 - One click deletes all local data.
@@ -105,6 +106,7 @@ Safari and Firefox prints and graduate transcripts have no real sample, and the 
 - Each requirement opens a pane listing its courses as Planned, Can take, Not open, and Counted, and the pane always agrees with the requirement's bar.
 - Hovering or tabbing to earned, in progress, or planned on a bar lists the courses behind the number.
 - A second program gets its own bar, labelled by the pair, such as Major and Minor, Joint honours, or Core and Breadth.
+  An extra minor gets a third bar and its own pane.
 
 #### P0-7 Program requirements
 
@@ -119,6 +121,9 @@ The five hand-written programs that override their generated files are Computer 
 - A transcript import picks a program only when exactly one program fits its degree and program lines.
 - A profile holds one program and one second program (a minor, a second major, a joint honours component, or a B.Sc. Liberal breadth component), with the pair read from the two programs' names.
   Shared courses count for both up to the limit the catalogue states, and with no stated limit an Arts degree shares none and any other shares all.
+- A profile with a second program can add one extra minor, for the B.A. combinations of two majors and a minor, a major and two minors, or two joint honours components and a minor.
+  The extra minor shares courses with the program and the second program under one limit, its own, so in Arts it shares none.
+  A transcript import fills it from a second minor line, or from the minor line when the transcript names two program lines.
 
 The engine counts progress by these rules.
 
@@ -193,7 +198,7 @@ The app credits Year 0 groups to Quebec CEGEP students, counts lump-sum advanced
 | Transfer from another university | Per-course transfer credit, and at least 60 credits (or half of a B.Eng.) must be taken at McGill. | The residency rule is not checked |
 | Mature student | Usually starts in U0. | Only the Foundation entry fits |
 | Entered under an older catalogue year | Follows the requirements of the year they entered. | Every student uses the 2026-2027 catalogue |
-| Second program | A minor, second major, joint honours component, or B.Sc. Liberal breadth component adds a second set of requirements. | A third program is not tracked |
+| Second program | A minor, second major, joint honours component, or B.Sc. Liberal breadth component adds a second set of requirements. | A third program is tracked only as an extra minor, and a fourth not at all |
 | Graduate student | Master's programs, certificates, and diplomas state a credit total, doctorates state none. | Some graduate transcript wording is unknown (P0-4) |
 | Changed program or faculty | Some earlier credits may not count toward the new program. | Not handled |
 | Co-op work terms | Work terms sit between study terms. | Not handled in the planner |
@@ -251,6 +256,9 @@ Checked on 2026-10-08 with direct requests unless noted.
   Its markers are the title `UNOFFICIAL Transcript`, the form name `SWFTRAN`, and the footer URL `horizon.mcgill.ca/pban1/bzsktran.P_Display_Form`.
 - **mcgill.courses API.** Public read endpoints with no login and CORS open to any origin, where `GET /api/courses/COMP251` returns `avgRating`, `avgDifficulty`, and `reviewCount`.
   The code is CC0, but students write the reviews, so we show aggregates and link out.
+- **Program combinations.** The B.A. degree page asks for "at least two" program components, and Arts OASIS lists a major and two minors as an option (checked 2026-10-26).
+  The OASIS guide says no course may fulfil the requirements of more than one program.
+  The Faculty of Science page describes one primary program and one optional second program, and names no rule for a third.
 
 ## 9. Open Questions
 

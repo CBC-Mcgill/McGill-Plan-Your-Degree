@@ -26,6 +26,7 @@ export const PAIR_TIPS: Record<Pair, string> = {
   majors: `A second major taken alongside your first, toward the same degree. ${pairBothTip}`,
   liberal: `The breadth component of your Liberal program, taken alongside your core science component. ${pairBothTip}`,
   other: `A second program taken alongside your program. ${pairBothTip}`,
+  extra: `A minor taken on top of your program and second program, as in two majors and a minor. ${bothTip}`,
 };
 
 export const GLOSSARY = {
@@ -156,7 +157,7 @@ export function shareDefinition(
       label: COPY.firstOnly(pair),
       tip:
         pair !== "minor" && !cap
-          ? `No course may count for both programs, so this course counts for your ${first} only.`
+          ? `No course may count for ${pair === "extra" ? "two" : "both"} programs, so this course counts for your ${first} only.`
           : `This ${second} lets at most ${COPY.credits(cap ?? 0)} count for your ${first} too, and they are used, so this course counts for your ${first} only.`,
     };
   }
@@ -164,8 +165,10 @@ export function shareDefinition(
     label: COPY.countsForBoth,
     tip:
       cap !== undefined
-        ? `Up to ${COPY.credits(cap)} can count for both your ${first} and this ${second}.`
-        : pair === "minor"
+        ? pair === "extra"
+          ? `Up to ${COPY.credits(cap)} of this minor can count for your other programs too.`
+          : `Up to ${COPY.credits(cap)} can count for both your ${first} and this ${second}.`
+        : pair === "minor" || pair === "extra"
           ? bothTip
           : pairBothTip,
   };

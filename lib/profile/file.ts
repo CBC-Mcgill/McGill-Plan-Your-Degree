@@ -10,7 +10,7 @@ import {
   termKey,
 } from "./types.ts";
 
-export const PROFILE_VERSION = 6;
+export const PROFILE_VERSION = 7;
 
 const FORMAT = "plan-your-degree-profile";
 const MAX_FILE_CHARS = 1_000_000;
@@ -170,6 +170,7 @@ function profile(value: unknown): Profile {
     "records",
     "programId",
     "minorId",
+    "extraMinorId",
     "entry",
     "advancedStanding",
     "creditsRequired",
@@ -181,12 +182,18 @@ function profile(value: unknown): Profile {
     "checked",
     "assigned",
   ]);
+  const minorId = nullable(o.minorId, (v) => programId(v, "profile.minorId"));
+  const extraMinorId = nullable(o.extraMinorId, (v) =>
+    programId(v, "profile.extraMinorId"),
+  );
   return {
     records: array(o.records, "profile.records", MAX_RECORDS).map((r, i) =>
       record(r, `profile.records[${i}]`),
     ),
     programId: nullable(o.programId, (v) => programId(v, "profile.programId")),
-    minorId: nullable(o.minorId, (v) => programId(v, "profile.minorId")),
+    // The extra minor only sits beside a second program, as on the profile page.
+    minorId: minorId ?? extraMinorId,
+    extraMinorId: minorId && extraMinorId !== minorId ? extraMinorId : null,
     entry: nullable(o.entry, (v) => {
       if (v !== "cegep" && v !== "foundation") {
         bad("profile.entry", 'must be "cegep" or "foundation"');
@@ -258,6 +265,9 @@ export function migrateProfile(data: unknown, version: number): unknown {
   if (version < 6 && typeof migrated === "object" && migrated !== null) {
     migrated = { assigned: {}, ...migrated };
   }
+  if (version < 7 && typeof migrated === "object" && migrated !== null) {
+    migrated = { extraMinorId: null, ...migrated };
+  }
   return migrated;
 }
 
@@ -267,6 +277,7 @@ export function profileOf(state: Profile): Profile {
     records: state.records,
     programId: state.programId,
     minorId: state.minorId,
+    extraMinorId: state.extraMinorId,
     entry: state.entry,
     advancedStanding: state.advancedStanding,
     creditsRequired: state.creditsRequired,

@@ -10,6 +10,7 @@ export function ProgramCard() {
     useShallow((s) => ({
       programId: s.programId,
       minorId: s.minorId,
+      extraMinorId: s.extraMinorId,
       startTerm: s.startTerm,
       graduationTerm: s.graduationTerm,
       entry: s.entry,

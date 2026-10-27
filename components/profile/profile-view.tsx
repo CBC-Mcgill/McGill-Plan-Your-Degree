@@ -15,10 +15,11 @@ import { ReviewScreen } from "@/components/profile/review-screen";
 import { useImportFlow } from "@/components/profile/use-import-flow";
 import { Button } from "@/components/ui/button";
 import { COPY } from "@/lib/copy";
+import { list } from "@/lib/engine/parts";
 import { isStarted, startProfile } from "@/lib/profile/started";
 import { useProfileHydrated, useProfileStore } from "@/lib/profile/store";
 import { formatTerm } from "@/lib/profile/terms";
-import { useProgram, useProgramIndex } from "@/lib/programs/client";
+import { useProgram, useProgramIndex, useSeconds } from "@/lib/programs/client";
 
 export function ProfileView() {
   const hydrated = useProfileHydrated();
@@ -83,10 +84,10 @@ export function ProfileView() {
   );
 }
 
-/** "Computer Engineering (B.Eng.) with the Applied Artificial Intelligence minor, Fall 2025 to Winter 2029." */
+/** "Economics (B.A.) with the History minor, Fall 2025 to Winter 2029." */
 function Summary() {
   const program = useProgram(useProfileStore((s) => s.programId));
-  const minor = useProgram(useProfileStore((s) => s.minorId));
+  const seconds = useSeconds() ?? [];
   const start = useProfileStore((s) => s.startTerm);
   const end = useProfileStore((s) => s.graduationTerm);
   const degree = program && `${program.name} (${program.degree})`;
@@ -97,7 +98,11 @@ function Summary() {
         ? `from ${formatTerm(start)}`
         : end && `until ${formatTerm(end)}`;
   const first = [
-    [degree, minor && `with the ${COPY.secondTitle(minor)}`]
+    [
+      degree,
+      seconds.length > 0 &&
+        `with ${list.format(seconds.map((second) => `the ${COPY.secondTitle(second)}`))}`,
+    ]
       .filter(Boolean)
       .join(" "),
     terms,

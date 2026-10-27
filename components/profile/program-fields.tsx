@@ -21,6 +21,7 @@ import type { Program, ProgramSummary } from "@/lib/programs/types";
 export interface ProgramValues {
   programId: string | null;
   minorId: string | null;
+  extraMinorId: string | null;
   startTerm: Term | null;
   graduationTerm: Term | null;
   entry: EntryRoute | null;
@@ -41,8 +42,11 @@ export function ProgramFields({
   // Null credits mean "use the default", so the field only holds what the student typed.
   const program = useProgram(value.programId);
   const second = useProgram(value.minorId);
+  const extra = useProgram(value.extraMinorId);
   const pair = pairOf(program ?? null, second ?? null);
   const secondLabel = second ? COPY.pair[pair].labels[1] : undefined;
+  const extraLabel = second ? COPY.extraLabel(second) : "Minor";
+  const [addingExtra, setAddingExtra] = useState(false);
   // A graduate program has no CEGEP or U0 entry and no second program.
   const graduate = program?.level === "graduate";
   const defaultCredits = degreeCredits(null, value.entry, program ?? null);
@@ -63,7 +67,7 @@ export function ProgramFields({
     chosen: ProgramSummary | null,
   ) => {
     const patch: Partial<ProgramValues> = chosen?.level
-      ? { programId, minorId: null }
+      ? { programId, minorId: null, extraMinorId: null }
       : { programId };
     const before = guess(program);
     if (
@@ -81,7 +85,7 @@ export function ProgramFields({
       <div className="col-span-2">
         <ProgramCombobox
           value={value.programId}
-          other={value.minorId}
+          others={[value.minorId, value.extraMinorId]}
           onChange={pickProgram}
           info={
             detected
@@ -96,8 +100,15 @@ export function ProgramFields({
           <ProgramCombobox
             kind="second"
             value={value.minorId}
-            other={value.programId}
-            onChange={(minorId) => onChange({ minorId })}
+            others={[value.programId, value.extraMinorId]}
+            // Clearing the second program promotes the extra minor.
+            onChange={(minorId) =>
+              onChange(
+                minorId
+                  ? { minorId }
+                  : { minorId: value.extraMinorId, extraMinorId: null },
+              )
+            }
             label={secondLabel}
             info={
               secondLabel
@@ -106,6 +117,32 @@ export function ProgramFields({
             }
           />
           {second?.generated && <GeneratedLine program={second} />}
+          {value.minorId && !value.extraMinorId && !addingExtra && (
+            <button
+              type="button"
+              onClick={() => setAddingExtra(true)}
+              className="link mt-2 max-lg:relative max-lg:after:absolute max-lg:after:-inset-x-2 max-lg:after:-inset-y-3"
+            >
+              Add {extraLabel === "Minor" ? "a minor" : "a second minor"}
+            </button>
+          )}
+        </div>
+      )}
+      {!graduate && value.minorId && (value.extraMinorId || addingExtra) && (
+        <div className="col-span-2">
+          <ProgramCombobox
+            kind="extra"
+            value={value.extraMinorId}
+            others={[value.programId, value.minorId]}
+            autoFocus={!value.extraMinorId}
+            onChange={(extraMinorId) => {
+              setAddingExtra(false);
+              onChange({ extraMinorId });
+            }}
+            label={extraLabel}
+            info={{ label: extraLabel, tip: PAIR_TIPS.extra }}
+          />
+          {extra?.generated && <GeneratedLine program={extra} />}
         </div>
       )}
       <TermSelect
