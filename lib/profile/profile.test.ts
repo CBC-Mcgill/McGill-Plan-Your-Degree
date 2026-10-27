@@ -188,6 +188,21 @@ test("a version 3 file loads without a minor, and both minors survive an export"
       extraMinorId: "mathematics-minor-bsc",
     },
   });
+  const edited = (minorId: string | null, extraMinorId: string) =>
+    parseProfileFile(
+      JSON.stringify({
+        ...JSON.parse(exported),
+        profile: { ...JSON.parse(exported).profile, minorId, extraMinorId },
+      }),
+    );
+  expect(edited(null, "mathematics-minor-bsc")).toMatchObject({
+    profile: { minorId: "mathematics-minor-bsc", extraMinorId: null },
+  });
+  expect(
+    edited("mathematics-minor-bsc", "mathematics-minor-bsc"),
+  ).toMatchObject({
+    profile: { minorId: "mathematics-minor-bsc", extraMinorId: null },
+  });
 });
 
 test("parseProfileFile drops a credits required that only repeats the default", () => {

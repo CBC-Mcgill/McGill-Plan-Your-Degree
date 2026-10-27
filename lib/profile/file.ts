@@ -182,15 +182,18 @@ function profile(value: unknown): Profile {
     "checked",
     "assigned",
   ]);
+  const minorId = nullable(o.minorId, (v) => programId(v, "profile.minorId"));
+  const extraMinorId = nullable(o.extraMinorId, (v) =>
+    programId(v, "profile.extraMinorId"),
+  );
   return {
     records: array(o.records, "profile.records", MAX_RECORDS).map((r, i) =>
       record(r, `profile.records[${i}]`),
     ),
     programId: nullable(o.programId, (v) => programId(v, "profile.programId")),
-    minorId: nullable(o.minorId, (v) => programId(v, "profile.minorId")),
-    extraMinorId: nullable(o.extraMinorId, (v) =>
-      programId(v, "profile.extraMinorId"),
-    ),
+    // The extra minor only sits beside a second program, as on the profile page.
+    minorId: minorId ?? extraMinorId,
+    extraMinorId: minorId && extraMinorId !== minorId ? extraMinorId : null,
     entry: nullable(o.entry, (v) => {
       if (v !== "cegep" && v !== "foundation") {
         bad("profile.entry", 'must be "cegep" or "foundation"');
