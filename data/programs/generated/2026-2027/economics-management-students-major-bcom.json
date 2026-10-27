@@ -41,19 +41,11 @@
         },
         {
           "title": "At least 6 of these 18 credits should be taken from courses with 400-level numbers",
-          "minCredits": 6,
-          "match": {
-            "minLevel": 400,
-            "maxLevel": 400
-          }
+          "unparsed": true
         },
         {
           "title": "No more than 6 of the 18 credits may be taken at the 200 level",
-          "maxCredits": 6,
-          "match": {
-            "minLevel": 200,
-            "maxLevel": 200
-          }
+          "unparsed": true
         }
       ]
     }

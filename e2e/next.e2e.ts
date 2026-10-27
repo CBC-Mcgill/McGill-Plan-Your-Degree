@@ -303,7 +303,7 @@ test("a rule the crawler could not read can be marked as checked, and the mark t
   });
   await requirement(page, "Complementary courses").click();
   const pane = page.getByRole("region", { name: "Complementary courses" });
-  await pane.getByRole("button", { name: "Mark as checked" }).click();
+  await pane.getByRole("button", { name: "Mark as checked" }).first().click();
   await expect(pane).toContainText("Checked by you");
   await expect(pane.getByRole("button", { name: "Undo" })).toBeFocused();
 
@@ -366,17 +366,17 @@ test("an undergraduate's listed course counts toward the group, and Not yet leav
   });
   const tab = requirement(page, "Complementary courses");
   await tab.click();
-  await expect(tab).toContainText("0 of 18");
+  await expect(tab).toContainText("3 rules to check");
   const pane = page.getByRole("region", { name: "Complementary courses" });
-  await pane.getByRole("button", { name: "Add a course" }).click();
+  await pane.getByRole("button", { name: "Add a course" }).first().click();
   await page.getByRole("combobox", { name: "Add a course" }).fill("econ 305");
   await page.getByRole("option", { name: /ECON 305/ }).click();
   await expect(tab).toContainText("3 of 18");
-  await pane.getByRole("button", { name: "Mark as checked" }).click();
+  await pane.getByRole("button", { name: "Mark as checked" }).first().click();
   await page.getByRole("button", { name: "Not yet" }).click();
   await expect(pane).toContainText("Check this requirement");
   await expect(
-    pane.getByRole("button", { name: "Mark as checked" }),
+    pane.getByRole("button", { name: "Mark as checked" }).first(),
   ).toBeFocused();
 });
 
