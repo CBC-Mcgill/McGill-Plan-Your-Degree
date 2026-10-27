@@ -12,7 +12,7 @@ export const isMinor = ({
 /** "Technological Entrepreneurship Minor" without its trailing "Minor", for places that already say "Minor". */
 export const minorName = (name: string) => name.replace(/\s+minor$/i, "");
 
-/** How the program and the second program fit together. "liberal" is a B.Sc. Liberal core with its breadth component, which can itself be a minor. "extra" is the extra minor beside both, which `pairOf` never returns. */
+/** How the program and the second program fit together. `pairOf` never returns "extra". */
 export type Pair = "minor" | "joint" | "majors" | "liberal" | "other" | "extra";
 
 const is = (pattern: RegExp, { id, name }: Named) =>

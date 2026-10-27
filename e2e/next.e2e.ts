@@ -520,12 +520,27 @@ test("a minor added beside a second major saves, and moves up when the second ma
       }),
     );
   }, KEY);
+  let release = () => {};
+  const loaded = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/programs.json", async (route) => {
+    await loaded;
+    await route.continue();
+  });
   await page.goto("/profile");
 
   await page.getByRole("button", { name: "Add a minor" }).click();
   const minor = page.getByRole("combobox", { name: "Minor", exact: true });
   await expect(minor).toBeFocused();
   await minor.fill("statistics minor concentration ba");
+  // Enter while the list loads must not pick None.
+  await minor.press("Enter");
+  await expect(minor).toHaveValue("statistics minor concentration ba");
+  release();
+  await expect(
+    page.getByRole("option", { name: /Statistics Minor Concentration/ }),
+  ).toBeVisible();
   await minor.press("Enter");
   await expect(minor).toHaveValue("Statistics Minor Concentration (B.A.)");
   await expect(page.getByRole("main")).toContainText(

@@ -53,13 +53,13 @@ const PAIR: Record<
   extra: { labels: ["Programs", "Minor"], nouns: ["other programs", "minor"] },
 };
 
-/** What the extra minor is called: "Second minor" beside a minor, "Minor" beside a second major or joint honours component. */
+/** "Second minor" beside a minor, else "Minor". */
 const extraLabel = (second: Pick<ProgramSummary, "id" | "degree">) =>
   isMinor(second) ? "Second minor" : "Minor";
 
 const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
-/** "Major and minor credits", "Joint honours credits" when both halves share the word, or "Major, second major and minor credits" with an extra minor. */
+/** "Major and minor credits", or "Major, second major and minor credits". */
 const pairCredits = (pair: Pair, extra?: string) => {
   const labels: string[] = [...PAIR[pair].labels];
   const [first, ...rest] = new Set(extra ? [...labels, extra] : labels);

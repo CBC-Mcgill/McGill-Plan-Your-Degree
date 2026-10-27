@@ -77,7 +77,7 @@ function Review({
       programs,
     );
     const programId = guessed ?? store.programId;
-    // A second major or joint honours component comes before the minors, which fill the rest.
+    // A second major or joint component goes first, minors fill the rest.
     const read = [
       guessSecond(transcript.degree, transcript.programs, guessed, programs),
       ...guessMinors(transcript.degree, transcript.minors, programs),

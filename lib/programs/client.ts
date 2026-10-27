@@ -74,7 +74,7 @@ export function useProgram(
   );
 }
 
-/** The profile's second program, then its extra minor, leaving out the ones not set. Undefined while either loads. */
+/** The second program, then the extra minor. Undefined while either loads. */
 export function useSeconds(): Program[] | undefined {
   const minor = useProgram(useProfileStore((state) => state.minorId));
   const extra = useProgram(useProfileStore((state) => state.extraMinorId));

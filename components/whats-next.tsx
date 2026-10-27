@@ -382,7 +382,7 @@ function Page({
     const progress = secondView?.progress;
     if (!secondView || !progress) return;
     const key = i === 0 ? SECOND_KEY : EXTRA_KEY;
-    // The extra minor shares with the program and the second program, both counted before it.
+    // The extra minor shares with everything counted before it.
     const others = new Set(
       [view, ...secondViews.slice(0, i)].flatMap((earlier) => [
         ...programCodes(earlier),

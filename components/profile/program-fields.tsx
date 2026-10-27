@@ -101,7 +101,7 @@ export function ProgramFields({
             kind="second"
             value={value.minorId}
             others={[value.programId, value.extraMinorId]}
-            // Clearing the second program moves the extra minor up, since it only sits beside one.
+            // Clearing the second program promotes the extra minor.
             onChange={(minorId) =>
               onChange(
                 minorId

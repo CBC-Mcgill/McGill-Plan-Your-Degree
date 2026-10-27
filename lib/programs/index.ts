@@ -154,7 +154,7 @@ export function guessSecond(
     : null;
 }
 
-/** Maps each minor line of a transcript, such as "Minor Management", to a minor in `index`, in line order, leaving out a line that none or several fit. A minor whose degree is just "Minor" fits any degree. */
+/** One minor id per transcript minor line with a single match, in line order. */
 export function guessMinors(
   degree: string | null,
   minors: string[],

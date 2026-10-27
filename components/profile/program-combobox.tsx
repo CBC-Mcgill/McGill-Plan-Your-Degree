@@ -22,7 +22,7 @@ const NO_PROGRAMS: ProgramSummary[] = [];
 
 type Kind = "program" | "second" | "extra";
 
-/** The words around the list: the program, the second program and the extra minor share the field and differ only here. */
+/** The words around the list for each kind of field. */
 const COPY: Record<
   Kind,
   {
@@ -90,7 +90,7 @@ function search(programs: ProgramSummary[], query: string, suffix = "") {
 }
 
 /**
- * A searchable list of every program but the minors, graduate programs last, for the second program, of every undergraduate program with the minors first, and for the extra minor, of the undergraduate minors. None lists `others`, the programs in the other fields.
+ * A searchable program list: non-minors for the program, undergraduate programs for the second, minors for the extra.
  * The empty choice is "My program isn't listed" for a program the catalogue does not have, and "None" for the second. `label` replaces the field's own, and `info` makes the label a `Term`.
  */
 export function ProgramCombobox({
@@ -108,7 +108,7 @@ export function ProgramCombobox({
   others?: readonly (string | null)[];
   label?: string;
   info?: Definition;
-  /** Focuses the field and opens its list on mount, for a field the student just asked for. */
+  /** Focuses the field on mount. */
   autoFocus?: boolean;
 }) {
   const copy = COPY[kind];
@@ -246,7 +246,11 @@ export function ProgramCombobox({
                   setActive(
                     (at) => (at + step + options.length) % options.length,
                   );
-                } else if (event.key === "Enter" && open) {
+                } else if (
+                  event.key === "Enter" &&
+                  open &&
+                  index.status !== "loading"
+                ) {
                   event.preventDefault();
                   choose(options[active] ?? null);
                 }

@@ -84,7 +84,7 @@ export function ProfileView() {
   );
 }
 
-/** "Computer Engineering (B.Eng.) with the Applied Artificial Intelligence minor, Fall 2025 to Winter 2029." Two second programs read "with the Economics Major Concentration and the Statistics minor". */
+/** "Economics (B.A.) with the History minor, Fall 2025 to Winter 2029." */
 function Summary() {
   const program = useProgram(useProfileStore((s) => s.programId));
   const seconds = useSeconds() ?? [];

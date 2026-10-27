@@ -744,16 +744,13 @@ export interface MinorOverlap {
   left: number;
 }
 
-/** A program counted before a second program, with the courses it may not count past its own cap. */
+/** A program counted before a second program, minus courses past its cap. */
 interface Earlier {
   program: Program;
   exclude?: ReadonlySet<string>;
 }
 
-/**
- * Lets the minor count the courses the program and any `earlier` second program count, up to its cap, in the minor's group order, and leaves the rest to them.
- * The cap is one budget across all of them, since no page says a minor may share its cap again with each program.
- */
+/** Lets the minor share courses earlier programs count, up to one cap in total. */
 export function minorOverlap(
   minor: Program,
   program: Program | null,
@@ -924,7 +921,7 @@ export function lacking(group: GroupProgress): string | null {
   return `${rule.title} (${need})${open.length > 1 ? ` and ${open.length - 1} more` : ""}`;
 }
 
-/** The overlap of each second program in turn, the second program first and then the extra minor, each sharing with the program and the ones before it. */
+/** Each second program's overlap with the program and the ones before it. */
 export function secondOverlaps(
   seconds: readonly Program[],
   program: Program | null,

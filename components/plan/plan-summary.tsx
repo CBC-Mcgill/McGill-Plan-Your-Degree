@@ -109,7 +109,7 @@ const ROW =
 /** The middle column, on a line of its own on phones. */
 const UNDER = "max-md:col-span-2 max-md:row-start-2";
 
-/** "Minor" or another word for a second program before its group's name, so it reads apart from the program's. */
+/** "Minor" or similar before a second program's group name. */
 const SecondPrefix = ({ prefix }: { prefix?: string }) =>
   prefix && <span className="font-normal text-fg-muted">{prefix} · </span>;
 
@@ -161,14 +161,14 @@ function lacks(
   );
 }
 
-/** One row per open requirement of the program, then of each second program, and one per rule nobody could read. */
+/** One row per open requirement of each program, plus one per unread rule. */
 function missingRows(
   standings: (Standing & { prefix?: string; pane?: string })[],
   snapshot: Snapshot,
   catalogue: Catalogue,
 ) {
   return standings.flatMap(({ program, progress, prefix, pane }) => {
-    // Each second program has one pane on What's next, the first one pane per group.
+    // Each second program has one pane, the program one per group.
     const panes = groupKeys(progress.groups);
     return progress.groups.flatMap((group, g) => {
       if (group.satisfied) return [];
@@ -233,7 +233,7 @@ function missingRows(
   });
 }
 
-/** The plan's headline: program credits with the plan, what is still missing, the second programs, and the warning count. */
+/** The plan's headline: credits, what is missing, second programs and warnings. */
 export function PlanSummary({
   standing,
   seconds,
@@ -244,7 +244,7 @@ export function PlanSummary({
   graduationPassed,
 }: {
   standing: Standing | null;
-  /** The student's minor or other second program, then the extra minor, each counted on its own from the same courses. */
+  /** The second program, then the extra minor. */
   seconds: readonly Standing[];
   snapshot: Snapshot;
   catalogue: Catalogue;

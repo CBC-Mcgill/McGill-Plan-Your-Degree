@@ -41,7 +41,7 @@ export function RoomLeft({
   );
 }
 
-/** The program's credits bar, and the second program's (a minor, a second major, the other joint honours component or a breadth component) and the extra minor's beside it at the same level. Three bars share a row from 1024px, and they stack below 768px. */
+/** Credit bars for the program and up to two second programs. */
 export function ProgramBars({
   program,
   seconds,
@@ -84,7 +84,7 @@ export function ProgramBars({
       )}
     >
       {[program, ...seconds].map((bar, index) => (
-        // A subgrid keeps the bars on one line when one label wraps and another does not.
+        // A subgrid keeps bars aligned when one label wraps.
         // biome-ignore lint/suspicious/noArrayIndexKey: the bars never reorder
         <div key={index} className="row-span-3 grid grid-rows-subgrid gap-y-0">
           <p className="flex items-baseline-last justify-between gap-4 self-end">

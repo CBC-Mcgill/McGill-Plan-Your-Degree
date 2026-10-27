@@ -328,7 +328,7 @@ test("a minor shares the program's courses only up to its overlap cap, another s
   expect(shared(major)).toBe(3);
   expect(shared({ ...major, degree: "B.A." })).toBe(0);
   expect(shared(major, { ...program, faculty: "Arts" })).toBe(0);
-  // An extra minor shares one cap with the program and the second program, so the second program's COMP 302 counts against it too.
+  // The extra minor's one cap also covers the second program's COMP 302.
   const [second, extra] = secondOverlaps(
     [major, minor(3)],
     program,

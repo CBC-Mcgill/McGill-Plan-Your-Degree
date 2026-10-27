@@ -51,7 +51,7 @@ export interface Profile {
   programId: string | null;
   /** A second program taken alongside the program: a minor, a second major, the other half of a joint honours, or a B.Sc. Liberal breadth component. Its credits sit inside the degree's total. The name stays so saved profiles load. */
   minorId: string | null;
-  /** A minor taken on top of the program and the second program, as in two majors and a minor or a major and two minors. Set only with a second program. */
+  /** A minor beside the program and the second program. Set only with a second program. */
   extraMinorId: string | null;
   entry: EntryRoute | null;
   /** Lump-sum credits from the transcript's advanced standing, on top of the course records. 0 to 60. */

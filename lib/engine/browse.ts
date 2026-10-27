@@ -125,7 +125,7 @@ export function pinSubjects(
 
 export type ProgramRole = "required" | "complementary" | "minor";
 
-/** The program's required courses, every course a complementary group names, then each second program's courses. Each keeps its first role, and graduate courses (600 and up) are left out. */
+/** Each program's course codes with their first role, leaving out graduate courses. */
 export function programCodes(
   program: Program | null,
   seconds: readonly Program[],
