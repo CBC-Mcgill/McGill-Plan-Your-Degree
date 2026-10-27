@@ -2,14 +2,16 @@
 
 import { cn } from "cn";
 import { Search } from "lucide-react";
-import { useEffect, useId, useRef, useState } from "react";
+import { type ReactNode, useEffect, useId, useRef, useState } from "react";
 import { addWithUndo } from "@/components/plan/add-with-undo";
+import { PriorityCount } from "@/components/plan/priority-flag";
 import { PHONE } from "@/components/plan/use-media";
 import { STATUS, StatusIcon } from "@/components/status";
 import { controlStyles } from "@/components/ui/field";
 import { type IndexedCourse, searchCourses } from "@/lib/catalogue/search";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { creditsLabel } from "@/lib/engine/parts";
+import type { Priority } from "@/lib/engine/priority";
 import type { Snapshot } from "@/lib/engine/snapshot";
 import { type BrowseStatus, courseStatus } from "@/lib/engine/status";
 import { termLabel } from "@/lib/profile/term-options";
@@ -23,6 +25,8 @@ export interface PickState {
   disabled: boolean;
   reason: string;
   note: string;
+  /** Shown before the note, such as how many program courses it unlocks. */
+  aside?: ReactNode;
 }
 
 /** Search combobox that puts a course in the term. A course planned elsewhere moves here. */
@@ -32,12 +36,19 @@ export function AddCourse({
   snapshot,
   plan,
   placeholder,
+  priorityOf,
+  now,
+  graduation,
 }: {
   term: Term;
   index: readonly IndexedCourse[];
   snapshot: Snapshot;
   plan: Plan;
   placeholder?: string;
+  /** With a program, each result shows how many of its courses it unlocks. */
+  priorityOf?: (code: string) => Priority;
+  now: Term;
+  graduation: Term;
 }) {
   const label = termLabel(term);
 
@@ -62,6 +73,13 @@ export function AddCourse({
           : at
             ? `In ${termLabel(at)}`
             : "",
+      aside: priorityOf && (
+        <PriorityCount
+          priority={priorityOf(course.code)}
+          now={now}
+          graduation={graduation}
+        />
+      ),
     };
   };
 
@@ -201,7 +219,7 @@ export function CourseSearch({
               aria-label="Search results"
               onMouseDown={(event) => event.preventDefault()}
             >
-              {results.map(({ course, status, disabled, note }, i) => (
+              {results.map(({ course, status, disabled, note, aside }, i) => (
                 <button
                   key={course.code}
                   type="button"
@@ -226,6 +244,7 @@ export function CourseSearch({
                       {course.title}
                     </span>
                   </span>
+                  {aside}
                   <span className="shrink-0 font-normal text-fg-muted tabular-nums">
                     {note || creditsLabel(course)}
                   </span>
