@@ -18,10 +18,7 @@
         },
         {
           "title": "At least 12 credits must be at the 300 level or higher",
-          "minCredits": 12,
-          "match": {
-            "minLevel": 300
-          }
+          "unparsed": true
         },
         {
           "title": "No more than 9 credits of these courses can be credited toward the Arts Minor",

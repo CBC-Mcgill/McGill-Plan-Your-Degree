@@ -125,13 +125,9 @@
         },
         {
           "title": "Must include 6 credits of 400-500 levels",
-          "minCredits": 6,
-          "match": {
-            "minLevel": 400
-          }
+          "unparsed": true
         }
-      ],
-      "maxCredits": 15
+      ]
     }
   ],
   "generated": true

@@ -176,7 +176,7 @@ test("a rule to check has a full-size button that fits a phone", async ({
     plan: [],
   });
   const pane = page.getByRole("region", { name: "Complementary courses" });
-  const mark = pane.getByRole("button", { name: "Mark as checked" });
+  const mark = pane.getByRole("button", { name: "Mark as checked" }).first();
   expect((await mark.boundingBox())?.height).toBeGreaterThanOrEqual(44);
   await expectNoSideScroll(page);
   await mark.tap();
@@ -195,7 +195,7 @@ test("on a phone a student adds and removes a listed course with full-size targe
     plan: [],
   });
   const pane = page.getByRole("region", { name: "Complementary courses" });
-  const add = pane.getByRole("button", { name: "Add a course" });
+  const add = pane.getByRole("button", { name: "Add a course" }).first();
   expect((await add.boundingBox())?.height).toBeGreaterThanOrEqual(44);
   await add.tap();
   const search = page.getByRole("combobox", { name: "Add a course" });
