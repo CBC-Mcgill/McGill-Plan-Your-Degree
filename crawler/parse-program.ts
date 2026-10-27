@@ -692,7 +692,7 @@ function parseAnyCourse(text: string): Rule | null {
 const MIN_LEAD = "at least|a minimum of|minimum of|minimum";
 const MAX_LEAD =
   "up to|at most|a maximum of|maximum of|maximum|no more than|only";
-// "At least 6 of these credits", "No more than 6 of the 18 credits", "Must include 6 credits" limit courses chosen elsewhere.
+// "At least 6 of these credits" limits courses chosen elsewhere.
 const NARROWING = new RegExp(
   String.raw`^(?:${MIN_LEAD}|${MAX_LEAD})\b|\bof (?:these|which|the \d+)\b|\bmust (?:be|include)\b`,
   "i",
@@ -1884,7 +1884,7 @@ function rulesOf(section: Section, ctx: Context): Rule[] {
   const narrows = (rule: Rule) =>
     NARROWING.test(rule.title) ||
     (rule.minCredits === undefined && rule.minCourses === undefined);
-  // "At least 6 of these credits must be at the 400 level" narrows a list, so when the only list is a sentence no rule could read it would take any subject's courses.
+  // A level limit over an unread list would claim any subject's courses.
   const unread =
     rules.some((rule) => rule.unparsed) &&
     !rules.some((rule) => levelOnly(rule) && !narrows(rule));

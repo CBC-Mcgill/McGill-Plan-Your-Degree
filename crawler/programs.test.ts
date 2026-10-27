@@ -1678,7 +1678,7 @@ test("a level floor or cap over a source no rule could read stays for a person t
       `<p>18 credits in Economics selected from other 200- (with numbers above 209), 300-, 400- and 500-level courses.</p>${limits}`,
     ).map((rule) => rule.unparsed),
   ).toEqual([true, true, true]);
-  // A level source of its own is what the floor and cap narrow.
+  // With a level source of its own, the floor and cap narrow it.
   expect(
     complementary(
       `<p>18 credits at the 200 level or higher.</p><p>Up to 6 credits of non-ECON courses may be taken outside the Department.</p>${limits}`,
