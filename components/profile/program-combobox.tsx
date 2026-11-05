@@ -177,7 +177,7 @@ export function ProgramCombobox({
   function show() {
     if (open) return;
     const at = options.findIndex((program) => program?.id === value);
-    setActive(at < 0 ? 0 : at);
+    setActive(Math.max(0, at));
     setOpen(true);
     // On a phone the keyboard takes the bottom half, so the field moves up to leave the list room.
     if (phone) field.current?.scrollIntoView({ block: "start" });

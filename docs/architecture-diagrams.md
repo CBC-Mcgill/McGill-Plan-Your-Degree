@@ -220,15 +220,15 @@ flowchart LR
 Every screen reads the profile through `useProfileStore`.
 This table shows the rest.
 
-| Screen | Hooks | Engine calls |
-|---|---|---|
-| Home | `useSnapshot`, `useCatalogue`, `useProgram` | `nextView`, `programProgress`, `buildStages` |
-| WhatsNext | `useSnapshot`, `useCatalogue`, `useProgram` | `nextView` |
-| Planner | `useSnapshot`, `useCatalogue`, `useProgram` | `planWarnings`, `buildStages`, `programProgress` |
-| CourseBrowser | `useSnapshot`, `useCatalogue`, `useProgram` | `courseStatus`, `browse.ts` helpers |
-| Course page, client parts | `useSnapshot` | `courseStatus`, `isOffered`, `courseLoads` |
-| CommandPalette | `useSnapshot`, `useCatalogue` | `courseStatus` |
-| Profile and import review | `useCatalogue`, `useProgram`, `useProgramIndex` | `buildSnapshot` |
+| Screen                    | Hooks                                           | Engine calls                                     |
+| ------------------------- | ----------------------------------------------- | ------------------------------------------------ |
+| Home                      | `useSnapshot`, `useCatalogue`, `useProgram`     | `nextView`, `programProgress`, `buildStages`     |
+| WhatsNext                 | `useSnapshot`, `useCatalogue`, `useProgram`     | `nextView`                                       |
+| Planner                   | `useSnapshot`, `useCatalogue`, `useProgram`     | `planWarnings`, `buildStages`, `programProgress` |
+| CourseBrowser             | `useSnapshot`, `useCatalogue`, `useProgram`     | `courseStatus`, `browse.ts` helpers              |
+| Course page, client parts | `useSnapshot`                                   | `courseStatus`, `isOffered`, `courseLoads`       |
+| CommandPalette            | `useSnapshot`, `useCatalogue`                   | `courseStatus`                                   |
+| Profile and import review | `useCatalogue`, `useProgram`, `useProgramIndex` | `buildSnapshot`                                  |
 
 ## The transcript import
 

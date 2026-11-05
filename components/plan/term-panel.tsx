@@ -60,7 +60,7 @@ import { termLabel } from "@/lib/profile/term-options";
 import type { Plan, Term } from "@/lib/profile/types";
 import { recordLabel, termKey } from "@/lib/profile/types";
 import type { Program } from "@/lib/programs/types";
-import { describe } from "./term-path";
+import { describeStage } from "./term-path";
 import { PHONE, useMedia } from "./use-media";
 
 /** Checklist rows shown before Show N more. */
@@ -522,7 +522,7 @@ export function TermPanel({
 
   const nowKey = termKey(now);
   const label = termLabel(stage.term);
-  const { status, word } = describe(stage, nowKey);
+  const { status, word } = describeStage(stage, nowKey);
   // Only terms after the current one take new courses.
   const open = stage.key > nowKey;
   const over = stage.credits > creditLimit;

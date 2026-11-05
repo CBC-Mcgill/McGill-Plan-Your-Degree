@@ -93,16 +93,16 @@ Open http://localhost:3000.
 
 ## Scripts
 
-| Command | What it does |
-|---|---|
-| `pnpm dev` | Start the dev server |
-| `pnpm build` | Production build |
-| `pnpm lint` | Lint and format check (Biome) |
-| `pnpm format` | Fix lint and formatting |
-| `pnpm typecheck` | Generate route types and run `tsc` |
-| `pnpm test` | Unit tests (Vitest) |
-| `pnpm test:e2e` | End-to-end tests (Playwright, desktop) |
-| `pnpm crawl` | Crawl the course catalogue into `data/catalogue/` |
+| Command               | What it does                                               |
+| --------------------- | ---------------------------------------------------------- |
+| `pnpm dev`            | Start the dev server                                       |
+| `pnpm build`          | Production build                                           |
+| `pnpm lint`           | Lint and format check (Biome)                              |
+| `pnpm format`         | Fix lint and formatting                                    |
+| `pnpm typecheck`      | Generate route types and run `tsc`                         |
+| `pnpm test`           | Unit tests (Vitest)                                        |
+| `pnpm test:e2e`       | End-to-end tests (Playwright, desktop)                     |
+| `pnpm crawl`          | Crawl the course catalogue into `data/catalogue/`          |
 | `pnpm crawl:programs` | Crawl program requirements into `data/programs/generated/` |
 
 Run `pnpm exec playwright install chromium` once before the first E2E run.

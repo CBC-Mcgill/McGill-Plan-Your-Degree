@@ -14,7 +14,7 @@ import { isDone } from "@/lib/profile/types";
 import { useMedia } from "./use-media";
 
 /** The term's glyph and status word, the line under its name on the path, and the `short` line a phone shows under it. */
-export function describe(
+export function describeStage(
   stage: Stage,
   nowKey: number,
 ): { status: Status; word: string; detail: string; short: string } {
@@ -198,7 +198,7 @@ export function TermPath({
         >
           {stages.map((stage, i) => {
             const isSelected = stage.key === selected;
-            const { status, detail, short } = describe(stage, nowKey);
+            const { status, detail, short } = describeStage(stage, nowKey);
             const warnings = stage.warnings.length;
             return (
               <button

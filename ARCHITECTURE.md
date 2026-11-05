@@ -46,16 +46,16 @@ flowchart TB
   browser -->|"course code only"| ratings
 ```
 
-| Folder | What lives there |
-|---|---|
-| [crawler/](crawler/) | Scripts that read the McGill catalogue and write JSON. They run on Node and never ship in the app. |
-| [data/](data/) | The generated catalogue and programs, plus the five hand-written programs. |
-| [app/](app/) | Next.js routes: pages, `/catalogue.json`, `/programs.json` and `/programs/[id]`. |
-| [components/](components/) | React components. `ui/` holds the primitives and the rest is grouped by feature. |
-| [lib/catalogue/](lib/catalogue/), [lib/programs/](lib/programs/) | Types, server-side loading, browser hooks and search for courses and programs. |
-| [lib/profile/](lib/profile/), [lib/transcript/](lib/transcript/) | The profile store and file format, and the PDF reader, parser and synthetic fixtures. |
-| [lib/engine/](lib/engine/) | Pure functions that turn a profile and the catalogue into statuses, progress, suggestions and warnings. |
-| [e2e/](e2e/) | Playwright tests. |
+| Folder                                                           | What lives there                                                                                        |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [crawler/](crawler/)                                             | Scripts that read the McGill catalogue and write JSON. They run on Node and never ship in the app.      |
+| [data/](data/)                                                   | The generated catalogue and programs, plus the five hand-written programs.                              |
+| [app/](app/)                                                     | Next.js routes: pages, `/catalogue.json`, `/programs.json` and `/programs/[id]`.                        |
+| [components/](components/)                                       | React components. `ui/` holds the primitives and the rest is grouped by feature.                        |
+| [lib/catalogue/](lib/catalogue/), [lib/programs/](lib/programs/) | Types, server-side loading, browser hooks and search for courses and programs.                          |
+| [lib/profile/](lib/profile/), [lib/transcript/](lib/transcript/) | The profile store and file format, and the PDF reader, parser and synthetic fixtures.                   |
+| [lib/engine/](lib/engine/)                                       | Pure functions that turn a profile and the catalogue into statuses, progress, suggestions and warnings. |
+| [e2e/](e2e/)                                                     | Playwright tests.                                                                                       |
 
 ## Data sources
 
@@ -163,14 +163,14 @@ It reads `data/catalogue/` to map a department name to its subject code and to r
 
 The parser reads the Courses tab as headings, paragraphs, tables and footnotes, then builds groups.
 
-| Schema piece | Where it comes from |
-|---|---|
-| Required group | A section where every course is needed. The credits come from the heading. |
-| `oneOf` alternative | An "or" row in a table or a footnote such as "MATH 340 or MATH 350". Any one course satisfies the item. |
-| Complementary group | A section where the student chooses. Its sentences become rules with `minCredits`, `maxCredits`, `minCourses` and `maxCourses`. |
-| Rule selection | A rule lists `courses`, or a `match` on subjects and levels, such as "300 level or above except COMP 396". It can also only filter, such as "at least 6 credits at the 400 level". |
-| `unparsed` rule | A sentence with a constraint the parser cannot express safely. It keeps the catalogue text in `title`, matches no course and counts nothing. |
-| `foundation` group | A group whose title mentions Year 0 or Foundation, which Quebec CEGEP students are credited for. |
+| Schema piece        | Where it comes from                                                                                                                                                                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Required group      | A section where every course is needed. The credits come from the heading.                                                                                                         |
+| `oneOf` alternative | An "or" row in a table or a footnote such as "MATH 340 or MATH 350". Any one course satisfies the item.                                                                            |
+| Complementary group | A section where the student chooses. Its sentences become rules with `minCredits`, `maxCredits`, `minCourses` and `maxCourses`.                                                    |
+| Rule selection      | A rule lists `courses`, or a `match` on subjects and levels, such as "300 level or above except COMP 396". It can also only filter, such as "at least 6 credits at the 400 level". |
+| `unparsed` rule     | A sentence with a constraint the parser cannot express safely. It keeps the catalogue text in `title`, matches no course and counts nothing.                                       |
+| `foundation` group  | A group whose title mentions Year 0 or Foundation, which Quebec CEGEP students are credited for.                                                                                   |
 
 Each program is written to `data/programs/generated/<catalogue year>/<id>.json`, where the id is the last part of the page URL.
 An `index.json` beside them lists each program's name, degree, faculty, credits and number of unparsed rules.
@@ -225,14 +225,14 @@ Styling is Tailwind CSS v4, loaded through the Turbopack rule in the same file.
 
 ### Routes
 
-| Route | File | What renders where |
-|---|---|---|
-| `/` | [app/page.tsx](app/page.tsx) | A server page holding the client `Home`: a landing page for visitors and a dashboard for students with a profile. |
-| `/courses` | [app/courses/page.tsx](app/courses/page.tsx) | A server page holding the client `CourseBrowser`, which keeps its whole query in the URL. |
-| `/courses/[slug]` | [app/courses/[slug]/page.tsx](app/courses/[slug]/page.tsx) | A server component. The text, requirements and unlock list are the same for everyone, and the student-specific parts are client components. |
-| `/next`, `/plan`, `/profile` | [app/next/](app/next/page.tsx), [app/plan/](app/plan/page.tsx), [app/profile/](app/profile/page.tsx) | Server pages holding the client `WhatsNext`, `Planner` and `ProfileView` (which hosts the import flow). `/requirements` permanently redirects to `/next`, which shows where each course counts. |
-| `/advisor` | [app/advisor/page.tsx](app/advisor/page.tsx) | A preview of the future AI advisor. It calls no AI. |
-| `/catalogue.json`, `/programs.json`, `/programs/[id]` | [app/catalogue.json/](app/catalogue.json/route.ts), [app/programs.json/](app/programs.json/route.ts), [app/programs/[id]/](app/programs/[id]/route.ts) | Static route handlers, described below. |
+| Route                                                 | File                                                                                                                                                   | What renders where                                                                                                                                                                              |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/`                                                   | [app/page.tsx](app/page.tsx)                                                                                                                           | A server page holding the client `Home`: a landing page for visitors and a dashboard for students with a profile.                                                                               |
+| `/courses`                                            | [app/courses/page.tsx](app/courses/page.tsx)                                                                                                           | A server page holding the client `CourseBrowser`, which keeps its whole query in the URL.                                                                                                       |
+| `/courses/[slug]`                                     | [app/courses/[slug]/page.tsx](app/courses/[slug]/page.tsx)                                                                                             | A server component. The text, requirements and unlock list are the same for everyone, and the student-specific parts are client components.                                                     |
+| `/next`, `/plan`, `/profile`                          | [app/next/](app/next/page.tsx), [app/plan/](app/plan/page.tsx), [app/profile/](app/profile/page.tsx)                                                   | Server pages holding the client `WhatsNext`, `Planner` and `ProfileView` (which hosts the import flow). `/requirements` permanently redirects to `/next`, which shows where each course counts. |
+| `/advisor`                                            | [app/advisor/page.tsx](app/advisor/page.tsx)                                                                                                           | A preview of the future AI advisor. It calls no AI.                                                                                                                                             |
+| `/catalogue.json`, `/programs.json`, `/programs/[id]` | [app/catalogue.json/](app/catalogue.json/route.ts), [app/programs.json/](app/programs.json/route.ts), [app/programs/[id]/](app/programs/[id]/route.ts) | Static route handlers, described below.                                                                                                                                                         |
 
 The server cannot know the student, so profile-dependent screens render a skeleton until the profile has loaded from `localStorage` (`useProfileHydrated`).
 [app/layout.tsx](app/layout.tsx) mounts the shared client pieces: the header, the storage warning banner, the command palette and the toaster.
@@ -479,19 +479,19 @@ If the live stylesheet still looks stale after a few minutes, redeploy with `--f
 
 ## Where to change things
 
-| To do this | Change this |
-|---|---|
-| Add a hand-written program | Copy a file in `data/programs/`, import it in [lib/programs/index.ts](lib/programs/index.ts), add it to `PROGRAMS` and the `guessProgram` list, then run `pnpm test`. It overrides the crawled program with the same id. |
-| Fix a prerequisite parse | [crawler/prereq.ts](crawler/prereq.ts), with the real string added to [crawler/prereq.test.ts](crawler/prereq.test.ts), then `pnpm crawl`. |
-| Fix a program the crawler read wrongly | A hand-written file with the same id, or [crawler/parse-program.ts](crawler/parse-program.ts) with a test in [crawler/programs.test.ts](crawler/programs.test.ts). |
-| Change what the crawler reads from a course page | [crawler/parse-course.ts](crawler/parse-course.ts) and [lib/catalogue/types.ts](lib/catalogue/types.ts). |
-| Change crawl rate, cache or User-Agent | [crawler/fetch.ts](crawler/fetch.ts). |
-| Change the crawl guardrails | [crawler/compare.ts](crawler/compare.ts) and [crawler/compare-programs.ts](crawler/compare-programs.ts). |
-| Change the crawl schedule | The `cron` lines in [.github/workflows/crawl.yml](.github/workflows/crawl.yml). |
-| Change the wording of a tooltip definition | [lib/glossary.ts](lib/glossary.ts). |
-| Change a status label or color | `STATUS` in [components/status.tsx](components/status.tsx) and the color tokens in [app/globals.css](app/globals.css). |
-| Change when a course is available, or how requirements count | [lib/engine/status.ts](lib/engine/status.ts) and [lib/engine/progress.ts](lib/engine/progress.ts). |
-| Change a plan warning | [lib/engine/plan.ts](lib/engine/plan.ts), shown by [components/plan/term-warnings.tsx](components/plan/term-warnings.tsx). |
-| Support a new transcript layout | [lib/transcript/parse.ts](lib/transcript/parse.ts), plus a synthetic case in [generate.mts](lib/transcript/fixtures/generate.mts). |
-| Add a field to the profile | [lib/profile/types.ts](lib/profile/types.ts), the store, then the validator and export in [lib/profile/file.ts](lib/profile/file.ts), raising `PROFILE_VERSION` with a migration step. |
-| Add a page | A new `app/<route>/page.tsx` holding a client component, a link in [components/nav-links.tsx](components/nav-links.tsx) and an entry in `PAGES` in [components/command-palette.tsx](components/command-palette.tsx). |
+| To do this                                                   | Change this                                                                                                                                                                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Add a hand-written program                                   | Copy a file in `data/programs/`, import it in [lib/programs/index.ts](lib/programs/index.ts), add it to `PROGRAMS` and the `guessProgram` list, then run `pnpm test`. It overrides the crawled program with the same id. |
+| Fix a prerequisite parse                                     | [crawler/prereq.ts](crawler/prereq.ts), with the real string added to [crawler/prereq.test.ts](crawler/prereq.test.ts), then `pnpm crawl`.                                                                               |
+| Fix a program the crawler read wrongly                       | A hand-written file with the same id, or [crawler/parse-program.ts](crawler/parse-program.ts) with a test in [crawler/programs.test.ts](crawler/programs.test.ts).                                                       |
+| Change what the crawler reads from a course page             | [crawler/parse-course.ts](crawler/parse-course.ts) and [lib/catalogue/types.ts](lib/catalogue/types.ts).                                                                                                                 |
+| Change crawl rate, cache or User-Agent                       | [crawler/fetch.ts](crawler/fetch.ts).                                                                                                                                                                                    |
+| Change the crawl guardrails                                  | [crawler/compare.ts](crawler/compare.ts) and [crawler/compare-programs.ts](crawler/compare-programs.ts).                                                                                                                 |
+| Change the crawl schedule                                    | The `cron` lines in [.github/workflows/crawl.yml](.github/workflows/crawl.yml).                                                                                                                                          |
+| Change the wording of a tooltip definition                   | [lib/glossary.ts](lib/glossary.ts).                                                                                                                                                                                      |
+| Change a status label or color                               | `STATUS` in [components/status.tsx](components/status.tsx) and the color tokens in [app/globals.css](app/globals.css).                                                                                                   |
+| Change when a course is available, or how requirements count | [lib/engine/status.ts](lib/engine/status.ts) and [lib/engine/progress.ts](lib/engine/progress.ts).                                                                                                                       |
+| Change a plan warning                                        | [lib/engine/plan.ts](lib/engine/plan.ts), shown by [components/plan/term-warnings.tsx](components/plan/term-warnings.tsx).                                                                                               |
+| Support a new transcript layout                              | [lib/transcript/parse.ts](lib/transcript/parse.ts), plus a synthetic case in [generate.mts](lib/transcript/fixtures/generate.mts).                                                                                       |
+| Add a field to the profile                                   | [lib/profile/types.ts](lib/profile/types.ts), the store, then the validator and export in [lib/profile/file.ts](lib/profile/file.ts), raising `PROFILE_VERSION` with a migration step.                                   |
+| Add a page                                                   | A new `app/<route>/page.tsx` holding a client component, a link in [components/nav-links.tsx](components/nav-links.tsx) and an entry in `PAGES` in [components/command-palette.tsx](components/command-palette.tsx).     |

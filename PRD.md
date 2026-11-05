@@ -22,14 +22,14 @@ Evidence so far is anecdotal (firsthand experience and the v1 PRD), and validati
 
 ## 3. Non-Goals
 
-| Non-goal | Why it is out |
-|---|---|
-| AI course advisor answers | Needs trustworthy course data first. The chat ships as a preview (P1-8), and real answers come later (P2). |
-| Timetables and section times | Visual Schedule Builder already does this, so we link to it (P1-3). |
-| Registering for courses or touching Minerva | No public API, and acting on a student's account is a liability. |
+| Non-goal                                    | Why it is out                                                                                                                     |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| AI course advisor answers                   | Needs trustworthy course data first. The chat ships as a preview (P1-8), and real answers come later (P2).                        |
+| Timetables and section times                | Visual Schedule Builder already does this, so we link to it (P1-3).                                                               |
+| Registering for courses or touching Minerva | No public API, and acting on a student's account is a liability.                                                                  |
 | Hand-checked requirements for every program | The crawler reads all 944 programs and only 5 are checked by hand. Rules it cannot read become checks a student resolves (P0-11). |
-| Degree audit PDF import | The transcript already gives completed courses. A second parser adds little. |
-| Native apps and French UI | The web app has its own phone and tablet layouts (P0-9). French is P2. |
+| Degree audit PDF import                     | The transcript already gives completed courses. A second parser adds little.                                                      |
+| Native apps and French UI                   | The web app has its own phone and tablet layouts (P0-9). French is P2.                                                            |
 
 ## 4. User Stories
 
@@ -134,10 +134,10 @@ The engine counts progress by these rules.
 - An adviser reminder with no amount counts no course.
 - Advanced standing counts toward the degree total and credited Year 0 groups, never toward an elective.
 
-| 2026-2027 crawl | Programs fully readable | Rules kept as raw text |
-|---|---|---|
-| Undergraduate | 184 of 461 | 746 of 3,018 |
-| Graduate | 137 of 483 | 695 of 1,599, of which 114 are the doctoral thesis check |
+| 2026-2027 crawl | Programs fully readable | Rules kept as raw text                                   |
+| --------------- | ----------------------- | -------------------------------------------------------- |
+| Undergraduate   | 184 of 461              | 746 of 3,018                                             |
+| Graduate        | 137 of 483              | 695 of 1,599, of which 114 are the doctoral thesis check |
 
 The raw rules are left as checks a student resolves (P0-11), by the coverage rule.
 A parser shape must recur in 5 or more programs, with no page or department specific rules, and precision beats recall, since a wrong "satisfied" is worse than a raw rule.
@@ -187,22 +187,22 @@ McGill places students by how they arrive, and the plan has to follow.
 Sources are McGill's CEGEP transfer credit page, the Faculty of Engineering transfer credit page, and the Foundation program page, checked 2026-10-08.
 The app credits Year 0 groups to Quebec CEGEP students, counts lump-sum advanced standing and per-course transfer credits, treats the Science DEC courses (BIOL 111, CHEM 110 and 120, MATH 133, 139, 140, and 141, PHYS 131 and 142) as met for prerequisites, and names the credits an exemption must replace.
 
-| Case | What McGill does | Still open |
-|---|---|---|
-| Quebec CEGEP graduate (DEC) | Enters U1 with up to 29 or 30 advanced standing credits. A B.Sc. or B.A. is 90 credits. Engineering Year 0 courses are credited. | Nothing |
-| Course exemption without credit | The course counts as done, but its credits must be replaced. | Nothing |
-| AP, IB, A-Level, French Baccalaureate, or CAPE | Up to 29 or 30 credits of advanced standing. 24 or more credits places the student in U1. | Unknown |
-| Outside Quebec, from high school | Enters U0 and completes a 30-credit Foundation year, so a B.Sc. or B.A. is 120 credits. | Foundation course choices are not checked |
-| CEGEP with only part of Year 0 covered | Some Year 0 courses are credited and some must still be taken. | Year 0 is credited as a whole |
-| Incomplete DEC or a non-science DEC | Missing CEGEP prerequisites must be taken at McGill. | Every CEGEP student is assumed to hold a Science DEC |
-| Transfer from another university | Per-course transfer credit, and at least 60 credits (or half of a B.Eng.) must be taken at McGill. | The residency rule is not checked |
-| Mature student | Usually starts in U0. | Only the Foundation entry fits |
-| Entered under an older catalogue year | Follows the requirements of the year they entered. | Every student uses the 2026-2027 catalogue |
-| Second program | A minor, second major, joint honours component, or B.Sc. Liberal breadth component adds a second set of requirements. | A third program is tracked only as an extra minor, and a fourth not at all |
-| Graduate student | Master's programs, certificates, and diplomas state a credit total, doctorates state none. | Some graduate transcript wording is unknown (P0-4) |
-| Changed program or faculty | Some earlier credits may not count toward the new program. | Not handled |
-| Co-op work terms | Work terms sit between study terms. | Not handled in the planner |
-| Second bachelor's degree | Reduced requirements and residency rules. | Not handled |
+| Case                                           | What McGill does                                                                                                                 | Still open                                                                 |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Quebec CEGEP graduate (DEC)                    | Enters U1 with up to 29 or 30 advanced standing credits. A B.Sc. or B.A. is 90 credits. Engineering Year 0 courses are credited. | Nothing                                                                    |
+| Course exemption without credit                | The course counts as done, but its credits must be replaced.                                                                     | Nothing                                                                    |
+| AP, IB, A-Level, French Baccalaureate, or CAPE | Up to 29 or 30 credits of advanced standing. 24 or more credits places the student in U1.                                        | Unknown                                                                    |
+| Outside Quebec, from high school               | Enters U0 and completes a 30-credit Foundation year, so a B.Sc. or B.A. is 120 credits.                                          | Foundation course choices are not checked                                  |
+| CEGEP with only part of Year 0 covered         | Some Year 0 courses are credited and some must still be taken.                                                                   | Year 0 is credited as a whole                                              |
+| Incomplete DEC or a non-science DEC            | Missing CEGEP prerequisites must be taken at McGill.                                                                             | Every CEGEP student is assumed to hold a Science DEC                       |
+| Transfer from another university               | Per-course transfer credit, and at least 60 credits (or half of a B.Eng.) must be taken at McGill.                               | The residency rule is not checked                                          |
+| Mature student                                 | Usually starts in U0.                                                                                                            | Only the Foundation entry fits                                             |
+| Entered under an older catalogue year          | Follows the requirements of the year they entered.                                                                               | Every student uses the 2026-2027 catalogue                                 |
+| Second program                                 | A minor, second major, joint honours component, or B.Sc. Liberal breadth component adds a second set of requirements.            | A third program is tracked only as an extra minor, and a fourth not at all |
+| Graduate student                               | Master's programs, certificates, and diplomas state a credit total, doctorates state none.                                       | Some graduate transcript wording is unknown (P0-4)                         |
+| Changed program or faculty                     | Some earlier credits may not count toward the new program.                                                                       | Not handled                                                                |
+| Co-op work terms                               | Work terms sit between study terms.                                                                                              | Not handled in the planner                                                 |
+| Second bachelor's degree                       | Reduced requirements and residency rules.                                                                                        | Not handled                                                                |
 
 ### P2 - Design for, do not build
 
@@ -216,32 +216,32 @@ Vercel Web Analytics counts anonymous page views, with no cookies and nothing fr
 The funnel events below are not built, so those rows are not measured yet.
 Leading metrics cover the first registration period with analytics, and review points are 1 week after analytics went live, the end of that period, and 6 months after launch.
 
-| Metric | Kind | Success | Stretch | Measured by |
-|---|---|---|---|---|
-| Imports confirmed with zero manual edits | Leading | 90% | 97% | Confirm event with edit count, not built |
-| Sample transcript corpus pass rate | Leading | 100% | 100% | CI |
-| Students who reach What's next after importing | Leading | 80% | 90% | Funnel events, not built |
-| Weekly active users during registration | Leading | 100 | 500 | Vercel Web Analytics |
-| Users returning the next registration period | Lagging | 30% | 50% | Needs a local install id (open question 3) |
-| External PRs merged within 6 months | Lagging | 3 | 10 | GitHub |
-| Hand-written program files from contributors within 6 months | Lagging | 1 | 4 | GitHub |
-| Crawl PRs merged with no manual data fixes | Lagging | 3 of 4 | 4 of 4 | GitHub |
+| Metric                                                       | Kind    | Success | Stretch | Measured by                                |
+| ------------------------------------------------------------ | ------- | ------- | ------- | ------------------------------------------ |
+| Imports confirmed with zero manual edits                     | Leading | 90%     | 97%     | Confirm event with edit count, not built   |
+| Sample transcript corpus pass rate                           | Leading | 100%    | 100%    | CI                                         |
+| Students who reach What's next after importing               | Leading | 80%     | 90%     | Funnel events, not built                   |
+| Weekly active users during registration                      | Leading | 100     | 500     | Vercel Web Analytics                       |
+| Users returning the next registration period                 | Lagging | 30%     | 50%     | Needs a local install id (open question 3) |
+| External PRs merged within 6 months                          | Lagging | 3       | 10      | GitHub                                     |
+| Hand-written program files from contributors within 6 months | Lagging | 1       | 4       | GitHub                                     |
+| Crawl PRs merged with no manual data fixes                   | Lagging | 3 of 4  | 4 of 4  | GitHub                                     |
 
 ## 7. Engineering Foundation
 
 The stack and commands are in `CLAUDE.md`.
 
-| Area | Decision | Reason |
-|---|---|---|
-| Catalogue storage | Versioned JSON in the repo, written by a TypeScript crawler that Node 24 runs directly | Every data change is a reviewable diff, with no database and no build step. |
-| Profile storage | Zustand store persisted to browser storage, with `version` and `migrate` | Local-first, and old exports migrate. |
-| PDF parsing | pdf.js in a Web Worker | Text-only extraction off the main thread. |
-| Tests | Vitest for `*.test.ts`, Playwright at 1280 px and 1024 px plus a Pixel 7 phone for `e2e/mobile*.e2e.ts` | Parsers and engine in units, flows as a student uses them end to end. |
-| CI | GitHub Actions on every PR and push to `main`, with frozen install, lint, typecheck, unit, build, and E2E, and Dependabot for dependency updates | Nothing merges red. |
-| Analytics | Vercel Web Analytics | Anonymous page views, no cookies, nothing from the profile. |
-| Backend (P1) | Supabase Postgres, Auth, and row-level security | Only for P1-1, provisioned through the Vercel Marketplace. The app has no backend. |
-| Hosting | Vercel, Thai's own account on the Hobby plan, at https://plan-your-degree.vercel.app | Native Next.js hosting with cached static course pages. Deploys run from `main` with the Vercel CLI. |
-| Repo | One package, no monorepo | Until a second deployable exists. |
+| Area              | Decision                                                                                                                                         | Reason                                                                                               |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Catalogue storage | Versioned JSON in the repo, written by a TypeScript crawler that Node 24 runs directly                                                           | Every data change is a reviewable diff, with no database and no build step.                          |
+| Profile storage   | Zustand store persisted to browser storage, with `version` and `migrate`                                                                         | Local-first, and old exports migrate.                                                                |
+| PDF parsing       | pdf.js in a Web Worker                                                                                                                           | Text-only extraction off the main thread.                                                            |
+| Tests             | Vitest for `*.test.ts`, Playwright at 1280 px and 1024 px plus a Pixel 7 phone for `e2e/mobile*.e2e.ts`                                          | Parsers and engine in units, flows as a student uses them end to end.                                |
+| CI                | GitHub Actions on every PR and push to `main`, with frozen install, lint, typecheck, unit, build, and E2E, and Dependabot for dependency updates | Nothing merges red.                                                                                  |
+| Analytics         | Vercel Web Analytics                                                                                                                             | Anonymous page views, no cookies, nothing from the profile.                                          |
+| Backend (P1)      | Supabase Postgres, Auth, and row-level security                                                                                                  | Only for P1-1, provisioned through the Vercel Marketplace. The app has no backend.                   |
+| Hosting           | Vercel, Thai's own account on the Hobby plan, at https://plan-your-degree.vercel.app                                                             | Native Next.js hosting with cached static course pages. Deploys run from `main` with the Vercel CLI. |
+| Repo              | One package, no monorepo                                                                                                                         | Until a second deployable exists.                                                                    |
 
 ## 8. Data Sources
 
@@ -262,27 +262,27 @@ Checked on 2026-10-08 with direct requests unless noted.
 
 ## 9. Open Questions
 
-| # | Question | Owner | Blocking? |
-|---|---|---|---|
-| 1 | Older catalogue years sit under `/en/archives/`, which robots.txt allows, but McGill's terms of use for automated access are unconfirmed. May we crawl them so a student follows the year they entered? | Thai | Blocks older years |
-| 2 | Interview 5 students to validate the problem, and ask which open student backgrounds in section 5 matter most. | Thai | Non-blocking |
-| 3 | Is a random local install id acceptable for measuring return rate, if Thai still wants that metric? | Thai | Non-blocking |
+| #   | Question                                                                                                                                                                                                | Owner | Blocking?          |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ------------------ |
+| 1   | Older catalogue years sit under `/en/archives/`, which robots.txt allows, but McGill's terms of use for automated access are unconfirmed. May we crawl them so a student follows the year they entered? | Thai  | Blocks older years |
+| 2   | Interview 5 students to validate the problem, and ask which open student backgrounds in section 5 matter most.                                                                                          | Thai  | Non-blocking       |
+| 3   | Is a random local install id acceptable for measuring return rate, if Thai still wants that metric?                                                                                                     | Thai  | Non-blocking       |
 
 ## 10. Timeline and Phasing
 
-| Phase | Closed by |
-|---|---|
-| 0. Foundation | #1, #5, #6 |
-| 1. Catalogue (P0-1, P0-2) | #7, #9, #11, #16 |
-| 2. Design direction | #29 to #34, then #64 to #73 |
-| 3. Browse and profile (P0-3, P0-5) | #13, #14 |
-| 4. Import (P0-4) | #8, #15 |
-| 5. Plan (P0-6, P0-7, P0-8) | #10, #12, #18, #19 |
-| 6. Launch (P0-9, P0-10) | #20, #41, #48 |
-| 7. Ratings, advisor, and CEGEP students (P1-4, P1-7, P1-8) | #24 to #27 |
-| 8. Every undergraduate program | #42, #45, #99, #101 to #108, #110, #111 |
-| 9. Second program | #54, #84, #85, #100 |
-| 10. Phones and tablets | #89 to #96 |
-| 11. Graduate programs | #112 to #118 |
-| 12. Checks and course lists (P0-11) | #109, #119, #121, #122 |
-| 13. Analytics and new address | #123, #124 |
+| Phase                                                      | Closed by                               |
+| ---------------------------------------------------------- | --------------------------------------- |
+| 0. Foundation                                              | #1, #5, #6                              |
+| 1. Catalogue (P0-1, P0-2)                                  | #7, #9, #11, #16                        |
+| 2. Design direction                                        | #29 to #34, then #64 to #73             |
+| 3. Browse and profile (P0-3, P0-5)                         | #13, #14                                |
+| 4. Import (P0-4)                                           | #8, #15                                 |
+| 5. Plan (P0-6, P0-7, P0-8)                                 | #10, #12, #18, #19                      |
+| 6. Launch (P0-9, P0-10)                                    | #20, #41, #48                           |
+| 7. Ratings, advisor, and CEGEP students (P1-4, P1-7, P1-8) | #24 to #27                              |
+| 8. Every undergraduate program                             | #42, #45, #99, #101 to #108, #110, #111 |
+| 9. Second program                                          | #54, #84, #85, #100                     |
+| 10. Phones and tablets                                     | #89 to #96                              |
+| 11. Graduate programs                                      | #112 to #118                            |
+| 12. Checks and course lists (P0-11)                        | #109, #119, #121, #122                  |
+| 13. Analytics and new address                              | #123, #124                              |
