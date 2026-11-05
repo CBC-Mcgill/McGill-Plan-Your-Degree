@@ -46,6 +46,7 @@ test("a CEGEP engineering student with an exemption reads the same credits on Wh
   );
   const counting = Number(
     /(\d+) of 133 program credits earned or in progress/.exec(
+      // biome-ignore lint/performance/useDomNodeTextContent: the sentence spans elements, textContent drops the spaces between them
       await main.innerText(),
     )?.[1],
   );
