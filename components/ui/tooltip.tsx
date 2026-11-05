@@ -115,7 +115,8 @@ function DefinitionButton({
   className,
   children,
 }: {
-  def: Definition;
+  /** A glossary definition, or a tip worded for one spot. */
+  def: Definition | { tip: ReactNode };
   /** The button's name for screen readers. */
   label: string;
   className?: string;

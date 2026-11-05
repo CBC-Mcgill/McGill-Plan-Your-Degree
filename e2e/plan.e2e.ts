@@ -11,12 +11,13 @@ const done = (code: string) => ({
   source: "manual",
 });
 
-/** A profile with `records` done, starting two years ago and graduating in three. No program unless `programId` names one. */
+/** A profile with `records` done, starting two years ago and graduating in three unless `graduationTerm` says. No program unless `programId` names one. */
 async function seedProfile(
   page: Page,
   records: ReturnType<typeof done>[],
   plan: { term: { season: string; year: number }; courses: string[] }[] = [],
   programId: string | null = null,
+  graduationTerm = { season: "Winter", year: year + 3 },
 ) {
   await page.addInitScript(
     ([key, state]) => {
@@ -33,7 +34,7 @@ async function seedProfile(
         records,
         programId,
         startTerm: { season: "Fall", year: year - 2 },
-        graduationTerm: { season: "Winter", year: year + 3 },
+        graduationTerm,
         plan,
         creditLimit: 17,
         importedAt: null,
@@ -204,6 +205,32 @@ test("a term's checklist adds several courses at once, with the load shown first
   await expect(planned.getByRole("listitem")).toHaveCount(2);
   await page.getByRole("button", { name: "Undo" }).click();
   await expect(planned).toHaveCount(0);
+});
+
+test("a checklist course shows how many program courses it unlocks, and how late it can start", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
+  // COMP 206 runs alongside COMP 273, which comes before COMP 310, so all three still fit by Winter 2028 only if COMP 206 starts by Fall 2027.
+  await seedProfile(
+    page,
+    [done("COMP 202"), done("COMP 250"), done("MATH 240")],
+    [],
+    "computer-science-major-bsc",
+    { season: "Winter", year: 2028 },
+  );
+  await page.goto("/plan");
+
+  const fill = page.getByRole("region", { name: "Fill Winter 2027" });
+  const unlocks = fill
+    .getByRole("listitem")
+    .filter({ hasText: "COMP 206" })
+    .getByRole("button", { name: /^Unlocks \d+ courses in your program/ });
+  await expect(unlocks).toHaveAccessibleName(/Take it by Fall 2027/);
+  await unlocks.hover();
+  await expect(page.getByRole("tooltip")).toContainText(
+    "Required: COMP 273 (corequisite), COMP 303",
+  );
 });
 
 test("the add box highlights the first course it can add and explains the rest", async ({
