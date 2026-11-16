@@ -51,10 +51,8 @@ function reply(prompt: string): Piece[][] {
     ],
     [
       "In the meantime, ",
-      { href: "/next", label: "What's next" },
-      " shows the courses you can take now, and the ",
-      { href: "/plan", label: "Planner" },
-      " lays them out term by term.",
+      { href: "/plan", label: "Plan" },
+      " shows the courses you can take now and lays them out term by term.",
     ],
   ];
 }

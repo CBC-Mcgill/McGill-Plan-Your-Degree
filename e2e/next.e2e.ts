@@ -26,7 +26,7 @@ async function openWith(
     },
     [KEY, JSON.stringify({ state: { creditLimit: 17, ...state }, version: 4 })],
   );
-  await page.goto("/next");
+  await page.goto("/plan");
 }
 
 const row = (page: Page, region: string, code: string) =>
@@ -43,7 +43,7 @@ const requirement = (page: Page, name: string) =>
 test("without a profile it asks the student to import a transcript", async ({
   page,
 }) => {
-  await page.goto("/next");
+  await page.goto("/plan");
   const main = page.getByRole("main");
   await expect(
     main.getByRole("heading", { level: 1, name: "See what you can take next" }),
@@ -54,17 +54,6 @@ test("without a profile it asks the student to import a transcript", async ({
   await expect(
     main.getByRole("button", { name: "Start without a transcript" }),
   ).toBeVisible();
-});
-
-test("the old requirements page redirects here for good", async ({
-  page,
-  request,
-}) => {
-  const response = await request.get("/requirements", { maxRedirects: 0 });
-  expect(response.status()).toBe(308);
-  expect(response.headers().location).toBe("/next");
-  await page.goto("/requirements");
-  await expect(page).toHaveURL("/next");
 });
 
 test("a required course can be added to the next term, and the planner opens the course after it in the term after", async ({
@@ -94,7 +83,7 @@ test("a required course can be added to the next term, and the planner opens the
   });
   await expect(remove).toBeFocused();
 
-  await page.getByRole("link", { name: "Plan later terms" }).click();
+  await page.getByRole("tab", { name: "Terms", exact: true }).click();
   await page.getByRole("tab", { name: /^Fall 2027/ }).click();
   await expect(
     page
@@ -102,7 +91,7 @@ test("a required course can be added to the next term, and the planner opens the
       .getByRole("checkbox", { name: /COMP 310/ }),
   ).toBeAttached();
 
-  await page.goBack();
+  await page.getByRole("tab", { name: "Requirements", exact: true }).click();
   await remove.click();
   await expect(
     page.getByRole("button", { name: "Add COMP 273 to Winter 2027" }),
@@ -125,7 +114,7 @@ test("each requirement shows the courses it counts", async ({ page }) => {
     page.getByRole("heading", { level: 1, name: "Computer Science Major" }),
   ).toBeVisible();
   await expect(page.getByRole("main")).toContainText(
-    "12 of 63 program credits earned or in progress",
+    "15 of 63 program credits with your plan",
   );
   await expect(row(page, "Required courses", "COMP 303")).toContainText(
     "Winter 2027",
@@ -438,7 +427,7 @@ test("a program with every group met short of its total says what is missing, he
   await expect(
     page.getByRole("region", { name: "Thesis courses" }),
   ).toContainText("27 of 24 to 31 credits");
-  await page.getByRole("link", { name: "Plan later terms" }).click();
+  await page.getByRole("tab", { name: "Terms", exact: true }).click();
   await expect(page.getByRole("main")).toContainText(line);
 });
 
@@ -452,7 +441,6 @@ test("two joint honours components show as a pair, each with its own bar", async
     plan: [],
   });
 
-  await expect(page.getByText("Joint honours credits")).toBeVisible();
   const bars = page.getByRole("region", { name: "Credit progress" });
   await expect(bars).toContainText("Joint honours");
   await expect(bars).toContainText("Mathematics Joint Honours Component");
@@ -482,15 +470,12 @@ test("a major and two minors show three bars, and in Arts the second minor gives
     plan: [],
   });
 
-  await expect(
-    page.getByText("Major, minor and second minor credits"),
-  ).toBeVisible();
   const bars = page.getByRole("region", { name: "Credit progress" });
   await expect(bars).toContainText("Mathematics Minor Concentration");
   await expect(bars).toContainText("Statistics Minor Concentration");
 
   await requirement(page, "Statistics Minor Concentration").click();
-  await expect(page).toHaveURL("/next?req=extra-minor");
+  await expect(page).toHaveURL("/plan?req=extra-minor");
   const extra = page.getByRole("region", {
     name: "Statistics Minor Concentration",
   });
@@ -547,10 +532,10 @@ test("a minor added beside a second major saves, and moves up when the second ma
     "with the Psychology Major Concentration and the Statistics Minor Concentration",
   );
 
-  await page.goto("/next");
+  await page.goto("/plan");
   await expect(
-    page.getByText("Major, second major and minor credits"),
-  ).toBeVisible();
+    page.getByRole("region", { name: "Credit progress" }),
+  ).toContainText("Statistics Minor Concentration");
 
   await page.goto("/profile");
   const second = page.getByRole("combobox", { name: "Second major" });
@@ -608,7 +593,7 @@ test("a minor picked on the profile shows on What's next", async ({ page }) => {
   await minor.press("Enter");
   await expect(minor).toHaveValue(`${minorName} (B.Eng.)`);
 
-  await page.goto("/next");
+  await page.goto("/plan");
   await expect(
     requirement(page, "Technological Entrepreneurship minor"),
   ).toBeVisible();
@@ -628,7 +613,7 @@ test("the picked requirement lives in the URL, so Back and links reopen it", asy
   );
 
   await requirement(page, "Complementary courses").click();
-  await expect(page).toHaveURL("/next?req=complementary-courses");
+  await expect(page).toHaveURL("/plan?req=complementary-courses");
   await requirement(page, "Not counted").click();
   await expect(
     page.getByRole("region", { name: "Not counted toward your program" }),
@@ -640,9 +625,9 @@ test("the picked requirement lives in the URL, so Back and links reopen it", asy
 
   await requirement(page, "Complementary courses").press("ArrowUp");
   await expect(requirement(page, "Required courses")).toBeFocused();
-  await expect(page).toHaveURL("/next?req=required-courses");
+  await expect(page).toHaveURL("/plan?req=required-courses");
 
-  await page.goto("/next?req=other");
+  await page.goto("/plan?req=other");
   await expect(
     page.getByRole("region", {
       name: "Other courses you can take in Winter 2027",
@@ -680,7 +665,7 @@ test("a required course can be marked as waived, which opens the courses after i
   const needs = page.getByText(/Needs .* first/);
   await expect(needs).toContainText("COMP 202");
 
-  await page.goto("/next");
+  await page.goto("/plan");
   await expect(required).toContainText(
     "Students who have sufficient knowledge in a programming language do not need to take COMP 202",
   );
@@ -717,7 +702,7 @@ test("a required course can be marked as waived, which opens the courses after i
     page.getByRole("row").filter({ hasText: "COMP 202" }),
   ).toContainText("Waived");
 
-  await page.goto("/next");
+  await page.goto("/plan");
   await row(page, "Required courses", "COMP 202")
     .getByRole("button", { name: "Undo COMP 202 waiver" })
     .click();
@@ -736,7 +721,7 @@ test("a course listed under a rule to check can be marked as taken in a term, ta
     { records: [], programId: "anthropology-non-thesis-ma", plan: [] },
     "2026-10-15T12:00:00",
   );
-  await page.goto("/next?req=complementary-courses");
+  await page.goto("/plan?req=complementary-courses");
   const tab = requirement(page, "Complementary courses");
   await expect
     .soft(tab)
@@ -801,13 +786,13 @@ test("a course listed under a rule to check can be marked as taken in a term, ta
   await expect(record).toContainText("Completed");
   await expect(record).toContainText("Winter 2026");
 
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
   await page.getByRole("tab", { name: /^Winter 2026/ }).click();
   await expect(
-    page.getByRole("tabpanel").getByRole("list", { name: "Your courses" }),
+    page.locator("#term-panel").getByRole("list", { name: "Your courses" }),
   ).toContainText("ANTH 502");
 
-  await page.goto("/next?req=complementary-courses");
+  await page.goto("/plan?req=complementary-courses");
   await undo.click();
   await expect(markAs).toBeFocused();
   await expect(anth).toContainText("Not taken");

@@ -1,244 +1,35 @@
 "use client";
 
-import { cn } from "cn";
 import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
-import { Fragment, type ReactNode } from "react";
-import { CourseCode } from "@/components/course-code";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { ProgramBars, RoomLeft } from "@/components/program-bars";
-import { ShowMore } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
-import { Section } from "@/components/ui/section";
 import { Term } from "@/components/ui/tooltip";
-import { courseSlug } from "@/lib/catalogue/slug";
 import { COPY } from "@/lib/copy";
 import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
-import { EXTRA_KEY, groupKeys, SECOND_KEY } from "@/lib/engine/next-view";
 import { list } from "@/lib/engine/parts";
 import {
-  creditSources,
-  creditSplit,
-  type GroupProgress,
-  lacking,
   type ProgramProgress,
   programSplit,
   splitCourses,
 } from "@/lib/engine/progress";
-import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
-import { creditsText, sentence } from "@/lib/format";
+import type { Snapshot } from "@/lib/engine/snapshot";
 import { GLOSSARY } from "@/lib/glossary";
 import { pairOf } from "@/lib/programs/minor";
-import type { Group, Program } from "@/lib/programs/types";
+import type { Program } from "@/lib/programs/types";
 
 interface Standing {
   program: Program;
   progress: ProgramProgress;
 }
 
-/** Rows shown before Show N more. */
-const VISIBLE = 6;
-
-/** Rule text can run to a paragraph, which has no place in a row. */
-const brief = (text: string) =>
-  text.length > 100 ? `${text.slice(0, 99).trimEnd()}…` : text;
-
-/** A missing course as its subject tag, linking to its page when the catalogue has it. */
-function CourseTag({
-  code,
-  catalogue,
-}: {
-  code: string;
-  catalogue: Catalogue;
-}) {
-  const course = catalogue.get(code);
-  if (!course) {
-    return (
-      <span className="font-semibold">
-        <CourseCode code={code} />
-      </span>
-    );
-  }
-  return (
-    <Link
-      href={`/courses/${courseSlug(code)}`}
-      prefetch={false}
-      title={course.title}
-      className="rounded-[4px] font-semibold hover:underline"
-    >
-      <CourseCode code={code} />
-    </Link>
-  );
-}
-
-/** A group's credits split by the status of the courses it claimed, with what is left in grey. */
-function GroupBar({
-  group,
-  snapshot,
-}: {
-  group: GroupProgress;
-  snapshot: Snapshot;
-}) {
-  const { completed, inProgress, planned } = creditSplit(group, snapshot);
-  const parts = [
-    { key: "completed", value: completed, fill: "bg-completed" },
-    { key: "in-progress", value: inProgress, fill: "bg-in-progress" },
-    { key: "planned", value: planned, fill: "bg-planned" },
-  ].filter((part) => part.value > 0);
-  return (
-    <span
-      role="img"
-      aria-label={`${completed} completed, ${inProgress} in progress and ${planned} planned of ${group.credits} credits`}
-      className="flex h-1.5 w-12 shrink-0 gap-0.5 overflow-hidden rounded-[3px] bg-line"
-    >
-      {parts.map((part) => (
-        <span
-          key={part.key}
-          className={part.fill}
-          style={{ width: `${(part.value / group.credits) * 100}%` }}
-        />
-      ))}
-    </span>
-  );
-}
-
-/** Name, what is missing and the bar in three columns. On phones the name and the bar share a line and what is missing goes under them. */
-const ROW =
-  "-mx-5 grid min-h-11 grid-cols-[17rem_minmax(0,1fr)_9rem] items-center gap-6 border-line border-t px-5 py-2 first:border-t-0 max-md:grid-cols-[minmax(0,1fr)_auto] max-md:gap-x-4 max-md:gap-y-1 max-md:py-3";
-/** The middle column, on a line of its own on phones. */
-const UNDER = "max-md:col-span-2 max-md:row-start-2";
-
-/** "Minor" or similar before a second program's group name. */
-const SecondPrefix = ({ prefix }: { prefix?: string }) =>
-  prefix && <span className="font-normal text-fg-muted">{prefix} · </span>;
-
-/** What an open group lacks: the required courses as tags, or the credits a list still needs. Null when only rules to check are left. */
-function lacks(
-  group: GroupProgress,
-  definition: Group | undefined,
-  catalogue: Catalogue,
-  /** The What's next pane that lists the group's choices. */
-  pane: string,
-): ReactNode {
-  if (group.kind === "required") {
-    return (
-      <span className={cn("flex flex-wrap gap-x-3 gap-y-1", UNDER)}>
-        {group.remaining.map((item) => {
-          const codes = typeof item === "string" ? [item] : item.oneOf;
-          return (
-            <span key={codes.join()} className="flex gap-x-1.5">
-              {codes.map((code, i) => (
-                <Fragment key={code}>
-                  {i > 0 && <span className="text-fg-muted">or</span>}
-                  <CourseTag code={code} catalogue={catalogue} />
-                </Fragment>
-              ))}
-            </span>
-          );
-        })}
-      </span>
-    );
-  }
-  const gap = group.credits - group.creditsDone;
-  const from =
-    definition?.kind === "complementary" ? creditSources(definition) : null;
-  const where = from
-    ? ` from ${from}`
-    : group.replaces
-      ? ", check with your advisor"
-      : "";
-  const what = gap > 0 ? `Any ${creditsText(gap)}${where}` : lacking(group);
-  return (
-    what && (
-      <span className={cn("text-fg-muted", UNDER)}>
-        {what} ·{" "}
-        <Link href={`/next?req=${pane}`} prefetch={false} className="link">
-          See choices
-        </Link>
-      </span>
-    )
-  );
-}
-
-/** One row per open requirement of each program, plus one per unread rule. */
-function missingRows(
-  standings: (Standing & { prefix?: string; pane?: string })[],
-  snapshot: Snapshot,
-  catalogue: Catalogue,
-) {
-  return standings.flatMap(({ program, progress, prefix, pane }) => {
-    // Each second program has one pane, the program one per group.
-    const panes = groupKeys(progress.groups);
-    return progress.groups.flatMap((group, g) => {
-      if (group.satisfied) return [];
-      const key = `${program.id}-${g}`;
-      const what = lacks(
-        group,
-        program.groups[g],
-        catalogue,
-        pane ?? panes[g] ?? "",
-      );
-      const gap = group.credits - group.creditsDone;
-      const checks = group.rules.flatMap((rule, r) =>
-        rule.unparsed &&
-        !rule.confirmed &&
-        (rule.option === undefined || rule.option === group.option)
-          ? [
-              // biome-ignore lint/suspicious/noArrayIndexKey: two rules can share a title and the list never reorders
-              <li key={`${key}-${r}`} className={ROW}>
-                <span className="flex items-center gap-2 font-medium">
-                  <TriangleAlert
-                    aria-hidden
-                    className="size-4 shrink-0 text-warn"
-                  />
-                  <span>
-                    <SecondPrefix prefix={prefix} />
-                    {COPY.checkRequirement}
-                  </span>
-                </span>
-                <span className={cn("text-fg-muted", UNDER)}>
-                  {brief(rule.title)}{" "}
-                  <span className="whitespace-nowrap">
-                    · <CatalogueLink href={program.source} />
-                  </span>
-                </span>
-              </li>,
-            ]
-          : [],
-      );
-      if (!what) return checks;
-      return [
-        <li key={key} className={ROW}>
-          <span className="font-medium">
-            <SecondPrefix prefix={prefix} />
-            {sentence(group.title)}
-          </span>
-          {what}
-          <span className="flex items-center justify-end gap-3 tabular-nums max-md:col-start-2 max-md:row-start-1">
-            <GroupBar group={group} snapshot={snapshot} />
-            <span className="w-16 text-right">
-              {gap > 0 && (
-                <>
-                  <span className="font-semibold">{gap}</span>{" "}
-                  <span className="text-fg-muted">to go</span>
-                </>
-              )}
-            </span>
-          </span>
-        </li>,
-        ...checks,
-      ];
-    });
-  });
-}
-
-/** The plan's headline: credits, what is missing, second programs and warnings. */
+/** The plan's header, shared by both views: the program, its credits with the plan, second programs and warnings. */
 export function PlanSummary({
   standing,
   seconds,
   snapshot,
-  catalogue,
   warningCount,
   onShowWarnings,
   graduationPassed,
@@ -247,7 +38,6 @@ export function PlanSummary({
   /** The second program, then the extra minor. */
   seconds: readonly Standing[];
   snapshot: Snapshot;
-  catalogue: Catalogue;
   warningCount: number;
   onShowWarnings: () => void;
   /** The graduation term's label when it is already in the past. */
@@ -269,41 +59,12 @@ export function PlanSummary({
       </button>
     </p>
   );
-  const [second, extra] = seconds;
+  const [second] = seconds;
   const pair = pairOf(standing?.program ?? null, second?.program ?? null);
-  const standings = [
-    ...(standing ? [standing] : []),
-    ...(second
-      ? [
-          {
-            ...second,
-            prefix: COPY.capital(COPY.pair[pair].nouns[1]),
-            pane: SECOND_KEY,
-          },
-        ]
-      : []),
-    ...(second && extra
-      ? [
-          {
-            ...extra,
-            prefix: COPY.extraLabel(second.program),
-            pane: EXTRA_KEY,
-          },
-        ]
-      : []),
-  ];
-  const rows = missingRows(standings, snapshot, catalogue);
-  const short = standing
-    ? standing.progress.credits - standing.progress.creditsDone
-    : 0;
-  const hasChecks = (program: Program) =>
-    standings.some(
-      (row) =>
-        row.program === program &&
-        row.progress.groups.some((group) => group.unparsed > 0),
-    );
-  const met =
-    standing !== null && standings.every(({ progress }) => progress.satisfied);
+  const all = standing ? [standing, ...seconds] : [];
+  const hasChecks = (progress: ProgramProgress) =>
+    progress.groups.some((group) => group.unparsed > 0);
+  const met = all.length > 0 && all.every(({ progress }) => progress.satisfied);
   // A doctorate gives no credit total, so it counts requirements met.
   const byRequirements = standing?.progress.credits === 0;
   const [done, needed] = standing ? requirementsMet(standing.progress) : [0, 0];
@@ -312,69 +73,77 @@ export function PlanSummary({
     <div>
       <div className="flex items-baseline justify-between gap-8 max-md:flex-col max-md:gap-2">
         {standing ? (
-          <h1 className="tabular-nums max-md:text-2xl">
-            {byRequirements ? (
-              <>
-                {COPY.requirementsMet(done, needed)}{" "}
-                <Term def={GLOSSARY.withPlan} />
-              </>
-            ) : (
-              <>
-                {standing.progress.creditsDone} of {standing.progress.credits}{" "}
-                program credits <Term def={GLOSSARY.withPlan} />
-              </>
-            )}
-          </h1>
+          <h1>{standing.program.name}</h1>
         ) : (
           <>
-            <h1 className="sr-only">Planner</h1>
+            <h1 className="sr-only">Plan</h1>
             <p>
-              <Link href="/profile#program" className="link">
+              <Link href="/profile#program" className="link font-semibold">
                 {COPY.pickProgram}
               </Link>{" "}
-              to see what your plan still needs.
+              to see what you still need.
             </p>
           </>
         )}
         {warnings}
       </div>
       {standing && (
-        <div className="mt-4">
-          <ProgramBars
-            program={
-              byRequirements
-                ? {
-                    label: standing.program.name,
-                    done,
-                    split: requirementSplit(standing.progress, snapshot),
-                    total: needed,
-                    requirements: true,
-                  }
-                : {
-                    label: COPY.pair[pair].labels[0],
-                    done: standing.progress.creditsDone,
-                    split: programSplit(standing.progress, snapshot),
-                    total: standing.progress.credits,
-                    courses: splitCourses(standing.progress.groups, snapshot),
-                  }
-            }
-            seconds={seconds.map(({ program, progress }) => ({
-              label: COPY.secondTitle(program),
-              done: progress.creditsDone,
-              split: programSplit(progress, snapshot),
-              total: progress.credits,
-              courses: splitCourses(progress.groups, snapshot),
-              note: program.generated && (
-                <>
-                  <GeneratedNote hasChecks={hasChecks(program)} />{" "}
-                  <span className="whitespace-nowrap">
-                    · <CatalogueLink href={program.source} />
-                  </span>
-                </>
-              ),
-            }))}
-          />
-        </div>
+        <>
+          <p className="mt-2 text-fg-muted tabular-nums">
+            {byRequirements ? (
+              <>
+                {done} of {needed} <Term def={GLOSSARY.requirementsMet} />
+              </>
+            ) : (
+              `${standing.progress.creditsDone} of ${standing.progress.credits} program credits`
+            )}{" "}
+            <Term def={GLOSSARY.withPlan} />
+            {" · "}
+            <CatalogueLink href={standing.program.source} />
+            {standing.program.generated && (
+              <>
+                {" · "}
+                <GeneratedNote hasChecks={hasChecks(standing.progress)} />
+              </>
+            )}
+          </p>
+          <div className="mt-4">
+            <ProgramBars
+              program={
+                byRequirements
+                  ? {
+                      label: standing.program.name,
+                      done,
+                      split: requirementSplit(standing.progress, snapshot),
+                      total: needed,
+                      requirements: true,
+                    }
+                  : {
+                      label: COPY.pair[pair].labels[0],
+                      done: standing.progress.creditsDone,
+                      split: programSplit(standing.progress, snapshot),
+                      total: standing.progress.credits,
+                      courses: splitCourses(standing.progress.groups, snapshot),
+                    }
+              }
+              seconds={seconds.map(({ program, progress }) => ({
+                label: COPY.secondTitle(program),
+                done: progress.creditsDone,
+                split: programSplit(progress, snapshot),
+                total: progress.credits,
+                courses: splitCourses(progress.groups, snapshot),
+                note: program.generated && (
+                  <>
+                    <GeneratedNote hasChecks={hasChecks(progress)} />{" "}
+                    <span className="whitespace-nowrap">
+                      · <CatalogueLink href={program.source} />
+                    </span>
+                  </>
+                ),
+              }))}
+            />
+          </div>
+        </>
       )}
 
       <div className="mt-2 flex flex-col gap-1 empty:hidden">
@@ -392,52 +161,14 @@ export function PlanSummary({
           <p>
             Your plan meets every requirement of{" "}
             {list.format(
-              standings.map(({ program }, i) =>
+              all.map(({ program }, i) =>
                 i === 0 ? program.name : COPY.secondTitle(program),
               ),
             )}
             .
           </p>
         )}
-        {standing?.program.generated && (
-          <p>
-            <GeneratedNote hasChecks={hasChecks(standing.program)} />
-            {" · "}
-            <CatalogueLink href={standing.program.source} />
-          </p>
-        )}
       </div>
-
-      {!met && rows.length > 0 && (
-        <div className="mt-6">
-          <Section
-            title={
-              short > 0
-                ? `Your plan is ${creditsText(short)} short`
-                : "What your plan still misses"
-            }
-            meta={
-              <>
-                <span className="max-md:hidden">
-                  {rows.length}{" "}
-                  {rows.length === 1 ? "requirement" : "requirements"} still
-                  open
-                </span>
-                <span className="md:hidden">{rows.length} open</span>
-              </>
-            }
-          >
-            <ul>{rows.slice(0, VISIBLE)}</ul>
-            {rows.length > VISIBLE && (
-              <ShowMore count={rows.length - VISIBLE}>
-                <ul className="[&>li:first-child]:border-t">
-                  {rows.slice(VISIBLE)}
-                </ul>
-              </ShowMore>
-            )}
-          </Section>
-        </div>
-      )}
     </div>
   );
 }

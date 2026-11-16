@@ -157,7 +157,7 @@ function Review({
       startTerm: values.startTerm,
       graduationTerm: values.graduationTerm,
     });
-    router.push("/next");
+    router.push("/plan");
   }
 
   return (

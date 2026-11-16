@@ -59,13 +59,6 @@ const extraLabel = (second: Pick<ProgramSummary, "id" | "degree">) =>
 
 const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
-/** "Major and minor credits", or "Major, second major and minor credits". */
-const pairCredits = (pair: Pair, extra?: string) => {
-  const labels: string[] = [...PAIR[pair].labels];
-  const [first, ...rest] = new Set(extra ? [...labels, extra] : labels);
-  return `${list.format([first ?? "", ...rest.map((label) => label.toLowerCase())])} credits`;
-};
-
 /** "Winter 2027 and Fall 2027", the terms a multi-term course spans. One term reads as itself. */
 const termPair = (...terms: Term[]) => list.format(terms.map(termLabel));
 
@@ -133,7 +126,6 @@ export const COPY = {
   generated: "Read automatically from the catalogue",
   secondTitle,
   pair: PAIR,
-  pairCredits,
   extraLabel,
   capital,
   /** "Program only" on a second program's row whose course counts for the first program alone. */

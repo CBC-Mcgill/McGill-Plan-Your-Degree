@@ -4,7 +4,6 @@ import { cn } from "cn";
 import {
   CalendarPlus,
   CalendarRange,
-  Compass,
   FileUp,
   Library,
   type LucideIcon,
@@ -108,13 +107,13 @@ const BROWSE: Page = {
   href: "/courses",
   icon: Library,
 };
-const NEXT: Page = {
-  label: "What's next",
-  href: "/next",
-  icon: Compass,
-  aliases: "requirements where courses count degree audit",
+const PLAN: Page = {
+  label: "Plan",
+  href: "/plan",
+  icon: CalendarRange,
+  aliases:
+    "what's next planner requirements terms where courses count degree audit",
 };
-const PLANNER: Page = { label: "Planner", href: "/plan", icon: CalendarRange };
 const PROFILE: Page = {
   label: "Profile",
   href: "/profile",
@@ -241,8 +240,8 @@ function PaletteDialog() {
       : [];
     const pages = (
       imported
-        ? [BROWSE, NEXT, PLANNER, PROFILE, ADVISOR]
-        : [BROWSE, NEXT, PLANNER, ADVISOR, IMPORT]
+        ? [BROWSE, PLAN, PROFILE, ADVISOR]
+        : [BROWSE, PLAN, ADVISOR, IMPORT]
     )
       .filter((page) => !text || matches(text, page.label, page.aliases ?? ""))
       .map((page): Item => ({ kind: "page", ...page }));

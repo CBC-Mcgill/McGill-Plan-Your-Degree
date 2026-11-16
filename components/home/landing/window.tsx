@@ -117,7 +117,7 @@ export function PlanCards({ className }: { className?: string }) {
   );
 }
 
-/** The window's title bar and the app's page tabs with the Planner selected. No logo, since the real header sits right above. */
+/** The window's title bar and the app's page tabs with Plan selected. No logo, since the real header sits right above. */
 function Chrome() {
   return (
     <>
@@ -129,8 +129,7 @@ function Chrome() {
       <div className="flex h-12 items-center gap-6 border-line border-b bg-bg px-5">
         <span className="-ml-2.5 flex items-center gap-1 text-fg-muted">
           <span className="px-2.5 py-1.5">Browse courses</span>
-          <span className="px-2.5 py-1.5">What's next</span>
-          <span className="selected px-2.5 py-1.5">Planner</span>
+          <span className="selected px-2.5 py-1.5">Plan</span>
           <span className="px-2.5 py-1.5">Advisor</span>
         </span>
         <span className="ml-auto flex h-8 w-52 items-center gap-2 rounded-md bg-bg px-2.5 text-fg-subtle shadow-button max-[1180px]:w-40">

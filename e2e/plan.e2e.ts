@@ -56,7 +56,7 @@ test("a later term with registered courses counts them on the path", async ({
       source: "transcript",
     })),
   ]);
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
   await expect(page.getByRole("tab", { name: /^Winter 2027/ })).toContainText(
     "Registered · 2 courses · 6 credits",
   );
@@ -66,11 +66,11 @@ test("starting without a transcript opens the path on the next term to plan", as
   page,
 }) => {
   await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
   await expect(
     page.getByRole("heading", {
       level: 1,
-      name: "Plan every term to graduation",
+      name: "See what you can take next",
     }),
   ).toBeVisible();
   await expect(
@@ -103,48 +103,73 @@ test("starting without a transcript opens the path on the next term to plan", as
   expect(overflow).toBeLessThanOrEqual(0);
 });
 
-test("the headline lists one row per open requirement, with missing courses linking to their pages", async ({
+test("one header leads both views, and the switch flips between requirements and terms", async ({
   page,
 }) => {
-  await seedProfile(page, [done("COMP 202")], [], "computer-engineering-beng");
-  await page.goto("/plan");
-
-  const missing = page.getByRole("region", {
-    name: /^Your plan is \d+ credits short$/,
-  });
-  await expect(missing).toContainText("7 requirements still open");
-  const rows = missing.getByRole("listitem");
-  await expect(rows).toHaveCount(6);
-  const technical = rows.filter({ hasText: "Technical complementaries" });
-  await expect(technical).toContainText(
-    "Any 9 credits from List A or List B · See choices",
+  await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
+  await seedProfile(
+    page,
+    [done("COMP 202"), done("MATH 240")],
+    [{ term: { season: "Winter", year: 2027 }, courses: ["COMP 251"] }],
+    "computer-science-major-bsc",
   );
-  // The link opens that group's pane on What's next.
+  await page.goto("/plan");
   await expect(
-    technical.getByRole("link", { name: "See choices" }),
-  ).toHaveAttribute("href", "/next?req=technical-complementaries");
-  await missing.getByRole("button", { name: "Show 1 more" }).click();
-  await expect(rows).toHaveCount(7);
-  await expect(rows.last()).toContainText("Elective course");
-
-  const course = rows
-    .filter({ hasText: "Required computer engineering courses" })
-    .getByRole("link", { name: "ECSE 250" });
-  await expect(course).toHaveAttribute("href", "/courses/ecse-250");
-  await course.click();
-  await expect(
-    page.getByRole("heading", {
-      level: 1,
-      name: "Fundamentals of Software Development",
-    }),
+    page.getByRole("heading", { level: 1, name: "Computer Science Major" }),
   ).toBeVisible();
+  await expect(page.getByRole("main")).toContainText(
+    "9 of 63 program credits with your plan",
+  );
+  const views = page.getByRole("tablist", { name: "View" });
+  await expect(views.getByRole("tab", { selected: true })).toHaveText(
+    "Requirements",
+  );
+  await expect(
+    page.getByRole("tablist", { name: "Requirements" }),
+  ).toBeVisible();
+
+  const entries = await page.evaluate(() => history.length);
+  await views.getByRole("tab", { name: "Requirements" }).focus();
+  await page.keyboard.press("ArrowRight");
+  await expect(page).toHaveURL("/plan?view=terms");
+  await expect(page.getByRole("tablist", { name: "Terms" })).toBeVisible();
+  await expect(page.getByRole("region", { name: /credits short/ })).toHaveCount(
+    0,
+  );
+
+  // Switching views replaces the history entry, so arrow presses never pile up.
+  await page.keyboard.press("ArrowLeft");
+  await expect(page).toHaveURL("/plan");
+  expect(await page.evaluate(() => history.length)).toBe(entries);
+  await expect(
+    page.getByRole("tablist", { name: "Requirements" }),
+  ).toBeVisible();
+
+  // COMP 251 needs COMP 250, so Show opens Winter 2027 in the terms view.
+  await page.getByRole("button", { name: "Show", exact: true }).click();
+  await expect(page).toHaveURL("/plan?view=terms");
+  await expect(page.locator("#term-heading")).toBeFocused();
+  await expect(page.locator("#term-heading")).toHaveText(/^Winter 2027/);
+});
+
+test("the old What's next and Requirements pages redirect to the plan for good", async ({
+  page,
+  request,
+}) => {
+  for (const path of ["/next", "/requirements"]) {
+    const response = await request.get(path, { maxRedirects: 0 });
+    expect(response.status()).toBe(308);
+    expect(response.headers().location).toBe("/plan");
+  }
+  await page.goto("/next?req=complementary-courses");
+  await expect(page).toHaveURL("/plan?req=complementary-courses");
 });
 
 test("a course placed before its prerequisite warns until it is moved later", async ({
   page,
 }) => {
   await seedProfile(page, [done("COMP 202"), done("MATH 240")]);
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
 
   const fall = `Fall ${year + 1}`;
   await page.getByRole("tab", { name: new RegExp(`^${fall}`) }).click();
@@ -187,7 +212,7 @@ test("a term's checklist adds several courses at once, with the load shown first
 }) => {
   await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
   await seedProfile(page, [done("COMP 202")], [], "computer-engineering-beng");
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
 
   const fill = page.getByRole("region", { name: "Fill Winter 2027" });
   await fill.getByRole("tab", { name: "Required" }).click();
@@ -210,7 +235,7 @@ test("the add box highlights the first course it can add and explains the rest",
   page,
 }) => {
   await seedProfile(page, [done("COMP 250")]);
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
 
   const search = page.getByRole("combobox", { name: /^Add a course to/ });
   await search.fill("comp 25");
@@ -251,8 +276,8 @@ test("the credit limit is edited from the term load and kept after a reload", as
     [done("COMP 202")],
     [{ term: winter, courses: ["COMP 250"] }],
   );
-  await page.goto("/plan");
-  const panel = page.getByRole("tabpanel");
+  await page.goto("/plan?view=terms");
+  const panel = page.locator("#term-panel");
   await expect(panel).toContainText("3 of 17 credits");
 
   await page.getByRole("button", { name: "Credit limit, 17" }).click();
@@ -271,7 +296,7 @@ test("the credit limit is edited from the term load and kept after a reload", as
   ).toHaveAccessibleName(/with warnings/);
 
   await page.reload();
-  await expect(page.getByRole("tabpanel")).toContainText(
+  await expect(page.locator("#term-panel")).toContainText(
     "3 of 2 credits, over your limit",
   );
 });

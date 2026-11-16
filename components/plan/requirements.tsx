@@ -22,7 +22,6 @@ import {
   useState,
 } from "react";
 import { TermItem, useStarts } from "@/components/add-to-plan";
-import { CatalogueError } from "@/components/catalogue-error";
 import { CourseCode } from "@/components/course-code";
 import {
   ROW,
@@ -33,14 +32,9 @@ import {
 import { CreditsLabel } from "@/components/credits-label";
 import { CatalogueLink, VsbLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
-import { NoProfile } from "@/components/no-profile";
 import { CourseSearch, type PickState } from "@/components/plan/add-course";
 import { addWithUndo, removeWithUndo } from "@/components/plan/add-with-undo";
-import {
-  BAR_WITH_LEGEND,
-  ProgramBars,
-  RoomLeft,
-} from "@/components/program-bars";
+import { BAR_WITH_LEGEND } from "@/components/program-bars";
 import {
   STATUS,
   type Status,
@@ -54,12 +48,10 @@ import { CARD, Card } from "@/components/ui/card";
 import { Disclosure, ShowMore } from "@/components/ui/disclosure";
 import { Menu, MenuItem, MenuLabel } from "@/components/ui/menu";
 import { Term as Defined } from "@/components/ui/tooltip";
-import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses } from "@/lib/catalogue/search";
 import { courseSlug } from "@/lib/catalogue/slug";
 import type { CourseSummary } from "@/lib/catalogue/types";
 import { COPY } from "@/lib/copy";
-import { requirementSplit, requirementsMet } from "@/lib/engine/credits";
 import {
   type Entry,
   EXTRA_KEY,
@@ -81,7 +73,6 @@ import {
   type ProgramProgress,
   picksOne,
   programSplit,
-  programStanding,
   replaceKey,
   secondOverlaps,
   splitCourses,
@@ -110,8 +101,6 @@ import {
   type Term,
   termKey,
 } from "@/lib/profile/types";
-import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { useProgram, useSeconds } from "@/lib/programs/client";
 import { type Pair, pairOf } from "@/lib/programs/minor";
 import type { Program } from "@/lib/programs/types";
 
@@ -167,63 +156,24 @@ interface Pane {
   body: ReactNode;
 }
 
-export function WhatsNext() {
-  const snapshot = useSnapshot();
-  if (snapshot === null) {
-    return (
-      <NoProfile
-        title="See what you can take next"
-        lede="Import your unofficial transcript to see the courses you can take next term and what you still need to graduate."
-        sample="next"
-      />
-    );
-  }
-  if (snapshot === undefined) return <PageSkeleton />;
-  return <Ready snapshot={snapshot} />;
-}
-
-// Split out so a visitor without a profile does not download the catalogue.
-function Ready({ snapshot }: { snapshot: Snapshot }) {
-  const programId = useProfileStore((state) => state.programId);
-  const catalogue = useCatalogue();
-  const program = useProgram(programId);
-  const seconds = useSeconds();
-  if (catalogue.status === "error") {
-    return (
-      <>
-        <h1 className="sr-only">What's next</h1>
-        <CatalogueError />
-      </>
-    );
-  }
-  if (
-    catalogue.status !== "ready" ||
-    program === undefined ||
-    seconds === undefined
-  ) {
-    return <PageSkeleton />;
-  }
-  return (
-    <Page
-      snapshot={snapshot}
-      catalogue={catalogue.catalogue}
-      program={program}
-      seconds={seconds}
-    />
-  );
-}
-
-function Page({
+/** Every requirement in a list beside the open one, with what the student can take next term. */
+export function Requirements({
   snapshot,
   catalogue,
   program,
   seconds,
+  withPlan,
+  secondsWithPlan,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
   /** The second program, then the extra minor. */
   seconds: readonly Program[];
+  /** The program counted with the plan, so Not counted and the bars show a planned course before the student takes it. */
+  withPlan: ProgramProgress | null;
+  /** Each of `seconds` counted with the plan. */
+  secondsWithPlan: readonly ProgramProgress[];
 }) {
   const entry = useProfileStore((state) => state.entry);
   const records = useProfileStore((state) => state.records);
@@ -262,14 +212,6 @@ function Page({
     () => termSnapshot(snapshot, plan, term),
     [snapshot, plan, term],
   );
-  // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
-  const withPlan = useMemo(
-    () =>
-      program
-        ? programStanding(program, snapshot, catalogue, entry, "plan")
-        : null,
-    [program, snapshot, catalogue, entry],
-  );
   const view = useMemo(
     () =>
       nextView(catalogue, judged, term, program, entry, undefined, withPlan),
@@ -280,26 +222,6 @@ function Page({
       secondOverlaps(seconds, program, judged, catalogue, entry, "counting"),
     [seconds, program, judged, catalogue, entry],
   );
-  const secondsWithPlan = useMemo(() => {
-    const withPlanOverlaps = secondOverlaps(
-      seconds,
-      program,
-      snapshot,
-      catalogue,
-      entry,
-      "plan",
-    );
-    return seconds.map((second, i) =>
-      programStanding(
-        second,
-        snapshot,
-        catalogue,
-        entry,
-        "plan",
-        withPlanOverlaps[i]?.programOnly,
-      ),
-    );
-  }, [seconds, program, snapshot, catalogue, entry]);
   const secondViews = useMemo(
     () =>
       seconds.map((second, i) =>
@@ -321,23 +243,13 @@ function Page({
 
   if (!program || !view.progress) {
     return (
-      <>
-        <h1 className="sr-only">What's next</h1>
-        <p>
-          <Link href="/profile#program" className="link font-semibold">
-            {COPY.pickProgram}
-          </Link>{" "}
-          to see what you still need.
-        </p>
-        <div className="mt-6 max-md:[&_h2]:text-base">
-          <OtherCourses entries={view.other} context={context} />
-        </div>
-      </>
+      <div className="max-md:[&_h2]:text-base">
+        <OtherCourses entries={view.other} context={context} />
+      </div>
     );
   }
 
-  const { creditsDone, credits, groups } = view.progress;
-  const [met, needed] = requirementsMet(view.progress);
+  const { groups } = view.progress;
   const keys = groupKeys(groups);
   const when = termLabel(term);
   const requirements: Pane[] = groups.map((group, index) => {
@@ -482,90 +394,11 @@ function Page({
     panes.current?.scrollIntoView();
   }
 
-  const secondBars = seconds.flatMap((second, i) => {
-    const progress = secondViews[i]?.progress;
-    const secondWithPlan = secondsWithPlan[i];
-    return progress && secondWithPlan
-      ? [
-          {
-            label: COPY.secondTitle(second),
-            done: progress.creditsDone,
-            split: programSplit(secondWithPlan, snapshot),
-            total: progress.credits,
-            courses: splitCourses(secondWithPlan.groups, snapshot),
-          },
-        ]
-      : [];
-  });
-  const [second] = seconds;
-
   return (
     <>
-      <h1>{program.name}</h1>
-      <p className="mt-2 text-fg-muted">
-        {credits === 0 ? (
-          <>
-            <span className="tabular-nums">
-              {met} of {needed}
-            </span>{" "}
-            <Defined def={GLOSSARY.requirementsMet} />
-          </>
-        ) : (
-          <>
-            {second && secondBars.length > 0 ? (
-              COPY.pairCredits(pair, seconds[1] && COPY.extraLabel(second))
-            ) : (
-              <>
-                <span className="tabular-nums">
-                  {creditsDone} of {credits}
-                </span>{" "}
-                program credits
-              </>
-            )}{" "}
-            <Defined def={GLOSSARY.earnedOrInProgress} />
-          </>
-        )}
-        {dot}
-        <CatalogueLink href={coursesTab(program.source)} />
-        {program.generated && (
-          <>
-            {dot}
-            <GeneratedNote hasChecks={hasChecks(program)} />
-          </>
-        )}
-      </p>
-      {withPlan && (
-        <div className="mt-4">
-          <ProgramBars
-            program={
-              credits === 0
-                ? {
-                    label: program.name,
-                    done: met,
-                    split: requirementSplit(withPlan, snapshot),
-                    total: requirementsMet(withPlan)[1],
-                    requirements: true,
-                  }
-                : {
-                    label: COPY.pair[pair].labels[0],
-                    done: creditsDone,
-                    split: programSplit(withPlan, snapshot),
-                    total: credits,
-                    courses: splitCourses(withPlan.groups, snapshot),
-                  }
-            }
-            seconds={secondBars}
-          />
-          <RoomLeft progress={view.progress} className="mt-2" />
-        </div>
-      )}
-      <p className="mt-6">
+      <p>
         The lists mark what you can take in{" "}
         <span className="font-semibold">{termLabel(term)}</span>, your next term
-        ·{" "}
-        <Link href="/plan" className="link">
-          Plan later terms
-        </Link>{" "}
         · Sections and times in <VsbLink />
       </p>
 
@@ -599,10 +432,10 @@ function Page({
               {open && (
                 <a
                   id={`${paneId}-back`}
-                  href="/next"
+                  href="/plan"
                   onClick={(event) => {
                     event.preventDefault();
-                    go("/next", `${paneId}-open-${open.key}`);
+                    go("/plan", `${paneId}-open-${open.key}`);
                   }}
                   className="-ml-1 mb-2 inline-flex min-h-11 items-center gap-1 rounded-md pr-2 font-semibold lg:hidden"
                 >
@@ -2313,42 +2146,5 @@ function OtherCourses({
         <Rows entries={entries} context={context} limit={OTHER_LIMIT} />
       )}
     </Disclosure>
-  );
-}
-
-const bone = "rounded-md bg-tint motion-safe:animate-pulse";
-
-function PageSkeleton() {
-  return (
-    <div>
-      <p role="status" className="sr-only">
-        Loading your courses
-      </p>
-      <div aria-hidden>
-        <div className={cn(bone, "h-11 w-[400px] max-md:max-w-full")} />
-        <div className={cn(bone, "mt-2 h-5 w-[480px] max-md:max-w-full")} />
-        <div className={cn(bone, "mt-6 h-9 w-56")} />
-        <div className="mt-6 grid grid-cols-[15rem_minmax(0,1fr)] gap-6 max-lg:block">
-          <div className="flex flex-col gap-1">
-            {Array.from({ length: 6 }, (_, row) => (
-              // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-              <div key={row} className={cn(bone, "h-14")} />
-            ))}
-          </div>
-          <div className="max-lg:hidden">
-            <div className={cn(bone, "h-7 w-64")} />
-            <div className="mt-4">
-              {Array.from({ length: 6 }, (_, row) => (
-                // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-                <div key={row} className="flex h-11 items-center gap-4">
-                  <div className={cn(bone, "h-5 w-24")} />
-                  <div className={cn(bone, "h-5 flex-1")} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

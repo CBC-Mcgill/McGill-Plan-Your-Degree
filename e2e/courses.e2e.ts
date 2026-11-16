@@ -213,9 +213,12 @@ test("a course page adds the course to any term before graduation and moves it",
   await page.getByRole("menuitem", { name: /^Winter 2028/ }).click();
   await expect(page.getByText("Planned for Winter 2028")).toBeVisible();
 
-  await page.getByRole("link", { name: "Planner" }).click();
+  await page.getByRole("link", { name: "Plan", exact: true }).click();
+  await page.getByRole("tab", { name: "Terms", exact: true }).click();
   await page.getByRole("tab", { name: /^Winter 2028/ }).click();
-  await expect(page.getByRole("tabpanel")).toContainText("COMP 251");
+  await expect(
+    page.getByRole("tabpanel", { name: /^Winter 2028/ }),
+  ).toContainText("COMP 251");
 });
 
 test("view tabs move with the arrow keys", async ({ page }) => {
@@ -348,7 +351,8 @@ test("a multi-term course that ends after graduation can still be added and says
     page.getByText("Planned for Winter 2027 and Fall 2027"),
   ).toBeVisible();
 
-  await page.getByRole("link", { name: "Planner" }).click();
+  await page.getByRole("link", { name: "Plan", exact: true }).click();
+  await page.getByRole("tab", { name: "Terms", exact: true }).click();
   await expect(page.getByRole("list", { name: "Warnings" })).toContainText(
     "continues into Fall 2027, after your expected graduation in Winter 2027",
   );

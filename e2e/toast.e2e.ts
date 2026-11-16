@@ -36,7 +36,7 @@ test("toasts name the course, show one at a time, and Undo only runs when it is 
       [done("COMP 202"), done("COMP 206"), done("COMP 250")],
     ],
   );
-  await page.goto("/next");
+  await page.goto("/plan");
   const toast = page.locator('[aria-live="polite"]');
   const add = (code: string) =>
     page.getByRole("button", { name: `Add ${code} to Winter 2027` }).first();

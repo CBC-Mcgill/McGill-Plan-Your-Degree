@@ -12,7 +12,7 @@ const done = (code: string) => ({
 /** Opens What's next on 8 October 2026, so the next term is Winter 2027, as a Computer Engineering student with a minor unless `state` says otherwise. */
 async function openStudent(
   page: Page,
-  path = "/next",
+  path = "/plan",
   state: Record<string, unknown> = {},
 ) {
   await page.clock.setFixedTime(new Date("2026-10-08T12:00:00"));
@@ -57,7 +57,7 @@ async function expectNoSideScroll(page: Page) {
 const list = (page: Page) => page.getByRole("list", { name: "Requirements" });
 
 test("a visitor sees the import screen", async ({ page }) => {
-  await page.goto("/next");
+  await page.goto("/plan");
   const main = page.getByRole("main");
   await expect(
     main.getByRole("heading", { level: 1, name: "See what you can take next" }),
@@ -90,7 +90,7 @@ test("on a phone the requirements are a list that opens one pane at a time", asy
   await list(page)
     .getByRole("link", { name: /Required non-departmental courses/ })
     .tap();
-  await expect(page).toHaveURL("/next?req=required-non-departmental-courses");
+  await expect(page).toHaveURL("/plan?req=required-non-departmental-courses");
   await expect(list(page)).toBeHidden();
   const pane = page.getByRole("region", {
     name: "Required non-departmental courses",
@@ -111,7 +111,7 @@ test("on a phone the requirements are a list that opens one pane at a time", asy
   ).toBeFocused();
 
   await back.tap();
-  await expect(page).toHaveURL("/next");
+  await expect(page).toHaveURL("/plan");
   await expect(
     list(page).getByRole("link", {
       name: /Required non-departmental courses/,
@@ -124,7 +124,7 @@ test("on a phone the requirements are a list that opens one pane at a time", asy
 test("every pane fits a phone, and a link opens the minor's pane", async ({
   page,
 }) => {
-  await openStudent(page, "/next?req=minor");
+  await openStudent(page, "/plan?req=minor");
   const minor = page.getByRole("region", {
     name: "Technological Entrepreneurship minor",
   });
@@ -133,7 +133,7 @@ test("every pane fits a phone, and a link opens the minor's pane", async ({
   ).toContainText("Counts for both");
   await expectNoSideScroll(page);
 
-  await page.goto("/next");
+  await page.goto("/plan");
   await expect(list(page)).toBeVisible();
   const hrefs = await page
     .getByRole("main")
@@ -141,7 +141,7 @@ test("every pane fits a phone, and a link opens the minor's pane", async ({
     .evaluateAll((links) => links.map((a) => a.getAttribute("href")));
   expect(hrefs.length).toBeGreaterThan(5);
   for (const href of hrefs) {
-    await page.goto(`/next${href}`);
+    await page.goto(`/plan${href}`);
     await expect(
       page.getByRole("link", { name: "All requirements" }),
     ).toBeVisible();
@@ -152,7 +152,7 @@ test("every pane fits a phone, and a link opens the minor's pane", async ({
 test("on a phone two majors and a minor stack their bars and each opens its pane", async ({
   page,
 }) => {
-  await openStudent(page, "/next", {
+  await openStudent(page, "/plan", {
     records: [done("MATH 222")],
     programId: "economics-major-concentration-ba",
     minorId: "psychology-major-concentration-ba",
@@ -176,7 +176,7 @@ test("on a phone two majors and a minor stack their bars and each opens its pane
 test("on a phone a planned course sits in its own block and fits", async ({
   page,
 }) => {
-  await openStudent(page, "/next?req=complementary-studies-group-b", {
+  await openStudent(page, "/plan?req=complementary-studies-group-b", {
     plan: [{ term: { season: "Winter", year: 2028 }, courses: ["BUSA 465"] }],
   });
   const pane = page.getByRole("region", {
@@ -192,7 +192,7 @@ test("on a phone a planned course sits in its own block and fits", async ({
 test("a rule to check has a full-size button that fits a phone", async ({
   page,
 }) => {
-  await openStudent(page, "/next?req=complementary-courses", {
+  await openStudent(page, "/plan?req=complementary-courses", {
     records: [],
     programId: "economics-major-concentration-ba",
     minorId: null,
@@ -211,7 +211,7 @@ test("a rule to check has a full-size button that fits a phone", async ({
 test("on a phone a student adds and removes a listed course with full-size targets", async ({
   page,
 }) => {
-  await openStudent(page, "/next?req=complementary-courses", {
+  await openStudent(page, "/plan?req=complementary-courses", {
     records: [done("ECON 305")],
     programId: "economics-major-concentration-ba",
     minorId: null,
@@ -240,7 +240,7 @@ test("on a phone a student adds and removes a listed course with full-size targe
 test("on a phone a doctorate reads its progress as requirements met", async ({
   page,
 }) => {
-  await openStudent(page, "/next", {
+  await openStudent(page, "/plan", {
     records: [],
     programId: "computer-science-phd",
     minorId: null,
