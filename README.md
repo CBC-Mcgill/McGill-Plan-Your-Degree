@@ -22,24 +22,26 @@ Quebec CEGEP students get Year 0 credited, Science DEC courses meet prerequisite
 
 ![The transcript review screen with each course, its term, status, credits and grade, and the degree details beside it](docs/screenshots/import.webp)
 
-### See what's next
+### See what you still need
 
-See the courses you can take next term and the required ones you still need, requirement by requirement.
+The Plan page shows your program's credits once, then switches between Requirements and Terms.
+Requirements lists the courses you can take next term and the required ones you still need, requirement by requirement.
 With a minor, its progress bar sits beside the major's.
 
-![What's next with the major and minor bars, the requirement list and the courses for one requirement](docs/screenshots/whats-next.webp)
+![The Plan page on Requirements, with the major and minor bars, the requirement list and the courses for one requirement](docs/screenshots/plan-requirements.webp)
 
 Hover or tab to earned, in progress or planned on any bar to see the courses behind the number.
 
-![A tooltip listing the 53 earned credits course by course](docs/screenshots/breakdown.webp)
+![A tooltip listing the 50 earned credits course by course](docs/screenshots/breakdown.webp)
 
 ### Plan every term
 
-Lay out each term until graduation, with warnings for missing prerequisites, terms a course is not offered, and credit overloads.
-The plan lists what is still missing, and a minor counts the courses it shares with your major only up to the limit on its catalogue page.
+Terms lays out each term until graduation, with warnings for missing prerequisites, terms a course is not offered, and credit overloads.
+Change your expected graduation right on the path.
+A minor counts the courses it shares with your major only up to the limit on its catalogue page.
 Once a term's courses are set, pick their sections and times in McGill's [Visual Schedule Builder](https://vsb.mcgill.ca/criteria.jsp).
 
-![The planner with credits for the major and minor, the requirements still open and the path of terms](docs/screenshots/planner.webp)
+![The Plan page on Terms, with the path to graduation and the four courses planned for Winter 2027](docs/screenshots/plan-terms.webp)
 
 ### Browse every course
 
