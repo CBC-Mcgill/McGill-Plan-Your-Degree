@@ -1,6 +1,9 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const isCI = Boolean(process.env.CI);
+// Its own port, so a dev server on 3000 from another checkout is never tested by mistake.
+const port = 3100;
+const url = `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: "e2e",
@@ -8,7 +11,7 @@ export default defineConfig({
   forbidOnly: isCI,
   retries: 0,
   reporter: isCI ? "github" : "list",
-  use: { baseURL: "http://localhost:3000", trace: "retain-on-failure" },
+  use: { baseURL: url, trace: "retain-on-failure" },
   projects: [
     {
       name: "desktop",
@@ -30,8 +33,9 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: isCI ? "pnpm start" : "pnpm dev",
-    url: "http://localhost:3000",
-    reuseExistingServer: !isCI,
+    command: `${isCI ? "" : "pnpm build && "}pnpm start --port ${port}`,
+    url,
+    reuseExistingServer: false,
+    timeout: 180_000,
   },
 });
