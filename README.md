@@ -147,6 +147,7 @@ It also stands on the work of other student-built open-source projects, especial
 The long-term goal is to make planning something students actually enjoy, and to build it with them, not just for them. I genuinely believe this will move the needle and provide students a better education.
 
 Thai ([thaimtl](https://github.com/thaimtl))
+
 ## License
 
 MIT
