@@ -128,6 +128,7 @@ test("one header leads both views, and the switch flips between requirements and
     page.getByRole("tablist", { name: "Requirements" }),
   ).toBeVisible();
 
+  const entries = await page.evaluate(() => history.length);
   await views.getByRole("tab", { name: "Requirements" }).focus();
   await page.keyboard.press("ArrowRight");
   await expect(page).toHaveURL("/plan?view=terms");
@@ -136,8 +137,10 @@ test("one header leads both views, and the switch flips between requirements and
     0,
   );
 
-  await page.goBack();
+  // Switching views replaces the history entry, so arrow presses never pile up.
+  await page.keyboard.press("ArrowLeft");
   await expect(page).toHaveURL("/plan");
+  expect(await page.evaluate(() => history.length)).toBe(entries);
   await expect(
     page.getByRole("tablist", { name: "Requirements" }),
   ).toBeVisible();

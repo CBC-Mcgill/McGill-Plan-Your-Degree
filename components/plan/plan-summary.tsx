@@ -90,9 +90,13 @@ export function PlanSummary({
       {standing && (
         <>
           <p className="mt-2 text-fg-muted tabular-nums">
-            {byRequirements
-              ? COPY.requirementsMet(done, needed)
-              : `${standing.progress.creditsDone} of ${standing.progress.credits} program credits`}{" "}
+            {byRequirements ? (
+              <>
+                {done} of {needed} <Term def={GLOSSARY.requirementsMet} />
+              </>
+            ) : (
+              `${standing.progress.creditsDone} of ${standing.progress.credits} program credits`
+            )}{" "}
             <Term def={GLOSSARY.withPlan} />
             {" · "}
             <CatalogueLink href={standing.program.source} />

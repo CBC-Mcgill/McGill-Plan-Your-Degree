@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "cn";
 import { useMemo } from "react";
 import { flushSync } from "react-dom";
 import { TermPanel } from "@/components/plan/term-panel";
@@ -142,35 +141,3 @@ export function Terms({
 /** The path beside the term card, and above it below 1024px. */
 const GRID =
   "grid grid-cols-[16.5rem_minmax(0,1fr)] items-start gap-6 max-lg:grid-cols-[minmax(0,1fr)] max-lg:gap-4 xl:grid-cols-[18.75rem_minmax(0,1fr)]";
-
-const bone = "rounded-md bg-tint motion-safe:animate-pulse";
-
-/** The header, the view switch and the path while the catalogue loads. */
-export function PlanSkeleton() {
-  return (
-    <div role="status">
-      <span className="sr-only">Loading your plan</span>
-      <div aria-hidden>
-        <div className={`${bone} h-11 w-[400px] max-md:w-full`} />
-        <div className={`${bone} mt-2 h-5 w-[480px] max-md:w-2/3`} />
-        <div className={`${bone} mt-6 h-9 w-56 max-md:h-11 max-md:w-full`} />
-        <div className={cn(GRID, "mt-6")}>
-          <div className="flex flex-col gap-1 max-lg:flex-row max-lg:overflow-hidden">
-            {Array.from({ length: 6 }, (_, row) => (
-              <div
-                // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
-                key={row}
-                className={`${bone} h-11 max-lg:h-17 max-lg:w-36 max-lg:shrink-0`}
-              />
-            ))}
-          </div>
-          <div>
-            <div className={`${bone} h-7 w-40`} />
-            <div className={`${bone} mt-4 h-11`} />
-            <div className={`${bone} mt-6 h-9`} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}

@@ -1,13 +1,14 @@
 "use client";
 
+import { cn } from "cn";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { CatalogueError } from "@/components/catalogue-error";
 import { NoProfile } from "@/components/no-profile";
 import { PlanSummary } from "@/components/plan/plan-summary";
-import { PlanSkeleton, Terms } from "@/components/plan/planner";
+import { Requirements } from "@/components/plan/requirements";
+import { Terms } from "@/components/plan/terms";
 import { ViewTabs } from "@/components/ui/tabs";
-import { Requirements } from "@/components/whats-next";
 import { useCatalogue } from "@/lib/catalogue/client";
 import { planWarnings } from "@/lib/engine/plan";
 import { programStanding, secondOverlaps } from "@/lib/engine/progress";
@@ -96,12 +97,9 @@ function Ready({
   // Show warnings switches view, and the term card renders a render after the URL changes, so focus waits for it.
   const focusTerm = useRef(false);
   useEffect(() => {
-    const heading =
-      focusTerm.current && document.getElementById("term-heading");
-    if (heading) {
-      heading.focus();
-      focusTerm.current = false;
-    }
+    if (!focusTerm.current || view !== "terms") return;
+    focusTerm.current = false;
+    document.getElementById("term-heading")?.focus();
   });
 
   const now = useMemo(() => currentTerm(), []);
@@ -139,7 +137,8 @@ function Ready({
   }, [seconds, program, snapshot, catalogue, entry]);
 
   function show(next: View) {
-    window.history.pushState(
+    // A view is a tab of one page, so switching replaces the entry instead of adding one per arrow press.
+    window.history.replaceState(
       null,
       "",
       next === "terms" ? "?view=terms" : window.location.pathname,
@@ -198,9 +197,49 @@ function Ready({
             catalogue={catalogue}
             program={program}
             seconds={seconds}
+            withPlan={progress}
+            secondsWithPlan={secondStandings.map(({ progress }) => progress)}
           />
         )}
       </div>
     </>
+  );
+}
+
+const bone = "rounded-md bg-tint motion-safe:animate-pulse";
+
+/** The header, the view switch and the Requirements view, the default, while the profile and catalogue load. */
+function PlanSkeleton() {
+  return (
+    <div role="status">
+      <span className="sr-only">Loading your plan</span>
+      <div aria-hidden>
+        <div className={cn(bone, "h-11 w-[400px] max-md:max-w-full")} />
+        <div className={cn(bone, "mt-2 h-5 w-[480px] max-md:max-w-full")} />
+        <div className={cn(bone, "mt-4 h-1.5 w-80 max-md:w-full")} />
+        <div className={cn(bone, "mt-6 h-9 w-56 max-md:h-11 max-md:w-full")} />
+        <div className={cn(bone, "mt-6 h-5 w-[520px] max-md:max-w-full")} />
+        <div className="mt-6 grid grid-cols-[15rem_minmax(0,1fr)] gap-6 max-lg:block">
+          <div className="flex flex-col gap-1">
+            {Array.from({ length: 6 }, (_, row) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+              <div key={row} className={cn(bone, "h-14")} />
+            ))}
+          </div>
+          <div className="max-lg:hidden">
+            <div className={cn(bone, "h-7 w-64")} />
+            <div className="mt-4">
+              {Array.from({ length: 6 }, (_, row) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: static placeholders never reorder
+                <div key={row} className="flex h-11 items-center gap-4">
+                  <div className={cn(bone, "h-5 w-24")} />
+                  <div className={cn(bone, "h-5 flex-1")} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

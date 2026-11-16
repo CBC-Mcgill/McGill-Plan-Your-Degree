@@ -91,7 +91,7 @@ test("a required course can be added to the next term, and the planner opens the
       .getByRole("checkbox", { name: /COMP 310/ }),
   ).toBeAttached();
 
-  await page.goBack();
+  await page.getByRole("tab", { name: "Requirements", exact: true }).click();
   await remove.click();
   await expect(
     page.getByRole("button", { name: "Add COMP 273 to Winter 2027" }),

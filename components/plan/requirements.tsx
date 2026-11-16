@@ -73,7 +73,6 @@ import {
   type ProgramProgress,
   picksOne,
   programSplit,
-  programStanding,
   replaceKey,
   secondOverlaps,
   splitCourses,
@@ -163,12 +162,18 @@ export function Requirements({
   catalogue,
   program,
   seconds,
+  withPlan,
+  secondsWithPlan,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
   /** The second program, then the extra minor. */
   seconds: readonly Program[];
+  /** The program counted with the plan, so Not counted and the bars show a planned course before the student takes it. */
+  withPlan: ProgramProgress | null;
+  /** Each of `seconds` counted with the plan. */
+  secondsWithPlan: readonly ProgramProgress[];
 }) {
   const entry = useProfileStore((state) => state.entry);
   const records = useProfileStore((state) => state.records);
@@ -207,14 +212,6 @@ export function Requirements({
     () => termSnapshot(snapshot, plan, term),
     [snapshot, plan, term],
   );
-  // Not counted and the bars read the plan too, so a planned course shows before the student takes it.
-  const withPlan = useMemo(
-    () =>
-      program
-        ? programStanding(program, snapshot, catalogue, entry, "plan")
-        : null,
-    [program, snapshot, catalogue, entry],
-  );
   const view = useMemo(
     () =>
       nextView(catalogue, judged, term, program, entry, undefined, withPlan),
@@ -225,26 +222,6 @@ export function Requirements({
       secondOverlaps(seconds, program, judged, catalogue, entry, "counting"),
     [seconds, program, judged, catalogue, entry],
   );
-  const secondsWithPlan = useMemo(() => {
-    const withPlanOverlaps = secondOverlaps(
-      seconds,
-      program,
-      snapshot,
-      catalogue,
-      entry,
-      "plan",
-    );
-    return seconds.map((second, i) =>
-      programStanding(
-        second,
-        snapshot,
-        catalogue,
-        entry,
-        "plan",
-        withPlanOverlaps[i]?.programOnly,
-      ),
-    );
-  }, [seconds, program, snapshot, catalogue, entry]);
   const secondViews = useMemo(
     () =>
       seconds.map((second, i) =>
