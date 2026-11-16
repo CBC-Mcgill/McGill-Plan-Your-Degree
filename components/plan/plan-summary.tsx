@@ -4,6 +4,7 @@ import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
+import { GraduationEdit } from "@/components/plan/graduation-edit";
 import { ProgramBars, RoomLeft } from "@/components/program-bars";
 import { Notice } from "@/components/ui/notice";
 import { Term } from "@/components/ui/tooltip";
@@ -151,10 +152,7 @@ export function PlanSummary({
         {graduationPassed && (
           <Notice tone="warn">
             Your expected graduation, {graduationPassed}, has passed.{" "}
-            <Link href="/profile#graduation" className="link">
-              Update it on your profile
-            </Link>
-            .
+            <GraduationEdit>Change it</GraduationEdit>.
           </Notice>
         )}
         {met && (

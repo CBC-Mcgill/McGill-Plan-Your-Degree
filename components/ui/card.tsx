@@ -53,3 +53,7 @@ export function Card({
     </section>
   );
 }
+
+/** The floating panel of a popover or menu, above the page and fading in unless motion is reduced. */
+export const FLOATING =
+  "z-[85] rounded-lg bg-bg text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none";

@@ -171,3 +171,22 @@ test("on a phone the plan fits, terms switch by tap and every course action work
   await expect(planned).toContainText("COMP 302");
   await expectNoSideScroll(page);
 });
+
+test("on a phone the graduation at the end of the strip changes in place", async ({
+  page,
+}) => {
+  await seed(page);
+  await page.goto("/plan?view=terms");
+  const change = page.getByRole("button", { name: "Change", exact: true });
+  await change.scrollIntoViewIfNeeded();
+  await change.tap();
+  const picker = page.getByRole("combobox", { name: "Expected graduation" });
+  await expect(picker).toBeInViewport();
+  expect((await picker.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+  await expectTappable(page.getByRole("button", { name: "Save" }));
+  await expectNoSideScroll(page);
+
+  await picker.selectOption({ label: "Fall 2028" });
+  await page.getByRole("button", { name: "Save" }).tap();
+  await expect(page.getByText("Expected Fall 2028")).toBeVisible();
+});

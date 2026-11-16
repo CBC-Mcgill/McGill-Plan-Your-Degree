@@ -2,8 +2,8 @@
 
 import { cn } from "cn";
 import { GraduationCap, TriangleAlert } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { GraduationEdit } from "@/components/plan/graduation-edit";
 import { type Status, StatusIcon } from "@/components/status";
 import { BAND, CARD } from "@/components/ui/card";
 import { COPY } from "@/lib/copy";
@@ -270,14 +270,10 @@ export function TermPath({
             <span className="block text-[13px] text-fg-muted leading-[18px]">
               {graduation.set ? "Expected " : ""}
               {termLabel(graduation.term)}
-              {!graduation.set && (
-                <>
-                  , estimated ·{" "}
-                  <Link href="/profile#graduation" className="link">
-                    Set
-                  </Link>
-                </>
-              )}
+              {graduation.set ? " · " : ", estimated · "}
+              <GraduationEdit>
+                {graduation.set ? "Change" : "Set"}
+              </GraduationEdit>
             </span>
           </span>
         </div>
