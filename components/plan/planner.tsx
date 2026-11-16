@@ -1,86 +1,39 @@
 "use client";
 
 import { cn } from "cn";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { flushSync } from "react-dom";
-import { CatalogueError } from "@/components/catalogue-error";
-import { NoProfile } from "@/components/no-profile";
-import { PlanSummary } from "@/components/plan/plan-summary";
 import { TermPanel } from "@/components/plan/term-panel";
 import { TermPath } from "@/components/plan/term-path";
 import { Notice } from "@/components/ui/notice";
-import { useCatalogue } from "@/lib/catalogue/client";
 import { indexCourses } from "@/lib/catalogue/search";
-import { planWarnings, termRange } from "@/lib/engine/plan";
-import { programStanding, secondOverlaps } from "@/lib/engine/progress";
+import { type PlanWarning, termRange } from "@/lib/engine/plan";
+import type { ProgramProgress } from "@/lib/engine/progress";
 import type { Catalogue, Snapshot } from "@/lib/engine/snapshot";
 import { buildStages } from "@/lib/engine/stages";
 import { useProfileStore } from "@/lib/profile/store";
-import { currentTerm, termLabel } from "@/lib/profile/term-options";
+import { currentTerm } from "@/lib/profile/term-options";
 import { compareTerms, type Term, termKey } from "@/lib/profile/types";
-import { useSnapshot } from "@/lib/profile/use-snapshot";
-import { useProgram, useSeconds } from "@/lib/programs/client";
 import type { Program } from "@/lib/programs/types";
 
-/** The planner. Without a profile it offers to import a transcript or to plan from scratch. */
-export function Planner() {
-  const snapshot = useSnapshot();
-
-  if (snapshot === undefined) return <PlannerSkeleton />;
-  if (snapshot === null) {
-    return (
-      <NoProfile
-        title="Plan every term to graduation"
-        lede="Import your unofficial transcript and every course you have taken lands on your path."
-        sample="plan"
-      />
-    );
-  }
-  return <PlannerWithCatalogue snapshot={snapshot} />;
-}
-
-// Split out so a first-time visitor on the empty state does not download the catalogue.
-function PlannerWithCatalogue({ snapshot }: { snapshot: Snapshot }) {
-  const catalogue = useCatalogue();
-  const programId = useProfileStore((state) => state.programId);
-  const program = useProgram(programId);
-  const seconds = useSeconds();
-
-  if (catalogue.status === "error") {
-    return (
-      <>
-        <h1 className="sr-only">Planner</h1>
-        <CatalogueError />
-      </>
-    );
-  }
-  if (
-    catalogue.status !== "ready" ||
-    program === undefined ||
-    seconds === undefined
-  ) {
-    return <PlannerSkeleton />;
-  }
-  return (
-    <PlannerReady
-      snapshot={snapshot}
-      catalogue={catalogue.catalogue}
-      program={program}
-      seconds={seconds}
-    />
-  );
-}
-
-function PlannerReady({
+/** The path of terms beside the selected term's card. */
+export function Terms({
   snapshot,
   catalogue,
   program,
-  seconds,
+  progress,
+  warnings,
+  picked,
+  onPick,
 }: {
   snapshot: Snapshot;
   catalogue: Catalogue;
   program: Program | null;
-  seconds: readonly Program[];
+  progress: ProgramProgress | null;
+  warnings: readonly PlanWarning[];
+  /** The term the student opened, by key. */
+  picked: number | null;
+  onPick: (key: number) => void;
 }) {
   const records = useProfileStore((state) => state.records);
   const plan = useProfileStore((state) => state.plan);
@@ -88,15 +41,10 @@ function PlannerReady({
   const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const creditLimit = useProfileStore((state) => state.creditLimit);
   const entry = useProfileStore((state) => state.entry);
-  const [picked, setPicked] = useState<number | null>(null);
 
   const now = useMemo(() => currentTerm(), []);
   const nowKey = termKey(now);
   const index = useMemo(() => indexCourses(catalogue.values()), [catalogue]);
-  const warnings = useMemo(
-    () => planWarnings(plan, snapshot, catalogue, creditLimit, graduationTerm),
-    [plan, snapshot, catalogue, creditLimit, graduationTerm],
-  );
   const { stages, end } = useMemo(
     () =>
       buildStages({
@@ -122,34 +70,6 @@ function PlannerReady({
       now,
     ],
   );
-  const progress = useMemo(
-    () =>
-      program
-        ? programStanding(program, snapshot, catalogue, entry, "plan")
-        : null,
-    [program, snapshot, catalogue, entry],
-  );
-  const secondStandings = useMemo(() => {
-    const overlaps = secondOverlaps(
-      seconds,
-      program,
-      snapshot,
-      catalogue,
-      entry,
-      "plan",
-    );
-    return seconds.map((second, i) => ({
-      program: second,
-      progress: programStanding(
-        second,
-        snapshot,
-        catalogue,
-        entry,
-        "plan",
-        overlaps[i]?.programOnly,
-      ),
-    }));
-  }, [seconds, program, snapshot, catalogue, entry]);
   const moveOptions = useMemo(() => {
     const first = stages[0]?.term ?? now;
     const terms = new Map<number, Term>();
@@ -174,65 +94,48 @@ function PlannerReady({
     stages.find((stage) => stage.key === picked) ??
     stages.find((stage) => stage.key > nowKey) ??
     stages.at(-1);
-  const firstWarned = stages.find((stage) => stage.warnings.length > 0);
 
   // The panel of the old term is gone after a move, so land on the new one.
   function follow(key: number) {
-    flushSync(() => setPicked(key));
+    flushSync(() => onPick(key));
     document.getElementById("term-heading")?.focus();
   }
 
+  if (!selected) {
+    return (
+      <Notice tone="danger" role="alert">
+        Your graduation term is before your start term. Fix them on your
+        profile.
+      </Notice>
+    );
+  }
   return (
-    <>
-      <PlanSummary
-        standing={program && progress ? { program, progress } : null}
-        seconds={secondStandings}
+    <div className={GRID}>
+      <TermPath
+        stages={stages}
+        selected={selected.key}
+        onSelect={onPick}
+        nowKey={nowKey}
+        graduation={{
+          term: end,
+          set: graduationTerm !== null,
+          satisfied: progress?.satisfied ?? false,
+        }}
+      />
+      <TermPanel
+        key={selected.key}
+        stage={selected}
+        now={now}
         snapshot={snapshot}
         catalogue={catalogue}
-        warningCount={warnings.length}
-        onShowWarnings={() => firstWarned && follow(firstWarned.key)}
-        graduationPassed={
-          graduationTerm && compareTerms(graduationTerm, now) < 0
-            ? termLabel(graduationTerm)
-            : null
-        }
+        index={index}
+        program={program}
+        plan={plan}
+        creditLimit={creditLimit}
+        moveOptions={moveOptions}
+        onSelect={follow}
       />
-      {selected ? (
-        <div className={cn(GRID, "mt-6")}>
-          <TermPath
-            stages={stages}
-            selected={selected.key}
-            onSelect={setPicked}
-            nowKey={nowKey}
-            graduation={{
-              term: end,
-              set: graduationTerm !== null,
-              satisfied: progress?.satisfied ?? false,
-            }}
-          />
-          <TermPanel
-            key={selected.key}
-            stage={selected}
-            now={now}
-            snapshot={snapshot}
-            catalogue={catalogue}
-            index={index}
-            program={program}
-            plan={plan}
-            creditLimit={creditLimit}
-            moveOptions={moveOptions}
-            onSelect={follow}
-          />
-        </div>
-      ) : (
-        <div className="mt-12">
-          <Notice tone="danger" role="alert">
-            Your graduation term is before your start term. Fix them on your
-            profile.
-          </Notice>
-        </div>
-      )}
-    </>
+    </div>
   );
 }
 
@@ -242,14 +145,16 @@ const GRID =
 
 const bone = "rounded-md bg-tint motion-safe:animate-pulse";
 
-function PlannerSkeleton() {
+/** The header, the view switch and the path while the catalogue loads. */
+export function PlanSkeleton() {
   return (
     <div role="status">
       <span className="sr-only">Loading your plan</span>
       <div aria-hidden>
-        <div className={`${bone} h-11 w-[560px] max-md:w-full`} />
+        <div className={`${bone} h-11 w-[400px] max-md:w-full`} />
         <div className={`${bone} mt-2 h-5 w-[480px] max-md:w-2/3`} />
-        <div className={cn(GRID, "mt-8")}>
+        <div className={`${bone} mt-6 h-9 w-56 max-md:h-11 max-md:w-full`} />
+        <div className={cn(GRID, "mt-6")}>
           <div className="flex flex-col gap-1 max-lg:flex-row max-lg:overflow-hidden">
             {Array.from({ length: 6 }, (_, row) => (
               <div

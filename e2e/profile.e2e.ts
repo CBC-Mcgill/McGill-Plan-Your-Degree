@@ -9,7 +9,7 @@ async function importAndSave(page: Page) {
     page.getByRole("heading", { level: 1, name: "Check your transcript" }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Save to my profile" }).click();
-  await expect(page).toHaveURL("/next");
+  await expect(page).toHaveURL("/plan");
 }
 
 test("importing a transcript saves its courses, and a re-import says what it replaces", async ({
@@ -27,7 +27,7 @@ test("importing a transcript saves its courses, and a re-import says what it rep
     /.+/,
   );
   await page.getByRole("button", { name: "Save to my profile" }).click();
-  await expect(page).toHaveURL("/next");
+  await expect(page).toHaveURL("/plan");
 
   await page.goto("/profile");
   await expect(
@@ -72,7 +72,7 @@ test("a program read from the catalogue can be found and used", async ({
   await expect(program).toHaveValue("Psychology Major (B.Sc.)");
   await expect(page.getByText("read automatically")).toBeVisible();
 
-  await page.getByRole("link", { name: "What's next", exact: true }).click();
+  await page.getByRole("link", { name: "Plan", exact: true }).click();
   await expect(
     page.getByRole("heading", {
       name: "Psychology Major",
@@ -288,7 +288,7 @@ test("starting without a transcript counts as a profile everywhere", async ({
     page.getByRole("combobox", { name: "Program", exact: true }),
   ).toHaveValue("");
 
-  await page.getByRole("link", { name: "What's next", exact: true }).click();
+  await page.getByRole("link", { name: "Plan", exact: true }).click();
   await expect(
     page.getByRole("button", { name: /Other courses you can take/ }),
   ).toBeVisible();

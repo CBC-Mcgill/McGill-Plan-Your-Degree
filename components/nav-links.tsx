@@ -10,8 +10,7 @@ import { openCommandPalette, SearchBar } from "@/components/command-palette";
 
 const PAGES = [
   { href: "/courses", label: "Browse courses" },
-  { href: "/next", label: "What's next" },
-  { href: "/plan", label: "Planner" },
+  { href: "/plan", label: "Plan" },
   { href: "/advisor", label: "Advisor", soon: true },
 ];
 
@@ -52,7 +51,7 @@ function NavLink({
   );
 }
 
-/** Browse courses, What's next, Planner and Advisor, then search centered in the space before Profile, which sits on the right. */
+/** Browse courses, Plan and Advisor, then search centered in the space before Profile, which sits on the right. */
 export function NavLinks() {
   const pathname = usePathname();
   const previous = useRef(pathname);

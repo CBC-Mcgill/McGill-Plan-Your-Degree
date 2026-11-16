@@ -34,15 +34,13 @@ test("nav links reach their pages", async ({ page }) => {
   const nav = page.getByRole("navigation", { name: "Main" });
   await expect(nav.getByRole("link")).toHaveText([
     "Browse courses",
-    "What's next",
-    "Planner",
+    "Plan",
     "Advisor Soon",
     "Profile",
   ]);
   for (const [name, path] of [
     ["Browse courses", "/courses"],
-    ["What's next", "/next"],
-    ["Planner", "/plan"],
+    ["Plan", "/plan"],
     ["Advisor", "/advisor"],
     ["Profile", "/profile"],
   ] as const) {

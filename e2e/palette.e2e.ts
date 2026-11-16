@@ -15,7 +15,7 @@ test("the palette puts a named page first and keeps focus where the student is",
 
   await page.getByRole("combobox").fill("plan");
   const first = page.getByRole("option").first();
-  await expect(first).toHaveAccessibleName("Planner");
+  await expect(first).toHaveAccessibleName("Plan");
   await expect(first).toHaveAttribute("aria-selected", "true");
 
   await page.keyboard.press("Escape");
@@ -28,7 +28,7 @@ test("the palette puts a named page first and keeps focus where the student is",
   await expect(page.getByRole("main")).toBeFocused();
 });
 
-test("the palette finds What's next by its old name and says each course's status", async ({
+test("the plan page is found by its old names and says each course's status", async ({
   page,
 }) => {
   await page.addInitScript(
@@ -53,10 +53,10 @@ test("the palette finds What's next by its old name and says each course's statu
   await page.keyboard.press("Control+k");
   const input = page.getByRole("combobox");
 
-  await input.fill("requirements");
-  await expect(page.getByRole("option").first()).toHaveAccessibleName(
-    "What's next",
-  );
+  for (const name of ["requirements", "what's next", "planner"]) {
+    await input.fill(name);
+    await expect(page.getByRole("option").first()).toHaveAccessibleName("Plan");
+  }
 
   await input.fill("comp 250");
   await expect(page.getByRole("option").first()).toContainText("Completed");

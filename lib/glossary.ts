@@ -59,14 +59,6 @@ export const GLOSSARY = {
     label: "Credits earned",
     tip: "Credits from courses you completed, plus advanced standing and transfer credits. Year 0 credited from CEGEP counts as advanced standing. Courses in progress count once they are done.",
   },
-  earnedOrInProgress: {
-    label: "earned or in progress",
-    tip: "Credits earned, plus the courses you are taking now, counted as if you pass them.",
-  },
-  requirementsMet: {
-    label: "requirements met",
-    tip: "This program has no credit total, so progress counts requirements instead. A requirement is met once its courses are earned or in progress, or once you mark its rule as checked.",
-  },
   withPlan: {
     label: "with your plan",
     tip: "Credits earned or in progress, plus the courses in your plan.",

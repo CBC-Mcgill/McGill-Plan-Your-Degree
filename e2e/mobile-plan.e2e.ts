@@ -92,7 +92,7 @@ test.beforeEach(async ({ page }) => {
 test("on a phone a visitor can start a plan and gets the term strip", async ({
   page,
 }) => {
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
   await expectNoSideScroll(page);
   await page.getByRole("button", { name: "Start without a transcript" }).tap();
 
@@ -112,16 +112,17 @@ test("on a phone the plan fits, terms switch by tap and every course action work
   page,
 }) => {
   await seed(page);
-  await page.goto("/plan");
+  await page.goto("/plan?view=terms");
 
   await expect(
-    page.getByRole("heading", { level: 1, name: /program credits/ }),
+    page.getByRole("heading", { level: 1, name: "Computer Engineering" }),
   ).toBeVisible();
-  const missing = page.getByRole("region", {
-    name: /^Your plan is \d+ credits short$/,
-  });
-  await expect(missing.getByText(/\d+ open/)).toBeVisible();
-  await expect(missing.getByRole("listitem").first()).toContainText("to go");
+  // The view switch spans the screen, each half a 44px target.
+  const views = page.getByRole("tablist", { name: "View" });
+  await expect(views.getByRole("tab", { selected: true })).toHaveText("Terms");
+  const box = await views.boundingBox();
+  expect(box?.width).toBeGreaterThan(300);
+  expect(box?.height).toBe(44);
   await expectNoSideScroll(page);
 
   // The strip scrolls inside itself and keeps the selected term in view.
@@ -133,7 +134,7 @@ test("on a phone the plan fits, terms switch by tap and every course action work
   await expectSelectedInStrip(page);
   await strip.getByRole("tab", { name: /^Fall 2026/ }).tap();
   await expect(heading).toHaveText("Fall 2026");
-  await expect(page.getByRole("tabpanel")).toContainText("ECSE 206");
+  await expect(page.locator("#term-panel")).toContainText("ECSE 206");
   await strip.getByRole("tab", { name: /^Winter 2027/ }).tap();
   await expect(heading).toHaveText("Winter 2027");
 

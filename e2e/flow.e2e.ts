@@ -9,7 +9,7 @@ test("a student imports a transcript, adds a course, and sees it in the plan", a
     .locator('input[accept*="pdf"]')
     .setInputFiles("lib/transcript/fixtures/simple-record.pdf");
   await page.getByRole("button", { name: "Save to my profile" }).click();
-  await expect(page).toHaveURL("/next");
+  await expect(page).toHaveURL("/plan");
 
   const row = page
     .getByRole("region", { name: "Required courses" })
@@ -22,15 +22,15 @@ test("a student imports a transcript, adds a course, and sees it in the plan", a
     row.getByRole("button", { name: "Remove COMP 251 from Winter 2027" }),
   ).toBeVisible();
 
-  await page.getByRole("link", { name: "Planner" }).click();
-  await expect(page).toHaveURL("/plan");
+  await page.getByRole("tab", { name: "Terms", exact: true }).click();
+  await expect(page).toHaveURL("/plan?view=terms");
   await page.getByRole("tab", { name: /^Winter 2027/ }).click();
   await expect(
     page.getByRole("button", { name: "Remove COMP 251 from Winter 2027" }),
   ).toBeVisible();
 });
 
-test("a CEGEP engineering student with an exemption reads the same credits on What's next and the Planner", async ({
+test("a CEGEP engineering student with an exemption still has the elective to take", async ({
   page,
 }) => {
   await page.clock.setFixedTime(new Date("2026-10-09T12:00:00"));
@@ -39,32 +39,15 @@ test("a CEGEP engineering student with an exemption reads the same credits on Wh
     .locator('input[accept*="pdf"]')
     .setInputFiles("lib/transcript/fixtures/cegep-engineering.pdf");
   await page.getByRole("button", { name: "Save to my profile" }).click();
-  await expect(page).toHaveURL("/next");
-  const main = page.getByRole("main");
-  await expect(main).toContainText(
-    /\d+ of 133 program credits earned or in progress/,
+  await expect(page).toHaveURL("/plan");
+  await expect(page.getByRole("main")).toContainText(
+    /\d+ of 133 program credits with your plan/,
   );
-  const counting = Number(
-    /(\d+) of 133 program credits earned or in progress/.exec(
-      // biome-ignore lint/performance/useDomNodeTextContent: the sentence spans elements, textContent drops the spaces between them
-      await main.innerText(),
-    )?.[1],
-  );
-
-  // Nothing is planned, so the plan's figure is the same count.
-  await page.goto("/plan");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    `${counting} of 133 program credits`,
-  );
-  const short = page.getByRole("region", {
-    name: `Your plan is ${133 - counting} credits short`,
-  });
-  await expect(short).toBeVisible();
   // Advanced standing counts for the degree only, so the elective is still to take.
-  await short.getByRole("button", { name: /^Show \d+ more$/ }).click();
+  const list = page.getByRole("tablist", { name: "Requirements" });
   for (const group of ["Elective course", "Replace exempted credits"]) {
     await expect(
-      short.getByRole("listitem").filter({ hasText: group }),
-    ).toContainText("3 to go");
+      list.getByRole("tab", { name: new RegExp(group) }),
+    ).toContainText("0 of 3");
   }
 });

@@ -13,7 +13,7 @@ test("a student sends a suggestion and the advisor says it is coming soon", asyn
   const log = page.getByRole("log", { name: "Conversation" });
   await expect(log.getByText("Plan my next term")).toBeVisible();
   await expect(log.getByText(/coming soon/i)).toBeVisible();
-  await expect(log.getByRole("link", { name: "Planner" })).toHaveAttribute(
+  await expect(log.getByRole("link", { name: "Plan" })).toHaveAttribute(
     "href",
     "/plan",
   );

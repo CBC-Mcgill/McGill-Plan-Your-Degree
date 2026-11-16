@@ -100,6 +100,9 @@ Safari and Firefox prints and graduate transcripts have no real sample, and the 
 
 #### P0-6 What's next
 
+What's next and the semester planner (P0-8) are one Plan page at `/plan`: one header with the program's credits, bars, and warnings, then a switch between a Requirements view (this section) and a Terms view (P0-8).
+`/next` and `/requirements` redirect there.
+
 - Lists courses the student can take next term, with prerequisites met by completed and in-progress courses, offered that term, and not blocked by a restriction.
 - Shows remaining required courses and progress on each complementary list, such as "6 of 12 credits", or "N of M requirements met" for a program with no credit total.
 - Separates "must take" (remaining required courses) from "can take" (available complementaries and electives).
@@ -147,7 +150,7 @@ A parser shape must recur in 5 or more programs, with no page or department spec
 - Generates terms from the start term to expected graduation (Fall and Winter, Summer optional), which defaults to 2 years for a master's and 4 for a doctorate.
 - Students add, move, and remove courses per term by click or keyboard, with drag and drop as an extra, never the only way.
 - Warns, without blocking, when a course is placed before its prerequisites, in a term it is not offered, against a restriction, or over the credit limit (default 17, editable).
-- Shows whether the whole plan satisfies the program and lists what is still missing, and "See choices" opens that requirement's pane on What's next.
+- Shows whether the whole plan satisfies the program, and what is still missing is the Requirements view of the same page.
 - A term path shows every term to graduation, with completed, current, and planned terms looking distinct, and clicking a term opens it.
 
 #### P0-9 Responsive and accessible

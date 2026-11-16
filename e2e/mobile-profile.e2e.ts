@@ -100,7 +100,7 @@ test("on a phone a visitor imports a transcript and saves it from the bar", asyn
   await expect(save).toBeHidden();
   await page.getByRole("heading", { name: "Check your transcript" }).click();
   await save.click();
-  await expect(page).toHaveURL("/next");
+  await expect(page).toHaveURL("/plan");
 });
 
 test("on a phone a student's profile stacks, and every action is a tap away", async ({
@@ -139,13 +139,11 @@ test("on a phone a student's profile stacks, and every action is a tap away", as
 });
 
 test("on a phone the visitor screens fit", async ({ page }) => {
-  for (const path of ["/next", "/plan"]) {
-    await page.goto(path);
-    await expectTappable(
-      page.getByRole("link", { name: "Import your transcript" }),
-    );
-    await expectNoSideScroll(page);
-  }
+  await page.goto("/plan");
+  await expectTappable(
+    page.getByRole("link", { name: "Import your transcript" }),
+  );
+  await expectNoSideScroll(page);
 });
 
 test("on a phone the advisor keeps its chats behind a button and stacks the suggestions", async ({

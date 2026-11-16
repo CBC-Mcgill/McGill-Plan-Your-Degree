@@ -29,13 +29,12 @@ test("on a phone the header fits, search fills the screen and the menu reaches e
   const menu = page.getByRole("dialog", { name: "Menu" });
   await expect(menu.getByRole("link")).toHaveText([
     "Browse courses",
-    "What's next",
-    "Planner",
+    "Plan",
     /Advisor/,
     "Profile",
   ]);
-  await menu.getByRole("link", { name: "What's next" }).click();
-  await expect(page).toHaveURL("/next");
+  await menu.getByRole("link", { name: "Plan" }).click();
+  await expect(page).toHaveURL("/plan");
   await expect(menu).toBeHidden();
 });
 
