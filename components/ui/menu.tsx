@@ -1,8 +1,10 @@
 "use client";
 
+import { cn } from "cn";
 import Link from "next/link";
 import { DropdownMenu } from "radix-ui";
 import type { ReactNode } from "react";
+import { FLOATING } from "@/components/ui/card";
 
 /** Click to open a menu (pattern C). Escape closes it and focus returns to the trigger. */
 export function Menu({
@@ -22,7 +24,10 @@ export function Menu({
           align={align}
           sideOffset={4}
           collisionPadding={16}
-          className="z-[85] max-h-[min(400px,var(--radix-dropdown-menu-content-available-height))] min-w-56 max-w-[var(--radix-dropdown-menu-content-available-width)] overflow-y-auto rounded-lg bg-bg p-1 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
+          className={cn(
+            FLOATING,
+            "max-h-[min(400px,var(--radix-dropdown-menu-content-available-height))] min-w-56 max-w-[var(--radix-dropdown-menu-content-available-width)] overflow-y-auto p-1",
+          )}
         >
           {children}
         </DropdownMenu.Content>

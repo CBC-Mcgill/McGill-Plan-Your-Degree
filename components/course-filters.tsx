@@ -6,6 +6,7 @@ import { Checkbox, Popover } from "radix-ui";
 import type * as React from "react";
 import { Fragment, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { FLOATING } from "@/components/ui/card";
 import { Chip } from "@/components/ui/chip";
 import { controlStyles } from "@/components/ui/field";
 import { Menu, MenuItem } from "@/components/ui/menu";
@@ -172,7 +173,8 @@ export function FilterPopover({
             (event.currentTarget as HTMLElement).focus();
           }}
           className={cn(
-            "z-[85] rounded-lg bg-bg p-1 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none",
+            FLOATING,
+            "p-1",
             prop === "faculty" ? "w-96" : "w-64",
             "max-md:w-[calc(100vw-2rem)]",
           )}

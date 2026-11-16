@@ -306,8 +306,9 @@ test("the graduation on the path changes in place, by click or keyboard", async 
 }) => {
   await seedProfile(page, [done("COMP 202")]);
   await page.goto("/plan?view=terms");
-  const path = page.getByRole("tablist", { name: "Terms" }).locator("..");
-  await expect(path).toContainText(`Expected Winter ${year + 3} · Change`);
+  await expect(
+    page.getByText(`Expected Winter ${year + 3} · Change`),
+  ).toBeVisible();
 
   const change = page.getByRole("button", { name: "Change", exact: true });
   await change.click();
@@ -321,14 +322,16 @@ test("the graduation on the path changes in place, by click or keyboard", async 
   await page.keyboard.press("Enter");
   await picker.selectOption({ label: `Fall ${year + 3}` });
   await page.getByRole("button", { name: "Save" }).click();
-  await expect(path).toContainText(`Expected Fall ${year + 3} · Change`);
+  await expect(
+    page.getByText(`Expected Fall ${year + 3} · Change`),
+  ).toBeVisible();
   await expect(
     page.getByRole("tab", { name: new RegExp(`^Fall ${year + 3}`) }),
   ).toBeVisible();
   await expect(change).toBeFocused();
 
   await page.reload();
-  await expect(path).toContainText(`Expected Fall ${year + 3}`);
+  await expect(page.getByText(`Expected Fall ${year + 3}`)).toBeVisible();
 });
 
 test("a graduation that has passed is changed from its notice", async ({
@@ -349,4 +352,24 @@ test("a graduation that has passed is changed from its notice", async ({
   await page.getByRole("button", { name: "Save" }).click();
   await expect(notice).toHaveCount(0);
   await expect(page.getByRole("main")).toBeFocused();
+});
+
+test("the graduation picker starts at a start term still ahead", async ({
+  page,
+}) => {
+  await seedProfile(page, []);
+  await page.addInitScript(
+    ([key, start]) => {
+      const saved = JSON.parse(localStorage.getItem(key as string) ?? "{}");
+      saved.state.startTerm = start;
+      localStorage.setItem(key as string, JSON.stringify(saved));
+    },
+    ["plan-your-degree:profile", { season: "Fall", year: year + 1 }],
+  );
+  await page.goto("/plan?view=terms");
+  await page.getByRole("button", { name: "Change", exact: true }).click();
+  const options = page
+    .getByRole("combobox", { name: "Expected graduation" })
+    .getByRole("option");
+  await expect(options.nth(1)).toHaveText(`Fall ${year + 1}`);
 });

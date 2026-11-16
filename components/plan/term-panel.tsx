@@ -26,7 +26,7 @@ import {
   UncertainFlag,
 } from "@/components/status";
 import { Button } from "@/components/ui/button";
-import { BAND, CARD } from "@/components/ui/card";
+import { BAND, CARD, FLOATING } from "@/components/ui/card";
 import { ShowMore } from "@/components/ui/disclosure";
 import { TextField } from "@/components/ui/field";
 import { Menu, MenuItem } from "@/components/ui/menu";
@@ -260,7 +260,7 @@ function CreditLimit({ limit }: { limit: number }) {
           align="end"
           sideOffset={8}
           collisionPadding={16}
-          className="z-[85] w-64 rounded-lg bg-bg p-4 text-fg shadow-float outline-none transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none"
+          className={cn(FLOATING, "w-64 p-4")}
         >
           <form
             className="flex flex-col gap-4"
