@@ -300,3 +300,53 @@ test("the credit limit is edited from the term load and kept after a reload", as
     "3 of 2 credits, over your limit",
   );
 });
+
+test("the graduation on the path changes in place, by click or keyboard", async ({
+  page,
+}) => {
+  await seedProfile(page, [done("COMP 202")]);
+  await page.goto("/plan?view=terms");
+  const path = page.getByRole("tablist", { name: "Terms" }).locator("..");
+  await expect(path).toContainText(`Expected Winter ${year + 3} · Change`);
+
+  const change = page.getByRole("button", { name: "Change", exact: true });
+  await change.click();
+  const picker = page.getByRole("combobox", { name: "Expected graduation" });
+  await expect(picker).toBeFocused();
+  await expect(page.getByRole("tooltip")).toHaveCount(0);
+  await page.keyboard.press("Escape");
+  await expect(picker).toBeHidden();
+  await expect(change).toBeFocused();
+
+  await page.keyboard.press("Enter");
+  await picker.selectOption({ label: `Fall ${year + 3}` });
+  await page.getByRole("button", { name: "Save" }).click();
+  await expect(path).toContainText(`Expected Fall ${year + 3} · Change`);
+  await expect(
+    page.getByRole("tab", { name: new RegExp(`^Fall ${year + 3}`) }),
+  ).toBeVisible();
+  await expect(change).toBeFocused();
+
+  await page.reload();
+  await expect(path).toContainText(`Expected Fall ${year + 3}`);
+});
+
+test("a graduation that has passed is changed from its notice", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date(`${year + 4}-10-08T12:00:00`));
+  await seedProfile(page, [done("COMP 202")]);
+  await page.goto("/plan?view=terms");
+  const notice = page.getByText(
+    `Your expected graduation, Winter ${year + 3}, has passed.`,
+  );
+  await expect(notice).toBeVisible();
+
+  await page.getByRole("button", { name: "Change it" }).click();
+  await page
+    .getByRole("combobox", { name: "Expected graduation" })
+    .selectOption({ label: `Winter ${year + 6}` });
+  await page.getByRole("button", { name: "Save" }).click();
+  await expect(notice).toHaveCount(0);
+  await expect(page.getByRole("main")).toBeFocused();
+});
