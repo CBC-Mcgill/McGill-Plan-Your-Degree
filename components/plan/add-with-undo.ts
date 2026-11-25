@@ -91,9 +91,18 @@ export function addWithUndo(
         COPY.toast.removed(name, ...terms),
       );
   addToPlan(term, code);
+  const onTerms =
+    window.location.pathname === "/plan" &&
+    new URLSearchParams(window.location.search).get("view") === "terms";
   toast(
     from ? COPY.toast.moved(name, ...terms) : COPY.toast.added(name, ...terms),
     action,
+    onTerms
+      ? undefined
+      : {
+          label: COPY.toast.view,
+          href: `/plan?view=terms&term=${termKey(term)}`,
+        },
   );
 }
 

@@ -1246,7 +1246,7 @@ function Row({
   );
 }
 
-/** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action on hover. Below 1024px the title wraps and the action always shows, and below 768px the code, title and note stack with credits and the action on the right. */
+/** A course row of a pane: code and title, "Counts for both" when it does, a note column that keeps its width so notes line up at 1024 too, credits, and the action. Below 1024px the title wraps, and below 768px the code, title and note stack with credits and the action on the right. */
 function PaneRow({
   course,
   uncertain = false,
@@ -1336,14 +1336,18 @@ function PaneRow({
       )}
       <span
         className={cn(
-          "-my-2 flex w-20 shrink-0 justify-end opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 has-[[data-state=open]]:opacity-100 max-lg:opacity-100 max-md:w-auto max-md:self-center pointer-coarse:opacity-100",
+          "-my-2 flex w-20 shrink-0 justify-end max-md:w-auto max-md:self-center",
           // Positioned, so the buttons stay above the hidden credits they overlap.
           mark
             ? "relative gap-2 max-lg:my-0 max-lg:basis-full lg:pointer-coarse:my-0 lg:pointer-coarse:basis-full max-md:order-4 max-md:mt-1 max-md:ml-auto max-md:basis-auto"
             : "max-md:col-start-2 max-md:row-start-2",
         )}
       >
-        {mark}
+        {mark && (
+          <span className="flex lg:pointer-fine:opacity-0 lg:pointer-fine:group-focus-within:opacity-100 lg:pointer-fine:group-hover:opacity-100 lg:pointer-fine:has-[[data-state=open]]:opacity-100">
+            {mark}
+          </span>
+        )}
         {action}
       </span>
     </li>

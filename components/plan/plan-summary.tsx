@@ -6,6 +6,7 @@ import { CatalogueLink } from "@/components/external-link";
 import { GeneratedNote } from "@/components/generated-banner";
 import { GraduationEdit } from "@/components/plan/graduation-edit";
 import { ProgramBars, RoomLeft } from "@/components/program-bars";
+import { Button } from "@/components/ui/button";
 import { Notice } from "@/components/ui/notice";
 import { Term } from "@/components/ui/tooltip";
 import { COPY } from "@/lib/copy";
@@ -76,15 +77,15 @@ export function PlanSummary({
         {standing ? (
           <h1>{standing.program.name}</h1>
         ) : (
-          <>
-            <h1 className="sr-only">Plan</h1>
-            <p>
-              <Link href="/profile#program" className="link font-semibold">
-                {COPY.pickProgram}
-              </Link>{" "}
-              to see what you still need.
+          <div>
+            <h1>Plan</h1>
+            <p className="mt-2 text-fg-muted">
+              Your program decides which courses you still need.
             </p>
-          </>
+            <Button asChild className="mt-4 max-md:h-11 max-md:w-full">
+              <Link href="/profile#program">{COPY.pickProgram}</Link>
+            </Button>
+          </div>
         )}
         {warnings}
       </div>

@@ -90,9 +90,24 @@ function Ready({
   const graduationTerm = useProfileStore((state) => state.graduationTerm);
   const creditLimit = useProfileStore((state) => state.creditLimit);
   const entry = useProfileStore((state) => state.entry);
-  const view: View =
-    useSearchParams().get("view") === "terms" ? "terms" : "requirements";
-  const [picked, setPicked] = useState<number | null>(null);
+  const params = useSearchParams();
+  const view: View = params.get("view") === "terms" ? "terms" : "requirements";
+  const linked = params.get("term");
+  const [picked, setPicked] = useState<number | null>(
+    linked ? Number(linked) : null,
+  );
+  const [seen, setSeen] = useState(linked);
+  if (linked !== seen) {
+    setSeen(linked);
+    if (linked) setPicked(Number(linked));
+  }
+  useEffect(() => {
+    if (!linked) return;
+    document.getElementById("term-heading")?.focus();
+    const url = new URL(window.location.href);
+    url.searchParams.delete("term");
+    window.history.replaceState(null, "", url);
+  }, [linked]);
   const panelId = useId();
   // Show warnings switches view, and the term card renders a render after the URL changes, so focus waits for it.
   const focusTerm = useRef(false);
