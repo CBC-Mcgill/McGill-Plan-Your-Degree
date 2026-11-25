@@ -299,8 +299,7 @@ test("starting without a transcript counts as a profile everywhere", async ({
   const program = page.getByRole("combobox", { name: "Program", exact: true });
   await program.fill("Computer Science Major");
   await page
-    .getByRole("option", { name: /^Computer Science Major/ })
-    .first()
+    .getByRole("option", { name: /^Computer Science Major\s*B\.Sc\.$/ })
     .click();
   await page.getByRole("link", { name: "See your plan" }).click();
   await expect(page).toHaveURL("/plan");

@@ -76,10 +76,10 @@ test("toasts name the course, show one at a time, and Undo only runs when it is 
 
   await add("COMP 273").click();
   await toast.getByRole("link", { name: "View term" }).click();
-  await expect(page).toHaveURL(/\/plan\?view=terms&term=\d+$/);
   await expect(
     page.getByRole("heading", { name: "Winter 2027", exact: true }),
   ).toBeFocused();
+  await expect(page).toHaveURL("/plan?view=terms");
   await expect(
     page.getByRole("button", { name: "Remove COMP 273 from Winter 2027" }),
   ).toBeVisible();

@@ -102,8 +102,13 @@ function Ready({
     setSeen(linked);
     if (linked) setPicked(Number(linked));
   }
+  // Read once, then dropped, so a later pick is not undone by a refresh.
   useEffect(() => {
-    if (linked) document.getElementById("term-heading")?.focus();
+    if (!linked) return;
+    document.getElementById("term-heading")?.focus();
+    const url = new URL(window.location.href);
+    url.searchParams.delete("term");
+    window.history.replaceState(null, "", url);
   }, [linked]);
   const panelId = useId();
   // Show warnings switches view, and the term card renders a render after the URL changes, so focus waits for it.
