@@ -1343,7 +1343,6 @@ function PaneRow({
             : "max-md:col-start-2 max-md:row-start-2",
         )}
       >
-        {/* The action always shows. With a mouse the mark waits for hover, where it covers the credits. */}
         {mark && (
           <span className="flex lg:pointer-fine:opacity-0 lg:pointer-fine:group-focus-within:opacity-100 lg:pointer-fine:group-hover:opacity-100 lg:pointer-fine:has-[[data-state=open]]:opacity-100">
             {mark}

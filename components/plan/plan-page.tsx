@@ -92,7 +92,6 @@ function Ready({
   const entry = useProfileStore((state) => state.entry);
   const params = useSearchParams();
   const view: View = params.get("view") === "terms" ? "terms" : "requirements";
-  // A toast's "View term" link names the term to open.
   const linked = params.get("term");
   const [picked, setPicked] = useState<number | null>(
     linked ? Number(linked) : null,
@@ -102,7 +101,6 @@ function Ready({
     setSeen(linked);
     if (linked) setPicked(Number(linked));
   }
-  // Read once, then dropped, so a later pick is not undone by a refresh.
   useEffect(() => {
     if (!linked) return;
     document.getElementById("term-heading")?.focus();

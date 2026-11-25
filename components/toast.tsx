@@ -31,7 +31,7 @@ function act(item: Toast) {
   dismiss(item.id);
 }
 
-/** A short success message at the bottom left, gone after 5 seconds. A new toast replaces the old one. Errors never use a toast. `link` goes to where the change landed. */
+/** A short success message at the bottom left, gone after 5 seconds. A new toast replaces the old one. Errors never use a toast. */
 export function toast(
   message: string,
   action?: Toast["action"],
@@ -118,7 +118,6 @@ function ToastCard({ item }: { item: Toast }) {
       onBlur={() => setPaused(false)}
       className={cn(
         "flex h-10 items-center gap-4 rounded-md bg-fg pr-1 pl-4 text-white shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none max-md:h-12 max-md:justify-between",
-        // A phone has no room for the message and two actions on one line.
         item.link &&
           "max-md:h-auto max-md:flex-wrap max-md:gap-y-0 max-md:pt-3",
       )}
