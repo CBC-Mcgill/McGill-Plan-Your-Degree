@@ -42,13 +42,13 @@ test("toasts name the course, show one at a time, and Undo only runs when it is 
     page.getByRole("button", { name: `Add ${code} to Winter 2027` }).first();
 
   await add("COMP 273").click();
-  await expect(toast).toHaveText("COMP 273 added to Winter 2027Undo");
+  await expect(toast).toHaveText("COMP 273 added to Winter 2027View termUndo");
   const box = await toast.boundingBox();
   const viewport = page.viewportSize();
   expect(box?.x).toBe(24);
   expect(viewport && box && viewport.height - box.y - box.height).toBe(24);
   await add("COMP 303").click();
-  await expect(toast).toHaveText("COMP 303 added to Winter 2027Undo");
+  await expect(toast).toHaveText("COMP 303 added to Winter 2027View termUndo");
   await expect(toast.getByRole("button", { name: "Undo" })).toHaveAttribute(
     "title",
     /^Undo \((⌘Z|Ctrl\+Z)\)$/,
@@ -73,4 +73,14 @@ test("toasts name the course, show one at a time, and Undo only runs when it is 
   ).toBeVisible();
   await toast.getByRole("button", { name: "Undo" }).click();
   await expect(toast).toHaveText("Already changed");
+
+  await add("COMP 273").click();
+  await toast.getByRole("link", { name: "View term" }).click();
+  await expect(page).toHaveURL(/\/plan\?view=terms&term=\d+$/);
+  await expect(
+    page.getByRole("heading", { name: "Winter 2027", exact: true }),
+  ).toBeFocused();
+  await expect(
+    page.getByRole("button", { name: "Remove COMP 273 from Winter 2027" }),
+  ).toBeVisible();
 });

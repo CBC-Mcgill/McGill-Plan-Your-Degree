@@ -1,11 +1,14 @@
 "use client";
 
+import { cn } from "cn";
+import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 
 interface Toast {
   id: number;
   message: string;
   action?: { label: string; run: () => void };
+  link?: { label: string; href: string };
 }
 
 const DISMISS_MS = 5000;
@@ -28,9 +31,13 @@ function act(item: Toast) {
   dismiss(item.id);
 }
 
-/** A short success message at the bottom left, gone after 5 seconds. A new toast replaces the old one. Errors never use a toast. */
-export function toast(message: string, action?: Toast["action"]) {
-  current = { id: nextId++, message, action };
+/** A short success message at the bottom left, gone after 5 seconds. A new toast replaces the old one. Errors never use a toast. `link` goes to where the change landed. */
+export function toast(
+  message: string,
+  action?: Toast["action"],
+  link?: Toast["link"],
+) {
+  current = { id: nextId++, message, action, link };
   emit();
 }
 
@@ -88,6 +95,9 @@ export function Toaster() {
   );
 }
 
+const ACTION =
+  "h-8 rounded-md px-3 font-semibold underline-offset-3 hover:underline focus-visible:outline-white max-md:h-11 max-md:px-4";
+
 function ToastCard({ item }: { item: Toast }) {
   const [paused, setPaused] = useState(false);
 
@@ -106,16 +116,32 @@ function ToastCard({ item }: { item: Toast }) {
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
-      className="flex h-10 items-center gap-4 rounded-md bg-fg pr-1 pl-4 text-white shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none max-md:h-12 max-md:justify-between"
+      className={cn(
+        "flex h-10 items-center gap-4 rounded-md bg-fg pr-1 pl-4 text-white shadow-float transition-opacity duration-[120ms] starting:opacity-0 motion-reduce:transition-none max-md:h-12 max-md:justify-between",
+        // A phone has no room for the message and two actions on one line.
+        item.link &&
+          "max-md:h-auto max-md:flex-wrap max-md:gap-y-0 max-md:pt-3",
+      )}
     >
-      {item.message}
+      <span className={cn(item.link && "max-md:basis-full")}>
+        {item.message}
+      </span>
+      {item.link && (
+        <Link
+          href={item.link.href}
+          onClick={() => dismiss(item.id)}
+          className={cn(ACTION, "-mr-3 flex items-center max-md:-ml-4")}
+        >
+          {item.link.label}
+        </Link>
+      )}
       {item.action ? (
         <button
           type="button"
           title={`${item.action.label} (${shortcut})`}
           aria-keyshortcuts={isMac() ? "Meta+Z" : "Control+Z"}
           onClick={() => act(item)}
-          className="h-8 rounded-md px-3 font-semibold underline-offset-3 hover:underline focus-visible:outline-white max-md:h-11 max-md:px-4"
+          className={ACTION}
         >
           {item.action.label}
         </button>

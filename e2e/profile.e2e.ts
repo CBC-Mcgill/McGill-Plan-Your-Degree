@@ -295,6 +295,15 @@ test("starting without a transcript counts as a profile everywhere", async ({
   await page.getByRole("link", { name: "Pick your program" }).click();
   await expect(page).toHaveURL("/profile#program");
   await expect(page.locator("#program")).toBeInViewport();
+
+  const program = page.getByRole("combobox", { name: "Program", exact: true });
+  await program.fill("Computer Science Major");
+  await page
+    .getByRole("option", { name: /^Computer Science Major/ })
+    .first()
+    .click();
+  await page.getByRole("link", { name: "See your plan" }).click();
+  await expect(page).toHaveURL("/plan");
 });
 
 test("the expected graduation label defines the term on focus", async ({

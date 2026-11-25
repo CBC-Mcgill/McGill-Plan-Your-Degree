@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { CoursesCard } from "@/components/profile/courses-card";
 import { DataCard } from "@/components/profile/data-card";
@@ -25,6 +26,7 @@ export function ProfileView() {
   const hydrated = useProfileHydrated();
   const flow = useImportFlow();
   const started = useProfileStore(isStarted);
+  const hasProgram = useProfileStore((state) => state.programId !== null);
   // Starts the program list download, so the picker and the transcript guess have it when they render.
   useProgramIndex();
 
@@ -62,8 +64,17 @@ export function ProfileView() {
 
   return (
     <div className={PAGE}>
-      <h1>Profile</h1>
-      <Summary />
+      <div className="flex items-start justify-between gap-8 max-md:flex-col max-md:gap-4">
+        <div>
+          <h1>Profile</h1>
+          <Summary />
+        </div>
+        {hasProgram && (
+          <Button asChild className="max-md:h-11 max-md:w-full">
+            <Link href="/plan">See your plan</Link>
+          </Button>
+        )}
+      </div>
       {/* On a phone the degree and data cards sit under a long course list, so these jump to them. */}
       <nav aria-label="Profile sections" className="mt-4 flex gap-3 md:hidden">
         <Button asChild variant="secondary" className="h-11 flex-1">

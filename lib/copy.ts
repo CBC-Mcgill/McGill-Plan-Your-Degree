@@ -146,6 +146,7 @@ export const COPY = {
       `${code} moved to ${termPair(...terms)}`,
     removed: (code: string, ...terms: Term[]) =>
       `${code} removed from ${termPair(...terms)}`,
+    view: "View term",
   },
   undo: "Undo",
   advisor: "Advisor preview",
